@@ -40,6 +40,9 @@ properties:
       This property lets you decide if a given package should be automatically
       updated to the latest version when entering a given place. The game
       periodically checks for new updates while a place is open.
+
+      This property is visible and configurable in the Properties window in
+      Studio.
     code_samples: []
     type: boolean
     tags: []

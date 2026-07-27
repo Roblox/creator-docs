@@ -313,8 +313,8 @@ properties:
       approach. `Enum.RolloutState|Default` follows the current engine-wide
       rollout state.
 
-      This property cannot be set through scripting and must be set in Studio
-      through the properties window, command bar, or a plugin.
+      This property cannot be set through developer-facing Luau and must be set
+      in Studio through the Properties window, Command Bar, or a plugin.
     code_samples: []
     type: RolloutState
     tags:
@@ -424,8 +424,8 @@ properties:
       on `Class.BasePart|BaseParts` whose
       `Class.BasePart.EnableFluidForces|EnableFluidForces` property is true. The
       default, `Enum.FluidForces|Default`, disables aerodynamic forces. Note
-      that this property cannot be set through scripting and instead must be
-      toggled in Studio.
+      that this property cannot be set through developer-facing Luau and instead
+      must be toggled in Studio.
     code_samples: []
     type: FluidForces
     tags:
@@ -735,8 +735,9 @@ properties:
       Sets how the solver will advance the physics simulation forward in time.
     description: |
       Sets how the solver will advance the physics simulation forward in time.
-      This option is not scriptable and must be set from the
-      **PhysicsSteppingMethod** property of **Workspace** within Studio. See
+      This option cannot be set through developer-facing Luau and must be set
+      from the **PhysicsSteppingMethod** property of **Workspace** within
+      Studio. See
       [Adaptive Timestepping](../../../physics/adaptive-timestepping.md) for
       details.
 
@@ -1316,8 +1317,8 @@ methods:
       Workspace:BreakJoints({part1, part2, part3})
       ```
 
-      Note, this function cannot be used by scripts and will only function in
-      plugins.
+      Note, this function cannot be used in developer-facing Luau and will only
+      function in plugins.
     code_samples: []
     parameters:
       - name: objects
@@ -1707,8 +1708,8 @@ methods:
       exhibits similar behavior to the "focus" command but it shows the extents
       of the `Class.Workspace` rather than the currently selected object.
 
-      This function cannot be used in scripts but will function in the command
-      bar or plugins.
+      This function cannot be used in developer-facing Luau but will function in
+      the Command Bar or plugins.
     code_samples: []
     parameters: []
     returns:

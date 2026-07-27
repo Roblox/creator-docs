@@ -128,7 +128,7 @@ There are a variety of resources available for creators of all backgrounds to ge
 <tbody>
   <tr>
     <td>Tutorials</td>
-    <td>[Rigid accessory creation](../../art/accessories/creating-rigid/index.md) <br /><br />[Layered accessory creation](../../art/accessories/creating/index.md)</td>
+    <td>[Rigid accessory creation](../../art/accessories/creating-rigid/index.md)</td>
   </tr>
   <tr>
     <td>Reference files</td>

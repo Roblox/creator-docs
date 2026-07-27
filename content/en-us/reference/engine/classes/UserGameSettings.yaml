@@ -6,21 +6,21 @@ name: UserGameSettings
 type: class
 memory_category: Instances
 summary: |
-  The UserGameSettings is a singleton class found inside of the
+  `UserGameSettings` is a singleton class found inside of the
   `Class.UserSettings` singleton. It holds various persistent settings relating
   to how the user wants to control their camera, and their character.
 description: |
-  The UserGameSettings is a singleton class found inside of the
+  `UserGameSettings` is a singleton class found inside of the
   `Class.UserSettings` singleton. It holds various persistent settings relating
   to how the user wants to control their camera, and their character.
 
   The properties on this class reflect both the user-facing options exposed in
-  the in-experience settings menu (such as graphics quality, master volume,
-  camera and control modes) as well as other contextual user-configurable state
-  that is not surfaced in the menu itself (such as internal onboarding progress,
-  VR comfort options, window layout, and debug or profiling configuration). As a
-  result, some properties listed here may not correspond to anything visible in
-  the settings UI, and many are restricted to internal Roblox scripts.
+  the in-game settings menu (such as graphics quality, master volume, camera and
+  control modes) as well as other contextual user-configurable state that is not
+  surfaced in the menu itself (such as internal onboarding progress, VR comfort
+  options, window layout, and debug or profiling configuration). As a result,
+  some properties listed here may not correspond to anything visible in the
+  settings UI, and many are restricted to internal Roblox scripts.
 
   You can access this object from a `Class.LocalScript` via:
 
@@ -44,11 +44,9 @@ deprecation_message: ''
 properties:
   - name: UserGameSettings.AllTutorialsDisabled
     summary: |
-      Indicates whether all in-experience tutorials have been disabled by the
-      user.
+      Indicates whether all in-game tutorials have been disabled by the user.
     description: |
-      Indicates whether all in-experience tutorials have been disabled by the
-      user.
+      Indicates whether all in-game tutorials have been disabled by the user.
     code_samples: []
     type: boolean
     tags: []
@@ -100,9 +98,9 @@ properties:
     capabilities: []
   - name: UserGameSettings.ChatVisible
     summary: |
-      Indicates whether the in-experience chat is visible to the client.
+      Indicates whether the in-game chat is visible to the client.
     description: |
-      Indicates whether the in-experience chat is visible to the client.
+      Indicates whether the in-game chat is visible to the client.
     code_samples: []
     type: boolean
     tags: []
@@ -389,11 +387,9 @@ properties:
     capabilities: []
   - name: UserGameSettings.PeoplePageLayout
     summary: |
-      The layout style used to display the people page in the in-experience
-      menu.
+      The layout style used to display the people page in the in-game menu.
     description: |
-      The layout style used to display the people page in the in-experience
-      menu.
+      The layout style used to display the people page in the in-game menu.
     code_samples: []
     type: PeoplePageLayout
     tags: []
@@ -409,9 +405,9 @@ properties:
     capabilities: []
   - name: UserGameSettings.PlayerListVisible
     summary: |
-      Indicates whether the in-experience player list is visible to the client.
+      Indicates whether the in-game player list is visible to the client.
     description: |
-      Indicates whether the in-experience player list is visible to the client.
+      Indicates whether the in-game player list is visible to the client.
     code_samples: []
     type: boolean
     tags: []
@@ -427,11 +423,9 @@ properties:
     capabilities: []
   - name: UserGameSettings.PlayerNamesEnabled
     summary: |
-      Indicates whether player names are displayed above characters in the
-      experience.
+      Indicates whether player names are displayed above characters in the game.
     description: |
-      Indicates whether player names are displayed above characters in the
-      experience.
+      Indicates whether player names are displayed above characters in the game.
     code_samples: []
     type: boolean
     tags: []
@@ -692,6 +686,24 @@ properties:
     deprecation_message: ''
     security:
       read: None
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: UserGameSettings.VoiceChatVolume
+    summary: |
+      A float between `0` and `2` representing the volume of in-game voice chat.
+    description: |
+      A float between `0` and `2` representing the volume of in-game voice chat.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
       write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Data

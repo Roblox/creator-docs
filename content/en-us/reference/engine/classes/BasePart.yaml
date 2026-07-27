@@ -50,9 +50,9 @@ code_samples:
 inherits:
   - PVInstance
 descendants:
+  - Terrain
   - CornerWedgePart
   - FormFactorPart
-  - Terrain
   - TriangleMeshPart
   - TrussPart
   - VehicleSeat

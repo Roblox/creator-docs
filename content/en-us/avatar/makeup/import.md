@@ -20,7 +20,8 @@ To import your asset as a makeup model:
    - If modified, `Eyes` mesh and associated textures.
 
 1. In Studio, open up the [Makeup test place](https://github.com/Roblox/avatar/tree/main/Makeup).
-1. In the topbar, click **File** > **Import**, then select your 3D makeup asset. The **Importer** window displays.
+1. In the **Home** tab, click the **Import** button to open the Importer. A file browser opens.
+1. Select your makeup's `.fbx` or `.gltf` file. The Importer loads a preview of your makeup.
 1. Verify there are no errors with the imported components, then click **Import** to add the file into Studio. A new `Model` populates in the workspace.
 1. In the **Explorer** window, expand the new `Model` and verify that `Decal` child objects have populated, each with their own `WrapTextureTransfer` child object.
 

@@ -103,8 +103,14 @@ properties:
     capabilities:
       - AvatarAppearance
   - name: BaseWrap.HSRAssetId
-    summary: ''
-    description: ''
+    summary: |
+      Asset ID for the hidden surface removal (HSR) data used by layered
+      clothing.
+    description: |
+      This property is not accessible through scripts but is viewable in the
+      Properties window for any `Class.BaseWrap` object. It references
+      precomputed data that determines which mesh triangles are hidden when
+      clothing layers overlap.
     code_samples: []
     type: ContentId
     tags: []

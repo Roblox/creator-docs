@@ -49,6 +49,13 @@ methods:
     description: |
       This method may only be called from a `Class.Script` with
       `Enum.RunContext.Client`.
+
+      Note that you should call this method as close as possible to the moment
+      you plan to show the ad. For example, if you have a "Watch video ad to get
+      a reward" button in a shop menu, only call this method when the user opens
+      the shop menu. This approach improves performance by preventing ads from
+      unnecessarily being held in memory, and it benefits CPM (cost-per-thousand
+      impressions) and earnings by optimizing the ad fill rate.
     code_samples: []
     parameters:
       - name: adFormat

@@ -16,10 +16,10 @@ code_samples: []
 inherits:
   - Instance
 descendants:
+  - AnimationConstraint
   - AlignOrientation
   - AlignPosition
   - AngularVelocity
-  - AnimationConstraint
   - BallSocketConstraint
   - HingeConstraint
   - LineForce

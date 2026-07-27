@@ -164,8 +164,14 @@ properties:
       can_save: false
     capabilities: []
   - name: StudioService.Secrets
-    summary: ''
-    description: ''
+    summary: |
+      A JSON string storing the local secrets for the current experience, used
+      internally by Studio to support HttpService:GetSecret().
+    description: |
+      **Secrets** is an internal property that stores the
+      [local secrets](../../../cloud-services/secrets.md) configured for the
+      current experience. This property is not accessible to creators; secrets
+      are consumed at runtime through `HttpService:GetSecret()`.
     code_samples: []
     type: string
     tags: []

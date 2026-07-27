@@ -681,6 +681,12 @@ properties:
       clothing accessories equipped on them (Although
       `Class.Workspace.MeshPartHeadsAndAccessories` also need to be enabled in
       the `Class.Workspace`).
+
+      This property also gates the `Class.WrapLayer.AutoSkin` feature. When set
+      to `Disabled`, the automatic skinning transfer pipeline for WrapLayers
+      does not run, and `Class.WrapLayer.AutoSkin` has no effect. For more
+      information, see
+      [Automatic Skinning Transfer](../../../avatar/automatic-skinning-transfer.md).
     code_samples: []
     type: LoadCharacterLayeredClothing
     tags:

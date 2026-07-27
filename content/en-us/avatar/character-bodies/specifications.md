@@ -458,7 +458,7 @@ Higher-fidelity character body models require the same 15 mesh objects and namin
 
 ### Face accessories
 
-Face accessories, such as hair, eyebrows, and eyelashes, are unique rigid accessories that you can bundle with an avatar character body upload. At this time, eyebrows and eyelashes can't be uploaded as standalone accessories and must be bundled with an avatar body. For more information on face accessories, see [Rigid accessory specifications - Face accessories](../rigid-accessories/specifications.md#face-accessories).
+Face accessories, such as eyebrows and eyelashes, are unique layered accessories that you can bundle with an avatar character body upload. At this time, eyebrows and eyelashes can't be uploaded as standalone accessories and must be bundled with a character body. For more information on face accessories, see [Layered accessory specifications - Face accessories](../layered-accessories/specifications.md#face-accessories).
 
 ### Visibility
 
@@ -853,7 +853,7 @@ The following are examples of skin tone shading for the face, and you can apply 
 
 ## Outer cages
 
-Outer cages on your character model allow your character to wear layered accessories, such as shirts and jackets that wrap around the body. Review the following list for requirements on adding outer cage meshes to your character body model:
+Outer cages on your character model allow your character to wear layered accessories, such as shirts and jackets that stretch and wrap around the body. Review the following list for requirements on adding outer cage meshes to your character body model:
 
 - Use Roblox's [Avatar Setup](../../avatar-setup/index.md) or Roblox's [body cage templates](../../avatar/resources.md#project-files) to ensure naming conventions and other configurations are correct.
 - **Naming Conventions** - The outer cage of a body part must be named after the primary mesh object with **\_OuterCage** affixed, for example `LeftUpperArm_OuterCage`.
@@ -861,17 +861,18 @@ Outer cages on your character model allow your character to wear layered accesso
 - **Symmetry and consistency** - Keep each face of your geometry consistently sized and retain symmetry wherever possible by using symmetry tools in your modeling software.
 - For information on dynamic head cages and best practices when caging, see [Dynamic head specifications](../dynamic-heads/specifications.md#head-cage).
 
+<Alert severity = 'info'>
+Character bodies only require an outer cage, but layered accessories require both an inner and outer cage to deform properly. For more information, see [Layered accessories specifications - Cage meshes](../layered-accessories/specifications.md#cage-meshes).
+</Alert>
+
 ## Marketplace requirements
 
 Along with the other technical requirements listed, your items must meet the following additional specifications before uploading them to the Marketplace to sell:
 
-- Ensure that your items adhere to [Marketplace policies](../../marketplace/marketplace-policy.md).
-- Whenever possible, ensure that your items adhere to the following modeling requirements:
-  - [Custom mesh specifications](../../art/modeling/specifications.md)
-  - Any applicable [avatar specifications](../../avatar/character-bodies/specifications.md)
+- Ensure that your character bodies adhere to [Marketplace policies](../../marketplace/marketplace-policy.md).
+- Whenever applicable, ensure that your character bodies adhere to Roblox's [custom mesh specifications](../../art/modeling/specifications.md).
 - Object `Class.MeshPart.Material|Material` is set to `Plastic`.
 - Object `Class.MeshPart.Transparency|Transparency` is set to `0`.
 - Object `Class.MeshPart.VertexColor|VertexColor` is the default `1, 1, 1`.
-- If your character's head includes separate eyelash and eyebrow assets, you must add them to your character body model as `Class.Accessory` objects.
-  - See [Rigid accessory specifications](../../avatar/rigid-accessories/specifications.md) for additional technical requirements.
+- If your character's head includes separate eyelash and eyebrow assets, you must add them to your character body model as `Class.Accessory` objects. For more information, see [Publish bodies with eyelashes and eyebrows](../../art/accessories/publish-eyebrows-eyelashes.md).
 - Your `Class.Model` instance doesn't contain extraneous objects, like `Class.Script` or additional `Class.Part` instances.

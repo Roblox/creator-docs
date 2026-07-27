@@ -307,7 +307,8 @@
             "name": "objective",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "enum": ["ENGAGEMENT"]
             }
           }
         ],
@@ -832,218 +833,6 @@
           },
           {
             "roblox-oauth2": ["ad.campaign:write"]
-          }
-        ]
-      }
-    },
-    "/ads-management/v1/campaigns/{id}/performance": {
-      "get": {
-        "description": "Returns aggregate performance for a single campaign over the requested period: impressions, clicks, plays, spend, CPM (cost per 1,000 impressions), CPP (cost per play), playRate, and CTR (click-through rate). Metrics are calculated in the billing account's time zone. Money fields (spendMicros, cpmMicros, cppMicros) are micro-USD returned as decimal strings (e.g. \"5000000\" = $5.00). Set the period query parameter to choose the window (defaults to LAST_7_DAYS).",
-        "summary": "Get campaign performance",
-        "parameters": [
-          {
-            "description": "Campaign ID",
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "description": "Reporting period (TODAY, YESTERDAY, LAST_7_DAYS, LAST_30_DAYS, THIS_MONTH, LAST_MONTH, YEAR_TO_DATE, PREVIOUS_YEAR; default LAST_7_DAYS)",
-            "name": "period",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/internal_public_v1.PerformanceResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid period value",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Permission denied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Campaign not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
-                }
-              }
-            }
-          },
-          "429": {
-            "description": "Rate limit exceeded",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 300
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 300
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "ad.campaign:read",
-            "targetResourceSpecifier": ""
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["ad.campaign:read"]
-          }
-        ]
-      }
-    },
-    "/ads-management/v1/campaigns:batchGetPerformance": {
-      "post": {
-        "description": "Returns aggregate performance for up to 100 campaigns over a single shared period (default LAST_7_DAYS), calculated in the billing account's time zone. Each result carries the same metrics as the single-campaign performance endpoint: impressions, clicks, plays, spend, CPM (cost per 1,000 impressions), CPP (cost per play), playRate, and CTR (click-through rate). Provide the campaign IDs in campaignIds; any ID that is not found or is not owned by the caller is returned in the failures array with reason NOT_FOUND. Prefer this over calling the single-campaign endpoint in a loop when building account-wide dashboards.",
-        "summary": "Batch get campaign performance",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/internal_public_v1.BatchGetPerformanceRequest"
-              }
-            }
-          },
-          "description": "Campaign IDs (max 100) and optional period",
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/internal_public_v1.BatchGetPerformanceResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid request, exceeds 100 IDs, or invalid period",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Permission denied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
-                }
-              }
-            }
-          },
-          "429": {
-            "description": "Rate limit exceeded",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/internal_public_v1.ErrorEnvelope"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 300
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 300
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "ad.campaign:read",
-            "targetResourceSpecifier": ""
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["ad.campaign:read"]
           }
         ]
       }
@@ -91623,83 +91412,9 @@
           }
         }
       },
-      "internal_public_v1.BatchGetPerformanceRequest": {
-        "type": "object",
-        "properties": {
-          "campaignIds": {
-            "description": "The campaign IDs to report on. Required. At most 100 per request.",
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "period": {
-            "description": "The reporting window applied to every campaign in the batch. Optional; defaults\nto `LAST_7_DAYS`. Can be `TODAY`, `YESTERDAY`, `LAST_7_DAYS`, `LAST_30_DAYS`,\n`THIS_MONTH`, `LAST_MONTH`, `YEAR_TO_DATE`, or `PREVIOUS_YEAR`.",
-            "type": "string",
-            "enum": [
-              "TODAY",
-              "YESTERDAY",
-              "LAST_7_DAYS",
-              "LAST_30_DAYS",
-              "THIS_MONTH",
-              "LAST_MONTH",
-              "YEAR_TO_DATE",
-              "PREVIOUS_YEAR"
-            ]
-          }
-        }
-      },
-      "internal_public_v1.BatchGetPerformanceResponse": {
-        "type": "object",
-        "properties": {
-          "dataAsOf": {
-            "description": "The time the metrics were current, as an RFC 3339 UTC timestamp.",
-            "type": "string"
-          },
-          "endDate": {
-            "description": "The last day of the window (inclusive), as YYYY-MM-DD in the account's time zone.",
-            "type": "string"
-          },
-          "failures": {
-            "description": "The IDs that could not be resolved. Omitted when every ID resolved.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/internal_public_v1.CampaignIDFailure"
-            }
-          },
-          "period": {
-            "description": "The reporting window applied to every campaign. Can be `TODAY`, `YESTERDAY`,\n`LAST_7_DAYS`, `LAST_30_DAYS`, `THIS_MONTH`, `LAST_MONTH`, `YEAR_TO_DATE`, or `PREVIOUS_YEAR`.",
-            "type": "string",
-            "enum": [
-              "TODAY",
-              "YESTERDAY",
-              "LAST_7_DAYS",
-              "LAST_30_DAYS",
-              "THIS_MONTH",
-              "LAST_MONTH",
-              "YEAR_TO_DATE",
-              "PREVIOUS_YEAR"
-            ]
-          },
-          "results": {
-            "description": "One entry per successfully resolved campaign.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/internal_public_v1.CampaignPerformance"
-            }
-          },
-          "startDate": {
-            "description": "The first day of the window (inclusive), as YYYY-MM-DD in the account's time zone.",
-            "type": "string"
-          },
-          "timeZone": {
-            "description": "The IANA time zone the window and metrics are computed in.",
-            "type": "string"
-          }
-        }
-      },
       "internal_public_v1.BatchGetStatusRequest": {
         "type": "object",
+        "required": ["campaignIds"],
         "properties": {
           "campaignIds": {
             "description": "The campaign IDs to look up. Required. At most 100 per request.",
@@ -91943,18 +91658,6 @@
           }
         }
       },
-      "internal_public_v1.CampaignPerformance": {
-        "type": "object",
-        "properties": {
-          "campaignId": {
-            "description": "The campaign these metrics belong to.",
-            "type": "string"
-          },
-          "totals": {
-            "$ref": "#/components/schemas/internal_public_v1.PerformanceTotals"
-          }
-        }
-      },
       "internal_public_v1.CampaignStatus": {
         "type": "object",
         "properties": {
@@ -91998,6 +91701,15 @@
       },
       "internal_public_v1.CreateCampaignRequest": {
         "type": "object",
+        "required": [
+          "budget",
+          "creativeAssetIds",
+          "name",
+          "objective",
+          "paymentType",
+          "schedule",
+          "targetUniverseId"
+        ],
         "properties": {
           "bid": {
             "description": "Optional bidding strategy. Only `AUTOMATED` is accepted in v1; may be omitted.",
@@ -92188,85 +91900,6 @@
           }
         }
       },
-      "internal_public_v1.PerformanceResponse": {
-        "type": "object",
-        "properties": {
-          "campaignId": {
-            "description": "The campaign these metrics belong to.",
-            "type": "string"
-          },
-          "dataAsOf": {
-            "description": "The time the metrics were current, as an RFC 3339 UTC timestamp.",
-            "type": "string"
-          },
-          "endDate": {
-            "description": "The last day of the window (inclusive), as YYYY-MM-DD in the account's time zone.",
-            "type": "string"
-          },
-          "period": {
-            "description": "The reporting window applied. Can be `TODAY`, `YESTERDAY`, `LAST_7_DAYS`,\n`LAST_30_DAYS`, `THIS_MONTH`, `LAST_MONTH`, `YEAR_TO_DATE`, or `PREVIOUS_YEAR`.",
-            "type": "string",
-            "enum": [
-              "TODAY",
-              "YESTERDAY",
-              "LAST_7_DAYS",
-              "LAST_30_DAYS",
-              "THIS_MONTH",
-              "LAST_MONTH",
-              "YEAR_TO_DATE",
-              "PREVIOUS_YEAR"
-            ]
-          },
-          "startDate": {
-            "description": "The first day of the window (inclusive), as YYYY-MM-DD in the account's time zone.",
-            "type": "string"
-          },
-          "timeZone": {
-            "description": "The IANA time zone the window and metrics are computed in.",
-            "type": "string"
-          },
-          "totals": {
-            "$ref": "#/components/schemas/internal_public_v1.PerformanceTotals"
-          }
-        }
-      },
-      "internal_public_v1.PerformanceTotals": {
-        "type": "object",
-        "properties": {
-          "clicks": {
-            "description": "The number of clicks on an ad.",
-            "type": "integer"
-          },
-          "cpmMicros": {
-            "description": "Cost per 1,000 impressions in micro-USD, as a decimal string.",
-            "type": "string"
-          },
-          "cppMicros": {
-            "description": "Cost per play in micro-USD, as a decimal string.",
-            "type": "string"
-          },
-          "ctr": {
-            "description": "The click-through rate: clicks divided by impressions, from 0 to 1.",
-            "type": "number"
-          },
-          "impressions": {
-            "description": "The number of times an ad was shown.",
-            "type": "integer"
-          },
-          "playRate": {
-            "description": "The play rate: plays divided by impressions, from 0 to 1.",
-            "type": "number"
-          },
-          "plays": {
-            "description": "The number of resulting experience plays.",
-            "type": "integer"
-          },
-          "spendMicros": {
-            "description": "Total spend in micro-USD, as a decimal string (for example, `5000000` = $5.00).",
-            "type": "string"
-          }
-        }
-      },
       "internal_public_v1.PublicError": {
         "type": "object",
         "properties": {
@@ -92374,6 +92007,15 @@
           }
         }
       },
+      "internal_public_v1.UpdateBudget": {
+        "type": "object",
+        "properties": {
+          "amountMicros": {
+            "description": "The new budget amount in micro-USD, as a decimal string (for example,\n`5000000` = $5.00). Money is sent as a string so large values keep full\nprecision in every client. Must be a numeric string of micro-USD.",
+            "type": "string"
+          }
+        }
+      },
       "internal_public_v1.UpdateCampaignRequest": {
         "type": "object",
         "properties": {
@@ -92386,10 +92028,10 @@
             ]
           },
           "budget": {
-            "description": "A budget change. Only the amount may change; the budget type is immutable.",
+            "description": "A budget change. Only the amount is mutable; the budget type is fixed at\ncreation, so it is not part of this object. Sending `type` returns 400.",
             "allOf": [
               {
-                "$ref": "#/components/schemas/internal_public_v1.Budget"
+                "$ref": "#/components/schemas/internal_public_v1.UpdateBudget"
               }
             ]
           },

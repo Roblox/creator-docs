@@ -50,7 +50,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Asphalt. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Asphalt.
+      set to Asphalt. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -72,7 +75,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Basalt. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Basalt.
+      set to Basalt. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -94,7 +100,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Brick. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Brick.
+      set to Brick. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -111,8 +120,15 @@ properties:
     capabilities:
       - Material
   - name: MaterialService.CardboardName
-    summary: ''
-    description: ''
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Cardboard.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Cardboard. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Cardboard. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -129,8 +145,15 @@ properties:
     capabilities:
       - Material
   - name: MaterialService.CarpetName
-    summary: ''
-    description: ''
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Carpet.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Carpet. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Carpet. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -147,8 +170,15 @@ properties:
     capabilities:
       - Material
   - name: MaterialService.CeramicTilesName
-    summary: ''
-    description: ''
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in CeramicTiles.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in CeramicTiles.
+      The Specified MaterialVariant must have
+      `Class.MaterialVariant.BaseMaterial` set to CeramicTiles. This property is
+      not scriptable; use `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -165,8 +195,15 @@ properties:
     capabilities:
       - Material
   - name: MaterialService.ClayRoofTilesName
-    summary: ''
-    description: ''
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in ClayRoofTiles.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in ClayRoofTiles.
+      The Specified MaterialVariant must have
+      `Class.MaterialVariant.BaseMaterial` set to ClayRoofTiles. This property
+      is not scriptable; use `Class.MaterialService:GetBaseMaterialOverride()`
+      and `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -188,7 +225,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Cobblestone. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Cobblestone.
+      set to Cobblestone. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -210,7 +250,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Concrete. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Concrete.
+      set to Concrete. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -232,7 +275,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in CorrodedMetal.
       The Specified MaterialVariant must have
-      `Class.MaterialVariant.BaseMaterial` set to CorrodedMetal.
+      `Class.MaterialVariant.BaseMaterial` set to CorrodedMetal. This property
+      is not scriptable; use `Class.MaterialService:GetBaseMaterialOverride()`
+      and `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -254,7 +300,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in CrackedLava. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to CrackedLava.
+      set to CrackedLava. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -276,7 +325,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in DiamondPlate.
       The Specified MaterialVariant must have
-      `Class.MaterialVariant.BaseMaterial` set to DiamondPlate.
+      `Class.MaterialVariant.BaseMaterial` set to DiamondPlate. This property is
+      not scriptable; use `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -298,7 +350,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Fabric. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Fabric.
+      set to Fabric. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -320,7 +375,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Foil. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Foil.
+      set to Foil. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -342,7 +400,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Glacier. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Glacier.
+      set to Glacier. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -364,7 +425,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Granite. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Granite.
+      set to Granite. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -386,7 +450,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Grass. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Grass.
+      set to Grass. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -408,7 +475,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Ground. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Ground.
+      set to Ground. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -430,7 +500,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Ice. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Ice.
+      set to Ice. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -452,7 +525,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in LeafyGrass. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to LeafyGrass.
+      set to LeafyGrass. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -469,8 +545,15 @@ properties:
     capabilities:
       - Material
   - name: MaterialService.LeatherName
-    summary: ''
-    description: ''
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Leather.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Leather. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Leather. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -492,7 +575,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Limestone. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Limestone.
+      set to Limestone. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -514,7 +600,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Marble. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Marble.
+      set to Marble. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -536,7 +625,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Metal. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Metal.
+      set to Metal. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -558,7 +650,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Mud. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Mud.
+      set to Mud. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -580,7 +675,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Pavement. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Pavement.
+      set to Pavement. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -602,7 +700,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Pebble. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Pebble.
+      set to Pebble. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -619,8 +720,15 @@ properties:
     capabilities:
       - Material
   - name: MaterialService.PlasterName
-    summary: ''
-    description: ''
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Plaster.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Plaster. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Plaster. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -642,7 +750,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Plastic. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Plastic.
+      set to Plastic. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -664,7 +775,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Rock. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Rock.
+      set to Rock. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -681,8 +795,15 @@ properties:
     capabilities:
       - Material
   - name: MaterialService.RoofShinglesName
-    summary: ''
-    description: ''
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in RoofShingles.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in RoofShingles.
+      The Specified MaterialVariant must have
+      `Class.MaterialVariant.BaseMaterial` set to RoofShingles. This property is
+      not scriptable; use `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -699,8 +820,15 @@ properties:
     capabilities:
       - Material
   - name: MaterialService.RubberName
-    summary: ''
-    description: ''
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Rubber.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Rubber. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Rubber. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -722,7 +850,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Salt. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Salt.
+      set to Salt. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -744,7 +875,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Sand. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Sand.
+      set to Sand. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -766,7 +900,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Sandstone. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Sandstone.
+      set to Sandstone. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -788,7 +925,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Slate. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Slate.
+      set to Slate. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -810,7 +950,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in SmoothPlastic.
       The Specified MaterialVariant must have
-      `Class.MaterialVariant.BaseMaterial` set to SmoothPlastic.
+      `Class.MaterialVariant.BaseMaterial` set to SmoothPlastic. This property
+      is not scriptable; use `Class.MaterialService:GetBaseMaterialOverride()`
+      and `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -832,7 +975,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Snow. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Snow.
+      set to Snow. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -875,7 +1021,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in Wood. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to Wood.
+      set to Wood. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:
@@ -897,7 +1046,10 @@ properties:
     description: |
       Specify `Class.MaterialVariant` name to override built-in WoodPlanks. The
       Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
-      set to WoodPlanks.
+      set to WoodPlanks. This property is not scriptable; use
+      `Class.MaterialService:GetBaseMaterialOverride()` and
+      `Class.MaterialService:SetBaseMaterialOverride()` to access it from
+      scripts.
     code_samples: []
     type: string
     tags:

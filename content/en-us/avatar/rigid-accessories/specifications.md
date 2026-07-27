@@ -43,7 +43,7 @@ You can use tools like the [Accessory Fitting Tool](../../avatar/accessory-fitti
 <figure>
    <img src="../../assets/art/resources/Body-Scale-Rthro-Normal.png" width = "60%"/>
 <figcaption>
-A Rthro Normal body scale [downloadable mannequin](../../avatar/resources.md#references).
+A Rthro Normal body scale [downloadable mannequin](../../avatar/resources.md#references) that's roughly 5.75-6.5 studs tall.
 </figcaption>
 </figure>
 </center>
@@ -133,7 +133,7 @@ A Rthro Normal body scale [downloadable mannequin](../../avatar/resources.md#ref
 <figure>
    <img src="../../assets/art/resources/Body-Scale-Rthro-Slender.png" width = "60%"/>
 <figcaption>
-A Rthro Slender (Narrow) body scale [downloadable mannequin](../../avatar/resources.md#references).
+A Rthro Slender (Narrow) body scale [downloadable mannequin](../../avatar/resources.md#references) that's roughly 5.25-6.25 studs tall.
 </figcaption>
 </figure>
 </center>
@@ -223,7 +223,7 @@ A Rthro Slender (Narrow) body scale [downloadable mannequin](../../avatar/resour
 <figure>
    <img src="../../assets/art/resources/Body-Scale-Classic.png" width = "60%"/>
 <figcaption>
-A Classic body scale [downloadable mannequin](../../avatar/resources.md#references).
+A Classic body scale [downloadable mannequin](../../avatar/resources.md#references) that's roughly 4.75 studs tall.
 </figcaption>
 </figure>
 </center>

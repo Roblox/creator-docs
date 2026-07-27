@@ -20,8 +20,10 @@ tags:
 deprecation_message: ''
 properties:
   - name: NotificationService.IsLuaGameDetailsEnabled
-    summary: ''
-    description: ''
+    summary: |
+      This property is not functional and cannot be used.
+    description: |
+      This property is part of an unfinished service and cannot be used.
     code_samples: []
     type: boolean
     tags:
@@ -39,8 +41,10 @@ properties:
     capabilities:
       - Players
   - name: NotificationService.SelectedTheme
-    summary: ''
-    description: ''
+    summary: |
+      This property is not functional and cannot be used.
+    description: |
+      This property is part of an unfinished service and cannot be used.
     code_samples: []
     type: string
     tags:
@@ -59,8 +63,10 @@ properties:
 methods: []
 events:
   - name: NotificationService.Roblox17sConnectionChanged
-    summary: ''
-    description: ''
+    summary: |
+      This event is not functional and cannot be used.
+    description: |
+      This event is part of an unfinished service and cannot be used.
     code_samples: []
     parameters:
       - name: connectionName
@@ -81,8 +87,10 @@ events:
     capabilities:
       - Players
   - name: NotificationService.Roblox17sEventReceived
-    summary: ''
-    description: ''
+    summary: |
+      This event is not functional and cannot be used.
+    description: |
+      This event is part of an unfinished service and cannot be used.
     code_samples: []
     parameters:
       - name: eventData
