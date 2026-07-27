@@ -8,6 +8,10 @@ Sponsor items to increase the discoverability of your 3D user-generated content 
 
 <img src="../assets/promotion/misc/Sponsored-Items.png" width="846" />
 
+<Alert severity="info">
+This article covers sponsoring **Marketplace items**. To advertise an **experience**, use Ads Manager or the [Advertising API](../cloud/guides/advertising/index.md) instead.
+</Alert>
+
 ## Bidding system
 
 Advertisement space works on a bidding system where the higher you set your **Daily Budget** amount in relation to other creators' bids, the more likely your sponsored item will display within the **Sponsored** category on any item's details page on the Roblox website or in the Roblox app. The location of each sponsored item within the category is random.
