@@ -75,9 +75,9 @@ buyItemEvent.OnServerInvoke = buyItem
 
 ### Value validation
 
-In addition to validating types and data, you should validate the values passed through `Class.RemoteEvent|RemoteEvents` and `Class.RemoteFunction|RemoteFunctions`, ensuring they are valid and logical in the context being requested. This is essential for remotes that handle currency, items, numeric inputs, or user-generated content. You must ensure values are within expected boundaries (e.g., a purchase quantity is greater than zero) and that provided IDs or names are valid (e.g., an itemId corresponds to a real item in your game).
+In addition to validating types and data, you should validate the values passed through `Class.RemoteEvent|RemoteEvents` and `Class.RemoteFunction|RemoteFunctions`, ensuring they are valid and logical in the context being requested. This is essential for remotes that handle currency, items, numeric inputs, or user-generated content. You must ensure values are within expected boundaries, for example a purchase quantity being greater than zero or an item ID corresponding to a real item in your game.
 
-**Special considerations for numeric values:** Both inf and NaN are valid number types, but both can cause major issues if an exploiter sends them and they're not handled correctly. Use `Library.math.isfinite()` to detect and reject them:
+Note that both `inf` and NaN are valid number types, but both can cause major issues if an exploiter sends them and they're not handled correctly. Use `Library.math.isfinite()` to detect and reject them:
 
 ```lua
 -- Reject numeric values that are NaN or +/-inf
