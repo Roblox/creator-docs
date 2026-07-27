@@ -1,6 +1,6 @@
 ---
 title: Export rigid accessories
-description: Use the appropriate export settings in Maya and Blender to generate Studio-ready .fbx files.
+description: Use the appropriate export settings in Blender and Maya to generate Studio-ready .fbx files.
 ---
 
 When you are ready to export a rigid accessory model that meets Roblox's [rigid accessory specifications](./specifications.md), it's important to review the following prerequisite information and step-by-step instructions for the `.fbx` or `.gltf` export files so that your creation takes advantage of all of Studio's [Importer](../../studio/importer.md) features.
@@ -24,7 +24,7 @@ or delete them before export.
 
 Blender allows you to export your rigid accessory as either a `.fbx` or `.gltf` file. If you are exporting it as a `.fbx` file, familiarize yourself with [Blender's FBX scaling](../../art/blender.md#adjust-scale-fbx) to ensure that you successfully import the model into Studio at the correct scale.
 
-To export the `.fbx` file in Blender:
+To export your rigid accessory in Blender as a `.fbx` file:
 
 1. In the topbar, click **File** > **Export** > **FBX (.fbx)**. The **Blender File View** window displays.
 1. On the right-hand side, set **Path Mode** to **Copy**, then toggle the **Embed Textures** button.
@@ -39,7 +39,7 @@ You now have a `.fbx` file that you can [import into Studio](import.md) as a `Cl
 
 ## Maya export settings
 
-To export a mesh in Maya as a `.fbx` file:
+To export your rigid accessory in Maya as a `.fbx` file:
 
 1. In the topbar, click **File** > **Export All**. The **Export All** window displays.
 1. Near the bottom of the window, click the **Files of type** dropdown, then select **FBX export**.

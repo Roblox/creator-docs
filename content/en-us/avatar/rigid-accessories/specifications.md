@@ -1,6 +1,6 @@
 ---
 title: Rigid accessory specifications
-description: Rigid accessory specifications lists the specific technical requirements for basic avatar accessories.
+description: Rigid accessory specifications lists the specific technical requirements necessary for Studio compatibility.
 ---
 
 Rigid accessories require a specific set of components and configuration standards to ensure they are able to attach to character bodies and include optimizations for performance and quality. Because you must apply many of these requirements as you're designing and modeling the rigid accessory in a third-party modeling program like [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview), it's important to review these specifications early and often as you work.
@@ -21,20 +21,20 @@ When you're ready to export your rigid accessory, reference all [export setting 
 - **Budgets** - Rigid accessories can't exceed **4k** triangles.
 - **Watertight** - All geometry must be watertight without exposed holes or backfaces.
 - Use **quads** whenever possible. Avoid faces with 5 or more sides.
-- **Mesh Size** - Depending on the type of rigid accessory, meshes must follow a standard size (in studs, centered on attachment point) depending on the [body scale](#body-scale) it is designed for.
+- **Mesh Size** - Meshes must adhere to maximum size requirements (in studs, centered on attachment point) according to the type of rigid accessory you're designing and the [body scale](#body-scale) you're designing the rigid accessory for.
 
 ### Body scale
 
-Roblox supports 3 types of character body scales: `Normal`, `Slender`, and `Classic`. When designing a rigid accessory, the size of the accessory cannot exceed the following sizes based on body scale and rigid accessory asset type.A rigid accessory's size is measured based on attachment orientation.
+Roblox supports 3 types of character body scales: `Normal`, `Slender`, and `Classic`. When designing a rigid accessory, the size of the accessory cannot exceed the following sizes based on body scale and rigid accessory asset type. A rigid accessory's size is measured based attachment orientation.
 
 When modeling rigid accessories, it's important to use a [mannequin](../resources.md#mannequin-models) to help ensure your proportions fit. When using the [Importer](../../studio/importer.md#avatar-general) to import a mannequin:
 
-- Use **Rig Scale** > **Rthro** to import your model as a Normal body scale.
-- Use **Rig Scale** > **Rthro Narrow** to import your model as a Slender body scale.
-- Use **Rig Scale** > **Default** to import your model as a Classic body scale.
+- Use **Rig Scale** > **Rthro** to import your model as a `Normal` body scale.
+- Use **Rig Scale** > **Rthro Narrow** to import your model as a `Slender` body scale.
+- Use **Rig Scale** > **Default** to import your model as a `Classic` body scale.
 
 <Alert severity = 'info'>
-You can use tools like the [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md) to help visualize and adjust the scale of your mesh on a mannequin within a visualized boundary before uploading and publishing the asset to the Marketplace.
+You can use tools like the [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md) to help visualize and adjust the scale of your mesh on a mannequin within a visualized boundary before uploading and publishing the asset to the Marketplace. For a demonstration, see [Convert rigid accessories](import.md#convert-rigid-accessories).
 </Alert>
 
 #### Normal
@@ -332,7 +332,7 @@ In cases where you need to identify the current body scale of a body part or acc
 
 ## Textures
 
-- Rigid accessory textures must meet Roblox's general [texture specifications](../../art/modeling/texture-specifications.md).
+- Rigid accessory textures must meet Roblox's general [texture specifications](../../art/modeling/texture-specifications.md). High resolution textures are automatically converted to lower-resolution textures to optimize performance.
 - Rigid accessory textures for Marketplace assets cannot exceed 2048x2048 resolution.
 
 ## Attachment points
@@ -340,9 +340,9 @@ In cases where you need to identify the current body scale of a body part or acc
 `Class.Attachment` objects determine where an accessory model attaches to a point on a character body. Whether you are creating rigid or [layered](../layered-accessories/index.md) accessories, Studio's [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md) (AFT) automatically adds and configures the appropriate `Class.Attachment` with the following specifications:
 
 - **One attachment** - Each rigid accessory requires at least one attachment point to its associated body part.
-- **Naming Convention** - The `Class.Attachment` name must follow a specific naming convention depending on the `Class.Accessory.AccessoryType`. The AFT automatically generates an appropriate `Class.Attachment` name.
+- **Naming convention** - The `Class.Attachment` name must follow a specific naming convention depending on the `Class.Accessory.AccessoryType`. The AFT automatically generates an appropriate `Class.Attachment` name.
 
-If setting or configuring attachments manually in Studio, use the following names for your `Class.Attachment` object depending on the accessory type:
+If setting or configuring attachments manually in Studio, use the following names for your `Class.Attachment` object according to the accessory type:
 
   <table>
   <thead>
@@ -404,4 +404,4 @@ Rigid accessories must meet the following requirements before you upload them to
 - Object `Class.MeshPart.Material|Material` is set to `Plastic`.
 - Object `Class.MeshPart.Transparency|Transparency` is set to 0.
 - Object `Class.MeshPart.VertexColor|VertexColor` is the default `1, 1, 1`.
-- Your `Class.Accessory` instance does not contain extraneous objects, like `Class.Script` or additional `Class.Part` instances.
+- Your `Class.Accessory` object does not contain extraneous objects, like `Class.Script` or additional `Class.Part` objects.

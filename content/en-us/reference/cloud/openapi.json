@@ -66950,6 +66950,10 @@
           "isPurchaseConfirmed": {
             "type": "boolean",
             "nullable": true
+          },
+          "idempotencyKey": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

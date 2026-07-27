@@ -5,10 +5,6 @@ description: Use the Importer to add third-party models to Studio before using t
 
 Studio's Importer lets you import 3D assets into your projects, such as character bodies, makeup, and rigid accessories. The following instructions detail how to import a rigid accessory `.fbx` or `.gltf` file into Studio as a `Model` object and convert it into an `Accessory` object that you can use in your games, upload to the Marketplace, or share with other creators.
 
-<Alert severity ='info'>
-If your `.fbx` or `.gltf` file is a single mesh, you can use the [Avatar Setup](../../avatar-setup/) tool to automatically partition the mesh into the appropriate 15 body parts necessary for an avatar character body.
-</Alert>
-
 While the Importer provides object previews and error-checking to ensure that your creation meets Roblox's [general 3D requirements](../../art/modeling/specifications.md), it's important to ensure that your character model also meets Roblox's [rigid accessory specifications](./specifications.md) to use or sell this asset as an avatar-ready rigid accessory, otherwise you can encounter errors at different points in the workflow.
 
 ## Import accessories
@@ -47,19 +43,19 @@ If your textures didn't load correctly, you can import them manually using the [
 
 ## Convert rigid accessories
 
-After importing your asset into Studio, you can begin **fitting** your imported object to a mannequin and **converting** the `Class.Model` object into a `Class.Accessory`. When fitting and converting your accessory it's important to use the [Accessory Fitting Tool](../accessory-fitting-tool.md) (AFT) to correctly preview the placement and apply the correct configurations to your accessory.
+After importing your asset into Studio, you can begin **fitting** your imported object to a mannequin and **converting** the `Class.Model` object into a `Class.Accessory`. When fitting and converting your accessory, it's important to use the [Accessory Fitting Tool](../accessory-fitting-tool.md) (AFT) to correctly preview the placement and apply the correct configurations to your accessory.
 
-To fit and generate your accessory:
+To fit and generate your rigid accessory:
 
 1. In the toolbar's **Avatar** tab, click **Accessory** to open the AFT. The **Accessory Fitting Tool** panel displays.
-1. In the panel,
+1. In the panel:
 
-   1. Select the **Part** field, then in the **Explorer** window, select the accessory `Class.MeshPart` object.
+   1. Select the **Part** field, then in the **Explorer** window, select the rigid accessory `Class.MeshPart` object.
    1. Back in the panel, click the **Next** button. The **Asset Type** page displays.
 
    <img src="../../assets/art/accessories/creating-rigid/AFT-Select-Mesh-Bow.png" />
 
-1. In the **Asset Type** page,
+1. In the **Asset Type** page:
 
    1. Set asset type to **Accessory**, then use the dropdown menu to choose the location of where you want the rigid accessory to attach to a character's body.
    1. Set body type to the [body scale](./specifications.md#body-scale) you determined while sculpting and sizing of the asset during the creation process, then click the **Next** button. A preview panel displays with a default character wearing your rigid accessory.
@@ -79,11 +75,11 @@ To fit and generate your accessory:
    1. In the viewport, use the **Move**, **Scale**, and **Rotate** tools to adjust the positioning of your rigid accessory.
    1. If you accidentally select something else, click back into the AFT panel to reselect the accessory and resume your adjustments using the transformation tools.
 
-      <video controls src="../../assets/art/accessories/creating-rigid/Fitting-Mask.mp4" width="100%"></video>
+      <video controls src="../../assets/art/accessories/creating-rigid/Fitting-Bow.mp4" width="100%"></video>
 
-1. After previewing and fitting your asset, click the **Generate MeshPart Accessory** button.
+1. After previewing and fitting your asset, click the **Generate MeshPart Accessory** button. Your 3D model populates in your project as an `Class.Accessory` object.
 
-After successful fitting and converting, your 3D model populates in your project as an `Class.Accessory`. With this `Class.Accessory` object, you can perform any of the following:
+With this `Class.Accessory` object, you can perform any of the following:
 
 - Begin the process of [uploading and publishing](../../marketplace/publish-to-marketplace.md#upload-an-asset) the rigid accessory to the Marketplace.
 
