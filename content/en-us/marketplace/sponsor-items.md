@@ -9,7 +9,7 @@ Sponsor items to increase the discoverability of your 3D user-generated content 
 <img src="../assets/promotion/misc/Sponsored-Items.png" width="846" />
 
 <Alert severity="info">
-This article covers sponsoring **Marketplace items**. To advertise an **experience**, use Ads Manager or the [Advertising API](../cloud/guides/advertising/index.md) instead.
+This article covers sponsoring **Marketplace items**. To advertise an **experience**, use [Ads Manager](../production/promotion/ads-manager.md) or the [Advertising API](../cloud/guides/advertising/index.md) instead.
 </Alert>
 
 ## Bidding system
