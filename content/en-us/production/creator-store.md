@@ -186,7 +186,7 @@ When you are ready, you can publicly distribute and sell your own assets on the 
 In order to set any USD prices and sell your assets, **you must have a seller account**. Roblox administers seller accounts through Stripe, a third-party payments provider.
 </Alert>
 
-Before you import an asset to distribute and sell on the Creator Store, it's highly recommended to opt-into the [Asset Privacy](../projects/assets/privacy.md) beta so that any image, mesh, or decal is created as Restricted by default. When an asset is Restricted, Roblox always checks its permissions when it loads into a game or when a creator takes an action on the asset, such as inserting it into Studio, sharing it with another creator, or listing it on the Creator Store.
+Before you import an asset to distribute and sell on the Creator Store, it's highly recommended to enable [Asset Privacy](../projects/assets/privacy.md) so that any image, mesh, or decal is created as Restricted by default. When an asset is Restricted, Roblox always checks its permissions when it loads into an experience or when a creator takes an action on the asset, such as inserting it into Studio, sharing it with another creator, or listing it on the Creator Store.
 
 <Alert severity="info">
 If a creator or game doesn't have your explicit permission to use an asset, it cannot load in Studio or at runtime.
@@ -429,12 +429,12 @@ Due to regional restrictions, the Creator Store has limited support for some buy
 <Typography variant='buttonLarge'>Can I sell my existing models?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-If your existing models contain child image or mesh assets that you created before opting into the Asset Privacy beta, they were set to Open Use by default, meaning that they are freely available for anyone to use on Roblox if they have their assetIDs. To protect access to your content, it's recommended to:
+If your existing models contain child image or mesh assets that you created before enabling Asset Privacy, they were set to Open Use by default, meaning that they are freely available for anyone to use on Roblox if they have their assetIDs. To protect access to your content, it's recommended to:
 
-1. Opt-in to the Asset Privacy beta.
+1. Enable [Asset Privacy](../projects/assets/privacy.md).
 1. Only sell newly-uploaded or versioned models with all child assets set to Restricted.
 
-If you don't opt-in to Asset Privacy beta and set your newly uploaded image and mesh assets to Restricted, anyone will be able to easily access and use them in their projects.
+If you don't enable Asset Privacy and set your newly uploaded image and mesh assets to Restricted, anyone will be able to easily access and use them in their projects.
 
 <Alert severity="warning">
 You can only sell models and plugins that **you** own from an individual account. You cannot sell group-owned assets or assets owned by someone else.
