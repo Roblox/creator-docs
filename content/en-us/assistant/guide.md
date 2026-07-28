@@ -131,13 +131,18 @@ To generate a procedural model, type a command such as `/generate_procedural_mod
 
 <video controls width="90%" src="/assets/assistant/Segmentation-Examples.mp4" />
 
-Segmentation divides a generated asset into individual parts, giving you more control over customization. It lets you apply different materials, attach scripts, or replace individual components without regenerating the entire model.
+Segmentation divides a generated asset into individual parts, giving you more control over how you customize it. You can apply different materials, attach scripts, or replace individual components without regenerating the entire model.
 
-When you run `/generate_mesh` or `/generate_procedural_model`, Assistant suggests a segmentation plan that defines how the model will be divided. Before generation, you can edit the proposed part list under **Part Names** by adding or removing entries, or by regenerating the suggested segmentation. Each generated asset can have a maximum of eight parts.
+When you run `/generate_mesh` or `/generate_procedural_model` with a text prompt, Assistant suggests a segmentation plan that defines how the model will be divided. Before generating the model, you can:
 
-When the configuration is ready, click **Generate** to start generation or **Cancel** to discard the request.
+- Edit the **Prompt** to refine your description.
+- (Optional) Upload a **Hint Image** to use as a visual reference. If you upload a hint image, Assistant skips the preview step and generates the final model directly.
+- Add or remove entries under **Part Names** to control how the model is segmented. Each generated model can have up to eight parts.
+- Check **Suggest segmentation** to have Assistant regenerate the part list based on your prompt.
 
-For example, if you generate a skateboard and define five parts (`body`, `left rear wheel`, `right rear wheel`, `left front wheel`, and `right front wheel`), Assistant segments the model into those components, allowing you to modify each one independently.
+When you're happy with the configuration, click **Confirm** to generate four preview images. If none of the previews match what you have in mind, click **Back** to adjust the segmentation plan and create a new set of previews. Once you find one you like, select it and click **Confirm** to create the final model. When it's ready, click **Add to place** to insert the asset into your game.
+
+For example, if you generate a skateboard and define five parts (`body`, `left rear wheel`, `right rear wheel`, `left front wheel`, and `right front wheel`), Assistant divides the model into those components so you can modify each one independently.
 
   <Grid container spacing={3}>
     <Grid item Small={12} Medium={4} Large={4} XLarge={4}>
