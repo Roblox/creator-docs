@@ -186,7 +186,7 @@ When you are ready, you can publicly distribute and sell your own assets on the 
 In order to set any USD prices and sell your assets, **you must have a seller account**. Roblox administers seller accounts through Stripe, a third-party payments provider.
 </Alert>
 
-Before you import an asset to distribute and sell on the Creator Store, it's highly recommended to opt-into the [Asset Privacy](../projects/assets/privacy.md) beta so that any image, mesh, or decal is created as Restricted by default. When an asset is Restricted, Roblox always checks its permissions when it loads into a game or when a creator takes an action on the asset, such as inserting it into Studio, sharing it with another creator, or listing it on the Creator Store.
+Before you import an asset to distribute and sell on the Creator Store, it's highly recommended to enable [Asset Privacy](../projects/assets/privacy.md) so that any image, mesh, or decal is created as Restricted by default. When an asset is Restricted, Roblox always checks its permissions when it loads into a game or when a creator takes an action on the asset, such as inserting it into Studio, sharing it with another creator, or listing it on the Creator Store.
 
 <Alert severity="info">
 If a creator or game doesn't have your explicit permission to use an asset, it cannot load in Studio or at runtime.

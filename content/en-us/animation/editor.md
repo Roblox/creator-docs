@@ -9,7 +9,7 @@ The **Animation Editor**, accessible from Studio's **Avatar** tab or **Window**&
 
 ## Interface
 
-The editor's window is divided into three primary sections:
+The Animation Editor's window is divided into three primary sections:
 
 <figure>
 <img src="../assets/animation/animation-editor/Editor-Sections-Labeled.png" width="840" />
@@ -104,7 +104,7 @@ You can only create animations using **rigs**.
 
    <img src="../assets/studio/general/Toolbar-Character.png" width="800" alt="Character button highlighted in Studio's toolbar." />
 
-2. In the 3D viewport or the [Explorer](../studio/explorer.md), select the rig.
+2. In the 3D viewport or the **Explorer** window, select the rig.
 
 From here, you can begin [creating poses](#create-poses) for your rig and modifying the animation settings, such as [looping the animation](#loop-an-animation) or [setting its priority](#set-a-priority).
 
@@ -121,9 +121,9 @@ to look 45° to the left has two poses: The initial position looking forward, an
 
 To create a pose:
 
-1. In the [Explorer](../studio/explorer.md) window, select the rig and expand its child instances to access the bones or meshes.
+1. In the **Explorer** window, select the rig and expand its child instances to access the bones or meshes.
 
-2. In the 3D viewport or [Explorer](../studio/explorer.md), select a bone or mesh.
+2. In the 3D viewport or the **Explorer** window, select a bone or mesh.
 
 3. In the timeline, click-and-move the **scrubber** to the frame position where you want to set the pose. By default, Roblox represents timeline units as **seconds:frames** and animations run at 30 frames per second. For example, **0:15** indicates ½ second.
 

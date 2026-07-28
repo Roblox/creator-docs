@@ -377,7 +377,9 @@ In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > *
 
 Although character body model geometries are typically created using quads, the Roblox Engine converts imported assets into tris. Each asset of your character model must not exceed our maximum tri budget. To quickly get the number of expected tris in your third-party modeling application, you can double the number of quads in your model.
 
-<Alert severity = 'info'>When character body models are uploaded to Studio and created into assets for the Marketplace, the body is split into 6 individual assets: **DynamicHead**, **Torso**, **LeftArm**, **RightArm**, **LeftLeg**, **RightLeg**.</Alert>
+<Alert severity = 'info'>
+When character body models are uploaded to Studio and created into assets for the Marketplace, the body is split into 6 individual assets: **DynamicHead**, **Torso**, **LeftArm**, **RightArm**, **LeftLeg**, **RightLeg**.
+</Alert>
 
 <table>
 <thead>
@@ -862,7 +864,7 @@ Outer cages on your character model allow your character to wear layered accesso
 - For information on dynamic head cages and best practices when caging, see [Dynamic head specifications](../dynamic-heads/specifications.md#head-cage).
 
 <Alert severity = 'info'>
-Character bodies only require an outer cage, but layered accessories require both an inner and outer cage to deform properly. For more information, see [Layered accessories specifications - Cage meshes](../layered-accessories/specifications.md#cage-meshes).
+Character bodies only require an outer cage, but layered accessories require both an inner and outer cage to deform properly. For more information, see [Layered accessory specifications - Cage meshes](../layered-accessories/specifications.md#cage-meshes).
 </Alert>
 
 ## Marketplace requirements

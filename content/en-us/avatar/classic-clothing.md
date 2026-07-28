@@ -50,26 +50,24 @@ A high-level overview of avatar items on Roblox.
 </Grid>
 </Grid>
 
-Classic clothing are the most basic type of avatar item available to purchase and sell on Roblox. With any image editor and web browser, you can create classic clothing items and sell them on the [Marketplace](https://www.roblox.com/catalog).
-
-<Alert severity = 'warning'>
-To publish and sell assets on the Marketplace, you must meet [creator requirements](../marketplace/marketplace-policy.md#creator-requirements).
-</Alert>
+**Classic clothing** are 2D assets that wrap around specific areas of the avatar's body, such as their front torso for t-shirts or their torso and legs for pants. This is the most basic type of avatar item to create and sell on the [Marketplace](https://www.roblox.com/catalog) as you just need an image editor and web browser for the creation process.
 
 To create classic clothing items:
 
 1. Decide on the [type of classic clothing](#types-of-classic-clothing) you'd like to create.
-2. [Create](#create-classic-clothing) an image for your asset using an image editor of your choice.
-3. [Test](#test-classic-clothing) your creation in Studio to ensure it looks as intended.
-4. [Upload](#upload-classic-clothing) the image file to the Marketplace through a web browser.
-   1. Adding an item to the Marketplace requires a Robux [fee](../marketplace/marketplace-fees-and-commissions.md#classic-clothing).
-   2. Upon successful moderation, you gain a copy of the asset in your inventory.
+1. [Create](#create-classic-clothing) an image for your asset using an image editor of your choice.
+1. [Test](#test-classic-clothing) your creation in Studio to ensure it looks as intended.
+1. [Upload](#upload-classic-clothing) the image file to the Marketplace through a web browser.
 
 ## Types of classic clothing
 
-The three types of classic clothing items are **T-shirts**, **Shirts**, and **Pants**. Each has different design and format requirements.
+There are three types of classic clothing: **T-shirts**, **Shirts**, and **Pants**. Each type of classic clothing has different design and format requirements.
 
-<img src="../assets/accessories/classic-clothing/Types-of-classic-clothing.png" alt="3 different examples of blocky characters with a different type of image displayed on its surface." />
+<GridContainer numColumns="3">
+<figure><img src="../assets/accessories/classic-clothing/Types-Tshirts.png" /><figcaption>T-shirts</figcaption></figure>
+<figure><img src="../assets/accessories/classic-clothing/Types-Shirts.png" /><figcaption>Shirts</figcaption></figure>
+<figure><img src="../assets/accessories/classic-clothing/Types-Pants.png" /><figcaption>Pants</figcaption></figure>
+</GridContainer>
 
 ### T-shirts
 
@@ -91,11 +89,6 @@ Classic shirts and pants are image assets that wrap around an avatar's body. Bec
   </figure>
 </GridContainer>
 
-<BaseAccordion>
-<AccordionSummary>
-Table of sizes for each template part
-</AccordionSummary>
-<AccordionDetails>
 <table>
 <thead>
   <tr>
@@ -127,16 +120,14 @@ Table of sizes for each template part
   </tr>
 </tbody>
 </table>
-</AccordionDetails>
-</BaseAccordion>
 
 ## Create classic clothing
 
 To begin creating classic clothing:
 
 1. If you are creating a classic shirt or pants, [download and unzip](../assets/accessories/classic-clothing/Classic-Clothing-Templates.zip) the following clothing templates to use as a canvas for your art.
-2. Modify the image in an image editor of your choice.
-3. Export the image as a `.png` or `.jpg` before testing and uploading it in Studio.
+1. Modify the image in an image editor of your choice.
+1. Export the image as a `.png` or `.jpg` before testing and uploading it in Studio.
 
 When applying clothing to avatars in Roblox, some limits exist with the templates and may require some testing to get right, as shown in the following examples:
 
@@ -151,39 +142,33 @@ When applying clothing to avatars in Roblox, some limits exist with the template
   </figure>
 </GridContainer>
 
-<Alert severity = 'success'>
-After creating your classic clothing, test your creation in Roblox Studio before uploading and selling your asset on the Marketplace.
-</Alert>
-
 ## Test classic clothing
 
-To ensure the best quality results, you can test your classic clothing before uploading or selling. You can test your clothes without needing to pay any fees by using [Roblox Studio](../studio/setup.md).
+To ensure the best quality results, it's recommended to test your classic clothing in Studio before uploading or selling your asset on the Marketplace. The testing process does not require any fees.
+
+To test your classic clothing:
 
 1. From the toolbar's **Avatar** tab, click **Character**.
-2. Choose a **Block Avatar** rig type from the popup menu. An avatar mannequin named **Rig** appears in the 3D workspace.
+1. Choose a **Block Avatar** rig type from the popup menu. An avatar mannequin named **Rig** appears in the 3D workspace.
 
    <img src="../assets/accessories/classic-clothing/Block-Avatar-Default.jpg" width="800" />
 
-3. In the **Explorer** window, hover over the **Rig** object, click the **&CirclePlus;** button and insert either a **ShirtGraphic** (T‑shirt), **Shirt**, or **Pants** object according to the clothing you want to test.
+1. In the **Explorer** window, hover over the **Rig** object, click the **&CirclePlus;** button and insert either a **ShirtGraphic** (T‑shirt), **Shirt**, or **Pants** object according to the clothing you want to test.
 
-4. Locate and select the new **Shirt Graphic** or **Clothing** object parented under **Rig**.
+1. Locate and select the new **Shirt Graphic** or **Clothing** object parented under **Rig**.
 
-   <Grid container spacing={3}>
-   <Grid item>
-	 <figure>
-	 <img src="../assets/studio/explorer/Rig-Shirt-Graphic.png" width="320" />
-	 <figcaption>Shirt Graphic (T-shirt)</figcaption>
-	 </figure>
-	 </Grid>
-	 <Grid item>
-	 <figure>
-	 <img src="../assets/studio/explorer/Rig-Clothing.png" width="320" />
-	 <figcaption>Clothing (Shirt/Pants)</figcaption>
-	 </figure>
-	 </Grid>
-	 </Grid>
+   <GridContainer numColumns="2">
+     <figure>
+       <img src="../assets/accessories/classic-clothing/ShirtGraphic.png" width="100%" />
+       <figcaption>Shirt Graphic (T-shirt)</figcaption>
+     </figure>
+     <figure>
+       <img src="../assets/accessories/classic-clothing/ShirtPants.png" width="100%" />
+       <figcaption>Clothing object (Shirt/Pants)</figcaption>
+     </figure>
+   </GridContainer>
 
-5. In the **Properties** window, locate the associated property as follows:
+1. In the **Properties** window, locate the associated property as follows:
 
 	 <table>
 	 <thead>
@@ -212,38 +197,33 @@ To ensure the best quality results, you can test your classic clothing before up
 	 </tbody>
 	 </table>
 
-6. Click inside the property's row and select the image you uploaded to Roblox. This applies the clothing texture to the **Rig** character.
+1. Click inside the property's row and select the image you uploaded to Roblox. This applies the clothing texture to the **Rig** character.
 
    <img src="../assets/accessories/classic-clothing/Block-Avatar-Dressed.jpg" width="800" />
 
 ## Upload classic clothing
 
-After creating and testing your classic clothing design, as long as you meet the [creator requirements](../marketplace/marketplace-policy.md#creator-requirements), you can upload and sell your clothing item on the Marketplace for a [fee](../marketplace/marketplace-fees-and-commissions.md#classic-clothing).
+After creating and testing your classic clothing design, as long as you meet the [creator requirements](../marketplace/marketplace-policy.md#creator-requirements), you can upload and sell your clothing item on the Marketplace for an [upload fee](../marketplace/marketplace-fees-and-commissions.md#upload-fees) of **80 Robux** per submission.
 
 To upload a custom clothing item:
 
 1. Navigate to your [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-2. Navigate to **Avatar Items**.
-3. Select the **Classics** tab.
-4. Drag and drop your image file into the upload box. Alternatively, you can click **Upload Asset** and upload your file on the next page.
-5. On the Upload Asset page, set the Asset Type dropdown to **T-Shirt**, **Shirt**, or **Pants**.
-6. Complete the **Name** and **Description** fields. These fields help users find your assets and allow you to organize your creations.
-7. Click the **Upload** button at the bottom of the page.
-   1. See [Fees and commissions](../marketplace/marketplace-fees-and-commissions.md#classic-clothing) for more information on the fees for listing avatar items on the Marketplace.
-   2. See [Manage existing assets](#manage-existing-assets) for information on modifying and selling your creations.
+1. Navigate to **Avatar Items**, then select the **Classics** tab.
+1. Drag and drop your image file into the upload box. Alternatively, you can click **Upload Asset** and upload your file on the next page.
+1. On the **Upload Asset** page, set the **Asset Type** dropdown to **T-Shirt**, **Shirt**, or **Pants**.
+1. Complete the **Name** and **Description** fields. These fields help users find your assets and allow you to organize your creations.
+1. Click the **Upload** button at the bottom of the page.
 
 ## Manage classic clothing
 
 To see your moderation status, place your item on sale, or modify your item settings:
 
 1. Navigate to your [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-2. Navigate to **Avatar Items**.
-3. Select the **Classics** tab.
-4. Use the **Classic Type** dropdown to filter by the type of classic clothing creation.
-5. Click on the asset to navigate to the asset's Configure page.
-6. You can modify the following fields:
-   1. **Item Name** — sets the public-facing name of the asset.
-   2. **Item Description** — sets the public-facing description of the asset.
-   3. **On Sale** — when enabled, users can view and purchase this item on the Marketplace.
-   4. **Set a price** — value of Robux that the creation sells for on the Marketplace.
-      1. See [Fees and commissions](../marketplace/marketplace-fees-and-commissions.md#classic-clothing) for more information.
+1. Navigate to **Avatar Items**, then select the **Classics** tab.
+1. Use the **Classic Type** dropdown to filter by the type of classic clothing creation.
+1. Click on the asset to navigate to the asset's **Configure** page.
+1. Modify the following fields:
+   1. **Item Name** — The public-facing name of the asset.
+   1. **Item Description** — The public-facing description of the asset.
+   1. **On Sale** — When enabled, users can view and purchase this item on the Marketplace.
+   1. **Set a price** — The value of Robux that the creation sells for on the Marketplace.

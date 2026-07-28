@@ -115,7 +115,7 @@ If setting or configuring attachments manually in Studio, use the following name
 
 ## Face accessories
 
-Face accessories, such as eyebrows and eyelashes, are unique layered accessories that you can bundle with an avatar body upload. At this time, eyebrows and eyelashes can not be uploaded as standalone accessories and must be bundled with [character bodies](../character-bodies/index.md). For more information on bundling your face accessories with avatar models, see [Publish bodies with eyelashes and eyebrows](../../art/accessories/publish-eyebrows-eyelashes.md).
+Face accessories, such as eyebrows and eyelashes, are unique layered accessories that you can bundle with an avatar body upload. At this time, eyebrows and eyelashes cannot be uploaded as standalone accessories and must be bundled with [character bodies](../character-bodies/index.md). For more information on bundling your face accessories with avatar models, see [Publish bodies with eyelashes and eyebrows](../../art/accessories/publish-eyebrows-eyelashes.md).
 
 - **Naming Convention when bundled** - When including these assets with an avatar body upload, the layered accessory objects must use the following name conventions:
   - `EyebrowAccessory`

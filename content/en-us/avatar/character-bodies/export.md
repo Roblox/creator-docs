@@ -92,8 +92,10 @@ To export your character body in Maya as a `.fbx` file:
 1. Enable **Bake Animation**.
 1. If you need to import textures as a `.png`, in the **Embed Media** section, enable **Embed Media**.
 1. In the **Advanced Options** section,
-   - Navigate to **Units**, then enable **Automatic**.
-   - Navigate to **Axis Conversion**, then set the **Up Axis** property to **Y**.
+
+   1. Navigate to **Units**, then enable **Automatic**.
+   1. Navigate to **Axis Conversion**, then set the **Up Axis** property to **Y**.
+
 1. Click the **Export All** button and save the `.fbx` to the directory of your choice.
 
     <img src="../../assets/accessories/lc-requirements-maya-settings-with-animation.png" width = "50%" alt = "Screenshot of Maya export settings for exports with animation."/>

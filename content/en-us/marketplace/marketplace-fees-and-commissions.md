@@ -520,9 +520,3 @@ To toggle timed options for individual assets:
 Depending on the 3D asset type, you must set the price of the item within the marketplace price range. If you are selling a [Limited](#limiteds) item, you can set your item price as **0**, or any value after the **Limiteds Price Floor**.
 
 [View Current Marketplace Ranges](https://create.roblox.com/dashboard/creations/pricing)
-
-## Classic clothing
-
-You can upload and sell [classic clothing](../avatar/classic-clothing.md) through the Roblox website. It costs **80 Robux** to upload these assets.
-
-If the seller takes the item off sale, it does not require an additional fee when they place it on sale again.

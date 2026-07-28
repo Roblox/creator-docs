@@ -36,7 +36,7 @@ You can use the following components within your `Class.Model` object to enable 
 With these components, the character model displays a `Class.Humanoid.DisplayName`, has health, and can move with `Class.Humanoid.Move()`. For more information on additional configurations of the display and health elements, see [Name/health display](../characters/name-health-display.md).
 
 <Alert severity = 'info'>
-For information on implementing layered clothing on a non-R15 character model, see [Character appearance](./appearance.md#layered-accessories-on-non-r15).
+For information on implementing layered accessories on a non-R15 character model, see [Character appearance](./appearance.md#layered-accessories-on-non-r15).
 </Alert>
 
 ## Avatar characters
