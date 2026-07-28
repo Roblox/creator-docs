@@ -59,7 +59,7 @@ After you create a config, it moves to a **staged** state so that you can test i
 
 <img src="../assets/analytics/configs/configs-publish.png" width="800" alt="The Configs page showing unpublished changes" />
 
-1. After you test your staged changes, click **Publish now** to publish to all players within five minutes. You can also choose **Publish over 15 min** if you prefer a longer rollout period.
+1. After you test your staged changes, click **Publish now** to publish to all players almost instantly (roughly between 15 seconds and 1 minute). You can also choose **Publish over 15 min** if you prefer a longer, more gradual rollout period. In some cases, clients may take a few minutes to reflect the changes after publishing.
 1. (Recommended) Add a descriptive publish message that indicates what you updated. This message appears on the **History** page and can help you and your team later identify the purpose of the change.
 
 ## Create and edit configs in Studio
@@ -70,9 +70,15 @@ If you prefer, you can create, edit, stage, and publish configs in Roblox Studio
 
 ### Publish configs to another experience
 
-In Studio only, you can publish your configs to another experience, which completely overwrites the configs for that experience. This can be especially useful for syncing configs from a staging or development experience to the live experience. Navigate to the **Published** tab in the Studio widget and click **Publish As** in the **&vellip;** menu.
+In Studio, you can publish your configs to another experience, which completely overwrites the configs for that experience. This can be especially useful for syncing configs from a staging or development experience to the live experience.
 
-<img src="../assets/analytics/configs/configs-widget-publish-as.png" width="600" alt="Studio window for working with configs" />
+1. In Roblox Studio, go to the top menu and select **File** > **Open Configs**.
+2. In the **Published** tab of the Configs widget, click the &vellip; icon and select **Publish As**.
+
+    <img src="../assets/analytics/configs/configs-widget-publish-as.png" width="600" alt="Studio window for working with configs" />
+
+3. In the dialog that appears, find and select the target experience from the list of groups where you have edit permissions.
+    <img src="../assets/analytics/configs/configs-widget-target-experience.png" width="300" alt="Publish configs to experiences" />
 
 ## View history and restore configs
 
@@ -117,6 +123,18 @@ The first step to working with configs is to retrieve a `Class.ConfigSnapshot`, 
   ```
 
 In either case, if the key doesn't exist, `Class.ConfigSnapshot:GetValue()` returns nil.
+
+### Autocomplete
+
+Configs are integrated into the Script Editor's autocomplete. When you call `Class.ConfigSnapshot:GetValue()`, the editor suggests your config key names and displays each config's type when you hover over the variable name.
+
+If your script uses `--!strict` mode, the linter can pick up and verify the type for you.
+
+<video controls width="80%" src="../assets/analytics/configs/configs-autocomplete.mp4" />
+
+Autocomplete also works with configs that use complex nested JSON types.
+
+<video controls width="80%" src="../assets/analytics/configs/configs-autocomplete2.mp4" />
 
 ### Refresh snapshots
 
