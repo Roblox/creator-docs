@@ -147,7 +147,8 @@ properties:
       The `Class.InputBinding` best matching the player's current input device.
     description: |
       A read-only reference to the `Class.InputBinding` child that matches the
-      player's current input device using `PreferredInput`.
+      player's current input device using
+      `Class.UserInputService.PreferredInput`.
     code_samples: []
     type: InputBinding
     tags:

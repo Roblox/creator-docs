@@ -394,8 +394,6 @@ end)
 
 ## Style transitions
 
-<BetaAlert betaName="Styling Transitions" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
-
 UI objects can also be animated through **style transitions**, comparable to [CSS transitions](./styling/css-comparisons.md#transitions), where one or more UI properties are tweened through `Class.StyleRule` definitions. See the [Style Editor](./styling/editor.md#style-transitions) guide for details.
 
 <img src="../assets/ui/ui-styling/SE-Transition-Rule-Result.png" width="840" alt="Final styled state rule in the Style Editor." />

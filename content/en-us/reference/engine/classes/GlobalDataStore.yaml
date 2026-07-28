@@ -279,7 +279,7 @@ methods:
         default: '{}'
         summary: |
           Table of `Class.Player.UserId|UserIds`, highly recommended to assist
-          with RTBF tracking/removal.
+          with GDPR tracking/removal.
       - name: options
         type: DataStoreSetOptions
         default: nil

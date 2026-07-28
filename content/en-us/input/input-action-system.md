@@ -12,6 +12,10 @@ The cross-platform **Input Action System** lets you connect [actions](#input-act
 - A comprehensive driving system equipped with acceleration/deceleration, car boosters, and refuel stations.
 - Hotkeys for an abilities system in a fighting game to swap out moves seamlessly without players missing a punch.
 
+<figure>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Fg-Ksoa7b-s?si=SwXhzsIjkyMKSUkJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
+
 ## Input contexts
 
 An `Class.InputContext` is a collection of actions which holds related [input actions](#input-actions), for example `PlayContext` for in‑game character controls and `NavContext` for controls to navigate around UI menus. You can [enable/disable contexts](#context-changes) (and their corresponding actions) through their `Class.InputContext.Enabled|Enabled` property, such as to enable the `NavContext` when an inventory menu is open and then change to the `PlayContext` when the player closes the menu and returns to primary gameplay.

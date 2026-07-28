@@ -650,8 +650,6 @@ CSS lets you declare and reference [variables](https://developer.mozilla.org/doc
 
 CSS [transitions](https://developer.mozilla.org/docs/Web/CSS/Guides/Transitions) let you tween property values over a set duration. You can achieve this in Roblox by setting property transitions on a `Class.StyleRule` through `Class.StyleRule:SetPropertyTransition()|SetPropertyTransition()` (single) or `Class.StyleRule:SetPropertyTransitions()|SetPropertyTransitions()` (multiple).
 
-<BetaAlert betaName="Styling Transitions" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
-
 <Card>
 <CardContent style={{paddingTop: '0px', paddingBottom: '0px'}}>
 <GridContainer numColumns="2">
