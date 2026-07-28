@@ -15,6 +15,7 @@
     "/ads-management/v1/advertisable-universes": {
       "get": {
         "description": "Returns the universe IDs of every experience the billing account is eligible to advertise. The complete list is returned in a single response; this endpoint is not paginated. Use these IDs to set targetUniverseId when creating a campaign, and resolve experience names with the Open Cloud Universe API.",
+        "tags": ["Sponsored campaigns", "Universes"],
         "summary": "List advertisable universes",
         "responses": {
           "200": {
@@ -85,12 +86,16 @@
           {
             "roblox-oauth2": ["ad.campaign:read"]
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-campaigns#get_ads_management_v1_advertisable_universes"
+        }
       }
     },
     "/ads-management/v1/billing-accounts": {
       "get": {
         "description": "Lists the billing accounts owned by the authenticated user. Each account includes its type, status, time zone, and create/update timestamps. Results are paginated with a cursor (pageToken).",
+        "tags": ["Sponsored campaigns"],
         "summary": "List billing accounts",
         "parameters": [
           {
@@ -189,12 +194,16 @@
           {
             "roblox-oauth2": ["ad.billing:read"]
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-campaigns#get_ads_management_v1_billing_accounts"
+        }
       }
     },
     "/ads-management/v1/billing-accounts/{id}": {
       "get": {
         "description": "Returns a single billing account owned by the authenticated user. Returns 404 if the account does not exist or is not owned by the caller.",
+        "tags": ["Sponsored campaigns"],
         "summary": "Get a billing account",
         "parameters": [
           {
@@ -286,12 +295,16 @@
           {
             "roblox-oauth2": ["ad.billing:read"]
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-campaigns#get_ads_management_v1_billing_accounts__id_"
+        }
       }
     },
     "/ads-management/v1/campaign-options": {
       "get": {
         "description": "Returns the values accepted when creating a campaign: supported objectives, payment types, ad formats, and targeting dimensions. When universeId is supplied, the response also includes an eligibility block indicating whether that experience can currently be advertised, along with the reasons when it cannot.",
+        "tags": ["Sponsored campaigns"],
         "summary": "Get campaign options",
         "parameters": [
           {
@@ -391,12 +404,16 @@
           {
             "roblox-oauth2": ["ad.campaign:read"]
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-campaigns#get_ads_management_v1_campaign_options"
+        }
       }
     },
     "/ads-management/v1/campaigns": {
       "get": {
         "description": "Lists the campaigns in the caller's billing account. Campaigns are grouped by status (ACTIVE first, then PAUSED, then CANCELLED) and returned newest first within each group. Results are paginated with a cursor (pageToken); each page returns up to maxPageSize campaigns (default 50, max 100).",
+        "tags": ["Sponsored campaigns"],
         "summary": "List campaigns",
         "parameters": [
           {
@@ -495,10 +512,14 @@
           {
             "roblox-oauth2": ["ad.campaign:read"]
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-campaigns#get_ads_management_v1_campaigns"
+        }
       },
       "post": {
         "description": "Creates an ad campaign in the billing account. The creatives you reference must already exist as Open Cloud image assets that you have permission to use; they are validated and saved to your account's reusable creatives when the campaign is created. On success the campaign is returned with deliveryStatus IN_REVIEW, meaning it is queued for ad-policy review and not yet serving — poll the campaign (or campaigns:batchGetStatus) until this changes. budget.amountMicros is the budget in micro-USD as a decimal string (e.g. \"5000000\" = $5.00). It must be at least the minimum campaign budget; an amount below the minimum returns 400 with the required minimum stated in the error message. schedule.durationInDays must not exceed 3650 (~10 years). The x-idempotency-key header is required and must be a UUID: retrying the same key with an identical body within 24 hours returns the original campaign (200), while reusing a key with a different body returns 409.",
+        "tags": ["Sponsored campaigns"],
         "summary": "Create a campaign",
         "parameters": [
           {
@@ -611,12 +632,16 @@
           {
             "roblox-oauth2": ["ad.campaign:write"]
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-campaigns#post_ads_management_v1_campaigns"
+        }
       }
     },
     "/ads-management/v1/campaigns/{id}": {
       "get": {
         "description": "Returns a single campaign, including its status (the lifecycle state you control: ACTIVE, PAUSED, or CANCELLED) and its deliveryStatus (whether it is currently serving: SERVING, IN_REVIEW, NOT_SERVING, or REJECTED). deliveryStatusReasons lists any reasons that affect delivery — for example why a campaign is not serving or was rejected, or that a serving campaign is still in its initial learning period. Returns 404 if the campaign does not exist or is not owned by the caller.",
+        "tags": ["Sponsored campaigns"],
         "summary": "Get a campaign",
         "parameters": [
           {
@@ -718,10 +743,14 @@
           {
             "roblox-oauth2": ["ad.campaign:read"]
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-campaigns#get_ads_management_v1_campaigns__id_"
+        }
       },
       "patch": {
         "description": "Updates the mutable fields of a campaign. You can change: name, budget.amountMicros, schedule.startTime and schedule.durationInDays (schedule changes are only allowed before the campaign starts), and status. Set status to ACTIVE to run or resume the campaign, PAUSED to pause it, or CANCELLED to cancel it permanently. budget.type cannot be changed — only the amount. A budget increase takes effect immediately, but a budget decrease on a running campaign is scheduled for the next midnight in the account's time zone; while a decrease is pending, the response reports it in budget.scheduledAmountMicros and budget.scheduledEffectiveTime. The fields objective, paymentType, targeting, creativeAssetIds, and bid are fixed after creation and return 400 if included. The updated campaign is returned with its recomputed deliveryStatus.",
+        "tags": ["Sponsored campaigns"],
         "summary": "Update a campaign",
         "parameters": [
           {
@@ -834,12 +863,16 @@
           {
             "roblox-oauth2": ["ad.campaign:write"]
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-campaigns#patch_ads_management_v1_campaigns__id_"
+        }
       }
     },
     "/ads-management/v1/campaigns:batchGetStatus": {
       "post": {
         "description": "Returns the status (lifecycle state) and deliveryStatus (whether the campaign is currently serving), along with deliveryStatusReasons, for up to 100 campaigns in a single call. This is the recommended way to poll the review and serving state of many campaigns at once. Provide the campaign IDs in campaignIds; any ID that is not found or is not owned by the caller is returned in the failures array with reason NOT_FOUND.",
+        "tags": ["Sponsored campaigns"],
         "summary": "Batch get campaign status",
         "requestBody": {
           "content": {
@@ -931,12 +964,16 @@
           {
             "roblox-oauth2": ["ad.campaign:read"]
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-campaigns#post_ads_management_v1_campaigns_batchGetStatus"
+        }
       }
     },
     "/ads-management/v1/creatives": {
       "get": {
         "description": "Lists the reusable creatives saved to the caller's billing account. Each creative includes its assetId, name, moderation status, dimensions, and source. Use isArchived to filter by archive state. Results are paginated with a cursor (pageToken).",
+        "tags": ["Assets", "Sponsored campaigns"],
         "summary": "List creatives",
         "parameters": [
           {
@@ -1043,7 +1080,10 @@
           {
             "roblox-oauth2": ["ad.campaign:read"]
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#get_ads_management_v1_creatives"
+        }
       }
     },
     "/analytics-query-api/v1/universes/{universeId}/dimension-values": {
@@ -92335,6 +92375,7 @@
         "path": "assets",
         "content": "HTTP APIs for working with assets on Roblox Cloud.",
         "ordering": [
+          "get_ads_management_v1_creatives",
           "Assets_CreateAsset",
           "Assets_GetAsset",
           "Assets_UpdateAsset",
@@ -93283,11 +93324,21 @@
     },
     {
       "name": "Sponsored campaigns",
-      "description": "Create and manage sponsored advertising campaigns for your experiences and assets. [Launch](#adconfiguration_post_v2_sponsored_campaigns_create), [list](#adconfiguration_get_v2_sponsored_campaigns), and [stop](#adconfiguration_post_v2_sponsored_campaigns_stop) campaigns to promote your content across the Roblox platform, and [verify eligibility](#adconfiguration_get_v2_sponsored_campaigns_eligible_asset_type_ids) for sponsorship.\n",
+      "description": "Create and manage sponsored advertising campaigns for your experiences and assets. Choose an [advertisable universe](#get_ads_management_v1_advertisable_universes), [billing account](#get_ads_management_v1_billing_accounts), [billing account details](#get_ads_management_v1_billing_accounts__id_), [campaign options](#get_ads_management_v1_campaign_options), and [creative](#get_ads_management_v1_creatives), then [create](#post_ads_management_v1_campaigns) a campaign. [List](#get_ads_management_v1_campaigns), [retrieve](#get_ads_management_v1_campaigns__id_), [update](#patch_ads_management_v1_campaigns__id_), and [check the status](#post_ads_management_v1_campaigns_batchGetStatus) of campaigns to manage their lifecycle.\n",
       "x-roblox-tag-info": {
         "path": "sponsored-campaigns",
         "content": "HTTP APIs for working with sponsored campaigns on Roblox Cloud.",
         "ordering": [
+          "get_ads_management_v1_advertisable_universes",
+          "get_ads_management_v1_billing_accounts",
+          "get_ads_management_v1_billing_accounts__id_",
+          "get_ads_management_v1_campaign_options",
+          "get_ads_management_v1_campaigns",
+          "post_ads_management_v1_campaigns",
+          "get_ads_management_v1_campaigns__id_",
+          "patch_ads_management_v1_campaigns__id_",
+          "post_ads_management_v1_campaigns_batchGetStatus",
+          "get_ads_management_v1_creatives",
           "adconfiguration_get_v2_sponsored_campaigns",
           "adconfiguration_post_v2_sponsored_campaigns_create",
           "adconfiguration_get_v2_sponsored_campaigns_eligible_asset_type_ids",
@@ -93421,6 +93472,7 @@
         "path": "universes",
         "content": "HTTP APIs for working with universes on Roblox Cloud, including subscriptions, place and instance updates, user restrictions, and more.",
         "ordering": [
+          "get_ads_management_v1_advertisable_universes",
           "Cloud_GetUniverse",
           "Cloud_UpdateUniverse",
           "Cloud_PublishUniverseMessage",

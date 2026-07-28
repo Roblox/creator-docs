@@ -111,7 +111,7 @@ Here's the list of available metamethods:
 		</tr>
 	  <tr>
 		  <td>`__mode`</td>
-		  <td>Used in weak tables, declaring whether the keys and/or values of a table are weak.</td>
+		  <td>Used in weak tables, declaring whether the keys and/or values of a table are weak. See [Use weak tables](#use-weak-tables).</td>
 		</tr>
 	  <tr>
 		  <td>`__len(table)`</td>
@@ -177,11 +177,11 @@ print(a / 2) -- 5, 2.5
 
 ### Usage
 
-There are many ways to use metatables
+There are many ways to use metatables.
 
 #### Apply the unary minus operator to tables
 
-For example the `__unm` metamethod to make a table negative:
+The `__unm` metamethod handles the unary minus operator. Use it to negate every value in a table:
 
 ```lua
 local metatable = {
@@ -213,15 +213,14 @@ print(t.x) --> 1
 
 `__index` was fired when `x` was indexed in the table and not found. Luau then searched through the `__index` table for an index called `x`, and, finding one, returned that.
 
-Now you can easily do that with a simple function, but there's a lot more where
-that came from. Take this for example:
+#### Call a table like a function
+
+Metatables can do much more than supply a missing value. Take this for example:
 
 ```lua
 local t = {10, 20, 30}
 print(t(5))
 ```
-
-#### Call a table like a function
 
 Typically you can't call a table, but with metatables you can:
 
@@ -282,7 +281,7 @@ for k, v in table1 + table2 do
 end
 ```
 
-#### Create a caching table
+#### Set values without invoking metamethods
 
 When playing with metatables, you may run into some problems. If you need to use the `__index` metamethod to create new values in a table, but that table's metatable also has a `__newindex` metamethod, you'll want to use the Luau built-in function `Global.LuaGlobals.rawset()` to set the value without invoking any metamethods. Take the following code as an example of what happens if you don't use these functions.
 
@@ -314,9 +313,9 @@ local t = setmetatable({}, {
 print(t[1]) --> 10
 ```
 
-#### Create weak tables
+## Use weak tables
 
-Variables that contain tables, functions, userdata, and `Class.Instance|Instances` store references to those objects instead of copying them. Assigning an object to another variable creates another reference to the same object:
+Variables that hold tables, functions, threads, and [userdata](userdata.md), including `Class.Instance|Instances`, store references to those objects instead of copies of them. Assigning an object to another variable creates another reference to the same object:
 
 ```lua
 local map = {key = 1}
@@ -347,9 +346,9 @@ Although `child` no longer refers to the child table, `parent.Child` still does.
 
 A **weak table** holds keys, values, or both without preventing the garbage collector from reclaiming otherwise unreachable objects. Set the `__mode` field of the table's metatable to control which references are weak:
 
-- `k` makes the keys weak.
-- `v` makes the values weak.
-- `kv` makes both the keys and values weak.
+- `"k"` makes the keys weak.
+- `"v"` makes the values weak.
+- `"kv"` or `"vk"` makes both the keys and values weak.
 
 The following code sample creates a table with weak values:
 
@@ -366,8 +365,12 @@ end
 
 After the `do` block ends, the value stored in `children.example` has no strong references and becomes eligible for garbage collection. When the garbage collector reclaims the child table, Luau removes its entry from `children`. Garbage collection is nondeterministic, so don't depend on when the entry disappears.
 
+Any mode you leave out stays strong. Keys in a `__mode = "v"` table remain strong references, so an object stored as a key stays reachable and its entry stays in the table.
+
+For `Class.Instance|Instances`, garbage collection applies to the Luau reference rather than to the object itself. The engine stores instance data outside the Luau VM, so collecting a Luau reference doesn't delete the instance, and an instance that remains in the data model doesn't keep its Luau reference alive. To release an instance, call `Class.Instance:Destroy()` and clear every remaining reference to it.
+
 <Alert severity="warning">
-Don't use weak tables to track whether an `Class.Instance` exists in the data model. Use `Class.Instance.AncestryChanged` to observe hierarchy changes, or `Class.CollectionService:GetInstanceRemovedSignal()` to observe when a tagged instance loses its tag or leaves the data model. Even if an instance is still retained by the engine, its Luau-side reference can be garbage-collected when no strong Luau references to it remain.
+Don't use a weak table to track whether an `Class.Instance` still exists in the data model, because Luau can collect the reference while the instance is alive. To observe hierarchy changes, connect to `Class.Instance.AncestryChanged`. To observe when a tagged instance loses its tag or leaves the data model, use `Class.CollectionService:GetInstanceRemovedSignal()`.
 </Alert>
 
 ## Use the set datatype
