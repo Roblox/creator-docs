@@ -8,6 +8,8 @@ navigation:
     section:
       - title: Build on the Roblox App
         path: /ai/build
+      - title: Build with Assistant
+        path: /ai/build-with-assistant
       - title: Build with a coding harness
         path: /ai/coding-harness
   - heading: Create
