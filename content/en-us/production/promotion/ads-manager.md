@@ -95,9 +95,11 @@ During campaign creation, you can enable **auto-reload** to automatically purcha
 
 <h5 style={{marginTop: '36px'}}>Creatives</h5>
 
-An ad creative is the thumbnail that shows up on a player's Home page when you sponsor a game. You can select up to 10 thumbnails for your ad campaign, which are then evenly distributed across players' Home pages. After you create a campaign, you can edit the campaign to turn specific thumbnails on and off.
+An ad creative is the thumbnail that appears on a player's Home page when you sponsor a game. You can include up to 10 thumbnails in a campaign, which are evenly distributed across players. After creating a campaign, you can enable or disable individual thumbnails at any time.
 
-You can use existing thumbnail images you have previously uploaded to the Creator Hub, or upload new ad-specific images with the Ads Manager. Any image you use as a thumbnail is resized to a ratio of 16:9 when displayed on the Home page.
+You can use existing thumbnails you've already uploaded to Creator Hub, upload new images specifically for the campaign, or create new thumbnails with the **AI generate** option. AI generate creates three thumbnail variations from a text description that you provide.
+
+All thumbnails are displayed on the Home page with a 16:9 aspect ratio. Images that don't match this aspect ratio are automatically resized.
 
 ### Create an ad campaign
 
@@ -170,7 +172,7 @@ To create an ad campaign:
    3. Set a **Start Date** and a **Start Time** for your campaign.
    4. Set a **Duration** for your campaign.
    5. <Chip label="OPTIONAL" size="small" variant="outlined" />If you're using ad credits, enable **auto-reload** to automatically add ad credits to the campaign when your budget runs out.
-6. Under **Creatives**, choose up to 10 thumbnails to show players.
+6. Under **Creatives**, choose up to 10 thumbnails to show players. You can click **Add creative** to upload your own thumbnails or click **AI generate** to generate thumbnails from a description.
 7. Click **Publish** and confirm submission. Your ad campaign will go live after it's approved by the moderation team.
 
 <Alert severity="info">
@@ -260,6 +262,35 @@ end
 
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
+
+## Asset library
+
+The **asset library** is a centralized hub for uploading, storing, and reusing creative assets across multiple campaigns. Instead of re-uploading the same images or videos every time you create a campaign, you can build a portfolio of pre-moderated assets that are ready to use at any time.
+
+You can add assets to the asset library by manually uploading files or by generating thumbnails with AI.
+
+To upload assets manually:
+
+1. In the **Asset library**, click **Add asset**.
+2. (Optional) Select a game from the dropdown to associate the assets with.
+3. Click **Select media** and select one or more files to upload. You can upload up to 10 files at once.
+4. Click **Add assets**.
+
+To generate assets with AI:
+
+1. In the **Asset library**, click **Generate**.
+2. Select a game from the dropdown to associate the assets with.
+3. Enter a description. AI generates three images based on the game you selected and the description you entered.
+4. Select one or more of the generated images.
+5. Click **Save creatives**.
+
+All assets are automatically submitted for moderation when uploaded. Moderation is typically completed within 48 hours. If your asset is rejected, you can appeal that status by clicking **Appeal**.
+
+To archive an asset you no longer need, click **&vellip;** > **Archive**. Archived assets aren't available during campaign creation, but their performance history is retained.
+
+<Alert severity="warning">
+You cannot archive assets that are currently tied to a live or processing campaign.
+</Alert>
 
 ## Reporting
 
