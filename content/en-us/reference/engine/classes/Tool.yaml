@@ -377,21 +377,8 @@ events:
       The below code, when placed in a `Class.LocalScript`, creates a tool in
       the local player's `Class.Backpack` and prints "Tool activated" when the
       player clicks while the created tool is equipped.
-
-      ```lua
-      local Players = game:GetService("Players")
-
-      local tool = Instance.new("Tool")
-      tool.RequiresHandle = false
-      tool.Parent = Players.LocalPlayer.Backpack
-
-      function onActivation()
-      	print("Tool activated")
-      end
-
-      tool.Activated:Connect(onActivation)
-      ```
-    code_samples: []
+    code_samples:
+      - Tool-Activated
     parameters: []
     tags: []
     deprecation_message: ''
@@ -410,21 +397,8 @@ events:
       The below code, when placed in a `Class.LocalScript`, creates a tool in
       the local player's `Class.Backpack` and prints "Tool deactivated" when the
       player releases their click while the tool is equipped and activated.
-
-      ```lua
-      local Players = game:GetService("Players")
-
-      local tool = Instance.new("Tool")
-      tool.RequiresHandle = false
-      tool.Parent = Players.LocalPlayer.Backpack
-
-      function toolDeactivated()
-      	print("Tool deactivated")
-      end
-
-      tool.Deactivated:Connect(toolDeactivated)
-      ```
-    code_samples: []
+    code_samples:
+      - Tool-Deactivated
     parameters: []
     tags: []
     deprecation_message: ''

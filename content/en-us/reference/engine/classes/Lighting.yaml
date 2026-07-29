@@ -761,25 +761,8 @@ methods:
       The following code sample includes a simple day/night cycle script. The
       speed of time and the initial time can be changed using the `TIME_SPEED`
       and `START_TIME` parameters.
-
-      ```lua
-      local Lighting = game:GetService("Lighting")
-
-      local TIME_SPEED = 60  -- 1 min = 1 hour
-      local START_TIME = 9  -- 9 AM
-
-      local minutesAfterMidnight = START_TIME * 60
-      local waitTime = 60 / TIME_SPEED
-
-      while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
-
-      	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
-
-      	task.wait(waitTime)
-      end
-      ```
-    code_samples: []
+    code_samples:
+      - Lighting-SetMinutesAfterMidnight
     parameters:
       - name: minutes
         type: double

@@ -1489,17 +1489,10 @@ properties:
       This is convenient for setting the pivot to a location in **local** space,
       but setting a part's pivot to a location in **world** space can be done as
       follows:
-
-      ```
-      local Workspace = game:GetService("Workspace")
-
-      local part = Workspace.BluePart
-      local desiredPivotCFrameInWorldSpace = CFrame.new(0, 10, 0)
-      part.PivotOffset = part.CFrame:ToObjectSpace(desiredPivotCFrameInWorldSpace)
-      ```
     code_samples:
       - reset-pivot
       - clock-hands
+      - BasePart-PivotOffset
     type: CFrame
     tags: []
     deprecation_message: ''
@@ -2188,16 +2181,8 @@ methods:
       the changing orientation of the body. The optional `angVelocity` parameter
       accounts for these gyroscopic effects. If omitted, these gyroscopic
       effects are omitted from the calculation.
-
-      ```lua
-      local part = workspace.Part
-      local angularVelocity = part.AssemblyAngularVelocity
-      local desiredAcceleration = Vector3.new(0, 10, 0)
-
-      -- Compute the torque needed to achieve the desired acceleration
-      local torque = part:AngularAccelerationToTorque(desiredAcceleration, angularVelocity)
-      ```
-    code_samples: []
+    code_samples:
+      - BasePart-AngularAccelerationToTorque
     parameters:
       - name: angAcceleration
         type: Vector3
@@ -3094,16 +3079,8 @@ methods:
       angular velocity. The `angVelocity` parameter accounts for these
       gyroscopic effects. If omitted (defaults to zero), the result neglects
       this contribution from the result.
-
-      ```lua
-      local part = workspace.Part
-      local angularVelocity = part.AssemblyAngularVelocity
-      local appliedTorque = Vector3.new(0, 100, 0)
-
-      -- Predict the angular acceleration from this torque
-      local angAccel = part:TorqueToAngularAcceleration(appliedTorque, angularVelocity)
-      ```
-    code_samples: []
+    code_samples:
+      - BasePart-TorqueToAngularAcceleration
     parameters:
       - name: torque
         type: Vector3

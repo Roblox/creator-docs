@@ -45,16 +45,8 @@ properties:
 
       Unlike `Class.Object:IsA()`, ClassName can be used to check if an object
       belongs to a specific class ignoring class inheritance. For example:
-
-      ```
-      for _, child in workspace:GetChildren() do
-          if child.ClassName == "Part" then
-              print("Found a Part")
-              -- will find Parts in model, but NOT TrussParts, WedgeParts, etc
-          end
-      end
-      ```
-    code_samples: []
+    code_samples:
+      - Object-ClassName
     type: string
     tags:
       - ReadOnly

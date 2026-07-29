@@ -36,15 +36,8 @@ properties:
       `Class.AnimationConstraint.Transform|Transform` — if evaluation was
       throttled, applying procedural offsets would fight the stale pose and
       should be skipped:
-
-      ```lua
-      RunService.PreSimulation:Connect(function()
-          if not animator.EvaluationThrottled then
-              neck.Transform = computeNeckRotation() * neck.Transform
-          end
-      end)
-      ```
-    code_samples: []
+    code_samples:
+      - Animator-EvaluationThrottled
     type: boolean
     tags:
       - ReadOnly

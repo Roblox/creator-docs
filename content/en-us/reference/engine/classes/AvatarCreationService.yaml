@@ -84,27 +84,8 @@ methods:
       `Class.AvatarCreationService:LoadAvatar2DPreviewAsync()|LoadAvatar2DPreviewAsync()`
       to retrieve the preview image on the client. This API can only be used on
       the game server.
-
-      ```lua
-      local AvatarCreationService = game:GetService("AvatarCreationService")
-
-      function generateAvatar2DPreview(sessionId, fileId, textPrompt)
-          local pcallSuccess, result = pcall(function()
-              local args = {}
-              args.SessionId = sessionId
-              args.FileId = fileId
-              args.TextPrompt = textPrompt
-              return AvatarCreationService:GenerateAvatar2DPreviewAsync(args)
-          end)
-
-          if not pcallSuccess then
-              warn("Generating 2D preview failed: ", result)
-          end
-
-          return result
-      end
-      ```
-    code_samples: []
+    code_samples:
+      - AvatarCreationService-GenerateAvatar2DPreviewAsync
     parameters:
       - name: avatarGeneration2dPreviewParams
         type: Dictionary
@@ -139,26 +120,8 @@ methods:
       method is then called to retrieve the generated
       `Class.HumanoidDescription` avatar. This API can only be used on the game
       server.
-
-      ```lua
-      local AvatarCreationService = game:GetService("AvatarCreationService")
-
-      function generateAvatar(sessionId, previewId)
-          local pcallSuccess, result = pcall(function()
-              local args = {}
-              args.SessionId = sessionId
-              args.PreviewId = previewId
-              return AvatarCreationService:GenerateAvatarAsync(args)
-          end)
-
-          if not pcallSuccess then
-              warn("Generating avatar failed: ", result)
-          end
-
-          return result
-      end
-      ```
-    code_samples: []
+    code_samples:
+      - AvatarCreationService-GenerateAvatarAsync
     parameters:
       - name: avatarGenerationParams
         type: Dictionary
@@ -419,23 +382,8 @@ methods:
     description: |
       Load an AvatarGeneration 2D preview as an `Class.EditableImage` on the
       client for the given previewId. This API can only be used on the client.
-
-      ```lua
-      local AvatarCreationService = game:GetService("AvatarCreationService")
-
-      function loadAvatar2DPreview(previewId)
-          local pcallSuccess, result = pcall(function()
-              return AvatarCreationService:LoadAvatar2DPreviewAsync(previewId)
-          end)
-
-          if not pcallSuccess then
-              warn("Failed to load preview: ", result)
-          end
-
-          return result
-      end
-      ```
-    code_samples: []
+    code_samples:
+      - AvatarCreationService-LoadAvatar2DPreviewAsync
     parameters:
       - name: previewId
         type: string
@@ -826,35 +774,8 @@ methods:
       a session request. The estimated `waitTime` is used to provide the player
       an estimated time in seconds until the session will be ready. This API can
       only be used on the game server.
-
-      ```lua
-      local AvatarCreationService = game:GetService("AvatarCreationService")
-      local playerSessions = {}
-      local playerSessionRequests = {}
-
-      function requestAvatarGenerationSession(player)
-          local pcallSuccess, conn, waitTime = pcall(function()
-              return AvatarCreationService:RequestAvatarGenerationSessionAsync(player, function(sessionInfo)
-                  playerSessions[player.UserID] = sessionInfo
-                  playerSessionRequests[player.UserID] = nil
-              end)
-          end)
-
-          if not pcallSuccess then
-              warn("Failed to request Avatar generation session: ", conn)
-          end
-
-          playerSessionRequests[player.UserID] = conn
-          print("Wait time for session: ", tostring(waitTime))
-      end
-
-      function cancelAvatarGenerationSessionRequest(player)
-          if playerSessionRequests[player.UserID] ~= nil then
-              playerSessionRequests[player.UserID]:Disconnect()
-          end
-      end
-      ```
-    code_samples: []
+    code_samples:
+      - AvatarCreationService-RequestAvatarGenerationSessionAsync
     parameters:
       - name: player
         type: Player

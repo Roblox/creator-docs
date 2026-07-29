@@ -72,23 +72,8 @@ properties:
 
       To restore `CameraSubject` to its default value, set it to the local
       character's `Class.Humanoid`:
-
-      ```lua
-      local Players = game:GetService("Players")
-
-      local localPlayer = Players.LocalPlayer
-      local camera = workspace.CurrentCamera
-
-      local function resetCameraSubject()
-      	if camera and localPlayer.Character then
-      		local humanoid = localPlayer.Character:FindFirstChildWhichIsA("Humanoid")
-      		if humanoid then
-      			camera.CameraSubject = humanoid
-      		end
-      	end
-      end
-      ```
-    code_samples: []
+    code_samples:
+      - Camera-CameraSubject
     type: Instance
     tags: []
     deprecation_message: ''
@@ -815,19 +800,9 @@ methods:
       camera's `Class.Camera.CFrame|CFrame` is not accounted for. To obtain the
       actual roll of the `Class.Camera`, including roll manually applied, you
       can use the following snippet:
-
-      ```lua
-      local function getActualRoll()
-      	local camera = workspace.CurrentCamera
-
-      	local trueUp = Vector3.new(0, 1, 0)
-      	local cameraUp = camera:GetRenderCFrame().upVector
-
-      	return math.acos(trueUp:Dot(cameraUp))
-      end
-      ```
     code_samples:
       - Camera-GetRoll1
+      - Camera-GetRoll
     parameters: []
     returns:
       - type: float
@@ -1418,18 +1393,8 @@ methods:
 
       The method automatically accounts for the camera's field of view and
       viewport aspect ratio to ensure the entire bounding box fits.
-
-      ```lua
-      local camera = workspace.CurrentCamera
-      local model = workspace:FindFirstChild("MyModel")
-
-      if model then
-      	local modelCFrame = model:GetModelCFrame()
-      	local extentsSize = model:GetExtentsSize()
-      	camera:ZoomToExtents(modelCFrame, extentsSize)
-      end
-      ```
-    code_samples: []
+    code_samples:
+      - Camera-ZoomToExtents
     parameters:
       - name: boundingBoxCFrame
         type: CFrame

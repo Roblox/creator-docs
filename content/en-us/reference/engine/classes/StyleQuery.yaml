@@ -157,12 +157,8 @@ methods:
 
       To set multiple conditions for a `StyleQuery` at once, see
       `Class.StyleQuery:SetConditions()|SetConditions()`.
-
-      ```lua
-      local styleQuery = Instance.new("StyleQuery")
-      styleQuery:SetCondition("MaxSize", Vector2.new(200, math.huge))
-      ```
-    code_samples: []
+    code_samples:
+      - StyleQuery-SetCondition
     parameters:
       - name: name
         type: string
@@ -200,15 +196,8 @@ methods:
 
       To set/update just one condition of a `StyleQuery`, see
       `Class.StyleQuery:SetCondition()|SetCondition()`.
-
-      ```lua
-      local styleQuery = Instance.new("StyleQuery")
-      styleQuery:SetConditions({
-      	["AspectRatioRange"] = NumberRange.new(0, 1),
-      	["MaxSize"] = Vector2.new(200, math.huge),
-      })
-      ```
-    code_samples: []
+    code_samples:
+      - StyleQuery-SetConditions
     parameters:
       - name: conditions
         type: Dictionary

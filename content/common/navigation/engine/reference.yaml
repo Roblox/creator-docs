@@ -1189,6 +1189,11 @@ navigation:
                                 type: engineapi
                                 source: /reference/engine/classes/TextLabel.yaml
                                 ignoreTranslation: true
+                          - title: InputActionLabel
+                            path: /reference/engine/classes/InputActionLabel
+                            type: engineapi
+                            source: /reference/engine/classes/InputActionLabel.yaml
+                            ignoreTranslation: true
                           - title: ScrollingFrame
                             path: /reference/engine/classes/ScrollingFrame
                             type: engineapi
@@ -5706,6 +5711,11 @@ navigation:
         path: /reference/engine/enums/SlimTintMode
         type: engineapi
         source: /reference/engine/enums/SlimTintMode.yaml
+        ignoreTranslation: true
+      - title: SlimTranscoderStatus
+        path: /reference/engine/enums/SlimTranscoderStatus
+        type: engineapi
+        source: /reference/engine/enums/SlimTranscoderStatus.yaml
         ignoreTranslation: true
       - title: SolverConvergenceMetricType
         path: /reference/engine/enums/SolverConvergenceMetricType

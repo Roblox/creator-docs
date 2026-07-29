@@ -17,9 +17,8 @@ description: |
   unique face:
 
   ```lua
-  local Workspace = game:GetService("Workspace")
-
-  local cube = Workspace.Cube
+  local cube = Instance.new("Part")
+  cube.Shape = Enum.PartType.Block
   local rx, ry, rz = math.rad(90), math.rad(90), math.rad(90)
 
   task.wait(5)
@@ -33,9 +32,8 @@ description: |
   An equivalent operation is:
 
   ```lua
-  local Workspace = game:GetService("Workspace")
-
-  local cube = Workspace.Cube
+  local cube = Instance.new("Part")
+  cube.Shape = Enum.PartType.Block
   local rx, ry, rz = math.rad(90), math.rad(90), math.rad(90)
 
   cube.CFrame = CFrame.fromEulerAngles(rx, ry, rz, Enum.RotationOrder.XYZ)

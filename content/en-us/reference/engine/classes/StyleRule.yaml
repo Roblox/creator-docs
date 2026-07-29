@@ -206,25 +206,8 @@ methods:
     description: |
       Returns a dictionary of key-value pairs describing the properties of the
       `StyleRule`, for example:
-
-      ```lua
-      local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
-      local coreSheet = ReplicatedStorage:FindFirstChild("CoreSheet")
-
-      -- Get reference to style rule
-      local frameRule = coreSheet.Frame
-
-      local props = frameRule:GetProperties()
-      print(props)
-      --[[
-      {
-      	["AnchorPoint"] = 0.5, 0,
-      	["BackgroundColor3"] = 1, 0, 0.25
-      }
-      ]]
-      ```
-    code_samples: []
+    code_samples:
+      - StyleRule-GetProperties
     parameters: []
     returns:
       - type: Dictionary
@@ -242,19 +225,8 @@ methods:
       Returns the value of a specific property in the `StyleRule`.
     description: |
       Returns the value of a specific property in the `StyleRule`.
-
-      ```lua
-      local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
-      local coreSheet = ReplicatedStorage:FindFirstChild("CoreSheet")
-
-      -- Get reference to style rule
-      local frameRule = coreSheet.Frame
-
-      local prop = frameRule:GetProperty("AnchorPoint")
-      print(prop) --> 0.5, 0
-      ```
-    code_samples: []
+    code_samples:
+      - StyleRule-GetProperty
     parameters:
       - name: name
         type: string

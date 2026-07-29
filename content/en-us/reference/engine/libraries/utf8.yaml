@@ -62,8 +62,9 @@ functions:
       Returns an iterator function so that the construction:
 
       ```lua
+      local str = "héllo"
       for position, codepoint in utf8.codes(str) do
-      	-- body
+      	print(position, codepoint)
       end
       ```
 

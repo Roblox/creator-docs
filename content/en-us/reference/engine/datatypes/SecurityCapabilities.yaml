@@ -14,7 +14,18 @@ deprecation_message: ''
 constructors:
   - name: SecurityCapabilities.new
     summary: Returns a new set of capabilities from zero or more `Enum.SecurityCapability` items.
-    description: "Returns a new set of capabilities from zero or more `Enum.SecurityCapability`\nitems.\n\n```lua\nlocal capabilities = SecurityCapabilities.new(Enum.SecurityCapability.Players,\n	Enum.SecurityCapability.Animation,\n	Enum.SecurityCapability.Basic)\n\nlocal newScript = Instance.new(\"Script\")\nnewScript.Capabilities = capabilities\n```"
+    description: |-
+      Returns a new set of capabilities from zero or more `Enum.SecurityCapability`
+      items.
+
+      ```lua
+      local capabilities = SecurityCapabilities.new(Enum.SecurityCapability.Players,
+          Enum.SecurityCapability.Animation,
+          Enum.SecurityCapability.Basic)
+
+      local newScript = Instance.new("Script")
+      newScript.Capabilities = capabilities
+      ```
     parameters:
       - name: ...
         type: SecurityCapability

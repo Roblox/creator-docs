@@ -75,25 +75,8 @@ methods:
     description: |
       Similar to `Class.StyleBase:InsertStyleRule()|InsertStyleRule()` but lets
       you declare and set multiple `Class.StyleRule|StyleRules` at once.
-
-      ```lua
-      local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
-      local coreSheet = Instance.new("StyleSheet")
-      coreSheet.Name = "CoreSheet"
-      coreSheet.Parent = ReplicatedStorage
-
-      local styleRuleA = Instance.new("StyleRule")
-      styleRuleA.Selector = "Frame"
-      styleRuleA:SetProperty("BackgroundColor3", Color3.new(1, 0, 0))
-
-      local styleRuleB = Instance.new("StyleRule")
-      styleRuleB.Selector = "Frame"
-      styleRuleB:SetProperty("BackgroundColor3", Color3.new(0, 1, 0))
-
-      coreSheet:SetStyleRules({ styleRuleA, styleRuleB })
-      ```
-    code_samples: []
+    code_samples:
+      - StyleBase-SetStyleRules
     parameters:
       - name: rules
         type: Instances

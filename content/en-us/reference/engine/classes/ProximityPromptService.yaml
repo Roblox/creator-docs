@@ -33,19 +33,8 @@ properties:
 
       For example, in a round-based system, you can disable prompts at certain
       points in the experience to disable proximity-based interactions:
-
-      ```lua
-      local ProximityPromptService = game:GetService("ProximityPromptService")
-      local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
-      local enablePrompts = ReplicatedStorage:FindFirstChild("EnablePrompts") -- BindableEvent
-
-      -- Connect to the BindableEvent and fire from another script controlling experience logic
-      enablePrompts.OnServerEvent:Connect(function(enabled)
-      	ProximityPromptService.Enabled = enabled
-      end)
-      ```
-    code_samples: []
+    code_samples:
+      - ProximityPromptService-Enabled
     type: boolean
     tags: []
     deprecation_message: ''

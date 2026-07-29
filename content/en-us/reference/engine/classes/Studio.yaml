@@ -3678,12 +3678,9 @@ methods:
       The **GetAvailableThemes()** function returns a list of
       `Class.StudioTheme|StudioThemes` available in `Class.Studio`. You can
       access the function via:
-
-      ```
-      settings().Studio:GetAvailableThemes()
-      ```
     code_samples:
       - getavailablethemes
+      - Studio-GetAvailableThemes
     parameters: []
     returns:
       - type: Array

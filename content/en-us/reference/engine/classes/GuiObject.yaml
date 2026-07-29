@@ -35,6 +35,7 @@ descendants:
   - Frame
   - GuiButton
   - GuiLabel
+  - InputActionLabel
   - ScrollingFrame
   - TextBox
   - VideoDisplay

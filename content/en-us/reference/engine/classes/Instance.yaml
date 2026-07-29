@@ -402,14 +402,8 @@ properties:
       options will ignore its own `Class.Instance.Archivable|Archivable`
       property and set `Class.Instance.Archivable|Archivable` to `true` for the
       copy.
-
-      ```
-      local part = Instance.new("Part")
-      print(part:Clone())  --> Part
-      part.Archivable = false
-      print(part:Clone())  --> nil
-      ```
-    code_samples: []
+    code_samples:
+      - Instance-Archivable
     type: boolean
     tags: []
     deprecation_message: ''
@@ -1566,38 +1560,8 @@ methods:
       styled/modified. This differs slightly from accessing the property value
       directly, such as `[GuiObject].Rotation`, which returns the default or
       modified value of the property.
-
-      ```lua
-      local Players = game:GetService("Players")
-      local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
-      local player = Players.LocalPlayer
-      local playerGui = player.PlayerGui
-      local HUDContainer = playerGui:WaitForChild("HUDContainer")
-
-      local coreSheet = ReplicatedStorage:FindFirstChild("CoreSheet")
-      local rule = coreSheet:FindFirstChildWhichIsA("StyleRule")
-      rule.Selector = "TextButton"
-
-      -- Reference to a button
-      local button = HUDContainer:FindFirstChildWhichIsA("TextButton")
-
-      print(button:GetStyled("Rotation")) --> 0 (default value)
-      print(button.Rotation) --> 0 (default value)
-
-      -- Apply rotation through style rule property
-      rule:SetProperty("Rotation", 30)
-
-      print(button:GetStyled("Rotation")) --> 30 (styled value based on rule)
-      print(button.Rotation) --> 0 (default value)
-
-      -- Explicitly modify/override styled property
-      button.Rotation = 45
-
-      print(button:GetStyled("Rotation")) --> 45 (modified value)
-      print(button.Rotation) --> 45 (modified value)
-      ```
-    code_samples: []
+    code_samples:
+      - Instance-GetStyled
     parameters:
       - name: name
         type: string
@@ -1634,22 +1598,8 @@ methods:
       Note that this event will not pass any arguments to a connected function,
       so the value of the changed property must be read directly within a
       script.
-
-      ```lua
-      local Players = game:GetService("Players")
-
-      local player = Players.LocalPlayer
-      local playerGui = player.PlayerGui
-      local HUDContainer = playerGui:WaitForChild("HUDContainer")
-      local meterBar = HUDContainer.MeterBar
-
-      local function stylePropertyChanged()
-      	print("Style property changed!")
-      end
-
-      meterBar:GetStyledPropertyChangedSignal("AnchorPoint"):Connect(stylePropertyChanged)
-      ```
-    code_samples: []
+    code_samples:
+      - Instance-GetStyledPropertyChangedSignal
     parameters:
       - name: property
         type: string
@@ -2459,22 +2409,8 @@ events:
     description: |
       This event fires whenever any style property is changed on the instance,
       including when a property is set to `nil`.
-
-      ```lua
-      local Players = game:GetService("Players")
-
-      local player = Players.LocalPlayer
-      local playerGui = player.PlayerGui
-      local HUDContainer = playerGui:WaitForChild("HUDContainer")
-      local meterBar = HUDContainer.MeterBar
-
-      local function stylePropertyChanged()
-      	print("Styled properties changed")
-      end
-
-      meterBar:StyledPropertiesChanged():Connect(stylePropertyChanged)
-      ```
-    code_samples: []
+    code_samples:
+      - Instance-StyledPropertiesChanged
     parameters: []
     tags: []
     deprecation_message: ''

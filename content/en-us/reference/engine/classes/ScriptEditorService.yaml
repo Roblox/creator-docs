@@ -408,15 +408,8 @@ methods:
 
       If the script is not open in the editor, the new content updates to the
       script source, which is the text the editor would display if it is opened.
-
-      ```lua
-      local ScriptEditorService = game:GetService("ScriptEditorService")
-
-      ScriptEditorService:UpdateSourceAsync(workspace.Script, function(oldContent)
-      	return oldContent .. " World!"
-      end)
-      ```
-    code_samples: []
+    code_samples:
+      - ScriptEditorService-UpdateSourceAsync
     parameters:
       - name: script
         type: LuaSourceContainer

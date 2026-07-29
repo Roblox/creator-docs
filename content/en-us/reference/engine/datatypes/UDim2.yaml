@@ -16,9 +16,10 @@ description: |
   `Class.GuiObject|GuiObjects`.
 
   ```lua
-  local guiObject = script.Parent
+  local guiObject = Instance.new("Frame")
   guiObject.Size = UDim2.new(0, 300, 1, 0)  -- 300 pixels wide; full height of parent
   guiObject.Position = UDim2.new(0, 50, 0, 0)  -- 50 pixels from the left
+  print(guiObject.Size) --> {0, 300}, {1, 0}
   ```
 code_samples: []
 tags: []
@@ -88,7 +89,8 @@ constructors:
       Equivalent to:
 
       ```lua
-      UDim2.fromScale(xScale, yScale) == UDim2.new(xScale, 0, yScale, 0)
+      local xScale, yScale = 0.5, 0.25
+      print(UDim2.fromScale(xScale, yScale) == UDim2.new(xScale, 0, yScale, 0)) --> true
       ```
     parameters:
       - name: xScale
@@ -108,7 +110,8 @@ constructors:
       Returns a new `Datatype.UDim2` with the given offset coordinates and no scaling. Equivalent to:
 
       ```lua
-      UDim2.fromOffset(xOffset, yOffset) == UDim2.new(0, xOffset, 0, yOffset)
+      local xOffset, yOffset = 100, 50
+      print(UDim2.fromOffset(xOffset, yOffset) == UDim2.new(0, xOffset, 0, yOffset)) --> true
       ```
     parameters:
       - name: xOffset

@@ -31,15 +31,15 @@ constructors:
       - name: red
         type: number
         default: 0
-        summary: ''
+        summary: The red component of the color, from 0 to 1.
       - name: green
         type: number
         default: 0
-        summary: ''
+        summary: The green component of the color, from 0 to 1.
       - name: blue
         type: number
         default: 0
-        summary: ''
+        summary: The blue component of the color, from 0 to 1.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -61,15 +61,15 @@ constructors:
       - name: red
         type: number
         default: 0
-        summary: ''
+        summary: The red component of the color, from 0 to 255.
       - name: green
         type: number
         default: 0
-        summary: ''
+        summary: The green component of the color, from 0 to 255.
       - name: blue
         type: number
         default: 0
-        summary: ''
+        summary: The blue component of the color, from 0 to 255.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -90,15 +90,15 @@ constructors:
       - name: hue
         type: number
         default:
-        summary: ''
+        summary: The hue of the color, from 0 to 1.
       - name: saturation
         type: number
         default:
-        summary: ''
+        summary: The saturation of the color, from 0 to 1.
       - name: value
         type: number
         default:
-        summary: ''
+        summary: The value (brightness) of the color, from 0 to 1.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -121,7 +121,7 @@ constructors:
       - name: hex
         type: string
         default:
-        summary: ''
+        summary: A three- or six-character hexadecimal color string, optionally prefixed with `#`.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -182,11 +182,14 @@ methods:
       - name: color
         type: Color3
         default:
-        summary: ''
+        summary: |
+          The color to interpolate toward.
       - name: alpha
         type: number
         default:
-        summary: ''
+        summary: |
+          An interpolation value between 0 and 1, where 0 returns this color and
+          1 returns the target color.
     returns:
       - type: Color3
         summary: ''
@@ -261,7 +264,8 @@ functions:
       - name: color
         type: Color3
         default:
-        summary: ''
+        summary: |
+          The Color3 to convert to HSV.
     returns:
       - type: number
         summary: ''

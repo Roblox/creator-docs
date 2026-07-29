@@ -181,17 +181,8 @@ methods:
 
       When `DirectChatRequester` is set, only messages between users that can
       direct chat with the `DirectChatRequester` are delivered.
-
-      ```lua
-      local function createWhisperChannel(fromPlayer, toPlayer)
-        local whisperChannel = Instance.new("TextChannel")
-        whisperChannel:SetDirectChatRequester(fromPlayer)
-        whisperChannel:AddUserAsync(toPlayer.UserId)
-        -- The TextChannel instance now has two TextSource instances.
-        return whisperChannel
-      end
-      ```
-    code_samples: []
+    code_samples:
+      - TextChannel-SetDirectChatRequester
     parameters:
       - name: requester
         type: Player

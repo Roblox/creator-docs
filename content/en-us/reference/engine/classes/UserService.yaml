@@ -122,16 +122,8 @@ methods:
       `Datatype.User` value.
 
       This is a server-only yielding call.
-
-      ```lua
-      local UserService = game:GetService("UserService")
-
-      local user = UserService:GetUserFromGlobalUserIdAsync(globalUserId)
-      print(user.Id)         -- Domain user ID for this experience
-      print(user.DomainType) -- Enum.DomainType.EXPERIENCE
-      print(user.DomainId)   -- Current universe ID
-      ```
-    code_samples: []
+    code_samples:
+      - UserService-GetUserFromGlobalUserIdAsync
     parameters:
       - name: userId
         type: int64

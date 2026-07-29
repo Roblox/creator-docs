@@ -758,31 +758,8 @@ events:
       </table>
 
       ##### Code Sample
-
-      ```lua
-      local RunService = game:GetService("RunService")
-
-      RunService.Misprediction:Connect(function(time, instances, stats)
-      	print(`Misprediction at t={time}, resim={stats.ResimulationTime}s`)
-
-      	for _, entry in instances do
-      		print(`  Instance: {entry.Instance:GetFullName()}`)
-
-      		if entry.Properties then
-      			for name, values in entry.Properties do
-      				print(`    Property '{name}': predicted={values.Predicted}, authoritative={values.Authoritative}`)
-      			end
-      		end
-
-      		if entry.Attributes then
-      			for name, values in entry.Attributes do
-      				print(`    Attribute '{name}': predicted={values.Predicted}, authoritative={values.Authoritative}`)
-      			end
-      		end
-      	end
-      end)
-      ```
-    code_samples: []
+    code_samples:
+      - RunService-Misprediction
     parameters:
       - name: time
         type: double
@@ -960,23 +937,8 @@ events:
       access, you can listen for this event, compare the rolled-back-to step
       against your farthest-reached step, and rewind your custom state
       accordingly.
-
-      ```lua
-      local RunService = game:GetService("RunService")
-
-      local stateHistory = {} -- your custom state tracked per fixed step
-
-      RunService.Rollback:Connect(function(time)
-      	-- Discard any custom state newer than the rolled-back-to step
-      	-- and restore the state at that step before resimulation begins
-      	for step, _ in stateHistory do
-      		if step > time then
-      			stateHistory[step] = nil
-      		end
-      	end
-      end)
-      ```
-    code_samples: []
+    code_samples:
+      - RunService-Rollback
     parameters:
       - name: time
         type: double

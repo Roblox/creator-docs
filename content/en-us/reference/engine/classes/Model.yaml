@@ -230,21 +230,9 @@ properties:
       simply by creating a new model and parenting objects to it, avoiding the
       need to explicitly set `Class.Model.WorldPivot` every time you create a
       model in code.
-
-      ```
-      local Workspace = game:GetService("Workspace")
-
-      local model = Instance.new("Model")
-      Workspace.BluePart.Parent = model
-      Workspace.RedPart.Parent = model
-      model.Parent = Workspace
-
-      print(model:GetPivot())  -- Currently equal to the center of the bounding box containing "BluePart" and "RedPart"
-
-      model:PivotTo(CFrame.new(0, 10, 0))  -- This works without needing to explicitly set "model.WorldPivot"
-      ```
     code_samples:
       - reset-pivot
+      - Model-WorldPivot
     type: CFrame
     tags:
       - NotReplicated
@@ -353,19 +341,8 @@ methods:
       `Class.PVInstance.GetPivot|Pivot` - either the pivot of the
       `Class.Model.PrimaryPart|PrimaryPart` (if present) or the
       `Class.Model.WorldPivot|WorldPivot` of the model.
-
-      ```lua
-      local Workspace = game:GetService("Workspace")
-
-      local model = Workspace.Model
-      local part = Workspace.Part
-      local orientation, size = model:GetBoundingBox()
-
-      -- Resize and position part equal to bounding box of model
-      part.Size = size
-      part.CFrame = orientation
-      ```
-    code_samples: []
+    code_samples:
+      - Model-GetBoundingBox
     parameters: []
     returns:
       - type: Tuple

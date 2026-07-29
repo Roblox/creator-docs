@@ -41,12 +41,6 @@ functions:
     description: |
       Throws an error if the provided `value` is `false` or `nil`. If the
       assertion passes, it returns all values passed to it.
-
-      ```lua
-      local product = 90 * 4
-      assert(product == 360, "Oh dear, multiplication is broken")
-      -- The line above does nothing, because 90 times 4 is 360
-      ```
     parameters:
       - name: value
         type: Variant
@@ -62,7 +56,8 @@ functions:
       - type: Variant
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-assert
     deprecation_message: ''
   - name: collectgarbage
     summary: |
@@ -180,16 +175,6 @@ functions:
       Returns the metatable of the given table `t` if it has one, otherwise
       returns `nil`. If `t` does have a metatable, and the `__metatable`
       metamethod is set, it returns that value instead.
-
-      ```lua
-      -- Demonstrate getmetatable:
-      local meta = {}
-      local t = setmetatable({}, meta)
-      print(getmetatable(t) == meta) --> true
-      -- Make the original metatable unrecoverable by setting the __metatable metamethod:
-      meta.__metatable = "protected"
-      print(getmetatable(t)) --> protected
-      ```
     parameters:
       - name: t
         type: Variant
@@ -200,7 +185,8 @@ functions:
       - type: Variant
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-getmetatable
     deprecation_message: ''
   - name: ipairs
     summary: |
@@ -211,13 +197,6 @@ functions:
       numerical index-value pair in the table. When used in a generic for-loop,
       the return values can be used to iterate over each numerical index in the
       table:
-
-      ```lua
-      local fruits = {"apples", "oranges", "kiwi"}
-      for index, fruit in ipairs(fruits) do
-         print(index, fruit) --> 1 apples, 2 oranges, 3 kiwi, etc...
-      end
-      ```
     parameters:
       - name: t
         type: Array
@@ -232,7 +211,8 @@ functions:
       - type: int
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-ipairs
     deprecation_message: ''
   - name: loadstring
     summary: |
@@ -326,17 +306,6 @@ functions:
       Returns an iterator function, the passed table `t`, and `nil`, so that the
       construction will iterate over all key/value pairs of that table when used
       in a generic `for` loop:
-
-      ```lua
-      local scores = {
-          ["John"] = 5,
-          ["Sally"] = 10
-      }
-
-      for name, score in pairs(scores) do
-          print(name .. " has score: " .. score)
-      end
-      ```
     parameters:
       - name: t
         type: table
@@ -349,7 +318,8 @@ functions:
       - type: table
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-pairs
     deprecation_message: ''
   - name: pcall
     summary: |
@@ -363,20 +333,6 @@ functions:
       errors. In such case, `pcall()` also returns all results from the call,
       after this first result. In case of any error, `pcall()` returns false
       plus the error message.
-
-      ```lua
-      local function divideByFive(n: number): number
-      	return n / 5
-      end
-
-      local success, errorMessage = pcall(divideByFive, "notANumber")  -- Results in error...
-
-      if success then
-      	-- Handle successful response...
-      else
-      	warn("Error message:", errorMessage)
-      end
-      ```
     parameters:
       - name: func
         type: function
@@ -394,7 +350,8 @@ functions:
       - type: Variant
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-pcall
     deprecation_message: ''
   - name: print
     summary: |
@@ -541,28 +498,6 @@ functions:
       parentheses have been added to clarify exactly how each path component
       maps onto an instance.
 
-      ```lua
-      -- "./" prefix is equivalent to script.Parent
-      require("./MySibling")
-      require((script.Parent).(MySibling))
-
-      -- "../" prefix is equivalent to script.Parent.Parent
-      require("../SiblingOfMyParent")
-      require((script.Parent.Parent).(SiblingOfMyParent))
-
-      -- "../" can be chained to go up multiple levels
-      require("../../SiblingOfMyGrandparent")
-      require((script.Parent.Parent).(Parent).(SiblingOfMyGrandparent))
-
-      -- "@self" prefix corresponds to the script itself
-      require("@self/MyChild")
-      require((script).(MyChild))
-
-      -- "@game" prefix corresponds to the DataModel root
-      require("@game/ReplicatedStorage/Shared/MyModule")
-      require((game).(ReplicatedStorage).(Shared).(MyModule))
-      ```
-
       Once the return object is created by an **initial**
       `Global.LuaGlobals.require()` call of a `Class.ModuleScript`, future
       `Global.LuaGlobals.require()` calls for the same `Class.ModuleScript` (on
@@ -601,7 +536,8 @@ functions:
           What the `Class.ModuleScript` returned (usually a table or a
           function).
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-require
     deprecation_message: ''
   - name: select
     summary: |
@@ -610,17 +546,8 @@ functions:
       Returns all arguments after argument number `index`. If negative, it will
       return from the end of the argument list.
 
-      ```lua
-      print(select(2, "A", "B", "C")) --> B C
-      print(select(-1, "A", "B", "C")) --> C
-      ```
-
       If the `index` argument is set to `"#"`, the number of arguments that were
       passed after it is returned.
-
-      ```lua
-      print(select("#", "A", "B", "C")) --> 3
-      ```
     parameters:
       - name: index
         type: Variant
@@ -638,7 +565,8 @@ functions:
       - type: Tuple
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-select
     deprecation_message: ''
   - name: setfenv
     summary: |
@@ -687,14 +615,6 @@ functions:
       `nil`, the metatable of `t` is removed. Finally, this function returns the
       table `t` which was passed to it. If `t` already has a metatable whose
       `__metatable` metamethod is set, calling this on `t` raises an error.
-
-      ```lua
-      local meta = {__metatable = "protected"}
-      local t = {}
-      setmetatable(t, meta) -- This sets the metatable of t
-      -- We now have a table, t, with a metatable. If we try to change it...
-      setmetatable(t, {}) --> Error: cannot change a protected metatable
-      ```
     parameters:
       - name: t
         type: table
@@ -711,7 +631,8 @@ functions:
       - type: table
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-setmetatable
     deprecation_message: ''
   - name: tonumber
     summary: |
@@ -729,17 +650,6 @@ functions:
 
       If a string begins with `0x` and a base is not provided, the `0x` is
       trimmed and the base is assumed to be 16, or hexadecimal.
-
-      ```lua
-      print(tonumber("1337")) --> 1337 (assumes base 10, decimal)
-      print(tonumber("1.25")) --> 1.25 (base 10 may have decimal portions)
-      print(tonumber("3e2")) --> 300 (base 10 may have exponent portion, 3 &times; 10 ^ 2)
-      print(tonumber("25", 8)) --> 21 (base 8, octal)
-      print(tonumber("0x100")) --> 256 (assumes base 16, hexadecimal)
-      print(tonumber("roblox")) --> nil (does not raise an error)
-      -- Tip: use with assert if you would like unconvertable numbers to raise an error
-      print(assert(tonumber("roblox"))) --> Error: assertion failed
-      ```
     parameters:
       - name: arg
         type: Variant
@@ -755,7 +665,8 @@ functions:
       - type: Variant
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-tonumber
     deprecation_message: ''
   - name: tostring
     summary: |
@@ -766,12 +677,6 @@ functions:
       string.format. If the metatable of `e` has a `__tostring` metamethod, then
       it will be called with `e` as the only argument and will return the
       result.
-
-      ```lua
-      local isRobloxCool = true
-      -- Convert the boolean to a string then concatenate:
-      print("Roblox is cool: " .. tostring(isRobloxCool)) --> Roblox is cool: true
-      ```
     parameters:
       - name: e
         type: Variant
@@ -782,7 +687,8 @@ functions:
       - type: string
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-tostring
     deprecation_message: ''
   - name: type
     summary: |
