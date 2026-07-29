@@ -23,6 +23,11 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
+  - name: None
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
   - name: Backspace
     summary: |
       The `Backspace` key.
@@ -1706,5 +1711,45 @@ items:
       The scale delta (change) of a two-finger touch pinch gesture. Primarily
       used in the [Input Action System](../../../input/input-action-system.md).
     value: 1050
+    tags: []
+    deprecation_message: ''
+  - name: ButtonCenter
+    summary: |
+      TV remote `Center` button.
+    value: 1051
+    tags: []
+    deprecation_message: ''
+  - name: ButtonBack
+    summary: |
+      TV remote `Back` button.
+    value: 1052
+    tags: []
+    deprecation_message: ''
+  - name: ButtonUp
+    summary: |
+      `Enum.PreferredInput.MicroGamepad|MicroGamepad` (including TV remotes)
+      `Up` directional button.
+    value: 1053
+    tags: []
+    deprecation_message: ''
+  - name: ButtonDown
+    summary: |
+      `Enum.PreferredInput.MicroGamepad|MicroGamepad` (including TV remotes)
+      `Down` directional button.
+    value: 1054
+    tags: []
+    deprecation_message: ''
+  - name: ButtonLeft
+    summary: |
+      `Enum.PreferredInput.MicroGamepad|MicroGamepad` (including TV remotes)
+      `Left` directional button.
+    value: 1055
+    tags: []
+    deprecation_message: ''
+  - name: ButtonRight
+    summary: |
+      `Enum.PreferredInput.MicroGamepad|MicroGamepad` (including TV remotes)
+      `Right` directional button.
+    value: 1056
     tags: []
     deprecation_message: ''

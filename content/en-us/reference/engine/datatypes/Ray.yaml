@@ -22,11 +22,11 @@ constructors:
       - name: Origin
         type: Vector3
         default:
-        summary: The starting point of the ray in 3D space.
+        summary: ''
       - name: Direction
         type: Vector3
         default:
-        summary: The direction vector of the ray. Does not need to be a unit vector.
+        summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -79,13 +79,10 @@ methods:
       - name: point
         type: Vector3
         default:
-        summary: |
-          The point in 3D space to project onto the ray.
+        summary: ''
     returns:
       - type: Vector3
-        summary: |
-          The point on the ray closest to the given point, or the ray origin if
-          the projection falls behind it.
+        summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -100,13 +97,10 @@ methods:
       - name: point
         type: Vector3
         default:
-        summary: |
-          The point in 3D space to measure distance from.
+        summary: ''
     returns:
       - type: number
-        summary: |
-          The shortest distance between the given point and the closest point on
-          the ray.
+        summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''

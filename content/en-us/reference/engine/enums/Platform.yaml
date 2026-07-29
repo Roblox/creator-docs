@@ -127,20 +127,17 @@ items:
     tags: []
     deprecation_message: ''
   - name: PS5
-    summary: |
-      The client is running on a PS5 (console).
+    summary: ''
     value: 19
     tags: []
     deprecation_message: ''
   - name: MetaOS
-    summary: |
-      The client is running on Meta OS (Meta Quest VR platform).
+    summary: ''
     value: 20
     tags: []
     deprecation_message: ''
   - name: Web
-    summary: |
-      The client is running in a web browser.
+    summary: ''
     value: 21
     tags: []
     deprecation_message: ''

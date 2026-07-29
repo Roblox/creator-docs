@@ -27,7 +27,7 @@ constructors:
       - name: seed
         type: number
         default:
-        summary: An optional number that initializes the pseudorandom number generator's internal state, truncated toward zero to a whole number. Should be within the range [-9007199254740991, 9007199254740991]; values outside this range are clamped to 0.
+        summary: ''
     code_samples:
       - generating-random-seed
     tags: []
@@ -39,27 +39,19 @@ methods:
     summary: |
       Returns a pseudorandom integer uniformly distributed over `[min, max]`.
     description: |
-      Returns a pseudorandom integer uniformly distributed over `[min, max]`,
-      inclusive of both endpoints. If `min` is greater than `max`, the two
-      values are swapped so the call still succeeds. Both arguments are
-      truncated toward zero to whole numbers before sampling.
+      Returns a pseudorandom integer uniformly distributed over `[min, max]`.
     parameters:
       - name: min
         type: number
         default:
-        summary: |
-          The minimum integer value of the range (inclusive). Truncated toward
-          zero to a whole number.
+        summary: ''
       - name: max
         type: number
         default:
-        summary: |
-          The maximum integer value of the range (inclusive). Truncated toward
-          zero to a whole number.
+        summary: ''
     returns:
       - type: number
-        summary: |
-          A pseudorandom integer uniformly distributed over [min, max].
+        summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -72,8 +64,7 @@ methods:
     parameters: []
     returns:
       - type: number
-        summary: |
-          A pseudorandom number uniformly distributed over [0, 1].
+        summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -87,17 +78,14 @@ methods:
       - name: min
         type: number
         default:
-        summary: |
-          The minimum value of the range (inclusive).
+        summary: ''
       - name: max
         type: number
         default:
-        summary: |
-          The maximum value of the range (inclusive).
+        summary: ''
     returns:
       - type: number
-        summary: |
-          A pseudorandom number uniformly distributed over [min, max].
+        summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -118,8 +106,7 @@ methods:
       - name: tb
         type: table
         default:
-        summary: |
-          The table whose array part is shuffled in-place.
+        summary: ''
     returns:
       - type: ()
         summary: ''
@@ -144,15 +131,11 @@ methods:
     summary: |
       Returns a new Random object with the same state as the original.
     description: |
-      Returns a new `Datatype.Random` object whose internal state is copied from
-      the original. After cloning, both the original and the clone produce the
-      same sequence of pseudorandom values going forward, but they advance
-      independently — consuming a value from one does not affect the other.
+      Returns a new Random object with the same state as the original.
     parameters: []
     returns:
       - type: Random
-        summary: |
-          A new Random object with the same internal state as the original.
+        summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''

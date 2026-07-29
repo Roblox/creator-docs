@@ -8,25 +8,8 @@ summary: |
   The `Axes` data type is for the `Class.ArcHandles` class to control which
   rotation axes are currently enabled.
 description: |
-  The `Datatype.Axes` data type contains a set of enabled 3D axes, represented
-  as a bitmask. It is used by the `Class.ArcHandles` class through its
-  `Class.ArcHandles.Axes|Axes` property to control which rotation arc handles
-  are visible.
-
-  `Datatype.Axes` exposes three axis properties (`X`, `Y`, `Z`) and six face
-  properties (`Top`, `Bottom`, `Left`, `Right`, `Front`, `Back`). Because faces
-  map to their corresponding axis, face pairs always share the same value: `Top`
-  and `Bottom` both reflect the Y axis, `Left` and `Right` both reflect the X
-  axis, and `Front` and `Back` both reflect the Z axis.
-
-  ```lua
-  -- Enable arc handles for the X and Y axes only
-  local arcHandles = Instance.new("ArcHandles")
-  arcHandles.Axes = Axes.new(Enum.Axis.X, Enum.Axis.Y)
-  ```
-
-  Like most data types on Roblox, the `Datatype.Axes` data type is immutable:
-  you cannot assign to its properties once created.
+  The `Axes` data type is for the `Class.ArcHandles` class to control which
+  rotation axes are currently enabled.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -36,28 +19,13 @@ constructors:
       Creates a new Axes using list of axes and/or faces. NormalIds (faces) are
       converted to the corresponding axes.
     description: |-
-      Creates a new `Datatype.Axes` from up to 6 `Enum.Axis` or `Enum.NormalId`
-      values. Each `Enum.NormalId` is converted to its corresponding axis (for
-      example, `Enum.NormalId.Top` and `Enum.NormalId.Bottom` both enable the Y
-      axis). Calling `Axes.new()` with no arguments returns an Axes with all
-      properties set to `false`.
-
-      ```lua
-      -- Using Enum.Axis values
-      local axes = Axes.new(Enum.Axis.X, Enum.Axis.Z)
-      print(axes.X) -- true
-      print(axes.Y) -- false
-
-      -- Using Enum.NormalId values (converted to axes)
-      local axes2 = Axes.new(Enum.NormalId.Top, Enum.NormalId.Right)
-      print(axes2.Y) -- true (Top -> Y axis)
-      print(axes2.X) -- true (Right -> X axis)
-      ```
+      Creates a new Axes using list of axes and/or faces. NormalIds (faces) are
+      converted to the corresponding axes.
     parameters:
       - name: axes
         type: Tuple
         default:
-        summary: Any combination of `Enum.Axis` and/or `Enum.NormalId` values (up to 6) specifying which axes to enable.
+        summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -68,9 +36,7 @@ properties:
     summary: |
       Whether the X axis is enabled.
     description: |
-      Whether the X axis is enabled. Defaults to `false` when constructed via
-      `Axes.new()` with no arguments. This property is equivalent to both `Left`
-      and `Right`, which also reflect the X axis state.
+      Whether the X axis is enabled.
     default:
     code_samples: []
     tags: []
@@ -80,9 +46,7 @@ properties:
     summary: |
       Whether the Y axis is enabled.
     description: |
-      Whether the Y axis is enabled. Defaults to `false` when constructed via
-      `Axes.new()` with no arguments. This property is equivalent to both `Top`
-      and `Bottom`, which also reflect the Y axis state.
+      Whether the Y axis is enabled.
     default:
     code_samples: []
     tags: []
@@ -92,9 +56,7 @@ properties:
     summary: |
       Whether the Z axis is enabled.
     description: |
-      Whether the Z axis is enabled. Defaults to `false` when constructed via
-      `Axes.new()` with no arguments. This property is equivalent to both
-      `Front` and `Back`, which also reflect the Z axis state.
+      Whether the Z axis is enabled.
     default:
     code_samples: []
     tags: []
@@ -104,9 +66,7 @@ properties:
     summary: |
       Whether the top face is included.
     description: |
-      Whether the top face is included. This corresponds to the positive Y
-      direction (`Enum.NormalId.Top`) and is always equal to the `Y` property.
-      Defaults to `false`.
+      Whether the top face is included.
     default:
     code_samples: []
     tags: []
@@ -116,9 +76,7 @@ properties:
     summary: |
       Whether the bottom face is included.
     description: |
-      Whether the bottom face is included. This corresponds to the negative Y
-      direction (`Enum.NormalId.Bottom`) and is always equal to the `Y`
-      property. Defaults to `false`.
+      Whether the bottom face is included.
     default:
     code_samples: []
     tags: []
@@ -128,9 +86,7 @@ properties:
     summary: |
       Whether the left face is included.
     description: |
-      Whether the left face is included. This corresponds to the negative X
-      direction (`Enum.NormalId.Left`) and is always equal to the `X` property.
-      Defaults to `false`.
+      Whether the left face is included.
     default:
     code_samples: []
     tags: []
@@ -140,9 +96,7 @@ properties:
     summary: |
       Whether the right face is included.
     description: |
-      Whether the right face is included. This corresponds to the positive X
-      direction (`Enum.NormalId.Right`) and is always equal to the `X` property.
-      Defaults to `false`.
+      Whether the right face is included.
     default:
     code_samples: []
     tags: []
@@ -152,9 +106,7 @@ properties:
     summary: |
       Whether the back face is included.
     description: |
-      Whether the back face is included. This corresponds to the positive Z
-      direction (`Enum.NormalId.Back`) and is always equal to the `Z` property.
-      Defaults to `false`.
+      Whether the back face is included.
     default:
     code_samples: []
     tags: []
@@ -164,9 +116,7 @@ properties:
     summary: |
       Whether the front face is included.
     description: |
-      Whether the front face is included. This corresponds to the negative Z
-      direction (`Enum.NormalId.Front`) and is always equal to the `Z` property.
-      Defaults to `false`.
+      Whether the front face is included.
     default:
     code_samples: []
     tags: []
