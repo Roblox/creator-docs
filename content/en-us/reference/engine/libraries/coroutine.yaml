@@ -82,10 +82,16 @@ description: |
   values. You can do this using `Library.coroutine.wrap()`:
 
   ```lua
+  -- A simple coroutine body that returns a value
+  local function task()
+  	return "done"
+  end
+
   -- Create coroutine and return a wrapper function that resumes it
   local f = coroutine.wrap(task)
   -- Resume the coroutine as if we called coroutine.resume()
   local result = f()
+  print(result) --> done
   -- If an error occurs it will be raised here!
   -- This differs from coroutine.resume() which acts similar to pcall()
   ```
@@ -120,6 +126,14 @@ description: |
   followed by multiple calls to `Library.coroutine.resume()`:
 
   ```lua
+  local function repeatThis(word)
+  	local repetition = ""
+  	while true do
+  		repetition = repetition .. word
+  		coroutine.yield(repetition)
+  	end
+  end
+
   local repetitionCoro = coroutine.create(repeatThis)
   print(coroutine.resume(repetitionCoro, "Hello"))  -- true, Hello
   print(coroutine.resume(repetitionCoro))           -- true, HelloHello
@@ -130,6 +144,14 @@ description: |
   a function that produces values:
 
   ```lua
+  local function repeatThis(word)
+  	local repetition = ""
+  	while true do
+  		repetition = repetition .. word
+  		coroutine.yield(repetition)
+  	end
+  end
+
   local f = coroutine.wrap(repeatThis)
   print(f("Hello"))  -- Hello
   print(f())         -- HelloHello

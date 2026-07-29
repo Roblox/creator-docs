@@ -349,23 +349,6 @@ properties:
       can_save: true
     capabilities:
       - Basic
-  - name: Decal.TexturePack
-    summary: ''
-    description: ''
-    code_samples: []
-    type: ContentId
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxEngineSecurity
-      write: RobloxEngineSecurity
-    thread_safety: ReadSafe
-    category: Appearance
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Basic
   - name: Decal.Transparency
     summary: |
       Determines the transparency of the `Class.Decal`.

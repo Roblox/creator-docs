@@ -6,14 +6,17 @@ name: CanvasGroup
 type: class
 memory_category: Gui
 summary: |
-  Blends descendants as a group with color/transparency.
+  Blends descendants as a flattened group with an optional color/transparency
+  modification.
 description: |
-  `CanvasGroup` renders descendants as a group with color and transparency
-  applied to the render result. `Class.UIComponent` visual modifiers such as
+  `CanvasGroup` renders its descendants as a flattened group with
+  `Class.CanvasGroup.GroupColor3|GroupColor3` and
+  `Class.CanvasGroup.GroupTransparency|GroupTransparency` optionally applied to
+  the rendered result. `Class.UIComponent` visual modifiers such as
   `Class.UICorner` and `Class.UIGradient` under a `CanvasGroup` will also apply
   to the whole group. Note that `CanvasGroup` always has
   `Class.GuiObject.ClipsDescendants|ClipsDescendants` set to `true` and all
-  descendants will render within group's viewport.
+  descendants will be clipped outside the group's bounds.
 
   #### Important Notes
 
@@ -35,9 +38,9 @@ deprecation_message: ''
 properties:
   - name: CanvasGroup.GroupColor3
     summary: |
-      Color tint that applies to all descendants.
+      Color tint that applies to the rendered group.
     description: |
-      Color tint that applies to all descendants.
+      Color tint that applies to the rendered group.
     code_samples: []
     type: Color3
     tags: []
@@ -54,9 +57,9 @@ properties:
       - UI
   - name: CanvasGroup.GroupTransparency
     summary: |
-      Transparency that applies to all descendants.
+      Transparency that applies to the rendered group.
     description: |
-      Transparency that applies to all descendants.
+      Transparency that applies to the rendered group.
     code_samples: []
     type: float
     tags: []

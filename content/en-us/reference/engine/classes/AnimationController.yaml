@@ -50,14 +50,9 @@ methods:
       that have loaded but are not playing. If the developer wishes to track
       these they will need to index them manually. See below for one example of
       how this could be achieved:
-
-      ```
-      local animationTracks = {}
-      local track = animationController:LoadTrack(animation)
-      table.insert(animationTracks, track)
-      ```
     code_samples:
       - GetPlayingAnimationTracks
+      - AnimationController-GetPlayingAnimationTracks
     parameters: []
     returns:
       - type: Array

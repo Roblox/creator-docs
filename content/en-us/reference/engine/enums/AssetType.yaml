@@ -372,3 +372,9 @@ items:
     value: 91
     tags: []
     deprecation_message: ''
+  - name: TextDocument
+    summary: |
+      The asset is a text document.
+    value: 93
+    tags: []
+    deprecation_message: ''

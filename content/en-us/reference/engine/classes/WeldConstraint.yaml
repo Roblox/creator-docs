@@ -126,25 +126,8 @@ properties:
       If `Part0` or `Part1` are ever set to new parts, then the `WeldConstraint`
       will instantly link the new part. The old part will no longer be
       constrained.
-
-      ```lua
-      local Workspace = game:GetService("Workspace")
-
-      local partA = Instance.new("Part")
-      local partB = Instance.new("Part")
-
-      partA.Position = Vector3.new(0, 10, 0)
-      partA.Parent = Workspace
-
-      partB.Position = Vector3.new(0, 10, 10)
-      partB.Parent = Workspace
-
-      local weld = Instance.new("WeldConstraint")
-      weld.Part0 = partA
-      weld.Part1 = partB
-      weld.Parent = partA
-      ```
-    code_samples: []
+    code_samples:
+      - WeldConstraint-Part0
     type: BasePart
     tags:
       - NotReplicated
@@ -172,25 +155,8 @@ properties:
       If `Part0` or `Part1` are ever set to new parts, then the `WeldConstraint`
       will instantly link the new part. The old part will no longer be
       constrained.
-
-      ```lua
-      local Workspace = game:GetService("Workspace")
-
-      local partA = Instance.new("Part")
-      local partB = Instance.new("Part")
-
-      partA.Position = Vector3.new(0, 10, 0)
-      partA.Parent = Workspace
-
-      partB.Position = Vector3.new(0, 10, 10)
-      partB.Parent = Workspace
-
-      local weld = Instance.new("WeldConstraint")
-      weld.Part0 = partA
-      weld.Part1 = partB
-      weld.Parent = partA
-      ```
-    code_samples: []
+    code_samples:
+      - WeldConstraint-Part1
     type: BasePart
     tags:
       - NotReplicated

@@ -500,8 +500,25 @@ properties:
     capabilities:
       - Basic
   - name: ParticleEmitter.LocalTransparencyModifier
-    summary: ''
-    description: ''
+    summary: |
+      Determines a multiplier for `Class.ParticleEmitter.Transparency` that is
+      only visible to the local client.
+    description: |
+      The `LocalTransparencyModifier` property is a multiplier applied to the
+      particle emitter's `Class.ParticleEmitter.Transparency|Transparency` that
+      is only visible to the local client. It does not replicate from client to
+      server and is useful for when particles should not render for a specific
+      client.
+
+      Uses the same formula as `Class.BasePart.LocalTransparencyModifier`:
+
+      `1` - ((`1` - `Class.ParticleEmitter.Transparency|Transparency`) &times;
+      (`1` - `LocalTransparencyModifier`))
+
+      A value of `0` (default) has no effect on the particle transparency. A
+      value of `1` makes all particles completely invisible to the local client
+      regardless of their `Class.ParticleEmitter.Transparency|Transparency`
+      value.
     code_samples: []
     type: float
     tags:

@@ -1189,6 +1189,11 @@ navigation:
                                 type: engineapi
                                 source: /reference/engine/classes/TextLabel.yaml
                                 ignoreTranslation: true
+                          - title: InputActionLabel
+                            path: /reference/engine/classes/InputActionLabel
+                            type: engineapi
+                            source: /reference/engine/classes/InputActionLabel.yaml
+                            ignoreTranslation: true
                           - title: ScrollingFrame
                             path: /reference/engine/classes/ScrollingFrame
                             type: engineapi
@@ -2611,11 +2616,6 @@ navigation:
                         type: engineapi
                         source: /reference/engine/classes/UserSettings.yaml
                         ignoreTranslation: true
-              - title: ServiceVisibilityService
-                path: /reference/engine/classes/ServiceVisibilityService
-                type: engineapi
-                source: /reference/engine/classes/ServiceVisibilityService.yaml
-                ignoreTranslation: true
               - title: SessionCheckService
                 path: /reference/engine/classes/SessionCheckService
                 type: engineapi
@@ -3308,21 +3308,6 @@ navigation:
                 path: /reference/engine/classes/Visit
                 type: engineapi
                 source: /reference/engine/classes/Visit.yaml
-                ignoreTranslation: true
-              - title: VisualizationMode
-                path: /reference/engine/classes/VisualizationMode
-                type: engineapi
-                source: /reference/engine/classes/VisualizationMode.yaml
-                ignoreTranslation: true
-              - title: VisualizationModeCategory
-                path: /reference/engine/classes/VisualizationModeCategory
-                type: engineapi
-                source: /reference/engine/classes/VisualizationModeCategory.yaml
-                ignoreTranslation: true
-              - title: VisualizationModeService
-                path: /reference/engine/classes/VisualizationModeService
-                type: engineapi
-                source: /reference/engine/classes/VisualizationModeService.yaml
                 ignoreTranslation: true
               - title: VoiceChatService
                 path: /reference/engine/classes/VoiceChatService
@@ -5726,6 +5711,11 @@ navigation:
         path: /reference/engine/enums/SlimTintMode
         type: engineapi
         source: /reference/engine/enums/SlimTintMode.yaml
+        ignoreTranslation: true
+      - title: SlimTranscoderStatus
+        path: /reference/engine/enums/SlimTranscoderStatus
+        type: engineapi
+        source: /reference/engine/enums/SlimTranscoderStatus.yaml
         ignoreTranslation: true
       - title: SolverConvergenceMetricType
         path: /reference/engine/enums/SolverConvergenceMetricType

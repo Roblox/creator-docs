@@ -27,15 +27,15 @@ properties:
       (`Class.Players:BanAsync()|BanAsync()`,
       `Class.Players:UnbanAsync()|UnbanAsync()`, and
       `Class.Players:GetBanHistoryAsync()|GetBanHistoryAsync()`) that constitute
-      the ban API. This property is not scriptable and can only be modified in
-      Studio.
+      the ban API. This property cannot be set through developer-facing Luau and
+      must be set in Studio through the Players properties window.
     description: |
       Enables or disables the three `Class.Players` methods
       (`Class.Players:BanAsync()|BanAsync()`,
       `Class.Players:UnbanAsync()|UnbanAsync()`, and
       `Class.Players:GetBanHistoryAsync()|GetBanHistoryAsync()`) that constitute
-      the ban API. This property is not scriptable and can only be modified in
-      Studio.
+      the ban API. This property cannot be set through developer-facing Luau and
+      must be set in Studio through the Players properties window.
     code_samples: []
     type: boolean
     tags:

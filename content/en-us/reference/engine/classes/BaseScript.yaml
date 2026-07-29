@@ -20,25 +20,19 @@ deprecation_message: ''
 properties:
   - name: BaseScript.Disabled
     summary: |
-      Determines whether a `Class.BaseScript` will run or not.
+      Determines whether a `Class.BaseScript` runs or not.
     description: |
-      Determines whether a `Class.BaseScript` will run or not.
+      Determines whether a `Class.BaseScript` runs or not.
 
-      If a script is disabled by changing this property to true while the script
-      is running, the current running thread of the script will be terminated.
+      Setting this property to true while the script is running drops its
+      references to the script's thread; a thread that is yielded (or that
+      yields later) is never resumed and becomes eligible for garbage
+      collection. A thread that is actively executing continues to run until it
+      next yields or returns.
 
-      If this property is changed from true to false, the script will run again.
-      This means that `Class.BaseScript.Disabled|Disabled` can be toggled to
-      restart a script:
-
-      ```lua
-      scriptObject.Disabled = true
-      scriptObject.Disabled = false
-      ```
-
-      Note that the above code snippet cannot be used within the script itself,
-      since disabling the script from within itself will terminate the thread
-      and the line to reenable it will never execute.
+      If this property is changed from true to false, a fresh run of the script
+      is started. This means that `Class.BaseScript.Disabled|Disabled` can be
+      toggled to restart a script.
     code_samples: []
     type: boolean
     tags: []
@@ -54,28 +48,21 @@ properties:
     capabilities: []
   - name: BaseScript.Enabled
     summary: |
-      Determines whether a `Class.BaseScript` will run or not.
+      Determines whether a `Class.BaseScript` runs or not.
     description: |
-      Determines whether a `Class.BaseScript` will run or not. This should be
-      used in favor of the similar but opposite
-      `Class.BaseScript.Disabled|Disabled` property.
+      Determines whether a `Class.BaseScript` runs or not. We recommend this
+      property over the similar but opposite
+      `Class.BaseScript.Disabled|Disabled`.
 
-      If a script is disabled by changing this property to false while the
-      script is running, the current running thread of the script will be
-      terminated.
+      Setting this property to false while the script is running drops its
+      references to the script's thread; a thread that is yielded (or that
+      yields later) is never resumed and becomes eligible for garbage
+      collection. A thread that is actively executing continues to run until it
+      next yields or returns.
 
-      If this property is changed from false to true, the script will run again.
-      This means that `Class.BaseScript.Enabled|Enabled` can be toggled to
-      restart a script:
-
-      ```lua
-      scriptObject.Enabled = false
-      scriptObject.Enabled = true
-      ```
-
-      Note that the above code snippet cannot be used within the script itself,
-      since disabling the script from within itself will terminate the thread
-      and the line to reenable it will never execute.
+      If this property is changed from false to true, a fresh run of the script
+      is started. This means that `Class.BaseScript.Enabled|Enabled` can be
+      toggled to restart a script.
     code_samples: []
     type: boolean
     tags:
@@ -131,19 +118,19 @@ properties:
       - LoadUnownedAsset
   - name: BaseScript.RunContext
     summary: |
-      Determines the context under which the script will run.
+      Determines the context under which the script runs.
     description: |
-      Determines the context under which the script will run.
+      Determines the context under which the script runs. Only available for
+      `Class.Script|Scripts`, not `Class.LocalScript|LocalScripts`.
 
-      When using the Legacy RunContext scripts will only run when parented to
-      certain containers dependent on whether they are a `Class.Script` or
-      `Class.LocalScript`.
+      When set to `Legacy`, `Class.Script|Scripts` only run when parented to
+      certain containers. See
+      [Script types and locations](/scripting/locations.md).
 
-      If RunContext is assigned while the script is running any threads created
-      by the script will be terminated and the script will start running under
-      the new context if possible.
-
-      Note, RunContext cannot be used from a LocalScript.
+      If `RunContext` is assigned while the script is running, the engine drops
+      its references to that thread, and a fresh run of the script is started
+      under the new context (if possible). A thread that is actively executing
+      continues to run until it next yields or returns.
     code_samples: []
     type: RunContext
     tags: []

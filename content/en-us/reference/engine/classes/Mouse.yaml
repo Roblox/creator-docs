@@ -589,20 +589,9 @@ properties:
       for example when the mouse is pointing at the sky. At the moment, this
       property is set to 'Right' under these circumstances. Before using this
       property, check that the mouse's target is not `nil`.
-
-      ```lua
-      local Players = game:GetService("Players")
-      local player = Players.LocalPlayer
-      local mouse = player:GetMouse()
-      -- Check that there exists a part at which the mouse is pointing
-      if mouse.Target then
-      	print("The mouse is pointing to the " .. mouse.TargetSurface.Name .. " side of " .. mouse.Target.Name)
-      else
-      	print("The mouse is not pointing at anything.")
-      end
-      ```
     code_samples:
       - Mouse-TargetSurface
+      - Mouse-TargetSurface-2
     type: NormalId
     tags:
       - ReadOnly
@@ -627,14 +616,8 @@ properties:
       position in 3D space (described by `Class.Mouse.Hit`). It originates from
       the `Class.Camera.CFrame|CFrame` of the `Class.Workspace.CurrentCamera`.
       Like all unit rays, it has a distance of 1.
-
-      ```lua
-      local Players = game:GetService("Players")
-      local player = Players.LocalPlayer
-      local mouse = player:GetMouse()
-      print(mouse.UnitRay.Direction.Magnitude) -- Always 1
-      ```
-    code_samples: []
+    code_samples:
+      - Mouse-UnitRay
     type: Ray
     tags:
       - ReadOnly

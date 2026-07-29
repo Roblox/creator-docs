@@ -105,6 +105,55 @@ properties:
       can_save: true
     capabilities:
       - Input
+  - name: InputBinding.DisplayImage
+    summary: |
+      Custom image asset to display for this binding.
+    description: |
+      A custom `Datatype.Content` image asset that represents this binding
+      visually (for example a gamepad button image or a stylized key graphic).
+
+      When empty (the default), no custom image is provided. Developers can use
+      `Class.UserInputService:GetImageForKeyCode()` to obtain a
+      platform-appropriate image.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Input
+  - name: InputBinding.DisplayName
+    summary: |
+      Custom display text for this binding.
+    description: |
+      A custom string that overrides the display name shown for this binding in
+      UI elements such as key prompts (for example "FIGHT" instead of the
+      default key name "F").
+
+      When empty (the default), no custom name is provided. Developers can use
+      `Class.UserInputService:GetStringForKeyCode()` to obtain the
+      platform-appropriate key name.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Input
   - name: InputBinding.Down
     summary: |
       Specifies an alternate `Enum.KeyCode` for dispatching directionally "down"

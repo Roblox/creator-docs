@@ -349,11 +349,8 @@ methods:
     description: |
       Deprecated in favor of `Class.LocalizationTable:RemoveEntry()`. Calling
       RemoveKey is the same as making the following call to RemoveEntry:
-
-      ```lua
-      LocalizationTable:RemoveEntry(key, "", "")
-      ```
-    code_samples: []
+    code_samples:
+      - LocalizationTable-RemoveKey
     parameters:
       - name: key
         type: string

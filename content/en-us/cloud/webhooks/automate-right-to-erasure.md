@@ -1,9 +1,20 @@
 ---
 title: Automate right to erasure requests
 description: Explains how to automate Right to Erasure requests with webhooks and Open Cloud APIs for data stores.
+keywords:
+  - GDPR
+  - CCPA
+  - LGPD
+  - PIPA
+  - right to erasure
+  - right to be forgotten
+  - data protection
+  - privacy
+  - PII
+  - personal data
 ---
 
-The **General Data Protection Regulation (GDPR)** is a European regulation on data protection and privacy. It grants individuals the right to request the deletion of their personal data, known as the [right to erasure](https://gdpr-info.eu/art-17-gdpr/). If you store any **Personally Identifiable Information (PII)** of your users, such as their User IDs, you must comply with GDPR requirements by deleting this information upon receiving a user's request.
+Global data protection and privacy regulations grant individuals the right to control their data, including the right to request its deletion (often referred to as the "right to erasure" or "right to delete"). If you store any personal data or **Personally Identifiable Information (PII)**, such as User IDs, you are responsible for complying with applicable privacy framework(s) by permanently deleting this information upon receiving a user request. More information can be found in [RTBF and creators](../../production/publishing/RTBF-and-creators.md).
 
 Instead of handling requests manually, you can [set up a webhook](../../cloud/webhooks/webhook-notifications.md) and use a bot within a third-party messaging application to automate the process. As [data stores](../../cloud-services/data-stores/index.md) being the most common way for storing PII data, this tutorial provides an example on how to create a bot within Discord that uses the [Open Cloud API for data stores](../../cloud/guides/data-stores/index.md) to delete PII data as an automation solution.
 
@@ -37,7 +48,7 @@ The following steps show how to set up the server using Discord.
 
 1. The server automatically creates a **#general** channel as your default channel. Click the **Edit Channel** icon of the **#general** channel.
 1. Under **Permissions**, set the channel to private.
-1. Create a webhook integration with the new server, name it to `GDPR Hook`. If you are unfamiliar with the process, see [Discord Support](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
+1. Create a webhook integration with the new server, name it to `RTBF Hook`. If you are unfamiliar with the process, see [Discord Support](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
 1. Copy the webhook URL and store it in a secure place. Only allow trusted team members to access it, as leaking the URL can enable bad actors to send fake messages and potentially delete your user data.
 
 ### Configure a webhook on Roblox
@@ -59,7 +70,7 @@ You can test the webhook using the **Test Response** button to see if you receiv
 After you add the webhook, use it to configure the bot with the following steps. For more information, see the [Discord documentation](https://discord.com/developers/docs/topics/oauth2#bot-vs-user-accounts).
 
 1. Navigate to the [Applications page](https://discord.com/developers/applications).
-1. Create a new application and name it to `GDPR Bot`.
+1. Create a new application and name it `RTBF Bot`.
 1. The system redirects you to the **General Information** settings of the bot. Copy and save its application ID in a secure place.
 1. Under the settings menu, select **OAuth2**.
 1. Navigate to the **OAuth2** settings

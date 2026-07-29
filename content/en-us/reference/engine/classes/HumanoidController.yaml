@@ -12,12 +12,8 @@ description: |
   `Class.Humanoid`).
 
   This object can be found inside of the `Class.ControllerService`, via:
-
-  ```lua
-  local ControllerService = game:GetService("ControllerService")
-  local HumanoidController = ControllerService:FindFirstChildOfClass("HumanoidController")
-  ```
-code_samples: []
+code_samples:
+  - HumanoidController-Overview
 inherits:
   - Controller
 descendants: []

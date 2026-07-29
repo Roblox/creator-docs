@@ -333,9 +333,12 @@ constructors:
       default of `XYZ`, equivalent to:
 
       ```lua
-      CFrame.fromEulerAngles(rx, 0, 0) *  -- X
-      CFrame.fromEulerAngles(0, ry, 0) *  -- Y
-      CFrame.fromEulerAngles(0, 0, rz)    -- Z
+      local rx, ry, rz = math.rad(30), math.rad(45), math.rad(60)
+      local cframe = CFrame.fromEulerAngles(rx, 0, 0) -- X
+                     * CFrame.fromEulerAngles(0, ry, 0) -- Y
+                     * CFrame.fromEulerAngles(0, 0, rz) -- Z
+      local rx_out, ry_out, rz_out = cframe:ToEulerAnglesXYZ()
+      print(string.format("rx: %.2f, ry: %.2f, rz: %.2f", math.deg(rx_out), math.deg(ry_out), math.deg(rz_out))) --> rx: 30.00, ry: 45.00, rz: 60.00
       ```
     parameters:
       - name: rx
@@ -366,9 +369,12 @@ constructors:
       radians using `Enum.RotationOrder.XYZ`, equivalent to:
 
       ```lua
-      CFrame.fromEulerAngles(rx, 0, 0) *  -- X
-      CFrame.fromEulerAngles(0, ry, 0) *  -- Y
-      CFrame.fromEulerAngles(0, 0, rz)    -- Z
+      local rx, ry, rz = math.rad(30), math.rad(45), math.rad(60)
+      local cframe = CFrame.fromEulerAngles(rx, 0, 0) -- X
+                     * CFrame.fromEulerAngles(0, ry, 0) -- Y
+                     * CFrame.fromEulerAngles(0, 0, rz) -- Z
+      local rx_out, ry_out, rz_out = cframe:ToEulerAnglesXYZ()
+      print(string.format("rx: %.2f, ry: %.2f, rz: %.2f", math.deg(rx_out), math.deg(ry_out), math.deg(rz_out))) --> rx: 30.00, ry: 45.00, rz: 60.00
       ```
     parameters:
       - name: rx
@@ -395,9 +401,12 @@ constructors:
       radians using `Enum.RotationOrder.YXZ`, equivalent to:
 
       ```lua
-      CFrame.fromEulerAngles(0, ry, 0) *  -- Y
-      CFrame.fromEulerAngles(rx, 0, 0) *  -- X
-      CFrame.fromEulerAngles(0, 0, rz)    -- Z
+      local rx, ry, rz = math.rad(30), math.rad(45), math.rad(60)
+      local cframe = CFrame.fromEulerAngles(0, ry, 0) -- Y
+                     * CFrame.fromEulerAngles(rx, 0, 0) -- X
+                     * CFrame.fromEulerAngles(0, 0, rz) -- Z
+      local rx_out, ry_out, rz_out = cframe:ToEulerAnglesYXZ()
+      print(string.format("rx: %.2f, ry: %.2f, rz: %.2f", math.deg(rx_out), math.deg(ry_out), math.deg(rz_out))) --> rx: 30.00, ry: 45.00, rz: 60.00
       ```
     parameters:
       - name: rx

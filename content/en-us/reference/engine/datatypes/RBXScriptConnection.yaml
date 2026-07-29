@@ -13,13 +13,12 @@ description: |
   from an `Datatype.RBXScriptSignal`.
 
   ```lua
-  local part : BasePart = script.Parent
+  local part = Instance.new("Part")
   -- Store reference to the RBXScriptConnection so it can be disconnected later
   local connection : RBXScriptConnection = part.Touched:Connect(function(otherPart)
       print("Hello world!")
   end)
-  -- Wait 15 seconds, then disconnect
-  task.wait(15)
+  -- Disconnect when the connection is no longer needed
   connection:Disconnect()
   ```
 code_samples: []

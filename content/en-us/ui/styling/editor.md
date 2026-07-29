@@ -492,8 +492,6 @@ While manual resizing is a quick way to check responsive logic, you can also use
 
 Style **transitions**, comparable to [CSS transitions](./css-comparisons.md#transitions), let you tween property values over a set duration.
 
-<BetaAlert betaName="Styling Transitions" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
-
 ### Default
 
 To tween many UI properties with the same parameters, you can set a default transition that applies to **all** properties unless another transition is explicitly set for a specific property.

@@ -12,6 +12,8 @@ navigation:
             path: /production/monetization/18-plus-devex-rate
           - title: DevEx Portal
             path: /production/monetization/devex-portal
+          - title: Tax information
+            path: /production/monetization/tax-information
       - title: Creator Rewards
         path: /creator-rewards
       - title: Roblox Plus

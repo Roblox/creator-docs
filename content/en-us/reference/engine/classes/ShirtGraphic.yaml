@@ -64,23 +64,8 @@ properties:
       property of the `Class.ShirtGraphic` in Roblox Studio, as Studio will
       correct it. Alternatively `Class.InsertService:LoadAsset()` can be used to
       insert the t-shirt into the workspace, for example:
-
-      ```
-      local InsertService = game:GetService("InsertService")
-      local Workspace = game:GetService("Workspace")
-
-      local webURL = "https://www.roblox.com/catalog/2591161/Sword-Fight-on-the-Heights-Ring-of-Fire-T-Shirt"
-      local assetId = tonumber(string.match(webURL, "%d+") or 0)  -- Extract the number
-
-      local success, model = pcall(function()
-      	return InsertService:LoadAsset(assetId)
-      end)
-
-      if success then
-      	model.Parent = Workspace
-      end
-      ```
-    code_samples: []
+    code_samples:
+      - ShirtGraphic-Graphic
     type: ContentId
     tags: []
     deprecation_message: ''

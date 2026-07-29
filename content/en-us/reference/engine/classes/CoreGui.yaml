@@ -32,8 +32,13 @@ tags:
 deprecation_message: ''
 properties:
   - name: CoreGui.SelectionImageObject
-    summary: ''
-    description: ''
+    summary: |
+      Overrides the default selection adornment used for gamepad selection in
+      the CoreGui.
+    description: |
+      This property is not accessible through scripts but is viewable in the
+      Properties window. It overrides the default selection adornment used for
+      gamepad selection across all CoreGui elements.
     code_samples: []
     type: GuiObject
     tags: []

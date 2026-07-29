@@ -94,8 +94,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -114,8 +114,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -134,8 +134,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Brows
     serialization:
@@ -154,8 +154,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Eyes
     serialization:
@@ -174,8 +174,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Eyes
     serialization:
@@ -194,8 +194,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Eyes
     serialization:
@@ -214,8 +214,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Eyes
     serialization:
@@ -236,8 +236,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -256,8 +256,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -278,8 +278,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Jaw
     serialization:
@@ -297,8 +297,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Jaw
     serialization:
@@ -317,8 +317,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Jaw
     serialization:
@@ -337,8 +337,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Brows
     serialization:
@@ -357,8 +357,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -377,8 +377,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Eyes
     serialization:
@@ -397,8 +397,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -417,8 +417,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Eyes
     serialization:
@@ -439,8 +439,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Eyes
     serialization:
@@ -459,8 +459,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Brows
     serialization:
@@ -479,8 +479,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -501,8 +501,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -523,8 +523,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -545,8 +545,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -567,8 +567,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Brows
     serialization:
@@ -587,8 +587,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Brows
     serialization:
@@ -609,8 +609,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -629,8 +629,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -651,8 +651,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -671,8 +671,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -691,8 +691,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -711,8 +711,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -733,8 +733,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -753,8 +753,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Brows
     serialization:
@@ -773,8 +773,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -793,8 +793,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Eyes
     serialization:
@@ -813,8 +813,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -833,8 +833,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Eyes
     serialization:
@@ -855,8 +855,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Eyes
     serialization:
@@ -875,8 +875,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Brows
     serialization:
@@ -895,8 +895,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -917,8 +917,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -939,8 +939,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -961,8 +961,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -983,8 +983,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Brows
     serialization:
@@ -1003,8 +1003,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Brows
     serialization:
@@ -1025,8 +1025,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:
@@ -1045,8 +1045,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Tongue
     serialization:
@@ -1065,8 +1065,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Tongue
     serialization:
@@ -1085,8 +1085,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Tongue
     serialization:
@@ -1105,8 +1105,8 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Mouth
     serialization:

@@ -28,14 +28,8 @@ description: |
   If you need to control a player's UI container during playtime, for example to
   show/hide a specific `Class.ScreenGui` or any of its children, access it as
   follows from a `Class.LocalScript`:
-
-  ```lua
-  local Players = game:GetService("Players")
-
-  local player = Players.LocalPlayer
-  local playerGui = player.PlayerGui
-  ```
-code_samples: []
+code_samples:
+  - PlayerGui-Overview
 inherits:
   - BasePlayerGui
 descendants: []

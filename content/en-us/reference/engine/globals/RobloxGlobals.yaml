@@ -45,13 +45,9 @@ properties:
       where a script is executed as a plugin and is not passed to
       `Class.ModuleScript|ModuleScripts` within the plugin. To use this
       reference in a `Class.ModuleScript`, you must explicitly pass it.
-
-      ```lua
-      assert(plugin, "This script must be run as a plugin!")
-      -- Code beyond this point will execute only if the script is run as a plugin
-      ```
     tags: []
-    code_samples: []
+    code_samples:
+      - RobloxGlobals-plugin
     deprecation_message: ''
   - name: shared
     type: Array
@@ -227,10 +223,6 @@ functions:
          called to when the function was invoked.
       2. The second being equivalent to elapsedTime() or roughly how long the
          engine has been running.
-
-      ```lua
-      spawn(print) -- 0.0079617658390703 451.55683163643
-      ```
     parameters:
       - name: callback
         type: function
@@ -242,7 +234,8 @@ functions:
         summary: ''
     tags:
       - Deprecated
-    code_samples: []
+    code_samples:
+      - RobloxGlobals-spawn
     deprecation_message: |
       This method has been superseded by `Library.task.spawn()` and should not
       be used for future work.

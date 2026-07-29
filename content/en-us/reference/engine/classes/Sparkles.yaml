@@ -83,18 +83,9 @@ properties:
       `Class.Instance.Parent` is set to `nil`, this property is useful in
       allowing existing particles the opportunity to expire before destroying
       the Fire object altogether. See the function below.
-
-      ```
-      local Debris = game:GetService("Debris")
-      local part = script.Parent
-      function stopSparkling(sparkles)
-      	sparkles.Enabled = false -- No more new particles
-      	Debris:AddItem(sparkles, 4) -- Remove the object after a delay (after existing particles have expired)
-      end
-      stopSparkling(part.Sparkles)
-      ```
     code_samples:
       - Give-Sparkles
+      - Sparkles-Enabled
     type: boolean
     tags: []
     deprecation_message: ''

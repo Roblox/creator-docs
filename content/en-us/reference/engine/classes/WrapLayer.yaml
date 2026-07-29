@@ -27,8 +27,24 @@ tags: []
 deprecation_message: ''
 properties:
   - name: WrapLayer.AutoSkin
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether this WrapLayer automatically transfers skinning data
+      from the underlying body mesh to the clothing mesh.
+    description: |
+      Determines whether this WrapLayer automatically transfers skinning data
+      from the underlying body mesh to the clothing mesh. When set to
+      `Enum.WrapLayerAutoSkin.EnabledOverride|EnabledOverride`, skinning is
+      applied regardless of whether the clothing mesh already has skinning data.
+      When set to `Enum.WrapLayerAutoSkin.EnabledPreserve|EnabledPreserve`,
+      skinning is only applied if the mesh does not already have skinning data.
+
+      This property requires `Class.StarterPlayer.LoadCharacterLayeredClothing`
+      to be set to `Enabled` (or `Default`) in order to function. When layered
+      clothing is disabled, the auto-skinning pipeline does not run and this
+      property has no effect.
+
+      For more information, see
+      [Automatic Skinning Transfer](../../../avatar/automatic-skinning-transfer.md).
     code_samples: []
     type: WrapLayerAutoSkin
     tags: []

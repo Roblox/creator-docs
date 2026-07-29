@@ -5,8 +5,25 @@
 name: HeapProfilerService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Provides methods which return Luau heap memory usage summaries on client and
+  server.
+description: |
+  The `HeapProfilerService` provides methods which return summaries of Luau heap
+  memory usage on client and server, useful for analyzing the memory allocated
+  to scripts. The returned summaries break down Luau heap memory usage by:
+
+  - VM type, for example `table`, `string`, or `userdata`.
+  - Memory category (a value assigned to an object when it is allocated,
+    depending on the thread it is allocated from).
+  - The Roblox engine class (both total size and instance count).
+
+  They also contain a graph view of the Luau heap's memory usage, where each
+  node of the graph is an object allocated in the Luau heap and edges represent
+  references between objects.
+
+  `HeapProfilerService` can also be used to create multiple snapshots to compare
+  differences in script memory usage over time.
 code_samples: []
 inherits:
   - Instance
@@ -18,7 +35,9 @@ deprecation_message: ''
 properties: []
 methods:
   - name: HeapProfilerService:ClientRequestDataAsync
-    summary: ''
+    summary: |
+      Returns a summary of Luau heap memory usage for the requested player's
+      client.
     description: ''
     code_samples: []
     parameters:
@@ -36,7 +55,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: HeapProfilerService:ServerRequestDataAsync
-    summary: ''
+    summary: |
+      Returns a summary of Luau heap memory usage on the client.
     description: ''
     code_samples: []
     parameters: []

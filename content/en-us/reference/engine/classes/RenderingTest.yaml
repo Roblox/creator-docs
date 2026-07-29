@@ -292,5 +292,15 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
-events: []
+events:
+  - name: RenderingTest.TestFramesCountdownAboutToStart
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - Basic
 callbacks: []

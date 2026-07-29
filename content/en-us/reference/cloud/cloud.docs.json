@@ -4133,7 +4133,7 @@
       "patch": {
         "tags": ["Cloud"],
         "summary": "Update Place",
-        "description": "Updates the specified place.",
+        "description": "Updates the specified place. To avoid overwriting changes, this endpoint\nresponds with an HTTP 409 Conflict error if the place is open in an\nactive Team Create session.",
         "operationId": "Cloud_UpdatePlace",
         "parameters": [
           {

@@ -6,8 +6,10 @@ navigation:
   - title: AI accelerated workflows
     path: /ai/accelerated-workflows
     section:
-      - title: Build with a coding harness
+      - title: Build on the Roblox App
         path: /ai/build
+      - title: Build with a coding harness
+        path: /ai/coding-harness
   - heading: Create
   - title: Overview
     path: /creation
@@ -45,6 +47,8 @@ navigation:
                 path: /workspace/streaming/
               - title: Techniques
                 path: /workspace/streaming/techniques
+              - title: SLIM
+                path: /workspace/streaming/slim
           - title: Server authority
             path: /projects/server-authority/
             section:

@@ -1,6 +1,6 @@
 ---
-title: Layered clothing
-description: Layered clothing are cosmetic accessories that stretch, fit, and layer over any body type simulating real-life clothing.
+title: Layered accessories
+description: Layered accessories are 3D assets that stretch, fit, and layer over any character body type.
 ---
 
 <Grid container spacing={2} style={{ marginBottom: 24, width: '100%' }}>
@@ -19,7 +19,7 @@ allowFullScreen
 style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
 </div>
 <Typography variant="body1">
-A high-level overview of 3D clothing on Roblox.
+A high-level overview of layered accessories on Roblox.
 </Typography>
 
 </Grid>
@@ -40,116 +40,112 @@ allowFullScreen
 style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
 </div>
 <Typography variant="body1">
-Create and sell your first basic layered clothing.
+Create and sell your first basic layered accessory.
 </Typography>
 </Grid>
 </Grid>
 </Grid>
 
-Layered clothing accessories are 3D cosmetic items that users can equip and wear on their avatar body, such as pants, t-shirt, jackets, dresses, and more. Unlike [rigid accessories](../rigid-accessories/index.md) that only attach to a specific point on a character, layered clothing stretches and fits over any body type and existing clothing.
+**Layered accessories**, often referred to as **layered clothing**, are 3D assets that stretch and fit on an avatar's body according to their rigging armature and cage meshes. When users purchase layered accessories on the Marketplace, such as jackets, dresses, and cardigans, they expect it to move with the character's animations and layer appropriately on top of existing clothing the character is wearing.
 
-To create a custom Roblox accessory for your own game or to sell on the Marketplace, it's important to start with the following:
+There are three main layers of a layered accessory that structure how the accessory looks and works on the platform:
 
-- A general background with 3D modeling tools such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview).
-- An understanding of the [components that make up a layered accessory](#components-of-a-layered-clothing-accessory).
-- An understanding of the general [clothing creation process](#creation-process).
-- Review Roblox's official tutorials to create your own accessories:
-  - [Rigid accessory creation tutorial](../../art/accessories/creating-rigid/index.md) - covers each process required for converting a 3D model to a rigid accessory and publishing it to the Marketplace.
-  - [Clothing creation tutorial](../../art/accessories/creating/index.md) - a step-by-step process of creating your own avatar-ready clothing from scratch in Blender.
-- [Additional tools, resources, and guides](#resources) provided by Roblox to standardize and expedite the creation process.
+- **Mesh & textures** that make up the layered accessory's visual appearance.
+- **Rigging armature** that determines how the character moves and animates with the layered accessory.
+- **Cage meshes & attachments** that determine how the layered accessory stretches, fits, and layers over the character's body.
 
-<Alert severity = 'warning'>
-If you are a developer and are looking for information on manually equipping or configuring layered clothing accessories within a game, including [implementing layered clothing on a non-standard character model](../../characters/appearance.md#layered-clothing-on-non-r15), see [Character appearance](../../characters/appearance.md).
+While you can create most of these layers manually in third-party modeling tools like [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview), cage meshes and attachments have strict configuration requirements to meet Roblox's technical [layered accessory specifications](specifications.md) that guarantee your layered accessories behave consistently from game to game. Before you create your first custom layered accessory, it's recommended to:
+
+1. Understand the [essential components](#layered-accessory-components) of a layered accessory and how they work together.
+1. Review all [resources](#resources) that Roblox provides to standardize and expedite the [creation process](#creation-process), such as Blender and Maya project files, Studio tooling, and step-by-step guides.
+1. Follow the [basic layered accessory creation tutorial](../../art/accessories/creating/index.md) that covers how to create your own avatar-ready sweater from scratch in Blender.
+
+Once you have a custom layered accessory, you can import it into Studio and use the Avatar Setup tool to process your creation into an avatar asset that's ready to be sold on the [Marketplace](../../marketplace/index.md).
+
+<Alert severity = 'info'>
+Unlike layered accessories that stretch and wrap over a target until it fits over the character's body, rigid accessories don't deform and only attach to a specific point on the avatar. For more information, see [Rigid accessories](../rigid-accessories/index.md).
 </Alert>
 
-Roblox also supports [classic clothing](#classic-clothing), 2D images that can be applied to your character's surface.
+<Alert severity = 'warning'>
+If you are a game developer and are looking for information on manually equipping or configuring layered accessories within a game, such as implementing layered accessories on a non-standard character model, see [Character appearance](../../characters/appearance.md).
+</Alert>
 
-## Components of a layered clothing accessory
+## Layered accessory components
 
-All accessory models are made up of the same base components of a [mesh object](#mesh-part), [textures](#textures), and [attachment](#attachments). Layered clothing requires additional components, such as a [poseable rig](#rigging-armature), and an [inner and outer cage](#inner-and-outer-cages), to allow the asset to stretch, fit, and layer over a target character and existing clothing items.
-
-When [creating accessories](#creation-process), all of the components are created first in your modeling software, then converted to their appropriate Roblox Studio instance on import.
+All layered accessories are made up of the same fundamental components that allow users to equip 3D items that stretch, fit, and layer over a target character and existing clothing items with consistent behavior **regardless** of the character's [body type](../character-bodies/specifications.md#body-scale).
 
 ### Mesh part
 
 <GridContainer numColumns="2">
 
-<figure><img src="../../assets/art/accessories/Mesh-Example.png"/>  <figcaption>T-shirt clothing mesh object</figcaption></figure>
+<figure><img src="../../assets/art/accessories/Mesh-Jumpsuit-Example.png"/>  <figcaption>Jumpsuit layered accessory mesh object.</figcaption></figure>
 
-<figure><img src="../../assets/art/accessories/Mesh-Bow-Example.png" /><figcaption>Bow accessory mesh object</figcaption></figure>
+<figure><img src="../../assets/art/accessories/Mesh-ShoulderPads-Example.png" /><figcaption>Shoulder pads layered accessory mesh object.</figcaption></figure>
 </GridContainer>
 
-<Alert severity = 'warning'>
-Simple accessories, such as the bow, are [rigid accessories](../rigid-accessories/index.md) do not require the rigging and caging components that allow it to stretch and fit over a target.
-</Alert>
-
-All accessories require a single mesh object that represents the geometry of the accessory object. In Studio, this mesh object is represented as a `Class.MeshPart` nested under a single `Class.Model`
+All layered accessories require a single mesh object that represents the accessory's geometry. In Studio, this mesh object is represented as a `Class.MeshPart` nested under a single `Class.Model`.
 
 ### Textures
 
 <GridContainer numColumns="2">
-  <figure><img src="../../assets/art/accessories/Texture-Example.png" />  <figcaption>2D texture map for the t-shirt model</figcaption></figure>
+  <figure><img src="../../assets/art/accessories/Texture-Jumpsuit-Example.png" />  <figcaption>2D texture map for the jumpsuit layered accessory.</figcaption></figure>
 
-  <figure><img src="../../assets/art/accessories/Texture-Applied-Example.png" /><figcaption>T-shirt model with texture applied</figcaption></figure>
+  <figure><img src="../../assets/art/accessories/Texture-ShoulderPads-Example.png" /><figcaption>2D texture map for the shoulder pads layered accessory.</figcaption></figure>
 </GridContainer>
 
-Textures are image files that define the surface appearance of your accessory. You can create textures within a texture painting program or a 3D modeling software. In Studio, textures images are imported as image assets and are set to `Class.MeshPart` objects by a child `Class.SurfaceAppearance` object or a `Class.MeshPart.TextureID` property.
+Textures are image files that define the surface appearance of your layered accessory. You can create textures within a texture painting program or 3D modeling software.
 
-### Attachments
-
-<GridContainer numColumns="2">
-  <figure><img src="../../assets/art/accessories/Attachment-Example.png" />  <figcaption>Attachment geometry defines where the attachment connects with the character</figcaption></figure>
-
-  <figure><img src="../../assets/art/accessories/Attachment-Data-Model-Example.png" width="80%"/><figcaption>Geometry with the "_Att" suffix automatically convert to `Class.Attachment` objects in Studio</figcaption></figure>
-</GridContainer>
-
-For layered clothing, the attachment point is used to associate with the correct body part when the body ragdolls or is dismembered. In Studio, attachments are represented by `Class.Attachment` objects.
-
-Attachments for clothing items are automatically generated in Studio using the [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md).
+In Studio, you must import textures as image files and set them to `Class.MeshPart` objects by a child `Class.SurfaceAppearance` object or the mesh's `Class.MeshPart.TextureID|TextureID` property.
 
 ### Rigging armature
 
 <GridContainer numColumns="2">
-  <figure><img src="../../assets/art/accessories/Rigging-Example.png" />  <figcaption>To ensure natural movement of the clothing item, it must be weighted to a character rig</figcaption></figure>
+  <figure><img src="../../assets/art/accessories/Rigging-Example.png" />  <figcaption>To ensure the layered accessory can deform with the character's body, it must be weighted to a rigging armature.</figcaption></figure>
 
-  <figure><img src="../../assets/art/accessories/Rigging-Pose-Example.png" /><figcaption>When the rig is properly set up, the layered model can move and bend with the character rig</figcaption></figure>
+  <figure><img src="../../assets/art/accessories/Rigging-Pose-Example.png" /><figcaption>When the rigging armature is properly set up, the layered accessory moves and bends as the character moves in the 3D space.</figcaption></figure>
 </GridContainer>
 
-A rigging armature defines how a layered asset can move with a character model. Using rigging and skinning techniques, you can set the areas of your clothes to move naturally with a character model's joints, such as ensuring a shirt sleeve correctly follows the movement of the elbow and shoulder. In Studio, this rigging and skinning data is saved to the mesh geometry.
+Inside of the avatar's physical body is a non-rendered rigging armature that allows the character to articulate its limbs. Often referred to as joints or bones, a rigging armature includes skinning data that allows connections between limbs to bend organically, such as the character's knees and elbows. In Studio, this rigging and skinning data is saved to the mesh geometry.
 
-### Inner and outer cages
+The rigging armature also defines how layered accessories move and deform as the character moves in the 3D space. Using rigging and skinning techniques, you can configure areas of your layered accessories to move naturally with the character's joints, such as a shirt sleeve following the natural movement of the character's elbow and shoulder during a walk cycle.
+
+### Cage meshes
 
 <GridContainer numColumns="2">
-  <figure><img src="../../assets/art/accessories/Inner-Cage-Example.png" />  <figcaption>The inner cage defines the inner surface of the clothing item where the clothes wrap over</figcaption></figure>
+  <figure><img src="../../assets/art/accessories/Inner-Cage-Example.png" />  <figcaption>The inner cage defines the inner surface of the clothing item where the clothes wrap over.</figcaption></figure>
 
-  <figure><img src="../../assets/art/accessories/Outer-Cage-Example.png" /><figcaption>The outer cage defines the outer surface of the clothing item where any additional clothes can wrap and layer over</figcaption></figure>
+  <figure><img src="../../assets/art/accessories/Outer-Cage-Example.png" /><figcaption>The outer cage defines the outer surface of the clothing item where any additional clothes can wrap and layer over.</figcaption></figure>
 </GridContainer>
 
-Cage meshes indicate the inner and outer surfaces of a layered accessory. The inside cage of a t-shirt defines how the t-shirt stretches and fits over a character body. The outer cage of a t-shirt defines how additional layered clothing fit over the t-shirt. In Studio, these cages are represented by `Class.WrapLayer` objects.
+Cage meshes set the inner and outer surfaces of a layered accessory. For example, the inner cage of a t-shirt defines how a layered accessory t-shirt stretches and fits over a character body, and the outer cage defines how other layered accessories can stretch and fit over the t-shirt itself.
+
+In Studio, these cages are represented by `Class.WrapLayer` objects.
+
+### Attachments
+
+<GridContainer numColumns="2">
+  <figure><img src="../../assets/art/accessories/Attachment-Jumpsuit-Example.png" />  <figcaption>The jumpsuit layered accessory's attachment point.</figcaption></figure>
+
+  <figure><img src="../../assets/art/accessories/Attachment-ShoulderPads-Example.png" /><figcaption>The shoulder pads layered accessory's attachment point.</figcaption></figure>
+</GridContainer>
+
+Attachment points for layered accessories set which body part the accessory is attached to when the character body ragdolls or dismembers in a game. In Studio, attachment points are represented by `Class.Attachment` objects.
+
+<Alert severity = 'info'>
+You can automatically generate attachment points for your layered accessories using the [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md).
+</Alert>
 
 ## Creation process
 
-Custom accessories are first created in 3D modeling programs, such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview), before importing the `.fbx` or `.gltf` model into Studio.
-To get started creating your first avatar asset, see [Avatar Tutorials](../../avatar/tutorials.md).
+When designing a layered accessory in [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview), you must export all of the avatar components in a single `.fbx` or `.gltf` for import into Studio. Since 3D creation isn't a linear process and always requires reiteration and testing, the process of creating a layered accessory can differ between individuals and various creation workflows.
 
-Depending on the type of asset you are creating, the creation process follows these high-level workflows:
+In general, the creation process follows the following workflow:
 
-<GridContainer numColumns="2">
-  <figure><figcaption><center>Layered Accessory Workflow</center></figcaption><br /><img src="../../assets/art/accessories/Workflow-Layered.png"/></figure>  
-  
-  <figure>  <figcaption><center>Rigid Accessory Workflow</center></figcaption><br /><img src="../../assets/art/accessories/Workflow-Rigid.png" /></figure>
-
-</GridContainer>
-
-<Alert severity = 'info'>
-Since 3D creation isn't a linear process and always requires reiteration and testing, the process of creating an accessory can differ between individuals and various creation workflows.
-</Alert>
+<figure><figcaption><center>Layered Accessory Workflow</center></figcaption><center><img src="../../assets/art/accessories/Workflow-Layered.png" width="50%"/></center></figure>
 
 ## Resources
 
-There are a variety of resources available for creators of all backgrounds to get started with accessory creation.
-
-If you are interested in specific avatar creation topics, use the following table to find guides and resources that best match your needs:
+There are a variety of resources available for creators of all backgrounds to get started with layered accessory creation. Review the following table for specific topics and resources:
 
 <table>
 <thead>
@@ -161,7 +157,7 @@ If you are interested in specific avatar creation topics, use the following tabl
 <tbody>
   <tr>
     <td>Tutorials</td>
-    <td>[Rigid accessory creation](../../art/accessories/creating-rigid/index.md) <br /><br />[Basic clothing creation](../../art/accessories/creating/index.md)</td>
+    <td>[Create your first layered accessory](../../art/accessories/creating/index.md)</td>
   </tr>
   <tr>
     <td>Reference files</td>
@@ -193,9 +189,3 @@ If you are interested in specific avatar creation topics, use the following tabl
   </tr>
 </tbody>
 </table>
-
-## Classic clothing
-
-Classic clothing assets are 2D images that you can apply to the surface of an avatar body as t-shirts, shirts, or pants. You can design these assets in any image processing software, test the textures in Studio, and then upload the designs to the Marketplace to sell. See [Classic clothing](../../avatar/classic-clothing.md) for more information on creating, uploading, and selling these assets.
-
-<img src="../../assets/accessories/classic-clothing/Block-Avatar-Dressed.jpg" width="800" />

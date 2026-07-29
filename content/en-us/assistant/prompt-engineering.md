@@ -82,7 +82,45 @@ _Certainly! This script is an example of how to handle collisions between two pa
 </TabItem>
 </Tabs>
 
-### Prompting for procedural models
+### Prompting for asset generation
+
+When generating assets, start by naming the object and then gradually add details about its appearance. Assistant automatically determines the camera angle, background, and lighting, so you only need to describe the object itself.
+
+<table>
+  <thead>
+    <tr>
+      <th>Prompt</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>mailbox</code></td>
+      <td>Generates a basic mailbox.</td>
+    </tr>
+    <tr>
+      <td><code>blue metal mailbox</code></td>
+      <td>Adds color and material.</td>
+    </tr>
+    <tr>
+      <td><code>weathered blue metal mailbox with a red flag</code></td>
+      <td>Adds age and distinctive features.</td>
+    </tr>
+    <tr>
+      <td><code>weathered blue metal mailbox covered in barnacles and coral, with seashells attached around the base</code></td>
+      <td>Produces a more specific and distinctive asset.</td>
+    </tr>
+  </tbody>
+</table>
+
+Avoid describing the image rather than the object. For example, don't include:
+
+- Backgrounds or environments, like `"white background"` or `"studio backdrop"`.
+- Camera angles or composition, like `"3/4 view"` or `"front shot"`.
+- Lighting, like `"clean shadows"` or `"cinematic lighting"`.
+- Generic quality terms, like `"high quality"` or `"4K"`.
+
+### Prompting for procedural model generation
 
 Procedural model generation can take longer than text responses. To continue working efficiently, you can keep typing your next prompt while Assistant is generating your model.
 
@@ -90,7 +128,7 @@ When writing prompts for procedural models, make sure to explicitly specify the 
 
 It's also helpful to define how different parts of the model should respond to changes in scale or count. For example, you can say "when I scale the table longer or wider, the model should add more chairs proportionally." You can even include specific technical details, like measurements of spacing between parts, like "add a property to control the distance between the rails of the railroad."
 
-### Reference images for procedural models
+<h4 style={{marginTop: '36px'}}>Reference images for procedural models</h4>
 
 When uploading images for procedural model generation, use `.png` images. Choose images with good lighting, a clear focus on the object of interest, and a simple background. When possible, use images with good spatial information, like isometric or 3/4 angles, instead of direct front, side, or back views. Avoid low-poly style images.
 

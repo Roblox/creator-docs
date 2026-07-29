@@ -30,22 +30,8 @@ properties:
       Whether the haptic effect loops continuously.
     description: |
       Whether the haptic effect loops continuously.
-
-      ```
-      local Workspace = game:GetService("Workspace")
-
-      local effect = Instance.new("HapticEffect")
-      effect.Type = Enum.HapticEffectType.GameplayExplosion
-      effect.Looped = true
-      effect.Parent = Workspace
-
-      -- Start the haptic effect
-      effect:Play()
-      -- After two seconds, stop the effect
-      task.wait(2)
-      effect:Stop()
-      ```
-    code_samples: []
+    code_samples:
+      - HapticEffect-Looped
     type: boolean
     tags: []
     deprecation_message: ''
@@ -72,20 +58,8 @@ properties:
       supported on PC.
 
       <img src="/assets/engine-api/classes/HapticEffect/Position-Radius.png" width="780" />
-
-      ```
-      local Workspace = game:GetService("Workspace")
-
-      local effect = Instance.new("HapticEffect")
-
-      -- Set the position and radius of impact
-      effect.Position = Vector3.new(0.5, 0.5, 0)
-      effect.Radius = 1
-      effect.Parent = Workspace
-
-      effect:Play()
-      ```
-    code_samples: []
+    code_samples:
+      - HapticEffect-Position
     type: Vector3
     tags: []
     deprecation_message: ''
@@ -112,21 +86,8 @@ properties:
       supported on PC.
 
       <img src="/assets/engine-api/classes/HapticEffect/Position-Radius.png" width="780" />
-
-      ```
-      local Workspace = game:GetService("Workspace")
-
-      local effect = Instance.new("HapticEffect")
-
-      -- Set the position and radius of impact
-      effect.Position = Vector3.new(0.5, 0.5, 0)
-      effect.Radius = 1
-      effect.Parent = Workspace
-
-      -- Play the haptic effect
-      effect:Play()
-      ```
-    code_samples: []
+    code_samples:
+      - HapticEffect-Radius
     type: float
     tags: []
     deprecation_message: ''
@@ -169,18 +130,8 @@ methods:
       Plays the haptic effect.
     description: |
       Plays the haptic effect.
-
-      ```
-      local Workspace = game:GetService("Workspace")
-
-      local effect = Instance.new("HapticEffect")
-      effect.Type = Enum.HapticEffectType.GameplayExplosion
-      effect.Parent = Workspace
-
-      -- Play the haptic effect
-      effect:Play()
-      ```
-    code_samples: []
+    code_samples:
+      - HapticEffect-Play
     parameters: []
     returns:
       - type: ()
@@ -203,29 +154,8 @@ methods:
       ranging from `0` (no haptic) to `1` (full intensity), and an
       `Enum.KeyInterpolationMode` that controls how the curve interpolates.
       between keys.
-
-      ```
-      local Workspace = game:GetService("Workspace")
-
-      local effect = Instance.new("HapticEffect")
-
-      -- Set effect type to custom in order to define a waveform
-      effect.Type = Enum.HapticEffectType.Custom
-      effect.Parent = Workspace
-
-      -- Define the custom waveform curve through a table of FloatCurveKeys
-      -- Time values are in milliseconds; values range from 0 (no haptic) to 1 (full intensity)
-      local rampUpWaveform = {
-      	FloatCurveKey.new(0, 0.3, Enum.KeyInterpolationMode.Linear),
-      	FloatCurveKey.new(100, 0.4, Enum.KeyInterpolationMode.Linear),
-      	FloatCurveKey.new(300, 0.8, Enum.KeyInterpolationMode.Linear),
-      	FloatCurveKey.new(400, 1.0, Enum.KeyInterpolationMode.Linear)
-      }
-
-      -- Set waveform through the effect's method
-      effect:SetWaveformKeys(rampUpWaveform)
-      ```
-    code_samples: []
+    code_samples:
+      - HapticEffect-SetWaveformKeys
     parameters:
       - name: keys
         type: Array
@@ -245,22 +175,8 @@ methods:
       Stops the haptic effect.
     description: |
       Stops the haptic effect.
-
-      ```
-      local Workspace = game:GetService("Workspace")
-
-      local effect = Instance.new("HapticEffect")
-      effect.Type = Enum.HapticEffectType.GameplayExplosion
-      effect.Looped = true
-      effect.Parent = Workspace
-
-      -- Start the haptic effect
-      effect:Play()
-      -- After two seconds, stop the effect
-      task.wait(2)
-      effect:Stop()
-      ```
-    code_samples: []
+    code_samples:
+      - HapticEffect-Stop
     parameters: []
     returns:
       - type: ()

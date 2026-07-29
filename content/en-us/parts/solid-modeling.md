@@ -5,69 +5,69 @@ description: Solid modeling is the process of joining parts together to form com
 
 import BetaAlert from '../includes/beta-features/beta-alert.md'
 
-**Solid modeling** is the process of joining [parts](../parts/index.md)
-together in unique ways to form more complex shapes. This includes the boolean operations **union**, **subtraction**, and **intersection**, which are commonly known as Constructive Solid Geometry (CSG). You can perform solid modeling everywhere: in Studio, plugins, even [in-game](#in-game-solid-modeling) on both the server and client.
+**Solid modeling** is the process of joining `Class.BasePart|BaseParts` together in unique ways to form more complex shapes. This includes the boolean operations [union](#union), [intersection](#intersect), and [subtraction](#negate) which are commonly known as Constructive Solid Geometry (CSG). You can perform solid modeling in Studio, [plugins](../studio/plugins.md), and [in‑game](#in-game-solid-modeling) on both the server and client.
 
 In addition to boolean CSG, solid modeling also supports meshes, as long as they are [watertight](#watertight-geometry), and operations like **sweep** and **fragment** that let you and your players slice, cut, and shatter geometry for unique gameplay interactions.
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/modeling/solid-modeling/SweepPart-Crinkle.png" width="80%" alt="" />
-    <figcaption>A mesh object created with `Class.GeometryService:SweepPartAsync()|SweepPartAsync()`</figcaption>
+    <img src="../assets/modeling/solid-modeling/SweepPart-Crinkle.jpg" />
+    <figcaption>`Class.MeshPart` created with `Class.GeometryService:SweepPartAsync()|SweepPartAsync()`</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/solid-modeling/Fragment-Bridge.png" alt="" />
-    <figcaption>A mesh object broken with `Class.GeometryService:FragmentAsync()|FragmentAsync()`</figcaption>
+    <img src="../assets/modeling/solid-modeling/Fragment-Bridge.jpg" />
+    <figcaption>`Class.MeshPart` broken with `Class.GeometryService:FragmentAsync()|FragmentAsync()`</figcaption>
   </figure>
 </GridContainer>
 
 <BetaAlert betaName="Solid Modeling On Meshes" leadIn="Performing CSG on meshes and using the sweep and fragment operations are only available by enabling the beta feature through " leadOut="." components={props.components} />
 
-<Alert severity="info">
-In this guide, the term "part" refers to an instance of `Class.Part`, `Class.PartOperation`, or `Class.MeshPart`, which are all children of `Class.BasePart`.
-</Alert>
-
 ## Watertight geometry
 
-<BaseAccordion>
-<AccordionSummary>
-<Typography variant="subtitle2">Basic elements of meshes</Typography>
-</AccordionSummary>
-<AccordionDetails>
+Solid modeling operations can only work with **watertight** geometry. In technical terms, a mesh being watertight means that it's closed, manifold, and non-self-intersecting. These terms have strict definitions, but here are some simple rules:
 
-There are three basic elements of meshes:
-
-- **Vertex** - A single point on the mesh.
-- **Edge** - A line that connects two vertices.
-- **Face** - A surface area between three or more vertices.
-
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../assets/art/3p-software/blender/Vertex.png" alt="A single active vertex on a cube mesh." />
-    <figcaption>Vertex</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/art/3p-software/blender/Edge.png"alt="A single active edge on a cube mesh."/>
-    <figcaption>Edge</figcaption>
-  </figure>
-	<figure>
-    <img src="../assets/art/3p-software/blender/Face.png" alt="A single active face on a cube mesh." />
-    <figcaption>Face</figcaption>
-  </figure>
-</GridContainer>
-
-</AccordionDetails>
-</BaseAccordion>
-
-Solid modeling operations can only work with **watertight** geometry; in fact, "solid" and "watertight" are synonymous. In technical terms, a mesh being watertight means that it's closed, manifold, and non-self-intersecting. These terms have strict definitions, but here are some simple rules:
-
-- Each face must have an 'inside' side and an 'outside' side. These are determined by the face's winding order, which is the order of its three vertices.
-- Each edge must be shared by exactly two triangles. This means there cannot be any holes in the mesh because the edges around the rim of a hole would only have one triangle.
+- Each **face** must have an "inside" side and an "outside" side. These are determined by the face's winding order, which is the order of its three vertices.
+- Each **edge** must be shared by exactly two triangles. This means there cannot be any holes in the mesh because the edges around the rim of a hole would only have one triangle.
 - Faces cannot pass through other faces.
-- Adjacent triangles must agree on which side is the 'outside' side.
-- Each vertex must have exactly one fan of adjacent triangles.
+- Adjacent triangles must agree on which side is the "outside" side.
+- Each **vertex** must have exactly one fan of adjacent triangles.
 
-<img src="../assets/modeling/solid-modeling/Not-Watertight-Examples.png" alt="Examples of non-watertight goemetry" width="70%" />
+Each of the following examples is **non-watertight** for the noted reason:
+
+<Grid container spacing={3}>
+	<Grid item XSmall={12} Medium={3} Large={3} XLarge={3}>
+		<figure>
+			<img src="../assets/modeling/solid-modeling/Not-Watertight-A.png" style={{marginBottom: '0px'}} />
+      <Alert severity="warning">
+			Mesh is not closed
+			</Alert>
+		</figure>
+	</Grid>
+	<Grid item XSmall={12} Medium={3} Large={3} XLarge={3}>
+		<figure>
+			<img src="../assets/modeling/solid-modeling/Not-Watertight-B.png" style={{marginBottom: '0px'}} />
+      <Alert severity="warning">
+			Self-intersecting
+			</Alert>
+		</figure>
+	</Grid>
+	<Grid item XSmall={12} Medium={3} Large={3} XLarge={3}>
+		<figure>
+			<img src="../assets/modeling/solid-modeling/Not-Watertight-C.png" style={{marginBottom: '0px'}} />
+      <Alert severity="warning">
+			Shares an edge
+			</Alert>
+		</figure>
+	</Grid>
+	<Grid item XSmall={12} Medium={3} Large={3} XLarge={3}>
+		<figure>
+			<img src="../assets/modeling/solid-modeling/Not-Watertight-D.png" style={{marginBottom: '0px'}} />
+      <Alert severity="warning">
+			Shares a vertex
+			</Alert>
+		</figure>
+	</Grid>
+</Grid>
 
 <BaseAccordion>
 <AccordionSummary>
@@ -77,12 +77,22 @@ Solid modeling operations can only work with **watertight** geometry; in fact, "
 
 The solid modeling system is able to automatically repair specific small issues with a mesh, but in general, API calls will fail if the mesh is not watertight. There's no one-size-fits-all way to repair an existing non-watertight mesh, but there are several Blender plugins which can help, such as [3D Print Toolbox](https://extensions.blender.org/add-ons/print3d-toolbox) and [Mesh Repair Tools](https://extensions.blender.org/add-ons/mesh-repair-tools). As another option, [Meshlab](https://www.meshlab.net) also has very useful tools built-in to try and make the mesh manifold, which is the main requirement for a mesh being watertight.
 
-One way to see that a mesh will be extremely difficult to make watertight is to look at it in Studio from all angles, then try enabling and disabling the mesh's `Class.MeshPart.DoubleSided` property. If you can see any difference, then the mesh is just a shell and the tools mentioned above won't work because they cannot guess what space is inside versus outside the mesh. However, if all you want is a thin mesh and it isn't important to keep the mesh's dimensions exactly the same, you can use Blender's [Solidify modifier](https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/solidify.html) to sightly thicken the shell into a watertight mesh.
+One way to see that a mesh will be extremely difficult to make watertight is to look at it in Studio from all angles, then try enabling and disabling the mesh's `Class.MeshPart.DoubleSided` property. If you can see any difference, then the mesh is just a shell and the tools mentioned above won't work because they cannot guess what space is inside versus outside the mesh. However, if all you want is a thin mesh and it isn't important to keep the mesh's dimensions exactly the same, you can use Blender's [Solidify modifier](https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/solidify.html) to slightly thicken the shell into a watertight mesh.
 
-<figure>
-    <img src="../assets/modeling/solid-modeling/DoubleSided-Diff.png" alt="Example of a mesh which looks different when DoubleSided is enabled." width="800" />
-    <figcaption>This is a shell mesh and automatic repair methods won't work for it.</figcaption>
-</figure>
+<Grid container spacing={4}>
+	<Grid item XSmall={12} Medium={4} Large={4} XLarge={4}>
+		<figure>
+			<img src="../assets/modeling/solid-modeling/DoubleSided-Diff-1.png" />
+		<figcaption>`Class.MeshPart.DoubleSided|DoubleSided` = `false`</figcaption>
+		</figure>
+	</Grid>
+	<Grid item XSmall={12} Medium={4} Large={4} XLarge={4}>
+		<figure>
+			<img src="../assets/modeling/solid-modeling/DoubleSided-Diff-2.png" />
+		<figcaption>`Class.MeshPart.DoubleSided|DoubleSided` = `true`</figcaption>
+		</figure>
+	</Grid>
+</Grid>
 
 </AccordionDetails>
 </BaseAccordion>
@@ -103,36 +113,36 @@ You can perform three basic boolean operations using four tools within the **Mod
   </thead>
   <tbody>
     <tr>
-      <td>[Union](#union-parts)</td>
+      <td>[Union](#union)</td>
 	    <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>G</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>G</kbd> (Mac)</td>
       <td>Join two or more parts together to form a single solid union.</td>
     </tr>
 	<tr>
-      <td>[Intersect](#intersect-parts)</td>
+      <td>[Intersect](#intersect)</td>
 	    <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>I</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>I</kbd> (Mac)</td>
       <td>Intersect overlapping parts into a single solid intersection.</td>
     </tr>
     <tr>
-      <td>[Negate](#negate-parts)</td>
-	    <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>N</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>N</kbd> (Mac)</td>
-      <td>Negate parts, useful for making holes and indentations.</td>
-    </tr>
-    <tr>
-      <td>[Separate](#separate-unions-or-intersections)</td>
+      <td>[Separate](#separate)</td>
 	    <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>U</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>U</kbd> (Mac)</td>
       <td>Separate the union or intersection back into its individual parts.</td>
+    </tr>
+    <tr>
+      <td>[Negate](#negate)</td>
+	    <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>N</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>N</kbd> (Mac)</td>
+      <td>Negate parts, useful for making holes and indentations.</td>
     </tr>
   </tbody>
 </table>
 
-### Union parts
+### Union
 
 The **Union** tool joins two or more parts together to form a single solid `Class.UnionOperation`.
 
 <GridContainer numColumns="2">
   <figure>
     <img src="../assets/modeling/solid-modeling/Union-Before.png" alt="A block and a cylinder." />
-    <figcaption>Individual Parts</figcaption>
+    <figcaption>Individual parts</figcaption>
   </figure>
   <figure>
     <img src="../assets/modeling/solid-modeling/Union-After.png" alt="A block and a cylinder combined into one object." />
@@ -145,14 +155,14 @@ To combine parts together into a union:
 1. Select all parts that you want to join together.
 2. Click the **Union** button. All of the parts combine into one solid `Class.UnionOperation` with the name **Union**.
 
-### Intersect parts
+### Intersect
 
 The **Intersect** tool intersects overlapping parts into a single solid `Class.IntersectOperation`.
 
 <GridContainer numColumns="2">
   <figure>
     <img src="../assets/modeling/solid-modeling/Intersect-Before.png" alt="A block and a cylinder." />
-    <figcaption>Individual Parts</figcaption>
+    <figcaption>Individual parts</figcaption>
   </figure>
   <figure>
     <img src="../assets/modeling/solid-modeling/Intersect-After.png" alt="A block and a cylinder combined into one object." />
@@ -165,9 +175,9 @@ To intersect overlapping parts together:
 1. Select all parts that you want to intersect.
 2. Click the **Intersect** button. All of the parts combine into one solid `Class.IntersectOperation` with the name **Intersection**.
 
-### Negate parts
+### Negate
 
-The **Negate** tool negates a part so that when it's [unioned with another part](#union-parts), the shape of the negated part is **subtracted** from the other part.
+The **Negate** tool negates a part so that when it's [unioned with another part](#union), the shape of the negated part is **subtracted** from the other part.
 
 <GridContainer numColumns="2">
   <figure>
@@ -183,13 +193,11 @@ The **Negate** tool negates a part so that when it's [unioned with another part]
 To subtract a part from other overlapping parts:
 
 1. Select the part you want to negate from other parts.
-1. Click **Negate**. The part becomes tagged as a negated part and a negated symbol appears in the Explorer. The part becomes translucent with a reddish tint to indicate its state.
+1. Click **Negate**. The part becomes translucent with a reddish tint to indicate its state.
 1. Select both the negated part and the parts you want to subtract it from.
 1. Click **Union**. The negated part is cut out from the included overlapping parts.
 
-The tag is exposed for scripting, so you can also negate parts by adding the tag `rbxNegate` from a script or plugin. `Class.NegateOperation` is no longer used.
-
-### Separate unions or intersections
+### Separate
 
 The **Separate** tool separates a `Class.UnionOperation` back into its individual parts, essentially serving as an "undo" tool for unions and intersections.
 
@@ -200,13 +208,17 @@ To separate a union or intersection back into individual parts:
 
 ## In-game solid modeling
 
-You can also perform solid modeling operations while a game is running by using `Class.GeometryService` functions.
+You can also perform solid modeling operations while a game is running or from a [plugin](../studio/plugins.md) through `Class.GeometryService` methods.
 
-### UnionAsync(), IntersectAsync(), and SubtractAsync()
+<Alert severity="warning">
+In-game solid modeling operations are asynchronous, meaning they can impact performance. For best results, you should not perform a large series of calls such as `Class.GeometryService:UnionAsync()|UnionAsync()` in quick succession.
+</Alert>
 
-Similar to Studio's built-in basic boolean operation tools, you can use `Class.GeometryService` functions like `Class.GeometryService:UnionAsync()|UnionAsync()`, `Class.GeometryService:IntersectAsync()|IntersectAsync()`, and `Class.GeometryService:SubtractAsync()|SubtractAsync()`to perform basic boolean operations while a game is running. For example, the following script uses `Class.GeometryService:SubtractAsync()|SubtractAsync()`to subtract the volume of one part from another.
+### Core operations
 
-```lua highlight="6"
+Similar to Studio's built-in operation tools, you can use `Class.GeometryService` methods like `Class.GeometryService:UnionAsync()|UnionAsync()`, `Class.GeometryService:IntersectAsync()|IntersectAsync()`, and `Class.GeometryService:SubtractAsync()|SubtractAsync()`to perform basic boolean operations. For example, the following script uses `Class.GeometryService:SubtractAsync()|SubtractAsync()`to subtract the volume of one part from another.
+
+```lua title="Subtract One Part From Another"
 local GeometryService = game:GetService("GeometryService")
 
 local mainPart = Instance.new("Part")
@@ -223,15 +235,9 @@ if success and newParts then
 end
 ```
 
-<img src="../assets/modeling/solid-modeling/Subtract-Simple-Block.png" alt="A block subtracted from another block."  width="300" />
-
-<Alert severity="warning">
-In-game solid modeling operations are asynchronous, meaning they can impact performance. For best results, you should not perform a large series of `Async` calls such as `Class.GeometryService:UnionAsync()|UnionAsync()` in quick succession.
-</Alert>
-
 To further demonstrate, the next code sample combines the geometry of `mainPart` and the parts in the `otherParts` array, then it destroys the original parts involved in the operation. You can replace the call to `Class.GeometryService:UnionAsync()|UnionAsync()` with `Class.GeometryService:IntersectAsync()|IntersectAsync()` or `Class.GeometryService:SubtractAsync()|SubtractAsync()` to perform the other boolean operations.
 
-```lua highlight="6"
+```lua title="Combine Geometry of Multiple Parts"
 local GeometryService = game:GetService("GeometryService")
 
 local mainPart = workspace.BlueBlock
@@ -240,10 +246,9 @@ local otherParts = { workspace.PurpleCylinder }
 local options = {
 	CollisionFidelity = Enum.CollisionFidelity.Default,
 	RenderFidelity = Enum.RenderFidelity.Automatic,
-	SplitApart = false,
+	SplitApart = false
 }
 
--- Perform union operation in pcall() since it's asynchronous
 local success, newParts = pcall(function()
 	return GeometryService:UnionAsync(mainPart, otherParts, options)
 end)
@@ -266,15 +271,21 @@ if success and newParts then
 end
 ```
 
-As long as all the inputs are composed of primitive parts rather than `Class.MeshPart|MeshParts`, the union, interact, and subtract boolean operations will produce a `Class.PartOperation` with two pieces of stored data: a tree of CSG operations known as a CSGTree, and a mesh for rendering.
+While there is no engine-level method for part **negation**, you can add the `rbxNegate` tag within a script or [plugin](../studio/plugins.md) to perform negation equivalent to Studio's [Negate](#negate) toolbar button.
+
+```lua title="Part Negation via Script"
+local CollectionService = game:GetService("CollectionService")
+
+CollectionService:AddTag(workspace.Part, "rbxNegate")
+```
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="subtitle2">Migrating from BasePart CSG APIs</Typography>
+<Typography variant="subtitle2">Migrating from BasePart CSG Functions</Typography>
 </AccordionSummary>
 <AccordionDetails>
 
-Compared to `Class.BasePart:UnionAsync()`/`Class.BasePart:IntersectAsync()`/`Class.BasePart:SubtractAsync()`, the `Class.GeometryService` boolean functions differ as follows:
+Compared to `Class.BasePart:UnionAsync()`/`Class.BasePart:IntersectAsync()`/`Class.BasePart:SubtractAsync()`, the `Class.GeometryService` methods differ as follows:
 
 - The output is an array of instances rather than a single instance.
 - The input parts do not need to be parented to the scene, allowing for background operations.
@@ -284,17 +295,17 @@ Compared to `Class.BasePart:UnionAsync()`/`Class.BasePart:IntersectAsync()`/`Cla
 </AccordionDetails>
 </BaseAccordion>
 
-### SweepPartAsync()
+### Sweep part
 
-<BetaAlert betaName="Solid Modeling On Meshes" leadIn="This API is only available by enabling the beta feature through " leadOut="." components={props.components} />
+<BetaAlert betaName="Solid Modeling On Meshes" leadIn="This workflow is only available by enabling the feature through " leadOut="." components={props.components} />
 
-The `Class.GeometryService:SweepPartAsync()` function creates a `Class.MeshPart` which has the shape of the input part dragged through a given set of `CFrame` positions. This function can be very useful for performing slicing and cutting interactions.
+The `Class.GeometryService:SweepPartAsync()|SweepPartAsync()` method creates a `Class.MeshPart` which has the shape of the input part dragged through a given set of `Datatype.CFrame` positions. This method can be very useful for performing slicing and cutting interactions.
 
-The input can be a `Class.Part`, `Class.PartOperation`, or `Class.MeshPart`. The result's shape is defined as the union of the convex hulls of each adjacent pair of `CFrames`; if only a single `CFrame` is provided, the result will be a convex hull of the input part.
+The input can be a `Class.Part`, `Class.PartOperation`, or `Class.MeshPart`. The result's shape is defined as the union of the convex hulls of each adjacent pair of `Datatype.CFrame|CFrames`; if only a single `Datatype.CFrame` is provided, the result will be a convex hull of the input part.
 
-To demonstrate how this function works, the following code sample sweeps a ball through a set of `CFrame` positions to create a spiral:
+To demonstrate how this method works, the following code sample sweeps a ball through a set of `Datatype.CFrame` positions to create a spiral:
 
-```lua highlight="6"
+```lua title="Sweep Part Along Spiral"
 local GeometryService = game:GetService("GeometryService")
 
 local inputPart = Instance.new("Part")
@@ -307,7 +318,7 @@ for i = 1, 50 do
 	table.insert(cframeList, rotation * CFrame.new(position))
 end
 
-local success, sweptPart = pcall( function()
+local success, sweptPart = pcall(function()
 	return GeometryService:SweepPartAsync(inputPart, cframeList)
 end)
 if success and sweptPart then
@@ -315,9 +326,7 @@ if success and sweptPart then
 end
 ```
 
-<img src="../assets/modeling/solid-modeling/SweepPart-Spring.png" alt="A spiral shape created by sweeping a sphere."  width="300" />
-
-**Example**
+<img src="../assets/modeling/solid-modeling/SweepPart-Spring.jpg" alt="A spiral shape created by sweeping a sphere." width="40%" />
 
 <BaseAccordion>
 <AccordionSummary>
@@ -327,11 +336,11 @@ end
 
 <img src="../assets/modeling/solid-modeling/SweepPart-Slice.png" alt="A translucent curved shape subtracted from a block."  width="500" />
 
-This examples uses `Class.GeometryService:SweepPartAsync()` to achieve a sword or laser gun slice gameplay feature, where the movement of the sword is based on the player's mouse position. The user's mouse movement is recorded as a list of `CFrames`, `Class.GeometryService:SweepPartAsync()|SweepPartAsync()` builds a slice mesh from this data, then the slice mesh is subtracted from the part which was hit.
+This examples uses `Class.GeometryService:SweepPartAsync()|SweepPartAsync()` to achieve a sword or laser gun slice gameplay feature, where the movement of the sword is based on the player's mouse position. The user's mouse movement is recorded as a list of `Datatype.CFrame|CFrames`, `Class.GeometryService:SweepPartAsync()|SweepPartAsync()` builds a slice mesh from this data, then the slice mesh is subtracted from the part which was hit.
 
 To get this example running in Studio:
 
-1. Create the following `Script` in `ServerScriptService` to perform all of the solid modeling operations.
+1. Create the following `Class.Script` in `Class.ServerScriptService` to perform all of the solid modeling operations.
 
    ```lua highlight="6"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -342,7 +351,7 @@ To get this example running in Studio:
 	   local blade = Instance.new("Part")
 	   blade.Size = Vector3.new(0.2, 0.2, 15.0)
 
-	   local success, sweptPart = pcall( function()
+	   local success, sweptPart = pcall(function()
 		   return GeometryService:SweepPartAsync(blade, cframeList)
 	   end)
 
@@ -354,7 +363,7 @@ To get this example running in Studio:
 		   sweptPart.CanQuery = false
 		
 		   -- Subtract the sweep from the hit instance
-		   local subtractSuccess, newParts = pcall( function()
+		   local subtractSuccess, newParts = pcall(function()
 			   return GeometryService:SubtractAsync(hitInstance, {sweptPart})
 		   end)
 		   if subtractSuccess and newParts then
@@ -368,7 +377,7 @@ To get this example running in Studio:
    end)
    ```
 
-1. Create the following `LocalScript` in `StarterPlayerScripts` to handle user input.
+1. Create the following `Class.LocalScript` in `Class.StarterPlayerScripts` to handle user input.
 
    ```lua highlight="6"
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -379,7 +388,7 @@ To get this example running in Studio:
 	   local blade = Instance.new("Part")
 	   blade.Size = Vector3.new(0.2, 0.2, 15.0)
 
-	   local success, sweptPart = pcall( function()
+	   local success, sweptPart = pcall(function()
 		   return GeometryService:SweepPartAsync(blade, cframeList)
 	   end)
 
@@ -391,7 +400,7 @@ To get this example running in Studio:
 		   sweptPart.CanQuery = false
 		
 		   -- Subtract the sweep from the hit instance
-		   local subtractSuccess, newParts = pcall( function()
+		   local subtractSuccess, newParts = pcall(function()
 			  r eturn GeometryService:SubtractAsync(hitInstance, {sweptPart})
 		   end)
 		   if subtractSuccess and newParts then
@@ -405,18 +414,18 @@ To get this example running in Studio:
    end)
    ```
 
-1. Create a `RemoteEvent` in `ReplicatedStorage` named **DrawCurveEvent**.
+1. Create a `Class.RemoteEvent` in `Class.ReplicatedStorage` named `DrawCurveEvent`.
 
 </AccordionDetails>
 </BaseAccordion>
 
-### FragmentAsync()
+### Fragment
 
-<BetaAlert betaName="Solid Modeling On Meshes" leadIn="This API is only available by enabling the beta feature through " leadOut="." components={props.components} />
+<BetaAlert betaName="Solid Modeling On Meshes" leadIn="This workflow is only available by enabling the feature through " leadOut="." components={props.components} />
 
-The `Class.GeometryService:FragmentAsync()` and `Class.GeometryService:GenerateFragmentSites()` functions let you shatter a part into pieces with natural-looking shapes. `Class.GeometryService:FragmentAsync()` uses [voronoi](https://en.wikipedia.org/wiki/Voronoi_diagram) decomposition to divide a single part into multiple `Class.MeshPart` instances according to the pattern of points passed in, while `Class.GeometryService:GenerateFragmentSites()` is a helper function which generates points known as voronoi sites to pass into `Class.GeometryService:FragmentAsync()|FragmentAsync()`.
+The `Class.GeometryService:FragmentAsync()|FragmentAsync()` and `Class.GeometryService:GenerateFragmentSites()|GenerateFragmentSites()` methods let you shatter a part into pieces with natural-looking shapes. `Class.GeometryService:FragmentAsync()|FragmentAsync()` uses [voronoi](https://en.wikipedia.org/wiki/Voronoi_diagram) decomposition to divide a single part into multiple `Class.MeshPart` instances according to the pattern of points passed in, while `Class.GeometryService:GenerateFragmentSites()|GenerateFragmentSites()` is a helper method which generates points known as voronoi sites to pass into `Class.GeometryService:FragmentAsync()|FragmentAsync()`.
 
-To demonstrate how these functions work together, the following code sample generates voronoi sites to fragment a block part:
+The following code sample generates voronoi sites to fragment a block part:
 
 ```lua highlight="6"
 local GeometryService = game:GetService("GeometryService")
@@ -426,7 +435,7 @@ inputPart.Position = Vector3.new(0, 0.7, 20)
 
 local sites = GeometryService:GenerateFragmentSites(inputPart)
 
-local success, fragments = pcall( function()
+local success, fragments = pcall(function()
 	return GeometryService:FragmentAsync(inputPart, sites)
 end)
 if success and fragments then
@@ -437,15 +446,11 @@ if success and fragments then
 end
 ```
 
-<img src="../assets/modeling/solid-modeling/Fragment-Simple-Block.png" alt="A block smashed into pieces."  width="300" />
+<img src="../assets/modeling/solid-modeling/Fragment-Simple-Block.jpg" alt="A block smashed into pieces." width="40%" />
 
 <Alert severity="warning">
-Keep in mind that the number of small pieces created can be massive. If you give users the freedom to fragment objects, you need a system in place for cleaning up the pieces, such as removing them after some amount of time using the `Class.Debris` service.
-
-In addition, you can create your own lists of sites manually rather than using `Class.GeometryService:GenerateFragmentSites()|GenerateFragmentSites()`, but it can take 50+ lines of Lua to generate well-behaved points.
+Keep in mind that the number of small pieces created can be massive. If you give users the freedom to fragment objects, you need a system in place for cleaning up the pieces, such as removing them after some amount of time using the `Class.Debris` service. In addition, you can create your own lists of sites manually rather than using `Class.GeometryService:GenerateFragmentSites()|GenerateFragmentSites()`, but it can take 50+ lines of Luau to generate well-behaved points.
 </Alert>
-
-**Examples**
 
 <BaseAccordion>
 <AccordionSummary>
@@ -453,7 +458,7 @@ In addition, you can create your own lists of sites manually rather than using `
 </AccordionSummary>
 <AccordionDetails>
 
-<img src="../assets/modeling/solid-modeling/Fragment-Localized.png" alt="A block with the corner fragmented in pieces."  width="500" />
+<img src="../assets/modeling/solid-modeling/Fragment-Localized.jpg" alt="A block with the corner fragmented in pieces." width="40%" />
 
 The following script fragments an area of a part, given by a position and radius. The position might commonly come from a physical collision or a raycast from a player.
 
@@ -462,10 +467,10 @@ The first element of the site array which `Class.GeometryService:GenerateFragmen
 ```lua highlight="6"
 local GeometryService = game:GetService("GeometryService")
 
-function fragmentAtPosition(player, part, contactPoint, radius)
+local function fragmentAtPosition(player, part, contactPoint, radius)
 	local allSites = GeometryService:GenerateFragmentSites(part, {Origin = contactPoint, Radius = radius})
 
-	local success, fragments = pcall( function()
+	local success, fragments = pcall(function()
 		return GeometryService:FragmentAsync(part, allSites)
 	end)
 	if not success then
@@ -516,11 +521,11 @@ The following script breaks fragments off the first part within a shape defined 
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/modeling/solid-modeling/Fragment-Stencil-Before.png" alt="Stencil in the shape of the Roblox Studio logo" />
+    <img src="../assets/modeling/solid-modeling/Fragment-Stencil-Before.jpg" alt="Stencil in the shape of the Roblox Studio logo" />
     <figcaption>Part (dark grey) and stencil part</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/solid-modeling/Fragment-Stencil-After.png" alt="Results of a fragment in the shape of a stencil" />
+    <img src="../assets/modeling/solid-modeling/Fragment-Stencil-After.jpg" alt="Results of a fragment in the shape of a stencil" />
     <figcaption>Fragment script result</figcaption>
   </figure>
 </GridContainer>
@@ -528,7 +533,7 @@ The following script breaks fragments off the first part within a shape defined 
 ```lua highlight="6"
 local GeometryService = game:GetService("GeometryService")
 
-function fragmentWithinStencil(player, part)
+local function fragmentWithinStencil(player, part)
 	local overlapParams = OverlapParams.new()
 	overlapParams.FilterType = Enum.RaycastFilterType.Include
 	overlapParams.FilterDescendantsInstances = {workspace.Stencil}
@@ -557,7 +562,7 @@ function fragmentWithinStencil(player, part)
 
 	workspace.Stencil:Destroy()
 
-	local success, fragments = pcall( function()
+	local success, fragments = pcall(function()
 		return GeometryService:FragmentAsync(part, sortedSites, {SplitApart = false})
 	end)
 	if not success then
@@ -604,19 +609,19 @@ end
 <Typography variant="subtitle2">Fragment multiple parts and hide the original part boundaries</Typography>
 </AccordionSummary>
 <AccordionDetails>
-The following script is a much more niche use case, but it demonstrates the power of the index data which is returned from `Class.GeometryService:FragmentAsync()`.
+The following script is a much more niche use case, but it demonstrates the power of the index data which is returned from `Class.GeometryService:FragmentAsync()|FragmentAsync()`.
 
 For example, many places contain buildings formed from multiple non-unioned block parts. If a grenade, cannonball, or sledgehammer were to damage it, you would want all of the wall parts to be fragmented. This script fragments all of the nearby parts, then unions the fragments of different parts together to completely hide the seams.
 
-This involves multiple `Async` operations, so it may not be suitable for use in-game as an instant response to user input, such as a sledgehammer tool.
+This involves multiple `Async()` operations, so it may not be suitable for use in-game as an instant response to user input, such as a sledgehammer tool.
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/modeling/solid-modeling/Fragment-Multiple-Before.png" alt="A row of blocks" />
+    <img src="../assets/modeling/solid-modeling/Fragment-Multiple-Before.jpg" alt="A row of blocks" />
     <figcaption>A row of blocks</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/solid-modeling/Fragment-Multiple-After.png" alt="A row of blocks fragmented" />
+    <img src="../assets/modeling/solid-modeling/Fragment-Multiple-After.jpg" alt="A row of blocks fragmented" />
     <figcaption>Each piece may originate from multiple input parts</figcaption>
   </figure>
 </GridContainer>
@@ -624,7 +629,7 @@ This involves multiple `Async` operations, so it may not be suitable for use in-
 ```lua highlight="6"
 local GeometryService = game:GetService("GeometryService")
 
-function fragmentCrossPart(player, part, contactPoint, radius)
+local function fragmentCrossPart(player, part, contactPoint, radius)
 	local allSites = GeometryService:GenerateFragmentSites(part, {Origin = contactPoint, Radius = radius})
 
 	local fragmentsSorted = {}
@@ -635,7 +640,7 @@ function fragmentCrossPart(player, part, contactPoint, radius)
 	local partsFound = workspace:GetPartBoundsInRadius(contactPoint, radius)
 	for i, part in ipairs(partsFound) do
 
-		local success, fragments = pcall( function()
+		local success, fragments = pcall(function()
 			return GeometryService:FragmentAsync(part, allSites)
 		end)
 		if not success then
@@ -683,7 +688,7 @@ function fragmentCrossPart(player, part, contactPoint, radius)
 			table.insert(otherParts, fragmentList[j])
 		end
 		
-		local success, results = pcall( function()
+		local success, results = pcall(function()
 			return GeometryService:UnionAsync(mainPart, otherParts)
 		end)
 		if not success then
@@ -712,7 +717,7 @@ end
 <Typography variant="subtitle2">Customizable Luau GenerateFragmentSites()</Typography>
 </AccordionSummary>
 <AccordionDetails>
-The following script is a nearly identical Luau replacement for `Class.GeometryService:GenerateFragmentSites()`. If you want similar behavior to `Class.GeometryService:GenerateFragmentSites()` but want to make slight changes, you can use this as a starting point.
+The following script is a nearly identical Luau replacement for `Class.GeometryService:GenerateFragmentSites()|GenerateFragmentSites()`. If you want similar behavior to `Class.GeometryService:GenerateFragmentSites()|GenerateFragmentSites()` but want to make slight changes, you can use this as a starting point.
 
 It uses a jittered grid of points, and guarantees that the fragmented area is well behaved, unlike fully random points.
 
@@ -820,7 +825,7 @@ end
 
 ### Preserve constraints
 
-If an input part has constraints or attachments that you want to preserve, you can transfer them over to the resulting parts. It can be tedious to figure out which output part a constraint should be attatched to, so it's recommended to use `Class.GeometryService:CalculateConstraintsToPreserve()` to generate a table of recommendations which you can loop over and apply.
+If an input part has constraints or attachments that you want to preserve, you can transfer them over to the resulting parts. It can be tedious to figure out which output part a constraint should be attached to, so it's recommended to use `Class.GeometryService:CalculateConstraintsToPreserve()|CalculateConstraintsToPreserve()` to generate a table of recommendations which you can loop over and apply.
 
 To demonstrate, the following code sample performs a subtract operation, loops through the resulting parts to reparent and reposition the resulting parts, then calculates a table of constraints and attachments to either preserve or drop before destroying all original parts.
 
@@ -888,6 +893,8 @@ if success and newParts then
 end
 ```
 
+## Solid modeling results
+
 ### Behavior details
 
 <Alert severity="info">
@@ -898,21 +905,21 @@ In this section, the term "main part" refers to either the first part you select
 
 - If the main part is moving during the calculation of the operation, you can set the resulting parts to the updated `Datatype.CFrame` of the main part, since the returned parts are in the same coordinate space as the main part.
 
-- There are functions to swap out the mesh data of an instance, making it easier to utilize the geometry of the operation while maintaining properties, attributes, tags, and children of the main part, such as `Class.Attachment|Attachments`, `Class.Constraint|Constraints`, `Class.ParticleEmitter|ParticleEmitters`, light objects, and decals. This approach also circumvents the potential "flicker" of completely replacing the original `Class.PartOperation` with another.
+- If a solid modeling operation would result in any parts with more than 20,000 triangles, they will be simplified to 20,000. If that cannot be done, usually in a case with thousands of non-overlapping components, the operation results in an error.
+
+- There are methods to swap out the mesh data of an instance, making it easier to utilize the geometry of the operation while maintaining properties, attributes, tags, and children of the main part, such as `Class.Attachment|Attachments`, `Class.Constraint|Constraints`, `Class.ParticleEmitter|ParticleEmitters`, light objects, and decals. This approach also circumvents the potential "flicker" of completely replacing the original `Class.PartOperation` with another.
 
   - If using this method with a `Class.PartOperation` as the main part and none of the other parts are `Class.MeshPart|MeshParts`, you can substitute in the geometry of another `Class.PartOperation` via `Class.PartOperation:SubstituteGeometry()|SubstituteGeometry()`.
   - If the main part is a `Class.MeshPart`, you can use `Class.MeshPart:ApplyMesh()`.
 
-- It's possible to call these functions on the client, but with some limitations. First, it must be done with objects **created** on the client. Secondly, there is no replication available from client to the server.
+- It's possible to call these methods on the client, but with some limitations. First, it must be done with objects **created** on the client. Secondly, there is no replication available from client to the server.
 
 - The following properties from the main part are applied to the
 resulting `Class.PartOperation|PartOperations` or `Class.MeshPart|MeshParts`:
 
-  - Appearance: `Class.BasePart.Color|Color`, `Class.BasePart.Material`, `Class.BasePart.MaterialVariant`, `Class.BasePart.Reflectance`,  `Class.BasePart.Transparency`
-  - Collision: `Class.BasePart.AudioCanCollide`, `Class.BasePart.CanCollide`
-  - Part: `Class.BasePart.Anchored`, `Class.BasePart.CurrentPhysicalProperties`/`Class.BasePart.CustomPhysicalProperties`
-
-## Solid modeling results considerations
+  - **Appearance** — `Class.BasePart.Color|Color`, `Class.BasePart.Material`, `Class.BasePart.MaterialVariant`, `Class.BasePart.Reflectance`,  `Class.BasePart.Transparency`
+  - **Collision** — `Class.BasePart.AudioCanCollide`, `Class.BasePart.CanCollide`
+  - **Part** — `Class.BasePart.Anchored`, `Class.BasePart.CurrentPhysicalProperties`/`Class.BasePart.CustomPhysicalProperties`
 
 ### Colors and UVs
 
@@ -923,8 +930,8 @@ The colors of the resulting part(s) after solid modeling come from two places: t
 
 UVs are also handled differently depending of the type of result:
 
-- `Class.PartOperation|PartOperations` always have boxmapped UVs, which means each face will have the material/texture/decal from one direction (one of -x, +x, -y, +y, -z, +z) applied to it. This can stretch textures.
-- `Class.MeshPart|MeshParts` are not boxmapped. The UVs of the main part's mesh are used. Since Roblox does not currently have multi-material support, the UVs of faces originating from the other parts are given UVs of (0, 0). For best results, ensure pixel (0, 0) of your texture has a reasonable color.
+- `Class.PartOperation|PartOperations` always have boxmapped UVs, which means each face will have the material/texture/decal from one direction (one of `-x`, `+x`, `-y`, `+y`, `-z`, `+z`) applied to it. This can stretch textures.
+- `Class.MeshPart|MeshParts` are not boxmapped. The UVs of the main part's mesh are used. Since Roblox does not currently have multi-material support, the UVs of faces originating from the other parts are given UVs of `(0, 0)`. For best results, ensure pixel `(0, 0)` of your texture has a reasonable color.
 
 ### Smoothing angle
 
@@ -935,29 +942,14 @@ While a value between 30 and 70 degrees usually produces a good result, values b
 <GridContainer numColumns="2">
   <figure>
     <img src="../assets/modeling/solid-modeling/SmoothingAngle-0.png" alt="Solid modeled part with SmoothingAngle of 0" />
-    <figcaption>`Class.PartOperation.SmoothingAngle|SmoothingAngle` = 0</figcaption>
+    <figcaption>`Class.PartOperation.SmoothingAngle|SmoothingAngle` = `0`</figcaption>
   </figure>
   <figure>
     <img src="../assets/modeling/solid-modeling/SmoothingAngle-45.png" alt="Solid modeled part with SmoothingAngle of 45" />
-    <figcaption>`Class.PartOperation.SmoothingAngle|SmoothingAngle` = 45</figcaption>
+    <figcaption>`Class.PartOperation.SmoothingAngle|SmoothingAngle` = `45`</figcaption>
   </figure>
 </GridContainer>
 
 <Alert severity="warning">
 You can only adjust a solid modeled part's `Class.PartOperation.SmoothingAngle|SmoothingAngle` property in Studio, and it isn't currently possible to adjust the smoothing angle of a `Class.MeshPart`.
 </Alert>
-
-### Part simplification
-
-If a solid modeling operation would result in any parts with more than 20,000 triangles, they will be simplified to 20,000. If that cannot be done, usually in a case with thousands of non-overlapping components, the operation results in an error.
-
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../assets/modeling/solid-modeling/Simplification-Before.png" alt="A MeshPart in good condition" />
-    <figcaption>Before simplication</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/modeling/solid-modeling/Simplification-After.png" alt="A MeshPart with obvious reduction in mesh quality" />
-    <figcaption>After simplication</figcaption>
-  </figure>
-</GridContainer>

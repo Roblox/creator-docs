@@ -1127,7 +1127,7 @@ return (<>
         ctas={[
           {
             label: 'Build with a coding harness',
-            href: './build.md',
+            href: './coding-harness.md',
           },
           {
             label: 'Build with the Assistant in Studio',

@@ -49,17 +49,8 @@ methods:
 
       Note: Only the scripts which are descendants of an Actor may bind to its
       messages.
-
-      ```lua
-      local actor = script:GetActor()
-
-      -- Print out a message when a greeting message is sent to the Actor
-      -- this script is a descendant of.
-      local connection = actor:BindToMessage("Greeting", function(message)
-        print("Received Greeting Message:", message)
-      end)
-      ```
-    code_samples: []
+    code_samples:
+      - Actor-BindToMessage
     parameters:
       - name: topic
         type: string
@@ -95,17 +86,8 @@ methods:
 
       Note: Only the scripts which are descendants of an Actor may bind to its
       messages.
-
-      ```lua
-      local actor = script:GetActor()
-
-      -- Print out a message when a greeting message is sent to the Actor
-      -- this script is a descendant of.
-      local connection = actor:BindToMessageParallel("Greeting", function(message)
-        print("Received Greeting Message:", message)
-      end)
-      ```
-    code_samples: []
+    code_samples:
+      - Actor-BindToMessageParallel
     parameters:
       - name: topic
         type: string
@@ -145,12 +127,8 @@ methods:
       boundaries, not by reference. Sending large tables incurs a full copy on
       each call. Functions are bound to a specific VM and cannot be passed in
       messages.
-
-      ```lua
-      -- Assume `actor` is a local variable referring to an Actor instance
-      actor:SendMessage("Greeting", "Hello World")
-      ```
-    code_samples: []
+    code_samples:
+      - Actor-SendMessage
     parameters:
       - name: topic
         type: string

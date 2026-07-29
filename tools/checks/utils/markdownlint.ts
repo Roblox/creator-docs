@@ -1,4 +1,5 @@
-import markdownlint, { LintError } from 'markdownlint';
+import { lint as lintMarkdownSync } from 'markdownlint/sync';
+import type { LintError } from 'markdownlint';
 import markdownLintConfig from '../../../.markdownlint.json' with { type: 'json' };
 import { createNewPullRequestComment, requiredCheckMessage } from './github.js';
 import { IConfig } from './config.js';
@@ -18,7 +19,7 @@ export const getMarkdownLintErrors = ({
     handleRuleFailures: true,
   };
 
-  const { fileContent: fileErrors } = markdownlint.sync(options);
+  const { fileContent: fileErrors } = lintMarkdownSync(options);
   return fileErrors;
 };
 

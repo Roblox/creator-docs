@@ -75,18 +75,9 @@ properties:
       `Class.Instance.Parent` is set to `nil`, this property is useful in
       allowing existing particles the opportunity to expire before destroying
       the Fire object altogether. See the function below.
-
-      ```
-      local Debris = game:GetService("Debris")
-      local part = script.Parent
-      function stopSmoke(smoke)
-      	smoke.Enabled = false -- No more new particles
-      	Debris:AddItem(smoke, 10) -- Remove the object after a delay (after existing particles have expired)
-      end
-      stopSmoke(part.Smoke)
-      ```
     code_samples:
       - Add-Smoke-to-Fire
+      - Smoke-Enabled
     type: boolean
     tags: []
     deprecation_message: ''

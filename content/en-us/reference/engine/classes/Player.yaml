@@ -247,17 +247,8 @@ properties:
       Therefore, in a `Class.LocalScript` under `Class.StarterGui` or
       `Class.StarterPack`, it is advisable to make sure the parent of
       `Character` is not `nil` before using it, for example:
-
-      ```lua
-      local Players = game:GetService("Players")
-      local player = Players.LocalPlayer
-
-      local character = player.Character
-      if not character or character.Parent == nil then
-      	character = player.CharacterAdded:Wait()
-      end
-      ```
-    code_samples: []
+    code_samples:
+      - Player-Character
     type: Model
     tags: []
     deprecation_message: ''
@@ -746,8 +737,11 @@ properties:
     capabilities:
       - Players
   - name: Player.InputLatency
-    summary: ''
-    description: ''
+    summary: |
+      An internal property used by the Server Authority netcode system.
+    description: |
+      An internal property used by the Server Authority netcode system. This
+      property is not accessible through scripts.
     code_samples: []
     type: int
     tags: []
@@ -969,8 +963,12 @@ properties:
     capabilities:
       - Players
   - name: Player.StepIdOffset
-    summary: ''
-    description: ''
+    summary: |
+      An internal offset between client and server used by the Server Authority
+      system.
+    description: |
+      An internal offset between client and server used by the Server Authority
+      system. This property is not accessible through scripts.
     code_samples: []
     type: int
     tags: []
@@ -1071,18 +1069,8 @@ properties:
       Use this property as the standard way to identify users in new code.
       Engine APIs that accept user ID parameters also accept `Datatype.User`
       values directly.
-
-      ```lua
-      local Players = game:GetService("Players")
-
-      Players.PlayerAdded:Connect(function(player)
-          local user = player.User
-          print("Domain user ID:", user.Id)
-          print("Domain type:", user.DomainType)
-          print("Domain ID:", user.DomainId)
-      end)
-      ```
-    code_samples: []
+    code_samples:
+      - Player-User
     type: User
     tags: []
     deprecation_message: ''
@@ -1239,12 +1227,9 @@ methods:
 
       If you would like to determine the distance between two non-player
       instances or positions, you can use the following:
-
-      ```lua
-      local distance = (position1 - position2).Magnitude
-      ```
     code_samples:
       - Player-DistanceFromCharacter1
+      - Player-DistanceFromCharacter
     parameters:
       - name: point
         type: Vector3
@@ -1306,21 +1291,11 @@ methods:
       The `FieldOfView` and `ViewportSize` fields use standard client-to-server
       property replication which is not synchronized with input and may update
       at a different cadence.
-
-      ```lua
-      local Players = game:GetService("Players")
-
-      local player = Players.LocalPlayer
-      local cameraState = player:GetCameraState()
-
-      print(cameraState.CFrame)
-      print(cameraState.FieldOfView)
-      print(cameraState.ViewportSize)
-      ```
-    code_samples: []
+    code_samples:
+      - Player-GetCameraState
     parameters: []
     returns:
-      - type: Dictionary
+      - type: CameraState
         summary: |
           A dictionary containing `Class.Camera.CFrame|CFrame`,
           `Class.Camera.FieldOfView|FieldOfView`, and

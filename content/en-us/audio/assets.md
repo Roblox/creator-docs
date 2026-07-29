@@ -105,4 +105,22 @@ To import audio through an HTTP request:
   </TabItem>
 </Tabs>
 
-After the audio assets pass moderation, you can reuse them in any project on the platform. Although you are initially the only one who can view and use private audio assets, the [asset privacy](../projects/assets/privacy.md) system lets you grant usage permissions to specific friends and games.
+After the audio assets pass moderation, you can reuse them in any project on the platform. Although you are initially the only one who can view and use private audio assets, the [asset privacy](../projects/assets/privacy.md) system lets you grant usage permissions to specific friends and experiences.
+
+## Visibility
+
+When you upload audio to Roblox, it is automatically classified as a **sound effect** or a **song**. Sound effects are not eligible to appear on the details page of the game in which they're used, but they can be distributed on the [Creator Store](../production/creator-store.md). A song **can** appear on the game details page if:
+
+- It passes all moderation and copyright checks.
+- It meets the minimum duration, playback (number of unique plays), and platform age requirements.
+- It has a meaningful and appropriate title.
+- The uploader is [ID verified](../production/publishing/account-verification.md).
+- The uploader has acknowledged the Roblox [Audio Terms of Use](https://en.help.roblox.com/hc/en-us/articles/23359485439124-Audio-Upload-License-Agreement).
+
+<Alert severity="info">
+Eligible songs will become visible on the game details page by default when the above requirements are met. You can toggle this visibility on the asset's **Configure** page in the [Creator Hub](https://create.roblox.com/). You can also add the Roblox usernames of song composers and collaborators in the **Song Artist** field; if this field is left blank, you'll be listed as the artist.
+</Alert>
+
+Once a song is on the game details page, players can click the song tile to see the song details page. Here, they can view additional information about the track and listen to a 15-second preview.
+
+<img src="../assets/publishing/experiences-places-assets/Song-Preview-Details-Page.jpg" width="80%" alt="Song preview page linked from a game's details page" />

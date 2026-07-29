@@ -3,16 +3,12 @@ title: Animation Graph Editor
 description: The animation graph editor is a visual, node-based tool that lets you build complex animation logic.
 ---
 
-import BetaAlert from '../includes/beta-features/beta-alert.md'
-
-<BetaAlert betaName="Animation Graph" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
-
 The **Animation Graph Editor** is a visual, node-based tool that empowers technical artists and animators to build complex animation logic directly within Roblox Studio. By providing a streamlined interface for creating behaviors like blend trees, it removes the traditional dependency on manual scripting for character motion.
 
 This system works in tandem with your existing animation workflow:
 
 - **Animation Editor**: Continue using the [Animation Editor](./editor.md) as your primary tool for authoring individual clips and fine-tuning keyframes and curves.
-- **Animation Graph Editor**: Use this new workspace to take those clips and organize them into a logic tree to drive sophisticated gameplay behavior.
+- **Animation Graph Editor**: Use this tool to take those clips and organize them into a logic tree to drive sophisticated gameplay behavior.
 
 Designed to enhance collaboration, the visual graph allows developers to quickly inspect, debug, and understand the logic created by animators. While artists focus on refining interactive motion, developers can still access animation graph nodes programmatically for direct control over blended animations and states.
 
@@ -148,8 +144,8 @@ A reference to an `Class.AnimationClip` asset. This serves as a leaf node in the
   </tr></thead>
 <tbody>
   <tr>
-    <td>**Clip**</td>
-    <td>Asset ID</td>
+    <td>**AnimationId**</td>
+    <td>String</td>
     <td>The animation asset to play (e.g. `rbxassetid://12345`).</td>
   </tr>
   <tr>
@@ -247,11 +243,11 @@ Evaluates a list of connected inputs from top to bottom and plays the first one 
 <dd>
 - **Input1...InputN**
   - **Trigger** (Boolean): A logical condition that must be true for this input to activate. In current versions, this is wired to a boolean parameter.
-  - **Interruptible** (`Enum.AnimationNodeInterruptible`): Defines the rule for when this active animation can be interrupted by a higher-priority input.
+  - **TransitionOverrideInterruptible** (`Enum.AnimationNodeInterruptible`): Defines the rule for when this active animation can be interrupted by a higher-priority input. Overrides the node-level **DefaultInterruptible** setting.
     - **Always (default)**: The input can be interrupted at any time by a higher-priority condition.
     - **Finished**: The current animation must complete its playback before a higher-priority input can take over.
     - **Trigger**: The input is only interruptible when the `InterruptibleTrigger` is set to true.
-  - **InterruptibleTrigger** (Boolean): Only available if **Interruptible** is set to **Trigger**. The input can be interrupted when this specific expression is true.
+  - **InterruptibleTrigger** (Boolean): Only available if **TransitionOverrideInterruptible** is set to **Trigger**. The input can be interrupted when this specific expression is true.
 </dd>
 <dt>**Properties**</dt>
 <dd>
@@ -266,11 +262,8 @@ Evaluates a list of connected inputs from top to bottom and plays the first one 
   <tr>
     <td>DefaultInterruptible</td>
     <td>`Enum.AnimationNodeInterruptible`</td>
-    <td>The baseline interruption rule applied to all inputs. Each input can override this with its own **Interruptible** input property.</td>
+    <td>The baseline interruption rule applied to all inputs. Each input can override this with its own **TransitionOverrideInterruptible** input property.</td>
   </tr>
-    <td>DefaultInterruptibleTrigger</td>
-    <td>Boolean</td>
-    <td>The baseline trigger value used when an input’s resolved **Interruptible** mode is **Trigger**. Each input can override this with its own **InterruptibleTrigger** input property. </td>
 </tbody></table>
 
 </dd>
@@ -291,14 +284,14 @@ Activates connected inputs in a specific sequential order based on defined wait 
 <dt>**Inputs**</dt>
 <dd>
 - **Input1...InputN**
-  - **WaitFor** (`Enum.AnimationNodeWaitFor`): Specifies the condition that must be met before the sequence advances to the next input.
+  - **TransitionOverrideWaitFor** (`Enum.AnimationNodeWaitFor`): Specifies the condition that must be met before the sequence advances to the next input. Overrides the node-level **DefaultWaitFor** setting.
     - **Finished (default)**: Advances to the next input when the current input completes a cycle. The advancement behavior depends on the connected input:
       - **Play-once clip**: Advances when the clip finishes.
       - **Looping clip**: Advances after one full loop completes.
       - **Sequence with infinite loops**: Advances after one full cycle through all inputs.
-      - **Sequence with infinite loops**: Advances after all loops complete.
+      - **Sequence with finite loops**: Advances after all loops complete.
     - **Trigger**: Activates the next input when a custom logical expression evaluates to true.
-  - **WaitForTrigger** (Boolean): Only available when `WaitFor` is set to `Trigger`.
+  - **WaitForTrigger** (Boolean): Only available when `TransitionOverrideWaitFor` is set to `Trigger`.
 </dd>
 <dt>**Properties**</dt>
 <dd>
@@ -313,12 +306,12 @@ Activates connected inputs in a specific sequential order based on defined wait 
   <tr>
     <td>**LoopCount**</td>
     <td>Number</td>
-    <td>The number of times to cycle through the entire sequence (default is 1). A value of 0 indicates an infinite loop. Once the count is reached, the node respects the looping or hold setting of the final input.</td>
+    <td>The number of times to cycle through the entire sequence. A value of 0 (default) indicates an infinite loop. Once the count is reached, the node respects the looping or hold setting of the final input.</td>
   </tr>
   <tr>
     <td>**DefaultWaitFor**</td>
     <td>`Enum.AnimationNodeWaitFor`</td>
-    <td>The baseline wait condition applied to all inputs. Each input can override this with its own **WaitFor** input property. </td>
+    <td>The baseline wait condition applied to all inputs. Each input can override this with its own **TransitionOverrideWaitFor** input property.</td>
   </tr>
 </tbody></table>
 
@@ -455,7 +448,7 @@ Adds the **Additive** pose to the **Base** pose, attenuated by a specific **Weig
 
 <img src="../assets/animation/graph-editor/Subtract-Node.png" width="30%" alt="Subtract node" />
 
-Converts an animation into an additive pose by subtracting a relative base pose from the target pose ($A - B$). The result is attenuated by a specific **Weight** (unclamped).
+Converts an animation into an additive pose by subtracting a relative base pose from the target pose ($A - \text{Weight} \times B$). The **Weight** scales the **B** pose before subtraction (unclamped).
 
 <dl>
 <dt>**Inputs**</dt>
@@ -476,7 +469,7 @@ Converts an animation into an additive pose by subtracting a relative base pose 
   <tr>
     <td>**Weight**</td>
     <td>Number</td>
-    <td>Determines the strength of the subtraction effect applied to the result.</td>
+    <td>Scales the **B** pose before it is subtracted from **A**. At `1.0` (default), **B** is fully subtracted; at `0.0`, no subtraction occurs.</td>
   </tr>
 </tbody></table>
 
@@ -735,121 +728,107 @@ Input-specific link properties that supersede the default transition. These are 
 
 ## Replication
 
-Animation graph parameters are local to each `Class.AnimationTrack` and are not automatically replicated. This may change in future updates, but the currently recommended approach uses:
+Animation graph parameters and internal node state replicate automatically. The replication mode is determined by `Class.Workspace.AuthorityMode` at the time the Animate script is created:
 
-- **Client → Server**: A `Class.RemoteEvent` to send parameters from the owning client to the server at a fixed tick rate.
-- **Server → Other Clients**: Instance **attributes** which automatically replicate to all clients.
+- **In `Enum.AuthorityMode.Automatic`**: Parameters set via `Class.AnimationTrack:SetParameter` replicate automatically to other peers.
+- **In `Enum.AuthorityMode.Server`**: The server drives the full graph simulation. All node states, such as elapsed time for `Enum.AnimationNodeType.ClipNode`, and graph parameters replicate automatically from server to clients. The owning player's client uses prediction for smooth local playback.
 
-### Player characters
+### Sample Animate Scripts
 
-A client script drives player characters. Since only the owning client knows the current gameplay state (movement input, humanoid state, etc.), parameters must flow from the owning client to the server and then to all other clients.
+To generate example scripts to drive an animation graph for a rig, use **Graph -> Create Animate script** in the Animation Graph Editor. This produces a script hierarchy placed under `Class.StarterCharacterScripts` (for player characters) or directly on the rig (for NPCs):
 
-<h4>Setup</h4>
-
-Under `Class.StarterCharacterScripts`, create:
-
-- A `Class.LocalScript` for client-side animation and parameter driving.
-- A `Class.Script` for server-side replication.
-- A `Class.RemoteEvent` for client-to-server communication.
-
-<h4>Client script</h4>
-
-The owning client drives parameters from gameplay events and sends them to the server periodically. Other clients read replicated attributes from the server script instead.
-
-```lua
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-
-local character = script.Parent
-local humanoid = character:WaitForChild("Humanoid")
-local animator = humanoid:FindFirstChildOfClass("Animator") or humanoid
-
--- Load the animation graph
-local animation = Instance.new("Animation")
-animation.AnimationId = "rbxassetid://YOUR_GRAPH_ID" -- Replace with your published graph ID
-local track = animator:LoadAnimation(animation)
-track:Play()
-
-local isLocalCharacter = Players:GetPlayerFromCharacter(character) == Players.LocalPlayer
-
-if not isLocalCharacter then
-    -- Read replicated parameters from the server script
-    local animateServer = script.Parent:WaitForChild("AnimateServer")
-
-    for attribute, value in animateServer:GetAttributes() do
-        track:SetParameter(attribute, value)
-    end
-
-    animateServer.AttributeChanged:Connect(function(attribute)
-        track:SetParameter(attribute, animateServer:GetAttribute(attribute))
-    end)
-    return
-end
-
--- Local player: drive parameters from gameplay
-local params = {}
-
-local function setParam(key, value)
-    track:SetParameter(key, value)
-    params[key] = value
-end
-
--- Example: drive parameters from humanoid state
-humanoid.Running:Connect(function(speed)
-    setParam("Speed", speed)
-    setParam("State", if speed < 0.1 then "Idle" else "Moving")
-end)
-
--- Send parameters to the server at a fixed tick rate
-local replicateEvent = script.Parent:WaitForChild("ReplicateEvent")
-local TICK_RATE = 1 / 20
-local lastSendTime = 0
-
-RunService.Stepped:Connect(function(gameTime)
-    if gameTime - lastSendTime > TICK_RATE then
-        lastSendTime = gameTime
-        replicateEvent:FireServer(params)
-    end
-end)
+```text
+Animate (ModuleScript)
+├── RunClient (LocalScript)
+└── RunServer (Script, RunContext = Legacy)
 ```
 
-<h4>Server script</h4>
+The **Animate** `Class.ModuleScript` contains the graph-loading logic. The **RunClient** and **RunServer** scripts invoke it in the appropriate context. Which scripts are included depends on the use case:
 
-Receives parameters from the owning client, drives the server-side animation graph, and propagates values as attributes for replication to other clients.
+<table><thead>
+  <tr>
+    <th>Use Case</th>
+    <th>Scripts Included</th>
+    <th>Behavior</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>**NPC** (any mode)</td>
+    <td>RunServer</td>
+    <td>Server loads and plays the graph. State replicates to all clients automatically.</td>
+  </tr>
+  <tr>
+    <td>**Player + `Enum.AuthorityMode.Server`**</td>
+    <td>RunServer + RunClient</td>
+    <td>Server drives the graph authoritatively. The owning client enables `Enum.PredictionMode` for rollback-based local prediction.</td>
+  </tr>
+  <tr>
+    <td>**Player + `Enum.AuthorityMode.Automatic`**</td>
+    <td>RunClient</td>
+    <td>Owning client loads and plays the graph. Parameters replicate automatically to the server and other clients.</td>
+  </tr>
+</tbody></table>
 
-```lua
-local Players = game:GetService("Players")
+The following attributes are stored on the Animate script and configure its behavior:
 
-local character = script.Parent
-local humanoid = character:WaitForChild("Humanoid")
-local animator = humanoid:FindFirstChildOfClass("Animator") or humanoid
+<table><thead>
+  <tr>
+    <th>Attribute</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>**GraphName**</td>
+    <td>String</td>
+    <td>Name of the animation graph asset.</td>
+  </tr>
+  <tr>
+    <td>**CharacterName**</td>
+    <td>String</td>
+    <td>Name of the rig the graph targets.</td>
+  </tr>
+  <tr>
+    <td>**SourceAssetId**</td>
+    <td>String</td>
+    <td>The published Asset ID of the graph. Used at runtime in published games.</td>
+  </tr>
+  <tr>
+    <td>**IsServerAuthority**</td>
+    <td>Boolean</td>
+    <td>Whether the script was created with `Class.Workspace.AuthorityMode` set to **Server**. Determines the replication strategy.</td>
+  </tr>
+  <tr>
+    <td>**PreviewInStudio**</td>
+    <td>Boolean</td>
+    <td>When true (default), Studio play-testing loads the unpublished graph locally so you can iterate without publishing. Set to false to test the published asset in Studio. Note that this is currently not supported in `Enum.AuthorityMode.Server`.</td>
+  </tr>
+</tbody></table>
 
--- Load the same animation graph on the server
-local animation = Instance.new("Animation")
-animation.AnimationId = "rbxassetid://YOUR_GRAPH_ID" -- Same graph ID as client
-animation.Parent = script
-local track = animator:LoadAnimation(animation)
-track:Play()
+### Parameter replication in Automatic mode
 
--- Receive parameters from owning client and replicate via attributes
-local replicateEvent = script.Parent:WaitForChild("ReplicateEvent")
+When `Class.Workspace.AuthorityMode` is **Automatic**:
 
-replicateEvent.OnServerEvent:Connect(function(player, params)
-    if Players:GetPlayerFromCharacter(character) ~= player then
-        return
-    end
+- The **owning client** drives player character graphs; the **server** drives NPC graphs.
+- Parameters set via `Class.AnimationTrack:SetParameter` are automatically replicated to other peers. Multiple `SetParameter` calls within a single frame are coalesced (last-writer-wins).
+- No additional scripting is needed for parameter transport — the engine handles replication internally.
+- Other clients see parameter updates with a small delay (one send interval plus network latency).
 
-    for key, value in params do
-        track:SetParameter(key, value)
-        script:SetAttribute(key, value)
-    end
-end)
-```
+### Server authority
 
-### NPCs
+When `Class.Workspace.AuthorityMode` is **Server**:
 
-Since the server owns NPC animation, only server-to-client replication is needed. Drive the animation graph on the server, write parameters as attributes on a server Script, and read them on clients using the same `Class.Instance.AttributeChanged` pattern shown above.
+- The **server** is authoritative for all graphs — it runs the simulation and replicates the full graph state.
+- **What is replicated**: Both parameters and internal node state, including elapsed time, current selections, transition progress, loop counts, and RNG seeds. This ensures all clients see identical animation behavior.
+- **Player characters**: The server drives the graph. The owning client's **RunClient** script automatically enables `Enum.PredictionMode` on the `Class.Animator`, so the local player sees smooth, predicted animation that reconciles with the server on mismatch.
+- **NPCs**: The server drives the graph exclusively; clients observe the replicated state with no local simulation.
 
-### Latency
+### Driving parameters
 
-Other clients see animations with a small delay equal to the tick interval (up to 50 ms at 20 Hz) plus network latency. You can reduce the tick interval by increasing the frequency (such as 1/30), at the cost of higher network traffic. 20 Hz is a reasonable default; animation blending is forgiving enough that small delays are hard to notice.
+Use `Class.AnimationTrack:SetParameter` from every script that runs the graph:
+
+- **NPC (any mode)**: Call `SetParameter` from **RunServer** (or any server `Class.Script` with access to the `Class.AnimationTrack`).
+- **Player character in `Enum.AuthorityMode.Server`**: Call `SetParameter` from **both** **RunServer** and **RunClient**. The server needs parameters to drive the authoritative simulation, and the owning client needs the same parameters to drive its local prediction.
+- **Player character in `Enum.AuthorityMode.Automatic`**: Call `SetParameter` from **RunClient** (or any client `Class.LocalScript` with access to the `Class.AnimationTrack`).
+
+The generated Animate script includes a commented-out `SetParameter` block as a starting point. Uncomment and modify it to drive parameters from gameplay state (movement speed, humanoid state, input direction, etc.).

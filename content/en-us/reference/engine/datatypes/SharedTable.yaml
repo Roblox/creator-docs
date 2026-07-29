@@ -339,8 +339,10 @@ functions:
       on the first line and the update on the second line:
 
       ```lua
+      local st = SharedTable.new({ x = "a" })
       local oldValue = st["x"]
       st["x"] = oldValue .. ",x"
+      print(st["x"]) --> a,x
       ```
 
       The update function makes it possible to perform an atomic update to an

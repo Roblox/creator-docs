@@ -38,20 +38,8 @@ methods:
 
       The `onCaptureReady` callback can be used to prompt the user to save or
       share the screenshot:
-
-      ```lua
-      local CaptureService = game:GetService("CaptureService")
-
-      -- Reference to an ImageLabel parent of the script containing this code
-      local imageLabel = script.Parent
-
-      local function onCaptureReady(contentId)
-      	imageLabel.Image = contentId
-      end
-
-      CaptureService:CaptureScreenshot(onCaptureReady)
-      ```
-    code_samples: []
+    code_samples:
+      - CaptureService-CaptureScreenshot
     parameters:
       - name: onCaptureReady
         type: Function
@@ -163,28 +151,8 @@ methods:
 
       For users or devices who are not eligible to use share sheets, this method
       prompts them to download the capture instead.
-
-      ```lua
-      local CaptureService = game:GetService("CaptureService")
-
-      local function onShareAccepted()
-      	print("Capture share was accepted!")
-      end
-
-      local function onShareDenied()
-      	print("Capture share was denied!")
-      end
-
-      local onCaptureReady = function(result, videoCapture)
-      	if videoCapture then
-      		local captureContent = Content.fromObject(videoCapture)
-      		CaptureService:PromptShareCapture(captureContent, "launchData" , onShareAccepted, onShareDenied)
-      	end
-      end
-
-      CaptureService:StartVideoCaptureAsync(onCaptureReady, {})
-      ```
-    code_samples: []
+    code_samples:
+      - CaptureService-PromptShareCapture
     parameters:
       - name: captureContent
         type: Content
@@ -291,31 +259,8 @@ methods:
       share the video capture.
 
       The `captureParams` parameter is currently non-operational.
-
-      ```lua
-      local CaptureService = game:GetService("CaptureService")
-
-      local parent = script.Parent
-
-      local onCaptureReady = function(result, videoCapture)
-      	if result ~= Enum.VideoCaptureResult.Success and result ~= Enum.VideoCaptureResult.TimeLimitReached or not videoCapture then
-      		print("Video recording failed to complete for reason:", result)
-      	else
-      		-- Prompt the user to save the video capture to their gallery
-      		CaptureService:PromptSaveCapturesToGallery({ videoCapture }, function()
-      			print("Capture saved")
-      		end)
-      	end
-      end
-
-      parent.Activated:Connect(function()
-      	local videoRecordingAllowedResult: Enum.VideoCaptureStartedResult = CaptureService:StartVideoCaptureAsync(onCaptureReady, {})
-      	if videoRecordingAllowedResult ~= Enum.VideoCaptureStartedResult.Success then
-      		print("Video recording failed to start for reason:", videoRecordingAllowedResult)
-      	end
-      end)
-      ```
-    code_samples: []
+    code_samples:
+      - CaptureService-StartVideoCaptureAsync
     parameters:
       - name: onCaptureReady
         type: Function
@@ -366,32 +311,8 @@ methods:
       Use the `Enum.UICaptureMode` parameter in `captureParams` to specify
       whether UI elements should be in the screenshot. By default, this is set
       to `Enum.UICaptureMode.None`.
-
-      ```lua
-      local CaptureService = game:GetService("CaptureService")
-
-      local parent = script.Parent
-
-      local onCaptureReady = function(result, screenshotCapture)
-      	if result ~= Enum.ScreenshotCaptureResult.Success or not screenshotCapture then
-      		print("Screenshot failed to complete for reason:", result)
-      	else
-      		-- Prompt the user to save the screenshot capture to their gallery
-      		CaptureService:PromptSaveCapturesToGallery({ screenshotCapture }, function(results)
-      			for capture, result in pairs(results) do
-      				if result then
-      					print("Capture saved")
-      				end
-      			end
-      		end)
-      	end
-      end
-
-      parent.Activated:Connect(function()
-      	CaptureService:TakeScreenshotCaptureAsync(onCaptureReady, { UICaptureMode = Enum.UICaptureMode.All })
-      end)
-      ```
-    code_samples: []
+    code_samples:
+      - CaptureService-TakeScreenshotCaptureAsync
     parameters:
       - name: onCaptureReady
         type: Function

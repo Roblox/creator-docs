@@ -182,11 +182,8 @@ properties:
       [Beams](../../../effects/beams.md#curve) for more details.
 
       The position of this point can be determined by the following equation:
-
-      ```lua
-      local controlPoint2 = Beam.Attachment0.WorldPosition + (Beam.Attachment0.CFrame.RightVector * Beam.CurveSize0)
-      ```
-    code_samples: []
+    code_samples:
+      - Beam-CurveSize0
     type: float
     tags: []
     deprecation_message: ''
@@ -210,11 +207,8 @@ properties:
       [Beams](../../../effects/beams.md#curve) for more details.
 
       The position of this point can be determined by the following equation:
-
-      ```lua
-      local controlPoint3 = Beam.Attachment1.WorldPosition - (Beam.Attachment1.CFrame.RightVector * Beam.CurveSize1)
-      ```
-    code_samples: []
+    code_samples:
+      - Beam-CurveSize1
     type: float
     tags: []
     deprecation_message: ''

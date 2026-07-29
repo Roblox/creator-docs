@@ -24,18 +24,9 @@ description: |
   [disable&nbsp;default&nbsp;UI](../../../players/disable-ui.md).
 
   `Backpack` can be accessed from both the client and the server:
-
-  ```lua
-  local Players = game:GetService("Players")
-
-  -- Accessing Backpack from a server script
-  local backpack = Players.PlayerName.Backpack
-
-  -- Accessing Backpack from a client script
-  local backpack = Players.LocalPlayer.Backpack
-  ```
 code_samples:
   - Backpack-Give-Tool
+  - Backpack-Overview
 inherits:
   - Instance
 descendants: []

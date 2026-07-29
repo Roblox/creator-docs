@@ -793,13 +793,14 @@ methods:
       - type: Array
         summary: |
           An array of strings, each identifying a head shape owned by
-          `Class.Players.LocalPlayer`. Possible values include:
-          `"RobloxClassic"`, `"Blockhead"`, `"Cheeks"`, `"Chiseled"`,
-          `"CoolThing"`, `"EraserHead"`, `"FatHead"`, `"FlatTop"`,
+          `Class.Players.LocalPlayer`. Possible values include: `"Blockhead"`,
+          `"Cheeks"`, `"Chiseled"`, `"ClassicFemaleV2"`, `"ClassicMaleV2"`,
+          `"CoolThing"`, `"Default"`, `"EraserHead"`, `"FatHead"`, `"FlatTop"`,
           `"GoldenKorbloxGeneral"`, `"GoldenMrRobot"`, `"KnightOfChivalry"`,
-          `"KnightOfCourage"`, `"ManHead"`, `"MercilessNinja"`, `"Narrow"`,
-          `"Paragon"`, `"Peabrain"`, `"Perfection"`, `"Roll"`, `"Roundy"`,
-          `"RoxBox"`, `"TheEngineer"`, `"Trim"`, `"WomanHead"`.
+          `"KnightOfCourage"`, `"ManHead"`, `"MercilessNinja"`, `"MrToilet"`,
+          `"Narrow"`, `"NeoClassicFemaleV2"`, `"NeoClassicMaleV2"`, `"Paragon"`,
+          `"Peabrain"`, `"Perfection"`, `"RobloxClassic"`, `"Roll"`, `"Roundy"`,
+          `"RoxBox"`, `"StrongJaw"`, `"TheEngineer"`, `"Trim"`, `"WomanHead"`.
     tags:
       - Yields
     deprecation_message: ''

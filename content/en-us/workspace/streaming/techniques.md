@@ -3,26 +3,10 @@ title: Techniques and conversion
 description: Step‑by‑step guidelines on implementing instance streaming in a non‑streaming game, as well as techniques for using it efficiently and effectively.
 ---
 
-This guide outlines several techniques for using in-game [instance streaming](./index.md) efficiently and effectively. While there's no "one size fits all" solution for designing a streaming game or converting a non‑streaming game to streaming, following these high‑level steps will get you most of the way there.
+This guide outlines several techniques for using in-game [instance streaming](./index.md) efficiently and effectively. While there's no "one size fits all" solution for designing a streaming game, following these high‑level steps will get you most of the way there.
 
-<Alert severity="success" style={{marginBottom: '8px'}}>
-Set [recommended streaming properties](#streaming-properties) on the top-level `Class.Workspace` object.
-</Alert>
-
-<Alert severity="success" style={{marginBottom: '8px'}}>
-Configure [model level-of-detail](#model-level-of-detail) to make models look good even when they're not streamed in.
-</Alert>
-
-<Alert severity="success" style={{marginBottom: '8px'}}>
-[Restructure models](#model-structure) to work best under streaming and enable [SLIM avatars](#slim-avatars).
-</Alert>
-
-<Alert severity="success" style={{marginBottom: '8px'}}>
-[Update scripts](#script-patterns) to handle a partial client `Class.DataModel` and manage client-side changes that streaming may undo.
-</Alert>
-
-<Alert severity="success" style={{marginBottom: '8px'}}>
-Test thoroughly under [realistic streaming conditions](#realistic-test-conditions).
+<Alert severity="success">
+If you are converting a non-streaming game to streaming, be sure to check out the [AI streaming conversion skill](#ai-streaming-conversion-skill) which can convert games to streaming automatically.
 </Alert>
 
 ## Streaming properties
@@ -66,12 +50,12 @@ Once `Class.Workspace.StreamingEnabled|StreamingEnabled` is toggled on for the `
 
 ## Model level-of-detail
 
-`Class.Model.LevelOfDetail` helps fill in non‑streamed `Class.Model` content with lightweight composite or imposter meshes, making the world look visually complete. **SLIM** (Scalable Lightweight Interactive Model) composite meshes are particularly effective, as players often cannot distinguish a SLIM mesh from the fully streamed‑in original.
+`Class.Model.LevelOfDetail` helps fill in non‑streamed `Class.Model` content with lightweight composite or imposter meshes, making the world look visually complete. [SLIM](./slim.md) (Scalable Lightweight Interactive Models) are particularly effective, as players often cannot distinguish a SLIM mesh from the fully streamed‑in original.
 
 For best results:
 
 - Group parts that are spatially and logically related, for example all the parts of a car.
-- Set `Class.Model.LevelOfDetail|LevelOfDetail` to `Enum.ModelLevelOfDetail.SLIM|SLIM` on models that contain **static** meshes and parts. Models that contain skinned meshes, are modified at runtime, or play animations are not supported.
+- Set `Class.Model.LevelOfDetail|LevelOfDetail` to `Enum.ModelLevelOfDetail.SLIM|SLIM` on models that contain **static** meshes and parts. Models that are modified at runtime or play animations are not supported.
 - Keep the spatial extent of each model under ~64 cubic studs to increase the likelihood that the entire actual model streams in together. If a model has very large extents, break it up into smaller modular models and apply an appropriate `Class.Model.LevelOfDetail|LevelOfDetail` to each one.
 
 <GridContainer numColumns="2">
@@ -106,32 +90,10 @@ Beyond setting [model level‑of‑detail](#model-level-of-detail), the structur
 Platform avatars outside of the currently streamed area are not visible by default, but enabling `Class.Workspace.EnableSLIMAvatars` renders [standard rig](../../avatar/character-bodies/specifications.md#standard-rigs) avatars as lightweight, animated stand‑ins when appropriate. Effectively, the engine:
 
 - Renders a SLIM version when an actual avatar model streams out.
-- Swaps SLIM/actual by available resources inside the streaming radius, as SLIM models can be significantly less costly to render than the full resolution model.
-- Throttles SLIM animations by scene importance and bandwidth.
+- Swaps between SLIM and full-resolution representations based on available resources, even inside the streaming radius.
+- Throttles SLIM animations based on scene importance and available bandwidth.
 
-The avatar level-of-detail system has specific optimizations for avatars. The following describes what will or won't be processed by SLIM:
-
-<Grid container spacing={2}>
-	<Grid item Small={12} Medium={12} Large={6} XLarge={6}>
-	<Alert severity="success" variant="outlined" style={{height: '100%', marginBottom: '0', paddingBottom: '0'}}>
-	<AlertTitle>SLIM Supported</AlertTitle>
-	<ul style={{paddingBottom: '0'}}>
-	<li style={{marginBottom: '10px'}}>Roblox-added standard-rig avatars on player join, including the character's body, head, layered clothing, and accessories.</li>
-	<li>Avatar changes made between the `Class.Player.CharacterAdded()|CharacterAdded()` event and `Class.Player.CharacterAppearanceLoaded()|CharacterAppearanceLoaded()` event.</li>
-	</ul>
-	</Alert>
-	</Grid>
-	<Grid item Small={12} Medium={12} Large={6} XLarge={6}>
-	<Alert severity="error" variant="outlined" style={{height: '100%', marginBottom: '0', paddingBottom: '0'}}>
-	<AlertTitle>Excluded</AlertTitle>
-	<ul style={{marginBottom: '0', paddingBottom: '0'}}>
-	<li style={{marginBottom: '10px'}}>R6 and NPC avatars (even standard-rig).</li>
-	<li style={{marginBottom: '10px'}}>Custom proportions/clothing/body parts (falls back to "Player Choice").</li>
-	<li>Avatar changes made after the `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded()` event (equipping tools, accessory/clothing changes, etc.).</li>
-	</ul>
-	</Alert>
-	</Grid>
-</Grid>
+SLIM avatars support R15 standard-rig player characters with body, head, layered clothing, and accessories. R6 avatars, NPCs, and avatars with custom proportions are excluded. For the full list of supported and excluded avatar configurations, performance data, and troubleshooting tips, see [SLIM avatars](./slim.md#enabling-slim-for-avatars).
 
 ## Script patterns
 
@@ -433,3 +395,44 @@ Once [scripts are updated](#script-patterns), test the game thoroughly. Streamin
 - Watch the [Output](../../studio/output.md) window and [Developer Console](../../studio/developer-console.md) for errors, as many of the [script patterns](#script-patterns) produce errors rather than silent misbehavior. Pay particular attention to errors of the form `attempt to index nil with ...` which often indicate a missing `Class.Instance:WaitForChild()|WaitForChild()` call.
 
 - Equip and activate `Class.Tool|Tools`, fire weapons, and trigger different game interactions.
+
+## AI streaming conversion skill
+
+To assist with streaming conversion and optimization, Roblox offers an **AI streaming skill**, accessible from the Studio [MCP&nbsp;server](../../studio/mcp.md). The skill automatically evaluates your game, applies recommended configurations, and cleans up compatibility issues, including:
+
+<Tabs>
+<TabItem label="Model & World Adjustments">
+- Configures streaming settings to the [recommended baselines](#streaming-properties).
+- Sets [level-of-detail](#model-level-of-detail) for models to [SLIM](./slim.md) where applicable.
+- Refactors [model structures](#model-structure) to achieve optimal sizes and visual quality.
+
+</TabItem>
+<TabItem label="Script & Replication Fixes">
+- Automatically adds necessary `Class.Instance:WaitForChild()|WaitForChild()` calls and `nil` checks to handle streaming environments.
+- Updates client-side [spatial queries](#spatial-queries) and other [script patterns](#script-patterns) that behave differently under streaming.
+- Intelligently adds pre-fetches and multiple replication foci for `Datatype.CFrame|CFrames` and remote gameplay areas.
+
+</TabItem>
+<TabItem label="Built-in Guardrails">
+- Runs a validation safety step to ensure basic gameplay functions properly after conversion.
+- Performs a brief playability check to ensure players can successfully join, move around, and don't get stuck in infinite death loops.
+- Provides a summary of changes directly in Studio and saves a comprehensive change log to a file.
+
+</TabItem>
+</Tabs>
+
+<Alert severity="success">
+Even if your game already utilizes streaming, the skill will scan your existing setup, identify potential issues or areas for improvement, and automatically apply fixes to optimize it further.
+</Alert><br />
+
+To use the AI skill in your game:
+
+1. <Chip label="IMPORTANT" size="small" variant="outlined" color="error" /> Back up your game. The conversion process can be complex, so you should **always** save a backup (**File**&nbsp;⟩&nbsp;**Publish&nbsp;to&nbsp;Roblox&nbsp;As**) before running the skill.
+
+2. You can run this skill using any LLM you prefer through the [Model Context Protocol (MCP)](../../studio/mcp.md) in Studio. Higher-end AI models with large context windows are recommended; in Claude Opus, the typical conversion takes 20-30 minutes and utilizes roughly 200,000 tokens of context.
+
+   1. [Enable and connect the MCP server in Studio](../../studio/mcp.md).
+   1. Open your game in Studio.
+   1. <a href="../../../roblox-streaming-conversion-v1.0.zip" download>Download the skill</a> and, in your AI client, open the unzipped folder (`roblox-streaming-conversion`) as the current project.
+   1. Run the skill with `/rbx-convert-to-streaming`.
+   1. As with any AI output, verify the results and playtest your game extensively under [realistic test conditions](#realistic-test-conditions).

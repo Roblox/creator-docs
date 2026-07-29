@@ -37,6 +37,8 @@ navigation:
     path: /cloud/guides/usage-messaging
   - title: Place publishing
     path: /cloud/guides/usage-place-publishing
+  - title: Advertising
+    path: /cloud/guides/advertising
   - heading: Webhooks
   - title: Webhook notifications
     path: /cloud/webhooks/webhook-notifications

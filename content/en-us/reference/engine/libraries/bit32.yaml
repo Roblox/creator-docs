@@ -114,6 +114,7 @@ functions:
       For any integer `x`, the following identity holds:
 
       ```lua
+      local x = 0xF0
       assert(bit32.bnot(x) == (-1 - x) % 2^32)
       ```
     parameters:
@@ -372,6 +373,7 @@ functions:
       following identity holds:
 
       ```lua
+      local x, disp = 0xF0, 35
       assert(bit32.lrotate(x, disp) == bit32.lrotate(x, disp % 32))
       ```
 
@@ -407,6 +409,7 @@ functions:
       For positive displacements, the following equality holds:
 
       ```lua
+      local b, disp = 0xF0, 3
       assert(bit32.lshift(b, disp) == (b * 2^disp) % 2^32)
       ```
     parameters:
@@ -435,7 +438,8 @@ functions:
       For any valid displacement, the following identity holds:
 
       ```lua
-      assert(bit32.rrotate(x, disp) == bit32.rrotate(x , disp % 32))
+      local x, disp = 0xF0, 35
+      assert(bit32.rrotate(x, disp) == bit32.rrotate(x, disp % 32))
       ```
 
       In particular, negative displacements rotate to the left.
@@ -470,6 +474,7 @@ functions:
       For positive displacements, the following equality holds:
 
       ```lua
+      local b, disp = 0xF00, 3
       assert(bit32.rshift(b, disp) == (b % 2^32 / 2^disp) // 1)
       ```
 

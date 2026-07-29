@@ -3,6 +3,8 @@ title: Frames
 description: Frames are basic containers for UI objects.
 ---
 
+import Clipping from '../includes/ui/clipping.md'
+
 Basic `Class.Frame|Frames` act as containers for other `Class.GuiObject|GuiObjects` such as [labels](../ui/labels.md) and [buttons](../ui/buttons.md). You can apply frames to display on a user's [screen](../ui/on-screen-containers.md) or on a [surface](../ui/in-experience-containers.md) within the game.
 
 <img src="../assets/ui/ui-objects/Frame-Example.jpg" width="840" alt="Example Frame on the screen containing a TextLabel, TextBox, and ImageButton." />
@@ -17,9 +19,7 @@ See also [scrolling frames](../ui/scrolling-frames.md), [viewport frames](../ui/
 
 ## Clipping
 
-By default, `Class.Frame` containers **clip** their content (child `Class.GuiObject|GuiObjects`) through the `Class.Frame.ClipsDescendants|ClipsDescendants` boolean. If you want children to appear outside of a frame's bounds, simply set `Class.Frame.ClipsDescendants|ClipsDescendants` to `false`.
-
-Importantly, note that `Class.Frame.ClipsDescendants|ClipsDescendants` does **not** apply if the frame or any of its ancestors have a non‑zero `Class.Frame.Rotation|Rotation`; in such cases, descendants will render outside of the frame's bounds.
+<Clipping components={props.components} />
 
 ## Automatic sizing
 

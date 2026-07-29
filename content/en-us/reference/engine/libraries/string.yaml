@@ -246,7 +246,7 @@ functions:
         </tbody>
       </table>
 
-      ```
+      ```lua
       local str = "The magic word is %s"
       print(string.format(str, "Roblox"))
       -- The magic word is Roblox
@@ -432,17 +432,17 @@ functions:
 
       ```lua
       -- Basic replacement
-      string.gsub("I love tacos!", "tacos", "Roblox") --> I love Roblox! 1
+      string.gsub("I love tacos!", "tacos", "Roblox") --> "I love Roblox!" 1
       -- Replacement with a pattern
-      string.gsub("I like red!", "%w+", "word") --> word word word! 3
+      string.gsub("I like red!", "%w+", "word") --> "word word word!" 3
       -- Replacement table
-      string.gsub("I play Roblox.", "%w+", {I="Je", play="joue à"}) --> Je joue à Roblox. 3
+      string.gsub("I play Roblox.", "%w+", {I="Je", play="joue à"}) --> "Je joue à Roblox." 3
       -- Replacement function
-      string.gsub("I have 2 cats.", "%d+", function(n) return tonumber(n) * 12 end) --> I have 24 cats. 1
+      string.gsub("I have 2 cats.", "%d+", function(n) return tonumber(n) * 12 end) --> "I have 24 cats." 1
       -- Replace only twice
-      string.gsub("aaa", "a", "b", 2) --> bba 2
+      string.gsub("aaa", "a", "b", 2) --> "bba" 2
       -- Replacement with capture groups (maximum of nine)
-      string.gsub("love2play Roblox", "(%w+)(%d+)(%w+)%s+(%w+)", "I %1 %2 %3 %4!") --> I love 2 play Roblox! 1
+      string.gsub("love2play Roblox", "(%w+)(%d+)(%w+)%s+(%w+)", "I %1 %2 %3 %4!") --> "I love 2 play Roblox!" 1
       ```
     parameters:
       - name: s
@@ -629,8 +629,9 @@ functions:
       with three strings: `"abc"`, `""`, and `"def"`.
 
       ```lua
+      local input = "a,b,c"
       local values = input:split(",")
-      print(values[1], values[2], values[3])
+      print(values[1], values[2], values[3]) --> "a" "b" "c"
       ```
 
       Also note that whitespace from the original string will be preserved, for
@@ -643,40 +644,58 @@ functions:
       #### Empty String
 
       ```lua
-      "" --> ""
+      local result = string.split("", ",")
+      print(#result) --> 1
+      print(result[1]) --> ""
       ```
 
       #### Empty Slices
 
       ```lua
-      "foo,,bar" --> "foo", "", "bar"
-      ",foo" --> "", "foo"
-      "foo," --> "foo", ""
-      "," --> "", ""
-      ",," --> "", "", ""
+      local result = string.split("foo,,bar", ",")
+      print(result[1], result[2], result[3]) --> "foo" "" "bar"
+
+      local result2 = string.split(",foo", ",")
+      print(result2[1], result2[2]) --> "" "foo"
+
+      local result3 = string.split("foo,", ",")
+      print(result3[1], result3[2]) --> "foo" ""
+
+      local result4 = string.split(",", ",")
+      print(result4[1], result4[2]) --> "" ""
+
+      local result5 = string.split(",,", ",")
+      print(result5[1], result5[2], result5[3]) --> "" "" ""
       ```
 
       #### Whitespace Preserved
 
       ```lua
-      "   whitespace   " --> "   whitespace   "
-      "foo , bar" --> "foo ", " bar"
+      local result = string.split("   whitespace   ", ",")
+      print(result[1]) --> "   whitespace   "
+
+      local result2 = string.split("foo , bar", ",")
+      print(result2[1], result2[2]) --> "foo " " bar"
       ```
 
       #### Invalid UTF-8
 
       ```lua
-      "\xFF" --> "\xFF"
-      "\xFD,\xFE" --> "\xFD", "\xFE"
+      local result = string.split("\xFF", ",")
+      print(result[1]) --> "\xFF"
+
+      local result = string.split("\xFF,\xFE", ",")
+      print(result[1], result[2]) --> "\xFF" "\xFE"
       ```
 
       #### Unicode
 
       ```lua
-      "，" --> U+FF0C FULLWIDTH COMMA
-      "我很高兴，你呢？" --> "我很高兴", "你呢？"
-      "•" --> U+2022 BULLET
-      "hello•world" --> "hello", "world"
+      local result = string.split("我很高兴，你呢？", "，")
+      print(result[1], result[2]) --> "我很高兴" "你呢？"
+
+      local result2 = string.split("hello•world", "•")
+      print(result2[1], result2[2]) --> "hello" "world"
       ```
     parameters:
       - name: s

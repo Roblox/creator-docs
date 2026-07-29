@@ -182,14 +182,9 @@ methods:
       Note this function overwrites the existing selection. However, using
       `Class.Selection:Get()` an `Class.Instance` can be added to the existing
       selection like so:
-
-      ```
-      local selected = Selection:Get()
-      table.insert(selected, object)
-      Selection:Set(selected)
-      ```
     code_samples:
       - SelectionSet1
+      - Selection-Set
     parameters:
       - name: selection
         type: Instances

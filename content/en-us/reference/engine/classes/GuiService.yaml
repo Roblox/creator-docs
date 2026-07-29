@@ -579,14 +579,8 @@ methods:
       Note that the inset values supplied by this method only take effect on
       `Class.ScreenGui|ScreenGuis` that have their
       `Class.ScreenGui.IgnoreGuiInset|IgnoreGuiInset` property set to `false`.
-
-      ```lua
-      local GuiService = game:GetService("GuiService")
-
-      local screenAreaTopLeft, screenAreaBottomRight = GuiService:GetGuiInset()
-      print(screenAreaTopLeft, screenAreaBottomRight)
-      ```
-    code_samples: []
+    code_samples:
+      - GuiService-GetGuiInset
     parameters: []
     returns:
       - type: Tuple
@@ -619,23 +613,8 @@ methods:
       of the core UI area.
 
       <img src="../../../assets/engine-api/classes/GuiService/GetInsetArea.png" width="840" />
-
-      ```lua
-      local GuiService = game:GetService("GuiService")
-
-      local noneRect = GuiService:GetInsetArea(Enum.ScreenInsets.None)
-      print(noneRect) --> -59, -58, 792, 334
-
-      local deviceSafeRect = GuiService:GetInsetArea(Enum.ScreenInsets.DeviceSafeInsets)
-      print(deviceSafeRect) --> 0, -58, 733, 313
-
-      local coreUISafeRect = GuiService:GetInsetArea(Enum.ScreenInsets.CoreUISafeInsets)
-      print(coreUISafeRect) --> 0, 0, 733, 313
-
-      local topbarSafeRect = GuiService:GetInsetArea(Enum.ScreenInsets.TopbarSafeInsets)
-      print(topbarSafeRect) --> 164, -58, 733, 0
-      ```
-    code_samples: []
+    code_samples:
+      - GuiService-GetInsetArea
     parameters:
       - name: screenInsets
         type: ScreenInsets

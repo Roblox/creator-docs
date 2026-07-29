@@ -265,15 +265,15 @@ MarketplaceService.PromptRobloxSubscriptionPurchaseFinished:Connect(onPromptRobl
 
 ## Earn from paid private server time
 
-Roblox Plus subscribers can create paid [private servers](./private-servers.md) for free. To make sure that you can still earn from these servers, Roblox compensates you based on the time Plus subscribers spend in the paid private servers they create within your game.
+Roblox Plus subscribers can create a paid [private server](./private-servers.md) for free in your game. To make sure that you can still earn from this server, Roblox compensates you based on the time Plus subscribers spend in the paid private server they create within your game.
 
-**Payouts are based on the time a Plus subscriber spends in paid private servers they create themselves.** This means that if a Plus subscriber invites another Plus subscriber to a paid private server, you do not earn from the invited player.
+**Payouts are based on the time a Plus subscriber spends in the paid private server they create themselves.** This means that if a Plus subscriber invites another Plus subscriber to their paid private server, only the server owner's time counts toward your earnings. Time spent by the invited subscriber does not count.
 
-On the Plus subscription renewal day, Roblox evaluates paid private server usage over the previous 30 days for that subscriber. This evaluation occurs even if the subscriber cancels Plus instead of renewing. Roblox then determines the **top five paid private servers the subscriber created within your game**, based on the amount of time they spent in each server during that period, with a minimum of 60 cumulative minutes.
+On the Plus subscription renewal day, Roblox evaluates paid private server usage over the previous 30 days for that subscriber. This evaluation occurs even if the subscriber cancels Plus instead of renewing. Roblox then determines the subscriber's **top five paid private servers across Roblox**, based on the amount of time they spent in each server during that period. The paid private server in your game qualifies if it's among those five and if the subscriber has spent a minimum of 60 cumulative minutes in it.
 
-If a Plus subscriber (including a subscriber on a Free Plus Trial) spends **at least 60 cumulative minutes over the last 30 days** in a paid private server they created within your game, you can earn up to **100 Robux per user per server** based on the server price.
+If a Plus subscriber, including a subscriber on a Free Plus Trial, spends **at least 60 cumulative minutes over the last 30 days** in the paid private server they created within your game, you can earn up to **100 Robux for that subscriber** based on the server price.
 
-In the following example, Servers A, B, and C qualify because the Plus subscriber spent at least 60 minutes in each server during the last 30 days. Servers D and E don't qualify because they don't meet the 60-minute threshold. If all five servers (A–E) belong to the same game and represent the top five servers the subscriber spent time in, the creator earns a total of 205 Robux across the qualifying servers.
+In the following example, Private Servers A, B, and C qualify because the Plus subscriber spent at least 60 minutes in each server during the last 30 days. Private Servers D and E don't qualify because they don't meet the 60-minute threshold. These represent the subscriber's top five paid private servers across Roblox. Across the qualifying servers, the creator earns a combined 205 Robux from this Plus subscriber.
 
 <table>
 <thead>
@@ -286,31 +286,31 @@ In the following example, Servers A, B, and C qualify because the Plus subscribe
 </thead>
 <tbody>
   <tr>
-    <td>Server A</td>
+    <td>Private Server A</td>
     <td>100 Robux</td>
     <td>120 minutes</td>
     <td>70 Robux (70% revenue share on a 100 Robux server price)</td>
   </tr>
   <tr>
-    <td>Server B</td>
+    <td>Private Server B</td>
     <td>200 Robux</td>
     <td>80 minutes</td>
     <td>100 Robux (70% revenue share on a 200 Robux server price, capped at 100 Robux)</td>
   </tr>
   <tr>
-    <td>Server C</td>
+    <td>Private Server C</td>
     <td>50 Robux</td>
     <td>70 minutes</td>
     <td>35 Robux (70% revenue share on a 50 Robux server price)</td>
   </tr>
   <tr>
-    <td>Server D</td>
+    <td>Private Server D</td>
     <td>60 Robux</td>
     <td>15 minutes</td>
     <td>Not eligible (less than 60 minutes)</td>
   </tr>
   <tr>
-    <td>Server E</td>
+    <td>Private Server E</td>
     <td>70 Robux</td>
     <td>10 minutes</td>
     <td>Not eligible (less than 60 minutes)</td>

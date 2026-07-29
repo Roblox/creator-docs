@@ -5,7 +5,9 @@
 name: PhysicsSettings
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  Lets you view debugging features in Roblox's physics engine, found under the
+  Physics tab in Studio's settings menu.
 description: |
   The PhysicsSettings is a singleton class, which lets you view debugging
   features in Roblox's physics engine. You can find it under the Physics tab in
@@ -87,8 +89,11 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.AreAssemblyCentersOfMassShown
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, shows the center of mass for each physics assembly.
+    description: |
+      When set to true, shows the center of mass for each physics assembly. This
+      property must be set in the Physics tab of Studio's settings menu.
     code_samples: []
     type: boolean
     tags: []
@@ -183,8 +188,11 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.AreCollisionCostsShown
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, displays collision cost annotations for parts.
+    description: |
+      When set to true, displays collision cost annotations for parts. This
+      property is not scriptable.
     code_samples: []
     type: boolean
     tags: []
@@ -199,8 +207,13 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.AreConstraintForcesShownForSelectedOrHoveredInstances
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, draws force vectors for constraints on selected or
+      hovered instances.
+    description: |
+      When set to true, draws force vectors for constraints on selected or
+      hovered instances. This property must be set in the Physics tab of
+      Studio's settings menu.
     code_samples: []
     type: boolean
     tags: []
@@ -215,8 +228,13 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.AreConstraintTorquesShownForSelectedOrHoveredInstances
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, draws torque vectors for constraints on selected or
+      hovered instances.
+    description: |
+      When set to true, draws torque vectors for constraints on selected or
+      hovered instances. This property must be set in the Physics tab of
+      Studio's settings menu.
     code_samples: []
     type: boolean
     tags: []
@@ -231,8 +249,13 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.AreContactForcesShownForSelectedOrHoveredAssemblies
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, draws contact force vectors for selected or hovered
+      assemblies.
+    description: |
+      When set to true, draws contact force vectors for selected or hovered
+      assemblies. This property must be set in the Physics tab of Studio's
+      settings menu.
     code_samples: []
     type: boolean
     tags: []
@@ -359,8 +382,13 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.AreGravityForcesShownForSelectedOrHoveredAssemblies
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, draws gravity force vectors for selected or hovered
+      assemblies.
+    description: |
+      When set to true, draws gravity force vectors for selected or hovered
+      assemblies. This property must be set in the Physics tab of Studio's
+      settings menu.
     code_samples: []
     type: boolean
     tags: []
@@ -395,8 +423,13 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.AreMagnitudesShownForDrawnForcesAndTorques
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, displays magnitude labels alongside drawn force and
+      torque vectors.
+    description: |
+      When set to true, displays magnitude labels alongside drawn force and
+      torque vectors. This property must be set in the Physics tab of Studio's
+      settings menu.
     code_samples: []
     type: boolean
     tags: []
@@ -453,8 +486,13 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.AreNonAnchorsShown
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, parts that are not `Class.BasePart.Anchored` will be
+      highlighted.
+    description: |
+      When set to true, parts that are not `Class.BasePart.Anchored` will be
+      highlighted. This property must be set in the Physics tab of Studio's
+      settings menu.
     code_samples: []
     type: boolean
     tags: []
@@ -536,8 +574,11 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.AreSolverIslandsShown
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, each solver island is highlighted with a unique color.
+    description: |
+      When set to true, each solver island is highlighted with a unique color.
+      This property must be set in the Physics tab of Studio's settings menu.
     code_samples: []
     type: boolean
     tags: []
@@ -552,8 +593,11 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.AreTerrainReplicationRegionsShown
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, shows terrain replication streaming regions.
+    description: |
+      When set to true, shows terrain replication streaming regions. This
+      property is not scriptable.
     code_samples: []
     type: boolean
     tags: []
@@ -568,8 +612,11 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.AreTimestepsShown
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, shows physics timestep information for assemblies.
+    description: |
+      When set to true, shows physics timestep information for assemblies. This
+      property is not scriptable.
     code_samples: []
     type: boolean
     tags: []
@@ -646,8 +693,11 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.DisableCSGv3ForPlugins
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, disables CSGv3 for plugin solid modeling operations.
+    description: |
+      When set to true, disables CSGv3 for plugin solid modeling operations.
+      This property must be set in the Physics tab of Studio's settings menu.
     code_samples: []
     type: boolean
     tags: []
@@ -662,8 +712,13 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.DrawConstraintsNetForce
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, draws the net force from all constraints on selected or
+      hovered assemblies.
+    description: |
+      When set to true, draws the net force from all constraints on selected or
+      hovered assemblies. This property must be set in the Physics tab of
+      Studio's settings menu.
     code_samples: []
     type: boolean
     tags: []
@@ -678,8 +733,13 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.DrawContactsNetForce
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, draws the net force from all contacts on selected or
+      hovered assemblies.
+    description: |
+      When set to true, draws the net force from all contacts on selected or
+      hovered assemblies. This property must be set in the Physics tab of
+      Studio's settings menu.
     code_samples: []
     type: boolean
     tags: []
@@ -694,8 +754,13 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.DrawTotalNetForce
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, draws the total net force on selected or hovered
+      assemblies.
+    description: |
+      When set to true, draws the total net force on selected or hovered
+      assemblies. This property must be set in the Physics tab of Studio's
+      settings menu.
     code_samples: []
     type: boolean
     tags: []
@@ -710,8 +775,13 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.EnableForceVisualizationSmoothing
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, enables temporal smoothing for force and torque
+      visualizations.
+    description: |
+      When set to true, enables temporal smoothing for force and torque
+      visualizations. This property must be set in the Physics tab of Studio's
+      settings menu.
     code_samples: []
     type: boolean
     tags: []
@@ -747,8 +817,11 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.ForceCSGv2
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, forces the use of CSGv2 for solid modeling operations.
+    description: |
+      When set to true, forces the use of CSGv2 for solid modeling operations.
+      This property must be set in the Physics tab of Studio's settings menu.
     code_samples: []
     type: boolean
     tags:
@@ -765,8 +838,11 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.ForceDrawScale
-    summary: ''
-    description: ''
+    summary: |
+      Sets the scale of arrows drawn for force visualization.
+    description: |
+      Sets the scale of arrows drawn for force visualization. This property is
+      not scriptable.
     code_samples: []
     type: float
     tags: []
@@ -781,8 +857,11 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.ForceVisualizationSmoothingSteps
-    summary: ''
-    description: ''
+    summary: |
+      Controls the number of frames used for force visualization smoothing.
+    description: |
+      Controls the number of frames used for force visualization smoothing. This
+      property must be set in the Physics tab of Studio's settings menu.
     code_samples: []
     type: int
     tags: []
@@ -797,8 +876,11 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.IsInterpolationThrottleShown
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, shows physics interpolation throttle information.
+    description: |
+      When set to true, shows physics interpolation throttle information. This
+      property is not scriptable.
     code_samples: []
     type: boolean
     tags: []
@@ -959,8 +1041,13 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.ShowInstanceNamesForDrawnForcesAndTorques
-    summary: ''
-    description: ''
+    summary: |
+      When set to true, displays instance names alongside drawn force and torque
+      vectors.
+    description: |
+      When set to true, displays instance names alongside drawn force and torque
+      vectors. This property must be set in the Physics tab of Studio's settings
+      menu.
     code_samples: []
     type: boolean
     tags: []
@@ -975,8 +1062,11 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.SolverConvergenceMetricType
-    summary: ''
-    description: ''
+    summary: |
+      Controls which metric is used for solver convergence visualization.
+    description: |
+      Controls which metric is used for solver convergence visualization. This
+      property is not scriptable.
     code_samples: []
     type: SolverConvergenceMetricType
     tags: []
@@ -991,8 +1081,11 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.SolverConvergenceVisualizationMode
-    summary: ''
-    description: ''
+    summary: |
+      Controls the visualization mode for solver convergence.
+    description: |
+      Controls the visualization mode for solver convergence. This property is
+      not scriptable.
     code_samples: []
     type: SolverConvergenceVisualizationMode
     tags: []
@@ -1031,8 +1124,11 @@ properties:
       can_save: true
     capabilities: []
   - name: PhysicsSettings.TorqueDrawScale
-    summary: ''
-    description: ''
+    summary: |
+      Sets the scale of arrows drawn for torque visualization.
+    description: |
+      Sets the scale of arrows drawn for torque visualization. This property is
+      not scriptable.
     code_samples: []
     type: float
     tags: []

@@ -17,11 +17,13 @@ Because the skinning transfer process uses a character's outer cage to help calc
 
 ## Enable Automatic Skinning Transfer
 
-To enable the Automatic skinning transfer process, you must enable the `Class.WrapLayer.AutoSkin|AutoSkin` property within the `Class.WrapLayer` instance of the layered `Class.Accessory` you want to automatically skin, then set it to one of the following values:
+To enable the Automatic skinning transfer process you must:
 
-- `Disabled`: Disables the Automatic Skinning Transfer process. This is the default value.
-- `EnabledOverride`: Enables the Automatic Skinning Transfer process, and allows it to override any existing skinning information found on the accessory at runtime.
-- `EnabledPreserve`: Enables the Automatic Skinning Transfer process, but doesn't allow it to override any existing skinning information found on the accessory at runtime. If there isn't any skinning to maintain, the Automatic Skinning Transfer process automatically creates new skinning data.
+1. Ensure that `Class.StarterPlayer.LoadCharacterLayeredClothing` is enabled in your game.
+2. Enable the `Class.WrapLayer.AutoSkin|AutoSkin` property within the `Class.WrapLayer` instance of the layered `Class.Accessory` you want to automatically skin, then set it to one of the following values:
+   - `Disabled`: Disables the Automatic Skinning Transfer process. This is the default value.
+   - `EnabledOverride`: Enables the Automatic Skinning Transfer process, and allows it to override any existing skinning information found on the accessory at runtime.
+   - `EnabledPreserve`: Enables the Automatic Skinning Transfer process, but doesn't allow it to override any existing skinning information found on the accessory at runtime. If there isn't any skinning to maintain, the Automatic Skinning Transfer process automatically creates new skinning data.
 
 When there isn't any skinning data on the accessory, or if you choose to override any existing skinning data associated with the accessory, the Roblox Engine calculates skinning data from the character's geometry and cages, then the new skinning data and rig associated with the accessory drives the accessory's deformations and motions in sync with the source geometry itself.
 

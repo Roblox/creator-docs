@@ -1,14 +1,12 @@
 ---
 title: Emotes
-description: All Roblox users are represented by an avatar character which can be customized with body parts, accessories, and clothes from the Marketplace or within games.
+description: Emotes are full body animations that an avatar character can perform to communicate and celebrate with others in games.
 ---
 
-**Emotes** are short animations that an avatar performs, making it easier to communicate and celebrate with others, enhancing the game to feel more social and more lively.
-
-Creators sell their own emotes, such as gestures, reactions, dances, and more, by publishing their animation to sell on the Marketplace or within games.
+**Emotes** are full body animations that an avatar character can perform to communicate and celebrate with others in a game, such as gestures, reactions, and dances. While Roblox provides a set of default emotes for each avatar on the platform, you can create and sell your own emotes on the Marketplace or within games.
 
 <Alert severity = 'info'>
-Developers can access and modify emotes within their own games. For more information, see [character emotes](../../characters/emotes.md).
+Game developers can access and modify emotes within their games. For more information on this process, see [character emotes](../../characters/emotes.md).
 </Alert>
 
 ## Components
@@ -27,11 +25,11 @@ Emotes are made up of an `Class.Animation` object with the unique `Class.Animati
   </figure>
 </GridContainer>
 
-Emotes must meet [technical specifications](./specifications.md), [Marketplace policies](../../marketplace/marketplace-policy.md), and Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+All emotes must meet Roblox's technical [emote specifications](./specifications.md), [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [Marketplace policies](../../marketplace/marketplace-policy.md).
 
 ## Create emotes
 
-There are several ways to create an animation both in Studio or using a third-party tool. See the following table for common workflows and various resources to create your own.
+There are several ways you can create emotes using either Studio or a third-party animation tool. Review the following table for specific workflows and resources:
 
 <table><thead>
   <tr>
@@ -41,11 +39,11 @@ There are several ways to create an animation both in Studio or using a third-pa
 <tbody>
   <tr>
     <td>Animation Capture</td>
-    <td>Use the [Animation Capture (Body)](../../animation/capture.md#body) to convert a video of your emote into a keyframe sequence.</td>
+    <td>Use Studio's [Animation Capture](../../animation/capture.md#body) tool to convert a full body video into a keyframe sequence for your emote.</td>
   </tr>
   <tr>
     <td>Manual animation with Animation Editor</td>
-    <td>Use the [Animation Editor](../../animation/editor.md) to manually animate a character rig. For an in-depth tutorial on creating a character animation, see [Create character animations](../../tutorials/use-case-tutorials/animation/create-an-animation.md).</td>
+    <td>Use Studio's [Animation Editor](../../animation/editor.md) to manually animate a character rig. For an in-depth tutorial on creating a character animation, see [Create character animations](../../tutorials/use-case-tutorials/animation/create-an-animation.md).</td>
   </tr>
   <tr>
     <td>Third-party plug-ins</td>
@@ -54,4 +52,4 @@ There are several ways to create an animation both in Studio or using a third-pa
 </tbody>
 </table>
 
-To convert your keyframe sequence into an animation and upload to the Marketplace, see [import and configure emotes](./import.md#configure).
+To convert your keyframe sequence into an animation that you can upload to the Marketplace, see [Import emotes - Generate asset ID](./import.md#generate-asset-id).

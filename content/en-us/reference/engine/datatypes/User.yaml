@@ -37,20 +37,13 @@ description: |
   The encoded string is stable, URL-safe, and compact. Use it when persisting or
   transmitting user identity across systems.
 
-  ```lua
-  -- Serialize
-  local encoded = player.User:ToString()
-
-  -- Deserialize
-  local user = User.fromString(encoded)
-  ```
-
   #### Users vs. Players
 
   A `Datatype.User` represents persistent identity, not live server presence. It
   can reference any account in the domain, whether or not that user is currently
   connected. Use `Class.Player` when you need the in-server instance.
-code_samples: []
+code_samples:
+  - User-Overview
 tags: []
 deprecation_message: ''
 constructors:
@@ -60,18 +53,13 @@ constructors:
       Creates a new `Datatype.User` from the given domain user ID, using the current
       experience as the domain. The ID must be a valid domain user ID (above the
       global user ID range).
-
-      ```lua
-      local user = User.fromId(domainUserId)
-      print(user.Id)         -- domainUserId
-      print(user.DomainType) -- Enum.DomainType.EXPERIENCE
-      ```
     parameters:
       - name: domainUserId
         type: int64
         default:
         summary: ''
-    code_samples: []
+    code_samples:
+      - User-fromId
     tags: []
     deprecation_message: ''
   - name: User.fromString
@@ -79,18 +67,13 @@ constructors:
     description: |-
       Deserializes a `Datatype.User` from a string previously produced by
       `Datatype.User:ToString()|ToString()`.
-
-      ```lua
-      local encoded = player.User:ToString()
-      local restored = User.fromString(encoded)
-      print(restored.Id == player.User.Id) -- true
-      ```
     parameters:
       - name: userString
         type: string
         default:
         summary: ''
-    code_samples: []
+    code_samples:
+      - User-fromString
     tags: []
     deprecation_message: ''
 constants: []
@@ -142,17 +125,12 @@ methods:
 
       The string can be converted back to a `Datatype.User` via
       `Datatype.User.fromString()|fromString()`.
-
-      ```lua
-      local encoded = player.User:ToString()
-      -- Store in a data store, send over a remote, etc.
-      DataStore:SetAsync("last_visitor", encoded)
-      ```
     parameters: []
     returns:
       - type: string
         summary: ''
-    code_samples: []
+    code_samples:
+      - User-ToString
     tags: []
     deprecation_message: ''
 functions: []

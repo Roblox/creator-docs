@@ -350,25 +350,8 @@ methods:
       When a player joins a group in-experience due to a call to
       `Class.GroupService:PromptJoinAsync()`, any cached result for that player
       and group will be cleared on the client where the prompt was shown.
-
-      ```lua
-      local GroupService = game:GetService("GroupService")
-      local Players = game:GetService("Players")
-
-      local GROUP_ID = 377251
-      local localPlayer = Players.LocalPlayer
-
-      local result = GroupService:GetRolesInGroupAsync(localPlayer.UserId, GROUP_ID)
-      if result.IsMember then
-          print("User is a member with", #result.Roles, "role(s)")
-          for _, role in ipairs(result.Roles) do
-              print(role.Name, "rank", role.Rank)
-          end
-      else
-          print("User is not a member")
-      end
-      ```
-    code_samples: []
+    code_samples:
+      - GroupService-GetRolesInGroupAsync
     parameters:
       - name: userId
         type: User

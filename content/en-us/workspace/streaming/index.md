@@ -8,14 +8,14 @@ In-game **instance streaming** allows the Roblox engine to dynamically load and 
 - <Chip label="Faster Join Times" size="small" variant="outlined" color="success" /> — Players can start playing in one part of the world while more of the world loads in the background.
 - <Chip label="Memory Efficiency" size="small" variant="outlined" color="success" /> — Games can be played on devices with less memory since content is dynamically streamed in and out. More immersive and detailed worlds can be played on a wider range of devices.
 - <Chip label="Improved Performance" size="small" variant="outlined" color="success" /> — Better frame rates and performance, as the server can spend less time and bandwidth synchronizing changes between the world and players in it. Clients spend less time updating instances that aren't currently relevant to the player.
-- <Chip label="Level of Detail" size="small" variant="outlined" color="success" /> — When configured, distant models, platform avatars, and terrain remain visible even when they're not streamed to clients, keeping the game optimized without entirely sacrificing background visuals.
+- <Chip label="Level of Detail" size="small" variant="outlined" color="success" /> — When configured, distant models, platform avatars, and terrain remain visible even when they're not streamed to clients, keeping the game optimized without entirely sacrificing background visuals. [SLIM](./slim.md) provides the highest-fidelity level of detail for both models and avatars.
 
 Instance streaming is controlled through the `Class.Workspace.StreamingEnabled` property, enabled by default for new places created in Studio. This property cannot be set in a script.
 
 <img src="../../assets/studio/properties/Workspace-StreamingEnabled.png" width="320" alt="The Properties window with the StreamingEnabled property enabled." />
 
 <Alert severity="success">
-Once you review this technical guide, it's recommended that you review the [streaming techniques](./techniques.md) guide on how to use streaming efficiently and effectively.
+Once you review this technical guide, it's recommended that you review the [streaming techniques](./techniques.md) guide on how to use streaming efficiently and effectively, and the [SLIM](./slim.md) guide for enabling high‑fidelity level‑of‑detail on models and avatars.
 </Alert>
 
 ## Technical behavior
@@ -100,7 +100,7 @@ The following properties control how instance streaming applies to your game. Al
 <tbody>
   <tr>
     <td>`Class.Workspace.EnableSLIMAvatars|EnableSLIMAvatars`</td>
-    <td>Controls whether a `Enum.ModelLevelOfDetail.SLIM|SLIM` model is generated for avatar characters in the game. When enabled, avatars render using SLIM in the same way that setting `Class.Model.LevelOfDetail` to `Enum.ModelLevelOfDetail.SLIM|SLIM` works for other models.</td>
+    <td>Controls whether a [SLIM](./slim.md#enabling-slim-for-avatars) model is generated for avatar characters in the game. When enabled, avatars render using SLIM in the same way that setting `Class.Model.LevelOfDetail` to `Enum.ModelLevelOfDetail.SLIM|SLIM` works for other models. See [SLIM](./slim.md) for details.</td>
   </tr>
   <tr>
     <td>`Class.Workspace.ModelStreamingBehavior|ModelStreamingBehavior`</td>

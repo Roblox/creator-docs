@@ -47,23 +47,8 @@ properties:
       Unlike SinglePlayer however, Dialogs set to MultiplePlayers will not show
       the dialog choices and responses to anyone but the player in the
       conversation.
-
-      ```lua
-      local Workspace = game:GetService("Workspace")
-
-      local singlePlayerDialog = Instance.new("Dialog")
-      local singlePlayerPart = Workspace.SinglePlayerPart
-      singlePlayerDialog.BehaviorType = Enum.DialogBehaviorType.SinglePlayer
-      singlePlayerDialog.InitialPrompt = "Only one person can interact with me at once."
-      singlePlayerDialog.Parent = singlePlayerPart
-
-      local multiplePlayersDialog = Instance.new("Dialog")
-      local multiplePlayersPart = Workspace.MultiplePlayersPart
-      multiplePlayersDialog.BehaviorType = Enum.DialogBehaviorType.MultiplePlayers
-      multiplePlayersDialog.InitialPrompt = "Any number of players can interact with me at once."
-      multiplePlayersDialog.Parent = multiplePlayersPart
-      ```
-    code_samples: []
+    code_samples:
+      - Dialog-BehaviorType
     type: DialogBehaviorType
     tags: []
     deprecation_message: ''

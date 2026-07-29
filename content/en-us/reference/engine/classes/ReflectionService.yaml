@@ -14,33 +14,8 @@ description: |
   or creating dynamic behaviors based on the engine's capabilities.
 
   The following is an example script that inspects classes and their properties:
-
-  ```lua
-  local ReflectionService = game:GetService("ReflectionService")
-
-  -- Create a SecurityCapabilities object with all capabilities
-  local allCapabilities = SecurityCapabilities.new(table.unpack(Enum.SecurityCapability:GetEnumItems()))
-
-  -- Get all classes accessible with all capabilities
-  local allClasses = ReflectionService:GetClasses({ Security = allCapabilities })
-  print("Total classes:", #allClasses)
-
-  -- Get a specific class
-  local partClass = ReflectionService:GetClass("Part")
-  if partClass then
-  	print("\nPart class:")
-  	print("  Name:", partClass.Name)
-  	print("  Superclass:", partClass.Superclass and tostring(partClass.Superclass) or "none")
-  end
-
-  -- Get the first 5 properties of a class
-  local properties = ReflectionService:GetPropertiesOfClass("Part", { Security = allCapabilities })
-  print("\nPart properties:", #properties)
-  for i = 1, math.min(5, #properties) do
-  	print("  -", properties[i].Name)
-  end
-  ```
-code_samples: []
+code_samples:
+  - ReflectionService-Overview
 inherits:
   - Instance
 descendants: []

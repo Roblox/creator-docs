@@ -577,7 +577,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:FindClosestVertex
@@ -600,7 +600,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:FindVerticesWithinSphere
@@ -628,7 +628,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetAdjacentFaces
@@ -651,7 +651,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetAdjacentVertices
@@ -675,7 +675,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetBoneByName
@@ -698,7 +698,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetBoneCFrame
@@ -723,7 +723,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetBoneIsVirtual
@@ -747,7 +747,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetBoneName
@@ -769,7 +769,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetBoneParent
@@ -792,7 +792,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetBones
@@ -809,7 +809,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetCenter
@@ -824,7 +824,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetColor
@@ -846,7 +846,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetColorAlpha
@@ -868,7 +868,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetColors
@@ -886,7 +886,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetFaceColors
@@ -909,7 +909,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetFaceNormals
@@ -932,7 +932,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetFaces
@@ -950,7 +950,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetFacesWithAttribute
@@ -975,7 +975,7 @@ methods:
     deprecation_message: |
       This method is deprecated. Do not use it for new work.
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetFacesWithColor
@@ -1000,7 +1000,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetFacesWithNormal
@@ -1025,7 +1025,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetFacesWithUV
@@ -1050,7 +1050,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetFaceUVs
@@ -1073,7 +1073,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetFaceVertices
@@ -1095,7 +1095,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetFacsCorrectivePose
@@ -1124,7 +1124,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetFacsCorrectivePoses
@@ -1143,7 +1143,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetFacsPose
@@ -1170,7 +1170,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetFacsPoses
@@ -1188,7 +1188,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetNormal
@@ -1210,7 +1210,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetNormals
@@ -1228,7 +1228,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetPosition
@@ -1250,7 +1250,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetSize
@@ -1265,7 +1265,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetUV
@@ -1287,7 +1287,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetUVs
@@ -1305,7 +1305,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetVertexBones
@@ -1327,7 +1327,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetVertexBoneWeights
@@ -1352,7 +1352,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetVertexColors
@@ -1375,7 +1375,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetVertexFaceColor
@@ -1402,7 +1402,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetVertexFaceNormal
@@ -1429,7 +1429,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetVertexFaces
@@ -1452,7 +1452,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetVertexFaceUV
@@ -1479,7 +1479,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetVertexNormals
@@ -1502,7 +1502,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetVertexUVs
@@ -1525,7 +1525,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetVertices
@@ -1542,7 +1542,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetVerticesWithAttribute
@@ -1567,7 +1567,7 @@ methods:
     deprecation_message: |
       This method is deprecated. Do not use it for new work.
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetVerticesWithColor
@@ -1592,7 +1592,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetVerticesWithNormal
@@ -1617,7 +1617,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetVerticesWithUV
@@ -1642,7 +1642,7 @@ methods:
       - CustomLuaState
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:IdDebugString
@@ -1724,7 +1724,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:RemoveBone

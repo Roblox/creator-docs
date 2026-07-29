@@ -44,26 +44,8 @@ properties:
       edited by the user. If the user is not editing a script, this will be
       `nil`. Below is an example that shows how you can use this property to
       measure for how long a script was active.
-
-      ```lua
-      local StudioService = game:GetService("StudioService")
-
-      local startTime = os.time()
-      local activeScript
-      local function onActiveScriptChanged()
-        local newActiveScript = StudioService.ActiveScript
-
-      	if activeScript and newActiveScript ~= activeScript then
-      		local deltaTime = os.time() - startTime
-      		print(("You edited %s for %d:%2.d"):format(activeScript.Name, deltaTime // 60, deltaTime % 60))
-      	end
-      	startTime = os.time()
-      	activeScript = newActiveScript
-      end
-
-      StudioService:GetPropertyChangedSignal("ActiveScript"):Connect(onActiveScriptChanged)
-      ```
-    code_samples: []
+    code_samples:
+      - StudioService-ActiveScript
     type: Instance
     tags:
       - ReadOnly
@@ -164,8 +146,14 @@ properties:
       can_save: false
     capabilities: []
   - name: StudioService.Secrets
-    summary: ''
-    description: ''
+    summary: |
+      A JSON string storing the local secrets for the current experience, used
+      internally by Studio to support HttpService:GetSecret().
+    description: |
+      **Secrets** is an internal property that stores the
+      [local secrets](../../../cloud-services/secrets.md) configured for the
+      current experience. This property is not accessible to creators; secrets
+      are consumed at runtime through `HttpService:GetSecret()`.
     code_samples: []
     type: string
     tags: []
@@ -224,20 +212,8 @@ properties:
 
       Below is a trivial example of localization based on the value returned by
       this function.
-
-      ```lua
-      local locale = game:GetService("StudioService").StudioLocaleId
-      if locale == "en_US" then
-      	print("Howdy, ya'll")
-      elseif locale == "en_GB" then
-      	print("'Ello, gov'na")
-      elseif locale:sub(1, 2) == "en" then
-      	print("Hello")
-      elseif locale == "fr_FR" then
-      	print("Bonjour")
-      end
-      ```
-    code_samples: []
+    code_samples:
+      - StudioService-StudioLocaleId
     type: string
     tags:
       - ReadOnly

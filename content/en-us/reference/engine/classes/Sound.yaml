@@ -711,17 +711,9 @@ properties:
       Note that setting `Class.Sound.TimePosition|TimePosition` to a value
       greater than the length in a looped track will not cause it to wrap
       around. If that behavior is desired, consider the following code snippet:
-
-      ```
-      local newPosition = 1.5
-
-      if newPosition >= sound.TimeLength then
-      	newPosition = newPosition - sound.TimeLength
-      end
-      sound.TimePosition = newPosition
-      ```
     code_samples:
       - Sound-TimePosition
+      - Sound-TimePosition-2
     type: double
     tags:
       - NotReplicated

@@ -14,8 +14,8 @@ code_samples: []
 inherits:
   - Instance
 descendants:
-  - BasePart
   - Camera
+  - BasePart
   - Model
 tags:
   - NotCreatable

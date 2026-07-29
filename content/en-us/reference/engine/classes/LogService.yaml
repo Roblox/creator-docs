@@ -23,6 +23,34 @@ description: |
   -- Output: "Value = {result}: 42"
   ```
 
+  #### Context Values
+
+  The `context` table accepts any value type. Non-serializable values are
+  automatically converted to strings in the stored context:
+
+  - **Instances** are stored as their full path (e.g.,
+    `"Workspace.MyModel.Part"`)
+  - **Functions** are stored as `"<function>"`
+  - **Other non-primitive types** are stored using their `tostring()`
+    representation
+
+  Mixed tables (tables with both string and numeric keys) and pure arrays are
+  accepted. Numeric keys are converted to string keys (e.g., index `1` becomes
+  key `"1"`). If a numeric key collides with an existing string key, the
+  explicit string key takes precedence.
+
+  ```lua
+  local LogService = game:GetService("LogService")
+
+  -- Instance values are converted to their full path
+  LogService:Info("Touched {part}", {part = workspace.MyPart})
+  -- Context stores: {part = "Workspace.MyPart"}
+
+  -- Mixed tables are accepted; numeric keys become string keys
+  LogService:Info("Player {name}", {name = "Alice", 1, 2, 3})
+  -- Context stores: {name = "Alice", ["1"] = 1, ["2"] = 2, ["3"] = 3}
+  ```
+
   #### Warning
 
   This service might have unexpected or unreliable behavior and content might be

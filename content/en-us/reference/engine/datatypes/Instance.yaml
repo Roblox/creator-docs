@@ -37,7 +37,7 @@ constructors:
       -- Set new instance's parent in constructor (discouraged)
       local part = Instance.new("Part", Workspace)
       part.Position = Vector3.new(0, 10, 0)
-      ````
+      ```
     parameters:
       - name: className
         type: string

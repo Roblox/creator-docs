@@ -67,7 +67,7 @@ Creature model from the <a href="https://www.roblox.com/games/7208091524/Beyond-
 
 ## Avatar and accessories
 
-The following include examples and templates utilizing Roblox's required [avatar components](../../avatar/character-bodies/index.md#components-of-an-avatar). Many of these project files and references require additional configuration in your modeling software before importing into Studio as a complete avatar character. See [Character bodies](../../avatar/character-bodies/index.md) for additional resources and template usage instruction.
+The following include examples and templates utilizing Roblox's required [avatar components](../../avatar/character-bodies/index.md#character-body-components). Many of these project files and references require additional configuration in your modeling software before importing into Studio as a complete avatar character. See [Character bodies](../../avatar/character-bodies/index.md) for additional resources and template usage instruction.
 
 ### References
 

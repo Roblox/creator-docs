@@ -273,17 +273,8 @@ properties:
       Those looking for the time since the program started running should use
       the 'time' function instead. See below for a comparison between
       DistributedGameTime and its alternatives.
-
-      ```
-      local Workspace = game:GetService("Workspace")
-
-      print(Workspace.DistributedGameTime) -- Time the game started running
-      print(os.time()) -- Time since epoch (1 January 1970, 00:00:00) UTC
-      print(tick()) -- Time since epoch (1 January 1970, 00:00:00) system time
-      print(time()) -- Time the game started running
-      print(elapsedTime()) -- Time since Roblox started running
-      ```
-    code_samples: []
+    code_samples:
+      - Workspace-DistributedGameTime
     type: double
     tags:
       - NotReplicated
@@ -313,8 +304,8 @@ properties:
       approach. `Enum.RolloutState|Default` follows the current engine-wide
       rollout state.
 
-      This property cannot be set through scripting and must be set in Studio
-      through the properties window, command bar, or a plugin.
+      This property cannot be set through developer-facing Luau and must be set
+      in Studio through the Properties window, Command Bar, or a plugin.
     code_samples: []
     type: RolloutState
     tags:
@@ -424,8 +415,8 @@ properties:
       on `Class.BasePart|BaseParts` whose
       `Class.BasePart.EnableFluidForces|EnableFluidForces` property is true. The
       default, `Enum.FluidForces|Default`, disables aerodynamic forces. Note
-      that this property cannot be set through scripting and instead must be
-      toggled in Studio.
+      that this property cannot be set through developer-facing Luau and instead
+      must be toggled in Studio.
     code_samples: []
     type: FluidForces
     tags:
@@ -735,8 +726,9 @@ properties:
       Sets how the solver will advance the physics simulation forward in time.
     description: |
       Sets how the solver will advance the physics simulation forward in time.
-      This option is not scriptable and must be set from the
-      **PhysicsSteppingMethod** property of **Workspace** within Studio. See
+      This option cannot be set through developer-facing Luau and must be set
+      from the **PhysicsSteppingMethod** property of **Workspace** within
+      Studio. See
       [Adaptive Timestepping](../../../physics/adaptive-timestepping.md) for
       details.
 
@@ -1294,24 +1286,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-  - name: Workspace.ValidateEnabledProximityPrompt
-    summary: ''
-    description: ''
-    code_samples: []
-    type: RolloutState
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Basic
 methods:
   - name: Workspace:BreakJoints
     summary: |
@@ -1334,8 +1308,8 @@ methods:
       Workspace:BreakJoints({part1, part2, part3})
       ```
 
-      Note, this function cannot be used by scripts and will only function in
-      plugins.
+      Note, this function cannot be used in developer-facing Luau and will only
+      function in plugins.
     code_samples: []
     parameters:
       - name: objects
@@ -1725,8 +1699,8 @@ methods:
       exhibits similar behavior to the "focus" command but it shows the extents
       of the `Class.Workspace` rather than the currently selected object.
 
-      This function cannot be used in scripts but will function in the command
-      bar or plugins.
+      This function cannot be used in developer-facing Luau but will function in
+      the Command Bar or plugins.
     code_samples: []
     parameters: []
     returns:

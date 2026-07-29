@@ -34,3 +34,11 @@ items:
     value: 2
     tags: []
     deprecation_message: ''
+  - name: MicroGamepad
+    summary: |
+      The player has connected or most recently interacted with a gamepad
+      without a thumbstick (for example, a TV remote or another limited-input
+      gamepad), and no standard gamepad is currently connected.
+    value: 3
+    tags: []
+    deprecation_message: ''

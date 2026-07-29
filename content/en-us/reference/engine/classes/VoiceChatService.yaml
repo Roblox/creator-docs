@@ -147,31 +147,9 @@ methods:
 
       In Roblox Studio this API is only available when the experience is running
       in **Team Test**.
-
-      ```lua
-      local VoiceChatService = game:GetService("VoiceChatService")
-      local Players = game:GetService("Players")
-      local players = Players:GetPlayers()
-
-      local success, chatGroups = pcall(function()
-      	return VoiceChatService:GetChatGroupsAsync(players)
-      end)
-
-      if not success then
-      	warn("Failed to retrieve chat groups")
-      	return
-      end
-
-      for _, group in ipairs(chatGroups) do
-      	-- Each group contains chat group ID strings.
-      	-- Players who share a matching group ID can chat with each other.
-      	for _, groupId in ipairs(group) do
-      		print("Chat group ID:", groupId)
-      	end
-      end
-      ```
     code_samples:
       - VoiceChatService-Chat-Groups-Teleport
+      - VoiceChatService-GetChatGroupsAsync
     parameters:
       - name: players
         type: Instances
@@ -202,20 +180,8 @@ methods:
       players in that server.
 
       This function can throw an error if the HTTP call fails.
-
-      ```lua
-      local Players = game:GetService("Players")
-      local VoiceChatService = game:GetService("VoiceChatService")
-
-      local localPlayer = Players.LocalPlayer
-      local success, enabled = pcall(function()
-      	return VoiceChatService:IsVoiceEnabledForUserIdAsync(localPlayer.UserId)
-      end)
-      if success and enabled then
-      	print("Voice chat enabled!")
-      end
-      ```
-    code_samples: []
+    code_samples:
+      - VoiceChatService-IsVoiceEnabledForUserIdAsync
     parameters:
       - name: userId
         type: User

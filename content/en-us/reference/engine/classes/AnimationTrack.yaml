@@ -451,17 +451,28 @@ methods:
     capabilities:
       - Animation
   - name: AnimationTrack:GetParameter
-    summary: ''
-    description: ''
+    summary: |
+      Returns the value of a parameter on the animation graph by key. Returns
+      nil if the parameter has not been set.
+    description: |
+      Returns the value of a parameter on the animation graph by key. If the
+      parameter has not been set via `Class.AnimationTrack:SetParameter()`, this
+      method returns nil.
+
+      Parameters are used to drive inputs on animation graph nodes. Use this
+      method to read back the current value of a parameter that was previously
+      set with `Class.AnimationTrack:SetParameter()`.
     code_samples: []
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the parameter to retrieve.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The current value of the parameter, or nil if not set.
     tags: []
     deprecation_message: ''
     security: None
@@ -470,45 +481,24 @@ methods:
       - Animation
     simulationAccess: true
   - name: AnimationTrack:GetParameterDefaults
-    summary: ''
-    description: ''
+    summary: |
+      Returns a dictionary of parameter values initially set as instance
+      attributes on the `Class.AnimationGraphDefinition` instance used to build
+      the animation graph inside this track.
+    description: |
+      Returns a dictionary of default parameter values defined by the animation
+      graph. This can be used to discover what parameters are available on an
+      animation graph and their initial values.
+
+      If the underlying `Class.Animation` is not an animation graph, this method
+      returns an empty dictionary.
     code_samples: []
     parameters: []
     returns:
       - type: Dictionary
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Animation
-  - name: AnimationTrack:GetTargetInstance
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: name
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: Instance?
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Animation
-  - name: AnimationTrack:GetTargetNames
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Array
-        summary: ''
+        summary: |
+          A dictionary mapping parameter names to their default values. Returns
+          an empty dictionary if the animation is not an animation graph.
     tags: []
     deprecation_message: ''
     security: None
@@ -606,18 +596,31 @@ methods:
       - Animation
     simulationAccess: true
   - name: AnimationTrack:SetParameter
-    summary: ''
-    description: ''
+    summary: |
+      Sets a parameter value on the animation graph, driving animation graph
+      node inputs.
+    description: |
+      Sets a parameter value on the animation graph, driving animation graph
+      node inputs. Parameters can be set before or during playback. If set
+      before the animation graph has loaded, the value is stored and applied
+      once the graph is ready.
+
+      Non-finite numeric values (NaN, Inf) are sanitized to 0 and produce a
+      warning. Use `Class.AnimationTrack:GetParameterDefaults()` to discover
+      what parameters are available and their default values.
     code_samples: []
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the parameter to set.
       - name: value
         type: Variant
         default:
-        summary: ''
+        summary: |
+          The value to assign to the parameter. Non-finite numeric values are
+          sanitized to 0.
     returns:
       - type: ()
         summary: ''
@@ -628,28 +631,6 @@ methods:
     capabilities:
       - Animation
     simulationAccess: true
-  - name: AnimationTrack:SetTargetInstance
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: name
-        type: string
-        default:
-        summary: ''
-      - name: target
-        type: Instance?
-        default:
-        summary: ''
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - Animation
   - name: AnimationTrack:Stop
     summary: |
       Stops the `Class.AnimationTrack`.
