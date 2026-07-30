@@ -4,8 +4,10 @@ description: Explains how to use the Voice Chat feature.
 ---
 
 <Alert severity="success">
-Voice Chat is currently available to all 13+ phone number verified users in a specific set of countries. Review the [Voice Chat FAQ](https://en.help.roblox.com/hc/en-us/articles/4405807645972-Voice-Chat-FAQs) to learn more. Users **not** in these countries should use [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) to enable chat with voice. Once verified, eligible 13+ phone verified users can opt‑in to use this feature by visiting their account **Settings** page or from within a voice enabled game, allowing them to chat with voice in any Roblox game that supports it. Games with voice often see an uplift in engagement, DAU, and spending.
+Voice Chat is currently available to all 13+ age-verified users in a specific set of countries. Review the [Voice Chat FAQ](https://en.help.roblox.com/hc/en-us/articles/4405807645972-Voice-Chat-FAQs) to learn more. Users **not** in these countries should use [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) to enable chat with voice. Once verified, eligible 13+ users can opt‑in to use this feature by visiting their account **Settings** page or from within a voice enabled game, allowing them to chat with voice in any Roblox game that supports it. Games with voice often see an uplift in engagement, DAU, and spending.
 </Alert>
+
+
 
 **Voice Chat** is a feature enabling real-time, spoken communication between yourself and other players. It is only available for places that support a maximum of 100 players.
 
@@ -22,7 +24,7 @@ Voice Chat is enabled by default for verified 13+ users on all new games with a 
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> For greater communication among players within your game, toggle on **Enable&nbsp;Camera** to allow eligible players to animate their avatar with their movement.
 1. [Publish](../production/publishing/publish-games-and-places.md) the place to save the changes.
 
-By enabling this setting, eligible 13+ users can opt-in to Voice Chat within your v. Enabling Voice Chat is required to use the speech-to-text API.
+By enabling this setting, eligible 13+ users can opt-in to Voice Chat within any voice chat supported game. Enabling Voice Chat is required to use the speech-to-text API.
 
 ### Set maximum players
 
