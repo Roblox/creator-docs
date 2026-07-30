@@ -22,7 +22,7 @@ Voice Chat is enabled by default for verified 13+ users on all new games with a 
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> For greater communication among players within your game, toggle on **Enable&nbsp;Camera** to allow eligible players to animate their avatar with their movement.
 1. [Publish](../production/publishing/publish-games-and-places.md) the place to save the changes.
 
-By enabling this setting, eligible 13+ users can opt-in to Voice Chat within any voice chat supported game. Enabling Voice Chat is required to use the speech-to-text API.
+By enabling this setting, eligible 13+ users can opt-in to Voice Chat within any game that supports the feature. Enabling Voice Chat is required to use the speech-to-text API.
 
 ### Set maximum players
 
