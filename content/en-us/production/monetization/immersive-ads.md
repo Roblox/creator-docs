@@ -247,7 +247,7 @@ To insert a portal ad:
    <img src="../../assets/studio/toolbox/Creator-Store-Categories-Ads.png" width="200" />
 
 1. Click any of the **Portal** template packages.
-1. (Optional) Customize the visual elements that surround the ad unit by modifying elements within the package's **Decorative** folder.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Customize the visual elements that surround the ad unit by modifying elements within the package's **Decorative** folder.
 
 Once you publish the game, users can see the ad unit in one of the following states:
 

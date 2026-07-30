@@ -22,7 +22,7 @@ To apply a dynamic effect:
 
       <img src="../assets/studio/explorer/SoundService-SoundGroup-ReverbSoundEffect.png" width="320" />
 
-2. **(Optional)** In the **Properties** window, select the new dynamic effect and adjust its properties.
+2. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Properties** window, select the new dynamic effect and adjust its properties.
 
    <img src="../assets/audio/sound-groups/Dynamic-Effect-Properties.png" width="320" />
 

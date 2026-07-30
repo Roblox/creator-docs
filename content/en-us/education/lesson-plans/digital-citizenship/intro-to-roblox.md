@@ -112,7 +112,7 @@ prev: /education/lesson-plans/digital-citizenship/landing
 
    - Provide students Handout: Digital Safety Scavenger Hunt.
    - Give students about five minutes to explore and collect information on their handouts.
-   - (Optional) To help students, you can leave the Presentation: Digital Safety - Slide 5 up so students can see the four clues.
+   - <Chip label="OPTIONAL" size="small" variant="outlined" /> To help students, you can leave the Presentation: Digital Safety - Slide 5 up so students can see the four clues.
 
 2. Give students a one minute warning, then transition them off the computers so they can discuss the game.
 3. As a class, discuss unreliable information found in that game.

@@ -360,7 +360,7 @@ If your request for creating a new asset or updating an existing asset succeeds,
    }
    ```
 
-3. (Optional) Check the created asset on your Roblox account.
+3. <Chip label="OPTIONAL" size="small" variant="outlined" /> Check the created asset on your Roblox account.
    1. Navigate to the **Inventory** page of your [Roblox account](https://www.roblox.com/home).
    2. Select the **Category** of the asset that you want to check.
    3. Find the target asset and click its thumbnail to view the asset.

@@ -1,6 +1,10 @@
 ---
 title: Import layered accessories
 description: Use the Importer to add third-party models to Studio before using the Accessory Fitting Tool to convert the model to an Accessory.
+keywords:
+  - Layered clothing
+  - Layerable accessories
+  - Layered clothing accessories
 ---
 
 Studio's Importer lets you import 3D assets into your projects, such as character bodies, makeup, and layered accessories. The following instructions detail how to import a layered accessory `.fbx` or `.gltf` file into Studio as a `Model` object and convert it into an `Accessory` object that you can use in your games, upload to the Marketplace, or share with other creators.
@@ -56,7 +60,7 @@ For shoes, you must convert the left shoe and the right shoe as separate layered
 To generate your layered accessory:
 
 1. In the toolbar's **Avatar** tab, click **Accessory** to open the AFT. The **Accessory Fitting Tool** panel displays.
-1. In the panel,
+1. In the panel:
 
    1. Select the **Part** field, then in the **Explorer** window, select the layered accessory `Class.MeshPart` object.
    1. Back in the panel, click the **Next** button. The **Asset Type** page displays.

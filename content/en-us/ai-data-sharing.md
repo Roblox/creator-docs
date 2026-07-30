@@ -27,7 +27,7 @@ To set your global data sharing preferences:
 1. On the [Creator Hub](https://create.roblox.com/), click your user name and **Settings**.
 1. Select **Data Sharing**.
 1. Enable or disable **Make sharing data the default option when publishing experiences**.
-1. (Optional) Choose individual games, avatar items, and paid Creator Store assets to share or not share.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Choose individual games, avatar items, and paid Creator Store assets to share or not share.
 
 ## How Roblox uses data
 

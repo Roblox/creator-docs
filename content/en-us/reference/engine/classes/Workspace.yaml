@@ -503,6 +503,56 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: Workspace.ImprovedAnimationConstraint
+    summary: |
+      Controls whether `Class.AnimationConstraint|AnimationConstraints` use the
+      improved soft-formulation controller.
+    description: |
+      Controls whether `Class.AnimationConstraint|AnimationConstraints` drive
+      their target using an improved soft controller based on strength and
+      damping instead of the legacy proportional-derivative controller.
+
+      `Enum.RolloutState|Default` follows the current engine-wide rollout state.
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+  - name: Workspace.ImprovedPhysicsReplication
+    summary: |
+      Controls whether the experience uses the improved physics replication path
+      between the server and clients.
+    description: |
+      Controls whether physics uses the improved state replication path when
+      sending physics state between the server and clients. When set to
+      `Enum.RolloutState|Enabled`, the server advertises this configuration so
+      connected clients enable the improved path. Setting it to
+      `Enum.RolloutState|Disabled` opts the place out.
+
+      `Enum.RolloutState|Default` follows the current engine-wide rollout state.
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: Workspace.InsertPoint
     summary: |
       The world position at which new objects are placed when inserted from the
@@ -813,6 +863,33 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+  - name: Workspace.PredictiveStreamingMode
+    summary: |
+      Controls whether the engine makes instance streaming decisions.
+      predictively.
+    description: |
+      Determines whether the engine streams instances predictively, pre-fetching
+      content the player is likely to need soon, such as along pathfinding
+      routes and near spawn locations, rather than streaming based only on the
+      player's current position. `Enum.PredictiveStreamingMode|Enabled` allows
+      the engine to make streaming decisions predictively, while
+      `Enum.PredictiveStreamingMode|Disabled` turns it off.
+      `Enum.PredictiveStreamingMode|Default` currently behaves the same as
+      `Enum.PredictiveStreamingMode|Disabled`.
+    code_samples: []
+    type: PredictiveStreamingMode
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Streaming
+    serialization:
+      can_load: true
+      can_save: true
     capabilities: []
   - name: Workspace.PrimalPhysicsSolver
     summary: |
@@ -1287,6 +1364,40 @@ properties:
       can_save: true
     capabilities: []
 methods:
+  - name: Workspace:ApplyRecommendedStreamingSettings
+    summary: |
+      Applies Roblox's recommended instance streaming settings to the
+      `Class.Workspace`.
+    description: |
+      Sets the `Class.Workspace` instance streaming properties to their
+      recommended values in a single call, changing only the properties whose
+      current values differ from the recommendation. This method is primarily
+      intended to assist with converting an experience to instance streaming.
+      The properties and their recommended values are:
+
+      - `Class.Workspace.StreamingEnabled` &rarr; enabled
+      - `Class.Workspace.StreamingMinRadius` &rarr; 64
+      - `Class.Workspace.StreamingTargetRadius` &rarr; 1024
+      - `Class.Workspace.ModelStreamingBehavior` &rarr;
+        `Enum.ModelStreamingBehavior|Improved`
+      - `Class.Workspace.StreamingIntegrityMode` &rarr;
+        `Enum.StreamingIntegrityMode|PauseOutsideLoadedArea`
+      - `Class.Workspace.StreamOutBehavior` &rarr;
+        `Enum.StreamOutBehavior|Opportunistic`
+
+      This method can only be called from plugins.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: boolean
+        summary: |
+          `true` if one or more streaming properties were changed; `false` if
+          every value already matched its recommended setting.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
   - name: Workspace:BreakJoints
     summary: |
       Goes through all `Class.BasePart|BaseParts` given, breaking any joints
@@ -1326,6 +1437,24 @@ methods:
     deprecation_message: |
       This method is deprecated. Do not use it for new work.
     security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+  - name: Workspace:ExperimentalSolverIsEnabled
+    summary: |
+      Returns `true` if the experimental physics solver is enabled.
+    description: |
+      Returns whether the experimental physics solver is currently enabled. This
+      method is primarily for internal testing purposes.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: boolean
+        summary: |
+          `true` if the experimental physics solver is enabled, `false`
+          otherwise.
+    tags: []
+    deprecation_message: ''
+    security: LocalUserSecurity
     thread_safety: Unsafe
     capabilities: []
   - name: Workspace:GetNumAwakeParts

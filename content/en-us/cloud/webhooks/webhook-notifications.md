@@ -69,9 +69,9 @@ To set up a webhook:
    ```
 
 3. Enter your webhook URL and a name.
-4. (Optional) Include a secret, which helps ensure that the notifications you receive are coming from Roblox. For more information, see [Verify webhook security](#verify-webhook-security).
+4. <Chip label="OPTIONAL" size="small" variant="outlined" /> Include a secret, which helps ensure that the notifications you receive are coming from Roblox. For more information, see [Verify webhook security](#verify-webhook-security).
 5. Choose one or more options from the list of [supported triggers](#supported-triggers) of events for which you want to receive notifications.
-6. (Optional) Use the **Test Response** button to check if your service can receive a sample request.
+6. <Chip label="OPTIONAL" size="small" variant="outlined" /> Use the **Test Response** button to check if your service can receive a sample request.
 7. Click **Save Changes**.
 
 <Alert severity="info">
@@ -162,7 +162,7 @@ To verify a signature:
 1. Compute a hash-based message authentication code (HMAC) with the SHA256 hash function using the secret you defined during the configuration as the key and the base string you generated through step 2 as the message. Convert the result to Base64 format to get the expected signature.
 1. Compare the extracted signature value to the expected signature. If you generated the signature correctly, the value should be the same.
 
-1. (Optional) To prevent replay attacks, a type of cyber attack where attackers intercept and resend data to gain unauthorized access or perform malicious actions, it's helpful to compare the extracted timestamp value with the current timestamp and ensure it falls within a reasonable time limit. For example, a 10-minute window is usually a good reasonable time limit.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> To prevent replay attacks, a type of cyber attack where attackers intercept and resend data to gain unauthorized access or perform malicious actions, it's helpful to compare the extracted timestamp value with the current timestamp and ensure it falls within a reasonable time limit. For example, a 10-minute window is usually a good reasonable time limit.
 
 </TabItem>
 
@@ -186,7 +186,7 @@ To verify a signature:
 
 1. Compare the extracted signature value to the expected signature. If you generated the signature correctly, the value should be the same.
 
-1. **(Optional)** To prevent replay attacks, a type of cyber attack where attackers intercept and resend data to gain unauthorized access or perform malicious actions, it's helpful to compare the extracted timestamp value with the current timestamp and ensure it falls within a reasonable time limit. For example, a 10-minute window is usually a good reasonable time limit.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> To prevent replay attacks, a type of cyber attack where attackers intercept and resend data to gain unauthorized access or perform malicious actions, it's helpful to compare the extracted timestamp value with the current timestamp and ensure it falls within a reasonable time limit. For example, a 10-minute window is usually a good reasonable time limit.
 
 </TabItem>
 </Tabs>

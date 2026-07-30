@@ -111,7 +111,7 @@ To replace the default UI:
 
    <img src="../../assets/developer-modules/friends-locator/Custom-UI-ScreenGui-Disabled.png" width="320" />
 
-1. **(Optional)** If you want the friend's avatar portrait and `Class.Player.DisplayName|DisplayName` to show up somewhere in the custom UI, you can place the following instances inside the **FriendLocator** frame.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you want the friend's avatar portrait and `Class.Player.DisplayName|DisplayName` to show up somewhere in the custom UI, you can place the following instances inside the **FriendLocator** frame.
 
    - An `Class.ImageLabel` of the name **Portrait**.
    - A `Class.TextLabel` of the name **DisplayName**.

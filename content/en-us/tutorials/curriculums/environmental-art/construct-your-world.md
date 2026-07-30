@@ -1833,7 +1833,7 @@ To apply your own asset library to the doors:
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Doors-2.jpg" width="100%"/>
 
-1. **(Optional)** Anchor all of these door assets.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Anchor all of these door assets.
 
   </TabItem>
   <TabItem key = "2" label="Recreate the sample">
@@ -2011,7 +2011,7 @@ The second exterior assets you can convert for the outdoor space are the two col
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Columns-5.jpg" width="100%"/>
 
-1. **(Optional)** Change the color of one part in each column to match each team's respective color theme.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Change the color of one part in each column to match each team's respective color theme.
 
 1. Anchor all of these parts.
 
@@ -2640,7 +2640,7 @@ To exactly recreate the skylights within the sample [Environment Art - Construct
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Skylight-7.jpg" width="100%"/>
 
 8. Anchor all of these parts and modular assets.
-9. **(Optional)** You can add foliage assets around the left, middle, and right skylights for more visual variety when users navigate through the building, and to add a pop of color to the ceiling.
+9. <Chip label="OPTIONAL" size="small" variant="outlined" /> You can add foliage assets around the left, middle, and right skylights for more visual variety when users navigate through the building, and to add a pop of color to the ceiling.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Skylight-8.jpg" width="100%"/>
 
@@ -4002,7 +4002,7 @@ To configure your own global lighting:
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-2.jpg" width="100%"/>
 
-1. **(Optional)** Apply one or more customizable filters, such as bloom, depth‑of‑field, or sun rays. For more information on these properties, see [Post-processing effects](../../../environment/post-processing-effects.md).
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Apply one or more customizable filters, such as bloom, depth‑of‑field, or sun rays. For more information on these properties, see [Post-processing effects](../../../environment/post-processing-effects.md).
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-4.jpg" width="100%"/>
 
@@ -4111,7 +4111,7 @@ To configure your own local lighting:
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-3B.jpg" width="100%"/>
 
-   1. **(Optional)** Add and anchor light fixtures around the interior and exterior of the building from your own asset library.
+   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Add and anchor light fixtures around the interior and exterior of the building from your own asset library.
 
   </TabItem>
   <TabItem key = "2" label="Recreate the sample">
@@ -4177,7 +4177,7 @@ To exactly recreate the local lighting configuration within the sample [Environm
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-3B.jpg" width="100%"/>
 
-4. **(Optional)** Using the sample [Environment Art Asset Library](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library), add and anchor light fixtures around the interior and exterior of the building. For example, the final sample laser tag environment uses **LightFixtureTall**, **LightFixtureShort**, **TouchScreenA**, and **Roblox Sign** lighting fixtures to complete the environment.
+4. <Chip label="OPTIONAL" size="small" variant="outlined" /> Using the sample [Environment Art Asset Library](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library), add and anchor light fixtures around the interior and exterior of the building. For example, the final sample laser tag environment uses **LightFixtureTall**, **LightFixtureShort**, **TouchScreenA**, and **Roblox Sign** lighting fixtures to complete the environment.
 
   </TabItem>
 </Tabs>

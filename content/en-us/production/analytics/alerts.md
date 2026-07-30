@@ -136,8 +136,8 @@ You can use webhooks to integrate with external tools like PagerDuty or Slack fo
    ```
 
 3. Enter your webhook URL and a name.
-4. (Optional) Include a secret, which can help ensure that the requests you receive came from Roblox.
-5. (Optional) Use the **Test Response** button to check if your service can receive a sample request.
+4. <Chip label="OPTIONAL" size="small" variant="outlined" /> Include a secret, which can help ensure that the requests you receive came from Roblox.
+5. <Chip label="OPTIONAL" size="small" variant="outlined" /> Use the **Test Response** button to check if your service can receive a sample request.
 6. Click **Save Changes**.
 7. When creating or editing an alert, select your webhook under the **Delivery channel** field.
 

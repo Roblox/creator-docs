@@ -86,7 +86,7 @@ navigation:
     section:
       - title: Overview
         path: /avatar-setup/
-      - title: Requirements
+      - title: Specifications
         path: /avatar-setup/auto-setup-requirements
   - title: Automatic Skinning Transfer
     path: /avatar/automatic-skinning-transfer

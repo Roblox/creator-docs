@@ -34,7 +34,8 @@ To create a token:
    3. **Item Type** - The **Body** item type can be used in-game with `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync` whereas the rest of the item types are meant to be used with
    `Class.AvatarCreationService.PromptCreateAvatarAssetAsync|PromptCreateAvatarAssetAsync`. You cannot change this setting after token creation.
    4. **Amount Above Price Floor** - Set the price above the Marketplace Price Floor for created items. If you intend to have different price points for items of the same type in your game, the best way to achieve this is by purchasing multiple tokens. You can modify this field after creation.
-   5. **Do not price below (Optional)** - Set the minimum price for users to purchase your item. You can modify this field after creation.
+   5. **Do not price below** <Chip label="OPTIONAL" size="small" variant="outlined" /> - Set the minimum price for users to purchase your item. You can modify this field after creation.
+
       <img src="../../assets/monetization/avatar-creation-tokens/Avatar-Creation-Token-Prices.png" width="90%" alt="Price related fields for avatar token creation, including a calculated item price."/>
 
 7. When complete, verify the **Creation Advance** and **Creation Fee** calculations and select **Create Token** to submit your purchase.

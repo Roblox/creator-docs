@@ -70,7 +70,7 @@ Once your listing has been created, you will be redirected to the listing detail
 6. Under **Guidelines and restrictions**:
    1. Enter the scope of your IP license. Include general background about the IP and clarify if any parts of the IP can or cannot be referenced by creators in their game.
    2. Under **Content standards**, set the rules that creators must follow when using your IP.
-   3. (Optional) Under **Brand guidelines**, upload a file to provide creators with creative direction.
+   3. <Chip label="OPTIONAL" size="small" variant="outlined" /> Under **Brand guidelines**, upload a file to provide creators with creative direction.
 7. Under **Privacy**, select one of the following:
 
    - **Public** to make the license listing public and visible to all creators. This option also allows all eligible creators to request to use the license.

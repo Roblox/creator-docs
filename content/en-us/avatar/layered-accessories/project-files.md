@@ -1,6 +1,10 @@
 ---
 title: Layered accessory reference files
 description: Download various project files and reference files for layered accessories.
+keywords:
+  - Layered clothing
+  - Layerable accessories
+  - Layered clothing accessories
 ---
 
 The following `.fbx`, `.blend`, and `.ma` template and reference project files are specifically helpful when creating a layered accessory for an avatar. For a comprehensive list of Roblox's official downloadable content for avatars, such as character bodies and rigid accessory templates, see [Resources](../../avatar/resources.md).

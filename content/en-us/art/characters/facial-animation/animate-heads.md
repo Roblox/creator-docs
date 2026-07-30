@@ -91,7 +91,7 @@ To create an animation for your head using the **Face Animation Editor**:
    - To redo a step on a slider, press <kbd>Ctrl</kbd><kbd>Y</kbd> (<kbd>⌘</kbd><kbd>Y</kbd>).
    - To reset a slider to its default value, right click on the slider. A contextual menu displays. Select **Reset Selected**.
 
-3. (Optional) Adjust the scrubber to a new position further along the timeline, then navigate back to the **Face Animation Editor** and adjust sliders to create a new facial expression. When you play the animation, the first facial expression will ease into the second facial expression.
+3. <Chip label="OPTIONAL" size="small" variant="outlined" /> Adjust the scrubber to a new position further along the timeline, then navigate back to the **Face Animation Editor** and adjust sliders to create a new facial expression. When you play the animation, the first facial expression will ease into the second facial expression.
 4. When you are finished creating your animation, navigate to the **Media and Playback Controls** and click the **…** button. A pop-up menu displays.
 5. Select **Save** or **Save As** to save the animation. The animation displays in the **Explorer** window as a child of the **AnimSaves** object (itself a child of the rig).
 

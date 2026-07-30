@@ -517,7 +517,7 @@ To use the Bridge Edge Loops tool:
 1. In **Edit** mode, select two or more edge loops that you want to connect.
 1. Press <kbd>Ctrl</kbd><kbd>E</kbd>/<kbd>⌘</kbd><kbd>E</kbd> to display a contextual menu for your active edge loops, then select **Bridge Edge Loops** to activate the tool.The **Bridge Edge Loops** panel displays.
 1. Set **Number of Cuts** to the number of subdivisions you want for your new bridge.
-1. **(Optional)** For further precision for curved bridges, increase **Smoothness** to create a more rounded bridge.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> For further precision for curved bridges, increase **Smoothness** to create a more rounded bridge.
 1. Left-click to confirm your bridge.
 
 <Alert severity="info">
@@ -534,7 +534,7 @@ To use the Fill tool:
 
 1. In **Edit** mode, select at least three vertices or two or more edges that form at least one complete perimeter.
 1. Press <kbd>Alt</kbd><kbd>F</kbd>/<kbd>⌥</kbd><kbd>F</kbd> to activate the tool.
-1. **(Optional)** In the **Fill** panel, enable **Beauty** to arrange the triangles nicely.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Fill** panel, enable **Beauty** to arrange the triangles nicely.
 1. Left-click to confirm your new face.
 
 <Alert severity="info">
@@ -748,7 +748,7 @@ To use the Follow Active Quads tool:
 
 1. Open the **UV Editing** workspace. The UV Editor displays on the lefthand side of the screen, and the 3D viewport displays on the righthand side of the screen in Edit mode.
 1. In the **3D Viewport**, navigate to your 3D object, then unwrap every face you want to texture using an active face.
-1. **(Optional)** Configure your active face.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Configure your active face.
    1. In the **UV Editor**, select the face you want to be your active face, then press <kbd>Alt</kbd><kbd>M</kbd>/<kbd>⌥</kbd><kbd>M</kbd> to open the **Split** contextual menu.
    1. Select **Selection**. The active face separates from the UV island.
    1. Move, scale, or rotate your active face to the appropriate position, orientation, and scale that you want other faces in the UV map to follow.

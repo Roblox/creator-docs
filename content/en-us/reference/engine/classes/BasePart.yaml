@@ -2486,17 +2486,15 @@ methods:
     capabilities: []
   - name: BasePart:GetJoints
     summary: |
-      Return all joints or constraints that are connected to this part.
+      Return all Joints or Constraints that is connected to this Part.
     description: |
-      Returns an array of all `Class.JointInstance|JointInstances` or
-      `Class.Constraint|Constraints` connected to this `Class.BasePart`.
+      Return all Joints or Constraints that is connected to this Part.
     code_samples: []
     parameters: []
     returns:
       - type: Instances
         summary: |
-          An array of all `Class.JointInstance|JointInstances` or
-          `Class.Constraint|Constraints` connected to this `Class.BasePart`.
+          An array of all Joints or Constraints connected to the Part.
     tags: []
     deprecation_message: ''
     security: None

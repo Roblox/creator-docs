@@ -785,6 +785,25 @@ properties:
       can_save: false
     capabilities:
       - Players
+  - name: Player.MaximumSimulationRadius
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: LocalUserSecurity
+      write: LocalUserSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Players
   - name: Player.MembershipType
     summary: |
       Describes the account's membership type.
@@ -960,6 +979,24 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Players
+  - name: Player.SimulationRadius
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: LocalUserSecurity
+      write: LocalUserSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
     capabilities:
       - Players
   - name: Player.StepIdOffset
@@ -1940,11 +1977,15 @@ methods:
       - Groups
   - name: Player:IsVerified
     summary: |
-      Returns whether the player is verified with concrete, real-world signals.
+      Returns whether the player meets the specified verification level.
     description: |
-      Returns a boolean value indicating that player's verification status. When
-      `true`, the player is verified. Verification includes, but isn't limited
-      to, non-VOIP phone number or government ID verification.
+      Returns a boolean value indicating whether the player meets the specified
+      `Enum.VerifiedLevel`. When `level` is omitted, this method defaults to
+      `Enum.VerifiedLevel.Low`. Note that this is a distinct check from the
+      verified badge.
+
+      Verification uses concrete, real-world signals, including, but not limited
+      to, phone number or government ID verification.
 
       When implementing `IsVerified`, exercise caution to ensure that the
       implementation does not inadvertently block all unverified users.
@@ -1954,11 +1995,17 @@ methods:
       return `false` in Studio.
     code_samples:
       - Player-IsVerified
-    parameters: []
+    parameters:
+      - name: level
+        type: VerifiedLevel
+        default:
+        summary: |
+          The verification level to check. Defaults to `Enum.VerifiedLevel.Low`.
     returns:
       - type: boolean
         summary: |
-          A boolean indicating whether the player is verified.
+          A boolean indicating whether the player meets the specified
+          verification level.
     tags: []
     deprecation_message: ''
     security: None

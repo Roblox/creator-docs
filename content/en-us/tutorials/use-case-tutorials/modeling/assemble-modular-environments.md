@@ -126,7 +126,7 @@ To use alternative custom materials for wall meshes:
 
    <img src="../../../assets/tutorials/assembling-modular-environments/Customizing-NewCustomMaterial.jpg" width="50%"/>
 
-1. **(Optional)** To further customize the new custom material, select a new tint color.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> To further customize the new custom material, select a new tint color.
 
    1. In the **Properties** window, click either **BrickColor** or **Color**. The hexagon map or colors popup display, respectively.
    1. Select a new color. All active wall meshes update their tint color in the viewport.
@@ -170,7 +170,7 @@ To swap `Class.SurfaceAppearance` objects for trim meshes:
 
    <img src="../../../assets/tutorials/assembling-modular-environments/SurfaceAppearance-Final.jpg" width="50%"/>
 
-1. **(Optional)** To further customize the new `Class.SurfaceAppearance` object, select a new tint color.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> To further customize the new `Class.SurfaceAppearance` object, select a new tint color.
 
    1. In the viewport, hold down <kbd>Alt</kbd><kbd>Shift</kbd> (<kbd>⌥</kbd><kbd>Shift</kbd>) then click on any mesh of your building with a trim.
    1. In the **Properties** window, click either **BrickColor** or **Color**. The hexagon map or colors popup display, respectively.

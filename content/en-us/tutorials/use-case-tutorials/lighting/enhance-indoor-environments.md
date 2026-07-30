@@ -111,7 +111,7 @@ To recreate the time of day in the sample [Lighting Indoors - Complete](https://
 1. In the **Explorer** window, select **Lighting**.
 1. In the **Properties** window,
    1. Set **ClockTime** to `15.6`. The sun moves to the approximate position it would be in at 3:45 pm.
-   1. **(Optional)** Set **GeographicLatitude** to `323`.
+   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Set **GeographicLatitude** to `323`.
 
    <img width="80%" img src="../../../assets/tutorials/enhancing-indoor-environments/TimeOfDay-2.jpg" alt="A full view of the cabin with the sun in its new position." />
 
@@ -292,7 +292,7 @@ To recreate candle local lighting in the sample [Lighting Indoors - Complete](ht
 
    <video controls src="../../../assets/tutorials/enhancing-indoor-environments/Candles-3.mp4" alt="A front view of the cabin's dresser with both candle groupings illuminating the space." width="90%"></video>
 
-1. **(Optional)** Using the same technique from the previous steps, add a point light with your own configuration to illuminate the fire burning in the fireplace.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Using the same technique from the previous steps, add a point light with your own configuration to illuminate the fire burning in the fireplace.
 
    <video controls src="../../../assets/tutorials/enhancing-indoor-environments/Candles-4.mp4" alt="A full view of the cabin will all fire light sources illuminating the space." width="90%"></video>
 

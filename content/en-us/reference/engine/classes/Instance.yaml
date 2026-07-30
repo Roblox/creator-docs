@@ -49,6 +49,7 @@ descendants:
   - AudioEcho
   - AudioEmitter
   - AudioEqualizer
+  - AudioFDNReverb
   - AudioFader
   - AudioFilter
   - AudioFlanger
@@ -76,6 +77,7 @@ descendants:
   - BindableFunction
   - BodyPartDescription
   - BrowserService
+  - BugReporterService
   - CacheableContentProvider
   - CaptureService
   - ChangeHistoryService
@@ -119,6 +121,7 @@ descendants:
   - ExperienceInviteOptions
   - ExperienceNotificationService
   - FaceControls
+  - FacialAgeEstimationService
   - FeatureRestrictionManager
   - Fire
   - FlagStandService
@@ -202,6 +205,7 @@ descendants:
   - PathfindingModifier
   - PathfindingService
   - PermissionsService
+  - PlaceAssetIdsService
   - Player
   - PlayerScripts
   - PlayerViewService
@@ -265,6 +269,7 @@ descendants:
   - StatsItem
   - StyleQuery
   - SurfaceAppearance
+  - SystemThemeService
   - TaskScheduler
   - Team
   - TeamCreateData
@@ -310,14 +315,20 @@ descendants:
   - VisibilityCheckDispatcher
   - Visit
   - VoiceChatService
+  - WebSocketClient
+  - WebSocketService
   - Wire
   - WrapTextureTransfer
   - RenderSettings
   - StartupMessageService
   - StopWatchReporter
   - VirtualInputManager
+  - FileSystemService
   - PatchBundlerFileWatch
+  - ProcessService
+  - PlatformService
   - CreatorStoreService
+  - LiveSyncService
   - InputAction
   - InputBinding
   - InputContext
@@ -375,12 +386,16 @@ descendants:
   - TeamCreateService
   - VRStatusService
   - StudioService
+  - LanguageService
   - StyleBase
   - StyleDerive
   - StyleLink
   - Annotation
   - RemoteCommandService
   - UniqueIdLookupService
+  - NewContainerRoot
+  - RemoteEventClass
+  - StyleTestObjectBase
   - GetTextBoundsParams
 tags:
   - NotCreatable

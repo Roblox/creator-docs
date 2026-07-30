@@ -175,7 +175,7 @@ To grant a collaborator permission to use a restricted asset:
 
    <img src="../../assets/creator-dashboard/Add-Collaborators.png" alt="The Add Collaborators pop-up menu." width="60%" />
 
-1. **(Optional)** If your selected asset type is a model or package, you can choose one of the following access types:
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If your selected asset type is a model or package, you can choose one of the following access types:
    - **Use** - The collaborator receives permission to use the asset in their games.
    - **Edit** - The collaborator receives permission to edit the asset's metadata, such as its name and description.
 
@@ -257,7 +257,7 @@ To view every restricted asset that your or your group's games have permission t
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. Select one of your or your group's games. The game's overview page displays.
 1. In the game's left-hand navigation, navigate to the **Configure** section, then select **Permissions**. The game's **Permissions** page displays.
-1. **(Optional)** Click the download arrow button to export the data for offline processing.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Click the download arrow button to export the data for offline processing.
 
 ## Revoke permissions
 

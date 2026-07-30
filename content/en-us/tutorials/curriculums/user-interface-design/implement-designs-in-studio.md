@@ -193,7 +193,7 @@ To exactly recreate the objective UI within the sample [Laser Tag](https://www.r
 
       <img src="../../../assets/tutorials/user-interface-design/Section3/Objective-1.jpg" width="80%" />
 
-   1. **(Optional)** Insert a **UIAspectRatioConstraint** into **Objective** to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to `7`.
+   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Insert a **UIAspectRatioConstraint** into **Objective** to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to `7`.
 
 1. Create a container for the objective's prompt objects.
 
@@ -224,7 +224,7 @@ To exactly recreate the objective UI within the sample [Laser Tag](https://www.r
 
       <img src="../../../assets/tutorials/user-interface-design/Section3/Objective-3B.jpg" width="80%" />
 
-   1. **(Optional)** Insert a **UIAspectRatioConstraint** into the **ImageLabel** to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to **13.781**.
+   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Insert a **UIAspectRatioConstraint** into the **ImageLabel** to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to **13.781**.
    1. Insert a **TextLabel** into **Header** to display a title.
    1. Select the new label, then in the **Properties** window,
 
@@ -256,7 +256,7 @@ To exactly recreate the objective UI within the sample [Laser Tag](https://www.r
 
       <img src="../../../assets/tutorials/user-interface-design/Section3/Objective-4B.jpg" width="80%" />
 
-   1. **(Optional)** Insert a **UIAspectRatioConstraint** into the **ImageLabel** to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to `13.781`.
+   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Insert a **UIAspectRatioConstraint** into the **ImageLabel** to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to `13.781`.
    1. Insert a **TextLabel** into **Body** to display a prompt.
    1. Select the new label, then in the **Properties** window,
 
@@ -496,7 +496,7 @@ To exactly recreate the crosshair within the sample [Laser Tag](https://www.robl
    1. Set **Position** to `{0.5,0},{0.5,0}` to set the label in the middle of the screen.
    1. Set **ScaleType** to **Fit** so the image fits within its container and doesn't stretch on various screen sizes.
 
-1. **(Optional)** Insert a **UIAspectRatioConstraint** into **Crosshair** to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to **0.895**.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Insert a **UIAspectRatioConstraint** into **Crosshair** to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to **0.895**.
 
 #### Hit marker
 
@@ -633,7 +633,7 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
 
       <img src="../../../assets/tutorials/user-interface-design/Section3/BS-1B.png" width="80%" />
 
-   1. **(Optional)** Insert a **UIAspectRatioConstraint** into **Component** to ensure the frame and its children UI elements' aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to **5**.
+   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Insert a **UIAspectRatioConstraint** into **Component** to ensure the frame and its children UI elements' aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to **5**.
 
 1. Create a container to hold UI element groupings.
 
@@ -664,7 +664,7 @@ To exactly recreate the blaster selector within the sample [Laser Tag](https://w
 
       <img src="../../../assets/tutorials/user-interface-design/Section3/BS-3B.png" width="80%" />
 
-   1. **(Optional)** Insert a **UIAspectRatioConstraint** into the label to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to `13.78`.
+   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Insert a **UIAspectRatioConstraint** into the label to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to `13.78`.
    1. Insert a **TextLabel** into **Header** to display a prompt.
    1. Select the new label, then in the **Properties** window,
 

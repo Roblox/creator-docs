@@ -5307,6 +5307,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PredictionStatus.yaml
         ignoreTranslation: true
+      - title: PredictiveStreamingMode
+        path: /reference/engine/enums/PredictiveStreamingMode
+        type: engineapi
+        source: /reference/engine/enums/PredictiveStreamingMode.yaml
+        ignoreTranslation: true
       - title: PreferredInput
         path: /reference/engine/enums/PreferredInput
         type: engineapi
@@ -6151,6 +6156,11 @@ navigation:
         path: /reference/engine/enums/VelocityConstraintMode
         type: engineapi
         source: /reference/engine/enums/VelocityConstraintMode.yaml
+        ignoreTranslation: true
+      - title: VerifiedLevel
+        path: /reference/engine/enums/VerifiedLevel
+        type: engineapi
+        source: /reference/engine/enums/VerifiedLevel.yaml
         ignoreTranslation: true
       - title: VerticalAlignment
         path: /reference/engine/enums/VerticalAlignment

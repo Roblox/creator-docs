@@ -65,7 +65,7 @@ To create your own animation graph, similar to the basic example provided in the
 
    <img src="../assets/animation/graph-editor/Connect-The-Clip-Nodes.png" width="80%" alt="All nodes connected to a final output node" />
 
-10. **(Optional)** Assign a parameter to your `Speed` variable.
+10. <Chip label="OPTIONAL" size="small" variant="outlined" /> Assign a parameter to your `Speed` variable.
 
     1. Click and drag the green Speed port to an empty area. A new parameter node displays.
        <img src="../assets/animation/graph-editor/Parameter-Noodle.png" width="80%" alt="Click and dragging connector from Speed port of Clip node." />

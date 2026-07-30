@@ -1,14 +1,19 @@
 ---
 title: Avatar Setup
-description: The Avatar Setup tool helps accelerate the avatar character, clothing, and accessory creation process by automatically processing custom models into avatar assets.
+description: The Avatar Setup tool helps accelerate the avatar item creation process by automatically processing custom models into avatar assets.
+keywords:
+  - Layered clothing
+  - Layerable accessories
+  - Layered clothing accessories
+  - Rigid accessories
 ---
 
-**Avatar Setup** helps accelerate the avatar character, clothing, and accessory creation process by automatically processing custom models into avatar assets. If your characters, accessories, and clothing don't have all essential components for publishing to the [Marketplace](https://www.roblox.com/catalog), Avatar Setup can perform the following for your 3D models:
+**Avatar Setup** helps accelerate the avatar character body, rigid accessory, and layered accessory creation process by automatically processing custom models into avatar assets. If your characters and rigid/layered accessories don't have all essential components for publishing to the [Marketplace](https://www.roblox.com/catalog), Avatar Setup can perform the following for your 3D models:
 
 - **Rigging** — Adds a [standard](../avatar/character-bodies/specifications.md#standard-rigs) or [higher-fidelity](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) rigging armature to your body model to enable movement and animation.
 - **Skinning** — Adds weights and influences to various surfaces of your mesh, ensuring an organic and natural flexibility during movement.
 - **Facial animation** — Generates the FACS poses, facial rigging, skinning, and animation data required for facial animation and avatar chat.
-- **Caging** — Adds the required cages to your asset, enabling it to support layered clothing.
+- **Caging** — Adds the required cages to your asset, enabling it to support layered accessories.
 - **Partitioning** — Separates the body mesh into the appropriate 15 body parts necessary for an avatar character body.
 - **Creating attachments** — Adds the appropriate attachment points enabling the character to wear rigid accessories.
 
@@ -37,7 +42,7 @@ When you import a new model into Studio, the system adds the model to the modera
 
 ## Run Avatar Setup
 
-When your project has the appropriate `Class.Model` object in your workspace, you can run Avatar Setup to see if your 3D asset requires any additional avatar components before you can publish it to the Marketplace as a character body, accessory, or clothing item. Avatar Setup supports the conversion of the following 3D asset types from a base `Class.Model`:
+When your project has the appropriate `Class.Model` object in your workspace, you can run Avatar Setup to see if your 3D asset requires any additional avatar components before you can publish it to the Marketplace as a character body, rigid accessory, or layered accessory. Avatar Setup supports the conversion of the following 3D asset types from a base `Class.Model`:
 
 <figure>
 <table><thead>
@@ -48,23 +53,23 @@ When your project has the appropriate `Class.Model` object in your workspace, yo
   </tr></thead>
 <tbody>
   <tr>
-    <td>Avatar body</td>
-    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [body inputs](./auto-setup-requirements.md#body).</td>
+    <td>Avatar character body</td>
+    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [body inputs](./auto-setup-requirements.md#character-body).</td>
     <td>`Class.Model` parenting associated 15 `Class.MeshPart` objects and other expected [avatar components](../avatar/character-bodies/index.md#character-body-components).</td>
   </tr>
   <tr>
-    <td>Accessory</td>
-    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [accessory inputs](./auto-setup-requirements.md#accessories). <br /> <br />Must [bundle](./auto-setup-requirements.md#bundle-multiple-assets) with an avatar body `Class.Model` for Avatar Setup.</td>
+    <td>Rigid accessory</td>
+    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [rigid accessory inputs](./auto-setup-requirements.md#rigid-accessories). <br /> <br />Must [bundle](./auto-setup-requirements.md#bundle-multiple-assets) with an avatar body `Class.Model` for Avatar Setup.</td>
     <td>`Class.Accessory` that includes all expected [rigid accessory components](../avatar/rigid-accessories/index.md#rigid-accessory-components).</td>
   </tr>
   <tr>
-    <td>Layered clothing</td>
+    <td>Layered accessory</td>
     <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [accessory inputs](./auto-setup-requirements.md#accessories-and-clothing). <br /> <br />Can optionally [bundle](./auto-setup-requirements.md#bundle-multiple-assets) with an avatar body `Class.Model` for Avatar Setup.</td>
     <td>`Class.Accessory` that includes all expected [layered accessory components](../avatar/layered-accessories/index.md#layered-accessory-components).</td>
   </tr>
   <tr>
-    <td>Multiple accessories and clothing with single body</td>
-    <td>`Folder` [bundle](./auto-setup-requirements.md#bundle-multiple-assets) containing one or more `Class.Model` that meet supported inputs for accessories, clothing, or body. <br /> <br />Must [bundle](./auto-setup-requirements.md#bundle-multiple-assets) with an avatar body `Class.Model` for Avatar Setup.</td>
+    <td>Multiple accessories with single body</td>
+    <td>`Folder` [bundle](./auto-setup-requirements.md#bundle-multiple-assets) containing one or more `Class.Model` that meet supported inputs for rigid accessories, layered accessories, or avatar bodies. <br /> <br />Must [bundle](./auto-setup-requirements.md#bundle-multiple-assets) with an avatar character body `Class.Model` for Avatar Setup.</td>
     <td>`Class.Model` character body and any `Class.Accessory` equippable items. <br /> <br />All generated assets include expected avatar item components.</td>
   </tr>
 </tbody>
@@ -101,8 +106,8 @@ To run Avatar Setup:
    </center>
    </figure>
    <figure>
-   A comprehensive <code>.zip</code> folder of an Avatar Setup ready character model, including clothing and rigid accessory assets and PBR texture assets.
-   <br /><br />
+   A comprehensive <code>.zip</code> folder of an Avatar Setup ready character model, including rigid and layered accessory assets and PBR textures.
+   <br />
    This template is not compatible with the traditional avatar creation workflow.
    </figure>
    </CardContent>
@@ -150,7 +155,7 @@ To run Avatar Setup:
 
    1. Set **Type** for each asset to the correct asset type so that it moves and animates correctly in the 3D space.
       1. For character body geometry, select **Body**.
-      1. For layered clothing assets, select **Layered**.
+      1. For layered accessory assets, select **Layered**.
       1. For rigid accessory assets, select **Rigid**.
       1. For eyebrow and eyelash assets, select **Eye Layered**.
 
@@ -198,7 +203,7 @@ To run Avatar Setup:
 
 ## Testing tools
 
-After you successfully load your character into the Avatar Setup window, you can access various testing tools in the window's side navigation to ensure your character moves, animates, and equips clothing and accessories properly.
+After you successfully load your character into the Avatar Setup window, you can access various testing tools in the window's side navigation to ensure your character moves, animates, and equips rigid and layered accessories properly.
 
 <img src="../assets/avatar/avatar-setup/Testing-Interface.png" width="70%" alt="" />
 
@@ -211,7 +216,7 @@ If you discover any issues that can't be resolved with Avatar Setup testing tool
 
 ### Check Body
 
-The **Check Body** interface contains various tabs for checking how your character model animates, emotes, wears clothing and accessories, and changes skin tone. To learn more about what you can do with this interface, click through the following tabs.
+The **Check Body** interface contains various tabs for checking how your character model animates, emotes, wears rigid and layered accessories, and changes skin tone. To learn more about what you can do with this interface, click through the following tabs.
 
 <img src="../assets/avatar/avatar-setup/Skin-Tone-Selector.png" alt="" width = "60%"/>
 
@@ -225,9 +230,9 @@ If you notice any issues with your character's body as it animates, you can eith
 </TabItem>
 <TabItem key = "2" label="Clothing">
 
-The **Clothing** tab lets you try on various layered clothing on your character to see if your character's cage works properly for different avatar clothing types, such as shirts, jackets, pants, and shoes.
+The **Clothing** tab lets you try on various layered accessories on your character to see if your character's cage works properly for different avatar layered accessory types, such as shirts, jackets, pants, and shoes.
 
-If you notice any areas on your character's body that don't interact with clothing as expected, you can either use Avatar Setup's [Cage Brush](#cage-brush) or your favorite third-party 3D modeling application to adjust your character's cage until the clothing fits properly.
+If you notice any areas on your character's body that don't interact with layered accessories as expected, you can either use Avatar Setup's [Cage Brush](#cage-brush) or your favorite third-party 3D modeling application to adjust your character's cage until the layered accessory fits properly.
 
 </TabItem>
 <TabItem key = "3" label="Accessories">
@@ -335,14 +340,14 @@ The **Attachment Tool** displays all attachment points on the character's body. 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/fwbuhzq1D0k" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 <br /><br />
 
-The Cage Brush lets you modify your character's body cage mesh and make adjustments to how clothing and other layered assets fit on your character. The following controls provide fine-grain control on your cage edits:
+The Cage Brush lets you modify your character's body cage mesh and make adjustments to how layered accessories fit on your character. The following controls provide fine-grain control on your cage edits:
 
 <img src="../assets/avatar/avatar-setup/Cage-Edit-Panel.png" alt=""width = "80%"/>
 
 - Symmetrical and mirror edits along X-axis.
 - Brush with radius and falloff controls.
 - Brush falloff visualization over the vertices.
-- Ability to hide or display equipped layered clothing items. Layered clothing will update in real time in the **Avatar Setup** tool's preview window.
+- Ability to hide or display equipped layered accessories. Layered accessories will update in real time in the **Avatar Setup** tool's preview window.
 
 <Alert severity = 'warning'>
 Major cage edits may require returning to your third-party modeling tool, making your cage adjustments, and then re-exporting the asset.
