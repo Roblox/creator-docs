@@ -8,7 +8,6 @@ Voice Chat is currently available to all 13+ age-verified users in a specific se
 </Alert>
 
 
-
 **Voice Chat** is a feature enabling real-time, spoken communication between yourself and other players. It is only available for places that support a maximum of 100 players.
 
 <img src="../assets/players/voice-chat/In-Experience-Example.jpg" width="800" alt="Two users chatting with voice inside a game." />
