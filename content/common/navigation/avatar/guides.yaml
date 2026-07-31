@@ -71,11 +71,11 @@ navigation:
         section:
           - title: Overview
             path: /avatar/dynamic-heads/
-          - title: Validation process
+          - title: Validation
             path: /avatar/dynamic-heads/validate
-          - title: Head specifications
+          - title: Specifications
             path: /avatar/dynamic-heads/specifications
-          - title: Face cage optimizations
+          - title: Caging best practices
             path: /avatar/dynamic-heads/caging-best-practices
           - title: Test in Studio
             path: /avatar/dynamic-heads/test
@@ -119,13 +119,13 @@ navigation:
         path: /marketplace/custom-thumbnails
       - title: Sponsor items
         path: /marketplace/sponsor-items
-  - title: In-experience sales
+  - title: In-game sales
     section:
       - title: Overview
         path: /production/monetization/avatar-items
       - title: UGC Homestore
         path: /marketplace/homestore
-  - title: In-experience creation
+  - title: In-game creation
     section:
       - title: Overview
         path: /avatar/in-experience-creation

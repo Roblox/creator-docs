@@ -9,17 +9,17 @@ summary: |
   Allows sending HTTP requests and provides various web-related and JSON
   methods.
 description: |
-  `HttpService` allows HTTP requests to be sent from experience servers using
+  `HttpService` allows HTTP requests to be sent from game servers using
   `Class.HttpService:RequestAsync()|RequestAsync`,
   `Class.HttpService:GetAsync()|GetAsync` and
-  `Class.HttpService:PostAsync()|PostAsync`. This service allows experiences to
-  be integrated with third-party web services such as analytics, data storage,
+  `Class.HttpService:PostAsync()|PostAsync`. This service allows games to be
+  integrated with third-party web services such as analytics, data storage,
   remote server configuration, error reporting, advanced calculations, or
   real-time communication. Additionally, it can call a subset of the Open Cloud
   APIs.
 
   For more information about these use cases, see
-  [In-experience HTTP requests](../../../cloud-services/http-service.md).
+  [in-game HTTP requests](../../../cloud-services/http-service.md).
 
   `HttpService` also houses the `Class.HttpService:JSONEncode()|JSONEncode` and
   `Class.HttpService:JSONDecode()|JSONDecode` methods, which are useful for
@@ -38,7 +38,7 @@ description: |
   as it arrives instead of waiting for the entire response to complete.
 
   Only send HTTP requests to trusted third-party platforms to avoid introducing
-  unnecessary security risks to your experience.
+  unnecessary security risks to your game.
 code_samples:
   - Astronauts-in-Space
   - International-Space-Station
@@ -60,10 +60,8 @@ properties:
       `Class.HttpService:GetAsync()`, `Class.HttpService:PostAsync()`, and
       `Class.HttpService:RequestAsync()`.
 
-      This property must be toggled on through the
-      [Experience Settings](../../../studio/experience-settings.md) interface in
-      Studio, or for **unpublished** experiences by setting this property to
-      `true` using the
+      This property must be toggled on for **unpublished** games by setting it
+      to `true` using the
       [Command Bar](../../../studio/ui-overview.md#command-bar):
 
       `game:GetService("HttpService").HttpEnabled = true`
@@ -100,7 +98,7 @@ methods:
       `Datatype.RBXScriptConnection|RBXScriptConnections` to avoid memory leaks.
 
       This method is available in Studio only. If you use it inside scripts,
-      make sure to remove any references before publishing the experience. We
+      make sure to remove any references before publishing the game. We
       encourage you to create plugins with this feature for reusability and ease
       of use.
     code_samples:
@@ -224,8 +222,8 @@ methods:
       Returns a `Datatype.Secret` from the secrets store.
     description: |
       This method returns a value previously added to the secrets store for the
-      experience. The secret content is not printable and not available when the
-      experience runs locally.
+      game. The secret content is not printable and not available when the game
+      runs locally.
 
       The returned `Datatype.Secret` can be transformed using built-in methods
       such as `Datatype.Secret:AddPrefix()`. It is expected to be sent as a part

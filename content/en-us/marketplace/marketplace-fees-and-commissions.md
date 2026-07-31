@@ -263,19 +263,19 @@ See the following guidelines:
 
 ## Commissions
 
-When you or your group sell avatar items on the platform, a portion of the sales is split between you or your group and Roblox. If the item is sold within an experience, the revenue share will additionally be split with the owner of the experience. Both individual accounts and groups **must** follow [Marketplace Creator Requirements](./marketplace-policy.md#creator-requirements) to keep items listed on the Marketplace and eligible for commissions.
+When you or your group sell avatar items on the platform, a portion of the sales is split between you or your group and Roblox. If the item is sold within a game, the revenue share will additionally be split with the owner of the game. Both individual accounts and groups **must** follow [Marketplace Creator Requirements](./marketplace-policy.md#creator-requirements) to keep items listed on the Marketplace and eligible for commissions.
 
 <table>
 <thead>
   <tr>
     <th>**Marketplace Purchase**</th>
-    <th>**In-experience Purchase**</th>
+    <th>**In-game Purchase**</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>Creator receives 30%</td>
-    <td><ul><li>Creator receives 30%</li><li>Experience owner receives 40%</li></ul></td>
+    <td><ul><li>Creator receives 30%</li><li>Game owner receives 40%</li></ul></td>
   </tr>
 </tbody>
 </table>

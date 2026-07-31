@@ -1,5 +1,5 @@
 ---
-title: Head specifications
+title: Dynamic head specifications
 description: In-depth details on expected head schemas for Marketplace
 ---
 

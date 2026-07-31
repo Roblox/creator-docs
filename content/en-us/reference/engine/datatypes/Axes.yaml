@@ -15,10 +15,10 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Axes.new
-    summary: |-
+    summary: |
       Creates a new Axes using list of axes and/or faces. NormalIds (faces) are
       converted to the corresponding axes.
-    description: |-
+    description: |
       Creates a new Axes using list of axes and/or faces. NormalIds (faces) are
       converted to the corresponding axes.
     parameters:

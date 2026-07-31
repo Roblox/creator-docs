@@ -17,12 +17,12 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: NumberRange.new
-    summary: |-
-      Returns a new `Datatype.NumberRange` with the minimum and maximum set to the
-      `value`.
-    description: |-
-      Returns a new `Datatype.NumberRange` with the minimum and maximum set to the
-      `value`.
+    summary: |
+      Returns a new `Datatype.NumberRange` with the minimum and maximum set to
+      the `value`.
+    description: |
+      Returns a new `Datatype.NumberRange` with the minimum and maximum set to
+      the `value`.
     parameters:
       - name: value
         type: number
@@ -32,10 +32,12 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: NumberRange.new
-    summary: Returns a new `Datatype.NumberRange` with the provided `minimum` and `maximum`.
-    description: |-
-      Returns a new `Datatype.NumberRange` with the provided `minimum` and `maximum`. The
-      `minimum` must be less than or equal to `maximum`.
+    summary: |
+      Returns a new `Datatype.NumberRange` with the provided `minimum` and
+      `maximum`.
+    description: |
+      Returns a new `Datatype.NumberRange` with the provided `minimum` and
+      `maximum`. The `minimum` must be less than or equal to `maximum`.
     parameters:
       - name: minimum
         type: number

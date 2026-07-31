@@ -870,8 +870,8 @@ properties:
       predictively.
     description: |
       Determines whether the engine streams instances predictively, pre-fetching
-      content the player is likely to need soon, such as along pathfinding
-      routes and near spawn locations, rather than streaming based only on the
+      content the player is likely to need soon (such as along pathfinding
+      routes and near spawn locations) rather than streaming based only on the
       player's current position. `Enum.PredictiveStreamingMode|Enabled` allows
       the engine to make streaming decisions predictively, while
       `Enum.PredictiveStreamingMode|Disabled` turns it off.
@@ -1437,24 +1437,6 @@ methods:
     deprecation_message: |
       This method is deprecated. Do not use it for new work.
     security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
-  - name: Workspace:ExperimentalSolverIsEnabled
-    summary: |
-      Returns `true` if the experimental physics solver is enabled.
-    description: |
-      Returns whether the experimental physics solver is currently enabled. This
-      method is primarily for internal testing purposes.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: boolean
-        summary: |
-          `true` if the experimental physics solver is enabled, `false`
-          otherwise.
-    tags: []
-    deprecation_message: ''
-    security: LocalUserSecurity
     thread_safety: Unsafe
     capabilities: []
   - name: Workspace:GetNumAwakeParts

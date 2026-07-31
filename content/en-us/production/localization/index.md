@@ -42,16 +42,6 @@ You can also access your game's localization settings in the on your [Creations]
    src="../../assets/localization/Experience-Page-Configure-Localization.png"
    width="400" />
 
-A link to your game's localization settings is also available in Studio. To find the link:
-
-1. Open Studio's **File** ⟩ **Experience Settings** window.
-2. In the **Localization** section, click the link indicated below to launch the
-   localization settings in your default browser.
-
-   <img
-   src="../../assets/localization/Game-Settings-Configure-Localization.png"
-   width="800" />
-
 ### Set source language
 
 Before you can start any localization, Roblox needs to know which language you

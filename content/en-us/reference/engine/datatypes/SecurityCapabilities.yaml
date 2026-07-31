@@ -13,10 +13,12 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: SecurityCapabilities.new
-    summary: Returns a new set of capabilities from zero or more `Enum.SecurityCapability` items.
-    description: |-
-      Returns a new set of capabilities from zero or more `Enum.SecurityCapability`
-      items.
+    summary: |
+      Returns a new set of capabilities from zero or more
+      `Enum.SecurityCapability` items.
+    description: |
+      Returns a new set of capabilities from zero or more
+      `Enum.SecurityCapability` items.
 
       ```lua
       local capabilities = SecurityCapabilities.new(Enum.SecurityCapability.Players,
@@ -35,8 +37,12 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: SecurityCapabilities.fromCurrent
-    summary: Returns a new set of capabilities from the capabilities of the calling function.
-    description: Returns a new set of capabilities from the capabilities of the calling function.
+    summary: |
+      Returns a new set of capabilities from the capabilities of the calling
+      function.
+    description: |
+      Returns a new set of capabilities from the capabilities of the calling
+      function.
     parameters: []
     code_samples: []
     tags: []

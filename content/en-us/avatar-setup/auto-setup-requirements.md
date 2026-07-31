@@ -10,7 +10,7 @@ keywords:
 
 [Avatar Setup](./index.md) supports the automatic conversion of basic custom models to Roblox-ready bodies, rigid accessories, and layered accessories. By [bundling](#bundle-multiple-assets) your models together, you can automatically setup multiple custom models into avatar items for use in-game or for upload to the Marketplace.
 
-## Character body
+## Character bodies
 
 Avatar Setup can attempt to process a 3D model into a Roblox-ready character body model. This is one of the most common use cases for Avatar Setup and can help you save time by automating the rigging, caging, and other configurations required to make a Roblox-ready avatar character that you can upload to the Marketplace.
 
@@ -28,15 +28,15 @@ Avatar Setup detects the following partial avatar body inputs:
 <tbody>
   <tr>
     <td><img src="../assets/avatar/avatar-setup/Partial-Inputs-None-Rigged.png"/></td>
-    <td><Alert severity = 'success'>A single or multiple mesh body with **no rigging**.</Alert>The most common input is a single mesh object that doesn't include rigging data or other components. The input character body must meet Avatar Setup's [model requirements](#character-body). <br /><br /> In this case, Avatar Setup creates the rest of the avatar components automatically.</td>
+    <td><Alert severity = 'success'>A single or multiple mesh body with **no rigging**.</Alert>The most common input is a single mesh object that doesn't include rigging data or other components. The input character body must meet Avatar Setup's [model requirements](#character-bodies).<br /><br /> In this case, Avatar Setup creates the rest of the avatar components automatically.</td>
   </tr>
   <tr>
     <td><img src="../assets/avatar/avatar-setup/Partial-Inputs-Body-Rigged.png"/></td>
-    <td><Alert severity = "success">A single or multiple mesh body with **only body rigging**.</Alert>If the provided meshes include a compatible [standard](../avatar/character-bodies/specifications.md#standard-rigs) rigging armature, Avatar Setup uses the provided rig and creates a facial rig and all other components. <br /><br /> The input character body rig must follow Roblox's [rigging configuration requirements](../avatar/character-bodies/specifications.md#rigging), otherwise Avatar Setup creates a brand new rig for you.</td>
+    <td><Alert severity = "success">A single or multiple mesh body with **only body rigging**.</Alert>If the provided meshes include a compatible [standard](../avatar/character-bodies/specifications.md#standard-rigs) rigging armature, Avatar Setup uses the provided rig and creates a facial rig and all other components.<br /><br /> The input character body rig must follow Roblox's [rigging configuration requirements](../avatar/character-bodies/specifications.md#rigging), otherwise Avatar Setup creates a brand new rig for you.</td>
   </tr>
   <tr>
     <td><img src="../assets/avatar/avatar-setup/Partial-Inputs-Head-Rigged.png"/><br /></td>
-    <td><Alert severity = "success">A multiple mesh with **only facial rigging**.</Alert>If you intend to use your own custom facial rigging, set the FaceRootJoint (and all child bones) as a child of the [standard](../avatar/character-bodies/specifications.md#standard-rigs) rigging armature's head joint. For more information, see the optional [rig requirements](#rig-requirements). </td>
+    <td><Alert severity = "success">A multiple mesh with **only facial rigging**.</Alert>If you intend to use your own custom facial rigging, set the FaceRootJoint (and all child bones) as a child of the [standard](../avatar/character-bodies/specifications.md#standard-rigs) rigging armature's head joint. For more information, see the optional [rig requirements](#rig-requirements).</td>
   </tr>
   <tr>
     <td><img src="../assets/avatar/avatar-setup/Partial-Inputs-All-Rigged.png"/><br /></td>
@@ -153,7 +153,7 @@ To ensure that Avatar Setup uses your **own custom body rig** instead of generat
 
 To ensure that Avatar Setup uses your **own custom face rig with FACS data**:
 
-- A [standard](../avatar/character-bodies/specifications.md#standard-rigs) rigging armature is required when submitting custom facial rigs and facial animation data. Review [supported character body inputs](#character-body) to ensure you are submitting a supported body input and facial rig combination.
+- A [standard](../avatar/character-bodies/specifications.md#standard-rigs) rigging armature is required when submitting custom facial rigs and facial animation data. Review [supported character body inputs](#character-bodies) to ensure you are submitting a supported body input and facial rig combination.
 - Facial rig must include a `RootFaceJoint` bone (usually [mapped](../art/characters/facial-animation/create-basic-heads.md#map) as `DynamicHead`) whose parent is the `Head` joint of the standard rigging armature.
 - All the other facial animation joints are descendants of the `RootFaceJoint`, and not direct children of the `Head` joint.
 - Animations need to be provided for the [17 required poses](../avatar/character-bodies/specifications.md#facial-animations), at minimum.
@@ -325,7 +325,7 @@ Avatar Setup can process multiple rigid or layered accessory models with a singl
 
 To parent your objects to folder:
 
-1. In the **Explorer** window, hold <kbd>Shift</kbd> and select the `Class.Model` objects you intend to process with Avatar Setup. Ensure you are selecting a [supported base character body](#character-body) as one of the `Class.Model` objects.
+1. In the **Explorer** window, hold <kbd>Shift</kbd> and select the `Class.Model` objects you intend to process with Avatar Setup. Ensure you are selecting a [supported base character body](#character-bodies) as one of the `Class.Model` objects.
 2. Right-click and select **Group as Folder**.
 3. Select the `Class.Folder` and then select the **Avatar Setup** tool to begin processing.
 

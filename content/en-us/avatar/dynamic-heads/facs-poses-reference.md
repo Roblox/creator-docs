@@ -8,7 +8,7 @@ The [Facial Action Coding System](https://en.wikipedia.org/wiki/Facial_Action_Co
 The following is a list of 50 base poses that you can use in Roblox to portray a wide range of face emotions. Except for the first neutral pose, the order of poses you save to your character model doesn't matter since this information is set during the [mapping](../../art/characters/facial-animation/create-basic-heads.md#map) process as a custom property.
 
 <Alert severity = 'warning'>
-If you intend to publish your avatar to the Marketplace, your avatar head must include the required [17 facial base poses](../../avatar/character-bodies/specifications.md#facial-animations). Marketplace validation rejects assets that do not include these 17 required base poses.
+If you intend to publish your avatar to the Marketplace, your avatar head must include the required [17 facial base poses](./specifications.md#facs-animation). Marketplace validation rejects assets that do not include these 17 required base poses.
 </Alert>
 
 You can combine multiple FACS base poses together in one animation frame to create complex facial expressions. However, some combinations of poses might collide unless you also add a [corrective](../../art/characters/facial-animation/create-basic-heads.md#combination-poses) to their full default values.

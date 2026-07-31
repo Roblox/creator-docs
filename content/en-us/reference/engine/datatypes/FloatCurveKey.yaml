@@ -28,8 +28,9 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: FloatCurveKey.new
-    summary: Returns a new `Datatype.FloatCurveKey` from the given time and value.
-    description: |-
+    summary: |
+      Returns a new `Datatype.FloatCurveKey` from the given time and value.
+    description: |
       Creates a new `Datatype.FloatCurveKey` at a given time and value.
       `Datatype.FloatCurveKey.LeftTangent|LeftTangent` and
       `Datatype.FloatCurveKey.RightTangent|RightTangent` are left uninitialized
@@ -39,11 +40,13 @@ constructors:
       - name: time
         type: number
         default:
-        summary: Time at which to create the new `Datatype.FloatCurveKey`.
+        summary: |
+          Time at which to create the new `Datatype.FloatCurveKey`.
       - name: value
         type: number
         default:
-        summary: Value of the new `Datatype.FloatCurveKey`.
+        summary: |
+          Value of the new `Datatype.FloatCurveKey`.
       - name: Interpolation
         type: KeyInterpolationMode
         default:

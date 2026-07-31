@@ -37,8 +37,12 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Vector3.new
-    summary: Returns a new `Datatype.Vector3` from the given `x`, `y`, and `z` components.
-    description: Returns a new `Datatype.Vector3` using the given `x`, `y`, and `z` components.
+    summary: |
+      Returns a new `Datatype.Vector3` from the given `x`, `y`, and `z`
+      components.
+    description: |
+      Returns a new `Datatype.Vector3` using the given `x`, `y`, and `z`
+      components.
     parameters:
       - name: x
         type: number
@@ -56,8 +60,10 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: Vector3.FromNormalId
-    summary: Returns a new `Datatype.Vector3` in the given direction.
-    description: Returns a new `Datatype.Vector3` in the given direction.
+    summary: |
+      Returns a new `Datatype.Vector3` in the given direction.
+    description: |
+      Returns a new `Datatype.Vector3` in the given direction.
     parameters:
       - name: normal
         type: NormalId
@@ -67,8 +73,10 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: Vector3.FromAxis
-    summary: Returns a new `Datatype.Vector3` for the given axis.
-    description: Returns a new `Datatype.Vector3` for the given axis.
+    summary: |
+      Returns a new `Datatype.Vector3` for the given axis.
+    description: |
+      Returns a new `Datatype.Vector3` for the given axis.
     parameters:
       - name: axis
         type: Axis
@@ -80,12 +88,14 @@ constructors:
 constants:
   - name: Vector3.zero
     type: Vector3
-    summary: A `Datatype.Vector3` with a magnitude of `0`.
-    description: |-
+    summary: |
+      A `Datatype.Vector3` with a magnitude of `0`.
+    description: |
       A `Datatype.Vector3` with a magnitude of `0`.
 
       This API member is a **constant**, and must be accessed through the
-      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
 
       ```lua
       print(Vector3.zero)  --> 0, 0, 0
@@ -95,12 +105,14 @@ constants:
     deprecation_message: ''
   - name: Vector3.one
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on every axis.
-    description: |-
+    summary: |
+      A `Datatype.Vector3` with a value of `1` on every axis.
+    description: |
       A `Datatype.Vector3` with a value of `1` on every axis.
 
       This API member is a **constant**, and must be accessed through the
-      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
 
       ```lua
       print(Vector3.one)  --> 1, 1, 1
@@ -110,12 +122,14 @@ constants:
     deprecation_message: ''
   - name: Vector3.xAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on the **X** axis.
-    description: |-
+    summary: |
+      A `Datatype.Vector3` with a value of `1` on the **X** axis.
+    description: |
       A `Datatype.Vector3` with a value of `1` on the **X** axis.
 
       This API member is a **constant**, and must be accessed through the
-      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
 
       ```lua
       print(Vector3.xAxis)  --> 1, 0, 0
@@ -125,12 +139,14 @@ constants:
     deprecation_message: ''
   - name: Vector3.yAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on the **Y** axis.
-    description: |-
+    summary: |
+      A `Datatype.Vector3` with a value of `1` on the **Y** axis.
+    description: |
       A `Datatype.Vector3` with a value of `1` on the **Y** axis.
 
       This API member is a **constant**, and must be accessed through the
-      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
 
       ```lua
       print(Vector3.yAxis)  --> 0, 1, 0
@@ -140,12 +156,14 @@ constants:
     deprecation_message: ''
   - name: Vector3.zAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on the **Z** axis.
-    description: |-
+    summary: |
+      A `Datatype.Vector3` with a value of `1` on the **Z** axis.
+    description: |
       A `Datatype.Vector3` with a value of `1` on the **Z** axis.
 
       This API member is a **constant**, and must be accessed through the
-      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
 
       ```lua
       print(Vector3.zAxis)  --> 0, 0, 1

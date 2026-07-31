@@ -39953,6 +39953,55 @@
         }
       }
     },
+    "/v1/groups/{groupId}/community-tier/evaluate": {
+      "post": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "groupId",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Client.TierEvaluationResultResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: Group is invalid or does not exist."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n22: The feature is disabled.\r\n23: Insufficient permissions to complete the request.\r\n49: User is invalid or does not exist"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
     "/v1/groups/{groupId}/configuration": {
       "get": {
         "tags": ["Groups"],
@@ -51129,7 +51178,7 @@
             }
           },
           "400": {
-            "description": "1: The universe does not exist.\r\n48: The playtesters list is missing or empty.\r\n49: Too many playtesters were specified in a single request."
+            "description": "1: The universe does not exist.\r\n48: The playtesters list is missing or empty.\r\n49: Too many playtesters were specified in a single request.\r\n51: One or more playtesters cannot be added due to safety restrictions."
           },
           "401": {
             "description": "0: Authorization has been denied for this request."
@@ -83166,6 +83215,21 @@
           },
           "contentId": {
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Client.TierEvaluationResultResponse": {
+        "type": "object",
+        "properties": {
+          "tierInfo": {
+            "$ref": "#/components/schemas/Roblox.Groups.Client.CommunityTierInfoResponse"
+          },
+          "passedSignals": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "additionalProperties": false

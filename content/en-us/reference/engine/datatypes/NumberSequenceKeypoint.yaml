@@ -15,8 +15,10 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: NumberSequenceKeypoint.new
-    summary: Returns a keypoint with the specified time and value.
-    description: Returns a keypoint with a specified time and value.
+    summary: |
+      Returns a keypoint with the specified time and value.
+    description: |
+      Returns a keypoint with a specified time and value.
     parameters:
       - name: time
         type: number
@@ -30,8 +32,10 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: NumberSequenceKeypoint.new
-    summary: Returns a keypoint with the specified time, value, and envelope.
-    description: Returns a keypoint with a specified time, value, and envelope.
+    summary: |
+      Returns a keypoint with the specified time, value, and envelope.
+    description: |
+      Returns a keypoint with a specified time, value, and envelope.
     parameters:
       - name: time
         type: number

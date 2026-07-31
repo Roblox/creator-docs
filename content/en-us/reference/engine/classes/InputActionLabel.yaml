@@ -152,7 +152,9 @@ properties:
       a read-only property set by the engine when the binding resolves.
     code_samples: []
     type: Content
-    tags: []
+    tags:
+      - ReadOnly
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -174,7 +176,9 @@ properties:
       binding resolves.
     code_samples: []
     type: string
-    tags: []
+    tags:
+      - ReadOnly
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None

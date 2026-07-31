@@ -5,12 +5,11 @@
 name: PredictiveStreamingMode
 type: enum
 summary: |
-  Controls whether the engine makes instance streaming decisions predictively.
+  Used with `Class.Workspace.PredictiveStreamingMode` to control whether the
+  engine streams instances predictively. predictively.
 description: |
-  Controls whether the engine streams instances predictively, pre-fetching
-  content the player is likely to need soon, such as along pathfinding routes
-  and near spawn locations, rather than streaming based only on the player's
-  current position. Set through `Class.Workspace.PredictiveStreamingMode`.
+  Used with `Class.Workspace.PredictiveStreamingMode` to control whether the
+  engine streams instances predictively.
 code_samples: []
 tags: []
 deprecation_message: ''

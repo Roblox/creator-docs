@@ -1502,8 +1502,10 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: BrickColor.new
-    summary: Constructs a `Datatype.BrickColor` from its numerical index.
-    description: Constructs a `Datatype.BrickColor` from its numerical index.
+    summary: |
+      Constructs a `Datatype.BrickColor` from its numerical index.
+    description: |
+      Constructs a `Datatype.BrickColor` from its numerical index.
     parameters:
       - name: val
         type: number
@@ -1513,12 +1515,12 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: BrickColor.new
-    summary: |-
-      Constructs the closest `Datatype.BrickColor` that can be matched to the specified RGB
-      components, each between 0 and 1.
-    description: |-
-      Constructs the closest `Datatype.BrickColor` that can be matched to the specified RGB
-      components, each between 0 and 1.
+    summary: |
+      Constructs the closest `Datatype.BrickColor` that can be matched to the
+      specified RGB components, each between 0 and 1.
+    description: |
+      Constructs the closest `Datatype.BrickColor` that can be matched to the
+      specified RGB components, each between 0 and 1.
     parameters:
       - name: r
         type: number
@@ -1536,8 +1538,10 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: BrickColor.new
-    summary: Constructs a `Datatype.BrickColor` from its name.
-    description: Constructs a `Datatype.BrickColor` from its name.
+    summary: |
+      Constructs a `Datatype.BrickColor` from its name.
+    description: |
+      Constructs a `Datatype.BrickColor` from its name.
     parameters:
       - name: name
         type: string
@@ -1547,10 +1551,12 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: BrickColor.new
-    summary: Constructs the closest `Datatype.BrickColor` that can be matched to the specified `Datatype.Color3`.
-    description: |-
-      Constructs the closest `Datatype.BrickColor` that can be matched to the specified
-      `Datatype.Color3`.
+    summary: |
+      Constructs the closest `Datatype.BrickColor` that can be matched to the
+      specified `Datatype.Color3`.
+    description: |
+      Constructs the closest `Datatype.BrickColor` that can be matched to the
+      specified `Datatype.Color3`.
     parameters:
       - name: color
         type: Color3
@@ -1560,8 +1566,10 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: BrickColor.palette
-    summary: Constructs a `Datatype.BrickColor` from its palette index.
-    description: Constructs a `Datatype.BrickColor` from its palette index.
+    summary: |
+      Constructs a `Datatype.BrickColor` from its palette index.
+    description: |
+      Constructs a `Datatype.BrickColor` from its palette index.
     parameters:
       - name: paletteValue
         type: number
@@ -1571,64 +1579,82 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: BrickColor.random
-    summary: Returns a random `Datatype.BrickColor`.
-    description: Returns a random `Datatype.BrickColor`.
+    summary: |
+      Returns a random `Datatype.BrickColor`.
+    description: |
+      Returns a random `Datatype.BrickColor`.
     parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.White
-    summary: Returns the "White" `Datatype.BrickColor`.
-    description: Returns the "White" `Datatype.BrickColor`.
+    summary: |
+      Returns the "White" `Datatype.BrickColor`.
+    description: |
+      Returns the "White" `Datatype.BrickColor`.
     parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Gray
-    summary: Returns the "Medium stone grey" `Datatype.BrickColor`.
-    description: Returns the "Medium stone grey" `Datatype.BrickColor`.
+    summary: |
+      Returns the "Medium stone grey" `Datatype.BrickColor`.
+    description: |
+      Returns the "Medium stone grey" `Datatype.BrickColor`.
     parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.DarkGray
-    summary: Returns the "Dark stone grey" `Datatype.BrickColor`.
-    description: Returns the "Dark stone grey" `Datatype.BrickColor`.
+    summary: |
+      Returns the "Dark stone grey" `Datatype.BrickColor`.
+    description: |
+      Returns the "Dark stone grey" `Datatype.BrickColor`.
     parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Black
-    summary: Returns the "Black" `Datatype.BrickColor`.
-    description: Returns the "Black" `Datatype.BrickColor`.
+    summary: |
+      Returns the "Black" `Datatype.BrickColor`.
+    description: |
+      Returns the "Black" `Datatype.BrickColor`.
     parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Red
-    summary: Returns the "Bright red" `Datatype.BrickColor`.
-    description: Returns the "Bright red" `Datatype.BrickColor`.
+    summary: |
+      Returns the "Bright red" `Datatype.BrickColor`.
+    description: |
+      Returns the "Bright red" `Datatype.BrickColor`.
     parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Yellow
-    summary: Returns the "Bright yellow" `Datatype.BrickColor`.
-    description: Returns the "Bright yellow" `Datatype.BrickColor`.
+    summary: |
+      Returns the "Bright yellow" `Datatype.BrickColor`.
+    description: |
+      Returns the "Bright yellow" `Datatype.BrickColor`.
     parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Green
-    summary: Returns the "Dark green" `Datatype.BrickColor`.
-    description: Returns the "Dark green" `Datatype.BrickColor`.
+    summary: |
+      Returns the "Dark green" `Datatype.BrickColor`.
+    description: |
+      Returns the "Dark green" `Datatype.BrickColor`.
     parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: BrickColor.Blue
-    summary: Returns the "Bright blue" `Datatype.BrickColor`.
-    description: Returns the "Bright blue" `Datatype.BrickColor`.
+    summary: |
+      Returns the "Bright blue" `Datatype.BrickColor`.
+    description: |
+      Returns the "Bright blue" `Datatype.BrickColor`.
     parameters: []
     code_samples: []
     tags: []

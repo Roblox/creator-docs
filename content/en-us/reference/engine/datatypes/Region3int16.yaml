@@ -54,8 +54,10 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Region3int16.new
-    summary: Returns a new Region3int16 from the provided boundaries.
-    description: Returns a new Region3int16 from the provided boundaries.
+    summary: |
+      Returns a new Region3int16 from the provided boundaries.
+    description: |
+      Returns a new Region3int16 from the provided boundaries.
     parameters:
       - name: min
         type: Vector3int16

@@ -93,17 +93,17 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Vector2int16.new
-    summary: Returns a `Datatype.Vector2int16` from the given x and y components.
-    description: |-
-      Returns a new `Datatype.Vector2int16` given the x and y components. Non-integer
-      components are rounded down.
+    summary: |
+      Returns a `Datatype.Vector2int16` from the given x and y components.
+    description: |
+      Returns a new `Datatype.Vector2int16` given the x and y components.
+      Non-integer components are rounded down.
 
       The components must fall within the range [-2<sup>15</sup>,
-      2<sup>15</sup>).  If outside this range, integer
-      overflow may occur. For
+      2<sup>15</sup>). If outside this range, integer overflow may occur. For
       example, providing 32,768 (equal to 2<sup>15</sup>) as a component
-      overflows the 16-bit integer, and so the component is -32,768 (equal
-      to -2<sup>15</sup>) instead.
+      overflows the 16-bit integer, and so the component is -32,768 (equal to
+      -2<sup>15</sup>) instead.
     parameters:
       - name: x
         type: number

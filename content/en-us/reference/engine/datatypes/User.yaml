@@ -48,11 +48,13 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: User.fromId
-    summary: Creates a `Datatype.User` from a domain user ID within the current experience.
-    description: |-
-      Creates a new `Datatype.User` from the given domain user ID, using the current
-      experience as the domain. The ID must be a valid domain user ID (above the
-      global user ID range).
+    summary: |
+      Creates a `Datatype.User` from a domain user ID within the current
+      experience.
+    description: |
+      Creates a new `Datatype.User` from the given domain user ID, using the
+      current experience as the domain. The ID must be a valid domain user ID
+      (above the global user ID range).
     parameters:
       - name: domainUserId
         type: int64
@@ -63,8 +65,9 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: User.fromString
-    summary: Creates a `Datatype.User` from its serialized string form.
-    description: |-
+    summary: |
+      Creates a `Datatype.User` from its serialized string form.
+    description: |
       Deserializes a `Datatype.User` from a string previously produced by
       `Datatype.User:ToString()|ToString()`.
     parameters:

@@ -41,8 +41,12 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: PhysicalProperties.new
-    summary: Returns a `Datatype.PhysicalProperties` with the default properties for the given material.
-    description: Returns a `Datatype.PhysicalProperties` container, with the density, friction, and elasticity specified for this material.
+    summary: |
+      Returns a `Datatype.PhysicalProperties` with the default properties for
+      the given material.
+    description: |
+      Returns a `Datatype.PhysicalProperties` container, with the density,
+      friction, and elasticity specified for this material.
     parameters:
       - name: material
         type: Material
@@ -52,12 +56,12 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: PhysicalProperties.new
-    summary: |-
-      Returns a `Datatype.PhysicalProperties` with the specified density, friction, and
-      elasticity.
-    description: |-
-      Returns a `Datatype.PhysicalProperties` container, with the specified density,
+    summary: |
+      Returns a `Datatype.PhysicalProperties` with the specified density,
       friction, and elasticity.
+    description: |
+      Returns a `Datatype.PhysicalProperties` container, with the specified
+      density, friction, and elasticity.
     parameters:
       - name: density
         type: number
@@ -75,12 +79,14 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: PhysicalProperties.new
-    summary: |-
-      Creates a `Datatype.PhysicalProperties` container with the specified density,
-      friction, elasticity, weight of friction, and weight of elasticity.
-    description: |-
-      Creates a `Datatype.PhysicalProperties` container with the specified density,
-      friction, elasticity, weight of friction, and weight of elasticity.
+    summary: |
+      Creates a `Datatype.PhysicalProperties` container with the specified
+      density, friction, elasticity, weight of friction, and weight of
+      elasticity.
+    description: |
+      Creates a `Datatype.PhysicalProperties` container with the specified
+      density, friction, elasticity, weight of friction, and weight of
+      elasticity.
     parameters:
       - name: density
         type: number
@@ -106,12 +112,14 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: PhysicalProperties.new
-    summary: |-
-      Creates a `Datatype.PhysicalProperties` container with the specified density,
-      friction, elasticity, weight of friction, weight of elasticity, and acoustic absorption.
-    description: |-
-      Creates a `Datatype.PhysicalProperties` container with the specified density,
-      friction, elasticity, weight of friction, weight of elasticity, and acoustic absorption.
+    summary: |
+      Creates a `Datatype.PhysicalProperties` container with the specified
+      density, friction, elasticity, weight of friction, weight of elasticity,
+      and acoustic absorption.
+    description: |
+      Creates a `Datatype.PhysicalProperties` container with the specified
+      density, friction, elasticity, weight of friction, weight of elasticity,
+      and acoustic absorption.
     parameters:
       - name: density
         type: number

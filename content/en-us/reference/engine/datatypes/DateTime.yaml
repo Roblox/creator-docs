@@ -412,15 +412,16 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: DateTime.now
-    summary: Returns a `Datatype.DateTime` representing the current moment in time.
-    description: |-
-      Returns a new `Datatype.DateTime` representing the current moment in
-      time, using the device's local clock. Most operating systems automatically
-      sync their local time against online time servers, so this should be
-      within a few hundred milliseconds. However, users can easily disable
-      sync behavior and set the system time to anything they want; for
-      synchronized time between client and server, use
-      `Class.Workspace:GetServerTimeNow()` instead.
+    summary: |
+      Returns a `Datatype.DateTime` representing the current moment in time.
+    description: |
+      Returns a new `Datatype.DateTime` representing the current moment in time,
+      using the device's local clock. Most operating systems automatically sync
+      their local time against online time servers, so this should be within a
+      few hundred milliseconds. However, users can easily disable sync behavior
+      and set the system time to anything they want; for synchronized time
+      between client and server, use `Class.Workspace:GetServerTimeNow()`
+      instead.
 
       When you need to precisely measure the time elapsed between two points in
       time, like when testing performance, use `Library.os.clock()` instead.
@@ -429,8 +430,9 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: DateTime.fromUnixTimestamp
-    summary: Returns a `Datatype.DateTime` representing the given Unix timestamp.
-    description: |-
+    summary: |
+      Returns a `Datatype.DateTime` representing the given Unix timestamp.
+    description: |
       Returns a new `Datatype.DateTime` object from the given Unix timestamp, or
       the number of **seconds** since January 1st, 1970 at 00:00 (UTC).
 
@@ -445,8 +447,10 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: DateTime.fromUnixTimestampMillis
-    summary: Returns a `Datatype.DateTime` representing the given Unix timestamp in milliseconds.
-    description: |-
+    summary: |
+      Returns a `Datatype.DateTime` representing the given Unix timestamp in
+      milliseconds.
+    description: |
       Returns a new `Datatype.DateTime` object from the given Unix timestamp, or
       the number of **milliseconds** since January 1st, 1970 at 00:00 (UTC).
     parameters:
@@ -458,16 +462,23 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: DateTime.fromUniversalTime
-    summary: Returns a new `Datatype.DateTime` using the given units from a UTC time.
-    description: |-
-      Returns a new `Datatype.DateTime` using the given units from a UTC time. The values
-      accepted are similar to those found in the time value table returned by
-      `Datatype.DateTime:ToUniversalTime()|ToUniversalTime()`.
+    summary: |
+      Returns a new `Datatype.DateTime` using the given units from a UTC time.
+    description: |
+      Returns a new `Datatype.DateTime` using the given units from a UTC time.
+      The values accepted are similar to those found in the time value table
+      returned by `Datatype.DateTime:ToUniversalTime()|ToUniversalTime()`.
 
-      - Date units (year, month, day) that produce an invalid date will raise an error. For example, January 32nd or February 29th on a non-leap year.
-      - Time units (hour, minute, second, millisecond) that are outside their normal range are valid. For example, 90 minutes will cause the hour to roll over by 1; -10 seconds will cause the minute value to roll back by 1.
-      - Non-integer values are rounded down. For example, providing 2.5 hours will be equivalent to providing 2 hours, not 2 hours 30 minutes.
-      - Omitted values are assumed to be their lowest value in their normal range, except for year which defaults to 1970.
+      - Date units (year, month, day) that produce an invalid date will raise an
+        error. For example, January 32nd or February 29th on a non-leap year.
+      - Time units (hour, minute, second, millisecond) that are outside their
+        normal range are valid. For example, 90 minutes will cause the hour to
+        roll over by 1; -10 seconds will cause the minute value to roll back
+        by 1.
+      - Non-integer values are rounded down. For example, providing 2.5 hours
+        will be equivalent to providing 2 hours, not 2 hours 30 minutes.
+      - Omitted values are assumed to be their lowest value in their normal
+        range, except for year which defaults to 1970.
     parameters:
       - name: year
         type: number
@@ -501,16 +512,23 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: DateTime.fromLocalTime
-    summary: Returns a new `Datatype.DateTime` using the given units from a local time.
-    description: |-
-      Returns a new `Datatype.DateTime` using the given units from a local time. The
-      values accepted are similar to those found in the time value table
+    summary: |
+      Returns a new `Datatype.DateTime` using the given units from a local time.
+    description: |
+      Returns a new `Datatype.DateTime` using the given units from a local time.
+      The values accepted are similar to those found in the time value table
       returned by `Datatype.DateTime:ToLocalTime()|ToLocalTime()`.
 
-      - Date units (year, month, day) that produce an invalid date will raise an error. For example, January 32nd or February 29th on a non-leap year.
-      - Time units (hour, minute, second, millisecond) that are outside their normal range are valid. For example, 90 minutes will cause the hour to roll over by 1; -10 seconds will cause the minute value to roll back by 1.
-      - Non-integer values are rounded down. For example, providing 2.5 hours will be equivalent to providing 2 hours, not 2 hours 30 minutes.
-      - Omitted values are assumed to be their lowest value in their normal range, except for year which defaults to 1970.
+      - Date units (year, month, day) that produce an invalid date will raise an
+        error. For example, January 32nd or February 29th on a non-leap year.
+      - Time units (hour, minute, second, millisecond) that are outside their
+        normal range are valid. For example, 90 minutes will cause the hour to
+        roll over by 1; -10 seconds will cause the minute value to roll back
+        by 1.
+      - Non-integer values are rounded down. For example, providing 2.5 hours
+        will be equivalent to providing 2 hours, not 2 hours 30 minutes.
+      - Omitted values are assumed to be their lowest value in their normal
+        range, except for year which defaults to 1970.
     parameters:
       - name: year
         type: number
@@ -544,10 +562,12 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: DateTime.fromIsoDate
-    summary: Returns a `Datatype.DateTime` from an ISO 8601 date-time string (in UTC).
-    description: |-
+    summary: |
+      Returns a `Datatype.DateTime` from an ISO 8601 date-time string (in UTC).
+    description: |
       Returns a `Datatype.DateTime` from an ISO 8601 date-time string in UTC
-      time, such as those returned by `Datatype.DateTime:ToIsoDate()|ToIsoDate()`. If the string parsing fails,
+      time, such as those returned by
+      `Datatype.DateTime:ToIsoDate()|ToIsoDate()`. If the string parsing fails,
       the function returns `nil`.
 
       An example ISO 8601 date-time string would be `2020-01-02T10:30:45Z`,

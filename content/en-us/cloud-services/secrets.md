@@ -27,11 +27,7 @@ You can also use Open Cloud to manage your secrets. See the [reference documenta
 
 For security reasons, the secrets store for each game is only available to live servers or [collaborative testing](../studio/testing-modes.md#collaborative-testing) environments. If you try to access a secret during [local playtesting](../studio/testing-modes.md#playtesting), you receive a `Can't find secret with given key` error. You receive an identical error if you try to access secrets from a client script.
 
-To specify secrets for local testing, go to Studio and then go to **File** ⟩ **Experience Settings** ⟩ **Security**. You can create new secrets and edit or delete existing secrets in the **Secrets** section.
-
-<img src="../assets/data/secrets-store/LocalSecrets.png" width="750px" alt="View, create, edit secrets with the Secrets UI."/>
-
-<img src="../assets/data/secrets-store/LocalSecrets_Edit.png" width="750px" alt="Add a new secret with name secretName1, value 123456, and restricted to domain *.example.com."/>
+To specify secrets for local testing, go to Studio and then go to **File** ⟩ **Experience Settings** ⟩ **Security**. You can create new secrets and edit or delete existing secrets in the **Local Secrets** section.
 
 ## Use secrets
 

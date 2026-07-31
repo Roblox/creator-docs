@@ -61,21 +61,21 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: NumberSequence.new
-    summary: |-
-      Returns a `Datatype.NumberSequence` with the start and end values set to the
-      provided `n`.
-    description: |-
+    summary: |
+      Returns a `Datatype.NumberSequence` with the start and end values set to
+      the provided `n`.
+    description: |
       Returns a `Datatype.NumberSequence` with the start and end values set to
       the provided `n`.
 
-        ```lua
-        local numberSequence = NumberSequence.new(n)
-        -- Equivalent to
-        local numberSequence = NumberSequence.new{
-            NumberSequenceKeypoint.new(0, n),
-            NumberSequenceKeypoint.new(1, n)
-        }
-        ```
+      ```lua
+      local numberSequence = NumberSequence.new(n)
+      -- Equivalent to
+      local numberSequence = NumberSequence.new{
+          NumberSequenceKeypoint.new(0, n),
+          NumberSequenceKeypoint.new(1, n)
+      }
+      ```
     parameters:
       - name: 'n'
         type: number
@@ -85,21 +85,21 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: NumberSequence.new
-    summary: |-
-      Returns a `Datatype.NumberSequence` of two keypoints with `n0` as the start value
-      and `n1` as the end value.
-    description: |-
-      Returns a `Datatype.NumberSequence` of two keypoints with `n0` as the start value
-      and `n1` as the end value.
+    summary: |
+      Returns a `Datatype.NumberSequence` of two keypoints with `n0` as the
+      start value and `n1` as the end value.
+    description: |
+      Returns a `Datatype.NumberSequence` of two keypoints with `n0` as the
+      start value and `n1` as the end value.
 
-        ```lua
-        local numberSequence = NumberSequence.new(n0, n1)
-        -- Equivalent to
-        local numberSequence = NumberSequence.new{
-            NumberSequenceKeypoint.new(0, n0),
-            NumberSequenceKeypoint.new(1, n1)
-        }
-        ```
+      ```lua
+      local numberSequence = NumberSequence.new(n0, n1)
+      -- Equivalent to
+      local numberSequence = NumberSequence.new{
+          NumberSequenceKeypoint.new(0, n0),
+          NumberSequenceKeypoint.new(1, n1)
+      }
+      ```
     parameters:
       - name: n0
         type: number
@@ -113,23 +113,23 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: NumberSequence.new
-    summary: |-
+    summary: |
       Returns a `Datatype.NumberSequence` from an array of
       `Datatype.NumberSequenceKeypoint|NumberSequenceKeypoints`.
-    description: |-
+    description: |
       Returns a `Datatype.NumberSequence` from an array of
       `Datatype.NumberSequenceKeypoint|NumberSequenceKeypoints`. The keypoints
-      must be provided in a non-descending time value order. At least two keypoints must
-      be provided, and they must have a time value of `0` (first) and `1`
-      (last).
+      must be provided in a non-descending time value order. At least two
+      keypoints must be provided, and they must have a time value of `0` (first)
+      and `1` (last).
 
-        ```lua
-        local numberSequence = NumberSequence.new{
-            NumberSequenceKeypoint.new(0, 0),
-            NumberSequenceKeypoint.new(0.5, 0.5, 0.25),
-            NumberSequenceKeypoint.new(1, 1)
-        }
-        ```
+      ```lua
+      local numberSequence = NumberSequence.new{
+          NumberSequenceKeypoint.new(0, 0),
+          NumberSequenceKeypoint.new(0.5, 0.5, 0.25),
+          NumberSequenceKeypoint.new(1, 1)
+      }
+      ```
     parameters:
       - name: Keypoints
         type: Array

@@ -15,21 +15,28 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: PathWaypoint.new
-    summary: Returns a `Datatype.PathWaypoint` object from the given `Datatype.Vector3` position, `Enum.PathWaypointAction` action, and optional string label.
-    description: Returns a `Datatype.PathWaypoint` object from the given `Datatype.Vector3` position, `Enum.PathWaypointAction` action, and optional string label.
+    summary: |
+      Returns a `Datatype.PathWaypoint` object from the given `Datatype.Vector3`
+      position, `Enum.PathWaypointAction` action, and optional string label.
+    description: |
+      Returns a `Datatype.PathWaypoint` object from the given `Datatype.Vector3`
+      position, `Enum.PathWaypointAction` action, and optional string label.
     parameters:
       - name: position
         type: Vector3
         default: ''
-        summary: The 3D position of the waypoint.
+        summary: |
+          The 3D position of the waypoint.
       - name: action
         type: PathWaypointAction
         default: ''
-        summary: The action to perform at the waypoint.
+        summary: |
+          The action to perform at the waypoint.
       - name: label
         type: string
         default: ''
-        summary: The name of the navigation area that generates the waypoint.
+        summary: |
+          The name of the navigation area that generates the waypoint.
     code_samples: []
     tags: []
     deprecation_message: ''

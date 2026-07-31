@@ -26,12 +26,18 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Faces.new
-    summary: Returns a Faces with the corresponding face of each passed `Enum.NormalId` as `true`.
-    description: |-
-      Creates a new Faces given some number of `Enum.NormalId` as arguments. Each NormalId provided indicates the property of the same name in the new Faces will be true.
+    summary: |
+      Returns a Faces with the corresponding face of each passed `Enum.NormalId`
+      as `true`.
+    description: |
+      Creates a new Faces given some number of `Enum.NormalId` as arguments.
+      Each NormalId provided indicates the property of the same name in the new
+      Faces will be true.
 
-      - The `Library.table.unpack()` function can be used to unpack a table of NormalId to be included.
-      - Passing values that are not a `Enum.NormalId` will do nothing; they are ignored silently.
+      - The `Library.table.unpack()` function can be used to unpack a table of
+        NormalId to be included.
+      - Passing values that are not a `Enum.NormalId` will do nothing; they are
+        ignored silently.
     parameters:
       - name: normalIds...
         type: Tuple

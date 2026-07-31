@@ -54,7 +54,7 @@ When your project has the appropriate `Class.Model` object in your workspace, yo
 <tbody>
   <tr>
     <td>Avatar character body</td>
-    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [body inputs](./auto-setup-requirements.md#character-body).</td>
+    <td>`Class.Model` containing one or more `Class.MeshPart` objects that meet Avatar Setup's supported [body inputs](./auto-setup-requirements.md#character-bodies).</td>
     <td>`Class.Model` parenting associated 15 `Class.MeshPart` objects and other expected [avatar components](../avatar/character-bodies/index.md#character-body-components).</td>
   </tr>
   <tr>

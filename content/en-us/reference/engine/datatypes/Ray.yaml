@@ -16,8 +16,10 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Ray.new
-    summary: Returns a `Datatype.Ray` with the given `Origin` and `Direction`.
-    description: Returns a new `Datatype.Ray` with given `Origin` and `Direction`.
+    summary: |
+      Returns a `Datatype.Ray` with the given `Origin` and `Direction`.
+    description: |
+      Returns a new `Datatype.Ray` with given `Origin` and `Direction`.
     parameters:
       - name: Origin
         type: Vector3

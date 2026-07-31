@@ -1,5 +1,5 @@
 ---
-title: Create basic heads
+title: Create basic dynamic heads
 description: The process of creating a basic animatable head in Blender.
 ---
 

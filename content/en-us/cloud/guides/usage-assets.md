@@ -119,7 +119,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
       </td>
       <td>
         <ul>
-          <li>Only content downloaded from [Asset delivery API](../api/asset-delivery.md) is accepted. If you are not trying to download and re-upload meshes, then use [Importer](../../studio/importer.md) to import meshes instead.</li>
+          <li>Only content downloaded from [Asset delivery API](/cloud/reference/domains/assetdelivery) is accepted. If you are not trying to download and re-upload meshes, then use [Importer](../../studio/importer.md) to import meshes instead.</li>
           <li>Not available for updating.</li>
         </ul>
       </td>

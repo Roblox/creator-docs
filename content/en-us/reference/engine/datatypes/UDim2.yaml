@@ -26,50 +26,54 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: UDim2.new
-    summary: |-
-      Returns a new `Datatype.UDim2` with the coordinates of two zero `Datatype.UDim`
-      components representing each axis.
-    description: |-
-      Returns a new `Datatype.UDim2` with the coordinates of two zero `Datatype.UDim`
-      components representing each axis.
+    summary: |
+      Returns a new `Datatype.UDim2` with the coordinates of two zero
+      `Datatype.UDim` components representing each axis.
+    description: |
+      Returns a new `Datatype.UDim2` with the coordinates of two zero
+      `Datatype.UDim` components representing each axis.
     parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim2.new
-    summary: |-
-      Returns a new `Datatype.UDim2` given the coordinates of the two `Datatype.UDim`
-      components representing each axis.
-    description: |-
-      Returns a new `Datatype.UDim2` given the coordinates of the two `Datatype.UDim`
-      components representing each axis.
+    summary: |
+      Returns a new `Datatype.UDim2` given the coordinates of the two
+      `Datatype.UDim` components representing each axis.
+    description: |
+      Returns a new `Datatype.UDim2` given the coordinates of the two
+      `Datatype.UDim` components representing each axis.
     parameters:
       - name: xScale
         type: number
         default: 0
-        summary: The **X** dimension scale.
+        summary: |
+          The **X** dimension scale.
       - name: xOffset
         type: number
         default: 0
-        summary: The **X** dimension offset.
+        summary: |
+          The **X** dimension offset.
       - name: yScale
         type: number
         default: 0
-        summary: The **Y** dimension scale.
+        summary: |
+          The **Y** dimension scale.
       - name: yOffset
         type: number
         default: 0
-        summary: The **Y** dimension offset.
+        summary: |
+          The **Y** dimension offset.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim2.new
-    summary: |-
-      Returns a new `Datatype.UDim2` from the given `Datatype.UDim` objects representing
-      the **X** and **Y** dimensions, respectively.
-    description: |-
-      Returns a new `Datatype.UDim2` from the given `Datatype.UDim` objects representing
-      the **X** and **Y** dimensions, respectively.
+    summary: |
+      Returns a new `Datatype.UDim2` from the given `Datatype.UDim` objects
+      representing the **X** and **Y** dimensions, respectively.
+    description: |
+      Returns a new `Datatype.UDim2` from the given `Datatype.UDim` objects
+      representing the **X** and **Y** dimensions, respectively.
     parameters:
       - name: x
         type: UDim
@@ -83,10 +87,12 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: UDim2.fromScale
-    summary: Returns a new `Datatype.UDim2` with the given scale components and no offsets.
-    description: |-
-      Returns a new `Datatype.UDim2` with the given scalar coordinates and no offsets.
-      Equivalent to:
+    summary: |
+      Returns a new `Datatype.UDim2` with the given scale components and no
+      offsets.
+    description: |
+      Returns a new `Datatype.UDim2` with the given scalar coordinates and no
+      offsets. Equivalent to:
 
       ```lua
       local xScale, yScale = 0.5, 0.25
@@ -105,9 +111,12 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: UDim2.fromOffset
-    summary: Returns a new `Datatype.UDim2` with the given offset components and no scaling.
-    description: |-
-      Returns a new `Datatype.UDim2` with the given offset coordinates and no scaling. Equivalent to:
+    summary: |
+      Returns a new `Datatype.UDim2` with the given offset components and no
+      scaling.
+    description: |
+      Returns a new `Datatype.UDim2` with the given offset coordinates and no
+      scaling. Equivalent to:
 
       ```lua
       local xOffset, yOffset = 100, 50

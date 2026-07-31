@@ -26,8 +26,9 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: OverlapParams.new
-    summary: Returns a blank `Datatype.OverlapParams` object.
-    description: |-
+    summary: |
+      Returns a blank `Datatype.OverlapParams` object.
+    description: |
       Returns a blank `Datatype.OverlapParams` object. Unlike other data type
       constructors, this constructor does not have any parameters, so you should
       set its properties appropriately.

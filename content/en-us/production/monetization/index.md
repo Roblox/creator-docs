@@ -108,17 +108,7 @@ A [developer product](../../production/monetization/developer-products.md) is an
 
 ### Private servers
 
-A [private server](../../production/monetization/private-servers.md) is a subscription-based feature that allows a user to decide who can play a game with them. While private servers can be free, you can also use private servers as a method of monetization by charging users who want to access private servers a **monthly Robux fee**. Private servers are often purchased for:
-
-- Playing games just with friends.
-
-- Holding gatherings such as classes, meetings, or parties.
-
-- Recording and/or streaming without other users.
-
-- Gathering in-game resources.
-
-<img src="../../assets/monetization/private-servers/Example-Purchase-Dialog.png" width="400" />
+A [private server](../../production/monetization/private-servers.md) is a subscription-based feature that allows a user to decide who can play a game with them. While private servers can be free, you can also use private servers as a method of monetization by charging users who want to access private servers a **monthly Robux fee**.
 
 ### Catalog fees and commissions
 

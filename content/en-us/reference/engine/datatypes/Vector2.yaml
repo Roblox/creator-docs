@@ -53,8 +53,10 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Vector2.new
-    summary: Returns a `Datatype.Vector2` from the given x and y components.
-    description: Returns a `Datatype.Vector2` from the given x and y components.
+    summary: |
+      Returns a `Datatype.Vector2` from the given x and y components.
+    description: |
+      Returns a `Datatype.Vector2` from the given x and y components.
     parameters:
       - name: x
         type: number
@@ -70,8 +72,9 @@ constructors:
 constants:
   - name: Vector2.zero
     type: Vector2
-    summary: A `Datatype.Vector2` with a magnitude of zero.
-    description: |-
+    summary: |
+      A `Datatype.Vector2` with a magnitude of zero.
+    description: |
       A `Datatype.Vector2` with a magnitude of zero.
 
       This API member is a **constant**, and must be accessed through the
@@ -86,8 +89,9 @@ constants:
     deprecation_message: ''
   - name: Vector2.one
     type: Vector2
-    summary: A `Datatype.Vector2` with a value of 1 on every axis.
-    description: |-
+    summary: |
+      A `Datatype.Vector2` with a value of 1 on every axis.
+    description: |
       A `Datatype.Vector2` with a value of 1 on every axis.
 
       This API member is a **constant**, and must be accessed through the
@@ -102,8 +106,9 @@ constants:
     deprecation_message: ''
   - name: Vector2.xAxis
     type: Vector2
-    summary: A `Datatype.Vector2` with a value of 1 on the X axis.
-    description: |-
+    summary: |
+      A `Datatype.Vector2` with a value of 1 on the X axis.
+    description: |
       A `Datatype.Vector2` with a value of 1 on the X axis.
 
       This API member is a **constant**, and must be accessed through the
@@ -118,8 +123,9 @@ constants:
     deprecation_message: ''
   - name: Vector2.yAxis
     type: Vector2
-    summary: A `Datatype.Vector2` with a value of 1 on the Y axis.
-    description: |-
+    summary: |
+      A `Datatype.Vector2` with a value of 1 on the Y axis.
+    description: |
       A `Datatype.Vector2` with a value of 1 on the Y axis.
 
       This API member is a **constant**, and must be accessed through the

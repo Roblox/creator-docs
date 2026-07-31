@@ -17,8 +17,9 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Color3.new
-    summary: Returns a `Datatype.Color3` with the given red, green, and blue values.
-    description: |-
+    summary: |
+      Returns a `Datatype.Color3` with the given red, green, and blue values.
+    description: |
       Returns a `Datatype.Color3` with the given red, green, and blue values.
       The parameters should be within the range of 0 to 1.
 
@@ -44,10 +45,10 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: Color3.fromRGB
-    summary: |-
-      Returns a `Datatype.Color3` from given components within the range of 0 to
-      255.
-    description: |-
+    summary: |
+      Returns a `Datatype.Color3` from given components within the range of 0
+      to 255.
+    description: |
       Creates a `Datatype.Color3` with the given red, green, and blue
       components. Unlike most other `Datatype.Color3` functions, the parameters
       for this function should be within the range of 0 to 255.
@@ -74,10 +75,10 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: Color3.fromHSV
-    summary: |-
+    summary: |
       Returns a `Datatype.Color3` from the given hue, saturation, and value
       components.
-    description: |-
+    description: |
       Creates a `Datatype.Color3` with the given hue, saturation, and value. The
       parameters should be within the range of 0 to 1.
 
@@ -103,8 +104,9 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: Color3.fromHex
-    summary: Returns a `Datatype.Color3` from a given hex value.
-    description: |-
+    summary: |
+      Returns a `Datatype.Color3` from a given hex value.
+    description: |
       Returns a new `Datatype.Color3` from a six- or three-character hexadecimal
       format, case insensitive. A preceding hashtag (`#`) is ignored, if
       present. This function interprets the given string as a typical web hex

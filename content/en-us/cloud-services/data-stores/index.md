@@ -18,7 +18,7 @@ By default, games tested in Studio can't access data stores, so you must first e
 
 To enable Studio access in a [published](../../production/publishing/publish-games-and-places.md) game:
 
-1. Open Studio's **File**&nbsp;⟩ **Experience Settings** window.
+1. Open Studio's **File** ⟩ **Experience Settings** window.
 2. Navigate to **Security**.
 3. Enable the **Enable Studio Access to API Services** toggle.
 4. Click **Save**.

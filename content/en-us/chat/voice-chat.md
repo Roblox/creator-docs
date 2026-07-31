@@ -13,25 +13,25 @@ Voice Chat is currently available to all 13+ age-verified users in a specific se
 
 ## Enable Voice Chat
 
-Voice Chat is enabled by default for verified 13+ users on all new games with a maximum of 100 players. To activate voice for existing games or disable it for new ones:
+Voice Chat is enabled by default for verified 13+ users on all new games with a maximum of 100 players. Enabling Voice Chat is required to use the speech-to-text API.
+
+To activate voice for existing games or disable it for new ones:
 
 1. Open your game in Studio.
-1. Open **File**&nbsp;⟩ **Experience Settings**.
+1. Open **File** ⟩ **Experience Settings**.
 1. Navigate to the **Communication** tab on the left side of the window.
 1. Toggle **Enable Voice Chat** to your desired setting.
-1. <Chip label="OPTIONAL" size="small" variant="outlined" /> For greater communication among players within your game, toggle on **Enable&nbsp;Camera** to allow eligible players to animate their avatar with their movement.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> For greater communication among players within your game, toggle on **Enable Camera** to allow eligible players to animate their avatar with their movement.
 1. [Publish](../production/publishing/publish-games-and-places.md) the place to save the changes.
-
-By enabling this setting, eligible 13+ users can opt-in to Voice Chat within any game that supports the feature. Enabling Voice Chat is required to use the speech-to-text API.
 
 ### Set maximum players
 
 If you previously set the maximum number of players in a place to more than 100, you'll need to reduce it to support Voice Chat.
 
-1. In the left-hand navigation of the **Experience Settings** window, select **Places**. Every place within your game displays.
-1. Click the **&ctdot;** button next to the place with more than 100 players, then select **Configure Place**.
-1. In the **Max Players** field, enter any number less than or equal to 100.
-1. Click the **Save** button and then [publish](../production/publishing/publish-games-and-places.md) to save the changes.
+1. Select the game on the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and then navigate to **Configure** ⟩ **Places**.
+1. Select the desired place and then navigate to Access in the left column.
+1. For **Maximum Visitor Count**, enter a number less than or equal to 100.
+1. Click the **Save Changes** button.
 
 When you update the maximum number of players in a place to fewer than 100, there may be servers already configured to a different, higher number. Since those servers won't support Voice Chat, it's recommended to [restart servers](../projects/update-games.md#restart-servers).
 
