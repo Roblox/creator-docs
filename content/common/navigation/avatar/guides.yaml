@@ -94,14 +94,8 @@ navigation:
     path: /avatar/accessory-fitting-tool
   - title: Photo-to-Avatar generation
     path: /avatar/avatar-generation
-  - title: Third-party tooling
-    section:
-      - title: Roblox Blender plugin
-        path: /art/modeling/roblox-blender-plugin
-      - title: Calisthenics Tool
-        path: /art/modeling/calisthenics-tool
-      - title: Clothing Validation Tool
-        path: /art/accessories/validation-tool
+  - title: Roblox Blender plugin
+    path: /art/modeling/roblox-blender-plugin
   - heading: Monetize
   - title: Overview
     path: /monetize-avatar

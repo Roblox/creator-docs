@@ -65401,6 +65401,623 @@
           "url": "https://create.roblox.com/docs/cloud/reference/features/avatars#avatar_get_v3_outfits__userOutfitId__details"
         }
       }
+    },
+    "/virtual-events/v3/game-events/{eventId}": {
+      "delete": {
+        "tags": ["Game Events"],
+        "summary": "Permanently delete an existing game event. Returns 204 No Content on success.\r\nPermission is enforced via an explicit pre-check: callers that can read but not edit\r\nreceive 403; callers that cannot read receive 404.",
+        "operationId": "GameEvent_Delete",
+        "parameters": [
+          {
+            "name": "eventId",
+            "in": "path",
+            "description": "Game event ID to delete (from path).",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The event was deleted."
+          },
+          "401": {
+            "description": "Caller is not authenticated.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VirtualEventsApi.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Caller can read the event but lacks delete permission.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VirtualEventsApi.ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Event does not exist or caller cannot see it.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VirtualEventsApi.ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The backend rejected the delete after the permission pre-check passed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VirtualEventsApi.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 20
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 20
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.event:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.event:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvent_Delete"
+        }
+      },
+      "get": {
+        "tags": ["Game Events"],
+        "summary": "Get a single game event by ID.\r\nUse `?fields=` to request a subset of fields; unknown field names return 400.",
+        "operationId": "GameEvent_Get",
+        "parameters": [
+          {
+            "name": "eventId",
+            "in": "path",
+            "description": "Game event ID (from path).",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Optional field mask (comma-separated; omit or use * for all fields).",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested game event.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameEventResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed `?fields=` or invalid event ID.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VirtualEventsApi.ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Event does not exist.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VirtualEventsApi.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.event:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.event:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvent_Get"
+        }
+      },
+      "patch": {
+        "tags": ["Game Events"],
+        "summary": "Partially update a game event. Only fields present in the request body are changed; omitted or null fields are left\r\nunchanged. Empty body is a no-op and returns the current game event resource.",
+        "operationId": "GameEvent_Update",
+        "parameters": [
+          {
+            "name": "eventId",
+            "in": "path",
+            "description": "Game event ID from the route.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Partial update payload. Omitted or null fields are treated as no change.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateGameEventRequest"
+                  }
+                ],
+                "description": "Request body for `PATCH /v3/game-events/{eventId}`.\r\nEvery field is optional; null = \"no change\". An empty body is a no-op and returns the current resource."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateGameEventRequest"
+                  }
+                ],
+                "description": "Request body for `PATCH /v3/game-events/{eventId}`.\r\nEvery field is optional; null = \"no change\". An empty body is a no-op and returns the current resource."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateGameEventRequest"
+                  }
+                ],
+                "description": "Request body for `PATCH /v3/game-events/{eventId}`.\r\nEvery field is optional; null = \"no change\". An empty body is a no-op and returns the current resource."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateGameEventRequest"
+                  }
+                ],
+                "description": "Request body for `PATCH /v3/game-events/{eventId}`.\r\nEvery field is optional; null = \"no change\". An empty body is a no-op and returns the current resource."
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated game event resource.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameEventResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation failure or backend reject.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VirtualEventsApi.ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Caller is not authenticated.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VirtualEventsApi.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Caller can read but lacks edit permission.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VirtualEventsApi.ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Event not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VirtualEventsApi.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 20
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 20
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.event:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.event:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvent_Update"
+        }
+      }
+    },
+    "/virtual-events/v3/universes/{universeId}/game-events": {
+      "get": {
+        "tags": ["Game Events"],
+        "summary": "List game events under a universe.\r\nUse `?fields=` to trim the response payload.\r\nResponse is always 200 (empty list for unknown universe).",
+        "operationId": "GameEvents_List",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "Universe that owns the events (from path).",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Requested page size.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "Continuation token from a prior page's `nextPageToken`.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reverse",
+            "in": "query",
+            "description": "When true, treats `pageToken` as a backward-pagination cursor.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "startsBefore",
+            "in": "query",
+            "description": "Upper bound on event start time.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "startsAfter",
+            "in": "query",
+            "description": "Lower bound on event start time.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endsBefore",
+            "in": "query",
+            "description": "Upper bound on event end time.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endsAfter",
+            "in": "query",
+            "description": "Lower bound on event end time. Defaults to now when neither bound is set.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "visibility",
+            "in": "query",
+            "description": "Visibility filter.",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/EventVisibility"
+                }
+              ]
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Field mask (comma-separated; omit or `*` for all fields).",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of game events.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginatedGameEventsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid `?fields=`, out-of-range `pageSize`, or bad query parameter.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VirtualEventsApi.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.event:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.event:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvents_List"
+        }
+      },
+      "post": {
+        "tags": ["Game Events"],
+        "summary": "Create a new game event. Returns the full resource on success.",
+        "operationId": "GameEvents_Create",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "Universe that will own the new event (from path).",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The create payload.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateGameEventRequest"
+                  }
+                ],
+                "description": "Request body for `POST /v3/universes/{universeId}/game-events`.\r\n`universeId` comes from the URL path, not the body.\r\nVirtualEventsApi.Models.V3.Request.CreateGameEventRequest.Visibility is restricted to Public/Private — Moderated is server-side only.\r\nNullable CLR properties allow JSON binding to materialize incomplete requests; required\r\nfields are enforced by the virtual-events gRPC service when `CreateVirtualEvent` runs."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateGameEventRequest"
+                  }
+                ],
+                "description": "Request body for `POST /v3/universes/{universeId}/game-events`.\r\n`universeId` comes from the URL path, not the body.\r\nVirtualEventsApi.Models.V3.Request.CreateGameEventRequest.Visibility is restricted to Public/Private — Moderated is server-side only.\r\nNullable CLR properties allow JSON binding to materialize incomplete requests; required\r\nfields are enforced by the virtual-events gRPC service when `CreateVirtualEvent` runs."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateGameEventRequest"
+                  }
+                ],
+                "description": "Request body for `POST /v3/universes/{universeId}/game-events`.\r\n`universeId` comes from the URL path, not the body.\r\nVirtualEventsApi.Models.V3.Request.CreateGameEventRequest.Visibility is restricted to Public/Private — Moderated is server-side only.\r\nNullable CLR properties allow JSON binding to materialize incomplete requests; required\r\nfields are enforced by the virtual-events gRPC service when `CreateVirtualEvent` runs."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateGameEventRequest"
+                  }
+                ],
+                "description": "Request body for `POST /v3/universes/{universeId}/game-events`.\r\n`universeId` comes from the URL path, not the body.\r\nVirtualEventsApi.Models.V3.Request.CreateGameEventRequest.Visibility is restricted to Public/Private — Moderated is server-side only.\r\nNullable CLR properties allow JSON binding to materialize incomplete requests; required\r\nfields are enforced by the virtual-events gRPC service when `CreateVirtualEvent` runs."
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The newly-created game event resource.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameEventResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation failure or server-side reject (moderation, age requirement, ...).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VirtualEventsApi.ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Caller is not authenticated.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VirtualEventsApi.ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Caller lacks permission or quota is exhausted.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VirtualEventsApi.ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 20
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 20
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.event:write",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.event:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvents_Create"
+        }
+      }
     }
   },
   "components": {
@@ -66288,6 +66905,24 @@
         },
         "additionalProperties": false
       },
+      "CategoryResponse": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/EventCategory"
+              }
+            ],
+            "description": "The event category type of an event.\r\n            \r\nMirror of:\r\nhttps://github.rbx.com/Roblox/virtual-events/blob/master/services/virtual-events/src/Implementations/Types/EventCategory.cs"
+          },
+          "rank": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "ClientStatusGetRequest": {
         "type": "object",
         "properties": {
@@ -66502,6 +67137,31 @@
         "additionalProperties": false,
         "description": "A representation of a configuration repository with just the values (no metadata or decorators).\r\nThis response can be used as a direct copy-and-paste to the draft update endpoints."
       },
+      "ConfigResponse": {
+        "type": "object",
+        "properties": {
+          "recurrence": {
+            "type": "string",
+            "description": "Cron expression defining the event's recurrence schedule, if any.",
+            "nullable": true
+          },
+          "recurrenceEndTime": {
+            "type": "string",
+            "description": "The latest UTC timestamp at which automatic recurrence scheduling can occur.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "notificationAudience": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/EventNotificationAudience"
+              }
+            ],
+            "description": "The audience that should receive notifications for this event."
+          }
+        },
+        "additionalProperties": false
+      },
       "ConfigValueFull": {
         "type": "object",
         "properties": {
@@ -66644,6 +67304,123 @@
           }
         },
         "description": "Creates a new entry with the value provided."
+      },
+      "CreateGameEventConfigRequest": {
+        "type": "object",
+        "properties": {
+          "recurrence": {
+            "type": "string",
+            "description": "Cron expression for recurrence. Null = no recurrence. Validated server-side.",
+            "nullable": true
+          },
+          "recurrenceEndTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "notificationAudience": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/EventNotificationAudience"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Optional event configuration block (recurrence + notification audience) on the v3 Create body."
+      },
+      "CreateGameEventRequest": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Event title. Clients must provide a non-empty value.",
+            "nullable": true
+          },
+          "subtitle": {
+            "type": "string",
+            "description": "Event subtitle. Clients must provide a non-empty value.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional event description.",
+            "nullable": true
+          },
+          "startTime": {
+            "type": "string",
+            "description": "Event start time. Clients must provide a timestamp such as\r\n`yyyy-MM-ddTHH:mm:ss.fffzzz` or `yyyy-MM-ddTHH:mm:ss.fffZ`.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "endTime": {
+            "type": "string",
+            "description": "Event end time. Clients must provide a timestamp such as\r\n`yyyy-MM-ddTHH:mm:ss.fffzzz` or `yyyy-MM-ddTHH:mm:ss.fffZ`, and it must be after\r\nVirtualEventsApi.Models.V3.Request.CreateGameEventRequest.StartTime.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "visibility": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/EventVisibility"
+              }
+            ],
+            "description": "Must be `Public` or `Private`; `Moderated` is server-managed and rejected.",
+            "nullable": true
+          },
+          "groupId": {
+            "type": "integer",
+            "description": "Group host. When omitted, the authenticated user is the host.",
+            "format": "int64",
+            "nullable": true
+          },
+          "placeId": {
+            "type": "integer",
+            "description": "Optional venue place ID. When omitted, the event is created in the universe root place.",
+            "format": "int64",
+            "nullable": true
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EventRankedCategory"
+            },
+            "nullable": true
+          },
+          "thumbnails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EventMedia"
+            },
+            "nullable": true
+          },
+          "config": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CreateGameEventConfigRequest"
+              }
+            ],
+            "description": "Optional event configuration block (recurrence + notification audience) on the v3 Create body.",
+            "nullable": true
+          },
+          "featuringStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FeaturingStatus"
+              }
+            ],
+            "description": "Optional featuring status flag. When omitted, defaults to \"not featured\".",
+            "nullable": true
+          },
+          "tagline": {
+            "type": "string",
+            "description": "Optional tagline. Length and content are validated server-side.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request body for `POST /v3/universes/{universeId}/game-events`.\r\n`universeId` comes from the URL path, not the body.\r\nVirtualEventsApi.Models.V3.Request.CreateGameEventRequest.Visibility is restricted to Public/Private — Moderated is server-side only.\r\nNullable CLR properties allow JSON binding to materialize incomplete requests; required\r\nfields are enforced by the virtual-events gRPC service when `CreateVirtualEvent` runs."
       },
       "CreateMatchmakingPlayerAttributeDefinitionRequest": {
         "type": "object",
@@ -67867,6 +68644,80 @@
         "additionalProperties": false,
         "description": "This is the base class for all custom Exceptions that are thrown in this API."
       },
+      "EventCategory": {
+        "enum": [
+          "contentUpdate",
+          "locationUpdate",
+          "systemUpdate",
+          "activity",
+          "newContent",
+          "itemDrop",
+          "newSeason",
+          "newLocation",
+          "newMap",
+          "moreLevels",
+          "newFeature",
+          "earlyAccess",
+          "expansion",
+          "challenge",
+          "quest",
+          "festival"
+        ],
+        "type": "string",
+        "description": "The event category type of an event.\r\n            \r\nMirror of:\r\nhttps://github.rbx.com/Roblox/virtual-events/blob/master/services/virtual-events/src/Implementations/Types/EventCategory.cs"
+      },
+      "EventMedia": {
+        "type": "object",
+        "properties": {
+          "mediaId": {
+            "type": "integer",
+            "description": "The ID of the media.",
+            "format": "int64"
+          },
+          "rank": {
+            "type": "integer",
+            "description": "The rank of the media.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Representation of some media associated with an event."
+      },
+      "EventNotificationAudience": {
+        "enum": ["all", "rsvp", "subscribed", "group", "none"],
+        "type": "string",
+        "description": "The notification audience for an experience event"
+      },
+      "EventRankedCategory": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/EventCategory"
+              }
+            ],
+            "description": "The category content."
+          },
+          "rank": {
+            "type": "integer",
+            "description": "The rank of the category.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Representation of the category associated with an event."
+      },
+      "EventVisibility": {
+        "enum": ["private", "public", "moderated"],
+        "type": "string",
+        "description": "The visibility of a virtual event."
+      },
+      "FeaturingStatus": {
+        "enum": ["invalid", "enabled", "disabled"],
+        "type": "string",
+        "description": "The featuring status of a virtual event."
+      },
       "FilterField": {
         "enum": ["EngineVersion", "PlaceVersion", "ALL"],
         "type": "string",
@@ -68001,6 +68852,141 @@
         },
         "additionalProperties": false,
         "description": "ForecastUpdateResponse is used to return information about the forecasted update of a place."
+      },
+      "GameEventResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique id of the game event. Always populated. Serialized as a string to\r\npreserve precision for clients (event IDs exceed 2^53).",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayTitle": {
+            "type": "string",
+            "description": "Localized title (caller's locale). Populated only when `displayTitle` is in the mask.",
+            "nullable": true
+          },
+          "subtitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "displaySubtitle": {
+            "type": "string",
+            "description": "Localized subtitle. Populated only when `displaySubtitle` is in the mask.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayDescription": {
+            "type": "string",
+            "description": "Localized description. Populated only when `displayDescription` is in the mask.",
+            "nullable": true
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "universeId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "placeId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "host": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/HostResponse"
+              }
+            ],
+            "description": "Host block. VirtualEventsApi.Models.V3.Response.HostResponse.HostName and VirtualEventsApi.Models.V3.Response.HostResponse.HasVerifiedBadge are omitted when host-details resolution failed.",
+            "nullable": true
+          },
+          "visibility": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/EventVisibility"
+              }
+            ],
+            "nullable": true
+          },
+          "featuringStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FeaturingStatus"
+              }
+            ],
+            "nullable": true
+          },
+          "tagline": {
+            "type": "string",
+            "description": "Tagline for featuring review; visible to curators only when featuring is opted into.",
+            "nullable": true
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CategoryResponse"
+            },
+            "nullable": true
+          },
+          "thumbnails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ThumbnailResponse"
+            },
+            "nullable": true
+          },
+          "allThumbnailsCreated": {
+            "type": "boolean",
+            "description": "Whether all requested thumbnails were successfully persisted. Returned on Create/Update.",
+            "nullable": true
+          },
+          "config": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ConfigResponse"
+              }
+            ],
+            "nullable": true
+          },
+          "userRsvpStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/RsvpStatus"
+              }
+            ],
+            "description": "Authenticated caller's RSVP status. Omitted for unauthenticated callers.",
+            "nullable": true
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "v3 game event response. All fields except VirtualEventsApi.Models.V3.Response.GameEventResponse.Id are gated by the `?fields=` mask."
       },
       "GamePassConfigV2": {
         "required": [
@@ -69231,6 +70217,38 @@
       "HomepageThumbnailStatus": {
         "enum": ["Active", "Spammy"],
         "type": "string"
+      },
+      "HostResponse": {
+        "type": "object",
+        "properties": {
+          "hostType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/HostType"
+              }
+            ],
+            "description": "The type of host of a virtual event."
+          },
+          "hostId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "hostName": {
+            "type": "string",
+            "nullable": true
+          },
+          "hasVerifiedBadge": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Host block. VirtualEventsApi.Models.V3.Response.HostResponse.HostName and VirtualEventsApi.Models.V3.Response.HostResponse.HasVerifiedBadge are omitted when host-details resolution failed."
+      },
+      "HostType": {
+        "enum": ["user", "group"],
+        "type": "string",
+        "description": "The type of host of a virtual event."
       },
       "HttpContent": {
         "type": "object",
@@ -71759,6 +72777,28 @@
         "x-oneOf": {
           "Value": ["value"]
         }
+      },
+      "PaginatedGameEventsResponse": {
+        "type": "object",
+        "properties": {
+          "gameEvents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GameEventResponse"
+            },
+            "nullable": true
+          },
+          "nextPageToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPageToken": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Paginated response for v3 LIST. Page tokens are null at the collection boundaries."
       },
       "PersonalizedConfigStatus": {
         "enum": ["Active", "Inactive"],
@@ -88542,6 +89582,11 @@
         "additionalProperties": false,
         "description": "One RPN token: either a logical/comparison CreatorConfigsPublicApi.Models.ConditionalRuleOperator (proto JSON `OPERATOR_*`) or an operand object."
       },
+      "RsvpStatus": {
+        "enum": ["none", "going", "maybeGoing", "notGoing"],
+        "type": "string",
+        "description": "The type of RSVP statuses."
+      },
       "RuleDeltaPayload": {
         "type": "object",
         "properties": {
@@ -89716,6 +90761,20 @@
         "enum": ["Reviewing", "Rejected", "Approved", "Unspecified"],
         "type": "string"
       },
+      "ThumbnailResponse": {
+        "type": "object",
+        "properties": {
+          "mediaId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "rank": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "ToolboxService.Asset": {
         "type": "object",
         "properties": {
@@ -90652,6 +91711,109 @@
         },
         "description": "Updates the entry provided with a new value."
       },
+      "UpdateGameEventConfigRequest": {
+        "type": "object",
+        "properties": {
+          "recurrence": {
+            "type": "string",
+            "description": "New cron recurrence expression. Null = no change. Validated server-side.",
+            "nullable": true
+          },
+          "recurrenceEndTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "notificationAudience": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/EventNotificationAudience"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Optional config block on the v3 PATCH body. Null sub-fields = no change."
+      },
+      "UpdateGameEventRequest": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "subtitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "visibility": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/EventVisibility"
+              }
+            ],
+            "description": "Must be `Public` or `Private`; other values are rejected. Null = no change.",
+            "nullable": true
+          },
+          "placeId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EventRankedCategory"
+            },
+            "nullable": true
+          },
+          "thumbnails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EventMedia"
+            },
+            "nullable": true
+          },
+          "config": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/UpdateGameEventConfigRequest"
+              }
+            ],
+            "description": "Optional config block on the v3 PATCH body. Null sub-fields = no change.",
+            "nullable": true
+          },
+          "featuringStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FeaturingStatus"
+              }
+            ],
+            "nullable": true
+          },
+          "tagline": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request body for `PATCH /v3/game-events/{eventId}`.\r\nEvery field is optional; null = \"no change\". An empty body is a no-op and returns the current resource."
+      },
       "UpdateInstanceMetadata": {
         "type": "object",
         "properties": {},
@@ -91435,6 +92597,33 @@
           }
         },
         "additionalProperties": false
+      },
+      "VirtualEventsApi.ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {}
       },
       "VotingModel": {
         "type": "object",
@@ -92818,6 +94007,21 @@
           "patch_legacy_game_internationalization_v1_developer_products__developerProductId__name_language_codes__languageCode_",
           "gameinternationalization_patch_v1_developer_products__developerProductId__name_language_codes__languageCode_",
           "thumbnails_get_v1_developer_products_icons"
+        ]
+      }
+    },
+    {
+      "name": "Game Events",
+      "description": "Create and manage scheduled game events for a universe — announce content\nupdates, drops, and live moments, and let players discover and RSVP to them.\n\nCommon use cases include:\n\n- **Create an event**: Publish a game event for a universe with a title, schedule, visibility, categories, and thumbnails\n- **List and read events**: Page through a universe's game events or fetch a single event, using an optional `fields` mask to trim the payload\n- **Update or cancel**: Patch event details or delete a game event\n",
+      "x-roblox-tag-info": {
+        "path": "virtual-events",
+        "content": "HTTP APIs for creating and managing game events for a universe on Roblox.",
+        "ordering": [
+          "GameEvents_List",
+          "GameEvents_Create",
+          "GameEvent_Get",
+          "GameEvent_Update",
+          "GameEvent_Delete"
         ]
       }
     },
