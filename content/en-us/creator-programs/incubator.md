@@ -20,5 +20,6 @@ Small, experienced teams who have a strong prototype or plan to build one, and a
 ## How to apply
 
 For more information on the selection criteria, FAQs, and the application process, click the following button.
+<Alert severity="info">Applications are currently closed. Check back here again in the future.</Alert>
 
 <Button href="https://create.roblox.com/build" size='large' variant='contained' style={{width:200}}>Apply</Button>
