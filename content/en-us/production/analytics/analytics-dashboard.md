@@ -115,7 +115,7 @@ You can filter by the following metrics:
   </tr>
   <tr>
     <td>Memory group (only applicable to some performance metrics)</td>
-    <td>&lt;2GB, 2GB-4GB, 4GB-8GB, 8GB+</td>
+    <td>&lt;2 GB, 2-4 GB, 4-8 GB, &gt;8 GB</td>
     <td>Can help you identify devices that aren't performing well in your game.</td>
   </tr>
 </tbody></table>

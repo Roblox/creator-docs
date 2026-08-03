@@ -10,9 +10,9 @@ You receive a commission every time users purchase your item. If users purchase 
 
 ## Upload fees
 
-To upload either a 2D or 3D item to the Marketplace, you must:
+To upload an avatar asset to the Marketplace, you must:
 
-1. Verify your account through [government ID](../production/publishing/account-verification.md#verify-through-government-id) or linked [parental account](https://about.roblox.com/parental-controls).
+1. Verify your account through your own [government ID](../production/publishing/account-verification.md#verify-through-government-id) or a linked [parental account](https://about.roblox.com/parental-controls) with government ID verification.
 2. Pay an upload fee of **80 Robux** per submission.
 
 In general, upload fees are not refunded if an item is rejected through moderation. If your asset clears the uploading process, your asset is ready to publish to the Marketplace.

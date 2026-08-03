@@ -154,7 +154,7 @@ To begin adding a new supported language, you need to manually add the country c
 
 <ul>
 <li>Max total entries: **10,000**</li>
-<li>Max `.csv` file size: **2MB**</li>
+<li>Max `.csv` file size: **2 MB**</li>
 <li>Max number of modified or added entries per `.csv` upload: **1,000**</li>
 </ul>
 </Alert>

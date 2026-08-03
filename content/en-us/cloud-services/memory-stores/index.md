@@ -43,7 +43,7 @@ Memory stores have an eviction policy based on expiration time, also known as ti
 
 ### Memory size quota
 
-The memory quota limits the total amount of memory that a game can consume. It's not a fixed value; instead, it changes over time depending on the number of users in the game according to the formula **64KB + 1.2KB \* [number of users]**. The quota applies on the game level instead of the server level.
+The memory quota limits the total amount of memory that a game can consume. It's not a fixed value; instead, it changes over time depending on the number of users in the game according to the formula **64 KB + 1.2 KB \* [number of users]**. The quota applies on the game level instead of the server level.
 
 When users join the game, the additional memory quota is available immediately. When users leave the game, the quota doesn't reduce immediately. There's a traceback period of eight days before the quota reevaluates to a lower value.
 
@@ -142,7 +142,7 @@ The following table lists and describes all status codes of API responses availa
     </tr>
     <tr>
       <td>DataStructureMemoryOverLimit</td>
-      <td>Exceeds data structure level memory size limit (100MB).</td>
+      <td>Exceeds data structure level memory size limit (100 MB).</td>
     </tr>
     <tr>
       <td>DataUpdateConflict</td>
@@ -186,7 +186,7 @@ The following table lists and describes all status codes of API responses availa
     </tr>
     <tr>
       <td>ItemValueSizeTooLarge</td>
-      <td>Value size exceeds limit (32KB).</td>
+      <td>Value size exceeds limit (32 KB).</td>
     </tr>
   </tbody>
 </table>

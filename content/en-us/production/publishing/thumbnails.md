@@ -196,7 +196,7 @@ To set up thumbnail personalization:
 
 1. In the **Home Page** tab, click **Edit active thumbnails**.
 2. Upload new thumbnails or activate existing thumbnails.
-   - To upload new thumbnails, click **Upload thumbnails** and select and confirm the images you want to use. Make sure to keep these images under 3MB and 1920×1080 pixels.
+   - To upload new thumbnails, click **Upload thumbnails** and select and confirm the images you want to use. Make sure to keep these images under 3 MB and 1920×1080 pixels.
    - To activate existing thumbnails, enable the **Active** checkbox next to 2-5 thumbnails.
 3. Click **Save changes**.
 4. In the **Start new thumbnail personalization?** dialog, click **Start**. The banner in the **Home Page** tab updates to indicate that thumbnail personalization is active.
