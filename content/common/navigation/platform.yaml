@@ -23,6 +23,9 @@ navigation:
     path: /scale
   - title: Monetize
     path: /monetize
+    section:
+      - title: Discover ad placements
+        path: /production/ad-placements/
   - title: Guidelines and policies
     section:
       - title: Safety on Roblox

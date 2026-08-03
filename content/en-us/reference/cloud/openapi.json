@@ -38899,12 +38899,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Groups.Api.GroupDetailResponse"
+                  "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Api.GroupDetailResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.Groups.Api.GroupDetailResponse"
+                  "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Api.GroupDetailResponse"
                 }
               }
             }
@@ -39955,6 +39955,7 @@
     },
     "/v1/groups/{groupId}/community-tier/evaluate": {
       "post": {
+        "tags": ["Groups"],
         "parameters": [
           {
             "in": "path",
@@ -39999,7 +40000,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_post_v1_groups__groupId__community_tier_evaluate"
+        }
       }
     },
     "/v1/groups/{groupId}/configuration": {
@@ -63146,6 +63150,7 @@
     },
     "/v2/sponsored-games": {
       "get": {
+        "tags": ["Advertising"],
         "summary": "Gets a page of Roblox.AdConfiguration.Api.SponsoredGameV2Model with specified input parameters.",
         "parameters": [
           {
@@ -63223,11 +63228,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_get_v2_sponsored_games"
+        }
       }
     },
     "/v2/sponsored-games/create": {
       "post": {
+        "tags": ["Advertising"],
         "summary": "Creates a new sponsored game ad with specified input parameters.",
         "requestBody": {
           "content": {
@@ -63289,11 +63298,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_post_v2_sponsored_games_create"
+        }
       }
     },
     "/v2/sponsored-games/stop": {
       "post": {
+        "tags": ["Advertising"],
         "summary": "To stop a sponsored-game ad (ad set) from running, initiated by a user.",
         "requestBody": {
           "content": {
@@ -63352,11 +63365,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_post_v2_sponsored_games_stop"
+        }
       }
     },
     "/v2/sponsored-games/universes": {
       "get": {
+        "tags": ["Advertising"],
         "summary": "Gets a list of universes for the authenticated user, or the given group, ordered by most recently created sponsored game ads.",
         "parameters": [
           {
@@ -63407,7 +63424,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_get_v2_sponsored_games_universes"
+        }
       }
     },
     "/v2/stream-notifications/clear-unread": {
@@ -70171,6 +70191,86 @@
           }
         },
         "description": "Represents the permissions on a role."
+      },
+      "GroupsApi.Roblox.Groups.Api.GroupDetailResponse": {
+        "description": "A detailed group response model",
+        "type": "object",
+        "properties": {
+          "id": {
+            "format": "int64",
+            "description": "The group id",
+            "type": "integer"
+          },
+          "name": {
+            "description": "The group name",
+            "type": "string"
+          },
+          "description": {
+            "description": "The group description",
+            "type": "string"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Roblox.Groups.Api.Models.Response.UserModel"
+          },
+          "shout": {
+            "$ref": "#/components/schemas/Roblox.Groups.Api.ShoutResponse"
+          },
+          "memberCount": {
+            "format": "int32",
+            "description": "The number of members in the group",
+            "type": "integer"
+          },
+          "isBuildersClubOnly": {
+            "description": "Whether the group is Builders Club only",
+            "type": "boolean"
+          },
+          "publicEntryAllowed": {
+            "description": "Whether the group is public (no approval required)",
+            "type": "boolean"
+          },
+          "isLocked": {
+            "description": "Whether the group is locked",
+            "type": "boolean"
+          },
+          "hasVerifiedBadge": {
+            "description": "Whether the group has a verified badge.",
+            "type": "boolean"
+          },
+          "hasSocialModules": {
+            "description": "Whether the group has social modules enabled (e.g. Forums)\r\n(determines if \"Followers\" vs \"Members\" should be shown).",
+            "type": "boolean"
+          },
+          "communityTier": {
+            "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Client.CommunityTierInfoResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GroupsApi.Roblox.Groups.Client.CommunityTierInfoResponse": {
+        "type": "object",
+        "properties": {
+          "groupId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "currentTier": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "previousTier": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "tierUpdatedTime": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "lastEvaluatedTime": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
       },
       "HomepageThumbnail": {
         "required": [
@@ -78034,6 +78134,10 @@
           "deviceName": {
             "description": "Name of the requesting device",
             "type": "string"
+          },
+          "isProvisional": {
+            "description": "True when the client granted iOS provisional authorization (silent, quiet-only)\r\nrather than full authorization. Absent/null is treated as not provisional.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -82543,60 +82647,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Groups.Api.GroupDetailResponse": {
-        "description": "A detailed group response model",
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "description": "The group id",
-            "type": "integer"
-          },
-          "name": {
-            "description": "The group name",
-            "type": "string"
-          },
-          "description": {
-            "description": "The group description",
-            "type": "string"
-          },
-          "owner": {
-            "$ref": "#/components/schemas/Roblox.Groups.Api.Models.Response.UserModel"
-          },
-          "shout": {
-            "$ref": "#/components/schemas/Roblox.Groups.Api.ShoutResponse"
-          },
-          "memberCount": {
-            "format": "int32",
-            "description": "The number of members in the group",
-            "type": "integer"
-          },
-          "isBuildersClubOnly": {
-            "description": "Whether the group is Builders Club only",
-            "type": "boolean"
-          },
-          "publicEntryAllowed": {
-            "description": "Whether the group is public (no approval required)",
-            "type": "boolean"
-          },
-          "isLocked": {
-            "description": "Whether the group is locked",
-            "type": "boolean"
-          },
-          "hasVerifiedBadge": {
-            "description": "Whether the group has a verified badge.",
-            "type": "boolean"
-          },
-          "hasSocialModules": {
-            "description": "Whether the group has social modules enabled (e.g. Forums)\r\n(determines if \"Followers\" vs \"Members\" should be shown).",
-            "type": "boolean"
-          },
-          "communityTier": {
-            "$ref": "#/components/schemas/Roblox.Groups.Client.CommunityTierInfoResponse"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Groups.Api.GroupEconomyPermissionsModel": {
         "description": "A model representing data about an Roblox.Platform.Membership.IUser",
         "type": "object",
@@ -82754,7 +82804,7 @@
         "type": "object",
         "properties": {
           "group": {
-            "$ref": "#/components/schemas/Roblox.Groups.Api.GroupDetailResponse"
+            "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Api.GroupDetailResponse"
           },
           "role": {
             "$ref": "#/components/schemas/Roblox.Groups.Api.GroupRoleResponse"
@@ -83102,7 +83152,7 @@
             "description": "The related or requested groups",
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Roblox.Groups.Api.GroupDetailResponse"
+              "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Api.GroupDetailResponse"
             }
           },
           "nextRowIndex": {
@@ -83344,7 +83394,7 @@
             "type": "boolean"
           },
           "communityTier": {
-            "$ref": "#/components/schemas/Roblox.Groups.Client.CommunityTierInfoResponse"
+            "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Client.CommunityTierInfoResponse"
           }
         },
         "additionalProperties": false
@@ -84157,32 +84207,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Groups.Client.CommunityTierInfoResponse": {
-        "type": "object",
-        "properties": {
-          "groupId": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "currentTier": {
-            "format": "int32",
-            "type": "integer"
-          },
-          "previousTier": {
-            "format": "int32",
-            "type": "integer"
-          },
-          "tierUpdatedTime": {
-            "format": "date-time",
-            "type": "string"
-          },
-          "lastEvaluatedTime": {
-            "format": "date-time",
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Groups.Client.CreateBlockedKeywordsResponse": {
         "type": "object",
         "properties": {
@@ -84263,7 +84287,7 @@
         "type": "object",
         "properties": {
           "tierInfo": {
-            "$ref": "#/components/schemas/Roblox.Groups.Client.CommunityTierInfoResponse"
+            "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Client.CommunityTierInfoResponse"
           },
           "passedSignals": {
             "type": "array",
@@ -88789,7 +88813,7 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Roblox.Groups.Api.GroupDetailResponse"
+              "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Api.GroupDetailResponse"
             }
           }
         },
@@ -93621,7 +93645,11 @@
           "adconfiguration_get_v2_sponsored_campaigns_eligible_asset_type_ids",
           "adconfiguration_post_v2_sponsored_campaigns_eligible_campaign_targets",
           "adconfiguration_get_v2_sponsored_campaigns_multi_get_can_user_sponsor",
-          "adconfiguration_post_v2_sponsored_campaigns_stop"
+          "adconfiguration_post_v2_sponsored_campaigns_stop",
+          "adconfiguration_get_v2_sponsored_games",
+          "adconfiguration_get_v2_sponsored_games_universes",
+          "adconfiguration_post_v2_sponsored_games_create",
+          "adconfiguration_post_v2_sponsored_games_stop"
         ]
       }
     },
@@ -94107,6 +94135,7 @@
           "groups_post_v1_featured_content_event",
           "groups_get_v1_groups__groupId_",
           "groups_get_v1_groups__groupId__community_feature_freezes",
+          "groups_post_v1_groups__groupId__community_tier_evaluate",
           "groups_get_v1_groups__groupId__configuration",
           "groups_post_v1_groups__groupId__change_owner",
           "groups_post_v1_groups__groupId__claim_ownership",
