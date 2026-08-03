@@ -183,7 +183,7 @@ See the following table for Extended Services pricing:
   <tr>
     <td><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}>Data store storage </a></td>
     <td>Storage</td>
-    <td>100 MB + (1MB * Lifetime Players)</td>
+    <td>100 MB + (1 MB * Lifetime Players)</td>
     <td>$0.12 / GB per month</td>
   </tr>
 
