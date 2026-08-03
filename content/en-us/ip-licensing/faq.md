@@ -64,6 +64,8 @@ description: Frequently asked questions and guidelines about IP licensing tools.
   <dt>**How do I communicate with rights holders I have an agreement with?**</dt>
   <dd><p />
     Rights holders can request changes to a licensed game if they believe it is deviating from the content standards or scope defined for the license. You'll receive a notification from Roblox to ensure that you can make any necessary changes to your game.
+
+    Before an agreement is active, a rights holder can also send a [conditional offer](./creators.md#conditional-offers) or conditional approval with feedback about changes you need to make first.
   <p /></dd><br />
 
   <dt>**How will I be notified about updates or changes to my license request or license agreements?**</dt>
@@ -71,9 +73,18 @@ description: Frequently asked questions and guidelines about IP licensing tools.
     You'll be notified via email and on Creator Hub. You can also always check your active license agreements in your License Manager.
   <p /></dd><br />
 
+  <dt>**What is a conditional offer?**</dt>
+  <dd><p />
+    A conditional offer lets a rights holder say they want to license your game, but only after you update the game to meet their content standards. The rights holder includes feedback about what must change. You have 14 days to make those changes and mark them as done, or to dispute the offer if the rights holder initiated it. The agreement activates only after the rights holder reviews and approves your changes. Unlike a standard offer, a conditional offer does not auto-activate after 14 days.
+
+    For more information, see [Review a license offer](./creators.md#review-a-license-offer) and [Review matches and send a license offer](./license-manager.md#review-matches-and-send-a-license-offer).
+  <p /></dd><br />
+
   <dt>**How are disputes resolved?**</dt>
   <dd><p />
     Rights holders can attempt to license a game twice, and creators can dispute an offer for a license twice. If an agreement can't be reached and the rights holder still believes that the game contains their IP, they can pursue other options, such as filing a DMCA claim.
+
+    Disputes apply to standard and conditional offers that a rights holder sends to your game. You can't dispute a conditional approval of a license request that you submitted; cancel the request instead if you no longer want to proceed.
   <p /></dd><br />
 
   <dt>**How does IP licensing interact with the DMCA process?**</dt>
@@ -83,7 +94,7 @@ description: Frequently asked questions and guidelines about IP licensing tools.
 
   <dt>**What protections do I have as a creator from a rights holder who is trying to inaccurately claim IP in my game?**</dt>
   <dd><p />
-    If you believe a rights holder has inaccurately offered a license for your game, you have 14 days to dispute the offer. When you dispute an offer, you can select from a set of reasons that tell the rights holder why the license isn't needed.
+    If you believe a rights holder has inaccurately offered a license for your game, you have 14 days to dispute the offer. When you dispute an offer, you can select from a set of reasons that tell the rights holder why the license isn't needed. For a conditional offer, you can also dispute within the 14-day window instead of making the requested changes.
   <p /></dd><br />
 
   <dt>**Can an active license agreement ever be terminated?**</dt>

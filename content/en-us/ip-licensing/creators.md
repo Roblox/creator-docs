@@ -38,7 +38,7 @@ To request to use an IP license in your game:
    - **No, I need time to incorporate this intellectual property into my experience** if you're not done incorporating the IP into your game. Revenue share won't start immediately, but the rights holder can still turn on monetization at any time.
 7. (For time-limited licenses) Under **Proposed date range**, use the calendar to set the proposed dates that your game will incorporate the IP. Start and end times for time-limited licenses are based on midnight UTC.
 8. Acknowledge licensing terms, review the guidelines and restrictions, and click **Next**.
-9. Click **Submit** to submit your license request. The rights holder then reviews and either approves or rejects your license request.
+9. Click **Submit** to submit your license request. The rights holder then reviews your request and can approve it, reject it, or (for perpetual licenses) send a [conditional approval](#respond-to-a-conditional-offer) that asks you to make changes before the agreement activates.
 
 <Alert severity="info">
   You can currently only request or be offered a license for a full game, where the IP is central to and present throughout the game.
@@ -49,7 +49,7 @@ To request to use an IP license in your game:
 </Alert>
 
 <Alert severity="info">
-  You can cancel a pending license request under certain conditions. See [Cancel a license](#cancel-a-license) for details.
+  You can cancel a pending license request under certain conditions, including after a rights holder sends a conditional approval. See [Cancel a license](#cancel-a-license) for details.
 </Alert>
 
 ### Pitch details
@@ -96,11 +96,11 @@ To view all of your offers and license agreements, go to **Intellectual Property
 <tbody>
   <tr>
     <td>**Offers**</td>
-    <td>All license offers that rights holders have sent you.</td>
+    <td>All license offers that rights holders have sent you, including conditional offers.</td>
   </tr>
   <tr>
     <td>**Requests**</td>
-    <td>All license requests that you have sent to rights holders.</td>
+    <td>All license requests that you have sent to rights holders, including requests with a conditional approval waiting for your changes.</td>
   </tr>
   <tr>
     <td>**Active**</td>
@@ -108,27 +108,55 @@ To view all of your offers and license agreements, go to **Intellectual Property
   </tr>
   <tr>
     <td>**Archived**</td>
-    <td>All archived offers or license agreements between you and rights holders.</td>
+    <td>All archived offers or license agreements between you and rights holders, including expired or unsuccessful conditional offers.</td>
   </tr>
 </tbody>
 </table>
 
 ## Review a license offer
 
+For licenses with a perpetual duration, rights holders can reach out and make a license offer directly to your game. This can happen if Roblox detects that your game has a high likelihood of making prominent use of a registered IP. Rights holders can send either a **standard offer** or a **conditional offer**.
+
+### Standard offers
+
 <Alert severity="error">
-  Any license offer you receive from a rights holder automatically becomes active after 14 days. **You must dispute the offer to reject it.**
+  A standard license offer automatically becomes active after 14 days. **You must dispute the offer to reject it.**
 </Alert>
 
-For licenses with a perpetual duration, rights holders can reach out and make a license offer directly to your game. This can happen if Roblox detects that your game has a high likelihood of making prominent use of a registered IP.
-
-After you receive an offer, you can review the offer details and either:
+After you receive a standard offer, you can:
 
 - Do nothing and wait for the offer to be automatically accepted after 14 days.
 - [Dispute the offer](#dispute-the-offer).
 
+### Conditional offers
+
+A **conditional offer** means the rights holder wants to license your game, but you must update your game to meet their content standards before the agreement can activate. Conditional offers do **not** auto-activate after 14 days. Conditional offer can only be sent from a match of your game.  
+
+After you receive a conditional offer or conditional approval, you have **14 days** to:
+
+- [Make the requested changes](#respond-to-a-conditional-offer) and mark them as done.
+- [Dispute the offer](#dispute-the-offer), if the rights holder initiated the offer (dispute is not available when the rights holder conditionally approves a request that you submitted).
+- [Cancel the request](#cancel-a-license), if you submitted the original license request.
+
+If you don't respond within 14 days, the conditional offer or request expires and becomes unsuccessful. The rights holder might then pursue other options, such as filing a [DMCA claim](../production/publishing/dmca-guidelines.md).
+
+### Respond to a conditional offer
+
+To review and complete a conditional offer or conditional approval:
+
+1. Go to **Intellectual Property** ⟩ **Licenses**.
+2. Open the conditional offer or request.
+3. Review the rights holder's feedback, which lists the content standard your game is violating and the specific changes they want.
+4. Update your game to address the requested changes.
+5. Mark the changes as done and confirm that you completed them. The rights holder then reviews your game and either activates the agreement or rejects the changes.
+
+<Alert severity="info">
+  After you mark the changes as done, the agreement activates only if the rights holder approves your changes. Roblox does not automatically verify that the changes were made.
+</Alert>
+
 ### Dispute the offer
 
-To dispute a license offer:
+To dispute a standard or conditional license offer that a rights holder sent to your game:
 
 1. Go to **Intellectual Property** ⟩ **Licenses** ⟩ **Offers**.
 2. Select the license offer you want to dispute.
@@ -141,15 +169,19 @@ To dispute a license offer:
 6. Review and accept the legal agreements.
 7. Click **Dispute**. The rights holder can then accept or reject your offer dispute.
 
-If the rights holder accepts your dispute, you will not enter into an agreement with them. However, if the rights holder rejects your dispute, you will receive their license offer again. After you receive their offer a second time, you can either wait 14 days for the offer to automatically become active or dispute the offer one final time.
+If the rights holder accepts your dispute, you will not enter into an agreement with them. However, if the rights holder rejects your dispute, you will receive their license offer again. For a standard offer, you can either wait 14 days for the offer to automatically become active or dispute it one final time. For a conditional offer, rejecting the dispute re-sends the conditional offer with the original feedback and starts a new 14-day window for you to make changes or dispute again.
 
 If you submit a second and final dispute, you will not enter into an agreement with the rights holder. Instead, the offer will be archived, and the rights holder might choose to pursue a [DMCA claim](../production/publishing/dmca-guidelines.md) separately.
+
+<Alert severity="info">
+  You can't dispute a conditional approval of a license request that you submitted. If you no longer want to proceed, [cancel the request](#cancel-a-license) instead.
+</Alert>
 
 ## Cancel a license
 
 You can cancel a pending license request if the following conditions are met:
 
-- The rights holder hasn't responded to your license request yet.
+- The rights holder hasn't fully accepted your license request yet. You can still cancel after a rights holder sends a conditional approval, as long as the agreement has not become active.
 - Early IP usage has not been detected in your game.
 - (For time-limited licenses only) The cancellation is made at least three days before the proposed start date.
 
