@@ -228,6 +228,8 @@ navigation:
             path: /scripting/scheduler
           - title: Multi-threading
             path: /scripting/multithreading
+          - title: Transparent batching
+            path: /scripting/transparent-batching
           - title: Native code generation
             path: /luau/native-code-gen
           - title: Script capabilities
