@@ -122,6 +122,8 @@ Matches are games that use a significant amount of content related to your IP li
 
 You can review the games matched to your IP and send them a license offer in order to enter an agreement with a game's creator, earn a share of their revenue, and set guidelines for the creator to follow.
 
+To help you evaluate a match before sending an offer, each matched game's details page includes gameplay screenshots captured by Roblox, so you can quickly assess how your IP appears in the game without launching it. For a more in-depth review, you can also play the game yourself.
+
 When you send an offer, choose an **offer type**:
 
 - **Send offer** for a standard license offer. The agreement activates when the creator accepts it, or automatically after 14 days if the creator doesn't dispute it.
