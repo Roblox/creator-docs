@@ -212,7 +212,7 @@ For convenience, the results page lets you replace the default config value with
 
 - **Don't act without statistical significance.** Even seemingly large changes in player behavior might not be statistically significant, generally due to small sample size. If a change isn't statistically significant, ignore it.
 
-- **Avoid changes during experiments**. Major bugs of course need fixes, but changes to experiegamence content can impact player behavior and invalidate your results, even if the changes **seem** unrelated to your experiment. Similarly, only run experiments simultaneously if you're confident they won't interact with each other.
+- **Avoid changes during experiments**. Major bugs of course need fixes, but changes to game content can impact player behavior and invalidate your results, even if the changes **seem** unrelated to your experiment. Similarly, only run experiments simultaneously if you're confident they won't interact with each other.
 
 - **Use confidence intervals for deep dives** into metrics and to check for borderline cases of statistical significance. If the confidence interval is too wide, the metric might never reach statistical significance.
 
