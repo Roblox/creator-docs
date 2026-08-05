@@ -3470,7 +3470,7 @@
       "post": {
         "tags": ["Cloud"],
         "summary": "Flush Memory Store",
-        "description": "Asynchronously flush all data structures in the universe.",
+        "description": "Asynchronously flush all data structures in the universe.\n\nUnlike some other endpoints, the flush response `path` already\nincludes the `cloud/v2` prefix. Poll the operation at\n`https://apis.roblox.com/{path}` without adding another prefix.",
         "operationId": "Cloud_FlushMemoryStore",
         "parameters": [
           {
@@ -6524,11 +6524,12 @@
             "description": "The resource ID of the entry.\n\nThis matches the last segment of the resource path, and is provided\nonly for convenience."
           },
           "users": {
+            "example": "users/123",
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "Users associated with the entry."
+            "description": "Users associated with the entry.\n\nEach value must be a user resource path in the format `users/{user_id}`,\nnot a bare user ID."
           },
           "attributes": {
             "type": "object",
@@ -7243,11 +7244,12 @@
             "format": "double"
           },
           "users": {
+            "example": "users/123",
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "Users associated with the entry.\n\nIf this is not provided, existing user IDs are cleared."
+            "description": "Users associated with the entry.\n\nEach value must be a user resource path in the format `users/{user_id}`,\nnot a bare user ID.\n\nIf this is not provided, existing user IDs are cleared."
           },
           "attributes": {
             "type": "object",
@@ -7735,12 +7737,12 @@
       "ListMemoryStoreSortedMapItemsResponse": {
         "type": "object",
         "properties": {
-          "memoryStoreSortedMapItems": {
+          "items": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
             },
-            "description": "The MemoryStoreSortedMapItems from the specified MemoryStoreSortedMap."
+            "description": "The MemoryStoreSortedMapItems from the specified MemoryStoreSortedMap.\n"
           },
           "nextPageToken": {
             "type": "string",

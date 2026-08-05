@@ -46,6 +46,25 @@ export const getAllContentFileNamesWithExtension = ({
   return fileNames;
 };
 
+/**
+ * Returns all files with the given extension under `content/common/`, which
+ * holds locale-independent shared content (e.g. `manifest.json`). These files
+ * are not part of any locale, so the checks' en-us locale filter drops them;
+ * callers that must validate them (e.g. JSON syntax) glob them directly.
+ */
+export const getCommonContentFileNamesWithExtension = ({
+  fileExtension,
+}: {
+  fileExtension: FileExtension;
+}): string[] => {
+  const contentPath = path.join(
+    repositoryRoot,
+    'content/common/',
+    `/**/*${fileExtension}`
+  );
+  return glob.sync(contentPath);
+};
+
 export const getFilePathFromRepoRoot = (
   fileName: string,
   rootPath: string

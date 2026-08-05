@@ -1770,8 +1770,7 @@
             "name": "doNotFallbackToBaselineRepresentation",
             "description": "Whether to prevent fallback to baseline representation when specific content representations are not available.",
             "schema": {
-              "type": "boolean",
-              "default": false
+              "type": "boolean"
             }
           },
           {
@@ -1779,8 +1778,7 @@
             "name": "contentRepresentationPriorityList",
             "description": "Base64URL-encoded JSON string specifying the priority list of desired content representations (format, version, fidelity).",
             "schema": {
-              "type": "string",
-              "default": ""
+              "type": "string"
             }
           },
           {
@@ -1959,16 +1957,14 @@
             "in": "query",
             "name": "doNotFallbackToBaselineRepresentation",
             "schema": {
-              "type": "boolean",
-              "default": false
+              "type": "boolean"
             }
           },
           {
             "in": "query",
             "name": "contentRepresentationPriorityList",
             "schema": {
-              "type": "string",
-              "default": ""
+              "type": "string"
             }
           },
           {
@@ -7760,7 +7756,7 @@
       "post": {
         "tags": ["Data and memory stores"],
         "summary": "Flush Memory Store",
-        "description": "Asynchronously flush all data structures in the universe.",
+        "description": "Asynchronously flush all data structures in the universe.\n\nUnlike some other endpoints, the flush response `path` already\nincludes the `cloud/v2` prefix. Poll the operation at\n`https://apis.roblox.com/{path}` without adding another prefix.",
         "operationId": "Cloud_FlushMemoryStore",
         "parameters": [
           {
@@ -27664,16 +27660,14 @@
             "in": "query",
             "name": "doNotFallbackToBaselineRepresentation",
             "schema": {
-              "type": "boolean",
-              "default": false
+              "type": "boolean"
             }
           },
           {
             "in": "query",
             "name": "contentRepresentationPriorityList",
             "schema": {
-              "type": "string",
-              "default": ""
+              "type": "string"
             }
           },
           {
@@ -28057,16 +28051,14 @@
             "in": "query",
             "name": "doNotFallbackToBaselineRepresentation",
             "schema": {
-              "type": "boolean",
-              "default": false
+              "type": "boolean"
             }
           },
           {
             "in": "query",
             "name": "contentRepresentationPriorityList",
             "schema": {
-              "type": "string",
-              "default": ""
+              "type": "string"
             }
           },
           {
@@ -28242,16 +28234,14 @@
             "in": "query",
             "name": "doNotFallbackToBaselineRepresentation",
             "schema": {
-              "type": "boolean",
-              "default": false
+              "type": "boolean"
             }
           },
           {
             "in": "query",
             "name": "contentRepresentationPriorityList",
             "schema": {
-              "type": "string",
-              "default": ""
+              "type": "string"
             }
           },
           {
@@ -37029,6 +37019,9 @@
           },
           "400": {
             "description": "8: The universe IDs specified are invalid.\r\n9: Too many universe IDs were requested."
+          },
+          "429": {
+            "description": "4: Too many requests have been made."
           }
         },
         "servers": [
@@ -38899,12 +38892,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Api.GroupDetailResponse"
+                  "$ref": "#/components/schemas/Roblox.Groups.Api.GroupDetailResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Api.GroupDetailResponse"
+                  "$ref": "#/components/schemas/Roblox.Groups.Api.GroupDetailResponse"
                 }
               }
             }
@@ -59594,16 +59587,14 @@
             "in": "query",
             "name": "doNotFallbackToBaselineRepresentation",
             "schema": {
-              "type": "boolean",
-              "default": false
+              "type": "boolean"
             }
           },
           {
             "in": "query",
             "name": "contentRepresentationPriorityList",
             "schema": {
-              "type": "string",
-              "default": ""
+              "type": "string"
             }
           },
           {
@@ -59760,16 +59751,14 @@
             "in": "query",
             "name": "doNotFallbackToBaselineRepresentation",
             "schema": {
-              "type": "boolean",
-              "default": false
+              "type": "boolean"
             }
           },
           {
             "in": "query",
             "name": "contentRepresentationPriorityList",
             "schema": {
-              "type": "string",
-              "default": ""
+              "type": "string"
             }
           },
           {
@@ -59935,16 +59924,14 @@
             "in": "query",
             "name": "doNotFallbackToBaselineRepresentation",
             "schema": {
-              "type": "boolean",
-              "default": false
+              "type": "boolean"
             }
           },
           {
             "in": "query",
             "name": "contentRepresentationPriorityList",
             "schema": {
-              "type": "string",
-              "default": ""
+              "type": "string"
             }
           },
           {
@@ -68136,11 +68123,12 @@
             "description": "The resource ID of the entry.\n\nThis matches the last segment of the resource path, and is provided\nonly for convenience."
           },
           "users": {
+            "example": "users/123",
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "Users associated with the entry."
+            "description": "Users associated with the entry.\n\nEach value must be a user resource path in the format `users/{user_id}`,\nnot a bare user ID."
           },
           "attributes": {
             "type": "object",
@@ -70192,86 +70180,6 @@
         },
         "description": "Represents the permissions on a role."
       },
-      "GroupsApi.Roblox.Groups.Api.GroupDetailResponse": {
-        "description": "A detailed group response model",
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "description": "The group id",
-            "type": "integer"
-          },
-          "name": {
-            "description": "The group name",
-            "type": "string"
-          },
-          "description": {
-            "description": "The group description",
-            "type": "string"
-          },
-          "owner": {
-            "$ref": "#/components/schemas/Roblox.Groups.Api.Models.Response.UserModel"
-          },
-          "shout": {
-            "$ref": "#/components/schemas/Roblox.Groups.Api.ShoutResponse"
-          },
-          "memberCount": {
-            "format": "int32",
-            "description": "The number of members in the group",
-            "type": "integer"
-          },
-          "isBuildersClubOnly": {
-            "description": "Whether the group is Builders Club only",
-            "type": "boolean"
-          },
-          "publicEntryAllowed": {
-            "description": "Whether the group is public (no approval required)",
-            "type": "boolean"
-          },
-          "isLocked": {
-            "description": "Whether the group is locked",
-            "type": "boolean"
-          },
-          "hasVerifiedBadge": {
-            "description": "Whether the group has a verified badge.",
-            "type": "boolean"
-          },
-          "hasSocialModules": {
-            "description": "Whether the group has social modules enabled (e.g. Forums)\r\n(determines if \"Followers\" vs \"Members\" should be shown).",
-            "type": "boolean"
-          },
-          "communityTier": {
-            "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Client.CommunityTierInfoResponse"
-          }
-        },
-        "additionalProperties": false
-      },
-      "GroupsApi.Roblox.Groups.Client.CommunityTierInfoResponse": {
-        "type": "object",
-        "properties": {
-          "groupId": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "currentTier": {
-            "format": "int32",
-            "type": "integer"
-          },
-          "previousTier": {
-            "format": "int32",
-            "type": "integer"
-          },
-          "tierUpdatedTime": {
-            "format": "date-time",
-            "type": "string"
-          },
-          "lastEvaluatedTime": {
-            "format": "date-time",
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
       "HomepageThumbnail": {
         "required": [
           "assetId",
@@ -70558,11 +70466,12 @@
             "format": "double"
           },
           "users": {
+            "example": "users/123",
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "Users associated with the entry.\n\nIf this is not provided, existing user IDs are cleared."
+            "description": "Users associated with the entry.\n\nEach value must be a user resource path in the format `users/{user_id}`,\nnot a bare user ID.\n\nIf this is not provided, existing user IDs are cleared."
           },
           "attributes": {
             "type": "object",
@@ -71417,12 +71326,12 @@
       "ListMemoryStoreSortedMapItemsResponse": {
         "type": "object",
         "properties": {
-          "memoryStoreSortedMapItems": {
+          "items": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
             },
-            "description": "The MemoryStoreSortedMapItems from the specified MemoryStoreSortedMap."
+            "description": "The MemoryStoreSortedMapItems from the specified MemoryStoreSortedMap.\n"
           },
           "nextPageToken": {
             "type": "string",
@@ -82647,6 +82556,60 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Groups.Api.GroupDetailResponse": {
+        "description": "A detailed group response model",
+        "type": "object",
+        "properties": {
+          "id": {
+            "format": "int64",
+            "description": "The group id",
+            "type": "integer"
+          },
+          "name": {
+            "description": "The group name",
+            "type": "string"
+          },
+          "description": {
+            "description": "The group description",
+            "type": "string"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Roblox.Groups.Api.Models.Response.UserModel"
+          },
+          "shout": {
+            "$ref": "#/components/schemas/Roblox.Groups.Api.ShoutResponse"
+          },
+          "memberCount": {
+            "format": "int32",
+            "description": "The number of members in the group",
+            "type": "integer"
+          },
+          "isBuildersClubOnly": {
+            "description": "Whether the group is Builders Club only",
+            "type": "boolean"
+          },
+          "publicEntryAllowed": {
+            "description": "Whether the group is public (no approval required)",
+            "type": "boolean"
+          },
+          "isLocked": {
+            "description": "Whether the group is locked",
+            "type": "boolean"
+          },
+          "hasVerifiedBadge": {
+            "description": "Whether the group has a verified badge.",
+            "type": "boolean"
+          },
+          "hasSocialModules": {
+            "description": "Whether the group has social modules enabled (e.g. Forums)\r\n(determines if \"Followers\" vs \"Members\" should be shown).",
+            "type": "boolean"
+          },
+          "communityTier": {
+            "$ref": "#/components/schemas/Roblox.Groups.Client.CommunityTierInfoResponse"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Groups.Api.GroupEconomyPermissionsModel": {
         "description": "A model representing data about an Roblox.Platform.Membership.IUser",
         "type": "object",
@@ -82804,7 +82767,7 @@
         "type": "object",
         "properties": {
           "group": {
-            "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Api.GroupDetailResponse"
+            "$ref": "#/components/schemas/Roblox.Groups.Api.GroupDetailResponse"
           },
           "role": {
             "$ref": "#/components/schemas/Roblox.Groups.Api.GroupRoleResponse"
@@ -83152,7 +83115,7 @@
             "description": "The related or requested groups",
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Api.GroupDetailResponse"
+              "$ref": "#/components/schemas/Roblox.Groups.Api.GroupDetailResponse"
             }
           },
           "nextRowIndex": {
@@ -83394,7 +83357,7 @@
             "type": "boolean"
           },
           "communityTier": {
-            "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Client.CommunityTierInfoResponse"
+            "$ref": "#/components/schemas/Roblox.Groups.Client.CommunityTierInfoResponse"
           }
         },
         "additionalProperties": false
@@ -84207,6 +84170,38 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Groups.Client.CommunityTierInfoResponse": {
+        "type": "object",
+        "properties": {
+          "groupId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "currentTier": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "previousTier": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "tierUpdatedTime": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "lastEvaluatedTime": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "requirements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Groups.Client.TierRequirement"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Groups.Client.CreateBlockedKeywordsResponse": {
         "type": "object",
         "properties": {
@@ -84287,13 +84282,34 @@
         "type": "object",
         "properties": {
           "tierInfo": {
-            "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Client.CommunityTierInfoResponse"
+            "$ref": "#/components/schemas/Roblox.Groups.Client.CommunityTierInfoResponse"
           },
           "passedSignals": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "requirements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Groups.Client.TierRequirement"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Client.TierRequirement": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "format": "int32",
+            "description": " ['OwnerModerationStatusOk' = 1, 'OwnerAgeEstimationVerified' = 2, 'OwnerIdVerified' = 3, 'OwnerTwoStepVerified' = 4, 'CommunityMeetsPlayerRequirement' = 5]",
+            "enum": [1, 2, 3, 4, 5],
+            "type": "integer"
+          },
+          "satisfied": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -88021,6 +88037,10 @@
           },
           "doNotFallbackToBaselineRepresentation": {
             "type": "boolean"
+          },
+          "xcachesplit": {
+            "format": "int64",
+            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -88813,7 +88833,7 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GroupsApi.Roblox.Groups.Api.GroupDetailResponse"
+              "$ref": "#/components/schemas/Roblox.Groups.Api.GroupDetailResponse"
             }
           }
         },

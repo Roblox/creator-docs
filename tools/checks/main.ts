@@ -62,6 +62,8 @@ import {
   summaryOfRequirements,
 } from './utils/console.js';
 import { checkMarkdownLint } from './utils/markdownlint.js';
+import { checkCommonContentJson, checkJsonIsValid } from './utils/json.js';
+import { checkManifestReferences } from './utils/manifest.js';
 import { checkEngineReferenceContent } from './utils/engineReferenceChecks.js';
 import {
   containsOpenApiSchema,
@@ -253,6 +255,19 @@ try {
     const fileContent = readFileSync(filePath);
 
     if (isJsonFile) {
+      // A syntax error (e.g. a missing comma) in a content JSON file breaks
+      // downstream page generation, so fail fast here. Skip the remaining JSON
+      // checks since they assume a parseable document.
+      if (
+        !checkJsonIsValid({
+          config,
+          fileContent,
+          filePath: filePathFromRepoRoot,
+        })
+      ) {
+        console.log('::endgroup::');
+        continue;
+      }
       if (containsOpenApiSchema(fileContent)) {
         await validateOpenApiSchema({
           config,
@@ -320,6 +335,18 @@ try {
     }
     console.log('::endgroup::');
   }
+  // Always validate shared content JSON (e.g. manifest.json). It lives outside
+  // any locale, so the per-file loop above skips it when checkLocalizedContent
+  // is false, and a syntax error there breaks page generation.
+  console.log(`::group::${Emoji.Mag} Validating shared content JSON`);
+  checkCommonContentJson({ config });
+  console.log('::endgroup::');
+  // Verify every page referenced by manifest.json exists. A dangling reference
+  // (e.g. a deleted file still listed in hiddenPages) breaks page generation
+  // with a misleading "Can't load file" error.
+  console.log(`::group::${Emoji.Mag} Validating manifest.json references`);
+  checkManifestReferences({ config });
+  console.log('::endgroup::');
   if (config.checkUnusedAssets) {
     checkUnusedAssets({ config });
   }
