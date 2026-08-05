@@ -255,7 +255,7 @@ See the following guidelines:
 - Once per day, Roblox processes and reimburses rebates from your sales and adds them to your transaction report.
   - If you see the rebate on your transaction report, the credit has been applied to your account.
   - The 30 day escrow does not apply for rebates.
-- You can access this data on the Creator Dashboard's [My Transactions](https://create.roblox.com/dashboard/transactions) report, by filtering **Type of Transaction** to **Publishing Advance Rebates**.
+- You can access this data on the Creator Dashboard's [My Transactions](https://www.roblox.com/transactions) report, by filtering **Type of Transaction** to **Publishing Advance Rebates**.
 
   <img src="../assets/publishing/marketplace/Transaction-Report.png" alt="Transaction report filtered by Publishing Advance Rebates." width="100%" />
 
