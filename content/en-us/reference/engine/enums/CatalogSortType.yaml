@@ -4,39 +4,59 @@
 
 name: CatalogSortType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the sort order for catalog search results returned by
+  `Class.AvatarEditorService:SearchCatalogAsync()`.
+description: |
+  `Enum.CatalogSortType` specifies how catalog search results are ordered when
+  using `Class.AvatarEditorService:SearchCatalogAsync()`. Set this on a
+  `Datatype.CatalogSearchParams` object via its `SortType` property, which
+  defaults to `Enum.CatalogSortType.Relevance`.
+
+  For `Enum.CatalogSortType.Bestselling` and
+  `Enum.CatalogSortType.MostFavorited`, the time window used to aggregate the
+  sort metric is controlled by `Datatype.CatalogSearchParams.SortAggregation`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Relevance
-    summary: ''
+    summary: |
+      Sorts catalog results by relevance to the search keyword or other query
+      parameters.
     value: 1
     tags: []
     deprecation_message: ''
   - name: PriceHighToLow
-    summary: ''
+    summary: |
+      Sorts catalog results from the highest price to the lowest price.
     value: 2
     tags: []
     deprecation_message: ''
   - name: PriceLowToHigh
-    summary: ''
+    summary: |
+      Sorts catalog results from the lowest price to the highest price.
     value: 3
     tags: []
     deprecation_message: ''
   - name: MostFavorited
-    summary: ''
+    summary: |
+      Sorts catalog results by the number of times items have been favorited,
+      with most-favorited items listed first.
     value: 5
     tags: []
     deprecation_message: ''
   - name: RecentlyCreated
-    summary: ''
+    summary: |
+      Sorts catalog results by creation date, with the most recently created
+      items listed first.
     value: 6
     tags: []
     deprecation_message: ''
   - name: Bestselling
-    summary: ''
+    summary: |
+      Sorts catalog results by total sales, with best-selling items listed
+      first.
     value: 7
     tags: []
     deprecation_message: ''

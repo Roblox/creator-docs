@@ -109,15 +109,21 @@ constructors:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The x-coordinate of the vector, rounded down to a signed 16-bit
+          integer.
       - name: 'y'
         type: number
         default:
-        summary: ''
+        summary: |
+          The y-coordinate of the vector, rounded down to a signed 16-bit
+          integer.
       - name: z
         type: number
         default:
-        summary: ''
+        summary: |
+          The z-coordinate of the vector, rounded down to a signed 16-bit
+          integer.
     code_samples: []
     tags: []
     deprecation_message: ''

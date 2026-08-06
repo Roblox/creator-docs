@@ -5,7 +5,9 @@
 name: BaseWrap
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  Abstract base class for `Class.WrapTarget` and `Class.WrapLayer` that stores
+  cage mesh data for layered clothing deformation.
 description: |
   The base class for `Class.WrapTarget` and `Class.WrapLayer` objects. Note that
   `Class.MeshPart` is the only valid parent type for `Class.BaseWrap` and that
@@ -23,8 +25,20 @@ tags:
 deprecation_message: ''
 properties:
   - name: BaseWrap.CageMeshContent
-    summary: ''
-    description: ''
+    summary: |
+      The cage mesh this wrap uses to deform geometry, stored as a
+      `Datatype.Content` value.
+    description: |
+      The cage mesh this wrap uses to deform geometry, stored as a
+      `Datatype.Content` value that can reference an uploaded mesh asset or an
+      in-memory `Class.EditableMesh`. Set automatically by the Importer. It is
+      the backing store for `Class.BaseWrap.CageMeshId`: that property reads the
+      mesh ID from this content, and setting either keeps both in sync and
+      raises a change on both.
+
+      Defaults to an empty `Datatype.Content`. Without a valid cage, the wrap
+      cannot contribute to layered clothing deformation for `Class.WrapLayer` or
+      `Class.WrapTarget`.
     code_samples: []
     type: Content
     tags: []
@@ -113,6 +127,34 @@ properties:
       clothing layers overlap.
     code_samples: []
     type: ContentId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxEngineSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - AvatarAppearance
+  - name: BaseWrap.HSRContent
+    summary: |
+      The hidden surface removal data for this wrap, stored as a
+      `Datatype.Content` value.
+    description: |
+      Hidden surface removal (HSR) data for this wrap, stored as a
+      `Datatype.Content` value that references a precomputed mesh asset. It is
+      the backing store for `Class.BaseWrap.HSRAssetId`: that property reads the
+      asset ID from this content, and setting either keeps both in sync.
+
+      The content determines which mesh triangles are hidden when clothing
+      layers overlap so occluded geometry can be culled during layered clothing
+      deformation. Generated automatically when a `Class.BaseWrap` is published;
+      you do not need to set it manually.
+    code_samples: []
+    type: Content
     tags: []
     deprecation_message: ''
     security:

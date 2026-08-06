@@ -19,8 +19,17 @@ tags:
 deprecation_message: ''
 properties:
   - name: VideoCapture.FilePath
-    summary: ''
-    description: ''
+    summary: |
+      Requires `RobloxScript` security. The local file system path to the
+      recorded video file.
+    description: |
+      Requires `RobloxScript` security; experience scripts cannot read it even
+      when they hold the `Class.VideoCapture` object. Absolute path on the
+      user's device to the video file this capture represents: the temporary
+      file while recording is in progress, or, after
+      `Class.CaptureService:PromptSaveCapturesToGallery()|PromptSaveCapturesToGallery()`,
+      the permanent gallery location. Defaults to an empty string until a
+      recording has produced a video file.
     code_samples: []
     type: string
     tags:
@@ -38,8 +47,14 @@ properties:
     capabilities:
       - Capture
   - name: VideoCapture.TimeLength
-    summary: ''
-    description: ''
+    summary: |
+      The length of the recorded video, in seconds.
+    description: |
+      Duration of the video capture, in seconds. Populated once recording
+      finishes, whether via
+      `Class.CaptureService:StopVideoCapture()|StopVideoCapture()` or because
+      the capture's time limit was reached. Defaults to `0` until recording has
+      finished.
     code_samples: []
     type: double
     tags:

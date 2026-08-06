@@ -136,7 +136,9 @@ methods:
       - name: guiObject
         type: Instance
         default:
-        summary: ''
+        summary: |
+          A `Class.GuiObject` to center the virtual cursor on when enabled, or
+          `nil` to use the default cursor position.
     returns:
       - type: ()
         summary: ''

@@ -4,34 +4,48 @@
 
 name: ModerationStatus
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates the moderation review state of an avatar outfit or asset.
+description: |
+  The `ModerationStatus` enum represents the current moderation review state of
+  avatar content such as outfits and assets. It is returned by
+  `Class.AvatarCreationService` moderation events —
+  `Class.AvatarCreationService.AvatarModerationCompleted`,
+  `Class.AvatarCreationService.AvatarAssetModerationCompleted`, and
+  `Class.AvatarCreationService.AvatarOutfitModerationCompleted` — to communicate
+  the outcome of a moderation check.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: ReviewedApproved
-    summary: ''
+    summary: |
+      The content completed moderation review and was approved for use.
     value: 1
     tags: []
     deprecation_message: ''
   - name: ReviewedRejected
-    summary: ''
+    summary: |
+      The content completed moderation review and was rejected.
     value: 2
     tags: []
     deprecation_message: ''
   - name: NotReviewed
-    summary: ''
+    summary: |
+      The content has been submitted but moderation review is still pending.
     value: 3
     tags: []
     deprecation_message: ''
   - name: NotApplicable
-    summary: ''
+    summary: |
+      Moderation review is not applicable to this content.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Invalid
-    summary: ''
+    summary: |
+      An unrecognized or error moderation status returned when the server
+      response cannot be mapped to a known value.
     value: 5
     tags: []
     deprecation_message: ''

@@ -7,7 +7,12 @@ type: enum
 summary: |
   Used to determine what UI elements should be captured with
   `Class.CaptureService`.
-description: ''
+description: |
+  Controls which UI layers are composited into screenshots and video captures
+  taken by `Class.CaptureService`. When `Enum.UICaptureMode.All`, both
+  `Class.CoreGui` and `Class.PlayerGui` elements are rendered into the output.
+  When `Enum.UICaptureMode.None`, no UI is included and the capture shows only
+  the 3D scene.
 code_samples: []
 tags: []
 deprecation_message: ''

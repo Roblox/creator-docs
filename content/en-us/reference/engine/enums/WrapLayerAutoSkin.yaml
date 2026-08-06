@@ -4,24 +4,44 @@
 
 name: WrapLayerAutoSkin
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how automatic bone weight transfer from the body is applied to a
+  `Class.WrapLayer` accessory's mesh.
+description: |
+  `Enum.WrapLayerAutoSkin` is used exclusively by `Class.WrapLayer.AutoSkin`,
+  which defaults to `Enum.WrapLayerAutoSkin.Disabled`. It controls whether the
+  engine runs an automatic skinning-transfer pass when layered clothing
+  processes an accessory, and — when enabled — whether authored skinning weights
+  are preserved or overridden.
+
+  Skinning transfer copies bone weights from the body part the accessory is
+  fitted to so the accessory mesh animates with the character rig. That matters
+  for accessories such as eyebrows and eyelashes, where the body schema may not
+  guarantee a standard facial-bone set.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Disabled
-    summary: ''
+    summary: |
+      No automatic skinning transfer is applied; the accessory uses its authored
+      skinning data as-is, and an unskinned mesh will not deform with the
+      character.
     value: 0
     tags: []
     deprecation_message: ''
   - name: EnabledPreserve
-    summary: ''
+    summary: |
+      Applies automatic skinning transfer only when the mesh has no existing
+      skinning data; otherwise the authored weights are kept.
     value: 1
     tags: []
     deprecation_message: ''
   - name: EnabledOverride
-    summary: ''
+    summary: |
+      Unconditionally overrides all skinning weights by running the cage-based
+      skinning transfer algorithm, regardless of whether the mesh was originally
+      skinned.
     value: 2
     tags: []
     deprecation_message: ''

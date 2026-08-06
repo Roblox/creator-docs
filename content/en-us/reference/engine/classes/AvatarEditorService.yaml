@@ -414,7 +414,16 @@ methods:
     summary: |
       Used to apply default clothing to the `Class.HumanoidDescription` if
       necessary.
-    description: ''
+    description: |
+      Deprecated in favor of
+      `Class.AvatarEditorService:CheckApplyDefaultClothingAsync()`. This method
+      has the same behavior: it returns a new `Class.HumanoidDescription` with
+      the Shirt and Pants properties updated if necessary, or `nil` if default
+      clothing was not needed.
+
+      Default clothing is necessary if the HumanoidDescription does not
+      currently have Shirt and Pants equipped and the body colors are too
+      similar.
     code_samples: []
     parameters:
       - name: humanoidDescription
@@ -467,17 +476,29 @@ methods:
     capabilities:
       - AvatarAppearance
   - name: AvatarEditorService:ConformToAvatarRules
-    summary: ''
-    description: ''
+    summary: |
+      Deprecated. Returns a copy of the given `Class.HumanoidDescription` that
+      conforms to the platform Avatar rules.
+    description: |
+      Deprecated in favor of
+      `Class.AvatarEditorService:ConformToAvatarRulesAsync()`. Clones the given
+      description and adjusts scale values, accessory counts, accessory
+      adjustments, default clothing, and layered-clothing limits to comply with
+      the platform Avatar rules. It also remaps classic face and classic head
+      assets to their corresponding Dynamic Head asset IDs.
     code_samples: []
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
         default:
-        summary: ''
+        summary: |
+          The `Class.HumanoidDescription` to conform to the platform Avatar
+          rules.
     returns:
       - type: HumanoidDescription
-        summary: ''
+        summary: |
+          A new `Class.HumanoidDescription` that conforms to the platform Avatar
+          rules.
     tags:
       - Yields
       - Deprecated
@@ -515,17 +536,37 @@ methods:
     capabilities:
       - AvatarAppearance
   - name: AvatarEditorService:GetAccessoryType
-    summary: ''
-    description: ''
+    summary: |
+      Returns the `Enum.AccessoryType` that corresponds to the given
+      `Enum.AvatarAssetType`.
+    description: |
+      Returns the `Enum.AccessoryType` that corresponds to the given
+      `Enum.AvatarAssetType`, which is useful for grouping avatar assets by the
+      accessory slot they occupy.
+
+      The mapping covers accessory asset types — for example,
+      `Enum.AvatarAssetType.HairAccessory` maps to `Enum.AccessoryType.Hair`,
+      and layered-clothing types such as `Enum.AvatarAssetType.ShirtAccessory`
+      map to `Enum.AccessoryType.Shirt`. An `Enum.AvatarAssetType` that does not
+      correspond to an accessory (for example, an animation or a body part)
+      returns `Enum.AccessoryType.Unknown`.
+
+      This method returns immediately; it does not yield or perform a web
+      request.
     code_samples: []
     parameters:
       - name: avatarAssetType
         type: AvatarAssetType
         default:
-        summary: ''
+        summary: |
+          The `Enum.AvatarAssetType` to convert to its corresponding
+          `Enum.AccessoryType`.
     returns:
       - type: AccessoryType
-        summary: ''
+        summary: |
+          The `Enum.AccessoryType` corresponding to the given
+          `Enum.AvatarAssetType`, or `Enum.AccessoryType.Unknown` if the asset
+          type has no matching accessory type.
     tags: []
     deprecation_message: ''
     security: None
@@ -535,7 +576,11 @@ methods:
     summary: |
       Returns the platform Avatar rules for things such as scaling, default
       shirts and pants, number of wearable assets.
-    description: ''
+    description: |
+      Deprecated in favor of `Class.AvatarEditorService:GetAvatarRulesAsync()`.
+      This method has the same behavior: it returns a dictionary containing the
+      platform Avatar rules. See
+      `Class.AvatarEditorService:GetAvatarRulesAsync()` for the response format.
     code_samples: []
     parameters: []
     returns:
@@ -619,7 +664,11 @@ methods:
   - name: AvatarEditorService:GetBatchItemDetails
     summary: |
       Gets the item details for a list of items at once.
-    description: ''
+    description: |
+      Deprecated in favor of
+      `Class.AvatarEditorService:GetBatchItemDetailsAsync()`. This method has
+      the same behavior: it gets the item details for a list of items at once
+      and returns an array of item details in the Item Details Response format.
     code_samples: []
     parameters:
       - name: itemIds
@@ -686,10 +735,8 @@ methods:
       given asset.
     description: |
       Returns a paginated list of bundles that contain the specified asset.
-      Results are returned in ascending order by date created.
-
-      Each page entry uses the **Item Details Response** format (see service
-      description above).
+      Results are returned in ascending order by date created. Each page entry
+      uses the **Item Details Response** format (see service description above).
     code_samples: []
     parameters:
       - name: assetId
@@ -718,7 +765,10 @@ methods:
     summary: |
       Returns if the `Class.Players.LocalPlayer` has favorited the given bundle
       or asset.
-    description: ''
+    description: |
+      Deprecated in favor of `Class.AvatarEditorService:GetFavoriteAsync()`.
+      This method has the same behavior: it returns whether the
+      `Class.Players.LocalPlayer` has favorited the given bundle or asset.
     code_samples: []
     parameters:
       - name: itemId
@@ -813,7 +863,13 @@ methods:
     summary: |
       Returns an `Class.InventoryPages` object with information about owned
       items in the users inventory with the given AvatarAssetTypes.
-    description: ''
+    description: |
+      Deprecated in favor of `Class.AvatarEditorService:GetInventoryAsync()`.
+      This method has the same behavior: it returns an `Class.InventoryPages`
+      object with information about items owned by the
+      `Class.Players.LocalPlayer` that match the given
+      `Enum.AvatarAssetType|AvatarAssetTypes`. See
+      `Class.AvatarEditorService:GetInventoryAsync()` for the response format.
     code_samples: []
     parameters:
       - name: assetTypes
@@ -824,7 +880,9 @@ methods:
           player's inventory.
     returns:
       - type: InventoryPages
-        summary: ''
+        summary: |
+          An `Class.InventoryPages` object containing information about owned
+          items matching the given asset types.
     tags:
       - Yields
       - Deprecated
@@ -910,7 +968,9 @@ methods:
           player's inventory.
     returns:
       - type: InventoryPages
-        summary: ''
+        summary: |
+          An `Class.InventoryPages` object containing information about owned
+          items matching the given asset types.
     tags:
       - Yields
     deprecation_message: ''
@@ -922,7 +982,11 @@ methods:
   - name: AvatarEditorService:GetItemDetails
     summary: |
       Returns the item details for the given item.
-    description: ''
+    description: |
+      Deprecated in favor of `Class.AvatarEditorService:GetItemDetailsAsync()`.
+      This method has the same behavior: it returns a table containing the item
+      details for the given item. See
+      `Class.AvatarEditorService:GetItemDetailsAsync()` for the response format.
     code_samples: []
     parameters:
       - name: itemId
@@ -988,7 +1052,7 @@ methods:
         <tr>
           <td><code>CreatingUniverseId</code></td>
           <td>number</td>
-          <td>If this asset was created in an experience, this is the universe ID where it was created. <code>nil</code> if not an in-experience creation.</td>
+          <td>If this asset was created in an experience via the In-Experience Creation (IEC) pipeline, this is the universe ID of the creating experience. <code>nil</code> for standard catalog items. Use this to display attribution (e.g., "Created in [experience]") in your avatar editor UI.</td>
         </tr>
         <tr>
           <td><code>ExpirationTime</code></td>
@@ -1025,7 +1089,12 @@ methods:
   - name: AvatarEditorService:GetOutfitDetails
     summary: |
       Returns the outfit details for the given outfit.
-    description: ''
+    description: |
+      Deprecated in favor of
+      `Class.AvatarEditorService:GetOutfitDetailsAsync()`. This method has the
+      same behavior: it returns a table containing the outfit details for the
+      given outfit. See `Class.AvatarEditorService:GetOutfitDetailsAsync()` for
+      the response format.
     code_samples: []
     parameters:
       - name: outfitId
@@ -1114,20 +1183,30 @@ methods:
   - name: AvatarEditorService:GetOutfits
     summary: |
       Returns outfit data for the `Class.Players.LocalPlayer`.
-    description: ''
+    description: |
+      Deprecated in favor of `Class.AvatarEditorService:GetOutfitsAsync()`. This
+      method has the same behavior: it returns outfit data for the
+      `Class.Players.LocalPlayer`. See
+      `Class.AvatarEditorService:GetOutfitsAsync()` for the response format.
     code_samples: []
     parameters:
       - name: outfitSource
         type: OutfitSource
         default: All
-        summary: ''
+        summary: |
+          An `Enum.OutfitSource` filter specifying which outfits to include.
+          Defaults to `Enum.OutfitSource.All`.
       - name: outfitType
         type: OutfitType
         default: All
-        summary: ''
+        summary: |
+          An `Enum.OutfitType` filter specifying the type of outfits to return.
+          Defaults to `Enum.OutfitType.All`.
     returns:
       - type: OutfitPages
-        summary: ''
+        summary: |
+          An `Class.OutfitPages` object containing the outfit data for the local
+          player.
     tags:
       - Yields
       - Deprecated
@@ -1191,14 +1270,20 @@ methods:
       - name: outfitSource
         type: OutfitSource
         default: All
-        summary: ''
+        summary: |
+          An `Enum.OutfitSource` filter specifying which outfits to include.
+          Defaults to `Enum.OutfitSource.All`.
       - name: outfitType
         type: OutfitType
         default: All
-        summary: ''
+        summary: |
+          An `Enum.OutfitType` filter specifying the type of outfits to return.
+          Defaults to `Enum.OutfitType.All`.
     returns:
       - type: OutfitPages
-        summary: ''
+        summary: |
+          An `Class.OutfitPages` object containing the outfit data for the local
+          player.
     tags:
       - Yields
     deprecation_message: ''
@@ -1211,7 +1296,13 @@ methods:
     summary: |
       Returns a list of recommended assets based on a given `Enum.AssetType` and
       asset ID.
-    description: ''
+    description: |
+      Deprecated in favor of
+      `Class.AvatarEditorService:GetRecommendedAssetsAsync()`. This method has
+      the same behavior: it returns a list of recommended assets based on the
+      given `Enum.AvatarAssetType` and context asset ID. See
+      `Class.AvatarEditorService:GetRecommendedAssetsAsync()` for the response
+      format.
     code_samples:
       - getting-a-hat-recommendation
     parameters:
@@ -1310,7 +1401,12 @@ methods:
   - name: AvatarEditorService:GetRecommendedBundles
     summary: |
       Returns a list of recommended bundles for a given bundle id.
-    description: ''
+    description: |
+      Deprecated in favor of
+      `Class.AvatarEditorService:GetRecommendedBundlesAsync()`. This method has
+      the same behavior: it returns a list of recommended bundles for a given
+      bundle ID. See `Class.AvatarEditorService:GetRecommendedBundlesAsync()`
+      for the response format.
     code_samples: []
     parameters:
       - name: bundleId
@@ -1563,7 +1659,8 @@ methods:
       - name: shouldFavorite
         type: boolean
         default:
-        summary: ''
+        summary: |
+          Whether to favorite (`true`) or unfavorite (`false`) the item.
     returns:
       - type: ()
         summary: ''
@@ -1611,7 +1708,12 @@ methods:
     summary: |
       Returns a `Class.CatalogPages` object containing the result of the given
       search.
-    description: ''
+    description: |
+      Deprecated in favor of `Class.AvatarEditorService:SearchCatalogAsync()`.
+      This method has the same behavior: it returns a `Class.CatalogPages`
+      object containing the result of the given search. See
+      `Class.AvatarEditorService:SearchCatalogAsync()` for details on the
+      response format.
     code_samples: []
     parameters:
       - name: searchParameters
@@ -1621,7 +1723,8 @@ methods:
           An object containing the parameters used for the search.
     returns:
       - type: CatalogPages
-        summary: ''
+        summary: |
+          A `Class.CatalogPages` object containing the search results.
     tags:
       - Yields
       - Deprecated
@@ -1695,7 +1798,8 @@ events:
       This event fires when the PromptSaveOutfit operation is completed. It
       gives a status `Enum.AvatarPromptResult|enum` indicating whether the
       prompt succeeded, failed or permission was not granted by the user.
-    code_samples: []
+    code_samples:
+      - AvatarEditorService-PromptCreateOutfitCompleted
     parameters:
       - name: result
         type: AvatarPromptResult
@@ -1705,7 +1809,9 @@ events:
       - name: failureType
         type: Variant
         default:
-        summary: ''
+        summary: |
+          An `Enum.CreateOutfitFailure` value indicating the reason the outfit
+          creation failed, or `nil` on success.
     tags: []
     deprecation_message: ''
     security: None
@@ -1771,7 +1877,9 @@ events:
       - name: humanoidDescription
         type: HumanoidDescription
         default:
-        summary: ''
+        summary: |
+          The `Class.HumanoidDescription` that was saved (or attempted to be
+          saved) to the platform avatar.
     tags: []
     deprecation_message: ''
     security: None

@@ -4,24 +4,34 @@
 
 name: VRLaserPointerMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the display mode of the VR laser pointer used to interact with the
+  user interface.
+description: |
+  Specifies the display mode of the laser pointer that a VR player uses to
+  interact with the user interface. This enum is the type of
+  `Class.VRService.LaserPointer`, which defaults to
+  `Enum.VRLaserPointerMode.Pointer|Pointer`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Disabled
-    summary: ''
+    summary: |
+      The laser pointer is hidden and no pointer is rendered for any VR hand.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Pointer
-    summary: ''
+    summary: |
+      A single laser pointer is shown for the primary VR hand; this is the
+      default value of `Class.VRService.LaserPointer`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: DualPointer
-    summary: ''
+    summary: |
+      A laser pointer is shown for each VR hand simultaneously.
     value: 2
     tags: []
     deprecation_message: ''

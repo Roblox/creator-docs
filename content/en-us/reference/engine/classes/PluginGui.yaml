@@ -5,7 +5,9 @@
 name: PluginGui
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  An abstract base class for GUIs that display `Class.GuiObject|GuiObjects` in
+  Roblox Studio widgets.
 description: |
   PluginGui is an abstract class for GUIs that allow the display of
   `Class.GuiObject|GuiObjects` in various Roblox Studio widgets. As of right
@@ -16,7 +18,6 @@ inherits:
   - LayerCollector
 descendants:
   - DockWidgetPluginGui
-  - QWidgetPluginGui
 tags:
   - NotCreatable
   - NotReplicated
@@ -165,7 +166,8 @@ events:
       - name: dragData
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A copy of the data originally passed to `Class.Plugin:StartDrag()`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -253,7 +255,8 @@ events:
       - name: dragData
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A copy of the data originally passed to `Class.Plugin:StartDrag()`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity

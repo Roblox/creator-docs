@@ -15,27 +15,34 @@ deprecation_message: |
   `Class.Terrain` for a list of current function, events, and properties.
 items:
   - name: None
-    summary: ''
+    summary: |
+      No flow force on a legacy voxel terrain water cell; the water is still.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Small
-    summary: ''
+    summary: |
+      A low flow force level of a legacy voxel terrain water cell.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Medium
-    summary: ''
+    summary: |
+      A moderate flow force level of a legacy voxel terrain water cell, between
+      `Enum.WaterForce.Small` and `Enum.WaterForce.Strong`.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Strong
-    summary: ''
+    summary: |
+      A high flow force level of a legacy voxel terrain water cell, one step
+      below `Enum.WaterForce.Max`.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Max
-    summary: ''
+    summary: |
+      The maximum flow force level of a legacy voxel terrain water cell.
     value: 4
     tags: []
     deprecation_message: ''

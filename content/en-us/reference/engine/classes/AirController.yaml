@@ -5,8 +5,23 @@
 name: AirController
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A physics character controller that governs movement while a character is
+  airborne.
+description: |
+  An `Class.AirController` is a `Class.ControllerBase` that a
+  `Class.ControllerManager` uses to drive a character's physics-based movement
+  while it is airborne, such as while jumping or falling. While it is the
+  manager's `Class.ControllerManager.ActiveController|ActiveController`, it
+  keeps the character balanced upright, turns it toward the
+  `Class.ControllerManager.FacingDirection`, and moves it horizontally toward
+  the `Class.ControllerManager.MovingDirection`. Uprighting is tuned with
+  `Class.AirController.BalanceMaxTorque|BalanceMaxTorque` and
+  `Class.AirController.BalanceSpeed|BalanceSpeed`, turning with
+  `Class.AirController.TurnMaxTorque|TurnMaxTorque` and
+  `Class.AirController.TurnSpeedFactor|TurnSpeedFactor`, and horizontal movement
+  with `Class.AirController.MoveMaxForce|MoveMaxForce`. An `Class.AirController`
+  only functions when parented to a `Class.ControllerManager`.
 code_samples: []
 inherits:
   - ControllerBase

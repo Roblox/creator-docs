@@ -4,24 +4,37 @@
 
 name: MakeupType
 type: enum
-summary: ''
-description: ''
+summary: |
+  The category of makeup asset applied to an avatar through a
+  `Class.MakeupDescription`.
+description: |
+  `MakeupType` categorizes the region of the avatar face that a
+  `Class.MakeupDescription` targets. Each `MakeupDescription` child of a
+  `Class.HumanoidDescription` carries a `MakeupType` that determines which
+  platform asset type is used when loading and compositing the makeup layer.
+  Multiple layers of the same type can be stacked; their compositing order is
+  controlled by `Class.MakeupDescription.Order`. Makeup is only supported on R15
+  characters with `Class.MeshPart` heads.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Face
-    summary: ''
+    summary: |
+      Makeup asset applied broadly across the face, such as blush or foundation;
+      the default value of `Class.MakeupDescription.MakeupType`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Lip
-    summary: ''
+    summary: |
+      Makeup asset targeting the lip area, such as lipstick or lip gloss.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Eye
-    summary: ''
+    summary: |
+      Makeup asset targeting the eye region, such as eyeshadow or eyeliner.
     value: 2
     tags: []
     deprecation_message: ''

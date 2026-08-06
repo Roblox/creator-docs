@@ -6,29 +6,36 @@ name: PredictiveStreamingMode
 type: enum
 summary: |
   Used with `Class.Workspace.PredictiveStreamingMode` to control whether the
-  engine streams instances predictively. predictively.
-description: |
-  Used with `Class.Workspace.PredictiveStreamingMode` to control whether the
   engine streams instances predictively.
+description: |
+  Used by `Class.Workspace.PredictiveStreamingMode` to control whether streaming
+  pre-fetches content in the predicted direction of player movement, reducing
+  visible pop-in. `Enum.PredictiveStreamingMode.Enabled` uses player velocity
+  and heading to pre-fetch beyond the current position-based radius.
+  `Enum.PredictiveStreamingMode.Disabled` uses only the position-based radius.
+  `Enum.PredictiveStreamingMode.Default` uses the engine's current default
+  behavior for predictive streaming.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
     summary: |
-      Default behavior, currently equivalent to `Disabled`.
+      Uses the engine's current default behavior for predictive streaming.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Enabled
     summary: |
-      Allow the engine to make streaming decisions predictively.
+      Enables predictive streaming, pre-fetching content in the direction of
+      player movement to reduce pop-in.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Disabled
     summary: |
-      Disable predictive streaming.
+      Disables predictive streaming; content is streamed based on the player's
+      current position radius only.
     value: 2
     tags: []
     deprecation_message: ''

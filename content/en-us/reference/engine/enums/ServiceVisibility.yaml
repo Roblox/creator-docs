@@ -4,24 +4,35 @@
 
 name: ServiceVisibility
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls when a service is displayed in the Explorer window in Roblox Studio.
+description: |
+  Controls when a service is displayed in the Explorer panel in Roblox Studio.
+  This enum is used by the `ServiceVisibility` property on
+  `Class.ReflectionMetadataClass`, which defines the default explorer visibility
+  for a service class. It does not affect whether the service is accessible via
+  `Class.ServiceProvider:GetService()|GetService()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Always
-    summary: ''
+    summary: |
+      The service is always visible in the Explorer window.
     value: 0
     tags: []
     deprecation_message: ''
   - name: 'Off'
-    summary: ''
+    summary: |
+      The service is hidden from the Explorer window by default, but can still
+      be added via the Insert Service menu.
     value: 1
     tags: []
     deprecation_message: ''
   - name: WithChildren
-    summary: ''
+    summary: |
+      The service is visible in the Explorer window only when it has children;
+      it can still be added via the Insert Service menu.
     value: 2
     tags: []
     deprecation_message: ''

@@ -4,29 +4,46 @@
 
 name: SensorMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies whether a `Class.ControllerPartSensor` targets floor or ladder
+  geometry, and which detection algorithm to use.
+description: |
+  The `Enum.SensorMode` enum controls both the type of geometry a
+  `Class.ControllerPartSensor` targets (floor surfaces or ladder rungs) and the
+  detection algorithm it applies. `Enum.SensorMode.Floor` and
+  `Enum.SensorMode.Ladder` use the current sensing algorithms, while
+  `Enum.SensorMode.ClassicFloor` and `Enum.SensorMode.ClassicLadder` preserve
+  legacy behavior. The default value of `Class.ControllerPartSensor.SensorMode`
+  is `Enum.SensorMode.Floor`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Floor
-    summary: ''
+    summary: |
+      Detects floor surfaces below the part using the modern detection
+      algorithm; the default value of `Class.ControllerPartSensor.SensorMode`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Ladder
-    summary: ''
+    summary: |
+      Detects ladder surfaces adjacent to the part using the modern
+      piercing-based detection algorithm.
     value: 1
     tags: []
     deprecation_message: ''
   - name: ClassicFloor
-    summary: ''
+    summary: |
+      Detects floor surfaces below the part using the legacy raycast-based
+      algorithm.
     value: 2
     tags: []
     deprecation_message: ''
   - name: ClassicLadder
-    summary: ''
+    summary: |
+      Detects ladder surfaces adjacent to the part using the legacy ladder
+      detection algorithm.
     value: 3
     tags: []
     deprecation_message: ''

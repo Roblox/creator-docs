@@ -4,8 +4,16 @@
 
 name: CellMaterial
 type: enum
-summary: ''
-description: ''
+summary: |
+  Material values for individual cells in the deprecated legacy voxel-based
+  `Class.Terrain` engine.
+description: |
+  Deprecated. Material values for individual cells in the legacy voxel-based
+  `Class.Terrain` engine. These values were passed to the deprecated
+  `Class.Terrain:SetCell()` and `Class.Terrain:SetCells()` methods. When a
+  legacy place is loaded, the engine converts these cell materials to their
+  closest equivalents in the modern smooth terrain system. Use `Enum.Material`
+  with the current terrain APIs instead.
 code_samples: []
 tags: []
 deprecation_message: |
@@ -13,92 +21,128 @@ deprecation_message: |
   engine to set the material of terrain cells.
 items:
   - name: Empty
-    summary: ''
+    summary: |
+      Represents an air (unfilled) cell in the legacy voxel terrain; converted
+      to air in the modern terrain system.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Grass
-    summary: ''
+    summary: |
+      A green grassy cell material in the legacy voxel terrain, converted to
+      `Enum.Material.Grass` in the modern terrain system.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Sand
-    summary: ''
+    summary: |
+      A sandy cell material in the legacy voxel terrain, converted to
+      `Enum.Material.Sand` in the modern terrain system.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Brick
-    summary: ''
+    summary: |
+      A red brick cell material in the legacy voxel terrain, converted to
+      `Enum.Material.Brick` in the modern terrain system.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Granite
-    summary: ''
+    summary: |
+      A speckled stone cell material in the legacy voxel terrain, converted to
+      `Enum.Material.Slate` in the modern terrain system.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Asphalt
-    summary: ''
+    summary: |
+      A dark paved road cell material in the legacy voxel terrain, converted to
+      `Enum.Material.Asphalt` in the modern terrain system.
     value: 5
     tags: []
     deprecation_message: ''
   - name: Iron
-    summary: ''
+    summary: |
+      A dark metallic cell material in the legacy voxel terrain, converted to
+      `Enum.Material.Concrete` in the modern terrain system.
     value: 6
     tags: []
     deprecation_message: ''
   - name: Aluminum
-    summary: ''
+    summary: |
+      A metallic silver cell material in the legacy voxel terrain, converted to
+      `Enum.Material.Concrete` in the modern terrain system.
     value: 7
     tags: []
     deprecation_message: ''
   - name: Gold
-    summary: ''
+    summary: |
+      A golden metallic cell material in the legacy voxel terrain, converted to
+      `Enum.Material.Concrete` in the modern terrain system.
     value: 8
     tags: []
     deprecation_message: ''
   - name: WoodPlank
-    summary: ''
+    summary: |
+      A flat wooden plank cell material in the legacy voxel terrain, converted
+      to `Enum.Material.WoodPlanks` in the modern terrain system.
     value: 9
     tags: []
     deprecation_message: ''
   - name: WoodLog
-    summary: ''
+    summary: |
+      A round wooden log cell material in the legacy voxel terrain, converted to
+      `Enum.Material.WoodPlanks` in the modern terrain system.
     value: 10
     tags: []
     deprecation_message: ''
   - name: Gravel
-    summary: ''
+    summary: |
+      A loose-stone cell material in the legacy voxel terrain, converted to
+      `Enum.Material.Asphalt` in the modern terrain system.
     value: 11
     tags: []
     deprecation_message: ''
   - name: CinderBlock
-    summary: ''
+    summary: |
+      A rough masonry cell material in the legacy voxel terrain, converted to
+      `Enum.Material.Concrete` in the modern terrain system.
     value: 12
     tags: []
     deprecation_message: ''
   - name: MossyStone
-    summary: ''
+    summary: |
+      A weathered stone cell material in the legacy voxel terrain, converted to
+      `Enum.Material.Pavement` in the modern terrain system.
     value: 13
     tags: []
     deprecation_message: ''
   - name: Cement
-    summary: ''
+    summary: |
+      A gray cement cell material in the legacy voxel terrain, converted to
+      `Enum.Material.Concrete` in the modern terrain system.
     value: 14
     tags: []
     deprecation_message: ''
   - name: RedPlastic
-    summary: ''
+    summary: |
+      A red-tinted cell material in the legacy voxel terrain, converted to
+      `Enum.Material.Sandstone` in the modern terrain system.
     value: 15
     tags: []
     deprecation_message: ''
   - name: BluePlastic
-    summary: ''
+    summary: |
+      A blue-tinted cell material in the legacy voxel terrain, converted to
+      `Enum.Material.Ice` in the modern terrain system.
     value: 16
     tags: []
     deprecation_message: ''
   - name: Water
-    summary: ''
+    summary: |
+      A water-filled cell in the legacy voxel terrain, converted to
+      `Enum.Material.Water` in the modern terrain system.
     value: 17
     tags: []
     deprecation_message: ''

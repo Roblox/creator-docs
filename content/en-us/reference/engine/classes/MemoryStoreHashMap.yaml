@@ -124,7 +124,9 @@ methods:
           (3,888,000 seconds).
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the key already had a value that was overwritten, or `false`
+          if the key was newly created.
     tags:
       - Yields
     deprecation_message: ''

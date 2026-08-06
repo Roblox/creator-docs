@@ -4,8 +4,20 @@
 
 name: WeldConstraintPreserve
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls which `Class.WeldConstraint|WeldConstraints` are included in the
+  recommendation table returned by
+  `Class.GeometryService:CalculateConstraintsToPreserve()`.
+description: |
+  Controls which `Class.WeldConstraint|WeldConstraints` are included in the
+  recommendation table returned by
+  `Class.GeometryService:CalculateConstraintsToPreserve()` after a solid
+  modeling operation such as `Class.GeometryService:UnionAsync()`,
+  `Class.GeometryService:SubtractAsync()`, or
+  `Class.GeometryService:IntersectAsync()`. Pass this enum as the
+  `weldConstraintPreserve` key inside the `options` dictionary argument to that
+  method. The default value used when no option is specified is
+  `Enum.WeldConstraintPreserve.Touching`.
 code_samples: []
 tags: []
 deprecation_message: ''

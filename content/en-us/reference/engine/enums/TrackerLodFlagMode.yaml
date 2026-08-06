@@ -4,24 +4,35 @@
 
 name: TrackerLodFlagMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether a real-time face-tracker feature (audio or video) is forced
+  on, forced off, or left to the automatic LOD system.
+description: |
+  Type of the `AudioMode` and `VideoMode` properties on `TrackerLodController`.
+  Each defaults to `Enum.TrackerLodFlagMode.Auto`. Lets a script force a tracker
+  pipeline (audio-based or video-based facial animation) on or off, or leave the
+  decision to the automatic LOD system.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: ForceFalse
-    summary: ''
+    summary: |
+      Forces the associated tracker feature disabled, regardless of the current
+      LOD state.
     value: 0
     tags: []
     deprecation_message: ''
   - name: ForceTrue
-    summary: ''
+    summary: |
+      Forces the associated tracker feature enabled, regardless of the current
+      LOD state.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Auto
-    summary: ''
+    summary: |
+      Defers the enabled/disabled decision to the automatic LOD system.
     value: 2
     tags: []
     deprecation_message: ''

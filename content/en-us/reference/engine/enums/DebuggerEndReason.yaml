@@ -7,7 +7,9 @@ type: enum
 summary: |
   Reason for the end of the debugger session.
 description: |
-  Reason for the end of the debugger session.
+  Indicates why a `ConnectionEnded` event fired on a
+  `DebuggerConnectionManager`. Each value corresponds to a distinct termination
+  path in the Debugger V2 connection lifecycle.
 code_samples: []
 tags: []
 deprecation_message: ''

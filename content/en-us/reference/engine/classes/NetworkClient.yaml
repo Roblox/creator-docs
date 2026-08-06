@@ -5,7 +5,8 @@
 name: NetworkClient
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A service that manages a network connection's properties server.
 description: |
   This service is responsible for connecting a client to a server.
 code_samples: []

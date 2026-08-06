@@ -78,7 +78,8 @@ events:
       - name: face
         type: NormalId
         default:
-        summary: ''
+        summary: |
+          The `Enum.NormalId` of the face whose handle was pressed.
     tags: []
     deprecation_message: ''
     security: None
@@ -96,7 +97,9 @@ events:
       - name: face
         type: NormalId
         default:
-        summary: ''
+        summary: |
+          The `Enum.NormalId` of the face whose handle was pressed when the
+          interaction began.
     tags: []
     deprecation_message: ''
     security: None
@@ -116,11 +119,14 @@ events:
       - name: face
         type: NormalId
         default:
-        summary: ''
+        summary: |
+          The `Enum.NormalId` of the face whose handle is being dragged.
       - name: distance
         type: float
         default:
-        summary: ''
+        summary: |
+          The signed distance, in studs, that the mouse has been dragged along
+          the handle's axis since `Class.Handles.MouseButton1Down` fired.
     tags: []
     deprecation_message: ''
     security: None
@@ -138,7 +144,8 @@ events:
       - name: face
         type: NormalId
         default:
-        summary: ''
+        summary: |
+          The `Enum.NormalId` of the face whose handle the mouse moved onto.
     tags: []
     deprecation_message: ''
     security: None
@@ -156,7 +163,8 @@ events:
       - name: face
         type: NormalId
         default:
-        summary: ''
+        summary: |
+          The `Enum.NormalId` of the face whose handle the mouse moved off of.
     tags: []
     deprecation_message: ''
     security: None

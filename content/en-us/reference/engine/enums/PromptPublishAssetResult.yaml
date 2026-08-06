@@ -4,39 +4,57 @@
 
 name: PromptPublishAssetResult
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the result of an `Class.AssetService:PromptCreateAssetAsync()` call.
+description: |
+  Describes the result of an `Class.AssetService:PromptCreateAssetAsync()` call.
+  The result is returned to the experience server after the publish flow
+  completes, regardless of whether the publish succeeded or failed.
+
+  This enum was also used with the now-deprecated `OpenPublishResultModal`
+  event. The current equivalent is `Enum.PromptCreateAssetResult`, which is
+  returned by the `OpenCreateResultModal` event and is the result type for
+  `Class.AssetService:PromptCreateAssetAsync()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Success
-    summary: ''
+    summary: |
+      The asset was published successfully.
     value: 1
     tags: []
     deprecation_message: ''
   - name: PermissionDenied
-    summary: ''
+    summary: |
+      The user explicitly denied the consent prompt required to publish the
+      asset.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Timeout
-    summary: ''
+    summary: |
+      The publish flow timed out, typically because the user disconnected or
+      left the experience during the consent prompt.
     value: 3
     tags: []
     deprecation_message: ''
   - name: UploadFailed
-    summary: ''
+    summary: |
+      The asset upload to the Roblox backend failed after consent was granted.
     value: 4
     tags: []
     deprecation_message: ''
   - name: NoUserInput
-    summary: ''
+    summary: |
+      The user did not grant or deny the consent prompt before the window
+      expired.
     value: 5
     tags: []
     deprecation_message: ''
   - name: UnknownFailure
-    summary: ''
+    summary: |
+      The publish failed for an unspecified or unexpected reason.
     value: 6
     tags: []
     deprecation_message: ''

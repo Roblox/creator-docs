@@ -4,19 +4,28 @@
 
 name: MuteState
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes whether a voice chat participant's microphone is actively
+  transmitting audio.
+description: |
+  `Enum.MuteState` is the microphone mute status of a local player in a voice
+  chat session. It is passed in `Class.VoiceChatService` events such as
+  `VoiceChatPlayerMuteStateChangedClientToServer` and
+  `VoiceChatPlayerMuteStateChangedServerToClient`. Defaults to
+  `Enum.MuteState.Unmuted`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Unmuted
-    summary: ''
+    summary: |
+      The participant's microphone is active and transmitting audio.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Muted
-    summary: ''
+    summary: |
+      The participant's microphone is muted and not transmitting audio.
     value: 1
     tags: []
     deprecation_message: ''

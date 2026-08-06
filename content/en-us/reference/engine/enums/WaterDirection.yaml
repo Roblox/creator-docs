@@ -15,32 +15,38 @@ deprecation_message: |
   `Class.Terrain` for a list of current function, events, and properties.
 items:
   - name: NegX
-    summary: ''
+    summary: |
+      The negative X-axis face direction of a voxel terrain water cell.
     value: 0
     tags: []
     deprecation_message: ''
   - name: X
-    summary: ''
+    summary: |
+      The positive X-axis face direction of a voxel terrain water cell.
     value: 1
     tags: []
     deprecation_message: ''
   - name: NegY
-    summary: ''
+    summary: |
+      The negative Y-axis face direction of a voxel terrain water cell.
     value: 2
     tags: []
     deprecation_message: ''
   - name: 'Y'
-    summary: ''
+    summary: |
+      The positive Y-axis face direction of a voxel terrain water cell.
     value: 3
     tags: []
     deprecation_message: ''
   - name: NegZ
-    summary: ''
+    summary: |
+      The negative Z-axis face direction of a voxel terrain water cell.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Z
-    summary: ''
+    summary: |
+      The positive Z-axis face direction of a voxel terrain water cell.
     value: 5
     tags: []
     deprecation_message: ''

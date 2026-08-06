@@ -8,7 +8,15 @@ memory_category: Instances
 summary: |
   This service is used for interacting with `Class.ScriptDocument` instances.
 description: |
-  This service is used for interacting with `Class.ScriptDocument` instances.
+  This service is used for interacting with `Class.ScriptDocument` instances. It
+  provides methods to open, find, and list script documents that represent
+  scripts currently open in the Studio
+  [Script Editor](../../../studio/script-editor.md). It also enables plugins to
+  register custom callbacks for autocomplete and script analysis, and fires
+  events when script documents are opened, closed, or changed.
+
+  This service is only available in Studio plugins and the command bar (Plugin
+  security level).
 code_samples: []
 inherits:
   - Instance
@@ -24,14 +32,19 @@ methods:
     summary: |
       Removes a previously registered callback with the name `name`.
     description: |
-      Removes a previously registered callback with the name `name`.
+      Removes a previously registered autocomplete callback with the name
+      `name`. The callback must have been registered with
+      `Class.ScriptEditorService:RegisterAutocompleteCallback()`. Throws an
+      error if no callback with the given name is currently registered.
     code_samples:
       - ScriptEditorService-DeregisterAutocompleteCallback
     parameters:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The identifier that was used when registering the callback with
+          `Class.ScriptEditorService:RegisterAutocompleteCallback()`.
     returns:
       - type: ()
         summary: ''
@@ -44,14 +57,22 @@ methods:
     summary: |
       Removes a previously registered callback with the name `name`.
     description: |
-      Removes a previously registered callback with the name `name`.
+      Removes a previously registered Script Analysis callback with the name
+      `name`. The callback must have been registered with
+      `Class.ScriptEditorService:RegisterScriptAnalysisCallback()`. Throws an
+      error if no callback with the given name is currently registered.
+
+      After the callback is removed, Script Analysis automatically reruns on all
+      open scripts to update diagnostics.
     code_samples:
       - ScriptEditorService-DeregisterScriptAnalysisCallback
     parameters:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The identifier that was used when registering the callback with
+          `Class.ScriptEditorService:RegisterScriptAnalysisCallback()`.
     returns:
       - type: ()
         summary: ''
@@ -67,6 +88,10 @@ methods:
     description: |
       Returns the open `Class.ScriptDocument` corresponding to the given
       `Class.LuaSourceContainer`, or `nil` if the given script is not open.
+
+      A `Class.ScriptDocument` only exists while the script has an open tab in
+      the Script Editor. If the script's editor tab is closed, this method
+      returns `nil` even if the script instance still exists in the DataModel.
     code_samples:
       - ScriptDocument-CloseAsync
       - ScriptDocument-ViewportChanged
@@ -74,10 +99,15 @@ methods:
       - name: script
         type: LuaSourceContainer
         default:
-        summary: ''
+        summary: |
+          The `Class.LuaSourceContainer` (such as a `Class.Script`,
+          `Class.LocalScript`, or `Class.ModuleScript`) to find the open
+          document for.
     returns:
       - type: ScriptDocument
-        summary: ''
+        summary: |
+          The open `Class.ScriptDocument` corresponding to the given script, or
+          nil if the script is not currently open in the Script Editor.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -100,10 +130,13 @@ methods:
       - name: script
         type: LuaSourceContainer
         default:
-        summary: ''
+        summary: |
+          The `Class.LuaSourceContainer` to retrieve the edit-time source text
+          for.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The edit-time source text of the script as a string.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -115,13 +148,17 @@ methods:
       command bar.
     description: |
       Returns an array of the currently open script documents, including the
-      command bar.
+      command bar. Each entry is a `Class.ScriptDocument` representing one open
+      editor tab. The command bar's document can be identified with
+      `Class.ScriptDocument:IsCommandBar()` if you need to exclude it.
     code_samples:
       - ScriptEditorService-GetScriptDocuments
     parameters: []
     returns:
       - type: List<ScriptDocument>
-        summary: ''
+        summary: |
+          An array of `Class.ScriptDocument` objects representing all currently
+          open editor tabs, including the command bar.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -145,7 +182,8 @@ methods:
       - name: script
         type: LuaSourceContainer
         default:
-        summary: ''
+        summary: |
+          The `Class.LuaSourceContainer` to open in the Script Editor.
       - name: options
         type: Dictionary
         default: nil
@@ -159,7 +197,10 @@ methods:
             `HighlightRange = { Start = { Line = 10, Character = 1 }, End = { Line = 15, Character = 20 }}`.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple where the first value is a boolean indicating success and the
+          second is nil on success or a string describing the problem on
+          failure.
     tags:
       - Yields
     deprecation_message: ''
@@ -285,15 +326,21 @@ methods:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          A unique identifier for this callback, used to deregister it later
+          with `Class.ScriptEditorService:DeregisterAutocompleteCallback()`.
       - name: priority
         type: int
         default:
-        summary: ''
+        summary: |
+          The invocation order among registered callbacks; lower values run
+          first.
       - name: callbackFunction
         type: Function
         default:
-        summary: ''
+        summary: |
+          The function invoked during autocomplete with the signature
+          `(Request: table, Response: table) -> table`.
     returns:
       - type: ()
         summary: ''
@@ -368,15 +415,22 @@ methods:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          A unique identifier for this callback, used to deregister it later
+          with `Class.ScriptEditorService:DeregisterScriptAnalysisCallback()`.
       - name: priority
         type: int
         default:
-        summary: ''
+        summary: |
+          The invocation order among registered callbacks; lower values run
+          first.
       - name: callbackFunction
         type: Function
         default:
-        summary: ''
+        summary: |
+          The function invoked during Script Analysis with the signature
+          `(Request: table) -> table`, returning a response containing
+          diagnostics.
     returns:
       - type: ()
         summary: ''
@@ -445,11 +499,14 @@ events:
       - name: document
         type: ScriptDocument
         default:
-        summary: ''
+        summary: |
+          The `Class.ScriptDocument` that changed.
       - name: changesArray
         type: Variant
         default:
-        summary: ''
+        summary: |
+          An array of change structures, each describing a range that was
+          replaced and the new text.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -470,7 +527,8 @@ events:
       - name: oldDocument
         type: ScriptDocument
         default:
-        summary: ''
+        summary: |
+          The `Class.ScriptDocument` that is about to be destroyed.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -481,14 +539,19 @@ events:
       to the service, which happens right after the script editor opens.
     description: |
       Fires just after a `Class.ScriptDocument` object is created and parented
-      to the service, which happens right after the script editor opens.
+      to the service, which happens right after the script editor opens. The
+      `Class.ScriptDocument` passed to the handler is fully initialized and
+      ready to read or modify. This event also fires for the command bar
+      document.
     code_samples:
       - ScriptEditorService-TextDocumentDidOpen
     parameters:
       - name: newDocument
         type: ScriptDocument
         default:
-        summary: ''
+        summary: |
+          The newly created `Class.ScriptDocument` representing the opened
+          editor tab.
     tags: []
     deprecation_message: ''
     security: PluginSecurity

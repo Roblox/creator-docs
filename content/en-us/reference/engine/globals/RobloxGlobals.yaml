@@ -132,7 +132,8 @@ functions:
     parameters: []
     returns:
       - type: DebuggerManager
-        summary: ''
+        summary: |
+          The DebuggerManager singleton instance.
     tags:
       - Deprecated
     code_samples: []
@@ -150,7 +151,9 @@ functions:
     parameters: []
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The elapsed time, in seconds, since the current Roblox instance
+          started running.
     tags:
       - Deprecated
     code_samples: []
@@ -167,7 +170,8 @@ functions:
     parameters: []
     returns:
       - type: PluginManager
-        summary: ''
+        summary: |
+          The PluginManager singleton instance.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -182,7 +186,9 @@ functions:
       - name: prefix
         type: string
         default: Current identity is
-        summary: ''
+        summary: |
+          A custom string to print before the identity number; if omitted,
+          defaults to "Current identity is".
     returns:
       - type: ()
         summary: ''
@@ -200,7 +206,9 @@ functions:
     parameters: []
     returns:
       - type: GlobalSettings
-        summary: ''
+        summary: |
+          The GlobalSettings singleton used to access Roblox Studio's settings
+          objects.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -248,7 +256,8 @@ functions:
     parameters: []
     returns:
       - type: Stats
-        summary: ''
+        summary: |
+          The Stats service instance.
     tags:
       - Deprecated
     code_samples: []
@@ -271,7 +280,9 @@ functions:
     parameters: []
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The elapsed time, in seconds, since the Unix epoch (January 1, 1970)
+          according to the local device clock.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -289,7 +300,9 @@ functions:
     parameters: []
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The elapsed time, in seconds, since the current game instance started
+          running.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -309,7 +322,9 @@ functions:
           The Luau type that will have its type checked.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A string representation of the object's type, including
+          Roblox-specific types such as "Vector3" or "CFrame".
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -323,7 +338,8 @@ functions:
     parameters: []
     returns:
       - type: UserSettings
-        summary: ''
+        summary: |
+          The UserSettings singleton instance.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -345,7 +361,9 @@ functions:
     parameters: []
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A period-separated version string in the format
+          "generation.version.patch.commit".
     tags:
       - Deprecated
     code_samples: []
@@ -373,9 +391,11 @@ functions:
           Specifies how long the thread should yield for.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The actual time yielded, in seconds.
       - type: number
-        summary: ''
+        summary: |
+          The total time elapsed since the engine started, in seconds.
     tags:
       - Deprecated
     code_samples: []
@@ -422,12 +442,16 @@ functions:
       - name: args
         type: Tuple
         default:
-        summary: ''
+        summary: |
+          Additional arguments to pass to the function.
     returns:
       - type: bool
-        summary: ''
+        summary: |
+          Whether the function executed successfully without raising an error.
       - type: Variant
-        summary: ''
+        summary: |
+          The return values of the function on success, or the error message on
+          failure.
     tags:
       - Deprecated
     code_samples: []

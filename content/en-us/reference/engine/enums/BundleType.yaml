@@ -38,7 +38,9 @@ items:
     tags: []
     deprecation_message: ''
   - name: DynamicHeadAvatar
-    summary: ''
+    summary: |
+      A bundle containing full body parts and a dynamic head with facial
+      animation support.
     value: 5
     tags: []
     deprecation_message: ''

@@ -80,6 +80,10 @@ methods:
         used to control blending of the entire layer.
       - `NormalMap`, `MetalnessMap`, `RoughnessMap` are optional. If omitted,
         this layer doesn't perform any blending for those maps.
+
+      Calling this method on a `Class.Decal` that already has a pending
+      `ComposeDecalAsync` call in progress raises an error; wait for the first
+      call to resolve before issuing another on the same instance.
     code_samples:
       - AssetService-ComposeDecalAsync
     parameters:
@@ -291,7 +295,9 @@ methods:
             width and height.
     returns:
       - type: EditableImage
-        summary: ''
+        summary: |
+          The new `Class.EditableImage`, or `nil` if the device-specific
+          editable memory budget is exhausted.
     tags: []
     deprecation_message: ''
     security: None
@@ -358,7 +364,9 @@ methods:
           empty editable meshes.
     returns:
       - type: EditableMesh
-        summary: ''
+        summary: |
+          The new `Class.EditableMesh`, or `nil` if the device-specific editable
+          memory budget is exhausted.
     tags: []
     deprecation_message: ''
     security: None
@@ -454,7 +462,9 @@ methods:
             or the `options` table is `nil`.
     returns:
       - type: MeshPart
-        summary: ''
+        summary: |
+          The new `Class.MeshPart` with the specified mesh and fidelity settings
+          applied.
     tags:
       - Yields
     deprecation_message: ''
@@ -512,28 +522,37 @@ methods:
     summary: |
       Clones a place through the given `templatePlaceID` and puts it into the
       inventory of the given player.
-    description: ''
+    description: |
+      This method was removed in release 471 and no longer functions; calling it
+      raises an error. It previously cloned the place identified by
+      `templatePlaceID` and placed the copy into the given player's inventory.
+      There is no direct replacement.
     code_samples: []
     parameters:
       - name: player
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` whose inventory receives the cloned place.
       - name: placeName
         type: string
         default:
-        summary: ''
+        summary: |
+          Name for the new place.
       - name: templatePlaceID
         type: int64
         default:
-        summary: ''
+        summary: |
+          `Class.DataModel.PlaceId|PlaceId` of the place to clone.
       - name: description
         type: string
         default:
-        summary: ''
+        summary: |
+          Description for the new place.
     returns:
       - type: int64
-        summary: ''
+        summary: |
+          `Class.DataModel.PlaceId|PlaceId` of the new place.
     tags:
       - Yields
     deprecation_message: |
@@ -558,7 +577,9 @@ methods:
       `Class.AssetService:CreateEditableImageAsync(Content.fromUri(uri))`
 
       Default values will be used for all other `Class.SurfaceAppearance`
-      properties.
+      properties. Note that the `Class.EditableImage` assigned to each map
+      cannot be reassigned or swapped after the `Class.SurfaceAppearance` is
+      created.
     code_samples:
       - AssetService-CreateSurfaceAppearanceAsync
     parameters:
@@ -596,13 +617,18 @@ methods:
   - name: AssetService:GetAssetIdsForPackage
     summary: |
       Returns an array of asset IDs that are contained in a specified package.
-    description: ''
+    description: |
+      This deprecated method returns an array of asset IDs contained in the
+      specified package. Use
+      `Class.AssetService:GetAssetIdsForPackageAsync()|GetAssetIdsForPackageAsync()`
+      instead.
     code_samples: []
     parameters:
       - name: packageAssetId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The asset ID of the package to query.
     returns:
       - type: Array
         summary: |
@@ -628,7 +654,8 @@ methods:
       - name: packageAssetId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The asset ID of the package to query.
     returns:
       - type: Array
         summary: |
@@ -749,10 +776,12 @@ methods:
       - name: creationID
         type: int64
         default:
-        summary: ''
+        summary: |
+          The asset ID to look up for creator information.
     returns:
       - type: int64
-        summary: ''
+        summary: |
+          The `Class.Player.UserId` of the account that created the asset.
     tags:
       - Yields
       - Deprecated
@@ -775,7 +804,10 @@ methods:
     parameters: []
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          A `Class.StandardPages` object whose pages contain the name and
+          `Class.DataModel.PlaceId|PlaceId` of each place in the current
+          experience.
     tags:
       - Yields
     deprecation_message: ''
@@ -889,21 +921,41 @@ methods:
     capabilities:
       - AssetCreateUpdate
   - name: AssetService:PromptImportAnimationClipFromVideoAsync
-    summary: ''
-    description: ''
+    summary: |
+      Prompts the specified player to select and upload a video, which is then
+      converted into an `Class.AnimationClip`.
+    description: |
+      Prompts the given `player` to select and upload a video on their own
+      client, then converts the uploaded video into an `Class.AnimationClip` and
+      returns it. The player must grant consent through the prompt before the
+      upload proceeds; if they decline or provide no input, the method resolves
+      with `Enum.AnimationClipFromVideoStatus.Cancelled` and no clip.
+
+      This method can only be called from the server. The returned
+      `Enum.AnimationClipFromVideoStatus` reports success or the reason
+      processing failed.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The player who is prompted, on their own client, to select and upload
+          a video. The player's consent is required before the video is
+          uploaded.
       - name: progressCallback
         type: Function
         default:
-        summary: ''
+        summary: |
+          A function that receives status updates (an
+          `Enum.AnimationClipFromVideoStatus` value) while the video is uploaded
+          and processed.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple containing an `Enum.AnimationClipFromVideoStatus` describing
+          the outcome and, on success, the resulting `Class.AnimationClip`
+          (`nil` otherwise).
     tags:
       - Yields
     deprecation_message: ''
@@ -954,17 +1006,24 @@ methods:
   - name: AssetService:SearchAudio
     summary: |
       Finds audio assets matching a variety of search criteria.
-    description: ''
+    description: |
+      This deprecated method finds audio assets matching a variety of search
+      criteria. Use `Class.AssetService:SearchAudioAsync()|SearchAudioAsync()`
+      instead.
     code_samples:
       - printing-search-audio-result-titles
     parameters:
       - name: searchParameters
         type: AudioSearchParams
         default:
-        summary: ''
+        summary: |
+          A `Class.AudioSearchParams` object defining the search criteria such
+          as keyword, title, artist, audio type, and duration range.
     returns:
       - type: AudioPages
-        summary: ''
+        summary: |
+          An `Class.AudioPages` object containing the paginated results of the
+          audio search.
     tags:
       - Yields
       - Deprecated
@@ -1009,10 +1068,14 @@ methods:
       - name: searchParameters
         type: AudioSearchParams
         default:
-        summary: ''
+        summary: |
+          A `Class.AudioSearchParams` object defining the search criteria such
+          as keyword, title, artist, audio type, and duration range.
     returns:
       - type: AudioPages
-        summary: ''
+        summary: |
+          An `Class.AudioPages` object containing the paginated results of the
+          audio search.
     tags:
       - Yields
     deprecation_message: ''

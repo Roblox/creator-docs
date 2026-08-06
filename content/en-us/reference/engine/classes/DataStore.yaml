@@ -5,7 +5,9 @@
 name: DataStore
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A `Class.GlobalDataStore` that also supports versioning, key metadata, and
+  enumerating keys.
 description: |
   See [Data stores](../../../cloud-services/data-stores/index.md) for an
   in-depth guide on data structure, management, error handling, limits, and

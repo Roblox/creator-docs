@@ -40,11 +40,17 @@ constructors:
       - name: min
         type: Vector2
         default:
-        summary: ''
+        summary: |
+          One corner of the rectangle as a `Datatype.Vector2`. The constructor
+          computes the component-wise minimum of `min` and `max` to determine
+          the top-left corner.
       - name: max
         type: Vector2
         default:
-        summary: ''
+        summary: |
+          The other corner of the rectangle as a `Datatype.Vector2`. The
+          constructor computes the component-wise maximum of `min` and `max` to
+          determine the bottom-right corner.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -60,19 +66,23 @@ constructors:
       - name: minX
         type: number
         default:
-        summary: ''
+        summary: |
+          The X coordinate of the top-left corner of the rectangle.
       - name: minY
         type: number
         default:
-        summary: ''
+        summary: |
+          The Y coordinate of the top-left corner of the rectangle.
       - name: maxX
         type: number
         default:
-        summary: ''
+        summary: |
+          The X coordinate of the bottom-right corner of the rectangle.
       - name: maxY
         type: number
         default:
-        summary: ''
+        summary: |
+          The Y coordinate of the bottom-right corner of the rectangle.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -83,7 +93,11 @@ properties:
     summary: |
       The width of the **Rect**.
     description: |
-      The width of the **Rect** in pixels.
+      The horizontal span of the rectangle, equal to `Max.X - Min.X`. This value
+      is always non-negative because the constructor normalizes the input
+      coordinates so that `Datatype.Rect.Min|Min` is component-wise less than or
+      equal to `Datatype.Rect.Max|Max`. Defaults to `0` for a `Datatype.Rect`
+      created with no arguments.
     default:
     code_samples: []
     tags: []
@@ -93,7 +107,11 @@ properties:
     summary: |
       The height of the **Rect**.
     description: |
-      The height of the **Rect** in pixels.
+      The vertical span of the rectangle, equal to `Max.Y - Min.Y`. This value
+      is always non-negative because the constructor normalizes the input
+      coordinates so that `Datatype.Rect.Min|Min` is component-wise less than or
+      equal to `Datatype.Rect.Max|Max`. Defaults to `0` for a `Datatype.Rect`
+      created with no arguments.
     default:
     code_samples: []
     tags: []
@@ -103,7 +121,11 @@ properties:
     summary: |
       The coordinates of the top-left corner.
     description: |
-      The top-left corner.
+      The top-left corner of the rectangle as a `Datatype.Vector2`. When you
+      construct a `Datatype.Rect` with two positions, this property returns the
+      component-wise minimum of those positions regardless of the order they
+      were passed in. Defaults to `(0, 0)` for a `Datatype.Rect` created with no
+      arguments.
     default:
     code_samples: []
     tags: []
@@ -113,7 +135,11 @@ properties:
     summary: |
       The coordinates of the bottom-right corner.
     description: |
-      The bottom-right corner.
+      The bottom-right corner of the rectangle as a `Datatype.Vector2`. When you
+      construct a `Datatype.Rect` with two positions, this property returns the
+      component-wise maximum of those positions regardless of the order they
+      were passed in. Defaults to `(0, 0)` for a `Datatype.Rect` created with no
+      arguments.
     default:
     code_samples: []
     tags: []

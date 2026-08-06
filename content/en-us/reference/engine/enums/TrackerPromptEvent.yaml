@@ -4,14 +4,24 @@
 
 name: TrackerPromptEvent
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates the type of prompt fired by the face tracker when a runtime
+  condition requires user attention.
+description: |
+  Enumerates the categories of prompt events raised by `RTAnimationTracker` and
+  `FaceAnimatorService` via their `TrackerPrompt` events. Each value describes a
+  distinct condition that the face-tracking system wants to surface to
+  experience code so that the experience can react — for example, by displaying
+  UI guidance to the user.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: LODCameraRecommendDisable
-    summary: ''
+    summary: |
+      The LOD controller has determined that device performance is insufficient
+      to sustain camera-based face tracking and recommends disabling camera
+      input.
     value: 0
     tags: []
     deprecation_message: ''

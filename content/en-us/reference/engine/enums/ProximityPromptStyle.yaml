@@ -4,8 +4,16 @@
 
 name: ProximityPromptStyle
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the visual style of a `Class.ProximityPrompt`.
+description: |
+  Specifies the visual style used by a `Class.ProximityPrompt`. The default
+  value is `Enum.ProximityPromptStyle.Default`, which renders the built-in
+  Roblox CoreScript UI. Set `Class.ProximityPrompt.Style` to
+  `Enum.ProximityPromptStyle.Custom` to suppress the built-in UI and take full
+  control of prompt rendering by listening to
+  `Class.ProximityPromptService.PromptShown` and
+  `Class.ProximityPromptService.PromptHidden`.
 code_samples:
   - generating-a-custom-proximity-prompt
 tags: []
@@ -13,14 +21,14 @@ deprecation_message: ''
 items:
   - name: Default
     summary: |
-      The default prompt UI style.
+      Built-in Roblox CoreScript prompt UI.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Custom
     summary: |
-      Custom prompt UI style as set by the developer. For more information, see
-      `Class.ProximityPrompt.Style`.
+      Suppresses the built-in prompt UI so you can render a custom prompt (see
+      `Class.ProximityPrompt.Style`).
     value: 1
     tags: []
     deprecation_message: ''

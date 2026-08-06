@@ -5,7 +5,9 @@
 name: DockWidgetPluginGui
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A `Class.PluginGui` that displays its contents in a dockable, resizable Roblox
+  Studio window.
 description: |
   **DockWidgetPluginGui** is a `Class.PluginGui` that displays its contents
   inside a dockable Roblox Studio window. It is used to create widgets similar

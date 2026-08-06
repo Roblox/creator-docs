@@ -5,7 +5,10 @@
 name: PhysicsService
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  Service that provides methods for creating and managing collision groups,
+  which control whether sets of `Class.BasePart|BaseParts` collide with each
+  other.
 description: |
   `Class.PhysicsService` primarily contains methods for working with **collision
   groups** which define whether a set of parts may or may not collide with parts
@@ -45,14 +48,18 @@ methods:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the collision group to check.
       - name: part
         type: BasePart
         default:
-        summary: ''
+        summary: |
+          The `BasePart` to check for membership in the collision group.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the part belongs to the specified collision group, `false`
+          otherwise.
     tags:
       - Deprecated
     deprecation_message: |
@@ -75,14 +82,18 @@ methods:
       - name: name1
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the first collision group.
       - name: name2
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the second collision group.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the two groups are set to collide, `false` otherwise. Also
+          returns `true` if either group is unregistered.
     tags: []
     deprecation_message: ''
     security: None
@@ -104,15 +115,18 @@ methods:
       - name: name1
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the first collision group.
       - name: name2
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the second collision group.
       - name: collidable
         type: boolean
         default:
-        summary: ''
+        summary: |
+          Whether the two groups should collide with each other.
     returns:
       - type: ()
         summary: ''
@@ -135,10 +149,12 @@ methods:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the new collision group to create.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The integer ID assigned to the newly created collision group.
     tags:
       - Deprecated
     deprecation_message: |
@@ -181,18 +197,21 @@ methods:
     summary: |
       Returns the name of the group with the corresponding ID.
     description: |
-      Returns the name of the collision group with the corresponding ID. This
-      method will return `nil` if the group with the corresponding ID has not
-      been named.
+      Returns the name of the collision group with the corresponding ID, or an
+      empty string if that ID (`0`–`31`) has not been assigned to a group. The
+      method throws an error if the ID is outside the valid range.
     code_samples: []
     parameters:
       - name: name
         type: int
         default:
-        summary: ''
+        summary: |
+          The integer ID of the collision group to look up.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The name of the collision group with the given ID, or an empty string
+          if the ID has not been assigned to a group.
     tags:
       - Deprecated
     deprecation_message: |
@@ -240,7 +259,9 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of tables, each containing `name` (string), `id` (integer),
+          and `mask` (integer) fields for a registered collision group.
     tags:
       - Deprecated
     deprecation_message: |
@@ -261,7 +282,8 @@ methods:
     parameters: []
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The maximum number of collision groups supported, currently 32.
     tags: []
     deprecation_message: ''
     security: None
@@ -301,7 +323,9 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of tables, each containing `name` (string) and `mask`
+          (integer) fields for a registered collision group.
     tags: []
     deprecation_message: ''
     security: None
@@ -322,10 +346,13 @@ methods:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the collision group to check.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if a collision group with the given name is registered, `false`
+          otherwise.
     tags: []
     deprecation_message: ''
     security: None
@@ -353,7 +380,8 @@ methods:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the collision group to register.
     returns:
       - type: ()
         summary: ''
@@ -384,7 +412,8 @@ methods:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the collision group to remove.
     returns:
       - type: ()
         summary: ''
@@ -426,11 +455,13 @@ methods:
       - name: from
         type: string
         default:
-        summary: ''
+        summary: |
+          The current name of the collision group to rename.
       - name: to
         type: string
         default:
-        summary: ''
+        summary: |
+          The new name for the collision group.
     returns:
       - type: ()
         summary: ''
@@ -506,7 +537,8 @@ methods:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the collision group to unregister.
     returns:
       - type: ()
         summary: ''

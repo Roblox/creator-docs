@@ -5,8 +5,14 @@
 name: CreatorStoreService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Provides methods for querying Creator Store product information and purchasing
+  assets.
+description: |
+  Internal-only (`RobloxScript` security): not callable from experience or
+  community plugin scripts. Handles Creator Store product queries and purchases
+  — yielding methods to fetch product and asset metadata and to purchase Creator
+  Store assets.
 code_samples: []
 inherits:
   - Instance

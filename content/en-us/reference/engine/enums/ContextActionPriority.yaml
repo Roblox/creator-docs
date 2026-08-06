@@ -7,27 +7,38 @@ type: enum
 summary: |
   Describes the priority of a context action.
 description: |
-  The ContextActionPriority is used to set the priority of a context action.
-  This priority is used to determine context action order.
+  `ContextActionPriority` specifies the relative priority of an action bound via
+  `Class.ContextActionService:BindActionAtPriority()`. When multiple actions are
+  bound to the same input, `Class.ContextActionService` invokes them in
+  descending priority order — the action with the highest priority value runs
+  first and may sink the input before lower-priority actions receive it. The
+  three named levels map to the integer values `Low = 1000`, `Medium = 2000`,
+  and `High = 3000`; arbitrary integers are also accepted by
+  `BindActionAtPriority`. `Medium` is the default priority used by
+  `Class.ContextActionService:BindAction()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Low
     summary: |
-      Low priority.
+      The lowest named priority level (value 1000); an action at this level is
+      invoked after `High` and `Medium` actions bound to the same input.
     value: 1000
     tags: []
     deprecation_message: ''
   - name: Medium
     summary: |
-      Medium priority.
+      The default priority level (value 2000); used automatically by
+      `Class.ContextActionService:BindAction()` and falls between `High` and
+      `Low` in processing order.
     value: 2000
     tags: []
     deprecation_message: ''
   - name: High
     summary: |
-      High priority.
+      The highest named priority level (value 3000); an action at this level is
+      invoked before `Medium` and `Low` actions bound to the same input.
     value: 3000
     tags: []
     deprecation_message: ''

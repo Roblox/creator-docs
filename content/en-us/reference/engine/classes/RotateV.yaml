@@ -5,7 +5,9 @@
 name: RotateV
 type: class
 memory_category: BaseParts
-summary: ''
+summary: |
+  Joins two parts and allows rotation driven by angular velocity from the Motor
+  surface type.
 description: |
   A **RotateV** object joins two parts together and allows rotation about a set
   axis. This object is most commonly created by the `Enum.SurfaceType.Motor` on

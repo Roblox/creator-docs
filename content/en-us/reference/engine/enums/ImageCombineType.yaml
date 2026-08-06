@@ -57,3 +57,9 @@ items:
     value: 6
     tags: []
     deprecation_message: ''
+  - name: Subtract
+    summary: |
+      Subtracts pixels of the source from pixels of the destination.
+    value: 7
+    tags: []
+    deprecation_message: ''

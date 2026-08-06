@@ -4,134 +4,175 @@
 
 name: CompletionItemKind
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates the category of a script editor autocomplete suggestion, controlling
+  its icon and display in the completion list.
+description: |
+  Describes the semantic category of an item returned by the Luau Language
+  Server Protocol (LSP) autocomplete provider. Roblox Studio's script editor
+  uses this value to select the icon shown next to each completion item and to
+  apply autocomplete scoring and filtering logic.
+
+  This enum mirrors the
+  [LSP CompletionItemKind specification](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#completionItemKind)
+  (values 1–25). Plugins that register an autocomplete callback via
+  `Class.ScriptEditorService:RegisterAutocompleteCallback()` may set the `kind`
+  field on each `CompletionItem` to one of these values to hint how their
+  suggestion should be presented.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Text
-    summary: ''
+    summary: |
+      Indicates the completion item represents a plain text suggestion.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Method
-    summary: ''
+    summary: |
+      Indicates the completion item represents a method on a class or object.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Function
-    summary: ''
+    summary: |
+      Indicates the completion item represents a function.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Constructor
-    summary: ''
+    summary: |
+      Indicates the completion item represents a constructor.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Field
-    summary: ''
+    summary: |
+      Indicates the completion item represents a field within a record or
+      struct.
     value: 5
     tags: []
     deprecation_message: ''
   - name: Variable
-    summary: ''
+    summary: |
+      Indicates the completion item represents a variable binding.
     value: 6
     tags: []
     deprecation_message: ''
   - name: Class
-    summary: ''
+    summary: |
+      Indicates the completion item represents a class or type definition.
     value: 7
     tags: []
     deprecation_message: ''
   - name: Interface
-    summary: ''
+    summary: |
+      Indicates the completion item represents an interface type.
     value: 8
     tags: []
     deprecation_message: ''
   - name: Module
-    summary: ''
+    summary: |
+      Indicates the completion item represents a module.
     value: 9
     tags: []
     deprecation_message: ''
   - name: Property
-    summary: ''
+    summary: |
+      Indicates the completion item represents a property on a class or object.
     value: 10
     tags: []
     deprecation_message: ''
   - name: Unit
-    summary: ''
+    summary: |
+      Indicates the completion item represents a unit of measurement or a
+      module-level value.
     value: 11
     tags: []
     deprecation_message: ''
   - name: Value
-    summary: ''
+    summary: |
+      Indicates the completion item represents a value expression.
     value: 12
     tags: []
     deprecation_message: ''
   - name: Enum
-    summary: ''
+    summary: |
+      Indicates the completion item represents an enum type.
     value: 13
     tags: []
     deprecation_message: ''
   - name: Keyword
-    summary: ''
+    summary: |
+      Indicates the completion item represents a language keyword.
     value: 14
     tags: []
     deprecation_message: ''
   - name: Snippet
-    summary: ''
+    summary: |
+      Indicates the completion item represents an insertable code snippet with
+      tab stops.
     value: 15
     tags: []
     deprecation_message: ''
   - name: Color
-    summary: ''
+    summary: |
+      Indicates the completion item represents a color value.
     value: 16
     tags: []
     deprecation_message: ''
   - name: File
-    summary: ''
+    summary: |
+      Indicates the completion item represents a file reference.
     value: 17
     tags: []
     deprecation_message: ''
   - name: Reference
-    summary: ''
+    summary: |
+      Indicates the completion item represents a reference to another symbol.
     value: 18
     tags: []
     deprecation_message: ''
   - name: Folder
-    summary: ''
+    summary: |
+      Indicates the completion item represents a folder or directory.
     value: 19
     tags: []
     deprecation_message: ''
   - name: EnumMember
-    summary: ''
+    summary: |
+      Indicates the completion item represents an individual enum member value.
     value: 20
     tags: []
     deprecation_message: ''
   - name: Constant
-    summary: ''
+    summary: |
+      Indicates the completion item represents a constant value.
     value: 21
     tags: []
     deprecation_message: ''
   - name: Struct
-    summary: ''
+    summary: |
+      Indicates the completion item represents a struct or table type.
     value: 22
     tags: []
     deprecation_message: ''
   - name: Event
-    summary: ''
+    summary: |
+      Indicates the completion item represents an event.
     value: 23
     tags: []
     deprecation_message: ''
   - name: Operator
-    summary: ''
+    summary: |
+      Indicates the completion item represents an operator.
     value: 24
     tags: []
     deprecation_message: ''
   - name: TypeParameter
-    summary: ''
+    summary: |
+      Indicates the completion item represents a generic type parameter.
     value: 25
     tags: []
     deprecation_message: ''

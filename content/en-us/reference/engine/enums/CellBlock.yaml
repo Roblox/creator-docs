@@ -4,8 +4,15 @@
 
 name: CellBlock
 type: enum
-summary: ''
-description: ''
+summary: |
+  Deprecated enum specifying the geometric block shape of a legacy voxel terrain
+  cell, used with the removed `Class.Terrain:SetCell()` method.
+description: |
+  Specifies the geometric shape of a legacy voxel terrain cell, used with the
+  deprecated `Class.Terrain:SetCell()` and `Class.Terrain:SetCells()` methods.
+  Each value corresponds to one of the five reflected block shapes in the old
+  voxel terrain system. This enum and the methods that consume it are
+  deprecated; use smooth terrain APIs instead.
 code_samples: []
 tags: []
 deprecation_message: |
@@ -13,27 +20,37 @@ deprecation_message: |
   function that is no longer supported by the `Class.Terrain` engine.
 items:
   - name: Solid
-    summary: ''
+    summary: |
+      A legacy voxel cell that is completely filled, occupying the full cell
+      volume.
     value: 0
     tags: []
     deprecation_message: ''
   - name: VerticalWedge
-    summary: ''
+    summary: |
+      A legacy voxel cell shaped as a vertical wedge, occupying half of a full
+      cell's volume.
     value: 1
     tags: []
     deprecation_message: ''
   - name: CornerWedge
-    summary: ''
+    summary: |
+      A legacy voxel cell shaped as a corner wedge, occupying approximately
+      one-third of a full cell's volume.
     value: 2
     tags: []
     deprecation_message: ''
   - name: InverseCornerWedge
-    summary: ''
+    summary: |
+      A legacy voxel cell shaped as an inverse corner wedge, occupying
+      approximately two-thirds of a full cell's volume.
     value: 3
     tags: []
     deprecation_message: ''
   - name: HorizontalWedge
-    summary: ''
+    summary: |
+      A legacy voxel cell shaped as a horizontal wedge, occupying half of a full
+      cell's volume.
     value: 4
     tags: []
     deprecation_message: ''

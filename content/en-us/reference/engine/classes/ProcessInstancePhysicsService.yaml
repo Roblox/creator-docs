@@ -5,8 +5,16 @@
 name: ProcessInstancePhysicsService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  An internal engine service that generates collision geometry (physics data)
+  for `Class.MeshPart` and `Class.PartOperation` instances that need new
+  physics.
+description: |
+  An internal engine service with no scriptable properties, methods, events, or
+  callbacks. It computes collision geometry (physics data) for instances whose
+  collision mesh needs to be built or rebuilt, including `Class.MeshPart`
+  instances (from `Class.MeshPart.MeshId|MeshId`) and `Class.PartOperation`
+  instances from solid modeling, at the requested `Enum.CollisionFidelity`.
 code_samples: []
 inherits:
   - Instance

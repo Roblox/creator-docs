@@ -4,29 +4,43 @@
 
 name: GamepadType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies the hardware type of a connected gamepad controller.
+description: |
+  Identifies the hardware type of a connected gamepad (for example PlayStation
+  or Xbox). Detected when a gamepad connects. On console platforms the value is
+  fixed to the platform's native controller type; elsewhere it reflects the most
+  recently connected gamepad, defaulting to `Enum.GamepadType.Unknown` when none
+  has connected or the type cannot be determined.
+
+  Use `Class.UserInputService:GetImageForKeyCode()` to get an image
+  representation of a KeyCode for a given gamepad.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Unknown
-    summary: ''
+    summary: |
+      A gamepad whose hardware type could not be determined, or no gamepad has
+      connected yet.
     value: 0
     tags: []
     deprecation_message: ''
   - name: PS4
-    summary: ''
+    summary: |
+      A Sony PlayStation 4 DualShock controller.
     value: 1
     tags: []
     deprecation_message: ''
   - name: PS5
-    summary: ''
+    summary: |
+      A Sony PlayStation 5 DualSense controller.
     value: 2
     tags: []
     deprecation_message: ''
   - name: XboxOne
-    summary: ''
+    summary: |
+      A Microsoft Xbox One controller.
     value: 3
     tags: []
     deprecation_message: ''

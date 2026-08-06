@@ -4,64 +4,87 @@
 
 name: TrackerError
 type: enum
-summary: ''
-description: ''
+summary: |
+  Status and error codes reported by the face-tracking subsystem through the
+  `TrackerError` events on `RTAnimationTracker` and `FaceAnimatorService`.
+description: |
+  Passed to `TrackerError` handlers on `RTAnimationTracker` and
+  `FaceAnimatorService` to indicate why face tracking failed or stopped.
+  `Enum.TrackerError.Ok` is a clean state; other values cover initialization,
+  service availability, video input, or audio input failures.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Ok
-    summary: ''
+    summary: |
+      No error; the tracker is operating normally.
     value: 0
     tags: []
     deprecation_message: ''
   - name: NoService
-    summary: ''
+    summary: |
+      A required engine service was unavailable when the tracker attempted to
+      connect.
     value: 1
     tags: []
     deprecation_message: ''
   - name: InitFailed
-    summary: ''
+    summary: |
+      The tracker failed to create or initialize its tracking session.
     value: 2
     tags: []
     deprecation_message: ''
   - name: NoVideo
-    summary: ''
+    summary: |
+      Video input is unavailable because no camera device was found or the
+      camera was disconnected.
     value: 3
     tags: []
     deprecation_message: ''
   - name: VideoError
-    summary: ''
+    summary: |
+      A generic video error occurred during face-tracking camera input
+      processing.
     value: 4
     tags: []
     deprecation_message: ''
   - name: VideoNoPermission
-    summary: ''
+    summary: |
+      The user denied camera permission required for video-based face tracking.
     value: 5
     tags: []
     deprecation_message: ''
   - name: VideoUnsupported
-    summary: ''
+    summary: |
+      Video-based face tracking is not supported on this device or platform.
     value: 6
     tags: []
     deprecation_message: ''
   - name: NoAudio
-    summary: ''
+    summary: |
+      Audio input is unavailable because `SoundService` could not be found or
+      connected.
     value: 7
     tags: []
     deprecation_message: ''
   - name: AudioError
-    summary: ''
+    summary: |
+      A generic audio error occurred during face-tracking audio input
+      processing.
     value: 8
     tags: []
     deprecation_message: ''
   - name: AudioNoPermission
-    summary: ''
+    summary: |
+      The user denied microphone permission required for audio-based face
+      tracking.
     value: 9
     tags: []
     deprecation_message: ''
   - name: UnsupportedDevice
-    summary: ''
+    summary: |
+      The current device or platform does not support face tracking.
     value: 10
     tags: []
     deprecation_message: ''

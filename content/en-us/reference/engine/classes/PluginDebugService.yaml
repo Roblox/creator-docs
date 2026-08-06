@@ -5,8 +5,19 @@
 name: PluginDebugService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A service that holds the debuggable `Class.Plugin` instances that are
+  currently being debugged in Studio, parenting them into the data model.
+description: |
+  Studio-only service for plugin debugging — not available in published games.
+  It holds the `Class.Plugin` instances currently being debugged and parents
+  them into the data model so the debugger can treat stepped scripts as
+  data-model descendants, while keeping them out of serialization and under
+  Studio Explorer visibility control.
+
+  Only a `Class.Plugin` marked as debuggable can be parented here; any other
+  child raises an error. Debugging is opt-in through Studio settings and applies
+  only to local plugins the user placed in their local plugins directory.
 code_samples: []
 inherits:
   - Instance

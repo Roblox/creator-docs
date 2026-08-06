@@ -59,7 +59,13 @@ Unlike mobiles and desktops, navigation is always sequential on consoles, so pla
 
 ### Accommodate dynamic button icons
 
-As your game expands to more platforms, be sure to show button icons that match different devices. `Class.UserInputService` has two methods available that can achieve this:
+As your game expands to more platforms, be sure to show button icons that match different devices.
+
+<Alert severity="success">
+If you're showing bindings from the [Input Action System](../../input/input-action-system.md), use `Class.InputActionLabel` for a no-code way to keep button icons in sync across devices. See [displaying bindings](../../input/input-action-system.md#displaying-bindings) for details.
+</Alert>
+
+For other input hints, `Class.UserInputService` has two methods available that can achieve this:
 
 - `Class.UserInputService:GetStringForKeyCode()` can convert the US query key codes to console keyboard layouts. It's helpful for showing your custom assets as button icons to match the look and feel of your game.
 

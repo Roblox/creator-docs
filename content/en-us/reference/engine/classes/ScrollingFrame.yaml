@@ -49,7 +49,12 @@ properties:
     summary: |
       The size of the frame, in offsets, without the scroll bars.
     description: |
-      The size of the frame, in offsets, without the scroll bars.
+      The size of the frame, in offsets, without the scroll bars. This read-only
+      property represents the visible content area of the `ScrollingFrame`: the
+      frame's `Class.GuiBase2d.AbsoluteSize|AbsoluteSize` minus the space
+      occupied by any currently visible scroll bar gutters
+      (`Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness`). If no
+      scroll bars are visible, this equals the frame's absolute size.
     code_samples: []
     type: Vector2
     tags:
@@ -121,13 +126,12 @@ properties:
       - UI
   - name: ScrollingFrame.BottomImageContent
     summary: |
-      Image that displays on the bottom of a vertical scroll bar, or the right
-      of a horizontal scroll bar (rotated 90&deg; counterclockwise for a
-      horizontal scroll bar). Only supports asset URIs as textures.
+      The `Datatype.Content`-typed equivalent of
+      `Class.ScrollingFrame.BottomImage|BottomImage`.
     description: |
       Image that displays on the bottom of a vertical scroll bar, or the right
       of a horizontal scroll bar (rotated 90&deg; counterclockwise for a
-      horizontal scroll bar).
+      horizontal scroll bar). Only supports asset URIs as textures.
 
       <img src="/assets/ui/ui-objects/ScrollingFrame-Scroll-Bar-Elements.png" width="600" alt="Diagram showing the three image asset elements which construct a scrolling frame's scroll bar." />
     code_samples: []
@@ -215,9 +219,18 @@ properties:
       `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` on the
       horizontal axis.
     description: |
-      Indicates whether `Class.ScrollingFrame.CanvasSize|CanvasSize` is inset by
-      `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` on the
-      horizontal axis.
+      Indicates whether the scrollable canvas is inset by
+      `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` to account
+      for the horizontal scroll bar. Because the horizontal scroll bar occupies
+      space along the bottom edge, this inset reduces the canvas height.
+      Defaults to `Enum.ScrollBarInset.None`.
+
+      - `Enum.ScrollBarInset|None` — the canvas is never inset; content may be
+        obscured behind the horizontal scroll bar when it is visible.
+      - `Enum.ScrollBarInset|ScrollBar` — the canvas is inset only while the
+        horizontal scroll bar is visible.
+      - `Enum.ScrollBarInset|Always` — the canvas is always inset regardless of
+        whether the horizontal scroll bar is visible.
     code_samples: []
     type: ScrollBarInset
     tags: []
@@ -262,17 +275,15 @@ properties:
       - UI
   - name: ScrollingFrame.MidImageContent
     summary: |
+      The `Datatype.Content`-typed equivalent of
+      `Class.ScrollingFrame.MidImage|MidImage`.
+    description: |
       Image which spans the area between
       `Class.ScrollingFrame.TopImageContent|TopImageContent` and
       `Class.ScrollingFrame.BottomImageContent|BottomImageContent` (rotated
-      90&deg; counterclockwise for a horizontal scroll bar). Only supports asset
-      URIs as textures.
-    description: |
-      Image which spans the area between
-      `Class.ScrollingFrame.TopImage|TopImage` and
-      `Class.ScrollingFrame.BottomImage|BottomImage` (rotated 90&deg;
-      counterclockwise for a horizontal scroll bar). This image automatically
-      scales to fill the space between the cap segments.
+      90&deg; counterclockwise for a horizontal scroll bar). This image
+      automatically scales to fill the space between the cap segments. Only
+      supports asset URIs as textures.
 
       <img src="/assets/ui/ui-objects/ScrollingFrame-Scroll-Bar-Elements.png" width="600" alt="Diagram showing the three image asset elements which construct a scrolling frame's scroll bar." />
     code_samples: []
@@ -426,8 +437,17 @@ properties:
     capabilities:
       - UI
   - name: ScrollingFrame.TopImageContent
-    summary: ''
-    description: ''
+    summary: |
+      The `Datatype.Content`-typed equivalent of
+      `Class.ScrollingFrame.TopImage|TopImage`.
+    description: |
+      Image which displays on the top of a vertical scroll bar, or the left of a
+      horizontal scroll bar (rotated 90&deg; counterclockwise for a horizontal
+      scroll bar). Only supports asset URIs as textures. Defaults to the
+      built-in scroll bar top cap texture
+      (`rbxasset://textures/ui/Scroll/scroll-top.png`).
+
+      <img src="/assets/ui/ui-objects/ScrollingFrame-Scroll-Bar-Elements.png" width="600" alt="Diagram showing the three image asset elements which construct a scrolling frame's scroll bar." />
     code_samples: []
     type: Content
     tags: []
@@ -448,9 +468,18 @@ properties:
       `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` on the
       vertical axis.
     description: |
-      Indicates whether `Class.ScrollingFrame.CanvasSize|CanvasSize` is inset by
-      `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` on the
-      vertical axis.
+      Indicates whether the scrollable canvas is inset by
+      `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` to account
+      for the vertical scroll bar. Because the vertical scroll bar occupies
+      space along a side edge, this inset reduces the canvas width. Defaults to
+      `Enum.ScrollBarInset.None`.
+
+      - `Enum.ScrollBarInset|None` — the canvas is never inset; content may be
+        obscured behind the vertical scroll bar when it is visible.
+      - `Enum.ScrollBarInset|ScrollBar` — the canvas is inset only while the
+        vertical scroll bar is visible.
+      - `Enum.ScrollBarInset|Always` — the canvas is always inset regardless of
+        whether the vertical scroll bar is visible.
     code_samples: []
     type: ScrollBarInset
     tags: []
@@ -502,7 +531,9 @@ methods:
     parameters: []
     returns:
       - type: Vector2
-        summary: ''
+        summary: |
+          The current inertial scroll velocity in pixels per second on each
+          axis, or `(0, 0)` if the frame is not coasting.
     tags: []
     deprecation_message: ''
     security: None

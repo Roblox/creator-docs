@@ -79,6 +79,32 @@ properties:
       can_save: true
     capabilities:
       - AvatarAppearance
+  - name: ShirtGraphic.TextureContent
+    summary: |
+      A `Datatype.Content` property that references the t-shirt texture image,
+      supporting asset URIs and `Class.EditableImage` objects.
+    description: |
+      Holds the t-shirt texture as a `Datatype.Content` value. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris) and
+      `Class.EditableImage` objects, unlike legacy `Class.ShirtGraphic.Graphic`,
+      which only accepts string-based asset IDs.
+
+      Setting either `TextureContent` or `Class.ShirtGraphic.Graphic` updates
+      the other; both share the same texture data.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - AvatarAppearance
 methods: []
 events: []
 callbacks: []

@@ -4,24 +4,37 @@
 
 name: VoiceControlPath
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies which leg of a voice chat control-plane operation is being
+  reported.
+description: |
+  Identifies which voice control-plane path triggered a `Class.VoiceChatService`
+  event such as `RelayCandidatesGathered` or `VoiceSetupFailed`:
+  `Enum.VoiceControlPath.Join` (enter a voice room),
+  `Enum.VoiceControlPath.Publish` (send local microphone audio), or
+  `Enum.VoiceControlPath.Subscribe` (receive remote audio).
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Publish
-    summary: ''
+    summary: |
+      Represents the outbound audio path, through which a client sends local
+      microphone audio to the room.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Subscribe
-    summary: ''
+    summary: |
+      Represents the inbound audio path, through which a client receives remote
+      participants' audio streams.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Join
-    summary: ''
+    summary: |
+      Represents the room-join path, through which a client establishes
+      membership in a voice room.
     value: 2
     tags: []
     deprecation_message: ''

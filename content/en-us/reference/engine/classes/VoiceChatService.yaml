@@ -79,6 +79,38 @@ properties:
     capabilities:
       - Audio
       - Chat
+  - name: VoiceChatService.EnableVoiceVolumeControls
+    summary: |
+      Controls whether Roblox's built-in voice chat volume controls are
+      available to players.
+    description: |
+      This `Enum.RolloutState` property controls whether Roblox's built-in voice
+      chat volume controls are available to players, including a global voice
+      chat volume slider and per-user volume adjustments.
+
+      When set to `Enum.RolloutState|Enabled`, these controls are available to
+      players. When set to `Enum.RolloutState|Disabled`, the built-in controls
+      are hidden, though creators can still implement their own custom voice
+      volume controls. `Enum.RolloutState|Default` follows the default for this
+      feature.
+
+      If `Class.VoiceChatService.UseAudioApi|UseAudioApi` is disabled, this
+      property has no effect and built-in controls will be hidden.
+    code_samples: []
+    type: RolloutState
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+      - Chat
   - name: VoiceChatService.UseAudioApi
     summary: |
       Controls whether voice chat is represented and controlled by

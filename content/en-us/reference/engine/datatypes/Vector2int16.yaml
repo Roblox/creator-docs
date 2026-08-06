@@ -108,11 +108,15 @@ constructors:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The x-component of the vector, rounded down to a signed 16-bit
+          integer.
       - name: 'y'
         type: number
         default:
-        summary: ''
+        summary: |
+          The y-component of the vector, rounded down to a signed 16-bit
+          integer.
     code_samples: []
     tags: []
     deprecation_message: ''

@@ -5,8 +5,16 @@
 name: DataStoreGetOptions
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Specifies additional parameters for a `Class.GlobalDataStore:GetAsync()` call.
+description: |
+  An object that specifies additional parameters for a
+  `Class.GlobalDataStore:GetAsync()` call.
+
+  See also:
+
+  - [Data Stores](../../../cloud-services/data-stores/index.md), an in-depth
+    guide on data structure, management, error handling, etc.
 code_samples: []
 inherits:
   - Instance
@@ -16,8 +24,18 @@ tags:
 deprecation_message: ''
 properties:
   - name: DataStoreGetOptions.UseCache
-    summary: ''
-    description: ''
+    summary: |
+      Specifies whether `Class.GlobalDataStore:GetAsync()` can return a locally
+      cached value.
+    description: |
+      This property controls whether `Class.GlobalDataStore:GetAsync()` may
+      return a locally cached value instead of fetching from the data store
+      backend. It defaults to `true`.
+
+      When `true`, if a cached value for the key exists and has not expired,
+      `Class.GlobalDataStore:GetAsync()` returns that cached value immediately
+      without a backend request. When `false`, the cache is bypassed and the
+      call always retrieves the latest value from the data store backend.
     code_samples: []
     type: boolean
     tags: []

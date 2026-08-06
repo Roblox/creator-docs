@@ -4,19 +4,32 @@
 
 name: SolverConvergenceMetricType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the metric used to identify the least-converged constraint when
+  visualizing physics solver convergence.
+description: |
+  Specifies the metric used to determine which constraint is least converged
+  within a solver island when
+  `Class.PhysicsSettings.SolverConvergenceVisualizationMode` is active. The
+  selected metric controls what data is gathered per constraint and displayed in
+  the per-edge and per-island overlay. The default value, stored on
+  `Class.PhysicsSettings.SolverConvergenceMetricType`, is
+  `Enum.SolverConvergenceMetricType.AlgorithmAgnostic`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: IterationBased
-    summary: ''
+    summary: |
+      Identifies the least-converged constraint using the estimated force change
+      from an additional, non-applied solver iteration.
     value: 0
     tags: []
     deprecation_message: ''
   - name: AlgorithmAgnostic
-    summary: ''
+    summary: |
+      Identifies the least-converged constraint using a residual-based
+      convergence metric supported across solver algorithms.
     value: 1
     tags: []
     deprecation_message: ''

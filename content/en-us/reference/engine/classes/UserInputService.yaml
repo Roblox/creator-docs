@@ -535,8 +535,19 @@ properties:
     capabilities:
       - Input
   - name: UserInputService.TouchScreenEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Describes whether the user's device has a touch screen, reflecting the
+      device's true hardware capability.
+    description: |
+      Read-only. Whether the user's device has a touch screen. Defaults to
+      `false`; the engine sets it to `true` on devices with a physical touch
+      screen.
+
+      Unlike `Class.UserInputService.TouchEnabled|TouchEnabled`, which reports
+      `false` on some touch-capable desktop hardware (such as a Windows laptop
+      with a touch screen) to avoid switching those devices to mobile-style
+      controls, `TouchScreenEnabled` reflects the device's true touch
+      capability.
     code_samples: []
     type: boolean
     tags:
@@ -613,7 +624,9 @@ methods:
       This method creates a `Class.VirtualInput` object for simulating mouse,
       keyboard, and pointer input as if it were performed by a real user. It is
       intended for testing and automation workflows that need to simulate user
-      interaction inside a running experience.
+      interaction inside a running experience. Simulated input is restricted to
+      the experience's own UI elements and cannot interact with arbitrary or
+      system-level GUI.
 
       Always check that the returned value is not `nil` before calling any
       methods on it.
@@ -703,7 +716,10 @@ methods:
     parameters: []
     returns:
       - type: InputObject
-        summary: ''
+        summary: |
+          An `Class.InputObject` describing the device's current acceleration,
+          with `Class.InputObject.Position|Position` representing the
+          acceleration force on each local device axis.
     tags: []
     deprecation_message: ''
     security: None
@@ -736,7 +752,10 @@ methods:
     parameters: []
     returns:
       - type: InputObject
-        summary: ''
+        summary: |
+          An `Class.InputObject` describing the device's current gravity vector,
+          with `Class.InputObject.Position|Position` representing the force of
+          gravity on each local device axis.
     tags: []
     deprecation_message: ''
     security: None
@@ -781,7 +800,9 @@ methods:
     parameters: []
     returns:
       - type: TextBox
-        summary: ''
+        summary: |
+          The currently focused `Class.TextBox`, or `nil` if no `Class.TextBox`
+          is focused.
     tags: []
     deprecation_message: ''
     security: None
@@ -854,6 +875,13 @@ methods:
       connected device is a PlayStation controller, the user sees PlayStation
       assets. If you want to use custom assets, see
       `Class.UserInputService.GetStringForKeyCode()|GetStringForKeyCode()`.
+
+      For most use cases, consider using `Class.InputActionLabel` instead. It is
+      a `Class.GuiObject` that automatically displays the correct key icon for
+      an `Class.InputAction` and updates when the player switches input devices
+      or rebinds the action, without any scripting. `GetImageForKeyCode()`
+      remains useful for advanced or fully custom interfaces where you need
+      direct access to the underlying image asset.
     code_samples:
       - UserInputService-GetImageForKeyCode
     parameters:
@@ -1044,6 +1072,13 @@ methods:
       layout. For key codes that require some modifier to be held, this method
       returns the key to be pressed in addition to the modifier. See the
       examples below for further explanation.
+
+      For most use cases, consider using `Class.InputActionLabel` instead. It is
+      a `Class.GuiObject` that automatically displays the correct key text or
+      icon for an `Class.InputAction` and updates when the player switches input
+      devices or rebinds the action, without any scripting.
+      `GetStringForKeyCode()` remains useful for advanced or fully custom
+      interfaces where you need the raw display string.
 
       When using Roblox with a non‑QWERTY keyboard layout, key codes are mapped
       to equivalent QWERTY positions. For example, pressing <kbd>A</kbd> on an
@@ -1923,15 +1958,22 @@ events:
       - name: wheel
         type: float
         default:
-        summary: ''
+        summary: |
+          The mouse scroll wheel delta. Positive values indicate scrolling up
+          and negative values indicate scrolling down.
       - name: pan
         type: Vector2
         default:
-        summary: ''
+        summary: |
+          A `Datatype.Vector2` representing the trackpad pan movement delta in
+          pixels. Touch pan is handled separately via
+          `Class.UserInputService.TouchPan`.
       - name: pinch
         type: float
         default:
-        summary: ''
+        summary: |
+          The pinch-to-zoom gesture delta from a trackpad. Touch pinch is
+          handled separately via `Class.UserInputService.TouchPinch`.
       - name: gameProcessedEvent
         type: boolean
         default:
@@ -2000,7 +2042,11 @@ events:
       `Class.UserInputService.TouchEnabled|TouchEnabled` device.
     description: |
       This event fires when the user drags on the screen of a
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device.
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device. Use this event
+      to detect the start of a deliberate directional gesture (for example,
+      sliding an element left or right to reveal contextual actions) before the
+      user commits to a direction; for detecting a completed swipe or fling
+      gesture, use `Class.UserInputService.TouchSwipe|TouchSwipe` instead.
 
       Note that this event only fires when the Roblox client window is in focus.
       It will not fire when the window is minimized.

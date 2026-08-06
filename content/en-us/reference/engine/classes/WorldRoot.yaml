@@ -105,7 +105,10 @@ methods:
       - name: params
         type: RaycastParams
         default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
-        summary: ''
+        summary: |
+          An object used to specify hit eligibility in the shapecast operation.
+          If not provided, default values are used where all parts are
+          considered and `Class.Terrain` water is not ignored.
     returns:
       - type: RaycastResult?
         summary: |
@@ -146,15 +149,21 @@ methods:
       - name: partList
         type: Instances
         default:
-        summary: ''
+        summary: |
+          A table of `Class.BasePart|BaseParts` to be moved.
       - name: cframeList
         type: Array
         default:
-        summary: ''
+        summary: |
+          A table of `Datatype.CFrame|CFrames` that the parts will be moved to,
+          matched by index to `partList`.
       - name: eventMode
         type: BulkMoveMode
         default: FireAllEvents
-        summary: ''
+        summary: |
+          An `Enum.BulkMoveMode` enum specifying which
+          `Class.Object.Changed|Changed` events fire during the move. Default is
+          `Enum.BulkMoveMode|FireAllEvents`.
     returns:
       - type: ()
         summary: ''
@@ -204,19 +213,25 @@ methods:
       - name: ray
         type: Ray
         default:
-        summary: ''
+        summary: |
+          A `Datatype.Ray` whose origin and direction define the raycast.
       - name: ignoreDescendantsInstance
         type: Instance
         default: nil
-        summary: ''
+        summary: |
+          An `Class.Instance` whose descendants are ignored in the raycast.
       - name: terrainCellsAreCubes
         type: boolean
         default: false
-        summary: ''
+        summary: |
+          Whether `Class.Terrain` cells are treated as full cubes when
+          calculating intersection. Default is false.
       - name: ignoreWater
         type: boolean
         default: false
-        summary: ''
+        summary: |
+          Whether `Class.Terrain` water cells are ignored by the ray. Default is
+          false.
     returns:
       - type: Tuple
         summary: |
@@ -281,19 +296,25 @@ methods:
       - name: ray
         type: Ray
         default:
-        summary: ''
+        summary: |
+          A `Datatype.Ray` whose origin and direction define the raycast.
       - name: ignoreDescendantsTable
         type: Instances
         default:
-        summary: ''
+        summary: |
+          An array of objects whose descendants are excluded from the raycast.
       - name: terrainCellsAreCubes
         type: boolean
         default: false
-        summary: ''
+        summary: |
+          Whether `Class.Terrain` cells are treated as full cubes when
+          calculating intersection. Default is false.
       - name: ignoreWater
         type: boolean
         default: false
-        summary: ''
+        summary: |
+          Whether `Class.Terrain` water cells are ignored by the ray. Default is
+          false.
     returns:
       - type: Tuple
         summary: |
@@ -330,15 +351,20 @@ methods:
       - name: ray
         type: Ray
         default:
-        summary: ''
+        summary: |
+          A `Datatype.Ray` whose origin and direction define the raycast.
       - name: whitelistDescendantsTable
         type: Instances
         default:
-        summary: ''
+        summary: |
+          An array of objects whose descendants are the only candidates
+          considered in the raycast.
       - name: ignoreWater
         type: boolean
         default: false
-        summary: ''
+        summary: |
+          Whether `Class.Terrain` water cells are ignored by the ray. Default is
+          false.
     returns:
       - type: Tuple
         summary: |
@@ -947,25 +973,59 @@ methods:
     capabilities: []
     simulationAccess: true
   - name: WorldRoot:Shapecast
-    summary: ''
-    description: ''
+    summary: |
+      Casts the shape of a given `Class.BasePart` in a direction and returns a
+      `Datatype.RaycastResult` if the shape hits a `Class.BasePart` or
+      `Class.Terrain` cell.
+    description: |
+      Casts the shape of the given `Class.BasePart` in a given direction and
+      returns the first collision with a `Class.BasePart` or `Class.Terrain`
+      cell. This is analogous to how `Class.WorldRoot:Raycast()` casts a linear
+      ray in a direction to find a collision, but it uses a 3D shape instead of
+      a ray. Unlike `Class.WorldRoot:Blockcast()` and
+      `Class.WorldRoot:Spherecast()`, which use a simple box or sphere, this
+      method casts the actual geometry of the provided part.
+
+      Unlike `Class.WorldRoot:GetPartsInPart()`, this method does not detect
+      `Class.BasePart|BaseParts` that **initially** intersect the shape.
+
+      If a hit is detected, a `Datatype.RaycastResult` is returned containing
+      the hit information. The `Datatype.RaycastResult.Distance|Distance`
+      property represents the distance the shape has to travel to find a hit,
+      and the `Datatype.RaycastResult.Position|Position` property represents the
+      intersection point that causes the hit.
+
+      This method throws an error if it is passed a non-existent part, an
+      invalid direction, or a part with `Class.Terrain` geometry.
     code_samples: []
     parameters:
       - name: part
         type: BasePart
         default:
-        summary: ''
+        summary: |
+          The part whose shape is cast. The cast uses this part's geometry
+          (block, ball, mesh, and so on) and size; excessively large parts may
+          not be supported, and it cannot be a `Class.Terrain` part.
       - name: direction
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          Direction of the shapecast, with the magnitude representing the
+          maximum distance the shape can travel. The maximum distance is 1024
+          studs.
       - name: params
         type: RaycastParams
         default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
-        summary: ''
+        summary: |
+          An object used to specify hit eligibility in the shapecast operation.
+          If not provided, default values are used where all other parts are
+          considered and `Class.Terrain` water is not ignored. The part being
+          cast is always excluded from the results.
     returns:
       - type: RaycastResult?
-        summary: ''
+        summary: |
+          Contains the result of the shapecast operation, or `nil` if no
+          eligible `Class.BasePart` or `Class.Terrain` cell was hit.
     tags: []
     deprecation_message: ''
     security: None
@@ -1018,7 +1078,10 @@ methods:
       - name: params
         type: RaycastParams
         default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
-        summary: ''
+        summary: |
+          An object used to specify hit eligibility in the shapecast operation.
+          If not provided, default values are used where all parts are
+          considered and `Class.Terrain` water is not ignored.
     returns:
       - type: RaycastResult?
         summary: |

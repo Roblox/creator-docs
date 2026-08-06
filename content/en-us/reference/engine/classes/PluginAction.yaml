@@ -5,7 +5,9 @@
 name: PluginAction
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  Represents a generic performable action in Roblox Studio that can optionally
+  be bound to a keyboard shortcut.
 description: |
   `PluginAction` represents a generic performable action in Studio with no
   directly‑associated `Class.PluginToolbarButton`. If

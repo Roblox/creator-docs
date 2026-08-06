@@ -295,8 +295,27 @@ properties:
       - Physics
     simulationAccess: true
   - name: LinearVelocity.ReactionForceEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether an equal and opposite reaction force is also applied to
+      the assembly of `Class.Constraint.Attachment1|Attachment1` when
+      `Class.LinearVelocity.RelativeTo|RelativeTo` is
+      `Enum.ActuatorRelativeTo|Attachment1`.
+    description: |
+      Determines whether the constraint applies an equal and opposite reaction
+      force to the assembly of `Class.Constraint.Attachment1|Attachment1`.
+      Defaults to `true`. This reaction force is relevant when
+      `Class.LinearVelocity.RelativeTo|RelativeTo` is
+      `Enum.ActuatorRelativeTo.Attachment1` — the mode in which the constraint
+      drives the `Attachment0` assembly's velocity relative to the `Attachment1`
+      assembly. Because `RelativeTo` defaults to
+      `Enum.ActuatorRelativeTo.World`, this property is typically only
+      meaningful once `RelativeTo` is set to `Attachment1`.
+
+      When enabled in that mode, the constraint applies the reaction force to
+      the `Attachment1` assembly, coupling the two assemblies. When disabled,
+      the constraint applies force only to the `Attachment0` assembly; the
+      `Attachment1` assembly receives no reaction force, though its pose and
+      velocity are still read as the reference frame for the target velocity.
     code_samples: []
     type: boolean
     tags: []

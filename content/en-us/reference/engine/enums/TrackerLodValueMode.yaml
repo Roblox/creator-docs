@@ -4,24 +4,35 @@
 
 name: TrackerLodValueMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how the video LOD level is selected for the face-tracking pipeline in
+  `TrackerLodController`.
+description: |
+  Specifies whether the face-tracking video LOD level is chosen automatically by
+  the performance-adaptive LOD controller or forced to a fixed level. Used by
+  `VideoLodMode`, which defaults to `Enum.TrackerLodValueMode.Auto`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Force0
-    summary: ''
+    summary: |
+      Forces the face-tracking video pipeline to LOD level 0, the faster but
+      less accurate processing mode.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Force1
-    summary: ''
+    summary: |
+      Forces the face-tracking video pipeline to LOD level 1, the more accurate
+      but more resource-intensive processing mode.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Auto
-    summary: ''
+    summary: |
+      The LOD controller selects the video LOD level automatically based on
+      real-time performance metrics.
     value: 2
     tags: []
     deprecation_message: ''

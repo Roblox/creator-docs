@@ -5,7 +5,9 @@
 name: ClientReplicator
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  The client-side `Class.NetworkReplicator` that manages replication of data
+  model changes between the server and itself.
 description: |
   The ClientReplicator is in charge of replicating changes from the server over
   to the client. It represents the client's connection to a server.

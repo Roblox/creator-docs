@@ -227,7 +227,6 @@ descendants:
   - ReflectionService
   - RemoteDebuggerServer
   - RemoteFunction
-  - RenderingTest
   - ReplicatedFirst
   - ReplicatedStorage
   - RotationCurve
@@ -294,7 +293,6 @@ descendants:
   - Translator
   - TweenBase
   - TweenService
-  - UGCValidationService
   - UIBase
   - UserGameSettings
   - UserInputService
@@ -346,7 +344,6 @@ descendants:
   - ProcessInstancePhysicsService
   - SensorBase
   - RecommendationService
-  - CoreScriptDebuggingManagerHelper
   - DraftsService
   - DraggerService
   - File
@@ -373,7 +370,6 @@ descendants:
   - StudioTestService
   - StudioTheme
   - TeamCreateService
-  - VRStatusService
   - StudioService
   - StyleBase
   - StyleDerive

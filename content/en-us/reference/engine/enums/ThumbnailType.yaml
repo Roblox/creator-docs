@@ -4,7 +4,9 @@
 
 name: ThumbnailType
 type: enum
-summary: ''
+summary: |
+  Describes the type of user thumbnail returned by
+  `Class.Players:GetUserThumbnailAsync()`.
 description: |
   Describes the type of user thumbnail that should be returned by
   GetUserThumbnailAsync.

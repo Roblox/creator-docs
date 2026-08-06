@@ -4,22 +4,32 @@
 
 name: VRScaling
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether `Class.VRService` automatically adjusts the perceived scale
+  of the world in VR to match the player's avatar size.
+description: |
+  `VRScaling` is used by the `Class.VRService.AutomaticScaling` property to
+  determine how the engine scales the player's view in VR. When set to
+  `Enum.VRScaling.World`, the engine automatically adjusts
+  `Class.Camera.HeadScale` so that the scale of the world matches the player's
+  avatar height, preserving immersion when avatars differ in size. When set to
+  `Enum.VRScaling.Off`, no automatic adjustment is made and you can set
+  `Class.Camera.HeadScale` manually to control the perceived world scale.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: World
     summary: |
-      Adjusts `Class.Camera.HeadScale' so that the world in VR is seen from the
+      Adjusts `Class.Camera.HeadScale` so that the world in VR is seen from the
       avatar's perspective.
     value: 0
     tags: []
     deprecation_message: ''
   - name: 'Off'
     summary: |
-      Disable VR AutomaticScaling .
+      Disables VR automatic scaling; set `Class.Camera.HeadScale` manually if
+      needed.
     value: 1
     tags: []
     deprecation_message: ''

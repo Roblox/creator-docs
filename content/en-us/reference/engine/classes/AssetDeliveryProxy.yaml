@@ -5,8 +5,15 @@
 name: AssetDeliveryProxy
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Runs a local HTTP server that serves assets to real devices.
+description: |
+  Internal service for remote asset delivery; not intended for game scripts. It
+  backs the remote hot-reload workflow: `Class.IncrementalPatchBuilder` builds a
+  signed patch and this proxy serves it, along with any overridden assets, over
+  HTTP to the connected device. The server runs on its own thread and is
+  controlled through `Class.AssetDeliveryProxy.StartServer`,
+  `Class.AssetDeliveryProxy.Interface`, and `Class.AssetDeliveryProxy.Port`.
 code_samples: []
 inherits:
   - Instance
@@ -18,8 +25,15 @@ tags:
 deprecation_message: ''
 properties:
   - name: AssetDeliveryProxy.Interface
-    summary: ''
-    description: ''
+    summary: |
+      The network interface address that the asset-delivery HTTP server binds
+      to.
+    description: |
+      Sets the local network interface (address) that the proxy's HTTP server
+      binds to when it starts. Defaults to an empty string. Assigning a value
+      schedules the server to restart, but a new interface only takes effect
+      while the server is running — that is, once
+      `Class.AssetDeliveryProxy.StartServer` is `true` (it defaults to `false`).
     code_samples: []
     type: string
     tags: []
@@ -34,8 +48,15 @@ properties:
       can_save: true
     capabilities: []
   - name: AssetDeliveryProxy.Port
-    summary: ''
-    description: ''
+    summary: |
+      The TCP port that the asset-delivery HTTP server listens on.
+    description: |
+      The TCP port the proxy's HTTP server listens on. Defaults to `0`, which
+      tells the server to pick an available port automatically. While the server
+      is running, reading this property returns the port actually in use rather
+      than the configured value. A new port only takes effect when the server
+      (re)starts via `Class.AssetDeliveryProxy.StartServer` (defaults to
+      `false`).
     code_samples: []
     type: int
     tags: []
@@ -50,8 +71,15 @@ properties:
       can_save: true
     capabilities: []
   - name: AssetDeliveryProxy.StartServer
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the asset-delivery HTTP server is running.
+    description: |
+      Controls whether the proxy's HTTP server is running. Setting it to `true`
+      schedules the server to start; setting it to `false` stops it. Defaults to
+      `false`, so the server is off until you enable it. Because the server only
+      (re)starts while this is `true`, changes to
+      `Class.AssetDeliveryProxy.Interface` and `Class.AssetDeliveryProxy.Port`
+      take effect only when this property is `true`.
     code_samples: []
     type: boolean
     tags: []

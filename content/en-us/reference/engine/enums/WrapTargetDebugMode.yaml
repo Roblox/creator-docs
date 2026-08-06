@@ -79,12 +79,16 @@ items:
     tags: []
     deprecation_message: ''
   - name: OuterCageDetail
-    summary: ''
+    summary: |
+      Visualizes outer cage vertices and related cage faces when hovering a mesh
+      triangle in Studio.
     value: 8
     tags: []
     deprecation_message: ''
   - name: PreWrapDeformerCage
-    summary: ''
+    summary: |
+      Renders the outer cage as wireframe with vertex markers in its
+      pre-deformation state.
     value: 9
     tags: []
     deprecation_message: ''

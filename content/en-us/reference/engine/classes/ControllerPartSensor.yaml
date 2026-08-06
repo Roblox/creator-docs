@@ -65,8 +65,23 @@ properties:
       - Basic
     simulationAccess: true
   - name: ControllerPartSensor.LadderSearchHeight
-    summary: ''
-    description: ''
+    summary: |
+      The upper bound, in studs, of the vertical region the sensor searches for
+      a ladder when `Class.ControllerPartSensor.SensorMode` is set to a ladder
+      mode.
+    description: |
+      Top of the vertical extent the sensor scans for a climbable ladder, in
+      studs relative to the sensor's parent `Class.BasePart`. Together with
+      `Class.ControllerPartSensor.LadderSearchOffset`, it defines the height
+      range: the region extends upward to `LadderSearchHeight` minus
+      `LadderSearchOffset`.
+
+      Defaults to `6`; clamped to non-negative values.
+
+      Only affects sensing when `Class.ControllerPartSensor.SensorMode` is a
+      ladder mode such as `Enum.SensorMode.Ladder`. Because `SensorMode`
+      defaults to `Enum.SensorMode.Floor`, this has no effect until `SensorMode`
+      is changed.
     code_samples: []
     type: float
     tags: []
@@ -83,8 +98,23 @@ properties:
       - Basic
     simulationAccess: true
   - name: ControllerPartSensor.LadderSearchOffset
-    summary: ''
-    description: ''
+    summary: |
+      The downward offset, in studs, that positions the vertical region the
+      sensor searches for a ladder when `Class.ControllerPartSensor.SensorMode`
+      is set to a ladder mode.
+    description: |
+      Downward offset, in studs relative to the parent `Class.BasePart`, that
+      positions the vertical extent scanned for a climbable ladder. Behaves like
+      a hip-height offset: increasing it lowers both the bottom and top of the
+      searched region, and scales the rung-spacing tolerance used to decide
+      whether a surface is climbable.
+
+      Defaults to `5`; clamped to non-negative values.
+
+      Only affects sensing when `Class.ControllerPartSensor.SensorMode` is a
+      ladder mode such as `Enum.SensorMode.Ladder`. Because `SensorMode`
+      defaults to `Enum.SensorMode.Floor`, this has no effect until `SensorMode`
+      is changed.
     code_samples: []
     type: float
     tags: []
@@ -123,8 +153,18 @@ properties:
       - Basic
     simulationAccess: true
   - name: ControllerPartSensor.SensedMaterial
-    summary: ''
-    description: ''
+    summary: |
+      The surface `Enum.Material` of the `Class.ControllerPartSensor.SensedPart`
+      that the sensor is currently detecting.
+    description: |
+      Surface `Enum.Material` of the part the sensor currently detects, matching
+      the material `Class.Humanoid` floor and ladder detection report for the
+      same contact. Updated as an output alongside
+      `Class.ControllerPartSensor.SensedPart`,
+      `Class.ControllerPartSensor.HitFrame`, and
+      `Class.ControllerPartSensor.HitNormal` each time the sensor senses.
+
+      Defaults to `Enum.Material.Air`.
     code_samples: []
     type: Material
     tags: []

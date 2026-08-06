@@ -5,8 +5,15 @@
 name: PluginCapabilities
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Declares a plugin's capabilities (the data models it targets and the
+  permissions it requests) through a JSON manifest.
+description: |
+  `Class.PluginCapabilities` describes what a plugin is allowed to do. Its
+  `Class.PluginCapabilities.Manifest|Manifest` property holds a JSON string that
+  declares which data models the plugin targets (such as `Edit`, `Server`, and
+  `Client`) and the permissions the plugin requests. It's used by built-in and
+  standalone plugins to record their declared capabilities.
 code_samples: []
 inherits:
   - Instance
@@ -15,8 +22,18 @@ tags: []
 deprecation_message: ''
 properties:
   - name: PluginCapabilities.Manifest
-    summary: ''
-    description: ''
+    summary: |
+      A JSON string declaring the plugin's target data models and requested
+      permissions.
+    description: |
+      A JSON-encoded string describing the plugin's declared capabilities. It
+      contains a `Metadata` object whose `TargetDataModels` array names the data
+      models the plugin runs against (`Edit`, `Server`, and `Client`), and a
+      `Permissions` object listing the permissions the plugin requests. Defaults
+      to
+      `{"Metadata":{"TargetDataModels": ["Edit", "Server", "Client"]},"Permissions":{}}`,
+      which targets all three data models and requests no additional
+      permissions.
     code_samples: []
     type: string
     tags: []

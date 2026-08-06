@@ -131,13 +131,23 @@ properties:
       - Basic
 methods:
   - name: LocalizationTable:GetContents
-    summary: ''
-    description: ''
+    summary: |
+      Returns the contents of the `Class.LocalizationTable` serialized as a JSON
+      string.
+    description: |
+      Deprecated. Prefer `Class.LocalizationTable:GetEntries()`, which returns
+      the same data as a structured array of dictionaries. Returns all entries
+      in the `Class.LocalizationTable` encoded as a JSON-formatted string, the
+      legacy serialized representation of the table's contents. Each entry is an
+      object containing its `key`, `context`, `examples`, and `source` fields
+      (each omitted when empty) along with a `values` map of locale IDs to
+      translated strings.
     code_samples: []
     parameters: []
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The table's entries encoded as a JSON-formatted string.
     tags:
       - Deprecated
     deprecation_message: |
@@ -266,7 +276,9 @@ methods:
       - name: localeId
         type: string
         default:
-        summary: ''
+        summary: |
+          A Roblox locale identifier (for example, "en-us" or "es-es")
+          specifying the language the returned Translator should target.
     returns:
       - type: Instance
         summary: |
@@ -284,20 +296,35 @@ methods:
     description: |
       Removes an entry from the LocalizationTable, using the specified `key`,
       `source`, and `context` to narrow down the specific entry to be removed.
+
+      The entry is identified by the (`key`, `source`, `context`) triple. If
+      `key` is non-empty it alone identifies the entry because keys are unique
+      within the table. If `key` is empty the entry is matched by the (`source`,
+      `context`) pair. When no matching entry exists the call is a silent no-op.
+
+      Removing an entry deletes all of its translations and metadata. To remove
+      only a single locale's translation from an entry while keeping the entry
+      itself, use `Class.LocalizationTable:RemoveEntryValue()` instead.
     code_samples: []
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The unique key of the entry to remove. If non-empty, identifies the
+          entry by itself.
       - name: source
         type: string
         default:
-        summary: ''
+        summary: |
+          The source text of the entry. Used with context to identify the entry
+          when key is empty.
       - name: context
         type: string
         default:
-        summary: ''
+        summary: |
+          The `Class.Instance:GetFullName()` path used for disambiguation. Used
+          with source to identify the entry when key is empty.
     returns:
       - type: ()
         summary: ''
@@ -315,25 +342,46 @@ methods:
     description: |
       Removes a single language translation from the LocalizationTable, using
       the provided `key`, `source`, `context`, and `localeId` to narrow down the
-      specific entry to be removed.
+      specific entry to be modified.
+
+      The entry is identified by the (`key`, `source`, `context`) triple (see
+      `Class.LocalizationTable:RemoveEntry()` for lookup rules). Once the entry
+      is found, only the translation for `localeId` is erased; the entry itself
+      and all other locale translations remain intact. The `localeId` is
+      case-insensitive (it is canonicalized internally). If no matching entry
+      exists, or the entry has no translation for `localeId`, the call is a
+      silent no-op.
+
+      To remove the entire entry including all translations, use
+      `Class.LocalizationTable:RemoveEntry()`. To remove every translation of a
+      given locale across all entries, use
+      `Class.LocalizationTable:RemoveTargetLocale()`.
     code_samples: []
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The unique key of the entry. If non-empty, identifies the entry by
+          itself.
       - name: source
         type: string
         default:
-        summary: ''
+        summary: |
+          The source text of the entry. Used with context to identify the entry
+          when key is empty.
       - name: context
         type: string
         default:
-        summary: ''
+        summary: |
+          The `Class.Instance:GetFullName()` path used for disambiguation. Used
+          with source to identify the entry when key is empty.
       - name: localeId
         type: string
         default:
-        summary: ''
+        summary: |
+          The locale identifier (for example, "fr-fr") whose translation should
+          be removed from the entry.
     returns:
       - type: ()
         summary: ''
@@ -355,7 +403,8 @@ methods:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The unique key of the entry to remove.
     returns:
       - type: ()
         summary: ''
@@ -374,13 +423,21 @@ methods:
       localeId.
     description: |
       Removes all translations from the LocalizationTable with the specified
-      localeId.
+      `localeId`.
+
+      This is a bulk operation that iterates every entry in the table and erases
+      the translation for `localeId` from each one. Entries themselves are not
+      removed even if they have no remaining translations after this call. To
+      remove a single translation from one specific entry, use
+      `Class.LocalizationTable:RemoveEntryValue()` instead.
     code_samples: []
     parameters:
       - name: localeId
         type: string
         default:
-        summary: ''
+        summary: |
+          A Roblox locale identifier (for example, "fr-fr") specifying which
+          language's translations to remove from all entries.
     returns:
       - type: ()
         summary: ''
@@ -401,7 +458,9 @@ methods:
       - name: contents
         type: string
         default:
-        summary: ''
+        summary: |
+          A JSON-formatted string encoding the table's entries, in the same
+          format returned by `Class.LocalizationTable:GetContents()`.
     returns:
       - type: ()
         summary: ''
@@ -428,7 +487,10 @@ methods:
       - name: entries
         type: Variant
         default:
-        summary: ''
+        summary: |
+          An array of dictionaries in the same format returned by
+          `Class.LocalizationTable:GetEntries()`, each containing Key, Source,
+          Context, Example, and Values fields.
     returns:
       - type: ()
         summary: ''
@@ -439,22 +501,38 @@ methods:
     capabilities:
       - Basic
   - name: LocalizationTable:SetEntry
-    summary: ''
-    description: ''
+    summary: |
+      Sets the translation `text` for the `targetLocaleId` locale on the entry
+      identified by `key`, creating the entry if it doesn't exist.
+    description: |
+      Deprecated. Prefer `Class.LocalizationTable:SetEntryValue()` for matching
+      an entry by key, source, and context, or
+      `Class.LocalizationTable:SetEntries()` to set many entries at once. Sets
+      the translation `text` for the locale `targetLocaleId` on the
+      `Class.LocalizationTable` entry identified by `key`, creating a new entry
+      with an empty source and context if no entry with that key exists. When
+      `targetLocaleId` matches the table's
+      `Class.LocalizationTable.SourceLocaleId`, the entry's **Source** field is
+      also set to `text`.
     code_samples: []
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The unique key identifying the entry. If no entry with this key
+          exists, a new entry is created.
       - name: targetLocaleId
         type: string
         default:
-        summary: ''
+        summary: |
+          The Roblox locale identifier (for example, "en-us" or "fr-fr") for the
+          translation to set.
       - name: text
         type: string
         default:
-        summary: ''
+        summary: |
+          The translation text to store for the specified locale.
     returns:
       - type: ()
         summary: ''
@@ -462,7 +540,7 @@ methods:
       - Deprecated
     deprecation_message: |
       This item has been superseded by `Class.LocalizationTable:SetEntries()`
-      which should be used in all new work
+      which should be used in all new work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -476,24 +554,42 @@ methods:
       Sets the **Context** field of a LocalizationTable entry to `newContext`,
       using the specified `key`, `source`, and `context` to narrow down the
       entry that will have this change applied.
+
+      The entry is identified by the (`key`, `source`, `context`) triple (see
+      `Class.LocalizationTable:RemoveEntry()` for lookup rules). If no matching
+      entry exists, a new entry is created with the provided `key`, `source`,
+      and `newContext`. The method throws an error if setting the new context
+      would cause the entry to conflict with another existing entry that shares
+      the same key, source, and context combination.
+
+      The **Context** field stores an `Class.Instance:GetFullName()` path that
+      the automatic text replacement system uses for disambiguation when
+      multiple entries share the same **Source** string.
     code_samples: []
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The unique key of the entry. If non-empty, identifies the entry by
+          itself.
       - name: source
         type: string
         default:
-        summary: ''
+        summary: |
+          The source text of the entry. Used with context to identify the entry
+          when key is empty.
       - name: context
         type: string
         default:
-        summary: ''
+        summary: |
+          The current `Class.Instance:GetFullName()` path of the entry. Used
+          with source to identify the entry when key is empty.
       - name: newContext
         type: string
         default:
-        summary: ''
+        summary: |
+          The new context string to assign to the entry.
     returns:
       - type: ()
         summary: ''
@@ -512,24 +608,42 @@ methods:
       Sets the **Example** field of a LocalizationTable entry to `example`,
       using the specified `key`, `source`, and `context` to narrow down the
       entry that will have this change applied.
+
+      The entry is identified by the (`key`, `source`, `context`) triple (see
+      `Class.LocalizationTable:RemoveEntry()` for lookup rules). If no matching
+      entry exists, a new entry is created with the provided `key`, `source`,
+      and `context`. The new `example` value always overwrites any existing
+      example text on the entry.
+
+      The **Example** field is an arbitrary metadata string. The text-capture
+      tools use it to store a sample of parameterized content in context, but
+      developers may store any helpful annotation.
     code_samples: []
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The unique key of the entry. If non-empty, identifies the entry by
+          itself.
       - name: source
         type: string
         default:
-        summary: ''
+        summary: |
+          The source text of the entry. Used with context to identify the entry
+          when key is empty.
       - name: context
         type: string
         default:
-        summary: ''
+        summary: |
+          The `Class.Instance:GetFullName()` path of the entry. Used with source
+          to identify the entry when key is empty.
       - name: example
         type: string
         default:
-        summary: ''
+        summary: |
+          The new example text to assign to the entry, typically a sample of
+          parameterized content in context.
     returns:
       - type: ()
         summary: ''
@@ -548,24 +662,43 @@ methods:
       Sets the **Key** field of a LocalizationTable entry to `newKey`, using the
       specified `key`, `source`, and `context` to narrow down the entry that
       will have this change applied.
+
+      The entry is identified by the (`key`, `source`, `context`) triple (see
+      `Class.LocalizationTable:RemoveEntry()` for lookup rules). If no matching
+      entry exists, a new entry is created with `newKey`, the provided `source`,
+      and `context`. The method throws an error if `newKey` would conflict with
+      an existing entry's key, because keys must be unique within the table. If
+      `newKey` equals the entry's current key the call is a no-op.
+
+      The **Key** field is an optional unique identifier for fast hash lookups
+      via `Class.Translator:FormatByKey()`. When non-empty it must be unique
+      across the entire table.
     code_samples: []
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The current unique key of the entry. If non-empty, identifies the
+          entry by itself.
       - name: source
         type: string
         default:
-        summary: ''
+        summary: |
+          The source text of the entry. Used with context to identify the entry
+          when key is empty.
       - name: context
         type: string
         default:
-        summary: ''
+        summary: |
+          The `Class.Instance:GetFullName()` path of the entry. Used with source
+          to identify the entry when key is empty.
       - name: newKey
         type: string
         default:
-        summary: ''
+        summary: |
+          The new key string to assign to the entry. Must be unique within the
+          table if non-empty.
     returns:
       - type: ()
         summary: ''
@@ -584,24 +717,45 @@ methods:
       Sets the **Source** field of a LocalizationTable entry to `newSource`,
       using the specified `key`, `source`, and `context` to narrow down the
       entry that will have this change applied.
+
+      The entry is identified by the (`key`, `source`, `context`) triple (see
+      `Class.LocalizationTable:RemoveEntry()` for lookup rules). If no matching
+      entry exists, a new entry is created with the provided `key`, `newSource`,
+      and `context`. The method throws an error if the resulting (`key`,
+      `newSource`, `context`) combination would conflict with an existing entry.
+      If `newSource` equals the entry's current source the call is a no-op.
+
+      The **Source** field is the original text in the source language used by
+      the `Class.LocalizationService` automatic text replacement system to match
+      GUI text at runtime. Changing the source also recomputes the internal
+      expression matcher, so parameterized format strings (e.g. `{1:translate}`)
+      are re-parsed immediately.
     code_samples: []
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The unique key of the entry. If non-empty, identifies the entry by
+          itself.
       - name: source
         type: string
         default:
-        summary: ''
+        summary: |
+          The current source text of the entry. Used with context to identify
+          the entry when key is empty.
       - name: context
         type: string
         default:
-        summary: ''
+        summary: |
+          The `Class.Instance:GetFullName()` path of the entry. Used with source
+          to identify the entry when key is empty.
       - name: newSource
         type: string
         default:
-        summary: ''
+        summary: |
+          The new source text to assign to the entry. Used by the automatic text
+          replacement system for matching GUI text at runtime.
     returns:
       - type: ()
         summary: ''
@@ -617,31 +771,57 @@ methods:
       using the specified `key`, `source`, and `context` to narrow down the
       entry that will have this change applied.
     description: |
-      Sets the text of the specified localeId in a LocalizationTable entry,
+      Sets the text of the specified `localeId` in a LocalizationTable entry,
       using the specified `key`, `source`, and `context` to narrow down the
       entry that will have this change applied.
+
+      The entry is identified by the (`key`, `source`, `context`) triple (see
+      `Class.LocalizationTable:RemoveEntry()` for lookup rules). If no matching
+      entry exists, a new entry is created with the provided `key`, `source`,
+      and `context` — this throws an error if both `key` and `source` are empty.
+      The `localeId` is case-insensitive (it is canonicalized internally).
+
+      If `text` is non-empty the translation is stored (or replaced) for
+      `localeId` on that entry. The text must be a valid format string
+      (parameters like `{1:translate}` must be well-formed or the call throws).
+      If `text` is an empty string the translation for `localeId` is removed
+      from the entry, equivalent to calling
+      `Class.LocalizationTable:RemoveEntryValue()`.
+
+      To set multiple entries at once, use
+      `Class.LocalizationTable:SetEntries()`.
     code_samples: []
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The unique key of the entry. If non-empty, identifies the entry by
+          itself.
       - name: source
         type: string
         default:
-        summary: ''
+        summary: |
+          The source text of the entry. Used with context to identify the entry
+          when key is empty.
       - name: context
         type: string
         default:
-        summary: ''
+        summary: |
+          The `Class.Instance:GetFullName()` path of the entry. Used with source
+          to identify the entry when key is empty.
       - name: localeId
         type: string
         default:
-        summary: ''
+        summary: |
+          The Roblox locale identifier (for example, "fr-fr") for the
+          translation to set or remove.
       - name: text
         type: string
         default:
-        summary: ''
+        summary: |
+          The translation text to store. If empty, the translation for the
+          specified locale is removed from the entry.
     returns:
       - type: ()
         summary: ''

@@ -4,79 +4,107 @@
 
 name: AnimationNodeType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the type of an animation graph node, determining how it processes or
+  combines animation data.
+description: |
+  Used by `Class.AnimationNodeDefinition.NodeType` to define how a node in an
+  animation graph processes animation. Setting a node's type resets its input
+  pins to the default set for that type. See individual items for clip, blend,
+  layer, sequence, mask, and speed behaviors.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: InvalidNode
-    summary: ''
+    summary: |
+      The default unassigned type indicating a node has not been configured.
     value: 0
     tags: []
     deprecation_message: ''
   - name: AddNode
-    summary: ''
+    summary: |
+      An additive blend node that layers an additive pose on top of a base pose.
     value: 1
     tags: []
     deprecation_message: ''
   - name: OverNode
-    summary: ''
+    summary: |
+      A layering node that composites an overlay pose on top of a base pose
+      using per-joint masking.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Blend1DNode
-    summary: ''
+    summary: |
+      A blend node that interpolates between multiple inputs along a single
+      numeric axis.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Blend2DNode
-    summary: ''
+    summary: |
+      A blend node that interpolates between multiple inputs using a
+      two-dimensional position.
     value: 4
     tags: []
     deprecation_message: ''
   - name: ClipNode
-    summary: ''
+    summary: |
+      A leaf node that plays back an animation clip asset.
     value: 5
     tags: []
     deprecation_message: ''
   - name: GraphOutput
-    summary: ''
+    summary: |
+      The terminal output node of an animation graph that receives the final
+      pose.
     value: 6
     tags: []
     deprecation_message: ''
   - name: MaskNode
-    summary: ''
+    summary: |
+      A node that filters its input pose through a per-joint weight mask.
     value: 7
     tags: []
     deprecation_message: ''
   - name: PrioritySelectNode
-    summary: ''
+    summary: |
+      A state node that plays the highest-priority input whose trigger condition
+      is true.
     value: 8
     tags: []
     deprecation_message: ''
   - name: RandomSequenceNode
-    summary: ''
+    summary: |
+      A sequence node that plays its inputs in a weighted random order.
     value: 9
     tags: []
     deprecation_message: ''
   - name: SelectNode
-    summary: ''
+    summary: |
+      A state node that plays whichever input is chosen by a string selection
+      parameter.
     value: 10
     tags: []
     deprecation_message: ''
   - name: SequenceNode
-    summary: ''
+    summary: |
+      A node that plays its inputs one after another in order, optionally
+      looping.
     value: 11
     tags: []
     deprecation_message: ''
   - name: SpeedNode
-    summary: ''
+    summary: |
+      A node that scales the playback speed of its input.
     value: 12
     tags: []
     deprecation_message: ''
   - name: SubtractNode
-    summary: ''
+    summary: |
+      A blend node that subtracts one pose from another to produce a difference
+      pose.
     value: 13
     tags: []
     deprecation_message: ''

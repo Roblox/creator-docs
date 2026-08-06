@@ -4,19 +4,34 @@
 
 name: AvatarSettingsCustomBodyType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines whether an experience's custom body override is identified by
+  individual asset references or by a single bundle ID.
+description: |
+  This enum is used by the `CustomBodyType` property to control how a custom
+  avatar body is specified when `AppearanceMode` is set to `CustomBody`. The
+  default value is `Enum.AvatarSettingsCustomBodyType.AvatarReference`.
+
+  When set to `Enum.AvatarSettingsCustomBodyType.AvatarReference`, the avatar
+  body is assembled from per-part asset IDs configured on `AvatarBodyRules`
+  (head, torso, arms, legs, etc.). When set to
+  `Enum.AvatarSettingsCustomBodyType.BundleId`, the entire body is sourced from
+  the bundle specified in `CustomBodyBundleId`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: AvatarReference
-    summary: ''
+    summary: |
+      The custom body is assembled from individual per-part asset references on
+      `AvatarBodyRules`. This is the default value.
     value: 0
     tags: []
     deprecation_message: ''
   - name: BundleId
-    summary: ''
+    summary: |
+      The custom body is sourced from a single avatar bundle, identified by the
+      `CustomBodyBundleId` property.
     value: 1
     tags: []
     deprecation_message: ''

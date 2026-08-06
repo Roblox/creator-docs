@@ -4,19 +4,27 @@
 
 name: HttpCompression
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the compression algorithm applied to HTTP request body sent via
+  `Class.HttpService`.
+description: |
+  Specifies the compression algorithm applied to the body of an HTTP request
+  when calling `Class.HttpService:RequestAsync()` or
+  `Class.HttpService:PostAsync()`. Pass this enum value in the `Compress` field
+  of the request options table to reduce bandwidth when sending large payloads.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      No compression is applied to the request body. This is the default.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Gzip
-    summary: ''
+    summary: |
+      The request body is compressed using the Gzip algorithm before being sent.
     value: 1
     tags: []
     deprecation_message: ''

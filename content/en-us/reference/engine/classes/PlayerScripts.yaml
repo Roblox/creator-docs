@@ -33,8 +33,12 @@ methods:
       Unregisters all `ComputerCameraMovementMode` enums from the game's
       settings menu.
     description: |
-      Unregisters all `ComputerCameraMovementMode` enums from the game's
-      settings menu.
+      Removes every `Enum.ComputerCameraMovementMode` currently registered on
+      this `Class.PlayerScripts` instance, so the in-experience settings menu
+      offers no computer camera modes until one is registered again with
+      `Class.PlayerScripts:RegisterComputerCameraMovementMode()`. The call
+      always notifies the settings menu, which rebuilds its camera-mode options
+      to reflect the now-empty set.
     code_samples: []
     parameters: []
     returns:
@@ -52,8 +56,12 @@ methods:
       Unregisters all `ComputerMovementMode` enums from the game's settings
       menu.
     description: |
-      Unregisters all `ComputerMovementMode` enums from the game's settings
-      menu.
+      Removes every `Enum.ComputerMovementMode` currently registered on this
+      `Class.PlayerScripts` instance, so the in-experience settings menu offers
+      no computer movement modes until one is registered again with
+      `Class.PlayerScripts:RegisterComputerMovementMode()`. The call always
+      notifies the settings menu, which rebuilds its movement-mode options to
+      reflect the now-empty set.
     code_samples: []
     parameters: []
     returns:
@@ -71,8 +79,12 @@ methods:
       Unregisters all `TouchCameraMovementMode` enums from the game's settings
       menu.
     description: |
-      Unregisters all `TouchCameraMovementMode` enums from the game's settings
-      menu.
+      Removes every `Enum.TouchCameraMovementMode` currently registered on this
+      `Class.PlayerScripts` instance, so the in-experience settings menu offers
+      no touch camera modes until one is registered again with
+      `Class.PlayerScripts:RegisterTouchCameraMovementMode()`. The call always
+      notifies the settings menu, which rebuilds its camera-mode options to
+      reflect the now-empty set.
     code_samples: []
     parameters: []
     returns:
@@ -89,7 +101,12 @@ methods:
     summary: |
       Unregisters all `TouchMovementMode` enums from the game's settings menu.
     description: |
-      Unregisters all `TouchMovementMode` enums from the game's settings menu.
+      Removes every `Enum.TouchMovementMode` currently registered on this
+      `Class.PlayerScripts` instance, so the in-experience settings menu offers
+      no touch movement modes until one is registered again with
+      `Class.PlayerScripts:RegisterTouchMovementMode()`. The call always
+      notifies the settings menu, which rebuilds its movement-mode options to
+      reflect the now-empty set.
     code_samples: []
     parameters: []
     returns:
@@ -107,14 +124,24 @@ methods:
       Registers that a computer camera movement mode is available to be selected
       from the game menu.
     description: |
-      Registers that a computer camera movement mode is available to be selected
-      from the game menu.
+      Adds `cameraMovementMode` to the set of `Enum.ComputerCameraMovementMode`
+      options a player can select in the in-experience settings menu on
+      mouse-and-keyboard devices. A new `Class.PlayerScripts` instance is
+      pre-populated with the default computer camera modes
+      (`Enum.ComputerCameraMovementMode.Default`,
+      `Enum.ComputerCameraMovementMode.Classic`, and
+      `Enum.ComputerCameraMovementMode.Follow`); the first call to this method
+      clears that default set so that only the modes you explicitly register are
+      offered, and each later call adds one more. Registering a mode notifies
+      the settings menu so its list of camera options updates.
     code_samples: []
     parameters:
       - name: cameraMovementMode
         type: ComputerCameraMovementMode
         default:
-        summary: ''
+        summary: |
+          The `Enum.ComputerCameraMovementMode` to add to the selectable options
+          in the settings menu.
     returns:
       - type: ()
         summary: ''
@@ -130,14 +157,23 @@ methods:
       Registers that a computer movement mode is available to be selected from
       the game menu.
     description: |
-      Registers that a computer movement mode is available to be selected from
-      the game menu.
+      Adds `movementMode` to the set of `Enum.ComputerMovementMode` options a
+      player can select in the in-experience settings menu on mouse-and-keyboard
+      devices. A new `Class.PlayerScripts` instance is pre-populated with the
+      default computer movement modes (`Enum.ComputerMovementMode.Default`,
+      `Enum.ComputerMovementMode.KeyboardMouse`, and
+      `Enum.ComputerMovementMode.ClickToMove`); the first call to this method
+      clears that default set so that only the modes you explicitly register are
+      offered, and each later call adds one more. Registering a mode notifies
+      the settings menu so its list of movement options updates.
     code_samples: []
     parameters:
       - name: movementMode
         type: ComputerMovementMode
         default:
-        summary: ''
+        summary: |
+          The `Enum.ComputerMovementMode` to add to the selectable options in
+          the settings menu.
     returns:
       - type: ()
         summary: ''
@@ -153,14 +189,23 @@ methods:
       Registers that a touch camera movement mode is available to be selected
       from the game menu.
     description: |
-      Registers that a touch camera movement mode is available to be selected
-      from the game menu.
+      Adds `cameraMovementMode` to the set of `Enum.TouchCameraMovementMode`
+      options a player can select in the in-experience settings menu on touch
+      devices. A new `Class.PlayerScripts` instance is pre-populated with the
+      default touch camera modes (`Enum.TouchCameraMovementMode.Default`,
+      `Enum.TouchCameraMovementMode.Classic`, and
+      `Enum.TouchCameraMovementMode.Follow`); the first call to this method
+      clears that default set so that only the modes you explicitly register are
+      offered, and each later call adds one more. Registering a mode notifies
+      the settings menu so its list of camera options updates.
     code_samples: []
     parameters:
       - name: cameraMovementMode
         type: TouchCameraMovementMode
         default:
-        summary: ''
+        summary: |
+          The `Enum.TouchCameraMovementMode` to add to the selectable options in
+          the settings menu.
     returns:
       - type: ()
         summary: ''
@@ -176,14 +221,23 @@ methods:
       Registers that a touch movement mode is available to be selected from the
       game menu.
     description: |
-      Registers that a touch movement mode is available to be selected from the
-      game menu.
+      Adds `movementMode` to the set of `Enum.TouchMovementMode` options a
+      player can select in the in-experience settings menu on touch devices. A
+      new `Class.PlayerScripts` instance is pre-populated with the default touch
+      movement modes (`Enum.TouchMovementMode.Default`,
+      `Enum.TouchMovementMode.Thumbstick`, `Enum.TouchMovementMode.ClickToMove`,
+      and `Enum.TouchMovementMode.DynamicThumbstick`); the first call to this
+      method clears that default set so that only the modes you explicitly
+      register are offered, and each later call adds one more. Registering a
+      mode notifies the settings menu so its list of movement options updates.
     code_samples: []
     parameters:
       - name: movementMode
         type: TouchMovementMode
         default:
-        summary: ''
+        summary: |
+          The `Enum.TouchMovementMode` to add to the selectable options in the
+          settings menu.
     returns:
       - type: ()
         summary: ''

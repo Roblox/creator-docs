@@ -4,24 +4,42 @@
 
 name: AvatarSettingsCollisionMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines the collision geometry mode for avatars managed by
+  `AvatarCollisionRules`.
+description: |
+  Determines the collision geometry mode for avatars managed by
+  `AvatarCollisionRules`. `Enum.AvatarSettingsCollisionMode.Default` uses each
+  body part's native collision geometry.
+  `Enum.AvatarSettingsCollisionMode.SingleCollider` replaces per-part collision
+  with a single box collider welded to the HumanoidRootPart.
+  `Enum.AvatarSettingsCollisionMode.Legacy` delegates to the
+  `LegacyCollisionMode` setting.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Each body part uses its native collision geometry. The HumanoidRootPart,
+      UpperTorso, and LowerTorso collide while other parts do not. This is the
+      default value for `CollisionMode`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: SingleCollider
-    summary: ''
+    summary: |
+      A single box-shaped collider part replaces all per-part collision. The
+      collider is welded to the HumanoidRootPart and sized by
+      `SingleColliderSize` (default 2, 3, 1). All other parts become
+      non-collidable and massless.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Legacy
-    summary: ''
+    summary: |
+      Collision geometry is determined by `LegacyCollisionMode`, which selects
+      either inner-box colliders or R6-style colliders.
     value: 2
     tags: []
     deprecation_message: ''

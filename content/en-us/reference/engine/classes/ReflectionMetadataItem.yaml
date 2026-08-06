@@ -46,7 +46,11 @@ properties:
     summary: |
       Describes the category of this class.
     description: |
-      Describes the category of this class.
+      The category name used to group this class in Studio's Insert Object
+      window. When set, the class is listed under a heading matching this
+      category; when left at its default empty string, the class is grouped
+      under "Uncategorized". This applies to class-level reflection metadata and
+      has no effect on individual members.
     code_samples: []
     type: string
     tags: []
@@ -61,8 +65,11 @@ properties:
       can_save: true
     capabilities: []
   - name: ReflectionMetadataItem.ClientOnly
-    summary: ''
-    description: ''
+    summary: |
+      Whether this item is only meaningful on the client.
+    description: |
+      When this value is true, this reflection item is only meaningful on the
+      client and shouldn't be read or set on the server. Defaults to false.
     code_samples: []
     type: boolean
     tags: []
@@ -135,7 +142,10 @@ properties:
     summary: |
       Toggles whether this property can be edited from the Properties window.
     description: |
-      Toggles whether this property can be edited from the Properties window.
+      When this value is true, the property is shown as read-only in Studio's
+      Properties window: its value is still displayed but cannot be edited
+      there. Defaults to false, in which case the property can be edited
+      normally.
     code_samples: []
     type: boolean
     tags: []
@@ -150,8 +160,12 @@ properties:
       can_save: true
     capabilities: []
   - name: ReflectionMetadataItem.EditorType
-    summary: ''
-    description: ''
+    summary: |
+      Names the editor used for this property in the Properties window.
+    description: |
+      Identifies the specialized editor used to display and edit this property
+      in Studio's Properties window. Defaults to an empty string, in which case
+      the default editor for the property's value type is used.
     code_samples: []
     type: string
     tags: []
@@ -166,8 +180,14 @@ properties:
       can_save: true
     capabilities: []
   - name: ReflectionMetadataItem.FFlag
-    summary: ''
-    description: ''
+    summary: |
+      Names a setting that controls whether this item is browsable.
+    description: |
+      Names a Studio setting whose state controls whether this item is
+      browsable. When set, the item is hidden unless that setting is on;
+      prefixing the name with `!` inverts this. Defaults to an empty string, in
+      which case visibility is governed only by
+      `Class.ReflectionMetadataItem.Browsable`.
     code_samples: []
     type: string
     tags: []
@@ -201,8 +221,14 @@ properties:
       can_save: true
     capabilities: []
   - name: ReflectionMetadataItem.PropertyOrder
-    summary: ''
-    description: ''
+    summary: |
+      The sort position of this property within its category in the Properties
+      window.
+    description: |
+      Controls where this property appears relative to others in its category in
+      the Properties window; lower values appear higher. Defaults to 5000, which
+      leaves room to order properties before or after those that have no
+      explicit order.
     code_samples: []
     type: int
     tags: []
@@ -242,8 +268,11 @@ properties:
       can_save: true
     capabilities: []
   - name: ReflectionMetadataItem.ServerOnly
-    summary: ''
-    description: ''
+    summary: |
+      Whether this item is only meaningful on the server.
+    description: |
+      When this value is true, this reflection item is only meaningful on game
+      servers and shouldn't be read or set on the client. Defaults to false.
     code_samples: []
     type: boolean
     tags: []
@@ -258,8 +287,18 @@ properties:
       can_save: true
     capabilities: []
   - name: ReflectionMetadataItem.SliderScaling
-    summary: ''
-    description: ''
+    summary: |
+      The scaling mode for this property's slider bar in the Properties window.
+    description: |
+      Determines how the Properties-window slider maps tick positions to values
+      between `Class.ReflectionMetadataItem.UIMinimum` and
+      `Class.ReflectionMetadataItem.UIMaximum`. When set to "Square", the slider
+      uses a quadratic mapping so that ticks near the minimum give finer
+      control; any other value, including the default empty string, uses a
+      linear mapping. The slider only takes effect when its range is configured
+      through `Class.ReflectionMetadataItem.UIMinimum`,
+      `Class.ReflectionMetadataItem.UIMaximum`, and
+      `Class.ReflectionMetadataItem.UINumTicks`, which all default to 0.
     code_samples: []
     type: string
     tags: []
@@ -279,9 +318,11 @@ properties:
       `Class.ReflectionMetadataItem.UIMinimum` to control the slider bar of this
       property in the `Properties` window.
     description: |
-      The maximum value of this property. Used with
-      `Class.ReflectionMetadataItem.UIMinimum` to control the slider bar of this
-      property in the `Properties` window.
+      The upper bound of the slider shown for this numeric property in Studio's
+      Properties window, used together with
+      `Class.ReflectionMetadataItem.UIMinimum`. Both default to 0, and Studio
+      only shows a slider when the minimum and maximum differ; with the default
+      values the property is edited through a plain input field with no slider.
     code_samples: []
     type: double
     tags: []
@@ -301,9 +342,11 @@ properties:
       `Class.ReflectionMetadataItem.UIMaximum` to control the slider bar of this
       property in the `Properties` window.
     description: |
-      The minimum value of this property. Used with
-      `Class.ReflectionMetadataItem.UIMaximum` to control the slider bar of this
-      property in the `Properties` window.
+      The lower bound of the slider shown for this numeric property in Studio's
+      Properties window, used together with
+      `Class.ReflectionMetadataItem.UIMaximum`. Both default to 0, and Studio
+      only shows a slider when the minimum and maximum differ; with the default
+      values the property is edited through a plain input field with no slider.
     code_samples: []
     type: double
     tags: []
@@ -323,9 +366,14 @@ properties:
       `Class.ReflectionMetadataItem.UIMinimum` and
       `Class.ReflectionMetadataItem.UIMaximum`.
     description: |
-      The number of potential values the property's slider bar can be set to,
+      The number of discrete tick positions on this property's Properties-window
+      slider, mapping each tick to a value between
       `Class.ReflectionMetadataItem.UIMinimum` and
-      `Class.ReflectionMetadataItem.UIMaximum`.
+      `Class.ReflectionMetadataItem.UIMaximum`. Defaults to 0, in which case
+      Studio substitutes a built-in default number of intervals. It only takes
+      effect when the slider is active, which requires
+      `Class.ReflectionMetadataItem.UIMinimum` and
+      `Class.ReflectionMetadataItem.UIMaximum` to be set to different values.
     code_samples: []
     type: double
     tags: []

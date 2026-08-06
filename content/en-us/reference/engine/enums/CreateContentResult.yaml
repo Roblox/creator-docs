@@ -4,15 +4,22 @@
 
 name: CreateContentResult
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates the result of a `Class.AssetService:CreateDataModelContentAsync()`
+  call.
+description: |
+  Returned as the first value in the tuple from
+  `Class.AssetService:CreateDataModelContentAsync()`, which creates a
+  `DataModel`-scoped runtime content object at runtime. A value of
+  `Enum.CreateContentResult.Success|Success` means the content was created and
+  stored successfully; any other value describes why the operation failed.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Success
     summary: |
-      Success.
+      The content object was created and stored successfully.
     value: 1
     tags: []
     deprecation_message: ''

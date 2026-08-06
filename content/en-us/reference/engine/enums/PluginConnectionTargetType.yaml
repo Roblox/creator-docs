@@ -4,7 +4,9 @@
 
 name: PluginConnectionTargetType
 type: enum
-summary: ''
+summary: |
+  Describes the data model type that the remote end of a
+  `Class.PluginConnection` runs in.
 description: |
   An enum describing the possible relationships a target data model of a
   `Class.PluginConnection` can have to the current data model.
@@ -13,12 +15,16 @@ tags: []
 deprecation_message: ''
 items:
   - name: Edit
-    summary: ''
+    summary: |
+      The target data model is an edit-session data model which spawned this
+      test data model.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Test
-    summary: ''
+    summary: |
+      The target data model is a test (simulation/playtest) data model spawned
+      from this edit data model.
     value: 1
     tags: []
     deprecation_message: ''

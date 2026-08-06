@@ -4,19 +4,35 @@
 
 name: AvatarSettingsHitAndTouchDetectionMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines whether hit detection and spatial queries use the individual body
+  parts or the single collider when `AvatarCollisionRules.CollisionMode` is
+  `Enum.AvatarSettingsCollisionMode.SingleCollider`.
+description: |
+  Determines whether `Class.BasePart.CanTouch` (hit detection) and
+  `Class.BasePart.CanQuery` (spatial queries) are routed to the individual
+  avatar body parts or to the single collider part. Only takes effect when
+  `AvatarCollisionRules.CollisionMode` is
+  `Enum.AvatarSettingsCollisionMode.SingleCollider`; in other collision modes it
+  is ignored.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: UseParts
-    summary: ''
+    summary: |
+      Individual avatar body parts handle `Touched` events and spatial queries
+      (`CanTouch` and `CanQuery` enabled on body parts) while the single
+      collider part has `CanTouch` and `CanQuery` disabled. This is the default
+      value for `AvatarCollisionRules.HitAndTouchDetectionMode`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: UseCollider
-    summary: ''
+    summary: |
+      The single collider part handles `Touched` events and spatial queries
+      (`CanTouch` and `CanQuery` enabled on the collider) while all individual
+      body parts have `CanTouch` and `CanQuery` disabled.
     value: 1
     tags: []
     deprecation_message: ''

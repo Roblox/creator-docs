@@ -4,24 +4,33 @@
 
 name: DeviceLevel
 type: enum
-summary: ''
-description: ''
+summary: |
+  Classifies a device's hardware capability tier.
+description: |
+  `DeviceLevel` is an enum that indicates the hardware capability tier of the
+  current device. Internal usage only.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Low
-    summary: ''
+    summary: |
+      Indicates a low-end device that benefits from reduced graphics or
+      simulation quality.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Medium
-    summary: ''
+    summary: |
+      Indicates a mid-range device that may benefit from moderate reductions in
+      resource-intensive features.
     value: 1
     tags: []
     deprecation_message: ''
   - name: High
-    summary: ''
+    summary: |
+      Indicates a high-end device capable of running resource-intensive features
+      at full fidelity.
     value: 2
     tags: []
     deprecation_message: ''

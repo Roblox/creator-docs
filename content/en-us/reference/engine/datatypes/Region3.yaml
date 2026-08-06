@@ -41,11 +41,13 @@ constructors:
       - name: min
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The lower corner of the rectangular volume.
       - name: max
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The upper corner of the rectangular volume.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -56,7 +58,12 @@ properties:
     summary: |
       The center location and rotation of the `Datatype.Region3`.
     description: |
-      The center location and rotation of the `Datatype.Region3`.
+      The `Datatype.CFrame` representing the center position and orientation of
+      the `Datatype.Region3`. The position component is the midpoint of the
+      `min` and `max` vectors passed to `Datatype.Region3.new()`, computed as
+      `(min + max) / 2`. Because a `Datatype.Region3` is always axis-aligned,
+      the rotation component of the returned `Datatype.CFrame` is always the
+      identity (no rotation). This property is read-only.
     default:
     code_samples: []
     tags: []
@@ -66,7 +73,10 @@ properties:
     summary: |
       The 3D size of the `Datatype.Region3`.
     description: |
-      The 3D size of the `Datatype.Region3`.
+      The size of the `Datatype.Region3` as a `Datatype.Vector3`, equal to
+      `max - min` from the constructor arguments. Individual components may be
+      **negative** if the corresponding component of `min` is greater than `max`
+      in the call to `Datatype.Region3.new()`. This property is read-only.
     default:
     code_samples: []
     tags: []
@@ -84,10 +94,14 @@ methods:
       - name: resolution
         type: number
         default:
-        summary: ''
+        summary: |
+          The grid resolution to align the region bounds to, in studs. Must be a
+          positive number.
     returns:
       - type: Region3
-        summary: ''
+        summary: |
+          A new Region3 whose minimum bounds are floored and maximum bounds are
+          ceiled to the nearest multiple of `resolution`.
     code_samples: []
     tags: []
     deprecation_message: ''

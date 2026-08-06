@@ -5,8 +5,22 @@
 name: SelectionHighlightManager
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Studio service that draws selection outline highlights for the local user's
+  selection and for Team Create collaborators' selections.
+description: |
+  Studio-only service; not intended for experience scripts. Manages the
+  selection outline highlights shown in the viewport. It tracks the
+  `Class.Selection` service and, for each selected instance, creates a highlight
+  with color and thickness matching the current selection style. Highlights are
+  applied to `Class.PVInstance` objects (excluding the `Class.Workspace` itself)
+  and recurse into `Class.Folder` and `Class.BasePart` containers that have
+  highlightable descendants; selected `Class.GuiBase2d` UI objects are outlined
+  with a drawn rectangle.
+
+  In Team Create, the service also renders other collaborators' selections using
+  each collaborator's assigned color, and removes them when a collaborator goes
+  idle or when a user toggles collaborator selection highlights off.
 code_samples: []
 inherits:
   - Instance

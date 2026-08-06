@@ -4,24 +4,33 @@
 
 name: SelectionRenderMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how selected objects are highlighted in Roblox Studio.
+description: |
+  Specifies the visual style used to highlight selected objects in Roblox
+  Studio. This enum is used by the `RenderMode` property, which defaults to
+  `Enum.SelectionRenderMode.Outlines`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Outlines
-    summary: ''
+    summary: |
+      Renders selected objects using an outline drawn along each object's edges.
     value: 0
     tags: []
     deprecation_message: ''
   - name: BoundingBoxes
-    summary: ''
+    summary: |
+      Renders selected objects using a bounding box drawn around each object's
+      extents.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Both
-    summary: ''
+    summary: |
+      Renders selected objects with both outlines and bounding boxes
+      simultaneously.
     value: 2
     tags: []
     deprecation_message: ''

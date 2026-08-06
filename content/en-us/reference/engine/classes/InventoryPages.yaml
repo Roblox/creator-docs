@@ -5,7 +5,9 @@
 name: InventoryPages
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A special version of `Class.Pages` that contains information about a specific
+  category of a user's inventory.
 description: |
   The InventoryPages class is used in the case of iterating over a specific
   category in a user's inventory.

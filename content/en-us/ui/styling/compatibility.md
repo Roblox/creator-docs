@@ -423,6 +423,55 @@ The following tables outline all of the classes and associated properties which 
 </tbody>
 </table>
 
+### InputActionLabel
+
+<table size="small">
+<thead>
+  <tr>
+    <th>Property</th>
+    <th width="40%">Type</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`Class.InputActionLabel.FontFace`</td>
+    <td>`Datatype.Font`</td>
+	</tr>
+  <tr>
+    <td>`Class.InputActionLabel.ImageColor3`</td>
+    <td>`Datatype.Color3`</td>
+	</tr>
+  <tr>
+    <td>`Class.InputActionLabel.ImageTransparency`</td>
+    <td>float</td>
+	</tr>
+  <tr>
+    <td>`Class.InputActionLabel.TextColor3`</td>
+    <td>`Datatype.Color3`</td>
+	</tr>
+  <tr>
+    <td>`Class.InputActionLabel.TextSize`</td>
+    <td>float</td>
+	</tr>
+  <tr>
+    <td>`Class.InputActionLabel.TextTransparency`</td>
+    <td>float</td>
+	</tr>
+  <tr>
+    <td>`Class.InputActionLabel.TextWrapped`</td>
+    <td>boolean</td>
+	</tr>
+  <tr>
+    <td>`Class.InputActionLabel.TextXAlignment`</td>
+    <td>`Enum.TextXAlignment`</td>
+	</tr>
+  <tr>
+    <td>`Class.InputActionLabel.TextYAlignment`</td>
+    <td>`Enum.TextYAlignment`</td>
+	</tr>
+</tbody>
+</table>
+
 ### TextBox
 
 <table size="small">

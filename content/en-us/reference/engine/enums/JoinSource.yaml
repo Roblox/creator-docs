@@ -4,14 +4,22 @@
 
 name: JoinSource
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies the context in which a player joined an experience via a deeplink.
+description: |
+  Identifies the context in which a player joined an experience via a deeplink.
+  The value is available as the `JoinSource` key in the `GameJoinContext` table
+  returned by `Class.Player:GetJoinData()`. Experiences can inspect this value
+  on `Class.Players.PlayerAdded` to customize the player's starting state
+  depending on how they arrived.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: CreatedItemAttribution
-    summary: ''
+    summary: |
+      The player joined by following an attribution link for an item created
+      inside an experience.
     value: 1
     tags: []
     deprecation_message: ''

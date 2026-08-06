@@ -230,37 +230,51 @@ items:
     tags: []
     deprecation_message: ''
   - name: EyebrowAccessory
-    summary: ''
+    summary: |
+      A layered eyebrow accessory.
     value: 76
     tags: []
     deprecation_message: ''
   - name: EyelashAccessory
-    summary: ''
+    summary: |
+      A layered eyelash accessory.
     value: 77
     tags: []
     deprecation_message: ''
   - name: MoodAnimation
-    summary: ''
+    summary: |
+      A mood animation that drives a character's facial expression.
     value: 78
     tags: []
     deprecation_message: ''
   - name: DynamicHead
-    summary: ''
+    summary: |
+      A head with facial animation support.
     value: 79
     tags: []
     deprecation_message: ''
   - name: FaceMakeup
-    summary: ''
+    summary: |
+      Face makeup applied to a character's head.
     value: 88
     tags: []
     deprecation_message: ''
   - name: LipMakeup
-    summary: ''
+    summary: |
+      Lip makeup applied to a character's face.
     value: 89
     tags: []
     deprecation_message: ''
   - name: EyeMakeup
-    summary: ''
+    summary: |
+      Eye makeup applied to a character's face.
     value: 90
+    tags: []
+    deprecation_message: ''
+  - name: AvatarBackground
+    summary: |
+      A 2D image background displayed behind a user's avatar on their profile
+      and thumbnail surfaces.
+    value: 92
     tags: []
     deprecation_message: ''

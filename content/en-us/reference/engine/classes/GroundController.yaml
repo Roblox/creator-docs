@@ -5,8 +5,23 @@
 name: GroundController
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  The `Class.ControllerBase` that moves a `Class.ControllerManager` character
+  while it is walking or standing on the ground.
+description: |
+  `Class.GroundController` is the `Class.ControllerBase` that a
+  `Class.ControllerManager` activates when its character is moving along or
+  standing on the ground. It keeps the `Class.ControllerManager.RootPart`
+  hovering at `Class.GroundController.GroundOffset` above the detected floor,
+  drives locomotion toward the manager's target velocity (ramped by
+  `Class.GroundController.AccelerationTime` and
+  `Class.GroundController.DecelerationTime`), keeps the root part upright, and
+  turns it toward the `Class.ControllerManager.FacingDirection`. Ground friction
+  comes from the floor material and this controller's
+  `Class.GroundController.Friction` and `Class.GroundController.FrictionWeight`.
+  Parent one to a `Class.ControllerManager` to supply on-ground movement; the
+  manager selects it through `Class.ControllerManager.ActiveController` and
+  activates one controller at a time.
 code_samples: []
 inherits:
   - ControllerBase

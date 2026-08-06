@@ -33,7 +33,12 @@ methods:
     summary: |
       Adds an item to the queue.
     description: |
-      Adds an item to the queue.
+      Adds an item to the queue with the given priority and expiration. Items
+      with a higher `priority` are retrieved from the queue before items with a
+      lower priority, and items with the same priority are retrieved in the
+      order they were added; `priority` defaults to 0. The `expiration` value,
+      in seconds, sets how long the item remains in the queue before it is
+      automatically removed. This method yields until the item has been added.
     code_samples: []
     parameters:
       - name: value
@@ -67,7 +72,12 @@ methods:
     summary: |
       Gets the size of the queue.
     description: |
-      Gets the size of the queue.
+      Returns the number of items currently in the queue. By default the
+      returned count includes invisible items -- items that have been read with
+      `Class.MemoryStoreQueue:ReadAsync()` but not yet removed and whose
+      invisibility timeout has not expired. Set the `excludeInvisible` parameter
+      to `true` to omit these items from the count; it defaults to `false`. This
+      method yields until the size is retrieved.
     code_samples: []
     parameters:
       - name: excludeInvisible
@@ -77,7 +87,10 @@ methods:
           Determines whether to exclude invisible items from the size count.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The number of items currently in the queue. Items that have been read
+          but not yet removed (invisible items) are included in the count unless
+          `excludeInvisible` is `true`.
     tags:
       - Yields
     deprecation_message: ''

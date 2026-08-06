@@ -5,7 +5,9 @@
 name: UIPageLayout
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  Positions sibling UI elements as full-size pages in a single row or column
+  that users can scroll or animate through one page at a time.
 description: |
   Creates a paged viewing window, like the home screen of a mobile device. You
   can use a UIPageLayout by parenting it to a GuiObject. The UIPageLayout will
@@ -21,7 +23,10 @@ properties:
     summary: |
       Whether or not to animate transitions between pages.
     description: |
-      Whether or not to animate transitions between pages.
+      When set to true, page transitions use the configured
+      `Class.UIPageLayout.EasingStyle`, `Class.UIPageLayout.EasingDirection`,
+      and `Class.UIPageLayout.TweenTime` to animate the movement between pages.
+      When set to false, page transitions are instantaneous. Defaults to `true`.
     code_samples: []
     type: boolean
     tags: []
@@ -40,7 +45,11 @@ properties:
     summary: |
       Whether or not the page layout wraps around at the ends.
     description: |
-      Whether or not the page layout wraps around at the ends.
+      When set to true, navigating past the last page wraps around to the first
+      page, and navigating before the first page wraps to the last. Animated
+      transitions take the shortest rotational path around the wrap boundary.
+      When set to false, navigation stops at the first and last pages. Defaults
+      to `false`.
     code_samples: []
     type: boolean
     tags: []
@@ -60,8 +69,13 @@ properties:
       The page that is either currently being displayed or is the target of the
       current animation.
     description: |
-      The page that is either currently being displayed or is the target of the
-      current animation.
+      A read-only reference to the `Class.GuiObject` sibling that is currently
+      displayed or is the target of an in-progress animation. The layout updates
+      this property when pages change via `Class.UIPageLayout:Next()`,
+      `Class.UIPageLayout:Previous()`, `Class.UIPageLayout:JumpTo()`,
+      `Class.UIPageLayout:JumpToIndex()`, or through user input (touch swipe,
+      scroll wheel, or gamepad). If no page has been explicitly navigated to, it
+      defaults to the first visible `Class.GuiObject` sibling in layout order.
     code_samples: []
     type: GuiObject
     tags:
@@ -82,7 +96,11 @@ properties:
     summary: |
       The easing direction to use when performing an animation.
     description: |
-      The easing direction to use when performing an animation.
+      Determines the direction component of the easing function applied during
+      animated page transitions. Combined with `Class.UIPageLayout.EasingStyle`
+      to form the full tween curve. Only takes effect when
+      `Class.UIPageLayout.Animated` is true. Defaults to
+      `Enum.EasingDirection.Out`.
     code_samples: []
     type: EasingDirection
     tags: []
@@ -101,7 +119,10 @@ properties:
     summary: |
       The easing style to use when performing an animation.
     description: |
-      The easing style to use when performing an animation.
+      Determines the easing curve applied during animated page transitions.
+      Combined with `Class.UIPageLayout.EasingDirection` to form the full tween
+      curve. Only takes effect when `Class.UIPageLayout.Animated` is true.
+      Defaults to `Enum.EasingStyle.Back`.
     code_samples: []
     type: EasingStyle
     tags: []
@@ -121,8 +142,14 @@ properties:
       Controls the overrides of `NextSelection{Up, Down, Left, Right}`. Defaults
       to true.
     description: |
-      Controls the overrides of `NextSelection{Up,Down,Left,Right}`. Defaults to
-      true.
+      When set to true, the layout overrides sibling
+      `Class.GuiObject.NextSelectionLeft` and
+      `Class.GuiObject.NextSelectionRight` (for horizontal fill direction) or
+      `Class.GuiObject.NextSelectionUp` and `Class.GuiObject.NextSelectionDown`
+      (for vertical fill direction) so that gamepad directional navigation moves
+      between pages. Additionally, the L1 and R1 bumper buttons advance to the
+      previous and next page respectively. When false, gamepad input does not
+      interact with the layout. Defaults to `true`.
     code_samples: []
     type: boolean
     tags: []
@@ -163,8 +190,10 @@ properties:
       Controls the use of scroll wheel, in case that it is intended for
       something else. Defaults to true.
     description: |
-      Controls the use of scroll wheel, in case that it is intended for
-      something else. Defaults to true.
+      When set to true, mouse scroll wheel input navigates between pages.
+      Scrolling up moves to the previous page and scrolling down moves to the
+      next page. Set this to false when the scroll wheel is intended for other
+      interactions in the UI. Defaults to `true`.
     code_samples: []
     type: boolean
     tags: []
@@ -184,8 +213,9 @@ properties:
       Controls touch scrolling, in case this is a non-interactive layout.
       Defaults to true.
     description: |
-      Controls touch scrolling, in case this is a non-interactive layout.
-      Defaults to true.
+      When set to true, touch-based swipe gestures navigate between pages. Set
+      this to false for layouts where touch input should not trigger page
+      transitions, such as non-interactive displays. Defaults to `true`.
     code_samples: []
     type: boolean
     tags: []
@@ -204,7 +234,9 @@ properties:
     summary: |
       The length of the animation.
     description: |
-      The length of the animation.
+      The duration, in seconds, of the animated transition when navigating
+      between pages. The value is clamped to a minimum of 0.01. Only takes
+      effect when `Class.UIPageLayout.Animated` is true. Defaults to `1`.
     code_samples: []
     type: float
     tags: []
@@ -226,15 +258,20 @@ methods:
       `Class.UIPageLayout.CurrentPage` to it and animates to it. If the circular
       layout is enabled, it will take the shortest path to this page.
     description: |
-      If the `page` is in the UIPageLayout, then it sets
-      `Class.UIPageLayout.CurrentPage` to it and animates to it. If the circular
-      layout is enabled, it will take the shortest path to this page.
+      Navigates to a specific page within the layout. The `page` argument must
+      be a `Class.GuiObject` that is a visible sibling managed by this layout;
+      passing `nil` or an instance that is not part of the layout throws an
+      error. Sets `Class.UIPageLayout.CurrentPage` to the target and animates
+      the transition (or jumps instantly if `Class.UIPageLayout.Animated` is
+      false). When `Class.UIPageLayout.Circular` is true, the animation takes
+      the shortest rotational path to the target page.
     code_samples: []
     parameters:
       - name: page
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.GuiObject` sibling to navigate to.
     returns:
       - type: ()
         summary: ''
@@ -247,20 +284,20 @@ methods:
   - name: UIPageLayout:JumpToIndex
     summary: |
       If the index is `>= 0` and less than the size of the layout, this method
-      acts like `Class.UIPageLayout:JumpTo()`. If it's out of bounds and
-      circular is set, it will animate the full distance between the in-bounds
-      index of `Class.UIPageLayout.CurrentPage` and the new index.
+      acts like `Class.UIPageLayout:JumpTo()`. Out-of-bounds indices are wrapped
+      modulo the page count to determine the target page.
     description: |
-      If the index is `>= 0` and less than the size of the layout, this method
-      acts like `Class.UIPageLayout:JumpTo()`. If it's out of bounds and
-      circular is set, it will animate the full distance between the in-bounds
-      index of `Class.UIPageLayout.CurrentPage` and the new index.
+      Navigates to the page at the given zero-based `index` in layout order. If
+      the index is within the valid range (0 to page count minus 1), this method
+      behaves like `Class.UIPageLayout:JumpTo()`. Out-of-bounds indices are
+      wrapped modulo the page count to determine the final page.
     code_samples: []
     parameters:
       - name: index
         type: int
         default:
-        summary: ''
+        summary: |
+          The zero-based position of the target page in layout order.
     returns:
       - type: ()
         summary: ''
@@ -275,8 +312,12 @@ methods:
       Sets `Class.UIPageLayout.CurrentPage` to the page after the current page
       and animates to it, or does nothing if there isn't a next page.
     description: |
-      Sets `Class.UIPageLayout.CurrentPage` to the page after the current page
-      and animates to it, or does nothing if there isn't a next page.
+      Advances `Class.UIPageLayout.CurrentPage` to the next page in layout order
+      and animates the transition (or jumps instantly if
+      `Class.UIPageLayout.Animated` is false). If the current page is already
+      the last page and `Class.UIPageLayout.Circular` is false, this method does
+      nothing. If `Class.UIPageLayout.Circular` is true, it wraps from the last
+      page to the first.
     code_samples: []
     parameters: []
     returns:
@@ -293,8 +334,12 @@ methods:
       Sets `Class.UIPageLayout.CurrentPage` to the page before the current page
       and animates to it, or does nothing if there isn't a previous page.
     description: |
-      Sets `Class.UIPageLayout.CurrentPage` to the page before the current page
-      and animates to it, or does nothing if there isn't a previous page.
+      Moves `Class.UIPageLayout.CurrentPage` to the previous page in layout
+      order and animates the transition (or jumps instantly if
+      `Class.UIPageLayout.Animated` is false). If the current page is already
+      the first page and `Class.UIPageLayout.Circular` is false, this method
+      does nothing. If `Class.UIPageLayout.Circular` is true, it wraps from the
+      first page to the last.
     code_samples: []
     parameters: []
     returns:
@@ -311,13 +356,18 @@ events:
     summary: |
       Fires when a page comes into view, and is going to be rendered.
     description: |
-      Fires when a page comes into view, and is going to be rendered.
+      Fires when a sibling page's bounding rect begins intersecting the parent's
+      clip region, causing it to become visible and rendered. The `page`
+      parameter is the `Class.GuiObject` that entered view. This event fires on
+      the frame the page's visibility flips from hidden to shown, whether due to
+      an animated transition, a programmatic jump, or user input scrolling.
     code_samples: []
     parameters:
       - name: page
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.GuiObject` that entered view.
     tags: []
     deprecation_message: ''
     security: None
@@ -327,13 +377,18 @@ events:
     summary: |
       Fires when a page leaves view, and will not be rendered.
     description: |
-      Fires when a page leaves view, and will not be rendered.
+      Fires when a sibling page's bounding rect stops intersecting the parent's
+      clip region, causing it to become hidden and no longer rendered. The
+      `page` parameter is the `Class.GuiObject` that left view. This event fires
+      on the frame the page's visibility flips from shown to hidden, whether due
+      to an animated transition, a programmatic jump, or user input scrolling.
     code_samples: []
     parameters:
       - name: page
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.GuiObject` that left view.
     tags: []
     deprecation_message: ''
     security: None
@@ -344,14 +399,18 @@ events:
       Fires when an animation to `Class.UIPageLayout.CurrentPage` is completed
       without being canceled, and the view stops scrolling.
     description: |
-      Fires when an animation to `Class.UIPageLayout.CurrentPage` is completed
-      without being canceled, and the view stops scrolling.
+      Fires when a page-navigation animation reaches its target without being
+      interrupted by new input, and the view comes to rest. The `currentPage`
+      parameter is the `Class.GuiObject` now displayed. This event does not fire
+      for programmatic transitions made while `Class.UIPageLayout.Animated` is
+      false, since those snap to the target page instantly.
     code_samples: []
     parameters:
       - name: currentPage
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.GuiObject` now displayed after the transition completed.
     tags: []
     deprecation_message: ''
     security: None

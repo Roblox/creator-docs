@@ -217,12 +217,15 @@ methods:
     description: |
       Returns the applied `Class.Accessory` if this `Class.AccessoryDescription`
       is the child of an applied `Class.HumanoidDescription` parented to a
-      `Class.Humanoid`.
+      `Class.Humanoid`. Throws an error if this `Class.AccessoryDescription` is
+      not a child of a `Class.HumanoidDescription` that has been applied to a
+      `Class.Humanoid`, or if no matching applied instance is found.
     code_samples: []
     parameters: []
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          The applied `Class.Accessory`.
     tags: []
     deprecation_message: ''
     security: None

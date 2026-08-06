@@ -54,8 +54,29 @@ properties:
       Determines the geometric representation used to compute aerodynamic forces
       and torques.
     description: |
-      Determines the geometric representation used to compute aerodynamic forces
-      and torques.
+      Controls which geometric representation the physics engine uses when it
+      computes aerodynamic (fluid) forces and torques for the part. It defaults
+      to `Enum.FluidFidelity.Automatic`, in which the engine selects a
+      representation on your behalf.
+
+      - `Enum.FluidFidelity.Automatic` — the engine chooses the representation;
+        it currently evaluates fluid forces against the part's collision
+        geometry.
+      - `Enum.FluidFidelity.UseCollisionGeometry` — fluid forces are evaluated
+        against the part's collision geometry, matching the shape used for
+        collision detection.
+      - `Enum.FluidFidelity.UsePreciseGeometry` — fluid forces are evaluated
+        against the part's precise mesh geometry, producing more accurate forces
+        at a higher computational cost.
+
+      Because this property has plugin-level write security, it is configured in
+      Studio rather than assigned by runtime scripts.
+
+      This setting only affects a part while fluid forces are active for the
+      place, which is governed by `Class.Workspace.FluidForces` (an
+      `Enum.FluidForces` value that defaults to `Default`; setting it to
+      `Experimental` enables the aerodynamic force model). When fluid forces are
+      not applied to the part, the chosen fidelity has no effect.
     code_samples: []
     type: FluidFidelity
     tags:
@@ -72,8 +93,15 @@ properties:
     capabilities:
       - Basic
   - name: TriangleMeshPart.MeshSize
-    summary: ''
-    description: ''
+    summary: |
+      The original size of the part's source mesh geometry, before any scaling
+      applied through `Class.BasePart.Size`.
+    description: |
+      This read-only property reports the size of the part's mesh geometry when
+      it was loaded, as width, height, and depth in studs. It is not affected by
+      resizing the part through `Class.BasePart.Size`, so dividing
+      `Class.BasePart.Size` by `MeshSize` gives the scale factor currently
+      applied to the mesh's visual and physical geometry.
     code_samples: []
     type: Vector3
     tags:

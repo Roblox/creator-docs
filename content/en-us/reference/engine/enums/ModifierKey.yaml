@@ -4,29 +4,39 @@
 
 name: ModifierKey
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies a keyboard modifier key for use with
+  `Class.InputObject:IsModifierKeyDown()`.
+description: |
+  Identifies keyboard modifier keys. Pass a value to
+  `Class.InputObject:IsModifierKeyDown()` to test whether that modifier is held
+  during an input event. Left and right physical variants map to the same value
+  (for example, both Shift keys report as `Enum.ModifierKey.Shift`).
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Shift
-    summary: ''
+    summary: |
+      The Shift key (left or right Shift key).
     value: 0
     tags: []
     deprecation_message: ''
   - name: Ctrl
-    summary: ''
+    summary: |
+      The Control key (left or right Ctrl key).
     value: 1
     tags: []
     deprecation_message: ''
   - name: Alt
-    summary: ''
+    summary: |
+      The Alt key (left or right Alt/Option key).
     value: 2
     tags: []
     deprecation_message: ''
   - name: Meta
-    summary: ''
+    summary: |
+      The Meta key (the Windows key on Windows, or the Command key on macOS).
     value: 3
     tags: []
     deprecation_message: ''

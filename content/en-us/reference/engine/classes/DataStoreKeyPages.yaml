@@ -27,8 +27,18 @@ tags:
 deprecation_message: ''
 properties:
   - name: DataStoreKeyPages.Cursor
-    summary: ''
-    description: ''
+    summary: |
+      Marks the position from which the next page of keys is retrieved.
+    description: |
+      A read-only pagination cursor that marks the position from which the next
+      page of keys is retrieved. It defaults to an empty string.
+
+      The cursor advances as each page is retrieved. When you call
+      `Class.Pages:AdvanceToNextPageAsync()`, a non-empty cursor is sent as the
+      exclusive start key so the request returns the keys that follow the
+      current page; while it remains empty, the request fetches the first page.
+      The cursor is cleared once there are no more keys to return, at which
+      point `Class.Pages.IsFinished` becomes `true`.
     code_samples: []
     type: string
     tags:

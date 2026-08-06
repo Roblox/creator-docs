@@ -21,7 +21,9 @@ deprecation_message: ''
 properties: []
 methods:
   - name: EncodingService:Base64Decode
-    summary: ''
+    summary: |
+      Decodes a Base64-encoded buffer into a new buffer containing the original
+      binary data.
     description: |
       Method takes a `Library.buffer` with data encoded in Base64 format and
       decodes it into a new `Library.buffer`.
@@ -50,7 +52,9 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: EncodingService:Base64Encode
-    summary: ''
+    summary: |
+      Encodes binary data from a buffer into Base64 format, returning the result
+      as a new buffer.
     description: |
       Method takes a `Library.buffer` with binary data and encodes it using
       Base64.
@@ -73,7 +77,9 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: EncodingService:CompressBuffer
-    summary: ''
+    summary: |
+      Compresses binary buffer data using the specified algorithm and
+      compression level.
     description: |
       Compresses the binary data stored in a `Library.buffer` using the
       specified compression algorithm and compression level. The higher the
@@ -109,7 +115,9 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: EncodingService:ComputeBufferHash
-    summary: ''
+    summary: |
+      Computes a cryptographic hash of a buffer's binary data using the
+      specified algorithm.
     description: |
       Uses a
       [cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
@@ -147,7 +155,8 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: EncodingService:ComputeStringHash
-    summary: ''
+    summary: |
+      Computes a cryptographic hash of a string using the specified algorithm.
     description: |
       Uses a
       [cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
@@ -185,7 +194,9 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: EncodingService:DecompressBuffer
-    summary: ''
+    summary: |
+      Decompresses binary buffer data that was compressed with the specified
+      algorithm.
     description: |
       Decompresses the binary data stored in a `Library.buffer` using the
       specified compression algorithm.
@@ -219,7 +230,9 @@ methods:
     thread_safety: Safe
     capabilities: []
   - name: EncodingService:GetDecompressedBufferSize
-    summary: ''
+    summary: |
+      Returns the expected decompressed size of a compressed buffer, or nil if
+      the size is unknown or invalid.
     description: |
       Reports the size of the decompressed data stored in a compressed
       `Library.buffer`. If the compressed data doesn't have a size or the size

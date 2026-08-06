@@ -1961,7 +1961,7 @@ methods:
     parameters:
       - name: level
         type: VerifiedLevel
-        default:
+        default: Low
         summary: |
           The verification level to check. Defaults to `Enum.VerifiedLevel.Low`.
     returns:

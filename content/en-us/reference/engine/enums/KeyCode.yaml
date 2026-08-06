@@ -479,577 +479,673 @@ items:
     tags: []
     deprecation_message: ''
   - name: World0
-    summary: ''
+    summary: |
+      Deprecated
     value: 160
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World1
-    summary: ''
+    summary: |
+      Deprecated
     value: 161
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World2
-    summary: ''
+    summary: |
+      Deprecated
     value: 162
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World3
-    summary: ''
+    summary: |
+      Deprecated
     value: 163
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World4
-    summary: ''
+    summary: |
+      Deprecated
     value: 164
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World5
-    summary: ''
+    summary: |
+      Deprecated
     value: 165
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World6
-    summary: ''
+    summary: |
+      Deprecated
     value: 166
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World7
-    summary: ''
+    summary: |
+      Deprecated
     value: 167
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World8
-    summary: ''
+    summary: |
+      Deprecated
     value: 168
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World9
-    summary: ''
+    summary: |
+      Deprecated
     value: 169
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World10
-    summary: ''
+    summary: |
+      Deprecated
     value: 170
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World11
-    summary: ''
+    summary: |
+      Deprecated
     value: 171
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World12
-    summary: ''
+    summary: |
+      Deprecated
     value: 172
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World13
-    summary: ''
+    summary: |
+      Deprecated
     value: 173
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World14
-    summary: ''
+    summary: |
+      Deprecated
     value: 174
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World15
-    summary: ''
+    summary: |
+      Deprecated
     value: 175
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World16
-    summary: ''
+    summary: |
+      Deprecated
     value: 176
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World17
-    summary: ''
+    summary: |
+      Deprecated
     value: 177
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World18
-    summary: ''
+    summary: |
+      Deprecated
     value: 178
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World19
-    summary: ''
+    summary: |
+      Deprecated
     value: 179
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World20
-    summary: ''
+    summary: |
+      Deprecated
     value: 180
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World21
-    summary: ''
+    summary: |
+      Deprecated
     value: 181
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World22
-    summary: ''
+    summary: |
+      Deprecated
     value: 182
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World23
-    summary: ''
+    summary: |
+      Deprecated
     value: 183
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World24
-    summary: ''
+    summary: |
+      Deprecated
     value: 184
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World25
-    summary: ''
+    summary: |
+      Deprecated
     value: 185
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World26
-    summary: ''
+    summary: |
+      Deprecated
     value: 186
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World27
-    summary: ''
+    summary: |
+      Deprecated
     value: 187
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World28
-    summary: ''
+    summary: |
+      Deprecated
     value: 188
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World29
-    summary: ''
+    summary: |
+      Deprecated
     value: 189
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World30
-    summary: ''
+    summary: |
+      Deprecated
     value: 190
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World31
-    summary: ''
+    summary: |
+      Deprecated
     value: 191
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World32
-    summary: ''
+    summary: |
+      Deprecated
     value: 192
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World33
-    summary: ''
+    summary: |
+      Deprecated
     value: 193
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World34
-    summary: ''
+    summary: |
+      Deprecated
     value: 194
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World35
-    summary: ''
+    summary: |
+      Deprecated
     value: 195
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World36
-    summary: ''
+    summary: |
+      Deprecated
     value: 196
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World37
-    summary: ''
+    summary: |
+      Deprecated
     value: 197
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World38
-    summary: ''
+    summary: |
+      Deprecated
     value: 198
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World39
-    summary: ''
+    summary: |
+      Deprecated
     value: 199
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World40
-    summary: ''
+    summary: |
+      Deprecated
     value: 200
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World41
-    summary: ''
+    summary: |
+      Deprecated
     value: 201
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World42
-    summary: ''
+    summary: |
+      Deprecated
     value: 202
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World43
-    summary: ''
+    summary: |
+      Deprecated
     value: 203
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World44
-    summary: ''
+    summary: |
+      Deprecated
     value: 204
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World45
-    summary: ''
+    summary: |
+      Deprecated
     value: 205
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World46
-    summary: ''
+    summary: |
+      Deprecated
     value: 206
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World47
-    summary: ''
+    summary: |
+      Deprecated
     value: 207
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World48
-    summary: ''
+    summary: |
+      Deprecated
     value: 208
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World49
-    summary: ''
+    summary: |
+      Deprecated
     value: 209
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World50
-    summary: ''
+    summary: |
+      Deprecated
     value: 210
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World51
-    summary: ''
+    summary: |
+      Deprecated
     value: 211
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World52
-    summary: ''
+    summary: |
+      Deprecated
     value: 212
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World53
-    summary: ''
+    summary: |
+      Deprecated
     value: 213
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World54
-    summary: ''
+    summary: |
+      Deprecated
     value: 214
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World55
-    summary: ''
+    summary: |
+      Deprecated
     value: 215
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World56
-    summary: ''
+    summary: |
+      Deprecated
     value: 216
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World57
-    summary: ''
+    summary: |
+      Deprecated
     value: 217
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World58
-    summary: ''
+    summary: |
+      Deprecated
     value: 218
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World59
-    summary: ''
+    summary: |
+      Deprecated
     value: 219
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World60
-    summary: ''
+    summary: |
+      Deprecated
     value: 220
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World61
-    summary: ''
+    summary: |
+      Deprecated
     value: 221
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World62
-    summary: ''
+    summary: |
+      Deprecated
     value: 222
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World63
-    summary: ''
+    summary: |
+      Deprecated
     value: 223
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World64
-    summary: ''
+    summary: |
+      Deprecated
     value: 224
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World65
-    summary: ''
+    summary: |
+      Deprecated
     value: 225
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World66
-    summary: ''
+    summary: |
+      Deprecated
     value: 226
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World67
-    summary: ''
+    summary: |
+      Deprecated
     value: 227
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World68
-    summary: ''
+    summary: |
+      Deprecated
     value: 228
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World69
-    summary: ''
+    summary: |
+      Deprecated
     value: 229
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World70
-    summary: ''
+    summary: |
+      Deprecated
     value: 230
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World71
-    summary: ''
+    summary: |
+      Deprecated
     value: 231
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World72
-    summary: ''
+    summary: |
+      Deprecated
     value: 232
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World73
-    summary: ''
+    summary: |
+      Deprecated
     value: 233
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World74
-    summary: ''
+    summary: |
+      Deprecated
     value: 234
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World75
-    summary: ''
+    summary: |
+      Deprecated
     value: 235
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World76
-    summary: ''
+    summary: |
+      Deprecated
     value: 236
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World77
-    summary: ''
+    summary: |
+      Deprecated
     value: 237
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World78
-    summary: ''
+    summary: |
+      Deprecated
     value: 238
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World79
-    summary: ''
+    summary: |
+      Deprecated
     value: 239
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World80
-    summary: ''
+    summary: |
+      Deprecated
     value: 240
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World81
-    summary: ''
+    summary: |
+      Deprecated
     value: 241
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World82
-    summary: ''
+    summary: |
+      Deprecated
     value: 242
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World83
-    summary: ''
+    summary: |
+      Deprecated
     value: 243
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World84
-    summary: ''
+    summary: |
+      Deprecated
     value: 244
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World85
-    summary: ''
+    summary: |
+      Deprecated
     value: 245
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World86
-    summary: ''
+    summary: |
+      Deprecated
     value: 246
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World87
-    summary: ''
+    summary: |
+      Deprecated
     value: 247
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World88
-    summary: ''
+    summary: |
+      Deprecated
     value: 248
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World89
-    summary: ''
+    summary: |
+      Deprecated
     value: 249
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World90
-    summary: ''
+    summary: |
+      Deprecated
     value: 250
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World91
-    summary: ''
+    summary: |
+      Deprecated
     value: 251
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World92
-    summary: ''
+    summary: |
+      Deprecated
     value: 252
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World93
-    summary: ''
+    summary: |
+      Deprecated
     value: 253
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World94
-    summary: ''
+    summary: |
+      Deprecated
     value: 254
     tags:
       - Deprecated
     deprecation_message: ''
   - name: World95
-    summary: ''
+    summary: |
+      Deprecated
     value: 255
     tags:
       - Deprecated
@@ -1727,29 +1823,29 @@ items:
     deprecation_message: ''
   - name: ButtonUp
     summary: |
-      `Enum.PreferredInput.MicroGamepad|MicroGamepad` (including TV remotes)
-      `Up` directional button.
+      [MicroGamepad](https://create.roblox.com/docs/reference/engine/enums/PreferredInput#MicroGamepad)
+      (including TV remotes) `Up` directional button.
     value: 1053
     tags: []
     deprecation_message: ''
   - name: ButtonDown
     summary: |
-      `Enum.PreferredInput.MicroGamepad|MicroGamepad` (including TV remotes)
-      `Down` directional button.
+      [MicroGamepad](https://create.roblox.com/docs/reference/engine/enums/PreferredInput#MicroGamepad)
+      (including TV remotes) `Down` directional button.
     value: 1054
     tags: []
     deprecation_message: ''
   - name: ButtonLeft
     summary: |
-      `Enum.PreferredInput.MicroGamepad|MicroGamepad` (including TV remotes)
-      `Left` directional button.
+      [MicroGamepad](https://create.roblox.com/docs/reference/engine/enums/PreferredInput#MicroGamepad)
+      (including TV remotes) `Left` directional button.
     value: 1055
     tags: []
     deprecation_message: ''
   - name: ButtonRight
     summary: |
-      `Enum.PreferredInput.MicroGamepad|MicroGamepad` (including TV remotes)
-      `Right` directional button.
+      [MicroGamepad](https://create.roblox.com/docs/reference/engine/enums/PreferredInput#MicroGamepad)
+      (including TV remotes) `Right` directional button.
     value: 1056
     tags: []
     deprecation_message: ''

@@ -94,8 +94,7 @@ callbacks:
   - name: AdGui.OnAdEvent
     summary: |
       Used to react to the AdGui events.
-    description: |
-      The callback function used to react to the AdGui events.
+    description: ''
     code_samples: []
     parameters:
       - name: eventInfo
@@ -112,7 +111,8 @@ callbacks:
         summary: |
           Whether the callback has successfully reacted to the event.
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This callback has been deprecated and will never be called.
     security: None
     thread_safety: Unsafe
     capabilities:

@@ -5,8 +5,13 @@
 name: ILegacyStudioBridge
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Internal Studio-only base interface for a Studio bridge service. Declares no
+  scriptable members.
+description: |
+  Internal Studio-only base interface for a bridge service that proxies a small
+  set of Studio host capabilities. `Class.ILegacyStudioBridge` itself declares
+  no scriptable members.
 code_samples: []
 inherits:
   - Instance

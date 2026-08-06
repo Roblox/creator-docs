@@ -5,28 +5,40 @@
 name: ActuatorRelativeTo
 type: enum
 summary: |
-  The CFrame value in which the body mover constraint is expressed.
+  Determines the coordinate frame in which a mover constraint's directional
+  properties are expressed.
 description: |
-  The CFrame value in which the body mover constraint is expressed.
+  Determines the coordinate frame in which a mover constraint's directional
+  properties — such as force, velocity, or torque vectors — are interpreted.
+  Used by the `Class.VectorForce.RelativeTo`, `Class.LinearVelocity.RelativeTo`,
+  `Class.Torque.RelativeTo`, and `Class.AngularVelocity.RelativeTo` properties,
+  as well as `Class.AlignPosition.ForceRelativeTo`. When set to
+  `Enum.ActuatorRelativeTo|Attachment0` or
+  `Enum.ActuatorRelativeTo|Attachment1`, the direction rotates with the
+  referenced attachment's orientation; when set to
+  `Enum.ActuatorRelativeTo|World`, it remains fixed in world space.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Attachment0
     summary: |
-      The constraint is expressed relative to Attachment0.
+      The directional property is interpreted in the local coordinate frame of
+      `Class.Constraint.Attachment0|Attachment0`, rotating with its parent part.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Attachment1
     summary: |
-      The constraint is expressed relative to Attachment1.
+      The directional property is interpreted in the local coordinate frame of
+      `Class.Constraint.Attachment1|Attachment1`, rotating with its parent part.
     value: 1
     tags: []
     deprecation_message: ''
   - name: World
     summary: |
-      The constraint is expressed relative to the game world.
+      The directional property is interpreted in world-space coordinates,
+      remaining constant regardless of part orientation.
     value: 2
     tags: []
     deprecation_message: ''

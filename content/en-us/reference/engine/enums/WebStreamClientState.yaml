@@ -7,7 +7,17 @@ type: enum
 summary: |
   WebStreamClientState indicates the current state of a WebStreamClient object.
 description: |
-  WebStreamClientState indicates the current state of a WebStreamClient object.
+  `WebStreamClientState` describes the lifecycle state of a
+  `Class.WebStreamClient` connection, readable through the
+  `Class.WebStreamClient.ConnectionState` property.
+
+  A newly created `Class.WebStreamClient` begins in the `Connecting` state. On a
+  successful handshake the state advances to `Open`, after which messages can be
+  received (and sent, for WebSocket connections). The connection terminates in
+  either `Closed` (clean shutdown) or `Error` (unrecoverable failure). Listening
+  to the `Class.WebStreamClient.Opened`, `Class.WebStreamClient.Closed`, and
+  `Class.WebStreamClient.Error` events is the recommended way to react to these
+  transitions.
 code_samples: []
 tags: []
 deprecation_message: ''

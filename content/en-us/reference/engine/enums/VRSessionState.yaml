@@ -4,34 +4,48 @@
 
 name: VRSessionState
 type: enum
-summary: ''
-description: ''
+summary: |
+  The lifecycle state of the active VR session, as reported by the
+  `VRSessionState` property of `Class.VRService`.
+description: |
+  Represents the current state of the VR session managed by `Class.VRService`.
+  The engine updates `VRSessionState` each frame from the active session.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Undefined
-    summary: ''
+    summary: |
+      The VR session state is unknown or has not yet been established; the
+      default value of `VRSessionState`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Idle
-    summary: ''
+    summary: |
+      The VR headset is connected and ready but is not yet presenting frames to
+      the user.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Visible
-    summary: ''
+    summary: |
+      The VR session is rendering frames visible to the user but does not yet
+      have XR input focus; haptic feedback is available.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Focused
-    summary: ''
+    summary: |
+      The VR session has full XR input focus and is rendering visible frames;
+      haptic feedback is available.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Stopping
-    summary: ''
+    summary: |
+      The VR session is in the process of stopping and will transition to an
+      inactive state.
     value: 4
     tags: []
     deprecation_message: ''

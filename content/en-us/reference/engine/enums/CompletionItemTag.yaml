@@ -81,12 +81,17 @@ items:
     tags: []
     deprecation_message: ''
   - name: Invalidated
-    summary: ''
+    summary: |
+      Indicates that the completion is stale because the cursor has moved
+      outside the item's valid replacement range, hiding it from the completion
+      list.
     value: 10
     tags: []
     deprecation_message: ''
   - name: PutCursorBeforeEnd
-    summary: ''
+    summary: |
+      Instructs the editor to move the cursor to just before the nearest
+      preceding `end` keyword after inserting the given completion, if accepted.
     value: 11
     tags: []
     deprecation_message: ''

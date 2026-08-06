@@ -15,22 +15,27 @@ tags: []
 deprecation_message: ''
 items:
   - name: Small
-    summary: ''
+    summary: |
+      Use when the video sample is displayed on roughly a quarter of the screen.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Medium
-    summary: ''
+    summary: |
+      Use when the video sample is displayed on roughly half the screen.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Large
-    summary: ''
+    summary: |
+      Use when the video sample is displayed on roughly three quarters of the
+      screen.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Full
-    summary: ''
+    summary: |
+      Use when the video sample is displayed full screen.
     value: 3
     tags: []
     deprecation_message: ''
