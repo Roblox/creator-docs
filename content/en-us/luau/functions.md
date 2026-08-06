@@ -9,7 +9,7 @@ description: Functions are blocks of code that can execute multiple times on com
 
 A function definition includes:
 
-- The [scope](./scope.md) of the function (global or `local`).
+- The [scope](./scope.md) of the function (global or `local/const`).
 - The `function` keyword.
 - The name of the function in `camelCase`.
 - The parameters of the function in parentheses (`()`).

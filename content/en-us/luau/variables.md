@@ -28,7 +28,7 @@ It's best practice to spell out words fully. Abbreviations generally make code e
 - Use `PascalCase` names for class and enum-like objects.
 - Use `PascalCase` names for all Roblox APIs. `camelCase` APIs are mostly deprecated.
 - Use `camelCase` names for local variables, member values, and [functions](./functions.md).
-- Use `LOUD_SNAKE_CASE` names for local constants (variables with values that you don't expect to [change](#change-values)).
+- Use `LOUD_SNAKE_CASE` names for local constants, such as [`const`](#const-variables) variables or other values that you don't expect to [change](#change-values).
 - Don't capitalize entire acronyms within names. For example, write `aJsonVariable` or `MakeHttpCall`.
 
 ### Reserved names
@@ -102,4 +102,41 @@ local x = 1000
 local y = 2000
 print(x) -- 1000
 print(y) -- 2000
+```
+
+## Const variables
+
+To create a variable that you can't reassign, use `const` instead of `local`. If you try to change the value of a `const` variable, Luau raises an error.
+
+```lua
+const x = 10
+print(x) -- 10
+
+x = 20 -- error: cannot reassign a const variable
+```
+
+Like local variables, you can assign multiple `const` variables in one line.
+
+```lua
+const a, b, c = 1, 2, 3
+print(a, b, c) -- 1, 2, 3
+
+a = 10 -- error: cannot reassign a const variable
+```
+
+`const` makes the variable itself immutable, not the value it holds. If a `const` variable holds a table, you can still change the contents of the table.
+
+```lua
+const t = { count = 0 }
+t.count += 1 -- ok: mutating the table's field
+t = {} -- error: reassigning the binding
+```
+
+Unlike the keywords in [Reserved names](#reserved-names), `const` is contextual: Luau only treats it as a keyword where `local` is valid, so existing code that uses `const` as a variable name still works.
+
+```lua
+local const = 1
+print(const) -- 1
+
+const = 2 -- ok: `const` is just a variable name here
 ```
