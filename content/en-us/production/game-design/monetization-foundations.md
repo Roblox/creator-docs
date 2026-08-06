@@ -3,13 +3,6 @@ title: Monetization foundations
 description: Monetization foundations
 ---
 
- <figure>
-    <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/1GKd9euwkuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-    <figcaption>Introduction</figcaption>
-  </figure>
-
-<br />
-
 Monetization is an integral part of your experience's initial and ongoing development. Monetization features are some of the most prominent content interaction spaces and directly impacts an experience's monetary growth potential. There are 3 key components that comprise monetization foundations:
 
 - Items
@@ -19,18 +12,6 @@ Monetization is an integral part of your experience's initial and ongoing develo
 Taken together, these components can foster a thriving economy within your experience. For a comprehensive list of key monetization terms, see the [glossary](#glossary).
 
 ## Items
-
-<figure>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rPHlMWSUgGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-<figcaption>Items and shop introduction</figcaption>
-</figure>
-
-<br />
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mWtz5UTyZX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-<figcaption>Items</figcaption>
-
-<br />
 
 **Items** are individual pieces of content available to earn or purchase. The essence of monetization can be represented in three basic questions:
 
@@ -68,12 +49,6 @@ They can then be further divided into categories of utility:
 - **Expression:** These items personalize the player's experience and makes them unique, such as skins, emotes, and pets.
 
 ## The shop
-
-<figure>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/C3YrGutsuSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-<figcaption>The shop</figcaption>
-</figure>
-<br />
 
 The **shop** is where players go to enhance and personalize their experience through the purchasing of virtual items. The shop should be as interesting and intentionally designed as other parts of your experience.
 
@@ -118,12 +93,6 @@ New content and item updates invites players back to the store to see what's new
   </figure>
 
 ## Season passes
-
-<figure>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wIT3hWvwYPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-<figcaption>Season passes</figcaption>
-</figure>
-<br />
 
 **Season passes** are limited-time, quest-based progression systems that are part of an experience's content cadence. Players complete quest objectives to earn rewards for the duration of the pre-defined period of time or "season".
 

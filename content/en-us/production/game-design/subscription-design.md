@@ -3,10 +3,6 @@ title: Subscription design
 description: Learn how to effectively design subscriptions on Roblox.
 ---
 
-<iframe width="880" height="440" src="https://www.youtube-nocookie.com/embed/kumeLD2TtRM?si=2nsTV0pia-HxwBPa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-
-<br />
-
 Subscriptions allow you to offer players recurring benefits for a monthly fee and are a simple way to present compelling content on a regular basis. Done correctly, subscription benefits are something your players look forward to each month, and provide regular income while driving more attention to an experience's shop.
 
 <Alert severity="warning">
