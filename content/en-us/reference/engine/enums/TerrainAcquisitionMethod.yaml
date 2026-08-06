@@ -4,69 +4,97 @@
 
 name: TerrainAcquisitionMethod
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes how terrain in a place was originally created or last substantially
+  modified.
+description: |
+  Describes how the terrain in a place was originally created or last
+  substantially modified. This value is stored on the `AcquisitionMethod`
+  property of `Class.Terrain` and is updated automatically by the engine
+  whenever terrain changes.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      No terrain is present, or terrain acquisition method has not been
+      recorded.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Legacy
-    summary: ''
+    summary: |
+      Terrain was deserialized from a place file that predates
+      acquisition-method tracking.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Template
-    summary: ''
+    summary: |
+      Terrain was loaded from a Studio place template.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Generate
-    summary: ''
+    summary: |
+      Terrain was created using the Studio terrain generator.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Import
-    summary: ''
+    summary: |
+      Terrain was created by importing a heightmap or colormap image via the
+      Studio terrain importer.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Convert
-    summary: ''
+    summary: |
+      Terrain was created by converting legacy smooth terrain from an older
+      place format.
     value: 5
     tags: []
     deprecation_message: ''
   - name: EditAddTool
-    summary: ''
+    summary: |
+      Terrain was created or last modified using the Studio terrain editor's Add
+      tool.
     value: 6
     tags: []
     deprecation_message: ''
   - name: EditSeaLevelTool
-    summary: ''
+    summary: |
+      Terrain was created or last modified using the Studio terrain editor's Sea
+      Level tool.
     value: 7
     tags: []
     deprecation_message: ''
   - name: EditReplaceTool
-    summary: ''
+    summary: |
+      Terrain was created or last modified using the Studio terrain editor's
+      Replace tool.
     value: 8
     tags: []
     deprecation_message: ''
   - name: RegionFillTool
-    summary: ''
+    summary: |
+      Terrain was created or last modified using the Studio terrain editor's
+      Fill region tool.
     value: 9
     tags: []
     deprecation_message: ''
   - name: RegionPasteTool
-    summary: ''
+    summary: |
+      Terrain was created or last modified by pasting a previously copied
+      terrain region in the Studio terrain editor.
     value: 10
     tags: []
     deprecation_message: ''
   - name: Other
-    summary: ''
+    summary: |
+      Terrain was created or modified by an untracked method, such as a
+      third-party plugin.
     value: 11
     tags: []
     deprecation_message: ''

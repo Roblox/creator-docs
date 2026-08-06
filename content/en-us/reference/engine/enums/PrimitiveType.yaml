@@ -4,39 +4,58 @@
 
 name: PrimitiveType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies the base primitive shape of a `Class.BasePart` node within a CSG
+  operation graph.
+description: |
+  Identifies the base primitive shape of a `Class.BasePart` node within a CSG
+  (Constructive Solid Geometry) operation graph (`OperationGraph`). Used when
+  performing union, negate, and intersect operations to determine how each input
+  part's geometry is represented during the operation.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: 'Null'
-    summary: ''
+    summary: |
+      Sentinel value indicating no valid primitive shape; used for uninitialized
+      or invalid nodes in a CSG operation graph.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Ball
-    summary: ''
+    summary: |
+      A spherical primitive shape, corresponding to the ball/sphere geometry of
+      a `Class.Part`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Cylinder
-    summary: ''
+    summary: |
+      A cylindrical primitive shape, corresponding to the cylinder geometry of a
+      `Class.Part`.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Block
-    summary: ''
+    summary: |
+      A box primitive shape, corresponding to the standard rectangular block
+      geometry of a `Class.Part`; the default primitive type for new Part nodes
+      in a CSG operation graph.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Wedge
-    summary: ''
+    summary: |
+      A wedge primitive shape, corresponding to the geometry of a
+      `Class.WedgePart`.
     value: 4
     tags: []
     deprecation_message: ''
   - name: CornerWedge
-    summary: ''
+    summary: |
+      A corner wedge primitive shape, corresponding to the geometry of a
+      `Class.CornerWedgePart`.
     value: 5
     tags: []
     deprecation_message: ''

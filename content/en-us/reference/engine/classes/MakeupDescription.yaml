@@ -117,7 +117,9 @@ methods:
     parameters: []
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          The single composed makeup `Class.Decal` parented under the
+          character's head.
     tags: []
     deprecation_message: ''
     security: None

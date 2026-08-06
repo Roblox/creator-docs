@@ -18,8 +18,20 @@ tags: []
 deprecation_message: ''
 properties:
   - name: CharacterMesh.BaseTextureContent
-    summary: ''
-    description: ''
+    summary: |
+      The base texture applied to the mesh, as a `Datatype.Content` value.
+    description: |
+      The `Datatype.Content`-typed equivalent of
+      `Class.CharacterMesh.BaseTextureId`, holding the base texture applied to
+      the R6 body part's mesh. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris). Can be
+      overridden by Shirts, Pants, T-Shirts, and
+      `Class.CharacterMesh.OverlayTextureContent`. Defaults to empty
+      `Datatype.Content`.
+
+      Underlying storage for legacy `Class.CharacterMesh.BaseTextureId`: the two
+      stay in sync. Like the rest of `Class.CharacterMesh`, it only affects R6
+      characters.
     code_samples: []
     type: Content
     tags: []
@@ -75,8 +87,19 @@ properties:
     capabilities:
       - AvatarAppearance
   - name: CharacterMesh.MeshContent
-    summary: ''
-    description: ''
+    summary: |
+      The mesh applied to the body part given by `Class.CharacterMesh.BodyPart`,
+      as a `Datatype.Content` value.
+    description: |
+      The `Datatype.Content`-typed equivalent of `Class.CharacterMesh.MeshId`.
+      Loads a mesh and applies it to the body part given by
+      `Class.CharacterMesh.BodyPart`. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris). Defaults to
+      empty `Datatype.Content`.
+
+      Underlying storage for legacy `Class.CharacterMesh.MeshId`: the two stay
+      in sync. Like the rest of `Class.CharacterMesh`, it only affects R6
+      characters.
     code_samples: []
     type: Content
     tags: []
@@ -111,8 +134,20 @@ properties:
     capabilities:
       - AvatarAppearance
   - name: CharacterMesh.OverlayTextureContent
-    summary: ''
-    description: ''
+    summary: |
+      The overlay texture that covers Shirts, Pants, T-Shirts, and the base
+      texture, as a `Datatype.Content` value.
+    description: |
+      The `Datatype.Content`-typed equivalent of
+      `Class.CharacterMesh.OverlayTextureId`. The overlay covers Shirts, Pants,
+      T-Shirts, and `Class.CharacterMesh.BaseTextureContent`. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris). Defaults to
+      empty `Datatype.Content`.
+
+      Setting either `OverlayTextureContent` or
+      `Class.CharacterMesh.OverlayTextureId` updates the other; both reflect the
+      same texture. Like the rest of `Class.CharacterMesh`, it only affects R6
+      characters.
     code_samples: []
     type: Content
     tags: []

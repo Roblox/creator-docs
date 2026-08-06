@@ -85,8 +85,15 @@ properties:
       - Audio
       - UI
   - name: VideoFrame.MaximumResolution
-    summary: ''
-    description: ''
+    summary: |
+      Internal-only. Caps the resolution the video is allowed to stream at,
+      expressed as an `Enum.VideoSampleSize`.
+    description: |
+      Internal-only. Caps the resolution the video is allowed to stream at, as
+      an `Enum.VideoSampleSize` rather than exact pixel dimensions.
+
+      The video may still stream below the cap on a slow connection. Defaults to
+      `Enum.VideoSampleSize.Full`.
     code_samples: []
     type: VideoSampleSize
     tags:
@@ -152,8 +159,18 @@ properties:
       - Audio
       - UI
   - name: VideoFrame.RollOffMaxDistance
-    summary: ''
-    description: ''
+    summary: |
+      The maximum distance, in studs, a listener can be from the video's part
+      and still hear its audio.
+    description: |
+      The maximum distance, in studs, a client's listener can be from the
+      `Class.VideoFrame`'s part and still hear its audio. Defaults to `10000`.
+
+      This property only affects playback when the `Class.VideoFrame` is 3D, as
+      described in the class's "2D and 3D Sound" section; it has no effect on a
+      global `Class.VideoFrame`. How `RollOffMaxDistance` affects the
+      attenuation of the sound depends on the
+      `Class.VideoFrame.RollOffMode|RollOffMode` property.
     code_samples: []
     type: float
     tags: []
@@ -170,8 +187,18 @@ properties:
       - Audio
       - UI
   - name: VideoFrame.RollOffMinDistance
-    summary: ''
-    description: ''
+    summary: |
+      The minimum distance, in studs, at which the video's audio starts to
+      attenuate.
+    description: |
+      The minimum distance, in studs, at which the `Class.VideoFrame`'s audio
+      begins to attenuate (decrease in volume). Defaults to `1`.
+
+      This property only affects playback when the `Class.VideoFrame` is 3D, as
+      described in the class's "2D and 3D Sound" section; it has no effect on a
+      global `Class.VideoFrame`. How `RollOffMinDistance` affects the
+      attenuation of the sound depends on the
+      `Class.VideoFrame.RollOffMode|RollOffMode` property.
     code_samples: []
     type: float
     tags: []
@@ -188,8 +215,17 @@ properties:
       - Audio
       - UI
   - name: VideoFrame.RollOffMode
-    summary: ''
-    description: ''
+    summary: |
+      Controls how the video's audio volume attenuates with distance.
+    description: |
+      Controls how the volume of the `Class.VideoFrame`'s audio attenuates
+      (fades out) as the distance between the listener and the video's part
+      changes. Defaults to `Enum.RollOffMode.Inverse`.
+
+      This property only affects playback when the `Class.VideoFrame` is 3D, as
+      described in the class's "2D and 3D Sound" section; it has no effect on a
+      global `Class.VideoFrame`. For details on the different modes, see
+      `Enum.RollOffMode`.
     code_samples: []
     type: RollOffMode
     tags: []
@@ -276,8 +312,28 @@ properties:
       - Audio
       - UI
   - name: VideoFrame.VideoContent
-    summary: ''
-    description: ''
+    summary: |
+      The video content a `Class.VideoFrame` is associated with, as either an
+      asset content ID (same value as `Class.VideoFrame.Video|Video`) or a
+      direct reference to a `Class.VideoCapture` object for local screen
+      recordings.
+    description: |
+      The video content a `Class.VideoFrame` object is associated with. Setting
+      this property is equivalent to setting `Class.VideoFrame.Video|Video`, and
+      reading it returns a content ID equal to `Class.VideoFrame.Video|Video`.
+
+      When referencing a video by content ID, build the value with the
+      corresponding `Datatype.Content` constructor:
+      `Datatype.Content.fromAssetId()` for a numeric asset ID, or
+      `Datatype.Content.fromUri()` for an `rbxassetid://` URI.
+
+      Unlike `Class.VideoFrame.Video|Video`, which only accepts a content ID
+      string, `VideoContent` can also hold a direct reference to a
+      `Class.VideoCapture` object, such as one retrieved through
+      `Class.CaptureService:ReadCapturesFromGalleryAsync()`. This lets a local
+      screen recording play back on the `VideoFrame` without first uploading it
+      to Roblox. Build the value with `Datatype.Content.fromObject()`, for
+      example `videoFrame.VideoContent = Content.fromObject(capture)`.
     code_samples: []
     type: Content
     tags: []

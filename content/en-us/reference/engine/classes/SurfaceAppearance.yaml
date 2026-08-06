@@ -119,8 +119,21 @@ properties:
     capabilities:
       - Basic
   - name: SurfaceAppearance.ColorMapContent
-    summary: ''
-    description: ''
+    summary: |
+      `Datatype.Content` object that determines the color and opacity of the
+      surface.
+    description: |
+      A `Datatype.Content` that determines the color and opacity of the surface
+      (sometimes called the **albedo** texture). The content can hold an
+      [asset URI](../../../projects/assets/index.md#asset-uris) or a reference
+      to an `Class.EditableImage` object.
+
+      The alpha channel of the texture controls its opacity, which behaves
+      differently based on the `Class.SurfaceAppearance.AlphaMode` setting. It
+      defaults to an empty content, in which case no color map is applied.
+      Assigning an `Class.EditableImage` is useful for dynamically generating or
+      modifying textures at runtime, such as in avatar customization and other
+      in-experience content creation workflows.
     code_samples: []
     type: Content
     tags:
@@ -245,8 +258,25 @@ properties:
     capabilities:
       - Basic
   - name: SurfaceAppearance.MetalnessMapContent
-    summary: ''
-    description: ''
+    summary: |
+      `Datatype.Content` object that determines which parts of the surface are
+      metal or non-metal.
+    description: |
+      A `Datatype.Content` that determines which parts of the surface are metal
+      or non-metal. The metalness map is a grayscale image where black pixels
+      correspond to non-metals and white pixels correspond to metals. The
+      content can hold an
+      [asset URI](../../../projects/assets/index.md#asset-uris) or a reference
+      to an `Class.EditableImage` object.
+
+      Metals only reflect light the same color as the metal, and they reflect
+      much more light than non-metals. Most pixels in a metalness map will be
+      either pure black or pure white, while values in between can be used to
+      simulate dirt or grunge on top of an underlying metal area.
+
+      When `Class.Lighting.EnvironmentSpecularScale` is 0, metalness has no
+      effect. Defaults to an empty content, in which case no metalness map is
+      applied.
     code_samples: []
     type: Content
     tags:
@@ -319,8 +349,23 @@ properties:
     capabilities:
       - Basic
   - name: SurfaceAppearance.NormalMapContent
-    summary: ''
-    description: ''
+    summary: |
+      `Datatype.Content` object that modifies the lighting of the surface by
+      adding bumps, dents, cracks, and curves.
+    description: |
+      A `Datatype.Content` that modifies the lighting of the surface by adding
+      bumps, dents, cracks, and curves, without adding more polygons. The normal
+      map is an RGB image that modifies the surface's normal vector used for
+      lighting calculations, where the **R**, **G**, and **B** channels
+      correspond to the **X**, **Y**, and **Z** components of the local surface
+      vector respectively. The content can hold an
+      [asset URI](../../../projects/assets/index.md#asset-uris) or a reference
+      to an `Class.EditableImage` object.
+
+      Roblox expects tangent-space normal maps in the "OpenGL format" (the **G**
+      channel is not inverted), and imported meshes must include tangent
+      information. Defaults to an empty content, in which case no normal map is
+      applied.
     code_samples: []
     type: Content
     tags:
@@ -337,8 +382,15 @@ properties:
     capabilities:
       - Basic
   - name: SurfaceAppearance.ResampleMode
-    summary: ''
-    description: ''
+    summary: |
+      Selects the texture resampling mode used for the surface's texture maps.
+    description: |
+      Determines how the surface's texture maps look when they are scaled. When
+      set to the default `Enum.ResamplerMode.Default`, the textures smooth out
+      using bilinear filtering when displayed larger or smaller than their size
+      in texture memory. When set to `Enum.ResamplerMode.Pixelated|Pixelated`,
+      the textures preserve the sharp edges of pixels using nearest-neighbor
+      filtering. Defaults to `Enum.ResamplerMode.Default`.
     code_samples: []
     type: ResamplerMode
     tags: []
@@ -383,8 +435,21 @@ properties:
     capabilities:
       - Basic
   - name: SurfaceAppearance.RoughnessMapContent
-    summary: ''
-    description: ''
+    summary: |
+      `Datatype.Content` object that determines the apparent roughness across
+      the surface.
+    description: |
+      A `Datatype.Content` that determines the apparent roughness across the
+      surface. The roughness map is a grayscale image where black pixels
+      correspond to a maximally smooth surface, and white pixels correspond to a
+      maximally rough surface. The content can hold an
+      [asset URI](../../../projects/assets/index.md#asset-uris) or a reference
+      to an `Class.EditableImage` object.
+
+      Surface roughness works on a very small scale. Reflections on smooth
+      surfaces are sharp and concentrated, while reflections on rough surfaces
+      are more blurry and dispersed. Defaults to an empty content, in which case
+      no roughness map is applied.
     code_samples: []
     type: Content
     tags:
@@ -393,6 +458,35 @@ properties:
     security:
       read: None
       write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+  - name: SurfaceAppearance.TexturePackContent
+    summary: |
+      Engine-managed `Datatype.Content` that stores the compressed runtime
+      texture data for the surface appearance.
+    description: |
+      Managed by the engine and not intended to be set directly. A
+      `Datatype.Content` that holds the compressed runtime texture data for the
+      surface appearance. It is the backing storage for
+      `Class.SurfaceAppearance.TexturePack`: when the object is published, the
+      engine bakes its individual texture maps into a single texture pack asset
+      and stores the resulting reference here.
+
+      Requires elevated permissions to read (`RobloxScript` security) and is
+      writable only by the engine (`RobloxEngine` security). Defaults to an
+      empty content.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Appearance
     serialization:

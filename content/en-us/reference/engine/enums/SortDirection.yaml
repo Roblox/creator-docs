@@ -4,19 +4,31 @@
 
 name: SortDirection
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether results are ordered from lowest to highest or from highest to
+  lowest.
+description: |
+  Controls the ordering direction of results returned by APIs that support
+  sorted retrieval, such as `Class.DataStore:ListVersionsAsync()` and
+  `Class.MemoryStoreSortedMap:GetRangeAsync()`. Pass
+  `Enum.SortDirection.Ascending` to receive items ordered from lowest to highest
+  (or oldest to newest), and `Enum.SortDirection.Descending` to receive them
+  from highest to lowest (or newest to oldest).
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Ascending
-    summary: ''
+    summary: |
+      Orders results from lowest to highest value, or from oldest to newest
+      entry.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Descending
-    summary: ''
+    summary: |
+      Orders results from highest to lowest value, or from newest to oldest
+      entry.
     value: 1
     tags: []
     deprecation_message: ''

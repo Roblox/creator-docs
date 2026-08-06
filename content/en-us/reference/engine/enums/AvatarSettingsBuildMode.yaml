@@ -4,19 +4,31 @@
 
 name: AvatarSettingsBuildMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines whether players can freely scale their avatar body or whether the
+  experience enforces custom scale ranges.
+description: |
+  Determines whether avatar body scaling in an experience uses full
+  platform-wide limits (player's choice) or creator-defined custom ranges. This
+  enum is used by the `BuildMode` property to control how avatar height, width,
+  head, body type, and proportions scales are constrained when a player joins
+  the experience.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: PlayerChoice
-    summary: ''
+    summary: |
+      Players can scale their avatar body freely within the full platform-wide
+      limits. This is the default value.
     value: 0
     tags: []
     deprecation_message: ''
   - name: CustomBuild
-    summary: ''
+    summary: |
+      The experience enforces creator-defined min/max ranges for avatar body
+      scales (height, width, head, body type, and proportions), overriding the
+      platform defaults.
     value: 1
     tags: []
     deprecation_message: ''

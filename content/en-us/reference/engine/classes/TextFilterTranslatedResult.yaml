@@ -5,8 +5,28 @@
 name: TextFilterTranslatedResult
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Holds the filtered source text and its filtered translations produced by
+  `Class.TextService:FilterAndTranslateStringAsync()`.
+description: |
+  A `Class.TextFilterTranslatedResult` is the object returned by
+  `Class.TextService:FilterAndTranslateStringAsync()`. It bundles the filtered
+  source text together with filtered translations of that text into each
+  requested target locale.
+
+  Read `Class.TextFilterTranslatedResult.SourceText` and
+  `Class.TextFilterTranslatedResult.SourceLanguage` for the filtered original
+  text and its language, call
+  `Class.TextFilterTranslatedResult:GetTranslationForLocale()` to retrieve the
+  filtered translation for a single locale, or call
+  `Class.TextFilterTranslatedResult:GetTranslations()` to retrieve all of them
+  at once.
+
+  Instances of this class cannot be created, parented, or replicated; they are
+  only produced by the engine as the return value of the filtering call. That
+  call, `Class.TextService:FilterAndTranslateStringAsync()`, is deprecated, so
+  new work should filter and translate chat through `Class.TextChatService`
+  instead.
 code_samples: []
 inherits:
   - Instance
@@ -17,8 +37,14 @@ tags:
 deprecation_message: ''
 properties:
   - name: TextFilterTranslatedResult.SourceLanguage
-    summary: ''
-    description: ''
+    summary: |
+      The language of the original text that was filtered.
+    description: |
+      The language string of the original text that was submitted to
+      `Class.TextService:FilterAndTranslateStringAsync()`. This is the source
+      language that the translations returned by
+      `Class.TextFilterTranslatedResult:GetTranslations()` were translated from.
+      This property is read-only.
     code_samples: []
     type: string
     tags:
@@ -36,8 +62,16 @@ properties:
     capabilities:
       - UI
   - name: TextFilterTranslatedResult.SourceText
-    summary: ''
-    description: ''
+    summary: |
+      The filtered form of the original, untranslated text.
+    description: |
+      A `Class.TextFilterResult` representing the filtered form of the original
+      text that was submitted to
+      `Class.TextService:FilterAndTranslateStringAsync()`, in its
+      `Class.TextFilterTranslatedResult.SourceLanguage`. Use the returned
+      `Class.TextFilterResult` to obtain the correctly filtered string for each
+      recipient before displaying the untranslated text. This property is
+      read-only.
     code_samples: []
     type: TextFilterResult
     tags:
@@ -56,17 +90,26 @@ properties:
       - UI
 methods:
   - name: TextFilterTranslatedResult:GetTranslationForLocale
-    summary: ''
-    description: ''
+    summary: |
+      Returns the filtered translation of the source text for the given locale.
+    description: |
+      Returns the filtered `Class.TextFilterResult` for the translation of the
+      source text into `locale`, or `nil` if the result contains no translation
+      for that locale. The `locale` argument is normalized to its language
+      before lookup, so locale variants that share a language resolve to the
+      same translation.
     code_samples: []
     parameters:
       - name: locale
         type: string
         default:
-        summary: ''
+        summary: |
+          The locale identifier of the translation to retrieve.
     returns:
       - type: TextFilterResult
-        summary: ''
+        summary: |
+          The filtered `Class.TextFilterResult` for the requested locale, or
+          `nil` if the result contains no translation for it.
     tags: []
     deprecation_message: ''
     security: None
@@ -74,13 +117,21 @@ methods:
     capabilities:
       - UI
   - name: TextFilterTranslatedResult:GetTranslations
-    summary: ''
-    description: ''
+    summary: |
+      Returns all filtered translations of the source text, keyed by language.
+    description: |
+      Returns a dictionary that maps each translation's language string to its
+      filtered `Class.TextFilterResult`. The keys are the languages that the
+      source text was translated into for the requested target locales; use
+      `Class.TextFilterTranslatedResult:GetTranslationForLocale()` to look up a
+      single locale directly.
     code_samples: []
     parameters: []
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A dictionary mapping each translation's language string to its
+          filtered `Class.TextFilterResult`.
     tags: []
     deprecation_message: ''
     security: None

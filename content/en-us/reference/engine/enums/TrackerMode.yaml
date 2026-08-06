@@ -4,29 +4,43 @@
 
 name: TrackerMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the combination of input sources an `RTAnimationTracker` is
+  currently using to drive animation.
+description: |
+  Describes what combination of input inference modes an `RTAnimationTracker` is
+  currently using. The value is read-only and reflects whether audio-to-curve
+  (a2c) inference, video-to-curve (v2c) inference, both, or neither is active at
+  a given moment.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      No tracking inference is active; the tracker is idle or has not
+      successfully started.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Audio
-    summary: ''
+    summary: |
+      Only audio-to-curve (lipsync) inference is active; no camera-based facial
+      tracking is running.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Video
-    summary: ''
+    summary: |
+      Only video-to-curve facial tracking is active; audio-based lipsync
+      inference is not running.
     value: 2
     tags: []
     deprecation_message: ''
   - name: AudioVideo
-    summary: ''
+    summary: |
+      Both audio-to-curve lipsync inference and video-to-curve facial tracking
+      are active simultaneously.
     value: 3
     tags: []
     deprecation_message: ''

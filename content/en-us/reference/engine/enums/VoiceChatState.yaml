@@ -4,44 +4,60 @@
 
 name: VoiceChatState
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the connection state of a local player's voice chat session.
+description: |
+  Describes the connection state of a local player's voice chat session. The
+  session progresses through the `Enum.VoiceChatState` items from idle, through
+  joining, to joined, and then to leaving, ended, or failed when the session
+  concludes.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Idle
-    summary: ''
+    summary: |
+      The player is not connected to voice chat and no join attempt is in
+      progress.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Joining
-    summary: ''
+    summary: |
+      A voice chat join attempt is in progress for the first time.
     value: 1
     tags: []
     deprecation_message: ''
   - name: JoiningRetry
-    summary: ''
+    summary: |
+      A voice chat join is being retried after a previous attempt did not
+      succeed.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Joined
-    summary: ''
+    summary: |
+      The player has successfully joined the voice chat session and is actively
+      connected.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Leaving
-    summary: ''
+    summary: |
+      The player is in the process of disconnecting from the voice chat session.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Ended
-    summary: ''
+    summary: |
+      The voice chat session has ended normally.
     value: 5
     tags: []
     deprecation_message: ''
   - name: Failed
-    summary: ''
+    summary: |
+      The voice chat session ended due to an error, such as a failure to join or
+      a mid-session error.
     value: 6
     tags: []
     deprecation_message: ''

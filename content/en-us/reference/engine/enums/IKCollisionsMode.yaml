@@ -4,8 +4,26 @@
 
 name: IKCollisionsMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls which parts in the workspace participate in collision resolution when
+  `Class.WorldRoot:IKMoveTo()` drives a part toward a target `Datatype.CFrame`.
+description: |
+  Controls which parts in the workspace participate in collision resolution when
+  `Class.WorldRoot:IKMoveTo()` drives a part toward a target `Datatype.CFrame`
+  via inverse kinematics.
+
+  The three `Enum.IKCollisionsMode` values offer a spectrum of collision
+  fidelity. `Enum.IKCollisionsMode.NoCollisions` ignores the rest of the
+  workspace and moves only the mechanism being dragged (fastest, most
+  permissive). `Enum.IKCollisionsMode.OtherMechanismsAnchored` keeps the dragged
+  mechanism physically correct against the scene but treats other objects as
+  immovable anchors. `Enum.IKCollisionsMode.IncludeContactedMechanisms` lets the
+  dragged mechanism push unanchored objects, so the entire contacted set
+  participates in resolution.
+
+  `Class.WorldRoot:IKMoveTo()` defaults to
+  `Enum.IKCollisionsMode.OtherMechanismsAnchored` when no collisions mode is
+  supplied.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -13,7 +31,7 @@ items:
   - name: NoCollisions
     summary: |
       Only the part and any parts directly joined to it via
-      joints/`Class.Constraint|constraints` be involved in the resolution,
+      joints/`Class.Constraint|constraints` will be involved in the resolution;
       everything else in the workspace will be treated as though it doesn't
       exist.
     value: 0
@@ -21,7 +39,7 @@ items:
     deprecation_message: ''
   - name: OtherMechanismsAnchored
     summary: |
-      Only the part and any parts directly jointed to it via
+      Only the part and any parts directly joined to it via
       joints/`Class.Constraint|constraints` will be moved during resolution, but
       they will collide with other objects in the workspace.
     value: 1

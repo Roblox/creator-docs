@@ -202,8 +202,26 @@ properties:
     capabilities:
       - AvatarAppearance
   - name: WrapLayer.ReferenceMeshContent
-    summary: ''
-    description: ''
+    summary: |
+      The reference mesh that defines the Inner Cage of the `Class.WrapLayer`,
+      stored as a `Datatype.Content` value.
+    description: |
+      The reference mesh that defines the inner cage of a `Class.WrapLayer`,
+      stored as a `Datatype.Content` value. Together with the outer cage from
+      `Class.BaseWrap.CageMeshContent|CageMeshContent`, the inner cage describes
+      the surfaces used to fit and deform the accessory around an avatar and
+      underlying accessories without clipping. A `Class.WrapLayer` is only
+      considered valid once both its cage mesh and its reference mesh are set.
+
+      The reference mesh establishes the standard topology and UV coordinates
+      used for index matching. It is expected that for all catalog avatars this
+      points to one of the 15 standard reference meshes provided by Roblox, but
+      for some NPCs or a custom avatar system it might point to a different
+      mesh. This property is normally set up automatically by the Importer.
+
+      This `Datatype.Content`-typed property is the successor to
+      `Class.WrapLayer.ReferenceMeshId` and reads and writes the same underlying
+      storage. Defaults to an empty `Datatype.Content`.
     code_samples: []
     type: Content
     tags: []

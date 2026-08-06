@@ -4,19 +4,31 @@
 
 name: AvatarSettingsScaleMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines whether the experience enforces a custom height range on player
+  characters or allows players to spawn at their natural avatar height.
+description: |
+  Determines whether the experience overrides player character height with a
+  creator-defined range or leaves it at the player's own avatar height. Used by
+  `ScaleMode`. When set to `Enum.AvatarSettingsScaleMode.CustomScale`, the
+  engine clamps character height to `CustomHeight` and applies layered clothing
+  bounds from the resulting body extents. Defaults to
+  `Enum.AvatarSettingsScaleMode.PlayerChoice`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: PlayerChoice
-    summary: ''
+    summary: |
+      Characters spawn at their natural avatar height without any
+      experience-level height override. This is the default value.
     value: 0
     tags: []
     deprecation_message: ''
   - name: CustomScale
-    summary: ''
+    summary: |
+      The experience clamps the character's height to the range specified by
+      `CustomHeight`, overriding the player's natural avatar height.
     value: 1
     tags: []
     deprecation_message: ''

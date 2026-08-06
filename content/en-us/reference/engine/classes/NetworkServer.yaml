@@ -5,7 +5,9 @@
 name: NetworkServer
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A server-side service that manages all `Class.NetworkReplicator` instances and
+  handles incoming client connections.
 description: |
   The `Class.NetworkServer` stores all the `Class.NetworkReplicator` in the game
   and handles all connections. `Class.NetworkPeer:SetOutgoingKBPSLimit()` can be
@@ -22,21 +24,41 @@ deprecation_message: ''
 properties: []
 methods:
   - name: NetworkServer:EncryptStringForPlayerId
-    summary: ''
-    description: ''
+    summary: |
+      Encrypts a string with the session key of the connection belonging to the
+      player with the given `playerId`, returning the ciphertext.
+    description: |
+      Encrypts `toEncrypt` using the per-session encryption key of the connected
+      player whose `Class.Player.UserId` equals `playerId`, then returns the
+      ciphertext. Only that player's client can decrypt the result.
+
+      This supports the encrypted-assets workflow: the server session-encrypts
+      an asset encryption key for a single player, and that client decrypts and
+      registers it through
+      `Class.ContentProvider:RegisterSessionEncryptedAsset()` (or
+      `Class.ContentProvider:RegisterDefaultSessionKey()`), so the raw key is
+      never transmitted in plain text.
+
+      Returns an empty string when no player with the given `playerId` is
+      currently connected.
     code_samples: []
     parameters:
       - name: toEncrypt
         type: string
         default:
-        summary: ''
+        summary: |
+          The plain text string to encrypt, typically an asset encryption key.
       - name: playerId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The `Class.Player.UserId` of the connected player whose session key is
+          used to encrypt the string.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The session-encrypted string, or an empty string if no player with the
+          given `playerId` is currently connected.
     tags: []
     deprecation_message: ''
     security: None

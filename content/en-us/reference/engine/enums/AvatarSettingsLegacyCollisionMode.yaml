@@ -4,19 +4,41 @@
 
 name: AvatarSettingsLegacyCollisionMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines which legacy collision geometry is applied to R15 avatars when
+  `Enum.AvatarSettingsCollisionMode` is set to Legacy.
+description: |
+  When the avatar collision rules' `CollisionMode` is set to
+  `Enum.AvatarSettingsCollisionMode|Legacy`, this enum selects which collision
+  strategy the engine uses for R15 characters. `InnerBoxColliders` replaces each
+  mesh part's physics data with inner-box geometry derived from the standard R15
+  scaling model, while `R6Colliders` creates six invisible box parts that
+  approximate the classic R6 body shape.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: R6Colliders
-    summary: ''
+    summary: |
+      Creates six invisible box collider parts welded to R15 limbs to
+      approximate classic R6 collision geometry. The engine spawns six invisible
+      `Class.Part` instances (head, torso, left arm, right arm, left leg, right
+      leg) parented to the character and welded to the corresponding R15 body
+      parts. All original R15 mesh parts have their `Class.BasePart.CanCollide`,
+      `Class.BasePart.CanTouch`, and `Class.BasePart.CanQuery` disabled and are
+      made massless; only the HumanoidRootPart retains mass so it remains the
+      physics assembly root.
     value: 0
     tags: []
     deprecation_message: ''
   - name: InnerBoxColliders
-    summary: ''
+    summary: |
+      Overrides each R15 mesh part's collision physics with inner-box geometry
+      derived from the standard R15 scaling model. The engine recalculates every
+      `Class.MeshPart` in the character with collision data from the default R15
+      model's bounding dimensions, producing tighter collision volumes that
+      follow the avatar's proportions without adding extra parts. This is the
+      default value of `LegacyCollisionMode`.
     value: 1
     tags: []
     deprecation_message: ''

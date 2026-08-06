@@ -5,7 +5,10 @@
 name: PluginToolbarButton
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A button on a `Class.PluginToolbar` in the Studio ribbon, created by
+  `Class.PluginToolbar:CreateButton()`, that fires
+  `Class.PluginToolbarButton.Click|Click` when pressed.
 description: |
   A `PluginToolbarButton` object is created through the
   `Class.PluginToolbar:CreateButton()` function. It allows the user to initiate
@@ -126,6 +129,29 @@ properties:
       can_load: true
       can_save: false
     capabilities: []
+  - name: PluginToolbarButton.IconContent
+    summary: |
+      The content of the image used as the button's icon in the toolbar. Only
+      supports asset URIs.
+    description: |
+      This property sets the image content displayed as the button's icon in the
+      plugin toolbar. When this property is not set, the button instead displays
+      the text label provided when calling `Class.PluginToolbar:CreateButton()`.
+      Only asset URIs are supported for this property.
+    code_samples: []
+    type: Content
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities: []
 methods:
   - name: PluginToolbarButton:SetActive
     summary: |
@@ -142,7 +168,9 @@ methods:
       - name: active
         type: boolean
         default:
-        summary: ''
+        summary: |
+          Whether to set the button to its active, pressed state (`true`) or its
+          inactive state (`false`).
     returns:
       - type: ()
         summary: ''

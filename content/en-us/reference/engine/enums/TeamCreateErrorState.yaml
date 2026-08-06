@@ -4,29 +4,46 @@
 
 name: TeamCreateErrorState
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates the outcome of a Team Create place-upload attempt, as reported by
+  the `TeamCreateErrorStatus` event on `TeamCreatePublishService`.
+description: |
+  `TeamCreateErrorState` is fired as the `result` argument of
+  `TeamCreatePublishService.TeamCreateErrorStatus` after each Team Create
+  auto-save or publish attempt. Studio clients use this value to update status
+  indicators and surface warnings or errors to collaborators. Values reflect the
+  outcome of serializing the place and comparing its size against the configured
+  thresholds.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: PlaceSizeTooLarge
-    summary: ''
+    summary: |
+      The serialized place size has exceeded the hard upload limit and the save
+      was aborted.
     value: 0
     tags: []
     deprecation_message: ''
   - name: PlaceSizeApproachingLimit
-    summary: ''
+    summary: |
+      The serialized place size has reached or exceeded the public warning
+      threshold but is still below the hard upload limit.
     value: 1
     tags: []
     deprecation_message: ''
   - name: PlaceUploadFailing
-    summary: ''
+    summary: |
+      Repeated upload attempts have failed due to HTTP or network errors, and
+      the consecutive-failure count has reached the configured warning
+      threshold.
     value: 2
     tags: []
     deprecation_message: ''
   - name: NoError
-    summary: ''
+    summary: |
+      The place serialized and uploaded successfully with no size-limit issues
+      detected.
     value: 3
     tags: []
     deprecation_message: ''

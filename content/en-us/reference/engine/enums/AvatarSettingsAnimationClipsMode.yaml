@@ -4,19 +4,31 @@
 
 name: AvatarSettingsAnimationClipsMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines whether avatar animation clips are defined by the experience or if
+  they are determined by `AnimationPacksMode`.
+description: |
+  Determines whether custom experience-defined avatar animation clips override
+  the clips determined by the `AnimationPacksMode` setting. This enum is the
+  type of `AnimationClipsMode`, which defaults to
+  `Enum.AvatarSettingsAnimationClipsMode.PlayerChoice`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: PlayerChoice
-    summary: ''
+    summary: |
+      The clips determined by the `AnimationPacksMode` are used, without
+      experience-level overrides.
     value: 0
     tags: []
     deprecation_message: ''
   - name: CustomClips
-    summary: ''
+    summary: |
+      The experience overrides individual animation clips using the per-clip
+      enabled and ID properties on `AvatarAnimationRules` (for example,
+      `CustomRunAnimationEnabled` and `CustomRunAnimationId`). Only clips whose
+      enabled flag is true are replaced.
     value: 1
     tags: []
     deprecation_message: ''

@@ -118,8 +118,23 @@ properties:
     capabilities:
       - Material
   - name: MaterialVariant.CustomPhysicalProperties
-    summary: ''
-    description: ''
+    summary: |
+      Determines the physical properties of parts whose material resolves to
+      this variant.
+    description: |
+      Determines the physical properties, such as density, friction, and
+      elasticity, of parts whose material resolves to this variant.
+
+      The assigned `Datatype.PhysicalProperties` apply only when that value was
+      constructed with explicit values. Otherwise the physical properties are
+      inherited, falling back first to the base-material override configured on
+      the parent `Class.MaterialService`, and if none is set, to the default
+      physical properties of the variant's
+      `Class.MaterialVariant.BaseMaterial|BaseMaterial` category.
+
+      The default value is a `Datatype.PhysicalProperties` constructed without
+      explicit values, so an unmodified variant inherits its base material's
+      physical properties.
     code_samples: []
     type: PhysicalProperties
     tags: []

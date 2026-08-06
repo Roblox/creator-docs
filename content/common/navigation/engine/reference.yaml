@@ -806,11 +806,6 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/CoreGuiConfiguration.yaml
                 ignoreTranslation: true
-              - title: CoreScriptDebuggingManagerHelper
-                path: /reference/engine/classes/CoreScriptDebuggingManagerHelper
-                type: engineapi
-                source: /reference/engine/classes/CoreScriptDebuggingManagerHelper.yaml
-                ignoreTranslation: true
               - title: CreatorStoreService
                 path: /reference/engine/classes/CreatorStoreService
                 type: engineapi
@@ -1204,6 +1199,11 @@ navigation:
                             type: engineapi
                             source: /reference/engine/classes/TextBox.yaml
                             ignoreTranslation: true
+                          - title: TextChannelWindow
+                            path: /reference/engine/classes/TextChannelWindow
+                            type: engineapi
+                            source: /reference/engine/classes/TextChannelWindow.yaml
+                            ignoreTranslation: true
                           - title: VideoDisplay
                             path: /reference/engine/classes/VideoDisplay
                             type: engineapi
@@ -1240,11 +1240,6 @@ navigation:
                                 path: /reference/engine/classes/DockWidgetPluginGui
                                 type: engineapi
                                 source: /reference/engine/classes/DockWidgetPluginGui.yaml
-                                ignoreTranslation: true
-                              - title: QWidgetPluginGui
-                                path: /reference/engine/classes/QWidgetPluginGui
-                                type: engineapi
-                                source: /reference/engine/classes/QWidgetPluginGui.yaml
                                 ignoreTranslation: true
                           - title: ScreenGui
                             path: /reference/engine/classes/ScreenGui
@@ -2456,11 +2451,6 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/RenderSettings.yaml
                 ignoreTranslation: true
-              - title: RenderingTest
-                path: /reference/engine/classes/RenderingTest
-                type: engineapi
-                source: /reference/engine/classes/RenderingTest.yaml
-                ignoreTranslation: true
               - title: ReplicatedFirst
                 path: /reference/engine/classes/ReplicatedFirst
                 type: engineapi
@@ -3053,11 +3043,6 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/TweenService.yaml
                 ignoreTranslation: true
-              - title: UGCValidationService
-                path: /reference/engine/classes/UGCValidationService
-                type: engineapi
-                source: /reference/engine/classes/UGCValidationService.yaml
-                ignoreTranslation: true
               - title: UIBase
                 path: /reference/engine/classes/UIBase
                 type: engineapi
@@ -3187,11 +3172,6 @@ navigation:
                 path: /reference/engine/classes/VRService
                 type: engineapi
                 source: /reference/engine/classes/VRService.yaml
-                ignoreTranslation: true
-              - title: VRStatusService
-                path: /reference/engine/classes/VRStatusService
-                type: engineapi
-                source: /reference/engine/classes/VRStatusService.yaml
                 ignoreTranslation: true
               - title: ValueBase
                 path: /reference/engine/classes/ValueBase
@@ -3382,6 +3362,11 @@ navigation:
         path: /reference/engine/datatypes/CFrame
         type: engineapi
         source: /reference/engine/datatypes/CFrame.yaml
+        ignoreTranslation: true
+      - title: Collection
+        path: /reference/engine/datatypes/Collection
+        type: engineapi
+        source: /reference/engine/datatypes/Collection.yaml
         ignoreTranslation: true
       - title: Color3
         path: /reference/engine/datatypes/Color3
@@ -3687,6 +3672,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AdUnitStatus.yaml
         ignoreTranslation: true
+      - title: AgeCheckStatus
+        path: /reference/engine/enums/AgeCheckStatus
+        type: engineapi
+        source: /reference/engine/enums/AgeCheckStatus.yaml
+        ignoreTranslation: true
       - title: AlignType
         path: /reference/engine/enums/AlignType
         type: engineapi
@@ -3776,6 +3766,11 @@ navigation:
         path: /reference/engine/enums/AppLifecycleManagerState
         type: engineapi
         source: /reference/engine/enums/AppLifecycleManagerState.yaml
+        ignoreTranslation: true
+      - title: ApplyShadowMode
+        path: /reference/engine/enums/ApplyShadowMode
+        type: engineapi
+        source: /reference/engine/enums/ApplyShadowMode.yaml
         ignoreTranslation: true
       - title: ApplyStrokeMode
         path: /reference/engine/enums/ApplyStrokeMode
@@ -3972,11 +3967,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AvatarSettingsScaleMode.yaml
         ignoreTranslation: true
-      - title: AvatarThumbnailCustomizationType
-        path: /reference/engine/enums/AvatarThumbnailCustomizationType
-        type: engineapi
-        source: /reference/engine/enums/AvatarThumbnailCustomizationType.yaml
-        ignoreTranslation: true
       - title: AvatarUnificationMode
         path: /reference/engine/enums/AvatarUnificationMode
         type: engineapi
@@ -4117,11 +4107,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/CellOrientation.yaml
         ignoreTranslation: true
-      - title: CenterDialogType
-        path: /reference/engine/enums/CenterDialogType
-        type: engineapi
-        source: /reference/engine/enums/CenterDialogType.yaml
-        ignoreTranslation: true
       - title: CharacterControlMode
         path: /reference/engine/enums/CharacterControlMode
         type: engineapi
@@ -4207,11 +4192,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/CompletionItemTag.yaml
         ignoreTranslation: true
-      - title: CompletionTriggerKind
-        path: /reference/engine/enums/CompletionTriggerKind
-        type: engineapi
-        source: /reference/engine/enums/CompletionTriggerKind.yaml
-        ignoreTranslation: true
       - title: CompositeValueCurveType
         path: /reference/engine/enums/CompositeValueCurveType
         type: engineapi
@@ -4236,11 +4216,6 @@ navigation:
         path: /reference/engine/enums/ConfigSnapshotErrorState
         type: engineapi
         source: /reference/engine/enums/ConfigSnapshotErrorState.yaml
-        ignoreTranslation: true
-      - title: ConnectionError
-        path: /reference/engine/enums/ConnectionError
-        type: engineapi
-        source: /reference/engine/enums/ConnectionError.yaml
         ignoreTranslation: true
       - title: ConnectionState
         path: /reference/engine/enums/ConnectionState
@@ -4372,11 +4347,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/DeveloperMemoryTag.yaml
         ignoreTranslation: true
-      - title: DeviceFeatureType
-        path: /reference/engine/enums/DeviceFeatureType
-        type: engineapi
-        source: /reference/engine/enums/DeviceFeatureType.yaml
-        ignoreTranslation: true
       - title: DeviceForm
         path: /reference/engine/enums/DeviceForm
         type: engineapi
@@ -4431,6 +4401,11 @@ navigation:
         path: /reference/engine/enums/DisplaySize
         type: engineapi
         source: /reference/engine/enums/DisplaySize.yaml
+        ignoreTranslation: true
+      - title: DistanceAttenuationMode
+        path: /reference/engine/enums/DistanceAttenuationMode
+        type: engineapi
+        source: /reference/engine/enums/DistanceAttenuationMode.yaml
         ignoreTranslation: true
       - title: DomainType
         path: /reference/engine/enums/DomainType
@@ -4667,6 +4642,16 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/Genre.yaml
         ignoreTranslation: true
+      - title: GradientTileMode
+        path: /reference/engine/enums/GradientTileMode
+        type: engineapi
+        source: /reference/engine/enums/GradientTileMode.yaml
+        ignoreTranslation: true
+      - title: GradientType
+        path: /reference/engine/enums/GradientType
+        type: engineapi
+        source: /reference/engine/enums/GradientType.yaml
+        ignoreTranslation: true
       - title: GraphicsMode
         path: /reference/engine/enums/GraphicsMode
         type: engineapi
@@ -4741,11 +4726,6 @@ navigation:
         path: /reference/engine/enums/HttpError
         type: engineapi
         source: /reference/engine/enums/HttpError.yaml
-        ignoreTranslation: true
-      - title: HttpRequestType
-        path: /reference/engine/enums/HttpRequestType
-        type: engineapi
-        source: /reference/engine/enums/HttpRequestType.yaml
         ignoreTranslation: true
       - title: HumanoidCollisionType
         path: /reference/engine/enums/HumanoidCollisionType
@@ -4887,11 +4867,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/KeyInterpolationMode.yaml
         ignoreTranslation: true
-      - title: KeywordFilterType
-        path: /reference/engine/enums/KeywordFilterType
-        type: engineapi
-        source: /reference/engine/enums/KeywordFilterType.yaml
-        ignoreTranslation: true
       - title: Language
         path: /reference/engine/enums/Language
         type: engineapi
@@ -4942,16 +4917,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ListenerType.yaml
         ignoreTranslation: true
-      - title: LiveEditingAtomicUpdateResponse
-        path: /reference/engine/enums/LiveEditingAtomicUpdateResponse
-        type: engineapi
-        source: /reference/engine/enums/LiveEditingAtomicUpdateResponse.yaml
-        ignoreTranslation: true
-      - title: LiveEditingBroadcastMessageType
-        path: /reference/engine/enums/LiveEditingBroadcastMessageType
-        type: engineapi
-        source: /reference/engine/enums/LiveEditingBroadcastMessageType.yaml
-        ignoreTranslation: true
       - title: LoadCharacterLayeredClothing
         path: /reference/engine/enums/LoadCharacterLayeredClothing
         type: engineapi
@@ -4992,11 +4957,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/MarketplaceProductType.yaml
         ignoreTranslation: true
-      - title: MarkupKind
-        path: /reference/engine/enums/MarkupKind
-        type: engineapi
-        source: /reference/engine/enums/MarkupKind.yaml
-        ignoreTranslation: true
       - title: MatchmakingType
         path: /reference/engine/enums/MatchmakingType
         type: engineapi
@@ -5016,6 +4976,11 @@ navigation:
         path: /reference/engine/enums/MembershipType
         type: engineapi
         source: /reference/engine/enums/MembershipType.yaml
+        ignoreTranslation: true
+      - title: MeshAttribute
+        path: /reference/engine/enums/MeshAttribute
+        type: engineapi
+        source: /reference/engine/enums/MeshAttribute.yaml
         ignoreTranslation: true
       - title: MeshPartDetailLevel
         path: /reference/engine/enums/MeshPartDetailLevel
@@ -5222,11 +5187,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PhysicalConstraintType.yaml
         ignoreTranslation: true
-      - title: PhysicsSimulationRate
-        path: /reference/engine/enums/PhysicsSimulationRate
-        type: engineapi
-        source: /reference/engine/enums/PhysicsSimulationRate.yaml
-        ignoreTranslation: true
       - title: PhysicsSteppingMethod
         path: /reference/engine/enums/PhysicsSteppingMethod
         type: engineapi
@@ -5256,16 +5216,6 @@ navigation:
         path: /reference/engine/enums/PlayerChatType
         type: engineapi
         source: /reference/engine/enums/PlayerChatType.yaml
-        ignoreTranslation: true
-      - title: PlayerDataErrorState
-        path: /reference/engine/enums/PlayerDataErrorState
-        type: engineapi
-        source: /reference/engine/enums/PlayerDataErrorState.yaml
-        ignoreTranslation: true
-      - title: PlayerDataLoadFailureBehavior
-        path: /reference/engine/enums/PlayerDataLoadFailureBehavior
-        type: engineapi
-        source: /reference/engine/enums/PlayerDataLoadFailureBehavior.yaml
         ignoreTranslation: true
       - title: PlayerExitReason
         path: /reference/engine/enums/PlayerExitReason
@@ -5331,11 +5281,6 @@ navigation:
         path: /reference/engine/enums/PrimitiveType
         type: engineapi
         source: /reference/engine/enums/PrimitiveType.yaml
-        ignoreTranslation: true
-      - title: PrivilegeType
-        path: /reference/engine/enums/PrivilegeType
-        type: engineapi
-        source: /reference/engine/enums/PrivilegeType.yaml
         ignoreTranslation: true
       - title: ProductLocationRestriction
         path: /reference/engine/enums/ProductLocationRestriction
@@ -5432,11 +5377,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/RecommendationActionType.yaml
         ignoreTranslation: true
-      - title: RecommendationDepartureIntent
-        path: /reference/engine/enums/RecommendationDepartureIntent
-        type: engineapi
-        source: /reference/engine/enums/RecommendationDepartureIntent.yaml
-        ignoreTranslation: true
       - title: RecommendationImpressionType
         path: /reference/engine/enums/RecommendationImpressionType
         type: engineapi
@@ -5476,11 +5416,6 @@ navigation:
         path: /reference/engine/enums/RenderingCacheOptimizationMode
         type: engineapi
         source: /reference/engine/enums/RenderingCacheOptimizationMode.yaml
-        ignoreTranslation: true
-      - title: RenderingTestComparisonMethod
-        path: /reference/engine/enums/RenderingTestComparisonMethod
-        type: engineapi
-        source: /reference/engine/enums/RenderingTestComparisonMethod.yaml
         ignoreTranslation: true
       - title: RenderPriority
         path: /reference/engine/enums/RenderPriority
@@ -5592,11 +5527,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/SandboxedInstanceMode.yaml
         ignoreTranslation: true
-      - title: SaveAvatarThumbnailCustomizationFailure
-        path: /reference/engine/enums/SaveAvatarThumbnailCustomizationFailure
-        type: engineapi
-        source: /reference/engine/enums/SaveAvatarThumbnailCustomizationFailure.yaml
-        ignoreTranslation: true
       - title: SavedQualitySetting
         path: /reference/engine/enums/SavedQualitySetting
         type: engineapi
@@ -5682,11 +5612,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/SensorUpdateType.yaml
         ignoreTranslation: true
-      - title: ServerLiveEditingMode
-        path: /reference/engine/enums/ServerLiveEditingMode
-        type: engineapi
-        source: /reference/engine/enums/ServerLiveEditingMode.yaml
-        ignoreTranslation: true
       - title: ServiceVisibility
         path: /reference/engine/enums/ServiceVisibility
         type: engineapi
@@ -5706,6 +5631,11 @@ navigation:
         path: /reference/engine/enums/SignalBehavior
         type: engineapi
         source: /reference/engine/enums/SignalBehavior.yaml
+        ignoreTranslation: true
+      - title: SimulationMode
+        path: /reference/engine/enums/SimulationMode
+        type: engineapi
+        source: /reference/engine/enums/SimulationMode.yaml
         ignoreTranslation: true
       - title: SizeConstraint
         path: /reference/engine/enums/SizeConstraint
@@ -5741,11 +5671,6 @@ navigation:
         path: /reference/engine/enums/SortOrder
         type: engineapi
         source: /reference/engine/enums/SortOrder.yaml
-        ignoreTranslation: true
-      - title: SpecialKey
-        path: /reference/engine/enums/SpecialKey
-        type: engineapi
-        source: /reference/engine/enums/SpecialKey.yaml
         ignoreTranslation: true
       - title: StartCorner
         path: /reference/engine/enums/StartCorner
@@ -5946,11 +5871,6 @@ navigation:
         path: /reference/engine/enums/TextFilterContext
         type: engineapi
         source: /reference/engine/enums/TextFilterContext.yaml
-        ignoreTranslation: true
-      - title: TextInputType
-        path: /reference/engine/enums/TextInputType
-        type: engineapi
-        source: /reference/engine/enums/TextInputType.yaml
         ignoreTranslation: true
       - title: TextTruncate
         path: /reference/engine/enums/TextTruncate
@@ -6246,11 +6166,6 @@ navigation:
         path: /reference/engine/enums/VRControllerModelMode
         type: engineapi
         source: /reference/engine/enums/VRControllerModelMode.yaml
-        ignoreTranslation: true
-      - title: VRDeviceType
-        path: /reference/engine/enums/VRDeviceType
-        type: engineapi
-        source: /reference/engine/enums/VRDeviceType.yaml
         ignoreTranslation: true
       - title: VRLaserPointerMode
         path: /reference/engine/enums/VRLaserPointerMode

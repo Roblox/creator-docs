@@ -4,24 +4,38 @@
 
 name: FieldOfViewMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines which field-of-view angle a `Class.Camera` holds constant when the
+  viewport is resized.
+description: |
+  `Enum.FieldOfViewMode` controls which field-of-view (FOV) measurement the
+  `Class.Camera` treats as invariant when the viewport dimensions change. When
+  the viewport is resized, the engine recalculates the other FOV values to keep
+  the chosen axis constant. Used by
+  `Class.Camera.FieldOfViewMode|FieldOfViewMode`, which defaults to
+  `Enum.FieldOfViewMode.Vertical`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Vertical
-    summary: ''
+    summary: |
+      The camera holds its vertical field of view constant when the viewport is
+      resized.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Diagonal
-    summary: ''
+    summary: |
+      The camera holds its diagonal field of view constant when the viewport is
+      resized.
     value: 1
     tags: []
     deprecation_message: ''
   - name: MaxAxis
-    summary: ''
+    summary: |
+      The camera holds the field of view along the longer viewport axis constant
+      when the viewport is resized.
     value: 2
     tags: []
     deprecation_message: ''

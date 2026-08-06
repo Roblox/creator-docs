@@ -5,8 +5,17 @@
 name: HSRDataContentProvider
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  An internal service that fetches, parses, and caches hidden surface removal
+  (HSR) data for layered clothing; cannot be used by developers.
+description: |
+  Internal-only; managed by the engine and cannot be used by developers.
+  Inherits from `Class.CacheableContentProvider` and fetches, parses, and caches
+  hidden surface removal (HSR) data assets — which triangles of a layered
+  clothing item's mesh are occluded by overlapping garments so that geometry can
+  be culled when the avatar is rendered. When an HSR asset is requested, the
+  service downloads and decodes it into a `Class.HiddenSurfaceRemovalAsset` and
+  stores it in a cache.
 code_samples: []
 inherits:
   - CacheableContentProvider

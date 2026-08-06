@@ -4,24 +4,35 @@
 
 name: ProximityPromptInputType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies the input method a player is using when a `Class.ProximityPrompt`
+  is shown.
+description: |
+  `Enum.ProximityPromptInputType` is passed to
+  `Class.ProximityPrompt.PromptShown` and
+  `Class.ProximityPromptService.PromptShown` to indicate which input device the
+  player is using. `Class.ProximityPromptService` switches shown prompts when
+  the active input type changes so button hints match the device (keyboard,
+  gamepad, or touch).
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Keyboard
-    summary: ''
+    summary: |
+      The player is using keyboard and mouse input.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Gamepad
-    summary: ''
+    summary: |
+      The player is using a gamepad controller.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Touch
-    summary: ''
+    summary: |
+      The player is using a touch screen.
     value: 2
     tags: []
     deprecation_message: ''

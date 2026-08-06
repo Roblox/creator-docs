@@ -68,8 +68,15 @@ properties:
     capabilities:
       - UI
   - name: VideoDisplay.TileSize
-    summary: ''
-    description: ''
+    summary: |
+      Sets the tiling size of the `Class.VideoDisplay`.
+    description: |
+      This property sets the tiling size of the `Class.VideoDisplay` with a
+      default of
+      <Typography noWrap>`Datatype.UDim2.new(1, 0, 1, 0)`</Typography>. Tiling
+      starts at the top-left corner of the video. This property is only active
+      if the `Class.VideoDisplay.ScaleType|ScaleType` for the
+      `Class.VideoDisplay` is set to `Enum.ScaleType.Tile`.
     code_samples: []
     type: UDim2
     tags: []

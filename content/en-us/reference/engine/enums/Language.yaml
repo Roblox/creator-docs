@@ -4,14 +4,23 @@
 
 name: Language
 type: enum
-summary: ''
-description: ''
+summary: |
+  An enumeration embedded in `Class.LocalizationService` that specifies a
+  language context for localization operations; currently defines only
+  `Default`.
+description: |
+  An enumeration embedded in `Class.LocalizationService` that represents a
+  language selector for localization-related operations. The only defined item
+  is `Enum.Language.Default`, which instructs the engine to resolve the language
+  from the player's system locale rather than from a hard-coded override.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Instructs the engine to use the player's system-determined locale for
+      language resolution rather than a fixed override.
     value: 0
     tags: []
     deprecation_message: ''

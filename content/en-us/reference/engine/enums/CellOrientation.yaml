@@ -4,8 +4,15 @@
 
 name: CellOrientation
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the corner orientation of a legacy terrain cell, used with the
+  deprecated `Class.Terrain:SetCell()` method.
+description: |
+  Deprecated. Specifies the corner from which a legacy terrain cell's block
+  begins, used with the deprecated `Class.Terrain:SetCell()` and
+  `Class.Terrain:SetCells()` methods. When viewed from directly above (downward
+  vertical perspective), the value identifies which corner of the cell the block
+  occupies, ordered clockwise starting from the upper-left.
 code_samples: []
 tags: []
 deprecation_message: |
@@ -13,22 +20,28 @@ deprecation_message: |
   engine to set the orientation of terrain cells.
 items:
   - name: NegZ
-    summary: ''
+    summary: |
+      Upper-left corner orientation when the cell is viewed from directly above.
     value: 0
     tags: []
     deprecation_message: ''
   - name: X
-    summary: ''
+    summary: |
+      Upper-right corner orientation when the cell is viewed from directly
+      above.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Z
-    summary: ''
+    summary: |
+      Lower-right corner orientation when the cell is viewed from directly
+      above.
     value: 2
     tags: []
     deprecation_message: ''
   - name: NegX
-    summary: ''
+    summary: |
+      Lower-left corner orientation when the cell is viewed from directly above.
     value: 3
     tags: []
     deprecation_message: ''

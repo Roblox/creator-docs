@@ -4,24 +4,36 @@
 
 name: TrackerType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the type of motion tracking that an `RTAnimationTracker` performs.
+description: |
+  `TrackerType` controls which tracking modality the `RTAnimationTracker` uses
+  to generate real-time animation data. Changing the `TrackerType` property
+  shuts down the current tracking engine and reinitializes with the newly
+  selected type.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      No tracking type is selected; the tracking engine does not initialize, and
+      attempting to start tracking with this type set raises
+      `TrackerError.UnsupportedDevice`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Face
-    summary: ''
+    summary: |
+      Enables face tracking from a connected video device (and optionally audio)
+      to produce FACS blendshape weights and head-orientation data each step.
     value: 1
     tags: []
     deprecation_message: ''
   - name: UpperBody
-    summary: ''
+    summary: |
+      Reserved for upper-body motion tracking. Setting this type raises
+      `TrackerError.UnsupportedDevice` on initialization.
     value: 2
     tags: []
     deprecation_message: ''

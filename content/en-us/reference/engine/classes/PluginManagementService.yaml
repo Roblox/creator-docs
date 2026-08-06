@@ -5,8 +5,14 @@
 name: PluginManagementService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Studio service that manages installed plugins; not intended for creator
+  scripts or plugins.
+description: |
+  Not intended for creator scripts or plugins. A Studio-only, non-creatable,
+  non-replicated service that backs Studio's plugin-management UI: it can enable
+  or disable a plugin's automatic updates and look up the latest over-the-air
+  (OTA) version published for a given plugin.
 code_samples: []
 inherits:
   - Instance

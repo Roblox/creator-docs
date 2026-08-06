@@ -4,24 +4,36 @@
 
 name: FramerateManagerMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how the Frame Rate Manager (FRM) adjusts rendering quality to
+  maintain target frame rates.
+description: |
+  Controls how the Frame Rate Manager (FRM) dynamically scales rendering quality
+  — including view distance, block count, and quality level — to meet frame rate
+  targets. The FRM is enabled separately via `Class.RenderSettings.EnableFRM`;
+  this enum selects its operating mode when active.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Automatic
-    summary: ''
+    summary: |
+      The engine selects whether to run FRM based on hardware and platform
+      context. This is the default.
     value: 0
     tags: []
     deprecation_message: ''
   - name: 'On'
-    summary: ''
+    summary: |
+      FRM is explicitly enabled and dynamically adjusts rendering quality to
+      meet frame rate targets.
     value: 1
     tags: []
     deprecation_message: ''
   - name: 'Off'
-    summary: ''
+    summary: |
+      FRM quality throttling is disabled; block count is fixed at the baseline
+      level regardless of frame rate.
     value: 2
     tags: []
     deprecation_message: ''

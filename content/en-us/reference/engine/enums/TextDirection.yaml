@@ -4,24 +4,41 @@
 
 name: TextDirection
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls the base text rendering direction for `Class.TextLabel`,
+  `Class.TextButton`, and `Class.TextBox` instances.
+description: |
+  Controls the base paragraph direction used when laying out text. Used by
+  `Class.TextLabel.TextDirection`, `Class.TextButton.TextDirection`, and
+  `Class.TextBox.TextDirection`, which default to `Enum.TextDirection.Auto`.
+
+  `Enum.TextDirection.Auto` lets the Unicode Bidirectional Algorithm determine
+  the paragraph's base direction from the first strong directional character.
+  `Enum.TextDirection.LeftToRight` or `Enum.TextDirection.RightToLeft` pins the
+  base direction regardless of content, which is useful for mixed-script strings
+  where automatic detection would choose the wrong base.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Auto
-    summary: ''
+    summary: |
+      Automatically determines text direction from the first strong directional
+      character using the Unicode Bidirectional Algorithm.
     value: 0
     tags: []
     deprecation_message: ''
   - name: LeftToRight
-    summary: ''
+    summary: |
+      Forces the paragraph base direction to left-to-right regardless of the
+      text content.
     value: 1
     tags: []
     deprecation_message: ''
   - name: RightToLeft
-    summary: ''
+    summary: |
+      Forces the paragraph base direction to right-to-left regardless of the
+      text content.
     value: 2
     tags: []
     deprecation_message: ''

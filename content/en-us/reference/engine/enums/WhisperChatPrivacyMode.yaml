@@ -4,19 +4,33 @@
 
 name: WhisperChatPrivacyMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes which other players a player allows to initiate a whisper (direct)
+  chat with them in an experience.
+description: |
+  Describes which other players a player allows to initiate a whisper (direct)
+  chat with them in an experience. A whisper chat is only permitted when
+  **both** the sender and the recipient have
+  `Enum.WhisperChatPrivacyMode.AllUsers`; if either player's mode is
+  `Enum.WhisperChatPrivacyMode.NoOne`, the private chat is blocked. The setting
+  comes from the player's account privacy configuration and is applied when the
+  `Class.Player` object is created. Defaults to
+  `Enum.WhisperChatPrivacyMode.NoOne`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: AllUsers
-    summary: ''
+    summary: |
+      The player allows any other player in the experience to initiate a whisper
+      chat with them.
     value: 0
     tags: []
     deprecation_message: ''
   - name: NoOne
-    summary: ''
+    summary: |
+      The player does not allow any other player to initiate a whisper chat with
+      them.
     value: 1
     tags: []
     deprecation_message: ''

@@ -35,7 +35,29 @@ methods:
     summary: |
       Communicates to Studio that the identified recording is finished and to
       take the final operation to complete the recording.
-    description: ''
+    description: |
+      Completes a recording that was started with
+      `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`. Pass
+      the `identifier` returned by that call along with an
+      `Enum.FinishRecordingOperation` describing what to do with the recorded
+      changes:
+
+      - `Enum.FinishRecordingOperation.Commit` adds the changes to the undo/redo
+        history as a new waypoint.
+      - `Enum.FinishRecordingOperation.Cancel` discards the recording and
+        reverts the changes it captured. The `identifier` is ignored for this
+        operation, so a plugin can cancel its own in-progress recording without
+        knowing the identifier.
+      - `Enum.FinishRecordingOperation.Append` merges the recording into the
+        waypoint that immediately precedes it rather than creating a new one.
+
+      When the recording finishes, this method fires
+      `Class.ChangeHistoryService.OnRecordingFinished|OnRecordingFinished`,
+      forwarding the `finalOptions` table. It raises an error if the calling
+      plugin has no recording in progress, or if `operation` is not
+      `Enum.FinishRecordingOperation.Cancel` and `identifier` does not match the
+      active recording. It has no effect when the service is disabled or while
+      an undo or redo is in progress.
     code_samples:
       - ChangeHistoryService-TryBeginRecording1
     parameters:
@@ -68,16 +90,25 @@ methods:
     capabilities: []
   - name: ChangeHistoryService:GetCanRedo
     summary: |
-      Returns whether there are actions that can be redone, and, if there are,
-      returns the last of them.
+      Returns whether there is an action available to redo and, if so, the name
+      of that action.
     description: |
-      Returns whether there are actions that can be redone, and, if there are,
-      returns the last of them.
+      Reports whether `Class.ChangeHistoryService:Redo()|Redo()` currently has
+      an action available to replay. It returns a boolean that is `true` when a
+      redoable waypoint exists ahead of the current position in the undo/redo
+      history; when that boolean is `true`, it also returns the name of the
+      waypoint that the next redo would replay.
+
+      The boolean is `false`, with no name returned, when the redo stack is
+      empty because the newest waypoint is already the current one, or when the
+      service is disabled (which is always the case at runtime).
     code_samples: []
     parameters: []
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          `true` followed by the name of the action that would be redone when a
+          redo is available; otherwise `false`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -85,33 +116,57 @@ methods:
     capabilities: []
   - name: ChangeHistoryService:GetCanUndo
     summary: |
-      Returns whether there are actions that can be undone, and, if there are,
-      returns the last of them.
+      Returns whether there is an action available to undo and, if so, the name
+      of that action.
     description: |
-      Returns whether there are actions that can be undone, and, if there are,
-      returns the last of them.
+      Reports whether `Class.ChangeHistoryService:Undo()|Undo()` currently has
+      an action available to revert. It returns a boolean that is `true` when an
+      undoable waypoint exists at the current position in the undo/redo history;
+      when that boolean is `true`, it also returns the name of the waypoint that
+      the next undo would revert.
+
+      The boolean is `false`, with no name returned, when the undo stack is
+      empty because the position is already at the base waypoint, or when the
+      service is disabled (which is always the case at runtime).
     code_samples: []
     parameters: []
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          `true` followed by the name of the action that would be undone when an
+          undo is available; otherwise `false`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
   - name: ChangeHistoryService:IsRecordingInProgress
-    summary: ''
-    description: ''
+    summary: |
+      Returns whether the plugin currently has a recording in progress,
+      optionally checking for a specific recording identifier.
+    description: |
+      Reports whether the calling plugin has a recording in progress that was
+      started with
+      `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
+
+      When called without an `identifier`, it returns `true` if any recording is
+      active for the plugin. When an `identifier` is supplied, it returns `true`
+      only if the active recording's identifier matches that value. It returns
+      `false` when the service is disabled or when the plugin has no active
+      recording.
     code_samples: []
     parameters:
       - name: identifier
         type: string?
         default:
-        summary: ''
+        summary: |
+          Optional identifier of a specific recording to check for. When
+          omitted, the method reports whether _any_ recording is in progress for
+          the plugin.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if a matching recording is in progress; otherwise `false`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -119,9 +174,21 @@ methods:
     capabilities: []
   - name: ChangeHistoryService:Redo
     summary: |
-      Executes the last action that was undone.
+      Re-executes the most recently undone action, advancing forward through the
+      undo/redo history.
     description: |
-      Executes the last action that was undone.
+      Replays the waypoint immediately ahead of the current position in the
+      undo/redo history, redoing the action that a matching
+      `Class.ChangeHistoryService:Undo()|Undo()` had reverted, and advances the
+      redo pointer forward by one waypoint. After the waypoint is replayed, it
+      fires `Class.ChangeHistoryService.OnRedo|OnRedo` with the name of the
+      redone waypoint.
+
+      This method raises an error if a play is already in progress, if the
+      service is disabled (which is always the case at runtime), or if there is
+      nothing left to redo. Call
+      `Class.ChangeHistoryService:GetCanRedo()|GetCanRedo()` first to confirm a
+      redo is available.
     code_samples: []
     parameters: []
     returns:
@@ -134,9 +201,16 @@ methods:
     capabilities: []
   - name: ChangeHistoryService:ResetWaypoints
     summary: |
-      Clears the history, causing all undo/redo waypoints to be removed.
+      Clears the undo/redo history by collapsing it into a single base waypoint.
     description: |
-      Clears the history, causing all undo/redo waypoints to be removed.
+      Records the current state as a waypoint named `base` and then merges every
+      existing waypoint into that single waypoint, leaving no actions to undo or
+      redo. Use this to establish a clean starting point so that later
+      `Class.ChangeHistoryService:Undo()|Undo()` calls cannot revert past the
+      current state.
+
+      This method has no effect when the service is disabled (which is always
+      the case at runtime).
     code_samples: []
     parameters: []
     returns:
@@ -160,7 +234,8 @@ methods:
       - name: state
         type: boolean
         default:
-        summary: ''
+        summary: |
+          Whether to enable (`true`) or disable (`false`) the service.
     returns:
       - type: ()
         summary: ''
@@ -193,7 +268,9 @@ methods:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The name to assign to the new waypoint, which appears in the undo/redo
+          history.
     returns:
       - type: ()
         summary: ''
@@ -238,7 +315,9 @@ methods:
           Name of the action being performed to display to the user.
     returns:
       - type: string?
-        summary: ''
+        summary: |
+          A unique string identifier for the recording on success, or `nil` if
+          the recording could not be started.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -246,9 +325,20 @@ methods:
     capabilities: []
   - name: ChangeHistoryService:Undo
     summary: |
-      Undos the last action taken, for which there exists a waypoint.
+      Reverts the most recent action, stepping backward through the undo/redo
+      history.
     description: |
-      Undos the last action taken, for which there exists a waypoint.
+      Unplays the waypoint at the current position in the undo/redo history,
+      reverting the most recent recorded action, and steps the undo pointer back
+      by one waypoint. After the waypoint is reverted, it fires
+      `Class.ChangeHistoryService.OnUndo|OnUndo` with the name of the undone
+      waypoint.
+
+      This method raises an error if a play is already in progress, if the
+      service is disabled (which is always the case at runtime), or if there is
+      nothing left to undo. Call
+      `Class.ChangeHistoryService:GetCanUndo()|GetCanUndo()` first to confirm an
+      undo is available.
     code_samples: []
     parameters: []
     returns:
@@ -265,7 +355,14 @@ events:
       Fired when the user completes an action. Parameters come from
       `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()` and
       `Class.ChangeHistoryService:FinishRecording()|FinishRecording()`.
-    description: ''
+    description: |
+      Fires when a recording started with
+      `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()` is
+      completed through
+      `Class.ChangeHistoryService:FinishRecording()|FinishRecording()`. The
+      `operation` argument reports how the recording was finished (`Commit`,
+      `Cancel`, or `Append`), and `finalOptions` is the optional table that was
+      passed to `FinishRecording()`.
     code_samples: []
     parameters:
       - name: name
@@ -287,7 +384,9 @@ events:
       - name: operation
         type: FinishRecordingOperation
         default:
-        summary: ''
+        summary: |
+          The `Enum.FinishRecordingOperation` that completed the recording,
+          either `Commit`, `Cancel`, or `Append`.
       - name: finalOptions
         type: Dictionary?
         default:
@@ -302,7 +401,11 @@ events:
     summary: |
       Fired when the user begins an action. Parameters come from
       `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
-    description: ''
+    description: |
+      Fires when a plugin begins a recording with
+      `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`,
+      carrying the same `name` and `displayName` values that were passed to that
+      call.
     code_samples: []
     parameters:
       - name: name
@@ -322,34 +425,42 @@ events:
     capabilities: []
   - name: ChangeHistoryService.OnRedo
     summary: |
-      Fired when the user reverses the undo command. Waypoint describes the type
-      action that has been redone.
+      Fires after an action is redone, reporting the name of the action that was
+      replayed.
     description: |
-      Fired when the user reverses the undo command. Waypoint describes the type
-      action that has been redone.
+      Fires immediately after `Class.ChangeHistoryService:Redo()|Redo()` replays
+      a waypoint, whether the redo was triggered by the user through Studio or
+      invoked programmatically. The `waypoint` argument is the name of the
+      action that was redone, matching the name that was recorded for that
+      waypoint.
     code_samples: []
     parameters:
       - name: waypoint
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the waypoint (action) that was redone.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     capabilities: []
   - name: ChangeHistoryService.OnUndo
     summary: |
-      Fired when the user undoes an action in studio. Waypoint describes the
-      type action that has been undone.
+      Fires after an action is undone, reporting the name of the action that was
+      reverted.
     description: |
-      Fired when the user undoes an action in studio. Waypoint describes the
-      type action that has been undone.
+      Fires immediately after `Class.ChangeHistoryService:Undo()|Undo()` reverts
+      a waypoint, whether the undo was triggered by the user through Studio or
+      invoked programmatically. The `waypoint` argument is the name of the
+      action that was undone, matching the name that was recorded for that
+      waypoint.
     code_samples: []
     parameters:
       - name: waypoint
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the waypoint (action) that was undone.
     tags: []
     deprecation_message: ''
     security: PluginSecurity

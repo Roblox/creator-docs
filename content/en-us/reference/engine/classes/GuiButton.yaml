@@ -180,7 +180,8 @@ events:
     description: |
       Fires when a left click press-and-release is detected on desktop, touch
       release is detected on mobile, or **A**/cross is activated in UI
-      navigation mode on console.
+      navigation mode on console. The first time this method is called,
+      `clickCount` will start at `0`.
 
       As this event doesn't fire on the server, it should only be used in a
       `Class.LocalScript`, or in a `Class.Script` with

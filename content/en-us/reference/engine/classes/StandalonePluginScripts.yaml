@@ -5,7 +5,9 @@
 name: StandalonePluginScripts
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A container for `Class.Script|Scripts` that run only in the standalone plugin
+  `Class.DataModel` at Roblox Studio startup.
 description: |
   **StandalonePluginScripts** is a container of `Class.Script|Scripts` to be run
   in a standalone plugin `Class.DataModel` when Roblox Studio starts (it is not

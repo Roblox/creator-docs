@@ -14,13 +14,15 @@ deprecation_message: ''
 items:
   - name: Asset
     summary: |
-      Avatar assets.
+      An individual avatar catalog item such as a hat, shirt, or accessory,
+      identified by an asset ID.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Bundle
     summary: |
-      Avatar bundles.
+      A collection of related avatar items sold together as a group, identified
+      by a bundle ID.
     value: 2
     tags: []
     deprecation_message: ''

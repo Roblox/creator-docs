@@ -5,8 +5,24 @@
 name: SwimController
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  The `Class.ControllerBase` that moves a `Class.ControllerManager` character
+  while it is swimming.
+description: |
+  `Class.SwimController` is the `Class.ControllerBase` that a
+  `Class.ControllerManager` activates to move a physics-based character while it
+  is swimming. When it is the manager's
+  `Class.ControllerManager.ActiveController`, it drives the
+  `Class.ControllerManager.RootPart` toward the manager's target velocity
+  (scaled by `Class.ControllerBase.MoveSpeedFactor`), pitches the character to
+  face the `Class.ControllerManager.FacingDirection`, and rolls it to keep it
+  oriented in the water. Pitch rotation is tuned with
+  `Class.SwimController.PitchMaxTorque` and
+  `Class.SwimController.PitchSpeedFactor`, and roll with
+  `Class.SwimController.RollMaxTorque` and
+  `Class.SwimController.RollSpeedFactor`, with the speed factors scaled by
+  `Class.ControllerManager.BaseTurnSpeed`. A `Class.SwimController` only
+  functions when parented to a `Class.ControllerManager`.
 code_samples: []
 inherits:
   - ControllerBase

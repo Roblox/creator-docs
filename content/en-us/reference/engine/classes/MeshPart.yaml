@@ -28,8 +28,8 @@ properties:
       Determines whether to render both faces of polygons in the mesh.
     description: |
       This property determines whether to render both faces of polygons in the
-      mesh. It is only changeable in Studio. This is useful for meshes that are
-      typically modeled as "cards" such as a leaf, hair, or cloth.
+      mesh. This is useful for meshes that are typically modeled as "cards" such
+      as a leaf, hair, or cloth.
     code_samples: []
     type: boolean
     tags: []
@@ -45,14 +45,20 @@ properties:
     capabilities:
       - Basic
   - name: MeshPart.HasJointOffset
-    summary: ''
-    description: ''
+    summary: |
+      Deprecated legacy flag associated with the part's
+      `Class.MeshPart.JointOffset|JointOffset`.
+    description: |
+      Deprecated legacy property associated with a `Class.MeshPart`'s internal
+      `Class.MeshPart.JointOffset|JointOffset`. It is managed by the engine and
+      cannot be set by scripts. Do not use it in new work.
     code_samples: []
     type: boolean
     tags:
       - Hidden
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This property is deprecated and should not be used in new work.
     security:
       read: None
       write: NotAccessibleSecurity
@@ -64,8 +70,17 @@ properties:
     capabilities:
       - Basic
   - name: MeshPart.HasSkinnedMesh
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the mesh currently applied to the `Class.MeshPart`
+      contains skinning (bone and joint) data.
+    description: |
+      Indicates whether the mesh currently applied to the `Class.MeshPart`
+      contains skinning (bone and joint) data, such as a mesh authored with an
+      armature for skeletal deformation.
+
+      Defaults to `false`. The engine sets this automatically when a mesh is
+      loaded (`true` when the mesh data includes joints), so scripts cannot set
+      it.
     code_samples: []
     type: boolean
     tags:
@@ -82,14 +97,19 @@ properties:
     capabilities:
       - Basic
   - name: MeshPart.JointOffset
-    summary: ''
-    description: ''
+    summary: |
+      Deprecated. An offset once used to position a skinned mesh's joints.
+    description: |
+      Deprecated. A `Datatype.Vector3` offset once used to position a skinned
+      mesh's joints. Defaults to `0, 0, 0` and is reset whenever a new mesh is
+      applied to the part. Cannot be set by scripts; do not use it in new work.
     code_samples: []
     type: Vector3
     tags:
       - Hidden
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This property is deprecated and should not be used in new work.
     security:
       read: None
       write: NotAccessibleSecurity
@@ -360,7 +380,15 @@ methods:
       - name: meshPart
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The source `Class.MeshPart` whose
+          `Class.MeshPart.MeshContent|MeshContent`,
+          `Class.MeshPart.TextureContent|TextureContent`, and collision geometry
+          (along with `Class.MeshPart.RenderFidelity|RenderFidelity`,
+          `Class.MeshPart.CollisionFidelity|CollisionFidelity`,
+          `Class.MeshPart.FluidFidelity|FluidFidelity`, and
+          `Class.MeshPart.MeshSize|MeshSize`) are copied onto this part. The
+          object must be a `Class.MeshPart`, otherwise the call throws an error.
     returns:
       - type: ()
         summary: ''

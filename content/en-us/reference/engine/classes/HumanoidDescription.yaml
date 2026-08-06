@@ -879,8 +879,28 @@ properties:
     capabilities:
       - AvatarAppearance
   - name: HumanoidDescription.MoodAnimation
-    summary: ''
-    description: ''
+    summary: |
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, this determines the asset ID of the mood animation
+      that gives the character's face its persistent expression.
+    description: |
+      When this description is `Class.Humanoid:ApplyDescriptionAsync()|applied`
+      to a `Class.Humanoid`, this property sets the asset ID of the mood
+      animation to apply. The asset ID must be for a Mood animation asset.
+      Defaults to `0`, in which case the character's face uses its neutral rest
+      pose.
+
+      A mood animation applies a static facial pose to a character with a
+      Dynamic Head, giving the face a characteristic expression (such as a
+      smile) that persists while the head is otherwise idle.
+
+      See also:
+
+      - [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
+        for more information on `Class.HumanoidDescription`.
+      - `Class.HumanoidDescription.StaticFacialAnimation|StaticFacialAnimation`,
+        which disables animated facial movement so that a Dynamic Head displays
+        a static mood pose instead
     code_samples: []
     type: int64
     tags: []
@@ -1436,7 +1456,9 @@ properties:
     capabilities:
       - AvatarAppearance
   - name: HumanoidDescription.UseAvatarSettings
-    summary: ''
+    summary: |
+      When `true`, applying this description also applies the experience's
+      Avatar Settings to the resulting model. Defaults to `false`.
     description: |
       When true, `Humanoid:ApplyDescriptionAsync` or
       `Players:CreateHumanoidModelFromDescriptionAsync` will also apply the

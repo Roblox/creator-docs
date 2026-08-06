@@ -4,19 +4,35 @@
 
 name: AvatarSettingsCustomClothingMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines whether an experience overrides a player's classic 2D or layered 3D
+  clothing with creator-specified assets or preserves the player's own clothing
+  choices.
+description: |
+  Determines whether the classic 2D clothing or layered 3D clothing worn by
+  player avatars in an experience is controlled by the creator or left to each
+  player's own selection. Used by `AvatarClothingRules.CustomClothingMode`
+  within `AvatarSettings`.
+
+  When set to `Enum.AvatarSettingsCustomClothingMode.CustomClothing`, the engine
+  applies the asset IDs from the `AvatarClothingRules` custom clothing
+  properties to each player's `Class.HumanoidDescription` on join, replacing the
+  player's equipped clothing.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: PlayerChoice
-    summary: ''
+    summary: |
+      Players keep their own clothing selections. The experience does not
+      override clothing assets. This is the default value.
     value: 0
     tags: []
     deprecation_message: ''
   - name: CustomClothing
-    summary: ''
+    summary: |
+      The experience enforces creator-specified clothing assets from
+      `AvatarClothingRules`, overriding each player's own equipped clothing.
     value: 1
     tags: []
     deprecation_message: ''

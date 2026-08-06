@@ -88,7 +88,8 @@ methods:
     parameters: []
     returns:
       - type: DataStore
-        summary: ''
+        summary: |
+          The default `Class.GlobalDataStore` instance.
     tags: []
     deprecation_message: ''
     security: None
@@ -109,14 +110,17 @@ methods:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          Name of the ordered data store.
       - name: scope
         type: string
         default: global
-        summary: ''
+        summary: |
+          **(Optional)** A string specifying the scope. Default is "global".
     returns:
       - type: OrderedDataStore
-        summary: ''
+        summary: |
+          An `Class.OrderedDataStore` instance with the provided name and scope.
     tags: []
     deprecation_message: ''
     security: None
@@ -138,10 +142,13 @@ methods:
       - name: requestType
         type: DataStoreRequestType
         default:
-        summary: ''
+        summary: |
+          The `Enum.DataStoreRequestType` to check the budget for.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The number of data store requests that can currently be made for the
+          specified request type.
     tags: []
     deprecation_message: ''
     security: None
@@ -241,15 +248,20 @@ methods:
       - name: requestType
         type: DataStoreRequestType
         default:
-        summary: ''
+        summary: |
+          The `Enum.DataStoreRequestType` to configure the rate limit for.
       - name: baseLimit
         type: int
         default:
-        summary: ''
+        summary: |
+          The base number of requests allowed per minute regardless of player
+          count.
       - name: perPlayerLimit
         type: int
         default:
-        summary: ''
+        summary: |
+          The additional number of requests per minute granted for each
+          connected player.
     returns:
       - type: ()
         summary: ''

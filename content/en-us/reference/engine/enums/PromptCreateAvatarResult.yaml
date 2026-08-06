@@ -4,69 +4,99 @@
 
 name: PromptCreateAvatarResult
 type: enum
-summary: ''
-description: ''
+summary: |
+  Result codes returned by
+  `Class.AvatarCreationService:PromptCreateAvatarAsync()` indicating whether
+  avatar creation succeeded or why it failed.
+description: |
+  Result codes returned by
+  `Class.AvatarCreationService:PromptCreateAvatarAsync()` to indicate the
+  outcome of an in-experience avatar creation flow. A value of
+  `Enum.PromptCreateAvatarResult.Success` means the avatar was created and
+  published; all other values identify the failure reason so the experience can
+  surface an appropriate message to the player.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Success
-    summary: ''
+    summary: |
+      The avatar was successfully created and published to the player's account.
     value: 1
     tags: []
     deprecation_message: ''
   - name: PermissionDenied
-    summary: ''
+    summary: |
+      The player explicitly declined the avatar creation consent prompt.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Timeout
-    summary: ''
+    summary: |
+      The avatar creation consent prompt timed out before the player responded.
     value: 3
     tags: []
     deprecation_message: ''
   - name: UploadFailed
-    summary: ''
+    summary: |
+      The avatar assets passed validation but the server-side upload or bundle
+      creation step failed.
     value: 4
     tags: []
     deprecation_message: ''
   - name: NoUserInput
-    summary: ''
+    summary: |
+      The player did not interact with the avatar creation consent prompt before
+      it closed.
     value: 5
     tags: []
     deprecation_message: ''
   - name: InvalidHumanoidDescription
-    summary: ''
+    summary: |
+      The `Class.HumanoidDescription` supplied to
+      `Class.AvatarCreationService:PromptCreateAvatarAsync()` was invalid and
+      could not be used to create an avatar.
     value: 6
     tags: []
     deprecation_message: ''
   - name: UGCValidationFailed
-    summary: ''
+    summary: |
+      The avatar's geometry or content failed Roblox's UGC (User-Generated
+      Content) validation checks.
     value: 7
     tags: []
     deprecation_message: ''
   - name: ModeratedName
-    summary: ''
+    summary: |
+      The proposed avatar name or description was rejected by Roblox moderation.
     value: 8
     tags: []
     deprecation_message: ''
   - name: MaxOutfits
-    summary: ''
+    summary: |
+      The player has reached the maximum number of outfits allowed on their
+      Roblox account.
     value: 9
     tags: []
     deprecation_message: ''
   - name: PurchaseFailure
-    summary: ''
+    summary: |
+      The avatar creation attempt failed because the player did not have
+      sufficient Robux to cover the required purchase.
     value: 10
     tags: []
     deprecation_message: ''
   - name: UnknownFailure
-    summary: ''
+    summary: |
+      An unexpected or unclassified failure occurred during avatar creation.
     value: 11
     tags: []
     deprecation_message: ''
   - name: TokenInvalid
-    summary: ''
+    summary: |
+      The creation token provided to
+      `Class.AvatarCreationService:PromptCreateAvatarAsync()` was not valid or
+      did not match the current experience.
     value: 12
     tags: []
     deprecation_message: ''

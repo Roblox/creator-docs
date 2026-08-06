@@ -4,40 +4,61 @@
 
 name: CatalogCategoryFilter
 type: enum
-summary: ''
-description: ''
+summary: |
+  Filters Avatar Shop catalog search results by a predefined category such as
+  Featured, Premium, or Recommended.
+description: |
+  Used with `Datatype.CatalogSearchParams.CategoryFilter` to narrow Avatar Shop
+  catalog search results by category when calling
+  `Class.AvatarEditorService:SearchCatalogAsync()`. Defaults to
+  `Enum.CatalogCategoryFilter.None`, which applies no category filter and
+  returns items from all categories.
+
+  To filter by collectible items (Limited and Limited Unique), use
+  `Enum.SalesTypeFilter.Collectibles` via
+  `Datatype.CatalogSearchParams.SalesTypeFilter` instead of the deprecated
+  `Enum.CatalogCategoryFilter.Collectibles` value.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      No category filter is applied; returns items from all categories. This is
+      the default value of `Datatype.CatalogSearchParams.CategoryFilter`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Featured
-    summary: ''
+    summary: |
+      Returns only items editorially featured in the Avatar Shop catalog.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Collectibles
-    summary: ''
+    summary: |
+      Deprecated. Previously filtered for collectible items; use
+      `Enum.SalesTypeFilter.Collectibles` via
+      `Datatype.CatalogSearchParams.SalesTypeFilter` instead.
     value: 3
     tags:
       - Deprecated
     deprecation_message: ''
   - name: CommunityCreations
-    summary: ''
+    summary: |
+      Returns only items created by community developers.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Premium
-    summary: ''
+    summary: |
+      Returns only items available to Roblox Premium subscribers.
     value: 5
     tags: []
     deprecation_message: ''
   - name: Recommended
-    summary: ''
+    summary: |
+      Returns only items recommended by the catalog for the current user.
     value: 6
     tags: []
     deprecation_message: ''

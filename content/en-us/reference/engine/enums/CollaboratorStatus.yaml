@@ -4,29 +4,42 @@
 
 name: CollaboratorStatus
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the current editing activity of a collaborator in a Team Create
+  session.
+description: |
+  Describes the current editing activity of a collaborator in a Team Create
+  session. Stored on `Collaborator.Status` (defaults to
+  `Enum.CollaboratorStatus.None`) and updated server-side via
+  `CollaboratorsService`. Do not set `Collaborator.Status` from client code;
+  call through `CollaboratorsService` so server-side access checks apply.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      The collaborator has no active editing context; this is the default
+      status.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Editing3D
-    summary: ''
+    summary: |
+      The collaborator is actively working in the 3D viewport.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Scripting
-    summary: ''
+    summary: |
+      The collaborator is editing a script that is replicated to the server.
     value: 2
     tags: []
     deprecation_message: ''
   - name: PrivateScripting
-    summary: ''
+    summary: |
+      The collaborator is editing a script that is not replicated to the server
+      (a local or module script not visible server-side).
     value: 3
     tags: []
     deprecation_message: ''

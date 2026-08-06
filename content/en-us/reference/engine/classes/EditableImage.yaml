@@ -36,13 +36,13 @@ description: |
   For example, if you update three `EditableImage` objects which are currently
   being displayed, it will take three frames for all of them to be updated.
 
-  #### Enabling for Published Games
+  #### Enabling for Published Experiences
 
   For security purposes, using `EditableImage` fails by default for published
-  games. To enable usage, you must be 13+ age verified and ID verified. After
-  you're verified, navigate to the game's **Configure**&nbsp;⟩ **Settings** on
-  the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and
-  toggle on **Enable&nbsp;Mesh&nbsp;&#47;&nbsp;Image&nbsp;APIs**.
+  experiences. To enable usage, you must be 13+ age verified and ID verified.
+  After you are verified, open the
+  [Creator Dashboard](https://create.roblox.com/dashboard/creations) and toggle
+  on **Enable Mesh / Image APIs**.
 
   #### Permissions
 

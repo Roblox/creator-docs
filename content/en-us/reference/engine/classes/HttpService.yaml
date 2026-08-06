@@ -9,17 +9,17 @@ summary: |
   Allows sending HTTP requests and provides various web-related and JSON
   methods.
 description: |
-  `HttpService` allows HTTP requests to be sent from game servers using
+  `HttpService` allows HTTP requests to be sent from experience servers using
   `Class.HttpService:RequestAsync()|RequestAsync`,
   `Class.HttpService:GetAsync()|GetAsync` and
-  `Class.HttpService:PostAsync()|PostAsync`. This service allows games to be
-  integrated with third-party web services such as analytics, data storage,
+  `Class.HttpService:PostAsync()|PostAsync`. This service allows experiences to
+  be integrated with third-party web services such as analytics, data storage,
   remote server configuration, error reporting, advanced calculations, or
   real-time communication. Additionally, it can call a subset of the Open Cloud
   APIs.
 
   For more information about these use cases, see
-  [in-game HTTP requests](../../../cloud-services/http-service.md).
+  [In-experience HTTP requests](../../../cloud-services/http-service.md).
 
   `HttpService` also houses the `Class.HttpService:JSONEncode()|JSONEncode` and
   `Class.HttpService:JSONDecode()|JSONDecode` methods, which are useful for
@@ -38,7 +38,7 @@ description: |
   as it arrives instead of waiting for the entire response to complete.
 
   Only send HTTP requests to trusted third-party platforms to avoid introducing
-  unnecessary security risks to your game.
+  unnecessary security risks to your experience.
 code_samples:
   - Astronauts-in-Space
   - International-Space-Station
@@ -60,8 +60,8 @@ properties:
       `Class.HttpService:GetAsync()`, `Class.HttpService:PostAsync()`, and
       `Class.HttpService:RequestAsync()`.
 
-      This property must be toggled on for **unpublished** games by setting it
-      to `true` using the
+      This property must be toggled on for **unpublished** experiences by
+      setting this property to `true` using the
       [Command Bar](../../../studio/ui-overview.md#command-bar):
 
       `game:GetService("HttpService").HttpEnabled = true`
@@ -98,7 +98,7 @@ methods:
       `Datatype.RBXScriptConnection|RBXScriptConnections` to avoid memory leaks.
 
       This method is available in Studio only. If you use it inside scripts,
-      make sure to remove any references before publishing the game. We
+      make sure to remove any references before publishing the experience. We
       encourage you to create plugins with this feature for reusability and ease
       of use.
     code_samples:
@@ -156,6 +156,8 @@ methods:
 
       - `true`: `{94b717b2-d54f-4340-a504-bd809ef5bf5c}`
       - `false`: `db454790-7563-44ed-ab4b-397ff5df737b`
+
+      This method can be used regardless of whether HTTP requests are enabled.
     code_samples:
       - HttpService-GenerateGUID
     parameters:
@@ -187,6 +189,12 @@ methods:
 
       When `true`, the `nocache` parameter prevents this method from caching
       results from previous calls with the same `url`.
+
+      The `url` parameter also accepts a `Datatype.Secret` value; use
+      `Class.HttpService:GetSecret()|GetSecret` combined with
+      `Datatype.Secret:AddPrefix()|AddPrefix` and
+      `Datatype.Secret:AddSuffix()|AddSuffix` to safely embed secret credentials
+      (such as API keys) directly in the URL without exposing their values.
     code_samples:
       - Astronauts-in-Space
       - International-Space-Station
@@ -222,8 +230,8 @@ methods:
       Returns a `Datatype.Secret` from the secrets store.
     description: |
       This method returns a value previously added to the secrets store for the
-      game. The secret content is not printable and not available when the game
-      runs locally.
+      experience. The secret content is not printable and not available when the
+      experience runs locally.
 
       The returned `Datatype.Secret` can be transformed using built-in methods
       such as `Datatype.Secret:AddPrefix()`. It is expected to be sent as a part
@@ -236,10 +244,13 @@ methods:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the secret to fetch, matching the identifier under which
+          it was added to the experience's secrets store.
     returns:
       - type: Secret
-        summary: ''
+        summary: |
+          A `Datatype.Secret` wrapping the stored value associated with `key`.
     tags: []
     deprecation_message: ''
     security: None
@@ -337,8 +348,14 @@ methods:
       `Class.HttpService:RequestAsync()|RequestAsync()` should be used in most
       cases.
 
-      When `true`, the `compress` parameter controls whether large request
-      bodies will be compressed using **gzip**.
+      When `true`, the `compress` parameter controls whether a large request
+      body is compressed using **gzip**.
+
+      The `url` parameter also accepts a `Datatype.Secret` value — use
+      `Class.HttpService:GetSecret()|GetSecret` combined with
+      `Datatype.Secret:AddPrefix()|AddPrefix` and
+      `Datatype.Secret:AddSuffix()|AddSuffix`to safely embed secret credentials
+      (such as API keys) directly in the URL without exposing their values.
     code_samples:
       - HttpService-Pastebin
     parameters:

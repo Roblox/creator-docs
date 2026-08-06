@@ -19,20 +19,20 @@ description: |
   handles.Faces = Faces.new(Enum.NormalId.Front, Enum.NormalId.Left)
   ```
 
-  Like most data types on Roblox, the Faces data type is immutable: you cannot
-  assign to its properties once created.
+  Like most data types on Roblox, the `Faces` data type is immutable and you
+  cannot assign to its properties once created.
 code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
   - name: Faces.new
     summary: |
-      Returns a Faces with the corresponding face of each passed `Enum.NormalId`
-      as `true`.
+      Returns a `Faces` with the corresponding face of each passed
+      `Enum.NormalId` as `true`.
     description: |
-      Creates a new Faces given some number of `Enum.NormalId` as arguments.
-      Each NormalId provided indicates the property of the same name in the new
-      Faces will be true.
+      Creates a new `Faces` given some number of `Enum.NormalId` as arguments.
+      Each `Enum.NormalId` provided indicates the property of the same name in
+      the new `Faces` will be `true`.
 
       - The `Library.table.unpack()` function can be used to unpack a table of
         NormalId to be included.
@@ -42,7 +42,9 @@ constructors:
       - name: normalIds...
         type: Tuple
         default:
-        summary: ''
+        summary: |
+          Any number of `Enum.NormalId` values indicating which faces to enable
+          in the new `Faces`.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -53,7 +55,10 @@ properties:
     summary: |
       Whether the top face is included.
     description: |
-      Whether the top face is included.
+      Whether the top face (positive **Y** direction, corresponding to
+      `Enum.NormalId.Top`) is included in this `Datatype.Faces` value. Defaults
+      to `false` when `Enum.NormalId.Top` is not passed to the
+      `Datatype.Faces.new()` constructor.
     default:
     code_samples: []
     tags: []
@@ -63,7 +68,10 @@ properties:
     summary: |
       Whether the bottom face is included.
     description: |
-      Whether the bottom face is included.
+      Whether the bottom face (negative **Y** direction, corresponding to
+      `Enum.NormalId.Bottom`) is included in this `Datatype.Faces` value.
+      Defaults to `false` when `Enum.NormalId.Bottom` is not passed to the
+      `Datatype.Faces.new()` constructor.
     default:
     code_samples: []
     tags: []
@@ -73,7 +81,10 @@ properties:
     summary: |
       Whether the left face is included.
     description: |
-      Whether the left face is included.
+      Whether the left face (negative **X** direction, corresponding to
+      `Enum.NormalId.Left`) is included in this `Datatype.Faces` value. Defaults
+      to `false` when `Enum.NormalId.Left` is not passed to the
+      `Datatype.Faces.new()` constructor.
     default:
     code_samples: []
     tags: []
@@ -83,7 +94,10 @@ properties:
     summary: |
       Whether the right face is included.
     description: |
-      Whether the right face is included.
+      Whether the right face (positive **X** direction, corresponding to
+      `Enum.NormalId.Right`) is included in this `Datatype.Faces` value.
+      Defaults to `false` when `Enum.NormalId.Right` is not passed to the
+      `Datatype.Faces.new()` constructor.
     default:
     code_samples: []
     tags: []
@@ -93,7 +107,10 @@ properties:
     summary: |
       Whether the back face is included.
     description: |
-      Whether the back face is included.
+      Whether the back face (positive **Z** direction, corresponding to
+      `Enum.NormalId.Back`) is included in this `Datatype.Faces` value. Defaults
+      to `false` when `Enum.NormalId.Back` is not passed to the
+      `Datatype.Faces.new()` constructor.
     default:
     code_samples: []
     tags: []
@@ -103,7 +120,10 @@ properties:
     summary: |
       Whether the front face is included.
     description: |
-      Whether the front face is included.
+      Whether the front face (negative **Z** direction, corresponding to
+      `Enum.NormalId.Front`) is included in this `Datatype.Faces` value.
+      Defaults to `false` when `Enum.NormalId.Front` is not passed to the
+      `Datatype.Faces.new()` constructor.
     default:
     code_samples: []
     tags: []

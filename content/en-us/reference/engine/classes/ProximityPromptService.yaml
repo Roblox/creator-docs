@@ -49,8 +49,22 @@ properties:
     capabilities:
       - Input
   - name: ProximityPromptService.MaxIndicatorsVisible
-    summary: ''
-    description: ''
+    summary: |
+      Maximum number of prompt indicators that can be visible at once.
+    description: |
+      This property sets the maximum number of prompt indicators that can be
+      visible at the same time. Indicators are lightweight distance hints shown
+      for `Class.ProximityPrompt|ProximityPrompts` when the player is within the
+      prompt's `Class.ProximityPrompt.MaxIndicatorDistance|MaxIndicatorDistance`
+      but still outside its
+      `Class.ProximityPrompt.MaxActivationDistance|MaxActivationDistance`.
+
+      This property defaults to `16` and is clamped to the range `[0, 64]`.
+      Because indicators are opt-in per prompt — a prompt's
+      `Class.ProximityPrompt.MaxIndicatorDistance|MaxIndicatorDistance` defaults
+      to `0`, which disables its indicator — this property has no visible effect
+      unless at least one prompt sets a non-zero
+      `Class.ProximityPrompt.MaxIndicatorDistance|MaxIndicatorDistance`.
     code_samples: []
     type: int
     tags: []
@@ -89,28 +103,51 @@ properties:
 methods: []
 events:
   - name: ProximityPromptService.IndicatorHidden
-    summary: ''
-    description: ''
+    summary: |
+      Triggers client-side when a prompt's indicator becomes hidden.
+    description: |
+      This event triggers client-side in connected local scripts when the
+      indicator for a `Class.ProximityPrompt` is no longer visible, such as when
+      the player moves outside the prompt's
+      `Class.ProximityPrompt.MaxIndicatorDistance|MaxIndicatorDistance` or the
+      prompt is disabled. It is the counterpart to
+      `Class.ProximityPromptService.IndicatorShown|IndicatorShown` and is
+      convenient for tearing down custom indicator UI globally rather than
+      connecting to each individual `Class.ProximityPrompt`.
     code_samples: []
     parameters:
       - name: prompt
         type: ProximityPrompt
         default:
-        summary: ''
+        summary: |
+          The prompt whose indicator becomes hidden.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - Input
   - name: ProximityPromptService.IndicatorShown
-    summary: ''
-    description: ''
+    summary: |
+      Triggers client-side when a prompt's indicator becomes visible.
+    description: |
+      This event triggers client-side in connected local scripts when the
+      indicator for a `Class.ProximityPrompt` becomes visible, which happens
+      when the player moves within the prompt's
+      `Class.ProximityPrompt.MaxIndicatorDistance|MaxIndicatorDistance` but
+      remains outside its
+      `Class.ProximityPrompt.MaxActivationDistance|MaxActivationDistance`.
+      Indicators are opt-in: a prompt only shows one when its
+      `Class.ProximityPrompt.MaxIndicatorDistance|MaxIndicatorDistance` is set
+      greater than `0` (the default of `0` disables the indicator). Listening on
+      the service rather than on each `Class.ProximityPrompt` is convenient when
+      implementing custom indicator UI globally.
     code_samples: []
     parameters:
       - name: prompt
         type: ProximityPrompt
         default:
-        summary: ''
+        summary: |
+          The prompt whose indicator becomes visible.
     tags: []
     deprecation_message: ''
     security: None

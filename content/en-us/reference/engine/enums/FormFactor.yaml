@@ -4,7 +4,9 @@
 
 name: FormFactor
 type: enum
-summary: ''
+summary: |
+  Deprecated enum that previously controlled the minimum size and resize
+  increment of a `Class.FormFactorPart` along each axis.
 description: |
   The FormFactor Enum for `Class.FormFactorPart.FormFactor`.
 

@@ -4,34 +4,48 @@
 
 name: VideoCaptureStartedResult
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the outcome of a video capture start request made through
+  `Class.CaptureService`.
+description: |
+  Describes the outcome of a video capture start request initiated via
+  `Class.CaptureService:StartVideoCaptureAsync()`. The value is returned
+  directly by that method and is also surfaced through the
+  `UserVideoCaptureStartFailed` event when the result is not
+  `Enum.VideoCaptureStartedResult.Success`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Success
-    summary: ''
+    summary: |
+      Video capture started successfully.
     value: 0
     tags: []
     deprecation_message: ''
   - name: OtherError
-    summary: ''
+    summary: |
+      Video capture failed due to an unspecified internal error.
     value: 1
     tags: []
     deprecation_message: ''
   - name: CapturingAlready
-    summary: ''
+    summary: |
+      A video capture session is already in progress and a new one cannot be
+      started.
     value: 2
     tags: []
     deprecation_message: ''
   - name: NoDeviceSupport
-    summary: ''
+    summary: |
+      The device does not have the required capture capabilities.
     value: 3
     tags: []
     deprecation_message: ''
   - name: NoSpaceOnDevice
-    summary: ''
+    summary: |
+      The device does not have sufficient storage space available to begin
+      capturing video.
     value: 4
     tags: []
     deprecation_message: ''

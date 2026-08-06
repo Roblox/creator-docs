@@ -5,7 +5,9 @@
 name: HapticEffect
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  An object that provides waveform-based haptic feedback (vibrations and
+  rumbles) on supported controllers and mobile devices.
 description: |
   Modern controllers and devices have motors built‑in to provide haptic
   feedback. Adding rumbles and vibrations can provide subtle feedback that is
@@ -160,7 +162,11 @@ methods:
       - name: keys
         type: Array
         default:
-        summary: ''
+        summary: |
+          An array of `Datatype.FloatCurveKey` objects defining the custom
+          haptic waveform, where each key specifies a time in milliseconds, an
+          intensity value from 0 (no haptic) to 1 (full intensity), and an
+          `Enum.KeyInterpolationMode` for interpolation between keys.
     returns:
       - type: ()
         summary: ''

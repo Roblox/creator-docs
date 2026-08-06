@@ -4,7 +4,8 @@
 
 name: ExplosionType
 type: enum
-summary: ''
+summary: |
+  Determines whether an `Class.Explosion` creates craters when it detonates.
 description: |
   The ExplosionType Enum is used to set the `Class.Explosion.ExplosionType`
   property.

@@ -4,8 +4,15 @@
 
 name: FinishRecordingOperation
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how `Class.ChangeHistoryService:FinishRecording()` completes or
+  discards a recording session.
+description: |
+  Controls what `Class.ChangeHistoryService:FinishRecording()` does when a
+  plugin ends a recording. Pass `Enum.FinishRecordingOperation.Commit` to push
+  recorded changes onto the undo/redo stack,
+  `Enum.FinishRecordingOperation.Append` to merge them with the previous entry
+  when possible, or `Enum.FinishRecordingOperation.Cancel` to discard them.
 code_samples: []
 tags: []
 deprecation_message: ''

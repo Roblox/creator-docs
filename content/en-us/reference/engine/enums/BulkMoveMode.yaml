@@ -4,19 +4,39 @@
 
 name: BulkMoveMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines the set of property changed events that fire when parts are moved
+  by `Class.WorldRoot:BulkMoveTo()`.
+description: |
+  Determines which property `Class.Object.Changed|Changed` events fire when
+  `Class.WorldRoot:BulkMoveTo()` repositions parts. Passing
+  `Enum.BulkMoveMode.FireCFrameChanged` instead of
+  `Enum.BulkMoveMode.FireAllEvents` reduces per-part event overhead by
+  suppressing `Class.BasePart.Position|Position`,
+  `Class.BasePart.Orientation|Orientation`, and
+  `Class.BasePart.Rotation|Rotation` changed signals while still firing the
+  `Class.BasePart.CFrame|CFrame` changed signal. The default value of the
+  `eventMode` parameter in `Class.WorldRoot:BulkMoveTo()` is
+  `Enum.BulkMoveMode.FireAllEvents`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: FireAllEvents
-    summary: ''
+    summary: |
+      Every property changed event fires for each moved part, including
+      `Class.BasePart.CFrame|CFrame`, `Class.BasePart.Position|Position`,
+      `Class.BasePart.Orientation|Orientation`, and
+      `Class.BasePart.Rotation|Rotation`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: FireCFrameChanged
-    summary: ''
+    summary: |
+      Only the `Class.BasePart.CFrame|CFrame` property changed event fires for
+      each moved part; `Class.BasePart.Position|Position`,
+      `Class.BasePart.Orientation|Orientation`, and
+      `Class.BasePart.Rotation|Rotation` changed events are suppressed.
     value: 1
     tags: []
     deprecation_message: ''

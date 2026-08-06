@@ -4,24 +4,37 @@
 
 name: FACSDataLod
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the level of detail for FACS blendshape data transmitted by the face
+  tracking system.
+description: |
+  `FACSDataLod` controls how many FACS (Facial Action Coding System) blendshape
+  weights the face tracking system transmits and processes. Higher LOD numbers
+  transmit fewer controls, reducing network and CPU cost at the expense of
+  facial animation fidelity. The active LOD is selected automatically at runtime
+  based on performance.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: LOD0
-    summary: ''
+    summary: |
+      Full-fidelity FACS data transmitting all 50 blendshape controls.
     value: 0
     tags: []
     deprecation_message: ''
   - name: LOD1
-    summary: ''
+    summary: |
+      Reduced FACS data transmitting 6 blendshape controls: JawDrop,
+      RightEyeClosed, LeftEyeClosed, RightLipCornerPuller, LeftLipCornerPuller,
+      and Pucker.
     value: 1
     tags: []
     deprecation_message: ''
   - name: LODCount
-    summary: ''
+    summary: |
+      Sentinel value equal to the total number of FACSDataLod levels; not a
+      valid LOD to assign.
     value: 2
     tags: []
     deprecation_message: ''

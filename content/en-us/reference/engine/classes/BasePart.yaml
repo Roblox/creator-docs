@@ -2478,7 +2478,9 @@ methods:
           `Class.JointInstance|joint`.
     returns:
       - type: List<BasePart>
-        summary: ''
+        summary: |
+          An array of `Class.BasePart|BaseParts` connected to this part by rigid
+          joints. If `recursive` is true, includes all parts in the assembly.
     tags: []
     deprecation_message: ''
     security: None
@@ -2580,13 +2582,25 @@ methods:
     capabilities: []
     simulationAccess: true
   - name: BasePart:GetNoCollisionConstraints
-    summary: ''
-    description: ''
+    summary: |
+      Returns the enabled `Class.NoCollisionConstraint` objects currently
+      registered for this part in its physics world.
+    description: |
+      Returns the enabled `Class.NoCollisionConstraint` objects currently
+      registered for this part in its physics world. A
+      `Class.NoCollisionConstraint` disables collisions between the two specific
+      parts it references, while each of those parts may still collide with the
+      rest of the world.
+
+      The returned array is empty if no such constraint is currently registered
+      for this part. The order of the returned constraints is not guaranteed.
     code_samples: []
     parameters: []
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          An array of the enabled `Class.NoCollisionConstraint` objects
+          currently registered for this part in its physics world.
     tags: []
     deprecation_message: ''
     security: None
@@ -2604,7 +2618,9 @@ methods:
     parameters: []
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          The `Datatype.CFrame` representing where the part is being rendered,
+          which is now equivalent to the part's `Class.BasePart.CFrame|CFrame`.
     tags:
       - Deprecated
     deprecation_message: |
@@ -2681,10 +2697,14 @@ methods:
       - name: position
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The world-space position at which to compute the assembly's linear
+          velocity.
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` representing the linear velocity of the assembly
+          at the specified world-space position.
     tags: []
     deprecation_message: ''
     security: None
@@ -2693,25 +2713,8 @@ methods:
     simulationAccess: true
   - name: BasePart:IntersectAsync
     summary: |
-      Note: It is highly recommended to use the newer
-      `Class.GeometryService:IntersectAsync` instead of this function. As well
-      as having better performance and more features, the new function differs
-      as follows:
-
-      - The output is an array of instances rather than a single instance.
-      - The input parts do not need to be parented to the scene, allowing for
-        background operations.
-      - When the `SplitApart` option is set to `true` (default), each distinct
-        body will be returned in its own `Class.PartOperation`.
-      - All the returned parts are in the coordinate space of the main part, so
-        their `Class.PVInstance.Origin` positions are the same as the main
-        part's. This keeps the vertices of the mesh in the same position
-        relative to the object as before the operation, but it does also mean
-        the `(0, 0, 0)` of a returned part is not necessarily at the center of
-        its body.
-
-        Creates a new `Class.IntersectOperation` from the overlapping geometry
-        of the part and the other parts in the given array.
+      Creates a new `Class.IntersectOperation` from the overlapping geometry of
+      the part and the other parts in the given array.
     description: |
       Creates a new `Class.IntersectOperation` from the intersecting geometry of
       the part and the other parts in the given array. Only `Class.Part|Parts`
@@ -2733,22 +2736,24 @@ methods:
         `Class.BasePart.Friction|Friction`,
         `Class.BasePart.FrictionWeight|FrictionWeight`
 
-      In the following image comparison,
-      `Class.BasePart:IntersectAsync()|IntersectAsync()` is called on the purple
-      block using a table containing the blue block. The resulting
-      `Class.IntersectOperation` resolves into a shape of the intersecting
-      geometry of both parts.
+      #### Migration
 
-      <figure>
-      <img src="../../../assets/modeling/solid-modeling/Separate-Parts-To-Intersect.jpg"
-      width="720" alt="Two block parts overlapping" />
-      <figcaption>Separate parts</figcaption>
-      </figure>
-      <figure>
-      <img src="../../../assets/modeling/solid-modeling/Intersect-Result.jpg"
-      width="720" alt="Parts intersected into a new solid model" />
-      <figcaption>Resulting <code>Class.IntersectOperation</code></figcaption>
-      </figure>
+      It is highly recommended to use the newer
+      `Class.GeometryService:IntersectAsync()` instead of this method. As well
+      as having better performance and more features, the new method differs as
+      follows:
+
+      - The output is an array of instances rather than a single instance.
+      - The input parts do not need to be parented to the scene, allowing for
+        background operations.
+      - When the `SplitApart` option is set to `true` (default), each distinct
+        body will be returned in its own `Class.PartOperation`.
+      - All the returned parts are in the coordinate space of the main part, so
+        their `Class.PVInstance.Origin` positions are the same as the main
+        part's. This keeps the vertices of the mesh in the same position
+        relative to the object as before the operation, but it does also mean
+        the `(0, 0, 0)` of a returned part is not necessarily at the center of
+        its body.
 
       #### Notes
 
@@ -2972,9 +2977,23 @@ methods:
     simulationAccess: true
   - name: BasePart:SubtractAsync
     summary: |
-      Note: It is highly recommended to use the newer
-      `Class.GeometryService:UnionAsync` instead of this function. As well as
-      having better performance and more features, the new function differs as
+      Creates a new `Class.UnionOperation` from the part, minus the geometry
+      occupied by the parts in the given array.
+    description: |
+      Creates a new `Class.UnionOperation` from the part, minus the geometry
+      occupied by the parts in the given array. Only `Class.Part|Parts` are
+      supported, not `Class.Terrain` or `Class.MeshPart|MeshParts`. Similar to
+      `Class.Instance:Clone()|Clone()`, the returned object has no set
+      `Class.Instance.Parent|Parent`.
+
+      Note that the resulting union cannot be empty due to subtractions. If the
+      operation would result in completely empty geometry, it will fail.
+
+      #### Migration
+
+      It is highly recommended to use the newer
+      `Class.GeometryService:SubtractAsync()` instead of this method. As well as
+      having better performance and more features, the new method differs as
       follows:
 
       - The output is an array of instances rather than a single instance.
@@ -2988,37 +3007,7 @@ methods:
         relative to the object as before the operation, but it does also mean
         the `(0, 0, 0)` of a returned part is not necessarily at the center of
         its body.
-
-        Creates a new `Class.UnionOperation` from the part, minus the geometry
-        occupied by the parts in the given array.
-    description: |
-      Creates a new `Class.UnionOperation` from the part, minus the geometry
-      occupied by the parts in the given array. Only `Class.Part|Parts` are
-      supported, not `Class.Terrain` or `Class.MeshPart|MeshParts`. Similar to
-      `Class.Instance:Clone()|Clone()`, the returned object has no set
-      `Class.Instance.Parent|Parent`.
-
-      Note that the resulting union cannot be empty due to subtractions. If the
-      operation would result in completely empty geometry, it will fail.
-
-      In the following image comparison,
-      `Class.BasePart:SubtractAsync()|SubtractAsync()` is called on the blue
-      cylinder using a table containing the purple block. The resulting
-      `Class.UnionOperation` resolves into a shape that omits the block's
-      geometry from that of the cylinder.
-
-      <figure>
-      <img src="../../../assets/modeling/solid-modeling/Separate-Parts-To-Subtract.jpg"
-      width="720" alt="Longer block overlapping a cylinder" />
-      <figcaption>Separate parts</figcaption>
-      </figure>
-      <figure>
-      <img src="../../../assets/modeling/solid-modeling/Negate-Result.jpg" width="720"
-      alt="Block part subtracted from cylinder" />
-      <figcaption>Resulting <code>Class.UnionOperation</code></figcaption>
-      </figure>
-    code_samples:
-      - PartOperation-SubtractAsync
+    code_samples: []
     parameters:
       - name: parts
         type: Instances
@@ -3107,26 +3096,8 @@ methods:
     simulationAccess: true
   - name: BasePart:UnionAsync
     summary: |
-      Note: It is highly recommended to use the newer
-      `Class.GeometryService:UnionAsync` instead of this function. As well as
-      having better performance and more features, the new function differs as
-      follows:
-
-      - The output is an array of instances rather than a single instance.
-      - The input parts do not need to be parented to the scene, allowing for
-        background operations.
-      - When the `SplitApart` option is set to `true` (default), each distinct
-        body will be returned in its own `Class.PartOperation`.
-      - All the returned parts are in the coordinate space of the main part, so
-        their `Class.PVInstance.Origin` positions are the same as the main
-        part's. This keeps the vertices of the mesh in the same position
-        relative to the object as before the operation, but it does also mean
-        the `(0, 0, 0)` of a returned part is not necessarily at the center of
-        its body.
-
-              Creates a new `Class.UnionOperation` from the part, plus the geometry
-
-        occupied by the parts in the given array.
+      Creates a new `Class.UnionOperation` from the part, plus the geometry
+      occupied by the parts in the given array.
     description: |
       Creates a new `Class.UnionOperation` from the part, plus the geometry
       occupied by the parts in the given array. Only `Class.Part|Parts` are
@@ -3148,22 +3119,24 @@ methods:
         `Class.BasePart.Friction|Friction`,
         `Class.BasePart.FrictionWeight|FrictionWeight`
 
-      In the following image comparison,
-      `Class.BasePart:UnionAsync()|UnionAsync()` is called on the blue block
-      using a table containing the purple cylinder. The resulting
-      `Class.UnionOperation` resolves into a shape of the combined geometry of
-      both parts.
+      #### Migration
 
-      <figure>
-      <img src="../../../assets/modeling/solid-modeling/Separate-Parts-To-Union.jpg"
-      width="720" alt="Block and cylinder parts overlapping" />
-      <figcaption>Separate parts</figcaption>
-      </figure>
-      <figure>
-      <img src="../../../assets/modeling/solid-modeling/Union-Result.jpg" width="720"
-      alt="Parts joined together into a single solid union" />
-      <figcaption>Resulting <code>Class.UnionOperation</code></figcaption>
-      </figure>
+      It is highly recommended to use the newer
+      `Class.GeometryService:UnionAsync()` instead of this method. As well as
+      having better performance and more features, the new method differs as
+      follows:
+
+      - The output is an array of instances rather than a single instance.
+      - The input parts do not need to be parented to the scene, allowing for
+        background operations.
+      - When the `SplitApart` option is set to `true` (default), each distinct
+        body will be returned in its own `Class.PartOperation`.
+      - All the returned parts are in the coordinate space of the main part, so
+        their `Class.PVInstance.Origin` positions are the same as the main
+        part's. This keeps the vertices of the mesh in the same position
+        relative to the object as before the operation, but it does also mean
+        the `(0, 0, 0)` of a returned part is not necessarily at the center of
+        its body.
 
       #### Notes
 
@@ -3177,8 +3150,7 @@ methods:
         `Class.PartOperation.UsePartColor|UsePartColor` property to `true`.
       - If a union operation would result in a part with more than 20,000
         triangles, it will be simplified to 20,000 triangles.
-    code_samples:
-      - PartOperation-UnionAsync
+    code_samples: []
     parameters:
       - name: parts
         type: Instances
@@ -3210,7 +3182,9 @@ methods:
       - CSG
 events:
   - name: BasePart.LocalSimulationTouched
-    summary: ''
+    summary: |
+      Fires on the local client when another part comes in contact with this
+      part.
     description: |
       Fired when another part comes in contact with another object. This event
       only sends data to the client notifying it that two parts have collided,
@@ -3221,7 +3195,8 @@ events:
       - name: part
         type: BasePart
         default:
-        summary: ''
+        summary: |
+          The other part that came in contact with this part.
     tags:
       - Deprecated
     deprecation_message: |
@@ -3229,7 +3204,8 @@ events:
     security: None
     capabilities: []
   - name: BasePart.OutfitChanged
-    summary: ''
+    summary: |
+      Fires when the part's appearance changes due to a `Class.Shirt`.
     description: |
       Fired if the part's appearance is affected by the `Class.Shirt` class.
     code_samples: []
@@ -3241,14 +3217,22 @@ events:
     security: None
     capabilities: []
   - name: BasePart.StoppedTouching
-    summary: ''
-    description: ''
+    summary: |
+      Fires on the local client when a part stops touching another part.
+    description: |
+      Deprecated. Fires on the local client when a part stops touching another
+      part, under conditions similar to those of `Class.BasePart.TouchEnded`.
+      This event is the client-only counterpart to `Class.BasePart.TouchEnded`:
+      it only notifies the local client that the two parts have separated,
+      whereas `Class.BasePart.TouchEnded` also sends data to the server. Use
+      `Class.BasePart.TouchEnded` instead.
     code_samples: []
     parameters:
       - name: otherPart
         type: BasePart
         default:
-        summary: ''
+        summary: |
+          The other part that stopped touching the given part.
     tags:
       - Deprecated
     deprecation_message: |
@@ -3306,7 +3290,8 @@ events:
       - name: otherPart
         type: BasePart
         default:
-        summary: ''
+        summary: |
+          The other part that stopped touching this part.
     tags: []
     deprecation_message: ''
     security: None

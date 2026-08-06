@@ -4,24 +4,45 @@
 
 name: RuntimeUndoBehavior
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how `Class.ChangeHistoryService` records and handles undo history
+  during a Studio playtest session.
+description: |
+  `RuntimeUndoBehavior` is the type of the
+  `ChangeHistoryService.RuntimeUndoBehavior` property and determines what Studio
+  does when a waypoint is requested (via
+  `Class.ChangeHistoryService:SetWaypoint()` or the recording API) while the
+  game is in the run state (i.e., during a playtest). The three values offer
+  different trade-offs between undo granularity and physics-change handling.
+
+  The default behavior is `Enum.RuntimeUndoBehavior.Aggregate`: waypoints are
+  suppressed during the run, all runtime edits accumulate into a single
+  waypoint, and they are all reverted at once when the playtest stops or resets.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Aggregate
-    summary: ''
+    summary: |
+      Rejects waypoint requests during a run session; all runtime changes
+      accumulate into a single waypoint that is reverted together when the
+      session stops or resets.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Snapshot
-    summary: ''
+    summary: |
+      Accepts waypoint requests during a run session and captures a snapshot of
+      each instance's position and velocity at every waypoint boundary so that
+      physics state can be fully restored on undo.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Hybrid
-    summary: ''
+    summary: |
+      Accepts waypoint requests during a run session but excludes unsolicited
+      physics changes (position and velocity drift from simulation) from the
+      recorded history.
     value: 2
     tags: []
     deprecation_message: ''

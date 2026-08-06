@@ -9,8 +9,16 @@ summary: |
   An object which handles the replication of other objects either from the
   server to the client, or from the client to the server.
 description: |
-  An object which handles the replication of other objects either from the
-  server to the client, or from the client to the server.
+  Each `NetworkReplicator` corresponds to a single network connection between
+  two peers and serializes, transmits, receives, and applies the stream of data
+  model changes (new instances, property and attribute changes, event
+  invocations, and instance removals) that keeps those peers in sync. It is the
+  base class for the two concrete replicators: a `Class.ServerReplicator` runs
+  on the server and replicates between the server and the connected client,
+  while a `Class.ClientReplicator` runs on a client and replicates between that
+  client and the server. A `NetworkReplicator` is created and managed by the
+  engine automatically as clients connect and disconnect, and is not
+  instantiated or manipulated by creator scripts.
 code_samples: []
 inherits:
   - Instance
@@ -27,12 +35,19 @@ methods:
     summary: |
       Returns the player that is connected to the NetworkReplicator.
     description: |
-      Returns the player that is connected to the NetworkReplicator.
+      Returns the `Class.Player` associated with the connection that this
+      `NetworkReplicator` serves. On a `Class.ServerReplicator`, this is the
+      remote client's player; on a `Class.ClientReplicator` it is the local
+      player. Returns `nil` if the replicator has no target player, such as
+      before the connection has been assigned a player or after it has been torn
+      down.
     code_samples: []
     parameters: []
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          The `Class.Player` associated with this `NetworkReplicator`
+          connection, or `nil` if the replicator has no target player.
     tags: []
     deprecation_message: ''
     security: None

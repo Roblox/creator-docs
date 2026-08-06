@@ -4,104 +4,144 @@
 
 name: LexemeType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies the category of a token produced when the Studio Explorer filter
+  bar lexes a filter expression.
+description: |
+  Studio-only Explorer filter lexer token kinds — not used by experience
+  scripts. Classifies each token produced while tokenizing text in the Studio
+  Explorer filter search bar. The lexer assigns one of these categories to every
+  token; the parser builds an expression tree that the filter evaluates against
+  the Explorer hierarchy.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Eof
-    summary: ''
+    summary: |
+      End-of-input token emitted when the lexer reaches the end of the filter
+      string.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Name
-    summary: ''
+    summary: |
+      An unquoted identifier token, such as an instance name or property key in
+      a filter expression.
     value: 1
     tags: []
     deprecation_message: ''
   - name: QuotedString
-    summary: ''
+    summary: |
+      A string literal token delimited by single (`'`) or double (`"`) quotes,
+      with backslash escape support.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Number
-    summary: ''
+    summary: |
+      A numeric literal token representing an integer or decimal value used in a
+      comparison.
     value: 3
     tags: []
     deprecation_message: ''
   - name: And
-    summary: ''
+    summary: |
+      The case-insensitive keyword `and`, used to combine filter conditions with
+      logical AND.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Or
-    summary: ''
+    summary: |
+      The case-insensitive keyword `or`, used to combine filter conditions with
+      logical OR.
     value: 5
     tags: []
     deprecation_message: ''
   - name: Equal
-    summary: ''
+    summary: |
+      The equality comparison operator, matched as `=` or `==` in a filter
+      expression.
     value: 6
     tags: []
     deprecation_message: ''
   - name: TildeEqual
-    summary: ''
+    summary: |
+      The not-equal comparison operator (`~=`).
     value: 7
     tags: []
     deprecation_message: ''
   - name: GreaterThan
-    summary: ''
+    summary: |
+      The greater-than comparison operator (`>`).
     value: 8
     tags: []
     deprecation_message: ''
   - name: GreaterThanEqual
-    summary: ''
+    summary: |
+      The greater-than-or-equal comparison operator (`>=`).
     value: 9
     tags: []
     deprecation_message: ''
   - name: LessThan
-    summary: ''
+    summary: |
+      The less-than comparison operator (`<`).
     value: 10
     tags: []
     deprecation_message: ''
   - name: LessThanEqual
-    summary: ''
+    summary: |
+      The less-than-or-equal comparison operator (`<=`).
     value: 11
     tags: []
     deprecation_message: ''
   - name: Colon
-    summary: ''
+    summary: |
+      The colon character (`:`), used as a separator in filter expressions such
+      as `ClassName:PropertyName`.
     value: 12
     tags: []
     deprecation_message: ''
   - name: Dot
-    summary: ''
+    summary: |
+      The dot character (`.`), used to navigate nested property paths in a
+      filter expression.
     value: 13
     tags: []
     deprecation_message: ''
   - name: LeftParenthesis
-    summary: ''
+    summary: |
+      The opening parenthesis character (`(`), used to begin a grouped
+      subexpression in a filter.
     value: 14
     tags: []
     deprecation_message: ''
   - name: RightParenthesis
-    summary: ''
+    summary: |
+      The closing parenthesis character (`)`), used to end a grouped
+      subexpression in a filter.
     value: 15
     tags: []
     deprecation_message: ''
   - name: Star
-    summary: ''
+    summary: |
+      The single wildcard character (`*`), used to match any single name segment
+      in a filter path.
     value: 16
     tags: []
     deprecation_message: ''
   - name: DoubleStar
-    summary: ''
+    summary: |
+      The double wildcard token (`**`), which matches any number of path
+      segments recursively across the instance hierarchy.
     value: 17
     tags: []
     deprecation_message: ''
   - name: ReservedSpecial
-    summary: ''
+    summary: |
+      A character that is syntactically recognized but has no defined meaning in
+      the current filter grammar.
     value: 18
     tags: []
     deprecation_message: ''

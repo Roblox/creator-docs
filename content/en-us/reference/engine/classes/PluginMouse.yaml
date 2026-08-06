@@ -43,7 +43,9 @@ events:
       - name: instances
         type: Instances
         default:
-        summary: ''
+        summary: |
+          An array of the `Class.Instance|Instances` that were inserted into the
+          3D viewport by the drag-and-drop operation.
     tags: []
     deprecation_message: ''
     security: PluginSecurity

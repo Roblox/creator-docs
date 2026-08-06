@@ -5,8 +5,14 @@
 name: Hat
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A deprecated accessory container superseded by `Class.Accessory`.
+description: |
+  A deprecated legacy accessory container. `Class.Hat` is effectively a
+  deprecated alias for the same `Class.Accoutrement` behavior used by
+  accessories: it has no additional members beyond `Class.Accoutrement`, and
+  Attachment-based positioning works on any limb (not only the head). Prefer
+  `Class.Accessory` for new work.
 code_samples:
   - Hat1
 inherits:

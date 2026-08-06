@@ -7,7 +7,12 @@ type: enum
 summary: |
   Controls the `Class.Part.Shape` of an object.
 description: |
-  The **PartType** enum controls the `Class.Part.Shape|Shape` of a `Class.Part`.
+  The **PartType** enum specifies the primitive geometry shape of a
+  `Class.Part`, assigned through its `Class.Part.Shape|Shape` property. A new
+  `Class.Part` defaults to `Block`. The five available shapes are Ball (sphere),
+  Block (rectangular prism), Cylinder (oriented along the X axis), Wedge (a ramp
+  with a slope on one face), and CornerWedge (a ramp with slopes on two
+  perpendicular faces).
 code_samples: []
 tags: []
 deprecation_message: ''

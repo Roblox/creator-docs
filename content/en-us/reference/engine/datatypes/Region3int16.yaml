@@ -62,11 +62,13 @@ constructors:
       - name: min
         type: Vector3int16
         default:
-        summary: ''
+        summary: |
+          The lower bound of the region.
       - name: max
         type: Vector3int16
         default:
-        summary: ''
+        summary: |
+          The upper bound of the region.
     code_samples: []
     tags: []
     deprecation_message: ''

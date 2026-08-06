@@ -35,9 +35,17 @@ In cross-platform development, it's important that you determine and respond to 
 
 For example, a touch‑enabled device assumes touch is the **default** input and that touch buttons may appear for actions, but a player may choose to connect a bluetooth gamepad. In this case, touch remains a valid input, but you can assume the player wants to switch to the connected gamepad as the **primary** input type and possibly use touch as a backup input for on‑screen UI.
 
+If you're using the [Input Action System](../input/input-action-system.md), the `Class.InputAction.PreferredBinding|PreferredBinding` property complements primary input detection: just as `Class.UserInputService.PreferredInput|PreferredInput` reports the player's current primary input type, `Class.InputAction.PreferredBinding|PreferredBinding` reports the specific `Class.InputBinding` that matches the player's current device. Both update automatically as the player switches devices, so you can drive device‑aware UI without writing device‑switch logic yourself.
+
 ### Assistive hints
 
 Based on the [primary input type](#input-type-detection), it's recommended that you include **assistive UI hints** whenever possible. For example, when selecting tools to equip, display input‑specific hints such as <kbd>1</kbd>–<kbd>5</kbd> when the player is using a keyboard, or gamepad trigger hints when the player is using a gamepad.
+
+<Alert severity="success">
+For no-code assistive hints that automatically update when the player switches devices, use `Class.InputActionLabel` and point it at any `Class.InputAction` to display the correct input per platform. See [displaying bindings](../input/input-action-system.md#displaying-bindings) for full details.
+</Alert>
+
+For more granular control, or if you need to customize hint display beyond what `Class.InputActionLabel` offers, you can use the `Class.UserInputService` methods below to manually gather platform‑specific images and strings:
 
 <Tabs>
 <TabItem label="Keyboard Input">
@@ -160,7 +168,7 @@ Ensure that all text is legible on all screens. Also make sure all UI has [suffi
 
 Even with UI elements [properly sized](#position-and-size) across all device screen sizes, the overall game should meet [accessibility standards](../production/publishing/accessibility.md) for players with impaired vision or color blindness. Text size can factor heavily into the legibility of text‑based UI, so you should include a [text size constraint](../ui/size-modifiers.md#text-size) to ensure text doesn't become illegible (too&nbsp;small) or visually too large on larger screens like 4K&nbsp;TVs.
 
-For more tips on accessibility, see [here](../production/publishing/accessibility.md).
+For more tips on accessibility, see [accessibility guidelines](../production/publishing/accessibility.md).
 
 ## Final tips & tricks
 

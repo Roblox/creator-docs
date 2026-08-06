@@ -80,7 +80,9 @@ constructors:
       - name: 'n'
         type: number
         default:
-        summary: ''
+        summary: |
+          The constant value used for both the start and end keypoints of the
+          sequence.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -104,11 +106,13 @@ constructors:
       - name: n0
         type: number
         default:
-        summary: ''
+        summary: |
+          The value at the start of the sequence (time 0).
       - name: n1
         type: number
         default:
-        summary: ''
+        summary: |
+          The value at the end of the sequence (time 1).
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -134,7 +138,10 @@ constructors:
       - name: Keypoints
         type: Array
         default:
-        summary: ''
+        summary: |
+          An array of `Datatype.NumberSequenceKeypoint|NumberSequenceKeypoints`
+          ordered by non-descending time, starting at time 0 and ending at time
+          1, with a maximum of 20 keypoints.
     code_samples: []
     tags: []
     deprecation_message: ''

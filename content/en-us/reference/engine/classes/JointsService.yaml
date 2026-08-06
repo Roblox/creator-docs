@@ -75,7 +75,9 @@ methods:
       - name: joinInstance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.PVInstance` to be joined to the target set by
+          `Class.JointsService:SetJoinAfterMoveTarget()`.
     returns:
       - type: ()
         summary: ''
@@ -97,7 +99,9 @@ methods:
       - name: joinTarget
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.PVInstance` to serve as the connection target for the
+          instance set by `Class.JointsService:SetJoinAfterMoveInstance()`.
     returns:
       - type: ()
         summary: ''

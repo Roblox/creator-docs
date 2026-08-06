@@ -189,11 +189,17 @@ properties:
       - UI
   - name: TextLabel.LocalizedText
     summary: |
-      Sets whether a `Class.TextLabel` should be `Class.GuiBase2d.Localize` or
-      not.
+      Read-only string containing the automatically-localized text that the
+      `Class.TextLabel` renders.
     description: |
-      This property sets whether a `Class.TextLabel` should regard
-      `Class.GuiBase2d.Localize` or not.
+      This read-only property holds the automatically-localized text that the
+      `Class.TextLabel` renders. When automatic localization is enabled through
+      `Class.GuiBase2d.AutoLocalize|AutoLocalize` and the label's
+      `Class.TextLabel.Text|Text` matches an entry in an applicable localization
+      table for the player's locale, this property contains the translated
+      string that is actually displayed; when no translation applies, it falls
+      back to the label's own text. It defaults to an empty string and can't be
+      set from a script.
     code_samples: []
     type: string
     tags:
@@ -241,8 +247,23 @@ properties:
     capabilities:
       - UI
   - name: TextLabel.OpenTypeFeatures
-    summary: ''
-    description: ''
+    summary: |
+      Applies OpenType typographic features to the text rendered by the
+      `Class.TextLabel`.
+    description: |
+      This property is a comma-separated list of OpenType feature tags that are
+      applied when the `Class.TextLabel` shapes and renders its text, such as
+      `zero` for slashed zeros or `ss03` for a stylistic set. It defaults to an
+      empty string, which applies no additional features.
+
+      Each entry uses the standard OpenType feature-string syntax (for example,
+      `zero` or `ss03`). Only a supported subset of features is applied; a
+      feature that isn't supported, a malformed string, or the bracketed
+      partial-enabling syntax (for example, `zero[1:3]`) is rejected, and the
+      reason is reported through
+      `Class.TextLabel.OpenTypeFeaturesError|OpenTypeFeaturesError`.
+
+      This property supports [styling](../../../ui/styling/index.md).
     code_samples: []
     type: string
     tags: []
@@ -258,8 +279,24 @@ properties:
     capabilities:
       - UI
   - name: TextLabel.OpenTypeFeaturesError
-    summary: ''
-    description: ''
+    summary: |
+      Read-only property that describes why the
+      `Class.TextLabel.OpenTypeFeatures` string could not be applied.
+    description: |
+      This read-only property reports the error, if any, encountered while
+      parsing and applying the
+      `Class.TextLabel.OpenTypeFeatures|OpenTypeFeatures` string. It defaults to
+      an empty string, which indicates that the requested features were applied
+      successfully.
+
+      When a feature can't be applied, this property is set to one of the
+      following messages:
+
+      - `Failed to parse features.` when a feature string is malformed.
+      - `Unsupported feature: <tag>` when a feature isn't part of the supported
+        set.
+      - `Partial feature enabling not supported.` when the string uses the
+        bracketed range syntax.
     code_samples: []
     type: string
     tags:
@@ -418,7 +455,15 @@ properties:
     summary: |
       Direction in which the text is rendered.
     description: |
-      `Enum.TextDirection` in which the text is rendered.
+      This property sets the base direction in which the `Class.TextLabel`
+      orders and renders its text, using a value of the `Enum.TextDirection`
+      enum. It defaults to `Enum.TextDirection.Auto`, which infers the direction
+      from the content of `Class.TextLabel.Text|Text` so that left-to-right and
+      right-to-left scripts are ordered correctly. Set it to
+      `Enum.TextDirection.LeftToRight` or `Enum.TextDirection.RightToLeft` to
+      force a specific direction regardless of the text content.
+
+      This property supports [styling](../../../ui/styling/index.md).
     code_samples: []
     type: TextDirection
     tags: []
@@ -438,8 +483,15 @@ properties:
       A boolean representation of whether the label's text fits within the size
       of it.
     description: |
-      A boolean representation of whether the label's text fits within the size
-      of it.
+      This read-only property is `true` when the text rendered by the
+      `Class.TextLabel` fits entirely within the element's
+      `Class.GuiBase2d.AbsoluteSize`, and `false` when the text is too large and
+      is therefore clipped or truncated. It's computed from
+      `Class.TextLabel.TextBounds|TextBounds` relative to the available space,
+      so it reflects the combined effect of
+      `Class.TextLabel.TextWrapped|TextWrapped`,
+      `Class.TextLabel.TextTruncate|TextTruncate`, and
+      `Class.TextLabel.TextScaled|TextScaled`.
     code_samples: []
     type: boolean
     tags:
@@ -609,7 +661,16 @@ properties:
     summary: |
       Controls the truncation of the text displayed in the `Class.TextLabel`.
     description: |
-      Controls the truncation of the text displayed in the `Class.TextLabel`.
+      This property controls how the `Class.TextLabel` truncates text that is
+      too large to fit within the element, using a value of the
+      `Enum.TextTruncate` enum. It defaults to `Enum.TextTruncate.None`, which
+      leaves text untruncated. `Enum.TextTruncate.AtEnd` truncates at word
+      boundary and replaces the overflowing graphemes with an ellipsis (`...`),
+      respecting word boundaries where possible, while
+      `Enum.TextTruncate.SplitWord` truncates inside a word when the line ends
+      in the middle of one.
+
+      This property supports [styling](../../../ui/styling/index.md).
     code_samples: []
     type: TextTruncate
     tags: []

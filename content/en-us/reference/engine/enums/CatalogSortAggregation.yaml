@@ -4,39 +4,53 @@
 
 name: CatalogSortAggregation
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the time window over which catalog items are aggregated when sorting
+  `Datatype.CatalogSearchParams` results.
+description: |
+  Specifies the time window used to aggregate catalog item data when sorting
+  search results via `Datatype.CatalogSearchParams.SortAggregation`. The
+  selected period determines which sales, popularity, or relevance signals are
+  counted toward the sort order. `Enum.CatalogSortAggregation.AllTime` is the
+  default.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Past12Hours
-    summary: ''
+    summary: |
+      Aggregates catalog data from the past 12 hours when sorting search
+      results.
     value: 1
     tags: []
     deprecation_message: ''
   - name: PastDay
-    summary: ''
+    summary: |
+      Aggregates catalog data from the past day when sorting search results.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Past3Days
-    summary: ''
+    summary: |
+      Aggregates catalog data from the past 3 days when sorting search results.
     value: 3
     tags: []
     deprecation_message: ''
   - name: PastWeek
-    summary: ''
+    summary: |
+      Aggregates catalog data from the past week when sorting search results.
     value: 4
     tags: []
     deprecation_message: ''
   - name: PastMonth
-    summary: ''
+    summary: |
+      Aggregates catalog data from the past month when sorting search results.
     value: 5
     tags: []
     deprecation_message: ''
   - name: AllTime
-    summary: ''
+    summary: |
+      Aggregates catalog data across all time when sorting search results.
     value: 6
     tags: []
     deprecation_message: ''

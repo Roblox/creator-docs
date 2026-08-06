@@ -91,35 +91,6 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-  - name: ScriptDebuggerService:RemoveBreakpoint
-    summary: |
-      Removes the breakpoint on the given script and line.
-    description: |
-      Removes the breakpoint at the specified line in the given script. Returns
-      `false` if no breakpoint exists on the line (no-op). Errors if the script
-      instance or line number is invalid.
-    code_samples: []
-    parameters:
-      - name: scriptInstance
-        type: LuaSourceContainer
-        default:
-        summary: |
-          The `Class.LuaSourceContainer` containing the breakpoint.
-      - name: line
-        type: int
-        default:
-        summary: |
-          The 1-based line number of the breakpoint to remove.
-    returns:
-      - type: boolean
-        summary: |
-          `true` if a breakpoint was removed, `false` if no breakpoint existed
-          on the line.
-    tags: []
-    deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
   - name: ScriptDebuggerService:ClearBreakpoints
     summary: |
       Removes all breakpoints across all scripts.
@@ -135,70 +106,77 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-  - name: ScriptDebuggerService:SetExceptionBreakMode
+  - name: ScriptDebuggerService:Evaluate
     summary: |
-      Controls when the debugger pauses on exceptions.
+      Evaluates a Luau expression in a stack frame's context.
     description: |
-      Sets the exception break mode on **all** `Class.DataModel|DataModels`. Use
-      `Enum.DebugBreakModeType` to specify when the debugger should pause on
-      exceptions.
+      Evaluates a Luau expression in the context of the specified stack frame,
+      or globally if no `frameId` is provided.
+
+      Errors if the expression has a syntax error or `frameId` is invalid.
     code_samples: []
     parameters:
-      - name: breakMode
-        type: DebugBreakModeType
+      - name: expression
+        type: string
         default:
         summary: |
-          The `Enum.DebugBreakModeType` to set.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
-  - name: ScriptDebuggerService:Pause
-    summary: |
-      Requests the debugger to pause at the next safe point.
-    description: |
-      Requests the debugger to pause at the next safe point. This method is
-      asynchronous and returns immediately. When the thread pauses,
-      `Class.ScriptDebuggerService.OnStopped|OnStopped` fires with reason
-      `Enum.ScriptStoppedReason.Pause`. Has no effect if already stopped.
-
-      Only meaningful when the `Class.DataModel` is running during a playtest.
-      Calling `Pause()` while already stopped at a breakpoint has no effect.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
-  - name: ScriptDebuggerService:GetThreads
-    summary: |
-      Returns all paused Luau threads.
-    description: |
-      Returns all paused Luau threads. Should be called when the
-      `Class.DataModel` is stopped (typically inside
-      `Class.ScriptDebuggerService.OnStopped|OnStopped`). Returns empty results
-      when the `Class.DataModel` is not stopped at a breakpoint or exception, or
-      when stopped via `Class.ScriptDebuggerService:Pause()|Pause()`.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: List<ScriptDebugThread>
+          The Luau expression to evaluate.
+      - name: frameId
+        type: int?
+        default: nil
         summary: |
-          An array of script debug thread dictionaries, each containing the
+          Optional frame identifier. If omitted, evaluates globally.
+    returns:
+      - type: ScriptEvaluateResult
+        summary: |
+          Dictionary with the following key-value pairs:
+
+          - `Result` — String representation of the evaluated result.
+          - `Type` — String indicating the Luau type of the result (`"number"`,
+            `"string"`, `"table"`, `"Instance"`, etc.).
+          - `VariablesReference` — If greater than `0`, drill into with
+            `Class.ScriptDebuggerService:GetVariables()|GetVariables()`.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+  - name: ScriptDebuggerService:GetRootVariables
+    summary: |
+      Returns the root variables (locals, upvalues, globals) for a stack frame.
+    description: |
+      Returns the root variables (locals, upvalues, globals) for the specified
+      stack frame. Each variable includes a `VariablesReference` field; if
+      greater than `0`, pass it to
+      `Class.ScriptDebuggerService:GetVariables()|GetVariables()` to drill into
+      children.
+
+      Errors if `frameId` is invalid. Returns empty if the `Class.DataModel` is
+      not stopped at a breakpoint or exception, or when stopped via
+      `Class.ScriptDebuggerService:Pause()|Pause()`.
+    code_samples: []
+    parameters:
+      - name: frameId
+        type: int
+        default:
+        summary: |
+          The frame identifier from a debug stack frame `Id` field (see
+          `Class.ScriptDebuggerService:GetStackTrace()|GetStackTrace()`).
+    returns:
+      - type: List<ScriptVariable>
+        summary: |
+          An array of script variable dictionaries, each containing the
           following key-value pairs:
 
-          - `Id` — Numerical thread identifier; use with
-            `Class.ScriptDebuggerService:GetStackTrace()|GetStackTrace()` and
-            stepping.
-          - `Name` — Human-readable name of the script.
+          - `Name` — String value indicating the variable name or table key.
+          - `Value` — String representation of the value.
+          - `Type` — String indicating the Luau type (`"number"`, `"string"`,
+            `"table"`, `"Instance"`, etc.).
+          - `Scope` — `Enum.ScriptVariableScope` value (children inherit
+            parent's scope).
+          - `VariablesReference` — If greater than `0`, call
+            `Class.ScriptDebuggerService:GetVariables()|GetVariables()` with
+            this to get children.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -248,42 +226,27 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-  - name: ScriptDebuggerService:GetRootVariables
+  - name: ScriptDebuggerService:GetThreads
     summary: |
-      Returns the root variables (locals, upvalues, globals) for a stack frame.
+      Returns all paused Luau threads.
     description: |
-      Returns the root variables (locals, upvalues, globals) for the specified
-      stack frame. Each variable includes a `VariablesReference` field; if
-      greater than `0`, pass it to
-      `Class.ScriptDebuggerService:GetVariables()|GetVariables()` to drill into
-      children.
-
-      Errors if `frameId` is invalid. Returns empty if the `Class.DataModel` is
-      not stopped at a breakpoint or exception, or when stopped via
-      `Class.ScriptDebuggerService:Pause()|Pause()`.
+      Returns all paused Luau threads. Should be called when the
+      `Class.DataModel` is stopped (typically inside
+      `Class.ScriptDebuggerService.OnStopped|OnStopped`). Returns empty results
+      when the `Class.DataModel` is not stopped at a breakpoint or exception, or
+      when stopped via `Class.ScriptDebuggerService:Pause()|Pause()`.
     code_samples: []
-    parameters:
-      - name: frameId
-        type: int
-        default:
-        summary: |
-          The frame identifier from a debug stack frame `Id` field (see
-          `Class.ScriptDebuggerService:GetStackTrace()|GetStackTrace()`).
+    parameters: []
     returns:
-      - type: List<ScriptVariable>
+      - type: List<ScriptDebugThread>
         summary: |
-          An array of script variable dictionaries, each containing the
+          An array of script debug thread dictionaries, each containing the
           following key-value pairs:
 
-          - `Name` — String value indicating the variable name or table key.
-          - `Value` — String representation of the value.
-          - `Type` — String indicating the Luau type (`"number"`, `"string"`,
-            `"table"`, `"Instance"`, etc.).
-          - `Scope` — `Enum.ScriptVariableScope` value (children inherit
-            parent's scope).
-          - `VariablesReference` — If greater than `0`, call
-            `Class.ScriptDebuggerService:GetVariables()|GetVariables()` with
-            this to get children.
+          - `Id` — Numerical thread identifier; use with
+            `Class.ScriptDebuggerService:GetStackTrace()|GetStackTrace()` and
+            stepping.
+          - `Name` — Human-readable name of the script.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -321,36 +284,73 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
-  - name: ScriptDebuggerService:Evaluate
+  - name: ScriptDebuggerService:Pause
     summary: |
-      Evaluates a Luau expression in a stack frame's context.
+      Requests the debugger to pause at the next safe point.
     description: |
-      Evaluates a Luau expression in the context of the specified stack frame,
-      or globally if no `frameId` is provided.
+      Requests the debugger to pause at the next safe point. This method is
+      asynchronous and returns immediately. When the thread pauses,
+      `Class.ScriptDebuggerService.OnStopped|OnStopped` fires with reason
+      `Enum.ScriptStoppedReason.Pause`. Has no effect if already stopped.
 
-      Errors if the expression has a syntax error or `frameId` is invalid.
+      Only meaningful when the `Class.DataModel` is running during a playtest.
+      Calling `Pause()` while already stopped at a breakpoint has no effect.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+  - name: ScriptDebuggerService:RemoveBreakpoint
+    summary: |
+      Removes the breakpoint on the given script and line.
+    description: |
+      Removes the breakpoint at the specified line in the given script. Returns
+      `false` if no breakpoint exists on the line (no-op). Errors if the script
+      instance or line number is invalid.
     code_samples: []
     parameters:
-      - name: expression
-        type: string
+      - name: scriptInstance
+        type: LuaSourceContainer
         default:
         summary: |
-          The Luau expression to evaluate.
-      - name: frameId
-        type: int?
-        default: nil
+          The `Class.LuaSourceContainer` containing the breakpoint.
+      - name: line
+        type: int
+        default:
         summary: |
-          Optional frame identifier. If omitted, evaluates globally.
+          The 1-based line number of the breakpoint to remove.
     returns:
-      - type: ScriptEvaluateResult
+      - type: boolean
         summary: |
-          Dictionary with the following key-value pairs:
-
-          - `Result` — String representation of the evaluated result.
-          - `Type` — String indicating the Luau type of the result (`"number"`,
-            `"string"`, `"table"`, `"Instance"`, etc.).
-          - `VariablesReference` — If greater than `0`, drill into with
-            `Class.ScriptDebuggerService:GetVariables()|GetVariables()`.
+          `true` if a breakpoint was removed, `false` if no breakpoint existed
+          on the line.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+  - name: ScriptDebuggerService:SetExceptionBreakMode
+    summary: |
+      Controls when the debugger pauses on exceptions.
+    description: |
+      Sets the exception break mode on **all** `Class.DataModel|DataModels`. Use
+      `Enum.DebugBreakModeType` to specify when the debugger should pause on
+      exceptions.
+    code_samples: []
+    parameters:
+      - name: breakMode
+        type: DebugBreakModeType
+        default:
+        summary: |
+          The `Enum.DebugBreakModeType` to set.
+    returns:
+      - type: ()
+        summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity

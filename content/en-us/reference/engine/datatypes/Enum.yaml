@@ -27,7 +27,8 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of all `Datatype.EnumItem` values belonging to this enum.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -40,10 +41,13 @@ methods:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the EnumItem to look up in this enum.
     returns:
       - type: Enum | nil
-        summary: ''
+        summary: |
+          The `Datatype.EnumItem` whose Name matches the given string, or nil if
+          no match exists.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -56,10 +60,13 @@ methods:
       - name: value
         type: number
         default:
-        summary: ''
+        summary: |
+          The integer value of the EnumItem to look up in this enum.
     returns:
       - type: Enum | nil
-        summary: ''
+        summary: |
+          The `Datatype.EnumItem` whose integer value matches the given number,
+          or nil if no match exists.
     code_samples: []
     tags: []
     deprecation_message: ''

@@ -51,7 +51,8 @@ constructors:
       - name: material
         type: Material
         default:
-        summary: ''
+        summary: |
+          The `Enum.Material` for which to retrieve default physical properties.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -66,15 +67,21 @@ constructors:
       - name: density
         type: number
         default:
-        summary: ''
+        summary: |
+          The mass per unit volume of the part, clamped to the range [0.0001,
+          100].
       - name: friction
         type: number
         default:
-        summary: ''
+        summary: |
+          The coefficient of friction opposing sliding motion, clamped to [0,
+          2].
       - name: elasticity
         type: number
         default:
-        summary: ''
+        summary: |
+          The coefficient of restitution (bounciness) applied on collision,
+          clamped to [0, 1].
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -91,23 +98,33 @@ constructors:
       - name: density
         type: number
         default:
-        summary: ''
+        summary: |
+          The mass per unit volume of the part, clamped to the range [0.0001,
+          100].
       - name: friction
         type: number
         default:
-        summary: ''
+        summary: |
+          The coefficient of friction opposing sliding motion, clamped to [0,
+          2].
       - name: elasticity
         type: number
         default:
-        summary: ''
+        summary: |
+          The coefficient of restitution (bounciness) applied on collision,
+          clamped to [0, 1].
       - name: frictionWeight
         type: number
         default:
-        summary: ''
+        summary: |
+          The weight of this part's friction in the pairwise weighted average,
+          clamped to [0, 100].
       - name: elasticityWeight
         type: number
         default:
-        summary: ''
+        summary: |
+          The weight of this part's elasticity in the pairwise weighted average,
+          clamped to [0, 100].
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -124,27 +141,39 @@ constructors:
       - name: density
         type: number
         default:
-        summary: ''
+        summary: |
+          The mass per unit volume of the part, clamped to the range [0.0001,
+          100].
       - name: friction
         type: number
         default:
-        summary: ''
+        summary: |
+          The coefficient of friction opposing sliding motion, clamped to [0,
+          2].
       - name: elasticity
         type: number
         default:
-        summary: ''
+        summary: |
+          The coefficient of restitution (bounciness) applied on collision,
+          clamped to [0, 1].
       - name: frictionWeight
         type: number
         default:
-        summary: ''
+        summary: |
+          The weight of this part's friction in the pairwise weighted average,
+          clamped to [0, 100].
       - name: elasticityWeight
         type: number
         default:
-        summary: ''
+        summary: |
+          The weight of this part's elasticity in the pairwise weighted average,
+          clamped to [0, 100].
       - name: acousticAbsorption
         type: number
         default:
-        summary: ''
+        summary: |
+          How much sound energy the surface absorbs during acoustic simulation,
+          clamped to [0, 1].
     code_samples: []
     tags: []
     deprecation_message: ''

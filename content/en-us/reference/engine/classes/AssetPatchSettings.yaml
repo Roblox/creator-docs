@@ -5,8 +5,16 @@
 name: AssetPatchSettings
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Configures a single patch asset built by `Class.IncrementalPatchBuilder` and
+  served through `Class.AssetDeliveryProxy`.
+description: |
+  Defines the settings for an asset produced by `Class.IncrementalPatchBuilder`
+  and served through `Class.AssetDeliveryProxy` during local debugging and
+  hot-reload. An `AssetPatchSettings` instance can only be parented to an
+  `Class.IncrementalPatchBuilder`, and its `Class.Instance.Name|Name` represents
+  the patch ID. Each child provides the content ID and cache location that the
+  builder uses when it registers a completed patch.
 code_samples: []
 inherits:
   - Instance
@@ -17,8 +25,16 @@ tags:
 deprecation_message: ''
 properties:
   - name: AssetPatchSettings.ContentId
-    summary: ''
-    description: ''
+    summary: |
+      The content ID used to override this patch asset when it is served by
+      `Class.AssetDeliveryProxy`.
+    description: |
+      The content ID used to override this asset when it is served by
+      `Class.AssetDeliveryProxy`, for example
+      `rbxasset://models/DataModelPatch/DataModelPatch.rbxm`. When
+      `Class.IncrementalPatchBuilder` finishes a build, it registers the
+      serialized patch under this content ID so that requests for that asset
+      return the patched content. Defaults to an empty string.
     code_samples: []
     type: string
     tags: []
@@ -33,8 +49,15 @@ properties:
       can_save: true
     capabilities: []
   - name: AssetPatchSettings.OutputPath
-    summary: ''
-    description: ''
+    summary: |
+      The filesystem path where the built patch asset is cached; when empty, an
+      in-memory cache is used instead.
+    description: |
+      The output path for the local cache of the patch asset, for example
+      `/path/to/content/models/DataModelPatch/DataModelPatch.rbxm`. When set,
+      `Class.IncrementalPatchBuilder` writes each completed patch to this path,
+      creating any missing parent directories. Defaults to an empty string; when
+      empty, no file is written and an in-memory cache is used instead.
     code_samples: []
     type: string
     tags: []
@@ -49,8 +72,13 @@ properties:
       can_save: true
     capabilities: []
   - name: AssetPatchSettings.PatchId
-    summary: ''
-    description: ''
+    summary: |
+      An identifier for distinguishing patches under a single
+      `Class.IncrementalPatchBuilder`. Has no effect.
+    description: |
+      An identifier for distinguishing patches under a single
+      `Class.IncrementalPatchBuilder`. Has no effect. Defaults to an empty
+      string.
     code_samples: []
     type: string
     tags: []

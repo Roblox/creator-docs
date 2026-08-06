@@ -46,3 +46,10 @@ items:
     value: 5
     tags: []
     deprecation_message: ''
+  - name: TranscoderStatus
+    summary: |
+      Colors each SLIM model by its `Enum.SlimTranscoderStatus`. Follow the link
+      to see which color maps to each status.
+    value: 6
+    tags: []
+    deprecation_message: ''

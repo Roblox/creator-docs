@@ -4,24 +4,33 @@
 
 name: CreateOutfitFailure
 type: enum
-summary: ''
-description: ''
-code_samples: []
+summary: |
+  Indicates why a `Class.AvatarEditorService:PromptCreateOutfit()` call failed.
+description: |
+  Indicates the reason a `Class.AvatarEditorService:PromptCreateOutfit()` call
+  did not successfully create an outfit. The failure code is surfaced through
+  the `Class.AvatarEditorService.PromptCreateOutfitCompleted` event alongside an
+  `Enum.AvatarPromptResult.Failed` result.
+code_samples:
+  - AvatarEditorService-PromptCreateOutfitCompleted
 tags: []
 deprecation_message: ''
 items:
   - name: InvalidName
-    summary: ''
+    summary: |
+      The outfit name provided by the player was rejected as invalid.
     value: 1
     tags: []
     deprecation_message: ''
   - name: OutfitLimitReached
-    summary: ''
+    summary: |
+      The player has reached the maximum number of saved outfits.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Other
-    summary: ''
+    summary: |
+      The outfit creation failed for an unspecified or unrecognized reason.
     value: 3
     tags: []
     deprecation_message: ''

@@ -4,104 +4,154 @@
 
 name: FilterErrorType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies the category of a parse or validation error produced by the Studio
+  Explorer filter expression engine.
+description: |
+  `Enum.FilterErrorType` classifies each `FilterError` returned when the Studio
+  Explorer filter bar cannot parse or validate a filter expression. A
+  `FilterError` carries the type alongside the source range and human-readable
+  message so tooling can distinguish failure categories programmatically.
+
+  Values fall into three groups:
+
+  - **Lexer errors** — the raw character stream cannot be tokenized.
+  - **Parser errors** — a valid token stream forms an invalid expression tree.
+  - **Bespoke-filter and property errors** — the expression is syntactically
+    valid but semantically incorrect (unknown property, unsupported type, bad
+    operator, and similar).
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: BackslashNotEscapingAnything
-    summary: ''
+    summary: |
+      A backslash at the end of a quoted string has nothing after it to escape.
     value: 0
     tags: []
     deprecation_message: ''
   - name: BadBespokeFilter
-    summary: ''
+    summary: |
+      A recognized bespoke filter keyword (such as `classname:`) is missing its
+      required value, or a `query:` expression contains an invalid query string.
     value: 1
     tags: []
     deprecation_message: ''
   - name: BadName
-    summary: ''
+    summary: |
+      An unexpected token was encountered where a name or identifier was
+      expected.
     value: 2
     tags: []
     deprecation_message: ''
   - name: IncompleteOr
-    summary: ''
+    summary: |
+      Reserved error code for an incomplete `or` expression; currently not
+      emitted by the filter engine.
     value: 3
     tags: []
     deprecation_message: ''
   - name: IncompleteParenthesis
-    summary: ''
+    summary: |
+      An opening parenthesis `(` in the filter expression has no matching
+      closing parenthesis `)`.
     value: 4
     tags: []
     deprecation_message: ''
   - name: InvalidDoubleStar
-    summary: ''
+    summary: |
+      A `**` wildcard token directly follows a `*` wildcard in a dotted name
+      path (for example, `A.*.**.X`), which is not allowed.
     value: 5
     tags: []
     deprecation_message: ''
   - name: InvalidTilde
-    summary: ''
+    summary: |
+      A lone `~` character was found that is not part of the `~=` not-equal
+      operator.
     value: 6
     tags: []
     deprecation_message: ''
   - name: PropertyBadOperator
-    summary: ''
+    summary: |
+      A comparison operator other than `=` or `~=` was used with a property type
+      that only supports equality comparisons.
     value: 7
     tags: []
     deprecation_message: ''
   - name: PropertyDoesNotExist
-    summary: ''
+    summary: |
+      The named property does not exist on any reflected class known to the
+      filter engine.
     value: 8
     tags: []
     deprecation_message: ''
   - name: PropertyInvalidField
-    summary: ''
+    summary: |
+      A sub-field index (such as `.W`) was used with a vector or color property
+      that does not have a field by that name.
     value: 9
     tags: []
     deprecation_message: ''
   - name: PropertyInvalidValue
-    summary: ''
+    summary: |
+      The value string provided for a property comparison cannot be parsed into
+      the expected type for that property (for example, `Locked=notabool`).
     value: 10
     tags: []
     deprecation_message: ''
   - name: PropertyUnsupportedFields
-    summary: ''
+    summary: |
+      A sub-field index was used with a property type that does not support
+      field access (for example, `Locked.X=true`).
     value: 11
     tags: []
     deprecation_message: ''
   - name: PropertyUnsupportedProperty
-    summary: ''
+    summary: |
+      The named property exists but its type is not supported by the filter
+      engine (for example, complex datatypes such as `CFrame` or `TweenInfo`).
     value: 12
     tags: []
     deprecation_message: ''
   - name: UnexpectedNameIndex
-    summary: ''
+    summary: |
+      A `.` in a dotted name path is not followed by a valid name, number, or
+      wildcard token.
     value: 13
     tags: []
     deprecation_message: ''
   - name: UnexpectedToken
-    summary: ''
+    summary: |
+      A token that cannot be a value (such as an operator) appears where a value
+      is expected after a comparison operator.
     value: 14
     tags: []
     deprecation_message: ''
   - name: UnfinishedBinaryOperator
-    summary: ''
+    summary: |
+      An `and` or `or` binary operator appears with no right-hand operand.
     value: 15
     tags: []
     deprecation_message: ''
   - name: UnfinishedQuote
-    summary: ''
+    summary: |
+      A quoted string was opened but not closed before the end of the filter
+      input.
     value: 16
     tags: []
     deprecation_message: ''
   - name: UnknownBespokeFilter
-    summary: ''
+    summary: |
+      A `name:value` token uses a keyword that is not a recognized bespoke
+      filter type (for example, `foo:Bar`).
     value: 17
     tags: []
     deprecation_message: ''
   - name: WildcardInProperty
-    summary: ''
+    summary: |
+      A wildcard (`*` or `**`) appears in the property portion of a dotted
+      expression where a concrete property name is required.
     value: 18
     tags: []
     deprecation_message: ''

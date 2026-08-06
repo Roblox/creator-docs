@@ -7,7 +7,23 @@ type: class
 memory_category: Instances
 summary: |
   Provides haptic feedback to controllers and devices.
-description: ''
+description: |
+  `HapticService` allows scripts to query vibration support and set motor
+  intensities on gamepad controllers, VR controllers, and mobile devices. Use
+  `Class.HapticService:IsVibrationSupported()|IsVibrationSupported()` and
+  `Class.HapticService:IsMotorSupported()|IsMotorSupported()` to check device
+  capabilities, then `Class.HapticService:SetMotor()|SetMotor()` to drive a
+  specific `Enum.VibrationMotor` on a given `Enum.UserInputType`. Motor output
+  is scaled by the user's haptic intensity preference in their Roblox settings.
+
+  As this service is client-side only, it can only be used in a
+  `Class.LocalScript`, a `Class.ModuleScript` required by a `Class.LocalScript`,
+  or a `Class.Script` with `Class.BaseScript.RunContext|RunContext` set to
+  `Enum.RunContext.Client`.
+
+  This service has been superseded by `Class.HapticEffect`, which supports
+  waveform-based effects, looping, spatial attenuation, and preset effect types.
+  For new work, use `Class.HapticEffect` instead.
 code_samples: []
 inherits:
   - Instance

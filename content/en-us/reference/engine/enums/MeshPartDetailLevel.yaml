@@ -21,7 +21,8 @@ items:
     tags: []
     deprecation_message: ''
   - name: Level00
-    summary: ''
+    summary: |
+      Forces MeshParts to render at LOD index 0, the finest detail level.
     value: 1
     tags: []
     deprecation_message: ''
@@ -50,27 +51,32 @@ items:
     tags: []
     deprecation_message: ''
   - name: Level05
-    summary: ''
+    summary: |
+      Forces MeshParts to render at LOD index 5.
     value: 6
     tags: []
     deprecation_message: ''
   - name: Level06
-    summary: ''
+    summary: |
+      Forces MeshParts to render at LOD index 6.
     value: 7
     tags: []
     deprecation_message: ''
   - name: Level07
-    summary: ''
+    summary: |
+      Forces MeshParts to render at LOD index 7.
     value: 8
     tags: []
     deprecation_message: ''
   - name: Level08
-    summary: ''
+    summary: |
+      Forces MeshParts to render at LOD index 8.
     value: 9
     tags: []
     deprecation_message: ''
   - name: Level09
-    summary: ''
+    summary: |
+      Forces MeshParts to render at LOD index 9, the coarsest available.
     value: 10
     tags: []
     deprecation_message: ''

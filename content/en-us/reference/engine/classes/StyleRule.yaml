@@ -389,7 +389,8 @@ methods:
     capabilities:
       - UI
   - name: StyleRule:SetProperty
-    summary: ''
+    summary: |
+      Sets or updates a single property of the `StyleRule`.
     description: |
       Sets a new property (or modifies an existing property) for the
       `StyleRule`. The `name` parameter should be a valid property of the

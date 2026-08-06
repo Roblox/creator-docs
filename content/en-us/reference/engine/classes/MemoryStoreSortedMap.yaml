@@ -107,7 +107,8 @@ methods:
     parameters: []
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The number of items currently stored in the sorted map.
     tags:
       - Yields
     deprecation_message: ''
@@ -170,7 +171,9 @@ methods:
           number (integer or decimal) or a string.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the value of an existing key was overwritten, or `false` if
+          a new key was added to the sorted map.
     tags:
       - Yields
     deprecation_message: ''

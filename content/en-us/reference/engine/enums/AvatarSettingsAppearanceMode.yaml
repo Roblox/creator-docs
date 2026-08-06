@@ -4,24 +4,42 @@
 
 name: AvatarSettingsAppearanceMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines how the avatar's body-part appearance is sourced in an experience
+  that uses `AvatarBodyRules`.
+description: |
+  Used by `AppearanceMode` to control whether players retain their own avatar
+  body parts or the experience overrides them with custom assets. Defaults to
+  `Enum.AvatarSettingsAppearanceMode.PlayerChoice`.
+
+  When set to `Enum.AvatarSettingsAppearanceMode.CustomParts`, individual body
+  parts (head, face, torso, arms, legs, eyebrows, eyelashes, mood) can each be
+  independently enabled and assigned a custom asset ID. When set to
+  `Enum.AvatarSettingsAppearanceMode.CustomBody`, the entire body is replaced as
+  a single unit using `CustomBodyType` and `CustomBodyBundleId`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: PlayerChoice
-    summary: ''
+    summary: |
+      Players keep their own avatar body parts; the experience does not override
+      any body-part assets.
     value: 0
     tags: []
     deprecation_message: ''
   - name: CustomParts
-    summary: ''
+    summary: |
+      The experience overrides individual body parts (head, face, torso, arms,
+      legs) using per-part asset IDs and enablement settings on
+      `AvatarBodyRules`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: CustomBody
-    summary: ''
+    summary: |
+      The experience replaces the avatar's entire body as a single unit, using
+      `CustomBodyType` and `CustomBodyBundleId`.
     value: 2
     tags: []
     deprecation_message: ''

@@ -67,8 +67,14 @@ properties:
       The furthest distance that a player can be from the Dialog's parent to
       start a conversation.
     description: |
-      The furthest distance that a player can be from the Dialog's parent to
-      start a conversation.
+      The maximum distance in studs between the player's character and the
+      Dialog's parent `Class.BasePart` at which the player can click on the
+      speech bubble to begin or continue a conversation. If the player moves
+      further than this distance from the parent part, they cannot initiate the
+      dialog. The engine uses this value to select the nearest available Dialog
+      when multiple are in range.
+
+      Default is 25.
     code_samples: []
     type: float
     tags: []
@@ -110,8 +116,13 @@ properties:
       Sets the sentence that the dialog will show to the player when the chat
       ends.
     description: |
-      Sets the sentence that the dialog will show to the player when the chat
-      ends
+      The text displayed as the goodbye option at the bottom of the dialog
+      choices list. When `Class.Dialog.GoodbyeChoiceActive` is true, this string
+      appears as the final selectable choice; clicking it ends the conversation.
+      When `Class.Dialog.GoodbyeChoiceActive` is false, this property has no
+      visible effect.
+
+      Default is an empty string.
     code_samples: []
     type: string
     tags: []
@@ -131,8 +142,12 @@ properties:
       Sets the first sentence that the dialog will show to the player, once a
       chat is commenced.
     description: |
-      Sets the first sentence that the dialog will show to the player, once a
-      chat is commenced.
+      The text that the NPC displays inside the speech bubble when a player
+      first begins the conversation. This is the opening line that appears
+      before the player selects from `Class.DialogChoice` options nested under
+      this Dialog.
+
+      Default is an empty string.
     code_samples: []
     type: string
     tags: []
@@ -151,7 +166,14 @@ properties:
     summary: |
       If true, this dialog is being used by at least one player.
     description: |
-      If true, this dialog is being used by at least one player.
+      A read-only runtime indicator that is true whenever at least one player is
+      currently engaged in this dialog conversation. The engine sets this to
+      true when a player begins talking and resets it to false when all
+      participants leave. This property is not serialized and always starts as
+      false when the place loads. Scripts can read this property but cannot set
+      it directly.
+
+      Default is false.
     code_samples: []
     type: boolean
     tags: []
@@ -170,7 +192,14 @@ properties:
     summary: |
       Sets the icon that the initial dialog displays.
     description: |
-      Sets the icon that the initial dialog displays.
+      Controls which icon appears on the dialog's speech bubble indicator.
+      Accepts a value from the `Enum.DialogPurpose` enum:
+
+      - **Quest** -- displays an exclamation mark (!)
+      - **Help** -- displays a question mark (?)
+      - **Shop** -- displays a dollar sign ($)
+
+      Default is Help.
     code_samples: []
     type: DialogPurpose
     tags: []
@@ -189,7 +218,14 @@ properties:
     summary: |
       Sets the color of the NPC's speech bubble.
     description: |
-      Sets the color of the NPC's speech bubble.
+      Controls the color accent on the dialog's speech bubble. Accepts a value
+      from the `Enum.DialogTone` enum:
+
+      - **Neutral** -- blue accent bar
+      - **Friendly** -- green accent bar
+      - **Enemy** -- red accent bar
+
+      Default is Neutral.
     code_samples: []
     type: DialogTone
     tags: []
@@ -208,7 +244,15 @@ properties:
     summary: |
       Sets the maximum distance that a dialog can be triggered from.
     description: |
-      Sets the maximum distance that a dialog can be triggered from.
+      The maximum distance in studs from the Dialog's parent `Class.BasePart` at
+      which the dialog's trigger indicator becomes visible to a player. When a
+      player's character is within this distance, the speech bubble icon appears
+      over the parent part, inviting interaction. The value is clamped between 0
+      and 400.
+
+      Default is 0, which effectively disables the distance-based trigger
+      indicator; the player must be within `Class.Dialog.ConversationDistance`
+      to see and interact with the dialog.
     code_samples: []
     type: float
     tags: []
@@ -227,7 +271,13 @@ properties:
     summary: |
       Sets the offset of the dialog relative to the dialog's parent.
     description: |
-      Sets the offset of the dialog relative to the dialog's parent.
+      A `Datatype.Vector3` offset in studs that shifts the position of the
+      dialog's speech bubble indicator relative to the Dialog's parent
+      `Class.BasePart`. Use this to position the indicator above or beside the
+      NPC rather than at the part's center. This property participates in model
+      scaling.
+
+      Default is (0, 0, 0).
     code_samples: []
     type: Vector3
     tags: []
@@ -255,7 +305,8 @@ methods:
     parameters: []
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          A list of `Class.Player` objects currently engaged in the Dialog.
     tags: []
     deprecation_message: ''
     security: None
@@ -279,11 +330,13 @@ events:
       - name: player
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` who made the selection.
       - name: dialogChoice
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.DialogChoice` that was selected by the player.
     tags: []
     deprecation_message: ''
     security: None

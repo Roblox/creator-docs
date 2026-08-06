@@ -42,7 +42,12 @@ properties:
     summary: |
       Describes the player's current screen orientation.
     description: |
-      Describes the player's current screen orientation.
+      Describes the player's current screen orientation as an
+      `Enum.ScreenOrientation` value. Unlike the writable
+      `Class.PlayerGui.ScreenOrientation` property, which requests a _preferred_
+      orientation mode, `Class.PlayerGui.CurrentScreenOrientation` is read-only
+      and reports the orientation the device is actually displaying, updating as
+      the player physically rotates a mobile device.
     code_samples: []
     type: ScreenOrientation
     tags:
@@ -64,8 +69,14 @@ properties:
       Sets the preferred screen orientation mode for this player, if on a mobile
       device.
     description: |
-      Sets the preferred screen orientation mode for this player, if on a mobile
-      device.
+      Sets the preferred screen orientation mode for this player when on a
+      mobile device, expressed as an `Enum.ScreenOrientation` value. Changing it
+      requests that the device lock to, or follow, a particular orientation (for
+      example `Enum.ScreenOrientation|Portrait` or
+      `Enum.ScreenOrientation|LandscapeSensor`). The orientation the device is
+      actually displaying is reported separately by the read-only
+      `Class.PlayerGui.CurrentScreenOrientation` property. This property
+      defaults to `Enum.ScreenOrientation|LandscapeSensor`.
     code_samples: []
     type: ScreenOrientation
     tags: []
@@ -105,13 +116,20 @@ methods:
     summary: |
       Returns the transparency of the Topbar.
     description: |
-      Returns the transparency of the Topbar.
+      Returns the current transparency of the topbar `Class.CoreGui`, a value in
+      the range `[0, 1]` where `0` is completely opaque and `1` is completely
+      transparent. This is the value previously assigned with
+      `Class.PlayerGui:SetTopbarTransparency()`, and it defaults to `0.5`. This
+      method can only be called from a `Class.LocalScript`; calling it from a
+      server script raises an error.
     code_samples:
       - PlayerGui-GetTopbarTransparency1
     parameters: []
     returns:
       - type: float
-        summary: ''
+        summary: |
+          The current topbar transparency, a number between 0 (completely
+          opaque) and 1 (completely transparent).
     tags:
       - Deprecated
     deprecation_message: ''
@@ -139,7 +157,9 @@ methods:
       - name: transparency
         type: float
         default:
-        summary: ''
+        summary: |
+          A number between 0 (completely opaque) and 1 (completely transparent).
+          Values outside this range are clamped.
     returns:
       - type: ()
         summary: ''
@@ -155,14 +175,21 @@ events:
     summary: |
       Fires when the transparency of the Topbar CoreGui changes.
     description: |
-      Fires when the transparency of the Topbar CoreGui changes.
+      Fires whenever the transparency of the topbar `Class.CoreGui` changes,
+      such as after a call to `Class.PlayerGui:SetTopbarTransparency()`. The
+      event passes the new transparency as its `transparency` argument, a value
+      in the range `[0, 1]`. It only fires when the clamped transparency differs
+      from the previous value, so setting the same value again does not re-fire
+      it.
     code_samples:
       - PlayerGui-TopbarTransparencyChangedSignal1
     parameters:
       - name: transparency
         type: float
         default:
-        summary: ''
+        summary: |
+          The new topbar transparency after the change, a number between 0
+          (completely opaque) and 1 (completely transparent).
     tags:
       - Deprecated
     deprecation_message: ''

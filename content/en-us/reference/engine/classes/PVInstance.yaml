@@ -23,8 +23,25 @@ tags:
 deprecation_message: ''
 properties:
   - name: PVInstance.Origin
-    summary: ''
-    description: ''
+    summary: |
+      Editor-only property that reads and sets the world `Datatype.CFrame` of
+      the `Class.PVInstance`'s pivot, moving the entire instance when changed
+      from the Studio Properties window.
+    description: |
+      Editor-only property, shown in the Studio Properties window as **Origin
+      Position** and **Origin Orientation** under **Transform**. Its value is
+      the world-space `Datatype.CFrame` of the instance's pivot; reading it
+      returns the same `Datatype.CFrame` as `Class.PVInstance:GetPivot()`. It
+      has no stored value of its own and always reflects the current pivot.
+
+      Setting it from the Properties window moves the whole instance so its
+      pivot lands at the new `Datatype.CFrame`, much like
+      `Class.PVInstance:PivotTo()`. Editing through the Properties window
+      temporarily disables `Class.WeldConstraint|WeldConstraints` to other
+      objects for the move; `PivotTo` does not modify joints.
+
+      Not available to scripts; use `Class.PVInstance:GetPivot()` and
+      `Class.PVInstance:PivotTo()` at runtime instead.
     code_samples: []
     type: CFrame
     tags:
@@ -41,8 +58,26 @@ properties:
       can_save: false
     capabilities: []
   - name: PVInstance.Pivot Offset
-    summary: ''
-    description: ''
+    summary: |
+      Editor-only property that displays and edits the pivot's `Datatype.CFrame`
+      relative to the instance, moving only the pivot and leaving the instance
+      in place.
+    description: |
+      Editor-only property, shown in the Studio Properties window as **Pivot
+      Position** and **Pivot Orientation** under **Pivot**. It is the
+      `Datatype.CFrame` of the pivot relative to the instance's own frame.
+
+      Changing it from the Properties window moves the pivot relative to the
+      instance while leaving the instance in place, unlike `Origin`, which moves
+      the whole instance. For a `Class.BasePart`, the offset defaults to the
+      identity `Datatype.CFrame`, so the pivot coincides with the part's center.
+      For a `Class.Model`, this property appears only when the model has a
+      `Class.Model.PrimaryPart|PrimaryPart`; it then reflects and edits that
+      part's `Class.BasePart.PivotOffset|PivotOffset`, and
+      `Class.Model:GetPivot()` aliases the primary part's pivot.
+
+      Not available to scripts; scripts read and write the equivalent through
+      the concrete class, such as `Class.BasePart.PivotOffset`.
     code_samples: []
     type: CFrame
     tags:
@@ -74,7 +109,8 @@ methods:
     parameters: []
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          The world-space `Datatype.CFrame` of the instance's pivot.
     tags: []
     deprecation_message: ''
     security: None

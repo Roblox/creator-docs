@@ -230,8 +230,20 @@ properties:
     capabilities:
       - UI
   - name: TextButton.OpenTypeFeatures
-    summary: ''
-    description: ''
+    summary: |
+      Applies OpenType font features, such as stylistic sets, to the text
+      rendered by the `Class.TextButton`.
+    description: |
+      A comma-separated list of
+      [OpenType](https://learn.microsoft.com/typography/opentype/spec/featuretags)
+      feature tags applied to text rendered by the `Class.TextButton` (for
+      example, `zero` for slashed zeros). Whitespace around each tag is ignored.
+      Defaults to an empty string, which applies no additional features.
+
+      Only a supported subset of tags is applied. If a tag can't be parsed,
+      isn't supported, or uses unsupported partial enabling with brackets, all
+      tags are discarded.
+      `Class.TextButton.OpenTypeFeaturesError|OpenTypeFeaturesError`.
     code_samples: []
     type: string
     tags: []
@@ -247,8 +259,16 @@ properties:
     capabilities:
       - UI
   - name: TextButton.OpenTypeFeaturesError
-    summary: ''
-    description: ''
+    summary: |
+      Read-only property that contains the error message, if any, produced while
+      applying `Class.TextButton.OpenTypeFeatures|OpenTypeFeatures`.
+    description: |
+      Read-only message produced when a tag in
+      `Class.TextButton.OpenTypeFeatures|OpenTypeFeatures` can't be applied —
+      for example, when a tag fails to parse, isn't supported, or uses
+      unsupported partial (bracketed) enabling. Empty while the current
+      `Class.TextButton.OpenTypeFeatures|OpenTypeFeatures` value applies
+      successfully.
     code_samples: []
     type: string
     tags:

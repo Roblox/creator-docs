@@ -207,8 +207,21 @@ properties:
     capabilities:
       - AvatarBehavior
   - name: Explosion.LocalTransparencyModifier
-    summary: ''
-    description: ''
+    summary: |
+      A multiplier for the transparency of the `Class.Explosion` visual effect
+      that is only visible to the local client.
+    description: |
+      A client-local multiplier for the transparency of the `Class.Explosion`
+      visual effect. It does not replicate from client to server and is useful
+      when the explosion visual should appear differently for a specific client.
+
+      A value of `0`, the default, has no effect on the explosion's appearance,
+      while a value of `1` makes the visual effect completely invisible to the
+      local client. Values are clamped between `0` and `1`.
+
+      This property does not alter the explosion's physical or damaging effects.
+      To hide the visual effect for all clients while retaining force and
+      damage, set `Class.Explosion.Visible|Visible` to `false` instead.
     code_samples: []
     type: float
     tags:

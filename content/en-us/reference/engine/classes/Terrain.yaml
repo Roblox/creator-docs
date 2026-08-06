@@ -121,7 +121,11 @@ properties:
     summary: |
       Displays the boundaries of the largest possible editable region.
     description: |
-      Displays the boundaries of the largest possible editable region.
+      Displays the boundaries of the largest possible editable region as a
+      `Datatype.Region3int16`. The returned value spans from
+      `(-32000, -32000, -32000)` to `(32000, 32000, 32000)` in cell coordinates,
+      where each cell is 4 studs wide. This corresponds to a world-space volume
+      of -128,000 to 128,000 studs on each axis. The property is read-only.
     code_samples: []
     type: Region3int16
     tags:
@@ -142,7 +146,9 @@ properties:
     summary: |
       The tint of `Terrain` water.
     description: |
-      The tint of `Terrain` water.
+      The tint color applied to `Terrain` water. This `Datatype.Color3` value is
+      blended with the water's base appearance to shift its overall hue. The
+      default value is `[0.05, 0.33, 0.36]` (a dark teal).
     code_samples: []
     type: Color3
     tags: []
@@ -161,7 +167,9 @@ properties:
     summary: |
       Controls how opaque `Terrain` water reflections are.
     description: |
-      Controls how opaque `Terrain` water reflections are.
+      Controls how opaque the reflections on `Terrain` water are, on a scale of
+      `0` (no reflections) to `1` (fully opaque reflections). The default value
+      is `1`.
     code_samples: []
     type: float
     tags: []
@@ -180,7 +188,8 @@ properties:
     summary: |
       The transparency of `Terrain` water.
     description: |
-      The transparency of `Terrain` water.
+      The transparency of `Terrain` water, on a scale of `0` (fully opaque) to
+      `1` (fully transparent). The default value is `0.3`.
     code_samples: []
     type: float
     tags: []
@@ -247,18 +256,22 @@ methods:
       - name: x
         type: int
         default:
-        summary: ''
+        summary: |
+          The X coordinate of the terrain cell.
       - name: 'y'
         type: int
         default:
-        summary: ''
+        summary: |
+          The Y coordinate of the terrain cell.
       - name: z
         type: int
         default:
-        summary: ''
+        summary: |
+          The Z coordinate of the terrain cell.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Always returns `true`; the function no longer performs any operation.
     tags:
       - Deprecated
     deprecation_message: |
@@ -272,13 +285,17 @@ methods:
     summary: |
       Obsolete function which no longer does anything.
     description: |
-      <!-- Note: only H4, H5, and H6 headers areObsolete function which no longer does anything._(OBSOLETE)_ No longer does anything.
+      Obsolete function which no longer does anything. It was part of the legacy
+      terrain engine that has since been removed, so calling it on a region has
+      no effect.
     code_samples: []
     parameters:
       - name: region
         type: Region3int16
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Region3int16` specifying the region of terrain cells to
+          process.
     returns:
       - type: ()
         summary: ''
@@ -295,24 +312,32 @@ methods:
     summary: |
       Returns the world position of the center of the terrain cell.
     description: |
-      Returns the world position of the center of the terrain cell.
+      Returns the world position of the center of the terrain cell at grid
+      coordinates `(x, y, z)`. Each terrain cell is 4&times;4&times;4 studs, so
+      this method returns the position of the lower-left-forward corner of the
+      cell plus an offset of `(2, 2, 2)` studs.
     code_samples: []
     parameters:
       - name: x
         type: int
         default:
-        summary: ''
+        summary: |
+          The X coordinate of the terrain cell in grid space.
       - name: 'y'
         type: int
         default:
-        summary: ''
+        summary: |
+          The Y coordinate of the terrain cell in grid space.
       - name: z
         type: int
         default:
-        summary: ''
+        summary: |
+          The Z coordinate of the terrain cell in grid space.
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          The world-space `Datatype.Vector3` position at the center of the
+          specified cell.
     tags: []
     deprecation_message: ''
     security: None
@@ -323,24 +348,32 @@ methods:
     summary: |
       Returns the position of the lower-left-forward corner of the grid cell.
     description: |
-      Returns the position of the lower-left-forward corner of the grid cell.
+      Returns the world position of the lower-left-forward corner of the terrain
+      cell at grid coordinates `(x, y, z)`. Each terrain cell is
+      4&times;4&times;4 studs, so the corner position is
+      `(x * 4, y * 4, z * 4)`.
     code_samples: []
     parameters:
       - name: x
         type: int
         default:
-        summary: ''
+        summary: |
+          The X coordinate of the terrain cell in grid space.
       - name: 'y'
         type: int
         default:
-        summary: ''
+        summary: |
+          The Y coordinate of the terrain cell in grid space.
       - name: z
         type: int
         default:
-        summary: ''
+        summary: |
+          The Z coordinate of the terrain cell in grid space.
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          The world-space `Datatype.Vector3` position of the lower-left-forward
+          corner of the specified cell.
     tags: []
     deprecation_message: ''
     security: None
@@ -351,7 +384,11 @@ methods:
     summary: |
       Clears all terrain.
     description: |
-      Clears all terrain.
+      Clears the entire terrain, removing all material and occupancy data from
+      every voxel. After calling this method, the `Terrain` object contains no
+      geometry until new terrain is written via methods such as
+      `Class.Terrain:FillBlock()|FillBlock()` or
+      `Class.Terrain:WriteVoxels()|WriteVoxels()`.
     code_samples: []
     parameters: []
     returns:
@@ -398,10 +435,14 @@ methods:
       - name: region
         type: Region3int16
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Region3int16` defining the area of terrain to copy, in
+          cell coordinates.
     returns:
       - type: TerrainRegion
-        summary: ''
+        summary: |
+          A `Class.TerrainRegion` containing the copied voxel data from the
+          specified region.
     tags: []
     deprecation_message: ''
     security: None
@@ -412,12 +453,16 @@ methods:
     summary: |
       Returns the number of non-empty cells in the terrain.
     description: |
-      Returns the number of non-empty cells in the terrain.
+      Returns the approximate number of non-empty cells in the terrain. A cell
+      is considered non-empty when it has a material other than Air and an
+      occupancy greater than zero. This count is an approximation and can be
+      used to quickly gauge how much terrain geometry exists in the place.
     code_samples: []
     parameters: []
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The approximate number of non-empty terrain cells.
     tags: []
     deprecation_message: ''
     security: None
@@ -428,7 +473,10 @@ methods:
     summary: |
       Fills a ball of smooth terrain in a given space.
     description: |
-      Fills a ball of smooth terrain in a given space.
+      Fills a spherical volume of smooth terrain centered at `center` with the
+      given `radius` (in studs) and `Enum.Material`. Voxels within the sphere
+      are set to full occupancy with the specified material. Existing terrain
+      inside the sphere is overwritten.
     code_samples: []
     parameters:
       - name: center
@@ -460,8 +508,11 @@ methods:
       Fills a block of smooth terrain with a given location, rotation, size, and
       material.
     description: |
-      Fills a block of smooth terrain with a given location, rotation, size, and
-      material.
+      Fills an oriented rectangular volume of smooth terrain at the position and
+      rotation specified by `cframe`, with the dimensions given by `size` (in
+      studs), using the specified `Enum.Material`. Because the block is oriented
+      by a `Datatype.CFrame`, it can be rotated to any angle. Existing terrain
+      inside the volume is overwritten.
     code_samples: []
     parameters:
       - name: cframe
@@ -529,21 +580,28 @@ methods:
     summary: |
       Fills a `Datatype.Region3` space with smooth terrain.
     description: |
-      Fills a `Datatype.Region3` space with smooth terrain.
+      Fills an axis-aligned `Datatype.Region3` volume of smooth terrain with the
+      specified `Enum.Material` at full occupancy. The `resolution` parameter
+      must be exactly `4`. The region must be aligned to the voxel grid; use
+      `Datatype.Region3:ExpandToGrid()` to align a region before calling.
     code_samples: []
     parameters:
       - name: region
         type: Region3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Region3` to fill, which must be aligned to the voxel
+          grid.
       - name: resolution
         type: float
         default:
-        summary: ''
+        summary: |
+          The voxel resolution; must be exactly `4`.
       - name: material
         type: Material
         default:
-        summary: ''
+        summary: |
+          The `Enum.Material` to fill the region with.
     returns:
       - type: ()
         summary: ''
@@ -598,18 +656,23 @@ methods:
       - name: x
         type: int
         default:
-        summary: ''
+        summary: |
+          The X coordinate of the terrain cell.
       - name: 'y'
         type: int
         default:
-        summary: ''
+        summary: |
+          The Y coordinate of the terrain cell.
       - name: z
         type: int
         default:
-        summary: ''
+        summary: |
+          The Z coordinate of the terrain cell.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple containing the legacy cell material, block type, and
+          orientation of the specified cell.
     tags:
       - Deprecated
     deprecation_message: |
@@ -623,17 +686,22 @@ methods:
     summary: |
       Returns current terrain material color for specified terrain material.
     description: |
-      Returns the current terrain material color for the specified terrain
-      material.
+      Returns the current `Datatype.Color3` color for the specified terrain
+      `Enum.Material`. This color represents the tint applied to the material's
+      base texture. Passing `Enum.Material|Air` or `Enum.Material|Water` throws
+      an error because those materials do not support custom colors.
     code_samples: []
     parameters:
       - name: material
         type: Material
         default:
-        summary: ''
+        summary: |
+          The `Enum.Material` whose terrain color to retrieve.
     returns:
       - type: Color3
-        summary: ''
+        summary: |
+          The `Datatype.Color3` representing the current color tint of the
+          specified material.
     tags: []
     deprecation_message: ''
     security: None
@@ -650,18 +718,23 @@ methods:
       - name: x
         type: int
         default:
-        summary: ''
+        summary: |
+          The X coordinate of the terrain cell.
       - name: 'y'
         type: int
         default:
-        summary: ''
+        summary: |
+          The Y coordinate of the terrain cell.
       - name: z
         type: int
         default:
-        summary: ''
+        summary: |
+          The Z coordinate of the terrain cell.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple containing whether the cell has water, the water force, and
+          the water direction.
     tags:
       - Deprecated
     deprecation_message: |
@@ -683,15 +756,21 @@ methods:
       - name: region
         type: TerrainRegion
         default:
-        summary: ''
+        summary: |
+          The `Class.TerrainRegion` to paste, previously obtained from
+          `Class.Terrain:CopyRegion()`.
       - name: corner
         type: Vector3int16
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Vector3int16` cell coordinate at which to place the
+          lower-left-forward corner of the region.
       - name: pasteEmptyCells
         type: boolean
         default:
-        summary: ''
+        summary: |
+          Whether to overwrite existing terrain with empty (air) cells from the
+          region.
     returns:
       - type: ()
         summary: ''
@@ -706,8 +785,12 @@ methods:
       Returns a region of terrain voxel data in table format based on the
       channel names.
     description: |
-      Returns a region of terrain voxel data in table format based on the
-      channel names.
+      Returns voxel data from a region of terrain, separated by channel. Unlike
+      `Class.Terrain:ReadVoxels()|ReadVoxels()`, this method lets you specify
+      exactly which channels to read (`SolidMaterial`, `SolidOccupancy`, and/or
+      `LiquidOccupancy`), and returns a dictionary keyed by channel ID. The
+      `region` must be aligned to the voxel grid, `resolution` must be `4`, and
+      the region cannot exceed 4,194,304 voxels.
     code_samples:
       - terrain-readvoxelchannels-code-example
     parameters:
@@ -762,7 +845,12 @@ methods:
     summary: |
       Returns a certain region of smooth terrain in table format.
     description: |
-      Returns a certain region of smooth terrain in table format.
+      Returns the voxel data for a region of smooth terrain as two 3D arrays:
+      `materials` (an array of `Enum.Material` values) and `occupancies` (an
+      array of numbers between `0` and `1`). The `region` must be aligned to the
+      voxel grid, `resolution` must be `4`, and the region cannot exceed
+      4,194,304 voxels. For more granular channel control, see
+      `Class.Terrain:ReadVoxelChannels()|ReadVoxelChannels()`.
     code_samples:
       - terrain-readvoxels-code-example
     parameters:
@@ -853,27 +941,33 @@ methods:
       - name: x
         type: int
         default:
-        summary: ''
+        summary: |
+          The X coordinate of the terrain cell.
       - name: 'y'
         type: int
         default:
-        summary: ''
+        summary: |
+          The Y coordinate of the terrain cell.
       - name: z
         type: int
         default:
-        summary: ''
+        summary: |
+          The Z coordinate of the terrain cell.
       - name: material
         type: CellMaterial
         default:
-        summary: ''
+        summary: |
+          The `Enum.CellMaterial` to set for the cell.
       - name: block
         type: CellBlock
         default:
-        summary: ''
+        summary: |
+          The `Enum.CellBlock` shape type for the cell.
       - name: orientation
         type: CellOrientation
         default:
-        summary: ''
+        summary: |
+          The `Enum.CellOrientation` rotation for the cell.
     returns:
       - type: ()
         summary: ''
@@ -899,19 +993,25 @@ methods:
       - name: region
         type: Region3int16
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Region3int16` specifying the area of terrain cells to
+          set.
       - name: material
         type: CellMaterial
         default:
-        summary: ''
+        summary: |
+          The `Enum.CellMaterial` to apply to all cells in the region.
       - name: block
         type: CellBlock
         default:
-        summary: ''
+        summary: |
+          The `Enum.CellBlock` shape type to apply to all cells in the region.
       - name: orientation
         type: CellOrientation
         default:
-        summary: ''
+        summary: |
+          The `Enum.CellOrientation` rotation to apply to all cells in the
+          region.
     returns:
       - type: ()
         summary: ''
@@ -935,11 +1035,13 @@ methods:
       - name: material
         type: Material
         default:
-        summary: ''
+        summary: |
+          The `Enum.Material` whose terrain color to change.
       - name: value
         type: Color3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Color3` to apply as the new color tint for the material.
     returns:
       - type: ()
         summary: ''
@@ -961,23 +1063,28 @@ methods:
       - name: x
         type: int
         default:
-        summary: ''
+        summary: |
+          The X coordinate of the terrain cell.
       - name: 'y'
         type: int
         default:
-        summary: ''
+        summary: |
+          The Y coordinate of the terrain cell.
       - name: z
         type: int
         default:
-        summary: ''
+        summary: |
+          The Z coordinate of the terrain cell.
       - name: force
         type: WaterForce
         default:
-        summary: ''
+        summary: |
+          The `Enum.WaterForce` value representing the water force in the cell.
       - name: direction
         type: WaterDirection
         default:
-        summary: ''
+        summary: |
+          The `Enum.WaterDirection` value representing the water flow direction.
     returns:
       - type: ()
         summary: ''
@@ -1000,10 +1107,13 @@ methods:
       - name: position
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The world-space `Datatype.Vector3` to convert to a cell coordinate.
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` representing the grid cell coordinates containing
+          the given position.
     tags: []
     deprecation_message: ''
     security: None
@@ -1022,10 +1132,14 @@ methods:
       - name: position
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The world-space `Datatype.Vector3` to convert to a cell coordinate.
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` representing the grid cell coordinates, biased
+          toward an empty (air) neighbor when the position lies on a cell
+          boundary.
     tags: []
     deprecation_message: ''
     security: None
@@ -1044,10 +1158,14 @@ methods:
       - name: position
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The world-space `Datatype.Vector3` to convert to a cell coordinate.
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` representing the grid cell coordinates, biased
+          toward a non-empty (solid) neighbor when the position lies on a cell
+          boundary.
     tags: []
     deprecation_message: ''
     security: None
@@ -1058,7 +1176,13 @@ methods:
     summary: |
       Sets a region of terrain using a dictionary of voxel channel data.
     description: |
-      Sets a region of terrain using a dictionary of voxel channel data.
+      Sets a region of terrain using a dictionary of per-channel voxel data, the
+      inverse of `Class.Terrain:ReadVoxelChannels()|ReadVoxelChannels()`. The
+      `channels` dictionary maps channel ID strings (`SolidMaterial`,
+      `SolidOccupancy`, and/or `LiquidOccupancy`) to their respective 3D data
+      arrays. You may write one or more channels in a single call. The `region`
+      must be aligned to the voxel grid, `resolution` must be `4`, and the
+      region cannot exceed 4,194,304 voxels.
     code_samples:
       - terrain-writevoxelchannels-example
     parameters:
@@ -1109,7 +1233,13 @@ methods:
     summary: |
       Sets a certain region of smooth terrain using table format.
     description: |
-      Sets a certain region of smooth terrain using table format.
+      Sets a region of smooth terrain from two 3D arrays: `materials` (an array
+      of `Enum.Material` values) and `occupancy` (an array of numbers between
+      `0` and `1`). Both arrays must have dimensions that exactly match the
+      target region in voxels. The `region` must be aligned to the voxel grid,
+      `resolution` must be `4`, and the region cannot exceed 4,194,304 voxels.
+      For more granular channel control, see
+      `Class.Terrain:WriteVoxelChannels()|WriteVoxelChannels()`.
     code_samples:
       - terrain-writevoxels-example
     parameters:

@@ -81,11 +81,33 @@ properties:
       can_save: true
     capabilities:
       - UI
+  - name: UIShadow.Enabled
+    summary: |
+      Determines whether the `UIShadow` is visible.
+    description: |
+      This property determines whether the `UIShadow` is visible. Default is
+      `true`.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
   - name: UIShadow.Offset
     summary: |
       Moves the shadow relative to the parent's position.
     description: |
-      This property moves the shadow relative to the parent's position.
+      This property moves the shadow relative to the parent's position. The X
+      scale factor is relative to the parent's width, and the Y scale factor is
+      relative to the parent's height.
     code_samples: []
     type: UDim2
     tags: []
@@ -104,7 +126,9 @@ properties:
     summary: |
       Expands or shrinks the shadow relative to the parent's size.
     description: |
-      This property changes the shadow's size. Properties that are relative to
+      This property expands or shrinks the shadow relative to the parent's size.
+      The X scale factor is relative to the parent's width, and the Y scale
+      factor is relative to the parent's height. Properties that are relative to
       the parent's size, such as the scale factors of
       `Class.UIShadow.BlurRadius|BlurRadius` and `Class.UIShadow.Offset|Offset`,
       are not affected by `Spread`.
@@ -159,26 +183,6 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Appearance
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - UI
-  - name: UIShadow.Enabled
-    summary: |
-      Determines whether the `UIShadow` is visible.
-    description: |
-      This property determines whether the `UIShadow` is visible. Default is
-      `true`.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
     serialization:
       can_load: true
       can_save: true

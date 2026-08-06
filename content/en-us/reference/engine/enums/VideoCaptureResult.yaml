@@ -4,29 +4,40 @@
 
 name: VideoCaptureResult
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates whether a video capture session ended successfully or the reason it
+  was interrupted.
+description: |
+  Passed as the `result` argument of `UserVideoCaptureFailed` when a video
+  capture session ends. `Enum.VideoCaptureResult.Success` means the capture
+  completed normally; other values identify why recording stopped.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Success
-    summary: ''
+    summary: |
+      Video capture ended normally without any errors.
     value: 0
     tags: []
     deprecation_message: ''
   - name: OtherError
-    summary: ''
+    summary: |
+      Video capture stopped due to an unspecified internal error.
     value: 1
     tags: []
     deprecation_message: ''
   - name: ScreenSizeChanged
-    summary: ''
+    summary: |
+      Video capture was interrupted because the screen dimensions changed while
+      recording was in progress.
     value: 2
     tags: []
     deprecation_message: ''
   - name: TimeLimitReached
-    summary: ''
+    summary: |
+      Video capture was stopped automatically because the maximum allowed
+      recording duration was reached.
     value: 3
     tags: []
     deprecation_message: ''

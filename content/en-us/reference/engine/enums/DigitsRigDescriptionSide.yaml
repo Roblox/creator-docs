@@ -4,24 +4,35 @@
 
 name: DigitsRigDescriptionSide
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies which hand side a `Class.DigitsRigDescription` instance is assigned
+  to.
+description: |
+  Identifies the hand that a `Class.DigitsRigDescription` maps to within a
+  character rig. The animation system routes finger-joint data by this value; an
+  instance whose `Class.DigitsRigDescription.Side` is
+  `Enum.DigitsRigDescriptionSide.None` is skipped. Defaults to
+  `Enum.DigitsRigDescriptionSide.None`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      The `Class.DigitsRigDescription` has not been assigned to a hand side and
+      is skipped by the animation system.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Left
-    summary: ''
+    summary: |
+      The `Class.DigitsRigDescription` is assigned to the left hand.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Right
-    summary: ''
+    summary: |
+      The `Class.DigitsRigDescription` is assigned to the right hand.
     value: 2
     tags: []
     deprecation_message: ''

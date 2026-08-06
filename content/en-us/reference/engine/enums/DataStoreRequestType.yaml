@@ -7,7 +7,18 @@ type: enum
 summary: |
   Indicates the type of data store request being made.
 description: |
-  Indicates the type of data store request being made.
+  Categorizes data store operations for use with
+  `Class.DataStoreService:GetRequestBudgetForRequestType()`, which returns the
+  remaining per-server request budget for a given category.
+
+  The enum contains two sets of values. The **legacy** values (`GetAsync`,
+  `SetIncrementAsync`, `UpdateAsync`, `GetSortedAsync`,
+  `SetIncrementSortedAsync`, `OnUpdate`, `ListAsync`, `GetVersionAsync`, and
+  `RemoveVersionAsync`) should not be used. The **modern** values
+  (`StandardRead`, `StandardWrite`, `StandardList`, `StandardRemove`,
+  `OrderedRead`, `OrderedWrite`, `OrderedList`, and `OrderedRemove`) correspond
+  to the newer `Class.DataStore` and `Class.OrderedDataStore` API families that
+  use universe-level and per-server limits.
 code_samples: []
 tags: []
 deprecation_message: ''

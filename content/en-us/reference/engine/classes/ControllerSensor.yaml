@@ -5,8 +5,23 @@
 name: ControllerSensor
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  An abstract base class for `Class.SensorBase` types that supply sensory data
+  to a character controller.
+description: |
+  `Class.ControllerSensor` is an abstract base class for `Class.SensorBase`
+  types whose output is intended to be consumed by a physics-based character
+  controller such as a `Class.ControllerManager`. A `Class.ControllerManager`
+  reads its `Class.ControllerManager.GroundSensor` and
+  `Class.ControllerManager.ClimbSensor`, both of which are
+  `Class.ControllerSensor|ControllerSensors`, to determine how its
+  `Class.ControllerManager.RootPart` interacts with the world.
+
+  `Class.ControllerSensor` adds no members of its own; it groups the concrete
+  sensor types that provide controller-relevant data, such as
+  `Class.ControllerPartSensor`, which detects floors and ladders using the same
+  logic as a `Class.Humanoid`. Because it is abstract, you don't create a
+  `Class.ControllerSensor` directly; use one of its subclasses instead.
 code_samples: []
 inherits:
   - SensorBase

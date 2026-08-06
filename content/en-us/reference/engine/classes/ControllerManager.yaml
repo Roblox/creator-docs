@@ -218,8 +218,18 @@ properties:
       - AvatarBehavior
     simulationAccess: true
   - name: ControllerManager.UpDirection
-    summary: ''
-    description: ''
+    summary: |
+      The unit vector describing the up direction for the character.
+    description: |
+      The unit vector describing the up direction for the character, which
+      defaults to `(0, 1, 0)` (world up). Controllers under this
+      `Class.ControllerManager` use it to keep the
+      `Class.ControllerManager.RootPart|RootPart` upright and to orient
+      direction-dependent forces. For example, a `Class.GroundController`
+      applies levitation and balancing forces along this direction, while an
+      `Class.AirController` and `Class.SwimController` align the character to
+      it. Any `Datatype.Vector3` assigned is automatically unitized; a zero,
+      `NaN`, or infinite value is ignored.
     code_samples: []
     type: Vector3
     tags: []
