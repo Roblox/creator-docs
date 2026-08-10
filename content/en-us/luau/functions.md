@@ -38,7 +38,6 @@ end
 
 addOneAndTwo = nil -- error: cannot reassign a const variable
 ```
-</Alert>
 
 ### Parameters
 
