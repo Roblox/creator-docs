@@ -30,7 +30,7 @@ TeleportService:TeleportAsync(TARGET_PLACE_ID, {playerToTeleport})
 To get the appropriate players to teleport, you might use a `Class.BasePart.Touched` or a `Class.ProximityPrompt.Triggered` event to get an individual `Class.Player`. Then you can check if the player is part of a team (`Class.Player.Team`) or party (`Class.Player.PartyId`). Finally, you can use `Class.Team:GetPlayers()` or `Class.SocialService:GetPlayersByPartyId()` if you want to teleport the entire group rather than just the individual.
 
 <Alert severity="info">
-To reduce client-side exploits, you can only call `Class.TeleportService:TeleportAsync()|TeleportAsync()` from server scripts. If necessary, client scripts can call `Class.TeleportService:Teleport()|Teleport()`, but we don't recommend it. For more information, see [Configure secure teleportation](#configure-secure-teleportation).
+To reduce client-side exploits, you can only call `Class.TeleportService:TeleportAsync()|TeleportAsync()` from server scripts. The client-side `Class.TeleportService:Teleport()|Teleport()` method is deprecated and should not be used for new work, even if your place is configured as "Fully Open." For more information, see [Configure secure teleportation](#configure-secure-teleportation).
 </Alert>
 
 ## Configure secure teleportation
