@@ -16,13 +16,15 @@ deprecation_message: ''
 items:
   - name: Parent
     summary: |
-      Uses the parent `Class.Instance` of the `Class.AudioEmitter`.
+      Uses the position and orientation of the `Class.AudioListener`'s parent
+      `Class.Instance`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Instance
     summary: |
-      Uses a specified `Class.Instance`.
+      Uses the position and orientation of the `Class.Instance` specified by
+      `Class.AudioListener.PositionInstance`.
     value: 1
     tags: []
     deprecation_message: ''

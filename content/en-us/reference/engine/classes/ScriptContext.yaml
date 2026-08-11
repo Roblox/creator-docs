@@ -5,7 +5,8 @@
 name: ScriptContext
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A service that manages the execution of all `Class.BaseScript` objects.
 description: |
   This service controls all `Class.BaseScript` objects. Most of the properties
   and methods of this service are locked for internal use.
@@ -21,14 +22,23 @@ deprecation_message: ''
 properties: []
 methods:
   - name: ScriptContext:EnableCoverage
-    summary: ''
-    description: ''
+    summary: |
+      Marks an instance and its descendant scripts for code-coverage tracking.
+      Requires `PluginOrOpenCloud` security.
+    description: |
+      Requires `PluginOrOpenCloud` security; not callable from game scripts.
+      Registers `instance` as a coverage root so the engine records per-line and
+      per-function execution coverage for `instance` and every script descended
+      from it. Retrieve the recorded data with
+      `Class.ScriptContext:GetCoverageStats()`.
     code_samples: []
     parameters:
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The instance to track; coverage is recorded for this instance and
+          every script descended from it.
     returns:
       - type: ()
         summary: ''
@@ -39,13 +49,28 @@ methods:
     capabilities:
       - PluginOrOpenCloud
   - name: ScriptContext:GetCoverageStats
-    summary: ''
-    description: ''
+    summary: |
+      Returns code-coverage statistics for scripts marked by
+      `Class.ScriptContext:EnableCoverage()|EnableCoverage()`. Requires
+      `PluginOrOpenCloud` security.
+    description: |
+      Requires `PluginOrOpenCloud` security; not callable from experience
+      scripts. Returns an array of coverage results, one entry per tracked
+      script. Each entry is a table with a `Script` field (the script
+      `Class.Instance`) and a `GetHits()` function. Calling `GetHits()` returns
+      two arrays: per-line hit counts, where `-1` marks a line that was never
+      executed or was excluded, and per-function records containing each
+      function's `Name`, `Line`, and `Hits`.
+
+      Like `Class.ScriptContext:EnableCoverage()`, this method raises an error
+      if coverage collection is not enabled.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of per-script coverage tables, each with a `Script` field and
+          a `GetHits` function for retrieving line and function hit counts.
     tags: []
     deprecation_message: ''
     security: None
@@ -56,13 +81,24 @@ methods:
     summary: |
       Limits how long a script is allowed to run without yielding.
     description: |
-      Limits how long a script is allowed to run without yielding.
+      Sets the watchdog time limit that the engine applies to running scripts.
+      The value becomes the per-resumption execution budget: if a thread runs
+      for longer than `seconds` since it was last resumed without yielding, the
+      watchdog aborts it with the runtime error
+      `Script timeout: exhausted allowed execution time`.
+
+      The timeout defaults to `0`, which disables the watchdog so that scripts
+      may run without any time limit. Call this method with a positive value to
+      enable enforcement, or pass `0` to turn it back off.
     code_samples: []
     parameters:
       - name: seconds
         type: double
         default:
-        summary: ''
+        summary: |
+          The maximum time, in seconds, that a script may run between yields
+          before the watchdog interrupts it. A value of `0` disables the
+          timeout.
     returns:
       - type: ()
         summary: ''
@@ -76,22 +112,32 @@ events:
     summary: |
       Fired when an error occurs.
     description: |
-      Fired when an error occurs.
+      Fires when an unhandled error occurs while running a script, reporting the
+      error to any listening code. The engine raises this event from its
+      error-reporting path when a thread terminates with an error, passing the
+      error `message`, a formatted `stackTrace` string, and the `script` that
+      was running.
+
+      This event does not fire for errors raised by the watchdog when a script
+      exceeds its execution-time limit (see `Class.ScriptContext:SetTimeout()`).
     code_samples:
       - ScriptContext-Error1
     parameters:
       - name: message
         type: string
         default:
-        summary: ''
+        summary: |
+          The error message describing what went wrong.
       - name: stackTrace
         type: string
         default:
-        summary: ''
+        summary: |
+          The call stack at the point the error occurred, formatted as a string.
       - name: script
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The script in which the error occurred.
     tags: []
     deprecation_message: ''
     security: None

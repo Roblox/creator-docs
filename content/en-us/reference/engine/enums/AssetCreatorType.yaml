@@ -4,19 +4,30 @@
 
 name: AssetCreatorType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates whether an asset is owned by an individual user or a group.
+description: |
+  Indicates whether an asset is owned by an individual user or a group. Used as
+  the `CreatorType` field in the request parameters of
+  `Class.AssetService:CreateAssetAsync()` and
+  `Class.AssetService:CreateAssetVersionAsync()` to specify the type of entity
+  that will own the resulting asset. When set to `Enum.AssetCreatorType.User`,
+  the accompanying `CreatorId` is interpreted as a user ID; when set to
+  `Enum.AssetCreatorType.Group`, it is interpreted as a group ID.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: User
-    summary: ''
+    summary: |
+      The asset is owned by an individual user; the accompanying creator ID is a
+      user ID.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Group
-    summary: ''
+    summary: |
+      The asset is owned by a group; the accompanying creator ID is a group ID.
     value: 1
     tags: []
     deprecation_message: ''

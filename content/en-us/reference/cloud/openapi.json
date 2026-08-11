@@ -27535,6 +27535,14 @@
             }
           },
           {
+            "in": "header",
+            "name": "usageContext",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
             "in": "query",
             "name": "id",
             "schema": {
@@ -27682,14 +27690,6 @@
             "name": "accessContext",
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "in": "query",
-            "name": "usageContext",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
             }
           }
         ],
@@ -54237,6 +54237,12 @@
             "description": "3: The user id is invalid."
           }
         },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://apis.roblox.com/cloud/v2/users/{user_id}",
+            "httpMethod": "GET"
+          }
+        ],
         "servers": [
           {
             "url": "https://users.roblox.com"
@@ -65490,6 +65496,7 @@
     },
     "/v4/avatar/users/{userId}": {
       "get": {
+        "tags": ["Avatars", "User profiles"],
         "summary": "Gets the currently wearing avatar definition for the specified user.",
         "description": "Returns an Roblox.Api.Avatar.Models.V4.AvatarDefinition containing an Roblox.Api.Avatar.Models.V4.AvatarModelV4 and Roblox.Api.Avatar.Models.V4.AvatarConfigurations.\r\nBehavior is aligned with the V2 `GET v2/avatar/users/{userId}/avatar` endpoint.",
         "parameters": [
@@ -65562,7 +65569,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/avatars#avatar_get_v4_avatar_users__userId_"
+        }
       }
     },
     "/v4/outfits/{outfitId}/details": {
@@ -88280,6 +88290,7 @@
         "properties": {
           "userIds": {
             "description": "The user ids.",
+            "maxItems": 200,
             "type": "array",
             "items": {
               "format": "int64",
@@ -90804,7 +90815,9 @@
           "roblox_restarted",
           "crashed",
           "out_of_memory",
-          "moderated"
+          "moderated",
+          "pending",
+          "unspecified"
         ],
         "type": "string",
         "description": "Server status that is visible to creators.\r\nThis is derived from the shutdown reason for shutdown rows; it is always \"Active\" for currently live servers."
@@ -92170,6 +92183,14 @@
           "owner": ["user", "group"]
         }
       },
+      "UniverseEligibility": {
+        "type": "object",
+        "properties": {
+          "eligible": {
+            "type": "boolean"
+          }
+        }
+      },
       "Universe_SocialLink": {
         "type": "object",
         "properties": {
@@ -93457,7 +93478,7 @@
             "description": "The eligibility result for the requested experience. Present only when\nuniverseId was supplied in the request.",
             "allOf": [
               {
-                "$ref": "#/components/schemas/internal_public_v1.UniverseEligibility"
+                "$ref": "#/components/schemas/UniverseEligibility"
               }
             ]
           },
@@ -93807,27 +93828,6 @@
               "type": "string",
               "enum": ["PHONE", "TABLET", "DESKTOP", "CONSOLE"]
             }
-          }
-        }
-      },
-      "internal_public_v1.UniverseEligibility": {
-        "type": "object",
-        "properties": {
-          "eligible": {
-            "description": "Whether the experience can currently be advertised.",
-            "type": "boolean"
-          },
-          "reasons": {
-            "description": "The reasons the experience is not eligible. Omitted when eligible. Values can be\n`NO_PERMISSION` or `BLOCKED`.",
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": ["NO_PERMISSION", "BLOCKED"]
-            }
-          },
-          "universeId": {
-            "description": "The identifier of the experience that was checked.",
-            "type": "string"
           }
         }
       },
@@ -94269,7 +94269,7 @@
     },
     {
       "name": "Avatars",
-      "description": "Customize user avatars and manage outfits programmatically, including body colors, scales, and [thumbnail generation](#Cloud_GenerateUserThumbnail).\n",
+      "description": "Customize user avatars and manage outfits programmatically, including [retrieving a user's avatar configuration](#avatar_get_v4_avatar_users__userId_), body colors, scales, and [thumbnail generation](#Cloud_GenerateUserThumbnail).\n",
       "x-roblox-tag-info": {
         "path": "avatars",
         "content": "HTTP APIs for working with avatars on Roblox Cloud.",
@@ -94299,6 +94299,7 @@
           "avatar_get_v3_outfits__userOutfitId__details",
           "avatar_post_v3_outfits_create",
           "avatar_get_v4_avatar",
+          "avatar_get_v4_avatar_users__userId_",
           "avatar_get_v4_outfits__outfitId__details",
           "catalog_get_v1_asset_to_category",
           "catalog_get_v1_asset_to_subcategory",
@@ -95456,6 +95457,7 @@
           "accountinformation_get_v1_users__userId__promotion_channels",
           "accountinformation_get_v1_users__userId__roblox_badges",
           "avatar_post_v1_avatar_redraw_thumbnail",
+          "avatar_get_v4_avatar_users__userId_",
           "avatar_get_v1_users__userId__avatar",
           "avatar_get_v1_users__userId__currently_wearing",
           "badges_get_v1_users__userId__badges",

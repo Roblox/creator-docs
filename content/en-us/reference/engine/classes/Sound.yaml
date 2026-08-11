@@ -32,23 +32,6 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
-  - name: Sound.AcousticSimulationEnabled
-    summary: ''
-    description: ''
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Emitter
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - LegacySound
   - name: Sound.AudioContent
     summary: |
       A reference to an audio asset.

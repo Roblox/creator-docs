@@ -43,7 +43,8 @@ deprecation_message: ''
 properties: []
 methods:
   - name: StudioDeviceSimulatorService:CreateDeviceAsync
-    summary: ''
+    summary: |
+      Creates a custom device preset and returns its ID.
     description: |
       Creates a custom device and returns its newly assigned ID. Custom devices
       are persisted to disk and appear in the Device Simulator UI.
@@ -55,7 +56,14 @@ methods:
       - name: config
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A dictionary describing the new device. Required fields: `Name`
+          (string, 1-200 characters, cannot be `"default"`), `Width` (int,
+          1-7680 pixels), `Height` (int, 1-4320 pixels), `PixelDensity` (int,
+          72-10000 DPI). Optional fields: `DeviceForm` (`Enum.DeviceForm`,
+          default Phone), `ResolutionScale` (float, default 1.0, max 10.0),
+          `PortraitKeyboardHeight` (int, default 0), `LandscapeKeyboardHeight`
+          (int, default 0).
     returns:
       - type: string
         summary: |
@@ -67,7 +75,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:GetDeviceAsync
-    summary: ''
+    summary: |
+      Returns the ID of the currently active device, or `"default"` if none is
+      active.
     description: |
       Returns the ID of the currently active device, or `"default"` if no device
       is active.
@@ -84,7 +94,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:GetDeviceInfoAsync
-    summary: ''
+    summary: |
+      Returns the configuration dictionary for the specified device.
     description: |
       Returns a `DeviceConfiguration` for the specified device without
       activating it. Useful for inspecting presets before choosing one to switch
@@ -169,7 +180,9 @@ methods:
       - name: deviceId
         type: string
         default:
-        summary: ''
+        summary: |
+          The unique identifier of the device to query. Must be a valid ID from
+          `GetDeviceListAsync()`; cannot be `"default"`.
     returns:
       - type: Dictionary
         summary: |
@@ -182,7 +195,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:GetDeviceListAsync
-    summary: ''
+    summary: |
+      Returns an array of all available device IDs.
     description: |
       Returns an array of device IDs for all available presets, including
       built-in and custom devices.
@@ -200,7 +214,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:GetOrientationAsync
-    summary: ''
+    summary: |
+      Returns the current simulated screen orientation.
     description: |
       Returns the current simulated orientation.
     code_samples: []
@@ -216,7 +231,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:GetPixelDensityAsync
-    summary: ''
+    summary: |
+      Returns the current simulated pixel density in DPI.
     description: |
       Returns the current simulated pixel density.
     code_samples: []
@@ -232,7 +248,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:GetResolutionAsync
-    summary: ''
+    summary: |
+      Returns the current simulated viewport resolution.
     description: |
       Returns the current simulated resolution.
     code_samples: []
@@ -248,15 +265,23 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:GetScalingModeAsync
-    summary: ''
+    summary: |
+      Returns how the simulated resolution currently maps to the Studio
+      viewport.
     description: |
-      Returns the current scaling mode.
+      Returns the current `Enum.DeviceSimulatorScalingMode` for how the
+      simulated resolution maps to the Studio viewport. See
+      `Class.StudioDeviceSimulatorService:SetScalingModeAsync()|SetScalingModeAsync()`
+      for the available modes.
+
+      Requires an active device; errors when `GetDeviceAsync()` returns
+      `"default"`.
     code_samples: []
     parameters: []
     returns:
       - type: DeviceSimulatorScalingMode
         summary: |
-          DeviceSimulatorScalingMode
+          The current `Enum.DeviceSimulatorScalingMode`.
     tags:
       - Yields
     deprecation_message: ''
@@ -264,7 +289,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:RemoveDeviceAsync
-    summary: ''
+    summary: |
+      Removes a custom device from the catalog.
     description: |
       Removes a custom device.
 
@@ -274,7 +300,8 @@ methods:
       - name: deviceId
         type: string
         default:
-        summary: ''
+        summary: |
+          The unique identifier of the custom device to remove.
     returns:
       - type: ()
         summary: ''
@@ -285,7 +312,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:SetDeviceAsync
-    summary: ''
+    summary: |
+      Activates the specified device or stops simulation if `"default"` is
+      passed.
     description: |
       Activates the specified device. Passing `"default"` stops simulation and
       is equivalent to calling `StopSimulationAsync`.
@@ -296,7 +325,9 @@ methods:
       - name: deviceId
         type: string
         default:
-        summary: ''
+        summary: |
+          The unique identifier of the device to activate, or `"default"` to
+          stop simulation.
     returns:
       - type: ()
         summary: ''
@@ -307,7 +338,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:SetOrientationAsync
-    summary: ''
+    summary: |
+      Sets the simulated screen orientation.
     description: |
       Sets or gets the simulated screen orientation. Accepts Portrait,
       LandscapeLeft, or LandscapeRight. Other values will error.
@@ -318,7 +350,11 @@ methods:
       - name: orientation
         type: ScreenOrientation
         default:
-        summary: ''
+        summary: |
+          The target screen orientation. Accepted values are
+          `Enum.ScreenOrientation.Portrait`,
+          `Enum.ScreenOrientation.LandscapeLeft`, or
+          `Enum.ScreenOrientation.LandscapeRight`.
     returns:
       - type: ()
         summary: ''
@@ -329,7 +365,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:SetPixelDensityAsync
-    summary: ''
+    summary: |
+      Overrides the simulated pixel density in DPI for the current session.
     description: |
       Overrides or returns the simulated pixel density in DPI. Session-level;
       cleared on device switch.
@@ -341,7 +378,8 @@ methods:
       - name: density
         type: float
         default:
-        summary: ''
+        summary: |
+          The pixel density override in DPI. Must be between 72 and 10000.
     returns:
       - type: ()
         summary: ''
@@ -352,7 +390,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:SetResolutionAsync
-    summary: ''
+    summary: |
+      Overrides the simulated viewport resolution for the current session.
     description: |
       Overrides the simulated viewport resolution or returns the current
       resolution as a Vector2. Overrides are session-level and cleared when you
@@ -369,11 +408,15 @@ methods:
       - name: width
         type: int
         default:
-        summary: ''
+        summary: |
+          The viewport width in pixels (horizontal axis in landscape
+          orientation). Range: 1 to 7680.
       - name: height
         type: int
         default:
-        summary: ''
+        summary: |
+          The viewport height in pixels (vertical axis in landscape
+          orientation). Range: 1 to 4320.
     returns:
       - type: ()
         summary: ''
@@ -384,7 +427,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:SetScalingModeAsync
-    summary: ''
+    summary: |
+      Sets how the simulated resolution maps to the Studio viewport.
     description: |
       Controls how the simulated resolution maps to the Studio viewport.
 
@@ -400,7 +444,11 @@ methods:
       - name: mode
         type: DeviceSimulatorScalingMode
         default:
-        summary: ''
+        summary: |
+          The scaling mode to apply. One of
+          `Enum.DeviceSimulatorScalingMode.ScaleToPhysicalSize`,
+          `Enum.DeviceSimulatorScalingMode.ActualResolution`, or
+          `Enum.DeviceSimulatorScalingMode.FitToWindow`.
     returns:
       - type: ()
         summary: ''
@@ -411,7 +459,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:StopSimulationAsync
-    summary: ''
+    summary: |
+      Stops the active device simulation.
     description: |
       Stops the active simulation. Prefer this over `SetDeviceAsync("default")`
       for clarity.
@@ -429,7 +478,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioDeviceSimulatorService:UpdateDeviceAsync
-    summary: ''
+    summary: |
+      Updates the configuration of an existing custom device.
     description: |
       Updates a custom device's configuration.
 
@@ -440,11 +490,15 @@ methods:
       - name: deviceId
         type: string
         default:
-        summary: ''
+        summary: |
+          The unique identifier of the custom device to update.
       - name: config
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A dictionary of device fields to apply. Uses patch semantics: omitted
+          optional fields retain their current values. Same schema as
+          `CreateDeviceAsync()`.
     returns:
       - type: ()
         summary: ''
@@ -456,7 +510,8 @@ methods:
     capabilities: []
 events:
   - name: StudioDeviceSimulatorService.ConfigurationChanged
-    summary: ''
+    summary: |
+      Fires when the active simulation state changes.
     description: |
       Fires when the active simulation state changes: device switch,
       orientation, resolution, pixel density, scaling mode, or user interaction

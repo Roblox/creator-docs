@@ -277,7 +277,7 @@ A failed write call, such as `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`
     <td></td>
     <td>`OrderedReadExperienceThrottled`</td>
     <td>`OrderedRead` request was throttled by experience limits.</td>
-    <td>A request to `Class.OrderedDataStore:GetAsync()|GetAsync()` or the read of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` on an ordered data store exceeded the `OrderedRead` experience-level rate limit.</td>
+    <td>A request to `Class.OrderedDataStore:GetAsync()|GetAsync()`, `Class.GlobalDataStore:BatchGetAsync()|BatchGetAsync()`, or the read of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` on an ordered data store exceeded the `OrderedRead` experience-level rate limit.</td>
   </tr>
   <tr>
     <td></td>
@@ -325,7 +325,7 @@ A failed write call, such as `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`
     <td></td>
     <td>`OrderedReadGameServerThrottled`</td>
     <td>`OrderedRead` request was throttled by game server limits or the request queue was full.</td>
-    <td>A request to `Class.OrderedDataStore:GetAsync()|GetAsync()` or the read of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` on an ordered data store exceeded the `OrderedRead` game server-level rate limit.</td>
+    <td>A request to `Class.OrderedDataStore:GetAsync()|GetAsync()`, `Class.GlobalDataStore:BatchGetAsync()|BatchGetAsync()`, or the read of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` on an ordered data store exceeded the `OrderedRead` game server-level rate limit.</td>
   </tr>
   <tr>
     <td></td>
@@ -437,7 +437,7 @@ A failed write call, such as `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`
   <tr>
     <td>`OrderedReadExperienceThrottled`</td>
     <td>The ordered read request rate exceeds the allowed maximum for the experience.</td>
-    <td>A request to `Class.OrderedDataStore:GetAsync()|GetAsync()` or the read of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` on an ordered data store exceeded the `OrderedRead` experience-level rate limit.</td>
+    <td>A request to `Class.OrderedDataStore:GetAsync()|GetAsync()`, `Class.GlobalDataStore:BatchGetAsync()|BatchGetAsync()`, or the read of `Class.OrderedDataStore:UpdateAsync()|UpdateAsync()` on an ordered data store exceeded the `OrderedRead` experience-level rate limit.</td>
   </tr>
   <tr>
     <td>`OrderedWriteExperienceThrottled`</td>
@@ -534,7 +534,7 @@ Each experience is allowed a certain number of data store requests based on the 
   <tbody>
     <tr>
       <td><b>Read</b></td>
-      <td>`Class.OrderedDataStore:GetAsync()|GetAsync()`<br></br>`Class.OrderedDataStore:UpdateAsync()|UpdateAsync()`</td>
+      <td>`Class.OrderedDataStore:GetAsync()|GetAsync()`<br></br>`Class.GlobalDataStore:BatchGetAsync()|BatchGetAsync()`<br></br>`Class.OrderedDataStore:UpdateAsync()|UpdateAsync()`</td>
       <td>Get Ordered Data Store Entry</td>
       <td>300 + concurrentUsers × 40</td>
     </tr>
@@ -861,7 +861,7 @@ The following **default rate limits** apply if the API is not called:
     <tr>
       <td><b>Read</b></td>
       <td>`OrderedRead`</td>
-      <td>`Class.OrderedDataStore:GetAsync()|GetAsync()`<br></br>`Class.OrderedDataStore:UpdateAsync()|UpdateAsync()`</td>
+      <td>`Class.OrderedDataStore:GetAsync()|GetAsync()`<br></br>`Class.GlobalDataStore:BatchGetAsync()|BatchGetAsync()`<br></br>`Class.OrderedDataStore:UpdateAsync()|UpdateAsync()`</td>
       <td>60 + numPlayers × 40</td>
     </tr>
     <tr>

@@ -5,8 +5,24 @@
 name: BaseRemoteEvent
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Abstract base class inherited by `Class.RemoteEvent` and
+  `Class.UnreliableRemoteEvent` for asynchronous, one-way communication across
+  the client-server boundary.
+description: |
+  Abstract base class inherited by `Class.RemoteEvent` and
+  `Class.UnreliableRemoteEvent`. It defines shared behavior for asynchronous,
+  one-way communication across the
+  [client-server](../../../projects/client-server.md) boundary without yielding
+  for a response — from a client to the server, from the server to a specific
+  client, or from the server to all clients.
+
+  This class isn't creatable. Use `Class.RemoteEvent` for reliable, ordered
+  delivery, or `Class.UnreliableRemoteEvent` when reduced latency and network
+  traffic matter more than guaranteed delivery. Fire and receive APIs
+  (`FireServer`, `FireClient`, `FireAllClients`, `OnServerEvent`,
+  `OnClientEvent`) are defined on those subclasses. If you need a return value,
+  use a `Class.RemoteFunction` instead.
 code_samples: []
 inherits:
   - Instance

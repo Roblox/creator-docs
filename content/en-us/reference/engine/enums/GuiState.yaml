@@ -4,15 +4,20 @@
 
 name: GuiState
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the current interaction state of a `Class.GuiObject`.
+description: |
+  Describes the current input state of a `Class.GuiObject`, as reported by its
+  read-only `Class.GuiObject.GuiState` property. The engine sets this value
+  automatically based on user input; it cannot be set from scripts. The value
+  defaults to `Enum.GuiState.Idle` when the object is not being interacted with.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Idle
     summary: |
-      The GUI currently has no state.
+      The GuiObject is idle — neither hovered nor pressed.
     value: 0
     tags: []
     deprecation_message: ''

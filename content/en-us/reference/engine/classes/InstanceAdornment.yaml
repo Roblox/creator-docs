@@ -7,7 +7,15 @@ type: class
 memory_category: Instances
 summary: |
   A base class for all objects that adorn `Class.Instance` classes.
-description: ''
+description: |
+  A base class for 3D GUI elements (`Class.GuiBase3d`) that adorn objects of the
+  `Class.Instance` class. Unlike `Class.PartAdornment` and `Class.PVAdornment`,
+  whose adornee is restricted to a `Class.BasePart` or `Class.PVInstance`
+  respectively, an `Class.InstanceAdornment` can adorn any `Class.Instance` set
+  through its `Class.InstanceAdornment.Adornee` property. Like other
+  `Class.GuiBase3d` objects, it renders in 3D relative to its adornee when it is
+  a descendant of the `Class.Workspace` or another location where GUI objects
+  are rendered.
 code_samples: []
 inherits:
   - GuiBase3d

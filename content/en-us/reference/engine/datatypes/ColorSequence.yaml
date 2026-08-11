@@ -84,7 +84,9 @@ constructors:
       - name: c
         type: Color3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Color3` value used for both the start and end of the
+          sequence.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -108,11 +110,13 @@ constructors:
       - name: c0
         type: Color3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Color3` value at the start of the sequence (time 0).
       - name: c1
         type: Color3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Color3` value at the end of the sequence (time 1).
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -142,7 +146,10 @@ constructors:
       - name: keypoints
         type: Array
         default:
-        summary: ''
+        summary: |
+          An array of `Datatype.ColorSequenceKeypoint` values ordered by
+          non-descending time, starting at time 0 and ending at time 1. Must
+          contain at least 2 and no more than 20 keypoints.
     code_samples: []
     tags: []
     deprecation_message: ''

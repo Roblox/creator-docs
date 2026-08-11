@@ -39,7 +39,10 @@ methods:
           The name of the registered `Datatype.SharedTable`.
     returns:
       - type: SharedTable
-        summary: ''
+        summary: |
+          The registered `Datatype.SharedTable` with the specified name, or a
+          newly created and registered `Datatype.SharedTable` if no
+          `Datatype.SharedTable` was previously registered under that name.
     tags: []
     deprecation_message: ''
     security: None

@@ -5,8 +5,29 @@
 name: ScriptProfilerService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A service that captures sampling-based profiles of Luau script execution on
+  the server or on a client.
+description: |
+  `ScriptProfilerService` provides a scripting interface to Roblox's Luau script
+  profiler, which periodically samples running Luau threads to attribute CPU
+  time to the functions that consume it.
+
+  Profiling is controlled independently for the server and for individual
+  clients: `Class.ScriptProfilerService:ServerStart()|ServerStart()` and
+  `Class.ScriptProfilerService:ServerStop()|ServerStop()` govern server-side
+  scripts, while `Class.ScriptProfilerService:ClientStart()|ClientStart()` and
+  `Class.ScriptProfilerService:ClientStop()|ClientStop()` govern a given
+  player's client. Calling
+  `Class.ScriptProfilerService:ServerRequestData()|ServerRequestData()` or
+  `Class.ScriptProfilerService:ClientRequestData()|ClientRequestData()` collects
+  a snapshot of the profiling results, which is delivered asynchronously through
+  the `Class.ScriptProfilerService.OnNewData|OnNewData` event as a JSON string.
+  That string can be turned into a structured Luau table with
+  `Class.ScriptProfilerService:DeserializeJSON()|DeserializeJSON()`.
+
+  This service powers the Script Profiler in the in-experience Developer
+  Console.
 code_samples: []
 inherits:
   - Instance
@@ -18,14 +39,27 @@ deprecation_message: ''
 properties: []
 methods:
   - name: ScriptProfilerService:ClientRequestData
-    summary: ''
-    description: ''
+    summary: |
+      Requests the current script profiling data from the specified player's
+      client.
+    description: |
+      Requests a snapshot of the profiling data collected for the given player's
+      client. The data is not returned directly; instead it is delivered
+      asynchronously through the
+      `Class.ScriptProfilerService.OnNewData|OnNewData` event as a JSON string.
+
+      When called on the server this replicates a data request to the target
+      client, and when called on the client it gathers the local player's
+      profiling data directly. On a client the `player` argument must be the
+      local player.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` whose client should report its profiling data. When
+          called on a client, this must be the local player.
     returns:
       - type: ()
         summary: ''
@@ -35,18 +69,32 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ScriptProfilerService:ClientStart
-    summary: ''
-    description: ''
+    summary: |
+      Begins Luau script profiling for the specified player's client.
+    description: |
+      Begins profiling the Luau scripts running on the given player's client.
+      The profiler periodically samples running Luau threads at `frequency`
+      samples per second; if `frequency` is omitted it defaults to `1000`, and a
+      value outside the range `[1, 10000]` raises an error.
+
+      When called on the server this replicates a request to the target client
+      to start profiling, and when called on the client it starts sampling the
+      local player's scripts directly. On a client the `player` argument must be
+      the local player.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` whose client should start profiling. When called on
+          a client, this must be the local player.
       - name: frequency
         type: int?
         default:
-        summary: ''
+        summary: |
+          Optional sampling frequency in samples per second. Defaults to `1000`
+          and must be within the range `[1, 10000]`.
     returns:
       - type: ()
         summary: ''
@@ -56,14 +104,23 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ScriptProfilerService:ClientStop
-    summary: ''
-    description: ''
+    summary: |
+      Stops Luau script profiling for the specified player's client.
+    description: |
+      Stops profiling the Luau scripts running on the given player's client.
+
+      When called on the server this replicates a request to the target client
+      to stop profiling, and when called on the client it stops sampling the
+      local player's scripts directly. On a client the `player` argument must be
+      the local player.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` whose client should stop profiling. When called on
+          a client, this must be the local player.
     returns:
       - type: ()
         summary: ''
@@ -73,17 +130,29 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ScriptProfilerService:DeserializeJSON
-    summary: ''
-    description: ''
+    summary: |
+      Parses a script-profiling JSON string into a structured Luau table.
+    description: |
+      Converts the raw JSON produced by the profiler into a Luau table so the
+      results can be inspected programmatically rather than parsed by hand. The
+      returned table mirrors the profiling session, exposing entries such as its
+      version, session start and end times, categories, call nodes, and function
+      metadata.
+
+      An empty or non-object input yields no data.
     code_samples: []
     parameters:
       - name: jsonString
         type: string?
         default:
-        summary: ''
+        summary: |
+          The profiling data encoded as a JSON string, such as the value
+          delivered by `Class.ScriptProfilerService.OnNewData|OnNewData`.
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A dictionary representing the parsed profiling data, including the
+          session's categories, call nodes, and function metadata.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -91,8 +160,13 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ScriptProfilerService:ServerRequestData
-    summary: ''
-    description: ''
+    summary: |
+      Requests the current script profiling data from the server.
+    description: |
+      Requests a snapshot of the profiling data collected on the server. The
+      data is not returned directly; instead it is delivered asynchronously
+      through the `Class.ScriptProfilerService.OnNewData|OnNewData` event as a
+      JSON string, with no associated player.
     code_samples: []
     parameters: []
     returns:
@@ -104,14 +178,21 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ScriptProfilerService:ServerStart
-    summary: ''
-    description: ''
+    summary: |
+      Begins Luau script profiling on the server.
+    description: |
+      Begins profiling the Luau scripts running on the server. The profiler
+      periodically samples running Luau threads at `frequency` samples per
+      second; if `frequency` is omitted it defaults to `1000`, and a value
+      outside the range `[1, 10000]` raises an error.
     code_samples: []
     parameters:
       - name: frequency
         type: int?
         default:
-        summary: ''
+        summary: |
+          Optional sampling frequency in samples per second. Defaults to `1000`
+          and must be within the range `[1, 10000]`.
     returns:
       - type: ()
         summary: ''
@@ -121,8 +202,10 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: ScriptProfilerService:ServerStop
-    summary: ''
-    description: ''
+    summary: |
+      Stops Luau script profiling on the server.
+    description: |
+      Stops profiling the Luau scripts running on the server.
     code_samples: []
     parameters: []
     returns:
@@ -135,18 +218,30 @@ methods:
     capabilities: []
 events:
   - name: ScriptProfilerService.OnNewData
-    summary: ''
-    description: ''
+    summary: |
+      Fires when a new profiling data snapshot becomes available after a data
+      request.
+    description: |
+      Fires when a new profiling snapshot becomes available, in response to
+      `Class.ScriptProfilerService:ClientRequestData()|ClientRequestData()` or
+      `Class.ScriptProfilerService:ServerRequestData()|ServerRequestData()`. The
+      data is delivered as a JSON string in `jsonString`; pass it to
+      `Class.ScriptProfilerService:DeserializeJSON()|DeserializeJSON()` to
+      obtain a structured table. `player` identifies the client the data came
+      from, or is `nil` when the data was collected on the server.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` whose client produced the data, or `nil` for data
+          collected on the server.
       - name: jsonString
         type: string
         default:
-        summary: ''
+        summary: |
+          The profiling data encoded as a JSON string.
     tags: []
     deprecation_message: ''
     security: PluginSecurity

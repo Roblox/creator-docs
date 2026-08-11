@@ -1,3 +1,5 @@
+https://luau.org/syntax/
+https://luau.org/syntax/
 https://learn.microsoft.com/typography/opentype/spec/featuretags
 https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/
 https://www.passmark.com/

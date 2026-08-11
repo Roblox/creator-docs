@@ -9,7 +9,7 @@ description: Functions are blocks of code that can execute multiple times on com
 
 A function definition includes:
 
-- The [scope](./scope.md) of the function (global, `local`, or `const`).
+- The [scope](./scope.md) of the function: global or `local` (or [`const`](./variables.md#const-variables) for a local function whose name you can't reassign).
 - The `function` keyword.
 - The name of the function in `camelCase`.
 - The parameters of the function in parentheses (`()`).
@@ -26,17 +26,6 @@ local function addOneAndTwo()
 end
 -- Calling a function without a return
 addOneAndTwo() -- 3
-```
-
-You can also use `const` in place of `local` to define a function whose name can't be reassigned, since `const function name()` is shorthand for a [const variable](./variables.md#const-variables) holding a function value.
-
-```lua
-const function addOneAndTwo()
-	local result = 1 + 2
-	print(result)
-end
-
-addOneAndTwo = nil -- error: cannot reassign a const variable
 ```
 
 ### Parameters

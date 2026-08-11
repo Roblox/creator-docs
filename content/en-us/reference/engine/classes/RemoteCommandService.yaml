@@ -5,8 +5,29 @@
 name: RemoteCommandService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Team Create service that executes Luau commands sent from a Studio client on
+  the collaborative editing server and relays their output back to that client.
+description: |
+  Studio-only Team Create service; not accessible from experience scripts.
+  Powers remote command execution: a Studio client submits Luau source, which
+  the collaborative editing server runs inside a dedicated sandboxed thread,
+  streaming the command's output and errors back to the client that started it.
+
+  Commands take one of two forms: a persistent command that opens a two-way
+  channel between the client and the running code, and a one-shot command that
+  runs once and hands back a single result or error.
+
+  While a persistent command runs, its server-side code communicates with the
+  originating client through the members on this service:
+  `Class.RemoteCommandService:SendUpdate()|SendUpdate()` pushes values to the
+  client,
+  `Class.RemoteCommandService:GetReceivedUpdateSignal()|GetReceivedUpdateSignal()`
+  delivers values the client sends back,
+  `Class.RemoteCommandService:GetStoppingSignal()|GetStoppingSignal()` fires
+  when the command is stopped, and
+  `Class.RemoteCommandService:GetExecutingPlayer()|GetExecutingPlayer()`
+  identifies the collaborator who started it.
 code_samples: []
 inherits:
   - Instance
@@ -18,13 +39,26 @@ deprecation_message: ''
 properties: []
 methods:
   - name: RemoteCommandService:GetExecutingPlayer
-    summary: ''
-    description: ''
+    summary: |
+      Returns the `Class.Player` for the Studio collaborator who started the
+      command that is currently executing.
+    description: |
+      Call this from inside a running command on the collaborative editing
+      server to find the `Class.Player` that represents the collaborator who
+      submitted it. The server compares the command's originating network
+      address against the connected players and returns the matching
+      `Class.Player`, or `nil` when no player matches.
+
+      This method may only be called from within an active persistent command,
+      and raises an error if there is no such command, such as when called from
+      a one-shot command or after the command has stopped.
     code_samples: []
     parameters: []
     returns:
       - type: Player
-        summary: ''
+        summary: |
+          The `Class.Player` representing the collaborator who started the
+          running command, or `nil` if no connected player matches.
     tags: []
     deprecation_message: ''
     security: None
@@ -32,13 +66,25 @@ methods:
     capabilities:
       - Unknown
   - name: RemoteCommandService:GetReceivedUpdateSignal
-    summary: ''
-    description: ''
+    summary: |
+      Returns a signal that fires on the server each time the Studio client that
+      started the command sends it an update.
+    description: |
+      Server-side command code connects to this signal to receive data pushed
+      from the Studio client that started the command. The event fires with the
+      tuple of values the client sends, forming the client-to-server half of the
+      command's two-way channel.
+
+      This method may only be called from within an active persistent command,
+      and raises an error if there is no such command, such as when called from
+      a one-shot command or after the command has stopped.
     code_samples: []
     parameters: []
     returns:
       - type: RBXScriptSignal
-        summary: ''
+        summary: |
+          An event that fires with the values the initiating Studio client
+          passes each time it sends an update to the running command.
     tags: []
     deprecation_message: ''
     security: None
@@ -46,13 +92,26 @@ methods:
     capabilities:
       - Unknown
   - name: RemoteCommandService:GetStoppingSignal
-    summary: ''
-    description: ''
+    summary: |
+      Returns a signal that fires on the server when the command that is
+      currently executing is being stopped.
+    description: |
+      Server-side command code connects to this signal to learn when its command
+      is being stopped, giving it a chance to clean up before the sandboxed
+      thread is torn down. The event fires when the initiating Studio client
+      stops the command, or when that collaborator disconnects from the Team
+      Create session.
+
+      This method may only be called from within an active persistent command,
+      and raises an error if there is no such command, such as when called from
+      a one-shot command or after the command has stopped.
     code_samples: []
     parameters: []
     returns:
       - type: RBXScriptSignal
-        summary: ''
+        summary: |
+          An event that fires, with no arguments, when the running command is
+          stopped.
     tags: []
     deprecation_message: ''
     security: None
@@ -60,14 +119,25 @@ methods:
     capabilities:
       - Unknown
   - name: RemoteCommandService:SendUpdate
-    summary: ''
-    description: ''
+    summary: |
+      Sends a set of values from the running command back to the Studio client
+      that started it.
+    description: |
+      Server-side command code calls this to push values to the Studio client
+      that started the command, forming the server-to-client half of the
+      command's two-way channel; the values reach that client through the
+      command's update event.
+
+      This method may only be called from within an active persistent command.
+      When there is no such command, such as when called from a one-shot command
+      or after the command has stopped, the call has no effect.
     code_samples: []
     parameters:
       - name: args
         type: Tuple
         default:
-        summary: ''
+        summary: |
+          The values to deliver to the initiating Studio client.
     returns:
       - type: ()
         summary: ''

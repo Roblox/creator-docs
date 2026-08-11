@@ -4,44 +4,64 @@
 
 name: TeleportMethod
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies which `Class.TeleportService` API method initiated a teleport.
+description: |
+  `TeleportMethod` identifies the `Class.TeleportService` call that initiated a
+  given teleport. Each enum item corresponds to a specific public
+  `Class.TeleportService` method.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: TeleportToSpawnByName
-    summary: ''
+    summary: |
+      Teleport was initiated by `Class.TeleportService:TeleportToSpawnByName()`,
+      which sends a player to a named `Class.SpawnLocation` in a place.
     value: 0
     tags: []
     deprecation_message: ''
   - name: TeleportToPlaceInstance
-    summary: ''
+    summary: |
+      Teleport was initiated by
+      `Class.TeleportService:TeleportToPlaceInstance()`, which sends a player to
+      a specific running server instance identified by its `instanceId`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: TeleportToPrivateServer
-    summary: ''
+    summary: |
+      Teleport was initiated by
+      `Class.TeleportService:TeleportToPrivateServer()`, which sends players to
+      a reserved server using an access code.
     value: 2
     tags: []
     deprecation_message: ''
   - name: TeleportPartyAsync
-    summary: ''
+    summary: |
+      Teleport was initiated by `Class.TeleportService:TeleportPartyAsync()`,
+      which sends a group of players to a place together.
     value: 3
     tags: []
     deprecation_message: ''
   - name: TeleportToVIPServer
-    summary: ''
+    summary: |
+      Teleport was initiated to a VIP (creator-owned private) server; the engine
+      upgrades the method tag to this value when VIP server credentials are
+      present at teleport time.
     value: 4
     tags: []
     deprecation_message: ''
   - name: TeleportToInstanceBack
-    summary: ''
+    summary: |
+      Teleport was initiated by back-navigation, returning a player to a
+      specific prior place instance.
     value: 5
     tags: []
     deprecation_message: ''
   - name: TeleportUnknown
-    summary: ''
+    summary: |
+      Fallback value used when the teleport method cannot be determined.
     value: 6
     tags: []
     deprecation_message: ''

@@ -127,7 +127,9 @@ methods:
     parameters: []
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The teleport data previously stored by
+          `Class.TeleportOptions:SetTeleportData()`, or nil if no data was set.
     tags: []
     deprecation_message: ''
     security: None

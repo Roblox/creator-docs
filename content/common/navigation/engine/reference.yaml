@@ -4447,11 +4447,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/DraggerMovementMode.yaml
         ignoreTranslation: true
-      - title: DraggingScrollBar
-        path: /reference/engine/enums/DraggingScrollBar
-        type: engineapi
-        source: /reference/engine/enums/DraggingScrollBar.yaml
-        ignoreTranslation: true
       - title: EasingDirection
         path: /reference/engine/enums/EasingDirection
         type: engineapi
@@ -4577,11 +4572,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/FontStyle.yaml
         ignoreTranslation: true
-      - title: FontWeight
-        path: /reference/engine/enums/FontWeight
-        type: engineapi
-        source: /reference/engine/enums/FontWeight.yaml
-        ignoreTranslation: true
       - title: ForceLimitMode
         path: /reference/engine/enums/ForceLimitMode
         type: engineapi
@@ -4601,16 +4591,6 @@ navigation:
         path: /reference/engine/enums/FrameStyle
         type: engineapi
         source: /reference/engine/enums/FrameStyle.yaml
-        ignoreTranslation: true
-      - title: FriendRequestEvent
-        path: /reference/engine/enums/FriendRequestEvent
-        type: engineapi
-        source: /reference/engine/enums/FriendRequestEvent.yaml
-        ignoreTranslation: true
-      - title: FriendStatus
-        path: /reference/engine/enums/FriendStatus
-        type: engineapi
-        source: /reference/engine/enums/FriendStatus.yaml
         ignoreTranslation: true
       - title: FunctionalTestResult
         path: /reference/engine/enums/FunctionalTestResult
@@ -4671,11 +4651,6 @@ navigation:
         path: /reference/engine/enums/GuiState
         type: engineapi
         source: /reference/engine/enums/GuiState.yaml
-        ignoreTranslation: true
-      - title: GuiType
-        path: /reference/engine/enums/GuiType
-        type: engineapi
-        source: /reference/engine/enums/GuiType.yaml
         ignoreTranslation: true
       - title: HandlesStyle
         path: /reference/engine/enums/HandlesStyle
@@ -5077,11 +5052,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/NormalId.yaml
         ignoreTranslation: true
-      - title: NotificationButtonType
-        path: /reference/engine/enums/NotificationButtonType
-        type: engineapi
-        source: /reference/engine/enums/NotificationButtonType.yaml
-        ignoreTranslation: true
       - title: OperationType
         path: /reference/engine/enums/OperationType
         type: engineapi
@@ -5442,11 +5412,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/RestPose.yaml
         ignoreTranslation: true
-      - title: ReturnKeyType
-        path: /reference/engine/enums/ReturnKeyType
-        type: engineapi
-        source: /reference/engine/enums/ReturnKeyType.yaml
-        ignoreTranslation: true
       - title: ReverbType
         path: /reference/engine/enums/ReverbType
         type: engineapi
@@ -5787,11 +5752,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/SurfaceConstraint.yaml
         ignoreTranslation: true
-      - title: SurfaceGuiShape
-        path: /reference/engine/enums/SurfaceGuiShape
-        type: engineapi
-        source: /reference/engine/enums/SurfaceGuiShape.yaml
-        ignoreTranslation: true
       - title: SurfaceGuiSizingMode
         path: /reference/engine/enums/SurfaceGuiSizingMode
         type: engineapi
@@ -6037,11 +5997,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/UIFlexMode.yaml
         ignoreTranslation: true
-      - title: UiMessageType
-        path: /reference/engine/enums/UiMessageType
-        type: engineapi
-        source: /reference/engine/enums/UiMessageType.yaml
-        ignoreTranslation: true
       - title: UITheme
         path: /reference/engine/enums/UITheme
         type: engineapi
@@ -6051,11 +6006,6 @@ navigation:
         path: /reference/engine/enums/UploadCaptureResult
         type: engineapi
         source: /reference/engine/enums/UploadCaptureResult.yaml
-        ignoreTranslation: true
-      - title: UsageContext
-        path: /reference/engine/enums/UsageContext
-        type: engineapi
-        source: /reference/engine/enums/UsageContext.yaml
         ignoreTranslation: true
       - title: UserCFrame
         path: /reference/engine/enums/UserCFrame

@@ -11,7 +11,7 @@ description: |
   The **Dragger** object is a helper object used to create tools that can drag
   parts. It is expected (but not required) to be used with `Class.Mouse` events.
 
-  Its implementation is primarily used in the RbxStamper library.
+  Primarily used with the RbxStamper library.
 code_samples: []
 inherits:
   - Instance
@@ -27,13 +27,23 @@ methods:
     summary: |
       Rotates the currently dragged part(s) by 90 degrees on the given axis.
     description: |
-      Rotates the currently dragged part(s) by 90 degrees on the given axis.
+      Rotates the currently dragged part(s) by 90 degrees around the specified
+      world axis. This method can only be called while a drag is actively in
+      progress (after `Class.Dragger:MouseDown()` has been called and
+      `Class.Dragger:MouseMove()` has initiated movement). The `axis` parameter
+      defaults to `Enum.Axis.X`.
+
+      For single-part drags the rotation is performed about the snap face axis.
+      For multi-part drags the rotation is applied around the computed center of
+      the part group using a collision-aware routine that prevents overlap with
+      surrounding geometry.
     code_samples: []
     parameters:
       - name: axis
         type: Axis
         default: X
-        summary: ''
+        summary: |
+          The `Enum.Axis` (`X`, `Y`, or `Z`) around which to rotate.
     returns:
       - type: ()
         summary: ''
@@ -48,22 +58,37 @@ methods:
       Initializes a dragging action, specifying which parts to use when
       dragging.
     description: |
-      Initializes a dragging action, specifying which parts to use when
-      dragging.
+      Initializes a dragging action by registering the parts to drag and the
+      point on the mouse part where the interaction began. This method does not
+      immediately begin moving parts; actual movement starts on a subsequent
+      `Class.Dragger:MouseMove()` call once the mouse has moved beyond a
+      break-free threshold (half the current grid snap distance).
+
+      `mousePart` must be a `Class.BasePart` that is both a member of `parts`
+      and a descendant of `Class.Workspace`. Calling this method while a drag is
+      already active (before `Class.Dragger:MouseUp()`) throws an error. While a
+      drag is pending, camera mouse-pan is disabled so that mouse movement
+      applies to the drag instead of the viewport.
     code_samples: []
     parameters:
       - name: mousePart
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.BasePart` under the mouse that serves as the drag handle.
+          Must be a member of `parts` and must be in the `Class.Workspace`.
       - name: pointOnMousePart
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` in the local coordinate space of `mousePart`
+          indicating where the mouse initially contacted the part.
       - name: parts
         type: Instances
         default:
-        summary: ''
+        summary: |
+          An array of `Class.BasePart|BaseParts` to move together during the
+          drag. Must include `mousePart` and contain at least one element.
     returns:
       - type: ()
         summary: ''
@@ -78,14 +103,27 @@ methods:
       Tries to move the currently dragged part to the point where MouseRay hits
       another part.
     description: |
-      Tries to move the currently dragged part to the point where MouseRay hits
-      another part.
+      Attempts to move the currently dragged parts to the location indicated by
+      `mouseRay`. Must be called after `Class.Dragger:MouseDown()`.
+
+      On the first call that detects sufficient mouse movement (exceeding half
+      the grid snap distance), the method transitions into active dragging: it
+      un-joins the dragged parts from surrounding geometry, aligns them to the
+      grid, and begins tracking movement. On each subsequent call, the ray is
+      cast against other parts in the `Class.Workspace` (or against the world
+      ground plane at Y = 0 if nothing is hit), and the dragged parts are moved
+      toward that snap point using a collision-aware algorithm that prevents
+      them from overlapping existing geometry. Single-part drags use surface
+      snapping; multi-part drags use grid-aligned displacement with Y-drop
+      collision avoidance.
     code_samples: []
     parameters:
       - name: mouseRay
         type: Ray
         default:
-        summary: ''
+        summary: |
+          A `Datatype.Ray` representing the current mouse position in world
+          space (origin at the camera, direction toward the pointer).
     returns:
       - type: ()
         summary: ''
@@ -99,7 +137,15 @@ methods:
     summary: |
       Stops the current dragging action (made by `Class.Dragger:MouseDown()`).
     description: |
-      Stops the current dragging action (made by `Class.Dragger:MouseDown()`)
+      Stops the current dragging action initiated by
+      `Class.Dragger:MouseDown()`. If parts were actively being dragged, this
+      method re-joins them to adjacent geometry and finalizes their position. If
+      `MouseDown` was called but the mouse never moved far enough to begin
+      actual dragging, the state is simply reset. In both cases camera mouse-pan
+      is re-enabled.
+
+      Calling this method without a prior `Class.Dragger:MouseDown()` throws an
+      error.
     code_samples: []
     parameters: []
     returns:

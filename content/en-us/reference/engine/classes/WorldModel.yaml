@@ -24,40 +24,7 @@ inherits:
 descendants: []
 tags: []
 deprecation_message: ''
-properties:
-  - name: WorldModel.UseWorkspaceCollisionGroups
-    summary: |
-      Determines whether this `Class.WorldModel` uses the parent
-      `Class.Workspace`'s collision groups instead of its own.
-    description: |
-      When set to `true`, the `Class.WorldModel` uses the collision group
-      definitions and collidability matrix of the `Class.Workspace` that
-      contains it, rather than maintaining its own independent set. The
-      containing `Class.Workspace` may be an indirect ancestor — for example,
-      when the `Class.WorldModel` is nested inside a `Class.ViewportFrame`.
-      Spatial queries and physics stepping within this `Class.WorldModel` then
-      respect those Workspace-level groups. When set to `false` (the default),
-      the `Class.WorldModel` maintains its own independent collision groups.
-
-      Note that the `Class.PhysicsService` collision-group methods
-      (`Class.PhysicsService:RegisterCollisionGroup()`,
-      `Class.PhysicsService:CollisionGroupSetCollidable()`, etc.) operate on the
-      collision groups of the `DataModel`'s `Class.Workspace`; they do not write
-      to a `Class.WorldModel`'s own group store.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Basic
+properties: []
 methods: []
 events: []
 callbacks: []

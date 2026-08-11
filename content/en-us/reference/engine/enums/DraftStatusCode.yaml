@@ -4,29 +4,41 @@
 
 name: DraftStatusCode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the state of a script draft tracked by `Class.DraftsService`.
+description: |
+  State of a script draft from `GetDraftStatus` and from `CommitStatusChanged` /
+  `UpdateStatusChanged`. See individual items for in-sync, outdated, committed,
+  and removed-script outcomes.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: OK
-    summary: ''
+    summary: |
+      The draft is in sync with the server's base version and has no blocking
+      conflicts.
     value: 0
     tags: []
     deprecation_message: ''
   - name: DraftOutdated
-    summary: ''
+    summary: |
+      The server version of the script has advanced beyond the base version used
+      when the draft was created, so the draft must be updated before it can be
+      committed.
     value: 1
     tags: []
     deprecation_message: ''
   - name: ScriptRemoved
-    summary: ''
+    summary: |
+      The script referenced by the draft no longer exists in the data model.
     value: 2
     tags: []
     deprecation_message: ''
   - name: DraftCommitted
-    summary: ''
+    summary: |
+      The draft was successfully committed to the server and removed from the
+      local sandbox.
     value: 3
     tags: []
     deprecation_message: ''

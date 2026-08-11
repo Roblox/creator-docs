@@ -4,7 +4,12 @@
 
 name: Font
 type: enum
-summary: ''
+summary: |
+  Determines the font used to render text in GUI objects such as
+  Class.TextLabel, Class.TextButton, and Class.TextBox. This is a legacy
+  property. For new work, use `Datatype.Font`,
+  `Class.TextLabel.FontFace|FontFace`, and `Class.TextButton.FontFace|FontFace`
+  instead.
 description: |
   The `Font` enum is used in `Class.TextBox`, `Class.TextLabel`,
   `Class.TextButton`, and similar GUI objects to determine how the element will

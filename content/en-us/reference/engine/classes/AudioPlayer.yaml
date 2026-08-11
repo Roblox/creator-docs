@@ -377,7 +377,19 @@ methods:
   - name: AudioPlayer:Cancel
     summary: |
       Attempts to cancel a pre-planned future `Play` or `Stop` command.
-    description: ''
+    description: |
+      Attempts to cancel a `Class.AudioPlayer:Play()|Play()` or
+      `Class.AudioPlayer:Stop()|Stop()` command that was scheduled to occur at a
+      future time. When `Class.AudioPlayer:Play()|Play()` or
+      `Class.AudioPlayer:Stop()|Stop()` is called with an `atTime` argument, the
+      action is scheduled against
+      `Class.SoundService:GetMixerTime()|GetMixerTime()` and the call returns a
+      unique `actionId`. Passing that `actionId` to this method prevents the
+      scheduled action from taking effect.
+
+      Returns `true` if the pending action was found and successfully cancelled.
+      Returns `false` if the action has already occurred, was never scheduled,
+      or the supplied `actionId` does not correspond to a pending action.
     code_samples: []
     parameters:
       - name: actionId
@@ -468,8 +480,12 @@ methods:
       `Class.AudioPlayer.Asset|Asset`.
     description: |
       Returns a sampling of the waveform data for the loaded
-      `Class.AudioPlayer.Asset|Asset`. This can be used to check the volume of
-      an asset over the course of its duration without playing it.
+      `Class.AudioPlayer.Asset|Asset`, allowing you to check the volume of an
+      asset over its full duration without playing it. Unlike
+      `Class.AudioAnalyzer`, which measures volume levels of a live audio stream
+      in real time, this method analyzes the asset ahead of time, making it
+      suitable for waverform visualization or logic that needs audio content
+      before playback begins.
     code_samples: []
     parameters:
       - name: timeRange
@@ -501,7 +517,10 @@ methods:
     description: |
       Plays the `Class.AudioPlayer` from wherever its
       `Class.AudioPlayer.TimePosition|TimePosition` is. Replicates from server
-      to client.
+      to client. When `atTime` is provided, the action is scheduled against
+      `Class.SoundService:GetMixerTime()|GetMixerTime()` for sample-accurate,
+      framerate-independent timing — useful for rhythm games or any scenario
+      where audio changes must align precisely with a beat.
     code_samples: []
     parameters:
       - name: atTime
@@ -529,7 +548,10 @@ methods:
     description: |
       Stops the `Class.AudioPlayer` wherever its
       `Class.AudioPlayer.TimePosition|TimePosition` is. Replicates from server
-      to client.
+      to client. When `atTime` is provided, the action is scheduled against
+      `Class.SoundService:GetMixerTime()|GetMixerTime()` for sample-accurate,
+      framerate-independent timing, enabling precise beat-synchronized stops or
+      track transitions.
     code_samples: []
     parameters:
       - name: atTime

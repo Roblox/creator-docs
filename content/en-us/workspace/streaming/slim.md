@@ -18,8 +18,8 @@ description: SLIM (Scalable Lightweight Interactive Models) automatically genera
 
 SLIM provides three key benefits:
 
-- <Chip label="Visual Quality" size="small" variant="outlined" color="success" /> — Distant models appear more detailed than the legacy model level‑of‑detail system, maintaining closer fidelity to the original.
-- <Chip label="Consistent Transitions" size="small" variant="outlined" color="success" /> — All parts within a model switch detail levels simultaneously, eliminating jarring per-part transitions.
+- <Chip label="Visual quality" size="small" variant="outlined" color="success" /> — Distant models appear more detailed than the legacy model level‑of‑detail system, maintaining closer fidelity to the original.
+- <Chip label="Consistent transitions" size="small" variant="outlined" color="success" /> — All parts within a model switch detail levels simultaneously, eliminating jarring per-part transitions.
 - <Chip label="Performance" size="small" variant="outlined" color="success" /> — Composite meshes dramatically reduce draw calls, triangle counts, and memory usage, enabling richer scenes across all device tiers.
 
 Explore SLIM in these published games:
@@ -267,6 +267,7 @@ Z-fighting can occur when parts in the original model have overlapping or coplan
 
 - Move overlapping parts slightly apart (even `0.01` studs is sufficient).
 - Avoid perfectly flush surfaces between adjacent parts in the same model.
+
 </AccordionDetails>
 </BaseAccordion>
 
@@ -277,6 +278,7 @@ SLIM regenerates UV mappings (how textures are projected onto 3D surfaces) durin
 
 - Use custom textures via `Class.SurfaceAppearance` for important surfaces.
 - Group visually related parts into the same model to ensure consistent texturing.
+
 </AccordionDetails>
 </BaseAccordion>
 

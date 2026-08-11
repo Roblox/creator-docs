@@ -69,6 +69,7 @@ export const ALLOWED_PROFANE_WORDS_LIST = [
   'poop',
   'sex',
   'sexy',
+  'three-way',
   'vomit',
   'fart',
   'farts',

@@ -53,7 +53,10 @@ items:
     tags: []
     deprecation_message: ''
   - name: NormalMapBlend
-    summary: ''
+    summary: |
+      Blends pixels from the source with the destination using alpha blending,
+      then renormalizes the resulting RGB values as a tangent-space normal
+      vector.
     value: 6
     tags: []
     deprecation_message: ''

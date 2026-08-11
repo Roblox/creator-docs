@@ -6,24 +6,23 @@ name: HeapProfilerService
 type: class
 memory_category: Instances
 summary: |
-  Provides methods which return Luau heap memory usage summaries on client and
-  server.
+  Generates and retrieves Luau heap memory profiles from the client and server
+  Luau virtual machines for memory debugging.
 description: |
-  The `HeapProfilerService` provides methods which return summaries of Luau heap
-  memory usage on client and server, useful for analyzing the memory allocated
-  to scripts. The returned summaries break down Luau heap memory usage by:
+  `HeapProfilerService` captures snapshots of the Luau heap so that
+  memory-profiling tools can analyze script memory usage. Requesting a profile
+  runs a full garbage-collection cycle and then walks the heap of the target
+  Luau virtual machine, producing a JSON report that breaks memory down by value
+  type, memory category, and userdata class, together with an aggregated
+  ownership graph and a list of unique and unparented instance references.
 
-  - VM type, for example `table`, `string`, or `userdata`.
-  - Memory category (a value assigned to an object when it is allocated,
-    depending on the thread it is allocated from).
-  - The Roblox engine class (both total size and instance count).
-
-  They also contain a graph view of the Luau heap's memory usage, where each
-  node of the graph is an object allocated in the Luau heap and edges represent
-  references between objects.
-
-  `HeapProfilerService` can also be used to create multiple snapshots to compare
-  differences in script memory usage over time.
+  Profiles can be requested for either the server or a specific client.
+  `Class.HeapProfilerService:ServerRequestDataAsync()` returns the server's
+  profile and `Class.HeapProfilerService:ClientRequestDataAsync()` returns a
+  given player's client profile. When the profiled machine differs from the
+  caller, the data is generated remotely, compressed, and replicated back
+  through the `Class.HeapProfilerService.OnNewData` event before the yielding
+  call resolves.
 code_samples: []
 inherits:
   - Instance
@@ -36,18 +35,32 @@ properties: []
 methods:
   - name: HeapProfilerService:ClientRequestDataAsync
     summary: |
-      Returns a summary of Luau heap memory usage for the requested player's
-      client.
-    description: ''
+      Yields until the Luau heap profile of the specified player's client is
+      available, then returns it as a JSON string.
+    description: |
+      Requests a Luau heap profile from the client belonging to `player`. When
+      called on that client itself, the profile is generated locally and
+      returned immediately. When called from the server, a request is sent to
+      the client and this function yields until the compressed profile is
+      replicated back through `Class.HeapProfilerService.OnNewData`,
+      decompressed, and returned. If the client does not respond within 10
+      seconds, the request fails.
+
+      The returned string is JSON containing a `Report` section (heap memory
+      broken down by value type, memory category, and userdata class, plus an
+      aggregated size graph) and a `Refs` section (unique and unparented
+      instance references).
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` whose client Luau heap should be profiled.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A JSON-encoded string containing the client's Luau heap profile.
     tags:
       - Yields
     deprecation_message: ''
@@ -56,13 +69,24 @@ methods:
     capabilities: []
   - name: HeapProfilerService:ServerRequestDataAsync
     summary: |
-      Returns a summary of Luau heap memory usage on the client.
-    description: ''
+      Yields until the server's Luau heap profile is available, then returns it
+      as a JSON string.
+    description: |
+      Requests a Luau heap profile from the server. When called on the server,
+      the profile is generated locally and returned immediately. When called
+      from a client, a request is sent to the server and this function yields
+      until the compressed profile is replicated back through
+      `Class.HeapProfilerService.OnNewData`, decompressed, and returned. If the
+      server does not respond within 10 seconds, the request fails.
+
+      The returned string has the same JSON structure as
+      `Class.HeapProfilerService:ClientRequestDataAsync()`.
     code_samples: []
     parameters: []
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A JSON-encoded string containing the server's Luau heap profile.
     tags:
       - Yields
     deprecation_message: ''
@@ -71,30 +95,45 @@ methods:
     capabilities: []
 events:
   - name: HeapProfilerService.OnNewData
-    summary: ''
-    description: ''
+    summary: |
+      Fires on the requesting machine with the compressed Luau heap profile
+      produced for an earlier request.
+    description: |
+      Delivers a Luau heap profile that was generated on a remote machine in
+      response to a `Class.HeapProfilerService:ClientRequestDataAsync()` or
+      `Class.HeapProfilerService:ServerRequestDataAsync()` call. The profile
+      JSON is zstd-compressed and carried in `jsonString`; the receiving service
+      decompresses it, matches it to the pending request by `id`, and resolves
+      the yielding call. The `compressedLength` and `uncompressedLength`
+      arguments report the buffer's size before and after decompression.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` the profile is being delivered to, or `nil` when
+          the data is replicated to the server.
       - name: jsonString
         type: buffer
         default:
-        summary: ''
+        summary: |
+          A buffer holding the zstd-compressed JSON heap profile.
       - name: id
         type: int
         default:
-        summary: ''
+        summary: |
+          The identifier of the request this data corresponds to.
       - name: compressedLength
         type: int
         default:
-        summary: ''
+        summary: |
+          The size, in bytes, of the compressed profile buffer.
       - name: uncompressedLength
         type: int
         default:
-        summary: ''
+        summary: |
+          The size, in bytes, of the heap profile JSON after decompression.
     tags: []
     deprecation_message: ''
     security: PluginSecurity

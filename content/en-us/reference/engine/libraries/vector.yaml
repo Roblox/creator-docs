@@ -22,7 +22,9 @@ properties:
     summary: |
       Constant vector with all components set to `0`.
     description: |
-      Constant vector with all components set to `0`.
+      A pre-allocated constant equivalent to `vector.create(0, 0, 0)`. Useful as
+      a default value or additive identity in vector arithmetic without
+      allocating a new vector each time.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -31,7 +33,9 @@ properties:
     summary: |
       Constant vector with all components set to `1`.
     description: |
-      Constant vector with all components set to `1`.
+      A pre-allocated constant equivalent to `vector.create(1, 1, 1)`. Useful as
+      a multiplicative identity or scale factor in vector arithmetic without
+      allocating a new vector each time.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -40,23 +44,29 @@ functions:
     summary: |
       Creates a new vector with the given component values.
     description: |
-      Creates a new vector with the given component values.
+      Creates a new vector with the given component values. The `z` parameter
+      defaults to `0` when omitted, so `vector.create(1, 2)` is equivalent to
+      `vector.create(1, 2, 0)`.
     parameters:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The x component of the new vector.
       - name: 'y'
         type: number
         default:
-        summary: ''
+        summary: |
+          The y component of the new vector.
       - name: z
         type: number
         default:
-        summary: ''
+        summary: |
+          The z component of the new vector. Defaults to `0` when omitted.
     returns:
       - type: vector
-        summary: ''
+        summary: |
+          A new vector with the specified x, y, and z component values.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -64,15 +74,18 @@ functions:
     summary: |
       Calculates the magnitude of a given vector.
     description: |
-      Calculates the magnitude of a given vector.
+      Returns the magnitude (Euclidean length) of the vector, computed as
+      `math.sqrt(vec.x^2 + vec.y^2 + vec.z^2)`.
     parameters:
       - name: vec
         type: vector
         default:
-        summary: ''
+        summary: |
+          The vector whose magnitude is computed.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The Euclidean length of the vector.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -80,15 +93,19 @@ functions:
     summary: |
       Computes the normalized version (unit vector) of a given vector.
     description: |
-      Computes the normalized version (unit vector) of a given vector.
+      Returns a unit vector (magnitude of 1) pointing in the same direction as
+      the input. Computed as `vec / vector.magnitude(vec)`. If the input vector
+      has zero magnitude, the result contains `nan` components.
     parameters:
       - name: vec
         type: vector
         default:
-        summary: ''
+        summary: |
+          The vector to normalize.
     returns:
       - type: vector
-        summary: ''
+        summary: |
+          A unit vector pointing in the same direction as the input.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -96,19 +113,26 @@ functions:
     summary: |
       Computes the cross product of two vectors.
     description: |
-      Computes the cross product of two vectors.
+      Returns the cross product of two vectors, which is a vector perpendicular
+      to both inputs whose magnitude equals the area of the parallelogram they
+      span. The result is computed as
+      `vector.create(vec1.y*vec2.z - vec1.z*vec2.y, vec1.z*vec2.x - vec1.x*vec2.z, vec1.x*vec2.y - vec1.y*vec2.x)`.
     parameters:
       - name: vec1
         type: vector
         default:
-        summary: ''
+        summary: |
+          The first operand vector.
       - name: vec2
         type: vector
         default:
-        summary: ''
+        summary: |
+          The second operand vector.
     returns:
       - type: vector
-        summary: ''
+        summary: |
+          A vector perpendicular to both inputs whose magnitude equals the area
+          of the parallelogram they span.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -116,19 +140,25 @@ functions:
     summary: |
       Computes the dot product of two vectors.
     description: |
-      Computes the dot product of two vectors.
+      Returns the dot product (scalar product) of two vectors, computed as
+      `vec1.x*vec2.x + vec1.y*vec2.y + vec1.z*vec2.z`. The result is a single
+      number equal to the product of the magnitudes of the two vectors times the
+      cosine of the angle between them.
     parameters:
       - name: vec1
         type: vector
         default:
-        summary: ''
+        summary: |
+          The first operand vector.
       - name: vec2
         type: vector
         default:
-        summary: ''
+        summary: |
+          The second operand vector.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The scalar dot product of the two vectors.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -142,18 +172,24 @@ functions:
       - name: vec1
         type: vector
         default:
-        summary: ''
+        summary: |
+          The first vector.
       - name: vec2
         type: vector
         default:
-        summary: ''
+        summary: |
+          The second vector.
       - name: axis
         type: vector?
         default:
-        summary: ''
+        summary: |
+          An optional reference axis used to determine the sign of the returned
+          angle.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The angle between the two vectors in radians, signed if an axis is
+          provided.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -161,15 +197,19 @@ functions:
     summary: |
       Applies `Library.math.floor()` to every component of the input vector.
     description: |
-      Applies `Library.math.floor()` to every component of the input vector.
+      Returns a new vector with each component rounded down to the nearest
+      integer, equivalent to
+      `vector.create(math.floor(vec.x), math.floor(vec.y), math.floor(vec.z))`.
     parameters:
       - name: vec
         type: vector
         default:
-        summary: ''
+        summary: |
+          The vector whose components are rounded down.
     returns:
       - type: vector
-        summary: ''
+        summary: |
+          A new vector with each component rounded down to the nearest integer.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -177,15 +217,19 @@ functions:
     summary: |
       Applies `Library.math.ceil()` to every component of the input vector.
     description: |
-      Applies `Library.math.ceil()` to every component of the input vector.
+      Returns a new vector with each component rounded up to the nearest
+      integer, equivalent to
+      `vector.create(math.ceil(vec.x), math.ceil(vec.y), math.ceil(vec.z))`.
     parameters:
       - name: vec
         type: vector
         default:
-        summary: ''
+        summary: |
+          The vector whose components are rounded up.
     returns:
       - type: vector
-        summary: ''
+        summary: |
+          A new vector with each component rounded up to the nearest integer.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -193,15 +237,19 @@ functions:
     summary: |
       Applies `Library.math.abs()` to every component of the input vector.
     description: |
-      Applies `Library.math.abs()` to every component of the input vector.
+      Returns a new vector with each component replaced by its absolute value,
+      equivalent to
+      `vector.create(math.abs(vec.x), math.abs(vec.y), math.abs(vec.z))`.
     parameters:
       - name: vec
         type: vector
         default:
-        summary: ''
+        summary: |
+          The vector whose components are made absolute.
     returns:
       - type: vector
-        summary: ''
+        summary: |
+          A new vector with each component replaced by its absolute value.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -209,15 +257,21 @@ functions:
     summary: |
       Applies `Library.math.sign()` to every component of the input vector.
     description: |
-      Applies `Library.math.sign()` to every component of the input vector.
+      Returns a new vector where each component is `1` if the corresponding
+      input component is positive, `-1` if negative, or `0` if zero. Equivalent
+      to `vector.create(math.sign(vec.x), math.sign(vec.y), math.sign(vec.z))`.
+      The behavior for negative zero and `nan` is consistent with `math.sign`.
     parameters:
       - name: vec
         type: vector
         default:
-        summary: ''
+        summary: |
+          The vector whose component signs are extracted.
     returns:
       - type: vector
-        summary: ''
+        summary: |
+          A new vector where each component is the sign of the corresponding
+          input component.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -225,23 +279,32 @@ functions:
     summary: |
       Applies `Library.math.clamp()` to every component of the input vector.
     description: |
-      Applies `Library.math.clamp()` to every component of the input vector.
+      Returns a new vector with each component clamped between the corresponding
+      components of `min` and `max`. Each component of `max` must be greater
+      than or equal to the corresponding component of `min`; otherwise, an error
+      is raised.
     parameters:
       - name: vec
         type: vector
         default:
-        summary: ''
+        summary: |
+          The vector whose components are clamped.
       - name: min
         type: vector
         default:
-        summary: ''
+        summary: |
+          The vector of per-component minimum bounds.
       - name: max
         type: vector
         default:
-        summary: ''
+        summary: |
+          The vector of per-component maximum bounds. Each component must be
+          greater than or equal to the corresponding component of `min`.
     returns:
       - type: vector
-        summary: ''
+        summary: |
+          A new vector with each component clamped between the corresponding
+          components of `min` and `max`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -257,18 +320,22 @@ functions:
       - name: vec1
         type: vector
         default:
-        summary: ''
+        summary: |
+          The starting vector (returned when `alpha` is `0`).
       - name: vec2
         type: vector
         default:
-        summary: ''
+        summary: |
+          The ending vector (returned when `alpha` is `1`).
       - name: alpha
         type: number
         default:
-        summary: ''
+        summary: |
+          The interpolation fraction. Not clamped to `[0, 1]`.
     returns:
       - type: vector
-        summary: ''
+        summary: |
+          A vector interpolated component-wise between `vec1` and `vec2`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -277,16 +344,21 @@ functions:
       Applies `Library.math.max()` to the corresponding components of the input
       vectors.
     description: |
-      Applies `Library.math.max()` to the corresponding components of the input
-      vectors.
+      Returns a new vector where each component is the maximum of the
+      corresponding components across all input vectors. Accepts a variadic
+      number of vectors (at least one). When a component is `nan` in one vector
+      but a valid number in another, the valid number is used.
     parameters:
       - name: ...
         type: vector
         default:
-        summary: ''
+        summary: |
+          One or more vectors to compare component-wise.
     returns:
       - type: vector
-        summary: ''
+        summary: |
+          A new vector where each component is the maximum of the corresponding
+          components across all inputs.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -295,16 +367,21 @@ functions:
       Applies `Library.math.min()` to the corresponding components of the input
       vectors.
     description: |
-      Applies `Library.math.min()` to the corresponding components of the input
-      vectors.
+      Returns a new vector where each component is the minimum of the
+      corresponding components across all input vectors. Accepts a variadic
+      number of vectors (at least one). When a component is `nan` in one vector
+      but a valid number in another, the valid number is used.
     parameters:
       - name: ...
         type: vector
         default:
-        summary: ''
+        summary: |
+          One or more vectors to compare component-wise.
     returns:
       - type: vector
-        summary: ''
+        summary: |
+          A new vector where each component is the minimum of the corresponding
+          components across all inputs.
     tags: []
     code_samples: []
     deprecation_message: ''

@@ -105,7 +105,7 @@ Initial 'x' = 0
 ]]
 ```
 
-`const` variables and functions follow the same scope rules as `local` ones. you can declare them in any block, including inside another function. For more information on `const`, see [Const variables](./variables.md#const-variables).
+`const` variables and functions follow the same scope rules as `local` ones. You can declare them in any block, including inside another function. For more information on `const`, see [Const variables](./variables.md#const-variables).
 
 ### Capture
 

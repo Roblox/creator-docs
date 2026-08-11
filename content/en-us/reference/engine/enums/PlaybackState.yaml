@@ -8,8 +8,15 @@ summary: |
   Describes the current state of a `Class.Tween` in its
   `Class.Tween.PlaybackState` property.
 description: |
-  Describes the current state of a `Class.Tween` in its
-  `Class.Tween.PlaybackState` property.
+  Describes the current playback state of a `Class.Tween`, accessible via its
+  `Class.TweenBase.PlaybackState` property. The state advances through a defined
+  lifecycle: a newly created tween begins in `Begin`; calling
+  `Class.TweenBase:Play()` moves it to `Delayed` (when
+  `Datatype.TweenInfo.DelayTime` is greater than `0`) or directly to `Playing`;
+  from `Playing` the tween can be suspended (`Paused`), stopped early
+  (`Cancelled`), or reach its natural end (`Completed`). The
+  `Class.TweenBase.Completed` event fires when the state transitions to either
+  `Completed` or `Cancelled`.
 code_samples: []
 tags: []
 deprecation_message: ''

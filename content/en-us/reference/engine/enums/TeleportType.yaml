@@ -34,12 +34,15 @@ items:
     tags: []
     deprecation_message: ''
   - name: ToVIPServer
-    summary: ''
+    summary: |
+      The teleport destination is a VIP (player-owned private) server instance.
     value: 3
     tags: []
     deprecation_message: ''
   - name: ToInstanceBack
-    summary: ''
+    summary: |
+      The teleport destination is a previously-visited place instance (back
+      navigation).
     value: 4
     tags: []
     deprecation_message: ''

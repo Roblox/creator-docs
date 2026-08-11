@@ -1318,10 +1318,13 @@ methods:
       - name: status
         type: string
         default:
-        summary: ''
+        summary: |
+          The custom status name to add to the Humanoid.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Whether the custom status was successfully added; returns false if it
+          already exists.
     tags:
       - Deprecated
     deprecation_message: |
@@ -1343,10 +1346,13 @@ methods:
       - name: status
         type: Status
         default: Poison
-        summary: ''
+        summary: |
+          The `Enum.Status` value to add to the Humanoid.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Whether the status was successfully added; returns false if it already
+          exists.
     tags:
       - Deprecated
     deprecation_message: |
@@ -1360,7 +1366,21 @@ methods:
     summary: |
       Makes the character's look match that of the passed in
       `Class.HumanoidDescription`.
-    description: ''
+    description: |
+      This yielding method makes the character's look match that of the passed
+      in `Class.HumanoidDescription`. A copy of the passed
+      `Class.HumanoidDescription` is cached as the `Class.HumanoidDescription`
+      for the `Class.Humanoid`.
+
+      This method is optimized through making the assumption that only this
+      method is used to change the appearance of the character, and no changes
+      are made through other means between calls. If changes are made to the
+      character between calls, then this method may not make the character
+      reflect the passed in `Class.HumanoidDescription` accurately.
+
+      This method has been superseded by
+      `Class.Humanoid:ApplyDescriptionAsync()|ApplyDescriptionAsync()`, which
+      should be used for all new work.
     code_samples: []
     parameters:
       - name: humanoidDescription
@@ -1447,7 +1467,23 @@ methods:
     summary: |
       Makes the character's look match that of the passed in
       `Class.HumanoidDescription`, even after external changes.
-    description: ''
+    description: |
+      This yielding method makes the character's look match that of the passed
+      in `Class.HumanoidDescription`, even after external changes. A copy of the
+      passed `Class.HumanoidDescription` is cached as the
+      `Class.HumanoidDescription` for the `Class.Humanoid`.
+
+      This method will always ensure the character reflects the passed in
+      `Class.HumanoidDescription`, even if changes have been made to the
+      character not using the `Class.HumanoidDescription` system. This is in
+      contrast to `Class.Humanoid:ApplyDescription()` which is optimized and may
+      incorrectly apply a `Class.HumanoidDescription` if the character has been
+      changed by means other than through the `Class.HumanoidDescription`
+      system.
+
+      This method has been superseded by
+      `Class.Humanoid:ApplyDescriptionResetAsync()|ApplyDescriptionResetAsync()`,
+      which should be used for all new work.
     code_samples: []
     parameters:
       - name: humanoidDescription
@@ -1684,7 +1720,9 @@ methods:
     parameters: []
     returns:
       - type: HumanoidDescription
-        summary: ''
+        summary: |
+          A copy of the `Class.HumanoidDescription` currently applied to the
+          humanoid.
     tags: []
     deprecation_message: ''
     security: None
@@ -1825,12 +1863,20 @@ methods:
       Returns the humanoid's actual physical velocity relative to the surface it
       is standing on as a `Datatype.Vector3` in world-space orientation. This
       accounts for moving platforms by subtracting floor velocity from the
-      humanoid's body velocity.
+      humanoid's body velocity. Unlike `Class.Humanoid:GetMoveVelocity()`, which
+      returns the intended input-driven velocity, this reflects the humanoid's
+      true physics-based motion — useful for animation speed scaling or
+      detecting whether a character is actually moving versus pushing against a
+      wall. When the humanoid is airborne, the floor velocity component uses the
+      last cached value from when it was grounded.
     code_samples: []
     parameters: []
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          The humanoid's velocity relative to the floor surface, as a
+          `Datatype.Vector3` in world-space orientation. Returns `(0, 0, 0)` if
+          the humanoid has no root part.
     tags: []
     deprecation_message: ''
     security: None
@@ -1913,7 +1959,9 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of strings representing the names of all statuses currently
+          applied to the Humanoid.
     tags:
       - Deprecated
     deprecation_message: |
@@ -1934,10 +1982,12 @@ methods:
       - name: status
         type: string
         default:
-        summary: ''
+        summary: |
+          The custom status name to check for.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Whether the specified custom status exists on the Humanoid.
     tags:
       - Deprecated
     deprecation_message: |
@@ -1957,10 +2007,12 @@ methods:
       - name: status
         type: Status
         default: Poison
-        summary: ''
+        summary: |
+          The `Enum.Status` value to check for.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Whether the specified status exists on the Humanoid.
     tags:
       - Deprecated
     deprecation_message: |
@@ -1986,7 +2038,8 @@ methods:
           The `Class.Animation` to load.
     returns:
       - type: AnimationTrack
-        summary: ''
+        summary: |
+          The `Class.AnimationTrack` created from the loaded `Class.Animation`.
     tags:
       - Deprecated
     deprecation_message: |
@@ -2139,7 +2192,15 @@ methods:
   - name: Humanoid:PlayEmote
     summary: |
       Plays emotes and returns if was successfully ran.
-    description: ''
+    description: |
+      This yielding method looks up the emote by name in the
+      `Class.HumanoidDescription` currently applied to the `Class.Humanoid` and
+      plays it. If the emote cannot be found in the `Class.HumanoidDescription`,
+      the method errors.
+
+      This method has been superseded by
+      `Class.Humanoid:PlayEmoteAsync()|PlayEmoteAsync()`, which should be used
+      for all new work.
     code_samples: []
     parameters:
       - name: emoteName
@@ -2225,10 +2286,13 @@ methods:
       - name: status
         type: string
         default:
-        summary: ''
+        summary: |
+          The custom status name to remove from the Humanoid.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Whether the custom status was successfully removed; returns false if
+          it does not exist.
     tags:
       - Deprecated
     deprecation_message: |
@@ -2249,10 +2313,13 @@ methods:
       - name: status
         type: Status
         default: Poison
-        summary: ''
+        summary: |
+          The `Enum.Status` value to remove from the Humanoid.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Whether the status was successfully removed; returns false if it does
+          not exist.
     tags:
       - Deprecated
     deprecation_message: |
@@ -2291,7 +2358,9 @@ methods:
           character.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Whether the body part replacement was successful; returns false if the
+          specified body part could not be found in the character.
     tags: []
     deprecation_message: ''
     security: None
@@ -2468,14 +2537,26 @@ events:
     capabilities:
       - Animation
   - name: Humanoid.ApplyDescriptionFinished
-    summary: ''
-    description: ''
+    summary: |
+      Fires when a `Class.HumanoidDescription` has finished being applied to the
+      `Class.Humanoid`.
+    description: |
+      Fires when the `Class.Humanoid` finishes applying a
+      `Class.HumanoidDescription` to the character, at the end of
+      `Class.Humanoid:ApplyDescriptionAsync()` or
+      `Class.Humanoid:ApplyDescriptionResetAsync()`. The `description` parameter
+      is the `Class.HumanoidDescription` that was applied.
+
+      The event fires on the server and replicates to clients, so server or
+      client listeners can respond when the character's appearance has been
+      updated.
     code_samples: []
     parameters:
       - name: description
         type: HumanoidDescription
         default:
-        summary: ''
+        summary: |
+          The `Class.HumanoidDescription` that was applied to the character.
     tags: []
     deprecation_message: ''
     security: None
@@ -2528,7 +2609,8 @@ events:
       - name: status
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the custom status that was added.
     tags:
       - Deprecated
     deprecation_message: |
@@ -2548,7 +2630,8 @@ events:
       - name: status
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the custom status that was removed.
     tags:
       - Deprecated
     deprecation_message: |
@@ -2969,7 +3052,8 @@ events:
       - name: status
         type: Status
         default:
-        summary: ''
+        summary: |
+          The name of the status that was added.
     tags:
       - Deprecated
     deprecation_message: |
@@ -2989,7 +3073,8 @@ events:
       - name: status
         type: Status
         default:
-        summary: ''
+        summary: |
+          The name of the status that was removed.
     tags:
       - Deprecated
     deprecation_message: |

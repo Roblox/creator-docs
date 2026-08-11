@@ -84,7 +84,10 @@ methods:
           A dictionary of properties, and their target values, to be tweened.
     returns:
       - type: Tween
-        summary: ''
+        summary: |
+          The newly created `Class.Tween` configured to interpolate the given
+          properties toward their target values. Call `Class.TweenBase:Play()`
+          on the returned object to start the tween.
     tags: []
     deprecation_message: ''
     security: None

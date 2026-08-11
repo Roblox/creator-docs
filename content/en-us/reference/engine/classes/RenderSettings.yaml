@@ -5,7 +5,9 @@
 name: RenderSettings
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A singleton settings class that exposes rendering configuration for graphics
+  quality, framerate management, and debug visualization in Roblox Studio.
 description: |
   `RenderSettings` is a singleton class which lets developers debug components
   of Roblox's graphics engine. It can be found in Roblox Studio's settings under
@@ -81,8 +83,13 @@ properties:
       can_save: true
     capabilities: []
   - name: RenderSettings.Enable VR Mode
-    summary: ''
-    description: ''
+    summary: |
+      Toggles whether virtual reality (VR) mode is enabled.
+    description: |
+      When set to `true`, virtual reality (VR) mode is enabled. This property
+      reflects the same underlying setting as
+      `Class.UserGameSettings.VREnabled`, so reading or writing it reads or
+      writes that shared value. Defaults to `false`.
     code_samples: []
     type: boolean
     tags: []
@@ -100,7 +107,15 @@ properties:
     summary: |
       Toggles the enabled state of the framerate manager.
     description: |
-      Toggles the enabled state of the framerate manager.
+      When set to `true`, the framerate manager (FRM) dynamically adjusts the
+      rendering quality level during gameplay to maintain a stable framerate.
+      When set to `false`, the quality level is fixed at
+      `Class.RenderSettings.EditQualityLevel` and no automatic adjustment
+      occurs. Defaults to `true`.
+
+      The `Class.RenderSettings.AutoFRMLevel|AutoFRMLevel` property reports the
+      current quality level that the FRM has assigned when this property is
+      enabled.
     code_samples: []
     type: boolean
     tags:
@@ -121,8 +136,11 @@ properties:
       Sets whether materials should be generated per part, or per unique
       appearance in Roblox's exporter.
     description: |
-      Sets whether materials should be generated per part, or per unique
-      appearance in Roblox's exporter.
+      Controls how materials are written during `.obj` export from Studio. When
+      set to `true`, parts that share the same material appearance are merged
+      into shared material definitions in the exported `.obj` file, reducing
+      material count. When set to `false`, each part receives its own
+      independent material definition. Defaults to `false`.
     code_samples: []
     type: boolean
     tags: []
@@ -140,7 +158,14 @@ properties:
     summary: |
       Specifies the behavior of the framerate manager.
     description: |
-      Specifies the behavior of the framerate manager.
+      Determines how the framerate manager (FRM) manages rendering quality using
+      a `Enum.FramerateManagerMode` value. When set to
+      `Enum.FramerateManagerMode.Automatic`, the engine decides whether to
+      enable FRM quality adjustment based on context (typically enabled during
+      gameplay). When set to `Enum.FramerateManagerMode.On`, the FRM is always
+      active. When set to `Enum.FramerateManagerMode.Off`, the FRM does not
+      adjust quality and block culling is forced to the lowest-quality distance
+      setting. Defaults to `Enum.FramerateManagerMode.Automatic`.
     code_samples: []
     type: FramerateManagerMode
     tags: []
@@ -158,7 +183,17 @@ properties:
     summary: |
       The graphics API that Roblox will use on startup.
     description: |
-      The graphics API that Roblox will use on startup.
+      Determines which graphics rendering API Roblox uses on startup, specified
+      as a `Enum.GraphicsMode` value. When set to `Enum.GraphicsMode.Automatic`,
+      the engine selects the best available backend for the current platform.
+      Available options are platform-dependent; for example,
+      `Enum.GraphicsMode.Metal` is only available on macOS and
+      `Enum.GraphicsMode.Direct3D11` is only available on Windows. If an
+      unsupported mode is selected, the engine silently falls back to
+      `Enum.GraphicsMode.Automatic`. Defaults to `Enum.GraphicsMode.Automatic`.
+
+      Because the graphics API is initialized at startup, changing this property
+      only takes effect after restarting Roblox Studio.
     code_samples: []
     type: GraphicsMode
     tags: []
@@ -298,8 +333,14 @@ properties:
       can_save: true
     capabilities: []
   - name: RenderSettings.ViewMode
-    summary: ''
-    description: ''
+    summary: |
+      Studio only. Selects a debug rendering visualization overlay for the
+      viewport.
+    description: |
+      Studio only. Determines which debug rendering visualization is drawn over
+      the viewport, using a value of `Enum.ViewMode`. Defaults to
+      `Enum.ViewMode.None`, which disables the overlay. Other values enable
+      overdraw visualizations for geometry complexity, transparency, or decals.
     code_samples: []
     type: ViewMode
     tags: []
@@ -318,12 +359,17 @@ methods:
     summary: |
       Returns the maximum quality level.
     description: |
-      Returns the maximum quality level.
+      Returns the total number of quality levels available in the rendering
+      quality system. Quality levels are numbered from
+      `Enum.QualityLevel.Automatic` (0) through `Enum.QualityLevel.Level21`
+      (21), so this method returns 22. Use `GetMaxQualityLevel() - 1` to obtain
+      the highest numeric quality level.
     code_samples: []
     parameters: []
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The total number of quality levels available in the rendering system.
     tags: []
     deprecation_message: ''
     security: PluginSecurity

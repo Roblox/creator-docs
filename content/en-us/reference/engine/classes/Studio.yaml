@@ -668,26 +668,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-  - name: Studio.CameraAdaptiveSpeed
-    summary: |
-      Controls whether camera movement speed adapts based on distance to nearby
-      objects.
-    description: |
-      Controls whether camera movement speed adapts based on distance to nearby
-      objects. This must be set in Studio Settings > Studio tab.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Camera
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: Studio.CameraNavigationModel
     summary: |
       Sets the navigation model used for camera movement in Studio.
@@ -696,44 +676,6 @@ properties:
       set in Studio Settings > Studio tab.
     code_samples: []
     type: CameraNavigationModel
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Camera
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: Studio.CameraOrbitSensitivity
-    summary: |
-      Sets the mouse sensitivity for camera orbit in Studio.
-    description: |
-      Sets the mouse sensitivity for camera orbit in Studio. This must be set in
-      Studio Settings > Studio tab.
-    code_samples: []
-    type: float
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Camera
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: Studio.CameraPanSensitivity
-    summary: |
-      Sets the mouse sensitivity for camera panning in Studio.
-    description: |
-      Sets the mouse sensitivity for camera panning in Studio. This must be set
-      in Studio Settings > Studio tab.
-    code_samples: []
-    type: float
     tags: []
     deprecation_message: ''
     security:
@@ -773,25 +715,6 @@ properties:
       object. This must be set in Studio Settings > Studio tab.
     code_samples: []
     type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Camera
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: Studio.CameraZoomSpeed
-    summary: |
-      Sets the speed of camera zooming in Studio.
-    description: |
-      Sets the speed of camera zooming in Studio. This must be set in Studio
-      Settings > Studio tab.
-    code_samples: []
-    type: float
     tags: []
     deprecation_message: ''
     security:

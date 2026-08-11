@@ -4,7 +4,10 @@
 
 name: FontSize
 type: enum
-summary: ''
+summary: |
+  Specifies preset font sizes for text-rendering UI objects such as
+  `Class.TextLabel`, `Class.TextButton`, and `Class.TextBox`. Prefer the
+  `TextSize` property instead of this deprecated enum.
 description: |
   The `FontSize` enum controls the font size of text in `Class.TextBox`,
   `Class.TextLabel`, `Class.TextButton`, and similar objects.

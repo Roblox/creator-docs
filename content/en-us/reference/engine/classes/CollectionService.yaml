@@ -74,11 +74,13 @@ methods:
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.Instance` to apply the tag to.
       - name: tag
         type: string
         default:
-        summary: ''
+        summary: |
+          The tag string to apply to the instance.
     returns:
       - type: ()
         summary: ''
@@ -93,12 +95,23 @@ methods:
     summary: |
       Returns an array of all tags in the experience.
     description: |
-      Returns an array of all tags in the experience.
+      Returns an array of all tags that currently have at least one tagged
+      instance inside the `Class.DataModel`. The returned array does not
+      guarantee any particular ordering.
+
+      A tag appears in the result as soon as any instance bearing it enters the
+      `Class.DataModel` (for example by being parented to `Class.Workspace`),
+      and it is removed from the result once the last instance with that tag
+      leaves the `Class.DataModel` or has the tag removed. This means calling
+      `GetAllTags()` immediately after removing the last instance with a given
+      tag will no longer include that tag.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of all tags that currently have at least one tagged instance
+          in the `Class.DataModel`.
     tags: []
     deprecation_message: ''
     security: None
@@ -119,10 +132,13 @@ methods:
       - name: class
         type: string
         default:
-        summary: ''
+        summary: |
+          The class type to retrieve instances of.
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          An array of all instances of the specified class in the
+          `Class.DataModel`.
     tags:
       - Deprecated
     deprecation_message: |
@@ -364,7 +380,8 @@ events:
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The instance that was added to the `Class.DataModel`.
     tags:
       - Deprecated
     deprecation_message: |
@@ -388,7 +405,8 @@ events:
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The instance that was removed from the `Class.DataModel`.
     tags:
       - Deprecated
     deprecation_message: |
@@ -402,14 +420,26 @@ events:
       Fires when a tag is added to an instance and the added tag is the only
       occurrence of that tag in the place.
     description: |
-      This event fires when a tag is added to an instance and the added tag is
-      the only occurrence of that tag in the place.
+      This event fires when a tag transitions from being unused to being in use
+      — specifically, when a tag is applied to an instance inside the
+      `Class.DataModel` and no other instance in the `Class.DataModel`
+      previously had that tag. The event passes the tag name as its parameter.
+
+      `TagAdded` fires once per tag lifetime, not once per instance. To detect
+      every individual instance that receives a particular tag, use
+      `Class.CollectionService:GetInstanceAddedSignal()|GetInstanceAddedSignal()`
+      instead.
+
+      The event fires asynchronously (deferred to the next resumption point),
+      not synchronously inside the `Class.CollectionService:AddTag()|AddTag()`
+      call that triggered it.
     code_samples: []
     parameters:
       - name: tag
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the tag that entered use.
     tags: []
     deprecation_message: ''
     security: None
@@ -420,14 +450,25 @@ events:
       Fires when a tag is removed from an instance and the removed tag is no
       longer used anywhere in the place.
     description: |
-      This event fires when a tag is removed from an instance and the removed
-      tag is no longer used anywhere in the place.
+      This event fires when the last instance bearing a given tag leaves the
+      `Class.DataModel` or has the tag removed, meaning no instance in the
+      `Class.DataModel` still carries that tag. The event passes the tag name as
+      its parameter.
+
+      `TagRemoved` fires once per tag lifetime, not once per instance. To detect
+      every individual instance that loses a particular tag, use
+      `Class.CollectionService:GetInstanceRemovedSignal()|GetInstanceRemovedSignal()`
+      instead.
+
+      The event fires asynchronously (deferred to the next resumption point),
+      not synchronously inside the removal operation that triggered it.
     code_samples: []
     parameters:
       - name: tag
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the tag that is no longer in use.
     tags: []
     deprecation_message: ''
     security: None

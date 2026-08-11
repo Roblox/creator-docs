@@ -4,34 +4,47 @@
 
 name: DeviceForm
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the physical form factor of a device used during Studio device
+  emulation.
+description: |
+  Studio-only device form factor for device emulation. Passed as the
+  `DeviceForm` field of the device info table accepted by
+  `Class.StudioDeviceSimulatorService:CreateDeviceAsync()` and
+  `Class.StudioDeviceSimulatorService:UpdateDeviceAsync()`, and exposed on
+  device records returned by
+  `Class.StudioDeviceSimulatorService:GetDeviceListAsync()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Console
-    summary: ''
+    summary: |
+      Represents a gaming console device, such as an Xbox or PlayStation.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Phone
-    summary: ''
+    summary: |
+      Represents a mobile phone with a touchscreen.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Tablet
-    summary: ''
+    summary: |
+      Represents a tablet with a touchscreen.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Desktop
-    summary: ''
+    summary: |
+      Represents a desktop or laptop computer.
     value: 3
     tags: []
     deprecation_message: ''
   - name: VR
-    summary: ''
+    summary: |
+      Represents a virtual reality headset.
     value: 4
     tags: []
     deprecation_message: ''

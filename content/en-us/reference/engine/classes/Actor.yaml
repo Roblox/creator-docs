@@ -60,7 +60,9 @@ methods:
       - name: function
         type: Function
         default:
-        summary: ''
+        summary: |
+          The Luau callback to invoke when a message with the specified topic is
+          received. The callback receives the message contents as its arguments.
     returns:
       - type: RBXScriptConnection
         summary: |
@@ -97,7 +99,9 @@ methods:
       - name: function
         type: Function
         default:
-        summary: ''
+        summary: |
+          The Luau callback to invoke when a message with the specified topic is
+          received. The callback receives the message contents as its arguments.
     returns:
       - type: RBXScriptConnection
         summary: |

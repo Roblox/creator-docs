@@ -5,8 +5,19 @@
 name: SlimContentProvider
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A service that fetches and caches SLIM (Scalable Lightweight Interactive
+  Models) asset content representations for model rendering.
+description: |
+  Not intended for use from experience scripts. `Class.SlimContentProvider`
+  retrieves SLIM (Scalable Lightweight Interactive Models) asset content
+  representations, parses them into mesh and level-of-detail metadata for the
+  model rendering pipeline, and signals when an asset is ready, needs a retry,
+  or has failed.
+
+  As a variant of `Class.CacheableContentProvider`, it caches parsed results
+  under a memory budget and evicts least-recently-used entries when the budget
+  is exceeded.
 code_samples: []
 inherits:
   - CacheableContentProvider

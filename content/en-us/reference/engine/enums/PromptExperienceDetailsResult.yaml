@@ -4,19 +4,29 @@
 
 name: PromptExperienceDetailsResult
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates how the player dismissed the experience details prompt shown by
+  `Class.TeleportService:PromptExperienceDetailsAsync()`.
+description: |
+  Indicates how the player dismissed the experience details prompt displayed by
+  `Class.TeleportService:PromptExperienceDetailsAsync()`. The returned value
+  lets scripts distinguish between a player who closed the prompt without acting
+  and a player who initiated a teleport to the advertised experience.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: PromptClosed
-    summary: ''
+    summary: |
+      The player dismissed the experience details prompt without choosing to
+      teleport (value `0`).
     value: 0
     tags: []
     deprecation_message: ''
   - name: TeleportAttempted
-    summary: ''
+    summary: |
+      The player clicked the **Join** button in the experience details prompt,
+      initiating a teleport to the advertised experience (value `1`).
     value: 1
     tags: []
     deprecation_message: ''
