@@ -110,7 +110,8 @@ callbacks:
       - type: boolean
         summary: |
           Whether the callback has successfully reacted to the event.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       This callback has been deprecated and will never be called.
     security: None

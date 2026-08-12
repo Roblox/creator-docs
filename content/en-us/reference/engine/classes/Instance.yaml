@@ -247,7 +247,6 @@ descendants:
   - SharedTableRegistry
   - Sky
   - Smoke
-  - SmoothVoxelsUpgraderService
   - SocialService
   - Sound
   - SoundEffect

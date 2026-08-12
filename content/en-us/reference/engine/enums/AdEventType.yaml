@@ -31,15 +31,18 @@ items:
   - name: RewardedAdLoaded
     summary: ''
     value: 3
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: RewardedAdGrant
     summary: ''
     value: 4
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: RewardedAdUnloaded
     summary: ''
     value: 5
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''

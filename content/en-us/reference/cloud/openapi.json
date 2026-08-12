@@ -2025,7 +2025,7 @@
     "/asset-permissions-api/v1/assets/permissions": {
       "patch": {
         "tags": ["Assets"],
-        "summary": "Grant a subject permission to multiple assets.\n            \nAuthorization is required to grant permissions to the subject and asset IDs in the request.",
+        "summary": "Grant a subject permission to multiple assets.\r\n            \r\nAuthorization is required to grant permissions to the subject and asset IDs in the request.",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -2052,7 +2052,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
@@ -2082,7 +2082,7 @@
             }
           },
           "500": {
-            "description": "Internal Server Error",
+            "description": "Server Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -24451,10 +24451,10 @@
           {
             "name": "MaxPageSize",
             "in": "query",
-            "description": "The maximum number of game servers to return. The service might return\r\nfewer than this value. If unspecified, at most 25 game servers are\r\nreturned. The maximum value is 100 and higher values are set to 100.",
+            "description": "The maximum number of game servers to return. The service might return\r\nfewer than this value. If unspecified, at most 25 game servers are\r\nreturned. The maximum value is 100 and higher values are set to 100.\r\nZero returns no game servers and only the total count, for callers that\r\nneed the count without paging through rows.",
             "schema": {
               "maximum": 100,
-              "minimum": 1,
+              "minimum": 0,
               "type": "integer",
               "format": "int32"
             }
@@ -45834,6 +45834,15 @@
               "enum": [0, 1, 2],
               "default": 1
             }
+          },
+          {
+            "in": "query",
+            "name": "uprankUnseen",
+            "description": "Whether to uprank unseen friend requests and return isUnseen per friend request.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
           }
         ],
         "responses": {
@@ -66713,7 +66722,7 @@
           "UpdateFromRcc"
         ],
         "type": "string",
-        "description": "Asset permission actions that can be granted.\n            \nActions:\n* Invalid - default value, not a valid action.\n* Edit - grants the ability to edit and manage the asset.\n* Use - grants the ability to use the asset.\n* Download - grants the ability to download the asset.\n* CopyFromRcc - grants the ability to copy the asset from RCC, used to enable AssetService:CreatePlaceAsync().\n* UpdateFromRcc - grants the ability to update the asset from RCC, used to enable AssetService:UpdatePlaceAsync().\n            \nValid AssetType - SubjectType - Action combinations:\n* Animation - Group/User/Universe - Use\n* Audio - Group/User/Universe - Use\n* Decal - All/Group/User/Universe - Use\n* Image - All/Group/User/Universe - Use\n* Mesh - All/Group/User/Universe - Use\n* MeshPart - Group/User/Universe - Use\n* Model - User - Edit\n  * Group/User/Universe - Use\n* Place - All - Download\n  * Universe - CopyFromRcc/UpdateFromRcc\n* Video - Group/User/Universe - Use."
+        "description": "Asset permission actions that can be granted.\r\n            \r\nActions:\r\n* Invalid - default value, not a valid action.\r\n* Edit - grants the ability to edit and manage the asset.\r\n* Use - grants the ability to use the asset.\r\n* Download - grants the ability to download the asset.\r\n* CopyFromRcc - grants the ability to copy the asset from RCC, used to enable AssetService:CreatePlaceAsync().\r\n* UpdateFromRcc - grants the ability to update the asset from RCC, used to enable AssetService:UpdatePlaceAsync().\r\n            \r\nValid AssetType - SubjectType - Action combinations:\r\n* Animation - Group/User/Universe - Use\r\n* Audio - Group/User/Universe - Use\r\n* Decal - All/Group/User/Universe - Use\r\n* Image - All/Group/User/Universe - Use\r\n* Mesh - All/Group/User/Universe - Use\r\n* MeshPart - Group/User/Universe - Use\r\n* Model - User - Edit\r\n  * Group/User/Universe - Use\r\n* Place - All - Download\r\n  * Universe - CopyFromRcc/UpdateFromRcc\r\n* Video - Group/User/Universe - Use."
       },
       "AssetGrantRequest": {
         "type": "object",
@@ -66762,7 +66771,16 @@
           "SubjectNotFound",
           "AssetTypeNotEnabled",
           "PermissionLimitReached",
-          "DependenciesLimitReached"
+          "DependenciesLimitReached",
+          "NotRequestable",
+          "RequesterNotConnected",
+          "AlreadyPending",
+          "AlreadyHasAccess",
+          "RequestNotFound",
+          "InvalidRequestStatus",
+          "RateLimited",
+          "CallerNotOwner",
+          "BatchSizeLimitExceeded"
         ],
         "type": "string",
         "description": "Enums for customized error code in error responses."
@@ -80089,6 +80107,10 @@
             }
           },
           "hasVerifiedBadge": {
+            "description": "The user's verified badge status.",
+            "type": "boolean"
+          },
+          "isUnseen": {
             "description": "The user's verified badge status.",
             "type": "boolean"
           },

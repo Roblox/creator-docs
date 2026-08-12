@@ -91,6 +91,99 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
+  - name: CollectionService:CreateCollection
+    summary: |
+      Creates a `Datatype.Collection` that tracks every instance matching a
+      query.
+    description: |
+      This method creates a `Datatype.Collection`, a **live, query-based group**
+      of instances. Unlike tag-based methods such as
+      `Class.CollectionService:GetTagged()|GetTagged()` which return a fixed
+      array at the moment they are called, a `Datatype.Collection` continuously
+      tracks which instances match `query` and notifies you as instances enter
+      and leave the result set.
+
+      The `query` string is a CSS-inspired selector that follows the same
+      selector conventions used by
+      `Class.Instance:QueryDescendants()|QueryDescendants()` and the
+      `Class.StyleRule` styling selectors. Filters stack conjunctively,
+      combinators express hierarchy, and comma-separated selectors form a union:
+
+      - `ClassName` — Instances of that class (uses
+        `Class.Instance:IsA()|IsA()`), for example `Part` or `Model`.
+      - `#Name` — Instances with a matching `Class.Instance.Name|Name`.
+      - `.Tag` — Instances carrying a `Class.CollectionService` tag.
+      - `[Property = value]` — Instances whose property equals a value.
+      - `[$Attribute]` or `[$Attribute = value]` — Instances that have an
+        attribute, optionally matching a value.
+      - `A > B` (direct child) and `A >> B` (any descendant) combinators.
+      - `:has(...)` and `:not(...)` pseudoclasses.
+
+      The rightmost selector in a chain identifies the matched instance, so
+      `Folder > Part` tracks the parts, not the folders.
+
+      ```lua
+      local CollectionService = game:GetService("CollectionService")
+
+      -- Track every Part tagged "KillBrick" anywhere under Workspace
+      local killBricks: Collection = CollectionService:CreateCollection("Part.KillBrick")
+
+      -- When a part joins the collection, make it glow red
+      -- OnAdded fires once for each part already matching, then again for each new match
+      function killBricks.OnAdded(brick: Part)
+      	brick.Material = Enum.Material.Neon
+      	brick.Color = Color3.new(1, 0, 0)
+      end
+
+      -- Kill any humanoid that touches a matched part
+      function killBricks.OnTouched(brick: Part, otherPart: BasePart)
+      	local character: Instance? = otherPart.Parent
+      	local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+      	if humanoid then
+      		humanoid.Health = 0
+      	end
+      end
+
+      -- Fires when a part stops matching (tag removed, reparented out, or destroyed)
+      function killBricks.OnRemoved(brick: Part)
+      	print("Deactivating", brick:GetFullName())
+      end
+      ```
+
+      #### Notes
+
+      - The collection remains active until you call
+        `Datatype.Collection:Destroy()|Destroy()` or its `root` is destroyed.
+      - Lifecycle callbacks are queued rather than invoked synchronously, so a
+        newly assigned `OnAdded` may fire on a later resumption point rather
+        than during the assignment itself.
+    code_samples: []
+    parameters:
+      - name: query
+        type: string
+        default:
+        summary: |
+          A selector string describing which instances to match. See the
+          description for the supported syntax.
+      - name: root
+        type: Instance
+        default: nil
+        summary: |
+          The instance whose descendants are searched. Pass this to restrict the
+          search to a subtree, such that instances outside that subtree never
+          match and an instance is removed from the collection if it is
+          reparented out of `root`. Defaults to `Class.Workspace` when omitted.
+    returns:
+      - type: Collection
+        summary: |
+          A `Datatype.Collection` that reactively tracks the instances matching
+          `query`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
   - name: CollectionService:GetAllTags
     summary: |
       Returns an array of all tags in the experience.
