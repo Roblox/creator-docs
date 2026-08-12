@@ -92,7 +92,7 @@ The following are Roblox-defined signals derived based on Roblox attributes:
   </tr>
   <tr>
     <td>[**Latency**](#latency)</td>
-    <td>The estimated player latency for a server, with a max relevant value of 250.</td>
+    <td>The joining player's delta ping for a server, which is the estimated ping above the lowest ping the player could achieve on their best reachable datacenter, with a max relevant value of 100.</td>
   </tr>
   <tr>
     <td>[**Language**](#language)</td>
@@ -151,9 +151,9 @@ $\text{languageSignalScore} = \text{\# players with same language setting as joi
 
 ### Latency
 
-A numerical signal that measures the estimated ping time in milliseconds of the joining player if they were to play on a server. This signal has a max relevant value of 250 milliseconds. The signal score is inversely related to the ping, meaning lower ping values have higher scores.
+A numerical signal that measures the joining player's delta ping in milliseconds if they were to play on a server, which is the estimated ping above the lowest ping the player could achieve on their best reachable datacenter. This signal has a max relevant value of 100 milliseconds. The signal score is inversely related to the delta ping, meaning lower delta ping values have higher scores.
 
-$\text{latencySignalScore} = 1 - \min(250, \text{estimatedPingMs}) / 250$
+$\text{latencySignalScore} = 1 - \min(100, \text{deltaPingMs}) / 100$
 
 ### Occupancy
 
