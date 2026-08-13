@@ -34,7 +34,9 @@ description: |
   `__newindex`:
 
   ```lua
-  local collection = {}
+  local CollectionService = game:GetService("CollectionService")
+
+  local collection = CollectionService:CreateCollection("Part")
 
   function collection.OnAdded(instance)
 
@@ -42,7 +44,9 @@ description: |
   ```
 
   ```lua
-  local collection = {}
+  local CollectionService = game:GetService("CollectionService")
+
+  local collection = CollectionService:CreateCollection("Part")
 
   collection.OnAdded = function(instance)
 
@@ -111,10 +115,12 @@ description: |
   The collection subscribes to each `Class.RunService` event **once** and
   dispatches to its members internally, rather than every instance holding its
   own connection. The callback fires once per step **for each instance** in the
-  collection and receives the instance followed by the step's `deltaTime`.
+  collection and receives the instance followed by the step's `deltaTime`:
 
   ```lua
-  local collection = {}
+  local CollectionService = game:GetService("CollectionService")
+
+  local collection = CollectionService:CreateCollection("Part")
 
   function collection.OnHeartbeat(instance, deltaTime)
 
@@ -132,6 +138,10 @@ description: |
     For example, `OnTouched` wraps `Class.BasePart.Touched`.
 
     ```lua
+    local CollectionService = game:GetService("CollectionService")
+
+    local collection = CollectionService:CreateCollection("Part")
+
     function collection.OnTouched(part, otherPart)
     	print(part, otherPart)
     end
@@ -143,6 +153,10 @@ description: |
     each instance.
 
     ```lua
+    local CollectionService = game:GetService("CollectionService")
+
+    local collection = CollectionService:CreateCollection("Part")
+
     function collection.OnPropertyChanged.Color(instance)
     	print(instance)
     end
@@ -153,6 +167,10 @@ description: |
     `Class.Instance:GetAttributeChangedSignal()|GetAttributeChangedSignal()`.
 
     ```lua
+    local CollectionService = game:GetService("CollectionService")
+
+    local collection = CollectionService:CreateCollection("Humanoid")
+
     function collection.OnAttributeChanged.CharacterHealth(instance)
     	print(instance)
     end

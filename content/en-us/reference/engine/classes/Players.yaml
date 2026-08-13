@@ -1245,7 +1245,7 @@ methods:
           The `Class.Player.UserId` of the user whose profile configuration to
           retrieve.
     returns:
-      - type: Dictionary
+      - type: ProfileConfiguration
         summary: |
           A dictionary containing the user's profile configuration, such as the
           background asset ID.

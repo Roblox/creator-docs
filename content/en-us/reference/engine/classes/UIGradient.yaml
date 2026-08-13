@@ -61,7 +61,133 @@ inherits:
 descendants: []
 tags: []
 deprecation_message: ''
-properties: []
+properties:
+  - name: UIGradient.Color
+    summary: |
+      Determines the color blended with the parent GuiObject along the length of
+      the gradient.
+    description: |
+      This property describes the color to blend with the parent UI element
+      along the provided `Datatype.ColorSequence`. This property works in a
+      similar manner to `Class.Beam.Color` or `Class.Trail.Color`, except that
+      it applies over an on-screen distance determined by the
+      `Class.UIGradient.Offset|Offset` and `Class.UIGradient.Rotation|Rotation`.
+    code_samples: []
+    type: ColorSequence
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UIGradient.Enabled
+    summary: |
+      Whether the gradient is enabled or not.
+    description: |
+      Whether the gradient is enabled or not.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UIGradient.Offset
+    summary: |
+      Determines the scalar translation of the gradient from the center of the
+      parent GuiObject.
+    description: |
+      This property determines the scalar translation of the gradient from the
+      center of the parent `Class.GuiObject`. It is a scalar translation,
+      meaning that the actual logical pixel offset is determined by the
+      `Class.GuiBase2d.AbsoluteSize|AbsoluteSize` of the parent
+      `Class.GuiObject`. So, a value of `(1, 0)` would shift the gradient
+      horizontally to the right by a distance equal to the parent object's
+      on‑screen size. Depending on the `Class.UIGradient.Rotation|Rotation`,
+      this may cause the gradient to be partially visible or not visible at all.
+
+      Also see `Class.UIGradient.Rotation|Rotation` which also affects the
+      geometry of the applied gradient.
+    code_samples: []
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UIGradient.Rotation
+    summary: |
+      Determines the clockwise rotation in degrees of the gradient starting from
+      left to right.
+    description: |
+      This property determines the **clockwise** rotation in degrees of the
+      `Class.UIGradient` starting from left to right. The beginning and end
+      control points snap to the edges of the parent `Class.GuiObject`, but
+      maintain the provided rotation.
+
+      Also see `Class.UIGradient.Offset|Offset` which also affects the geometry
+      of the applied gradient.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UIGradient.Transparency
+    summary: |
+      Determines how much the parent GuiObject can be seen through along the
+      length of the gradient.
+    description: |
+      This property describes how opaque the parent UI element will be along the
+      provided `Datatype.NumberSequence`. This property works in a similar
+      manner to `Class.Beam.Transparency` or `Class.Trail.Transparency`, except
+      that it applies over an on‑screen distance determined by the
+      `Class.UIGradient.Offset|Offset` and `Class.UIGradient.Rotation|Rotation`.
+
+      Note that the envelope values of the
+      `Datatype.NumberSequenceKeypoint|NumberSequenceKeypoints` are ignored.
+    code_samples: []
+    type: NumberSequence
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
 methods: []
 events: []
 callbacks: []

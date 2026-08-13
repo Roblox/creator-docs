@@ -211,6 +211,118 @@ properties:
       can_save: false
     capabilities:
       - Input
-methods: []
-events: []
+methods:
+  - name: InputAction:Fire
+    summary: |
+      Updates the `InputAction` to the given state and fires the appropriate
+      signals.
+    description: |
+      Updates the `InputAction` to the given state and fires the appropriate
+      signals. This method is most useful for script‑triggered "input" where the
+      passed `state` should trigger events like
+      `Class.InputAction.Pressed|Pressed` or
+      `Class.InputAction.StateChanged|StateChanged` regardless of whether the
+      player triggered that state through normal inputs.
+
+      This method will only accept a `state` parameter that matches the
+      `Class.InputAction.Type|Type` and attempting to call it with a mismatched
+      type will cause an error, for example passing a state of `0.5` when the
+      `Class.InputAction.Type|Type` is `Enum.InputActionType|Bool`.
+
+      Note that this method follows the conditions of
+      `Class.InputAction.Pressed|Pressed`,
+      `Class.InputAction.Released|Released`, and
+      `Class.InputAction.StateChanged|StateChanged`. For example, if you make
+      multiple consecutive calls to `Fire()` with a state of `true`,
+      `Class.InputAction.StateChanged|StateChanged` will only fire on the first
+      state change and the subsequent calls to `Fire()` will do nothing.
+    code_samples: []
+    parameters:
+      - name: state
+        type: Variant
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      Use `Class.InputBinding:Fire()` with a `Enum.InputBindingType|Scriptable`
+      binding instead.
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Input
+    simulationAccess: true
+  - name: InputAction:GetState
+    summary: |
+      Returns the current state of the `Class.InputAction`.
+    description: |
+      Returns the current state of the `Class.InputAction`, for example `true`
+      for an action with `Class.InputAction.Type|Type` set to
+      `Enum.InputActionType|Bool`.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Variant
+        summary: |
+          The current state of `Class.InputAction`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities:
+      - Input
+    simulationAccess: true
+events:
+  - name: InputAction.Pressed
+    summary: |
+      Fires only when the `Class.InputAction.Type` is set to
+      `Enum.InputActionType|Bool` on a state transition from `false` to `true`.
+    description: |
+      This event fires only when the `Class.InputAction.Type|Type` is set to
+      `Enum.InputActionType|Bool`, and only when the state transitions from
+      `false` to `true`.
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - Input
+  - name: InputAction.Released
+    summary: |
+      Fires only when the `Class.InputAction.Type` is set to
+      `Enum.InputActionType|Bool` on a state transition from `true` to `false`.
+    description: |
+      This event fires only when the `Class.InputAction.Type|Type` is set to
+      `Enum.InputActionType|Bool`, and only when the state transitions from
+      `true` to `false`.
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - Input
+  - name: InputAction.StateChanged
+    summary: |
+      Fires for all `Enum.InputActionType` types whenever the state changes,
+      except if the state attempts to transition to the same state.
+    description: |
+      This event fires for all `Enum.InputActionType` types whenever the state
+      changes, except if the state attempts to transition to the same state.
+    code_samples: []
+    parameters:
+      - name: value
+        type: Variant
+        default:
+        summary: |
+          The new state of the `Class.InputAction`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - Input
 callbacks: []
