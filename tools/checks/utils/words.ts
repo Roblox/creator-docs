@@ -77,9 +77,17 @@ export const ALLOWED_PROFANE_WORDS_LIST = [
   'pukes',
   'poop',
   'poops',
-  'pooping'
+  'pooping',
 ];
 const ALLOWED_PROFANE_WORDS_SET = new Set(ALLOWED_PROFANE_WORDS_LIST);
+
+// `retext-profanities` matches its `ignore` option against normalized `cuss`
+// keys, which are lowercased with punctuation stripped (e.g. `three-way` is
+// keyed as `threeway`). Normalize the allow list to that form so hyphenated or
+// multi-word entries are actually ignored rather than still flagged as profane.
+export const RETEXT_PROFANITIES_IGNORE_LIST = ALLOWED_PROFANE_WORDS_LIST.map(
+  (word) => word.replace(/[^a-z0-9]/gi, '').toLowerCase()
+);
 
 const BLOCKED_WORDS = ['a$$'];
 

@@ -1150,7 +1150,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1160,7 +1160,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1170,7 +1170,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1180,7 +1180,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1190,7 +1190,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1200,7 +1200,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1296,7 +1296,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1306,7 +1306,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1316,7 +1316,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1326,7 +1326,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1336,7 +1336,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1346,7 +1346,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1430,7 +1430,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1440,7 +1440,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1450,7 +1450,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1460,7 +1460,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1470,7 +1470,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1480,7 +1480,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1564,7 +1564,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1574,7 +1574,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1584,7 +1584,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1594,7 +1594,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1604,7 +1604,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -1614,7 +1614,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OperationError"
+                  "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationError"
                 }
               }
             }
@@ -11137,7 +11137,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -11153,7 +11153,8 @@
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
-                "JourneysConfig"
+                "JourneysConfig",
+                "AntiCheatConfig"
               ]
             },
             "x-enum-varnames": [
@@ -11163,7 +11164,8 @@
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
               "ExperienceUserConfig",
-              "JourneysConfig"
+              "JourneysConfig",
+              "AntiCheatConfig"
             ]
           }
         ],
@@ -11264,7 +11266,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -11280,7 +11282,8 @@
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
-                "JourneysConfig"
+                "JourneysConfig",
+                "AntiCheatConfig"
               ]
             },
             "x-enum-varnames": [
@@ -11290,7 +11293,8 @@
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
               "ExperienceUserConfig",
-              "JourneysConfig"
+              "JourneysConfig",
+              "AntiCheatConfig"
             ]
           }
         ],
@@ -11434,7 +11438,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -11450,7 +11454,8 @@
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
-                "JourneysConfig"
+                "JourneysConfig",
+                "AntiCheatConfig"
               ]
             },
             "x-enum-varnames": [
@@ -11460,7 +11465,8 @@
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
               "ExperienceUserConfig",
-              "JourneysConfig"
+              "JourneysConfig",
+              "AntiCheatConfig"
             ]
           }
         ],
@@ -11559,7 +11565,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -11575,7 +11581,8 @@
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
-                "JourneysConfig"
+                "JourneysConfig",
+                "AntiCheatConfig"
               ]
             },
             "x-enum-varnames": [
@@ -11585,7 +11592,8 @@
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
               "ExperienceUserConfig",
-              "JourneysConfig"
+              "JourneysConfig",
+              "AntiCheatConfig"
             ]
           }
         ],
@@ -11731,7 +11739,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -11747,7 +11755,8 @@
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
-                "JourneysConfig"
+                "JourneysConfig",
+                "AntiCheatConfig"
               ]
             },
             "x-enum-varnames": [
@@ -11757,7 +11766,8 @@
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
               "ExperienceUserConfig",
-              "JourneysConfig"
+              "JourneysConfig",
+              "AntiCheatConfig"
             ]
           }
         ],
@@ -11903,7 +11913,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -11919,7 +11929,8 @@
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
-                "JourneysConfig"
+                "JourneysConfig",
+                "AntiCheatConfig"
               ]
             },
             "x-enum-varnames": [
@@ -11929,7 +11940,8 @@
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
               "ExperienceUserConfig",
-              "JourneysConfig"
+              "JourneysConfig",
+              "AntiCheatConfig"
             ]
           }
         ],
@@ -12030,7 +12042,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -12046,7 +12058,8 @@
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
-                "JourneysConfig"
+                "JourneysConfig",
+                "AntiCheatConfig"
               ]
             },
             "x-enum-varnames": [
@@ -12056,7 +12069,8 @@
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
               "ExperienceUserConfig",
-              "JourneysConfig"
+              "JourneysConfig",
+              "AntiCheatConfig"
             ]
           }
         ],
@@ -12202,7 +12216,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -12218,7 +12232,8 @@
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
-                "JourneysConfig"
+                "JourneysConfig",
+                "AntiCheatConfig"
               ]
             },
             "x-enum-varnames": [
@@ -12228,7 +12243,8 @@
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
               "ExperienceUserConfig",
-              "JourneysConfig"
+              "JourneysConfig",
+              "AntiCheatConfig"
             ]
           },
           {
@@ -12385,7 +12401,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -12401,7 +12417,8 @@
                 "ExtendedServicesConfig",
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
-                "JourneysConfig"
+                "JourneysConfig",
+                "AntiCheatConfig"
               ]
             },
             "x-enum-varnames": [
@@ -12411,7 +12428,8 @@
               "ExtendedServicesConfig",
               "LeaderboardsConfig",
               "ExperienceUserConfig",
-              "JourneysConfig"
+              "JourneysConfig",
+              "AntiCheatConfig"
             ]
           },
           {
@@ -31909,12 +31927,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
+                  "$ref": "#/components/schemas/ClientSettingsApi.Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
+                  "$ref": "#/components/schemas/ClientSettingsApi.Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
                 }
               }
             }
@@ -66535,6 +66553,28 @@
         "additionalProperties": false,
         "description": "A metric value for a single breakdown series."
       },
+      "AnalyticsQueryPublicApi.OperationError": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The server-assigned resource path.",
+            "nullable": true
+          },
+          "done": {
+            "type": "boolean",
+            "description": "If false, the operation is still in progress. If true, the operation is completed."
+          },
+          "error": {
+            "$ref": "#/components/schemas/AnalyticsQueryPublicApi.QueryError"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A completed long-running operation that failed with an error."
+      },
       "AnalyticsQueryPublicApi.OperationMetadata": {
         "type": "object",
         "properties": {
@@ -67179,6 +67219,27 @@
           "rank": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClientSettingsApi.Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "clientVersionUpload": {
+            "type": "string"
+          },
+          "bootstrapperVersion": {
+            "type": "string"
+          },
+          "nextClientVersionUpload": {
+            "type": "string"
+          },
+          "nextClientVersion": {
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -72776,28 +72837,6 @@
           "result": ["error", "response"]
         }
       },
-      "OperationError": {
-        "type": "object",
-        "properties": {
-          "path": {
-            "type": "string",
-            "description": "The server-assigned resource path.",
-            "nullable": true
-          },
-          "done": {
-            "type": "boolean",
-            "description": "If false, the operation is still in progress. If true, the operation is completed."
-          },
-          "error": {
-            "$ref": "#/components/schemas/AnalyticsQueryPublicApi.QueryError"
-          },
-          "metadata": {
-            "$ref": "#/components/schemas/AnalyticsQueryPublicApi.OperationMetadata"
-          }
-        },
-        "additionalProperties": false,
-        "description": "A completed long-running operation that failed with an error."
-      },
       "OperationErrorResponse": {
         "type": "object",
         "properties": {
@@ -73981,10 +74020,11 @@
           "ExtendedServicesConfig",
           "LeaderboardsConfig",
           "ExperienceUserConfig",
-          "JourneysConfig"
+          "JourneysConfig",
+          "AntiCheatConfig"
         ],
         "type": "string",
-        "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig",
+        "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
         "x-enum-varnames": [
           "InExperienceConfig",
           "RecommendationServicesConfig",
@@ -73992,7 +74032,8 @@
           "ExtendedServicesConfig",
           "LeaderboardsConfig",
           "ExperienceUserConfig",
-          "JourneysConfig"
+          "JourneysConfig",
+          "AntiCheatConfig"
         ]
       },
       "RestartState": {
@@ -79667,6 +79708,9 @@
           },
           "nextClientVersion": {
             "type": "string"
+          },
+          "forceInstall": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -82369,11 +82413,11 @@
         "additionalProperties": false
       },
       "Roblox.Games.Api.Models.Response.UpsellUxTreatment": {
-        "description": "Upsell UX treatment metadata appended to a playability response when an experience is\r\ncurrently playable but will be restricted under upcoming Roblox-Core content rules.\r\nMirrors the existing Roblox.Games.Api.Models.Response.PlayableUxTreatment contract intentionally so client\r\nrendering can be unified.",
+        "description": "Upsell UX treatment metadata appended to a playability response.",
         "type": "object",
         "properties": {
           "treatment": {
-            "description": "Identifier of the client component to render (currently \"ageCheckUpsell\").\r\nAbsent when the upsell should not surface.",
+            "description": "Identifier of the client component to render.",
             "type": "string"
           },
           "data": {
@@ -82383,11 +82427,11 @@
         "additionalProperties": false
       },
       "Roblox.Games.Api.Models.Response.UpsellUxTreatmentData": {
-        "description": "Localized strings for an Roblox.Games.Api.Models.Response.UpsellUxTreatment. Currently only carries\r\nRoblox.Games.Api.Models.Response.UpsellUxTreatmentData.BodyText; structured to allow additional fields without breaking the\r\nJSON contract.",
+        "description": "Localized strings for an Roblox.Games.Api.Models.Response.UpsellUxTreatment.",
         "type": "object",
         "properties": {
           "bodyText": {
-            "description": "Localized body text for the upsell banner (e.g. \"You'll soon need an age check to\r\njoin this game.\").",
+            "description": "Localized body text for the upsell.",
             "type": "string"
           }
         },
