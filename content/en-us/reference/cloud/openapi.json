@@ -31927,12 +31927,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClientSettingsApi.Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
+                  "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClientSettingsApi.Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
+                  "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
                 }
               }
             }
@@ -67223,27 +67223,6 @@
         },
         "additionalProperties": false
       },
-      "ClientSettingsApi.Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse": {
-        "type": "object",
-        "properties": {
-          "version": {
-            "type": "string"
-          },
-          "clientVersionUpload": {
-            "type": "string"
-          },
-          "bootstrapperVersion": {
-            "type": "string"
-          },
-          "nextClientVersionUpload": {
-            "type": "string"
-          },
-          "nextClientVersion": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
       "ClientStatusGetRequest": {
         "type": "object",
         "properties": {
@@ -79708,9 +79687,6 @@
           },
           "nextClientVersion": {
             "type": "string"
-          },
-          "forceInstall": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false

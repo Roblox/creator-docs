@@ -40,6 +40,6 @@ From a business perspective, performant games often have higher user engagement,
 
   Excessive memory usage causes client crashes, too, but it also prevents users on lower-end devices from playing your game in the first place. Reducing memory usage can greatly expand your addressable audience, especially on mobile.
 
-- **Load time** is the amount of time it takes for a player to start enjoying your game.
+- **Join time** is the total time from when a player clicks the play button to when the world is rendered and they can move.
 
-  Long load times are annoying and hurt user acquisition and retention. Players might decide a game simply isn't worth the wait. Conversely, quick load times can give your game a "jump in" feel that makes players more likely to engage with it when they have a spare moment.
+  Long join times hurt user acquisition and retention—players may leave before ever entering your experience.
