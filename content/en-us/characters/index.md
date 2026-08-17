@@ -33,9 +33,9 @@ Player characters are characters that the player controls to play a game. While 
 
 For players, avatars are deeply personal because they symbolize one's digital identity, uniquely crafted by individual purchases on the [Marketplace](https://www.roblox.com/catalog) and in games, or from giveaways. For game developers, avatars offer a standardized, feature-complete character that unlocks platform compatibility for:
 
-- Body and facial animations
-- Rigid accessories, layered accessories, classic clothing, and makeup assets
-- Core character behavior and properties, like a display name, health bar, and basic movement states
+- Body and facial animations.
+- Rigid accessories, layered accessories, classic clothing, and makeup assets.
+- Core character behavior and properties, like a display name, health bar, and basic movement states.
 
 Avatars are able to offer this functionality because they must include the following system of components in order for creators to upload them to the Marketplace:
 
