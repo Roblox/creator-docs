@@ -24,7 +24,7 @@ This animation technique can provide solutions to the following examples:
 
 ## IKControl
 
-You can use an `Class.IKControl` to procedurally add IK to your character rigs outside of the **Animation Editor**. Studio allows you to programmatically apply IK to all characters, such as R15, Rthro, and custom imported skinned characters, to create realistic movement and interactions in your game.
+You can use an `Class.IKControl` to procedurally add IK to your character rigs outside of the **Animation Editor**. Studio allows you to programmatically apply IK to all characters to create realistic movement and interactions in your game.
 
 When adding an `Class.IKControl`, set the [required properties](#required-properties) correctly to avoid unexpected and unnatural animation results. As with all animation, [test your IKControls](#test-ikcontrols) to ensure that you achieve the desired behavior.
 
@@ -66,7 +66,7 @@ You can add and edit `Class.IKControl` programmatically or directly through the 
 To quickly test your `Class.IKControl` using an `Class.Attachment` as a target:
 
 1. From Studio's mezzanine, [initiate a playtest](../studio/testing-modes.md#playtesting).
-2. In the **Explorer**, navigate to **Workspace** → your user's `Class.Model`. This `Class.Model` instance is named as your current Roblox account.
+2. In the **Explorer** window, navigate to **Workspace** → your user's `Class.Model`. This `Class.Model` instance is named as your current Roblox account.
 3. Click the **⊕** icon next to your character model's `HumanoidRootPart` and add an **Attachment**.
 
    <img src="../assets/animation/inverse-kinematics/IK-Add-Attachment.png"
@@ -130,13 +130,13 @@ The following instructions describe the process of adding a `Class.HingeConstrai
 
 #### Elbow
 
-Roblox R15 characters already include attachments in their joints that you can use to apply the elbow constraint. For the elbow, both the LeftUpperArm and the LeftLowerArm include a `LeftElbowRigAttachment`. Along with adding a constraint, you also need to add additional child attachments to each part's `LeftElbowRigAttachment` to specify which axis the elbow can rotate about.
+Characters with [standard rigs](../avatar/character-bodies/specifications.md#standard-rigs) already include attachments in their joints that you can use to apply the elbow constraint. For the elbow, both the LeftUpperArm and the LeftLowerArm include a `LeftElbowRigAttachment`. Along with adding a constraint, you also need to add additional child attachments to each part's `LeftElbowRigAttachment` to specify which axis the elbow can rotate about.
 
 To add the `Class.HingeConstraint` and child attachments:
 
-1. In the **Explorer**, locate your model's **LeftLowerArm** and click the **⊕ button**.
+1. In the **Explorer** window, locate your model's **LeftLowerArm** and click the **⊕ button**.
 2. Add a **HingeConstraint** with the name `LeftElbowConstraint`.
-3. In the **Explorer**, navigate to the **LeftUpperArm.LeftElbowRigAttachment** and add an attachment:
+3. In the **Explorer** window, navigate to the **LeftUpperArm.LeftElbowRigAttachment** and add an attachment:
 
    1. Click the **⊕ button** to add an **Attachment** with the name `LeftElbowConstraintAttachment0`.
    2. In the viewport, select the attachment and use the **Rotate tool** to rotate the attachment so the yellow **PrimaryAxis** is the axis of your elbow's expected rotation.
@@ -145,7 +145,7 @@ To add the `Class.HingeConstraint` and child attachments:
 
    3. Set the **LeftElbowConstraint.Attachment0** property to this new attachment.
 
-4. In the **Explorer**, navigate to your model's **LeftLowerArm.LeftElbowRigAttachment** add an attachment:
+4. In the **Explorer** window, navigate to your model's **LeftLowerArm.LeftElbowRigAttachment** add an attachment:
 
    1. Click the **⊕ button** and add an **Attachment** with the name `LeftElbowConstraintAttachment1`.
    2. Set the **LeftUpperArm.LeftElbowConstraint.Attachment1** property to this new attachment.
@@ -173,7 +173,7 @@ You can improve this by adding a `Class.BallSocketConstraint` to limit the rotat
 
 To add a `Class.BallSocketConstraint` for the wrist:
 
-1. In the **Explorer**, locate your model's **LeftHand** and click the **⊕ button**.
+1. In the **Explorer** window, locate your model's **LeftHand** and click the **⊕ button**.
    1. Add a **BallSocketConstraint** with the name `LeftWristConstraint`.
 2. Locate your model's **LeftLowerArm.LeftWristRigAttachment** and add an attachment:
    1. Click the **⊕ button** and add an **Attachment** with the name `LeftWristConstraintAttachment0`.
@@ -184,7 +184,7 @@ To add a `Class.BallSocketConstraint` for the wrist:
    1. Click the **⊕ button** and add an **Attachment** with the name `LeftWristConstraintAttachment1`.
    2. Copy the **LeftWristConstraintAttachment0.CFrameOrientation** property and paste it as the **LeftWristConstraintAttachment1.CFrameOrientation** property.
    3. Set the **LeftWristConstraint.Attachment1** property to this new **LeftWristConstraintAttachment1**.
-4. In the **Explorer**, select the **LeftWristConstraint**.
+4. In the **Explorer** window, select the **LeftWristConstraint**.
 5. In the **Properties** window, set the following:
    1. Enable **LimitsEnabled**.
    2. Set **UpperAngle** to `80`. This controls how much the constraint's axis can rotate, and 80 degrees is approximately how much the wrist should be able to bend.

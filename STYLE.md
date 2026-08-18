@@ -57,7 +57,7 @@ We follow the [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-gu
   - **BAD**: After clicking, a player can see his or her inventory on his/her screen.
   - **BETTER**: After clicking, players can see their inventories on screen.
 
-- Use "select" for options or objects in an experience. Use "click" for buttons or icons.
+- Use "select" for options or objects in a game. Use "click" for buttons or icons.
 
   - **BAD**: Click and drag to grab the signpost. Then select the **Color** button.
   - **BETTER**: Select the signpost and click the **Color** button.
@@ -216,8 +216,8 @@ If desired, you can override the default link text using a `|` character followe
 
 This technique should be used to shorten the length of rendered links on the page:
 
-- **BAD**: [`MarketplaceService`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService) is responsible for in-experience transactions. The most notable methods are [`MarketplaceService:PromptProductPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptProductPurchase) and [`MarketplaceService:PromptPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptPurchase), as well as the callback [`MarketplaceService.ProcessReceipt`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#ProcessReceipt) which must be defined so that transactions do not fail.
-- **BETTER**: [`MarketplaceService`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService) is responsible for in-experience transactions. The most notable methods are [`PromptProductPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptProductPurchase) and [`PromptPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptPurchase), as well as the callback [`ProcessReceipt`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#ProcessReceipt) which must be defined so that transactions do not fail.
+- **BAD**: [`MarketplaceService`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService) is responsible for in-game transactions. The most notable methods are [`MarketplaceService:PromptProductPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptProductPurchase) and [`MarketplaceService:PromptPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptPurchase), as well as the callback [`MarketplaceService.ProcessReceipt`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#ProcessReceipt) which must be defined so that transactions do not fail.
+- **BETTER**: [`MarketplaceService`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService) is responsible for in-game transactions. The most notable methods are [`PromptProductPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptProductPurchase) and [`PromptPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptPurchase), as well as the callback [`ProcessReceipt`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#ProcessReceipt) which must be defined so that transactions do not fail.
 
 You should also use link substitution when framing an API term in plural:
 
@@ -234,7 +234,7 @@ To render a term in monospace without any possibility of forming a link, append 
 
 Images are usually great additions to documentation, but overusing them can make pages hard to scan and maintain over time. Each image should serve to clarify something that would be cumbersome to convey through text alone. For example, if a dialog has two buttons, **Cancel** and **OK**, just write, "Click **OK**." Adding a screenshot of the dialog doesn't offer any additional value to the reader and unnecessarily clutters the page.
 
-However, if a complex user interface has numerous tools, labels, and fields, a screenshot of the UI and an arrow pointing to a particular button can be a huge help to the reader. Likewise, images are essential for demonstrating concepts like textures and in-experience UI containers.
+However, if a complex user interface has numerous tools, labels, and fields, a screenshot of the UI and an arrow pointing to a particular button can be a huge help to the reader. Likewise, images are essential for demonstrating concepts like textures and in-game UI containers.
 
 We have the following guidelines for images:
 
