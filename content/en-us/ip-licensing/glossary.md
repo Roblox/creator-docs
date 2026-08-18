@@ -40,6 +40,10 @@ description: Glossary of IP licensing terms.
     <td>A set of terms and conditions that defines how a particular IP can be used by creators to build games on Roblox. Rights holders can create several licenses per IP family (for example, "Polly Pocket Full License", "20% Revenue Share License", or "Minimal Maturity License").</td>
   </tr>
   <tr>
+    <td>**License showcase**</td>
+    <td>An optional set of up to 10 games that a rights holder highlights on a live license's details page. Showcase games must already have an agreement with that license and appear in a carousel under **About** in the Licenses catalog.</td>
+  </tr>
+  <tr>
     <td>**Primary keyword**</td>
     <td>The official name of your IP. For example, "Polly Pocket".</td>
   </tr>
