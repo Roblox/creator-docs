@@ -31,7 +31,7 @@ Genre, gameplay, and visual style are common factors in a player's decision to t
 While not necessary for consideration, it's recommended that your game:
 
 - Includes optimizations for both console and mobile devices.
-- Supports R15 and layered clothing.
+- Supports standard rigs and layered clothing.
 - Updates regularly and includes a roapmap.
 - Uses [experience events](../production/promotion/experience-events.md) for future events and updates.
 </Alert>

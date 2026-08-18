@@ -140,7 +140,7 @@ You can publicly distribute and sell your own models on the Creator Store for Un
 - Open use asset or a restricted asset that you created, excluding audio and video.
 - Audio or video asset that you acquired from the Creator Store.
 
-This monetization method lets you earn 100% of net proceeds on transactions, bypassing platform fees and DevEx rates. For more information on asset and seller requirements, including how to set up a seller account to set prices and receive payouts, see [Creator Store - Requirements](../production/creator-store.md#requirements).
+This monetization method lets you earn 100% of net proceeds on transactions, bypassing platform fees and DevEx rates. For more information on asset and seller requirements, including how to set up a seller account to set prices and receive payouts, see [Creator Store - Distribute and sell assets](../production/creator-store.md#distribute-and-sell-assets).
 
 <Alert severity="info">
 If you want to distribute a model with a child audio asset that you created, you must distribute the audio asset on the Creator Store **_before_** making it a child of the model in order for the audio to be audible at runtime.
