@@ -12520,6 +12520,1400 @@
         }
       }
     },
+    "/creator-configs-public-api/v1/experimentation/universes/{universeId}/experiments": {
+      "get": {
+        "tags": ["Experiments"],
+        "summary": "Lists experiments for a universe.",
+        "description": "Pagination is offset-based (`maxPageSize` + `skip`). The response carries the page slice plus the unpaginated total\r\nmatching the filters. Request includes optional pagination, search, and filters.",
+        "operationId": "PublicExperimentation_ListExperiments",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "searchKey",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "stateFilters",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ExperimentState"
+              }
+            },
+            "x-enum-varnames": [
+              "Draft",
+              "Scheduled",
+              "Running",
+              "Completed",
+              "Cancelled",
+              "Deleted"
+            ]
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "x-enum-varnames": ["Ascending", "Descending"]
+          },
+          {
+            "name": "sortKey",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "x-enum-varnames": [
+              "Name",
+              "LastModifiedTime",
+              "StartTime",
+              "Relevance"
+            ]
+          },
+          {
+            "name": "productTypeFilter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "x-enum-varnames": ["InGameConfigs", "Matchmaking"]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListExperimentsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/experiments#PublicExperimentation_ListExperiments"
+        }
+      },
+      "post": {
+        "tags": ["Experiments"],
+        "summary": "Creates a new experiment for a universe.",
+        "description": "Returns an ExperimentOperation describing the async create call.",
+        "operationId": "PublicExperimentation_CreateExperiment",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateExperimentData"
+                  }
+                ],
+                "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\r\nPayload describing a new experiment."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateExperimentData"
+                  }
+                ],
+                "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\r\nPayload describing a new experiment."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateExperimentData"
+                  }
+                ],
+                "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\r\nPayload describing a new experiment."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateExperimentData"
+                  }
+                ],
+                "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\r\nPayload describing a new experiment."
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateExperimentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:write",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/experiments#PublicExperimentation_CreateExperiment"
+        }
+      }
+    },
+    "/creator-configs-public-api/v1/experimentation/universes/{universeId}/experiments/{experimentId}": {
+      "delete": {
+        "tags": ["Experiments"],
+        "summary": "Discards an experiment.",
+        "description": "The experiment record is retained with state Deleted.",
+        "operationId": "PublicExperimentation_DiscardExperiment",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "experimentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DiscardExperimentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:write",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/experiments#PublicExperimentation_DiscardExperiment"
+        }
+      },
+      "get": {
+        "tags": ["Experiments"],
+        "summary": "Gets an experiment by ID.",
+        "description": "Returns the `experiment`. Returns 404 if the experiment doesn't exist for the universe.",
+        "operationId": "PublicExperimentation_GetExperiment",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "experimentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetExperimentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/experiments#PublicExperimentation_GetExperiment"
+        }
+      },
+      "patch": {
+        "tags": ["Experiments"],
+        "summary": "Updates an existing experiment.",
+        "description": "The payload is a full replacement of the mutable experiment fields. Returns an\r\nExperimentOperation describing the async update.",
+        "operationId": "PublicExperimentation_UpdateExperiment",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "experimentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateExperimentData"
+                  }
+                ],
+                "description": "Request body for\r\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\r\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateExperimentData"
+                  }
+                ],
+                "description": "Request body for\r\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\r\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateExperimentData"
+                  }
+                ],
+                "description": "Request body for\r\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\r\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateExperimentData"
+                  }
+                ],
+                "description": "Request body for\r\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\r\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateExperimentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:write",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/experiments#PublicExperimentation_UpdateExperiment"
+        }
+      }
+    },
+    "/creator-configs-public-api/v1/experimentation/universes/{universeId}/experiments/{experimentId}/stats": {
+      "get": {
+        "tags": ["Experiments"],
+        "summary": "Gets diagnostic stats for an experiment.",
+        "operationId": "PublicExperimentation_GetExperimentStats",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "experimentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetExperimentStatsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/experiments#PublicExperimentation_GetExperimentStats"
+        }
+      }
+    },
+    "/creator-configs-public-api/v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete": {
+      "post": {
+        "tags": ["Experiments"],
+        "summary": "Completes an experiment by stopping it and rolling out the requested variant.",
+        "operationId": "PublicExperimentation_CompleteExperiment",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "experimentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CompleteExperimentRequest"
+                  }
+                ],
+                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CompleteExperimentRequest"
+                  }
+                ],
+                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CompleteExperimentRequest"
+                  }
+                ],
+                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CompleteExperimentRequest"
+                  }
+                ],
+                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompleteExperimentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:write",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/experiments#PublicExperimentation_CompleteExperiment"
+        }
+      }
+    },
+    "/creator-configs-public-api/v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule": {
+      "post": {
+        "tags": ["Experiments"],
+        "summary": "Schedules an experiment to start at a future UTC time.",
+        "description": "Body must include `scheduledStartTime` as an ISO-8601 UTC timestamp.",
+        "operationId": "PublicExperimentation_ScheduleExperiment",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "experimentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ScheduleExperimentRequest"
+                  }
+                ],
+                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ScheduleExperimentRequest"
+                  }
+                ],
+                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ScheduleExperimentRequest"
+                  }
+                ],
+                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ScheduleExperimentRequest"
+                  }
+                ],
+                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScheduleExperimentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:write",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/experiments#PublicExperimentation_ScheduleExperiment"
+        }
+      }
+    },
+    "/creator-configs-public-api/v1/experimentation/universes/{universeId}/experiments/{experimentId}:start": {
+      "post": {
+        "tags": ["Experiments"],
+        "summary": "Starts an experiment immediately.",
+        "description": "For a future-dated start, use the sibling `:schedule` endpoint.",
+        "operationId": "PublicExperimentation_StartExperiment",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "experimentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StartExperimentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:write",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/experiments#PublicExperimentation_StartExperiment"
+        }
+      }
+    },
+    "/creator-configs-public-api/v1/experimentation/universes/{universeId}/experiments:calculateMde": {
+      "post": {
+        "tags": ["Experiments"],
+        "summary": "Calculates the Minimum Detectable Effect (MDE) for a prospective experiment.",
+        "description": "Poll by clients until the operation is complete.",
+        "operationId": "PublicExperimentation_CalculateExperimentMde",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CalculateExperimentMdeData"
+                  }
+                ],
+                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CalculateExperimentMdeData"
+                  }
+                ],
+                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CalculateExperimentMdeData"
+                  }
+                ],
+                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CalculateExperimentMdeData"
+                  }
+                ],
+                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculateExperimentMdeResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/experiments#PublicExperimentation_CalculateExperimentMde"
+        }
+      }
+    },
+    "/creator-configs-public-api/v1/experimentation/universes/{universeId}/operations/{operationId}": {
+      "get": {
+        "tags": ["Experiments"],
+        "summary": "Gets the status of an experiment async operation.",
+        "description": "Polled by clients between mutations (Create / Update / Start / Schedule /\r\nComplete / Discard) to determine when the operation reaches `done = true`.",
+        "operationId": "PublicExperimentation_GetExperimentOperationStatus",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetExperimentOperationStatusResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/experiments#PublicExperimentation_GetExperimentOperationStatus"
+        }
+      }
+    },
     "/datastores/v1/universes/{universeId}/standard-datastores": {
       "get": {
         "tags": ["Data and memory stores"],
@@ -29879,6 +31273,7 @@
             "description": "0: Authorization has been denied for this request."
           }
         },
+        "deprecated": true,
         "servers": [
           {
             "url": "https://avatar.roblox.com"
@@ -29892,6 +31287,7 @@
             "roblox-legacy-cookie": []
           }
         ],
+        "description": "Please use GET v4/avatar",
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/avatars#avatar_get_v1_avatar"
         },
@@ -46466,6 +47862,7 @@
             "description": "1: The specified userOutfitId is invalid."
           }
         },
+        "deprecated": true,
         "servers": [
           {
             "url": "https://avatar.roblox.com"
@@ -46480,6 +47877,7 @@
             "roblox-legacy-cookie": []
           }
         ],
+        "description": "Please use GET v4/outfits/{outfitId}/details",
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/avatars#avatar_get_v1_outfits__userOutfitId__details"
         }
@@ -59985,6 +61383,86 @@
         ]
       }
     },
+    "/v2/avatar": {
+      "patch": {
+        "tags": ["Avatars"],
+        "summary": "Sets the avatar to the incoming avatar using field masks.",
+        "description": "Only allows items that you own, are not expired, and are wearable asset types.\r\nAny assets being worn before this method is called are automatically removed.\n\nPlease use PATCH v4/avatar",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Roblox-Place-Id",
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarRequestModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarRequestModel"
+              }
+            }
+          },
+          "description": "Model of avatar that we are updating to.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "3: Invalid assetId\r\n5: Meta does not apply to specified asset type\r\n7: Required meta is not provided for the specific asset type"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          },
+          "500": {
+            "description": "2: Failed to wear asset."
+          }
+        },
+        "deprecated": true,
+        "servers": [
+          {
+            "url": "https://avatar.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/avatars#avatar_patch_v2_avatar"
+        }
+      }
+    },
     "/v2/avatar/avatar": {
       "get": {
         "tags": ["Avatars"],
@@ -60100,6 +61578,7 @@
             "description": "0: Token Validation Failed"
           }
         },
+        "deprecated": true,
         "servers": [
           {
             "url": "https://avatar.roblox.com"
@@ -60113,6 +61592,7 @@
             "roblox-legacy-cookie": []
           }
         ],
+        "description": "Please use PATCH v4/avatar",
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/avatars#avatar_post_v2_avatar_set_body_colors"
         }
@@ -60122,7 +61602,7 @@
       "post": {
         "tags": ["Avatars"],
         "summary": "Sets the avatar's current assets to the list.",
-        "description": "Only allows items that you own, are not expired, and are wearable asset types.\r\nAny assets being worn before this method is called are automatically removed.",
+        "description": "Only allows items that you own, are not expired, and are wearable asset types.\r\nAny assets being worn before this method is called are automatically removed.\n\nPlease use PATCH v4/avatar",
         "parameters": [
           {
             "in": "header",
@@ -60179,6 +61659,7 @@
             "description": "2: Failed to wear asset."
           }
         },
+        "deprecated": true,
         "servers": [
           {
             "url": "https://avatar.roblox.com"
@@ -61331,7 +62812,7 @@
       "post": {
         "tags": ["Avatars"],
         "summary": "Creates a new outfit.",
-        "description": "Fails if any of the assetIds are not owned by the user, or not wearable types.\r\nThe name property of the request is optional as one will be auto-generated when the request has a null name.\n\nplease use v3/outfits/create",
+        "description": "Fails if any of the assetIds are not owned by the user, or not wearable types.\r\nThe name property of the request is optional as one will be auto-generated when the request has a null name.\n\nPlease use POST v4/outfits/create",
         "parameters": [
           {
             "in": "header",
@@ -61418,7 +62899,7 @@
       "patch": {
         "tags": ["Avatars"],
         "summary": "Updates the contents of an outfit.",
-        "description": "Fails if the user does not own any of the assetIds or if they are not wearable asset types.\r\nAccepts partial updates.\n\nPlease use PATCH v3/outfits/{userOutfitId}",
+        "description": "Fails if the user does not own any of the assetIds or if they are not wearable asset types.\r\nAccepts partial updates.\n\nPlease use PATCH v4/outfits/{outfitId}",
         "parameters": [
           {
             "in": "path",
@@ -64912,7 +66393,7 @@
       "post": {
         "tags": ["Avatars"],
         "summary": "Creates a new outfit.",
-        "description": "Fails if any of the assetIds are not owned by the user, or not wearable types.\r\nThe name property of the request is optional as one will be auto-generated when the request has a null name.",
+        "description": "Fails if any of the assetIds are not owned by the user, or not wearable types.\r\nThe name property of the request is optional as one will be auto-generated when the request has a null name.\n\nPlease use POST v4/outfits/create",
         "parameters": [
           {
             "in": "header",
@@ -64969,6 +66450,7 @@
             "description": "6: An error occurred while creating the outfit"
           }
         },
+        "deprecated": true,
         "servers": [
           {
             "url": "https://avatar.roblox.com"
@@ -64991,7 +66473,7 @@
       "patch": {
         "tags": ["Avatars"],
         "summary": "Updates the contents of an outfit.",
-        "description": "Fails if the user does not own any of the assetIds or if they are not wearable asset types.\r\nAccepts partial updates.",
+        "description": "Fails if the user does not own any of the assetIds or if they are not wearable asset types.\r\nAccepts partial updates.\n\nPlease use PATCH v4/outfits/{outfitId}",
         "parameters": [
           {
             "in": "path",
@@ -65061,6 +66543,7 @@
             "description": "6: An error occurred while trying to update the outfit"
           }
         },
+        "deprecated": true,
         "servers": [
           {
             "url": "https://avatar.roblox.com"
@@ -65226,6 +66709,83 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/avatars#avatar_get_v4_avatar"
         }
+      },
+      "patch": {
+        "tags": ["Avatars"],
+        "summary": "Sets the avatar to the incoming avatar using field masks.",
+        "description": "Only allows items that you own, are not expired, and are wearable asset types.\r\nAny assets being worn before this method is called are automatically removed.",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Roblox-Place-Id",
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Request.UpdateAvatarDefinitionRequestV4"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Request.UpdateAvatarDefinitionRequestV4"
+              }
+            }
+          },
+          "description": "Model of avatar that we are updating to.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Response.UpdateAvatarDefinitionResponseV4"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Response.UpdateAvatarDefinitionResponseV4"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "3: Invalid assetId\r\n5: Meta does not apply to specified asset type\r\n7: Required meta is not provided for the specific asset type"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          },
+          "500": {
+            "description": "2: Failed to wear asset."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://avatar.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/avatars#avatar_patch_v4_avatar"
+        }
       }
     },
     "/v4/avatar/users/{userId}": {
@@ -65306,6 +66866,176 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/avatars#avatar_get_v4_avatar_users__userId_"
+        }
+      }
+    },
+    "/v4/outfits/create": {
+      "post": {
+        "tags": ["Avatars"],
+        "summary": "Creates a new outfit.",
+        "description": "Fails if any of the assetIds are not owned by the user, or not wearable types.\r\nThe name property of the request is optional as one will be auto-generated when the request has a null name.",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Roblox-Place-Id",
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Request.CreateOutfitDefinitionRequestV4"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Request.CreateOutfitDefinitionRequestV4"
+              }
+            }
+          },
+          "description": "The outfit definition to create.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Response.CreateOutfitDefinitionResponseV4"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Response.CreateOutfitDefinitionResponseV4"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "3: Body colors must be valid BrickColor IDs\r\n4: Invalid outfit name\r\n5: Asset is not wearable by you and was not added to the outfit\r\n7: Invalid Player Avatar Type. Valid types are R6 and R15\r\n8: Invalid assetIds\r\n9: Meta does not apply to specified asset type\r\n10: Required meta is not provided for the specific asset type\r\n12: Outfit type invalid or not permitted\r\n13: Invalid Scale"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n1: You already have the maximum number of outfits"
+          },
+          "500": {
+            "description": "6: An error occurred while creating the outfit"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://avatar.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/avatars#avatar_post_v4_outfits_create"
+        }
+      }
+    },
+    "/v4/outfits/{outfitId}": {
+      "patch": {
+        "tags": ["Avatars"],
+        "summary": "Updates the contents of an outfit.",
+        "description": "Fails if the user does not own any of the assetIds or if they are not wearable asset types.\r\nAccepts partial updates via update types.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "outfitId",
+            "description": "The user outfit id.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Roblox-Place-Id",
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Request.UpdateOutfitDefinitionRequestV4"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Request.UpdateOutfitDefinitionRequestV4"
+              }
+            }
+          },
+          "description": "The outfit definition fields to update.",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Response.UpdateOutfitDefinitionResponseV4"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Response.UpdateOutfitDefinitionResponseV4"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "3: Body colors must be valid BrickColor IDs\r\n4: Invalid outfit name\r\n5: Asset is not wearable by you\r\n8: Invalid Player Avatar Type. Valid types are R6 and R15\r\n11: Meta does not apply to specified asset type\r\n12: Meta is required for this specific asset type\r\n13: Invalid Outfit Type\r\n14: Invalid scale"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n2: You don't have permission to update this outfit."
+          },
+          "404": {
+            "description": "1: The specified userOutfit does not exist!"
+          },
+          "500": {
+            "description": "6: An error occurred while trying to update the outfit"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://avatar.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/avatars#avatar_patch_v4_outfits__outfitId_"
         }
       }
     },
@@ -67186,6 +68916,79 @@
         "description": "Response model for bulk delete saves operation",
         "nullable": true
       },
+      "CalculateExperimentMdeData": {
+        "type": "object",
+        "properties": {
+          "exposurePercent": {
+            "type": "integer",
+            "description": "Exposure percent in range 0-100. Percent of eligible users seeing the experiment.",
+            "format": "int32"
+          },
+          "durationSeconds": {
+            "type": "integer",
+            "description": "Planned duration of the experiment in whole seconds.\r\nValues must be an exact multiple of `86400`.",
+            "format": "int64"
+          },
+          "baselineWeight": {
+            "type": "number",
+            "description": "Relative weight (in [0, 100]) for the baseline (control) variant.",
+            "format": "double"
+          },
+          "variantWeights": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            },
+            "description": "Relative weights (each in [0, 100]) for each non-baseline variant.",
+            "nullable": true
+          },
+          "universeGoalMetric": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/UniverseExperimentMetric"
+              }
+            ],
+            "description": "The goal metric whose detectable effect is being calculated.\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_SESSION_TIME\n\nUNIVERSE_EXPERIMENT_METRIC_PLAYTIME_PER_USER\n\nUNIVERSE_EXPERIMENT_METRIC_DAY_1_RETENTION\n\nUNIVERSE_EXPERIMENT_METRIC_DAY_7_RETENTION\n\nUNIVERSE_EXPERIMENT_METRIC_PAYER_CONVERSION_RATE\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_REVENUE_PER_USER\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_REVENUE_PER_PAYING_USER",
+            "x-enum-varnames": [
+              "AverageSessionTime",
+              "PlaytimePerUser",
+              "Day1Retention",
+              "Day7Retention",
+              "PayerConversionRate",
+              "AverageRevenuePerUser",
+              "AverageRevenuePerPayingUser"
+            ]
+          },
+          "targetingCriteria": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TargetingCriteria"
+              }
+            ],
+            "description": "Targeting criteria used to scope the analytics window.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
+      },
+      "CalculateExperimentMdeResponse": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/MdeOperation"
+              }
+            ],
+            "description": "The MDE async operation.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
+      },
       "CanInviteUserResponse": {
         "type": "object",
         "properties": {
@@ -67254,6 +69057,34 @@
         "additionalProperties": false,
         "description": "Set Client Status request."
       },
+      "CompleteExperimentRequest": {
+        "type": "object",
+        "properties": {
+          "variantId": {
+            "type": "string",
+            "description": "ID of the variant to roll out as the winning variant. If omitted, the experiment is\r\nstopped without rolling out a winner.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
+      },
+      "CompleteExperimentResponse": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentOperation"
+              }
+            ],
+            "description": "The async operation that completed the experiment.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
+      },
       "ConditionalRuleDefinition": {
         "type": "object",
         "properties": {
@@ -67267,7 +69098,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "JSON shape of an RPN conditional rule in public API requests, aligned with `roblox.creatorexperienceconfig.conditionrules.v1.RpnRule`."
+        "description": "JSON shape of an RPN conditional rule in public API requests."
       },
       "ConditionalRulesChangesPayload": {
         "type": "object",
@@ -67604,6 +69435,84 @@
           }
         },
         "description": "Creates a new entry with the value provided."
+      },
+      "CreateExperimentData": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Experiment display name.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "Experiment description.",
+            "nullable": true
+          },
+          "experimentConfiguration": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentConfiguration"
+              }
+            ],
+            "description": "Experiment configuration (variants + product-type-specific data).",
+            "nullable": true
+          },
+          "exposurePercent": {
+            "type": "integer",
+            "description": "Exposure percent in range 0-100. Percent of eligible users seeing the experiment.",
+            "format": "int32"
+          },
+          "targetingCriteria": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TargetingCriteria"
+              }
+            ],
+            "description": "Targeting criteria scoping which users are eligible for the experiment.",
+            "nullable": true
+          },
+          "durationSeconds": {
+            "type": "integer",
+            "description": "Experiment duration in whole seconds.",
+            "format": "int64"
+          },
+          "universeGoalMetric": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/UniverseExperimentMetric"
+              }
+            ],
+            "description": "Goal metric for the experiment.\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_SESSION_TIME\n\nUNIVERSE_EXPERIMENT_METRIC_PLAYTIME_PER_USER\n\nUNIVERSE_EXPERIMENT_METRIC_DAY_1_RETENTION\n\nUNIVERSE_EXPERIMENT_METRIC_DAY_7_RETENTION\n\nUNIVERSE_EXPERIMENT_METRIC_PAYER_CONVERSION_RATE\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_REVENUE_PER_USER\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_REVENUE_PER_PAYING_USER",
+            "x-enum-varnames": [
+              "AverageSessionTime",
+              "PlaytimePerUser",
+              "Day1Retention",
+              "Day7Retention",
+              "PayerConversionRate",
+              "AverageRevenuePerUser",
+              "AverageRevenuePerPayingUser"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\r\nPayload describing a new experiment."
+      },
+      "CreateExperimentResponse": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentOperation"
+              }
+            ],
+            "description": "Resulting async operation describing the create call.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response body for POST /v1/universes/{universeId}/experiment."
       },
       "CreateGameEventConfigRequest": {
         "type": "object",
@@ -68679,6 +70588,22 @@
         "additionalProperties": false,
         "description": "A completed long-running dimension values operation with results."
       },
+      "DiscardExperimentResponse": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentOperation"
+              }
+            ],
+            "description": "Resulting async operation describing the delete call.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response body for DELETE /v1/universes/{universeId}/experiment/{experimentId}."
+      },
       "DiscardMemoryStoreQueueItemsRequest": {
         "type": "object",
         "properties": {
@@ -68902,6 +70827,407 @@
         "enum": ["private", "public", "moderated"],
         "type": "string",
         "description": "The visibility of a virtual event."
+      },
+      "ExperimentApiError": {
+        "type": "object",
+        "properties": {
+          "errorType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentApiErrorType"
+              }
+            ],
+            "description": "Broad category of the failure.\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_VARIANT_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_VARIANT_LABEL\n\nEXPERIMENT_API_ERROR_TYPE_MUST_HAVE_EXACTLY_ONE_BASELINE_VARIANT\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_OVERLAPPING_RUNTIME\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_INVALID_SCORING_CONFIGURATIONS\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_UNEXPECTED_PRODUCT_TYPE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_EMPTY_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_EMPTY_VARIANT_METADATA\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_WEIGHT_MUST_BE_POSITIVE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_WEIGHTS_UNBALANCED\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_PLACE_CONFIG_REQUIRES_SCORING_ID_OR_DEFAULT\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_MISSING_VARIANT\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_MISSING_KEY\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_MISSING_VALUE\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_KEY_ALREADY_IN_USE\n\nEXPERIMENT_API_ERROR_TYPE_SYSTEM_ERROR\n\nEXPERIMENT_API_ERROR_TYPE_EXPERIMENT_RESULTS_NOT_FOUND\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_TARGETING_CRITERIA\n\nEXPERIMENT_API_ERROR_TYPE_TARGETING_NOT_ALLOWED\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_DURATION\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_CONFIG_NOT_FOUND\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_EXPERIMENT_NAME\n\nEXPERIMENT_API_ERROR_TYPE_CONDITIONAL_CONFIG_REQUIRES_NULL_BASELINE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_CONTROL_VARIANT_MUST_MATCH_CURRENT_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANTS_MUST_COVER_SAME_PLACES\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_HAS_DUPLICATE_PLACES",
+            "x-enum-varnames": [
+              "InvalidVariantConfiguration",
+              "InvalidVariantLabel",
+              "MustHaveExactlyOneBaselineVariant",
+              "MatchmakingOverlappingRuntime",
+              "MatchmakingInvalidScoringConfigurations",
+              "MatchmakingUnexpectedProductType",
+              "MatchmakingEmptyConfiguration",
+              "MatchmakingEmptyVariantMetadata",
+              "MatchmakingVariantWeightMustBePositive",
+              "MatchmakingVariantWeightsUnbalanced",
+              "MatchmakingPlaceConfigRequiresScoringIdOrDefault",
+              "ConfigsMissingVariant",
+              "ConfigsVariantMissingKey",
+              "ConfigsVariantMissingValue",
+              "ConfigsKeyAlreadyInUse",
+              "SystemError",
+              "ExperimentResultsNotFound",
+              "InvalidTargetingCriteria",
+              "TargetingNotAllowed",
+              "InvalidDuration",
+              "ConfigsVariantConfigNotFound",
+              "InvalidExperimentName",
+              "ConditionalConfigRequiresNullBaseline",
+              "MatchmakingControlVariantMustMatchCurrentConfiguration",
+              "MatchmakingVariantsMustCoverSamePlaces",
+              "MatchmakingVariantHasDuplicatePlaces"
+            ]
+          },
+          "errorCode": {
+            "type": "string",
+            "description": "Stable machine-readable error code.",
+            "nullable": true
+          },
+          "errorMessage": {
+            "type": "string",
+            "description": "Human-readable description of the failure.",
+            "nullable": true
+          },
+          "errorContext": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": "Optional structured context about the failure (field paths, offending values, etc.).",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Application-layer error emitted on a failed experiment operation."
+      },
+      "ExperimentApiErrorType": {
+        "enum": [
+          "EXPERIMENT_API_ERROR_TYPE_INVALID_VARIANT_CONFIGURATION",
+          "EXPERIMENT_API_ERROR_TYPE_INVALID_VARIANT_LABEL",
+          "EXPERIMENT_API_ERROR_TYPE_MUST_HAVE_EXACTLY_ONE_BASELINE_VARIANT",
+          "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_OVERLAPPING_RUNTIME",
+          "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_INVALID_SCORING_CONFIGURATIONS",
+          "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_UNEXPECTED_PRODUCT_TYPE",
+          "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_EMPTY_CONFIGURATION",
+          "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_EMPTY_VARIANT_METADATA",
+          "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_WEIGHT_MUST_BE_POSITIVE",
+          "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_WEIGHTS_UNBALANCED",
+          "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_PLACE_CONFIG_REQUIRES_SCORING_ID_OR_DEFAULT",
+          "EXPERIMENT_API_ERROR_TYPE_CONFIGS_MISSING_VARIANT",
+          "EXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_MISSING_KEY",
+          "EXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_MISSING_VALUE",
+          "EXPERIMENT_API_ERROR_TYPE_CONFIGS_KEY_ALREADY_IN_USE",
+          "EXPERIMENT_API_ERROR_TYPE_SYSTEM_ERROR",
+          "EXPERIMENT_API_ERROR_TYPE_EXPERIMENT_RESULTS_NOT_FOUND",
+          "EXPERIMENT_API_ERROR_TYPE_INVALID_TARGETING_CRITERIA",
+          "EXPERIMENT_API_ERROR_TYPE_TARGETING_NOT_ALLOWED",
+          "EXPERIMENT_API_ERROR_TYPE_INVALID_DURATION",
+          "EXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_CONFIG_NOT_FOUND",
+          "EXPERIMENT_API_ERROR_TYPE_INVALID_EXPERIMENT_NAME",
+          "EXPERIMENT_API_ERROR_TYPE_CONDITIONAL_CONFIG_REQUIRES_NULL_BASELINE",
+          "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_CONTROL_VARIANT_MUST_MATCH_CURRENT_CONFIGURATION",
+          "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANTS_MUST_COVER_SAME_PLACES",
+          "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_HAS_DUPLICATE_PLACES"
+        ],
+        "type": "string",
+        "description": "Validation failures.\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_VARIANT_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_VARIANT_LABEL\n\nEXPERIMENT_API_ERROR_TYPE_MUST_HAVE_EXACTLY_ONE_BASELINE_VARIANT\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_OVERLAPPING_RUNTIME\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_INVALID_SCORING_CONFIGURATIONS\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_UNEXPECTED_PRODUCT_TYPE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_EMPTY_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_EMPTY_VARIANT_METADATA\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_WEIGHT_MUST_BE_POSITIVE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_WEIGHTS_UNBALANCED\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_PLACE_CONFIG_REQUIRES_SCORING_ID_OR_DEFAULT\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_MISSING_VARIANT\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_MISSING_KEY\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_MISSING_VALUE\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_KEY_ALREADY_IN_USE\n\nEXPERIMENT_API_ERROR_TYPE_SYSTEM_ERROR\n\nEXPERIMENT_API_ERROR_TYPE_EXPERIMENT_RESULTS_NOT_FOUND\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_TARGETING_CRITERIA\n\nEXPERIMENT_API_ERROR_TYPE_TARGETING_NOT_ALLOWED\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_DURATION\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_CONFIG_NOT_FOUND\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_EXPERIMENT_NAME\n\nEXPERIMENT_API_ERROR_TYPE_CONDITIONAL_CONFIG_REQUIRES_NULL_BASELINE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_CONTROL_VARIANT_MUST_MATCH_CURRENT_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANTS_MUST_COVER_SAME_PLACES\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_HAS_DUPLICATE_PLACES",
+        "x-enum-varnames": [
+          "InvalidVariantConfiguration",
+          "InvalidVariantLabel",
+          "MustHaveExactlyOneBaselineVariant",
+          "MatchmakingOverlappingRuntime",
+          "MatchmakingInvalidScoringConfigurations",
+          "MatchmakingUnexpectedProductType",
+          "MatchmakingEmptyConfiguration",
+          "MatchmakingEmptyVariantMetadata",
+          "MatchmakingVariantWeightMustBePositive",
+          "MatchmakingVariantWeightsUnbalanced",
+          "MatchmakingPlaceConfigRequiresScoringIdOrDefault",
+          "ConfigsMissingVariant",
+          "ConfigsVariantMissingKey",
+          "ConfigsVariantMissingValue",
+          "ConfigsKeyAlreadyInUse",
+          "SystemError",
+          "ExperimentResultsNotFound",
+          "InvalidTargetingCriteria",
+          "TargetingNotAllowed",
+          "InvalidDuration",
+          "ConfigsVariantConfigNotFound",
+          "InvalidExperimentName",
+          "ConditionalConfigRequiresNullBaseline",
+          "MatchmakingControlVariantMustMatchCurrentConfiguration",
+          "MatchmakingVariantsMustCoverSamePlaces",
+          "MatchmakingVariantHasDuplicatePlaces"
+        ]
+      },
+      "ExperimentConfigEntry": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "The config key this variant overrides. Must match across variants in the same experiment.",
+            "nullable": true
+          },
+          "entryValue": {
+            "description": "The value assigned to Key for this variant. Can be a string, number, bool, array, object,\r\nor null.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional human-readable description carried alongside the value.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExperimentConfiguration": {
+        "type": "object",
+        "properties": {
+          "productType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentProductType"
+              }
+            ],
+            "description": "Discriminator selecting which configuration variant is populated.\n\nEXPERIMENT_PRODUCT_TYPE_IN_GAME_CONFIGS\n\nEXPERIMENT_PRODUCT_TYPE_MATCHMAKING",
+            "x-enum-varnames": ["InGameConfigs", "Matchmaking"]
+          },
+          "inGameConfigExperimentConfiguration": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/InGameConfigExperimentConfiguration"
+              }
+            ],
+            "description": "Populated when ProductType is InGameConfigExperimentConfiguration, null otherwise.",
+            "nullable": true
+          },
+          "matchmakingExperimentConfiguration": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/MatchmakingExperimentConfiguration"
+              }
+            ],
+            "description": "Populated when ProductType is MatchmakingExperimentConfiguration, null otherwise.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Union of per-product experiment configurations. At most one of InGameConfigExperimentConfiguration or\r\nMatchmakingExperimentConfiguration may be set."
+      },
+      "ExperimentOperation": {
+        "type": "object",
+        "properties": {
+          "operationId": {
+            "type": "string",
+            "description": "Stable operation ID.",
+            "nullable": true
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OperationalStatus"
+              }
+            ],
+            "description": "Current operational status of the operation.\n\nOPERATIONAL_STATUS_READY\n\nOPERATIONAL_STATUS_CREATING\n\nOPERATIONAL_STATUS_UPDATING\n\nOPERATIONAL_STATUS_STARTING\n\nOPERATIONAL_STATUS_STOPPING\n\nOPERATIONAL_STATUS_SCHEDULING\n\nOPERATIONAL_STATUS_DELETING\n\nOPERATIONAL_STATUS_RAMPING_UP\n\nOPERATIONAL_STATUS_SYNCING\n\nOPERATIONAL_STATUS_ROLLING_OUT",
+            "x-enum-varnames": [
+              "Ready",
+              "Creating",
+              "Updating",
+              "Starting",
+              "Stopping",
+              "Scheduling",
+              "Deleting",
+              "RampingUp",
+              "Syncing",
+              "RollingOut"
+            ]
+          },
+          "createdTime": {
+            "type": "string",
+            "description": "UTC time the operation was created.",
+            "format": "date-time"
+          },
+          "done": {
+            "type": "boolean",
+            "description": "True once the operation terminates (success or failure). When false, neither\r\nError nor Experiment is populated."
+          },
+          "error": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentApiError"
+              }
+            ],
+            "description": "Error outcome. Populated iff Done is true and the operation failed.",
+            "nullable": true
+          },
+          "experiment": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProductExperiment"
+              }
+            ],
+            "description": "Successful outcome. Populated iff Done is true and the operation\r\nsucceeded and returned an experiment resource.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Async operation result for an experiment Create / Update / Discard call. When\r\nDone is true, at most one of Error or Experiment is set; when false, neither is. A successful delete is the\r\none case where a done operation carries neither: the experiment no longer exists, so\r\nno Experiment body is returned."
+      },
+      "ExperimentProductType": {
+        "enum": [
+          "EXPERIMENT_PRODUCT_TYPE_IN_GAME_CONFIGS",
+          "EXPERIMENT_PRODUCT_TYPE_MATCHMAKING"
+        ],
+        "type": "string",
+        "description": "Type of product the experiment is targeting.\n\nEXPERIMENT_PRODUCT_TYPE_IN_GAME_CONFIGS\n\nEXPERIMENT_PRODUCT_TYPE_MATCHMAKING",
+        "x-enum-varnames": ["InGameConfigs", "Matchmaking"]
+      },
+      "ExperimentState": {
+        "enum": [
+          "EXPERIMENT_STATE_DRAFT",
+          "EXPERIMENT_STATE_SCHEDULED",
+          "EXPERIMENT_STATE_RUNNING",
+          "EXPERIMENT_STATE_COMPLETED",
+          "EXPERIMENT_STATE_CANCELLED",
+          "EXPERIMENT_STATE_DELETED"
+        ],
+        "type": "string",
+        "description": "Lifecycle state of an experiment.\n\nEXPERIMENT_STATE_DRAFT\n\nEXPERIMENT_STATE_SCHEDULED\n\nEXPERIMENT_STATE_RUNNING\n\nEXPERIMENT_STATE_COMPLETED\n\nEXPERIMENT_STATE_CANCELLED\n\nEXPERIMENT_STATE_DELETED",
+        "x-enum-varnames": [
+          "Draft",
+          "Scheduled",
+          "Running",
+          "Completed",
+          "Cancelled",
+          "Deleted"
+        ]
+      },
+      "ExperimentStats": {
+        "type": "object",
+        "properties": {
+          "isSrmDetected": {
+            "type": "boolean",
+            "description": "True if Sample Ratio Mismatch (SRM) was detected for the experiment."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Computed stats for a running experiment."
+      },
+      "ExperimentStatsOperation": {
+        "type": "object",
+        "properties": {
+          "experimentId": {
+            "type": "integer",
+            "description": "Experiment ID the stats are for.",
+            "format": "int64"
+          },
+          "lastModifiedTime": {
+            "type": "string",
+            "description": "UTC time the operation was last modified.",
+            "nullable": true
+          },
+          "done": {
+            "type": "boolean",
+            "description": "True once the stats fetch terminates (success or failure)."
+          },
+          "error": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentApiError"
+              }
+            ],
+            "description": "Error outcome, when Done is true and the fetch failed.",
+            "nullable": true
+          },
+          "experimentStats": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentStats"
+              }
+            ],
+            "description": "Successful outcome, when Done is true and stats are available.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Async operation for fetching experiment stats. When Done is true exactly\r\none of Error or ExperimentStats is set; when false, neither is."
+      },
+      "ExperimentSummary": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Experiment ID.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Experiment display name.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "Experiment description.",
+            "nullable": true
+          },
+          "createdTime": {
+            "type": "string",
+            "description": "UTC time the experiment was created.",
+            "format": "date-time"
+          },
+          "lastUpdatedTime": {
+            "type": "string",
+            "description": "UTC time the experiment was last updated.",
+            "nullable": true
+          },
+          "startedTime": {
+            "type": "string",
+            "description": "UTC time the experiment was started, if running.",
+            "nullable": true
+          },
+          "stoppedTime": {
+            "type": "string",
+            "description": "UTC time the experiment was stopped, if completed/cancelled.",
+            "nullable": true
+          },
+          "state": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentState"
+              }
+            ],
+            "description": "Lifecycle state.\n\nEXPERIMENT_STATE_DRAFT\n\nEXPERIMENT_STATE_SCHEDULED\n\nEXPERIMENT_STATE_RUNNING\n\nEXPERIMENT_STATE_COMPLETED\n\nEXPERIMENT_STATE_CANCELLED\n\nEXPERIMENT_STATE_DELETED",
+            "x-enum-varnames": [
+              "Draft",
+              "Scheduled",
+              "Running",
+              "Completed",
+              "Cancelled",
+              "Deleted"
+            ]
+          },
+          "createdBy": {
+            "type": "string",
+            "description": "User ID of the creator of the experiment.",
+            "nullable": true
+          },
+          "experimentConfigKey": {
+            "type": "string",
+            "description": "Convenience field exposing the first config key referenced by the first variant\r\n(in-game-configs experiments only). Empty for matchmaking.",
+            "nullable": true
+          },
+          "scheduledTime": {
+            "type": "string",
+            "description": "UTC time the experiment is scheduled to start, if scheduled.",
+            "nullable": true
+          },
+          "durationSeconds": {
+            "type": "integer",
+            "description": "Planned experiment duration in whole seconds.",
+            "format": "int64"
+          },
+          "productType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentProductType"
+              }
+            ],
+            "description": "Product type.\n\nEXPERIMENT_PRODUCT_TYPE_IN_GAME_CONFIGS\n\nEXPERIMENT_PRODUCT_TYPE_MATCHMAKING",
+            "x-enum-varnames": ["InGameConfigs", "Matchmaking"]
+          }
+        },
+        "additionalProperties": false,
+        "description": "Summary view of an experiment returned by the list endpoint. Does not include the variant /\r\nconfiguration payload; clients should call Get for the full payload."
       },
       "FeaturingStatus": {
         "enum": ["invalid", "enabled", "disabled"],
@@ -69581,6 +71907,54 @@
           }
         },
         "additionalProperties": false
+      },
+      "GetExperimentOperationStatusResponse": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentOperation"
+              }
+            ],
+            "description": "The current state of the async operation.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response body for\r\n`GET /v1/experimentation/universes/{universeId}/operations/{operationId}`."
+      },
+      "GetExperimentResponse": {
+        "type": "object",
+        "properties": {
+          "experiment": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProductExperiment"
+              }
+            ],
+            "description": "The requested experiment.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response body for GET /v1/universes/{universeId}/experiment/{experimentId}."
+      },
+      "GetExperimentStatsResponse": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentStatsOperation"
+              }
+            ],
+            "description": "The async operation containing the experiment stats.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response body for\r\n`GET /v1/experimentation/universes/{universeId}/experiments/{experimentId}/stats`."
       },
       "GetInstanceMetadata": {
         "type": "object",
@@ -70626,6 +73000,21 @@
         "description": "A save record, hydrated with the asset details.",
         "nullable": true
       },
+      "InGameConfigExperimentConfiguration": {
+        "type": "object",
+        "properties": {
+          "variants": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SingleConfigExperimentVariant"
+            },
+            "description": "Variants participating in the experiment. Exactly one must have IsBaseline set.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Configuration for an in-game-config experiment."
+      },
       "IncrementDataStoreEntryRequest": {
         "type": "object",
         "properties": {
@@ -71249,6 +73638,26 @@
         },
         "description": "A list of Entries in the parent collection."
       },
+      "ListExperimentsResponse": {
+        "type": "object",
+        "properties": {
+          "experiments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExperimentSummary"
+            },
+            "description": "The page of experiments matching the query.",
+            "nullable": true
+          },
+          "total": {
+            "type": "integer",
+            "description": "Total number of experiments for the universe matching the filters\r\n            (independent of pagination).",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response body for `GET /v1/experimentation/universes/{universeId}/experiments`."
+      },
       "ListGamePassConfigsByUniverseResponse": {
         "required": ["gamePasses", "nextPageToken"],
         "type": "object",
@@ -71626,7 +74035,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Literal constant for an RPN operand (proto `LiteralValue` oneof as independent fields for JSON)."
+        "description": "Literal constant for an RPN operand."
       },
       "LogSeverity": {
         "enum": [0, 1, 2, 3],
@@ -71964,6 +74373,45 @@
         "additionalProperties": false,
         "description": "Matchmaking object for universe feature flags controlling matchmaking customization."
       },
+      "MatchmakingExperimentConfiguration": {
+        "type": "object",
+        "properties": {
+          "variants": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MatchmakingExperimentVariant"
+            },
+            "description": "Variants participating in the experiment.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Configuration for a matchmaking experiment."
+      },
+      "MatchmakingExperimentVariant": {
+        "type": "object",
+        "properties": {
+          "variantMeta": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/VariantMeta"
+              }
+            ],
+            "description": "Metadata common to all variants.",
+            "nullable": true
+          },
+          "placeMatchmakingConfigs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PlaceScoringConfig"
+            },
+            "description": "Per-place matchmaking scoring configurations applied when this variant is selected.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Variant definition for a matchmaking experiment."
+      },
       "MatchmakingNumericalAttributeComparisonType": {
         "enum": [
           "Invalid",
@@ -72186,6 +74634,71 @@
         },
         "additionalProperties": false,
         "description": "The signal weight configuration for matchmaking."
+      },
+      "MdeOperation": {
+        "type": "object",
+        "properties": {
+          "operationId": {
+            "type": "string",
+            "description": "Stable operation ID.",
+            "nullable": true
+          },
+          "lastModifiedTime": {
+            "type": "string",
+            "description": "UTC time the operation was last modified.",
+            "nullable": true
+          },
+          "done": {
+            "type": "boolean",
+            "description": "True once the calculation terminates (success or failure)."
+          },
+          "error": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentApiError"
+              }
+            ],
+            "description": "Error outcome, when Done is true and the calculation failed.",
+            "nullable": true
+          },
+          "mde": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/MdeResult"
+              }
+            ],
+            "description": "Successful outcome, when Done is true and a result is available.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Async operation result for a `:calculateMde` call. When Done is true\r\nexactly one of Error or Mde is set; when false, neither is."
+      },
+      "MdeResult": {
+        "type": "object",
+        "properties": {
+          "totalSampleSize": {
+            "type": "integer",
+            "description": "Estimated total sample size required for the experiment.",
+            "format": "int32"
+          },
+          "mdeRelativePercentages": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            },
+            "description": "MDE expressed as a relative percentage of the goal metric, per non-baseline variant.",
+            "nullable": true
+          },
+          "minimumSampleSizeThreshold": {
+            "type": "integer",
+            "description": "Below this sample-size threshold the MDE estimate is unreliable.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "MDE calculation result. Returned in the `operation.result` field on a successful\r\n`POST .../experiments:calculateMde` call."
       },
       "MemoryStore": {
         "type": "object",
@@ -72855,6 +75368,34 @@
         "additionalProperties": false,
         "description": "A long-running operation that is still in progress."
       },
+      "OperationalStatus": {
+        "enum": [
+          "OPERATIONAL_STATUS_READY",
+          "OPERATIONAL_STATUS_CREATING",
+          "OPERATIONAL_STATUS_UPDATING",
+          "OPERATIONAL_STATUS_STARTING",
+          "OPERATIONAL_STATUS_STOPPING",
+          "OPERATIONAL_STATUS_SCHEDULING",
+          "OPERATIONAL_STATUS_DELETING",
+          "OPERATIONAL_STATUS_RAMPING_UP",
+          "OPERATIONAL_STATUS_SYNCING",
+          "OPERATIONAL_STATUS_ROLLING_OUT"
+        ],
+        "type": "string",
+        "description": "Current operational status reported on an experiment or an async operation performed on one.\n\nOPERATIONAL_STATUS_READY\n\nOPERATIONAL_STATUS_CREATING\n\nOPERATIONAL_STATUS_UPDATING\n\nOPERATIONAL_STATUS_STARTING\n\nOPERATIONAL_STATUS_STOPPING\n\nOPERATIONAL_STATUS_SCHEDULING\n\nOPERATIONAL_STATUS_DELETING\n\nOPERATIONAL_STATUS_RAMPING_UP\n\nOPERATIONAL_STATUS_SYNCING\n\nOPERATIONAL_STATUS_ROLLING_OUT",
+        "x-enum-varnames": [
+          "Ready",
+          "Creating",
+          "Updating",
+          "Starting",
+          "Stopping",
+          "Scheduling",
+          "Deleting",
+          "RampingUp",
+          "Syncing",
+          "RollingOut"
+        ]
+      },
       "OrderedDataStoreEntry": {
         "type": "object",
         "properties": {
@@ -73078,6 +75619,27 @@
         },
         "additionalProperties": false,
         "description": "Per-place restart status."
+      },
+      "PlaceScoringConfig": {
+        "type": "object",
+        "properties": {
+          "placeId": {
+            "type": "integer",
+            "description": "Place ID this scoring config applies to.",
+            "format": "int64"
+          },
+          "matchmakingScoringConfigId": {
+            "type": "string",
+            "description": "Matchmaking scoring config ID for this place. Ignored when UsePlatformDefault is true.",
+            "nullable": true
+          },
+          "usePlatformDefault": {
+            "type": "boolean",
+            "description": "When true, this place uses the platform default matchmaking scoring config instead of\r\nMatchmakingScoringConfigId."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Matchmaking scoring configuration applied to a single place in an experiment variant."
       },
       "PlaceSummaryForGameRestart": {
         "type": "object",
@@ -73648,7 +76210,11 @@
         "additionalProperties": false
       },
       "PrivateServerSubscriptionTag": {
-        "enum": ["Invalid", "RobloxSubscription"],
+        "enum": [
+          "Invalid",
+          "RobloxSubscription",
+          "RobloxSubscriptionActiveBenefit"
+        ],
         "type": "string"
       },
       "PrivateServerUpdatePermissionsRequest": {
@@ -73837,6 +76403,131 @@
           "nullable": true
         },
         "nullable": true
+      },
+      "ProductExperiment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Experiment ID.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Experiment display name.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "Experiment description.",
+            "nullable": true
+          },
+          "createdTime": {
+            "type": "string",
+            "description": "UTC time the experiment was created.",
+            "format": "date-time"
+          },
+          "lastUpdatedTime": {
+            "type": "string",
+            "description": "UTC time the experiment was last updated.",
+            "nullable": true
+          },
+          "startedTime": {
+            "type": "string",
+            "description": "UTC time the experiment was started (running), if it has been.",
+            "nullable": true
+          },
+          "stoppedTime": {
+            "type": "string",
+            "description": "UTC time the experiment was stopped, if it has been.",
+            "nullable": true
+          },
+          "state": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentState"
+              }
+            ],
+            "description": "Lifecycle state.\n\nEXPERIMENT_STATE_DRAFT\n\nEXPERIMENT_STATE_SCHEDULED\n\nEXPERIMENT_STATE_RUNNING\n\nEXPERIMENT_STATE_COMPLETED\n\nEXPERIMENT_STATE_CANCELLED\n\nEXPERIMENT_STATE_DELETED",
+            "x-enum-varnames": [
+              "Draft",
+              "Scheduled",
+              "Running",
+              "Completed",
+              "Cancelled",
+              "Deleted"
+            ]
+          },
+          "experimentConfiguration": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentConfiguration"
+              }
+            ],
+            "description": "Experiment configuration (variants and product-type-specific data).",
+            "nullable": true
+          },
+          "exposurePercent": {
+            "type": "integer",
+            "description": "Exposure percent in range 0-100.",
+            "format": "int32"
+          },
+          "targetingCriteria": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TargetingCriteria"
+              }
+            ],
+            "description": "Targeting criteria scoping which users are eligible for the experiment.",
+            "nullable": true
+          },
+          "operationalStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OperationalStatus"
+              }
+            ],
+            "description": "Current operational status of an in-flight async operation (if any).\n\nOPERATIONAL_STATUS_READY\n\nOPERATIONAL_STATUS_CREATING\n\nOPERATIONAL_STATUS_UPDATING\n\nOPERATIONAL_STATUS_STARTING\n\nOPERATIONAL_STATUS_STOPPING\n\nOPERATIONAL_STATUS_SCHEDULING\n\nOPERATIONAL_STATUS_DELETING\n\nOPERATIONAL_STATUS_RAMPING_UP\n\nOPERATIONAL_STATUS_SYNCING\n\nOPERATIONAL_STATUS_ROLLING_OUT",
+            "x-enum-varnames": [
+              "Ready",
+              "Creating",
+              "Updating",
+              "Starting",
+              "Stopping",
+              "Scheduling",
+              "Deleting",
+              "RampingUp",
+              "Syncing",
+              "RollingOut"
+            ]
+          },
+          "createdBy": {
+            "type": "string",
+            "description": "User ID of the creator of the experiment.",
+            "nullable": true
+          },
+          "scheduledTime": {
+            "type": "string",
+            "description": "UTC time the experiment is scheduled to start, if scheduled.",
+            "nullable": true
+          },
+          "durationSeconds": {
+            "type": "integer",
+            "description": "Experiment duration in whole seconds.",
+            "format": "int64"
+          },
+          "universeMetricConfiguration": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/UniverseMetricConfiguration"
+              }
+            ],
+            "description": "Metric configuration (goal + learning metrics).",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Config-based experiment for a given product. Returned by the Get endpoint and embedded in\r\na successful experiment operation."
       },
       "PublishDraftRequest": {
         "type": "object",
@@ -76130,6 +78821,23 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Api.Avatar.Models.EmoteRequestModel": {
+        "description": "Request model to equip a emote",
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "format": "int64",
+            "description": "The asset id of the emote",
+            "type": "integer"
+          },
+          "position": {
+            "format": "int32",
+            "description": "The position to equip the emote to",
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Api.Avatar.Models.EmoteResponseModel": {
         "description": "Response object representing a user's emote",
         "type": "object",
@@ -76194,6 +78902,58 @@
           },
           "moderationStatus": {
             "description": "Moderation status",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.InvalidBackgroundResponse": {
+        "type": "object",
+        "properties": {
+          "BackgroundAssetId": {
+            "format": "int64",
+            "description": "The asset id of the emote",
+            "type": "integer"
+          },
+          "Error": {
+            "description": "The error associated with the background.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.InvalidEmoteResponseModel": {
+        "description": "Response object representing an invalid emote",
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "format": "int64",
+            "description": "The asset id of the emote",
+            "type": "integer"
+          },
+          "position": {
+            "format": "int32",
+            "description": "The position the emote is equipped to",
+            "type": "integer"
+          },
+          "error": {
+            "description": "The error occured while trying to equip this emote",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.InvalidProfileFrameResponse": {
+        "description": "Validation error for a profile frame that could not be applied.",
+        "type": "object",
+        "properties": {
+          "FrameAssetId": {
+            "format": "int64",
+            "description": "The asset id of the profile frame.",
+            "type": "integer"
+          },
+          "Error": {
+            "description": "The error associated with the profile frame.",
             "type": "string"
           }
         },
@@ -76452,12 +79212,88 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Api.Avatar.Models.UpdateAvatarDataModel": {
+        "description": "A model containing details about an avatar.",
+        "type": "object",
+        "properties": {
+          "scales": {
+            "$ref": "#/components/schemas/Roblox.Web.Responses.Avatar.ScaleModel"
+          },
+          "playerAvatarType": {
+            "format": "int32",
+            "description": "The avatar type.",
+            "enum": [1, 3],
+            "type": "integer"
+          },
+          "bodyColors": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.BodyColors3Model"
+          },
+          "assets": {
+            "description": "The assets worn on the character.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetWearModel"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.UpdateAvatarRequestModel": {
+        "description": "A model containing details about an avatar update request.",
+        "type": "object",
+        "properties": {
+          "updateMask": {
+            "description": "Update mask specifying which avatar fields to update (can include multiple).\r\nAcceptable values:\r\n- UpdateAvatarType: updates avatar.type (R6/R15)\r\n- UpdateScales: updates avatar.scale\r\n- UpdateBodyColors: updates avatar.body_color_set\r\n- UpdateAssets: updates avatar.avatar_assets",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "description": "Defines the data that needs to be modified during an update.",
+              "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+              "type": "integer"
+            }
+          },
+          "data": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.UpdateAvatarDataModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.UpdateAvatarResponseModel": {
+        "description": "A model for update avatar responses.",
+        "type": "object",
+        "properties": {
+          "invalidAssets": {
+            "description": "The assets that could not be worn\r\nUnlike invalidAssetIds, only contains assets that are wearable types.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetModelV2"
+            }
+          },
+          "success": {
+            "description": "Whether or not all the outfit contents were successfully worn.",
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Api.Avatar.Models.V4.AvatarBackgroundModel": {
         "description": "A model containing avatar background data.",
         "type": "object",
         "properties": {
           "backgroundAsset": {
             "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetModelV2"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.AvatarBackgroundRequestModel": {
+        "description": "A model which contains the asset id of the background. This can be\r\nextended to have more attributes in the future.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "format": "int64",
+            "description": "An asset id.",
+            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -76534,6 +79370,18 @@
         "properties": {
           "frameAsset": {
             "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetModelV2"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.AvatarProfileFrameRequestModel": {
+        "description": "A model which contains the asset id of the profile frame.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "format": "int64",
+            "description": "An asset id. Use 0 to clear the equipped frame.",
+            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -76618,6 +79466,306 @@
             "format": "int32",
             "description": "The player avatar type.",
             "enum": [1, 3],
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.Request.CreateOutfitDefinitionRequestV4": {
+        "description": "Request model for creating an outfit (V4).",
+        "type": "object",
+        "properties": {
+          "outfitDefinition": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.UpdateOutfitDefinition"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.Request.UpdateAvatarDefinitionRequestV4": {
+        "description": "Request model for updating an avatar definition (V4).",
+        "type": "object",
+        "properties": {
+          "updateTypes": {
+            "description": "The list of data needed to be updated.",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "description": "Defines the data that needs to be modified during an update.",
+              "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+              "type": "integer"
+            }
+          },
+          "avatarDefinition": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.UpdateAvatarDefinition"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.Request.UpdateOutfitDefinitionRequestV4": {
+        "description": "Request model for updating an outfit (V4).",
+        "type": "object",
+        "properties": {
+          "updateTypes": {
+            "description": "The list of data needed to be updated.",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "description": "Defines the data that needs to be modified during an outfit update operation.",
+              "enum": [0, 1, 2, 3, 4, 5, 6],
+              "type": "integer"
+            }
+          },
+          "outfitDefinition": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.UpdateOutfitDefinition"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.Response.AvatarValidationResultV4": {
+        "description": "Validation details for avatar mutation responses when one or more inputs could not be applied.",
+        "type": "object",
+        "properties": {
+          "invalidAssets": {
+            "description": "Assets that could not be worn.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetModelV2"
+            }
+          },
+          "invalidBackground": {
+            "description": "Background assets that could not be applied.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.InvalidBackgroundResponse"
+            }
+          },
+          "invalidProfileFrame": {
+            "description": "Profile frame assets that could not be applied.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.InvalidProfileFrameResponse"
+            }
+          },
+          "invalidEmotes": {
+            "description": "Emotes that could not be equipped.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.InvalidEmoteResponseModel"
+            }
+          },
+          "invalidThumbnailCustomizations": {
+            "description": "Thumbnail customizations that could not be applied.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Response.InvalidThumbnailCustomizationResponse"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.Response.CreateOutfitDefinitionResponseV4": {
+        "description": "Response model for create outfit (V4).",
+        "type": "object",
+        "properties": {
+          "success": {
+            "description": "Whether all requested changes were successfully applied.",
+            "type": "boolean"
+          },
+          "validation": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Response.OutfitValidationResultV4"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.Response.InvalidThumbnailCustomizationResponse": {
+        "type": "object",
+        "properties": {
+          "ThumbnailCustomizationModel": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AvatarThumbnailCustomizationModel"
+          },
+          "Error": {
+            "description": "The error associated with the thumbnail customization",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.Response.OutfitValidationResultV4": {
+        "description": "Validation details for outfit mutation responses when one or more inputs could not be applied.",
+        "type": "object",
+        "properties": {
+          "unwornAssets": {
+            "description": "Assets that could not be worn.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetModelV2"
+            }
+          },
+          "invalidBackground": {
+            "description": "Background assets that could not be applied.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.InvalidBackgroundResponse"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.Response.UpdateAvatarDefinitionResponseV4": {
+        "description": "Response model for update avatar (V4).",
+        "type": "object",
+        "properties": {
+          "success": {
+            "description": "Whether all requested changes were successfully applied.",
+            "type": "boolean"
+          },
+          "invalidAssets": {
+            "description": "Temporary top-level mirror of Roblox.Api.Avatar.Models.V4.Response.AvatarValidationResultV4.InvalidAssets to unblock\r\nclients that still read `invalidAssets` at the response root during backgrounds rollout.\r\nPrefer Roblox.Api.Avatar.Models.V4.Response.UpdateAvatarDefinitionResponseV4.Validation.Roblox.Api.Avatar.Models.V4.Response.AvatarValidationResultV4.InvalidAssets.\r\nWill be reverted once the engine fix is fully deployed.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetModelV2"
+            }
+          },
+          "validation": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Response.AvatarValidationResultV4"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.Response.UpdateOutfitDefinitionResponseV4": {
+        "description": "Response model for update outfit (V4).",
+        "type": "object",
+        "properties": {
+          "success": {
+            "description": "Whether all requested changes were successfully applied.",
+            "type": "boolean"
+          },
+          "validation": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.Response.OutfitValidationResultV4"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.UpdateAvatarConfig": {
+        "description": "A model containing avatar config fields to update.",
+        "type": "object",
+        "properties": {
+          "emoteRequestModels": {
+            "description": "The avatar's emotes.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.EmoteRequestModel"
+            }
+          },
+          "thumbnailCustomizationModels": {
+            "description": "The avatar's thumbnail customizations.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AvatarThumbnailCustomizationModel"
+            }
+          },
+          "backgroundRequestModel": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.AvatarBackgroundRequestModel"
+          },
+          "profileFrameRequestModel": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.AvatarProfileFrameRequestModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.UpdateAvatarDefinition": {
+        "description": "A model containing details about an avatar update.",
+        "type": "object",
+        "properties": {
+          "updateAvatarModel": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.UpdateAvatarModelV4"
+          },
+          "updateAvatarConfig": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.UpdateAvatarConfig"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.UpdateAvatarModelV4": {
+        "description": "A model containing avatar model fields to update.",
+        "type": "object",
+        "properties": {
+          "scales": {
+            "$ref": "#/components/schemas/Roblox.Web.Responses.Avatar.ScaleModel"
+          },
+          "playerAvatarType": {
+            "format": "int32",
+            "description": "The avatar type.",
+            "enum": [1, 3],
+            "type": "integer"
+          },
+          "bodyColors": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.BodyColorsModelV4"
+          },
+          "assets": {
+            "description": "The assets worn on the character.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetWearModel"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.UpdateOutfitConfig": {
+        "description": "A model containing outfit config fields to update.",
+        "type": "object",
+        "properties": {
+          "backgroundRequestModel": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.AvatarBackgroundRequestModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.UpdateOutfitDefinition": {
+        "description": "A model containing outfit fields to create or update.",
+        "type": "object",
+        "properties": {
+          "updateOutfitModel": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.UpdateOutfitModelV4"
+          },
+          "updateOutfitConfig": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.V4.UpdateOutfitConfig"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Api.Avatar.Models.V4.UpdateOutfitModelV4": {
+        "description": "A model containing core outfit fields to update.",
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The outfit name.",
+            "type": "string"
+          },
+          "bodyColors": {
+            "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.BodyColorsModelV4"
+          },
+          "assets": {
+            "description": "The assets on the outfit.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Api.Avatar.Models.AssetWearModel"
+            }
+          },
+          "scale": {
+            "$ref": "#/components/schemas/Roblox.Web.Responses.Avatar.ScaleModel"
+          },
+          "playerAvatarType": {
+            "format": "int32",
+            "description": "The player avatar type.",
+            "enum": [1, 3],
+            "type": "integer"
+          },
+          "outfitType": {
+            "format": "int32",
+            "description": "The type of outfit (for example Avatar or Makeup). Defaults to Avatar when omitted.",
+            "enum": [0, 1, 2, 4, 5],
             "type": "integer"
           }
         },
@@ -80097,8 +83245,8 @@
           },
           "originSourceType": {
             "format": "int32",
-            "description": "The origin source type associated with the friend request. ['Unknown' = 0, 'PlayerSearch' = 1, 'QrCode' = 2, 'InGame' = 3, 'UserProfile' = 4, 'QqContactImporter' = 5, 'WeChatContactImporter' = 6, 'ProfileShare' = 7, 'PhoneContactImporter' = 8, 'FriendRecommendations' = 9, 'UserCommunities' = 10, 'TrustedFriend' = 11]",
-            "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+            "description": "The origin source type associated with the friend request. ['Unknown' = 0, 'PlayerSearch' = 1, 'QrCode' = 2, 'InGame' = 3, 'UserProfile' = 4, 'QqContactImporter' = 5, 'WeChatContactImporter' = 6, 'ProfileShare' = 7, 'PhoneContactImporter' = 8, 'FriendRecommendations' = 9, 'UserCommunities' = 10, 'TrustedFriend' = 11, 'SchoolMemberList' = 12]",
+            "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
             "type": "integer"
           },
           "contactName": {
@@ -89724,12 +92872,12 @@
                 "$ref": "#/components/schemas/LiteralValueDto"
               }
             ],
-            "description": "Literal constant for an RPN operand (proto `LiteralValue` oneof as independent fields for JSON).",
+            "description": "Literal constant for an RPN operand.",
             "nullable": true
           }
         },
         "additionalProperties": false,
-        "description": "RPN operand: attribute reference or literal value (same concepts as the proto `RpnOperand` oneof)."
+        "description": "RPN operand: attribute reference or literal value."
       },
       "RpnTokenDto": {
         "type": "object",
@@ -89744,12 +92892,12 @@
                 "$ref": "#/components/schemas/RpnOperandDto"
               }
             ],
-            "description": "RPN operand: attribute reference or literal value (same concepts as the proto `RpnOperand` oneof).",
+            "description": "RPN operand: attribute reference or literal value.",
             "nullable": true
           }
         },
         "additionalProperties": false,
-        "description": "One RPN token: either a logical/comparison CreatorConfigsPublicApi.Models.ConditionalRuleOperator (proto JSON `OPERATOR_*`) or an operand object."
+        "description": "One RPN token: either a logical/comparison ConditionalRuleOperator or an operand object."
       },
       "RsvpStatus": {
         "enum": ["none", "going", "maybeGoing", "notGoing"],
@@ -89855,6 +93003,34 @@
           "LastModified",
           "Price"
         ]
+      },
+      "ScheduleExperimentRequest": {
+        "type": "object",
+        "properties": {
+          "scheduledStartTime": {
+            "type": "string",
+            "description": "UTC time at which the experiment should be auto-started.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
+      },
+      "ScheduleExperimentResponse": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentOperation"
+              }
+            ],
+            "description": "The async operation that scheduled the experiment.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
       },
       "SearchAudioTypeModel": {
         "enum": ["Music", "SoundEffect", "Unknown"],
@@ -90538,6 +93714,31 @@
         "additionalProperties": false,
         "description": "Shutdown Game Instance response."
       },
+      "SingleConfigExperimentVariant": {
+        "type": "object",
+        "properties": {
+          "variantMeta": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/VariantMeta"
+              }
+            ],
+            "description": "Metadata common to all variants.",
+            "nullable": true
+          },
+          "configEntry": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentConfigEntry"
+              }
+            ],
+            "description": "The config entry value for this variant. Required for non-`IsBaseline` variants.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Variant definition for an in-game-config experiment (CreatorConfigsPublicApi.Models.Experimentation.InGameConfigExperimentConfiguration)."
+      },
       "SkinnyUserResponse": {
         "type": "object",
         "properties": {
@@ -90707,6 +93908,22 @@
         "additionalProperties": false,
         "description": "Representation of a sound effect asset.",
         "nullable": true
+      },
+      "StartExperimentResponse": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentOperation"
+              }
+            ],
+            "description": "The async operation that started the experiment.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:start`."
       },
       "State": {
         "type": "string",
@@ -90927,6 +94144,22 @@
           }
         },
         "description": "Information about the expiration of a subscription."
+      },
+      "TargetingCriteria": {
+        "type": "object",
+        "properties": {
+          "rule": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ConditionalRuleDefinition"
+              }
+            ],
+            "description": "RPN rule that decides whether an evaluator (user, request, etc.) is eligible for the\r\nexperiment. `null` means no targeting (every otherwise-eligible user is in scope).",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Eligibility criteria scoping which users an experiment can apply to."
       },
       "ThumbnailPersonalizationApi.ModerationStatus": {
         "enum": ["Reviewing", "Rejected", "Approved", "Unspecified"],
@@ -91810,6 +95043,60 @@
           }
         }
       },
+      "UniverseExperimentMetric": {
+        "enum": [
+          "UNIVERSE_EXPERIMENT_METRIC_AVERAGE_SESSION_TIME",
+          "UNIVERSE_EXPERIMENT_METRIC_PLAYTIME_PER_USER",
+          "UNIVERSE_EXPERIMENT_METRIC_DAY_1_RETENTION",
+          "UNIVERSE_EXPERIMENT_METRIC_DAY_7_RETENTION",
+          "UNIVERSE_EXPERIMENT_METRIC_PAYER_CONVERSION_RATE",
+          "UNIVERSE_EXPERIMENT_METRIC_AVERAGE_REVENUE_PER_USER",
+          "UNIVERSE_EXPERIMENT_METRIC_AVERAGE_REVENUE_PER_PAYING_USER"
+        ],
+        "type": "string",
+        "description": "Metric tracked for a universe experiment.\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_SESSION_TIME\n\nUNIVERSE_EXPERIMENT_METRIC_PLAYTIME_PER_USER\n\nUNIVERSE_EXPERIMENT_METRIC_DAY_1_RETENTION\n\nUNIVERSE_EXPERIMENT_METRIC_DAY_7_RETENTION\n\nUNIVERSE_EXPERIMENT_METRIC_PAYER_CONVERSION_RATE\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_REVENUE_PER_USER\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_REVENUE_PER_PAYING_USER",
+        "x-enum-varnames": [
+          "AverageSessionTime",
+          "PlaytimePerUser",
+          "Day1Retention",
+          "Day7Retention",
+          "PayerConversionRate",
+          "AverageRevenuePerUser",
+          "AverageRevenuePerPayingUser"
+        ]
+      },
+      "UniverseMetricConfiguration": {
+        "type": "object",
+        "properties": {
+          "goalMetric": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/UniverseExperimentMetric"
+              }
+            ],
+            "description": "Goal metric.\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_SESSION_TIME\n\nUNIVERSE_EXPERIMENT_METRIC_PLAYTIME_PER_USER\n\nUNIVERSE_EXPERIMENT_METRIC_DAY_1_RETENTION\n\nUNIVERSE_EXPERIMENT_METRIC_DAY_7_RETENTION\n\nUNIVERSE_EXPERIMENT_METRIC_PAYER_CONVERSION_RATE\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_REVENUE_PER_USER\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_REVENUE_PER_PAYING_USER",
+            "x-enum-varnames": [
+              "AverageSessionTime",
+              "PlaytimePerUser",
+              "Day1Retention",
+              "Day7Retention",
+              "PayerConversionRate",
+              "AverageRevenuePerUser",
+              "AverageRevenuePerPayingUser"
+            ]
+          },
+          "learningMetrics": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UniverseExperimentMetric"
+            },
+            "description": "Learning (observation-only) metrics.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Metric configuration for an experiment."
+      },
       "Universe_SocialLink": {
         "type": "object",
         "properties": {
@@ -91889,6 +95176,84 @@
           }
         },
         "description": "Updates the entry provided with a new value."
+      },
+      "UpdateExperimentData": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Experiment display name.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "Experiment description.",
+            "nullable": true
+          },
+          "experimentConfiguration": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentConfiguration"
+              }
+            ],
+            "description": "Experiment configuration (variants + product-type-specific data).",
+            "nullable": true
+          },
+          "exposurePercent": {
+            "type": "integer",
+            "description": "Exposure percent in range 0-100.",
+            "format": "int32"
+          },
+          "targetingCriteria": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TargetingCriteria"
+              }
+            ],
+            "description": "Targeting criteria scoping which users are eligible for the experiment.",
+            "nullable": true
+          },
+          "durationSeconds": {
+            "type": "integer",
+            "description": "Experiment duration in whole seconds.",
+            "format": "int64"
+          },
+          "universeGoalMetric": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/UniverseExperimentMetric"
+              }
+            ],
+            "description": "Goal metric for the experiment.\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_SESSION_TIME\n\nUNIVERSE_EXPERIMENT_METRIC_PLAYTIME_PER_USER\n\nUNIVERSE_EXPERIMENT_METRIC_DAY_1_RETENTION\n\nUNIVERSE_EXPERIMENT_METRIC_DAY_7_RETENTION\n\nUNIVERSE_EXPERIMENT_METRIC_PAYER_CONVERSION_RATE\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_REVENUE_PER_USER\n\nUNIVERSE_EXPERIMENT_METRIC_AVERAGE_REVENUE_PER_PAYING_USER",
+            "x-enum-varnames": [
+              "AverageSessionTime",
+              "PlaytimePerUser",
+              "Day1Retention",
+              "Day7Retention",
+              "PayerConversionRate",
+              "AverageRevenuePerUser",
+              "AverageRevenuePerPayingUser"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request body for\r\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\r\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
+      },
+      "UpdateExperimentResponse": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExperimentOperation"
+              }
+            ],
+            "description": "Resulting async operation describing the update call.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response body for PATCH /v1/universes/{universeId}/experiment/{experimentId}."
       },
       "UpdateGameEventConfigRequest": {
         "type": "object",
@@ -92755,6 +96120,32 @@
           }
         },
         "description": "Social network profiles of a user."
+      },
+      "VariantMeta": {
+        "type": "object",
+        "properties": {
+          "variantId": {
+            "type": "string",
+            "description": "Unique identifier for the variant. Only assigned once the experiment starts running;\r\nempty or null for draft variants.",
+            "nullable": true
+          },
+          "label": {
+            "type": "string",
+            "description": "Human-readable label for the variant, e.g. `Control`, `Treatment A`. Non-empty,\r\nat most 50 characters; must start with a letter and contain only letters, digits, spaces,\r\nunderscores, or hyphens.",
+            "nullable": true
+          },
+          "isBaseline": {
+            "type": "boolean",
+            "description": "True iff this variant is the baseline. Exactly one variant must be the baseline."
+          },
+          "weight": {
+            "type": "integer",
+            "description": "Relative traffic weight for this variant. The platform normalizes across all variants,\r\nso weights do not have to sum to 100.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Metadata shared by every experiment variant."
       },
       "VerifiedBadgeUserResponse": {
         "type": "object",
@@ -93906,6 +97297,7 @@
           "avatar_get_v1_users__userId__avatar",
           "avatar_get_v1_users__userId__currently_wearing",
           "avatar_get_v1_users__userId__outfits",
+          "avatar_patch_v2_avatar",
           "avatar_get_v2_avatar_avatar",
           "avatar_post_v2_avatar_set_body_colors",
           "avatar_post_v2_avatar_set_wearing_assets",
@@ -93917,7 +97309,10 @@
           "avatar_get_v3_outfits__userOutfitId__details",
           "avatar_post_v3_outfits_create",
           "avatar_get_v4_avatar",
+          "avatar_patch_v4_avatar",
           "avatar_get_v4_avatar_users__userId_",
+          "avatar_post_v4_outfits_create",
+          "avatar_patch_v4_outfits__outfitId_",
           "avatar_get_v4_outfits__outfitId__details",
           "catalog_get_v1_asset_to_category",
           "catalog_get_v1_asset_to_subcategory",
@@ -94168,6 +97563,27 @@
           "patch_legacy_game_internationalization_v1_developer_products__developerProductId__name_language_codes__languageCode_",
           "gameinternationalization_patch_v1_developer_products__developerProductId__name_language_codes__languageCode_",
           "thumbnails_get_v1_developer_products_icons"
+        ]
+      }
+    },
+    {
+      "name": "Experiments",
+      "description": "Manage and analyze experiments for your experiences programmatically. See the [Experiments guide](https://create.roblox.com/docs/production/experiments) for setup and usage.\n",
+      "x-roblox-tag-info": {
+        "path": "experiments",
+        "content": "HTTP APIs for managing experience experiments on Roblox Cloud",
+        "ordering": [
+          "PublicExperimentation_CreateExperiment",
+          "PublicExperimentation_GetExperiment",
+          "PublicExperimentation_UpdateExperiment",
+          "PublicExperimentation_DiscardExperiment",
+          "PublicExperimentation_ListExperiments",
+          "PublicExperimentation_GetExperimentOperationStatus",
+          "PublicExperimentation_StartExperiment",
+          "PublicExperimentation_ScheduleExperiment",
+          "PublicExperimentation_CompleteExperiment",
+          "PublicExperimentation_CalculateExperimentMde",
+          "PublicExperimentation_GetExperimentStats"
         ]
       }
     },

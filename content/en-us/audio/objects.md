@@ -321,12 +321,12 @@ From here, you can trigger your TTS audio with scripts. For code sample referenc
    </tr>
    <tr>
       <td>501</td>
-      <td>Chinese male</td>
+      <td>Chinese (Mandarin) male</td>
       <td><audio controls><source src="../assets/audio/audio-objects/Chinese-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
    </tr>
    <tr>
       <td>502</td>
-      <td>Chinese female</td>
+      <td>Chinese (Mandarin) female</td>
       <td><audio controls><source src="../assets/audio/audio-objects/Chinese-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
    </tr>
    <tr>

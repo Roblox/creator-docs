@@ -91,6 +91,7 @@ After you have created a license listing, you can go to **My licenses** ⟩ **[I
 - To edit details of a specific license, click the edit icon next to that license. You can edit any field except for the revenue share rate.
 - To add new licenses to the listing, click **Add license**.
 - To copy an existing license, click the copy icon next to that license. The copied license will undergo moderation review.
+- To highlight games that use the license, [add experiences to the license showcase](#showcase-games-using-your-ip).
 
 <Alert severity="info">
   Both listings and licenses undergo moderation review when they are first created. Subsequent edits only go through moderation review if sensitive fields are updated, specifically name, description, images, or documents. Rejected licenses can no longer be edited; however, they can be copied and the copy will undergo moderation review again.
@@ -103,6 +104,23 @@ After you have created a license listing, you can go to **My licenses** ⟩ **[I
 <Alert severity="info">
   Items purchased outside of the game on the Marketplace are not subject to the revenue share rate.
 </Alert>
+
+## Showcase games using your IP
+
+You can optionally highlight up to 10 games that use one of your live licenses. Showcased games appear in a carousel on the license details page in the Licenses catalog, under **About**, so creators can see examples of how your IP is already being used on Roblox.
+
+Only games that already have an agreement with that license are available to showcase. Each showcased game displays its thumbnail or video, when available, and links creators to the game's details page.
+
+To add experiences to a license showcase:
+
+1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Licenses**.
+2. Select the **My Licenses** tab.
+3. Open the license listing, then select the live license you want to update.
+4. Click **Edit license**.
+5. Under **Add Experiences to Showcase**, select up to 10 games from the dropdown of games that have an agreement with this license.
+6. Click **Update**.
+
+If you don't add any showcase experiences, the license details page does not show a showcase carousel.
 
 ## Review matches and send a license offer
 

@@ -18,7 +18,7 @@ To explore available licenses in the Licenses catalog:
 1. In the **Explore** dropdown in the Creator Hub, click **Licenses**.
 2. Click an available IP license to see the details page for that specific license.
    <img src="../assets/ip-licensing/LicensesCatalog.png" alt="Screenshot of Licenses page." width="750" />
-3. Click **View details** to see more details about the license, like eligibility requirements and content standards.
+3. Click **View details** to see more details about the license, like eligibility requirements and content standards. If the rights holder has added showcase games, a carousel under **About** shows examples of games that already use that IP. Select a game to open its details page.
 
 ## Request to use a license
 
