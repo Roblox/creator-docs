@@ -1,24 +1,20 @@
 ---
-title: Discover Ad Placements
+title: Discover ad placements
 description: See how other games have implemented Rewarded Video for inspiration.
 hideInPageNavigation: true
 ---
 
+See how other games have implemented rewarded video for inspiration.
+
   <style>{`
-    main h1 { display: none !important; }
     .placement-card {
       border-radius: 14px;
       overflow: hidden;
       border: 1px solid var(--color-stroke-default);
       background: var(--color-surface-0);
-      transition: box-shadow 200ms ease, border-color 180ms ease;
       height: 100%;
       display: flex;
       flex-direction: column;
-    }
-    .placement-card:hover {
-      border-color: var(--color-system-emphasis);
-      box-shadow: 0 4px 14px rgba(77,124,255,0.12);
     }
     .placement-card img {
       width: 100%;
@@ -33,19 +29,6 @@ hideInPageNavigation: true
   `}</style>
 
   {(() => {
-  const accent = 'var(--color-system-emphasis)';
-  const overlineStyle = {
-    color: accent,
-    fontWeight: 700,
-    letterSpacing: '0.1em',
-  };
-  const heroTitleStyle = {
-    fontSize: 48,
-    fontWeight: 800,
-    letterSpacing: '-0.03em',
-    lineHeight: 1.0,
-    margin: '6px 0 20px',
-  };
   const sectionStyle = { marginBottom: 64 };
 
   const PlacementCard = ({ title, placement, src, alt, href }) => {
@@ -112,12 +95,6 @@ hideInPageNavigation: true
   );
 
   return (<>
-    <div style={{ marginBottom: 48, marginTop: -48, textAlign: 'center' }}>
-      <div style={heroTitleStyle}>Discover ad placements</div>
-      <Typography component="p" variant="largeLabel1" color="secondary">
-        See how other games have implemented rewarded video for inspiration.
-      </Typography>
-    </div>
     {renderSection('In menu', placements.inMenu)}
     {renderSection('HUD', placements.hud)}
     {renderSection('In shop', placements.inShop)}

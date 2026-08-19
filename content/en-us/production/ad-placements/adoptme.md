@@ -8,13 +8,13 @@ hideInPageNavigation: true
     main h1 { display: none !important; }
     .placement-badge {
       display: inline-block;
-      background: var(--color-surface-200);
-      border: 1px solid var(--color-stroke-default);
+      background: var(--color-system-emphasis);
+      border: none;
       border-radius: 6px;
       padding: 4px 10px;
       font-size: 12px;
       font-weight: 600;
-      color: var(--color-content-muted);
+      color: var(--color-extended-white-100);
     }
     .placement-screenshot {
       width: 100%;
@@ -27,7 +27,6 @@ hideInPageNavigation: true
       grid-template-columns: 1fr 1fr;
       gap: 12px;
       margin-top: 16px;
-      max-width: 50%;
     }
     .detail-grid > div:last-child {
       grid-column: 1 / -1;
@@ -53,12 +52,13 @@ hideInPageNavigation: true
       gap: 6px;
       font-size: 14px;
       font-weight: 600;
-      color: #528BFF;
+      color: var(--color-system-emphasis);
       text-decoration: none;
       margin-bottom: 24px;
     }
     .back-link:hover {
-      color: #a8ccff;
+      color: var(--color-system-emphasis);
+      text-decoration: none;
     }
   `}</style>
 
