@@ -26,6 +26,8 @@ navigation:
     section:
       - title: Discover ad placements
         path: /production/ad-placements/
+      - title: Rewarded video guides
+        path: /production/rewarded-video-guides
   - title: Guidelines and policies
     section:
       - title: Safety on Roblox

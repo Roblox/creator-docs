@@ -8,13 +8,13 @@ hideInPageNavigation: true
     main h1 { display: none !important; }
     .placement-badge {
       display: inline-block;
-      background: var(--color-surface-200);
-      border: 1px solid var(--color-stroke-default);
+      background: var(--color-system-emphasis);
+      border: none;
       border-radius: 6px;
       padding: 4px 10px;
       font-size: 12px;
       font-weight: 600;
-      color: var(--color-content-muted);
+      color: var(--color-extended-white-100);
     }
     .placement-screenshots {
       display: grid;
@@ -58,12 +58,13 @@ hideInPageNavigation: true
       gap: 6px;
       font-size: 14px;
       font-weight: 600;
-      color: #528BFF;
+      color: var(--color-system-emphasis);
       text-decoration: none;
       margin-bottom: 24px;
     }
     .back-link:hover {
-      color: #a8ccff;
+      color: var(--color-system-emphasis);
+      text-decoration: none;
     }
   `}</style>
 
@@ -102,7 +103,7 @@ hideInPageNavigation: true
   );
 
   return (
-    <div style={{ maxWidth: 920 }}>
+    <div>
       <div style={{ marginBottom: 48, marginTop: -48 }}>
         <a className="back-link" href="./index.md"><b>← Back to ad placements</b></a>
         <div style={heroTitleStyle}>Barry's Prison Run</div>
@@ -118,8 +119,7 @@ hideInPageNavigation: true
         ]}
         location="HUD"
         reward="Consumable item"
-        highlights={<>Grants players immediate access to unique, single-use utility items right from the HUD. These consumables give players a vital, timely advantage to
-  help them complete their current run.</>}
+        highlights={<>Grants players immediate access to unique, single-use utility items right from the HUD. These consumables give players a vital, timely advantage to help them complete their current run.</>}
       />
     </div>
   );

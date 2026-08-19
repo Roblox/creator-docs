@@ -1,29 +1,38 @@
 ---
-title: Automate right to erasure requests
-description: Explains how to automate Right to Erasure requests with webhooks and Open Cloud APIs for data stores.
+title: Automate right to erasure using webhooks
+description: Explains how to use a creator webhook and custom logic to automate right to erasure requests.
 keywords:
-  - GDPR
-  - CCPA
-  - LGPD
-  - PIPA
   - right to erasure
+  - RTE
   - right to be forgotten
+  - RTBF
   - data protection
+  - data subject access rights
+  - user privacy rights
   - privacy
   - PII
   - personal data
+  - GDPR
 ---
 
-Global data protection and privacy regulations grant individuals the right to control their data, including the right to request its deletion (often referred to as the "right to erasure" or "right to delete"). If you store any personal data or **Personally Identifiable Information (PII)**, such as User IDs, you are responsible for complying with applicable privacy framework(s) by permanently deleting this information upon receiving a user request. More information can be found in [RTBF and creators](../../production/publishing/RTBF-and-creators.md).
+Global data protection and privacy regulations grant individuals the right to control their data, including the right to request its deletion (often referred to as the "right to erasure" or "right to delete"). If you store any personal data or **Personally Identifiable Information (PII)**, such as user IDs, you are responsible for complying with applicable privacy framework(s) by permanently deleting this information upon receiving a user request. More information can be found in [RTBF and creators](../../production/publishing/RTBF-and-creators.md).
 
-Instead of handling requests manually, you can [set up a webhook](../../cloud/webhooks/webhook-notifications.md) and use a bot within a third-party messaging application to automate the process. As [data stores](../../cloud-services/data-stores/index.md) being the most common way for storing PII data, this tutorial provides an example on how to create a bot within Discord that uses the [Open Cloud API for data stores](../../cloud/guides/data-stores/index.md) to delete PII data as an automation solution.
+## Consider alternatives
 
-## Workflow
+For personal data in data stores, the easiest automation option is to configure RTBF deletion templates. When Roblox processes an RTBF request, it automatically deletes matching standard or ordered data store entries without requiring you to host custom code. To configure templates and review supported patterns, see [Data store right to be forgotten (RTBF)](../../cloud-services/data-stores/right-to-be-forgotten.md).
 
-Upon completing this tutorial, you should be able to create a locally-running custom program that automates the handling of right to erasure requests from users. The workflow for this process is as follows:
+The webhook workflow on this page is of use when:
+
+- You store personal data outside of data stores.
+- Your data store schema or use case isn't supported by RTBF deletion templates.
+- You need custom processing or deletion logic.
+
+## Creator webhook workflow
+
+This tutorial demonstrates how to [set up a webhook](../../cloud/webhooks/webhook-notifications.md) and create a locally running Discord bot that uses the [Open Cloud API for data stores](../../cloud/guides/data-stores/index.md) to automate the handling of right to erasure requests. The workflow for this process is as follows:
 
 1. Roblox Support receives a right to erasure request from a user.
-1. Roblox webhook is triggered, containing the User ID and a list of Start Place IDs for the games they have joined in the payload.
+1. Roblox webhook is triggered, containing the user ID and a list of Start Place IDs for the games they have joined in the payload.
 1. Your bot listens for these webhook notifications, verifies their authenticity, and utilizes the [Open Cloud API for data stores](../../cloud/guides/data-stores/index.md) to delete the PII data stored in data stores.
    <Alert severity="warning">
    To use this solution, make sure your data store keys are identifiable by User IDs, such as containing User IDs as substrings, or you need to modify the scripts to match your own data schema.
@@ -56,7 +65,7 @@ The following steps show how to set up the server using Discord.
 After obtaining the third-party server URL, use it to [configure a webhook](../../cloud/webhooks/webhook-notifications.md#configure-webhooks-on-creator-dashboard) on Creator Dashboard. make sure you perform the following settings:
 
 <Alert severity="info">
-Currently, only group owners can receive Right to Erasure requests for group-owned games. To implement the automation solution for a group-owned game, make sure that the group owner configures the webhook.
+Currently, only group owners can receive right to erasure requests for group-owned games. To implement the automation solution for a group-owned game, make sure that the group owner configures the webhook.
 </Alert>
 
 - Add the Discord server URL as the **Webhook URL**.
@@ -366,7 +375,7 @@ After you finish setting up the webhook, bot, and API key for data stores, add t
    python3 discord_bot.py
    ```
 
-1. The bot then starts to listen and verify Roblox webhooks for right to erasure Requests and calls the Open Cloud endpoint for deleting the corresponding data store.
+1. The bot then starts to listen and verify Roblox webhooks for right to erasure requests and calls the Open Cloud endpoint for deleting the corresponding data store.
 
 <Alert severity="warning">
 To ensure constant and secure execution of the scripts, save and run them locally only. Keep your local device or virtual machine running the scripts turned on at all times. In the event that your device goes offline, you need to manually manage any missed messages during the offline period and handle delivery failures according to the [retry policy](../../cloud/webhooks/webhook-notifications.md#delivery-failure-retry-policy).

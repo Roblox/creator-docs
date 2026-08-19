@@ -116,9 +116,9 @@ To add experiences to a license showcase:
 1. Go to **Intellectual Property** ⟩ **License Manager** ⟩ **Licenses**.
 2. Select the **My Licenses** tab.
 3. Open the license listing, then select the live license you want to update.
-4. Click **Edit license**.
-5. Under **Add Experiences to Showcase**, select up to 10 games from the dropdown of games that have an agreement with this license.
-6. Click **Update**.
+4. Under **Featured creations**, select **Edit**.
+5. In the selection modal that opens, select up to 10 games that have an agreement with any license from this license listing.
+6. Click **Save**.
 
 If you don't add any showcase experiences, the license details page does not show a showcase carousel.
 
