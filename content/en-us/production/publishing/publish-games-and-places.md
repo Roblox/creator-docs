@@ -247,7 +247,7 @@ To reach **all ages** including [Roblox Kids and Select](./kids-and-select.md), 
 - Meet **one** of the following:
   - Maintain an active [Roblox Plus](../monetization/roblox-plus.md) or [Roblox Premium](https://www.roblox.com/premium/membership) subscription for 2 consecutive months.
   - Pay a one-time, refundable [fee](#optional-fees).
-- Game must pass the [evaluation process](../../production/publishing/kids-and-select.md#for-ages-9-15-in-kids-and-select-accounts) for **Kids** and **Select** accounts.
+- Game must pass the [evaluation process](../../production/publishing/kids-and-select.md#for-all-ages-including-kids-and-select-accounts) for **Kids** and **Select** accounts.
 
 ### Optional fees
 
@@ -257,7 +257,7 @@ If you do not have a Roblox Plus or Roblox Premium subscription for 2 consecutiv
 
 The **publishing fee** is a one-time, refundable fee of 1,000 Robux per game that allows you to publish and expand the reach of your game to users of all ages. This fee is intended to make it expensive and logistically difficult for bad actors to create large numbers of accounts and flood the platform with spam.
 
-If your game maintains 100 highly engaged players for 60 days without moderation, you will receive a refund of the publishing fee. However, if your game is permanently moderated or taken down for not meeting Roblox's [Community Standards](https://en.help.roblox.com/hc/articles/203313410) within the 60-day period, the fee will **not** be refunded.
+If your game maintains 25 highly engaged players for 60 days without moderation, you will receive a refund of the publishing fee. However, if your game is permanently moderated or taken down for not meeting Roblox's [Community Standards](https://en.help.roblox.com/hc/articles/203313410) within the 60-day period, the fee will **not** be refunded.
 
 To pay the publishing fee:
 
@@ -277,7 +277,7 @@ The **expedited review** fee is a one-time, refundable fee of 100,000 Robux per 
 While the expedited review fee accelerates safety and compliance reviews for creators planning a timed launch or running an off-platform campaign and need to know exactly when their game will be ready for all ages, **all games must continue to meet the same standards as other Roblox Kids and Select games**.
 </Alert>
 
-After 90 days, you can request a refund. As long as your game remains in good standing and maintains 100 highly engaged players, you can withdraw your fee and maintain Roblox Kids and Select eligibility. If your game hasn't hit those organic milestones yet, you can leave the fee in place to maintain your eligibility for Kids and Select audiences. However, if your game is permanently moderated or taken down for not meeting Roblox's [Community Standards](https://en.help.roblox.com/hc/articles/203313410), the fee will **not** be refunded.
+After 90 days, you can request a refund. As long as your game remains in good standing and maintains 25 highly engaged players, you can withdraw your fee and maintain Roblox Kids and Select eligibility. If your game hasn't hit those organic milestones yet, you can leave the fee in place to maintain your eligibility for Kids and Select audiences. However, if your game is permanently moderated or taken down for not meeting Roblox's [Community Standards](https://en.help.roblox.com/hc/articles/203313410), the fee will **not** be refunded.
 
 To pay the expedited review fee:
 

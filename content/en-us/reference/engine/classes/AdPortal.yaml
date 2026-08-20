@@ -5,8 +5,20 @@
 name: AdPortal
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A portal that teleports players to a sponsored experience as part of immersive
+  ads.
+description: |
+  An `AdPortal` is a developer-created instance that must be parented to a
+  `Class.Part` — attempting to parent it elsewhere throws an error. When added
+  to the data model, it registers itself with the ad service to be served portal
+  ads on rotation, and it uses a child `Class.AdGui` to display the current ad's
+  banner image and destination label above the portal.
+
+  When the local player's character touches the parent part, the portal
+  teleports that player to the sponsored experience associated with the
+  currently served ad. The portal only teleports while it is valid and has been
+  served an ad with a destination place (see `Class.AdPortal.Status`).
 code_samples: []
 inherits:
   - Instance
@@ -15,8 +27,18 @@ tags: []
 deprecation_message: ''
 properties:
   - name: AdPortal.PortalInvalidReason
-    summary: ''
-    description: ''
+    summary: |
+      A developer-facing message explaining why the portal is currently invalid,
+      if it is.
+    description: |
+      Holds a human-readable explanation of why the `Class.AdPortal` is not in a
+      valid, servable state. When the portal passes validation the value is an
+      empty string; when validation fails it is populated with the specific
+      reason reported by the portal's validator, such as an unsuitable parent or
+      a misconfigured child `Class.AdGui`.
+
+      This property is read-only and defaults to an empty string (`""`). It is
+      intended for surfacing configuration problems to developers in Studio.
     code_samples: []
     type: string
     tags:
@@ -35,8 +57,19 @@ properties:
     capabilities:
       - Monetization
   - name: AdPortal.Status
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the portal is currently active and able to teleport
+      players.
+    description: |
+      Reports the portal's current `Enum.AdUnitStatus`. The value is
+      `Enum.AdUnitStatus.Active` only when the portal has passed validation and
+      has been served an ad with a valid destination place; in every other case
+      it is `Enum.AdUnitStatus.Inactive`.
+
+      A newly created portal reports `Enum.AdUnitStatus.Inactive`, because its
+      destination place is unset (`0`) until the ad service fills the portal
+      with an ad — the portal cannot become `Enum.AdUnitStatus.Active`, and
+      therefore cannot teleport, until that happens. This property is read-only.
     code_samples: []
     type: AdUnitStatus
     tags:

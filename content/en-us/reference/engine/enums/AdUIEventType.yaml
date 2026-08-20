@@ -4,54 +4,83 @@
 
 name: AdUIEventType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the type of user-interaction or system event that occurred on the
+  immersive ad UI overlay of an `Class.AdGui`.
+description: |
+  Describes the type of user-interaction or system event that occurred on the
+  immersive ad UI overlay of an `Class.AdGui`. These values are passed to
+  `HandleLuaUIEvent()` to notify the engine of player actions on ad playback
+  controls (play, pause, volume, fullscreen, close) or programmatic state
+  changes (play/pause triggered by the system).
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: AdLabelClicked
-    summary: ''
+    summary: |
+      The player clicked the "Sponsored" label on the ad overlay, which opens
+      the ad disclosure prompt showing advertiser and payer information.
     value: 0
     tags: []
     deprecation_message: ''
   - name: VolumeButtonClicked
-    summary: ''
+    summary: |
+      The player clicked the volume toggle button on the ad overlay, which mutes
+      or unmutes the video ad audio.
     value: 1
     tags: []
     deprecation_message: ''
   - name: FullscreenButtonClicked
-    summary: ''
+    summary: |
+      The player clicked the fullscreen toggle button, which smoothly zooms the
+      camera to a centered view of the ad surface and enables audio.
     value: 2
     tags: []
     deprecation_message: ''
   - name: PlayButtonClicked
-    summary: ''
+    summary: |
+      The player clicked the play button on the ad overlay. If the ad is already
+      in fullscreen, playback resumes; otherwise it enters fullscreen mode which
+      also starts (or resumes) the video.
     value: 3
     tags: []
     deprecation_message: ''
   - name: PauseButtonClicked
-    summary: ''
+    summary: |
+      The player clicked the pause button while a video ad is playing in
+      fullscreen mode, which pauses video playback.
     value: 4
     tags: []
     deprecation_message: ''
   - name: CloseButtonClicked
-    summary: ''
+    summary: |
+      The player clicked the close button on the fullscreen video ad view, which
+      exits fullscreen mode and returns to the normal camera position.
     value: 5
     tags: []
     deprecation_message: ''
   - name: WhyThisAdClicked
-    summary: ''
+    summary: |
+      The player clicked the "Why this ad?" link, which displays the EUDSA
+      (European Digital Services Act) disclosure prompt showing the advertiser
+      and payer names for the current ad creative.
     value: 6
     tags: []
     deprecation_message: ''
   - name: PlayEventTriggered
-    summary: ''
+    summary: |
+      A system-initiated play/resume event that clears the force-pause state set
+      by `PauseEventTriggered` and resumes video playback if the stream is open.
     value: 7
     tags: []
     deprecation_message: ''
   - name: PauseEventTriggered
-    summary: ''
+    summary: |
+      A system-initiated pause event, used when the engine needs to force-pause
+      the video (for example, when a dropdown menu opens over the ad). Prevents
+      viewability-based auto-play from resuming playback until a corresponding
+      `PlayEventTriggered` clears that pause.
     value: 8
     tags: []
     deprecation_message: ''

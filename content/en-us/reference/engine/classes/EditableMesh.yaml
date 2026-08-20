@@ -902,6 +902,29 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DynamicGeneration
+  - name: EditableMesh:Clear
+    summary: |
+      Clears all of an EditableMesh's geometry.
+    description: |
+      Removes all vertex data (including positions, normals, UV coordinates, and
+      colors), faces, bones, and FACS data without destroying the
+      `Class.EditableMesh` or its allocated space.
+
+      This method cannot be called on a fixed-size mesh (where
+      `Class.EditableMesh.FixedSize|FixedSize` is `true`). Attempting to do so
+      throws an error because fixed-size meshes do not allow adding or removing
+      elements.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:Destroy
     summary: |
       Destroys the mesh.

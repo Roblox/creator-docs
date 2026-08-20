@@ -4,276 +4,390 @@
 
 name: SecurityCapability
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies a specific permission capability that a sandboxed script container
+  may grant or restrict.
+description: |
+  `SecurityCapability` is a bitmask-based permission system that controls which
+  engine APIs and Luau language features are accessible to scripts running
+  inside sandboxed containers. Each value represents one capability bit that can
+  be granted or restricted.
+
+  When an `Class.Instance` has its `Class.Instance.Sandboxed|Sandboxed` property
+  enabled, the engine intersects the capabilities of all ancestor containers to
+  determine the effective permission set of any script that executes within that
+  container. API members, classes, and Luau built-ins are each annotated with
+  one or more `SecurityCapability` values; a script's thread must hold every
+  required capability to call them.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: RunClientScript
-    summary: ''
+    summary: |
+      Indicates that a script container is permitted to execute scripts on the
+      client (`Class.LocalScript`).
     value: 0
     tags: []
     deprecation_message: ''
   - name: RunServerScript
-    summary: ''
+    summary: |
+      Indicates that a script container is permitted to execute scripts on the
+      server (`Class.Script`).
     value: 1
     tags: []
     deprecation_message: ''
   - name: AccessOutsideWrite
-    summary: ''
+    summary: |
+      Grants a script read-write access to instances that live outside its
+      sandboxed container.
     value: 2
     tags: []
     deprecation_message: ''
   - name: AssetRequire
-    summary: ''
+    summary: |
+      Deprecated. Use `Enum.SecurityCapability.LoadUnownedAsset` instead.
     value: 3
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Enum.SecurityCapability.LoadUnownedAsset` instead.
   - name: LoadString
-    summary: ''
+    summary: |
+      Allows a script to use the `loadstring()` Luau built-in to compile and
+      execute a string as code.
     value: 4
     tags: []
     deprecation_message: ''
   - name: ScriptGlobals
-    summary: ''
+    summary: |
+      Allows a script to access the `shared` and `_G` shared global variable
+      tables.
     value: 5
     tags: []
     deprecation_message: ''
   - name: CreateInstances
-    summary: ''
+    summary: |
+      Allows a script to create new `Instance` objects using `Instance.new()`.
     value: 6
     tags: []
     deprecation_message: ''
   - name: Basic
-    summary: ''
+    summary: |
+      Guards access to a broad set of general-purpose engine APIs that do not
+      belong to a more specific capability category.
     value: 7
     tags: []
     deprecation_message: ''
   - name: Audio
-    summary: ''
+    summary: |
+      Guards access to audio engine APIs such as `Class.Sound`,
+      `Class.AudioPlayer`, and related classes.
     value: 8
     tags: []
     deprecation_message: ''
   - name: DataStore
-    summary: ''
+    summary: |
+      Guards access to data store APIs such as `Class.DataStoreService` and its
+      associated objects.
     value: 9
     tags: []
     deprecation_message: ''
   - name: Network
-    summary: ''
+    summary: |
+      Guards access to low-level networking APIs such as `Class.HttpService`.
     value: 10
     tags: []
     deprecation_message: ''
   - name: Physics
-    summary: ''
+    summary: |
+      Guards access to physics engine APIs such as `Class.Constraint` classes
+      and `Class.BasePart` physics properties.
     value: 11
     tags: []
     deprecation_message: ''
   - name: UI
-    summary: ''
+    summary: |
+      Guards access to UI engine APIs such as `Class.ScreenGui`, `Class.Frame`,
+      and other `Class.GuiObject` classes.
     value: 12
     tags: []
     deprecation_message: ''
   - name: CSG
-    summary: ''
+    summary: |
+      Guards access to Constructive Solid Geometry (CSG) APIs such as
+      `Class.UnionOperation` and `Class.NegateOperation`.
     value: 13
     tags: []
     deprecation_message: ''
   - name: Chat
-    summary: ''
+    summary: |
+      Guards access to chat engine APIs such as `Class.TextChatService` and
+      related chat classes.
     value: 14
     tags: []
     deprecation_message: ''
   - name: Animation
-    summary: ''
+    summary: |
+      Guards access to animation engine APIs such as `Class.AnimationController`
+      and related classes.
     value: 15
     tags: []
     deprecation_message: ''
   - name: Avatar
-    summary: ''
+    summary: |
+      Deprecated. Use `Enum.SecurityCapability.AvatarAppearance` instead.
     value: 16
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Enum.SecurityCapability.AvatarAppearance` instead.
   - name: Input
-    summary: ''
+    summary: |
+      Guards access to user input APIs such as `Class.UserInputService` and
+      `Class.ContextActionService`.
     value: 17
     tags: []
     deprecation_message: ''
   - name: Environment
-    summary: ''
+    summary: |
+      Guards access to environment and world-setting APIs such as
+      `Class.Lighting` and `Class.Atmosphere`.
     value: 18
     tags: []
     deprecation_message: ''
   - name: RemoteEvent
-    summary: ''
+    summary: |
+      Guards access to remote event and function APIs such as
+      `Class.RemoteEvent` and `Class.RemoteFunction`.
     value: 19
     tags: []
     deprecation_message: ''
   - name: LegacySound
-    summary: ''
+    summary: |
+      Guards access to the legacy `Class.Sound` and
+      pre-`Class.VoiceChatService.UseAudioApi` sound stack APIs.
     value: 20
     tags: []
     deprecation_message: ''
   - name: Players
-    summary: ''
+    summary: |
+      Guards access to `Class.Players` service APIs that query or manage
+      connected players.
     value: 21
     tags: []
     deprecation_message: ''
   - name: CapabilityControl
-    summary: ''
+    summary: |
+      Guards access to the `Instance.Capabilities` and `Instance.Sandboxed`
+      properties that configure script sandboxing.
     value: 22
     tags: []
     deprecation_message: ''
   - name: Plugin
-    summary: ''
+    summary: |
+      Mirrors the legacy `Plugin` permission level, granting access to Studio
+      plugin APIs.
     value: 23
     tags: []
     deprecation_message: ''
   - name: LocalUser
-    summary: ''
+    summary: |
+      Mirrors the legacy `LocalUser` permission level, granting access to
+      IDE-only and Studio-level APIs.
     value: 24
     tags: []
     deprecation_message: ''
   - name: WritePlayer
-    summary: ''
+    summary: |
+      Mirrors the legacy `WritePlayer` permission level, granting the ability to
+      modify player identity properties such as name and `UserId`.
     value: 25
     tags: []
     deprecation_message: ''
   - name: RobloxScript
-    summary: ''
+    summary: |
+      Mirrors the legacy `RobloxScript` permission level, granting access to
+      `CoreScript` APIs.
     value: 26
     tags: []
     deprecation_message: ''
   - name: RobloxEngine
-    summary: ''
+    summary: |
+      Mirrors the legacy `RobloxEngine` permission level, granting access to
+      internal engine-level APIs.
     value: 27
     tags: []
     deprecation_message: ''
   - name: Unassigned
-    summary: ''
+    summary: |
+      The default capability assigned to API members that have not been
+      explicitly assigned to any other capability category.
     value: 28
     tags: []
     deprecation_message: ''
   - name: InternalTest
-    summary: ''
+    summary: |
+      Restricts access to non-sensitive APIs that are intentionally kept
+      internal.
     value: 29
     tags: []
     deprecation_message: ''
   - name: PluginOrOpenCloud
-    summary: ''
+    summary: |
+      Restricts access to APIs callable only from Studio plugin or Open Cloud
+      Luau execution sessions.
     value: 30
     tags: []
     deprecation_message: ''
   - name: Assistant
-    summary: ''
+    summary: |
+      Restricts access to APIs that may only be called from Studio Assistant
+      execution contexts.
     value: 31
     tags: []
     deprecation_message: ''
   - name: RemoteCommand
-    summary: ''
+    summary: |
+      Restricts access to APIs that are executable only from Studio's
+      `RemoteCommandService` in Team Create sessions.
     value: 32
     tags: []
     deprecation_message: ''
   - name: AssetRead
-    summary: ''
+    summary: |
+      Guards access to APIs that read or query asset metadata from the Roblox
+      catalog.
     value: 33
     tags: []
     deprecation_message: ''
   - name: AssetManagement
-    summary: ''
+    summary: |
+      Guards access to asset management APIs such as
+      `Class.ContentProvider:PreloadAsync()` and encryption-key registration.
     value: 34
     tags: []
     deprecation_message: ''
   - name: DynamicGeneration
-    summary: ''
+    summary: |
+      Guards access to procedural and AI-driven content generation APIs such as
+      `Class.EditableMesh` and `Class.AvatarCreationService`.
     value: 35
     tags: []
     deprecation_message: ''
   - name: PlatformAvatarEditing
-    summary: ''
+    summary: |
+      Guards access to platform-level avatar editing APIs provided by
+      `Class.AvatarEditorService`.
     value: 36
     tags: []
     deprecation_message: ''
   - name: AssetCreateUpdate
-    summary: ''
+    summary: |
+      Guards access to APIs that create or update published Roblox assets.
     value: 37
     tags: []
     deprecation_message: ''
   - name: Capture
-    summary: ''
+    summary: |
+      Guards access to `Class.CaptureService` APIs that take screenshots and
+      record video.
     value: 38
     tags: []
     deprecation_message: ''
   - name: SensitiveInput
-    summary: ''
+    summary: |
+      Guards access to sensitive user input APIs such as those that can read raw
+      keyboard or mouse data beyond normal game input.
     value: 39
     tags: []
     deprecation_message: ''
   - name: Monetization
-    summary: ''
+    summary: |
+      Guards access to in-experience purchase and monetization APIs such as
+      `Class.MarketplaceService`.
     value: 40
     tags: []
     deprecation_message: ''
   - name: LoadOwnedAsset
-    summary: ''
+    summary: |
+      Allows a script to load assets that are owned by the experience's creator
+      using `Class.InsertService` or `Global.LuaGlobals.require()`.
     value: 41
     tags: []
     deprecation_message: ''
   - name: Social
-    summary: ''
+    summary: |
+      Guards access to social APIs such as `Class.SocialService`,
+      `Class.FriendPages`, and `Class.ExperienceInviteOptions`.
     value: 42
     tags: []
     deprecation_message: ''
   - name: ServerCommunication
-    summary: ''
+    summary: |
+      Guards access to server-to-server messaging APIs such as
+      `Class.MessagingService`.
     value: 43
     tags: []
     deprecation_message: ''
   - name: Logging
-    summary: ''
+    summary: |
+      Guards access to `Class.LogService` and logging-related APIs.
     value: 44
     tags: []
     deprecation_message: ''
   - name: PromptExternalPurchase
-    summary: ''
+    summary: |
+      Guards access to APIs that initiate external (non-Roblox) purchase
+      prompts.
     value: 45
     tags: []
     deprecation_message: ''
   - name: Groups
-    summary: ''
+    summary: |
+      Guards access to group-related APIs such as `Class.GroupService`.
     value: 46
     tags: []
     deprecation_message: ''
   - name: Teleport
-    summary: ''
+    summary: |
+      Guards access to teleportation APIs such as `Class.TeleportService`,
+      `Class.TeleportOptions`, and `Class.TeleportAsyncResult`.
     value: 47
     tags: []
     deprecation_message: ''
   - name: Consequences
-    summary: ''
+    summary: |
+      Guards access to moderation and player-consequence APIs such as
+      `Class.Players:BanAsync()` and `Class.ModerationService`.
     value: 48
     tags: []
     deprecation_message: ''
   - name: Material
-    summary: ''
+    summary: |
+      Guards access to `Class.MaterialService`, `Class.MaterialVariant`, and
+      custom material APIs.
     value: 49
     tags: []
     deprecation_message: ''
   - name: AvatarBehavior
-    summary: ''
+    summary: |
+      Guards access to APIs that control avatar locomotion and behavior at
+      runtime.
     value: 50
     tags: []
     deprecation_message: ''
   - name: AvatarAppearance
-    summary: ''
+    summary: |
+      Guards access to APIs that read or modify avatar appearance, such as
+      `Class.HumanoidDescription`.
     value: 51
     tags: []
     deprecation_message: ''
   - name: LoadUnownedAsset
-    summary: ''
+    summary: |
+      Allows a script to `Global.LuaGlobals.require()` asset IDs or call
+      `Class.InsertService:LoadAsset()` for assets not owned by the creator.
     value: 52
     tags: []
     deprecation_message: ''

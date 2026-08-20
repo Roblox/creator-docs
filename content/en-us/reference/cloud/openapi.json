@@ -21644,7 +21644,9 @@
                 "PublishAnnouncement",
                 "DeleteAnnouncement",
                 "UpdateRoleSetPermissions",
-                "UpdateGroupSecuritySettings"
+                "UpdateGroupSecuritySettings",
+                "GrantEnterpriseTier",
+                "RevokeEnterpriseTier"
               ]
             }
           },
@@ -33323,12 +33325,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
+                  "$ref": "#/components/schemas/ClientSettingsApi.Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
+                  "$ref": "#/components/schemas/ClientSettingsApi.Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
                 }
               }
             }
@@ -40378,7 +40380,9 @@
                 "PublishAnnouncement",
                 "DeleteAnnouncement",
                 "UpdateRoleSetPermissions",
-                "UpdateGroupSecuritySettings"
+                "UpdateGroupSecuritySettings",
+                "GrantEnterpriseTier",
+                "RevokeEnterpriseTier"
               ]
             }
           },
@@ -48784,6 +48788,195 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#publish_post_v1_plugins__pluginId__icon"
         }
+      }
+    },
+    "/v1/preferences/publishing": {
+      "delete": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "groupId",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://itemconfiguration.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      },
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "groupId",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Response.PublishingPreferences.PublishingPreferencesResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Response.PublishingPreferences.PublishingPreferencesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://itemconfiguration.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      },
+      "patch": {
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Request.PublishingPreferences.UpdatePublishingPreferencesRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Request.PublishingPreferences.UpdatePublishingPreferencesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Response.PublishingPreferences.PublishingPreferencesResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Response.PublishingPreferences.PublishingPreferencesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://itemconfiguration.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      },
+      "post": {
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Request.PublishingPreferences.CreatePublishingPreferencesRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Request.PublishingPreferences.CreatePublishingPreferencesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Response.PublishingPreferences.PublishingPreferencesResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Response.PublishingPreferences.PublishingPreferencesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://itemconfiguration.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
       }
     },
     "/v1/presence/users": {
@@ -68543,7 +68736,7 @@
           "PermissionLimitReached",
           "DependenciesLimitReached",
           "NotRequestable",
-          "RequesterNotConnected",
+          "RequesterNotAConnection",
           "AlreadyPending",
           "AlreadyHasAccess",
           "RequestNotFound",
@@ -69022,6 +69215,30 @@
           "rank": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClientSettingsApi.Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "clientVersionUpload": {
+            "type": "string"
+          },
+          "bootstrapperVersion": {
+            "type": "string"
+          },
+          "nextClientVersionUpload": {
+            "type": "string"
+          },
+          "nextClientVersion": {
+            "type": "string"
+          },
+          "forceInstall": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -87500,6 +87717,9 @@
             "items": {
               "$ref": "#/components/schemas/Roblox.Groups.Client.TierRequirement"
             }
+          },
+          "capabilities": {
+            "$ref": "#/components/schemas/Roblox.Groups.Client.TierCapabilities"
           }
         },
         "additionalProperties": false
@@ -87576,6 +87796,15 @@
           },
           "contentId": {
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Client.TierCapabilities": {
+        "type": "object",
+        "properties": {
+          "isEligibleForUnrestrictedMessages": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -88075,6 +88304,174 @@
           },
           "name": {
             "description": "The asset name.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.ItemConfiguration.Api.Models.Request.PublishingPreferences.CreatePublishingPreferencesRequest": {
+        "type": "object",
+        "properties": {
+          "creatorUserId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "creatorGroupId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "publishingType": {
+            "format": "int32",
+            "description": "Publishing type for the collectible. Currently can be either Limited or NonLimited. ['Invalid' = 0, 'Limited' = 1, 'NonLimited' = 2]",
+            "enum": [0, 1, 2],
+            "type": "integer"
+          },
+          "saleLocationType": {
+            "format": "int32",
+            "description": "Represents possible SaleLocation types of the Collectibles System. ['SALE_LOCATION_TYPE_INVALID' = 0, 'SALE_LOCATION_TYPE_SHOP_AND_ALL_EXPERIENCES' = 1, 'SALE_LOCATION_EXPERIENCES_AND_DEV_API_ONLY' = 2, 'SALE_LOCATION_TYPE_SHOP_ONLY' = 3, 'SALE_LOCATION_TYPE_SHOP_AND_EXPERIENCES_BY_ID' = 4]",
+            "enum": [0, 1, 2, 3, 4],
+            "type": "integer"
+          },
+          "places": {
+            "type": "array",
+            "items": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          "priceInRobux": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "priceOffset": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "isFree": {
+            "type": "boolean"
+          },
+          "enableRegionalPricing": {
+            "type": "boolean"
+          },
+          "isRentalOptIn": {
+            "type": "boolean"
+          },
+          "autoPublishEnabled": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.ItemConfiguration.Api.Models.Request.PublishingPreferences.UpdatePublishingPreferencesRequest": {
+        "type": "object",
+        "properties": {
+          "creatorUserId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "creatorGroupId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "publishingType": {
+            "format": "int32",
+            "enum": [0, 1, 2],
+            "type": "integer"
+          },
+          "saleLocationType": {
+            "format": "int32",
+            "enum": [0, 1, 2, 3, 4],
+            "type": "integer"
+          },
+          "places": {
+            "type": "array",
+            "items": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          "priceInRobux": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "priceOffset": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "isFree": {
+            "type": "boolean"
+          },
+          "enableRegionalPricing": {
+            "type": "boolean"
+          },
+          "isRentalOptIn": {
+            "type": "boolean"
+          },
+          "autoPublishEnabled": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.ItemConfiguration.Api.Models.Response.PublishingPreferences.PublishingPreferencesResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "creatorUserId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "creatorGroupId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "publishingType": {
+            "format": "int32",
+            "description": "Publishing type for the collectible. Currently can be either Limited or NonLimited. ['Invalid' = 0, 'Limited' = 1, 'NonLimited' = 2]",
+            "enum": [0, 1, 2],
+            "type": "integer"
+          },
+          "saleLocationType": {
+            "format": "int32",
+            "description": "Represents possible SaleLocation types of the Collectibles System. ['SALE_LOCATION_TYPE_INVALID' = 0, 'SALE_LOCATION_TYPE_SHOP_AND_ALL_EXPERIENCES' = 1, 'SALE_LOCATION_EXPERIENCES_AND_DEV_API_ONLY' = 2, 'SALE_LOCATION_TYPE_SHOP_ONLY' = 3, 'SALE_LOCATION_TYPE_SHOP_AND_EXPERIENCES_BY_ID' = 4]",
+            "enum": [0, 1, 2, 3, 4],
+            "type": "integer"
+          },
+          "places": {
+            "type": "array",
+            "items": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          "priceInRobux": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "priceOffset": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "isFree": {
+            "type": "boolean"
+          },
+          "enableRegionalPricing": {
+            "type": "boolean"
+          },
+          "isRentalOptIn": {
+            "type": "boolean"
+          },
+          "autoPublishEnabled": {
+            "type": "boolean"
+          },
+          "created": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "updated": {
+            "format": "date-time",
             "type": "string"
           }
         },

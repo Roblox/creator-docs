@@ -107,7 +107,7 @@ The following table summarizes what creators must satisfy to reach each audience
 </table>
 
 <sup>1</sup> As long as the game is playable and not permanently removed due to Community Standards violations.<br />
-<sup>2</sup> Evaluation process requires 500 unique plays from highly engaged players in the last 60 days.<br />
+<sup>2</sup> Evaluation process requires 250 unique plays from highly engaged players in the last 60 days.<br />
 <sup>3</sup> Restricted content is limited to 18+ users.
 
 ### For all ages (including Kids and Select accounts)
@@ -130,7 +130,7 @@ To reach users who are under 16 years old, creators of individual-owned games or
    1. **Trial phase** - The game is first made available only to age-checked users 16 and older.
    1. **Analysis of Highly Engaged users** - Engagement is analyzed through metrics like account age, play history, and spend on Roblox to verify it's from real users and not bots. Increasing engagement with age-checked 16+ users will help you progress towards becoming eligible faster.
    1. **Safety review** - The game's real-time moderation reports and gameplay are reviewed for age-suitability.
-   1. **Threshold** - Once the game reaches a benchmark of 500 unique plays by highly engaged age-checked users within a 60-day window, it completes evaluation and becomes eligible for Kids and Select audiences.
+   1. **Threshold** - Once the game reaches a benchmark of 250 unique plays by highly engaged age-checked users within a 60-day window, it completes evaluation and becomes eligible for Kids and Select audiences.
 
    You can monitor your game's evaluation progress in real time using the **Audience Reach** dashboard in the [Creator Hub](https://create.roblox.com).
 
@@ -212,7 +212,7 @@ We'll keep evolving these criteria over time to capture more genuine players, wi
 <Typography variant='buttonLarge'>Will the highly engaged player requirements change over time?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Yes. We took an intentionally conservative approach at launch to make sure our safety systems have enough data to accurately evaluate games. We're working to expand eligibility so more compliant games can qualify in the coming weeks and months. We'll share an update on requirements before the global launch in June.
+Yes. We took an intentionally conservative approach at launch to make sure our safety systems have enough data to accurately evaluate games. We're working to expand eligibility so more compliant games can qualify in the coming weeks and months.
 </AccordionDetails>
 </BaseAccordion>
 <BaseAccordion>

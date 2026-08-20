@@ -22,11 +22,11 @@ To export the `.fbx` file in Blender:
 
 1. In the topbar, click **File**. A pop-up menu displays.
 2. Select **Export**, then **FBX (.fbx)**. The **Blender File View** window displays.
-3. On the right-hand side, change the **Path Mode** property to **Copy**, then toggle the **Embed Textures** button.
+3. On the right-hand side, change **Path Mode** to **Copy**, then toggle the **Embed Textures** button.
 
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-1.png" width="320" alt="Blender export sidebar showing Path Mode set to Copy and the Embed Textures button enabled."/>
 
-4. Set the **Transform** > **Apply Scalings** to **FBX Unit Scale**. If you run into scaling issues on import, see [Blender FBX scaling](../../art/blender.md#adjust-scale-fbx) for alternative approaches.
+4. Set **Transform** > **Apply Scalings** to **FBX Unit Scale**. If you run into scaling issues on import, see [Blender FBX scaling](../../art/blender.md#adjust-scale-fbx) for alternative approaches.
 
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-5.png" width="320" alt="Blender export sidebar showing Apply Scalings set to FBX Unit Scale."/>
 
