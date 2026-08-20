@@ -121,7 +121,7 @@ methods:
       <td><code>IsPhotoToAvatarAllowed</code></td>
       <td>Boolean</td>
       <td>Any experience that uses the Photo-to-Avatar APIs.</td>
-      <td>When <code>true</code>, the Photo-to-Avatar API `Class.AvatarCreationService: PromptSelectAvatarGenerationImageAsync()` is available to the player.</td>
+      <td>When <code>true</code>, the player is permitted by policy to use the Photo-to-Avatar API `Class.AvatarCreationService:PromptSelectAvatarGenerationImageAsync()`. This flag reflects age (for example, users under 13) and regional restrictions, which are evaluated server-side. Check it before calling Photo-to-Avatar APIs to avoid policy-related errors. Note that a <code>true</code> value does not by itself guarantee the prompt will succeed: camera and photo-library availability is checked separately on the player's device, so calls can still fail on platforms where camera access is unavailable.</td>
       </tr>
       <tr>
       <td><code>IsSubjectToChinaPolicies</code></td>

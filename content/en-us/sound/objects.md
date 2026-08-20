@@ -68,7 +68,7 @@ To create a `Class.Sound` object for volumetric audio:
 
    <img src="../assets/studio/properties/Sound-SoundId.png" width="320" />
 
-6. **(Optional)** If you want the audio to start playing when the game begins, enable the **Playing** property.
+6. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you want the audio to start playing when the game begins, enable the **Playing** property.
 
 #### Point source
 
@@ -81,7 +81,7 @@ To create a `Class.Sound` object for point source audio:
 1. In the **Explorer** window, hover over an attachment, truss, wedge, or corner wedge, then click the ⊕ button. A contextual menu displays.
 2. From the menu, insert a **Sound**.
 3. In the **Properties** window, navigate to the **SoundId** property and input a valid [audio asset ID](../audio/assets.md).
-4. **(Optional)** If you want the audio to start playing when the game begins, enable the **Playing** property.
+4. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you want the audio to start playing when the game begins, enable the **Playing** property.
 
 ### Background audio
 
@@ -94,8 +94,8 @@ To create a `Class.Sound` object for background audio:
 1. In the **Explorer** window, hover over **SoundService**, then click the ⊕ button. A contextual menu displays.
 2. From the menu, insert a **Sound**.
 3. In the **Properties** window, navigate to the **SoundId** property and input a valid [audio asset ID](../audio/assets.md).
-4. **(Optional)** If you want the audio to start playing when the game begins, enable the **Playing** property.
-5. **(Optional)** If this `Class.Sound` object is the only track you want to play in the place, enable its **Looped** property.
+4. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you want the audio to start playing when the game begins, enable the **Playing** property.
+5. <Chip label="OPTIONAL" size="small" variant="outlined" /> If this `Class.Sound` object is the only track you want to play in the place, enable its **Looped** property.
 
 ## Customize sound objects
 

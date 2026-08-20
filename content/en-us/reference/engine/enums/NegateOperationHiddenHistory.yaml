@@ -4,24 +4,41 @@
 
 name: NegateOperationHiddenHistory
 type: enum
-summary: ''
-description: ''
+summary: |
+  Records the CSG combination operation — Union or Intersection — that
+  previously merged multiple `Class.NegateOperation` parts, allowing the engine
+  to restore the correct result type when those parts are later separated.
+description: |
+  Type of the `PreviousOperation` property. Records which CSG combination
+  produced this `Class.NegateOperation` —
+  `Enum.NegateOperationHiddenHistory.NegatedUnion` or
+  `Enum.NegateOperationHiddenHistory.NegatedIntersection` — so the engine can
+  restore the correct output type when the solid is later separated. Defaults to
+  `Enum.NegateOperationHiddenHistory.None` when no prior combination history is
+  recorded.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      Indicates no previous CSG combination operation is recorded for this
+      `Class.NegateOperation` part. This is the default value of
+      `PreviousOperation`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: NegatedUnion
-    summary: ''
+    summary: |
+      Indicates this `Class.NegateOperation` was previously produced by a Union
+      operation applied to multiple negated parts.
     value: 1
     tags: []
     deprecation_message: ''
   - name: NegatedIntersection
-    summary: ''
+    summary: |
+      Indicates this `Class.NegateOperation` was previously produced by an
+      Intersection operation applied to multiple negated parts.
     value: 2
     tags: []
     deprecation_message: ''

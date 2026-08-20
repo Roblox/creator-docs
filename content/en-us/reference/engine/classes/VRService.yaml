@@ -53,7 +53,10 @@ properties:
       their controllers and headset.
     description: |
       When set to true, a VR player will be able to animate their hands and head
-      using their controllers and headset.
+      using their controllers and headset. Set this to `false` for experiences
+      where VR hand and head tracking conflicts with custom game mechanics, such
+      as bespoke avatar rigs or weapon systems incompatible with IK-driven
+      gestures.
 
       This property must be set on the server.
     code_samples: []
@@ -71,8 +74,18 @@ properties:
     capabilities:
       - Input
   - name: VRService.ControllerModels
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether and how the player's VR hand controllers are rendered in
+      the experience.
+    description: |
+      Controls how the models representing the player's VR hand controllers are
+      displayed (`Enum.VRControllerModelMode`). When set to
+      `Enum.VRControllerModelMode.Transparent|Transparent`, the controller
+      models are shown with transparency; when set to
+      `Enum.VRControllerModelMode.Disabled|Disabled`, the controller models are
+      not rendered.
+
+      Defaults to `Enum.VRControllerModelMode.Transparent|Transparent`.
     code_samples: []
     type: VRControllerModelMode
     tags: []
@@ -137,8 +150,18 @@ properties:
     capabilities:
       - Input
   - name: VRService.LaserPointer
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether and how the VR laser pointer used to interact with the
+      user interface is displayed.
+    description: |
+      Controls the mode of the laser pointer that a VR player uses to point at
+      and interact with the user interface (`Enum.VRLaserPointerMode`). Set it
+      to `Enum.VRLaserPointerMode.Disabled|Disabled` to hide the laser pointer,
+      `Enum.VRLaserPointerMode.Pointer|Pointer` to show a single pointer, or
+      `Enum.VRLaserPointerMode.DualPointer|DualPointer` to show a pointer for
+      each hand.
+
+      Defaults to `Enum.VRLaserPointerMode.Pointer|Pointer`.
     code_samples: []
     type: VRLaserPointerMode
     tags: []
@@ -154,8 +177,14 @@ properties:
     capabilities:
       - Input
   - name: VRService.ThirdPersonFollowCamEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the third-person follow camera is enabled for the VR
+      user.
+    description: |
+      Read-only. Indicates whether the third-person follow camera is enabled for
+      the VR user. Its value mirrors the user's VR comfort setting and updates
+      automatically whenever the user changes that setting, firing a changed
+      signal so that scripts can respond. It cannot be set from a script.
     code_samples: []
     type: boolean
     tags:
@@ -284,7 +313,9 @@ methods:
           The specified `Enum.UserCFrame|UserCFrame`.
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          A `Datatype.CFrame` describing the position and orientation of the
+          specified VR device as an offset from a point in real-world space.
     tags: []
     deprecation_message: ''
     security: None

@@ -62,8 +62,8 @@ properties:
 
       See also `Class.Player.LocaleId`, the locale ID that a user has set for
       their Roblox account which is used for localizing in-experience content.
-      This will be a different value when Roblox does not yet internally support
-      that player's locale.
+      This will be a different value when that player's account locale isn't
+      supported for localizing Roblox UI content.
     code_samples: []
     type: string
     tags:
@@ -92,7 +92,9 @@ methods:
     parameters: []
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          A list of `Class.LocalizationTable` objects used for localizing
+          CoreScripts.
     tags: []
     deprecation_message: ''
     security: None
@@ -959,7 +961,11 @@ methods:
       - name: instance
         type: Instance
         default: nil
-        summary: ''
+        summary: |
+          The `Class.Instance` for which to retrieve the ordered localization
+          table entries. If nil, only entries from the
+          `Class.LocalizationService` hierarchy and the cloud
+          `Class.LocalizationTable` are returned.
     returns:
       - type: Array
         summary: |

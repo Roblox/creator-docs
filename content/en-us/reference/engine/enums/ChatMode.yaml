@@ -4,9 +4,10 @@
 
 name: ChatMode
 type: enum
-summary: ''
+summary: |
+  Describes the methods of communication available to a player.
 description: |
-  Controls the methods of communication available to a player.
+  Describes the methods of communication available to a player.
 code_samples: []
 tags: []
 deprecation_message: ''

@@ -1,5 +1,5 @@
 ---
-title: Test heads in Studio
+title: Test dynamic heads in Studio
 description: If you have a model with a live head, you can import the model into Studio, equip face accessories, and create and save animations.
 ---
 
@@ -7,14 +7,14 @@ description: If you have a model with a live head, you can import the model into
 If you are looking to quickly test a character's head animation, use the [Avatar Setup tool](../../avatar-setup/index.md) to load your character and use the presets to preview various facial animations and head accessories.
 </Alert>
 
-Manually test your head creations by importing character models with animatable heads into Studio and use the generated `Class.FaceControls` instance to pose or animate the face.
+Manually test your dynamic head creations by importing character models with animatable heads into Studio and use the generated `Class.FaceControls` instance to pose or animate the face.
 
-When importing a head that supports facial animation into Studio, Studio creates a `Class.FaceControls` instance you can use to access and combine these individual poses to create expressions and animations. Unlike typical rigged models, you cannot access the facial `Class.Bone|Bones` of a head mesh directly in Studio.
+When importing a dynamic head that supports facial animation into Studio, Studio creates a `Class.FaceControls` instance you can use to access and combine these individual poses to create expressions and animations. Unlike typical rigged models, you cannot access the facial `Class.Bone|Bones` of a head mesh directly in Studio.
 
 To set up heads with facial animation in your game:
 
 1. [Import a model with an animatable head](../../art/characters/testing/studio.md#import). You can either create your own or use one of the provided reference model files.
-2. (Optional) [Import face accessories](#import-face-accessories) you want to deform with the facial expressions of your head. You can either create your own or use one of the provided reference accessory files.
+2. <Chip label="OPTIONAL" size="small" variant="outlined" /> [Import face accessories](#import-face-accessories) you want to deform with the facial expressions of your head. You can either create your own or use one of the provided reference accessory files.
 3. [Animate the head](#animate-heads) in the **Animation Editor** by either adding in individual animation tracks, or by using the **Face Animation Editor**.
 
 If you want to experiment with pre-made heads before [making your own](../../art/characters/facial-animation/create-basic-heads.md), Roblox has a reference game you can access to see how heads interact with Studio's interface, as well as two reference models and accessories you can import directly into your own game:
@@ -68,7 +68,7 @@ To import a face accessory:
    2. In the **Explorer** window, select the **MeshPart** you imported as a face accessory. Its name displays in the **Part** field.
    3. Click the **Next** button.
    4. In the **Clothing** category, select **Face**, then click the **Next** button.
-   5. (Optional) In the **Edit** panel, use the adjustment options to ensure the accessory fits your model.
+   5. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Edit** panel, use the adjustment options to ensure the accessory fits your model.
    6. In the **Preview** panel, preview the new facial accessory on your head, then click the **Next** button. The tool transforms the `Class.MeshPart` into an `Class.Accessory` instance, and it displays in the **Explorer** window.
 
 You can preview the accessory on your imported model by making the `Class.Accessory` instance a child of your character `Class.Model`. You can only equip character-specific face accessories with their designed character.

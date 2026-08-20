@@ -64,4 +64,4 @@ To publish an existing place of a game with [Place Publishing API](../../referen
    { "versionNumber": 7 }
    ```
 
-1. (Optional) Verify the upload in Studio or on [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Verify the upload in Studio or on [Creator Dashboard](https://create.roblox.com/dashboard/creations).

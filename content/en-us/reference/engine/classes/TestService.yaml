@@ -496,19 +496,25 @@ methods:
       - name: condition
         type: boolean
         default:
-        summary: ''
+        summary: |
+          The boolean expression to evaluate as the test assertion.
       - name: description
         type: string
         default:
-        summary: ''
+        summary: |
+          A label that identifies this check in the test output.
       - name: source
         type: Instance
         default: nil
-        summary: ''
+        summary: |
+          The script instance that invoked the check, used for output
+          attribution. Defaults to `nil`.
       - name: line
         type: int
         default: 0
-        summary: ''
+        summary: |
+          The line number in the source script where the check was called.
+          Defaults to `0`.
     returns:
       - type: ()
         summary: ''
@@ -528,15 +534,20 @@ methods:
       - name: text
         type: string
         default:
-        summary: ''
+        summary: |
+          The message to print alongside the checkpoint label.
       - name: source
         type: Instance
         default: nil
-        summary: ''
+        summary: |
+          The script instance that invoked the checkpoint, used for output
+          attribution. Defaults to `nil`.
       - name: line
         type: int
         default: 0
-        summary: ''
+        summary: |
+          The line number in the source script where the checkpoint was called.
+          Defaults to `0`.
     returns:
       - type: ()
         summary: ''
@@ -573,15 +584,20 @@ methods:
       - name: description
         type: string
         default:
-        summary: ''
+        summary: |
+          The error message text to display.
       - name: source
         type: Instance
         default: nil
-        summary: ''
+        summary: |
+          The script instance that raised the error, used for output
+          attribution. Defaults to `nil`.
       - name: line
         type: int
         default: 0
-        summary: ''
+        summary: |
+          The line number in the source script where the error was raised.
+          Defaults to `0`.
     returns:
       - type: ()
         summary: ''
@@ -602,15 +618,20 @@ methods:
       - name: description
         type: string
         default:
-        summary: ''
+        summary: |
+          The failure message text to display.
       - name: source
         type: Instance
         default: nil
-        summary: ''
+        summary: |
+          The script instance where the failure occurred, used for output
+          attribution. Defaults to `nil`.
       - name: line
         type: int
         default: 0
-        summary: ''
+        summary: |
+          The line number in the source script where the failure was triggered.
+          Defaults to `0`.
     returns:
       - type: ()
         summary: ''
@@ -620,17 +641,24 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: TestService:isFeatureEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Returns whether the named feature identified by `name` is currently
+      enabled.
+    description: |
+      Returns `true` if the feature identified by `name` is set to `true`, and
+      `false` if it is set to any other value. Raises an error if `name` doesn't
+      correspond to a defined feature.
     code_samples: []
     parameters:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the feature to query.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the named feature resolves to `true`, `false` otherwise.
     tags: []
     deprecation_message: ''
     security: None
@@ -647,15 +675,20 @@ methods:
       - name: text
         type: string
         default:
-        summary: ''
+        summary: |
+          The message to print to the output.
       - name: source
         type: Instance
         default: nil
-        summary: ''
+        summary: |
+          The script instance that sent the message, used for output
+          attribution. Defaults to `nil`.
       - name: line
         type: int
         default: 0
-        summary: ''
+        summary: |
+          The line number in the source script where the message was sent.
+          Defaults to `0`.
     returns:
       - type: ()
         summary: ''
@@ -665,17 +698,33 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: TestService:RegisterTest
-    summary: ''
-    description: ''
+    summary: |
+      Registers a test case with the service and returns the resulting
+      `TestCase`.
+    description: |
+      Registers a test case described by `testOptions` and returns the created
+      `TestCase`. The dictionary must include the non-empty string fields
+      `SuiteName` and `TestCaseName`, and may include an optional numeric
+      `Timeout` field that sets how long the case is allowed to run before it
+      times out. Registering the same suite and test-case name a second time
+      raises an error.
+
+      This member only functions during V2 test runs or when running in Roblox
+      Studio. In any other context it records an error and returns no value.
     code_samples: []
     parameters:
       - name: testOptions
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A dictionary describing the test, requiring the string fields
+          `SuiteName` and `TestCaseName` and optionally a numeric `Timeout`
+          field.
     returns:
       - type: TestCase
-        summary: ''
+        summary: |
+          The registered `TestCase`, or no value when registration isn't
+          supported in the current context.
     tags: []
     deprecation_message: ''
     security: None
@@ -695,19 +744,25 @@ methods:
       - name: condition
         type: boolean
         default:
-        summary: ''
+        summary: |
+          The boolean expression to evaluate as a required assertion.
       - name: description
         type: string
         default:
-        summary: ''
+        summary: |
+          A label that identifies this requirement in the test output.
       - name: source
         type: Instance
         default: nil
-        summary: ''
+        summary: |
+          The script instance that invoked the requirement, used for output
+          attribution. Defaults to `nil`.
       - name: line
         type: int
         default: 0
-        summary: ''
+        summary: |
+          The line number in the source script where the requirement was called.
+          Defaults to `0`.
     returns:
       - type: ()
         summary: ''
@@ -750,31 +805,47 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: TestService:ScopeTime
-    summary: ''
-    description: ''
+    summary: |
+      Returns a dictionary of per-scope physics simulation timings for
+      performance testing.
+    description: |
+      Returns a dictionary mapping physics simulation scopes to their measured
+      step times, used for per-scope physics performance testing. Raises an
+      error if the caller lacks permission.
     code_samples: []
     parameters: []
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A dictionary mapping physics simulation scopes to their measured step
+          times.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: TestService:TakeSnapshot
-    summary: ''
-    description: ''
+    summary: |
+      Captures a named screenshot snapshot during a test run.
+    description: |
+      Captures a screenshot associated with `snapshotname` and routes it through
+      the test rendering pipeline. When `source` is provided and a V2 test run
+      is active, the snapshot's suite and test names are resolved from the
+      source script's `Suite` and `TestName` attributes; otherwise default names
+      are used. The `source` parameter defaults to `nil`.
     code_samples: []
     parameters:
       - name: snapshotname
         type: string
         default:
-        summary: ''
+        summary: |
+          The name to associate with the captured snapshot.
       - name: source
         type: Instance
         default: nil
-        summary: ''
+        summary: |
+          An optional script instance whose `Suite` and `TestName` attributes
+          name the snapshot; defaults to `nil`.
     returns:
       - type: ()
         summary: ''
@@ -797,19 +868,25 @@ methods:
       - name: condition
         type: boolean
         default:
-        summary: ''
+        summary: |
+          The boolean expression to evaluate as the warning assertion.
       - name: description
         type: string
         default:
-        summary: ''
+        summary: |
+          A label that identifies this warning check in the test output.
       - name: source
         type: Instance
         default: nil
-        summary: ''
+        summary: |
+          The script instance that invoked the warning, used for output
+          attribution. Defaults to `nil`.
       - name: line
         type: int
         default: 0
-        summary: ''
+        summary: |
+          The line number in the source script where the warning was called.
+          Defaults to `0`.
     returns:
       - type: ()
         summary: ''
@@ -829,19 +906,23 @@ events:
       - name: condition
         type: boolean
         default:
-        summary: ''
+        summary: |
+          Whether the conditional test assertion passed or failed.
       - name: text
         type: string
         default:
-        summary: ''
+        summary: |
+          The description label associated with the test assertion.
       - name: script
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The script instance that produced the result.
       - name: line
         type: int
         default:
-        summary: ''
+        summary: |
+          The line number in the script where the assertion was made.
     tags: []
     deprecation_message: ''
     security: None
@@ -856,15 +937,18 @@ events:
       - name: text
         type: string
         default:
-        summary: ''
+        summary: |
+          The result message text sent from the client.
       - name: script
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The script instance that produced the result.
       - name: line
         type: int
         default:
-        summary: ''
+        summary: |
+          The line number in the script where the result was generated.
     tags: []
     deprecation_message: ''
     security: None

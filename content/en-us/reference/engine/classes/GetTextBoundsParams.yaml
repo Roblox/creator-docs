@@ -43,8 +43,19 @@ properties:
     capabilities:
       - UI
   - name: GetTextBoundsParams.RichText
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether the measured text is interpreted using rich text
+      markup.
+    description: |
+      Determines whether the text being measured is interpreted using
+      [rich text](../../../ui/rich-text.md) markup. Corresponds to the
+      `Class.TextLabel.RichText` property on text objects.
+
+      By default, the value is `false`, meaning the
+      `Class.GetTextBoundsParams.Text` string is measured verbatim. When set to
+      `true`, rich text formatting tags in the string are parsed rather than
+      measured as literal characters, so the returned bounds reflect the styled
+      text.
     code_samples: []
     type: boolean
     tags: []

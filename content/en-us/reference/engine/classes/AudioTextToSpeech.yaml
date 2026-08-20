@@ -377,7 +377,11 @@ methods:
     parameters: []
     returns:
       - type: AssetFetchStatus
-        summary: ''
+        summary: |
+          An `Enum.AssetFetchStatus` — `Enum.AssetFetchStatus.Success|Success`
+          once the speech audio has been generated, or
+          `Enum.AssetFetchStatus.Failure|Failure` if generation could not be
+          completed.
     tags:
       - Yields
     deprecation_message: ''

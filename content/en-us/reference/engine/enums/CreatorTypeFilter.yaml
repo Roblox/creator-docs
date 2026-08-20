@@ -4,24 +4,34 @@
 
 name: CreatorTypeFilter
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies which creator type to include when filtering catalog search results
+  in `Datatype.CatalogSearchParams`.
+description: |
+  Specifies which creator type to include when filtering catalog search results.
+  Used with the `Datatype.CatalogSearchParams.CreatorType` property to narrow
+  results to items made by individual users, groups, or any creator. The default
+  value of `Datatype.CatalogSearchParams.CreatorType` is
+  `Enum.CreatorTypeFilter.All`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: User
-    summary: ''
+    summary: |
+      Limits catalog search results to items created by individual users.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Group
-    summary: ''
+    summary: |
+      Limits catalog search results to items created by groups.
     value: 1
     tags: []
     deprecation_message: ''
   - name: All
-    summary: ''
+    summary: |
+      Includes items from all creator types; no filtering by creator is applied.
     value: 2
     tags: []
     deprecation_message: ''

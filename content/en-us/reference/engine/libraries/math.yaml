@@ -89,10 +89,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to return the absolute value of.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The absolute value of `x`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -105,10 +107,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The cosine value, between `-1` and `1`.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The angle in radians whose cosine is `x`, in the range `[0, pi]`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -121,10 +125,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The sine value, between `-1` and `1`.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The angle in radians whose sine is `x`, in the range `[-pi/2, pi/2]`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -137,10 +143,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The value to compute the arc tangent of.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The arc tangent of `x` in radians, in the range `[-pi/2, pi/2]`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -156,14 +164,17 @@ functions:
       - name: 'y'
         type: number
         default:
-        summary: ''
+        summary: |
+          The **Y** coordinate.
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The **X** coordinate.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The arc tangent of `y`/`x` in radians, in the range `[-pi, pi]`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -176,10 +187,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to round up.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The smallest integer greater than or equal to `x`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -192,18 +205,23 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to clamp.
       - name: min
         type: number
         default:
-        summary: ''
+        summary: |
+          The minimum value of the range.
       - name: max
         type: number
         default:
-        summary: ''
+        summary: |
+          The maximum value of the range; must be greater than or equal to
+          `min`.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          `x` constrained to the range `[`min`, `max`]`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -216,10 +234,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The angle in radians.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The cosine of `x`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -232,10 +252,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to compute the hyperbolic cosine of.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The hyperbolic cosine of `x`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -248,10 +270,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The angle in radians to convert.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The angle `x` converted to degrees.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -264,10 +288,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The exponent.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The value of `e` raised to the power `x`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -280,10 +306,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to round down.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The largest integer less than or equal to `x`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -298,14 +326,17 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The dividend.
       - name: 'y'
         type: number
         default:
-        summary: ''
+        summary: |
+          The divisor.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The remainder of the division of `x` by `y`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -320,12 +351,16 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to decompose into mantissa and exponent.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The mantissa `m`, a value whose absolute value is in `[0.5, 1)` or
+          zero.
       - type: int
-        summary: ''
+        summary: |
+          The exponent `e` such that `x = m * 2^e`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -339,10 +374,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to test.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          True if `x` is neither NaN nor infinity, false otherwise.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -356,10 +393,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to test.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          True if `x` is positive or negative infinity, false otherwise.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -372,10 +411,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to test.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          True if `x` is NaN, false otherwise.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -388,14 +429,17 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The mantissa value.
       - name: e
         type: int
         default:
-        summary: ''
+        summary: |
+          The integer exponent.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The value `x * 2^e`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -441,7 +485,8 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to compute the logarithm of.
       - name: base
         type: number
         default: 2.7182818
@@ -449,7 +494,8 @@ functions:
           The base of the logarithm, the constant `e` by default.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The logarithm of `x` in the given base.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -462,10 +508,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to compute the base-10 logarithm of.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The base-10 logarithm of `x`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -519,14 +567,17 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The first number to compare.
       - name: ...
         type: number
         default:
-        summary: ''
+        summary: |
+          Additional numbers to compare.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The largest value among all arguments.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -539,14 +590,17 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The first number to compare.
       - name: ...
         type: number
         default:
-        summary: ''
+        summary: |
+          Additional numbers to compare.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The smallest value among all arguments.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -561,12 +615,15 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to split into integral and fractional parts.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The integral part of `x`.
       - type: number
-        summary: ''
+        summary: |
+          The fractional part of `x`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -601,18 +658,22 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The **X** coordinate of the sample point.
       - name: 'y'
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The **Y** coordinate of the sample point.
       - name: z
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The **Z** coordinate of the sample point.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          A Perlin noise value, typically between `-1` and `1`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -626,14 +687,17 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The base value.
       - name: 'y'
         type: number
         default:
-        summary: ''
+        summary: |
+          The exponent value.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The value `x` raised to the power `y`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -646,10 +710,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The angle in degrees to convert.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The angle `x` converted to radians.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -673,14 +739,18 @@ functions:
       - name: m
         type: number
         default: 0
-        summary: ''
+        summary: |
+          When used alone, the upper bound of the integer range (lower bound is
+          `1`). When used with `n`, the lower bound.
       - name: 'n'
         type: number
         default: 1
-        summary: ''
+        summary: |
+          The upper bound of the integer range.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          A pseudo-random number within the specified range.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -694,7 +764,8 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The seed value for the pseudo-random number generator.
     returns:
       - type: ()
         summary: ''
@@ -721,7 +792,8 @@ functions:
           The value to be rounded.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The nearest integer to `x`, rounding away from zero for midpoints.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -736,10 +808,13 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to determine the sign of.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          `-1` if `x` is negative, `0` if `x` is zero, or `1` if `x` is
+          positive.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -752,10 +827,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The angle in radians.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The sine of `x`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -768,10 +845,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to compute the hyperbolic sine of.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The hyperbolic sine of `x`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -785,10 +864,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to compute the square root of.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The square root of `x`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -801,10 +882,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The angle in radians.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The tangent of `x`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -817,10 +900,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to compute the hyperbolic tangent of.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The hyperbolic tangent of `x`.
     tags: []
     code_samples: []
     deprecation_message: ''

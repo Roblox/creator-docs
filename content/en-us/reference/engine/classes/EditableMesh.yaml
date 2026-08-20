@@ -16,10 +16,9 @@ description: |
 
   For security purposes, using `EditableMesh` fails by default for published
   games. To enable usage of `EditableMesh`, you must be 13+ age verified and ID
-  verified. After you are verified, open Studio's
-  [Experience Settings](../../../studio/experience-settings.md), select
-  **Security**, and enable the **Allow&nbsp;Mesh&nbsp;&&nbsp;Image&nbsp;APIs**
-  toggle. Remember to review the
+  verified. After you are verified, open the
+  [Creator Dashboard](https://create.roblox.com/dashboard/creations) and toggle
+  on **Enable Mesh / Image APIs**. Remember to review the
   [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use#creators-restrictions-on-use)
   before enabling the toggle.
 
@@ -182,7 +181,7 @@ description: |
 
   -- Given 4 vertex IDs, adds a new normal and 2 triangles, making a sharp quad
   local function addSharpQuad(editableMesh, vid0, vid1, vid2, vid3)
-  	local nid = editableMesh:AddNormal()  -- This creates a normal ID which is automatically computed
+  	local nid = editableMesh:AddNormal() -- This creates a normal ID which is automatically computed
 
   	local fid1 = editableMesh:AddTriangle(vid0, vid1, vid2)
   	editableMesh:SetFaceNormals(fid1, {nid, nid, nid})
@@ -204,12 +203,12 @@ description: |
   	local v7 = editableMesh:AddVertex(Vector3.new(0, 1, 1))
   	local v8 = editableMesh:AddVertex(Vector3.new(1, 1, 1))
 
-  	addSharpQuad(editableMesh, v5, v6, v8, v7)  -- Front
-  	addSharpQuad(editableMesh, v1, v3, v4, v2)  -- Back
-  	addSharpQuad(editableMesh, v1, v5, v7, v3)  -- Left
-  	addSharpQuad(editableMesh, v2, v4, v8, v6)  -- Right
-  	addSharpQuad(editableMesh, v1, v2, v6, v5)  -- Bottom
-  	addSharpQuad(editableMesh, v3, v7, v8, v4)  -- Top
+  	addSharpQuad(editableMesh, v5, v6, v8, v7) -- Front
+  	addSharpQuad(editableMesh, v1, v3, v4, v2) -- Back
+  	addSharpQuad(editableMesh, v1, v5, v7, v3) -- Left
+  	addSharpQuad(editableMesh, v2, v4, v8, v6) -- Right
+  	addSharpQuad(editableMesh, v1, v2, v6, v5) -- Bottom
+  	addSharpQuad(editableMesh, v3, v7, v8, v4) -- Top
 
   	editableMesh:RemoveUnused()
   	return editableMesh
@@ -254,6 +253,33 @@ description: |
   Please note that corrective poses that operate on both left and right action
   units are not currently expressible. For example, using `LeftCheekPuff` and
   `RightEyeClosed` together in a corrective pose is not currently possible.
+
+  #### Batching
+
+  The **batch** methods let you create, read, update, and remove many mesh
+  elements in a single call instead of invoking the singular methods
+  (`Class.EditableMesh:AddVertex()|AddVertex()`,
+  `Class.EditableMesh:SetPosition()|SetPosition()`,
+  `Class.EditableMesh:GetColor()|GetColor()`, and so on) once per element.
+  Batching your mesh operations is typically much more performant than handling
+  them one by one.
+
+  Rather than one method per attribute, each batch method shares a small set of
+  general entry points and uses an `Enum.MeshAttribute` value (or the type
+  already encoded in each mesh ID) to determine which attribute you mean. For
+  example, `Class.EditableMesh:BatchSetValues()|BatchSetValues()` sets positions
+  when called with vertex IDs, but sets normals when called with normal IDs. You
+  cannot mix-and-match ID types within a single call.
+
+  Batch setters take parallel arrays: element `i` of every argument array
+  describes the same logical operation. In
+  `Class.EditableMesh:BatchSetValues()|BatchSetValues(ids, values)`, `values[i]`
+  is written to `ids[i]`. All argument arrays must be the same length or the
+  call errors. Batch getters take an array of IDs and return results in the same
+  order.
+
+  If a mesh ID is invalid, batching still applies updates to all elements before
+  the invalid ID, then stops.
 
   #### Limitations
 
@@ -457,8 +483,8 @@ methods:
       local fid2 = editableMesh:AddTriangle(v0, v3, v1)
 
       -- Create separate normals for each face to produce a hard edge
-      local n1 = editableMesh:AddNormal()  -- auto-computed for fid1
-      local n2 = editableMesh:AddNormal()  -- auto-computed for fid2
+      local n1 = editableMesh:AddNormal() -- Auto-computed for fid1
+      local n2 = editableMesh:AddNormal() -- Auto-computed for fid2
       editableMesh:SetFaceNormals(fid1, {n1, n1, n1})
       editableMesh:SetFaceNormals(fid2, {n2, n2, n2})
       ```
@@ -531,6 +557,368 @@ methods:
       - type: int64
         summary: |
           Stable vertex ID of the new vertex.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DynamicGeneration
+  - name: EditableMesh:BatchAdd
+    summary: |
+      Creates new mesh elements of the given attribute type and returns their
+      IDs.
+    description: |
+      Creates new mesh elements of the given attribute type and returns their
+      IDs in the same order as the input data. This method always requires an
+      explicit `Enum.MeshAttribute` because its input is raw values with no
+      existing IDs to inspect.
+
+      ```lua
+      local vIds = mesh:BatchAdd(Enum.MeshAttribute.Vertex, positions)     -- Positions: {Vector3}
+      local nIds = mesh:BatchAdd(Enum.MeshAttribute.Normal, normals)       -- Normals: {Vector3}
+      local uIds = mesh:BatchAdd(Enum.MeshAttribute.UV, uvs)               -- UVs: {Vector2}
+      local cIds = mesh:BatchAdd(Enum.MeshAttribute.Color, colors, alphas) -- Colors: {Color3}, Alphas (optional): {number}
+      local fIds = mesh:BatchAdd(Enum.MeshAttribute.Face, {
+          {vIds[1], vIds[2], vIds[3]},
+          {vIds[1], vIds[3], vIds[4]},
+      })
+      ```
+    code_samples: []
+    parameters:
+      - name: attr
+        type: MeshAttribute
+        default:
+        summary: |
+          The `Enum.MeshAttribute` type of element to create.
+      - name: data
+        type: Array
+        default:
+        summary: |
+          Values to initialize the new elements. An array of `Datatype.Vector3`
+          for `Enum.MeshAttribute|Vertex` or `Enum.MeshAttribute|Normal`; an
+          array of `Datatype.Vector2` for `Enum.MeshAttribute|UV`; an array of
+          `Datatype.Color3` followed by an optional array of alpha numbers for
+          `Enum.MeshAttribute|Color`; a 2D array of vertex-ID arrays for
+          `Enum.MeshAttribute|Face`.
+    returns:
+      - type: Array
+        summary: |
+          Ordered array of new element IDs matching the input order.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DynamicGeneration
+  - name: EditableMesh:BatchGetFaceAttributes
+    summary: |
+      Returns the per-corner attribute IDs for each face in a batch.
+    description: |
+      Returns, for each face, the array of per-corner attribute IDs.
+
+      ```lua
+      local faceNormals = mesh:BatchGetFaceAttributes(Enum.MeshAttribute.Normal, faceIds) -- {{normalId}}
+      local faceVerts = mesh:BatchGetFaceAttributes(Enum.MeshAttribute.Vertex, faceIds)   -- {{vertexId}}
+      ```
+    code_samples: []
+    parameters:
+      - name: attr
+        type: MeshAttribute
+        default:
+        summary: |
+          The attribute to retrieve for each face's corners, for example
+          `Enum.MeshAttribute.Normal`, `Enum.MeshAttribute.UV`, or
+          `Enum.MeshAttribute.Color`.
+      - name: faceIds
+        type: Array
+        default:
+        summary: |
+          Faces to query.
+    returns:
+      - type: Array
+        summary: |
+          2D array where `result[i]` is the array of attribute IDs at the
+          corners of `faceIds[i]`.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities:
+      - DynamicGeneration
+  - name: EditableMesh:BatchGetValues
+    summary: |
+      Returns attribute values for each ID in a batch.
+    description: |
+      Returns attribute values for the given IDs in the same order as the input.
+      The return type is determined by the ID type; no enum is needed.
+
+      ```lua
+      local positions = mesh:BatchGetValues(vertexIds)     -- {Vector3}
+      local normals = mesh:BatchGetValues(normalIds)       -- {Vector3}
+      local uvs = mesh:BatchGetValues(uvIds)               -- {Vector2}
+      local colors, alphas = mesh:BatchGetValues(colorIds) -- {Color3}, {number}
+      ```
+    code_samples: []
+    parameters:
+      - name: ids
+        type: Array
+        default:
+        summary: |
+          IDs of the elements to read. All must be the same type.
+    returns:
+      - type: Tuple
+        summary: |
+          A tuple of two values. The first is an array of attribute values:
+          `Datatype.Vector3` for vertex or normal IDs, `Datatype.Vector2` for UV
+          IDs, `Datatype.Color3` for color IDs. The second is `nil` for all
+          attribute types except color, where it is an array of alpha numbers.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities:
+      - DynamicGeneration
+  - name: EditableMesh:BatchGetVertexAttributes
+    summary: |
+      Returns the attribute IDs associated with each vertex in a batch.
+    description: |
+      Returns, for each vertex, the array of associated attribute IDs. For
+      example, using `Enum.MeshAttribute.Face` returns every face that
+      references each vertex.
+
+      ```lua
+      local adjFaces = mesh:BatchGetVertexAttributes(Enum.MeshAttribute.Face, vertexIds) -- {{faceId}}
+      ```
+    code_samples: []
+    parameters:
+      - name: attr
+        type: MeshAttribute
+        default:
+        summary: |
+          The attribute type to look up, for example `Enum.MeshAttribute.Face`
+          to get every face that references each vertex.
+      - name: vertexIds
+        type: Array
+        default:
+        summary: |
+          Vertices to query.
+    returns:
+      - type: Array
+        summary: |
+          2D array where `result[i]` is the array of attribute IDs associated
+          with `vertexIds[i]`.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities:
+      - DynamicGeneration
+  - name: EditableMesh:BatchGetVertexFaceAttributes
+    summary: |
+      Returns the attribute ID at each specified corner for a batch of
+      vertex–face pairs.
+    description: |
+      Returns the attribute ID at each corner specified by a vertex–face pair.
+
+      ```lua
+      local cornerColors = mesh:BatchGetVertexFaceAttributes(Enum.MeshAttribute.Color, vertexIds, faceIds)
+      ```
+    code_samples: []
+    parameters:
+      - name: attr
+        type: MeshAttribute
+        default:
+        summary: |
+          The attribute to retrieve.
+      - name: vertexIds
+        type: Array
+        default:
+        summary: |
+          Vertices that identify each corner.
+      - name: faceIds
+        type: Array
+        default:
+        summary: |
+          Faces that identify each corner.
+    returns:
+      - type: Array
+        summary: |
+          Array of attribute IDs at each corner, in the same order as the
+          inputs.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities:
+      - DynamicGeneration
+  - name: EditableMesh:BatchRemove
+    summary: |
+      Removes a batch of faces.
+    description: |
+      Removes a batch of faces.
+
+      ```lua
+      mesh:BatchRemove(faceIds)
+      ```
+    code_samples: []
+    parameters:
+      - name: faceIds
+        type: Array
+        default:
+        summary: |
+          Face IDs to remove.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DynamicGeneration
+  - name: EditableMesh:BatchSetFaceAttributes
+    summary: |
+      Sets the per-corner attribute IDs for each face in a batch.
+    description: |
+      Sets the per-corner attribute IDs for each face.
+
+      ```lua
+      -- Assign normal IDs to every corner of two faces
+      mesh:BatchSetFaceAttributes(faceIds, {
+      	{n1, n2, n3},
+      	{n4, n5, n6},
+      })
+      ```
+    code_samples: []
+    parameters:
+      - name: faceIds
+        type: Array
+        default:
+        summary: |
+          Faces to update.
+      - name: attrIdArrays
+        type: Array
+        default:
+        summary: |
+          2D array. `attrIdArrays[i]` is the list of attribute IDs for the
+          corners of `faceIds[i]`. Each inner array must have one entry per
+          corner of the face.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DynamicGeneration
+  - name: EditableMesh:BatchSetValues
+    summary: |
+      Writes attribute values to a batch of mesh element IDs.
+    description: |
+      Writes attribute values to the given IDs. `values[i]` is written to
+      `ids[i]`.
+
+      For color IDs, pass an array of `Datatype.Color3` to set the colors, or an
+      array of numbers to set the alphas. Mixing types in one call is an error.
+
+      ```lua
+      mesh:BatchSetValues(vertexIds, positions) -- Positions: {Vector3}
+      mesh:BatchSetValues(normalIds, normals)   -- Normals: {Vector3}
+      mesh:BatchSetValues(uvIds, uvs)           -- UVs: {Vector2}
+      mesh:BatchSetValues(colorIds, colors)     -- Colors: {Color3}
+      mesh:BatchSetValues(colorIds, alphas)     -- Alphas: {number}
+      mesh:BatchSetValues(normalIds, nil)       -- Resets each normal to auto-computed
+      ```
+    code_samples: []
+    parameters:
+      - name: ids
+        type: Array
+        default:
+        summary: |
+          IDs of the elements to write. All must be the same type.
+      - name: values
+        type: Array
+        default:
+        summary: |
+          Values to assign. Type depends on the ID type: `Datatype.Vector3` for
+          vertex or normal IDs, `Datatype.Vector2` for UV IDs, `Datatype.Color3`
+          or a number for color IDs. Pass `nil` for normal IDs to reset each
+          normal to auto-computed values, equivalent to calling
+          `Class.EditableMesh:ResetNormal()|ResetNormal()` on each.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DynamicGeneration
+  - name: EditableMesh:BatchSetVertexFaceAttributes
+    summary: |
+      Sets the attribute at a specific corner for each vertex–face pair in a
+      batch.
+    description: |
+      Sets the attribute at a specific corner — identified by a vertex–face pair
+      — for each element in the batch. For each index `i`, the attribute at
+      corner `(vertexIds[i], faceIds[i])` is set to `attrIds[i]`.
+
+      ```lua
+      mesh:BatchSetVertexFaceAttributes(vertexIds, faceIds, colorIds)
+      ```
+    code_samples: []
+    parameters:
+      - name: vertexIds
+        type: Array
+        default:
+        summary: |
+          Vertices that identify each corner.
+      - name: faceIds
+        type: Array
+        default:
+        summary: |
+          Faces that identify each corner.
+      - name: attrIds
+        type: Array
+        default:
+        summary: |
+          Attribute IDs to assign.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DynamicGeneration
+  - name: EditableMesh:Clear
+    summary: |
+      Clears all of an EditableMesh's geometry.
+    description: |
+      Removes all vertex data (including positions, normals, UV coordinates, and
+      colors), faces, bones, and FACS data without destroying the
+      `Class.EditableMesh` or its allocated space.
+
+      This method cannot be called on a fixed-size mesh (where
+      `Class.EditableMesh.FixedSize|FixedSize` is `true`). Attempting to do so
+      throws an error because fixed-size meshes do not allow adding or removing
+      elements.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None

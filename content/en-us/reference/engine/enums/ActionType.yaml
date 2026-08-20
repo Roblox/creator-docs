@@ -4,34 +4,44 @@
 
 name: ActionType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the outcome of a game action, such as winning, losing, or drawing.
+description: |
+  Legacy enum historically used with the player-points and badge-award system to
+  classify game results. No current engine API property or method accepts or
+  returns this enum; it remains in the Luau reflection system for backward
+  compatibility.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Nothing
-    summary: ''
+    summary: |
+      No specific game action occurred.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Pause
-    summary: ''
+    summary: |
+      The game or round was paused.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Lose
-    summary: ''
+    summary: |
+      The player lost the game or round.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Draw
-    summary: ''
+    summary: |
+      The game or round ended in a draw with no winner.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Win
-    summary: ''
+    summary: |
+      The player won the game or round.
     value: 4
     tags: []
     deprecation_message: ''

@@ -9,10 +9,10 @@ This tool is no longer in active development. You are free to use the tool for a
 
 The **Calisthenics Tool** is a supplemental [Blender](https://www.blender.org/) add-on that allows you to quickly test your asset through a set of animation cycles to verify your skinning data. At any point during the animation testing, you can pause and use Blender's skinning Tools, such as [Weight Painting brushes](https://docs.blender.org/manual/en/latest/sculpt_paint/weight_paint/introduction.html), to resolve any skinning imperfections.
 
-Skinning your clothing and characters is a critical and often time-intensive process to create high quality assets that move and fit with different character bodies. Similar to the [Layered Clothing Validation Tool](../../art/accessories/validation-tool.md), the Calisthenics Tool can save you time when testing your character models after rigging and skinning.
+Skinning your layered accessories and character bodies is a critical and often time-intensive process to create high quality assets that move and fit with different character bodies. Similar to the [Layered Accessory Validation Tool](../../art/accessories/validation-tool.md), the Calisthenics Tool can save you time when testing your character models after rigging and skinning.
 
 <Alert severity = 'info'>
-The Calisthenics Tool doesn't provide complete verification of all potential skinning issues. You must also ensure that your custom models meet Studio's [avatar character specifications](../../avatar/character-bodies/specifications.md) and any applicable [layered clothing specifications](../../avatar/layered-accessories/specifications.md) for the best results in your game.
+The Calisthenics Tool doesn't provide complete verification of all potential skinning issues. You must also ensure that your custom models meet Studio's [character body specifications](../../avatar/character-bodies/specifications.md) and any applicable [layered accessory specifications](../../avatar/layered-accessories/specifications.md) for the best results in your game.
 </Alert>
 
 <GridContainer numColumns="3">
@@ -65,9 +65,9 @@ To install the Calisthenics Tool in Blender:
 
 ## Use the Calisthenics Tool
 
-After installation, you can use the Calisthenics Tool whenever you want to test an R15 character rig with skinning data. With the Calisthenics Tool, you can check how a character would move with generic animations, as well as attach rigid reference accessories to verify attachment during these movements. The tool also includes an option to automatically export your character, removing reference animation and accessory data.
+After installation, you can use the Calisthenics Tool whenever you want to test a [standard](../../avatar/character-bodies/specifications.md#standard-rigs) rigging armature with skinning data. With the Calisthenics Tool, you can check how a character body would move with generic animations, as well as attach reference rigid accessories to verify attachment during these movements. The tool also includes an option to automatically export your character, removing reference animation and accessory data.
 
-You can try out the Calisthenics Tool using an [example character model](../../assets/modeling/skinned-meshes/calisthenic-tool/Fish-Character-No-FACS.fbx).
+You can try out the Calisthenics Tool using an [example character body model](../../assets/modeling/skinned-meshes/calisthenic-tool/Fish-Character-No-FACS.fbx).
 
 <Alert severity = 'info'>
 For demonstration purposes, this reference model doesn't contain FACS data. If you require a reference with facial animation, you can download the same model with FACS data from our [reference models](../../avatar/character-bodies/specifications.md#reference-files).
@@ -75,7 +75,7 @@ For demonstration purposes, this reference model doesn't contain FACS data. If y
 
 ### Test animations
 
-When testing your character model, first set the armature in the Calisthenics Tool then select one of the reference animations. It is important to visually verify your skinning quality using various movements and angles to ensure the best results for your model.
+When testing your character body model, first set the armature in the Calisthenics Tool then select one of the reference animations. It is important to visually verify your skinning quality using various movements and angles to ensure the best results for your model.
 
 <Alert severity ='warning'>
 If you encounter any errors or warnings when setting armature or playing animations, verify that your model uses an appropriate bone hierarchy and naming convention outlined in Roblox's [custom mesh requirements](../../avatar/character-bodies/specifications.md).
@@ -83,7 +83,7 @@ If you encounter any errors or warnings when setting armature or playing animati
 
 To test animations:
 
-1. Open a Blender project with an existing R15 character model, or import an appropriate character model `.fbx` using **File** > **Import** > **FBX (.fbx)**.
+1. Open a Blender project with an existing character body with a [standard](../../avatar/character-bodies/specifications.md#standard-rigs) rigging armature, or import an appropriate character model `.fbx` using **File** > **Import** > **FBX (.fbx)**.
 
 2. For easier visualization, hide non-rendered mesh objects, such as armature, cages, and attachments to better preview the reference animations.
 
@@ -101,7 +101,7 @@ To test animations:
 
 ### Test accessory attachments
 
-You can add reference attachments to your character model using the **Attach Test Accessory** buttons. These test accessories help preview how rigid accessories attach to your character and how they can move with your model. The tool includes two sets of rigid accessories to apply to your character.
+You can add reference attachments to your character body model using the **Attach Test Accessory** buttons. These test accessories help preview how rigid accessories attach to your character and how they can move with your model. The tool includes two sets of rigid accessories to apply to your character.
 
 <GridContainer numColumns ="2">
   <figure>
@@ -117,14 +117,14 @@ You can add reference attachments to your character model using the **Attach Tes
 To test accessories:
 
 1. Use the following **Attach Test Accessory** buttons to add or remove sample accessories to your character's attachment points:
-   - **Normal Size**: Adds normal scale test accessories.
-   - **Slender Size**: Adds slender scale test accessories.
-   - **Detach Test Accessories**: Removes any test accessories from your character.
-2. If an accessory is not attaching at an expected location, reposition the associated **Attachment object** in your character rig.
+   - **Normal Size** - Adds normal scale test accessories.
+   - **Slender Size** - Adds slender scale test accessories.
+   - **Detach Test Accessories** - Removes any test accessories from your character.
+2. If an accessory is not attaching at an expected location, reposition the associated **Attachment object** in your character's rigging armature.
 
 ### Export models
 
-When you are ready to export your model, you can export your character directly through the Calisthenics Tool. The tool automatically clears any of the test data and applies appropriate export settings.
+When you are ready to export your model, you can export your character body directly through the Calisthenics Tool. The tool automatically clears any of the test data and applies appropriate export settings.
 
 <Alert severity = 'info'>
 Using this tool to export models with [facial animations](../../avatar/dynamic-heads/index.md) may result in unexpected behavior because the stored FACS data can conflict with the tool's reference animations.

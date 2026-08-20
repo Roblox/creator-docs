@@ -14,8 +14,9 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Instance.new
-    summary: Returns an `Class.Instance` of the specified class.
-    description: |-
+    summary: |
+      Returns an `Class.Instance` of the specified class.
+    description: |
       Creates a new `Class.Instance` of type `className`. Abstract classes and
       services cannot be created with this constructor.
 
@@ -42,19 +43,22 @@ constructors:
       - name: className
         type: string
         default:
-        summary: Class name of the new instance to create.
+        summary: |
+          Class name of the new instance to create.
       - name: parent
         type: Instance?
         default:
-        summary: Optional object to parent the new instance to. Not recommended for performance reasons (see description above).
+        summary: |
+          Optional object to parent the new instance to. Not recommended for
+          performance reasons (see description above).
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Instance.fromExisting
-    summary: |-
+    summary: |
       Returns an `Class.Instance` which is a copy of an existing
       `Class.Instance`.
-    description: |-
+    description: |
       Creates a new object with the same type and property values as an existing
       object. In most cases using `Class.Instance:Clone()` is more appropriate,
       but this constructor is useful when implementing low‑level libraries or
@@ -63,14 +67,17 @@ constructors:
       There are two behavioral differences between this constructor and the
       `Class.Instance:Clone()` method:
 
-      - This constructor will not copy any of the descendant `Class.Instance|Instances` parented to the existing object.
+      - This constructor will not copy any of the descendant
+        `Class.Instance|Instances` parented to the existing object.
 
-      - This constructor will return a new object even if the existing object had `Class.Instance.Archivable` set to `false`.
+      - This constructor will return a new object even if the existing object
+        had `Class.Instance.Archivable` set to `false`.
     parameters:
       - name: existingInstance
         type: Instance
         default:
-        summary: The existing `Class.Instance` to copy property values from.
+        summary: |
+          The existing `Class.Instance` to copy property values from.
     code_samples: []
     tags: []
     deprecation_message: ''

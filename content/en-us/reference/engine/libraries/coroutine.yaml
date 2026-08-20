@@ -174,7 +174,8 @@ functions:
       - name: co
         type: thread
         default:
-        summary: ''
+        summary: |
+          The coroutine thread to close.
     returns:
       - type: bool
         summary: |
@@ -189,15 +190,21 @@ functions:
     summary: |
       Creates a new coroutine, with body f. f must be a Luau function.
     description: |
-      Creates a new coroutine, with body f. f must be a Luau function.
+      Creates a new coroutine with body `f`, which must be a Luau function, and
+      returns it as a `thread`. The returned coroutine starts in the `suspended`
+      state and does not begin executing until `Library.coroutine.resume()` is
+      called on it. The arguments passed to the first
+      `Library.coroutine.resume()` call are forwarded as the arguments to `f`.
     parameters:
       - name: f
         type: function
         default:
-        summary: ''
+        summary: |
+          The Luau function to use as the coroutine body.
     returns:
       - type: thread
-        summary: ''
+        summary: |
+          A new coroutine in the suspended state, ready to be resumed.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -233,16 +240,24 @@ functions:
       - name: co
         type: thread
         default:
-        summary: ''
+        summary: |
+          The coroutine thread to resume.
       - name: ...
         type: Variant
         default:
-        summary: ''
+        summary: |
+          Arguments passed to the coroutine body function (on first resume) or
+          returned from `coroutine.yield()` inside the coroutine (on subsequent
+          resumes).
     returns:
       - type: bool
-        summary: ''
+        summary: |
+          `true` if the coroutine ran without errors, `false` if an error
+          occurred.
       - type: Variant<Tuple, string>
-        summary: ''
+        summary: |
+          The values passed to `coroutine.yield()` or returned by the body
+          function on success, or the error message on failure.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -250,11 +265,16 @@ functions:
     summary: |
       Returns the running coroutine.
     description: |
-      Returns the running coroutine.
+      Returns the currently running coroutine as a `thread` value, or `nil` if
+      called from the main thread. The main thread is not considered a
+      coroutine, so only threads created by `Library.coroutine.create()` or
+      `Library.coroutine.wrap()` are returned by this function.
     parameters: []
     returns:
       - type: thread
-        summary: ''
+        summary: |
+          The currently running coroutine, or `nil` if called from the main
+          thread.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -272,10 +292,12 @@ functions:
       - name: co
         type: thread
         default:
-        summary: ''
+        summary: |
+          The coroutine thread to query.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          One of `"running"`, `"suspended"`, `"normal"`, or `"dead"`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -293,10 +315,14 @@ functions:
       - name: f
         type: function
         default:
-        summary: ''
+        summary: |
+          The Luau function to use as the coroutine body.
     returns:
       - type: function
-        summary: ''
+        summary: |
+          A wrapper function that resumes the coroutine each time it is called,
+          returning the yielded or returned values directly (without the boolean
+          status). Raises an error if the coroutine errors.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -312,10 +338,14 @@ functions:
       - name: ...
         type: Tuple
         default:
-        summary: ''
+        summary: |
+          Values to return as additional results from the corresponding
+          `coroutine.resume()` call.
     returns:
       - type: Tuple<Variant>
-        summary: ''
+        summary: |
+          The arguments passed to the next `coroutine.resume()` call that
+          continues this coroutine.
     tags: []
     code_samples: []
     deprecation_message: ''

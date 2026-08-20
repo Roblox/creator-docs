@@ -40,7 +40,9 @@ methods:
     parameters: []
     returns:
       - type: EditableMesh
-        summary: ''
+        summary: |
+          An `Class.EditableMesh` matching the deformed parent mesh geometry,
+          with its `Class.EditableMesh.FixedSize|FixedSize` set to `true`.
     tags:
       - Yields
     deprecation_message: ''
@@ -65,10 +67,15 @@ methods:
       - name: originalCFrame
         type: CFrame
         default:
-        summary: ''
+        summary: |
+          The `Datatype.CFrame`, expressed in the local space of the parent
+          `Class.MeshPart`, whose position is deformed.
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          A `Datatype.CFrame` in the parent `Class.MeshPart` space with its
+          position displaced by the same deformation field applied to the parent
+          mesh; rotation is unchanged.
     tags:
       - Yields
     deprecation_message: ''
@@ -90,11 +97,17 @@ methods:
       - name: content
         type: Content
         default:
-        summary: ''
+        summary: |
+          A Roblox mesh asset ID or an `Class.EditableMesh` reference specifying
+          the cage mesh to deform against the sibling `Class.WrapTarget`.
       - name: cageOrigin
         type: CFrame?
         default:
-        summary: ''
+        summary: |
+          An optional `Datatype.CFrame`, in the parent `Class.MeshPart` space,
+          that sets the cage's `Class.BaseWrap.CageOrigin|CageOrigin`. When
+          omitted, the existing `Class.BaseWrap.CageOrigin|CageOrigin` is left
+          unchanged.
     returns:
       - type: ()
         summary: ''

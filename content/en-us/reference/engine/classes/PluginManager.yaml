@@ -5,7 +5,8 @@
 name: PluginManager
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A deprecated singleton that was previously required to create plugins.
 description: |
   `PluginManager` is a deprecated singleton that was previously required to
   create plugins. It still has some applicable uses, such as if you need to
@@ -21,13 +22,21 @@ deprecation_message: ''
 properties: []
 methods:
   - name: PluginManager:CreatePlugin
-    summary: ''
-    description: ''
+    summary: |
+      Creates a new `Class.Plugin` object and returns it.
+    description: |
+      Creates a new `Class.Plugin` object and returns it.
+
+      Creating plugins this way is deprecated; see `Class.Plugin` for the
+      current process. `CreatePlugin` still has limited uses, such as creating a
+      `Class.Plugin` from Studio's
+      [Command Bar](../../../studio/ui-overview.md#command-bar).
     code_samples: []
     parameters: []
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          The newly created `Class.Plugin`.
     tags:
       - Deprecated
       - CustomLuaState
@@ -50,7 +59,8 @@ methods:
       - name: filePath
         type: string
         default:
-        summary: ''
+        summary: |
+          Ignored. A file save dialogue determines the export path.
     returns:
       - type: ()
         summary: ''
@@ -72,7 +82,8 @@ methods:
       - name: filePath
         type: string
         default:
-        summary: ''
+        summary: |
+          Ignored. A file save dialogue determines the export path.
     returns:
       - type: ()
         summary: ''

@@ -4,19 +4,26 @@
 
 name: DraggerCoordinateSpace
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines the coordinate space used when dragging objects in Studio.
+description: |
+  Determines the coordinate space in which the Studio dragger moves and orients
+  selected objects. Used as the type of the
+  `Class.DraggerService.DraggerCoordinateSpace` property, which defaults to
+  `Enum.DraggerCoordinateSpace.Object`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Object
-    summary: ''
+    summary: |
+      Dragging is performed relative to the object's local coordinate space.
     value: 0
     tags: []
     deprecation_message: ''
   - name: World
-    summary: ''
+    summary: |
+      Dragging is performed relative to the world coordinate space.
     value: 1
     tags: []
     deprecation_message: ''

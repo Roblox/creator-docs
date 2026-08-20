@@ -4,59 +4,76 @@
 
 name: PromptCreateAssetResult
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the result of an `Class.AssetService:PromptCreateAssetAsync()` call.
+description: |
+  Outcome of `Class.AssetService:PromptCreateAssetAsync()` after a player
+  responds to the in-experience asset-creation prompt. Distinguishes a
+  successful publish from failure modes such as moderation rejection, declined
+  consent, insufficient Robux, validation failure, or upload errors.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Success
-    summary: ''
+    summary: |
+      The asset was successfully created and published.
     value: 1
     tags: []
     deprecation_message: ''
   - name: PermissionDenied
-    summary: ''
+    summary: |
+      The player explicitly declined the asset-creation consent prompt.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Timeout
-    summary: ''
+    summary: |
+      The creation attempt timed out because the player disconnected or left the
+      experience.
     value: 3
     tags: []
     deprecation_message: ''
   - name: UploadFailed
-    summary: ''
+    summary: |
+      The asset upload to the Roblox backend failed after validation.
     value: 4
     tags: []
     deprecation_message: ''
   - name: NoUserInput
-    summary: ''
+    summary: |
+      The player did not interact with the creation prompt before it expired.
     value: 5
     tags: []
     deprecation_message: ''
   - name: UnknownFailure
-    summary: ''
+    summary: |
+      The asset creation failed for an unspecified or unexpected reason.
     value: 6
     tags: []
     deprecation_message: ''
   - name: UGCValidationFailed
-    summary: ''
+    summary: |
+      The asset failed user-generated content validation checks before upload.
     value: 7
     tags: []
     deprecation_message: ''
   - name: ModeratedName
-    summary: ''
+    summary: |
+      The asset name or description was rejected by Roblox moderation.
     value: 8
     tags: []
     deprecation_message: ''
   - name: PurchaseFailure
-    summary: ''
+    summary: |
+      The asset could not be created because the player had insufficient Robux.
     value: 9
     tags: []
     deprecation_message: ''
   - name: TokenInvalid
-    summary: ''
+    summary: |
+      The creation token provided to the prompt was invalid or could not be
+      verified.
     value: 10
     tags: []
     deprecation_message: ''

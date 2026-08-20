@@ -5,8 +5,18 @@
 name: ConfigureServerService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Configures a server's `Class.DataModel` for a place session during game-server
+  startup.
+description: |
+  Internal-only service; not accessible from scripts and exposes no scriptable
+  properties, methods, events, or callbacks. Configures a `Class.DataModel` for
+  a place session and starts it running on the game server. During server
+  startup it applies incoming join settings (place and universe identifiers,
+  matchmaking context, players, localization, voice and avatar-chat options, and
+  similar values), then either starts the `Class.RunService` so simulation and
+  scripts begin, or loads the place without running it for editing and other
+  non-play sessions.
 code_samples: []
 inherits:
   - Instance

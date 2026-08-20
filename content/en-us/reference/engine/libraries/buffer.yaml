@@ -64,7 +64,8 @@ functions:
       - name: str
         type: string
         default:
-        summary: ''
+        summary: |
+          The string whose bytes initialize the new buffer.
     returns:
       - type: buffer
         summary: ''
@@ -80,7 +81,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to convert.
     returns:
       - type: string
         summary: ''
@@ -96,7 +98,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to get the size of.
     returns:
       - type: number
         summary: ''
@@ -128,7 +131,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to read from.
       - name: bitOffset
         type: number
         default:
@@ -156,7 +160,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to read from.
       - name: offset
         type: number
         default:
@@ -178,7 +183,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to read from.
       - name: offset
         type: number
         default:
@@ -200,7 +206,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to read from.
       - name: offset
         type: number
         default:
@@ -222,7 +229,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to read from.
       - name: offset
         type: number
         default:
@@ -244,7 +252,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to read from.
       - name: offset
         type: number
         default:
@@ -266,7 +275,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to read from.
       - name: offset
         type: number
         default:
@@ -291,7 +301,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to read from.
       - name: offset
         type: number
         default:
@@ -316,7 +327,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to read from.
       - name: offset
         type: number
         default:
@@ -346,7 +358,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to write to.
       - name: bitOffset
         type: number
         default:
@@ -380,7 +393,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to write to.
       - name: offset
         type: number
         default:
@@ -407,7 +421,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to write to.
       - name: offset
         type: number
         default:
@@ -434,7 +449,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to write to.
       - name: offset
         type: number
         default:
@@ -461,7 +477,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to write to.
       - name: offset
         type: number
         default:
@@ -488,7 +505,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to write to.
       - name: offset
         type: number
         default:
@@ -515,7 +533,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to write to.
       - name: offset
         type: number
         default:
@@ -542,7 +561,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to write to.
       - name: offset
         type: number
         default:
@@ -569,7 +589,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to write to.
       - name: offset
         type: number
         default:
@@ -596,7 +617,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to read from.
       - name: offset
         type: number
         default:
@@ -624,7 +646,8 @@ functions:
       - name: b
         type: buffer
         default:
-        summary: ''
+        summary: |
+          The buffer to write to.
       - name: offset
         type: number
         default:

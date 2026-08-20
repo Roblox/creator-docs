@@ -1,6 +1,10 @@
 ---
 title: Layered accessories
 description: Layered accessories are 3D assets that stretch, fit, and layer over any character body type.
+keywords:
+  - Layered clothing
+  - Layerable accessories
+  - Layered clothing accessories
 ---
 
 <Grid container spacing={2} style={{ marginBottom: 24, width: '100%' }}>

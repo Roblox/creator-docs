@@ -5,7 +5,9 @@
 name: Weld
 type: class
 memory_category: BaseParts
-summary: ''
+summary: |
+  Holds two `Class.BasePart|BaseParts` together in a fixed relative position,
+  regardless of whether they're touching.
 description: |
   An object used to hold two objects together in a relative position, regardless
   of whether they're touching. This object is placed inside of a

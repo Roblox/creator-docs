@@ -5,8 +5,16 @@
 name: VideoCaptureService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Service that manages camera capture for features such as avatar
+  facial-animation tracking. Requires `RobloxScript` security; not callable from
+  experience scripts.
+description: |
+  `Class.VideoCaptureService` manages camera capture, for example for avatar
+  facial-animation tracking. It enumerates the available camera devices,
+  resolves and applies the requested device, and reports capture state through
+  its events. All of its members require `RobloxScript` security; not callable
+  from experience scripts.
 code_samples: []
 inherits:
   - Instance

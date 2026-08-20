@@ -31,10 +31,13 @@ methods:
       - name: func
         type: function
         default:
-        summary: ''
+        summary: |
+          The callback function to invoke each time the event fires.
     returns:
       - type: RBXScriptConnection
-        summary: ''
+        summary: |
+          A connection object that can be used to disconnect the listener from
+          the event.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -55,10 +58,14 @@ methods:
       - name: func
         type: function
         default:
-        summary: ''
+        summary: |
+          The callback function to invoke when the event fires in a parallel
+          execution context.
     returns:
       - type: RBXScriptConnection
-        summary: ''
+        summary: |
+          A connection object that can be used to disconnect the listener from
+          the event.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -78,10 +85,14 @@ methods:
       - name: func
         type: function
         default:
-        summary: ''
+        summary: |
+          The callback function to invoke the next time the event fires, after
+          which it is automatically disconnected.
     returns:
       - type: RBXScriptConnection
-        summary: ''
+        summary: |
+          A connection object that can be used to disconnect the listener before
+          it fires.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -95,7 +106,8 @@ methods:
     parameters: []
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The arguments passed by the signal when it fires.
     code_samples: []
     tags: []
     deprecation_message: ''

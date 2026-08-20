@@ -5,8 +5,19 @@
 name: SurfaceGuiBase
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Base class for containers that render `Class.GuiObject|GuiObjects` onto a face
+  of a `Class.BasePart` in the 3D world.
+description: |
+  `Class.SurfaceGuiBase` is the `Class.LayerCollector` base class for containers
+  that render their `Class.GuiObject` descendants onto a face of a
+  `Class.BasePart` in the 3D world. `Class.SurfaceGui` and `Class.AdGui` inherit
+  from it.
+
+  The target part is set through the `Class.SurfaceGuiBase.Adornee|Adornee`
+  property; if no adornee is specified, the container renders on its parent when
+  that parent is a `Class.BasePart`. The `Class.SurfaceGuiBase.Face|Face`
+  property selects which surface of the part the UI is projected onto.
 code_samples: []
 inherits:
   - LayerCollector
@@ -18,7 +29,9 @@ tags:
 deprecation_message: ''
 properties:
   - name: SurfaceGuiBase.Active
-    summary: ''
+    summary: |
+      Determines whether the `Class.SurfaceGui` sinks user input; `true` by
+      default.
     description: |
       This property determines whether the `Class.SurfaceGui` will sink input,
       for example if the parent or `Class.SurfaceGuiBase.Adornee|Adornee` part

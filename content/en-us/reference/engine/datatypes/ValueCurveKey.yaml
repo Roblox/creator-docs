@@ -28,22 +28,25 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: ValueCurveKey.new
-    summary: Returns a new `Datatype.ValueCurveKey` from the given time and value.
-    description: |-
+    summary: |
+      Returns a new `Datatype.ValueCurveKey` from the given time and value.
+    description: |
       Creates a new `Datatype.ValueCurveKey` at a given time and value.
       `Datatype.ValueCurveKey.LeftTangent|LeftTangent` and
       `Datatype.ValueCurveKey.RightTangent|RightTangent` are left uninitialized
-      and, if not initialized, tangent values of '0' will be used when evaluating
-      the curve.
+      and, if not initialized, tangent values of '0' will be used when
+      evaluating the curve.
     parameters:
       - name: time
         type: number
         default:
-        summary: Time at which to create the new `Datatype.ValueCurveKey`.
+        summary: |
+          Time at which to create the new `Datatype.ValueCurveKey`.
       - name: value
         type: any
         default:
-        summary: Value of the new `Datatype.ValueCurveKey`.
+        summary: |
+          Value of the new `Datatype.ValueCurveKey`.
       - name: Interpolation
         type: KeyInterpolationMode
         default:

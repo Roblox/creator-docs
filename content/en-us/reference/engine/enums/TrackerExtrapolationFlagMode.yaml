@@ -4,29 +4,44 @@
 
 name: TrackerExtrapolationFlagMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how the face-tracking pipeline extrapolates animation data between
+  camera frames on the `TrackerLodController`.
+description: |
+  Controls how the face-tracking pipeline extrapolates animation data between
+  camera frames. This mode is set via `VideoExtrapolationMode` on
+  `TrackerLodController` and determines whether the tracker infers intermediate
+  facial poses and FACS (Facial Action Coding System) blend-shape values when
+  the camera delivers frames at a lower rate than the animation update rate.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: ForceDisabled
-    summary: ''
+    summary: |
+      Disables all extrapolation so that facial animation updates only when a
+      new camera frame is processed.
     value: 0
     tags: []
     deprecation_message: ''
   - name: ExtrapolateFacsAndPose
-    summary: ''
+    summary: |
+      Extrapolates both FACS blend-shape values and head-pose data between
+      camera frames.
     value: 1
     tags: []
     deprecation_message: ''
   - name: ExtrapolateFacsOnly
-    summary: ''
+    summary: |
+      Extrapolates only FACS blend-shape values between camera frames, leaving
+      head-pose data unchanged.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Auto
-    summary: ''
+    summary: |
+      Lets the `TrackerLodController` automatically select the extrapolation
+      strategy based on current performance conditions.
     value: 3
     tags: []
     deprecation_message: ''

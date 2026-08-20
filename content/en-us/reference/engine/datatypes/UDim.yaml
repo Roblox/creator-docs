@@ -15,8 +15,10 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: UDim.new
-    summary: Returns a `Datatype.UDim` from the given components.
-    description: Returns a `Datatype.UDim` from the given components.
+    summary: |
+      Returns a `Datatype.UDim` from the given components.
+    description: |
+      Returns a `Datatype.UDim` from the given components.
     parameters:
       - name: Scale
         type: number

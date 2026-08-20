@@ -4,19 +4,28 @@
 
 name: ConfigSnapshotErrorState
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the error state of a `Class.ConfigSnapshot` object.
+description: |
+  Indicates whether a `Class.ConfigSnapshot` loaded its configuration data
+  successfully. Read the `Class.ConfigSnapshot.Error` property (which defaults
+  to `Enum.ConfigSnapshotErrorState.None`) to check for errors before calling
+  `Class.ConfigSnapshot:GetValue()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      Indicates the snapshot loaded successfully with no error; this is the
+      default state.
     value: 0
     tags: []
     deprecation_message: ''
   - name: LoadFailed
-    summary: ''
+    summary: |
+      Indicates the snapshot failed to load because the underlying config
+      service was unavailable at construction time.
     value: 1
     tags: []
     deprecation_message: ''

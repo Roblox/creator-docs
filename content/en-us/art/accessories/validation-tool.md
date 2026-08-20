@@ -1,9 +1,13 @@
 ---
-title: Clothing Validation Tool
-description: The Layered Clothing Validation Tool checks for common clothing creation issues in Blender or Maya before exporting.
+title: Layered Accessory Validation Tool
+description: The Layered Accessory Validation Tool checks for common layered accessory creation issues in Blender or Maya before exporting.
+keywords:
+  - Layered clothing
+  - Layerable accessories
+  - Layered clothing accessories
 ---
 
-The **Layered Clothing Validation Tool** is a supplemental tool you can install in either [Blender](https://www.blender.org/download/releases/3-0/) or [Maya](https://www.autodesk.com/products/maya/overview) to help quickly identify and fix common issues with layered clothing assets before you export them.
+The **Layered Accessory Validation Tool** is a supplemental tool you can install in either [Blender](https://www.blender.org/download/releases/3-0/) or [Maya](https://www.autodesk.com/products/maya/overview) to help quickly identify and fix common issues with layered accessories before you [export](../../avatar/layered-accessories/export.md) them.
 
 <GridContainer numColumns="2">
   <figure>
@@ -16,19 +20,19 @@ The **Layered Clothing Validation Tool** is a supplemental tool you can install 
   </figure>
 </GridContainer>
 
-While this tool can save you time in the typical iteration process between your 3D modeling program and Studio, the tool doesn't provide comprehensive verification of all aspects of layered clothing assets. You must ensure your layered clothing model meets both the [general mesh requirements](../../art/modeling/specifications.md) and Roblox-specific [layered clothing requirements](../../avatar/layered-accessories/specifications.md) prior to importing it into Studio.
+While this tool can save you time in the typical iteration process between your 3D modeling program and Studio, the tool doesn't provide comprehensive verification of all aspects of layered accessory assets. You must ensure your layered accessory model meets both the [general mesh requirements](../../art/modeling/specifications.md) and Roblox-specific [layered accessory specifications](../../avatar/layered-accessories/specifications.md) prior to importing it into Studio.
 
-## Install the Clothing Validation Tool
+## Install the tool
 
 There are two separate installation files and instructions for Blender and Maya.
 
 <Alert severity="info">
-The Layered Clothing Validation Tool is designed for both [Blender 3.0](https://www.blender.org/download/releases/3-0/) and [Maya 2022](https://www.autodesk.com/products/maya/overview). You can download and modify the tool for any use.
+The Layered Accessory Validation Tool is designed for both [Blender 3.0](https://www.blender.org/download/releases/3-0/) and [Maya 2022](https://www.autodesk.com/products/maya/overview). You can download and modify the tool for any use.
 </Alert>
 
 ### Blender
 
-To install the Clothing Validation Tool in Blender:
+To install the Layered Accessory Validation Tool in Blender:
 
 1. Download [ValidationTool_Blender.zip](../../assets/accessories/validation-tool/ValidationTool_Blender.zip) and save the `.zip` file locally.
 2. In Blender, navigate to **Edit** > **Preferences**.
@@ -57,26 +61,26 @@ To install the Clothing Validation Tool in Blender:
 
 ### Maya
 
-Before you begin the process of installing the Validation Tool in Maya, you must install [Python 3.0](https://www.python.org/downloads/) or higher. If you already have Python installed, you can proceed to installing the Validation Tool.
+Before you begin the process of installing the Layered Accessory Validation Tool in Maya, you must install [Python 3.0](https://www.python.org/downloads/) or higher. If you already have Python installed, you can proceed to installing the tool.
 
-To install Python 3.0+ on your device:
+To install the Layered Accessory Validation Tool in Maya:
 
-1. Download the appropriate installer from the official [Python website](https://www.python.org/downloads/).
-2. Open the installer and follow the installation instructions.
+1. Install Python 3.0+ on your device.
 
-   - Enable **Add Python ### to PATH** before selecting **Install Now**.
+   1. Download the appropriate installer from the official [Python website](https://www.python.org/downloads/).
+   1. Open the installer and follow the installation instructions.
 
-     <img src="../../assets/accessories/validation-tool/Maya-Install-Python-Settings.png" width="60%" />
+      - Enable **Add Python ### to PATH** before selecting **Install Now**.
 
-To install the Clothing Validation Tool in Maya:
+   <img src="../../assets/accessories/validation-tool/Maya-Install-Python-Settings.png" width="60%" />
 
 1. Download [ValidationTool_Maya.zip](../../assets/accessories/validation-tool/ValidationTool_Maya.zip) and unzip the content in a local directory.
-2. Open the contents of the `.zip` file in a file browser.
+1. Open the contents of the `.zip` file in a file browser.
 
    - If on Windows, **double-click** `install.bat`. This runs a batch script that enables you to quickly run the Validation Tool in Maya.
    - If on Mac, **right-click** the `install.command` file and select **Open With** > **Terminal**. This runs a terminal script that enables you to quickly run the Validation Tool in Maya.
 
-     <img src="../../assets/accessories/validation-tool/Mac-Right-Click-Install.png" width="40%" />
+   <img src="../../assets/accessories/validation-tool/Mac-Right-Click-Install.png" width="40%" />
 
    <Alert severity="warning">
    If on Mac, you may need to adjust the read/write permissions for the `install.command` file to run successfully. This step requires administrator access.
@@ -84,19 +88,19 @@ To install the Clothing Validation Tool in Maya:
    To allow the `install.command` file to have full read and write access:
 
    1. Open **terminal** and use the `cd` command to navigate to the directory of the saved `install.command` file.
-   2. Type the command `chmod 777 install.command` and press **Enter**. This should enable all read and write privileges for this file.
+   1. Type the command `chmod 777 install.command` and press **Enter**. This should enable all read and write privileges for this file.
 
    </Alert>
 
-3. When prompted, type your Maya version and press **Enter**. For example, if using Maya 2020, input **2020** as your version.
+1. When prompted, type your Maya version and press **Enter**. For example, if using Maya 2020, input **2020** as your version.
    <img src="../../assets/accessories/validation-tool/Maya-Install-Prompt-1.png" width="70%" />
 
-4. When installation is successful, the following message displays:
+1. When installation is successful, the following message displays:
    <img src="../../assets/accessories/validation-tool/Maya-Command-Prompt-Success.png" width="60%" />
 
-5. Open Maya and navigate to **Windows** > **General Editors** > **Script Editor**.
+1. Open Maya and navigate to **Windows** > **General Editors** > **Script Editor**.
    <img src="../../assets/accessories/validation-tool/Maya-Script-Editor-Menu.png" width="60%" />
-6. When using the plugin for the first time, in the Script Editor, type `import ValidationTool` then press the **Play** button in the top bar of the Script Editor. The plugin UI displays.
+1. When using the plugin for the first time, in the Script Editor, type `import ValidationTool` then press the **Play** button in the top bar of the Script Editor. The plugin UI displays.
    <img src="../../assets/accessories/validation-tool/Maya-Script-Editor.png" width="60%" />
 
    - When using the plugin after the initial launch, launch the plugin by typing `ValidationTool.validationTool()` and clicking the **Play** button.
@@ -106,7 +110,7 @@ To install the Clothing Validation Tool in Maya:
 
 ## Validate assets
 
-With the plugin active and a layered asset in your workspace, you can begin validating content. After the check, results with issues change to **red** (Blender) or **yellow** (Maya). You can resolve some failed checks by clicking the check button. See [Checks and Troubleshooting Steps](#checks-and-troubleshooting-steps) for details on each validation check.
+With the plugin active and a layered accessory asset in your workspace, you can begin validating content. After the check, results with issues change to **red** (Blender) or **yellow** (Maya). You can resolve some failed checks by clicking the check button. See [Checks and Troubleshooting Steps](#checks-and-troubleshooting-steps) for details on each validation check.
 
 <GridContainer numColumns="2">
   <figure>
@@ -119,14 +123,14 @@ With the plugin active and a layered asset in your workspace, you can begin vali
   </figure>
 </GridContainer>
 
-To use the Validation Tool on your asset:
+To use the Layered Accessory Validation Tool on your asset:
 
 1. **Select** the object in your scene.
 2. Open the Validation Tool and click **Check Assets**. After a few moments, the UI updates and produces an output message.
 3. Results with issues are highlighted with red or yellow. Some issues can be automatically corrected by clicking the highlighted button.
 
 <Alert severity="info">
-This Validation Tool only checks for common clothing creation issues. Ensure your layered clothing model meets both the [general mesh specifications](../../art/modeling/specifications.md) and Roblox-specific [layered clothing specifications](../../avatar/layered-accessories/specifications.md) before uploading to Studio.
+The Layered Accessory Validation Tool only checks for common layered accessory creation issues. Ensure your layered accessory model meets both the [general mesh specifications](../../art/modeling/specifications.md) and Roblox-specific [layered accessory specifications](../../avatar/layered-accessories/specifications.md) before uploading to Studio.
 </Alert>
 
 ## Checks and troubleshooting steps

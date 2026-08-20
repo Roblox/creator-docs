@@ -4,7 +4,9 @@
 
 name: ThumbnailSize
 type: enum
-summary: ''
+summary: |
+  Describes the pixel resolution of a user thumbnail returned by
+  `Class.Players:GetUserThumbnailAsync()`.
 description: |
   Describes the resolution of a user thumbnail being returned by
   GetUserThumbnailAsync.

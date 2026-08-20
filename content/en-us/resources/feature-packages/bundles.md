@@ -13,6 +13,10 @@ Using the package's customization options, you can tailor your bundles to meet t
 
 <img src="../../assets/resources/feature-packages/Bundles/Bundles-Intro.png" width="100%" />
 
+<Alert severity="info">
+For information on how to strategically provide purchase opportunities to meet player needs at key stages of your experience, see [Contextual Purchases](../../production/game-design/contextual-purchases.md).
+</Alert>
+
 ## Get package
 
 The **Creator Store** is a tab of the **Toolbox** that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add one or more assets directly into an open game, including feature packages!

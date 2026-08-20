@@ -4,66 +4,91 @@
 
 name: RibbonTool
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies a Studio ribbon toolbar tool, used with
+  `Class.Plugin:GetSelectedRibbonTool()` and `Class.Plugin:SelectRibbonTool()`.
+description: |
+  `Enum.RibbonTool` represents the set of built-in tools available on the Roblox
+  Studio ribbon toolbar. Values from this enum are returned by
+  `Class.Plugin:GetSelectedRibbonTool()` to identify which tool is currently
+  active, and passed to `Class.Plugin:SelectRibbonTool()` to programmatically
+  activate a tool from a plugin script.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Select
-    summary: ''
+    summary: |
+      The **Select** tool, which selects objects in the viewport.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Scale
-    summary: ''
+    summary: |
+      The **Scale** tool, which resizes selected parts along their axes.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Rotate
-    summary: ''
+    summary: |
+      The **Rotate** tool, which rotates selected parts around the three primary
+      axes.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Move
-    summary: ''
+    summary: |
+      The **Move** tool, which translates selected parts along the three primary
+      axes.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Transform
-    summary: ''
+    summary: |
+      The **Transform** tool, which provides combined move, scale, and rotate
+      handles in a single gizmo.
     value: 4
     tags: []
     deprecation_message: ''
   - name: ColorPicker
-    summary: ''
+    summary: |
+      The **Color** tool, which opens the color picker to paint the color of
+      selected parts.
     value: 5
     tags: []
     deprecation_message: ''
   - name: MaterialPicker
     summary: |
-      Deprecated in favor of Material Manager. Don't use.
+      Deprecated ribbon **Color**/**Material** picker tool; use **Material
+      Manager** instead.
     value: 6
     tags: []
     deprecation_message: |
       Deprecated in favor of Material Manager. Don't use.
   - name: Group
-    summary: ''
+    summary: |
+      The **Group** tool, which groups the selected objects into a
+      `Class.Model`.
     value: 7
     tags: []
     deprecation_message: ''
   - name: Ungroup
-    summary: ''
+    summary: |
+      The **Ungroup** tool, which dissolves a selected Model and promotes its
+      children to the parent container.
     value: 8
     tags: []
     deprecation_message: ''
   - name: None
-    summary: ''
+    summary: |
+      Represents no ribbon tool being active.
     value: 9
     tags: []
     deprecation_message: ''
   - name: PivotEditor
-    summary: ''
+    summary: |
+      The **Edit Pivot** tool, which repositions the pivot point of selected
+      parts or models.
     value: 10
     tags: []
     deprecation_message: ''

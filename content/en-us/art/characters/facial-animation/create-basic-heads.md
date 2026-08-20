@@ -1,5 +1,5 @@
 ---
-title: Create basic heads
+title: Create basic dynamic heads
 description: The process of creating a basic animatable head in Blender.
 ---
 
@@ -287,7 +287,7 @@ To create custom bone shapes for easier control bone access:
    </video>
 
 7. Perform steps 3-6 for all your controller bones. You can hide the original face bones at this point.
-8. (Optional) Set up **Bone Groups** to assign colors to your controller bones:
+8. <Chip label="OPTIONAL" size="small" variant="outlined" /> Set up **Bone Groups** to assign colors to your controller bones:
 
    1. Navigate to the **Object Data Properties** panel.
    2. Create a new bone group.

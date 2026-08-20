@@ -7,7 +7,20 @@ type: enum
 summary: |
   The result of prompt operations of `Class.AvatarEditorService`.
 description: |
-  The result of prompt operations of `Class.AvatarEditorService`.
+  Indicates the outcome of a prompt operation initiated by
+  `Class.AvatarEditorService`. Each `Prompt` method on the service (such as
+  `Class.AvatarEditorService:PromptSaveAvatar()`,
+  `Class.AvatarEditorService:PromptSetFavorite()`, and
+  `Class.AvatarEditorService:PromptCreateOutfit()`) displays a native dialog to
+  the user and fires a corresponding `Completed` event that passes this enum as
+  its `result` parameter.
+
+  - **Success** — the user confirmed the prompt and the back-end request
+    completed without error.
+  - **PermissionDenied** — the user dismissed the prompt or otherwise declined
+    to grant the requested permission.
+  - **Failed** — an error occurred while processing the request (for example, a
+    network failure or an invalid response from the server).
 code_samples: []
 tags: []
 deprecation_message: ''

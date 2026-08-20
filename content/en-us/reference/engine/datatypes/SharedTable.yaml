@@ -50,8 +50,9 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: SharedTable.new
-    summary: Returns a new, empty `Datatype.SharedTable`.
-    description: |-
+    summary: |
+      Returns a new, empty `Datatype.SharedTable`.
+    description: |
       Returns a new, empty `Datatype.SharedTable`.
 
       ```lua
@@ -62,16 +63,16 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: SharedTable.new
-    summary: |-
+    summary: |
       Returns a new `Datatype.SharedTable` containing elements equivalent to
       those in the provided Luau table.
-    description: |-
+    description: |
       Returns a new `Datatype.SharedTable` containing elements equivalent to
       those in the provided Luau table.
 
       If the provided Luau table contains any keys or values that cannot be
       stored in a `Datatype.SharedTable`, construction of the
-      `Datatype.SharedTable` fails.  See the summary at the top of this page for
+      `Datatype.SharedTable` fails. See the summary at the top of this page for
       a list of types of objects that can be stored in a `Datatype.SharedTable`.
       If the Luau table contains any table as a value, that table is converted
       into a new `Datatype.SharedTable`.
@@ -90,12 +91,15 @@ constructors:
       assert(st.z[3] == "c")
       ```
 
-      Note that in some cases it may be desirable to store a `Datatype.SharedTable` in the `Class.SharedTableRegistry`. The `Class.ShareTableRegistry:GetSharedTable()` method provides a convenient way to accomplish this.
+      Note that in some cases it may be desirable to store a
+      `Datatype.SharedTable` in the `Class.SharedTableRegistry`. The
+      `Class.ShareTableRegistry:GetSharedTable()` method provides a convenient
+      way to accomplish this.
     parameters:
       - name: t
         type: table
         default:
-        summary: |-
+        summary: |
           The Luau table whose elements are to be stored in the new
           `Datatype.SharedTable`.
     code_samples: []

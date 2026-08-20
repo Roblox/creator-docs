@@ -2478,7 +2478,9 @@ methods:
           `Class.JointInstance|joint`.
     returns:
       - type: List<BasePart>
-        summary: ''
+        summary: |
+          An array of `Class.BasePart|BaseParts` connected to this part by rigid
+          joints. If `recursive` is true, includes all parts in the assembly.
     tags: []
     deprecation_message: ''
     security: None
@@ -2486,17 +2488,15 @@ methods:
     capabilities: []
   - name: BasePart:GetJoints
     summary: |
-      Return all joints or constraints that are connected to this part.
+      Return all Joints or Constraints that is connected to this Part.
     description: |
-      Returns an array of all `Class.JointInstance|JointInstances` or
-      `Class.Constraint|Constraints` connected to this `Class.BasePart`.
+      Return all Joints or Constraints that is connected to this Part.
     code_samples: []
     parameters: []
     returns:
       - type: Instances
         summary: |
-          An array of all `Class.JointInstance|JointInstances` or
-          `Class.Constraint|Constraints` connected to this `Class.BasePart`.
+          An array of all Joints or Constraints connected to the Part.
     tags: []
     deprecation_message: ''
     security: None
@@ -2582,13 +2582,25 @@ methods:
     capabilities: []
     simulationAccess: true
   - name: BasePart:GetNoCollisionConstraints
-    summary: ''
-    description: ''
+    summary: |
+      Returns the enabled `Class.NoCollisionConstraint` objects currently
+      registered for this part in its physics world.
+    description: |
+      Returns the enabled `Class.NoCollisionConstraint` objects currently
+      registered for this part in its physics world. A
+      `Class.NoCollisionConstraint` disables collisions between the two specific
+      parts it references, while each of those parts may still collide with the
+      rest of the world.
+
+      The returned array is empty if no such constraint is currently registered
+      for this part. The order of the returned constraints is not guaranteed.
     code_samples: []
     parameters: []
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          An array of the enabled `Class.NoCollisionConstraint` objects
+          currently registered for this part in its physics world.
     tags: []
     deprecation_message: ''
     security: None
@@ -2606,7 +2618,9 @@ methods:
     parameters: []
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          The `Datatype.CFrame` representing where the part is being rendered,
+          which is now equivalent to the part's `Class.BasePart.CFrame|CFrame`.
     tags:
       - Deprecated
     deprecation_message: |
@@ -2683,10 +2697,14 @@ methods:
       - name: position
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The world-space position at which to compute the assembly's linear
+          velocity.
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` representing the linear velocity of the assembly
+          at the specified world-space position.
     tags: []
     deprecation_message: ''
     security: None
@@ -3164,7 +3182,9 @@ methods:
       - CSG
 events:
   - name: BasePart.LocalSimulationTouched
-    summary: ''
+    summary: |
+      Fires on the local client when another part comes in contact with this
+      part.
     description: |
       Fired when another part comes in contact with another object. This event
       only sends data to the client notifying it that two parts have collided,
@@ -3175,7 +3195,8 @@ events:
       - name: part
         type: BasePart
         default:
-        summary: ''
+        summary: |
+          The other part that came in contact with this part.
     tags:
       - Deprecated
     deprecation_message: |
@@ -3183,7 +3204,8 @@ events:
     security: None
     capabilities: []
   - name: BasePart.OutfitChanged
-    summary: ''
+    summary: |
+      Fires when the part's appearance changes due to a `Class.Shirt`.
     description: |
       Fired if the part's appearance is affected by the `Class.Shirt` class.
     code_samples: []
@@ -3195,14 +3217,22 @@ events:
     security: None
     capabilities: []
   - name: BasePart.StoppedTouching
-    summary: ''
-    description: ''
+    summary: |
+      Fires on the local client when a part stops touching another part.
+    description: |
+      Deprecated. Fires on the local client when a part stops touching another
+      part, under conditions similar to those of `Class.BasePart.TouchEnded`.
+      This event is the client-only counterpart to `Class.BasePart.TouchEnded`:
+      it only notifies the local client that the two parts have separated,
+      whereas `Class.BasePart.TouchEnded` also sends data to the server. Use
+      `Class.BasePart.TouchEnded` instead.
     code_samples: []
     parameters:
       - name: otherPart
         type: BasePart
         default:
-        summary: ''
+        summary: |
+          The other part that stopped touching the given part.
     tags:
       - Deprecated
     deprecation_message: |
@@ -3260,7 +3290,8 @@ events:
       - name: otherPart
         type: BasePart
         default:
-        summary: ''
+        summary: |
+          The other part that stopped touching this part.
     tags: []
     deprecation_message: ''
     security: None

@@ -139,8 +139,8 @@ To create a customized reward banner:
     1. Replace the default icon with an image that represents your game.
     2. Enter a reward name to display on the banner.
     3. Select a start and end date for when you want to show the banner to players.
-    4. (Optional) Enter a description with details about the reward.
-    5. (Optional) If you want to add reward restrictions, enter a reward limit. For example, a limit of up to 3 rewards per inviter.
+    4. <Chip label="OPTIONAL" size="small" variant="outlined" /> Enter a description with details about the reward.
+    5. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you want to add reward restrictions, enter a reward limit. For example, a limit of up to 3 rewards per inviter.
 5. Click **Save** to save your changes.
 6. Click **Publish** to make the banner visible to players.
 

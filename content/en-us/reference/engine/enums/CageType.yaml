@@ -4,19 +4,33 @@
 
 name: CageType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies which cage surface — inner or outer — to read or write on a
+  `Class.BaseWrap` object.
+description: |
+  Specifies which cage surface to target when calling cage-mesh methods on a
+  `Class.BaseWrap` object such as `GetVertices()`, `GetFaces()`, `GetUVs()`, and
+  `ModifyVertices()`.
+
+  A `Class.WrapLayer` carries two cage meshes: an inner cage that fits against
+  the surface beneath it (the avatar body or an underlying accessory) and an
+  outer cage that defines the surface the next clothing layer conforms to.
+  `CageType` selects which of those two meshes the called method operates on.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Inner
-    summary: ''
+    summary: |
+      Selects the inner cage mesh, which defines the surface that conforms to
+      the body or underlying layer beneath the accessory.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Outer
-    summary: ''
+    summary: |
+      Selects the outer cage mesh, which defines the surface that the next
+      clothing layer above this accessory conforms to.
     value: 1
     tags: []
     deprecation_message: ''

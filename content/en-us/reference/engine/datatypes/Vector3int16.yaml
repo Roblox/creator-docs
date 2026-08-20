@@ -93,14 +93,15 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Vector3int16.new
-    summary: Returns a new `Datatype.Vector3int16` from the given x, y, and z components.
-    description: |-
-      Returns a new `Datatype.Vector3int16` from the given x, y and z components.
-      Non-integer components are rounded down.
+    summary: |
+      Returns a new `Datatype.Vector3int16` from the given x, y, and z
+      components.
+    description: |
+      Returns a new `Datatype.Vector3int16` from the given x, y and z
+      components. Non-integer components are rounded down.
 
       The components must fall within the range [-2<sup>15</sup>,
-      2<sup>15</sup>).  If outside this range, integer
-      overflow may occur. For
+      2<sup>15</sup>). If outside this range, integer overflow may occur. For
       example, providing 32,768 (equal to 2<sup>15</sup>) as a component
       overflows the 16-bit integer, and so the component will be -32,768 (equal
       to -2<sup>15</sup>) instead.
@@ -108,15 +109,21 @@ constructors:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The x-coordinate of the vector, rounded down to a signed 16-bit
+          integer.
       - name: 'y'
         type: number
         default:
-        summary: ''
+        summary: |
+          The y-coordinate of the vector, rounded down to a signed 16-bit
+          integer.
       - name: z
         type: number
         default:
-        summary: ''
+        summary: |
+          The z-coordinate of the vector, rounded down to a signed 16-bit
+          integer.
     code_samples: []
     tags: []
     deprecation_message: ''

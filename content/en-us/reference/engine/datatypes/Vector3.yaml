@@ -37,55 +37,86 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Vector3.new
-    summary: Returns a new `Datatype.Vector3` from the given `x`, `y`, and `z` components.
-    description: Returns a new `Datatype.Vector3` using the given `x`, `y`, and `z` components.
+    summary: |
+      Returns a new `Datatype.Vector3` from the given `x`, `y`, and `z`
+      components.
+    description: |
+      Returns a new `Datatype.Vector3` using the given `x`, `y`, and `z`
+      components.
     parameters:
       - name: x
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The x-axis component of the vector.
       - name: 'y'
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The y-axis component of the vector.
       - name: z
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The z-axis component of the vector.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Vector3.FromNormalId
-    summary: Returns a new `Datatype.Vector3` in the given direction.
-    description: Returns a new `Datatype.Vector3` in the given direction.
+    summary: |
+      Returns a new `Datatype.Vector3` in the given direction.
+    description: |
+      Returns a unit `Datatype.Vector3` pointing in the direction of the given
+      `Enum.NormalId`. For example, `Enum.NormalId.Top` returns `(0, 1, 0)` and
+      `Enum.NormalId.Front` returns `(0, 0, -1)`.
+
+      ```lua
+      print(Vector3.FromNormalId(Enum.NormalId.Right)) --> 1, 0, 0
+      print(Vector3.FromNormalId(Enum.NormalId.Left))  --> -1, 0, 0
+      ```
     parameters:
       - name: normal
         type: NormalId
         default:
-        summary: ''
+        summary: |
+          The `Enum.NormalId` specifying the face direction to convert into a
+          unit vector.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Vector3.FromAxis
-    summary: Returns a new `Datatype.Vector3` for the given axis.
-    description: Returns a new `Datatype.Vector3` for the given axis.
+    summary: |
+      Returns a new `Datatype.Vector3` for the given axis.
+    description: |
+      Returns a unit `Datatype.Vector3` for the given `Enum.Axis`. The mapping
+      is `Enum.Axis.X` to `(1, 0, 0)`, `Enum.Axis.Y` to `(0, 1, 0)`, and
+      `Enum.Axis.Z` to `(0, 0, 1)`.
+
+      ```lua
+      print(Vector3.FromAxis(Enum.Axis.X)) --> 1, 0, 0
+      print(Vector3.FromAxis(Enum.Axis.Z)) --> 0, 0, 1
+      ```
     parameters:
       - name: axis
         type: Axis
         default:
-        summary: ''
+        summary: |
+          The `Enum.Axis` specifying which coordinate axis to convert into a
+          unit vector.
     code_samples: []
     tags: []
     deprecation_message: ''
 constants:
   - name: Vector3.zero
     type: Vector3
-    summary: A `Datatype.Vector3` with a magnitude of `0`.
-    description: |-
+    summary: |
+      A `Datatype.Vector3` with a magnitude of `0`.
+    description: |
       A `Datatype.Vector3` with a magnitude of `0`.
 
       This API member is a **constant**, and must be accessed through the
-      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
 
       ```lua
       print(Vector3.zero)  --> 0, 0, 0
@@ -95,12 +126,14 @@ constants:
     deprecation_message: ''
   - name: Vector3.one
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on every axis.
-    description: |-
+    summary: |
+      A `Datatype.Vector3` with a value of `1` on every axis.
+    description: |
       A `Datatype.Vector3` with a value of `1` on every axis.
 
       This API member is a **constant**, and must be accessed through the
-      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
 
       ```lua
       print(Vector3.one)  --> 1, 1, 1
@@ -110,12 +143,14 @@ constants:
     deprecation_message: ''
   - name: Vector3.xAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on the **X** axis.
-    description: |-
+    summary: |
+      A `Datatype.Vector3` with a value of `1` on the **X** axis.
+    description: |
       A `Datatype.Vector3` with a value of `1` on the **X** axis.
 
       This API member is a **constant**, and must be accessed through the
-      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
 
       ```lua
       print(Vector3.xAxis)  --> 1, 0, 0
@@ -125,12 +160,14 @@ constants:
     deprecation_message: ''
   - name: Vector3.yAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on the **Y** axis.
-    description: |-
+    summary: |
+      A `Datatype.Vector3` with a value of `1` on the **Y** axis.
+    description: |
       A `Datatype.Vector3` with a value of `1` on the **Y** axis.
 
       This API member is a **constant**, and must be accessed through the
-      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
 
       ```lua
       print(Vector3.yAxis)  --> 0, 1, 0
@@ -140,12 +177,14 @@ constants:
     deprecation_message: ''
   - name: Vector3.zAxis
     type: Vector3
-    summary: A `Datatype.Vector3` with a value of `1` on the **Z** axis.
-    description: |-
+    summary: |
+      A `Datatype.Vector3` with a value of `1` on the **Z** axis.
+    description: |
       A `Datatype.Vector3` with a value of `1` on the **Z** axis.
 
       This API member is a **constant**, and must be accessed through the
-      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
 
       ```lua
       print(Vector3.zAxis)  --> 0, 0, 1
@@ -249,7 +288,8 @@ properties:
     summary: |
       The **X** coordinate of the `Datatype.Vector3`.
     description: |
-      The **X** coordinate of the `Datatype.Vector3`.
+      The **X** coordinate of the `Datatype.Vector3`. In world space, this axis
+      corresponds to the left-right (east-west) direction.
     default:
     code_samples: []
     tags: []
@@ -259,7 +299,8 @@ properties:
     summary: |
       The **Y** coordinate of the `Datatype.Vector3`.
     description: |
-      The **Y** coordinate of the `Datatype.Vector3`.
+      The **Y** coordinate of the `Datatype.Vector3`. In world space, this axis
+      corresponds to the up-down (vertical) direction.
     default:
     code_samples: []
     tags: []
@@ -269,7 +310,8 @@ properties:
     summary: |
       The **Z** coordinate of the `Datatype.Vector3`.
     description: |
-      The **Z** coordinate of the `Datatype.Vector3`.
+      The **Z** coordinate of the `Datatype.Vector3`. In world space, this axis
+      corresponds to the north-south (forward-back) direction.
     default:
     code_samples: []
     tags: []
@@ -279,7 +321,14 @@ properties:
     summary: |
       The length of the `Datatype.Vector3`.
     description: |
-      The length of the `Datatype.Vector3`.
+      The length (magnitude) of the `Datatype.Vector3`, computed as
+      `math.sqrt(X^2 + Y^2 + Z^2)`. This is useful for comparing distances or
+      determining how far a point is from the origin.
+
+      ```lua
+      local v = Vector3.new(3, 4, 0)
+      print(v.Magnitude) --> 5
+      ```
     default:
     code_samples: []
     tags: []
@@ -290,8 +339,21 @@ properties:
       A normalized copy of the `Datatype.Vector3` - one that has the same
       direction as the original but a magnitude of `1`.
     description: |
-      A normalized copy of the `Datatype.Vector3` - one that has the same
-      direction as the original but a magnitude of `1`.
+      A normalized copy of the `Datatype.Vector3` — one that has the same
+      direction as the original but a magnitude of `1`. This is useful when you
+      need only the direction of a vector without its length, for example to get
+      a movement direction regardless of speed.
+
+      If the vector has a magnitude of `0` (i.e. all components are zero), the
+      resulting `Unit` vector will have `NaN` components. Check
+      `Datatype.Vector3.Magnitude|Magnitude` before using `Unit` when the vector
+      may be zero-length.
+
+      ```lua
+      local v = Vector3.new(3, 4, 0)
+      print(v.Unit)      --> 0.6, 0.8, 0
+      print(v.Unit.Magnitude) --> 1
+      ```
     default:
     code_samples: []
     tags: []
@@ -357,12 +419,28 @@ methods:
     summary: |
       Returns the cross product of the two vectors.
     description: |
-      Returns the cross product of the two vectors.
+      Returns the cross product of this vector and `other`. The resulting vector
+      is perpendicular to both input vectors and has a magnitude equal to the
+      area of the parallelogram they span. The direction follows the right-hand
+      rule: if you curl the fingers of your right hand from `self` toward
+      `other`, your thumb points in the direction of the result.
+
+      The cross product is commonly used to find normals to surfaces, determine
+      the axis of rotation between two directions, and test whether two vectors
+      are parallel (cross product of parallel vectors is the zero vector).
+
+      ```lua
+      local a = Vector3.new(1, 0, 0)
+      local b = Vector3.new(0, 1, 0)
+      print(a:Cross(b)) --> 0, 0, 1
+      print(b:Cross(a)) --> 0, 0, -1
+      ```
     parameters:
       - name: other
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The other `Datatype.Vector3` to compute the cross product with.
     returns:
       - type: Vector3
         summary: ''
@@ -374,17 +452,35 @@ methods:
       Returns the angle in radians between the two vectors. If you provide an
       axis, it determines the sign of the angle.
     description: |
-      Returns the angle in radians between the two vectors. If you provide an
-      axis, it determines the sign of the angle.
+      Returns the angle in radians between this vector and `other`. The input
+      vectors do not need to be unit vectors. Without an `axis` argument, the
+      returned angle is always in the range `[0, math.pi]` (unsigned).
+
+      If you provide an `axis` `Datatype.Vector3`, the returned angle is signed:
+      positive when the rotation from `self` to `other` follows the right-hand
+      rule around `axis`, and negative otherwise. The signed result is in the
+      range `[-math.pi, math.pi]`. The `axis` is used only to determine the
+      sign; the plane of rotation is still defined by `self` and `other`.
+
+      ```lua
+      local a = Vector3.new(1, 0, 0)
+      local b = Vector3.new(0, 1, 0)
+      print(a:Angle(b))                         --> 1.5707963... (pi/2)
+      print(a:Angle(b, Vector3.new(0, 0, 1)))   --> 1.5707963... (positive, CCW about +Z)
+      print(b:Angle(a, Vector3.new(0, 0, 1)))   --> -1.5707963... (negative, CW about +Z)
+      ```
     parameters:
       - name: other
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Vector3` to measure the angle to.
       - name: axis
         type: Vector3
         default: nil
-        summary: ''
+        summary: |
+          An optional `Datatype.Vector3` used to determine the sign of the angle
+          via the right-hand rule.
     returns:
       - type: number
         summary: ''
@@ -395,12 +491,30 @@ methods:
     summary: |
       Returns a scalar dot product of the two vectors.
     description: |
-      Returns a scalar dot product of the two vectors.
+      Returns the scalar dot product of this vector and `other`, computed as
+      `self.X * other.X + self.Y * other.Y + self.Z * other.Z`.
+
+      The dot product is useful for determining the relationship between two
+      directions: it equals the product of their magnitudes multiplied by the
+      cosine of the angle between them. For unit vectors, a result of `1` means
+      they point in the same direction, `0` means they are perpendicular, and
+      `-1` means they point in opposite directions.
+
+      ```lua
+      local a = Vector3.new(1, 0, 0)
+      local b = Vector3.new(0, 1, 0)
+      print(a:Dot(b)) --> 0
+
+      local c = Vector3.new(1, 2, 3)
+      local d = Vector3.new(4, 5, 6)
+      print(c:Dot(d)) --> 32
+      ```
     parameters:
       - name: other
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Vector3` to compute the dot product with.
     returns:
       - type: number
         summary: ''
@@ -413,18 +527,30 @@ methods:
       vectors is within `epsilon`. `epsilon` is scaled relative to the
       magnitude, rather than an absolute epsilon.
     description: |
-      Returns `true` if the difference between the squared magnitude of the two
-      vectors is within `epsilon`. `epsilon` is scaled relative to the
-      magnitude, rather than an absolute epsilon.
+      Returns `true` if the two vectors are approximately equal within the
+      tolerance defined by `epsilon`. The comparison is performed per-component
+      using a hybrid epsilon that scales relative to the magnitude of each
+      component, making it suitable for both small and large values. The default
+      `epsilon` of `0.00001` (1e-5) works well for most cases.
+
+      ```lua
+      local a = Vector3.new(1, 2, 3)
+      local b = Vector3.new(1.000001, 2, 3)
+      print(a:FuzzyEq(b))        --> true  (within default epsilon)
+      print(a:FuzzyEq(b, 1e-8))  --> false (tighter tolerance)
+      ```
     parameters:
       - name: other
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Vector3` to compare against.
       - name: epsilon
         type: number
         default: 0.00001 aka 1e-5
-        summary: ''
+        summary: |
+          The tolerance threshold for the comparison, scaled relative to the
+          component magnitudes.
     returns:
       - type: bool
         summary: ''
@@ -443,11 +569,14 @@ methods:
       - name: goal
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The target `Datatype.Vector3` to interpolate toward.
       - name: alpha
         type: number
         default:
-        summary: ''
+        summary: |
+          The interpolation fraction, typically between 0 (returns self) and 1
+          (returns goal), but not clamped.
     returns:
       - type: Vector3
         summary: ''
@@ -472,7 +601,8 @@ methods:
       - name: vector
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Vector3` to compare component-wise against.
     returns:
       - type: Vector3
         summary: ''
@@ -497,7 +627,8 @@ methods:
       - name: vector
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Vector3` to compare component-wise against.
     returns:
       - type: Vector3
         summary: ''

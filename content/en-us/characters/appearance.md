@@ -250,7 +250,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 ## Layered accessories on non-R15
 
-Caged accessories, like layered accessories, use `Class.WrapTarget` and `Class.WrapLayer` to stretch and wrap over a target `Class.Model`. Layered accessories can work with both standard [R15 Roblox characters](../characters/index.md#avatar-characters) and non-R15 models.
+Caged accessories, like layered accessories, use `Class.WrapTarget` and `Class.WrapLayer` to stretch and wrap over a target `Class.Model`. Layered accessories can work with both standard [player characters](../characters/index.md#player-characters) and non-R15 models.
 
 Custom implementation of layered accessories, such as a model using a unique cage UV map, cannot be uploaded and published to the Marketplace. For more information, see [Layered accessory specifications](../avatar/layered-accessories/specifications.md).
 

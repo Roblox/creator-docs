@@ -10,9 +10,15 @@ summary: |
   singleton classes, depending on what inherited class you are using its members
   with.
 description: |
-  A ServiceProvider is an abstract class, which stores, and provides certain
-  singleton classes, depending on what inherited class you are using its members
-  with.
+  A ServiceProvider is an abstract base class that manages a registry of
+  singleton service instances. The `Class.DataModel` (accessible in Lua as
+  `game`) is the primary ServiceProvider in an experience. Services are created
+  lazily the first time they are requested via
+  `Class.ServiceProvider:GetService()` and remain available for the lifetime of
+  the DataModel.
+
+  You do not create ServiceProvider instances directly; instead you interact
+  with its members through the DataModel.
 code_samples: []
 inherits:
   - Instance
@@ -30,18 +36,28 @@ methods:
       Returns the service specified by the given className if it's already
       created, errors for an invalid name.
     description: |
-      Returns the service specified by the given className if it's already
-      created, errors for an invalid name.
+      Returns the service with the given class name only if it has already been
+      created. Unlike `Class.ServiceProvider:GetService()`, this method does not
+      create the service when it does not yet exist; it returns `nil` instead.
+      If `className` is not a valid service name, the method throws an error.
+
+      This method is thread-safe and can be called from any thread context. It
+      is useful when you need to check whether a service is present without
+      triggering its initialization, for example during cleanup or conditional
+      logic that should not force service creation.
     code_samples:
       - ServiceProvider-FindService1
     parameters:
       - name: className
         type: string
         default:
-        summary: ''
+        summary: |
+          The class name of the service to find.
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          The service instance if it has already been created, or nil if the
+          service does not yet exist.
     tags: []
     deprecation_message: ''
     security: None
@@ -128,7 +144,15 @@ events:
     summary: |
       Fires when the current place is exited.
     description: |
-      Fires when the current place is exited.
+      Fires when the game instance is shutting down, immediately before services
+      and instances are torn down. On the server this occurs when the last
+      player leaves or the server is closed; on the client it fires when the
+      player leaves the experience.
+
+      Connect to this event to perform final cleanup such as saving player data
+      with `Class.DataStoreService`. Handlers run synchronously — the engine
+      waits for all connected callbacks to return before proceeding with
+      shutdown.
     code_samples:
       - ServiceProvider-Close1
     parameters: []
@@ -140,13 +164,18 @@ events:
     summary: |
       Fired when a service is created.
     description: |
-      Fired when a service is created.
+      Fires after a service is added to the DataModel. The `service` parameter
+      is the `Class.Instance` of the newly added service. Because services are
+      created lazily (the first time `Class.ServiceProvider:GetService()` is
+      called for them), this event lets you react to a service becoming
+      available without polling for it.
     code_samples: []
     parameters:
       - name: service
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The instance of the service that was added.
     tags: []
     deprecation_message: ''
     security: None
@@ -155,13 +184,17 @@ events:
     summary: |
       Fired when a service is about to be removed.
     description: |
-      Fired when a service is about to be removed.
+      Fires just before a service is removed from the DataModel. The `service`
+      parameter is the `Class.Instance` that is about to be removed. This event
+      fires during DataModel teardown, giving listeners a chance to disconnect
+      from the service or release references before the service is destroyed.
     code_samples: []
     parameters:
       - name: service
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The Instance of the service that is about to be removed.
     tags: []
     deprecation_message: ''
     security: None

@@ -74,11 +74,13 @@ methods:
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.Instance` to apply the tag to.
       - name: tag
         type: string
         default:
-        summary: ''
+        summary: |
+          The tag string to apply to the instance.
     returns:
       - type: ()
         summary: ''
@@ -89,16 +91,120 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
+  - name: CollectionService:CreateCollection
+    summary: |
+      Creates a `Datatype.Collection` that tracks every instance matching a
+      query.
+    description: |
+      This method creates a `Datatype.Collection`, a **live, query-based group**
+      of instances. Unlike tag-based methods such as
+      `Class.CollectionService:GetTagged()|GetTagged()` which return a fixed
+      array at the moment they are called, a `Datatype.Collection` continuously
+      tracks which instances match `query` and notifies you as instances enter
+      and leave the result set.
+
+      The `query` string is a CSS-inspired selector that follows the same
+      selector conventions used by
+      `Class.Instance:QueryDescendants()|QueryDescendants()` and the
+      `Class.StyleRule` styling selectors. Filters stack conjunctively,
+      combinators express hierarchy, and comma-separated selectors form a union:
+
+      - `ClassName` — Instances of that class (uses
+        `Class.Instance:IsA()|IsA()`), for example `Part` or `Model`.
+      - `#Name` — Instances with a matching `Class.Instance.Name|Name`.
+      - `.Tag` — Instances carrying a `Class.CollectionService` tag.
+      - `[Property = value]` — Instances whose property equals a value.
+      - `[$Attribute]` or `[$Attribute = value]` — Instances that have an
+        attribute, optionally matching a value.
+      - `A > B` (direct child) and `A >> B` (any descendant) combinators.
+      - `:has(...)` and `:not(...)` pseudoclasses.
+
+      The rightmost selector in a chain identifies the matched instance, so
+      `Folder > Part` tracks the parts, not the folders.
+
+      ```lua
+      local CollectionService = game:GetService("CollectionService")
+
+      -- Track every Part tagged "KillBrick" anywhere under Workspace
+      local killBricks: Collection = CollectionService:CreateCollection("Part.KillBrick")
+
+      -- When a part joins the collection, make it glow red
+      -- OnAdded fires once for each part already matching, then again for each new match
+      function killBricks.OnAdded(brick: Part)
+      	brick.Material = Enum.Material.Neon
+      	brick.Color = Color3.new(1, 0, 0)
+      end
+
+      -- Kill any humanoid that touches a matched part
+      function killBricks.OnTouched(brick: Part, otherPart: BasePart)
+      	local character: Instance? = otherPart.Parent
+      	local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+      	if humanoid then
+      		humanoid.Health = 0
+      	end
+      end
+
+      -- Fires when a part stops matching (tag removed, reparented out, or destroyed)
+      function killBricks.OnRemoved(brick: Part)
+      	print("Deactivating", brick:GetFullName())
+      end
+      ```
+
+      #### Notes
+
+      - The collection remains active until you call
+        `Datatype.Collection:Destroy()|Destroy()` or its `root` is destroyed.
+      - Lifecycle callbacks are queued rather than invoked synchronously, so a
+        newly assigned `OnAdded` may fire on a later resumption point rather
+        than during the assignment itself.
+    code_samples: []
+    parameters:
+      - name: query
+        type: string
+        default:
+        summary: |
+          A selector string describing which instances to match. See the
+          description for the supported syntax.
+      - name: root
+        type: Instance
+        default: nil
+        summary: |
+          The instance whose descendants are searched. Pass this to restrict the
+          search to a subtree, such that instances outside that subtree never
+          match and an instance is removed from the collection if it is
+          reparented out of `root`. Defaults to `Class.Workspace` when omitted.
+    returns:
+      - type: Collection
+        summary: |
+          A `Datatype.Collection` that reactively tracks the instances matching
+          `query`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
   - name: CollectionService:GetAllTags
     summary: |
       Returns an array of all tags in the experience.
     description: |
-      Returns an array of all tags in the experience.
+      Returns an array of all tags that currently have at least one tagged
+      instance inside the `Class.DataModel`. The returned array does not
+      guarantee any particular ordering.
+
+      A tag appears in the result as soon as any instance bearing it enters the
+      `Class.DataModel` (for example by being parented to `Class.Workspace`),
+      and it is removed from the result once the last instance with that tag
+      leaves the `Class.DataModel` or has the tag removed. This means calling
+      `GetAllTags()` immediately after removing the last instance with a given
+      tag will no longer include that tag.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of all tags that currently have at least one tagged instance
+          in the `Class.DataModel`.
     tags: []
     deprecation_message: ''
     security: None
@@ -119,10 +225,13 @@ methods:
       - name: class
         type: string
         default:
-        summary: ''
+        summary: |
+          The class type to retrieve instances of.
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          An array of all instances of the specified class in the
+          `Class.DataModel`.
     tags:
       - Deprecated
     deprecation_message: |
@@ -364,7 +473,8 @@ events:
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The instance that was added to the `Class.DataModel`.
     tags:
       - Deprecated
     deprecation_message: |
@@ -388,7 +498,8 @@ events:
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The instance that was removed from the `Class.DataModel`.
     tags:
       - Deprecated
     deprecation_message: |
@@ -402,14 +513,26 @@ events:
       Fires when a tag is added to an instance and the added tag is the only
       occurrence of that tag in the place.
     description: |
-      This event fires when a tag is added to an instance and the added tag is
-      the only occurrence of that tag in the place.
+      This event fires when a tag transitions from being unused to being in use
+      — specifically, when a tag is applied to an instance inside the
+      `Class.DataModel` and no other instance in the `Class.DataModel`
+      previously had that tag. The event passes the tag name as its parameter.
+
+      `TagAdded` fires once per tag lifetime, not once per instance. To detect
+      every individual instance that receives a particular tag, use
+      `Class.CollectionService:GetInstanceAddedSignal()|GetInstanceAddedSignal()`
+      instead.
+
+      The event fires asynchronously (deferred to the next resumption point),
+      not synchronously inside the `Class.CollectionService:AddTag()|AddTag()`
+      call that triggered it.
     code_samples: []
     parameters:
       - name: tag
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the tag that entered use.
     tags: []
     deprecation_message: ''
     security: None
@@ -420,14 +543,25 @@ events:
       Fires when a tag is removed from an instance and the removed tag is no
       longer used anywhere in the place.
     description: |
-      This event fires when a tag is removed from an instance and the removed
-      tag is no longer used anywhere in the place.
+      This event fires when the last instance bearing a given tag leaves the
+      `Class.DataModel` or has the tag removed, meaning no instance in the
+      `Class.DataModel` still carries that tag. The event passes the tag name as
+      its parameter.
+
+      `TagRemoved` fires once per tag lifetime, not once per instance. To detect
+      every individual instance that loses a particular tag, use
+      `Class.CollectionService:GetInstanceRemovedSignal()|GetInstanceRemovedSignal()`
+      instead.
+
+      The event fires asynchronously (deferred to the next resumption point),
+      not synchronously inside the removal operation that triggered it.
     code_samples: []
     parameters:
       - name: tag
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the tag that is no longer in use.
     tags: []
     deprecation_message: ''
     security: None

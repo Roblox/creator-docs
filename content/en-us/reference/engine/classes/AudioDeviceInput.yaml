@@ -255,7 +255,9 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of user IDs that are either in the allow-list or the
+          deny-list.
     tags: []
     deprecation_message: ''
     security: None
@@ -279,10 +281,12 @@ methods:
       - name: userIds
         type: Array
         default:
-        summary: ''
+        summary: |
+          An array of user IDs to apply to this `Class.AudioDeviceInput`.
     returns:
       - type: ()
-        summary: ''
+        summary: |
+          void
     tags: []
     deprecation_message: ''
     security: None

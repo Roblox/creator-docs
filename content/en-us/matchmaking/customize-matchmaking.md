@@ -82,7 +82,7 @@ To create a custom signal:
         1. Choose the [attribute](#create-a-custom-attribute) you want to reference.
         2. Adjust the values under the attribute.
 
-4. **(Optional)** Expand **Preview and Test Signal** to preview the signal score. You can adjust the **Test Signal** values to optimize the preview result.
+4. <Chip label="OPTIONAL" size="small" variant="outlined" /> Expand **Preview and Test Signal** to preview the signal score. You can adjust the **Test Signal** values to optimize the preview result.
 
    <img src="../assets/matchmaking/Preview_Custom_Signal.png" width="600" alt="A preview of the signal score in Preview and Test Signal." />
 

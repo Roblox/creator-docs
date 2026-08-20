@@ -4,28 +4,38 @@
 
 name: PoseEasingStyle
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the interpolation curve used when blending between keyframe
+  `Class.Pose|Poses` in a `Class.KeyframeSequence`.
+description: |
+  Controls how a `Class.Pose` transitions from one keyframe to the next in a
+  `Class.KeyframeSequence`. The value is set via the `Class.Pose.EasingStyle`
+  property, which defaults to `Enum.PoseEasingStyle.Linear`. For asymmetric
+  styles such as `Enum.PoseEasingStyle.Elastic`, `Enum.PoseEasingStyle.Bounce`,
+  and `Enum.PoseEasingStyle.CubicV2`, the direction of the curve is further
+  controlled by `Enum.PoseEasingDirection`. `Enum.PoseEasingStyle.Cubic` is a
+  legacy alias with a known direction-reversal bug between the Animation Editor
+  and runtime; use `Enum.PoseEasingStyle.CubicV2` for all new work.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Linear
     summary: |
-      Poses interpolate linearly between key frames.
+      Poses interpolate linearly between keyframes.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Constant
     summary: |
-      Poses do not interpolate but snap to the key frame indicated by the
+      Poses do not interpolate but snap to the keyframe indicated by the
       `Enum.PoseEasingDirection`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Elastic
     summary: |
-      Pose interpolation will overshoot like it is elastic.
+      Pose interpolation overshoots like an elastic curve.
     value: 2
     tags: []
     deprecation_message: ''
@@ -40,7 +50,7 @@ items:
       between the editor and runtime.
   - name: Bounce
     summary: |
-      Pose interpolation produces a bounce like effect between key frames.
+      Pose interpolation produces a bounce-like effect between keyframes.
     value: 4
     tags: []
     deprecation_message: ''

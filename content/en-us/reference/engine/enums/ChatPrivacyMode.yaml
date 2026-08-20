@@ -4,7 +4,9 @@
 
 name: ChatPrivacyMode
 type: enum
-summary: ''
+summary: |
+  Describes which other users a player is permitted to exchange in-game chat
+  messages with.
 description: |
   Internally controls the user's chat privacy settings.
 code_samples: []

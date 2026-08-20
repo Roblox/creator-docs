@@ -4,29 +4,44 @@
 
 name: CreateAssetResult
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates the outcome of a call to `Class.AssetService:CreateAssetAsync()` or
+  `Class.AssetService:CreateAssetVersionAsync()`.
+description: |
+  `Enum.CreateAssetResult` is returned as the first element of the tuple from
+  `Class.AssetService:CreateAssetAsync()` and
+  `Class.AssetService:CreateAssetVersionAsync()`. It indicates whether the asset
+  was created or updated successfully, or why the operation failed. On success,
+  the second tuple element is the new asset ID (for `CreateAssetAsync`) or the
+  new version number (for `CreateAssetVersionAsync`); on failure, the second
+  element is a string with additional diagnostic information.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Success
-    summary: ''
+    summary: |
+      The asset was created or updated successfully.
     value: 1
     tags: []
     deprecation_message: ''
   - name: PermissionDenied
-    summary: ''
+    summary: |
+      The caller does not have permission to create or update an asset in the
+      target inventory.
     value: 2
     tags: []
     deprecation_message: ''
   - name: UploadFailed
-    summary: ''
+    summary: |
+      The upload request to the Roblox asset service failed for a reason other
+      than a permission error.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Unknown
-    summary: ''
+    summary: |
+      An unexpected error occurred and the operation could not complete.
     value: 4
     tags: []
     deprecation_message: ''

@@ -44,14 +44,14 @@ To create an API key:
 
    For a list of all scopes and the APIs they support, see [Scopes](../reference/scopes.md).
 
-1. **(Optional)** In the **Security** section, explicitly restrict IP access to the key using [CIDR
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Security** section, explicitly restrict IP access to the key using [CIDR
    notation](#cidr-format). You can find
    the IP address of your local machine and add it to the **Accepted IP
    Addresses** section along with additional IP addresses for those that need
    access. If you don't have a fixed IP, or you are using the API key only in a
    local environment, you can leave the `Restrict IP addresses` toggle unchecked to allow any IP to use your API key.
 
-1. **(Optional)**: To add additional protection for your resources, set an expiration date for your key.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> To add additional protection for your resources, set an expiration date for your key.
 1. Click the **Save & Generate key** button.
 1. Copy and save the API key string to a secure location, **not** a public repository for your code.
 1. Verify the status of your API key on the
@@ -179,9 +179,9 @@ Retrieve information about an API key. Verifies whether the key can be used from
 
 `(application/json)`
 
-| Key            | Value                  |
-| -------------- | ---------------------- |
-| apiKey  | `<api_key>`     |
+| Key | Value |
+| :--- | :--- |
+| apiKey | `<api_key>` |
 
 ```bash title="Example Introspect API Key Request"
 curl --location --request POST 'https://apis.roblox.com/api-keys/v1/introspect' \

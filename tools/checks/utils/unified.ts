@@ -29,7 +29,7 @@ import {
   RETEXT_CONTRACTIONS_ALLOW_LIST,
   RETEXT_EQUALITY_ALLOW_LIST,
   RETEXT_PASSIVE_ALLOW_LIST,
-  ALLOWED_PROFANE_WORDS_LIST,
+  RETEXT_PROFANITIES_IGNORE_LIST,
   canIgnoreWordInSpellCheck,
 } from './words.js';
 import { areArraysEqual } from './array.js';
@@ -465,7 +465,7 @@ export const getReTextAnalysis = async (text: string) => {
         .use(retextInappropriate)
         .use(retextProfanities, {
           sureness: 2,
-          ignore: ALLOWED_PROFANE_WORDS_LIST,
+          ignore: RETEXT_PROFANITIES_IGNORE_LIST,
         })
         .use(retextRepeatedWords)
         .use(retextQuotes, { preferred: 'straight' })

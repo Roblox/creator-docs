@@ -139,4 +139,4 @@ To upload a plugin:
 
 ## Distribute and sell plugins
 
-You can publicly distribute and sell your own plugins on the Creator Store for others to use within their own game development. This monetization method lets you earn 100% of net proceeds on transactions, bypassing platform fees and DevEx rates. For more information on this process, including how to set up a seller account to set prices and receive payouts, see [Creator Store - Requirements](../production/creator-store.md#requirements).
+You can publicly distribute and sell your own plugins on the Creator Store for others to use within their own game development. This monetization method lets you earn 100% of net proceeds on transactions, bypassing platform fees and DevEx rates. For more information on this process, including how to set up a seller account to set prices and receive payouts, see [Creator Store - Distribute and sell assets](../production/creator-store.md#distribute-and-sell-assets).

@@ -566,7 +566,7 @@ properties:
       of all other cameras in your experience won't be updated, including those
       used for `Class.ViewportFrame|ViewportFrames`.
     code_samples: []
-    type: Vector2
+    type: ScreenSafeInsetsModel
     tags:
       - ReadOnly
       - NotReplicated

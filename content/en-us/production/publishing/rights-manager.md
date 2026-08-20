@@ -19,7 +19,7 @@ To file a removal request:
    1. Under **Select creations for removal**:
       1. Provide a link to your creation on the Roblox platform.
       2. Provide up to 250 links to the creations you are reporting.
-      3. (Optional) Enter any additional details that might be relevant and that might help Roblox understand your report. For example, if you are reporting an asset in a game, provide a screenshot and details of where to find the asset you are reporting.
+      3. <Chip label="OPTIONAL" size="small" variant="outlined" /> Enter any additional details that might be relevant and that might help Roblox understand your report. For example, if you are reporting an asset in a game, provide a screenshot and details of where to find the asset you are reporting.
       4. Click **Add Creation**.
    2. Under **Review creations**, review the details of your removal request and click **Next**.
    3. Under **Add details**:

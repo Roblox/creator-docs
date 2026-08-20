@@ -8,6 +8,8 @@ navigation:
     section:
       - title: Build on the Roblox App
         path: /ai/build
+      - title: Build with Assistant
+        path: /ai/build-with-assistant
       - title: Build with a coding harness
         path: /ai/coding-harness
   - heading: Create
@@ -226,6 +228,8 @@ navigation:
             path: /scripting/scheduler
           - title: Multi-threading
             path: /scripting/multithreading
+          - title: Transparent batching
+            path: /scripting/transparent-batching
           - title: Native code generation
             path: /luau/native-code-gen
           - title: Script capabilities

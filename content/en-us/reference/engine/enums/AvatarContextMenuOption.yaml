@@ -4,29 +4,41 @@
 
 name: AvatarContextMenuOption
 type: enum
-summary: ''
-description: ''
+summary: |
+  Options for the Avatar Context Menu, a menu that allows users to interact with
+  other players' characters in an experience.
+description: |
+  Options for the [Avatar Context Menu](../../../players/avatar-context-menu.md)
+  (ACM), a menu that allows users to interact with other players' characters in
+  an experience. Pass these values to `Class.StarterGui:SetCore()` with the
+  `"AddAvatarContextMenuOption"` or `"RemoveAvatarContextMenuOption"` options to
+  add or remove default actions from the menu.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Friend
-    summary: ''
+    summary: |
+      Sends a friend request to the selected user.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Chat
-    summary: ''
+    summary: |
+      Opens a private conversation with the selected user in the in-game chat.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Emote
-    summary: ''
+    summary: |
+      Plays a wave emote animation directed at the selected user.
     value: 2
     tags: []
     deprecation_message: ''
   - name: InspectMenu
-    summary: ''
+    summary: |
+      Opens the Avatar Inspect Menu to view the selected user's avatar and
+      equipped items.
     value: 3
     tags: []
     deprecation_message: ''

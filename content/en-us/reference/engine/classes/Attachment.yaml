@@ -47,7 +47,13 @@ properties:
       `Datatype.Vector3`.
     description: |
       Direction of the **X** axis of the attachment, represented as a unit
-      `Datatype.Vector3`.
+      `Datatype.Vector3`. Together with
+      `Class.Attachment.SecondaryAxis|SecondaryAxis`, this property defines the
+      orientation of the attachment. Setting `Axis` automatically re-projects
+      `SecondaryAxis` onto the plane perpendicular to the new axis so the two
+      always remain orthogonal.
+
+      The default value is `(1, 0, 0)`.
     code_samples: []
     type: Vector3
     tags:
@@ -116,7 +122,12 @@ properties:
       orientation of its parent.
     description: |
       Positional offset of the attachment, relative to the position and
-      orientation of its parent.
+      orientation of its parent. This value corresponds to the translational
+      component of `Class.Attachment.CFrame|CFrame`; changing either property
+      updates the other. The offset is expressed in the local coordinate space
+      of the parent `Class.BasePart`, `Class.Bone`, or `Class.Attachment`.
+
+      The default value is `(0, 0, 0)`.
     code_samples: []
     type: Vector3
     tags:
@@ -166,7 +177,13 @@ properties:
       `Datatype.Vector3`.
     description: |
       Direction of the **Y** axis of the attachment, represented as a unit
-      `Datatype.Vector3`.
+      `Datatype.Vector3`. Together with `Class.Attachment.Axis|Axis`, this
+      property defines the orientation of the attachment. When set, the value is
+      projected onto the plane perpendicular to `Axis` so the two axes always
+      remain orthogonal; the resulting stored value may therefore differ from
+      the value you assign.
+
+      The default value is `(0, 1, 0)`.
     code_samples: []
     type: Vector3
     tags:
@@ -187,7 +204,13 @@ properties:
     summary: |
       Toggles the in-experience visibility of the attachment.
     description: |
-      Toggles the in-experience visibility of the attachment.
+      Toggles the in-experience visibility of the attachment. When set to
+      `true`, the attachment renders as a small green sphere at its world
+      position during gameplay. This is useful for debugging constraint setups
+      or verifying attachment placement without needing Studio's constraint
+      detail overlays.
+
+      The default value is `false`.
     code_samples: []
     type: boolean
     tags: []
@@ -208,7 +231,11 @@ properties:
       represented as a unit `Datatype.Vector3` with a length of 1.
     description: |
       Direction of the **X** axis of the attachment relative to the world,
-      represented as a unit `Datatype.Vector3` with a length of 1.
+      represented as a unit `Datatype.Vector3` with a length of 1. This is the
+      world-space equivalent of `Class.Attachment.Axis|Axis`, computed by
+      transforming the local axis through the parent's `Datatype.CFrame`.
+      Setting this property converts the supplied direction into the parent's
+      local space and updates `Axis` accordingly.
     code_samples: []
     type: Vector3
     tags:
@@ -279,7 +306,11 @@ properties:
       parent.
     description: |
       Position of the attachment relative to the world rather than its own
-      parent.
+      parent. This is the world-space equivalent of
+      `Class.Attachment.Position|Position`, computed by transforming the local
+      offset through the parent's `Datatype.CFrame`. Setting this property
+      converts the supplied position into the parent's local space and updates
+      `Position` accordingly.
     code_samples: []
     type: Vector3
     tags:
@@ -332,7 +363,11 @@ properties:
       represented as a unit `Datatype.Vector3` with a length of 1.
     description: |
       Direction of the **Y** axis of the attachment relative to the world,
-      represented as a unit `Datatype.Vector3` with a length of 1.
+      represented as a unit `Datatype.Vector3` with a length of 1. This is the
+      world-space equivalent of `Class.Attachment.SecondaryAxis|SecondaryAxis`,
+      computed by transforming the local secondary axis through the parent's
+      `Datatype.CFrame`. Setting this property converts the supplied direction
+      into the parent's local space and updates `SecondaryAxis` accordingly.
     code_samples: []
     type: Vector3
     tags:
@@ -359,7 +394,9 @@ methods:
     parameters: []
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          The direction of the X axis as a unit `Datatype.Vector3` in the
+          attachment's local space.
     tags:
       - Deprecated
     deprecation_message: |
@@ -373,13 +410,18 @@ methods:
       Returns a list of `Class.Constraint|Constraints` connected to the
       attachment.
     description: |
-      Returns a list of `Class.Constraint|Constraints` connected to the
-      attachment.
+      Returns a list of `Class.Constraint|Constraints` that use this attachment
+      as either `Class.Constraint.Attachment0|Attachment0` or
+      `Class.Constraint.Attachment1|Attachment1`. The returned array is a
+      snapshot at the time of the call; subsequent changes to constraint
+      connections are not reflected in a previously returned array.
     code_samples: []
     parameters: []
     returns:
       - type: List<Constraint>
-        summary: ''
+        summary: |
+          An array of `Class.Constraint` objects that are connected to this
+          attachment.
     tags: []
     deprecation_message: ''
     security: None
@@ -397,7 +439,9 @@ methods:
     parameters: []
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          The direction of the Y axis as a unit `Datatype.Vector3` in the
+          attachment's local space.
     tags:
       - Deprecated
     deprecation_message: |
@@ -416,7 +460,9 @@ methods:
       - name: axis
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Vector3` to set as the X-axis direction of the
+          attachment.
     returns:
       - type: ()
         summary: ''
@@ -440,7 +486,9 @@ methods:
       - name: axis
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Vector3` to set as the Y-axis direction of the
+          attachment.
     returns:
       - type: ()
         summary: ''

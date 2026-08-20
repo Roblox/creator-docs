@@ -4,62 +4,77 @@
 
 name: StateObjectFieldType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies the data type of a field in a deprecated `StateObject`; all values
+  are deprecated and the enum is retained only for backward compatibility.
+description: |
+  `StateObjectFieldType` formerly described the data type of a field within a
+  `StateObject`. All enum values are deprecated. The enum itself is not used by
+  engine code and is preserved solely so that existing creator scripts that
+  reference it continue to function. New code should not depend on this enum.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Boolean
-    summary: ''
+    summary: |
+      A boolean field.
     value: 0
     tags:
       - Deprecated
     deprecation_message: ''
   - name: CFrame
-    summary: ''
+    summary: |
+      A `Datatype.CFrame` field.
     value: 1
     tags:
       - Deprecated
     deprecation_message: ''
   - name: Color3
-    summary: ''
+    summary: |
+      A `Datatype.Color3` field.
     value: 2
     tags:
       - Deprecated
     deprecation_message: ''
   - name: Float
-    summary: ''
+    summary: |
+      A floating-point number field.
     value: 3
     tags:
       - Deprecated
     deprecation_message: ''
   - name: Instance
-    summary: ''
+    summary: |
+      An `Class.Instance` reference field.
     value: 4
     tags:
       - Deprecated
     deprecation_message: ''
   - name: Random
-    summary: ''
+    summary: |
+      A `Datatype.Random` field.
     value: 5
     tags:
       - Deprecated
     deprecation_message: ''
   - name: Vector2
-    summary: ''
+    summary: |
+      A `Datatype.Vector2` field.
     value: 6
     tags:
       - Deprecated
     deprecation_message: ''
   - name: Vector3
-    summary: ''
+    summary: |
+      A `Datatype.Vector3` field.
     value: 7
     tags:
       - Deprecated
     deprecation_message: ''
   - name: INVALID
-    summary: ''
+    summary: |
+      An invalid or unrecognized field type.
     value: 8
     tags:
       - Deprecated

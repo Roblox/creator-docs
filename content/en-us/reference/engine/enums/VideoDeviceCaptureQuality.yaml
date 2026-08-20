@@ -4,29 +4,39 @@
 
 name: VideoDeviceCaptureQuality
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the capture resolution and frame rate used by a `VideoDeviceInput`
+  when reading from a camera device.
+description: |
+  Specifies the capture resolution and frame rate used by a `VideoDeviceInput`
+  when reading from a camera device. Set via the `CaptureQuality` property. The
+  actual resolution and frame rate for each value are optimized per platform.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      The default capture quality.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Low
-    summary: ''
+    summary: |
+      Captures at a reduced quality to lower resource usage on constrained or
+      mobile platforms.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Medium
-    summary: ''
+    summary: |
+      Captures at a balanced quality suitable for most use cases.
     value: 2
     tags: []
     deprecation_message: ''
   - name: High
-    summary: ''
+    summary: |
+      Captures at the highest available quality.
     value: 3
     tags: []
     deprecation_message: ''

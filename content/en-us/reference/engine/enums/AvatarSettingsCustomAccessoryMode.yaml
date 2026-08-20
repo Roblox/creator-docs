@@ -4,19 +4,33 @@
 
 name: AvatarSettingsCustomAccessoryMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines whether `AvatarAccessoryRules` replaces player accessories with
+  experience-defined custom accessories.
+description: |
+  Determines whether `AvatarAccessoryRules` replaces the player's rigid
+  accessories with experience-defined custom accessories. Used by
+  `CustomAccessoryMode`, which defaults to
+  `Enum.AvatarSettingsCustomAccessoryMode.PlayerChoice`. When set to
+  `Enum.AvatarSettingsCustomAccessoryMode.CustomAccessories`, the engine removes
+  existing player accessories in each enabled slot and replaces them with the
+  asset IDs specified by the per-slot `Custom*AccessoryEnabled` and
+  `Custom*AccessoryId` properties on `AvatarAccessoryRules`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: PlayerChoice
-    summary: ''
+    summary: |
+      No custom accessory replacement is applied; the player's own accessory
+      choices are displayed without modification.
     value: 0
     tags: []
     deprecation_message: ''
   - name: CustomAccessories
-    summary: ''
+    summary: |
+      The experience replaces player accessories with custom accessories defined
+      by the per-slot properties on `AvatarAccessoryRules`.
     value: 1
     tags: []
     deprecation_message: ''

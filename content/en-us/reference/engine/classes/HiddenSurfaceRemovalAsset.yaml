@@ -5,8 +5,21 @@
 name: HiddenSurfaceRemovalAsset
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Stores the precomputed hidden surface removal (HSR) data for a
+  layered-clothing wrap, marking the mesh faces that are hidden by higher
+  clothing layers so the engine can cull them.
+description: |
+  Engine-managed asset; its data is not exposed to scripts. Holds the hidden
+  surface removal (HSR) data produced by Roblox's layered-clothing deformation
+  pipeline. HSR identifies the faces of a wrap's mesh that are fully occluded by
+  clothing layers worn above it, so the engine can strip those faces from the
+  output geometry before rendering rather than drawing surfaces that will never
+  be visible.
+
+  The asset is stored and fetched by content ID: the engine deserializes it and
+  decodes its data into the runtime visibility information consumed by the wrap
+  deformer when solving a `Class.WrapLayer` or `Class.WrapTarget`.
 code_samples: []
 inherits:
   - Instance

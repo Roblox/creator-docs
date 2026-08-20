@@ -111,13 +111,17 @@ properties:
       - Physics
     simulationAccess: true
   - name: AngularVelocity.RelativeTo
-    summary: ''
+    summary: |
+      The `Enum.ActuatorRelativeTo` value specifying the coordinate frame in
+      which the `Class.AngularVelocity.AngularVelocity|AngularVelocity` vector
+      is expressed; defaults to `Enum.ActuatorRelativeTo|World`.
     description: |
-      The `Datatype.CFrame` in which the `AngularVelocity` force is specified.
-      If set to `Enum.ActuatorRelativeTo|World`, the angular velocity vector is
-      used as is. If set to `Enum.ActuatorRelativeTo|Attachment1`, the angular
-      velocity is transformed by the `Datatype.CFrame` of the assigned
-      attachment.
+      The coordinate frame in which the
+      `Class.AngularVelocity.AngularVelocity|AngularVelocity` vector is
+      expressed, selected by an `Enum.ActuatorRelativeTo` value. If set to
+      `Enum.ActuatorRelativeTo|World`, the angular velocity vector is used as
+      is. If set to `Enum.ActuatorRelativeTo|Attachment1`, the angular velocity
+      is transformed by the `Datatype.CFrame` of the assigned attachment.
 
       `Class.AngularVelocity.RelativeTo|RelativeTo` can also be set to
       `Enum.ActuatorRelativeTo|Attachment0`, but it makes no physical sense and

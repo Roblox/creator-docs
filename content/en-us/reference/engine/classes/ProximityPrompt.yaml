@@ -271,8 +271,22 @@ properties:
       - UI
       - Input
   - name: ProximityPrompt.MaxIndicatorDistance
-    summary: ''
-    description: ''
+    summary: |
+      The maximum distance at which a lightweight indicator for the prompt is
+      shown, hinting at a nearby interaction before the player is close enough
+      to trigger it.
+    description: |
+      The maximum distance a player's `Class.Player.Character|character` can be
+      from the `Class.ProximityPrompt` for a lightweight indicator to appear. An
+      indicator is shown while the player is farther than
+      `Class.ProximityPrompt.MaxActivationDistance` but no farther than
+      **MaxIndicatorDistance**, hinting that an interaction is nearby before the
+      prompt itself becomes active.
+
+      The default is `0`, which disables the indicator; an indicator only
+      appears when this property is set to a value greater than `0`. The number
+      of indicators shown at once is capped by
+      `Class.ProximityPromptService.MaxIndicatorsVisible`.
     code_samples: []
     type: float
     tags: []
@@ -464,8 +478,19 @@ methods:
       - Input
 events:
   - name: ProximityPrompt.IndicatorHidden
-    summary: ''
-    description: ''
+    summary: |
+      Fires on the client when a lightweight indicator for the prompt is no
+      longer shown.
+    description: |
+      Fires client-side when a lightweight indicator for this
+      `Class.ProximityPrompt` is hidden, which occurs when the player's
+      `Class.Player.Character|character` moves farther than
+      `Class.ProximityPrompt.MaxIndicatorDistance` from the prompt or the prompt
+      itself becomes active. Use this event to tear down a custom indicator UI.
+
+      As with `Class.ProximityPrompt.IndicatorShown`, indicators only appear
+      when `Class.ProximityPrompt.MaxIndicatorDistance` is set to a value
+      greater than `0`; it defaults to `0`.
     code_samples: []
     parameters: []
     tags: []
@@ -475,8 +500,19 @@ events:
       - UI
       - Input
   - name: ProximityPrompt.IndicatorShown
-    summary: ''
-    description: ''
+    summary: |
+      Fires on the client when a lightweight indicator for the prompt becomes
+      visible.
+    description: |
+      Fires client-side when a lightweight indicator for this
+      `Class.ProximityPrompt` becomes visible, which occurs when the player's
+      `Class.Player.Character|character` is within
+      `Class.ProximityPrompt.MaxIndicatorDistance` of the prompt but still
+      farther away than `Class.ProximityPrompt.MaxActivationDistance`. Listen to
+      this event to render a custom indicator UI.
+
+      Because `Class.ProximityPrompt.MaxIndicatorDistance` defaults to `0`,
+      indicators are disabled unless you set it to a value greater than `0`.
     code_samples: []
     parameters: []
     tags: []

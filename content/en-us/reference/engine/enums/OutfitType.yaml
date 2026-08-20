@@ -4,8 +4,19 @@
 
 name: OutfitType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Categorizes a saved player outfit by its content type, used to filter or
+  specify outfit type in `Class.AvatarEditorService` methods.
+description: |
+  `OutfitType` is an enum used with `Class.AvatarEditorService` to distinguish
+  saved player outfits by their content. It is accepted by
+  `Class.AvatarEditorService:GetOutfitsAsync()` and
+  `Class.AvatarEditorService:GetOutfits()` as a filter.
+
+  The most common values are `Enum.OutfitType.Avatar` (a full-body outfit) and
+  `Enum.OutfitType.Makeup` (a makeup-only configuration). Passing
+  `Enum.OutfitType.All` to a query method returns outfits of every type with no
+  filtering applied.
 code_samples: []
 tags: []
 deprecation_message: ''

@@ -1,6 +1,10 @@
 ---
 title: Layered accessory caging best practices
 description: In-depth description and images of various caging best practices for layered accessories.
+keywords:
+  - Layered clothing
+  - Layerable accessories
+  - Layered clothing accessories
 ---
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/QwZaA9Gc-WQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>

@@ -65,7 +65,7 @@ To verify your account with your phone number:
 
    <img src="../../assets/publishing/account-verification/Phone-Verified.png" width="780" />
 
-1. **(Optional)** Restart Studio to validate your new age verification status.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Restart Studio to validate your new age verification status.
 
 ## Check verification status by script
 

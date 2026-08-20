@@ -4,19 +4,29 @@
 
 name: VRControllerModelMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether and how the player's VR hand controller models are rendered
+  in an experience.
+description: |
+  `VRControllerModelMode` is used by the `Class.VRService.ControllerModels`
+  property to determine how the 3D models representing a VR player's hand
+  controllers are displayed.
+
+  The default value of `Class.VRService.ControllerModels` is
+  `Enum.VRControllerModelMode.Transparent|Transparent`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Disabled
-    summary: ''
+    summary: |
+      The player's VR hand controller models are not rendered.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Transparent
-    summary: ''
+    summary: |
+      The player's VR hand controller models are rendered with transparency.
     value: 1
     tags: []
     deprecation_message: ''

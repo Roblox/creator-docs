@@ -4,19 +4,30 @@
 
 name: CommandPermission
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the minimum security permission level required to invoke a Studio
+  command.
+description: |
+  Specifies the minimum security permission level a Lua execution context must
+  hold to invoke a Studio command registered through the plugin command system.
+  `Enum.CommandPermission.Plugin` is the standard permission for plugin scripts;
+  `Enum.CommandPermission.LocalUser` is the higher-privilege level reserved for
+  IDE-only APIs.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Plugin
-    summary: ''
+    summary: |
+      The command is accessible to scripts running at the standard Plugin
+      security level.
     value: 0
     tags: []
     deprecation_message: ''
   - name: LocalUser
-    summary: ''
+    summary: |
+      The command requires the LocalUser security level, granting access to
+      IDE-only APIs.
     value: 1
     tags: []
     deprecation_message: ''

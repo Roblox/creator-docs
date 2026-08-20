@@ -21,7 +21,7 @@ To update your genre:
 2. Click on the thumbnail of the game you want to update the genre for. The game's overview page displays.
 3. In the left-hand navigation, select **Configure** &rang; **Settings**.
 4. Select the genre of your game. For additional guidance, see [Best Practices](#best-practices).
-5. **(Optional)** Select a subgenre if one applies.
+5. <Chip label="OPTIONAL" size="small" variant="outlined" /> Select a subgenre if one applies.
 
 When you update your genre, the genre immediately updates on your game's main page, but it may take a few days to reflect in other Discovery systems like genre-specific sorts in Charts.
 

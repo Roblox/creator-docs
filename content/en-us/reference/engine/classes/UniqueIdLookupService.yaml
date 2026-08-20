@@ -5,8 +5,14 @@
 name: UniqueIdLookupService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Team Create service that maps `Class.Instance.UniqueId|UniqueId` to and from
+  RFC-4122 strings; not for experience scripts.
+description: |
+  Not intended for experience scripts. Used by Team Create and Studio
+  collaboration to map between an `Class.Instance`'s
+  `Class.Instance.UniqueId|UniqueId` (a 128-bit identifier) and its canonical
+  RFC-4122 string form, and to resolve the live instance from that string.
 code_samples: []
 inherits:
   - Instance
@@ -18,17 +24,28 @@ deprecation_message: ''
 properties: []
 methods:
   - name: UniqueIdLookupService:GetOrCreateUniqueIdRemoteCommand
-    summary: ''
-    description: ''
+    summary: |
+      Returns the RFC-4122 string form of the instance's
+      `Class.Instance.UniqueId|UniqueId`, creating one if the instance does not
+      already have it.
+    description: |
+      Returns the RFC-4122 string representation of the given `Class.Instance`'s
+      `Class.Instance.UniqueId|UniqueId`. If the instance does not yet have one,
+      a `Class.Instance.UniqueId|UniqueId` is generated for it (and for any
+      descendants that lack one) before the string is returned.
     code_samples: []
     parameters:
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The instance whose `Class.Instance.UniqueId|UniqueId` to read or
+          create.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The instance's `Class.Instance.UniqueId|UniqueId` as an RFC-4122
+          string.
     tags: []
     deprecation_message: ''
     security: None

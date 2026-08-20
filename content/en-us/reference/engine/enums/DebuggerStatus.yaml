@@ -7,7 +7,9 @@ type: enum
 summary: |
   Result of a debugger request.
 description: |
-  Result of a debugger request.
+  `Status` on every `DebuggerLuaResponse`, indicating whether the corresponding
+  debugger request succeeded or failed. See individual items for timeout,
+  connection, and other failure modes.
 code_samples: []
 tags: []
 deprecation_message: ''

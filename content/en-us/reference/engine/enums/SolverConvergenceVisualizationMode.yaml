@@ -4,24 +4,41 @@
 
 name: SolverConvergenceVisualizationMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether and at what granularity the physics solver's convergence
+  quality is overlaid as a debug visualization in Studio.
+description: |
+  Controls whether and at what granularity the physics solver's convergence
+  quality is overlaid as a 3D debug visualization in Roblox Studio. When active,
+  constraint edges connecting assembly root bodies are drawn as colored
+  cylinders; the worst-ranked edge within each simulation island is drawn in
+  red, while all remaining edges stay green. This visualization is only rendered
+  in Studio (not in published experiences). The metric used to rank convergence
+  is selected separately via
+  `Class.PhysicsSettings.SolverConvergenceMetricType`. Defaults to
+  `Enum.SolverConvergenceVisualizationMode.Disabled`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Disabled
-    summary: ''
+    summary: |
+      No solver convergence visualization is rendered; the default state.
     value: 0
     tags: []
     deprecation_message: ''
   - name: PerIsland
-    summary: ''
+    summary: |
+      Renders a single convergence metric label at the center of each simulation
+      island displaying the velocity-stage and position-stage maxima, which may
+      come from different constraints.
     value: 1
     tags: []
     deprecation_message: ''
   - name: PerEdge
-    summary: ''
+    summary: |
+      Renders convergence metrics as text labels on each aggregated body-pair
+      edge between assembly root bodies.
     value: 2
     tags: []
     deprecation_message: ''

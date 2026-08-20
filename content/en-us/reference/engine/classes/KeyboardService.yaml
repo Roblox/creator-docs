@@ -5,8 +5,16 @@
 name: KeyboardService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Service that maintains keyboard state, `Class.TextBox` focus, and clipboard
+  access; scripts read keyboard input through `Class.UserInputService` instead.
+description: |
+  Exposes no members for use in scripts. `Class.KeyboardService` maintains
+  per-window keyboard state — which keys are held, `Class.TextBox` focus and
+  on-screen keyboard geometry, clipboard access, and key-code display strings —
+  that experiences read through `Class.UserInputService` (for example
+  `Class.UserInputService:IsKeyDown()` and
+  `Class.UserInputService:GetKeysPressed()`).
 code_samples: []
 inherits:
   - Instance

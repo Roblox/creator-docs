@@ -17,34 +17,39 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: NumberRange.new
-    summary: |-
-      Returns a new `Datatype.NumberRange` with the minimum and maximum set to the
-      `value`.
-    description: |-
-      Returns a new `Datatype.NumberRange` with the minimum and maximum set to the
-      `value`.
+    summary: |
+      Returns a new `Datatype.NumberRange` with the minimum and maximum set to
+      the `value`.
+    description: |
+      Returns a new `Datatype.NumberRange` with the minimum and maximum set to
+      the `value`.
     parameters:
       - name: value
         type: number
         default:
-        summary: ''
+        summary: |
+          The number that both the minimum and maximum of the range are set to.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: NumberRange.new
-    summary: Returns a new `Datatype.NumberRange` with the provided `minimum` and `maximum`.
-    description: |-
-      Returns a new `Datatype.NumberRange` with the provided `minimum` and `maximum`. The
-      `minimum` must be less than or equal to `maximum`.
+    summary: |
+      Returns a new `Datatype.NumberRange` with the provided `minimum` and
+      `maximum`.
+    description: |
+      Returns a new `Datatype.NumberRange` with the provided `minimum` and
+      `maximum`. The `minimum` must be less than or equal to `maximum`.
     parameters:
       - name: minimum
         type: number
         default:
-        summary: ''
+        summary: |
+          The lower bound of the range.
       - name: maximum
         type: number
         default:
-        summary: ''
+        summary: |
+          The upper bound of the range.
     code_samples: []
     tags: []
     deprecation_message: ''

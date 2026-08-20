@@ -5,7 +5,9 @@
 name: TextFilterResult
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  Represents the result of a call to `Class.TextService:FilterStringAsync()`,
+  used to distribute a filtered string accordingly.
 description: |
   Represents the result of a call to `Class.TextService:FilterStringAsync()`.
   Used to distribute a filtered string accordingly.

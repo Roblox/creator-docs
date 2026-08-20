@@ -197,7 +197,8 @@ methods:
       - name: modifierKey
         type: ModifierKey
         default:
-        summary: ''
+        summary: |
+          The `Enum.ModifierKey` to check.
     returns:
       - type: boolean
         summary: |

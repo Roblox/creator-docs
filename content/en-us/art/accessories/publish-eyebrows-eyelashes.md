@@ -39,7 +39,7 @@ You can download reference `.fbx` models of [eyelashes](../../assets/art/referen
    <img src="../../assets/art/accessories/AFT-Eyebrows-Example.png"/>
 
 3. Select the appropriate **Accessory** > **Eyelash** or **Accessory** > **Eyebrow** asset type and click **Next**.
-4. (Optional) Preview the fit of your face accessory.
+4. <Chip label="OPTIONAL" size="small" variant="outlined" /> Preview the fit of your face accessory.
    1. If the face accessory was modeled on a specific character body, you may want to import that character body into Studio and use it as a mannequin in the fitting tool's preview. See [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md) for more information on adding custom characters.
    2. If using the provided reference body, you can continue to step 5.
 5. Click **Generate MeshPart Accessory** to create your MeshPart.

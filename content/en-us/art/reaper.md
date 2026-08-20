@@ -123,7 +123,7 @@ To create fades ins and outs:
 
    <video controls src="../assets/art/3p-software/reaper/Fades-Transition.mp4" width="90%"></video>
 
-1. **(Optional)** Change the transition's curve type.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Change the transition's curve type.
    1. Right-click either your fade in or out curve. A pop-up menu displays with multiple curve types.
    1. Select a new curve. The sound fades in or out according to the new curve type.
 

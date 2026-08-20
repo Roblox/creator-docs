@@ -5,8 +5,29 @@
 name: DraftsService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A Studio service that manages script drafts in a Team Create session with
+  collaborative editing enabled.
+description: |
+  `DraftsService` backs the collaborative editing "drafts" workflow in a Team
+  Create session. When collaborative editing is enabled, a collaborator's
+  changes to a `Class.Script`, `Class.LocalScript`, or `Class.ModuleScript` are
+  kept as a local _draft_ rather than being applied to the shared session copy
+  immediately, and a draft must be committed before other collaborators receive
+  it.
+
+  The service exposes the operations behind Studio's Drafts interface.
+  `GetDrafts()` enumerates the current drafts, `GetDraftStatus()` reports a
+  draft's status, and `GetEditors()` lists the collaborators editing a given
+  script. `CommitEdits()` and `DiscardEdits()` publish or drop changes;
+  `RestoreScripts()` and `UpdateToLatestVersion()` reconcile local drafts with
+  the server; and `ShowDiffsAgainstBase()` and `ShowDiffsAgainstServer()` open
+  diff views. Events including `DraftAdded`, `DraftRemoved`,
+  `DraftStatusChanged`, and `EditorsListChanged` fire as drafts and their
+  editors change.
+
+  `DraftsService` is a Studio-only service; retrieve it with
+  `game:GetService("DraftsService")`.
 code_samples: []
 inherits:
   - Instance

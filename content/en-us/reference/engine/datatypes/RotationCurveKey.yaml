@@ -28,10 +28,10 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: RotationCurveKey.new
-    summary: |-
+    summary: |
       Returns a new `Datatype.RotationCurveKey` at a given time with a given
       `Datatype.CFrame`.
-    description: |-
+    description: |
       Creates a new `Datatype.RotationCurveKey` at a given time with a given
       `Datatype.CFrame`. `Datatype.RotationCurveKey.LeftTangent|LeftTangent` and
       `Datatype.RotationCurveKey.RightTangent|RightTangent` are left
@@ -41,11 +41,13 @@ constructors:
       - name: time
         type: number
         default:
-        summary: Time at which to create the new `Datatype.RotationCurveKey`.
+        summary: |
+          Time at which to create the new `Datatype.RotationCurveKey`.
       - name: cframe
         type: CFrame
         default:
-        summary: '`Datatype.CFrame` of the new `Datatype.RotationCurveKey`.'
+        summary: |
+          `Datatype.CFrame` of the new `Datatype.RotationCurveKey`.
       - name: Interpolation
         type: KeyInterpolationMode
         default:

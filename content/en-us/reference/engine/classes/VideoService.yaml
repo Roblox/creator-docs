@@ -7,7 +7,9 @@ type: class
 memory_category: Instances
 summary: |
   An internal service that offers no functionality to developers.
-description: ''
+description: |
+  `Class.VideoService` creates `Class.VideoSampler` objects used to extract
+  still frames from video content.
 code_samples: []
 inherits:
   - Instance

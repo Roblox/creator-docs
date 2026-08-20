@@ -106,27 +106,27 @@ See the following table for Extended Services pricing:
   <tr>
     <td><a href="https://create.roblox.com/docs/cloud-services/memory-stores" style={{color: 'inherit', textDecoration: 'underline'}}>Memory stores</a></td>
     <td>Requests</td>
-    <td>1000 + (CCU x 120) requests per minute</td>
+    <td>1000 + (CCU × 120) requests per minute</td>
     <td>$0.003 / 1M requests</td>
   </tr>
   <tr>
     <td></td>
     <td>Storage</td>
-    <td>64KB + (CCU x 1.2KB)</td>
+    <td>64 KB + (CCU × 1.2 KB)</td>
     <td>$0.10 / GB per hour&sup1;</td>
   </tr>
 
   <tr>
     <td><a href="https://create.roblox.com/docs/audio/objects#text-to-speech" style={{color: 'inherit', textDecoration: 'underline'}}>Text-to-speech</a></td>
     <td>Requests</td>
-    <td>1 + (CCU x 6) requests per minute</td>
+    <td>1 + (CCU × 6) requests per minute</td>
     <td>$5.00 / 1M requests</td>
   </tr>
 
   <tr>
     <td><a href="https://create.roblox.com/docs/audio/objects#speech-to-text" style={{color: 'inherit', textDecoration: 'underline'}}>Speech-to-text</a></td>
     <td>Requests</td>
-    <td>1 + (CCU x 5) requests per minute</td>
+    <td>1 + (CCU × 5) requests per minute</td>
     <td>$1 / 1M requests</td>
   </tr>
 
@@ -183,7 +183,7 @@ See the following table for Extended Services pricing:
   <tr>
     <td><a href="https://create.roblox.com/docs/cloud-services/data-stores" style={{color: 'inherit', textDecoration: 'underline'}}>Data store storage </a></td>
     <td>Storage</td>
-    <td>100 MB + (1MB * Lifetime Players) GB per month</td>
+    <td>100 MB + (1 MB * Lifetime Players) GB per month</td>
     <td>$0.12 / GB per month</td>
   </tr>
 
@@ -196,7 +196,7 @@ See the following table for Extended Services pricing:
 </tbody>
 </table>
 
-<figcaption>&sup1; GB per hour = the storage consumption multiplied by the amount of time. For example, 100GB hours might equate to "100GB x 1 hour" or "200GB x 0.5 hours".</figcaption>
+<figcaption>&sup1; GB per hour = the storage consumption multiplied by the amount of time. For example, 100 GB hours might equate to "100 GB × 1 hour" or "200 GB × 0.5 hours".</figcaption>
 
 <figcaption>&sup2; Extended Services for Compute is billed based on how long the feature remains enabled, measured in minutes of playtime. Because enabling the feature reserves additional compute capacity for your game, charges apply whenever the feature is active, even if the additional compute is not fully consumed. Playtime hours are calculated as the sum of all player session durations. For example, if 10,000 users each play for 1 hour, that equals 10,000 playtime hours, resulting in $10 in charges beyond the included monthly allowance of 100,000 playtime hours. These limits and pricing only apply to games enrolled in Extended Services for Compute. Games that do not enroll continue to receive unlimited playtime hours under the current default limits at no additional charge.</figcaption>
 

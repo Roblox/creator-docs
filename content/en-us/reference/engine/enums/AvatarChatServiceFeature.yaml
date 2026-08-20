@@ -4,64 +4,108 @@
 
 name: AvatarChatServiceFeature
 type: enum
-summary: ''
-description: ''
+summary: |
+  A bitmask enum whose items represent individual avatar chat capabilities for
+  voice and video communication within an experience.
+description: |
+  A bitmask enum whose items represent individual avatar chat capabilities for
+  voice and video communication within an experience. Each item is a single bit
+  flag; multiple flags are combined with bitwise-OR to form a feature mask that
+  `IsEnabled()` can test. Flags fall into three categories: universe/place
+  settings (set by the server based on creator configuration), user eligibility
+  and opt-in state (resolved per-player from backend permissions), and
+  moderation status.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      No avatar chat features are enabled. This is the default value of the
+      bitmask before any capabilities are resolved.
     value: 0
     tags: []
     deprecation_message: ''
   - name: UniverseAudio
-    summary: ''
+    summary: |
+      Voice chat audio is enabled at the universe level. This is a server-side
+      setting configured by the experience creator; it must be combined with
+      `Enum.AvatarChatServiceFeature.PlaceAudio` for audio to be active in a
+      given place.
     value: 1
     tags: []
     deprecation_message: ''
   - name: UniverseVideo
-    summary: ''
+    summary: |
+      Avatar video (camera-based facial animation) is enabled at the universe
+      level. This is a server-side setting configured by the experience creator;
+      it must be combined with `Enum.AvatarChatServiceFeature.PlaceVideo` for
+      video to be active in a given place.
     value: 2
     tags: []
     deprecation_message: ''
   - name: PlaceAudio
-    summary: ''
+    summary: |
+      Voice chat audio is enabled for the current place. Both this flag and
+      `Enum.AvatarChatServiceFeature.UniverseAudio` must be set for audio to be
+      active in the place.
     value: 4
     tags: []
     deprecation_message: ''
   - name: PlaceVideo
-    summary: ''
+    summary: |
+      Avatar video (camera-based facial animation) is enabled for the current
+      place. Both this flag and `Enum.AvatarChatServiceFeature.UniverseVideo`
+      must be set for video to be active in the place.
     value: 8
     tags: []
     deprecation_message: ''
   - name: UserAudioEligible
-    summary: ''
+    summary: |
+      The user meets the requirements to use voice chat audio (age-verified, not
+      banned, etc.). Eligibility is resolved per-player from backend
+      permissions; it does not imply the user has opted in (see
+      `Enum.AvatarChatServiceFeature.UserAudio`).
     value: 16
     tags: []
     deprecation_message: ''
   - name: UserAudio
-    summary: ''
+    summary: |
+      The user has opted in to voice chat audio. This flag is only meaningful
+      when `Enum.AvatarChatServiceFeature.UserAudioEligible` is also set;
+      together they indicate the user both can and has chosen to use voice.
     value: 32
     tags: []
     deprecation_message: ''
   - name: UserVideoEligible
-    summary: ''
+    summary: |
+      The user meets the requirements to use avatar video (camera-based facial
+      animation). Eligibility is resolved per-player from backend permissions;
+      it does not imply the user has opted in (see
+      `Enum.AvatarChatServiceFeature.UserVideo`).
     value: 64
     tags: []
     deprecation_message: ''
   - name: UserVideo
-    summary: ''
+    summary: |
+      The user has opted in to avatar video (camera-based facial animation).
+      This flag is only meaningful when
+      `Enum.AvatarChatServiceFeature.UserVideoEligible` is also set; together
+      they indicate the user both can and has chosen to use video.
     value: 128
     tags: []
     deprecation_message: ''
   - name: UserBanned
-    summary: ''
+    summary: |
+      The user is currently banned from avatar chat features. When this flag is
+      present in the client features mask, voice and video capabilities are
+      unavailable to the player regardless of other eligibility flags.
     value: 256
     tags: []
     deprecation_message: ''
   - name: UserVerifiedForVoice
-    summary: ''
+    summary: |
+      The user has completed voice verification.
     value: 512
     tags: []
     deprecation_message: ''

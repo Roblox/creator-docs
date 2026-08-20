@@ -59,8 +59,8 @@ To record a new profiling session:
 3. Expand the client-server dropdown to select **Client** or **Server**.
 
    <img src="../../assets/studio/console/Client-Server-Dropdown.png" width="600" alt="Dropdown menu with Client and Server options for selection." />
-4. (Optional) Check the **Live** checkbox to enable the live polling behavior.
-5. (Optional) Select **Freq** and **Time** to choose the recording frequency and session time length if you don't want to use the default values.
+4. <Chip label="OPTIONAL" size="small" variant="outlined" /> Check the **Live** checkbox to enable the live polling behavior.
+5. <Chip label="OPTIONAL" size="small" variant="outlined" /> Select **Freq** and **Time** to choose the recording frequency and session time length if you don't want to use the default values.
 6. Click **Start** to begin the profiling session. If you set a duration, Script Profiler displays a countdown timer with the remaining time in the session.
 7. Click **Stop** or wait until the recording finishes to display the profiling data.
 

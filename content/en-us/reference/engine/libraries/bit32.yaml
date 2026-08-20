@@ -47,7 +47,8 @@ functions:
           The integer number of bits to shift by.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The result of arithmetically shifting `x` by `disp` bits to the right.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -96,10 +97,12 @@ functions:
       - name: numbers
         type: Tuple
         default:
-        summary: ''
+        summary: |
+          The numbers to combine with bitwise AND.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The bitwise AND of all provided numbers.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -121,10 +124,12 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to negate.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The bitwise negation of `x`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -173,10 +178,12 @@ functions:
       - name: numbers
         type: Tuple
         default:
-        summary: ''
+        summary: |
+          The numbers to combine with bitwise OR.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The bitwise OR of all provided numbers.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -185,16 +192,38 @@ functions:
       Returns a boolean describing whether the bitwise and of its operands is
       different from zero.
     description: |
-      Returns a boolean signalling whether the bitwise _and_ of its operands is
-      different from zero.
+      Returns `true` if the bitwise AND of all its operands is different from
+      zero, `false` otherwise. This is functionally equivalent to
+      `bit32.band(...) ~= 0` but returns a boolean directly without the
+      intermediate number.
+
+      This function is useful for testing whether one or more specific bits are
+      set in a value. For example, you can check whether a particular flag is
+      active in a bitmask:
+
+      ```lua
+      local flags = 0x5 -- bits 0 and 2 are set
+      print(bit32.btest(flags, 1)) --> true (bit 0 is set)
+      print(bit32.btest(flags, 2)) --> false (bit 1 is not set)
+      print(bit32.btest(flags, 4)) --> true (bit 2 is set)
+      ```
+
+      When called with more than two arguments, all values are ANDed together
+      before the zero-test:
+
+      ```lua
+      print(bit32.btest(0xFF, 0x0F, 0x03)) --> true (0xFF & 0x0F & 0x03 == 0x03)
+      ```
     parameters:
       - name: numbers
         type: Tuple
         default:
-        summary: ''
+        summary: |
+          The numbers to test with bitwise AND.
     returns:
       - type: bool
-        summary: ''
+        summary: |
+          True if the bitwise AND of all operands is non-zero, false otherwise.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -243,10 +272,12 @@ functions:
       - name: numbers
         type: Tuple
         default:
-        summary: ''
+        summary: |
+          The numbers to combine with bitwise XOR.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The bitwise XOR of all provided numbers.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -254,15 +285,29 @@ functions:
     summary: |
       Returns the given number with the order of the bytes swapped.
     description: |
-      Returns the given number with the order of the bytes swapped.
+      Reverses the byte order of the 32-bit unsigned integer representation of
+      `x`. The four bytes are rearranged so that the most-significant byte
+      becomes the least-significant byte and vice versa, converting between
+      big-endian and little-endian representations.
+
+      ```lua
+      print(bit32.byteswap(0xAABBCCDD)) --> 0xDDCCBBAA
+      print(bit32.byteswap(0x00000001)) --> 0x01000000
+      ```
+
+      This is useful when reading or writing binary data that uses a different
+      byte order (endianness) than expected, such as network protocols or file
+      formats that store multi-byte integers in big-endian order.
     parameters:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number whose bytes to swap.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The number with its byte order reversed.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -278,10 +323,13 @@ functions:
       - name: 'n'
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to count leading zeros in.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The count of consecutive zero bits from the most significant bit, or
+          32 if `n` is zero.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -298,10 +346,13 @@ functions:
       - name: 'n'
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to count trailing zeros in.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The count of consecutive zero bits from the least significant bit, or
+          32 if `n` is zero.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -318,18 +369,22 @@ functions:
       - name: 'n'
         type: number
         default:
-        summary: ''
+        summary: |
+          The number to extract bits from.
       - name: field
         type: number
         default:
-        summary: ''
+        summary: |
+          The zero-based position of the least significant bit to extract.
       - name: width
         type: number
         default: 1
-        summary: ''
+        summary: |
+          The number of bits to extract.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The unsigned number formed by the extracted bit range.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -344,22 +399,27 @@ functions:
       - name: 'n'
         type: number
         default:
-        summary: ''
+        summary: |
+          The number in which to replace bits.
       - name: v
         type: number
         default:
-        summary: ''
+        summary: |
+          The replacement value to insert into the bit range.
       - name: field
         type: number
         default:
-        summary: ''
+        summary: |
+          The zero-based position of the least significant bit to replace.
       - name: width
         type: number
         default: 1
-        summary: ''
+        summary: |
+          The number of bits to replace.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          A copy of `n` with the specified bit range replaced by `v`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -382,14 +442,17 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number whose bits to rotate.
       - name: disp
         type: number
         default:
-        summary: ''
+        summary: |
+          The number of bit positions to rotate left.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The result of rotating `x` left by `disp` bits.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -416,14 +479,17 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number whose bits to shift.
       - name: disp
         type: number
         default:
-        summary: ''
+        summary: |
+          The number of bit positions to shift left.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The result of logically shifting `x` left by `disp` bits.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -439,7 +505,7 @@ functions:
 
       ```lua
       local x, disp = 0xF0, 35
-      assert(bit32.rrotate(x, disp) == bit32.rrotate(x, disp % 32))
+      assert(bit32.rrotate(x, disp) == bit32.rrotate(x , disp % 32))
       ```
 
       In particular, negative displacements rotate to the left.
@@ -447,14 +513,17 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number whose bits to rotate.
       - name: disp
         type: number
         default:
-        summary: ''
+        summary: |
+          The number of bit positions to rotate right.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The result of rotating `x` right by `disp` bits.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -483,14 +552,17 @@ functions:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The number whose bits to shift.
       - name: disp
         type: number
         default:
-        summary: ''
+        summary: |
+          The number of bit positions to shift right.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The result of logically shifting `x` right by `disp` bits.
     tags: []
     code_samples: []
     deprecation_message: ''

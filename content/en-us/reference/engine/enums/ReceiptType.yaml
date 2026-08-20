@@ -13,6 +13,12 @@ description: |
   `Class.MarketplaceService:BindReceiptHandler()|BindReceiptHandler`, you pass a
   `ReceiptType` to specify which kind of receipt your handler should process.
 
+  `DeveloperProduct` is used for developer product purchases and provides a
+  `BindReceiptHandler`-based alternative to the legacy
+  `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callback.
+  `RobuxTransferSender` and `RobuxTransferReceiver` are used for Robux
+  transfers, described below.
+
   For Robux transfers initiated with
   `Class.MarketplaceService:PromptRobuxTransferAsync()|PromptRobuxTransferAsync`,
   two receipts are generated: one for the sender (`RobuxTransferSender`) and one
@@ -30,7 +36,14 @@ tags: []
 deprecation_message: ''
 items:
   - name: DeveloperProduct
-    summary: ''
+    summary: |
+      Used for processing receipts from developer product purchases made with
+      `Class.MarketplaceService:PromptProductPurchase()|PromptProductPurchase`.
+      The receipt includes `ProductId`, `CurrencyType`, and `CurrencySpent`
+      fields. A handler bound for this type processes developer product receipts
+      in place of the legacy
+      `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callback;
+      receipts with no matching bound handler fall through to `ProcessReceipt`.
     value: 0
     tags: []
     deprecation_message: ''

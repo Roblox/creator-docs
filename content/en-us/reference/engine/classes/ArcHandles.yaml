@@ -55,7 +55,9 @@ events:
       - name: axis
         type: Axis
         default:
-        summary: ''
+        summary: |
+          The `Enum.Axis` (`X`, `Y`, or `Z`) of the arc handle on which the left
+          mouse button was pressed.
     tags: []
     deprecation_message: ''
     security: None
@@ -73,7 +75,9 @@ events:
       - name: axis
         type: Axis
         default:
-        summary: ''
+        summary: |
+          The `Enum.Axis` (`X`, `Y`, or `Z`) of the arc handle on which the left
+          mouse button was released.
     tags: []
     deprecation_message: ''
     security: None
@@ -93,15 +97,20 @@ events:
       - name: axis
         type: Axis
         default:
-        summary: ''
+        summary: |
+          The `Enum.Axis` (`X`, `Y`, or `Z`) of the arc handle being dragged.
       - name: relativeAngle
         type: float
         default:
-        summary: ''
+        summary: |
+          The angle, in radians, that the handle has rotated around its axis
+          relative to the start of the drag.
       - name: deltaRadius
         type: float
         default:
-        summary: ''
+        summary: |
+          The change in radius (the cursor's distance from the handle's center)
+          relative to the start of the drag.
     tags: []
     deprecation_message: ''
     security: None
@@ -119,7 +128,9 @@ events:
       - name: axis
         type: Axis
         default:
-        summary: ''
+        summary: |
+          The `Enum.Axis` (`X`, `Y`, or `Z`) of the arc handle the mouse
+          entered.
     tags: []
     deprecation_message: ''
     security: None
@@ -137,7 +148,8 @@ events:
       - name: axis
         type: Axis
         default:
-        summary: ''
+        summary: |
+          The `Enum.Axis` (`X`, `Y`, or `Z`) of the arc handle the mouse left.
     tags: []
     deprecation_message: ''
     security: None

@@ -4,44 +4,62 @@
 
 name: TrackerFaceTrackingStatus
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the current state of face tracking for the device camera used by
+  `FaceAnimatorService`.
+description: |
+  Describes the current state of face tracking as reported by the device camera
+  tracker. Surfaced through `FaceTrackingStatusEnum`, which defaults to
+  `Enum.TrackerFaceTrackingStatus.FaceTrackingUninitialized` until the tracker
+  starts running.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: FaceTrackingSuccess
-    summary: ''
+    summary: |
+      Face tracking is active and a face is being tracked successfully.
     value: 0
     tags: []
     deprecation_message: ''
   - name: FaceTrackingNoFaceFound
-    summary: ''
+    summary: |
+      The tracker is running but no face has been detected in the camera feed.
     value: 1
     tags: []
     deprecation_message: ''
   - name: FaceTrackingUnknown
-    summary: ''
+    summary: |
+      The face tracking state is indeterminate or could not be mapped to a known
+      status.
     value: 2
     tags: []
     deprecation_message: ''
   - name: FaceTrackingLost
-    summary: ''
+    summary: |
+      Face tracking was previously active but the face has been lost from the
+      camera feed.
     value: 3
     tags: []
     deprecation_message: ''
   - name: FaceTrackingHasTrackingError
-    summary: ''
+    summary: |
+      Face tracking is active but has encountered an error that prevents
+      reliable pose estimation.
     value: 4
     tags: []
     deprecation_message: ''
   - name: FaceTrackingIsOccluded
-    summary: ''
+    summary: |
+      A face is detected but is partially or fully occluded, reducing tracking
+      reliability.
     value: 5
     tags: []
     deprecation_message: ''
   - name: FaceTrackingUninitialized
-    summary: ''
+    summary: |
+      Face tracking has not yet been initialized; this is the default state
+      before the tracker starts.
     value: 6
     tags: []
     deprecation_message: ''

@@ -9,8 +9,7 @@ summary: |
   An abstract class for various sensor instance types.
 description: |
   A `Class.SensorBase` is an instance that, when parented to a `Class.BasePart`,
-  outputs additional data about the world around that part. This data is
-  presented in the sensor's "output" property category. Often, other systems
+  outputs additional data about the world around that part. Often, other systems
   will consume the sensor's output data.
 code_samples: []
 inherits:
@@ -53,8 +52,19 @@ properties:
     simulationAccess: true
 methods:
   - name: SensorBase:Sense
-    summary: ''
-    description: ''
+    summary: |
+      Recomputes the sensor's output properties immediately.
+    description: |
+      Recomputes the sensor's output properties immediately.
+
+      This method is deprecated and should not be used in new work. When
+      `Class.SensorBase.UpdateType|UpdateType` is `Enum.SensorUpdateType.OnRead`
+      (the default), the sensor recalculates its output properties automatically
+      the next time you read them, so calling this method is unnecessary. When
+      `Class.SensorBase.UpdateType|UpdateType` is
+      `Enum.SensorUpdateType.Manual`, the outputs are never recomputed
+      automatically; set the output properties yourself rather than calling this
+      method.
     code_samples: []
     parameters: []
     returns:
@@ -69,8 +79,20 @@ methods:
     capabilities: []
 events:
   - name: SensorBase.OnSensorOutputChanged
-    summary: ''
-    description: ''
+    summary: |
+      Fires when one of the sensor's output properties changes value.
+    description: |
+      Fires when one of the sensor's output properties changes value. The event
+      carries no arguments; read the relevant output property to get its new
+      value.
+
+      A sensor only recomputes its outputs while
+      `Class.SensorBase.UpdateType|UpdateType` is `Enum.SensorUpdateType.OnRead`
+      (the default), so with the default update type this event fires as the
+      outputs are recalculated on read. When
+      `Class.SensorBase.UpdateType|UpdateType` is
+      `Enum.SensorUpdateType.Manual`, the outputs — and therefore this event —
+      change only when you set the output properties yourself.
     code_samples: []
     parameters: []
     tags: []

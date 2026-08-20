@@ -5,8 +5,17 @@
 name: CustomLog
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Internal-only instance that writes text to a file in the engine's logs
+  directory.
+description: |
+  Internal-only (`InternalTest` security); not available to ordinary experience
+  scripts. `Class.CustomLog` writes text to a file in the engine's logs
+  directory: `Class.CustomLog:Open()` creates a file named after the instance's
+  `Class.Instance.Name` (with a `.log` extension),
+  `Class.CustomLog:WriteAppend()` appends text, and `Class.CustomLog:Close()`
+  closes the file handle. The instance cannot be parented to or contain other
+  instances.
 code_samples: []
 inherits:
   - Instance
@@ -17,8 +26,11 @@ deprecation_message: ''
 properties: []
 methods:
   - name: CustomLog:Close
-    summary: ''
-    description: ''
+    summary: |
+      Closes the open log file.
+    description: |
+      Closes the file handle previously opened by `Class.CustomLog:Open()`.
+      Closing an already-closed log has no effect.
     code_samples: []
     parameters: []
     returns:
@@ -31,13 +43,19 @@ methods:
     capabilities:
       - InternalTest
   - name: CustomLog:GetLogPath
-    summary: ''
-    description: ''
+    summary: |
+      Returns the full filesystem path of the log file.
+    description: |
+      Returns the full filesystem path of the log file targeted by
+      `Class.CustomLog:Open()`. The path is set when `Class.CustomLog:Open()` is
+      called and is derived from the instance's `Class.Instance.Name`; it is
+      empty before the log has been opened.
     code_samples: []
     parameters: []
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The absolute filesystem path of the log file.
     tags: []
     deprecation_message: ''
     security: None
@@ -45,8 +63,16 @@ methods:
     capabilities:
       - InternalTest
   - name: CustomLog:Open
-    summary: ''
-    description: ''
+    summary: |
+      Opens the log file for writing, creating or truncating it.
+    description: |
+      Opens a file named after the instance's `Class.Instance.Name` (with a
+      `.log` extension) in the engine's logs directory, truncating any existing
+      contents so that writing starts from an empty file.
+
+      This method throws a runtime error if the log is already open, if
+      `Class.Instance.Name` is empty, if the name resolves to a path outside the
+      logs directory, or if the file otherwise fails to open.
     code_samples: []
     parameters: []
     returns:
@@ -59,14 +85,21 @@ methods:
     capabilities:
       - InternalTest
   - name: CustomLog:WriteAppend
-    summary: ''
-    description: ''
+    summary: |
+      Appends a string to the open log file.
+    description: |
+      Writes `append` to the end of the open log file. The text is written
+      verbatim, without adding a trailing newline.
+
+      This method throws a runtime error if the log is not open (call
+      `Class.CustomLog:Open()` first) or if the write fails.
     code_samples: []
     parameters:
       - name: append
         type: string
         default:
-        summary: ''
+        summary: |
+          The text to append to the log file.
     returns:
       - type: ()
         summary: ''

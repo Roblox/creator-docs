@@ -4,24 +4,33 @@
 
 name: OutfitSource
 type: enum
-summary: ''
-description: ''
+summary: |
+  Filters which outfits are returned by
+  `Class.AvatarEditorService:GetOutfitsAsync()` based on how they were obtained.
+description: |
+  Specifies whether `Class.AvatarEditorService:GetOutfitsAsync()` should return
+  all of a user's outfits, only outfits the user created themselves, or only
+  outfits the user purchased. Pass this value as the `outfitSource` parameter of
+  `Class.AvatarEditorService:GetOutfitsAsync()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: All
-    summary: ''
+    summary: |
+      Return all outfits regardless of whether they were created or purchased.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Created
-    summary: ''
+    summary: |
+      Return only outfits that the user created themselves (editable outfits).
     value: 2
     tags: []
     deprecation_message: ''
   - name: Purchased
-    summary: ''
+    summary: |
+      Return only outfits that the user purchased (non-editable outfits).
     value: 3
     tags: []
     deprecation_message: ''

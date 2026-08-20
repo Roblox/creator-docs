@@ -65,82 +65,91 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: ColorSequence.new
-    summary: Returns a new `Datatype.ColorSequence` that is entirely the specified color.
-    description: |-
+    summary: |
+      Returns a new `Datatype.ColorSequence` that is entirely the specified
+      color.
+    description: |
       Returns a sequence of two keypoints with `c` for both the start and end
       values.
 
-        ```lua
-        local colorSequence = ColorSequence.new(c)
-        -- Equivalent to
-        local colorSequence = ColorSequence.new{
-            ColorSequenceKeypoint.new(0, c),
-            ColorSequenceKeypoint.new(1, c)
-        }
-        ```
+      ```lua
+      local colorSequence = ColorSequence.new(c)
+      -- Equivalent to
+      local colorSequence = ColorSequence.new{
+          ColorSequenceKeypoint.new(0, c),
+          ColorSequenceKeypoint.new(1, c)
+      }
+      ```
     parameters:
       - name: c
         type: Color3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Color3` value used for both the start and end of the
+          sequence.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: ColorSequence.new
-    summary: |-
-      Returns a new `Datatype.ColorSequence` with `c0` as the start value and `c1` as the
-      end value.
-    description: |-
-      Returns a new `Datatype.ColorSequence` with `c0` as the start value and `c1` as the
-      end value.
+    summary: |
+      Returns a new `Datatype.ColorSequence` with `c0` as the start value and
+      `c1` as the end value.
+    description: |
+      Returns a new `Datatype.ColorSequence` with `c0` as the start value and
+      `c1` as the end value.
 
-        ```lua
-        local colorSequence = ColorSequence.new(c0, c1)
-        -- Equivalent to
-        local colorSequence = ColorSequence.new{
-            ColorSequenceKeypoint.new(0, c0),
-            ColorSequenceKeypoint.new(1, c1)
-        }
-        ```
+      ```lua
+      local colorSequence = ColorSequence.new(c0, c1)
+      -- Equivalent to
+      local colorSequence = ColorSequence.new{
+          ColorSequenceKeypoint.new(0, c0),
+          ColorSequenceKeypoint.new(1, c1)
+      }
+      ```
     parameters:
       - name: c0
         type: Color3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Color3` value at the start of the sequence (time 0).
       - name: c1
         type: Color3
         default:
-        summary: ''
+        summary: |
+          The `Datatype.Color3` value at the end of the sequence (time 1).
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: ColorSequence.new
-    summary: |-
+    summary: |
       Returns a new `Datatype.ColorSequence` from an array of
       `Datatype.ColorSequenceKeypoint|ColorSequenceKeypoints`.
-    description: |-
+    description: |
       Returns a new `Datatype.ColorSequence` from an array of
       `Datatype.ColorSequenceKeypoint|ColorSequenceKeypoints`. The keypoints
       must be in a non-descending time value order. At least two keypoints must
       be provided, and they must have a time value of `0` (first) and `1`
       (last).
 
-        ```lua
-        local red = Color3.fromRGB(255, 0, 0)
-        local cyan = Color3.fromRGB(0, 190, 200)
-        local purple = Color3.fromRGB(190, 0, 255)
+      ```lua
+      local red = Color3.fromRGB(255, 0, 0)
+      local cyan = Color3.fromRGB(0, 190, 200)
+      local purple = Color3.fromRGB(190, 0, 255)
 
-        local colorSequence = ColorSequence.new{
-            ColorSequenceKeypoint.new(0, red),
-            ColorSequenceKeypoint.new(0.5, cyan),
-            ColorSequenceKeypoint.new(1, purple)
-        }
-        ```
+      local colorSequence = ColorSequence.new{
+          ColorSequenceKeypoint.new(0, red),
+          ColorSequenceKeypoint.new(0.5, cyan),
+          ColorSequenceKeypoint.new(1, purple)
+      }
+      ```
     parameters:
       - name: keypoints
         type: Array
         default:
-        summary: ''
+        summary: |
+          An array of `Datatype.ColorSequenceKeypoint` values ordered by
+          non-descending time, starting at time 0 and ending at time 1. Must
+          contain at least 2 and no more than 20 keypoints.
     code_samples: []
     tags: []
     deprecation_message: ''

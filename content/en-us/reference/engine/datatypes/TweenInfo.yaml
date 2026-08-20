@@ -15,35 +15,42 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: TweenInfo.new
-    summary: Creates a new `Datatype.TweenInfo` from the provided parameters.
-    description: Creates a new `Datatype.TweenInfo` from the provided parameters.
+    summary: |
+      Creates a new `Datatype.TweenInfo` from the provided parameters.
+    description: |
+      Creates a new `Datatype.TweenInfo` from the provided parameters.
     parameters:
       - name: time
         type: number
         default: 1
-        summary: Duration for the tween, in seconds.
+        summary: |
+          Duration for the tween, in seconds.
       - name: easingStyle
         type: EasingStyle
         default: Enum.EasingStyle.Quad
-        summary: Easing style for the tween.
+        summary: |
+          Easing style for the tween.
       - name: easingDirection
         type: EasingDirection
         default: Enum.EasingDirection.Out
-        summary: The direction in which the tween executes.
+        summary: |
+          The direction in which the tween executes.
       - name: repeatCount
         type: number
         default: 0
-        summary: Number of times the tween should repeat. `-1` repeats indefinitely.
+        summary: |
+          Number of times the tween should repeat. `-1` repeats indefinitely.
       - name: reverses
         type: bool
         default: false
-        summary: |-
+        summary: |
           Whether the tween should reverse to the starting values once it
           reaches its targets.
       - name: delayTime
         type: number
         default: 0
-        summary: Time of delay until the tween begins, in seconds.
+        summary: |
+          Time of delay until the tween begins, in seconds.
     code_samples: []
     tags: []
     deprecation_message: ''

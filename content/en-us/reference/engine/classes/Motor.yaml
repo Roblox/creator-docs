@@ -89,7 +89,9 @@ methods:
       - name: value
         type: float
         default:
-        summary: ''
+        summary: |
+          The target angle, in radians, to set as the motor's
+          `Class.Motor.DesiredAngle`.
     returns:
       - type: ()
         summary: ''

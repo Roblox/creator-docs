@@ -227,7 +227,6 @@ descendants:
   - ReflectionService
   - RemoteDebuggerServer
   - RemoteFunction
-  - RenderingTest
   - ReplicatedFirst
   - ReplicatedStorage
   - RotationCurve
@@ -248,7 +247,6 @@ descendants:
   - SharedTableRegistry
   - Sky
   - Smoke
-  - SmoothVoxelsUpgraderService
   - SocialService
   - Sound
   - SoundEffect
@@ -294,7 +292,6 @@ descendants:
   - Translator
   - TweenBase
   - TweenService
-  - UGCValidationService
   - UIBase
   - UserGameSettings
   - UserInputService
@@ -346,7 +343,6 @@ descendants:
   - ProcessInstancePhysicsService
   - SensorBase
   - RecommendationService
-  - CoreScriptDebuggingManagerHelper
   - DraftsService
   - DraggerService
   - File
@@ -373,7 +369,6 @@ descendants:
   - StudioTestService
   - StudioTheme
   - TeamCreateService
-  - VRStatusService
   - StudioService
   - StyleBase
   - StyleDerive
@@ -463,6 +458,34 @@ properties:
       can_save: true
     capabilities:
       - CapabilityControl
+  - name: Instance.IsInSandbox
+    summary: |
+      Indicates whether the instance is inside a sandboxed container.
+    description: |
+      This read-only property returns `true` if the instance is contained within
+      a sandboxed container — that is, if the instance itself or any of its
+      ancestors has `Class.Instance.Sandboxed` enabled. Otherwise it returns
+      `false`.
+
+      This property is not scriptable and is only visible in Studio's Properties
+      window. See [script capabilities](../../../scripting/capabilities.md) for
+      further details.
+    code_samples: []
+    type: boolean
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Permissions
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
   - name: Instance.Name
     summary: |
       A non-unique identifier of the `Class.Instance`.
@@ -581,8 +604,33 @@ properties:
       can_save: false
     capabilities: []
   - name: Instance.PredictionMode
-    summary: ''
-    description: ''
+    summary: |
+      Reflects the client-side prediction mode applied to the instance under
+      server-authoritative physics.
+    description: |
+      This property reflects the `Enum.PredictionMode` currently applied to the
+      instance, which determines whether the instance's state is predicted on
+      the client ahead of the authoritative server state under
+      server-authoritative physics. It defaults to
+      `Enum.PredictionMode|Automatic`.
+
+      This property is read-only and cannot be assigned directly from a script;
+      the prediction mode is set through `Class.RunService:SetPredictionMode()`.
+      The property is shown in Studio's Properties window only when the
+      experience uses server-authoritative physics.
+
+      - `Enum.PredictionMode|Automatic` (default) — the engine automatically
+        decides whether to predict the instance. Currently, only
+        `Class.BasePart|BaseParts` near the local player character's
+        `Class.Humanoid` are predicted, within a dynamic radius that grows and
+        shrinks based on the device's capacity to handle the simulation load.
+      - `Enum.PredictionMode|On` — the instance is always predicted. If it is a
+        `Class.BasePart`, its physics properties are predicted ahead of the
+        replicated authoritative server state, and mismatches in the instance's
+        attributes between the client and server cause a rollback and
+        resimulation.
+      - `Enum.PredictionMode|Off` — the instance is not predicted, and regular
+        network ownership semantics apply.
     code_samples: []
     type: PredictionMode
     tags:
@@ -694,7 +742,8 @@ methods:
       - name: tag
         type: string
         default:
-        summary: ''
+        summary: |
+          The tag to apply to the instance.
     returns:
       - type: ()
         summary: ''
@@ -800,7 +849,9 @@ methods:
     parameters: []
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          A copy of the instance, or `nil` if the instance is not
+          `Class.Instance.Archivable|Archivable`.
     tags: []
     deprecation_message: ''
     security: None
@@ -1585,7 +1636,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: Instance:GetStyledPropertyChangedSignal
-    summary: ''
+    summary: |
+      Returns an event that fires when the given style property changes on the
+      instance.
     description: |
       This method returns an event that behaves exactly like the
       `Class.Instance.StyledPropertiesChanged|StyledPropertiesChanged` event,
@@ -1632,7 +1685,8 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of strings, each representing a tag applied to the instance.
     tags: []
     deprecation_message: ''
     security: None
@@ -1652,10 +1706,12 @@ methods:
       - name: tag
         type: string
         default:
-        summary: ''
+        summary: |
+          The tag to check for on the instance.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the instance has the given tag, `false` otherwise.
     tags: []
     deprecation_message: ''
     security: None
@@ -1990,7 +2046,8 @@ methods:
       - name: tag
         type: string
         default:
-        summary: ''
+        summary: |
+          The tag to remove from the instance.
     returns:
       - type: ()
         summary: ''

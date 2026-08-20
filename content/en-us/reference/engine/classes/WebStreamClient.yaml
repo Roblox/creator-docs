@@ -85,7 +85,9 @@ methods:
       - Network
 events:
   - name: WebStreamClient.Closed
-    summary: ''
+    summary: |
+      Fires when the streaming connection is closed, either by the server or by
+      a call to `Class.WebStreamClient:Close()`.
     description: |
       Fires when the server closes the connection succesfully or the user calls
       `Class.WebStreamClient:Close()`

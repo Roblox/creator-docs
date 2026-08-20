@@ -112,7 +112,7 @@ properties:
     description: |
       This property determines the scalar translation of the gradient from the
       center of the parent `Class.GuiObject`. It is a scalar translation,
-      meaning that the actual pixel offset is determined by the
+      meaning that the actual logical pixel offset is determined by the
       `Class.GuiBase2d.AbsoluteSize|AbsoluteSize` of the parent
       `Class.GuiObject`. So, a value of `(1, 0)` would shift the gradient
       horizontally to the right by a distance equal to the parent object's

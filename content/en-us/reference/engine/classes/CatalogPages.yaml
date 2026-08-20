@@ -5,8 +5,19 @@
 name: CatalogPages
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A special version of `Class.Pages` that stores the results of an Avatar Editor
+  catalog search.
+description: |
+  `Class.CatalogPages` is a special version of `Class.Pages` returned by
+  `Class.AvatarEditorService:SearchCatalogAsync()` and
+  `Class.AvatarEditorService:GetBundlesByAssetIdAsync()`. Each page is a list of
+  tables describing the catalog items that matched the query, such as each
+  item's ID, name, type, and price.
+
+  Iterate with the members inherited from `Class.Pages`:
+  `Class.Pages:GetCurrentPage()`, `Class.Pages:AdvanceToNextPageAsync()`, and
+  `Class.Pages.IsFinished`.
 code_samples: []
 inherits:
   - Pages

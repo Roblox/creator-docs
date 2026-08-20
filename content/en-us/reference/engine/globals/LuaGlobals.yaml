@@ -19,7 +19,19 @@ properties:
     summary: |
       A table that is shared between all scripts of the same context level.
     description: |
-      A table that is shared between all scripts of the same context level.
+      A table that is shared between all scripts of the same context level. Any
+      value written to `_G` from one script is visible to every other script at
+      that same context level, which makes it a simple way to share state
+      between scripts.
+
+      ```lua
+      -- Script A (sets a value)
+      _G.mySharedValue = "hello from Script A"
+
+      Note that relying on `_G` for cross-script communication introduces
+      ordering dependencies and makes code harder to reason about. Prefer
+      `Class.ModuleScript` for shared state when possible.
+      ```
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -54,7 +66,8 @@ functions:
           The text that will be shown in the error if the assertion fails.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          All values originally passed to `assert` if the assertion succeeds.
     tags: []
     code_samples:
       - LuaGlobals-assert
@@ -77,7 +90,9 @@ functions:
           collector.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The result of the garbage collector operation; for the `count` option,
+          returns the total memory in use in kilobytes.
     tags:
       - Deprecated
     code_samples: []
@@ -124,7 +139,8 @@ functions:
     parameters: []
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The total memory heap size in kilobytes.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -158,7 +174,8 @@ functions:
           function whose environment will be returned.
     returns:
       - type: table
-        summary: ''
+        summary: |
+          The environment table of the specified function or stack level.
     tags:
       - Deprecated
     code_samples: []
@@ -183,7 +200,9 @@ functions:
           The object to fetch the metatable of.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The metatable of `t`, the value of the `__metatable` metamethod if
+          set, or `nil` if no metatable exists.
     tags: []
     code_samples:
       - LuaGlobals-getmetatable
@@ -205,11 +224,15 @@ functions:
           A table whose elements are to be iterated over.
     returns:
       - type: function
-        summary: ''
+        summary: |
+          An iterator function that returns the next index-value pair on each
+          call.
       - type: Array
-        summary: ''
+        summary: |
+          The table `t` passed as the invariant state.
       - type: int
-        summary: ''
+        summary: |
+          The initial control value `0`.
     tags: []
     code_samples:
       - LuaGlobals-ipairs
@@ -246,7 +269,9 @@ functions:
           unspecified, Luau uses the `contents` string.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The compiled function on success, or `nil` followed by an error
+          message string on failure.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -254,15 +279,41 @@ functions:
     summary: |
       Creates a blank `userdata`, with the option for it to have a metatable.
     description: |
-      Creates a blank `userdata`, with the option for it to have a metatable.
+      Creates a blank zero-size `userdata` with the option for it to have a
+      metatable. If `addMetatable` is `true`, an empty metatable is created and
+      assigned to the userdata; you can then retrieve it with
+      `Global.LuaGlobals.getmetatable()` and populate it with metamethods. If
+      `addMetatable` is `false` or omitted, the userdata has no metatable and
+      only serves as a unique identity token.
+
+      Unlike host-created userdata (Roblox instances), a `newproxy`-created
+      userdata always reports `"userdata"` from both `Global.LuaGlobals.type()`
+      and `typeof()`; setting a `__type` metamethod on it does not change the
+      `typeof()` result.
+
+      ```lua
+      -- Create a proxy with a metatable to implement custom tostring
+      local proxy = newproxy(true)
+      local mt = getmetatable(proxy)
+
+      mt.__tostring = function()
+      	return "MyProxy"
+      end
+
+      print(tostring(proxy)) --> MyProxy
+      print(type(proxy)) --> userdata
+      ```
     parameters:
       - name: addMetatable
         type: bool
         default: false
-        summary: ''
+        summary: |
+          Whether to attach an empty metatable to the new userdata.
     returns:
       - type: userdata
-        summary: ''
+        summary: |
+          A new blank userdata, with an empty metatable attached if
+          `addMetatable` is `true`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -292,9 +343,11 @@ functions:
           The last key that was previously retrieved from a call to next.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The next key in the table, or `nil` if the traversal is complete.
       - type: Variant
-        summary: ''
+        summary: |
+          The value associated with the returned key.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -314,9 +367,14 @@ functions:
           An array or dictionary table to iterate over.
     returns:
       - type: function
-        summary: ''
+        summary: |
+          The `next` function as the iterator.
       - type: table
-        summary: ''
+        summary: |
+          The table `t` passed as the invariant state.
+      - type: Variant
+        summary: |
+          The initial control value `nil`.
     tags: []
     code_samples:
       - LuaGlobals-pairs
@@ -346,9 +404,12 @@ functions:
           The arguments to send to `func` when executing.
     returns:
       - type: bool
-        summary: ''
+        summary: |
+          `true` if `func` executed without errors, `false` otherwise.
       - type: Variant
-        summary: ''
+        summary: |
+          All return values of `func` on success, or the error message on
+          failure.
     tags: []
     code_samples:
       - LuaGlobals-pcall
@@ -378,7 +439,24 @@ functions:
     summary: |
       Returns whether `v1` is equal to `v2`, bypassing their metamethods.
     description: |
-      Checks whether `v1` is equal to `v2`, without invoking any metamethods.
+      Checks whether `v1` is equal to `v2` without invoking the `__eq`
+      metamethod. The comparison uses primitive equality rules: values of
+      different types are never equal; `nil` equals only itself; numbers and
+      vectors are compared by value; booleans are compared by value; and all
+      reference types (tables, functions, threads, userdata) are compared by
+      identity (same object in memory).
+
+      This is useful when you need to compare two tables or userdata objects
+      that have an `__eq` metamethod and you want to test whether they are
+      literally the same object rather than semantically equal.
+
+      ```lua
+      local a = setmetatable({}, {__eq = function() return true end})
+      local b = setmetatable({}, {__eq = function() return true end})
+      print(a == b) --> true (metamethod fires)
+      print(rawequal(a, b)) --> false (different objects)
+      print(rawequal(a, a)) --> true (same object)
+      ```
     parameters:
       - name: v1
         type: Variant
@@ -392,7 +470,9 @@ functions:
           The second variable to compare.
     returns:
       - type: bool
-        summary: ''
+        summary: |
+          `true` if `v1` and `v2` are primitively equal without metamethod
+          invocation, `false` otherwise.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -400,7 +480,22 @@ functions:
     summary: |
       Gets the real value of `table[index]`, bypassing any metamethods.
     description: |
-      Gets the real value of `table[index]`, without invoking any metamethods.
+      Gets the real value of `table[index]` without invoking the `__index`
+      metamethod. The first argument must be a table; the second can be any
+      non-`nil` value. If the key does not exist in the table itself, `rawget()`
+      returns `nil` rather than walking up the metatable chain.
+
+      This is useful for inspecting a table's own stored fields when a
+      metatable-based lookup chain would otherwise intercept the access.
+
+      ```lua
+      local fallback = {x = 10}
+      local t = setmetatable({}, {__index = fallback})
+      print(t.x) --> 10 (found via __index)
+      print(rawget(t, "x")) --> nil (not in t itself)
+      t.y = 20
+      print(rawget(t, "y")) --> 20 (stored directly in t)
+      ```
     parameters:
       - name: t
         type: table
@@ -414,7 +509,9 @@ functions:
           The index to get from `t`.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The value stored at `t[index]`, or `nil` if the key does not exist in
+          the table itself.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -422,8 +519,19 @@ functions:
     summary: |
       Returns the length of the string or table, bypassing any metamethods.
     description: |
-      Returns the length of the string or table, without invoking any
-      metamethods.
+      Returns the length of a table or string without invoking the `__len`
+      metamethod. The argument must be a table or string; passing any other type
+      raises an argument error. For tables, the result is equivalent to what the
+      `#` operator would return before any metamethod fires; the length of the
+      array portion as determined by the boundary search. For strings, it
+      returns the byte count.
+
+      ```lua
+      local t = setmetatable({1, 2, 3}, {__len = function() return 999 end})
+      print(#t) --> 999 (metamethod fires)
+      print(rawlen(t)) --> 3 (actual array length)
+      print(rawlen("hello")) --> 5
+      ```
     parameters:
       - name: t
         type: table
@@ -431,8 +539,9 @@ functions:
         summary: |
           The table to be referenced.
     returns:
-      - type: table
-        summary: ''
+      - type: number
+        summary: |
+          The raw length of the table or string without metamethod invocation.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -440,8 +549,29 @@ functions:
     summary: |
       Sets the real value of `table[index]`, bypassing any metamethods.
     description: |
-      Sets the real value of `table[index]` to a given `value`, without invoking
-      any metamethod.
+      Sets `table[index]` to `value` without invoking the `__newindex`
+      metamethod. The first argument must be a table, the second is the key
+      (must not be `nil`), and the third is the value to assign. Returns the
+      table itself, which allows chained calls when building tables that have a
+      `__newindex` guard.
+
+      This is the complement of `Global.LuaGlobals.rawget()` for write
+      operations; use it when you need to bypass a proxy table's write
+      interception.
+
+      ```lua
+      local log = {}
+      local proxy = setmetatable({}, {
+          __newindex = function(_, k, v)
+              table.insert(log, k)
+              rawset(proxy, k, v) -- actually store the value
+          end
+      })
+      rawset(proxy, "x", 42) -- bypasses __newindex; no log entry
+      proxy.y = 7 -- triggers __newindex; log entry created
+      print(proxy.x, proxy.y) --> 42  7
+      print(#log) --> 1 (only "y" was logged)
+      ```
     parameters:
       - name: t
         type: table
@@ -461,7 +591,8 @@ functions:
           The value to be set to a specified `index` in table `t`.
     returns:
       - type: table
-        summary: ''
+        summary: |
+          The table `t` that was passed in, allowing chained calls.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -563,7 +694,9 @@ functions:
           A tuple of arguments.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          All arguments after position `index`, or the count of arguments if
+          `index` is `"#"`.
     tags: []
     code_samples:
       - LuaGlobals-select
@@ -598,7 +731,8 @@ functions:
           The function environment table to set for the specified function.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The function whose environment was set, or no value if `f` is `0`.
     tags:
       - Deprecated
     code_samples: []
@@ -629,7 +763,9 @@ functions:
           the metatable to set for the given table `t`.
     returns:
       - type: table
-        summary: ''
+        summary: |
+          The table `t` that was passed in, with its metatable now set to
+          `newMeta`.
     tags: []
     code_samples:
       - LuaGlobals-setmetatable
@@ -663,7 +799,9 @@ functions:
           The numerical base to convert `arg` into.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The numeric value of `arg` in the given base, or `nil` if conversion
+          is not possible.
     tags: []
     code_samples:
       - LuaGlobals-tonumber
@@ -685,7 +823,9 @@ functions:
           The object to be converted into a string.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A string representation of `e`, using the `__tostring` metamethod if
+          available.
     tags: []
     code_samples:
       - LuaGlobals-tostring
@@ -707,7 +847,9 @@ functions:
           The object to return the type of.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The basic type name of `v` as a string (e.g. `"number"`, `"string"`,
+          `"table"`).
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -715,8 +857,21 @@ functions:
     summary: |
       Returns all elements from the given list as a tuple.
     description: |
-      Returns the elements from the given table. By default, `i` is 1 and `j` is
-      the length of `list`, as defined by the length operator.
+      Returns the elements from the given `list` as separate return values,
+      equivalent to `list[i], list[i+1], ..., list[j]`. By default, `i` is `1`
+      and `j` is the length of `list` (as defined by the `#` operator). If the
+      range is empty (`i > j`), no values are returned. An error is raised if
+      the requested range is too large to fit on the stack.
+
+      ```lua
+      local t = {10, 20, 30, 40, 50}
+      print(unpack(t)) --> 10  20  30  40  50
+      print(unpack(t, 2, 4)) --> 20  30  40
+
+      -- Common pattern: forwarding a stored argument list
+      local args = {1, "hello", true}
+      someFunction(unpack(args))
+      ```
     parameters:
       - name: list
         type: table
@@ -735,7 +890,8 @@ functions:
           The index of the last element to unpack.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The elements `list[i]` through `list[j]` as separate return values.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -773,12 +929,16 @@ functions:
       - name: args
         type: Tuple
         default:
-        summary: ''
+        summary: |
+          Additional arguments passed to `f` when it is called.
     returns:
       - type: bool
-        summary: ''
+        summary: |
+          `true` if `f` executed without errors, `false` otherwise.
       - type: Variant
-        summary: ''
+        summary: |
+          All return values of `f` on success, or the result of
+          `err(errorObject)` on failure.
     tags: []
     code_samples: []
     deprecation_message: ''

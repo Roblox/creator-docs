@@ -9,8 +9,11 @@ summary: |
   Object used to provide additional parameters to
   `Class.DataStoreService:GetDataStore()`.
 description: |
-  Any object containing additional parameters that are used by
-  `Class.DataStoreService:GetDataStore()`.
+  A configuration object passed as the third argument to
+  `Class.DataStoreService:GetDataStore()` to customize how the returned
+  `Class.DataStore` behaves. Create one with `Instance.new("DataStoreOptions")`,
+  set its properties, then pass it to `GetDataStore`. Currently the only
+  behavioral property is `Class.DataStoreOptions.AllScopes`.
 code_samples: []
 inherits:
   - Instance
@@ -23,8 +26,19 @@ properties:
     summary: |
       Whether the `Class.GlobalDataStore` should work with all scopes.
     description: |
-      This property specifies whether the `Class.GlobalDataStore` should work
-      with all scopes.
+      When set to `true`, the `Class.DataStore` returned by
+      `Class.DataStoreService:GetDataStore()` operates across all scopes instead
+      of a single scope. The `scope` parameter (second argument) to
+      `GetDataStore` must be an empty string (`""`) when this property is
+      enabled; passing a non-empty scope throws an error.
+
+      In all-scopes mode, every key is prefixed with its scope and a slash
+      separator. For example, `Class.DataStore:ListKeysAsync()` returns keys
+      such as `global/player_data_1234` or `houses/house3`. When you create or
+      access a key, you must include the scope prefix in the format
+      `scope/keyname`; omitting the slash throws an error.
+
+      Default value is `false`.
     code_samples: []
     type: boolean
     tags: []
@@ -41,9 +55,12 @@ properties:
       - DataStore
 methods:
   - name: DataStoreOptions:SetExperimentalFeatures
-    summary: ''
+    summary: |
+      Currently has no observable effect on data store behavior.
     description: |
-      This function currently has no effect.
+      Accepts a dictionary of feature-name keys mapped to boolean values and
+      stores them on this `Class.DataStoreOptions` instance. Calling this method
+      has no observable effect on runtime behavior.
     code_samples: []
     parameters:
       - name: experimentalFeatures

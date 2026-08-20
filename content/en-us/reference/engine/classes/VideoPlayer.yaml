@@ -145,8 +145,14 @@ properties:
       - Audio
       - UI
   - name: VideoPlayer.MaximumResolution
-    summary: ''
-    description: ''
+    summary: |
+      Caps the resolution of decoded video frames for this `Class.VideoPlayer`.
+    description: |
+      The maximum resolution, as an `Enum.VideoSampleSize` value, that the video
+      decoder produces when playing this `Class.VideoPlayer`. Defaults to
+      `Enum.VideoSampleSize.Full`, which doesn't limit the decoded resolution.
+      Lower `Enum.VideoSampleSize` values reduce the resolution the decoder
+      outputs, which can lower memory usage on constrained devices.
     code_samples: []
     type: VideoSampleSize
     tags:
@@ -387,7 +393,12 @@ methods:
     parameters: []
     returns:
       - type: AssetFetchStatus
-        summary: ''
+        summary: |
+          An `Enum.AssetFetchStatus` describing the outcome of the load —
+          `Enum.AssetFetchStatus.Success` once the
+          `Class.VideoPlayer.VideoContent|VideoContent` has loaded, or a failure
+          status such as `Enum.AssetFetchStatus.Failure` or
+          `Enum.AssetFetchStatus.TimedOut` if it could not be fetched.
     tags:
       - Yields
     deprecation_message: ''
@@ -500,14 +511,22 @@ events:
       - Audio
       - UI
   - name: VideoPlayer.PlayFailed
-    summary: ''
-    description: ''
+    summary: |
+      Fires when the `Class.VideoPlayer` fails to load or play its
+      `Class.VideoPlayer.VideoContent|VideoContent`.
+    description: |
+      Fires when the `Class.VideoPlayer` fails to load or play its
+      `Class.VideoPlayer.VideoContent|VideoContent`. The `error` parameter is an
+      `Enum.AssetFetchStatus` value that describes why the content couldn't be
+      fetched.
     code_samples: []
     parameters:
       - name: error
         type: AssetFetchStatus
         default:
-        summary: ''
+        summary: |
+          An `Enum.AssetFetchStatus` value describing why the
+          `Class.VideoPlayer.VideoContent|VideoContent` failed to load.
     tags: []
     deprecation_message: ''
     security: None

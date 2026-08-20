@@ -4,8 +4,14 @@
 
 name: ProximityPromptExclusivity
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how a `Class.ProximityPrompt` competes with other prompts for screen
+  visibility.
+description: |
+  Controls whether a `Class.ProximityPrompt` is always shown, shares a single
+  global display slot with all other prompts, or competes only with prompts
+  bound to the same input key. Set via the `Class.ProximityPrompt.Exclusivity`
+  property, which defaults to `Enum.ProximityPromptExclusivity.OnePerButton`.
 code_samples: []
 tags: []
 deprecation_message: ''

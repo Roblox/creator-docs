@@ -9,16 +9,16 @@ summary: |
   relative scale and an absolute offset.
 description: |
   The `Datatype.UDim2` data type represents a two-dimensional value where each
-  dimension is composed of a relative scale and an absolute offset in pixels. It
-  is a combination of two `Datatype.UDim` data types representing the **X** and
-  **Y** dimensions. The most common usages for `Datatype.UDim2` are setting the
-  `Class.GuiObject.Size|Size` and `Class.GuiObject.Position|Position` of
-  `Class.GuiObject|GuiObjects`.
+  dimension is composed of a relative scale and an absolute offset in logical
+  pixels. It is a combination of two `Datatype.UDim` data types representing the
+  **X** and **Y** dimensions. The most common usages for `Datatype.UDim2` are
+  setting the `Class.GuiObject.Size|Size` and
+  `Class.GuiObject.Position|Position` of `Class.GuiObject|GuiObjects`.
 
   ```lua
   local guiObject = Instance.new("Frame")
-  guiObject.Size = UDim2.new(0, 300, 1, 0)  -- 300 pixels wide; full height of parent
-  guiObject.Position = UDim2.new(0, 50, 0, 0)  -- 50 pixels from the left
+  guiObject.Size = UDim2.new(0, 300, 1, 0)  -- 300 logical pixels wide; full height of parent
+  guiObject.Position = UDim2.new(0, 50, 0, 0)  -- 50 logical pixels from the left
   print(guiObject.Size) --> {0, 300}, {1, 0}
   ```
 code_samples: []
@@ -26,67 +26,93 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: UDim2.new
-    summary: |-
-      Returns a new `Datatype.UDim2` with the coordinates of two zero `Datatype.UDim`
-      components representing each axis.
-    description: |-
-      Returns a new `Datatype.UDim2` with the coordinates of two zero `Datatype.UDim`
-      components representing each axis.
+    summary: |
+      Returns a new `Datatype.UDim2` with the coordinates of two zero
+      `Datatype.UDim` components representing each axis.
+    description: |
+      Returns a new `Datatype.UDim2` with both dimensions set to zero —
+      equivalent to `UDim2.new(0, 0, 0, 0)`. All four components (X scale, X
+      offset, Y scale, Y offset) default to `0`.
     parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim2.new
-    summary: |-
-      Returns a new `Datatype.UDim2` given the coordinates of the two `Datatype.UDim`
-      components representing each axis.
-    description: |-
-      Returns a new `Datatype.UDim2` given the coordinates of the two `Datatype.UDim`
-      components representing each axis.
+    summary: |
+      Returns a new `Datatype.UDim2` given the coordinates of the two
+      `Datatype.UDim` components representing each axis.
+    description: |
+      Returns a new `Datatype.UDim2` from four numbers that define both axes.
+      Each pair of arguments defines one dimension: `xScale` and `xOffset` for
+      the horizontal (**X**) axis, then `yScale` and `yOffset` for the vertical
+      (**Y**) axis. Scale is a relative fraction of the parent container's size
+      (typically between `0` and `1`), while offset is an absolute logical pixel
+      value added after scaling. All parameters default to `0`.
+
+      ```lua
+      -- 50% width + 20 logical pixels padding, full height
+      local size = UDim2.new(0.5, 20, 1, 0)
+      ```
     parameters:
       - name: xScale
         type: number
         default: 0
-        summary: The **X** dimension scale.
+        summary: |
+          The **X** dimension scale.
       - name: xOffset
         type: number
         default: 0
-        summary: The **X** dimension offset.
+        summary: |
+          The **X** dimension offset.
       - name: yScale
         type: number
         default: 0
-        summary: The **Y** dimension scale.
+        summary: |
+          The **Y** dimension scale.
       - name: yOffset
         type: number
         default: 0
-        summary: The **Y** dimension offset.
+        summary: |
+          The **Y** dimension offset.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim2.new
-    summary: |-
-      Returns a new `Datatype.UDim2` from the given `Datatype.UDim` objects representing
-      the **X** and **Y** dimensions, respectively.
-    description: |-
-      Returns a new `Datatype.UDim2` from the given `Datatype.UDim` objects representing
-      the **X** and **Y** dimensions, respectively.
+    summary: |
+      Returns a new `Datatype.UDim2` from the given `Datatype.UDim` objects
+      representing the **X** and **Y** dimensions, respectively.
+    description: |
+      Constructs a `Datatype.UDim2` by composing two `Datatype.UDim` values
+      directly. The first argument becomes the horizontal dimension (accessible
+      via `.X` or `.Width`) and the second becomes the vertical dimension
+      (accessible via `.Y` or `.Height`).
+
+      ```lua
+      local x = UDim.new(0.5, 10)
+      local y = UDim.new(1, 0)
+      local size = UDim2.new(x, y)  -- equivalent to UDim2.new(0.5, 10, 1, 0)
+      ```
     parameters:
       - name: x
         type: UDim
         default:
-        summary: ''
+        summary: |
+          The `Datatype.UDim` for the horizontal (**X**) axis.
       - name: 'y'
         type: UDim
         default:
-        summary: ''
+        summary: |
+          The `Datatype.UDim` for the vertical (**Y**) axis.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim2.fromScale
-    summary: Returns a new `Datatype.UDim2` with the given scale components and no offsets.
-    description: |-
-      Returns a new `Datatype.UDim2` with the given scalar coordinates and no offsets.
-      Equivalent to:
+    summary: |
+      Returns a new `Datatype.UDim2` with the given scale components and no
+      offsets.
+    description: |
+      Returns a new `Datatype.UDim2` with the given scalar coordinates and no
+      offsets. Equivalent to:
 
       ```lua
       local xScale, yScale = 0.5, 0.25
@@ -96,18 +122,23 @@ constructors:
       - name: xScale
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The relative scale for the horizontal (**X**) axis.
       - name: yScale
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The relative scale for the vertical (**Y**) axis.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim2.fromOffset
-    summary: Returns a new `Datatype.UDim2` with the given offset components and no scaling.
-    description: |-
-      Returns a new `Datatype.UDim2` with the given offset coordinates and no scaling. Equivalent to:
+    summary: |
+      Returns a new `Datatype.UDim2` with the given offset components and no
+      scaling.
+    description: |
+      Returns a new `Datatype.UDim2` with the given offset coordinates and no
+      scaling. Equivalent to:
 
       ```lua
       local xOffset, yOffset = 100, 50
@@ -117,11 +148,13 @@ constructors:
       - name: xOffset
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The absolute logical pixel offset for the horizontal (**X**) axis.
       - name: yOffset
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The absolute logical pixel offset for the vertical (**Y**) axis.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -132,7 +165,15 @@ properties:
     summary: |
       The **X** dimension scale and offset of the `Datatype.UDim2`.
     description: |
-      The **X** dimension scale and offset of the `Datatype.UDim2`.
+      The `Datatype.UDim` component for the horizontal axis. The returned
+      `Datatype.UDim` has a `.Scale` (relative fraction) and `.Offset` (absolute
+      logical pixels). This property is equivalent to `Datatype.UDim2.Width`.
+
+      ```lua
+      local pos = UDim2.new(0.5, 10, 1, 0)
+      print(pos.X.Scale)   -- 0.5
+      print(pos.X.Offset)  -- 10
+      ```
     default:
     code_samples: []
     tags: []
@@ -142,7 +183,15 @@ properties:
     summary: |
       The **Y** dimension scale and offset of the `Datatype.UDim2`.
     description: |
-      The **Y** dimension scale and offset of the `Datatype.UDim2`.
+      The `Datatype.UDim` component for the vertical axis. The returned
+      `Datatype.UDim` has a `.Scale` (relative fraction) and `.Offset` (absolute
+      logical pixels). This property is equivalent to `Datatype.UDim2.Height`.
+
+      ```lua
+      local pos = UDim2.new(0.5, 10, 1, 0)
+      print(pos.Y.Scale)   -- 1
+      print(pos.Y.Offset)  -- 0
+      ```
     default:
     code_samples: []
     tags: []
@@ -152,7 +201,8 @@ properties:
     summary: |
       The **X** dimension scale and offset of the `Datatype.UDim2`.
     description: |
-      The **X** dimension scale and offset of the `Datatype.UDim2`.
+      A synonym for `Datatype.UDim2.X`. Returns the `Datatype.UDim` component
+      for the horizontal axis, containing both `.Scale` and `.Offset`.
     default:
     code_samples: []
     tags: []
@@ -162,7 +212,8 @@ properties:
     summary: |
       The **Y** dimension scale and offset of the `Datatype.UDim2`.
     description: |
-      The **Y** dimension scale and offset of the `Datatype.UDim2`.
+      A synonym for `Datatype.UDim2.Y`. Returns the `Datatype.UDim` component
+      for the vertical axis, containing both `.Scale` and `.Offset`.
     default:
     code_samples: []
     tags: []
@@ -180,14 +231,19 @@ methods:
       - name: goal
         type: UDim2
         default:
-        summary: ''
+        summary: |
+          The target `Datatype.UDim2` to interpolate toward.
       - name: alpha
         type: number
         default:
-        summary: ''
+        summary: |
+          A value between `0` (returns this UDim2) and `1` (returns `goal`)
+          controlling the interpolation.
     returns:
       - type: UDim2
-        summary: ''
+        summary: |
+          A `Datatype.UDim2` where each axis is independently interpolated
+          between this value and `goal` by the fraction `alpha`.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -199,8 +255,15 @@ math_operations:
       Produces a `Datatype.UDim2` with components that are the sum of the
       respective components of the two `Datatype.UDim2` objects.
     description: |
-      Produces a `Datatype.UDim2` with components that are the sum of the
-      respective components of the two `Datatype.UDim2` objects.
+      Adds both the scale and offset of each axis independently: the result's X
+      scale is the sum of both X scales, the result's X offset is the sum of
+      both X offsets, and likewise for Y.
+
+      ```lua
+      local a = UDim2.new(0.5, 10, 0, 20)
+      local b = UDim2.new(0.25, 5, 1, 0)
+      local c = a + b  -- UDim2.new(0.75, 15, 1, 20)
+      ```
     type_a: UDim2
     type_b: UDim2
     return_type: UDim2
@@ -213,8 +276,15 @@ math_operations:
       Produces a `Datatype.UDim2` with components that are the difference of the
       respective components of the two `Datatype.UDim2` objects.
     description: |
-      Produces a `Datatype.UDim2` with components that are the difference of the
-      respective components of the two `Datatype.UDim2` objects.
+      Subtracts both the scale and offset of each axis independently: the
+      result's X scale is the first X scale minus the second, the result's X
+      offset is the first X offset minus the second, and likewise for Y.
+
+      ```lua
+      local a = UDim2.new(1, 100, 1, 50)
+      local b = UDim2.new(0.5, 30, 0, 10)
+      local c = a - b  -- UDim2.new(0.5, 70, 1, 40)
+      ```
     type_a: UDim2
     type_b: UDim2
     return_type: UDim2

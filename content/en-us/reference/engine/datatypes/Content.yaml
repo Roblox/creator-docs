@@ -31,65 +31,87 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Content.fromUri
-    summary: Returns a new `Content` with an [asset URI](../../../projects/assets/index.md#asset-uris) `string` value referencing content external to the place.
-    description: |-
-      Returns a new `Content` with an [asset URI](../../../projects/assets/index.md#asset-uris) `string` value referencing content external to the place.
+    summary: |
+      Returns a new `Content` with an
+      [asset URI](../../../projects/assets/index.md#asset-uris) `string` value
+      referencing content external to the place.
+    description: |
+      Returns a new `Content` with an
+      [asset URI](../../../projects/assets/index.md#asset-uris) `string` value
+      referencing content external to the place.
 
-      `Datatype.Content.SourceType` will be `Enum.ContentSourceType|Uri`, and `Datatype.Content.Uri` will contain a non‑`nil` `string` value.
+      `Datatype.Content.SourceType` will be `Enum.ContentSourceType|Uri`, and
+      `Datatype.Content.Uri` will contain a non‑`nil` `string` value.
 
       If `uri` is empty, `Datatype.Content.none` will be returned instead.
     parameters:
       - name: uri
         type: string
         default:
-        summary: The [asset URI](../../../projects/assets/index.md#asset-uris) string.
+        summary: |
+          The [asset URI](../../../projects/assets/index.md#asset-uris) string.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Content.fromAssetId
-    summary: Returns a new `Content` from a numeric asset ID.
-    description: |-
+    summary: |
+      Returns a new `Content` from a numeric asset ID.
+    description: |
       Returns a new `Content` from a numeric asset ID. This is a convenience
       constructor equivalent to calling
       `Content.fromUri("rbxassetid://" .. tostring(assetId))`.
 
       `Datatype.Content.SourceType` will be `Enum.ContentSourceType|Uri`, and
-      `Datatype.Content.Uri` will contain the formatted `rbxassetid://` URI string.
+      `Datatype.Content.Uri` will contain the formatted `rbxassetid://` URI
+      string.
 
       If `assetId` is `0`, `Datatype.Content.none` will be returned instead.
 
-      Throws if `assetId` is non‑finite, for example `Library.math.huge()` or `0/0`.
+      Throws if `assetId` is non‑finite, for example `Library.math.huge()` or
+      `0/0`.
     parameters:
       - name: assetId
         type: number
         default:
-        summary: The numeric asset ID.
+        summary: |
+          The numeric asset ID.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Content.fromObject
-    summary: Returns a new `Content` with a strong reference to an `Class.Object`.
-    description: |-
+    summary: |
+      Returns a new `Content` with a strong reference to an `Class.Object`.
+    description: |
       Returns a new `Content` with a strong reference to an `Class.Object`.
 
-      `Datatype.Content.SourceType` will be `Enum.ContentSourceType|Object`, and `Datatype.Content.Object` will contain a non‑`nil` `Class.Object` reference.
+      `Datatype.Content.SourceType` will be `Enum.ContentSourceType|Object`, and
+      `Datatype.Content.Object` will contain a non‑`nil` `Class.Object`
+      reference.
 
-      `Datatype.Content.Object` references are **strong** references that hold **shared ownership** of the `Class.Object`. Any `Datatype.Content.Object` reference will extend the lifetime of that `Class.Object` and prevent it from being garbage collected.
+      `Datatype.Content.Object` references are **strong** references that hold
+      **shared ownership** of the `Class.Object`. Any `Datatype.Content.Object`
+      reference will extend the lifetime of that `Class.Object` and prevent it
+      from being garbage collected.
 
       Throws if `object` is `nil`.
     parameters:
       - name: object
         type: Object
         default:
-        summary: The `Class.Object` to reference.
+        summary: |
+          The `Class.Object` to reference.
     code_samples: []
     tags: []
     deprecation_message: ''
 constants:
   - name: Content.none
     type: Content
-    summary: An empty `Content` value with `Datatype.Content.SourceType` of `Enum.ContentSourceType|None`.
-    description: An empty `Content` value with `Datatype.Content.SourceType` of `Enum.ContentSourceType|None`.
+    summary: |
+      An empty `Content` value with `Datatype.Content.SourceType` of
+      `Enum.ContentSourceType|None`.
+    description: |
+      An empty `Content` value with `Datatype.Content.SourceType` of
+      `Enum.ContentSourceType|None`.
     code_samples: []
     tags: []
     deprecation_message: ''

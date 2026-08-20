@@ -385,7 +385,9 @@ methods:
       - name: keyCodesForActivation
         type: Tuple
         default:
-        summary: ''
+        summary: |
+          Any number of `Enum.KeyCode` values that trigger `Class.Tool`
+          activation for the specified `Enum.UserInputType`.
     returns:
       - type: ()
         summary: ''
@@ -413,7 +415,8 @@ methods:
     parameters: []
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A dictionary mapping each bound action name to its info table.
     tags: []
     deprecation_message: ''
     security: None
@@ -520,10 +523,14 @@ methods:
       - name: actionName
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the action originally passed to BindAction.
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A dictionary with keys describing the bound action, including
+          stackOrder, priorityLevel, createTouchButton, inputTypes, description,
+          title, and image.
     tags: []
     deprecation_message: ''
     security: None
@@ -763,7 +770,8 @@ methods:
       - name: actionName
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the action to unbind, as originally passed to BindAction.
     returns:
       - type: ()
         summary: ''
@@ -828,13 +836,28 @@ events:
     summary: |
       Fires when the current player equips a `Class.Tool`.
     description: |
-      Fires when the current player equips a `Class.Tool`.
+      Fires when a `Class.Tool` is added as a child of the local player's
+      `Class.Player.Character|Character` model, which occurs when the player
+      equips the tool. The `toolEquipped` parameter is the `Class.Tool` instance
+      that was equipped.
+
+      This event fires only for `Class.Tool` children added to the character, so
+      it does not fire for non-Tool children. The connection is re-established
+      each time the player's character respawns.
+
+      This event is useful for updating contextual action bindings when a tool
+      is equipped. For example, you can call
+      `Class.ContextActionService:BindAction()|BindAction` inside a handler
+      connected to this event to set up tool-specific input, then call
+      `Class.ContextActionService:UnbindAction()|UnbindAction` in the
+      corresponding `Class.ContextActionService.LocalToolUnequipped` handler.
     code_samples: []
     parameters:
       - name: toolEquipped
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.Tool` instance that was equipped.
     tags: []
     deprecation_message: ''
     security: None
@@ -844,13 +867,27 @@ events:
     summary: |
       Fires when the current player unequips a `Class.Tool`.
     description: |
-      Fires when the current player unequips a `Class.Tool`.
+      Fires when a `Class.Tool` is removed from the local player's
+      `Class.Player.Character|Character` model, which occurs when the player
+      unequips the tool. The `toolUnequipped` parameter is the `Class.Tool`
+      instance that was unequipped.
+
+      This event fires only for `Class.Tool` children removed from the
+      character, so it does not fire for non-Tool children. The connection is
+      re-established each time the player's character respawns.
+
+      This event is useful for tearing down contextual action bindings when a
+      tool is unequipped. For example, you can call
+      `Class.ContextActionService:UnbindAction()|UnbindAction` inside a handler
+      connected to this event to remove tool-specific input that was bound in
+      the corresponding `Class.ContextActionService.LocalToolEquipped` handler.
     code_samples: []
     parameters:
       - name: toolUnequipped
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.Tool` instance that was unequipped.
     tags: []
     deprecation_message: ''
     security: None

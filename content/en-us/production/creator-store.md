@@ -20,7 +20,7 @@ You can find the Creator Store both on the [Creator Hub](https://create.roblox.c
 </TabItem>
 </Tabs>
 
-In addition to using or distributing your own free assets on the Creator Store, you can become a seller and monetize any models or plugins that you create for United States Dollars (USD). This monetization method lets you earn 100% of net proceeds on transactions, bypassing platform fees and DevEx rates.
+In addition to using or distributing free assets on the Creator Store, you can become a seller and monetize models or plugins for United States Dollars (USD). This monetization method lets you earn 100% of net proceeds on transactions, bypassing platform fees and DevEx rates.
 
 <figure>
 <img src="../assets/creator-store/CS-Analytics.png" width="100%" alt=""/>
@@ -177,10 +177,12 @@ Some assets include scripts that perform specific actions, such as animating at 
 
 ## Distribute and sell assets
 
-When you are ready, you can publicly distribute and sell your own assets on the Creator Store for others to use within their own game development. Specifically, as long as you and your assets meet Creator Store requirements, you can:
+When you are ready, you can distribute and sell assets on the Creator Store for others to use within their own game development. Specifically, as long as you and your assets meet Creator Store requirements, you can:
 
-- Distribute and make freely available any mesh or image that you have imported through the 3D Importer, or any model, plugin, or audio asset that you have uploaded to your inventory.
-- Sell any model or plugin and earn 100% of net proceeds on transactions. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted.
+- Distribute and make freely available any `Class.Model`, `Class.Plugin`, `Class.MeshPart|MeshPart`, `Class.Decal`, or [audio](../audio/objects.md) asset that you have created and uploaded to your inventory.
+- Sell a `Class.Model` or `Class.Plugin` and earn 100% of net proceeds on transactions. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted.
+
+You may also distribute composite assets which contain Open Use dependencies that were created by others, but you cannot distribute assets with Restricted dependencies that were not uploaded by you. For more information on Open Use and Restricted dependencies, see [Asset Privacy](../projects/assets/privacy.md).
 
 <Alert severity="info">
 In order to set any USD prices and sell your assets, **you must have a seller account**. Roblox administers seller accounts through Stripe, a third-party payments provider.
@@ -235,23 +237,11 @@ To distribute an asset inside Studio:
 </TabItem>
 </Tabs>
 
-### Requirements
-
-In order to be eligible to participate in the Creator Store,
-
-- **Assets** must meet requirements to be listed.
-- **Sellers** must meet requirements to sell models and plugins.
-- **Customers** must meet requirements to purchase assets.
-
-For a full list of these requirements, click through the following tabs.
-
-<Tabs>
-<TabItem key = "1" label="Asset Requirements">
+### Asset requirements
 
 Every asset that you distribute and sell on the Creator Store must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and [Digital Millennium Copyright Act](https://create.roblox.com/docs/production/publishing/dmca-guidelines) (DMCA) regarding copyright. If any asset breaks these rules, the asset and your account may be subject to moderation.
 
-There are limits on the number of assets you can distribute per 30 days, depending on whether you've [verified your account](../production/publishing/account-verification.md):
-
+There are limits on the number of assets you can distribute per 30 days, depending on whether you've verified your account. You can verify your account by passing an [age check](https://en.help.roblox.com/hc/en-us/articles/39143693116052-Understanding-Age-Checks-on-Roblox) or using a [government ID](../production/publishing/account-verification.md#verify-through-government-id), but you **cannot** verify with a phone number.
 <table>
 <thead>
   <tr>
@@ -294,14 +284,22 @@ In addition, the Creator Store restricts use of the following practices to ensur
 If you discover or purchase an asset that you believe violates Roblox's policies, report it using the **Report Item** option on the asset's detail page.
 </Alert>
 
-</TabItem>
-<TabItem key = "2" label="Seller Requirements">
+### Account requirements
 
-In order to set any USD prices and sell your models and plugins, you must have a seller account. In order to create a seller account, you must meet the following Roblox eligibility requirements:
+<Tabs>
 
-- Your Roblox account must be verified with a [government ID](../production/publishing/account-verification.md#verify-through-government-id). You **cannot** verify with a phone number.
+<TabItem key = "1" label="Distributor Requirements">
+
+In order to share assets to the Creator Store, you must meet the following eligibility requirements:
+
+- Your Roblox account must be at least 2 days old.
 - Your Roblox account must not have been recently banned for any reason.
+- Your Roblox account must be verified by passing an [age check](https://en.help.roblox.com/hc/en-us/articles/39143693116052-Understanding-Age-Checks-on-Roblox) or using a [government ID](../production/publishing/account-verification.md#verify-through-government-id). You **cannot** verify with a phone number.
+
+In addition, in order to set any USD prices and **sell your models and plugins**, you must have a valid seller account. To create a seller account, you must meet the previous eligibility requirements in addition to the following:
+
 - You must be either 18 years of age or older, or 13-17 years of age with parental consent. A parent/guardian (18+) must review and agree to the Creator Store terms, and parent/guardian information must be entered on the Stripe form.
+- You must secure your Roblox account with [2-Step verification](https://en.help.roblox.com/hc/en-us/articles/212459863-Add-2-Step-Verification-to-Your-Account).
 - You must reside in [one of the countries supported](https://stripe.com/docs/connect/cross-border-payouts) by our third-party payments provider.
 
 <Alert severity="info">
@@ -326,7 +324,7 @@ Transactions between any individual customer and seller are capped per month for
 
 </Tabs>
 
-### Seller accounts
+### Seller account setup
 
 All prospective sellers on the Creator Store must complete an application form through Stripe to create their seller account, set USD prices, and receive payouts. This process applies even if you have previously sold plugins for Robux on the Creator Store.
 

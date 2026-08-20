@@ -9,6 +9,10 @@ If you choose to offer purchasable content, Roblox doesn't automatically record 
 
 <br />
 
+<Alert severity="info">
+For an in-depth look at designing optimal monetization strategies for your experience, see [Monetization foundations](../../production/game-design/monetization-foundations.md).
+</Alert>
+
 ## Monetization strategies
 
 Be mindful of the monetization methods you introduce into your game as our users are likely to **downvote** your game if they do not approve of your strategies. Also, all developers need to be transparent with any [chance-based monetization](paid-random-items.md) and use these mechanics responsibly.
@@ -26,7 +30,7 @@ Please note that by applying these techniques and considerations, you are not gu
 It can be helpful to think of Roblox users in two categories:
 
 - **Tourists** typically hop from one game to another, prioritizing variety over depth. They prefer items with immediate effects, either through making gameplay more fun or through making them stand out, inviting other users to question how and where they got the item.
-- **Locals** are more likely to focus on a particular game or smaller set of games. They engage more deeply, and typically form almost all a game's engaged user base. They are more interested in items with long term benefits, such as a battle pass.
+- **Locals** are more likely to focus on a particular game or smaller set of games. They engage more deeply, and typically form almost all a game's engaged user base. They are more interested in items with long term benefits, such as a [battle pass](../../production/game-design/season-pass-design.md).
 
 To learn more about how to design your game with Roblox users in mind, see [Design for Roblox](../../production/game-design/design-for-roblox.md).
 
@@ -108,17 +112,7 @@ A [developer product](../../production/monetization/developer-products.md) is an
 
 ### Private servers
 
-A [private server](../../production/monetization/private-servers.md) is a subscription-based feature that allows a user to decide who can play a game with them. While private servers can be free, you can also use private servers as a method of monetization by charging users who want to access private servers a **monthly Robux fee**. Private servers are often purchased for:
-
-- Playing games just with friends.
-
-- Holding gatherings such as classes, meetings, or parties.
-
-- Recording and/or streaming without other users.
-
-- Gathering in-game resources.
-
-<img src="../../assets/monetization/private-servers/Example-Purchase-Dialog.png" width="400" />
+A [private server](../../production/monetization/private-servers.md) is a subscription-based feature that allows a user to decide who can play a game with them. While private servers can be free, you can also use private servers as a method of monetization by charging users who want to access private servers a **monthly Robux fee**.
 
 ### Catalog fees and commissions
 

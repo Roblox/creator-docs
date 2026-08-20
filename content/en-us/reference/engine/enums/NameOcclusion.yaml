@@ -8,8 +8,14 @@ summary: |
   The NameOcclusion Enum is used to set the `Class.Humanoid.NameOcclusion`
   property.
 description: |
-  The NameOcclusion Enum is used to set the `Class.Humanoid.NameOcclusion`
-  property.
+  `NameOcclusion` controls whether overhead name labels on `Class.Humanoid`
+  characters are hidden when solid geometry blocks the line of sight between the
+  viewer and the character. When the local player's
+  `Class.Humanoid.NameOcclusion` is set to `EnemyOcclusion` or `OccludeAll`, the
+  engine performs a raycast; if the character's head is behind a solid part, the
+  name label is not rendered for that frame. Setting the value to `NoOcclusion`
+  skips the raycast entirely and names are always visible regardless of
+  intervening geometry.
 code_samples: []
 tags: []
 deprecation_message: ''

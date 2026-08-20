@@ -5,7 +5,9 @@
 name: Plugin
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  The main object responsible for creating custom Studio widgets, toolbars,
+  buttons, and other plugin UI elements.
 description: |
   `Plugin` is the main object responsible for creating custom Studio widgets,
   plugin toolbars, plugin buttons, and more. The `Plugin` object can be accessed
@@ -145,7 +147,11 @@ methods:
     summary: |
       Creates a `Class.DockWidgetPluginGui` given a
       `Datatype.DockWidgetPluginGuiInfo`.
-    description: ''
+    description: |
+      This method has been superseded by
+      `Class.Plugin:CreateDockWidgetPluginGuiAsync()|CreateDockWidgetPluginGuiAsync()`.
+      It creates a new `Class.DockWidgetPluginGui` from the given
+      `Datatype.DockWidgetPluginGuiInfo`.
     code_samples: []
     parameters:
       - name: pluginGuiId
@@ -408,7 +414,9 @@ methods:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The string key that was previously passed to
+          `Class.Plugin:SetSetting()|SetSetting()`.
     returns:
       - type: Variant
         summary: ''
@@ -440,17 +448,29 @@ methods:
       Prompts the user to open a `.fbx` animation file that can be loaded onto
       the `rigModel`, then proceeds to insert the animation as a
       `Class.KeyframeSequence` in the `Class.Workspace`.
-    description: ''
+    description: |
+      This method prompts the user to open a `.fbx` animation file that can be
+      loaded onto the `rigModel`, then proceeds to insert the animation as a
+      `Class.KeyframeSequence` named "ImportedAnimation" in the
+      `Class.Workspace`. The `isR15` parameter determines whether the file is
+      interpreted as an R15 rig and defaults to `true`.
+
+      Returns the resulting `Class.KeyframeSequence` instance. Errors if
+      `rigModel` is `nil` or if the user cancels the file dialog without
+      selecting a file.
     code_samples: []
     parameters:
       - name: rigModel
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The rig model that the imported animation will be applied to.
       - name: isR15
         type: boolean
         default: true
-        summary: ''
+        summary: |
+          Whether the animation file should be interpreted as an R15 rig.
+          Defaults to `true`.
     returns:
       - type: Instance
         summary: ''
@@ -475,11 +495,14 @@ methods:
       - name: rigModel
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The rig model that the imported animation will be applied to.
       - name: isR15
         type: boolean
         default: true
-        summary: ''
+        summary: |
+          Whether the animation file should be interpreted as an R15 rig.
+          Defaults to `true`.
     returns:
       - type: Instance
         summary: ''
@@ -494,13 +517,19 @@ methods:
       Prompts the user to open a `.fbx` file, uploads the individual components
       of the model as meshes, and generates a character rig for use in
       animation, which is loaded into the `Class.Workspace`.
-    description: ''
+    description: |
+      This method has been superseded by
+      `Class.Plugin:ImportFbxRigAsync()|ImportFbxRigAsync()`. It prompts the
+      user to open a `.fbx` file, uploads the individual components of the model
+      as meshes, and generates a character rig for use in animation, which is
+      loaded into the `Class.Workspace`.
     code_samples: []
     parameters:
       - name: isR15
         type: boolean
         default: true
-        summary: ''
+        summary: |
+          Whether the rig file should be interpreted as R15. Defaults to `true`.
     returns:
       - type: Instance
         summary: ''
@@ -527,7 +556,8 @@ methods:
       - name: isR15
         type: boolean
         default: true
-        summary: ''
+        summary: |
+          Whether the rig file should be interpreted as R15. Defaults to `true`.
     returns:
       - type: Instance
         summary: ''
@@ -549,7 +579,8 @@ methods:
       - name: objects
         type: Instances
         default:
-        summary: ''
+        summary: |
+          The array of `Class.BasePart|BaseParts` to intersect.
     returns:
       - type: Instance
         summary: ''
@@ -617,7 +648,8 @@ methods:
       - name: objects
         type: Instances
         default:
-        summary: ''
+        summary: |
+          The array of `Class.BasePart|BaseParts` to negate.
     returns:
       - type: Instances
         summary: ''
@@ -635,17 +667,24 @@ methods:
       Used to open the given script instance in an editor window, in Roblox
       studio, at the given line. If no line is given as an argument it will
       default to 1.
+
+      Prefer
+      `Class.ScriptEditorService:OpenScriptDocumentAsync()|ScriptEditorService:OpenScriptDocumentAsync()`,
+      which provides better integration with other script editor APIs and is
+      more extensible.
     code_samples:
       - Plugin-OpenScript1
     parameters:
       - name: script
         type: LuaSourceContainer
         default:
-        summary: ''
+        summary: |
+          The `Class.LuaSourceContainer` script instance to open.
       - name: lineNumber
         type: int
         default: 1
-        summary: ''
+        summary: |
+          The line number to navigate to in the editor. Defaults to `1`.
     returns:
       - type: ()
         summary: ''
@@ -666,7 +705,8 @@ methods:
       - name: url
         type: string
         default:
-        summary: ''
+        summary: |
+          The URL of the wiki/documentation page to open.
     returns:
       - type: ()
         summary: ''
@@ -737,13 +777,19 @@ methods:
     summary: |
       Prompts the user to save their current selection with the specified file
       name.
-    description: ''
+    description: |
+      This method has been superseded by
+      `Class.Plugin:PromptSaveSelectionAsync()|PromptSaveSelectionAsync()`. It
+      prompts the user to save their current selection with the specified file
+      name and returns whether the user completed the save.
     code_samples: []
     parameters:
       - name: suggestedFileName
         type: string
         default:
-        summary: ''
+        summary: |
+          The default file name shown in the save dialog. Defaults to an empty
+          string.
     returns:
       - type: boolean
         summary: ''
@@ -768,7 +814,9 @@ methods:
       - name: suggestedFileName
         type: string
         default:
-        summary: ''
+        summary: |
+          The default file name shown in the save dialog. Defaults to an empty
+          string.
     returns:
       - type: boolean
         summary: ''
@@ -808,11 +856,14 @@ methods:
       - name: tool
         type: RibbonTool
         default:
-        summary: ''
+        summary: |
+          The `Enum.RibbonTool` to activate.
       - name: position
         type: UDim2
         default:
-        summary: ''
+        summary: |
+          The `Datatype.UDim2` screen position at which to show the tool's
+          dialog window, if applicable.
     returns:
       - type: ()
         summary: ''
@@ -833,7 +884,8 @@ methods:
       - name: objects
         type: Instances
         default:
-        summary: ''
+        summary: |
+          The array of `Class.UnionOperation|UnionOperations` to separate.
     returns:
       - type: Instances
         summary: ''
@@ -871,11 +923,14 @@ methods:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The string key to store the value under.
       - name: value
         type: Variant
         default:
-        summary: ''
+        summary: |
+          The value to store. Must be JSON-serializable (string, number,
+          boolean, table, or `nil`).
     returns:
       - type: ()
         summary: ''
@@ -961,7 +1016,9 @@ methods:
       - name: dragData
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A dictionary describing the drag, including fields such as `Sender`,
+          `MimeType`, `Data`, `MouseIcon`, `DragIcon`, and `HotSpot`.
     returns:
       - type: ()
         summary: ''
@@ -980,7 +1037,8 @@ methods:
       - name: objects
         type: Instances
         default:
-        summary: ''
+        summary: |
+          The array of `Class.BasePart|BaseParts` to union together.
     returns:
       - type: Instance
         summary: ''

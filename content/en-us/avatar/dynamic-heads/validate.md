@@ -1,10 +1,10 @@
 ---
-title: Head validation
+title: Dynamic head validation
 description: In-depth details on how Roblox validates head assets
 ---
 
 <Alert severity = 'info'>
-This content is for creators who intend to create character heads designated for the Marketplace, or any character heads that support assets from the Marketplace.
+This content is for creators who intend to create dynamic heads designated for the Marketplace, or any character heads that support assets from the Marketplace.
 </Alert>
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/OwhkWzSBnf0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>

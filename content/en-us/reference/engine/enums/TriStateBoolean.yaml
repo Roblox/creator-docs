@@ -4,24 +4,36 @@
 
 name: TriStateBoolean
 type: enum
-summary: ''
-description: ''
+summary: |
+  A three-state boolean enumeration used by `Class.PolicyService` to represent a
+  value that is explicitly `True`, explicitly `False`, or not yet resolved
+  (`Unknown`).
+description: |
+  A three-state boolean that extends a standard boolean with
+  `Enum.TriStateBoolean.Unknown` for values not yet determined. Used by
+  `Class.PolicyService` for region-specific platform states that may be unknown
+  before policy queries complete. Defaults to `Enum.TriStateBoolean.Unknown`
+  until explicitly set.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Unknown
-    summary: ''
+    summary: |
+      Indicates the condition has not yet been determined or resolved; the
+      default value.
     value: 0
     tags: []
     deprecation_message: ''
   - name: 'True'
-    summary: ''
+    summary: |
+      Indicates the condition is explicitly true.
     value: 1
     tags: []
     deprecation_message: ''
   - name: 'False'
-    summary: ''
+    summary: |
+      Indicates the condition is explicitly false.
     value: 2
     tags: []
     deprecation_message: ''

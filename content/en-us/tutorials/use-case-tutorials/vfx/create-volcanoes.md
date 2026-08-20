@@ -170,7 +170,7 @@ To recreate the global lighting in the sample [Volcano Island - Complete](https:
 
    <img src="../../../assets/tutorials/creating-volcanoes/GL-3.jpg" alt="A front view of the volcano with pitch black outdoor lighting and local lighting that glows orange." width="80%" />
 
-1. **(Optional)** Provide indirect light with clouds in the sky.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Provide indirect light with clouds in the sky.
    1. In the **Explorer** window, insert a **Clouds** object into the **Terrain** service.
    1. Select the **Clouds** object, then in the **Properties** window,
       1. Set **Cover** to `1` to provide full cloud cover to the sky.
@@ -605,7 +605,7 @@ To recreate the flowing magma from the caldera in the sample [Volcano Island - C
 
    <video controls src="../../../assets/tutorials/creating-volcanoes/LavaFlow-10.mp4" alt="An angled top down view of the volcano with two block parts rendering the bottom, middle, and top layer custom textures." width="90%"></video>
 
-1. **(Optional)** Using this same process, create more beams around the fork in the crevice to offshoot the magma. Be sure to adjust the properties to slow the textures and simulate magma that's darker in color as it cools in temperature.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Using this same process, create more beams around the fork in the crevice to offshoot the magma. Be sure to adjust the properties to slow the textures and simulate magma that's darker in color as it cools in temperature.
 
    <video controls src="../../../assets/tutorials/creating-volcanoes/LavaFlow-11.mp4" alt="An angled top down view of the volcano with two block parts rendering the bottom, middle, and top layer custom textures with forking beams." width="90%"></video>
 

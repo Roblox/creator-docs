@@ -5,8 +5,13 @@
 name: FunctionalTest
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Deprecated container for automated test scripts; use `Class.TestService`
+  instead.
+description: |
+  A deprecated container for automated test scripts that delegates its
+  test-result methods to `Class.TestService` and then signals test completion.
+  New scripts should use `Class.TestService` directly.
 code_samples: []
 inherits:
   - Instance
@@ -39,8 +44,11 @@ properties:
     capabilities: []
 methods:
   - name: FunctionalTest:Error
-    summary: ''
-    description: ''
+    summary: |
+      Prints a red failure message to the output and signals test completion.
+    description: |
+      Prints a red message to the output, prefixed by _"TestService: "_, then
+      signals test completion. Same behavior as `Class.FunctionalTest:Failed()`.
     code_samples: []
     parameters:
       - name: message
@@ -79,8 +87,11 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: FunctionalTest:Pass
-    summary: ''
-    description: ''
+    summary: |
+      Records a successful test result and signals test completion.
+    description: |
+      Records a successful test result and signals test completion. Same
+      behavior as `Class.FunctionalTest:Passed()`.
     code_samples: []
     parameters:
       - name: message
@@ -98,8 +109,11 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: FunctionalTest:Passed
-    summary: ''
-    description: ''
+    summary: |
+      Records a successful test result and signals test completion.
+    description: |
+      Records a successful test result and signals test completion. Same
+      behavior as `Class.FunctionalTest:Pass()`.
     code_samples: []
     parameters:
       - name: message

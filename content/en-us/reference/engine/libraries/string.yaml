@@ -22,7 +22,7 @@ functions:
   - name: string.byte
     summary: |
       Returns the internal numerical codes of the characters
-      `s[i], s[i+1], ..., s[j]`. The default value for `i` is 1; the default
+      `s[i], s[i+1], ..., s[j]`. The default value for `i` is `1`; the default
       value for `j` is `i`. These indices are corrected following the same rules
       of function string.sub.
     description: |
@@ -30,19 +30,43 @@ functions:
       `s[i], s[i+1], ..., s[j]`. The default value for `i` is 1; the default
       value for `j` is `i`. These indices are corrected following the same rules
       of function `Library.string.sub()`.
+
+      Numerical codes correspond to single-byte character values (`0`-`255`).
+      The function returns one number per character in the specified range, so
+      calling it on a multi-character slice yields multiple return values. If
+      the resolved range is empty (start index greater than end index after
+      adjustment), no values are returned.
+
+      ```lua
+      -- Single character
+      print(string.byte("A")) -- 65
+
+      -- Range of characters
+      print(string.byte("hello", 1, 3)) -- 104 101 108
+
+      -- Negative indices (counts from end)
+      print(string.byte("abc", -1)) -- 99 (the byte value of 'c')
+
+      -- Roundtrip with string.char
+      local a, b, c = string.byte("ABC", 1, 3)
+      print(string.char(a, b, c)) -- ABC
+      ```
     parameters:
       - name: s
         type: string
         default:
-        summary: ''
+        summary: |
+          The string to extract byte values from.
       - name: i
         type: number
         default: 1
-        summary: ''
+        summary: |
+          The starting index of the range of characters to convert.
       - name: j
         type: number
         default: i
-        summary: ''
+        summary: |
+          The ending index of the range of characters to convert.
     returns:
       - type: int
         summary: ''
@@ -58,11 +82,32 @@ functions:
       Receives zero or more integers and returns a string with length equal to
       the number of arguments, in which each character has the internal
       numerical code equal to its corresponding argument.
+
+      Each integer must be in the range `[0, 255]`; values outside that range
+      raise an error. This is the inverse of `Library.string.byte()`.
+
+      ```lua
+      -- Basic usage
+      print(string.char(72, 101, 108, 108, 111)) -- Hello
+
+      -- Single character
+      print(string.char(65)) -- A
+
+      -- Construct from byte values (e.g. null byte)
+      local s = string.char(0)
+      print(#s) -- 1
+
+      -- Roundtrip with string.byte
+      local code = string.byte("Z")
+      print(string.char(code)) -- Z
+      ```
     parameters:
       - name: ...
         type: int
         default:
-        summary: ''
+        summary: |
+          Zero or more integers in the range `[0, 255]`, each representing a
+          byte value.
     returns:
       - type: string
         summary: ''
@@ -77,7 +122,7 @@ functions:
       Searches for the first occurrence of a pattern in a string and returns the
       start and end indices of the match. If no match is found, it returns
       `nil.` You can specify where to start the search using the optional `init`
-      parameter which defaults to 1 and can be negative. An optional `plain`
+      parameter which defaults to `1` and can be negative. An optional `plain`
       parameter turns off pattern matching, so the function performs a plain
       substring search; note that if you use `plain`, you must also provide
       `init.`
@@ -132,7 +177,9 @@ functions:
       - name: plain
         type: bool
         default: false
-        summary: ''
+        summary: |
+          If true, turns off pattern matching and performs a plain substring
+          search.
     returns:
       - type: number
         summary: |
@@ -175,73 +222,73 @@ functions:
             <td><code>c</code></td>
             <td>integer</td>
             <td></td>
-            <td>3</td>
+            <td><code>3</code></td>
           </tr>
           <tr>
             <td><code>d</code> or <code>i</code></td>
             <td>integer</td>
             <td>Decimal representation.</td>
-            <td> 321 </td>
+            <td><code>321</code></td>
           </tr>
           <tr>
             <td><code>e</code> or <code>E</code></td>
             <td>float</td>
             <td>Scientific notation using <code>e</code> or <code>E</code>.</td>
-            <td>3.296e2<br>3.296E2</td>
+            <td><code>3.296e2</code><br><code>3.296E2</code></td>
           </tr>
           <tr>
             <td><code>f</code></td>
             <td>float</td>
             <td></td>
-            <td>3231.1231</td>
+            <td><code>3231.1231</code></td>
           </tr>
           <tr>
             <td><code>g</code> or <code>G</code></td>
             <td>float</td>
             <td>The shorter of <code>e</code>/<code>E</code> and <code>f</code>.</td>
-            <td>3E14<br>3e14</td>
+            <td><code>3E14</code><br><code>3e14</code></td>
           </tr>
           <tr>
             <td><code>o</code></td>
             <td>integer</td>
             <td>Octal representation.</td>
-            <td>610</td>
+            <td><code>610</code></td>
           </tr>
           <tr>
             <td><code>q</code></td>
             <td>string</td>
             <td>String in a form suitable to be safely read back by the Luau interpreter. The string is written between double quotes and all double quotes, new lines, embedded zeros, and backslashes are correctly escaped.</td>
-            <td>"print(\"Hi\")"</td>
+            <td><code>"print(\"Hi\")"</code></td>
           </tr>
           <tr>
             <td><code>s</code></td>
             <td>string</td>
             <td></td>
-            <td>Hello world!</td>
+            <td><code>Hello world!</code></td>
           </tr>
           <tr>
             <td><code>u</code></td>
             <td>integer</td>
             <td>Decimal representation.</td>
-            <td>3131</td>
+            <td><code>3131</code></td>
           </tr>
           <tr>
             <td><code>x</code> or <code>X</code></td>
             <td>integer</td>
             <td>Hexadecimal representation.</td>
-            <td>7fa<br>7FA</td>
+            <td><code>7fa</code><br><code>7FA</code></td>
           </tr>
           <tr>
             <td><code>*</code></td>
             <td>any</td>
             <td>Equivalent to <code>s</code> but accepts any variable by converting it to a string using <code>Global.LuaGlobals.tostring()</code>.</td>
-            <td>table: 0x0123456789abcdef</td>
+            <td><code>table: 0x0123456789abcdef</code></td>
           </tr>
           <tr>
             <td><code>%</code></td>
             <td></td>
             <td><code>%</code> followed by another <code>%</code> will return the <code>%</code> sign itself.</td>
-            <td>%</td>
+            <td><code>%</code></td>
           </tr>
         </tbody>
       </table>
@@ -276,11 +323,11 @@ functions:
       <tbody>
         <tr>
           <td><code>-</code></td>
-          <td>Left-justify the given field width (see <code>Width</code> below). Right justification is the default.</td>
+          <td>Left-justify the given field width (see <b>Width</b> below). Right justification is the default.</td>
         </tr>
         <tr>
           <td><code>+</code></td>
-          <td>Forces a "+" sign to precede a number. Has no effect on negative numbers.</td>
+          <td>Forces a <code>+</code> sign to precede a number. Has no effect on negative numbers.</td>
         </tr>
         <tr>
           <td>(space)</td>
@@ -288,11 +335,11 @@ functions:
         </tr>
         <tr>
           <td><code>#</code></td>
-          <td>When used with <code>o</code> and <code>x</code>/<code>X</code>, writes a 0 (octal) or 0x/0X (hex) before values other than zero.<br>When used with <code>e</code>/<code>E</code> and <code>f</code>, forces the output to contain a decimal point, even if no digits would follow (by default, no decimal point is written if no digits follow).<br>When used with <code>g</code> or <code>G</code>, the result is the same as with <code>e</code> or <code>E</code> but trailing zeros are not removed.</td>
+          <td>When used with <code>o</code> and <code>x</code>/<code>X</code>, writes a <code>0</code> (octal) or <code>0x</code>/<code>0X</code> (hex) before values other than zero.<br>When used with <code>e</code>/<code>E</code> and <code>f</code>, forces the output to contain a decimal point, even if no digits would follow (by default, no decimal point is written if no digits follow).<br>When used with <code>g</code> or <code>G</code>, the result is the same as with <code>e</code> or <code>E</code> but trailing zeros are not removed.</td>
         </tr>
         <tr>
           <td><code>0</code></td>
-          <td>Left-pads the number with zeros instead of empty spaces (see <code>Width</code> below).</td>
+          <td>Left-pads the number with zeros instead of empty spaces (see <b>Width</b> below).</td>
         </tr>
       </tbody>
       </table>
@@ -337,8 +384,8 @@ functions:
 
       #### Precision
 
-      The default precision is 1. If you give a period without a value, the
-      default is 0.
+      The default precision is <code>1</code>. If you give a period without a
+      value, the default is <code>0</code>.
 
       <table>
         <thead>
@@ -350,7 +397,7 @@ functions:
         <tbody>
           <tr>
             <td><code>.</code>(number)</td>
-            <td>For integer specifiers (<code>d</code>, <code>i</code>, <code>o</code>, <code>u</code>, <code>x</code>/<code>X</code>), precision specifies the minimum number of digits to be returned. If the value to be formatted is shorter than this number, the result is padded with leading zeros. A precision of 0 means that no character is written for the value 0.<br>For <code>e</code>/<code>E</code> and <code>f</code> specifiers, this is the number of digits to be printed after the decimal point.<br>For <code>g</code>/<code>G</code> specifiers, this is the maximum number of digits (before the <code>e</code>/<code>E</code>, if present).<br>For <code>s</code>, this is the maximum number of characters to be returned.<br>For <code>c</code> and <code>q</code>, this has no effect.</td>
+            <td>For integer specifiers (<code>d</code>, <code>i</code>, <code>o</code>, <code>u</code>, <code>x</code>/<code>X</code>), precision specifies the minimum number of digits to be returned. If the value to be formatted is shorter than this number, the result is padded with leading zeros. A precision of <code>0</code> means that no character is written for the value <code>0</code>.<br>For <code>e</code>/<code>E</code> and <code>f</code> specifiers, this is the number of digits to be printed after the decimal point.<br>For <code>g</code>/<code>G</code> specifiers, this is the maximum number of digits (before the <code>e</code>/<code>E</code>, if present).<br>For <code>s</code>, this is the maximum number of characters to be returned.<br>For <code>c</code> and <code>q</code>, this has no effect.</td>
           </tr>
         </tbody>
       </table>
@@ -372,11 +419,15 @@ functions:
       - name: formatstring
         type: string
         default:
-        summary: ''
+        summary: |
+          A string containing format specifiers that control how subsequent
+          arguments are formatted.
       - name: ...
         type: string
         default:
-        summary: ''
+        summary: |
+          Values to be formatted according to the specifiers in the format
+          string.
     returns:
       - type: string
         summary: ''
@@ -388,17 +439,49 @@ functions:
       Returns an iterator function that returns the next captures from pattern
       over the string `s` each time it's called.
     description: |
-      Returns an iterator function that returns the next captures from pattern
-      over the string `s` each time it's called.
+      Returns an iterator function that, each time it is called, returns the
+      next captures from `pattern` over the string `s`. If the pattern has no
+      captures, the whole match is returned on each call.
+
+      The iterator is typically used in a generic `for` loop. When the pattern
+      contains capture groups, each call returns the captured substrings as
+      separate values. An empty match (zero-width) advances past the current
+      position by one character to avoid an infinite loop.
+
+      ```lua
+      -- Iterate over all words in a sentence
+      for word in string.gmatch("Hello Roblox world", "%a+") do
+          print(word)
+      end
+      -- Hello
+      -- Roblox
+      -- world
+
+      -- Extract key-value pairs using captures
+      local t = {}
+      for key, value in string.gmatch("name=Roblox, version=1.0", "(%w+)=(%w[%w.]*)") do
+          t[key] = value
+      end
+      print(t.name, t.version) -- Roblox 1.0
+
+      -- Collect all digits
+      local digits = {}
+      for d in string.gmatch("abc123def456", "%d+") do
+          table.insert(digits, d)
+      end
+      print(table.concat(digits, ", ")) -- 123, 456
+      ```
     parameters:
       - name: s
         type: string
         default:
-        summary: ''
+        summary: |
+          The string to search for pattern matches.
       - name: pattern
         type: string
         default:
-        summary: ''
+        summary: |
+          The pattern to match repeatedly against the string.
     returns:
       - type: function
         summary: ''
@@ -412,7 +495,7 @@ functions:
       is the total number of substitutions made.
     description: |
       Short for global substitution. Returns a copy of `s` in which all (or the
-      first n, if given) occurrences of the pattern are substituted (replaced)
+      first `n`, if given) occurrences of the pattern are substituted (replaced)
       with the given `replacement`. The second value returned is the total
       number of substitutions made.
 
@@ -432,9 +515,9 @@ functions:
 
       ```lua
       -- Basic replacement
-      string.gsub("I love tacos!", "tacos", "Roblox") --> "I love Roblox!" 1
+      string.gsub("I love tacos!", "tacos", "Roblox") --> I love Roblox! 1
       -- Replacement with a pattern
-      string.gsub("I like red!", "%w+", "word") --> "word word word!" 3
+      string.gsub("I like red!", "%w+", "word") --> word word word! 3
       -- Replacement table
       string.gsub("I play Roblox.", "%w+", {I="Je", play="joue à"}) --> "Je joue à Roblox." 3
       -- Replacement function
@@ -477,12 +560,29 @@ functions:
     summary: |
       Returns the length of a string.
     description: |
-      Returns the length of a string.
+      Returns the number of bytes in the string `s`. Because Luau strings are
+      byte sequences, this counts bytes rather than Unicode characters or
+      grapheme clusters. An empty string returns `0`. Embedded null bytes (`\0`)
+      are included in the count.
+
+      ```lua
+      print(string.len("Hello")) -- 5
+      print(string.len(""))      -- 0
+
+      -- Embedded null bytes are counted
+      local s = "ab\0cd"
+      print(string.len(s)) -- 5
+
+      -- Equivalent to the # length operator
+      local str = "Roblox"
+      print(string.len(str) == #str) -- true
+      ```
     parameters:
       - name: s
         type: string
         default:
-        summary: ''
+        summary: |
+          The string to measure.
     returns:
       - type: int
         summary: ''
@@ -494,13 +594,27 @@ functions:
       Returns a copy of a string with all uppercase letters changed to
       lowercase.
     description: |
-      Returns a copy of a string with all uppercase letters changed to
-      lowercase.
+      Returns a copy of the string `s` with all uppercase ASCII letters
+      (`A`-`Z`) changed to their lowercase equivalents (`a`-`z`). Characters
+      outside the ASCII letter range, including accented or multibyte
+      characters, are left unchanged.
+
+      ```lua
+      print(string.lower("HELLO")) -- hello
+      print(string.lower("Hello World!")) -- hello world!
+
+      -- Non-letter characters are unaffected
+      print(string.lower("Roblox 123!")) -- roblox 123!
+
+      -- Only ASCII letters are converted
+      print(string.lower("ABC abc")) -- abc abc
+      ```
     parameters:
       - name: s
         type: string
         default:
-        summary: ''
+        summary: |
+          The string to convert to lowercase.
     returns:
       - type: string
         summary: ''
@@ -509,27 +623,51 @@ functions:
     deprecation_message: ''
   - name: string.match
     summary: |
-      Looks for the first match of pattern in the string `s`. If a match is
-      found, it is returned; otherwise, it returns `nil`. A third, optional
-      numerical argument, init, specifies where to start the search.
+      Looks for the first match of `pattern` in the string `s`.
     description: |
-      Looks for the first match of pattern in the string `s`. If a match is
-      found, it is returned; otherwise, it returns `nil`. A third, optional
-      numerical argument, init, specifies where to start the search; its default
-      value is 1 and can be negative.
+      Looks for the first match of `pattern` in the string `s`. If the pattern
+      contains captures, the captured substrings are returned as separate
+      values; otherwise, the whole match is returned. If no match is found, the
+      function returns `nil`.
+
+      The optional third argument `init` specifies the byte position to start
+      the search (default `1`). A negative `init` counts from the end of the
+      string. Unlike `Library.string.find()`, this function returns captured
+      values directly rather than the match indices.
+
+      ```lua
+      -- Extract matched substring
+      print(string.match("I have 42 cats", "%d+")) -- 42
+
+      -- Multiple captures
+      local year, month, day = string.match("2024-03-15", "(%d+)-(%d+)-(%d+)")
+      print(year, month, day) -- 2024 03 15
+
+      -- No match returns nil
+      print(string.match("hello", "%d+")) -- nil
+
+      -- Using init to skip ahead
+      print(string.match("foo123bar456", "%d+", 7)) -- 456
+
+      -- Anchored pattern
+      print(string.match("hello", "^%a+")) -- hello
+      ```
     parameters:
       - name: s
         type: string
         default:
-        summary: ''
+        summary: |
+          The string to search for a pattern match.
       - name: pattern
         type: string
         default:
-        summary: ''
+        summary: |
+          The pattern to match against the string.
       - name: init
         type: number
         default: 1
-        summary: ''
+        summary: |
+          The byte position at which to start searching.
     returns:
       - type: string
         summary: ''
@@ -547,11 +685,15 @@ functions:
       - name: format
         type: string
         default:
-        summary: ''
+        summary: |
+          A format string that describes the layout and types of the values to
+          pack.
       - name: ...
         type: Variant
         default:
-        summary: ''
+        summary: |
+          The values to serialize into binary form according to the format
+          string.
     returns:
       - type: string
         summary: ''
@@ -571,7 +713,9 @@ functions:
       - name: format
         type: string
         default:
-        summary: ''
+        summary: |
+          A format string describing the packing layout (must not contain
+          variable-length options `s` or `z`).
     returns:
       - type: number
         summary: ''
@@ -584,16 +728,33 @@ functions:
       `s`.
     description: |
       Returns a string that is the concatenation of `n` copies of the string
-      `s`.
+      `s`. If `n` is zero or negative, the function returns an empty string. An
+      error is raised if the resulting string would exceed the maximum string
+      size.
+
+      ```lua
+      print(string.rep("ab", 3))  -- ababab
+      print(string.rep("Go! ", 2)) -- Go! Go!
+
+      -- Zero or negative repeats return empty string
+      print(string.rep("x", 0))  -- (empty string)
+      print(string.rep("x", -1)) -- (empty string)
+
+      -- Useful for padding or separators
+      local separator = string.rep("-", 20)
+      print(separator) -- --------------------
+      ```
     parameters:
       - name: s
         type: string
         default:
-        summary: ''
+        summary: |
+          The string to repeat.
       - name: 'n'
         type: int
         default:
-        summary: ''
+        summary: |
+          The number of times to repeat the string.
     returns:
       - type: string
         summary: ''
@@ -604,12 +765,32 @@ functions:
     summary: |
       Returns a string that is the string `s` reversed.
     description: |
-      Returns a string that is the string `s` reversed.
+      Returns a string that is the string `s` reversed byte-by-byte. Because the
+      reversal operates on individual bytes, multibyte UTF-8 sequences are not
+      preserved as valid characters after reversal.
+
+      ```lua
+      print(string.reverse("hello"))  -- olleh
+      print(string.reverse("Roblox")) -- xolboR
+
+      -- Single character or empty string
+      print(string.reverse("a")) -- a
+      print(string.reverse(""))  -- (empty string)
+
+      -- Palindrome check
+      local function isPalindrome(s)
+          local lower = string.lower(s)
+          return lower == string.reverse(lower)
+      end
+      print(isPalindrome("racecar")) -- true
+      print(isPalindrome("hello"))   -- false
+      ```
     parameters:
       - name: s
         type: string
         default:
-        summary: ''
+        summary: |
+          The string to reverse.
     returns:
       - type: string
         summary: ''
@@ -717,25 +898,53 @@ functions:
   - name: string.sub
     summary: |
       Returns the substring of `s` that starts at `i` and continues until and
-      including `j`. `i` and `j` can be negative. `i` defaults to 1 and `j`
+      including `j`. `i` and `j` can be negative. `i` defaults to `1` and `j`
       defaults to `-1`.
     description: |
-      Returns the substring of `s` that starts at `i` and continues until and
-      including `j`. `i` and `j` can be negative. `i` defaults to 1 and `j`
-      defaults to `-1`.
+      Returns the substring of `s` that starts at byte position `i` and
+      continues until and including byte position `j`. Both `i` and `j` can be
+      negative: `-1` refers to the last byte, `-2` to the second-to-last, and so
+      on. The default for `i` is `1` (the beginning) and `j` defaults to `-1`
+      (the end).
+
+      If the resolved `i` is less than `1`, it is corrected to `1`. If `j`
+      exceeds the string length, it is corrected to the string length. If after
+      these corrections `i` is greater than `j`, the function returns an empty
+      string.
+
+      ```lua
+      local s = "Hello, world!"
+      print(string.sub(s, 1, 5))   -- Hello
+      print(string.sub(s, 8))      -- world!
+      print(string.sub(s, -6))     -- orld!
+      print(string.sub(s, -6, -2)) -- orld
+
+      -- Extract file extension
+      local filename = "script.lua"
+      local dot = string.find(filename, "%.")
+      print(string.sub(filename, dot + 1)) -- lua
+
+      -- Empty result when start > end
+      print(string.sub("abc", 3, 1)) -- (empty string)
+      ```
     parameters:
       - name: s
         type: string
         default:
-        summary: ''
+        summary: |
+          The source string to extract a substring from.
       - name: i
         type: int
         default: 1
-        summary: ''
+        summary: |
+          The starting byte position of the substring (negative values count
+          from the end).
       - name: j
         type: int
         default: -1
-        summary: ''
+        summary: |
+          The ending byte position of the substring, inclusive (negative values
+          count from the end).
     returns:
       - type: string
         summary: ''
@@ -755,15 +964,18 @@ functions:
       - name: format
         type: string
         default:
-        summary: ''
+        summary: |
+          The format string that describes how the binary data was packed.
       - name: data
         type: string
         default:
-        summary: ''
+        summary: |
+          The binary string to unpack values from.
       - name: readStart
         type: string
         default: 1
-        summary: ''
+        summary: |
+          The byte position in `data` at which to begin reading.
     returns:
       - type: Tuple
         summary: |
@@ -777,13 +989,27 @@ functions:
       Returns a copy of a string with all lowercase letters changed to
       uppercase.
     description: |
-      Returns a copy of a string with all lowercase letters changed to
-      uppercase.
+      Returns a copy of the string `s` with all lowercase ASCII letters
+      (`a`-`z`) changed to their uppercase equivalents (`A`-`Z`). Characters
+      outside the ASCII letter range, including accented or multibyte
+      characters, are left unchanged.
+
+      ```lua
+      print(string.upper("hello")) -- HELLO
+      print(string.upper("Hello World!")) -- HELLO WORLD!
+
+      -- Non-letter characters are unaffected
+      print(string.upper("roblox 123!")) -- ROBLOX 123!
+
+      -- Only ASCII letters are converted
+      print(string.upper("abc ABC")) -- ABC ABC
+      ```
     parameters:
       - name: s
         type: string
         default:
-        summary: ''
+        summary: |
+          The string to convert to uppercase.
     returns:
       - type: string
         summary: ''

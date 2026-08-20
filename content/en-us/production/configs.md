@@ -8,6 +8,7 @@ description: Configs let you update in-game values without restarting your serve
 - Turn features on and off, such as enabling or disabling a new onboarding dungeon.
 - Tune in-game values like boss health, experience gain, or item prices.
 - Launch timed content, such as a Halloween event that starts at midnight.
+- Give different values to different players, such as giving newer players extra armor.
 
 Configs take the form of keys and values. Rather than using hard-coded constants in your code, you can use the key to get a value (string, number, boolean, or JSON object) and then update that value whenever you'd like without publishing a new version of your experience. The required code changes are minimal:
 
@@ -24,9 +25,9 @@ You can have up to 1,000 active configs at any given time and manage them on Cre
 ## Create and edit configs
 
 1. On the [Creator Hub](https://create.roblox.com/dashboard/creations) **Configs** page for your experience, click **Create config**.
-1. Specify a key, a type, a value, and optionally, a description to help you or your team later identify the purpose of the config. Supported types are string, number, boolean, and JSON object.
-
-1. Copy the generated code snippet into a server script in your experience, likely in `Class.ServerScriptService`. The code should look something like this:
+1. Specify a key, a type, a value, and optionally, a description to help you or your team later identify the purpose of the config. Supported types are string, number, boolean, and JSON object. Click **Next**.
+1. (Optional) Add targeting conditions and values. Conditions let you apply config values to users who match (or don't match) certain criteria, such as users who have never played your game or ones who speak Portuguese. To learn more, see [Target configs to specific players](#target-configs-to-specific-players).
+1. Copy the generated code snippet into a server script in your experience, likely in `Class.ServerScriptService`. For "global" configs that don't differ by player, the code might look something like this:
 
    ```lua
    local ConfigService = game:GetService("ConfigService")
@@ -34,6 +35,21 @@ You can have up to 1,000 active configs at any given time and manage them on Cre
    local configSnapshot = ConfigService:GetConfigAsync()
    local MY_KEY = "my_key" -- optional, store the config key as a constant
    local myValue = configSnapshot:GetValue(MY_KEY)
+   ```
+
+   For [conditional configs](#target-configs-to-specific-players) and [experiments](experiments.md), the code is slightly different:
+
+   ```lua
+   local ConfigService = game:GetService("ConfigService")
+   local Players = game:GetService("Players")
+   local MY_KEY = "my_key" -- optional, store the config key as a constant
+
+   local function onPlayerAdded(player)
+       local playerConfigSnapshot = ConfigService:GetConfigForPlayerAsync(player)
+       local myValue = playerConfigSnapshot:GetValue(MY_KEY)
+   end
+
+   Players.PlayerAdded:Connect(onPlayerAdded)
    ```
 
 1. Use the value like you would any other variable. Configs **do nothing** unless you use them within your code.
@@ -61,6 +77,56 @@ After you create a config, it moves to a **staged** state so that you can test i
 
 1. After you test your staged changes, click **Publish now** to publish to all players almost instantly (roughly between 15 seconds and 1 minute). You can also choose **Publish over 15 min** if you prefer a longer, more gradual rollout period. In some cases, clients may take a few minutes to reflect the changes after publishing.
 1. (Recommended) Add a descriptive publish message that indicates what you updated. This message appears on the **History** page and can help you and your team later identify the purpose of the change.
+
+## Target configs to specific players
+
+By default, a config delivers the same value to everyone. **Conditional configs** let you deliver different values to different players based on player attributes (country, tenure, language, payer status, etc.).
+
+Conditional configs have three parts that determine what value a player receives:
+
+- **Conditional rules** define who matches. Each rule is a logical expression, such as "active payers in their first 30 days," that evaluates player attributes.
+- **Rule ordering** defines how to pick when a player matches more than one rule. Roblox evaluates rules from top to bottom and applies the first matching branch. Rules are ordered globally, regardless of the order in which you add conditional values to an individual key.
+- **Conditional values** define what a matching player gets. For each condition, you attach a value. If a player matches a rule within that condition, they receive the associated value; otherwise, they receive the config's default value.
+
+### Supported attributes
+
+Conditional configs support the following attributes. These attributes share the same definitions as the equivalent [filters](./analytics/analytics-dashboard.md#filter-by-metrics) and [breakdowns](./analytics/analytics-dashboard.md#view-kpi-breakdowns) in the analytics dashboards.
+
+Attribute | Description
+:--- | :---
+Country | The player's geographic location.
+Language | The player's language setting.
+New vs returning | Whether the player is playing your experience for the first time or has played it before.
+Source | How the player found your experience, such as a home page recommendation, search, or a sponsored ad.
+When user first played | How long ago the player first played your experience, such as 0-30 days ago or 31-90 days ago. Calculated daily.
+In-experience active payer status | The player's payment activity within your experience, which lets you target different segments of paying users. Calculated daily.
+In-experience activity status | How recently the player has played your experience, which lets you treat new, active, lapsed, and reactivated players differently. Calculated daily.
+User engagement | How much the player plays your experience each week, which lets you separate your most engaged players from more casual ones. Calculated daily.
+Platform spender status | Whether the player is a Roblox platform-wide active spender. Calculated daily.
+Platform activity status | How recently the player has played anywhere on Roblox, rather than only in your experience. Calculated daily.
+
+### Create conditional values
+
+You add conditions when you create or edit a config. On the **Add targeting** step, add a condition:
+
+1. Choose an existing condition or click **Create a new one**.
+1. Add one or more rules.
+1. Set the value that matching players receive.
+
+For example, to give a harder experience to top active payers who started playing within the last 30 days, you might increase their `dynamicBossHealth` value.
+
+![The Add targeting step showing conditional rules for a config](../assets/analytics/configs/configs-targeting-conditions.png)
+
+### Access targeted values in code
+
+To retrieve targeted values, use `Class.ConfigService:GetConfigForPlayerAsync()`, which evaluates the rules and ordering for an individual player. `Class.ConfigService:GetConfigAsync()` does **not** apply targeting because it isn't specific to a single player. For more information, see [Add configs to your code](#add-configs-to-your-code).
+
+### Best practices and limits
+
+- Every conditional value must match the data type (boolean, string, number, or JSON) of the config's default value.
+- You can have up to **100 conditions per game**.
+- Each config key supports up to **20 conditions**.
+- Verify rule ordering before you publish. Because rules are ordered globally, confirm that your evaluation order is prioritized correctly. To review the order, click the **Conditions** tab.
 
 ## Create and edit configs in Studio
 
@@ -108,7 +174,7 @@ The first step to working with configs is to retrieve a `Class.ConfigSnapshot`, 
   local bossHealth = configSnapshot:GetValue("bossHealth")
   ```
 
-- `Class.ConfigService:GetConfigForPlayerAsync()` is for [experiments](experiments.md). It fetches player-specific configs so that different players can get different values.
+- `Class.ConfigService:GetConfigForPlayerAsync()` fetches player-specific configs so that different players can get different values. Use it for [conditional configs](#target-configs-to-specific-players) and [experiments](experiments.md).
 
   ```lua
   local ConfigService = game:GetService("ConfigService")

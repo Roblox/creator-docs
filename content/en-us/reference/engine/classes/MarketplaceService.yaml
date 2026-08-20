@@ -14,6 +14,10 @@ description: |
   `Class.MarketplaceService:PromptPurchase()|PromptPurchase`, as well as the
   callback `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` which must
   be defined so that developer product transactions do not fail.
+  `Class.MarketplaceService:BindReceiptHandler()|BindReceiptHandler` is a newer
+  alternative that processes developer product receipts (and Robux transfer
+  receipts) through one or more bound handlers instead of the single
+  `ProcessReceipt` callback.
 
   `Class.MarketplaceService` also has methods that fetch information about
   [developer products](../../../production/monetization/developer-products.md)
@@ -44,9 +48,26 @@ methods:
       Registers a callback to process receipts of a specific type.
     description: |
       `BindReceiptHandler` registers a callback to process receipts of a
-      specific `Enum.ReceiptType`. You can use it to handle Robux transfer
-      receipts (`Enum.ReceiptType.RobuxTransferSender` and
+      specific `Enum.ReceiptType`. You can use it to handle developer product
+      receipts (`Enum.ReceiptType.DeveloperProduct`) and Robux transfer receipts
+      (`Enum.ReceiptType.RobuxTransferSender` and
       `Enum.ReceiptType.RobuxTransferReceiver`).
+
+      For `Enum.ReceiptType.DeveloperProduct`, you can register handlers in two
+      ways:
+
+      - **Filtered** &mdash; Pass a `filter` array of developer product IDs so
+        the handler only fires for receipts whose `ProductId` is in that array.
+        Use this to route specific products to dedicated handlers.
+      - **Catch-all** &mdash; Omit `filter` so the handler fires for any
+        developer product receipt not already claimed by a filtered handler.
+
+      For developer products, `BindReceiptHandler` is an alternative to the
+      legacy `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callback.
+      A bound handler takes precedence; if no bound handler matches a developer
+      product receipt, it falls through to `ProcessReceipt`. This lets you adopt
+      `BindReceiptHandler` incrementally without removing an existing
+      `ProcessReceipt` callback.
 
       The `handler` callback receives a receipt info dictionary and must return
       an `Enum.ReceiptDecision` value:
@@ -94,9 +115,23 @@ methods:
         <td>The type of this receipt.</td>
       </tr>
       <tr>
+        <td><code>ProductId</code></td>
+        <td>number</td>
+        <td>The developer product ID. Only present for
+        <code>Enum.ReceiptType.DeveloperProduct</code> receipts.</td>
+      </tr>
+      <tr>
+        <td><code>CurrencyType</code></td>
+        <td><code>Enum.CurrencyType</code></td>
+        <td>The currency used for the purchase. Only present for
+        <code>Enum.ReceiptType.DeveloperProduct</code> receipts.</td>
+      </tr>
+      <tr>
         <td><code>CurrencySpent</code></td>
         <td>number</td>
         <td>The amount of Robux involved in the transaction. For
+        <code>Enum.ReceiptType.DeveloperProduct</code> receipts, this is the
+        product's price. For
         <code>Enum.ReceiptType.RobuxTransferSender</code> receipts, this is
         the amount sent. For
         <code>Enum.ReceiptType.RobuxTransferReceiver</code> receipts, this is
@@ -129,6 +164,12 @@ methods:
         receiver accepts, to whichever server the sender is currently in or on
         their next join if they are offline.
 
+      For developer product receipts, `handler` is invoked when the purchase
+      completes while the buyer is on a server. If the handler returns
+      `Enum.ReceiptDecision.NotProcessedYet`, or the buyer is not reachable, the
+      receipt remains unresolved and is redelivered on a later opportunity or
+      the next time the buyer joins a server.
+
       The user must be on a server for `handler` to fire.
 
       #### Errors
@@ -141,6 +182,7 @@ methods:
         `Enum.ReceiptType`.
     code_samples:
       - MarketplaceService-BindReceiptHandler1
+      - MarketplaceService-BindReceiptHandler2
     parameters:
       - name: transactionType
         type: ReceiptType
@@ -537,10 +579,20 @@ methods:
         </tr>
         </tbody>
       </table>
+
+      #### Batching behavior
+
+      This method is **Transparent Batching capable**. If you spawn multiple
+      calls concurrently using `task.spawn`, the engine automatically combines
+      them into fewer HTTP requests behind the scenes. This is faster and helps
+      you avoid rate limits. See
+      [Transparent Batching](../../../scripting/transparent-batching.md) for
+      details and a code example.
     code_samples:
       - MarketplaceService-GetProductInfo1
       - MarketplaceService-GetProductInfo2
       - MarketplaceService-GetProductInfo-TimedOptions
+      - MarketplaceService-GetProductInfo-TransparentBatching
     parameters:
       - name: assetId
         type: int64
@@ -1722,7 +1774,17 @@ methods:
 
       When a user first enters a server after purchasing a game pass, this
       functions always returns true.
-    code_samples: []
+
+      #### Batching behavior
+
+      This method is **Transparent Batching capable**. If you spawn multiple
+      calls concurrently using `task.spawn`, the engine automatically combines
+      them into fewer HTTP requests behind the scenes. This is faster and helps
+      you avoid rate limits. See
+      [Transparent Batching](../../../scripting/transparent-batching.md) for
+      details.
+    code_samples:
+      - MarketplaceService-UserOwnsGamePassAsync-TransparentBatching
     parameters:
       - name: userId
         type: User

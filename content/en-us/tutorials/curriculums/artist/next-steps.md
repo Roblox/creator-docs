@@ -11,19 +11,7 @@ Congratulations on completing your first VFX art with Roblox Studio! Now that yo
 
 ## Share with others
 
-When you first publish a game, it's automatically set to **private** so that you are the only one who can play it. However, creating on Roblox is always more fun when you can share what you make with others, so let's set up your game so that they can play too.
-
-To make your game public:
-
-1. Using the steps from the last chapter, publish your game so others can see your latest changes.
-
-1. In the top-left corner of your computer, click **File** ⟩ **Experience Settings**.
-
-1. In the settings window:
-   1. Go to the left bar and select the **Permissions** tab. New settings display.
-   1. Set **Playability** to **Public**.
-
-1. Click the **Save** button. Now everyone on Roblox can play your game!
+When you first publish a game, it's automatically set to **private** so that you're the only one who can play it. However, creating on Roblox is always more fun when you can share what you make with others. See [making games public](../../../production/publishing/publish-games-and-places.md#make-game-public) for steps on how to make your game public.
 
 ## Continue learning
 

@@ -58,14 +58,20 @@ properties:
       - LoadUnownedAsset
 methods:
   - name: InsertService:ApproveAssetId
-    summary: ''
-    description: ''
+    summary: |
+      Deprecated. Accepts an asset ID for InsertService approval; calling it has
+      no effect.
+    description: |
+      Deprecated. Accepts an asset ID that was once used to approve assets for
+      `Class.InsertService`. Calling it has no effect. Retained only for
+      backward compatibility; do not use it in new work.
     code_samples: []
     parameters:
       - name: assetId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The ID of the asset.
     returns:
       - type: ()
         summary: ''
@@ -77,14 +83,20 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: InsertService:ApproveAssetVersionId
-    summary: ''
-    description: ''
+    summary: |
+      Deprecated. Accepts an asset version ID for InsertService approval;
+      calling it has no effect.
+    description: |
+      Deprecated. Accepts an asset version ID that was once used to approve
+      assets for `Class.InsertService`. Calling it has no effect. Retained only
+      for backward compatibility; do not use it in new work.
     code_samples: []
     parameters:
       - name: assetVersionId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The version ID of the asset.
     returns:
       - type: ()
         summary: ''
@@ -160,7 +172,9 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of dictionaries containing information about Roblox-approved
+          sets.
     tags:
       - Yields
       - Deprecated
@@ -181,10 +195,12 @@ methods:
       - name: categoryId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The ID of the set (category) to retrieve models from.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of the most recently uploaded models in the specified set.
     tags:
       - Yields
       - Deprecated
@@ -386,10 +402,12 @@ methods:
       - name: assetId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The ID of the asset to retrieve the latest version for.
     returns:
       - type: int64
-        summary: ''
+        summary: |
+          The latest asset version ID for the specified asset.
     tags:
       - Yields
     deprecation_message: ''
@@ -479,10 +497,12 @@ methods:
       - name: userId
         type: User
         default:
-        summary: ''
+        summary: |
+          The ID of the user whose sets to retrieve.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of dictionaries containing information about the user's sets.
     tags:
       - Yields
       - Deprecated
@@ -504,7 +524,8 @@ methods:
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.Instance` to insert into `Class.Workspace`.
     returns:
       - type: ()
         summary: ''
@@ -627,10 +648,12 @@ methods:
       - name: assetVersionId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The version ID of the asset to load.
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          A `Class.Model` containing the asset at the specified version.
     tags:
       - Yields
     deprecation_message: ''

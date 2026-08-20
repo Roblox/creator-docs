@@ -5,8 +5,18 @@
 name: PluginManagerInterface
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  The singleton object returned by the global `PluginManager()` function,
+  exposing a small set of legacy Studio plugin utilities.
+description: |
+  `PluginManagerInterface` is the singleton object returned by the global
+  `PluginManager()` function, which can be called from a plugin or from Studio's
+  [Command Bar](../../../studio/ui-overview.md#command-bar). It provides a small
+  set of legacy Studio utilities for exporting geometry —
+  `Class.PluginManagerInterface:ExportPlace()` and
+  `Class.PluginManagerInterface:ExportSelection()` — along with the deprecated
+  `Class.PluginManagerInterface:CreatePlugin()` method. Calling the
+  `PluginManager()` global requires plugin security.
 code_samples: []
 inherits:
   - Instance
@@ -18,13 +28,23 @@ deprecation_message: ''
 properties: []
 methods:
   - name: PluginManagerInterface:CreatePlugin
-    summary: ''
-    description: ''
+    summary: |
+      Deprecated. Creates and returns a new `Class.Plugin`; use `Class.Plugin`
+      instead.
+    description: |
+      Creates and returns a new `Class.Plugin` object, attached to the current
+      place's data model. The returned plugin is associated with the plugin that
+      called this method, so it unloads together with its creator.
+
+      This method is deprecated. The steps to create a plugin have changed, and
+      new work should use `Class.Plugin` directly rather than constructing one
+      through `PluginManager()`. Calling this method requires plugin security.
     code_samples: []
     parameters: []
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          The newly created `Class.Plugin`.
     tags:
       - Deprecated
       - CustomLuaState
@@ -35,14 +55,20 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: PluginManagerInterface:ExportPlace
-    summary: ''
-    description: ''
+    summary: |
+      Exports the entire place to an `.obj` file saved to a path chosen by the
+      user in a file save dialog.
+    description: |
+      Exports all geometry in the place to an `.obj` file. The file is saved to
+      the path chosen by the user in a file save dialog; the `filePath` argument
+      is ignored.
     code_samples: []
     parameters:
       - name: filePath
         type: string
         default:
-        summary: ''
+        summary: |
+          Ignored. A file save dialog determines the export path.
     returns:
       - type: ()
         summary: ''
@@ -52,14 +78,20 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: PluginManagerInterface:ExportSelection
-    summary: ''
-    description: ''
+    summary: |
+      Exports the current `Class.Selection` to an `.obj` file saved to a path
+      chosen by the user in a file save dialog.
+    description: |
+      Exports all geometry in the current `Class.Selection` to an `.obj` file.
+      The file is saved to the path chosen by the user in a file save dialog;
+      the `filePath` argument is ignored.
     code_samples: []
     parameters:
       - name: filePath
         type: string
         default:
-        summary: ''
+        summary: |
+          Ignored. A file save dialog determines the export path.
     returns:
       - type: ()
         summary: ''

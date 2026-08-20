@@ -1,6 +1,10 @@
 ---
 title: Export layered accessories
 description: Use the appropriate export settings in Blender and Maya to generate Studio-ready .fbx files.
+keywords:
+  - Layered clothing
+  - Layerable accessories
+  - Layered clothing accessories
 ---
 
 When you are ready to export a layered accessory model that meets Roblox's [layered accessory specifications](./specifications.md), it's important to review the following prerequisite information and step-by-step instructions for the `.fbx` or `.gltf` export files so that your creation takes advantage of all of Studio's [Importer](../../studio/importer.md) features.

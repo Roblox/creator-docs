@@ -571,7 +571,7 @@ To create your own combat pockets geometry:
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/GeneralCombatPockets-3.jpg" alt="An angled top-down view of the floor, perimeter, spawn zone walls, left combat pocket, middle combat pocket, and right combat pocket. The middle combat pocket geometry is highlighted in yellow." width="100%"/>
 
-1. **(Optional)** Using **block** parts, create **hallway additions** to the middle combat pocket to break up sight lines across the interior primary lane.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Using **block** parts, create **hallway additions** to the middle combat pocket to break up sight lines across the interior primary lane.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/GeneralCombatPockets-4.jpg" alt="An angled top-down view of the floor, perimeter, spawn zone walls, left combat pocket, middle combat pocket, right combat pocket, and hallway addition walls. The hallway addition geometry is highlighted in yellow." width="100%"/>
 

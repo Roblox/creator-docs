@@ -316,7 +316,7 @@ To publish your game for the first time:
 
       <img width="200" img src="../../assets/getting-started/Publish-2B.png" />
 
-1. **(Optional)** Share your game with others.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Share your game with others.
    1. Hover over the game's tile, click the **&ctdot;** button, and select **Copy URL** from the contextual menu.
    1. Share the URL with others as a direct link to your game's landing page.
 

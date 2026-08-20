@@ -100,7 +100,9 @@ methods:
           improve Roblox's text filtering.
     returns:
       - type: TextFilterResult
-        summary: ''
+        summary: |
+          A `Class.TextFilterResult` that wraps the filtered text and exposes
+          methods for retrieving it in the form appropriate for each audience.
     tags:
       - Yields
     deprecation_message: ''
@@ -258,14 +260,21 @@ methods:
       - name: fontSize
         type: int
         default:
-        summary: ''
+        summary: |
+          The font size, in offsets. This parameter currently does not affect
+          the returned offset.
       - name: font
         type: Datatype.Font
         default:
-        summary: ''
+        summary: |
+          The font. This parameter currently does not affect the returned
+          offset.
     returns:
       - type: float
-        summary: ''
+        summary: |
+          The offset, in pixels, to add to the height of a `Class.TextLabel` or
+          `Class.TextButton` to up-scale it for the player's current
+          `Class.GuiService.PreferredTextSize|PreferredTextSize` setting.
     tags:
       - Yields
     deprecation_message: ''

@@ -7,16 +7,27 @@ type: datatype
 summary: |
   A set of `Enum.SecurityCapability` items. See
   [script capabilities](../../../scripting/capabilities.md).
-description: ''
+description: |
+  An immutable set of `Enum.SecurityCapability` values that controls which
+  engine APIs and actions a script inside a sandboxed container can access.
+  Assign a `SecurityCapabilities` value to an instance's
+  `Class.Instance.Capabilities|Capabilities` property to restrict the scripts
+  beneath it.
+
+  Capability enforcement takes effect when
+  `Class.Workspace.SandboxedInstanceMode` is set to
+  `Enum.SandboxedInstanceMode.Experimental`.
 code_samples: []
 tags: []
 deprecation_message: ''
 constructors:
   - name: SecurityCapabilities.new
-    summary: Returns a new set of capabilities from zero or more `Enum.SecurityCapability` items.
-    description: |-
-      Returns a new set of capabilities from zero or more `Enum.SecurityCapability`
-      items.
+    summary: |
+      Returns a new set of capabilities from zero or more
+      `Enum.SecurityCapability` items.
+    description: |
+      Returns a new set of capabilities from zero or more
+      `Enum.SecurityCapability` items.
 
       ```lua
       local capabilities = SecurityCapabilities.new(Enum.SecurityCapability.Players,
@@ -30,13 +41,19 @@ constructors:
       - name: ...
         type: SecurityCapability
         default:
-        summary: ''
+        summary: |
+          Zero or more `Enum.SecurityCapability` values to include in the new
+          set.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: SecurityCapabilities.fromCurrent
-    summary: Returns a new set of capabilities from the capabilities of the calling function.
-    description: Returns a new set of capabilities from the capabilities of the calling function.
+    summary: |
+      Returns a new set of capabilities from the capabilities of the calling
+      function.
+    description: |
+      Returns a new set of capabilities from the capabilities of the calling
+      function.
     parameters: []
     code_samples: []
     tags: []
@@ -55,10 +72,13 @@ methods:
       - name: ...
         type: SecurityCapability
         default:
-        summary: ''
+        summary: |
+          Zero or more `Enum.SecurityCapability` values to add to the set.
     returns:
       - type: SecurityCapabilities
-        summary: ''
+        summary: |
+          A new set containing the union of the original capabilities and the
+          specified additions.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -73,10 +93,12 @@ methods:
       - name: capabilities
         type: SecurityCapabilities
         default:
-        summary: ''
+        summary: |
+          A `SecurityCapabilities` set whose items are added to the original.
     returns:
       - type: SecurityCapabilities
-        summary: ''
+        summary: |
+          A new set containing the union of both sets.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -91,10 +113,12 @@ methods:
       - name: ...
         type: SecurityCapability
         default:
-        summary: ''
+        summary: |
+          Zero or more `Enum.SecurityCapability` values to remove from the set.
     returns:
       - type: SecurityCapabilities
-        summary: ''
+        summary: |
+          A new set with the specified capabilities removed.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -109,7 +133,9 @@ methods:
       - name: capabilities
         type: SecurityCapabilities
         default:
-        summary: ''
+        summary: |
+          A `SecurityCapabilities` set whose items are removed from the
+          original.
     returns:
       - type: SecurityCapabilities
         summary: ''
@@ -128,7 +154,9 @@ methods:
       - name: ...
         type: SecurityCapability
         default:
-        summary: ''
+        summary: |
+          Zero or more `Enum.SecurityCapability` values to check for membership
+          in the set.
     returns:
       - type: boolean
         summary: ''
@@ -147,7 +175,9 @@ methods:
       - name: capabilities
         type: SecurityCapabilities
         default:
-        summary: ''
+        summary: |
+          A `SecurityCapabilities` set to check for membership in the original
+          set.
     returns:
       - type: boolean
         summary: ''

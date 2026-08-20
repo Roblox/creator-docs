@@ -4,19 +4,33 @@
 
 name: AvatarSettingsJumpMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines whether the avatar jump setting for an experience is configured
+  using jump height (studs) or jump power (force).
+description: |
+  Determines whether the avatar jump setting for an experience is configured
+  using jump height (in studs) or jump power (as an upward force). Maps to
+  `Class.Humanoid.UseJumpPower`: `Enum.AvatarSettingsJumpMode.JumpHeight` sets
+  `UseJumpPower` to false so that `Class.Humanoid.JumpHeight` is used, while
+  `Enum.AvatarSettingsJumpMode.JumpPower` sets `UseJumpPower` to true so that
+  `Class.Humanoid.JumpPower` is used.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: JumpHeight
-    summary: ''
+    summary: |
+      The avatar jump is configured using `Class.Humanoid.JumpHeight`, which
+      specifies the target jump height in studs. Corresponds to
+      `Class.Humanoid.UseJumpPower` being false.
     value: 0
     tags: []
     deprecation_message: ''
   - name: JumpPower
-    summary: ''
+    summary: |
+      The avatar jump is configured using `Class.Humanoid.JumpPower`, which
+      applies an upward force to the character. Corresponds to
+      `Class.Humanoid.UseJumpPower` being true.
     value: 1
     tags: []
     deprecation_message: ''

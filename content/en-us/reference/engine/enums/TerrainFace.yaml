@@ -4,24 +4,34 @@
 
 name: TerrainFace
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies which face direction of a terrain voxel a `Class.TerrainDetail`
+  object overrides.
+description: |
+  Identifies which face direction of a terrain voxel a `Class.TerrainDetail`
+  object targets. Terrain renders its top (+Y), side (horizontal), and bottom
+  (-Y) faces independently; this enum lets each `Class.TerrainDetail` child of a
+  `Class.MaterialVariant` declare which of those three surfaces it overrides.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Top
-    summary: ''
+    summary: |
+      The top (+Y) face of a terrain voxel.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Side
-    summary: ''
+    summary: |
+      The horizontal (side) faces of a terrain voxel, perpendicular to the Y
+      axis.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Bottom
-    summary: ''
+    summary: |
+      The bottom (-Y) face of a terrain voxel.
     value: 2
     tags: []
     deprecation_message: ''

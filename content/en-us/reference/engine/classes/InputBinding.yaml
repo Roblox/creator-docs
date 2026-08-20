@@ -45,37 +45,6 @@ properties:
       can_save: true
     capabilities:
       - Input
-  - name: InputBinding.Type
-    summary: |
-      Determines whether this binding is triggered by hardware input or
-      programmatically via `Class.InputBinding:Fire()|Fire()`.
-    description: |
-      Determines whether this `InputBinding` is triggered by hardware input
-      (`Enum.InputBindingType|Automatic`) or programmatically via
-      `Class.InputBinding:Fire()|Fire()` (`Enum.InputBindingType|Scriptable`).
-
-      When set to `Enum.InputBindingType|Automatic` (default), the binding
-      responds to physical input devices (keyboard, mouse, gamepad, touch) based
-      on its `Class.InputBinding.KeyCode|KeyCode` or composite direction or UI
-      button properties.
-
-      When set to `Enum.InputBindingType|Scriptable`, the binding ignores
-      hardware input and instead receives state updates exclusively through the
-      `Class.InputBinding:Fire()|Fire()` method.
-    code_samples: []
-    type: InputBindingType
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Input
   - name: InputBinding.ClampMagnitudeToOne
     summary: |
       Specifies how the binding normalizes composite directional input to a
@@ -91,6 +60,11 @@ properties:
       This property only applies when the parent action's
       `Class.InputAction.Type|Type` is `Enum.InputActionType|Direction1D`,
       `Enum.InputActionType|Direction2D`, or `Enum.InputActionType|Direction3D`.
+
+      Set this to `false` when input axes should remain independent of one
+      another, such as 3D freecam movement, or when combining inputs whose raw
+      values can exceed `1` (for example mouse wheel velocity) and you want to
+      handle scaling yourself.
     code_samples: []
     type: boolean
     tags: []
@@ -114,7 +88,10 @@ properties:
 
       When empty (the default), no custom image is provided. Developers can use
       `Class.UserInputService:GetImageForKeyCode()` to obtain a
-      platform-appropriate image.
+      platform-appropriate image. Use this together with
+      `Class.InputAction.PreferredBinding` to build keybinding UI that
+      automatically reflects the player's active input device without manually
+      resolving which binding image to display.
     code_samples: []
     type: Content
     tags: []
@@ -139,7 +116,10 @@ properties:
 
       When empty (the default), no custom name is provided. Developers can use
       `Class.UserInputService:GetStringForKeyCode()` to obtain the
-      platform-appropriate key name.
+      platform-appropriate key name. Use this together with
+      `Class.InputAction.PreferredBinding` to build keybinding UI that
+      automatically reflects the player's active input device without manually
+      resolving which binding name to display.
     code_samples: []
     type: string
     tags: []
@@ -515,6 +495,37 @@ properties:
       can_save: true
     capabilities:
       - Input
+  - name: InputBinding.Type
+    summary: |
+      Determines whether this binding is triggered by hardware input or
+      programmatically via `Class.InputBinding:Fire()|Fire()`.
+    description: |
+      Determines whether this `InputBinding` is triggered by hardware input
+      (`Enum.InputBindingType|Automatic`) or programmatically via
+      `Class.InputBinding:Fire()|Fire()` (`Enum.InputBindingType|Scriptable`).
+
+      When set to `Enum.InputBindingType|Automatic` (default), the binding
+      responds to physical input devices (keyboard, mouse, gamepad, touch) based
+      on its `Class.InputBinding.KeyCode|KeyCode` or composite direction or UI
+      button properties.
+
+      When set to `Enum.InputBindingType|Scriptable`, the binding ignores
+      hardware input and instead receives state updates exclusively through the
+      `Class.InputBinding:Fire()|Fire()` method.
+    code_samples: []
+    type: InputBindingType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Input
   - name: InputBinding.UIButton
     summary: |
       Connects a `Class.GuiButton` to a boolean action.
@@ -544,6 +555,11 @@ properties:
       similarly to `Class.InputBinding.PrimaryModifier|PrimaryModifier` and
       `Class.InputBinding.SecondaryModifier|SecondaryModifier`, but accepts a UI
       button reference rather than a `Enum.KeyCode`.
+
+      This is particularly useful for touch input where the relevant interaction
+      is defined by where on screen the touch originates, for example a dynamic
+      thumbstick that should only respond to touches that begin within a
+      specific UI region.
 
       If `nil`, no modifier is required.
     code_samples: []

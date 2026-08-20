@@ -69,7 +69,7 @@ To create `Class.MaterialVariant` objects for your tileable textures:
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-8.jpg" alt="The Set as Override toggle enabled." width="40%"/>
 
-9. **(Optional)** If you are creating a custom material that represents an organic material,
+9. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you are creating a custom material that represents an organic material,
 
    1. In the **Tiling** section, click the **Pattern** dropdown.
    1. Select **Organic** to randomize the output and reduce visible tiling.
@@ -108,7 +108,7 @@ To create `Class.SurfaceAppearance` packages that you can child to your modular 
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section3/SAPackages-7.jpg" alt="The Surface Appearance icon with a chain link symbol." width="30%"/>
 
-8. **(Optional)** Select the **SurfaceAppearance** object's child **PackageLink** object, then in the **Properties** window, enable **AutoUpdate** to automatically update the package if you make any modifications to the **SurfaceAppearance** object.
+8. <Chip label="OPTIONAL" size="small" variant="outlined" /> Select the **SurfaceAppearance** object's child **PackageLink** object, then in the **Properties** window, enable **AutoUpdate** to automatically update the package if you make any modifications to the **SurfaceAppearance** object.
 
 ## Import modular assets and props
 

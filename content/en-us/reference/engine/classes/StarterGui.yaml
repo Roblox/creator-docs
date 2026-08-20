@@ -111,8 +111,18 @@ properties:
     capabilities:
       - UI
   - name: StarterGui.RtlTextSupport
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether right-to-left (RTL) text layout is enabled for text in
+      `Class.GuiObject|GuiObjects` throughout the experience.
+    description: |
+      This property determines whether right-to-left (RTL) text layout is
+      applied to the text of `Class.GuiObject|GuiObjects` in the experience,
+      which is needed to correctly display languages written right-to-left, such
+      as Arabic and Hebrew.
+
+      The default value is `Enum.RtlTextSupport.Default`. Both
+      `Enum.RtlTextSupport.Default` and `Enum.RtlTextSupport.Enabled` turn RTL
+      text layout support on, while `Enum.RtlTextSupport.Disabled` turns it off.
     code_samples: []
     type: RtlTextSupport
     tags:
@@ -188,8 +198,18 @@ properties:
     capabilities:
       - UI
   - name: StarterGui.VirtualCursorMode
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the gamepad virtual cursor is enabled for navigating
+      `Class.GuiObject|GuiObjects` with a controller.
+    description: |
+      This property determines whether the gamepad virtual cursor, which lets
+      players move a pointer across on-screen `Class.GuiObject|GuiObjects` using
+      a controller, is enabled.
+
+      The default value is `Enum.VirtualCursorMode.Default`. Setting it to
+      `Enum.VirtualCursorMode.Enabled` turns the virtual cursor on and
+      `Enum.VirtualCursorMode.Disabled` turns it off. When a player is in VR,
+      the virtual cursor is always active regardless of this property's value.
     code_samples: []
     type: VirtualCursorMode
     tags:
@@ -299,10 +319,14 @@ methods:
       - name: parameterName
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the core parameter to retrieve, such as
+          `"PointsNotificationsActive"` or `"ChatActive"`.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The value associated with the specified core parameter name, whose
+          type depends on the parameter queried.
     tags:
       - Yields
     deprecation_message: ''

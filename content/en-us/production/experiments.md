@@ -55,6 +55,10 @@ Experiments come in two types:
 
    ![Variant page](../assets/analytics/configs/experiment-variant.png)
 
+1. (Optional) Target the experiment to a specific audience so that only matching players are eligible for enrollment. Targeting uses the same [player attributes as conditional configs](configs.md#supported-attributes), and you can copy existing conditions directly from your configs. For more information, see [Target experiments to specific audiences](#target-experiments-to-specific-audiences).
+
+   ![The optional targeting step during experiment creation](../assets/analytics/configs/experiment-targeting.png)
+
 1. The final step is scheduling. You can start experiments immediately or schedule them for a later date and time. After you schedule an experiment, you can't change its configuration (duration, rollout percentage, variants, etc.), but you can reschedule it.
 
   </TabItem>
@@ -114,8 +118,53 @@ Status | Description
 Completed | The experiment is over, which happens when you stop it manually, when you reach a decision, or automatically shortly after the decision date (14 days after for in-game, immediately for matchmaking). You can still review the details and results.
 Decision needed | The experiment has reached its decision date. Now is a good time to review the results.
 Running | The experiment is running but has yet to reach its decision date.
-Scheduled | The experiment is schedule to start at a future date.
+Scheduled | The experiment is scheduled to start at a future date.
 Draft | The experiment hasn't been started or scheduled. You can finish setting it up.
+
+## Target experiments to specific audiences
+
+By default, an in-game experiment can enroll any player in your rollout percentage. **Targeting** lets you run the experiment on a specific audience instead, such as players in certain countries, specific tenure windows, or active spender tiers. Targeting uses the same attributes as [config targeting](configs.md#target-configs-to-specific-players).
+
+<Alert severity="info">
+Targeting only applies to in-game experiments.
+</Alert>
+
+### Set up targeted experiments
+
+You configure targeting criteria when you [create the experiment](#create-experiments). After the experiment starts, you can't change the targeting rules, the control value, the variants, or any conditional rules that the config key uses.
+
+You can reuse existing conditional rules from your configs to define your targeting, but the experiment stores an independent **copy** of each rule. Editing or deleting the original config condition later has no effect on the experiment's targeting.
+
+Because narrowing your audience reduces your sample size, Roblox updates the [minimum detectable effect (MDE)](#best-practices-for-experiments) using an estimate of the audience that matches your targeting criteria. Make sure your targeted audience is large enough to produce statistically meaningful results.
+
+### How Roblox resolves targeted values
+
+Roblox evaluates experiments **first**, before any rules from standard conditional configs. When a config key has an active experiment, Roblox resolves the value in this order:
+
+1. The active experiment value, if the player is targeted and enrolled.
+1. The first matching config condition.
+1. Any subsequent matching config conditions.
+1. The default value.
+
+Players in the control group receive the value that your existing config rules produce. You can't run more than one active experiment on the same config key at a time.
+
+### Per-session evaluation
+
+Roblox evaluates targeting attributes **per session**, so an individual player's eligibility can change over time:
+
+- If a player matches your targeting criteria during a session, they can be enrolled and receive an experiment variant.
+- If they no longer match in a later session, they stop receiving the experiment value and immediately fall back to your standard config rules. If your experiment needs continuity beyond eligibility—for example, a multi-session onboarding flow targeted at new players—persist the value yourself, such as in a [data store](../cloud-services/data-stores/index.md).
+
+A player's data stays attributed to the variant (or control) they were enrolled in, even if they later stop matching the criteria. For example, D7 retention still counts a player who enrolled on day 0 and whether they returned on day 7, even if they no longer qualify by day 4.
+
+### Config changes while an experiment runs
+
+To prevent configuration drift and corrupted experiment data, Roblox **locks the config key** the moment an experiment starts running:
+
+- You can't edit or delete the running config key, nor can you modify its standard conditional values.
+- Any global conditions that the active config references are also locked. You can't edit, delete, or reorder them relative to each other.
+
+The lock releases when the experiment completes.
 
 ## Add experiments to your code
 
@@ -146,24 +195,28 @@ Players.PlayerAdded:Connect(onPlayerAdded)
   Wait to call `Class.ConfigSnapshot:GetValue()|GetValue()` until you need it. Calling `Class.ConfigSnapshot:GetValue()|GetValue()` too early can cause you to enroll players who never interact with the part of the game you're experimenting on.
   </Alert>
 
-- Enrollment in experiments isn't limited to new users. Even if a user previously received a value from `Class.ConfigService:GetConfigAsync()|GetConfigAsync()`, you can still enroll them in an experiement using a player-specific snapshot from `Class.ConfigService:GetConfigForPlayerAsync()|GetConfigForPlayerAsync()`.
+- Enrollment in experiments isn't limited to new users. Even if a user previously received a value from `Class.ConfigService:GetConfigAsync()|GetConfigAsync()`, you can still enroll them in an experiment using a player-specific snapshot from `Class.ConfigService:GetConfigForPlayerAsync()|GetConfigForPlayerAsync()`.
 - If a key in a player-specific snapshot doesn't have an active experiment, `Class.ConfigSnapshot:GetValue()|GetValue()` returns the standard config value (or nil if it has no value).
 
-### Targeted enrollment
+### Custom enrollment
 
-If you want to target some portion of your players that meet specific criteria, you have to write additional code to check for those criteria and only then call `Class.ConfigSnapshot:GetValue()|GetValue()` to enroll them in the experiment. Consider the following example:
+<Alert severity="info">
+To target players by attributes like country, tenure, or payer status, use [experiment targeting](#target-experiments-to-specific-audiences) instead. The approach in this section is for in-game state, such as how far a player has progressed.
+</Alert>
 
-- You want to test a new control scheme in your game.
-- You don't want to include existing players (who are presumably used to the existing scheme), only new players.
+If you want to enroll only players that meet criteria based on in-game state, you have to write additional code to check for those criteria and only then call `Class.ConfigSnapshot:GetValue()|GetValue()` to enroll them in the experiment. Consider the following example:
+
+- You want to test a new control scheme in your racing game.
+- The scheme is for advanced players, so you want to target players who have won a large number of races.
 
 Your code might look something like this:
 
 ```lua
-local function getControlScheme(player, racesCompleted)
-    if racesCompleted > 0 then
+local function getControlScheme(player, racesWon)
+    if racesWon < 20 then
         return "standardScheme"
     else
-        -- Player is new, enroll in experiment
+        -- Player has many wins, enroll in experiment
         local playerConfigSnapshot = ConfigService:GetConfigForPlayerAsync(player)
         if playerConfigSnapshot:GetValue("useNewControlScheme") then
             return "newScheme"
@@ -194,7 +247,24 @@ A metric is statistically significant when the confidence interval for its perce
 
 ![Confidence interval for a metric](../assets/analytics/configs/experiment-confidence.png)
 
-For convenience, the results page lets you replace the default config value with one of the variants from the experiment. Click **Make decision** to choose a variant or **Change winner** if you change your mind. If you then return to the **Configs** page, you should see the new value.
+For convenience, the results page lets you replace the default config value with one of the variants from the experiment.
+
+### Make a decision
+
+When your experiment concludes, click **Make decision** to start a guided rollout. Roblox shows any warnings about statistical significance and experiment duration, then prompts you to select a winning variant or keep the control. Based on your choice, Roblox rolls out the appropriate change to your permanent configs; returning to the **Configs** page shows the new value. Click **Change winner** if you change your mind.
+
+If you have unresolved staged changes on the config when you complete the experiment, Roblox temporarily stashes them and restores them on a best-effort basis after the rollout.
+
+Your decision determines the config changes that Roblox proposes:
+
+- **Control**: Roblox makes no changes to your existing configs.
+- **Untargeted variant**: The variant value becomes the config's new default value. Roblox removes all other conditions on that config key, though they remain in your global conditions list.
+- **Targeted variant**: Roblox integrates the winning rule back into your permanent config using the first applicable option in this priority order:
+
+  1. **Overwrite**: If an identical condition already sits at the top of the config, Roblox overwrites its value with the winning variant's value.
+  1. **Add existing**: If a matching global condition exists and would naturally sit at the top, Roblox adds it to the config with the variant's value.
+  1. **Promote**: If a matching global condition can be safely promoted to the lowest rank needed to make it the top rule in this config (without altering other configs), Roblox adds it to the config and reorders it globally.
+  1. **Create new**: Otherwise, Roblox creates a new global condition ranked one level above the highest condition currently used in the config. If this creates a duplicate rule inside the config, Roblox strips the redundant conditional value while preserving the global rule.
 
 ## Best practices for experiments
 
@@ -212,7 +282,7 @@ For convenience, the results page lets you replace the default config value with
 
 - **Don't act without statistical significance.** Even seemingly large changes in player behavior might not be statistically significant, generally due to small sample size. If a change isn't statistically significant, ignore it.
 
-- **Avoid changes during experiments**. Major bugs of course need fixes, but changes to experiegamence content can impact player behavior and invalidate your results, even if the changes **seem** unrelated to your experiment. Similarly, only run experiments simultaneously if you're confident they won't interact with each other.
+- **Avoid changes during experiments**. Major bugs of course need fixes, but changes to game content can impact player behavior and invalidate your results, even if the changes **seem** unrelated to your experiment. Similarly, only run experiments simultaneously if you're confident they won't interact with each other.
 
 - **Use confidence intervals for deep dives** into metrics and to check for borderline cases of statistical significance. If the confidence interval is too wide, the metric might never reach statistical significance.
 

@@ -118,7 +118,8 @@ methods:
       - name: humanoid
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.Humanoid` being forced to sit in the `Seat`.
     returns:
       - type: ()
         summary: ''

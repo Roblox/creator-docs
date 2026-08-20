@@ -82,32 +82,38 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: CFrame.new
-    summary: Returns a blank identity `Datatype.CFrame`.
-    description: Creates a blank identity `Datatype.CFrame`.
+    summary: |
+      Returns a blank identity `Datatype.CFrame`.
+    description: |
+      Creates an identity `Datatype.CFrame` with position `(0, 0, 0)` and no
+      rotation (identity rotation matrix). This is equivalent to
+      `Datatype.CFrame.identity`.
     parameters: []
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.new
-    summary: |-
+    summary: |
       Returns a `Datatype.CFrame` with no rotation with the position of the
       provided `Datatype.Vector3`.
-    description: |-
-      Returns a `Datatype.CFrame` with no rotation with the position of the
-      provided `Datatype.Vector3`.
+    description: |
+      Returns a `Datatype.CFrame` positioned at `pos` with no rotation (identity
+      rotation matrix). The orientation defaults to the identity, meaning the
+      local axes align with the world axes.
     parameters:
       - name: pos
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The 3D position for the new CFrame.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.new
-    summary: |-
+    summary: |
       Returns a `Datatype.CFrame` with the position of the first
       `Datatype.Vector3` and an orientation pointed toward the second.
-    description: |-
+    description: |
       Returns a new `Datatype.CFrame` located at `pos` and facing towards
       `lookAt`, assuming that `(0, 1, 0)` is considered "up" in world space.
 
@@ -124,79 +130,96 @@ constructors:
       - name: pos
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The world-space position of the CFrame.
       - name: lookAt
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The world-space point the CFrame should face toward.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.new
-    summary: Returns a `Datatype.CFrame` with a position comprised of the provided `x`, `y`, and `z` components.
-    description: Returns a `Datatype.CFrame` with a position comprised of the provided `x`, `y`, and `z` components.
+    summary: |
+      Returns a `Datatype.CFrame` with a position comprised of the provided `x`,
+      `y`, and `z` components.
+    description: |
+      Returns a `Datatype.CFrame` positioned at `(x, y, z)` with no rotation
+      (identity rotation matrix). This is equivalent to
+      `CFrame.new(Vector3.new(x, y, z))`.
     parameters:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The X component of the position.
       - name: 'y'
         type: number
         default:
-        summary: ''
+        summary: |
+          The Y component of the position.
       - name: z
         type: number
         default:
-        summary: ''
+        summary: |
+          The Z component of the position.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.new
-    summary: |-
-      Returns a `Datatype.CFrame` from position (`x`, `y`, `z`) and
-      quaternion (`qX`, `qY`, `qZ`, `qW`).
-    description: |-
-      Returns a `Datatype.CFrame` from position (`x`, `y`, `z`) and
-      quaternion (`qX`, `qY`, `qZ`, `qW`). The quaternion is expected
-      to be of unit length to represent a valid rotation.
-      If this isn't the case, the quaternion will be normalized.
+    summary: |
+      Returns a `Datatype.CFrame` from position (`x`, `y`, `z`) and quaternion
+      (`qX`, `qY`, `qZ`, `qW`).
+    description: |
+      Returns a `Datatype.CFrame` from position (`x`, `y`, `z`) and quaternion
+      (`qX`, `qY`, `qZ`, `qW`). The quaternion is expected to be of unit length
+      to represent a valid rotation. If this isn't the case, the quaternion will
+      be normalized.
     parameters:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The X component of the position.
       - name: 'y'
         type: number
         default:
-        summary: ''
+        summary: |
+          The Y component of the position.
       - name: z
         type: number
         default:
-        summary: ''
+        summary: |
+          The Z component of the position.
       - name: qX
         type: number
         default:
-        summary: ''
+        summary: |
+          The X component of the quaternion rotation.
       - name: qY
         type: number
         default:
-        summary: ''
+        summary: |
+          The Y component of the quaternion rotation.
       - name: qZ
         type: number
         default:
-        summary: ''
+        summary: |
+          The Z component of the quaternion rotation.
       - name: qW
         type: number
         default:
-        summary: ''
+        summary: |
+          The W (scalar) component of the quaternion rotation.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.new
-    summary: |-
+    summary: |
       Returns a `Datatype.CFrame` from position (`x`, `y`, `z`) with an
       orientation specified by the rotation matrix.
-    description: |-
+    description: |
       Creates a `Datatype.CFrame` from position (`x`, `y`, `z`) with an
       orientation specified by the rotation matrix.
 
@@ -205,59 +228,71 @@ constructors:
       - name: x
         type: number
         default:
-        summary: ''
+        summary: |
+          The X component of the position.
       - name: 'y'
         type: number
         default:
-        summary: ''
+        summary: |
+          The Y component of the position.
       - name: z
         type: number
         default:
-        summary: ''
+        summary: |
+          The Z component of the position.
       - name: R00
         type: number
         default:
-        summary: ''
+        summary: |
+          The row 1, column 1 element of the rotation matrix.
       - name: R01
         type: number
         default:
-        summary: ''
+        summary: |
+          The row 1, column 2 element of the rotation matrix.
       - name: R02
         type: number
         default:
-        summary: ''
+        summary: |
+          The row 1, column 3 element of the rotation matrix.
       - name: R10
         type: number
         default:
-        summary: ''
+        summary: |
+          The row 2, column 1 element of the rotation matrix.
       - name: R11
         type: number
         default:
-        summary: ''
+        summary: |
+          The row 2, column 2 element of the rotation matrix.
       - name: R12
         type: number
         default:
-        summary: ''
+        summary: |
+          The row 2, column 3 element of the rotation matrix.
       - name: R20
         type: number
         default:
-        summary: ''
+        summary: |
+          The row 3, column 1 element of the rotation matrix.
       - name: R21
         type: number
         default:
-        summary: ''
+        summary: |
+          The row 3, column 2 element of the rotation matrix.
       - name: R22
         type: number
         default:
-        summary: ''
+        summary: |
+          The row 3, column 3 element of the rotation matrix.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.lookAt
-    summary: |-
+    summary: |
       Returns a `Datatype.CFrame` with the position of the first
       `Datatype.Vector3` and an orientation pointed toward the second.
-    description: |-
+    description: |
       Returns a new `Datatype.CFrame` with the position of `at` and facing
       towards `lookAt`, optionally specifying the upward direction (`up`) with a
       default of `(0, 1, 0)`.
@@ -265,69 +300,90 @@ constructors:
       - name: at
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The world-space position of the CFrame.
       - name: lookAt
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The world-space point the CFrame should face toward.
       - name: up
         type: Vector3
         default: Vector3.yAxis
-        summary: ''
+        summary: |
+          The unit vector specifying the upward direction. Defaults to
+          `(0, 1, 0)`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.lookAlong
-    summary: |-
+    summary: |
       Returns a `Datatype.CFrame` with the position of the first
       `Datatype.Vector3` and an orientation directed along the second.
-    description: |-
-      Returns a new `Datatype.CFrame` with the position of `at` and facing
-      along `direction`, optionally specifying the upward direction (`up`)
-      with a default of `(0, 1, 0)`.
+    description: |
+      Returns a new `Datatype.CFrame` with the position of `at` and facing along
+      `direction`, optionally specifying the upward direction (`up`) with a
+      default of `(0, 1, 0)`.
 
       This constructor is equivalent to `CFrame.lookAt(at, at + direction)`.
     parameters:
       - name: at
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The world-space position of the CFrame.
       - name: direction
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The direction the CFrame should face along.
       - name: up
         type: Vector3
         default: Vector3.yAxis
-        summary: ''
+        summary: |
+          The unit vector specifying the upward direction. Defaults to
+          `(0, 1, 0)`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.fromRotationBetweenVectors
-    summary: |-
+    summary: |
       Returns a `Datatype.CFrame` representing the orientation needed to rotate
-      from the first `Datatype.Vector3` to the second, with the position set to zero.
-    description: |-
-      Returns a `Datatype.CFrame` representing the orientation needed to rotate
-      from the first `Datatype.Vector3` to the second, with the position set to zero.
+      from the first `Datatype.Vector3` to the second, with the position set to
+      zero.
+    description: |
+      Returns a `Datatype.CFrame` whose rotation represents the shortest-arc
+      rotation that aligns vector `from` with vector `to`. The input vectors do
+      not need to be unit length; they are normalized internally. The resulting
+      `Datatype.CFrame` has its position set to `(0, 0, 0)`.
+
+      ```lua
+      -- Rotate a direction to face another direction
+      local from = Vector3.new(0, 1, 0)
+      local to = Vector3.new(1, 0, 0)
+      local cf = CFrame.fromRotationBetweenVectors(from, to)
+      print(cf * from) --> approximately (1, 0, 0)
+      ```
     parameters:
       - name: from
         type: Vector3
         default:
-        summary: Vector representing the "from" direction.
+        summary: |
+          Vector representing the "from" direction.
       - name: to
         type: Vector3
         default:
-        summary: Vector representing the "to" direction.
+        summary: |
+          Vector representing the "to" direction.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.fromEulerAngles
-    summary: |-
+    summary: |
       Returns a rotated `Datatype.CFrame` from angles `rx`, `ry`, and `rz` in
       radians. Rotations are applied in the optional `Enum.RotationOrder` with a
       default of `XYZ`.
-    description: |-
+    description: |
       Returns a rotated `Datatype.CFrame` from angles `rx`, `ry`, and `rz` in
       radians. Rotations are applied in the optional `Enum.RotationOrder` with a
       default of `XYZ`, equivalent to:
@@ -344,27 +400,31 @@ constructors:
       - name: rx
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the X axis in radians.
       - name: ry
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the Y axis in radians.
       - name: rz
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the Z axis in radians.
       - name: order
         type: RotationOrder
         default: Enum.RotationOrder.XYZ
-        summary: ''
+        summary: |
+          The order in which rotations are applied.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.fromEulerAnglesXYZ
-    summary: |-
+    summary: |
       Returns a rotated `Datatype.CFrame` from angles `rx`, `ry`, and `rz` in
       radians using `Enum.RotationOrder.XYZ`.
-    description: |-
+    description: |
       Returns a rotated `Datatype.CFrame` from angles `rx`, `ry`, and `rz` in
       radians using `Enum.RotationOrder.XYZ`, equivalent to:
 
@@ -380,23 +440,26 @@ constructors:
       - name: rx
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the X axis in radians.
       - name: ry
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the Y axis in radians.
       - name: rz
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the Z axis in radians.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.fromEulerAnglesYXZ
-    summary: |-
+    summary: |
       Returns a rotated `Datatype.CFrame` from angles `rx`, `ry`, and `rz` in
       radians using `Enum.RotationOrder.YXZ`.
-    description: |-
+    description: |
       Returns a rotated `Datatype.CFrame` from angles `rx`, `ry`, and `rz` in
       radians using `Enum.RotationOrder.YXZ`, equivalent to:
 
@@ -412,102 +475,137 @@ constructors:
       - name: rx
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the X axis in radians.
       - name: ry
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the Y axis in radians.
       - name: rz
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the Z axis in radians.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.Angles
-    summary: Equivalent to `Datatype.CFrame.fromEulerAnglesXYZ()|fromEulerAnglesXYZ()`.
-    description: Equivalent to `Datatype.CFrame.fromEulerAnglesXYZ()|fromEulerAnglesXYZ()`.
+    summary: |
+      Equivalent to `Datatype.CFrame.fromEulerAnglesXYZ()|fromEulerAnglesXYZ()`.
+    description: |
+      Equivalent to `Datatype.CFrame.fromEulerAnglesXYZ()|fromEulerAnglesXYZ()`.
     parameters:
       - name: rx
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the X axis in radians.
       - name: ry
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the Y axis in radians.
       - name: rz
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the Z axis in radians.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.fromOrientation
-    summary: Equivalent to `Datatype.CFrame.fromEulerAnglesYXZ()|fromEulerAnglesYXZ()`.
-    description: Equivalent to `Datatype.CFrame.fromEulerAnglesYXZ()|fromEulerAnglesYXZ()`.
+    summary: |
+      Equivalent to `Datatype.CFrame.fromEulerAnglesYXZ()|fromEulerAnglesYXZ()`.
+    description: |
+      Equivalent to `Datatype.CFrame.fromEulerAnglesYXZ()|fromEulerAnglesYXZ()`.
     parameters:
       - name: rx
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the X axis in radians.
       - name: ry
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the Y axis in radians.
       - name: rz
         type: number
         default:
-        summary: ''
+        summary: |
+          Rotation angle around the Z axis in radians.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.fromAxisAngle
-    summary: Returns a rotated `Datatype.CFrame` from a unit `Datatype.Vector3` and a rotation in radians.
-    description: Returns a rotated `Datatype.CFrame` from a unit `Datatype.Vector3` and a rotation in radians.
+    summary: |
+      Returns a rotated `Datatype.CFrame` from a unit `Datatype.Vector3` and a
+      rotation in radians.
+    description: |
+      Returns a `Datatype.CFrame` rotated `r` radians around the axis `v`. The
+      axis vector is normalized internally, so it does not need to be unit
+      length. The resulting `Datatype.CFrame` has no translation (position is
+      `(0, 0, 0)`). A positive angle represents a counter-clockwise rotation
+      when looking from the tip of the axis vector toward the origin (right-hand
+      rule).
+
+      ```lua
+      -- Rotate 90 degrees around the Y axis
+      local cf = CFrame.fromAxisAngle(Vector3.yAxis, math.rad(90))
+      ```
     parameters:
       - name: v
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          The axis of rotation (normalized internally).
       - name: r
         type: number
         default:
-        summary: ''
+        summary: |
+          The rotation angle in radians.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame.fromMatrix
-    summary: Returns a `Datatype.CFrame` from a translation and the columns of a rotation matrix.
-    description: |-
-      Returns a `Datatype.CFrame` from a translation and the columns of a rotation
-      matrix. If `vZ` is excluded, the third column is calculated as
+    summary: |
+      Returns a `Datatype.CFrame` from a translation and the columns of a
+      rotation matrix.
+    description: |
+      Returns a `Datatype.CFrame` from a translation and the columns of a
+      rotation matrix. If `vZ` is excluded, the third column is calculated as
       `vX:Cross(vY).Unit`.
     parameters:
       - name: pos
         type: Vector3
         default:
-        summary: The 3D position of the `Datatype.CFrame`.
+        summary: |
+          The 3D position of the `Datatype.CFrame`.
       - name: vX
         type: Vector3
         default:
-        summary: Equivalent to `Datatype.CFrame.RightVector|RightVector`.
+        summary: |
+          Equivalent to `Datatype.CFrame.RightVector|RightVector`.
       - name: vY
         type: Vector3
         default:
-        summary: Equivalent to `Datatype.CFrame.UpVector|UpVector`.
+        summary: |
+          Equivalent to `Datatype.CFrame.UpVector|UpVector`.
       - name: vZ
         type: Vector3
         default:
-        summary: Equivalent to -`Datatype.CFrame.LookVector|LookVector`.
+        summary: |
+          Equivalent to -`Datatype.CFrame.LookVector|LookVector`.
     code_samples: []
     tags: []
     deprecation_message: ''
 constants:
   - name: CFrame.identity
     type: CFrame
-    summary: An identity `Datatype.CFrame` with no translation or rotation.
-    description: |-
+    summary: |
+      An identity `Datatype.CFrame` with no translation or rotation.
+    description: |
       An identity `Datatype.CFrame` with no translation or rotation. This
       property is a **constant** and must be accessed globally as opposed to
       through an individual `Datatype.CFrame` object.
@@ -532,7 +630,8 @@ properties:
     summary: |
       The 3D position of the `Datatype.CFrame`.
     description: |
-      The 3D position of the `Datatype.CFrame`.
+      The positional component of the `Datatype.CFrame` as a `Datatype.Vector3`.
+      Equivalent to `Vector3.new(cf.X, cf.Y, cf.Z)`.
     default:
     code_samples: []
     tags: []
@@ -542,7 +641,9 @@ properties:
     summary: |
       A copy of the `Datatype.CFrame` with no translation.
     description: |
-      A copy of the `Datatype.CFrame` with no translation.
+      A copy of the `Datatype.CFrame` with the positional component set to
+      `(0, 0, 0)`, retaining only the rotational component. Useful for isolating
+      a `Datatype.CFrame` object's orientation independent of its position.
     default:
     code_samples: []
     tags: []
@@ -552,7 +653,8 @@ properties:
     summary: |
       The **X** coordinate of the position.
     description: |
-      The **X** coordinate of the position.
+      The X component of the `Datatype.CFrame` object's world-space position.
+      Equivalent to `CFrame.Position.X`.
     default:
     code_samples: []
     tags: []
@@ -562,7 +664,8 @@ properties:
     summary: |
       The **Y** coordinate of the position.
     description: |
-      The **Y** coordinate of the position.
+      The Y component of the `Datatype.CFrame` object's world-space position.
+      Equivalent to `CFrame.Position.Y`.
     default:
     code_samples: []
     tags: []
@@ -572,7 +675,8 @@ properties:
     summary: |
       The **Z** coordinate of the position.
     description: |
-      The **Z** coordinate of the position.
+      The Z component of the `Datatype.CFrame` object's world-space position.
+      Equivalent to `CFrame.Position.Z`.
     default:
     code_samples: []
     tags: []
@@ -717,11 +821,16 @@ methods:
     summary: |
       Returns the inverse of the `Datatype.CFrame`.
     description: |
-      Returns the inverse of the `Datatype.CFrame`.
+      Returns the inverse of the `Datatype.CFrame`, representing the
+      transformation that undoes the original. For any `Datatype.CFrame` `cf`,
+      the expression `cf * cf:Inverse()` produces the identity
+      `Datatype.CFrame`. The inverse reverses both the rotation (transposing the
+      rotation matrix) and the translation.
     parameters: []
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          The inverse CFrame that reverses this transformation.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -731,19 +840,26 @@ methods:
       fraction `alpha`.
     description: |
       Returns a `Datatype.CFrame` interpolated between itself and `goal` by the
-      fraction `alpha`.
+      fraction `alpha`. The positional component is interpolated linearly while
+      the rotational component is interpolated using spherical linear
+      interpolation (slerp), producing a constant-speed rotation along the
+      shortest arc. An `alpha` of 0 returns the original `Datatype.CFrame` and
+      an `alpha` of 1 returns `goal`.
     parameters:
       - name: goal
         type: CFrame
         default:
-        summary: ''
+        summary: |
+          The target CFrame to interpolate toward.
       - name: alpha
         type: number
         default:
-        summary: ''
+        summary: |
+          The interpolation fraction, where 0 is the original and 1 is `goal`.
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          The interpolated CFrame between the original and `goal`.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -759,7 +875,8 @@ methods:
     parameters: []
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          A copy of this CFrame with its rotation matrix orthonormalized.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -785,10 +902,12 @@ methods:
       - name: ...
         type: Tuple<CFrame>
         default:
-        summary: ''
+        summary: |
+          One or more CFrames specified in object (local) space.
     returns:
       - type: Tuple<CFrame>
-        summary: ''
+        summary: |
+          The CFrames transformed into world space.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -805,10 +924,12 @@ methods:
       - name: ...
         type: Tuple<CFrame>
         default:
-        summary: ''
+        summary: |
+          One or more CFrames specified in world space.
     returns:
       - type: Tuple<CFrame>
-        summary: ''
+        summary: |
+          The CFrames transformed into object (local) space.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -834,10 +955,12 @@ methods:
       - name: ...
         type: Tuple<Vector3>
         default:
-        summary: ''
+        summary: |
+          One or more points specified in object (local) space.
     returns:
       - type: Tuple<Vector3>
-        summary: ''
+        summary: |
+          The points transformed into world space.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -854,10 +977,12 @@ methods:
       - name: ...
         type: Tuple<Vector3>
         default:
-        summary: ''
+        summary: |
+          One or more points specified in world space.
     returns:
       - type: Tuple<Vector3>
-        summary: ''
+        summary: |
+          The points transformed into object (local) space.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -874,10 +999,12 @@ methods:
       - name: ...
         type: Tuple<Vector3>
         default:
-        summary: ''
+        summary: |
+          One or more direction vectors specified in object (local) space.
     returns:
       - type: Tuple<Vector3>
-        summary: ''
+        summary: |
+          The vectors rotated into world space (translation ignored).
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -894,10 +1021,12 @@ methods:
       - name: ...
         type: Tuple<Vector3>
         default:
-        summary: ''
+        summary: |
+          One or more direction vectors specified in world space.
     returns:
       - type: Tuple<Vector3>
-        summary: ''
+        summary: |
+          The vectors rotated into object (local) space (translation ignored).
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -908,14 +1037,22 @@ methods:
       of the `Datatype.CFrame` and `R00`‑`R22` represent its 3&times;3 rotation
       matrix.
     description: |
-      Returns the values `x`, `y`, `z`, `R00`, `R01`, `R02`, `R10`, `R11`,
-      `R12`, `R20`, `R21`, and `R22`, where `x` `y` `z` represent the position
-      of the `Datatype.CFrame` and `R00`‑`R22` represent its 3&times;3 rotation
-      matrix.
+      Returns the 12 numeric components of the `Datatype.CFrame` as a tuple:
+      `x`, `y`, `z` (position), followed by `R00`, `R01`, `R02`, `R10`, `R11`,
+      `R12`, `R20`, `R21`, `R22` (the 3&times;3 rotation matrix in row-major
+      order). This is the reverse of the 12-argument `Datatype.CFrame.new()`
+      constructor.
+
+      ```lua
+      local cf = CFrame.new(1, 2, 3) * CFrame.fromEulerAnglesXYZ(0, math.rad(90), 0)
+      local x, y, z, R00, R01, R02, R10, R11, R12, R20, R21, R22 = cf:GetComponents()
+      ```
     parameters: []
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          The 12 numeric values: x, y, z, R00, R01, R02, R10, R11, R12, R20,
+          R21, R22.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -931,14 +1068,18 @@ methods:
       - name: order
         type: RotationOrder
         default: Enum.RotationOrder.XYZ
-        summary: ''
+        summary: |
+          The rotation order used for decomposition.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The X-axis rotation angle in radians.
       - type: number
-        summary: ''
+        summary: |
+          The Y-axis rotation angle in radians.
       - type: number
-        summary: ''
+        summary: |
+          The Z-axis rotation angle in radians.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -948,7 +1089,10 @@ methods:
       the `Datatype.CFrame` using `Enum.RotationOrder.XYZ`.
     description: |
       Returns the approximate angles, in radians, that could be used to generate
-      the `Datatype.CFrame` using `Enum.RotationOrder.XYZ`.
+      the `Datatype.CFrame` using `Enum.RotationOrder.XYZ`. The three returned
+      values represent rotations around the X, Y, and Z axes respectively. Due
+      to the nature of Euler angle decomposition, the angles are approximate and
+      subject to gimbal lock near pitch angles of &plusmn;90 degrees.
     parameters: []
     returns:
       - type: number
@@ -969,7 +1113,10 @@ methods:
       the `Datatype.CFrame` using `Enum.RotationOrder.YXZ`.
     description: |
       Returns the approximate angles, in radians, that could be used to generate
-      the `Datatype.CFrame` using `Enum.RotationOrder.YXZ`.
+      the `Datatype.CFrame` using `Enum.RotationOrder.YXZ`. The three returned
+      values represent rotations around the X, Y, and Z axes respectively. Due
+      to the nature of Euler angle decomposition, the angles are approximate and
+      subject to gimbal lock near pitch angles of &plusmn;90 degrees.
     parameters: []
     returns:
       - type: number
@@ -1011,14 +1158,19 @@ methods:
       Returns a tuple containing a unit `Datatype.Vector3` axis and a rotation
       angle in radians.
     description: |
-      Returns a tuple containing a unit `Datatype.Vector3` axis and a rotation
-      angle in radians.
+      Returns a unit `Datatype.Vector3` representing the axis of rotation and a
+      number representing the angle of rotation in radians. A positive angle
+      represents counter-clockwise rotation when looking from the tip of the
+      axis vector toward the origin (right-hand rule). This is the inverse of
+      `Datatype.CFrame.fromAxisAngle()`.
     parameters: []
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A unit vector representing the axis of rotation.
       - type: number
-        summary: ''
+        summary: |
+          The rotation angle in radians.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -1030,7 +1182,9 @@ methods:
     parameters: []
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          The 12 numeric values: x, y, z, R00, R01, R02, R10, R11, R12, R20,
+          R21, R22.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -1049,14 +1203,17 @@ methods:
       - name: other
         type: CFrame
         default:
-        summary: ''
+        summary: |
+          The CFrame to compare against.
       - name: epsilon
         type: number
         default: 0.00001 (1e-5)
-        summary: ''
+        summary: |
+          The tolerance for comparing position and rotation components.
     returns:
       - type: bool
-        summary: ''
+        summary: |
+          True if the two CFrames are within `epsilon` of each other.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -1073,10 +1230,13 @@ methods:
       - name: other
         type: CFrame
         default:
-        summary: ''
+        summary: |
+          The CFrame whose orientation is compared against this CFrame.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The angle in radians between the two orientations, in the range [0,
+          pi].
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -1088,8 +1248,11 @@ math_operations:
       Produces a new `Datatype.CFrame` representing the composition of the two
       `Datatype.CFrame|CFrames`.
     description: |
-      Produces a new `Datatype.CFrame` representing the composition of the two
-      `Datatype.CFrame|CFrames`.
+      Composes two `Datatype.CFrame` transformations, producing a new
+      `Datatype.CFrame` that applies the right operand's transform in the left
+      operand's local space. This is equivalent to
+      `Datatype.CFrame:ToWorldSpace()` and is the standard way to combine
+      translations and rotations.
     type_a: CFrame
     type_b: CFrame
     return_type: CFrame
@@ -1102,8 +1265,9 @@ math_operations:
       Produces a `Datatype.Vector3` transformed from object to world
       coordinates.
     description: |
-      Produces a `Datatype.Vector3` transformed from object to world
-      coordinates.
+      Transforms a `Datatype.Vector3` from the `Datatype.CFrame` object's local
+      (object) space into world space, applying both rotation and translation.
+      Equivalent to `Datatype.CFrame:PointToWorldSpace()`.
     type_a: CFrame
     type_b: Vector3
     return_type: Vector3
@@ -1116,8 +1280,9 @@ math_operations:
       Produces a `Datatype.CFrame` translated in world space by the
       `Datatype.Vector3`.
     description: |
-      Produces a `Datatype.CFrame` translated in world space by the
-      `Datatype.Vector3`.
+      Produces a `Datatype.CFrame` with its position offset by the
+      `Datatype.Vector3` in world space. The orientation remains unchanged. Only
+      the translational component is affected; rotation is preserved as-is.
     type_a: CFrame
     type_b: Vector3
     return_type: CFrame
@@ -1130,8 +1295,9 @@ math_operations:
       Produces a `Datatype.CFrame` translated in world space by the negative
       `Datatype.Vector3`.
     description: |
-      Produces a `Datatype.CFrame` translated in world space by the negative
-      `Datatype.Vector3`.
+      Produces a `Datatype.CFrame` with its position offset by the negated
+      `Datatype.Vector3` in world space. The orientation remains unchanged.
+      Equivalent to `CFrame + (-v)`.
     type_a: CFrame
     type_b: Vector3
     return_type: CFrame

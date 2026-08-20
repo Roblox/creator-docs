@@ -49,7 +49,7 @@ This can be achieved much more effectively using a **for** loop which repeats co
 
 - **Control variable** - The variable created and used to count the loops. In this example, it's `count` and the starting value is 1.
 - **End value** - The value it has to get to for the loop to stop. In this example, it's 10.
-- **Step increment** (optional) - Determines what to add to the control variable each loop. If left out, it defaults to 1, so in this example it's unnecessary.
+- **Step increment** <Chip label="OPTIONAL" size="small" variant="outlined" /> - Determines what to add to the control variable each loop. If left out, it defaults to 1, so in this example it's unnecessary.
 
 In **FadeOnTouch**:
 

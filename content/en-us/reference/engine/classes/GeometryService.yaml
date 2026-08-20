@@ -47,7 +47,10 @@ methods:
       - name: destination
         type: Array
         default:
-        summary: ''
+        summary: |
+          Array of resulting `Class.BasePart|BaseParts` from the solid modeling
+          operation, for example the results of
+          `Class.GeometryService:UnionAsync()|UnionAsync()`.
       - name: options
         type: Dictionary
         default: nil

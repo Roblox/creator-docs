@@ -5,7 +5,7 @@ description: Create and upload avatar characters, cosmetics, clothing, and acces
 hideInPageNavigation: true
 ---
 
-Every Roblox user is represented by an **avatar** — a fully customizable 3D character with cosmetics, clothing, and accessories that persist across games on the platform. At their core, avatars are deeply personal because they symbolize one's digital identity, uniquely crafted by individual purchases on the [Marketplace](https://www.roblox.com/catalog) or in experiences, or from giveaways.
+Every Roblox user is represented by an **avatar** — a fully customizable 3D character with cosmetics, clothing, and accessories that persist across games on the platform. At their core, avatars are deeply personal because they symbolize one's digital identity, uniquely crafted by individual purchases on the [Marketplace](https://www.roblox.com/catalog) or in games, or from giveaways.
 
 Each avatar is a system of components that work together to create a character that can interact with objects in the 3D space and wear cosmetics, clothing, and accessories. Broadly speaking, you can separate these components into those that make up **who you are** and **what you wear**. Let's break it down.
 

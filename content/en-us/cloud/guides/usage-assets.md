@@ -119,7 +119,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
       </td>
       <td>
         <ul>
-          <li>Only content downloaded from [Asset delivery API](../api/asset-delivery.md) is accepted. If you are not trying to download and re-upload meshes, then use [Importer](../../studio/importer.md) to import meshes instead.</li>
+          <li>Only content downloaded from [Asset delivery API](/cloud/reference/domains/assetdelivery) is accepted. If you are not trying to download and re-upload meshes, then use [Importer](../../studio/importer.md) to import meshes instead.</li>
           <li>Not available for updating.</li>
         </ul>
       </td>
@@ -360,7 +360,7 @@ If your request for creating a new asset or updating an existing asset succeeds,
    }
    ```
 
-3. (Optional) Check the created asset on your Roblox account.
+3. <Chip label="OPTIONAL" size="small" variant="outlined" /> Check the created asset on your Roblox account.
    1. Navigate to the **Inventory** page of your [Roblox account](https://www.roblox.com/home).
    2. Select the **Category** of the asset that you want to check.
    3. Find the target asset and click its thumbnail to view the asset.

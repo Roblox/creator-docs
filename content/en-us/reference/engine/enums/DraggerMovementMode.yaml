@@ -4,19 +4,31 @@
 
 name: DraggerMovementMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether `Class.DraggerService` moves parts geometrically or with
+  physics simulation during Studio drag operations.
+description: |
+  Controls whether Studio's drag tool moves parts by directly setting their
+  positions and orientations (`Enum.DraggerMovementMode.Geometric`) or by
+  simulating physics and respecting `Class.Constraint|Constraints` during the
+  drag (`Enum.DraggerMovementMode.Physical`). The active mode is set via
+  `Class.DraggerService.DraggerMovementMode`, which defaults to
+  `Enum.DraggerMovementMode.Geometric`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Geometric
-    summary: ''
+    summary: |
+      Parts are moved by directly updating their position and orientation,
+      ignoring physics and constraints.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Physical
-    summary: ''
+    summary: |
+      Parts are moved by applying physics impulses, so constraints and
+      collisions are respected during the drag.
     value: 1
     tags: []
     deprecation_message: ''

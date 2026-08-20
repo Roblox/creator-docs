@@ -4,19 +4,28 @@
 
 name: SensorUpdateType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls when a sensor recalculates its output properties.
+description: |
+  Controls when a sensor recalculates its output properties. Assign this enum to
+  the `UpdateType` property on any `Class.SensorBase`‑derived instance
+  (`Class.ControllerSensor`, `Class.FluidForceSensor`, `Class.AtmosphereSensor`)
+  to choose between automatic lazy evaluation and fully manual control.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: OnRead
-    summary: ''
+    summary: |
+      The sensor lazily recalculates its output the next time an output property
+      is read and the output is marked dirty.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Manual
-    summary: ''
+    summary: |
+      The sensor never automatically recalculates its output; scripts are
+      responsible for driving output updates.
     value: 1
     tags: []
     deprecation_message: ''

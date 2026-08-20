@@ -4,19 +4,30 @@
 
 name: HandlesStyle
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines the visual style of `Class.Handles` object handles.
+description: |
+  Determines the visual style of `Class.Handles` object handles. Setting
+  `Class.Handles.Style` to a value from this enum controls whether the handles
+  rendered on each face of the adornee appear as spheres
+  (`Enum.HandlesStyle.Resize`) or as directional arrows
+  (`Enum.HandlesStyle.Movement`). The default value of `Class.Handles.Style` is
+  `Enum.HandlesStyle.Resize`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Resize
-    summary: ''
+    summary: |
+      Renders `Class.Handles` as sphere shapes for resizing an adornee along its
+      face axes (the default style).
     value: 0
     tags: []
     deprecation_message: ''
   - name: Movement
-    summary: ''
+    summary: |
+      Renders `Class.Handles` as directional arrow shapes for translating an
+      adornee along its face axes.
     value: 1
     tags: []
     deprecation_message: ''

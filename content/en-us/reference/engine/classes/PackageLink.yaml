@@ -80,8 +80,18 @@ properties:
     capabilities:
       - AssetRead
   - name: PackageLink.DefaultName
-    summary: ''
-    description: ''
+    summary: |
+      Engine-managed name of the package's root instance as it was last
+      published, kept as a baseline for detecting local name changes.
+    description: |
+      Managed by the engine and not writable from scripts. Stores the name of
+      the package's root instance as recorded when the package was last
+      published or synced. It defaults to an empty string and is populated from
+      the base root node's name.
+
+      This value is the as-published baseline the engine compares against the
+      current instance name to detect local name customizations and preserve
+      them during a three-way merge when the package is updated.
     code_samples: []
     type: string
     tags: []
@@ -116,6 +126,30 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - AssetRead
+  - name: PackageLink.PackageContent
+    summary: |
+      Read-only `Datatype.Content` URL for the model asset backing this package.
+    description: |
+      A read-only `Datatype.Content` that references the package's model asset.
+      The value is the same asset that `Class.PackageLink.PackageId` points to,
+      expressed as a `Datatype.Content` URL rather than a `ContentId` string.
+      This property cannot be written from a `Class.Script`.
+    code_samples: []
+    type: Content
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Link
+    serialization:
+      can_load: false
+      can_save: true
     capabilities:
       - AssetRead
   - name: PackageLink.PackageId
@@ -162,8 +196,20 @@ properties:
     capabilities:
       - AssetRead
   - name: PackageLink.SerializedDefaultAttributes
-    summary: ''
-    description: ''
+    summary: |
+      Engine-managed serialized snapshot of the attributes on the package's root
+      instance as it was last published, kept as a baseline for detecting local
+      attribute changes.
+    description: |
+      Managed by the engine and not writable from scripts. Stores a serialized
+      (binary) snapshot of the attributes on the package's root instance as
+      recorded when the package was last published or synced. It defaults to an
+      empty value and is populated from the base root node's serialized
+      attributes.
+
+      This snapshot is the as-published baseline for a three-way merge: the
+      engine compares the root instance's current attributes against it to
+      preserve local customizations when the package is updated.
     code_samples: []
     type: BinaryString
     tags: []

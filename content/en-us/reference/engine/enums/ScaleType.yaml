@@ -8,8 +8,13 @@ summary: |
   Determines how an image (of a `Class.ImageLabel` or `Class.ImageButton`) is
   scaled.
 description: |
-  Determines how an image (of a `Class.ImageLabel` or `Class.ImageButton`) is
-  scaled.
+  Controls the method by which an image is scaled to fill a `Class.ImageLabel`,
+  `Class.ImageButton`, or `Class.VideoDisplay` element. When the source image's
+  dimensions differ from the element's rendered size, each `ScaleType` value
+  determines whether the image is stretched uniformly to fill, tiled in a
+  repeating grid, cropped to cover the element, letterboxed to fit without
+  cropping, or divided into independently scalable 9-slice regions that preserve
+  border details at any element size.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -25,7 +30,7 @@ items:
       9-Slice scaling: slice the image into 9 regions and apply different
       scaling rules to each region. The slice boundaries are determined by
       `Class.ImageLabel.SliceCenter` or `Class.ImageButton.SliceCenter`. See
-      [UI 9-Slice Design](../../../ui/9-slice.md) for more information. .
+      [UI 9-Slice Design](../../../ui/9-slice.md) for more information.
     value: 1
     tags: []
     deprecation_message: ''

@@ -37,6 +37,10 @@ properties:
       This property indicates the reserved server access code for the reserved
       server that the user(s) should be teleported to.
 
+      The access code is obtained either from
+      `Class.TeleportService:ReserveServerAsync()` or from
+      `Class.TeleportAsyncResult.ReservedServerAccessCode`.
+
       For more information on how to teleport players between servers, see
       [Teleporting Between Places](../../../projects/teleport.md).
     code_samples: []
@@ -127,7 +131,9 @@ methods:
     parameters: []
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The teleport data previously stored by
+          `Class.TeleportOptions:SetTeleportData()`, or nil if no data was set.
     tags: []
     deprecation_message: ''
     security: None

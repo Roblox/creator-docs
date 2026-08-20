@@ -4,24 +4,40 @@
 
 name: RtlTextSupport
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether right-to-left text rendering is enabled for the experience.
+description: |
+  Determines how `Class.StarterGui` handles bidirectional text layout across the
+  experience. Right-to-left (RTL) support allows UI text to flow from right to
+  left, which is the natural reading direction for scripts such as Arabic and
+  Hebrew. When set to `Enum.RtlTextSupport.Default` or
+  `Enum.RtlTextSupport.Enabled`, text-bearing UI elements correctly display
+  these scripts, including proper text alignment and character ordering. Setting
+  the property to `Enum.RtlTextSupport.Disabled` forces all text to render
+  left-to-right regardless of the script's natural direction.
+
+  The `Class.StarterGui.RtlTextSupport` property defaults to
+  `Enum.RtlTextSupport.Default`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Enables RTL text support using the engine's default behavior.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      Disables RTL text support, forcing all text to render left-to-right.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: |
+      Explicitly enables RTL text support for right-to-left scripts such as
+      Arabic and Hebrew.
     value: 2
     tags: []
     deprecation_message: ''

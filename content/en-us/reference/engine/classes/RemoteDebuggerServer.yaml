@@ -5,8 +5,19 @@
 name: RemoteDebuggerServer
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Studio service that runs the server side of Luau remote debugging over DAP;
+  not created during normal script execution.
+description: |
+  Not created during normal script execution. Implements the server side of Luau
+  remote debugging: it bridges the script debugger to an external debug client
+  over a JSON-RPC channel that speaks the Debug Adapter Protocol (DAP), and is
+  compatible with the `vscode-rbx-lrdb` Visual Studio Code extension.
+
+  Once a client connects, the service handles debug requests (initialize,
+  breakpoints, stepping, continue/pause, threads, stack frames, scopes,
+  variables, expression evaluation, and source) and pushes debugger events
+  (stopped, continued, breakpoint changes, exit) back to the client.
 code_samples: []
 inherits:
   - Instance

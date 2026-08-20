@@ -95,7 +95,9 @@ methods:
           depending on whether the format strings are numbered or named.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The localized text string associated with the given **key**, with any
+          format parameters filled in from **args**.
     tags: []
     deprecation_message: ''
     security: None

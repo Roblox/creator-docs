@@ -15,17 +15,22 @@ tags: []
 deprecation_message: ''
 items:
   - name: Small
-    summary: ''
+    summary: |
+      The smallest buffer size, providing the lowest latency at the cost of
+      frequency resolution.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Medium
-    summary: ''
+    summary: |
+      A mid-sized buffer that balances frequency resolution and latency.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Large
-    summary: ''
+    summary: |
+      The largest buffer size, providing higher frequency resolution at the cost
+      of more latency.
     value: 2
     tags: []
     deprecation_message: ''

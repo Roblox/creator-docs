@@ -71,47 +71,68 @@ items:
     tags: []
     deprecation_message: ''
   - name: ReferenceMeshAfterMorph
-    summary: ''
+    summary: |
+      Renders the layer's outer cage after the morph step that aligns it to the
+      previous layer's outer cage surface, prior to HSR processing.
     value: 7
     tags: []
     deprecation_message: ''
   - name: HSROuterDetail
-    summary: ''
+    summary: |
+      Interactive mode that highlights the render-mesh triangle under the cursor
+      and draws the corresponding outer cage vertices on the layer above using
+      HSR association data.
     value: 8
     tags: []
     deprecation_message: ''
   - name: HSROuter
-    summary: ''
+    summary: |
+      Highlights outer cage vertices that HSR associates with visible
+      render-mesh faces.
     value: 9
     tags: []
     deprecation_message: ''
   - name: HSRInner
-    summary: ''
+    summary: |
+      Highlights inner cage vertices that Hidden Surface Removal (HSR)
+      classifies as occluded by the clothing layer above, drawn at the previous
+      layer's outer-cage positions.
     value: 10
     tags: []
     deprecation_message: ''
   - name: HSRInnerReverse
-    summary: ''
+    summary: |
+      Highlights inner cage vertices that HSR classifies as visible (not
+      occluded), the complement of `Enum.WrapLayerDebugMode.HSRInner`.
     value: 11
     tags: []
     deprecation_message: ''
   - name: LayerCageFittedToBase
-    summary: ''
+    summary: |
+      Renders the layer's outer cage at positions from fitting it to the base
+      body mesh (rest pose), shown as spheres and wireframe edges.
     value: 12
     tags: []
     deprecation_message: ''
   - name: LayerCageFittedToPrev
-    summary: ''
+    summary: |
+      Renders the layer's outer cage at positions from fitting it to the
+      previous layer's deformed shape, shown as spheres and wireframe edges.
     value: 13
     tags: []
     deprecation_message: ''
   - name: PreWrapDeformerOuterCage
-    summary: ''
+    summary: |
+      Draws each outer cage vertex that moved during deformation as a sphere at
+      its pre-deformation position connected by a line to its post-deformation
+      position.
     value: 14
     tags: []
     deprecation_message: ''
   - name: SkinningTransfer
-    summary: ''
+    summary: |
+      Visualizes per-vertex skinning weight transfer for the layer mesh, drawing
+      lines from each mesh vertex to its influencing skeleton joints.
     value: 15
     tags: []
     deprecation_message: ''

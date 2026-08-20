@@ -4,99 +4,147 @@
 
 name: HttpError
 type: enum
-summary: ''
-description: ''
+summary: |
+  Enum representing errors that can occur when making HTTP requests, unrelated
+  to HTTP status codes returned by the server.
+description: |
+  Transport-level errors that can occur when making HTTP requests via
+  `Class.HttpService`. These values are distinct from HTTP status codes (such as
+  404 or 500) that a remote server might return in a successful response;
+  `Enum.HttpError` values indicate that the request did not complete normally at
+  the network or client level.
+
+  When a request callback receives an error code other than `Enum.HttpError.OK`,
+  the associated `HttpResponse` should not be considered valid.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: OK
-    summary: ''
+    summary: |
+      No error occurred; the request completed successfully. This value is
+      unrelated to the HTTP 200 OK status code.
     value: 0
     tags: []
     deprecation_message: ''
   - name: InvalidUrl
-    summary: ''
+    summary: |
+      The request URL is malformed or otherwise invalid; depending on the
+      platform, a bad URL might instead surface as `Enum.HttpError.DnsResolve`
+      or `Enum.HttpError.ConnectFail`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: DnsResolve
-    summary: ''
+    summary: |
+      The hostname in the request URL could not be resolved via DNS.
     value: 2
     tags: []
     deprecation_message: ''
   - name: ConnectFail
-    summary: ''
+    summary: |
+      The client failed to establish a TCP connection to the remote host.
     value: 3
     tags: []
     deprecation_message: ''
   - name: OutOfMemory
-    summary: ''
+    summary: |
+      The client ran out of memory while processing the HTTP request or
+      response.
     value: 4
     tags: []
     deprecation_message: ''
   - name: TimedOut
-    summary: ''
+    summary: |
+      The request did not receive a response within the allowed time limit.
     value: 5
     tags: []
     deprecation_message: ''
   - name: TooManyRedirects
-    summary: ''
+    summary: |
+      The server returned more redirects than the client is configured to
+      follow.
     value: 6
     tags: []
     deprecation_message: ''
   - name: InvalidRedirect
-    summary: ''
+    summary: |
+      The server returned a redirect response with an invalid or malformed
+      Location header.
     value: 7
     tags: []
     deprecation_message: ''
   - name: NetFail
-    summary: ''
+    summary: |
+      A general network-level failure occurred that does not fall into a more
+      specific error category.
     value: 8
     tags: []
     deprecation_message: ''
   - name: Aborted
-    summary: ''
+    summary: |
+      The HTTP request was aborted before it could complete.
     value: 9
     tags: []
     deprecation_message: ''
   - name: SslConnectFail
-    summary: ''
+    summary: |
+      The TLS/SSL handshake with the remote server failed during connection
+      establishment.
     value: 10
     tags: []
     deprecation_message: ''
   - name: SslVerificationFail
-    summary: ''
+    summary: |
+      The server's TLS certificate could not be verified.
     value: 11
     tags: []
     deprecation_message: ''
   - name: Unknown
-    summary: ''
+    summary: |
+      An error occurred that does not map to any other `Enum.HttpError` value.
     value: 12
     tags: []
     deprecation_message: ''
   - name: ConnectionClosed
-    summary: ''
+    summary: |
+      The connection was closed by the remote end before the full response was
+      received, typically indicating a server or network problem.
     value: 13
     tags: []
     deprecation_message: ''
   - name: ServerProtocolError
-    summary: ''
+    summary: |
+      An HTTP/2 protocol-level error was returned by the server.
     value: 14
     tags: []
     deprecation_message: ''
   - name: CreatorEnvironmentsNotSupportedByService
-    summary: ''
+    summary: |
+      The request was sent from a non-live environment (such as Studio) and the
+      target service does not support creator environments.
     value: 15
     tags: []
     deprecation_message: ''
   - name: InactivityTimeout
-    summary: ''
+    summary: |
+      A streaming request timed out because no data was transferred during the
+      inactivity window.
     value: 16
     tags: []
     deprecation_message: ''
   - name: TooManyOutstandingRequests
-    summary: ''
+    summary: |
+      The request was rejected because the client has exceeded its limit for
+      concurrent or pending requests.
     value: 17
+    tags: []
+    deprecation_message: ''
+  - name: InvalidRangeResponse
+    summary: |
+      The server returned an invalid response to a ranged HTTP request, such as
+      responding with a full 200 status instead of the expected 206 Partial
+      Content.
+    value: 18
     tags: []
     deprecation_message: ''

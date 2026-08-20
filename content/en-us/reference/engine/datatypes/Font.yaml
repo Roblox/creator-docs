@@ -195,33 +195,40 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Font.new
-    summary: Creates a new `Datatype.Font`.
-    description: Creates a new `Datatype.Font`.
+    summary: |
+      Creates a new `Datatype.Font`.
+    description: |
+      Creates a new `Datatype.Font`.
     parameters:
       - name: family
         type: Content
         default:
-        summary: |-
+        summary: |
           The asset ID for the font family, starting with `rbxasset://` or
           `rbxassetid://`.
       - name: weight
         type: FontWeight
         default: Enum.FontWeight.Regular
-        summary: How thick the text is.
+        summary: |
+          How thick the text is.
       - name: style
         type: FontStyle
         default: Enum.FontStyle.Normal
-        summary: Whether the text is normal or italic.
+        summary: |
+          Whether the text is normal or italic.
     code_samples:
       - datatype-Font-new
     tags: []
     deprecation_message: ''
   - name: Font.fromEnum
-    summary: Creates a `Datatype.Font` from an `Enum.Font` value.
-    description: |-
-      Creates a `Datatype.Font` from an `Enum.Font` value. Throws an error when called with `Enum.Font.Unknown`.
+    summary: |
+      Creates a `Datatype.Font` from an `Enum.Font` value.
+    description: |
+      Creates a `Datatype.Font` from an `Enum.Font` value. Throws an error when
+      called with `Enum.Font.Unknown`.
 
-      The following table indicates how each `Enum.Font` value maps to a font `Datatype.Font.Family|Family`.
+      The following table indicates how each `Enum.Font` value maps to a font
+      `Datatype.Font.Family|Family`.
 
       <table size="small">
       <thead>
@@ -389,50 +396,63 @@ constructors:
       - name: font
         type: Font
         default:
-        summary: The enum value of the font to use.
+        summary: |
+          The enum value of the font to use.
     code_samples:
       - datatype-Font-fromEnum
     tags: []
     deprecation_message: ''
   - name: Font.fromName
-    summary: Creates a `Datatype.Font` from a name like `FredokaOne`.
-    description: |-
-      This is a convenience method for creating fonts from the content folder. The name you pass in will be converted into an asset ID like `rbxasset://fonts/families/BuilderSans.json`.
+    summary: |
+      Creates a `Datatype.Font` from a name like `FredokaOne`.
+    description: |
+      This is a convenience method for creating fonts from the content folder.
+      The name you pass in will be converted into an asset ID like
+      `rbxasset://fonts/families/BuilderSans.json`.
 
-      The name can only contain alphabetical characters, digits, `_` (underscore), and `-` (hyphen). It can't contain any spaces.
+      The name can only contain alphabetical characters, digits, `_`
+      (underscore), and `-` (hyphen). It can't contain any spaces.
     parameters:
       - name: name
         type: string
         default:
-        summary: The name of the font.
+        summary: |
+          The name of the font.
       - name: weight
         type: FontWeight
         default: Enum.FontWeight.Regular
-        summary: How thick the text is.
+        summary: |
+          How thick the text is.
       - name: style
         type: FontStyle
         default: Enum.FontStyle.Normal
-        summary: Whether the text is normal or italic.
+        summary: |
+          Whether the text is normal or italic.
     code_samples:
       - datatype-Font-fromName
     tags: []
     deprecation_message: ''
   - name: Font.fromId
-    summary: Creates a `Datatype.Font` from a numerical asset ID.
-    description: This is a convenience method for creating fonts from an asset ID number.
+    summary: |
+      Creates a `Datatype.Font` from a numerical asset ID.
+    description: |
+      This is a convenience method for creating fonts from an asset ID number.
     parameters:
       - name: id
         type: number
         default:
-        summary: The asset ID of the font as a number.
+        summary: |
+          The asset ID of the font as a number.
       - name: weight
         type: FontWeight
         default: Enum.FontWeight.Regular
-        summary: How thick the text is.
+        summary: |
+          How thick the text is.
       - name: style
         type: FontStyle
         default: Enum.FontStyle.Normal
-        summary: Whether the text is normal or italic.
+        summary: |
+          Whether the text is normal or italic.
     code_samples:
       - datatype-Font-fromId
     tags: []

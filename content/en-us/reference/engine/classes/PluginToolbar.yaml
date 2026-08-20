@@ -5,7 +5,9 @@
 name: PluginToolbar
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A toolbar created by `Class.Plugin:CreateToolbar()` that groups
+  `Class.PluginToolbarButton|PluginToolbarButtons` in the Studio ribbon.
 description: |
   A `PluginToolbar` object is created by calling the
   `Class.Plugin:CreateToolbar()` method and is used to contain

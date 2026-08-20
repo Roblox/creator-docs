@@ -4,16 +4,31 @@
 
 name: RunContext
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls the execution context of a `Class.Script`, determining whether it
+  runs as server, client, plugin, or legacy container-based code.
+description: |
+  The `RunContext` enum is used with the `Class.BaseScript.RunContext` property
+  to specify the context in which a `Class.Script` executes. The default value
+  is `Enum.RunContext.Legacy`, which preserves the original container-based
+  behavior where a `Class.Script` runs on the server and a `Class.LocalScript`
+  runs on the client depending on its placement in the instance hierarchy.
+
+  Setting a non-`Legacy` value allows a `Class.Script` to run explicitly on the
+  server, client, or as plugin code, regardless of container placement.
+  `Class.LocalScript` objects cannot use this property — only `Class.Script`
+  objects support non-`Legacy` run contexts.
+
+  Changing this property while the script is running terminates any active
+  threads and restarts the script under the new context if conditions permit.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Legacy
     summary: |
-      Runs in legacy script containers dependent on the type of script uses such
-      as `Class.LocalScript` or `Class.Script`.
+      Runs with legacy container-based behavior that depends on the script type,
+      such as `Class.LocalScript` or `Class.Script`.
     value: 0
     tags: []
     deprecation_message: ''

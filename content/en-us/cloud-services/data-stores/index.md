@@ -18,7 +18,7 @@ By default, games tested in Studio can't access data stores, so you must first e
 
 To enable Studio access in a [published](../../production/publishing/publish-games-and-places.md) game:
 
-1. Open Studio's **File**&nbsp;⟩ **Experience Settings** window.
+1. Open Studio's **File** ⟩ **Experience Settings** window.
 2. Navigate to **Security**.
 3. Enable the **Enable Studio Access to API Services** toggle.
 4. Click **Save**.
@@ -356,3 +356,34 @@ end
 <Alert severity="info">
 When you iterate through `Class.DataStoreService:GetOrderedDataStore()|GetOrderedDataStore()` using `Class.Pages:AdvanceToNextPageAsync()|AdvanceToNextPageAsync()`, the limit for requests is the same as the maximum page size you set for an ordered data store. `Class.Pages:AdvanceToNextPageAsync()|AdvanceToNextPageAsync()` always has the same limit as the class that originally requires it.
 </Alert>
+
+### Read multiple entries
+
+To read multiple **ordered data store** entries in a single request, call `Class.GlobalDataStore:BatchGetAsync()|BatchGetAsync()` with an array of keys. This is the batch counterpart to reading entries one at a time with `Class.GlobalDataStore:GetAsync()|GetAsync()`.
+
+`Class.GlobalDataStore:BatchGetAsync()|BatchGetAsync()` returns a dictionary that maps each requested key to a table with a `value` field. Keys that don't exist are omitted from the dictionary, so confirm that a key is present before reading its value.
+
+Each key you request counts as one read request, so a single call for `N` keys counts as `N` requests against the ordered data store [read limit](error-codes-and-limits.md#access-limits).
+
+The following example reads three player scores in a single request, then loops through the keys and outputs each score that exists.
+
+```lua
+local DataStoreService = game:GetService("DataStoreService")
+
+local playerScores = DataStoreService:GetOrderedDataStore("PlayerScores")
+local keys = {"Player_123", "Player_456", "Player_789"}
+
+local success, results = pcall(function()
+	return playerScores:BatchGetAsync(keys)
+end)
+if success then
+	for _, key in keys do
+		local entry = results[key]
+		if entry then
+			print(key .. " : " .. tostring(entry.value))
+		else
+			print(key .. " has no saved entry")
+		end
+	end
+end
+```

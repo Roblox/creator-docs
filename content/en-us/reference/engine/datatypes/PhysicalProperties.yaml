@@ -41,102 +41,139 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: PhysicalProperties.new
-    summary: Returns a `Datatype.PhysicalProperties` with the default properties for the given material.
-    description: Returns a `Datatype.PhysicalProperties` container, with the density, friction, and elasticity specified for this material.
+    summary: |
+      Returns a `Datatype.PhysicalProperties` with the default properties for
+      the given material.
+    description: |
+      Returns a `Datatype.PhysicalProperties` container, with the density,
+      friction, and elasticity specified for this material.
     parameters:
       - name: material
         type: Material
         default:
-        summary: ''
+        summary: |
+          The `Enum.Material` for which to retrieve default physical properties.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: PhysicalProperties.new
-    summary: |-
-      Returns a `Datatype.PhysicalProperties` with the specified density, friction, and
-      elasticity.
-    description: |-
-      Returns a `Datatype.PhysicalProperties` container, with the specified density,
+    summary: |
+      Returns a `Datatype.PhysicalProperties` with the specified density,
       friction, and elasticity.
+    description: |
+      Returns a `Datatype.PhysicalProperties` container, with the specified
+      density, friction, and elasticity.
     parameters:
       - name: density
         type: number
         default:
-        summary: ''
+        summary: |
+          The mass per unit volume of the part, clamped to the range [0.0001,
+          100].
       - name: friction
         type: number
         default:
-        summary: ''
+        summary: |
+          The coefficient of friction opposing sliding motion, clamped to [0,
+          2].
       - name: elasticity
         type: number
         default:
-        summary: ''
+        summary: |
+          The coefficient of restitution (bounciness) applied on collision,
+          clamped to [0, 1].
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: PhysicalProperties.new
-    summary: |-
-      Creates a `Datatype.PhysicalProperties` container with the specified density,
-      friction, elasticity, weight of friction, and weight of elasticity.
-    description: |-
-      Creates a `Datatype.PhysicalProperties` container with the specified density,
-      friction, elasticity, weight of friction, and weight of elasticity.
+    summary: |
+      Creates a `Datatype.PhysicalProperties` container with the specified
+      density, friction, elasticity, weight of friction, and weight of
+      elasticity.
+    description: |
+      Creates a `Datatype.PhysicalProperties` container with the specified
+      density, friction, elasticity, weight of friction, and weight of
+      elasticity.
     parameters:
       - name: density
         type: number
         default:
-        summary: ''
+        summary: |
+          The mass per unit volume of the part, clamped to the range [0.0001,
+          100].
       - name: friction
         type: number
         default:
-        summary: ''
+        summary: |
+          The coefficient of friction opposing sliding motion, clamped to [0,
+          2].
       - name: elasticity
         type: number
         default:
-        summary: ''
+        summary: |
+          The coefficient of restitution (bounciness) applied on collision,
+          clamped to [0, 1].
       - name: frictionWeight
         type: number
         default:
-        summary: ''
+        summary: |
+          The weight of this part's friction in the pairwise weighted average,
+          clamped to [0, 100].
       - name: elasticityWeight
         type: number
         default:
-        summary: ''
+        summary: |
+          The weight of this part's elasticity in the pairwise weighted average,
+          clamped to [0, 100].
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: PhysicalProperties.new
-    summary: |-
-      Creates a `Datatype.PhysicalProperties` container with the specified density,
-      friction, elasticity, weight of friction, weight of elasticity, and acoustic absorption.
-    description: |-
-      Creates a `Datatype.PhysicalProperties` container with the specified density,
-      friction, elasticity, weight of friction, weight of elasticity, and acoustic absorption.
+    summary: |
+      Creates a `Datatype.PhysicalProperties` container with the specified
+      density, friction, elasticity, weight of friction, weight of elasticity,
+      and acoustic absorption.
+    description: |
+      Creates a `Datatype.PhysicalProperties` container with the specified
+      density, friction, elasticity, weight of friction, weight of elasticity,
+      and acoustic absorption.
     parameters:
       - name: density
         type: number
         default:
-        summary: ''
+        summary: |
+          The mass per unit volume of the part, clamped to the range [0.0001,
+          100].
       - name: friction
         type: number
         default:
-        summary: ''
+        summary: |
+          The coefficient of friction opposing sliding motion, clamped to [0,
+          2].
       - name: elasticity
         type: number
         default:
-        summary: ''
+        summary: |
+          The coefficient of restitution (bounciness) applied on collision,
+          clamped to [0, 1].
       - name: frictionWeight
         type: number
         default:
-        summary: ''
+        summary: |
+          The weight of this part's friction in the pairwise weighted average,
+          clamped to [0, 100].
       - name: elasticityWeight
         type: number
         default:
-        summary: ''
+        summary: |
+          The weight of this part's elasticity in the pairwise weighted average,
+          clamped to [0, 100].
       - name: acousticAbsorption
         type: number
         default:
-        summary: ''
+        summary: |
+          How much sound energy the surface absorbs during acoustic simulation,
+          clamped to [0, 1].
     code_samples: []
     tags: []
     deprecation_message: ''

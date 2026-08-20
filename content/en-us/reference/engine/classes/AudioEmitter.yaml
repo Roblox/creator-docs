@@ -104,6 +104,39 @@ properties:
       can_save: true
     capabilities:
       - Audio
+  - name: AudioEmitter.DiffractionEnabled
+    summary: |
+      Controls whether sound from this `Class.AudioEmitter` bends around corners
+      when acoustic simulation is active.
+    description: |
+      Controls whether diffraction (sound bending around corners) is applied to
+      this `Class.AudioEmitter` when heard by an `Class.AudioListener`. When set
+      to `Enum.SimulationMode.Default`, the effective value is inherited from
+      `Class.SoundService`. When set to `Enum.SimulationMode.Enabled` or
+      `Enum.SimulationMode.Disabled`, it overrides the service-level setting for
+      this emitter.
+
+      Diffraction repositions the perceived audio source to the edge of an
+      obstacle. Both the `Class.AudioEmitter` and `Class.AudioListener` must
+      have diffraction effectively enabled for the effect to occur on their
+      audio path. Diffraction also requires occlusion to be enabled. If
+      occlusion is off, sound passes straight through obstacles, so it has no
+      reason to bend around corners and this property has no effect. Defaults to
+      `Enum.SimulationMode.Default`.
+    code_samples: []
+    type: SimulationMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Simulation
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
   - name: AudioEmitter.DistanceAttenuation
     summary: |
       Represents how the perceived volume of the emitted sound changes as the
@@ -127,6 +160,106 @@ properties:
       write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Emission
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+  - name: AudioEmitter.DistanceAttenuationBounds
+    summary: |
+      The minimum and maximum distance range used by the selected
+      `Class.AudioEmitter.DistanceAttenuationMode|DistanceAttenuationMode`
+      preset.
+    description: |
+      Specifies the `Datatype.NumberRange` that defines the minimum and maximum
+      distances for the distance attenuation preset selected by
+      `Class.AudioEmitter.DistanceAttenuationMode|DistanceAttenuationMode`. The
+      emitter is at full volume when a `Class.AudioListener` is within the
+      minimum distance and fully attenuated at or beyond the maximum distance.
+      The attenuation curve between these bounds is determined by the chosen
+      `Enum.DistanceAttenuationMode`.
+
+      Defaults to a `Datatype.NumberRange` of `[4, 10000]`. This property is
+      only used when
+      `Class.AudioEmitter.DistanceAttenuationMode|DistanceAttenuationMode` is
+      set to a preset other than `Enum.DistanceAttenuationMode.Custom`.
+    code_samples: []
+    type: NumberRange
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emission
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+  - name: AudioEmitter.DistanceAttenuationMode
+    summary: |
+      Determines how the volume of this `Class.AudioEmitter` attenuates over
+      distance.
+    description: |
+      Determines which formula is used to roll off the perceived volume of this
+      `Class.AudioEmitter` as the distance from a `Class.AudioListener`
+      increases, via `Enum.DistanceAttenuationMode`.
+
+      When set to any value other than `Enum.DistanceAttenuationMode.Custom`,
+      `Class.AudioEmitter.DistanceAttenuationBounds|DistanceAttenuationBounds`
+      defines the minimum and maximum distances for the rolloff, and the custom
+      curve set by
+      `Class.AudioEmitter:SetDistanceAttenuation()|SetDistanceAttenuation()` is
+      ignored. Defaults to `Enum.DistanceAttenuationMode.Custom`.
+    code_samples: []
+    type: DistanceAttenuationMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emission
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+  - name: AudioEmitter.OcclusionEnabled
+    summary: |
+      Controls whether sound from this `Class.AudioEmitter` is muffled when
+      obstructed by geometry.
+    description: |
+      Controls whether occlusion (sound muffled through walls and other
+      geometry) is applied to this `Class.AudioEmitter` when heard by an
+      `Class.AudioListener`. When set to `Enum.SimulationMode.Default`, the
+      effective value is inherited from `Class.SoundService`. When set to
+      `Enum.SimulationMode.Enabled` or `Enum.SimulationMode.Disabled`, it
+      overrides the service-level setting for this emitter.
+
+      When active, a low-pass filter is applied based on the density of
+      materials and thickness of obstacles between the emitter and listener.
+      Both the `Class.AudioEmitter` and `Class.AudioListener` must have
+      occlusion effectively enabled for the effect to occur on their audio path.
+      Disabling occlusion also disables
+      `Class.AudioEmitter.DiffractionEnabled|DiffractionEnabled`, since
+      diffraction relies on occlusion data.
+
+      Only relevant when
+      `Class.AudioEmitter.AcousticSimulationEnabled|AcousticSimulationEnabled`
+      is `true`.
+
+      Defaults to `Enum.SimulationMode.Default`.
+    code_samples: []
+    type: SimulationMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Simulation
     serialization:
       can_load: true
       can_save: true
@@ -178,6 +311,42 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Emission
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+  - name: AudioEmitter.ReverbEnabled
+    summary: |
+      Controls whether sound from this `Class.AudioEmitter` receives
+      environmental reverb when acoustic simulation is active.
+    description: |
+      Controls whether environmental reverberation (sound echoing off walls and
+      surfaces) is applied to this `Class.AudioEmitter` when heard by an
+      `Class.AudioListener`. When set to `Enum.SimulationMode.Default`, the
+      effective value is inherited from `Class.SoundService`. When set to
+      `Enum.SimulationMode.Enabled` or `Enum.SimulationMode.Disabled`, it
+      overrides the service-level setting for this emitter.
+
+      When active, a reverb effect is computed from the size and material
+      properties of the surrounding environment. Both the `Class.AudioEmitter`
+      and `Class.AudioListener` must have reverb effectively enabled for the
+      effect to occur on their audio path.
+
+      Only relevant when
+      `Class.AudioEmitter.AcousticSimulationEnabled|AcousticSimulationEnabled`
+      is `true`.
+
+      Defaults to `Enum.SimulationMode.Default`.
+    code_samples: []
+    type: SimulationMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Simulation
     serialization:
       can_load: true
       can_save: true
@@ -248,10 +417,13 @@ methods:
       - name: listener
         type: AudioListener
         default:
-        summary: ''
+        summary: |
+          The `Class.AudioListener` to calculate audibility for.
     returns:
       - type: float
-        summary: ''
+        summary: |
+          A number between `0` and `1` representing the combined volume after
+          distance and angle attenuation.
     tags: []
     deprecation_message: ''
     security: None
@@ -291,11 +463,20 @@ methods:
       or equal to 0, while values are numbers between 0 and 1 (inclusive)
       describing how volume attenuates over distance. This method returns an
       empty table if the default distance attenuation curve is being used.
+
+      Note that this method always returns the custom curve set by
+      `Class.AudioEmitter:SetDistanceAttenuation()|SetDistanceAttenuation()`,
+      regardless of the current
+      `Class.AudioEmitter.DistanceAttenuationMode|DistanceAttenuationMode`
+      setting. When a preset mode is active, the custom curve is not used for
+      attenuation and this return value may not reflect the active rolloff
+      behavior.
     code_samples: []
     parameters: []
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A table mapping distance to volume, as described above.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -336,7 +517,8 @@ methods:
     parameters: []
     returns:
       - type: List<AudioListener>
-        summary: ''
+        summary: |
+          An array of `Class.AudioListener|AudioListeners`.
     tags: []
     deprecation_message: ''
     security: None
@@ -372,7 +554,10 @@ methods:
       Sets a volume-over-angle curve that affects how loudly a
       `Class.AudioListener` will hear the `Class.AudioEmitter`, based on the
       angle between them and the `Datatype.CFrame.LookVector|LookVector`
-      associated with the `Class.AudioEmitter`.
+      associated with the `Class.AudioEmitter`. Use this to model directional
+      audio sources — for example, making an avatar's voice project more
+      strongly in front of them, or having a monster's growl serve as a gameplay
+      cue that it is facing the player.
 
       The curve is represented by a table mapping angle keys to volume values.
       Keys are expected to be unique numbers between `0` and `180` (inclusive),
@@ -399,7 +584,9 @@ methods:
       - name: curve
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A table mapping angle to volume. Keys are numbers between `0` and
+          `180`, values are numbers between `0` and `1`.
     returns:
       - type: ()
         summary: ''
@@ -417,7 +604,9 @@ methods:
     description: |
       Sets a volume-over-distance curve that affects how loudly a
       `Class.AudioListener` will hear the `Class.AudioEmitter`, based on the
-      distance between them.
+      distance between them. This curve is only used for attenuation when
+      `Class.AudioEmitter.DistanceAttenuationMode|DistanceAttenuationMode` is
+      set to `Enum.DistanceAttenuationMode.Custom`.
 
       The curve is represented by a table mapping distance keys to volume
       values. Keys are expected to be unique numbers greater than or equal to 0,
@@ -445,7 +634,9 @@ methods:
       - name: curve
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A table mapping distance to volume. Keys are numbers greater than or
+          equal to `0`, values are numbers between `0` and `1`.
     returns:
       - type: ()
         summary: ''

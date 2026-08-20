@@ -156,127 +156,7 @@ To play 2D text-to-speech audio:
    1. A **Wire** object to connect the stream from the audio speech generator to the speaker.
 1. In the **Properties** window of the **AudioTextToSpeech** object:
    1. Set **Text** to anything you want the voice to say. There is a limit of 300 characters per request.
-   1. Set **VoiceId** to a number between `1` and `10`, depending on which artificial voice you want to use in the following table.
-
-      <BaseAccordion>
-         <AccordionSummary>
-
-         <Typography variant="label1">List of artificial voices</Typography>
-         </AccordionSummary>
-         <AccordionDetails>
-
-         <table>
-         <thead>
-         <tr>
-         <th>VoiceID</th>
-         <th>Voice Description</th>
-         <th>Audio Example</th>
-         </tr>
-         </thead>
-         <tbody>
-         <tr>
-         <td>1</td>
-         <td>British male</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/British-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>2</td>
-         <td>British female</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/British-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>3</td>
-         <td>United States male #1</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/US-Male-Voice-1.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>4</td>
-         <td>United States female #1</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/US-Female-Voice-1.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>5</td>
-         <td>United States male #2</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/US-Male-Voice-2.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>6</td>
-         <td>United States female #2</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/US-Female-Voice-2.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>7</td>
-         <td>Australian male</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/Australian-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>8</td>
-         <td>Australian female</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/Australian-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>9</td>
-         <td>Retro voice #1</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/Retro-Voice-1.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>10</td>
-         <td>Retro voice #2</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/Retro-Voice-2.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>11</td>
-         <td>Host voice</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/Narrator-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>101</td>
-         <td>Spanish male</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/Spanish-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>102</td>
-         <td>Spanish female</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/Spanish-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>201</td>
-         <td>German male</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/German-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>202</td>
-         <td>German female</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/German-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>301</td>
-         <td>Italian male</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/Italian-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>302</td>
-         <td>Italian female</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/Italian-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>401</td>
-         <td>French male</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/French-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>402</td>
-         <td>French female</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/French-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         </tbody>
-         </table>
-
-         </AccordionDetails>
-      </BaseAccordion>
-
-      <br></br>
-
+   1. Set **VoiceId** to the number of the artificial voice you want to use. For a full list of available voices, see the [list of artificial voices](#list-of-artificial-voices).
    1. Set **Volume** to the unit of amplitude you want to play your audio.
 1. In the **Properties** window of the **Wire** object:
    1. Set **SourceInstance** to the **AudioTextToSpeech** to specify that you want to play the audio within this specific audio speech generator.
@@ -316,82 +196,7 @@ To play 3D text-to-speech audio:
    1. A **Wire** object to connect the stream from the audio speech generator to the audio emitter.
 1. In the **Properties** window of the **AudioTextToSpeech** object:
    1. Set **Text** to anything you want the voice to say. There is a limit of 300 characters per request.
-   1. Set **VoiceId** to a number between `1` and `10`, depending on which artificial voice you want to use in the following table.
-
-      <BaseAccordion>
-         <AccordionSummary>
-
-         <Typography variant="label1">List of artificial voices</Typography>
-         </AccordionSummary>
-         <AccordionDetails>
-
-         <table>
-         <thead>
-         <tr>
-         <th>VoiceID</th>
-         <th>Voice Description</th>
-         <th>Audio Example</th>
-         </tr>
-         </thead>
-         <tbody>
-         <tr>
-         <td>1</td>
-         <td>British male</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/British-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>2</td>
-         <td>British female</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/British-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>3</td>
-         <td>United States male #1</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/US-Male-Voice-1.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>4</td>
-         <td>United States female #1</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/US-Female-Voice-1.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>5</td>
-         <td>United States male #2</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/US-Male-Voice-2.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>6</td>
-         <td>United States female #2</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/US-Female-Voice-2.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>7</td>
-         <td>Australian male</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/Australian-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>8</td>
-         <td>Australian female</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/Australian-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>9</td>
-         <td>Retro voice #1</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/Retro-Voice-1.wav" type="audio/mpeg"></source></audio></td>
-         </tr>
-         <tr>
-         <td>10</td>
-         <td>Retro voice #2</td>
-         <td><audio controls><source src="../assets/audio/audio-objects/Retro-Voice-2.wav" type="audio/mpeg"></source></audio></td>
-         </tr>  
-         </tbody>
-         </table>
-
-         </AccordionDetails>
-      </BaseAccordion>
-
-      <br></br>
-
+   1. Set **VoiceId** to the number of the artificial voice you want to use. For a full list of available voices, see the [list of artificial voices](#list-of-artificial-voices).
    1. Set **Volume** to the unit of amplitude you want to play your audio.
 1. In the **Properties** window of the of the **AudioEmitter**, set **DistanceAttenuation** to a volume-over-distance curve that determines how loudly the listener hears the emitter according to the distance between them.
 
@@ -407,6 +212,175 @@ To play 3D text-to-speech audio:
 </Tabs>
 
 From here, you can trigger your TTS audio with scripts. For code sample references for TTS audio, including how to configure context-aware TTS that adapts in relation to the player, the state of their environment, or gameplay status, see the [Add text-to-speech](../tutorials/use-case-tutorials/audio/add-text-to-speech.md) tutorial.
+
+#### List of artificial voices
+
+<table>
+   <thead>
+   <tr>
+      <th>VoiceID</th>
+      <th>Voice Description</th>
+      <th>Audio Example</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+      <td>1</td>
+      <td>British male</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/British-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>2</td>
+      <td>British female</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/British-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>3</td>
+      <td>United States male #1</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/US-Male-Voice-1.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>4</td>
+      <td>United States female #1</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/US-Female-Voice-1.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>5</td>
+      <td>United States male #2</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/US-Male-Voice-2.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>6</td>
+      <td>United States female #2</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/US-Female-Voice-2.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>7</td>
+      <td>Australian male</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Australian-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>8</td>
+      <td>Australian female</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Australian-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>9</td>
+      <td>Retro voice #1</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Retro-Voice-1.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>10</td>
+      <td>Retro voice #2</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Retro-Voice-2.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>11</td>
+      <td>Host voice</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Narrator-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>101</td>
+      <td>Spanish male</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Spanish-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>102</td>
+      <td>Spanish female</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Spanish-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>201</td>
+      <td>German male</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/German-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>202</td>
+      <td>German female</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/German-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>301</td>
+      <td>Italian male</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Italian-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>302</td>
+      <td>Italian female</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Italian-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>401</td>
+      <td>French male</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/French-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>402</td>
+      <td>French female</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/French-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>501</td>
+      <td>Chinese (Mandarin) male</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Chinese-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>502</td>
+      <td>Chinese (Mandarin) female</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Chinese-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>601</td>
+      <td>Hindi male</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Hindi-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>602</td>
+      <td>Hindi female</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Hindi-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>701</td>
+      <td>Japanese male</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Japanese-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>702</td>
+      <td>Japanese female</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Japanese-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>801</td>
+      <td>Arabic male</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Arabic-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>802</td>
+      <td>Arabic female</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Arabic-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>901</td>
+      <td>Korean male</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Korean-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>902</td>
+      <td>Korean female</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Korean-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>1001</td>
+      <td>Portuguese male</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Portuguese-Male-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+   <tr>
+      <td>1002</td>
+      <td>Portuguese female</td>
+      <td><audio controls><source src="../assets/audio/audio-objects/Portuguese-Female-Voice.wav" type="audio/mpeg"></source></audio></td>
+   </tr>
+</tbody>
+</table>
 
 ### Speech-to-text
 
@@ -450,7 +424,7 @@ By default, enabling the microphone also enables spatial voice chat in your expe
 
 After setting up STT in your experience, you can trigger it with scripts. For code sample references, see the [Add speech-to-text](../tutorials/use-case-tutorials/audio/speech-to-text.md) tutorial.
 
-<h5 style={{marginTop: '36px'}}>Supported languages</h5>
+#### Supported languages
 
 No configuration is required to enable supported languages. Roblox automatically detects the spoken language from the audio and transcribes it.
 
@@ -474,7 +448,7 @@ STT supports the following languages:
 - Thai
 - Vietnamese
 
-<h5 style={{marginTop: '36px'}}>Filter for similar words</h5>
+#### Filter for similar words
 
 When you implement STT in your experience, you might want to improve matching accuracy by filtering for words that sound similar to the words you actually want the player to say. To do this, you can compare the words recognized by `AudioSpeechToText` with known word lists:
 

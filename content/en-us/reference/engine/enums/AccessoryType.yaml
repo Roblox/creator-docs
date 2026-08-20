@@ -129,12 +129,14 @@ items:
     tags: []
     deprecation_message: ''
   - name: Eyebrow
-    summary: ''
+    summary: |
+      A layered accessory for avatar eyebrows.
     value: 18
     tags: []
     deprecation_message: ''
   - name: Eyelash
-    summary: ''
+    summary: |
+      A layered accessory for avatar eyelashes.
     value: 19
     tags: []
     deprecation_message: ''

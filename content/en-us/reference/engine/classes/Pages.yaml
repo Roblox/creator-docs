@@ -83,7 +83,10 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of entries on the current page, where the keys in each entry
+          are determined by the service that originally provided this Pages
+          object.
     tags: []
     deprecation_message: ''
     security: None

@@ -4,24 +4,38 @@
 
 name: InputSink
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how a `Class.GuiObject` or `Class.GuiButton` absorbs pointer and
+  activation input events relative to GUI elements beneath it.
+description: |
+  Controls how a `Class.GuiObject` or `Class.GuiButton` absorbs pointer and
+  activation input events relative to GUI elements layered beneath it. Use this
+  enum with the `Class.GuiObject.InputSink` property, which defaults to
+  `Enum.InputSink.None` on `Class.GuiObject` and `Enum.InputSink.Activate` on
+  `Class.GuiButton`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      The element does not sink any input events; pointer and activation events
+      pass through to elements beneath it.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Activate
-    summary: ''
+    summary: |
+      The element sinks activation input (button presses and taps) but allows
+      hover, `MouseEnter`, and `MouseLeave` events to pass through to elements
+      beneath it.
     value: 1
     tags: []
     deprecation_message: ''
   - name: All
-    summary: ''
+    summary: |
+      The element sinks all input events, preventing them from reaching any GUI
+      element beneath it.
     value: 100
     tags: []
     deprecation_message: ''

@@ -151,7 +151,7 @@ To implement the rewarded video ad on the server-side:
 1. Create a new `Class.Script` under **ServerScriptService**.
 2. Use the `Class.AdService.CreateAdRewardFromDevProductId|CreateAdRewardFromDevProductId` method to pass the developer product ID of the reward and create an `AdReward` object.
 3. Use the `Class.AdService.ShowRewardedVideoAdAsync|ShowRewardedVideoAdAsync` method to play the video ad to the user.
-   - (Optional) Add a `placementId` to track individual [video ad placements](#placements) inside your game.
+   - <Chip label="OPTIONAL" size="small" variant="outlined" /> Add a `placementId` to track individual [video ad placements](#placements) inside your game.
 4. Use the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` method to grant the user their reward if they have watched the entire video ad.
 
 ```lua title="Code example for rewarded video ad (Server)"

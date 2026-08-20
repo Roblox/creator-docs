@@ -629,7 +629,12 @@ methods:
       - type: ()
         summary: ''
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.TeleportService:TeleportAsync()|TeleportAsync()` for
+      server-side teleports. For client-side teleports, use a
+      `Class.RemoteEvent` to signal the server to call `TeleportAsync()`. For a
+      migration guide, see
+      [Teleport between places](../../../projects/teleport.md#migrate-to-secure-teleports).
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -646,6 +651,16 @@ methods:
       - Teleport players to a different place.
       - Teleport players to a specific server.
       - Teleport players to a reserved server.
+
+      #### Server-Only
+
+      This method can only be called from the server. If you need to initiate a
+      teleport from the client, use a `Class.RemoteEvent` to signal the server,
+      then call `Class.TeleportService:TeleportAsync()` from a server
+      `Class.Script`. Client-side teleports using
+      `Class.TeleportService:Teleport()` is not recommended for new work. See
+      [Teleport between places](../../../projects/teleport.md) for more
+      information.
 
       #### Group Teleport Limitations
 
@@ -779,7 +794,11 @@ methods:
           `Class.Player|Players` were teleported to.
     tags:
       - Yields
-    deprecation_message: ''
+      - Deprecated
+    deprecation_message: |
+      Use `Class.TeleportService:TeleportAsync()|TeleportAsync()` instead. For a
+      migration guide, see
+      [Teleport between places](../../../projects/teleport.md#migrate-to-secure-teleports).
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -834,8 +853,12 @@ methods:
     returns:
       - type: ()
         summary: ''
-    tags: []
-    deprecation_message: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      Use `Class.TeleportService:TeleportAsync()|TeleportAsync()` instead. For a
+      migration guide, see
+      [Teleport between places](../../../projects/teleport.md#migrate-to-secure-teleports).
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -891,8 +914,12 @@ methods:
     returns:
       - type: ()
         summary: ''
-    tags: []
-    deprecation_message: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      Use `Class.TeleportService:TeleportAsync()|TeleportAsync()` instead. For a
+      migration guide, see
+      [Teleport between places](../../../projects/teleport.md#migrate-to-secure-teleports).
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -943,8 +970,12 @@ methods:
     returns:
       - type: ()
         summary: ''
-    tags: []
-    deprecation_message: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      Use `Class.TeleportService:TeleportAsync()|TeleportAsync()` instead. For a
+      migration guide, see
+      [Teleport between places](../../../projects/teleport.md#migrate-to-secure-teleports).
     security: None
     thread_safety: Unsafe
     capabilities:

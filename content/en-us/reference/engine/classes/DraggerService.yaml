@@ -5,8 +5,16 @@
 name: DraggerService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A service that centralizes the global dragger settings that Studio's dragging
+  tools read so they move, snap, and highlight objects consistently.
+description: |
+  `DraggerService` is a central hub for dragger-related settings that Studio's
+  dragging tools (and other dragger-like editing UX) read when deciding how to
+  move, snap, and highlight objects. Because the Move, Scale, and Rotate tools
+  all consult the same service, changing a setting here keeps their snapping,
+  collision, joint, and hover behavior in sync. Each property reflects the
+  corresponding Studio editing preference or global editing state.
 code_samples: []
 inherits:
   - Instance
@@ -18,8 +26,13 @@ tags:
 deprecation_message: ''
 properties:
   - name: DraggerService.AlignDraggedObjects
-    summary: ''
-    description: ''
+    summary: |
+      Whether a dragged object is re-aligned to the surface it is dropped onto.
+    description: |
+      When `true`, a dragged object is rotated to align with the surface it is
+      dropped on instead of keeping its original orientation. This reflects
+      Studio's "Align Dragged Objects" editing preference and is read by the
+      dragging tools.
     code_samples: []
     type: boolean
     tags:
@@ -35,8 +48,13 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.AngleSnapEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Whether rotation drags snap to multiples of
+      `Class.DraggerService.AngleSnapIncrement`.
+    description: |
+      When `true`, rotating an object with a dragger snaps the rotation to
+      multiples of `Class.DraggerService.AngleSnapIncrement`. When `false`,
+      rotation is continuous and the increment has no effect.
     code_samples: []
     type: boolean
     tags:
@@ -52,8 +70,13 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.AngleSnapIncrement
-    summary: ''
-    description: ''
+    summary: |
+      The angle, in degrees, that rotation drags snap to.
+    description: |
+      The rotation snapping step, in degrees, applied while
+      `Class.DraggerService.AngleSnapEnabled` is `true`; it has no effect when
+      angle snapping is disabled. The value is clamped to a small positive
+      minimum, so it can never be set to `0` or a negative number.
     code_samples: []
     type: float
     tags:
@@ -69,8 +92,12 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.AnimateHover
-    summary: ''
-    description: ''
+    summary: |
+      Whether the hover highlight pulses instead of staying static.
+    description: |
+      When `true`, the highlight drawn over the object under the cursor animates
+      (pulses) at `Class.DraggerService.HoverAnimateFrequency`. It only has a
+      visible effect when `Class.DraggerService.ShowHover` is `true`.
     code_samples: []
     type: boolean
     tags:
@@ -86,8 +113,12 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.CollisionsEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Whether draggers prevent a moved object from overlapping other geometry.
+    description: |
+      When `true`, dragging performs collision checking so that a moved object
+      stops against other parts instead of passing through them. When `false`,
+      objects can be dragged freely through existing geometry.
     code_samples: []
     type: boolean
     tags:
@@ -103,8 +134,14 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.DraggerCoordinateSpace
-    summary: ''
-    description: ''
+    summary: |
+      Whether drag transforms are applied in the object's local space or in
+      world space.
+    description: |
+      Controls the coordinate space draggers operate in:
+      `Enum.DraggerCoordinateSpace.Object` moves and rotates relative to the
+      object's own orientation, while `Enum.DraggerCoordinateSpace.World` uses
+      the global axes. Defaults to `Enum.DraggerCoordinateSpace.Object`.
     code_samples: []
     type: DraggerCoordinateSpace
     tags:
@@ -120,8 +157,14 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.DraggerMovementMode
-    summary: ''
-    description: ''
+    summary: |
+      Whether dragging moves objects geometrically or by respecting physical
+      constraints.
+    description: |
+      Selects how draggers compute movement:
+      `Enum.DraggerMovementMode.Geometric` applies transforms directly, while
+      `Enum.DraggerMovementMode.Physical` respects physical constraints while
+      dragging. Defaults to `Enum.DraggerMovementMode.Geometric`.
     code_samples: []
     type: DraggerMovementMode
     tags:
@@ -137,8 +180,12 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.GeometrySnapColor
-    summary: ''
-    description: ''
+    summary: |
+      The color of the on-screen indicators drawn when a drag snaps to geometry.
+    description: |
+      The `Datatype.Color3` used to draw the snapping indicators (such as
+      pivot-to-geometry snap points) shown while dragging. It reflects the
+      corresponding Studio color preference.
     code_samples: []
     type: Color3
     tags:
@@ -154,8 +201,13 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.HoverAnimateFrequency
-    summary: ''
-    description: ''
+    summary: |
+      The frequency, in hertz, at which the hover highlight animates.
+    description: |
+      How fast the hover highlight pulses, in cycles per second, when
+      `Class.DraggerService.AnimateHover` is `true`. The value corresponds to
+      Studio's hover-animation speed preference, which ranges from `0.5` (very
+      slow) to `10` (very fast).
     code_samples: []
     type: float
     tags:
@@ -171,8 +223,13 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.HoverThickness
-    summary: ''
-    description: ''
+    summary: |
+      The thickness of the highlight outline drawn around the object under the
+      cursor.
+    description: |
+      The thickness of the outline drawn around the object beneath the cursor.
+      It is only visible when `Class.DraggerService.ShowHover` is `true`, and
+      reflects Studio's hover-outline thickness preference.
     code_samples: []
     type: float
     tags:
@@ -188,8 +245,13 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.JointsEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Whether draggers create surface joints between touching parts when a drag
+      ends.
+    description: |
+      When `true`, parts that come to rest against other surfaces during a drag
+      are joined to them (for example, surface welds) when the drag finishes.
+      When `false`, dragging does not create joints.
     code_samples: []
     type: boolean
     tags:
@@ -205,8 +267,13 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.LinearSnapEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Whether positional drags snap to a grid of
+      `Class.DraggerService.LinearSnapIncrement`.
+    description: |
+      When `true`, moving an object with a dragger snaps its position to a grid
+      whose spacing is `Class.DraggerService.LinearSnapIncrement`. When `false`,
+      movement is continuous and the increment has no effect.
     code_samples: []
     type: boolean
     tags:
@@ -222,8 +289,13 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.LinearSnapIncrement
-    summary: ''
-    description: ''
+    summary: |
+      The grid size, in studs, that positional drags snap to.
+    description: |
+      The spacing, in studs, of the movement grid applied while
+      `Class.DraggerService.LinearSnapEnabled` is `true`; it has no effect when
+      linear snapping is disabled. The value is clamped to a small positive
+      minimum, so it can never be set to `0` or a negative number.
     code_samples: []
     type: float
     tags:
@@ -239,8 +311,12 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.PartSnapEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Whether draggers snap to alignment points on nearby parts.
+    description: |
+      When `true`, dragging snaps the moved object to salient points (such as
+      edges and corners) on nearby parts, in addition to any grid snapping. When
+      `false`, part-to-part snapping is off.
     code_samples: []
     type: boolean
     tags:
@@ -256,8 +332,13 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.PivotSnapToGeometry
-    summary: ''
-    description: ''
+    summary: |
+      Whether an object's pivot snaps to points on nearby geometry while it is
+      being edited.
+    description: |
+      When `true`, dragging an object's pivot snaps it to points on surrounding
+      geometry (for example vertices, edges, and face centers). When `false`,
+      the pivot moves freely.
     code_samples: []
     type: boolean
     tags:
@@ -273,8 +354,14 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.ShowHover
-    summary: ''
-    description: ''
+    summary: |
+      Whether a highlight is drawn over the object currently under the cursor.
+    description: |
+      When `true`, draggers draw a highlight over the object beneath the cursor
+      to indicate what a drag would affect. When `false`, no hover highlight is
+      shown and `Class.DraggerService.AnimateHover`,
+      `Class.DraggerService.HoverThickness`, and
+      `Class.DraggerService.HoverAnimateFrequency` have no visible effect.
     code_samples: []
     type: boolean
     tags:
@@ -290,8 +377,12 @@ properties:
       can_save: false
     capabilities: []
   - name: DraggerService.ShowPivotIndicator
-    summary: ''
-    description: ''
+    summary: |
+      Whether to show the pivot indicator for a selected object as it's being
+      dragged.
+    description: |
+      When `true`, the pivot indicator (the marker showing an object's pivot
+      point) is shown while dragging. Defaults to `false`.
     code_samples: []
     type: boolean
     tags:
@@ -300,6 +391,30 @@ properties:
     security:
       read: None
       write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+  - name: DraggerService.UseBoundingBoxes
+    summary: |
+      Whether draggers use axis-aligned bounding boxes rather than precise
+      geometry for snapping calculations.
+    description: |
+      When `true`, the dragging tools use the axis-aligned bounding box of an
+      object for snapping instead of its precise geometric shape. This can
+      simplify placement when objects have complex geometry. The setting
+      corresponds to Studio's "Use Bounding Boxes" option in the
+      dragger-settings ribbon dropdown. Defaults to `false`.
+    code_samples: []
+    type: boolean
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Data
     serialization:

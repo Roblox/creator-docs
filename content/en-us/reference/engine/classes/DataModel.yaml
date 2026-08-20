@@ -568,7 +568,8 @@ methods:
 
       The experience server waits 30 seconds for all bound functions to stop
       running before it shuts down. After 30 seconds, the server shuts down even
-      if functions are still running.
+      if functions are still running. Teleports are disabled during moderation
+      shutdowns.
 
       To verify that the current session is not in Roblox Studio, use
       `Class.RunService:IsStudio()`. This prevents bound functions from

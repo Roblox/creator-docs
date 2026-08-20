@@ -7,7 +7,7 @@ You can use `Class.HttpService` to send generic HTTP requests to third-party web
 
 ## Enable HTTP requests
 
-The `Class.HttpService:GetAsync()`, `Class.HttpService:PostAsync()`, and `Class.HttpService:RequestAsync()` methods aren't enabled by default. To send requests, you must **Allow HTTP Requests** under [Experience Settings](../studio/experience-settings.md) for your game.
+The `Class.HttpService:GetAsync()`, `Class.HttpService:PostAsync()`, and `Class.HttpService:RequestAsync()` methods aren't enabled by default. To send requests, you must **Allow HTTP Requests** under **File** ⟩ **Experience Settings** ⟩ **Security** in Studio.
 
 ## Use in plugins
 

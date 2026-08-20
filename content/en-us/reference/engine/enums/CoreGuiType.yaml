@@ -71,7 +71,9 @@ items:
     tags: []
     deprecation_message: ''
   - name: ExperienceShop
-    summary: ''
+    summary: |
+      The in-experience shop overlay that lets players browse and purchase items
+      without leaving the experience.
     value: 9
     tags: []
     deprecation_message: ''

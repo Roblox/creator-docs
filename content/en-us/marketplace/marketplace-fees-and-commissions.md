@@ -10,9 +10,9 @@ You receive a commission every time users purchase your item. If users purchase 
 
 ## Upload fees
 
-To upload either a 2D or 3D item to the Marketplace, you must:
+To upload an avatar asset to the Marketplace, you must:
 
-1. Verify your account through [government ID](../production/publishing/account-verification.md#verify-through-government-id) or linked [parental account](https://about.roblox.com/parental-controls).
+1. Verify your account through your own [government ID](../production/publishing/account-verification.md#verify-through-government-id) or a linked [parental account](https://about.roblox.com/parental-controls) with government ID verification.
 2. Pay an upload fee of **80 Robux** per submission.
 
 In general, upload fees are not refunded if an item is rejected through moderation. If your asset clears the uploading process, your asset is ready to publish to the Marketplace.
@@ -255,7 +255,7 @@ See the following guidelines:
 - Once per day, Roblox processes and reimburses rebates from your sales and adds them to your transaction report.
   - If you see the rebate on your transaction report, the credit has been applied to your account.
   - The 30 day escrow does not apply for rebates.
-- You can access this data on the Creator Dashboard's [My Transactions](https://create.roblox.com/dashboard/transactions) report, by filtering **Type of Transaction** to **Publishing Advance Rebates**.
+- You can access this data on the Creator Dashboard's [My Transactions](https://www.roblox.com/transactions) report, by filtering **Type of Transaction** to **Publishing Advance Rebates**.
 
   <img src="../assets/publishing/marketplace/Transaction-Report.png" alt="Transaction report filtered by Publishing Advance Rebates." width="100%" />
 
@@ -263,19 +263,19 @@ See the following guidelines:
 
 ## Commissions
 
-When you or your group sell avatar items on the platform, a portion of the sales is split between you or your group and Roblox. If the item is sold within an experience, the revenue share will additionally be split with the owner of the experience. Both individual accounts and groups **must** follow [Marketplace Creator Requirements](./marketplace-policy.md#creator-requirements) to keep items listed on the Marketplace and eligible for commissions.
+When you or your group sell avatar items on the platform, a portion of the sales is split between you or your group and Roblox. If the item is sold within a game, the revenue share will additionally be split with the owner of the game. Both individual accounts and groups **must** follow [Marketplace Creator Requirements](./marketplace-policy.md#creator-requirements) to keep items listed on the Marketplace and eligible for commissions.
 
 <table>
 <thead>
   <tr>
     <th>**Marketplace Purchase**</th>
-    <th>**In-experience Purchase**</th>
+    <th>**In-game Purchase**</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>Creator receives 30%</td>
-    <td><ul><li>Creator receives 30%</li><li>Experience owner receives 40%</li></ul></td>
+    <td><ul><li>Creator receives 30%</li><li>Game owner receives 40%</li></ul></td>
   </tr>
 </tbody>
 </table>

@@ -5,7 +5,9 @@
 name: ScriptDocument
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  Represents the ephemeral state of an open document in the Studio Script
+  Editor, providing APIs for reading and editing code.
 description: |
   A `Class.ScriptDocument` instance is a proxy of the document of a Studio
   Script Editor. It's different from the `Class.LuaSourceContainer` open in the
@@ -63,7 +65,10 @@ methods:
     parameters: []
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple where the first element is `true` if the editor closed
+          successfully, or `false` followed by a string describing the failure
+          reason.
     tags:
       - Yields
     deprecation_message: ''
@@ -88,8 +93,8 @@ methods:
       The function throws an error if:
 
       - The range is invalid.
-      - The range would slice a unicode character, for example replace only some
-        of the bytes of the unicode character.
+      - The range would slice one Unicode character, for example replace only
+        some of the bytes of the unicode character.
       - The `newText` itself contains invalid UTF-8.
 
       If the function fails, it returns (false, string). The string is a
@@ -102,26 +107,37 @@ methods:
       - name: newText
         type: string
         default:
-        summary: ''
+        summary: |
+          The replacement string to insert into the specified range.
       - name: startLine
         type: int
         default:
-        summary: ''
+        summary: |
+          The 1-indexed line number where the replacement range begins.
       - name: startCharacter
         type: int
         default:
-        summary: ''
+        summary: |
+          The 1-indexed UTF-8 byte offset within `startLine` where the
+          replacement range begins.
       - name: endLine
         type: int
         default:
-        summary: ''
+        summary: |
+          The 1-indexed line number where the replacement range ends
+          (exclusive).
       - name: endCharacter
         type: int
         default:
-        summary: ''
+        summary: |
+          The 1-indexed UTF-8 byte offset within `endLine` where the replacement
+          range ends (exclusive).
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple where the first element is `true` if the edit was applied
+          successfully, or `false` followed by a string describing the failure
+          reason.
     tags:
       - Yields
     deprecation_message: ''
@@ -148,22 +164,32 @@ methods:
       - name: cursorLine
         type: int
         default:
-        summary: ''
+        summary: |
+          The 1-indexed line number for the cursor position.
       - name: cursorCharacter
         type: int
         default:
-        summary: ''
+        summary: |
+          The 1-indexed UTF-8 byte offset within the line for the cursor
+          position.
       - name: anchorLine
         type: int?
         default: nil
-        summary: ''
+        summary: |
+          The 1-indexed line number for the anchor position. Defaults to
+          `cursorLine` if not provided.
       - name: anchorCharacter
         type: int?
         default: nil
-        summary: ''
+        summary: |
+          The 1-indexed UTF-8 byte offset within the line for the anchor
+          position. Defaults to `cursorCharacter` if not provided.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple where the first element is `true` if the cursor was updated,
+          or `false` followed by a string explaining why the update was
+          declined.
     tags:
       - Yields
     deprecation_message: ''
@@ -183,10 +209,13 @@ methods:
       - name: lineIndex
         type: int?
         default: nil
-        summary: ''
+        summary: |
+          The 1-indexed line number to retrieve. Defaults to the current cursor
+          line if not provided.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The text content of the specified line as a string.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -202,7 +231,8 @@ methods:
     parameters: []
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The total number of lines in the document.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -220,7 +250,10 @@ methods:
     parameters: []
     returns:
       - type: LuaSourceContainer
-        summary: ''
+        summary: |
+          The `Class.LuaSourceContainer` that the document is editing, or `nil`
+          if the document does not represent a script instance in the place
+          (e.g. the Command Bar is not a real script instance).
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -238,7 +271,9 @@ methods:
     parameters: []
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The currently selected text as a string, or an empty string if nothing
+          is selected.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -276,7 +311,9 @@ methods:
     parameters: []
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple of (line, character) representing the larger of the cursor and
+          anchor positions, both 1-indexed.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -294,7 +331,9 @@ methods:
     parameters: []
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple of (line, character) representing the smaller of the cursor
+          and anchor positions, both 1-indexed.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -318,22 +357,32 @@ methods:
       - name: startLine
         type: int?
         default: nil
-        summary: ''
+        summary: |
+          The 1-indexed line number where the text range begins. Optional; omit
+          all arguments to get the entire document.
       - name: startCharacter
         type: int?
         default: nil
-        summary: ''
+        summary: |
+          The 1-indexed UTF-8 byte offset within `startLine` where the text
+          range begins.
       - name: endLine
         type: int?
         default: nil
-        summary: ''
+        summary: |
+          The 1-indexed line number where the text range ends (exclusive).
+          Optional; omit to read from `startLine`/`startCharacter` to the end of
+          the document.
       - name: endCharacter
         type: int?
         default: nil
-        summary: ''
+        summary: |
+          The 1-indexed UTF-8 byte offset within `endLine` where the text range
+          ends (exclusive).
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The text content within the specified range as a string.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -353,7 +402,9 @@ methods:
     parameters: []
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple of (startLine, endLine) representing the 1-indexed range of
+          lines currently visible in the editor.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -369,7 +420,9 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the editor has a non-empty text selection, `false`
+          otherwise.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -392,24 +445,61 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if this document represents the Command bar, `false` otherwise.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
   - name: ScriptDocument:MultiEditTextAsync
-    summary: ''
-    description: ''
+    summary: |
+      Applies a batch of text edits to the document as a single atomic
+      operation. Yields the current thread until the editor responds.
+    description: |
+      Applies a batch of text edits to the document as a single atomic
+      operation, then yields the current thread until it receives a reply from
+      the editor. Each entry in the `edits` array is a table describing one
+      replacement, with the same meaning as the arguments to
+      `Class.ScriptDocument:EditTextAsync()`, and the following fields:
+
+      - `NewText`: The replacement text.
+      - `StartLine`: The line of the start of the range to replace.
+      - `StartCharacter`: The character of the start of the range to replace.
+      - `EndLine`: The line of the end of the range to replace.
+      - `EndCharacter`: The character of the end of the range to replace.
+
+      The edits are applied together, so either all of them succeed or none of
+      them are applied. Before applying any edit, the function validates every
+      edit and throws an error if:
+
+      - Any range is invalid.
+      - Any range would slice one Unicode character, for example replace only
+        some of the bytes of the unicode character.
+      - Any `NewText` itself contains invalid UTF-8.
+      - The ranges of two edits overlap.
+
+      If the function succeeds, it returns (`true`, `nil`). If the function
+      fails, it returns (`false`, `string`), where the string describes the
+      problem. As with `Class.ScriptDocument:EditTextAsync()`, the most common
+      failure is a version mismatch, which occurs when the
+      `Class.ScriptDocument` is momentarily out of sync with the contents of the
+      editor; if this happens, you can retry the edits.
     code_samples: []
     parameters:
       - name: edits
         type: Array
         default:
-        summary: ''
+        summary: |
+          An array of tables, each describing a text replacement with fields
+          `NewText`, `StartLine`, `StartCharacter`, `EndLine`, and
+          `EndCharacter`.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple where the first element is `true` if all edits were applied
+          successfully, or `false` followed by a string describing the failure
+          reason.
     tags:
       - Yields
     deprecation_message: ''
@@ -434,22 +524,80 @@ methods:
       - name: cursorLine
         type: int
         default:
-        summary: ''
+        summary: |
+          The 1-indexed line number for the cursor position.
       - name: cursorCharacter
         type: int
         default:
-        summary: ''
+        summary: |
+          The 1-indexed UTF-8 byte offset within the line for the cursor
+          position.
       - name: anchorLine
         type: int?
         default: nil
-        summary: ''
+        summary: |
+          The 1-indexed line number for the anchor position. Defaults to
+          `cursorLine` if not provided.
       - name: anchorCharacter
         type: int?
         default: nil
-        summary: ''
+        summary: |
+          The 1-indexed UTF-8 byte offset within the line for the anchor
+          position. Defaults to `cursorCharacter` if not provided.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple where the first element is `true` if the cursor was updated,
+          or `false` followed by a string explaining why the update was
+          declined.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+  - name: ScriptDocument:ReviewableTextEditsAsync
+    summary: |
+      Applies a batch of line-based text edits that appear in the editor as
+      reviewable inline diffs, allowing users to accept or reject each change.
+    description: |
+      Applies a batch of line-based text edits to the document that are
+      presented to the user as reviewable inline diffs in the Script Editor
+      gutter. Each entry in the `changes` array is a table with the following
+      fields:
+
+      - `Text`: The replacement text to insert. Must be a non-empty string
+        unless `EndLine` is provided.
+      - `StartLine`: The 1-indexed line number where the edit begins. If
+        `EndLine` is omitted, the text is inserted before this line. If
+        `EndLine` is provided, lines from `StartLine` through `EndLine` are
+        replaced.
+      - `EndLine`: Optional. The 1-indexed last line of the range to replace
+        (inclusive). Must be greater than or equal to `StartLine`.
+
+      The edits must not overlap or border each other; there must be at least
+      one unchanged line between any two edits. Edits are applied atomically.
+      The function throws an error if any entry has invalid fields. If the
+      function fails due to a version mismatch or other editor-side issue, it
+      returns (`false`, `string`).
+
+      This method cannot be used on the Command bar.
+    code_samples: []
+    parameters:
+      - name: changes
+        type: Array
+        default:
+        summary: |
+          An array of tables, each with a `Text` field (the replacement string),
+          a `StartLine` field (1-indexed line to insert or begin replacing at),
+          and an optional `EndLine` field (1-indexed last line to replace,
+          inclusive).
+    returns:
+      - type: Tuple
+        summary: |
+          A tuple where the first element is `true` if the edits were applied
+          successfully, or `false` followed by a string describing the failure
+          reason.
     tags:
       - Yields
     deprecation_message: ''
@@ -470,19 +618,25 @@ events:
       - name: positionLine
         type: int64
         default:
-        summary: ''
+        summary: |
+          The 1-indexed line number of the cursor position after the change.
       - name: positionCharacter
         type: int64
         default:
-        summary: ''
+        summary: |
+          The 1-indexed UTF-8 byte offset of the cursor position after the
+          change.
       - name: anchorLine
         type: int64
         default:
-        summary: ''
+        summary: |
+          The 1-indexed line number of the selection anchor after the change.
       - name: anchorCharacter
         type: int64
         default:
-        summary: ''
+        summary: |
+          The 1-indexed UTF-8 byte offset of the selection anchor after the
+          change.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -499,11 +653,13 @@ events:
       - name: startLine
         type: int64
         default:
-        summary: ''
+        summary: |
+          The 1-indexed first line currently visible in the editor viewport.
       - name: endLine
         type: int64
         default:
-        summary: ''
+        summary: |
+          The 1-indexed last line currently visible in the editor viewport.
     tags: []
     deprecation_message: ''
     security: PluginSecurity

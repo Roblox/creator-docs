@@ -100,7 +100,7 @@ To create a first pass Contact pose for the left foot cycle:
 1. From the toolbar's **Avatar** tab, click **Clip Editor**. The [Animation Editor](../../../animation/editor.md) window displays.
 1. Select your rig. A contextual menu displays.
 1. In the **Animation Name** field, input a name for your animation, then click the **Create** button.
-1. **(Optional)** Set the timeline to 24 frames per second.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Set the timeline to 24 frames per second.
    1. In the editor's playback tools, click the gear icon.
 
       <img src="../../../assets/tutorials/creating-character-animations/Gear-Icon.png" width="30%" />
@@ -518,7 +518,7 @@ To publish your animation:
 
 1. From the contextual menu, select **Publish to Roblox**. The **Asset Configuration** window displays.
 1. Fill out all applicable fields, then click the **Save** button.
-1. **(Optional)** You can copy the animation's asset ID to use within scripts by clicking the copy icon.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> You can copy the animation's asset ID to use within scripts by clicking the copy icon.
 
    <img src="../../../assets/tutorials/creating-character-animations/Publish-4.png" alt="" width="60%" />
 

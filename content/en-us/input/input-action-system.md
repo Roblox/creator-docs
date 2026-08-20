@@ -40,6 +40,10 @@ An `Class.InputAction` defines a gameplay action mechanic such as "Jump," "Sprin
 
 An `Class.InputAction` can be of several variations depending on its `Class.InputAction.Type|Type` property (`Enum.InputActionType`). The default is `Enum.InputActionType|Bool`, designed to receive `true`/`false` values from press/release of inputs such as `Enum.KeyCode.ButtonA|ButtonA`, `Enum.KeyCode.E|E`, or `Enum.KeyCode.MouseLeftButton|MouseLeftButton`.
 
+<Alert severity="success">
+`Class.InputAction` also exposes a read-only `Class.InputAction.PreferredBinding|PreferredBinding` property that returns the child `Class.InputBinding` best matching the player's current input device (keyboard/mouse, gamepad, or touch). It updates dynamically as the player's device configuration changes and is the basis for [displaying bindings](#displaying-bindings) to players.
+</Alert>
+
 <table>
 	<thead>
 		<tr>
@@ -456,6 +460,130 @@ Once you have an [input context](#input-contexts) such as `PlayContext`, you can
 			contextEvent:Fire("PlayContext", true)
 		end)
 		```
+
+## Displaying bindings
+
+Once you've set up [actions](#input-actions) and [bindings](#input-bindings), you'll typically need to show players, via on‑screen [assistive hints](../projects/cross-platform.md#assistive-hints), which key or button triggers each action:
+
+<Tabs>
+<TabItem label="Keyboard Input">
+<img src="../assets/publishing/cross-platform/Inventory-Selection-Keyboard.jpg" width="840" height="473" />
+</TabItem>
+<TabItem label="Gamepad Input">
+<img src="../assets/publishing/cross-platform/Inventory-Selection-Gamepad.jpg" width="840" height="473" />
+</TabItem>
+</Tabs><br />
+
+The Input Action System provides two approaches:
+
+- <Chip label="RECOMMENDED" size="small" variant="outlined" color="success" /> `Class.InputActionLabel` — A no-code, drag-and-drop `Class.GuiObject` that automatically displays the correct input per platform.
+- <Chip label="INTERMEDIATE" size="small" variant="outlined" color="warning" /> `Class.InputAction.PreferredBinding|PreferredBinding` — A read-only `Class.InputAction` property for creators who want full control over how bindings are displayed in custom UI.
+
+<Tabs>
+<TabItem label="InputActionLabel">
+<BetaAlert betaName="InputActionLabel" leadIn="This class/object is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+`Class.InputActionLabel` is a `Class.GuiObject` that you can insert into any `Class.ScreenGui` or `Class.SurfaceGui`. Once its `Class.InputActionLabel.InputAction|InputAction` property is set to reference an existing `Class.InputAction` instance, it automatically resolves and displays the correct keybinding for the player's current input device&nbsp;— no scripting required. When the player switches devices (for example, picking up a gamepad after using a keyboard) or rebinds a control, the label updates instantly.
+
+To add an `Class.InputActionLabel`:
+
+1. Inside a `Class.ScreenGui` container inside `Class.StarterGui`, insert an `Class.InputActionLabel` just like any other `Class.GuiObject`.
+2. In the [Properties](../studio/properties.md) window, set its `Class.InputActionLabel.InputAction|InputAction` property to the `Class.InputAction` instance you want to display (for example, your "Sprint" action under `Class.ReplicatedStorage`) and [position/resize](../ui/position-and-size.md) it as desired.
+3. When the label resolves what to show, it checks the following in order:
+
+   1. **Custom Images** — If child `Class.InputBinding|InputBindings` have their
+   `Class.InputBinding.DisplayImage|DisplayImage` property set, the label
+   renders those images directly.
+
+   2. **Platform Key Images** — Lacking custom images, the label renders
+   platform-provided images for child `Class.InputBinding|InputBindings` through
+   `Class.UserInputService:GetImageForKeyCode()`, if such images are available.
+   Composite bindings with modifiers show multiple icons with `+` separators.
+
+   3. **Custom Names** — Lacking available images, if child
+   `Class.InputBinding|InputBindings` have their
+   `Class.InputBinding.DisplayName|DisplayName` property set, the label renders
+   that text using the label's style properties.
+
+   4. **Platform Key Strings** — Lacking all of the above, the label renders
+   platform-provided strings through
+   `Class.UserInputService:GetStringForKeyCode()`.
+
+   5. If no `Class.InputAction` is assigned or no child `Class.InputBinding`
+   exists, the label renders a placeholder icon.
+
+</TabItem>
+<TabItem label="PreferredBinding">
+For customized use cases where you need full control over hint display (custom animations, conditional visibility, composited layouts), you can use `Class.InputAction.PreferredBinding` to query the current binding and build your own UI. `Class.InputAction.PreferredBinding|PreferredBinding` is a read-only property that returns the child `Class.InputBinding` which best matches the player's current input device.
+
+The following two `Class.InputBinding` properties provide the custom display overrides used for `Class.InputAction.PreferredBinding|PreferredBinding`. If neither is set, fall back to platform-provided values via `Class.UserInputService:GetStringForKeyCode()|GetStringForKeyCode()` and `Class.UserInputService:GetImageForKeyCode()|GetImageForKeyCode()`.
+
+- `Class.InputBinding.DisplayName|DisplayName` — A read/write string for custom text, for example, "Sprint."
+- `Class.InputBinding.DisplayImage|DisplayImage` — A read/write `Datatype.Content` value for a custom image.
+
+The following examples assume a client `Class.Script` parented to the `Class.InputAction` and a hint UI object (`Class.TextLabel` or `Class.ImageLabel`) inside a `Class.ScreenGui` within the player's `Class.PlayerGui`. Both connect to changes to `Class.InputAction.PreferredBinding|PreferredBinding` so that the hint refreshes whenever the player switches input devices.
+
+```lua title="Text Hint (Client Script)"
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+
+local inputAction = script.Parent
+local player = Players.LocalPlayer
+local screenGui = player:WaitForChild("PlayerGui"):WaitForChild("ScreenGui")
+local label = screenGui:FindFirstChildWhichIsA("TextLabel")
+
+local function updateHintText()
+	if not label then
+		warn("Label UI object not found!")
+		return
+	end
+
+	local binding = inputAction.PreferredBinding
+	if binding and binding.DisplayName ~= "" then
+		label.Text = binding.DisplayName
+	elseif binding and binding.KeyCode ~= Enum.KeyCode.None then
+		label.Text = UserInputService:GetStringForKeyCode(binding.KeyCode)
+	else
+		label.Text = ""
+	end
+end
+
+inputAction:GetPropertyChangedSignal("PreferredBinding"):Connect(updateHintText)
+updateHintText()
+```
+
+```lua title="Image Hint (Client Script)"
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+
+local inputAction = script.Parent
+local player = Players.LocalPlayer
+local screenGui = player:WaitForChild("PlayerGui"):WaitForChild("ScreenGui")
+local label = screenGui:FindFirstChildWhichIsA("ImageLabel")
+
+local function updateHintImage()
+	if not label then
+		warn("Label UI object not found!")
+		return
+	end
+
+	local binding = inputAction.PreferredBinding
+	if binding and binding.DisplayImage.SourceType ~= Enum.ContentSourceType.None then
+		label.ImageContent = binding.DisplayImage
+	elseif binding and binding.KeyCode ~= Enum.KeyCode.None then
+		local keyImage = UserInputService:GetImageForKeyCode(binding.KeyCode)
+		label.ImageContent = (keyImage ~= "") and Content.fromUri(keyImage) or Content.none
+	else
+		label.ImageContent = Content.none
+	end
+end
+
+inputAction:GetPropertyChangedSignal("PreferredBinding"):Connect(updateHintImage)
+updateHintImage()
+```
+
+</TabItem>
+</Tabs>
 
 ## Input Action Manager
 

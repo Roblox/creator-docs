@@ -109,4 +109,4 @@ To prioritize `Class.SoundGroup|SoundGroups` through the `Class.CompressorSoundE
 6. In the **Attack** property field, input how quickly you want audio to duck.
 7. In the **Release** property field, input how quickly you want the audio to stop ducking.
 8. In the **Ratio** property field, input the ratio of how much compression you want to occur between the audio object that ducks and the audio object that Studio prioritizes.
-9. **(Optional)** Playtest your game to see if the audio sounds correct. If not, adjust the **CompressorSoundEffect** properties accordingly.
+9. <Chip label="OPTIONAL" size="small" variant="outlined" /> Playtest your game to see if the audio sounds correct. If not, adjust the **CompressorSoundEffect** properties accordingly.

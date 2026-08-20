@@ -1,3 +1,7 @@
+https://luau.org/syntax/
+https://luau.org/syntax/
+https://learn.microsoft.com/typography/opentype/spec/featuretags
+https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/
 https://www.passmark.com/
 https://modelcontextprotocol.io/docs/getting-started/intro
 https://code.visualstudio.com/docs/copilot/customization/mcp-servers
@@ -811,3 +815,4 @@ https://www.irs.gov/forms-pubs/about-form-w-9
 https://www.irs.gov/forms-pubs/about-form-1099-nec
 https://help.tipalti.com/hc/en-us/articles/31314361313815-Payment-methods-coverage-US-ROW
 https://www.youtube-nocookie.com/embed/dVmnD5pn3QI
+https://www.youtube-nocookie.com/embed/Fg-Ksoa7b-s?si=SwXhzsIjkyMKSUkJ

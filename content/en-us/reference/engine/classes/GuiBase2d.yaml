@@ -73,7 +73,7 @@ properties:
       See also `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` and
       `Class.GuiBase2d.AbsoluteSize|AbsoluteSize`.
     code_samples: []
-    type: float
+    type: Rotation2D
     tags:
       - ReadOnly
       - NotReplicated

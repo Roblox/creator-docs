@@ -5,8 +5,23 @@
 name: MouseService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Engine service that manages mouse cursor rendering, mouse lock behavior, the
+  cursor-icon stack, delta sensitivity, and mouse position, delta, and button
+  tracking.
+description: |
+  Not accessible from scripts (`Input` security). `Class.MouseService` manages
+  the mouse cursor and mouse input state — cursor rendering (software cursors
+  drawn by the engine and hardware cursors drawn by the operating system), mouse
+  lock behavior, the contextual cursor-icon stack, mouse delta sensitivity, and
+  tracking of the current mouse position, delta, and button state.
+
+  `Class.UserInputService` delegates its mouse-related members — such as
+  `Class.UserInputService.MouseBehavior|MouseBehavior`,
+  `Class.UserInputService.MouseIcon|MouseIcon`,
+  `Class.UserInputService.MouseIconEnabled|MouseIconEnabled`, and
+  `Class.UserInputService.MouseDeltaSensitivity|MouseDeltaSensitivity` — to this
+  service.
 code_samples: []
 inherits:
   - Instance

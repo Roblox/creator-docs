@@ -200,8 +200,7 @@ properties:
     description: |
       This property determines the maximum number of players that can be in a
       server. This property can only be set through a specific place's settings
-      on the [Creator Dashboard](https://create.roblox.com/dashboard/creations)
-      or through [Experience Settings](../../../studio/experience-settings.md).
+      on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
     code_samples: []
     type: int
     tags:
@@ -324,8 +323,19 @@ properties:
     capabilities:
       - Players
   - name: Players.UseStrafingAnimations
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether R15 character models play directional strafing and
+      backpedaling animations instead of always turning to face their direction
+      of movement.
+    description: |
+      When enabled, R15 character `Class.Humanoid|Humanoids` play directional
+      locomotion animations, strafing sideways and backpedaling while keeping
+      their current facing direction instead of rotating to face whichever
+      direction they move. When disabled, characters turn to face their
+      direction of movement. Defaults to `false`.
+
+      This property cannot be set through developer-facing Luau and must be set
+      in Studio through the `Class.Players` properties window.
     code_samples: []
     type: boolean
     tags:
@@ -513,7 +523,12 @@ methods:
     summary: |
       Returns a character `Class.Model` equipped with everything specified in
       the passed in `Class.HumanoidDescription`.
-    description: ''
+    description: |
+      Returns a character `Class.Model` equipped with everything specified in
+      the passed in `Class.HumanoidDescription`, and is R6 or R15 as specified
+      by `rigType`. This method has been superseded by
+      `Class.Players:CreateHumanoidModelFromDescriptionAsync()|CreateHumanoidModelFromDescriptionAsync()`,
+      which should be used in new work.
     code_samples: []
     parameters:
       - name: description
@@ -590,7 +605,13 @@ methods:
     summary: |
       Returns a character Model set-up with everything equipped to match the
       avatar of the user specified by the passed in userId.
-    description: ''
+    description: |
+      Returns a character `Class.Model` set up with everything equipped to match
+      the avatar of the user specified by the passed in `userId`, including
+      whether that character is currently R6 or R15. This method has been
+      superseded by
+      `Class.Players:CreateHumanoidModelFromUserIdAsync()|CreateHumanoidModelFromUserIdAsync()`,
+      which should be used in new work.
     code_samples:
       - create-humanoid-model-from-userid
     parameters:
@@ -665,7 +686,8 @@ methods:
       - name: userId
         type: User
         default:
-        summary: ''
+        summary: |
+          The `Class.Player.UserId` of the player whose ban history to retrieve.
     returns:
       - type: BanHistoryPages
         summary: |
@@ -703,7 +725,9 @@ methods:
           The `Class.Player.UserId` of the specified player.
     returns:
       - type: Model
-        summary: ''
+        summary: |
+          A `Class.Model` containing the assets the player is wearing, excluding
+          gear.
     tags:
       - Yields
       - Deprecated
@@ -883,7 +907,9 @@ methods:
           The user ID of the player being specified.
     returns:
       - type: FriendPages
-        summary: ''
+        summary: |
+          A `Class.FriendPages` object containing information for all of the
+          given user's friends.
     tags:
       - Yields
     deprecation_message: ''
@@ -896,7 +922,13 @@ methods:
     summary: |
       Returns the HumanoidDescription for a specified outfit, which will be set
       with the parts/colors/Animations etc of the outfit.
-    description: ''
+    description: |
+      Returns the `Class.HumanoidDescription` for the specified `outfitId`, set
+      with the parts, colors, animations, and other properties of the outfit. An
+      outfit can be one created by a user, or the outfit for a bundle created by
+      Roblox. This method has been superseded by
+      `Class.Players:GetHumanoidDescriptionFromOutfitIdAsync()|GetHumanoidDescriptionFromOutfitIdAsync()`,
+      which should be used in new work.
     code_samples:
       - get-humanoiddescription-from-outfitid
     parameters:
@@ -955,7 +987,12 @@ methods:
     summary: |
       Returns a HumanoidDescription which specifies everything equipped for the
       avatar of the user specified by the passed in userId.
-    description: ''
+    description: |
+      Returns a `Class.HumanoidDescription` which specifies everything equipped
+      for the avatar of the user specified by the passed in `userId`, including
+      scales and body colors. This method has been superseded by
+      `Class.Players:GetHumanoidDescriptionFromUserIdAsync()|GetHumanoidDescriptionFromUserIdAsync()`,
+      which should be used in new work.
     code_samples:
       - get-humanoiddescription-from-userid
     parameters:
@@ -1069,7 +1106,9 @@ methods:
           The `Class.Player.UserId` of the player being specified.
     returns:
       - type: Player
-        summary: ''
+        summary: |
+          The `Class.Player` with the given `Class.Player.UserId`, or `nil` if
+          no connected player has that UserId.
     tags: []
     deprecation_message: ''
     security: None
@@ -1111,7 +1150,9 @@ methods:
           A character instance that you want to get the player from.
     returns:
       - type: Player
-        summary: ''
+        summary: |
+          The `Class.Player` whose `Class.Player.Character` matches the given
+          model, or `nil` if one cannot be found.
     tags: []
     deprecation_message: ''
     security: None
@@ -1184,6 +1225,37 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
+      - Players
+  - name: Players:GetProfileConfigurationFromUserIdAsync
+    summary: |
+      Returns the profile configuration of a user as a dictionary.
+    description: |
+      Returns the profile configuration of the user specified by the given
+      `Class.Player.UserId` as a dictionary. The dictionary can include a
+      `backgroundAssetId` field for the user's profile background asset ID.
+
+      Can only be called from the server and is throttled to a limited number of
+      requests per minute.
+    code_samples: []
+    parameters:
+      - name: userId
+        type: User
+        default:
+        summary: |
+          The `Class.Player.UserId` of the user whose profile configuration to
+          retrieve.
+    returns:
+      - type: ProfileConfiguration
+        summary: |
+          A dictionary containing the user's profile configuration, such as the
+          background asset ID.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AvatarAppearance
       - Players
   - name: Players:GetUserIdFromNameAsync
     summary: |
@@ -1527,7 +1599,8 @@ events:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` whose membership has changed.
     tags: []
     deprecation_message: ''
     security: None

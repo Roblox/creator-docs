@@ -4,24 +4,40 @@
 
 name: AvatarSettingsAnimationPacksMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines which base animation pack is applied to avatar characters,
+  controlling whether players use their own equipped animations or the
+  experience forces a standard R15 or R6 animation set.
+description: |
+  Determines which base animation pack (locomotion assets such as run, walk,
+  fall, jump, idle, swim, swim idle, and climb) is applied to avatar characters.
+  This is the type of `AvatarAnimationRules.AnimationPacksMode`, which defaults
+  to `Enum.AvatarSettingsAnimationPacksMode.PlayerChoice`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: PlayerChoice
-    summary: ''
+    summary: |
+      The player's own equipped animation pack is used. The character's Animate
+      script supplies the animations without experience-level overrides.
     value: 0
     tags: []
     deprecation_message: ''
   - name: StandardR15
-    summary: ''
+    summary: |
+      The experience forces the standard R15 animation pack on all characters,
+      overriding player-equipped animations with a fixed set of R15 locomotion
+      clips.
     value: 1
     tags: []
     deprecation_message: ''
   - name: StandardR6
-    summary: ''
+    summary: |
+      The experience forces the standard R6 animation pack on all (R15)
+      characters, overriding player-equipped animations with a fixed set of
+      R6-style locomotion clips plus additional R6-style emote and tool
+      animations.
     value: 2
     tags: []
     deprecation_message: ''

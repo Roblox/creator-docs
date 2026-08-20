@@ -7,7 +7,11 @@ type: enum
 summary: |
   Determines the current teleportation state of a player.
 description: |
-  Determines the current teleportation state of a player.
+  Represents each stage of a player teleport as reported by the
+  `Class.Player.OnTeleport` event. Scripts connect to `Class.Player.OnTeleport`
+  to observe state changes throughout the teleport lifecycle and react
+  accordingly — for example, showing a loading screen when `InProgress` fires or
+  displaying an error when `Failed` fires.
 code_samples: []
 tags: []
 deprecation_message: ''

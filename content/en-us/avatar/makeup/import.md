@@ -30,7 +30,7 @@ To import your asset as a makeup model:
       <figure><img src="../../assets/makeup/Makeup-Studio-Datamodel.png" width = "100%" /><figcaption>Each decal parents a WrapTextureTransfer object</figcaption></figure>
    </GridContainer>
 
-1. Copy your new `Decal` objects into a character model's `Makeup` folder.
+1. Copy your new `Decal` objects into a character model's **Makeup** folder.
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you want to apply eyebrows or eyelashes, move those `Class.MeshPart` objects into the character's **Accessories** folder. For this place file, you do not need to convert eyelashes and eyebrows into Accessories first.
 
    <img src="../../assets/makeup/Makeup-Character-Folders.png" />

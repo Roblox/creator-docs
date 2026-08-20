@@ -48,6 +48,108 @@ properties:
       can_save: true
     capabilities:
       - Animation
-methods: []
-events: []
+methods:
+  - name: AnimationNodeDefinition:AddInputPin
+    summary: |
+      Appends a named input pin to the end of the ordered input pin list.
+    description: |
+      Appends a named input pin to the end of the ordered input pin list. The
+      order in which pins are added is significant for nodes such as
+      `Enum.AnimationNodeType.SequenceNode`,
+      `Enum.AnimationNodeType.RandomSequenceNode`, and
+      `Enum.AnimationNodeType.PrioritySelectNode`.
+    code_samples: []
+    parameters:
+      - name: pin
+        type: string
+        default:
+        summary: |
+          Name of the input pin to append. Should match the
+          `Class.ObjectValue.Name|Name` of the corresponding `Class.ObjectValue`
+          wiring child.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Animation
+  - name: AnimationNodeDefinition:GetOrderedInputPinNames
+    summary: |
+      Returns the current ordered list of input pin names.
+    description: |
+      Returns the current ordered list of input pin names.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          The ordered list of input pin names.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Animation
+  - name: AnimationNodeDefinition:RemoveInputPin
+    summary: |
+      Removes the first input pin matching the given name from the ordered pin
+      list.
+    description: |
+      Removes the first input pin matching the given name from the ordered pin
+      list.
+    code_samples: []
+    parameters:
+      - name: pin
+        type: string
+        default:
+        summary: |
+          Name of the input pin to remove. Only the first pin matching this name
+          is removed.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Animation
+  - name: AnimationNodeDefinition:SetOrderedInputPinNames
+    summary: |
+      Bulk-replaces the entire ordered input pin list.
+    description: |
+      Bulk-replaces the entire ordered input pin list. Use this to reorder pins
+      or apply batch updates in a single call.
+    code_samples: []
+    parameters:
+      - name: pins
+        type: Array
+        default:
+        summary: |
+          The new ordered list of input pin names, replacing the existing list.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Animation
+events:
+  - name: AnimationNodeDefinition.InputPinsChanged
+    summary: |
+      Fires whenever the ordered input pin list is modified.
+    description: |
+      Fires whenever the ordered input pin list is modified.
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - Animation
 callbacks: []

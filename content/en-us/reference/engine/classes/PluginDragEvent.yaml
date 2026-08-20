@@ -5,8 +5,24 @@
 name: PluginDragEvent
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Provides information about an in-progress drag for the drag events that
+  plugins can respond to.
+description: |
+  `Class.PluginDragEvent` provides information about a drag-and-drop operation
+  that a plugin can respond to. An instance of it is passed as the argument to
+  the `Class.PluginGui` drag events (`Class.PluginGui.PluginDragEntered`,
+  `Class.PluginGui.PluginDragMoved`, `Class.PluginGui.PluginDragLeft`, and
+  `Class.PluginGui.PluginDragDropped`) which fire as a drag started with
+  `Class.Plugin:StartDrag()` moves over, into, out of, or is released on a
+  plugin widget.
+
+  It carries the `Class.PluginDragEvent.Sender|Sender`,
+  `Class.PluginDragEvent.MimeType|MimeType`, and
+  `Class.PluginDragEvent.Data|Data` originally supplied to
+  `Class.Plugin:StartDrag()`, along with the
+  `Class.PluginDragEvent.Position|Position` of the cursor within the widget
+  receiving the drag.
 code_samples: []
 inherits:
   - Instance
@@ -17,8 +33,12 @@ tags:
 deprecation_message: ''
 properties:
   - name: PluginDragEvent.Data
-    summary: ''
-    description: ''
+    summary: |
+      The data payload being transferred by the drag.
+    description: |
+      The data being transferred by the drag, corresponding to the `Data` value
+      passed to `Class.Plugin:StartDrag()` when the drag began. This property is
+      read-only and defaults to an empty string.
     code_samples: []
     type: string
     tags:
@@ -35,8 +55,13 @@ properties:
       can_save: false
     capabilities: []
   - name: PluginDragEvent.MimeType
-    summary: ''
-    description: ''
+    summary: |
+      The MIME type describing the format of the dragged data, such as
+      `text/plain`.
+    description: |
+      Identifies the format of `Class.PluginDragEvent.Data`, corresponding to
+      the `MimeType` value passed to `Class.Plugin:StartDrag()` when the drag
+      began. This property is read-only and defaults to an empty string.
     code_samples: []
     type: string
     tags:
@@ -53,8 +78,12 @@ properties:
       can_save: false
     capabilities: []
   - name: PluginDragEvent.Position
-    summary: ''
-    description: ''
+    summary: |
+      The position of the drag relative to the widget receiving it.
+    description: |
+      The position, in pixels, of the mouse cursor relative to the
+      `Class.PluginGui` widget receiving the drag, updated as the drag moves.
+      This property is read-only and defaults to `(0, 0)`.
     code_samples: []
     type: Vector2
     tags:
@@ -71,8 +100,13 @@ properties:
       can_save: false
     capabilities: []
   - name: PluginDragEvent.Sender
-    summary: ''
-    description: ''
+    summary: |
+      A caller-defined string identifying the source of the drag.
+    description: |
+      A caller-defined string used to identify where the drag originated,
+      corresponding to the `Sender` value passed to `Class.Plugin:StartDrag()`
+      when the drag began. This property is read-only and defaults to an empty
+      string.
     code_samples: []
     type: string
     tags:

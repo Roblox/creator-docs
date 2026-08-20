@@ -4,29 +4,43 @@
 
 name: AvatarSettingsAccessoryLimitMethod
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines how `AvatarAccessoryRules` enforces accessory size limits when an
+  accessory exceeds the configured bounds.
+description: |
+  Determines how `AvatarAccessoryRules` enforces accessory size limits when an
+  accessory exceeds `LimitBounds`. Used by `LimitMethod`, which defaults to
+  `Enum.AvatarSettingsAccessoryLimitMethod.Remove`. Only takes effect when
+  `AccessoryMode` is `Enum.AvatarSettingsAccessoryMode.CustomLimit`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Scale
-    summary: ''
+    summary: |
+      Scales down rigid accessories that exceed the configured bounds, or
+      removes them if scaling would reduce them below minimum size thresholds.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Remove
-    summary: ''
+    summary: |
+      Destroys any rigid accessory whose bounding box exceeds the configured
+      bounds.
     value: 1
     tags: []
     deprecation_message: ''
   - name: PreviewScale
-    summary: ''
+    summary: |
+      Reports whether an accessory would be scaled or removed for exceeding the
+      configured bounds without actually modifying it.
     value: 2
     tags: []
     deprecation_message: ''
   - name: PreviewRemove
-    summary: ''
+    summary: |
+      Reports whether an accessory would be removed for exceeding the configured
+      bounds without actually destroying it.
     value: 3
     tags: []
     deprecation_message: ''

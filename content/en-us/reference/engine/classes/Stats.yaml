@@ -602,13 +602,23 @@ properties:
     capabilities: []
 methods:
   - name: Stats:GetHarmonyQualityLevel
-    summary: ''
-    description: ''
+    summary: |
+      Internal-only. Returns the engine's current dynamic-quality level as a
+      score normalized from `0` to `100`.
+    description: |
+      Requires the `InternalTest` security capability; not callable from
+      ordinary scripts. Returns the current quality level selected by the
+      engine's dynamic performance-control system, expressed as a score
+      normalized between `0` (the lowest-quality configuration) and `100` (the
+      highest). The score reflects how the system is currently balancing visual
+      quality against resource usage such as memory and frame time.
     code_samples: []
     parameters: []
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The current dynamic-quality level, normalized from `0` (lowest
+          quality) to `100` (highest quality).
     tags: []
     deprecation_message: ''
     security: None
@@ -616,13 +626,23 @@ methods:
     capabilities:
       - InternalTest
   - name: Stats:GetMemoryCategoryNames
-    summary: ''
-    description: ''
+    summary: |
+      Internal-only. Returns an array of the names of every developer memory
+      category the engine tracks.
+    description: |
+      Requires the `InternalTest` security capability; not callable from
+      ordinary scripts. Returns an array of strings containing the name of every
+      memory category the engine tracks, in category-index order. The entries
+      correspond one-to-one with the measurements returned by
+      `Class.Stats:GetMemoryUsageMbAllCategories()`, so the two arrays can be
+      read together to label each per-category memory value.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of strings, one per tracked memory category, ordered to match
+          the values returned by `Class.Stats:GetMemoryUsageMbAllCategories()`.
     tags: []
     deprecation_message: ''
     security: None
@@ -643,7 +663,12 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of numbers in which each entry is the memory, in megabytes,
+          consumed by one memory category, ordered to match the categories
+          returned by `Class.Stats:GetMemoryCategoryNames()`. Returns an empty
+          array if `Class.Stats.MemoryTrackingEnabled|MemoryTrackingEnabled` is
+          `false`.
     tags: []
     deprecation_message: ''
     security: None
@@ -666,10 +691,14 @@ methods:
       - name: tag
         type: DeveloperMemoryTag
         default:
-        summary: ''
+        summary: |
+          The `Enum.DeveloperMemoryTag` memory category to measure.
     returns:
       - type: float
-        summary: ''
+        summary: |
+          The memory, in megabytes, consumed by the given
+          `Enum.DeveloperMemoryTag` category, or `0` if
+          `Class.Stats.MemoryTrackingEnabled|MemoryTrackingEnabled` is `false`.
     tags: []
     deprecation_message: ''
     security: None
@@ -693,15 +722,27 @@ methods:
     parameters: []
     returns:
       - type: float
-        summary: ''
+        summary: |
+          The total memory, in megabytes, used by the current game session, as
+          reported by the operating system.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: Stats:ResetHarmonyMemoryTarget
-    summary: ''
-    description: ''
+    summary: |
+      Internal-only. Restores the performance-control system's memory budget to
+      the values in effect before `Class.Stats:SetHarmonyMemoryTarget()` was
+      called.
+    description: |
+      Requires the `InternalTest` security capability; not callable from
+      ordinary scripts. Reverts the artificial memory budget applied by
+      `Class.Stats:SetHarmonyMemoryTarget()`, restoring the memory-override
+      enable state and limit that were captured before the first call to
+      `SetHarmonyMemoryTarget()`. After this call, the performance-control
+      system resumes using the device's real available memory when making
+      dynamic-quality decisions.
     code_samples: []
     parameters: []
     returns:
@@ -714,14 +755,26 @@ methods:
     capabilities:
       - InternalTest
   - name: Stats:SetHarmonyMemoryTarget
-    summary: ''
-    description: ''
+    summary: |
+      Internal-only. Overrides the performance-control system's memory budget
+      with a target value, in megabytes, for testing.
+    description: |
+      Requires the `InternalTest` security capability; not callable from
+      ordinary scripts. Forces the engine's dynamic performance-control system
+      to operate against an artificial memory budget of `targetMB` megabytes
+      instead of the device's real available memory, making it behave as though
+      only that much memory is available. This lets you test how dynamic quality
+      and memory reclamation respond under a chosen level of memory pressure.
+      The first call records the pre-override settings so that a later call to
+      `Class.Stats:ResetHarmonyMemoryTarget()` can restore them.
     code_samples: []
     parameters:
       - name: targetMB
         type: int
         default:
-        summary: ''
+        summary: |
+          The memory budget to impose on the performance-control system, in
+          megabytes.
     returns:
       - type: ()
         summary: ''

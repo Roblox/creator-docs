@@ -9,10 +9,10 @@ summary: |
   transcoding to success or failure.
 description: |
   Describes the backend transcoding state of a SLIM model. The status progresses
-  as the model's property set is uploaded to the content-delivery network and
-  transcoded into SLIM assets. The **DebugVisualizations** panel in the
-  Developer Console can color-code models by this status to surface which models
-  have successfully transcoded and which have failed.
+  as the model is uploaded to the content-delivery network and transcoded into
+  SLIM assets. The **DebugVisualizations** panel in the Developer Console can
+  color-code models by this status to surface which models have successfully
+  transcoded and which have failed.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -35,16 +35,16 @@ items:
     deprecation_message: ''
   - name: NotUploaded
     summary: |
-      The model's property set has not been uploaded to the content-delivery
-      network. Shown as orange in the debug tint overlay.
+      The model has not been uploaded to the content-delivery network. Shown as
+      orange in the debug tint overlay.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Uploaded
     summary: |
-      The property set has been uploaded to the content-delivery network but has
-      not yet been transcoded into SLIM assets. Shown as yellow in the debug
-      tint overlay.
+      The model has been uploaded to the content-delivery network but has not
+      yet been transcoded into SLIM assets. Shown as yellow in the debug tint
+      overlay.
     value: 3
     tags: []
     deprecation_message: ''

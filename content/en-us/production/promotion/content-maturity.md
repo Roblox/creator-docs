@@ -44,7 +44,7 @@ As you are completing the questionnaire, **base your answers on the most mature 
 
 To generate content maturity information:
 
-1. **(Optional)** If you want your experience to include restricted content, confirm you are at least 18 years old by [verifying your account](../../production/publishing/account-verification.md) so the questionnaire can ask questions to generate the Restricted maturity label.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you want your experience to include restricted content, confirm you are at least 18 years old by [verifying your account](../../production/publishing/account-verification.md) so the questionnaire can ask questions to generate the Restricted maturity label.
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and click on the thumbnail of the experience you want to generate content maturity information for. The experience's **Overview** page displays.
 1. In the left-hand navigation, navigate to the **Audience** section, then select **Maturity & Compliance**.
 1. If you've never taken the questionnaire before, read the notes and details, then click **Start** to proceed. If you've previously completed the questionnaire, the **Questionnaire Completed** page displays, but you can click the **Restart** button to start over.

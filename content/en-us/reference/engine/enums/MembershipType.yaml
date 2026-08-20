@@ -7,7 +7,17 @@ type: enum
 summary: |
   The membership type of a Player.
 description: |
-  The membership type of a Player.
+  Describes the paid-membership tier associated with a `Class.Player`. The value
+  is exposed via the `Class.Player.MembershipType` property, which defaults to
+  `Enum.MembershipType.None` and is set automatically by the server when the
+  player joins. Prefer `Class.Player.HasRobloxSubscription` to check for an
+  active paid subscription.
+
+  The legacy Builders Club tiers (`Enum.MembershipType.BuildersClub`,
+  `Enum.MembershipType.TurboBuildersClub`,
+  `Enum.MembershipType.OutrageousBuildersClub`) are no longer available for
+  purchase and are retained only for backward compatibility. All active paid
+  memberships are represented by `Enum.MembershipType.Premium`.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -20,19 +30,25 @@ items:
     deprecation_message: ''
   - name: BuildersClub
     summary: |
-      (no longer available).
+      Legacy Builders Club membership. No longer available for purchase;
+      retained for compatibility. Active paid memberships use
+      `Enum.MembershipType.Premium`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: TurboBuildersClub
     summary: |
-      (no longer available).
+      Legacy Turbo Builders Club membership. No longer available for purchase;
+      retained for compatibility. Active paid memberships use
+      `Enum.MembershipType.Premium`.
     value: 2
     tags: []
     deprecation_message: ''
   - name: OutrageousBuildersClub
     summary: |
-      (no longer available).
+      Legacy Outrageous Builders Club membership. No longer available for
+      purchase; retained for compatibility. Active paid memberships use
+      `Enum.MembershipType.Premium`.
     value: 3
     tags: []
     deprecation_message: ''

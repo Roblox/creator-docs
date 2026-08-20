@@ -54,17 +54,21 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Region3int16.new
-    summary: Returns a new Region3int16 from the provided boundaries.
-    description: Returns a new Region3int16 from the provided boundaries.
+    summary: |
+      Returns a new Region3int16 from the provided boundaries.
+    description: |
+      Returns a new Region3int16 from the provided boundaries.
     parameters:
       - name: min
         type: Vector3int16
         default:
-        summary: ''
+        summary: |
+          The lower bound of the region.
       - name: max
         type: Vector3int16
         default:
-        summary: ''
+        summary: |
+          The upper bound of the region.
     code_samples: []
     tags: []
     deprecation_message: ''

@@ -5,7 +5,9 @@
 name: VelocityMotor
 type: class
 memory_category: BaseParts
-summary: ''
+summary: |
+  A `Class.Motor`-like `Class.JointInstance` that forms its connection using a
+  `Class.MotorFeature` and a `Class.Hole`.
 description: |
   The VelocityMotor is a special type of joint that works similarly to a
   `Class.Motor`, but it uses a `Class.MotorFeature` and a `Class.Hole` to create

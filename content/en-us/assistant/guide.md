@@ -136,7 +136,7 @@ Segmentation divides a generated asset into individual parts, giving you more co
 When you run `/generate_mesh` or `/generate_procedural_model` with a text prompt, Assistant suggests a segmentation plan that defines how the model will be divided. Before generating the model, you can:
 
 - Edit the **Prompt** to refine your description.
-- (Optional) Upload a **Hint Image** to use as a visual reference. If you upload a hint image, Assistant skips the preview step and generates the final model directly.
+- <Chip label="OPTIONAL" size="small" variant="outlined" /> Upload a **Hint Image** to use as a visual reference. If you upload a hint image, Assistant skips the preview step and generates the final model directly.
 - Add or remove entries under **Part Names** to control how the model is segmented. Each generated model can have up to eight parts.
 - Check **Suggest segmentation** to have Assistant regenerate the part list based on your prompt.
 

@@ -38,6 +38,7 @@ descendants:
   - InputActionLabel
   - ScrollingFrame
   - TextBox
+  - TextChannelWindow
   - VideoDisplay
   - VideoFrame
   - ViewportFrame
@@ -407,8 +408,30 @@ properties:
     capabilities:
       - UI
   - name: GuiObject.InputSink
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether, and how, the `Class.GuiObject` sinks input that occurs
+      over it.
+    description: |
+      Controls whether, and to what degree, the `Class.GuiObject` sinks input
+      that occurs over it, using `Enum.InputSink`. Sinking input prevents it
+      from passing through to objects behind the element, including 3D objects
+      in the world such as those with a `Class.ClickDetector` or
+      `Class.DragDetector`. It defaults to `Enum.InputSink.None`, except on
+      `Class.GuiButton` objects (`Class.ImageButton` and `Class.TextButton`),
+      where it defaults to `Enum.InputSink.Activate`.
+
+      - `Enum.InputSink.None` — the object does not sink input on its own.
+      - `Enum.InputSink.Activate` — the object sinks the mouse-button and touch
+        press/release input used to activate it, but lets other input (such as
+        mouse movement) pass through.
+      - `Enum.InputSink.All` — the object sinks all input that occurs over it.
+
+      This property is a more granular successor to the boolean
+      `Class.GuiObject.Active|Active` property, which can only sink all input or
+      none. The `Class.GuiObject.InputBegan|InputBegan`,
+      `Class.GuiObject.InputChanged|InputChanged`, and
+      `Class.GuiObject.InputEnded|InputEnded` events fire regardless of this
+      property's value.
     code_samples: []
     type: InputSink
     tags: []

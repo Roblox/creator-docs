@@ -4,19 +4,33 @@
 
 name: AccessModifierType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines whether an `Class.AudioDeviceInput` user ID access list acts as an
+  allow-list or a deny-list.
+description: |
+  Determines whether the user IDs supplied to
+  `Class.AudioDeviceInput:SetUserIdAccessList()|SetUserIdAccessList()` are
+  treated as an allow-list or a deny-list for hearing a particular
+  `Class.AudioDeviceInput`.
+
+  The default `Class.AudioDeviceInput.AccessType|AccessType` is
+  `Enum.AccessModifierType.Deny`, meaning all users can hear the device unless
+  explicitly excluded.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Allow
-    summary: ''
+    summary: |
+      User IDs in the access list are permitted to hear the
+      `Class.AudioDeviceInput` - all other users are blocked.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Deny
-    summary: ''
+    summary: |
+      User IDs in the access list are blocked from hearing the
+      `Class.AudioDeviceInput` - all other users are permitted.
     value: 1
     tags: []
     deprecation_message: ''

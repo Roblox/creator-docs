@@ -3,11 +3,9 @@ title: Alerts
 description: Create alerts to monitor performance metrics for your experience and receive notifications when they cross defined thresholds.
 ---
 
-<Alert severity="info">
-Alerts are currently in beta.
-</Alert>
+**Alerts** let you proactively monitor critical performance and data store metrics for your experience and receive real-time notifications when they cross your defined thresholds. Instead of manually checking dashboards, you can set up alerts that notify you automatically when metrics like crash rates spike, memory usage becomes excessive, or frame rates drop.
 
-**Alerts** let you proactively monitor critical performance metrics for your experience and receive real-time notifications when they cross your defined thresholds. Instead of manually checking dashboards, you can set up alerts that notify you automatically when metrics like crash rates spike, memory usage becomes excessive, or frame rates drop.
+Alerts are available for any experience that meets the eligibility requirement for [performance metrics](performance.md) (100+ daily active users).
 
 For example, the following workflow is a typical way of using alerts to catch performance regressions:
 
@@ -38,9 +36,11 @@ Alerts require specific permissions for different actions:
 | View the alert analytics page | View all analytics |
 | Create experience-level webhooks | List, create, update, and delete webhooks |
 
+For group-owned experiences, anyone with **Edit experience** permissions is granted **Create and configure alerts** by default so that teams can start setting up alerts immediately. If you want to restrict who can create or manage alerts, revoke the permission for specific roles under the experience **Permissions** page. Users who have **Create and configure alerts** also receive the webhook management permission by default.
+
 ## Create alerts
 
-To create an alert, click **Create** on the alerts configuration page.
+To create an alert, click **Create** on the alerts configuration page. You can also create an alert directly from a chart on the [Performance dashboard](performance.md) by opening the chart's overflow menu and selecting **Create an alert**, which pre-fills the alert with that chart's metric and filters.
 
 <img src="../../assets/analytics/alerts/create.png" alt="Existing alerts dashboard with create button." width="800" />
 
@@ -76,6 +76,8 @@ Alerts support all performance metrics available on the [Performance dashboard](
 - Concurrent users
 - Session time
 
+Alerts also support data store metrics, so you can monitor storage usage and data store performance alongside your experience's runtime performance.
+
 ### Trigger conditions
 
 You can set one of two trigger condition types:
@@ -85,7 +87,7 @@ You can set one of two trigger condition types:
 
   - **Week over week** - Checks the percent change between the same time last week (e.g. 5:00 PM this Friday vs. 5:00 PM last Friday).
   - **Day over day** - Checks the percent change between the same time yesterday (e.g. 9:00 AM today vs. 9:00 AM yesterday).
-  - **Hour over hour** - Checks the percent change between most recent hour and the previous hour (e.g. 9:05 AM vs. 8:05 AM).
+  - **Hour over hour** - Checks the percent change between the most recent hour and the previous hour (e.g. 9:05 AM vs. 8:05 AM).
 
 For example, you can set a metric value condition like "client crash rate is above 5%" or a period over period condition like "hourly change is above 50%."
 
@@ -136,8 +138,8 @@ You can use webhooks to integrate with external tools like PagerDuty or Slack fo
    ```
 
 3. Enter your webhook URL and a name.
-4. (Optional) Include a secret, which can help ensure that the requests you receive came from Roblox.
-5. (Optional) Use the **Test Response** button to check if your service can receive a sample request.
+4. <Chip label="OPTIONAL" size="small" variant="outlined" /> Include a secret, which can help ensure that the requests you receive came from Roblox.
+5. <Chip label="OPTIONAL" size="small" variant="outlined" /> Use the **Test Response** button to check if your service can receive a sample request.
 6. Click **Save Changes**.
 7. When creating or editing an alert, select your webhook under the **Delivery channel** field.
 

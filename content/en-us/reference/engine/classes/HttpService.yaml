@@ -60,10 +60,8 @@ properties:
       `Class.HttpService:GetAsync()`, `Class.HttpService:PostAsync()`, and
       `Class.HttpService:RequestAsync()`.
 
-      This property must be toggled on through the
-      [Experience Settings](../../../studio/experience-settings.md) interface in
-      Studio, or for **unpublished** experiences by setting this property to
-      `true` using the
+      This property must be toggled on for **unpublished** experiences by
+      setting this property to `true` using the
       [Command Bar](../../../studio/ui-overview.md#command-bar):
 
       `game:GetService("HttpService").HttpEnabled = true`
@@ -158,6 +156,8 @@ methods:
 
       - `true`: `{94b717b2-d54f-4340-a504-bd809ef5bf5c}`
       - `false`: `db454790-7563-44ed-ab4b-397ff5df737b`
+
+      This method can be used regardless of whether HTTP requests are enabled.
     code_samples:
       - HttpService-GenerateGUID
     parameters:
@@ -189,6 +189,12 @@ methods:
 
       When `true`, the `nocache` parameter prevents this method from caching
       results from previous calls with the same `url`.
+
+      The `url` parameter also accepts a `Datatype.Secret` value; use
+      `Class.HttpService:GetSecret()|GetSecret` combined with
+      `Datatype.Secret:AddPrefix()|AddPrefix` and
+      `Datatype.Secret:AddSuffix()|AddSuffix` to safely embed secret credentials
+      (such as API keys) directly in the URL without exposing their values.
     code_samples:
       - Astronauts-in-Space
       - International-Space-Station
@@ -238,10 +244,13 @@ methods:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the secret to fetch, matching the identifier under which
+          it was added to the experience's secrets store.
     returns:
       - type: Secret
-        summary: ''
+        summary: |
+          A `Datatype.Secret` wrapping the stored value associated with `key`.
     tags: []
     deprecation_message: ''
     security: None
@@ -339,8 +348,14 @@ methods:
       `Class.HttpService:RequestAsync()|RequestAsync()` should be used in most
       cases.
 
-      When `true`, the `compress` parameter controls whether large request
-      bodies will be compressed using **gzip**.
+      When `true`, the `compress` parameter controls whether a large request
+      body is compressed using **gzip**.
+
+      The `url` parameter also accepts a `Datatype.Secret` value — use
+      `Class.HttpService:GetSecret()|GetSecret` combined with
+      `Datatype.Secret:AddPrefix()|AddPrefix` and
+      `Datatype.Secret:AddSuffix()|AddSuffix`to safely embed secret credentials
+      (such as API keys) directly in the URL without exposing their values.
     code_samples:
       - HttpService-Pastebin
     parameters:

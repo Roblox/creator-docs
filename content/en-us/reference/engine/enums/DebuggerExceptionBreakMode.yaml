@@ -4,24 +4,35 @@
 
 name: DebuggerExceptionBreakMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls when the Luau debugger pauses script execution in response to a
+  runtime exception.
+description: |
+  Controls when the Luau debugger pauses script execution in response to a
+  runtime exception. This enum is used as the `breakMode` argument to
+  `DebuggerConnection:SetExceptionBreakMode()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Never
-    summary: ''
+    summary: |
+      The debugger never pauses due to a runtime exception; execution continues
+      normally regardless of whether the exception is caught or uncaught.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Always
-    summary: ''
+    summary: |
+      The debugger pauses on every runtime exception, including those caught by
+      `pcall` or `xpcall`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Unhandled
-    summary: ''
+    summary: |
+      The debugger pauses only on runtime exceptions that propagate without
+      being caught by `pcall` or `xpcall`.
     value: 2
     tags: []
     deprecation_message: ''

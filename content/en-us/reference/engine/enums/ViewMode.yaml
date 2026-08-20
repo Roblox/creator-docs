@@ -4,29 +4,43 @@
 
 name: ViewMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls which debug rendering visualization overlay is displayed in the
+  Studio viewport via `Class.RenderSettings.ViewMode`.
+description: |
+  Controls which debug rendering visualization overlay is drawn over the Studio
+  viewport. The visualization highlights overdraw for geometry, transparency, or
+  decals, or disables the overlay entirely. Assigned through
+  `Class.RenderSettings.ViewMode`, which defaults to `Enum.ViewMode.None`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      Disables the debug rendering visualization overlay; the default value of
+      `Class.RenderSettings.ViewMode`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: GeometryComplexity
-    summary: ''
+    summary: |
+      Displays an overdraw visualization highlighting geometric complexity
+      across rendered surfaces.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Transparent
-    summary: ''
+    summary: |
+      Displays an overdraw visualization highlighting surfaces rendered with
+      transparency.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Decal
-    summary: ''
+    summary: |
+      Displays an overdraw visualization highlighting surfaces rendered with
+      decals.
     value: 3
     tags: []
     deprecation_message: ''

@@ -5,8 +5,16 @@
 name: PublishService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A service that centralizes uploading assets to Roblox, including publishing
+  cage mesh edits and creating assets or asset versions.
+description: |
+  Requires `RobloxScript` security; used by Studio publishing and avatar-import
+  workflows rather than ordinary experience code. Centralizes uploading assets
+  to Roblox: publishing edited cage meshes from `Class.WrapTarget` and
+  `Class.WrapLayer` instances, publishing an instance's descendant assets in
+  parallel, and creating assets or asset versions while polling for the
+  resulting asset ID.
 code_samples: []
 inherits:
   - Instance

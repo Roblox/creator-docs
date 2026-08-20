@@ -15,36 +15,55 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: NumberSequenceKeypoint.new
-    summary: Returns a keypoint with the specified time and value.
-    description: Returns a keypoint with a specified time and value.
+    summary: |
+      Returns a keypoint with the specified time and value.
+    description: |
+      Returns a `Datatype.NumberSequenceKeypoint` with the given `time` and
+      `value`, with `Datatype.NumberSequenceKeypoint.Envelope|Envelope`
+      defaulting to 0 (no random variance). The `time` parameter should be a
+      number between 0 and 1, and `value` can be any number.
     parameters:
       - name: time
         type: number
         default:
-        summary: ''
+        summary: |
+          The relative time position of the keypoint within the sequence,
+          expressed as a number from 0 to 1.
       - name: value
         type: number
         default:
-        summary: ''
+        summary: |
+          The base numeric value at this keypoint's time position.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: NumberSequenceKeypoint.new
-    summary: Returns a keypoint with the specified time, value, and envelope.
-    description: Returns a keypoint with a specified time, value, and envelope.
+    summary: |
+      Returns a keypoint with the specified time, value, and envelope.
+    description: |
+      Returns a `Datatype.NumberSequenceKeypoint` with the given `time`,
+      `value`, and `envelope`. The `envelope` parameter must be a non-negative
+      number that defines the amount of random variance applied to `value` at
+      runtime; the actual output for this keypoint is chosen randomly within
+      [value&nbsp;&minus;&nbsp;envelope,&nbsp;value&nbsp;+&nbsp;envelope].
     parameters:
       - name: time
         type: number
         default:
-        summary: ''
+        summary: |
+          The relative time position of the keypoint within the sequence,
+          expressed as a number from 0 to 1.
       - name: value
         type: number
         default:
-        summary: ''
+        summary: |
+          The base numeric value at this keypoint's time position.
       - name: envelope
         type: number
         default:
-        summary: ''
+        summary: |
+          The amount of random variance that can be applied to the value at
+          runtime; must be non-negative.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -69,7 +88,14 @@ properties:
     summary: |
       The relative time at which the keypoint is positioned.
     description: |
-      The relative time at which the keypoint is positioned.
+      The relative time at which this keypoint is positioned within the parent
+      `Datatype.NumberSequence`, expressed as a number from 0 to 1 where 0 is
+      the beginning of the sequence and 1 is the end. Within a
+      `Datatype.NumberSequence`, the first keypoint must have a time of 0 and
+      the last keypoint must have a time of 1; any intermediate keypoints must
+      be in ascending time order. The engine linearly interpolates values and
+      envelopes between consecutive keypoints based on their time positions.
+      Defaults to 0.
     default:
     code_samples: []
     tags: []
@@ -79,7 +105,13 @@ properties:
     summary: |
       The base value of the keypoint.
     description: |
-      The base value of this keypoint.
+      The base numeric value at this keypoint's position in the sequence. When
+      the engine evaluates a `Datatype.NumberSequence`, it linearly interpolates
+      between adjacent keypoints' values based on time. If
+      `Datatype.NumberSequenceKeypoint.Envelope|Envelope` is greater than 0, the
+      actual output at runtime may vary randomly within the range
+      [Value&nbsp;&minus;&nbsp;Envelope,&nbsp;Value&nbsp;+&nbsp;Envelope].
+      Defaults to 0.
     default:
     code_samples: []
     tags: []

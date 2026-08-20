@@ -35,6 +35,36 @@ descendants:
 tags: []
 deprecation_message: ''
 properties:
+  - name: FileMesh.MeshContent
+    summary: |
+      The mesh content applied to the parent `Class.BasePart`, supporting asset
+      URIs and `Class.EditableMesh` objects.
+    description: |
+      The mesh content applied to the parent `Class.BasePart`. This property
+      accepts `Datatype.Content` values including
+      [asset URIs](../../../projects/assets/index.md#asset-uris) and
+      `Class.EditableMesh` objects.
+
+      MeshContent is the underlying storage for `Class.FileMesh.MeshId`. Setting
+      `Class.FileMesh.MeshId` writes through to this property, and reading
+      `Class.FileMesh.MeshId` derives its value from this property. When
+      MeshContent is set to `Datatype.Content.none`, no mesh is displayed.
+
+      This property is inherited by `Class.SpecialMesh`.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
   - name: FileMesh.MeshId
     summary: |
       The MeshId is the content ID of the mesh that is to be displayed.
@@ -46,6 +76,40 @@ properties:
     code_samples:
       - Mesh-VertexColor
     type: ContentId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+  - name: FileMesh.TextureContent
+    summary: |
+      The texture content applied to the mesh, supporting asset URIs and
+      `Class.EditableImage` objects.
+    description: |
+      The texture content applied to the mesh. This property accepts
+      `Datatype.Content` values including
+      [asset URIs](../../../projects/assets/index.md#asset-uris) and
+      `Class.EditableImage` objects.
+
+      TextureContent is the underlying storage for `Class.FileMesh.TextureId`.
+      Setting `Class.FileMesh.TextureId` writes through to this property, and
+      reading `Class.FileMesh.TextureId` derives its value from this property.
+      When TextureContent is set to `Datatype.Content.none`, no texture is
+      applied to the mesh.
+
+      When TextureContent references an `Class.EditableImage`, the texture
+      live-updates with any edits to that object.
+
+      This property is inherited by `Class.SpecialMesh`.
+    code_samples: []
+    type: Content
     tags: []
     deprecation_message: ''
     security:

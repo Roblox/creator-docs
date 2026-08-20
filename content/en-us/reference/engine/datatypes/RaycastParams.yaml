@@ -27,8 +27,9 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: RaycastParams.new
-    summary: Returns a blank `Datatype.RaycastParams`.
-    description: |-
+    summary: |
+      Returns a blank `Datatype.RaycastParams`.
+    description: |
       Returns a blank `Datatype.RaycastParams` object. Unlike other data type
       constructors, this constructor does not have any parameters, so you should
       set its properties appropriately.

@@ -65,8 +65,13 @@ properties:
       can_save: false
     capabilities: []
   - name: PluginMenu.Visible
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether the menu is shown when it is used as a submenu.
+    description: |
+      This property determines whether a `Class.PluginMenu` is shown when it is
+      displayed as a submenu of another menu, that is, when it has been added to
+      a parent menu through `Class.PluginMenu:AddMenu()`. It defaults to `true`;
+      setting it to `false` hides the submenu's entry in its parent menu.
     code_samples: []
     type: boolean
     tags: []

@@ -45,7 +45,9 @@ methods:
           The connection type to check.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Whether the current data model can potentially have connections of the
+          given type.
     tags: []
     deprecation_message: ''
     security: PluginSecurity

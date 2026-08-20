@@ -5,8 +5,18 @@
 name: ControllerBase
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Abstract base class for the controllers that a `Class.ControllerManager` uses
+  to move its character.
+description: |
+  `Class.ControllerBase` is the abstract base class for the controllers that a
+  `Class.ControllerManager` uses to move its assigned character:
+  `Class.GroundController`, `Class.AirController`, `Class.SwimController`, and
+  `Class.ClimbController`. Each controller is parented to a
+  `Class.ControllerManager` and supplies the movement and balance behavior for
+  one locomotion state, and the manager activates one controller at a time. This
+  class isn't created directly; instead create one of its derived controllers.
+  It defines the balance and movement properties shared by all of them.
 code_samples: []
 inherits:
   - Instance
@@ -20,8 +30,16 @@ tags:
 deprecation_message: ''
 properties:
   - name: ControllerBase.Active
-    summary: ''
-    description: ''
+    summary: |
+      Whether this controller is currently the active controller of its
+      `Class.ControllerManager`.
+    description: |
+      Indicates whether this controller is the one currently driving its parent
+      `Class.ControllerManager`. The manager activates the controller referenced
+      by its `Class.ControllerManager.ActiveController` property and sets that
+      controller's `Active` to `true`; when the controller is no longer the
+      active one, it is deactivated and `Active` returns to `false`. This
+      property is read-only and defaults to `false`.
     code_samples: []
     type: boolean
     tags:
@@ -39,8 +57,17 @@ properties:
     capabilities: []
     simulationAccess: true
   - name: ControllerBase.BalanceRigidityEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Whether the controller holds its balance orientation rigidly instead of
+      with a spring response.
+    description: |
+      Controls how the controller keeps its character oriented while active.
+      When `false` (the default), the balance constraint is compliant and
+      corrects orientation with a spring-damper response tuned by the
+      controller's balance properties, such as its balance torque and balance
+      speed. When `true`, the constraint instead holds the target orientation
+      rigidly, and those balance-tuning properties no longer apply. Defaults to
+      `false`.
     code_samples: []
     type: boolean
     tags: []
