@@ -241,8 +241,7 @@ To distribute an asset inside Studio:
 
 Every asset that you distribute and sell on the Creator Store must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and [Digital Millennium Copyright Act](https://create.roblox.com/docs/production/publishing/dmca-guidelines) (DMCA) regarding copyright. If any asset breaks these rules, the asset and your account may be subject to moderation.
 
-There are limits on the number of assets you can distribute per 30 days, depending on whether you've [verified your account](../production/publishing/account-verification.md):
-
+There are limits on the number of assets you can distribute per 30 days, depending on whether you've verified your account. You can verify your account by passing an [age check](https://en.help.roblox.com/hc/en-us/articles/39143693116052-Understanding-Age-Checks-on-Roblox) or using a [government ID](../production/publishing/account-verification.md#verify-through-government-id), but you **cannot** verify with a phone number.
 <table>
 <thead>
   <tr>
@@ -289,13 +288,18 @@ If you discover or purchase an asset that you believe violates Roblox's policies
 
 <Tabs>
 
-<TabItem key = "1" label="Seller Requirements">
+<TabItem key = "1" label="Distributor Requirements">
 
-In order to set any USD prices and sell your models and plugins, you must have a seller account. In order to create a seller account, you must meet the following Roblox eligibility requirements:
+In order to share assets to the Creator Store, you must meet the following eligibility requirements:
 
-- Your Roblox account must be verified with a [government ID](../production/publishing/account-verification.md#verify-through-government-id). You **cannot** verify with a phone number.
+- Your Roblox account must be at least 2 days old.
 - Your Roblox account must not have been recently banned for any reason.
+- Your Roblox account must be verified by passing an [age check](https://en.help.roblox.com/hc/en-us/articles/39143693116052-Understanding-Age-Checks-on-Roblox) or using a [government ID](../production/publishing/account-verification.md#verify-through-government-id). You **cannot** verify with a phone number.
+
+In addition, in order to set any USD prices and **sell your models and plugins**, you must have a valid seller account. To create a seller account, you must meet the previous eligibility requirements in addition to the following:
+
 - You must be either 18 years of age or older, or 13-17 years of age with parental consent. A parent/guardian (18+) must review and agree to the Creator Store terms, and parent/guardian information must be entered on the Stripe form.
+- You must secure your Roblox account with [2-Step verification](https://en.help.roblox.com/hc/en-us/articles/212459863-Add-2-Step-Verification-to-Your-Account).
 - You must reside in [one of the countries supported](https://stripe.com/docs/connect/cross-border-payouts) by our third-party payments provider.
 
 <Alert severity="info">

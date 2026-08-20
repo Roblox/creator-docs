@@ -96,9 +96,14 @@ Attribute | Description
 :--- | :---
 Country | The player's geographic location.
 Language | The player's language setting.
+New vs returning | Whether the player is playing your experience for the first time or has played it before.
+Source | How the player found your experience, such as a home page recommendation, search, or a sponsored ad.
 When user first played | How long ago the player first played your experience, such as 0-30 days ago or 31-90 days ago. Calculated daily.
 In-experience active payer status | The player's payment activity within your experience, which lets you target different segments of paying users. Calculated daily.
+In-experience activity status | How recently the player has played your experience, which lets you treat new, active, lapsed, and reactivated players differently. Calculated daily.
+User engagement | How much the player plays your experience each week, which lets you separate your most engaged players from more casual ones. Calculated daily.
 Platform spender status | Whether the player is a Roblox platform-wide active spender. Calculated daily.
+Platform activity status | How recently the player has played anywhere on Roblox, rather than only in your experience. Calculated daily.
 
 ### Create conditional values
 

@@ -65,10 +65,16 @@ methods:
       - name: commerceProductId
         type: string
         default:
-        summary: ''
+        summary: |
+          The identifier of the commerce product to look up, either the numeric
+          ID or the full `COM-`-prefixed form.
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A dictionary of information about the commerce product, including
+          whether it `IsForSale`, an `Item` sub-table of display details
+          (`Name`, `Description`, `IconImageAssetId`, `DisplayPrice`, and
+          `IsPurchasable`), and the `Benefits` granted by purchasing it.
     tags:
       - Yields
     deprecation_message: ''
@@ -90,11 +96,15 @@ methods:
       - name: user
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` to prompt with the purchase flow. When called from
+          a `LocalScript`, this must be the local player.
       - name: commerceProductId
         type: string
         default:
-        summary: ''
+        summary: |
+          The identifier of the commerce product to purchase, either the numeric
+          ID or the full `COM-`-prefixed form.
     returns:
       - type: ()
         summary: ''
@@ -105,7 +115,10 @@ methods:
     capabilities:
       - Monetization
   - name: CommerceService:PromptRealWorldCommerceBrowser
-    summary: ''
+    summary: |
+      Legacy endpoint that opens an in-experience browser to a real-world
+      commerce URL for the specified player; superseded by
+      `Class.CommerceService:PromptCommerceProductPurchase()`.
     description: |
       This is a legacy endpoint that is not meant for use. To open the webview
       to the purchasing flow for real world commerce, see
@@ -117,11 +130,15 @@ methods:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` for whom the browser opens. When called from a
+          `LocalScript`, this must be the local player.
       - name: url
         type: string
         default:
-        summary: ''
+        summary: |
+          The real-world commerce URL to open. The URL must be on the commerce
+          allowlist, or the request is ignored.
     returns:
       - type: ()
         summary: ''
@@ -132,7 +149,9 @@ methods:
     capabilities:
       - Monetization
   - name: CommerceService:UserEligibleForRealWorldCommerceAsync
-    summary: ''
+    summary: |
+      Legacy endpoint that returns whether the current user is eligible for
+      real-world commerce; superseded by `Class.PolicyService`.
     description: |
       This is a legacy endpoint that is not meant for use. To check if a user is
       eligible for real world commerce, see
@@ -143,7 +162,8 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the current user is eligible for real-world commerce.
     tags:
       - Yields
     deprecation_message: ''
@@ -170,11 +190,13 @@ events:
       - name: user
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` who was prompted with the purchase flow.
       - name: productId
         type: string
         default:
-        summary: ''
+        summary: |
+          The identifier of the commerce product whose purchase flow finished.
     tags: []
     deprecation_message: ''
     security: None

@@ -65,9 +65,10 @@ methods:
       - The player must not already have the badge (note that a player may
         delete an awarded badge from their profile and be awarded the badge
         again).
-      - The badge must be awarded from a server-side `Class.Script` or a
-        `Class.ModuleScript` eventually required by a `Class.Script`, not from a
-        `Class.LocalScript`.
+      - The badge must be awarded from a server script (a `Class.Script` with
+        `Class.BaseScript.RunContext|RunContext` of `Enum.RunContext.Server` or
+        `Enum.RunContext.Legacy`) or a `Class.ModuleScript` eventually required
+        by one, not from a client script.
       - The badge must be awarded in a place that is part of the experience
         associated with the badge.
       - The badge must be enabled; check this using the `IsEnabled` property of
@@ -108,7 +109,7 @@ methods:
       batches of up to 10 badges; use `Class.BadgeService:UserHasBadgeAsync()`
       for single badge lookups.
 
-      When called from a `Class.Script`, any `Class.Player.UserId|UserId` can be
+      When called from a server script, any `Class.Player.UserId|UserId` can be
       used. If the user with the target user ID has not recently been in the
       server, only badge IDs that are associated with the requesting experience
       will be checked, and any badge IDs that are not associated with the
@@ -119,8 +120,10 @@ methods:
       experiences can be queried, no matter who created the badge or which
       experience it is used for.
 
-      In a `Class.LocalScript`, only the `Class.Player.UserId|UserId` of the
-      local user whose client is running the script can be used.
+      In a client script (a `Class.LocalScript` or a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` of `Enum.RunContext.Client`),
+      only the `Class.Player.UserId|UserId` of the local user whose client is
+      running the script can be used.
 
       Rate limit is `10 + 5 * [number of players]` per minute in each server.
     code_samples:
@@ -214,6 +217,89 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - AssetManagement
+  - name: BadgeService:GetUserBadgesAsync
+    summary: |
+      Checks a list of badge IDs against a `Datatype.User` and returns, for each
+      badge the player owns, its ID and the date it was awarded.
+    description: |
+      Checks a list of badge IDs against a `Datatype.User` and returns, for each
+      badge the player owns, a dictionary containing the badge's ID and the date
+      it was awarded. This method supports batches of up to 100 badges; use
+      `Class.BadgeService:UserHasBadgeAsync()` for single badge lookups.
+
+      Each entry in the returned list is a dictionary with the following fields:
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Key</th>
+      			<th>Type</th>
+      			<th>Description</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td><code>BadgeId</code></td>
+      			<td>int64</td>
+      			<td>The ID of the owned badge.</td>
+      		</tr>
+      		<tr>
+      			<td><code>AwardedDate</code></td>
+      			<td>DateTime</td>
+      			<td>The date and time the badge was awarded to the user.</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+      When called from a server script, any `Datatype.User` can be used. If the
+      user with the target `Datatype.User` has not recently been in the server,
+      only badge IDs that are associated with the requesting experience will be
+      checked, and any badge IDs that are not associated with the requesting
+      experience will not be included in the response (as if they were not
+      owned).
+
+      For users that have recently been in the server, any badges for any
+      experiences can be queried, no matter who created the badge or which
+      experience it is used for.
+
+      In a client script (a `Class.LocalScript` or a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` of `Enum.RunContext.Client`),
+      only the `Datatype.User` of the local user whose client is running the
+      script can be used.
+
+      Rate limit is `10 + 5 * [number of players]` per minute in each server.
+    code_samples:
+      - badges---getting-earned-badges
+    parameters:
+      - name: userId
+        type: User
+        default:
+        summary: |
+          The `Datatype.User` of the player to check for ownership of the
+          specified badges.
+      - name: badgeIds
+        type: Array
+        default:
+        summary: |
+          The list of IDs of the badges to check ownership of. Maximum length
+          of 100.
+    returns:
+      - type: Array
+        summary: |
+          A list of dictionaries, one for each badge the given user owns out of
+          the provided badge IDs. Each dictionary contains a `BadgeId` and an
+          `AwardedDate`. Empty if none of the provided badges are owned by the
+          given user. Not guaranteed to be in the same order as the input list.
+          Some badge IDs may be omitted if the user with the target
+          `Datatype.User` has not recently been in the server and the badge IDs
+          are not associated with the requesting experience.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AssetManagement
   - name: BadgeService:IsDisabled
     summary: |
       Returns whether a given badge is disabled.
@@ -298,12 +384,13 @@ methods:
     description: |
       Checks and returns whether a `Class.Player` owns a badge given their
       `Class.Player.UserId|UserId` and the badge ID. You can call the function
-      from the server in a `Class.Script` or `Class.ModuleScript` eventually
-      required by a `Class.Script`. When calling the method from the client in a
-      `Class.LocalScript`, it only works for the local user whose client is
-      running the script.
+      from a server script or a `Class.ModuleScript` eventually required by one.
+      When calling the method from a client script (a `Class.LocalScript` or a
+      `Class.Script` with `Class.BaseScript.RunContext|RunContext` of
+      `Enum.RunContext.Client`), it only works for the local user whose client
+      is running the script.
 
-      When called from a `Class.Script`, any `Class.Player.UserId|UserId` can be
+      When called from a server script, any `Class.Player.UserId|UserId` can be
       used. If the user with the target user ID has not recently been in the
       server, only badge IDs that are associated with the requesting experience
       will be checked. If the requested badge ID is not associated with the
@@ -347,12 +434,13 @@ methods:
     description: |
       Checks and returns whether a `Class.Player` owns a badge given their
       `Class.Player.UserId|UserId` and the badge ID. You can call this method
-      from the server in a `Class.Script` or `Class.ModuleScript` eventually
-      required by a `Class.Script`. When calling this method from the client in
-      a `Class.LocalScript`, it only works for the local user whose client is
-      running the script.
+      from a server script or a `Class.ModuleScript` eventually required by one.
+      When calling this method from a client script (a `Class.LocalScript` or a
+      `Class.Script` with `Class.BaseScript.RunContext|RunContext` of
+      `Enum.RunContext.Client`), it only works for the local user whose client
+      is running the script.
 
-      When called from a `Class.Script`, any `Class.Player.UserId|UserId` can be
+      When called from a server script, any `Class.Player.UserId|UserId` can be
       used. If the user with the target user ID has not recently been in the
       server, only badge IDs that are associated with the requesting experience
       will be checked. If the requested badge ID is not associated with the

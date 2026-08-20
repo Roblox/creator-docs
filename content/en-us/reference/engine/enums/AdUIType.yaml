@@ -4,24 +4,32 @@
 
 name: AdUIType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the type of ad creative currently rendered by an `Class.AdGui`.
+description: |
+  Describes the type of ad creative that an `Class.AdGui` is currently rendering
+  on its surface. Managed by the engine based on the creative asset served to
+  the ad slot; see `Enum.AdUIType` items for the possible values.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      The `Class.AdGui` has no ad creative loaded and is not rendering ad
+      content.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Image
-    summary: ''
+    summary: |
+      The `Class.AdGui` is rendering a static image ad creative.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Video
-    summary: ''
+    summary: |
+      The `Class.AdGui` is rendering a video ad creative.
     value: 2
     tags: []
     deprecation_message: ''
