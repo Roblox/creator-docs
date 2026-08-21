@@ -436,8 +436,8 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
   </tr>
   <tr>
     <td>Render/PreRender/UpdateUILayouts/Rebuild Z-order list</td>
-    <td>Sorts the Z-order of UI elements (internal term not to be confused with `Class.GuiObject.ZIndex`) to prevent tearing of UI elements.</td>
-    <td>Reduce the amount of UI elements with the same `Class.GuiObject.ZIndex`.</td>
+    <td>Rebuilds the internal Z-order list of UI elements (not to be confused with `Class.GuiObject.ZIndex`) in a `Class.LayerCollector` on first render or when a new element is added, removed, or had its `Class.GuiObject.ZIndex` changed.</td>
+    <td>Reduce the number of UI elements in `Class.LayerCollector|LayerCollectors` before first render and avoid frequently changing the parent and `Class.GuiObject.ZIndex` of UI elements inside them. The more elements a `Class.LayerCollector` has, the worse it performs.</td>
   </tr>
   <tr>
     <td>Render/PreRender/UpdateUILayouts/Layout</td>
