@@ -26,11 +26,16 @@ To verify your account with a government-issued ID:
 
    <img src="../../assets/publishing/account-verification/Account-Settings.png" width="720" alt="Account settings menu on roblox.com" />
    2. **On Roblox app:** In the bottom-right corner, click the **⋯ More** icon and select **Settings**.
+
 2. Select the **Account Info** tab.
 3. Underneath your birthday, click **Continue with ID**.
+
    <img src="../../assets/publishing/account-verification/Verify-Birthday.png" width="400" alt="Option to verify age with selfie or ID" />
+
 4. Follow the instructions to complete the ID verification flow.
-      <img src="../../assets/publishing/account-verification/Verify-With-ID.png" width="400" alt="Option to verify age with selfie or ID" />
+
+   <img src="../../assets/publishing/account-verification/Verify-With-ID.png" width="400" alt="Option to verify age with selfie or ID" />
+
    1. Allow camera access.
    2. Scan your ID document. Roblox detects what type of document you have.
       1. If there is a barcode on the back, scan and capture an image of the back of your ID.
@@ -86,3 +91,10 @@ end
 
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
+
+The method also accepts an optional `Enum.VerifiedLevel` parameter if you want to do more granular gating:
+
+- `Enum.VerifiedLevel.Low` — Useful for gating standard features such as in-game trading, where the goal is to deter alternate accounts.
+- `Enum.VerifiedLevel.High` — Useful for gating high-stakes features such as ranked matchmaking queues, where you want the highest degree of integrity.
+
+If you don't pass a parameter, the method defaults to `Enum.VerifiedLevel.Low`, so existing implementations continue to work without changes.
