@@ -38,7 +38,7 @@ See the beta announcement for the latest information on limitations and currentl
 At this time, glTF has the following limitations:
 
 - Does not support animation data.
-- Inconsistent support for layered clothing — clothing accessories may not always position correctly and won't deform to avatar bodies outside of Roblox.
+- Inconsistent support for layered accessories — clothing accessories may not always position correctly and won't deform to avatar bodies outside of Roblox.
 
 ## Permissions
 

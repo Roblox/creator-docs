@@ -254,7 +254,7 @@ Caged accessories, like layered accessories, use `Class.WrapTarget` and `Class.W
 
 Custom implementation of layered accessories, such as a model using a unique cage UV map, cannot be uploaded and published to the Marketplace. For more information, see [Layered accessory specifications](../avatar/layered-accessories/specifications.md).
 
-Whether you are implementing layered accessories on an avatar R15 rig, or using a custom rig, ensure that your accessories and bodies include the following:
+Whether you are implementing layered accessories on an [R15 rigging armature](../avatar/character-bodies/specifications.md#rigging), or using a custom rig, ensure that your accessories and bodies include the following:
 
 - The target model, typically the body, has a `Class.WrapTarget` component on the meshes that additional models are intended to wrap around.
 - The layering model, typically the clothing or accessory, has a `Class.WrapLayer` component on the meshes meant to wrap the target model.

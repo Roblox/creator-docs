@@ -13,7 +13,7 @@ Whenever you are ready to export your model, it's important to clean up your pro
 - Final technical checks
 
 <Alert severity = 'error'>
-Failure to combine head geometry and [remove head bones](../../characters/creating/remove-extra-bones.md) will cause issues with validation, as the character will no longer adhere to the expected R15 geometry and joint hierarchy.
+Failure to combine head geometry and [remove head bones](../../characters/creating/remove-extra-bones.md) will cause issues with validation, as the character will no longer adhere to the expected standard [geometry](../../../avatar/character-bodies/specifications.md#body-parts) and [joint hierarchy](../../../avatar/character-bodies/specifications.md#rigging).
 </Alert>
 
 ## Combine head geometry

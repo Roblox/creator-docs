@@ -59,7 +59,9 @@ constructors:
       - name: domainUserId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The domain-scoped user ID to construct the User from. Must be above
+          the global user ID range.
     code_samples:
       - User-fromId
     tags: []
@@ -74,7 +76,8 @@ constructors:
       - name: userString
         type: string
         default:
-        summary: ''
+        summary: |
+          A string previously produced by `Datatype.User:ToString()|ToString()`.
     code_samples:
       - User-fromString
     tags: []
@@ -131,7 +134,10 @@ methods:
     parameters: []
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A stable, URL-safe encoded string representing the domain type, domain
+          ID, and domain user ID that can be deserialized back with
+          `Datatype.User.fromString()|fromString()`.
     code_samples:
       - User-ToString
     tags: []

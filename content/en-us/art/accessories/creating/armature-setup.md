@@ -5,7 +5,7 @@ next: /art/accessories/creating/test-poses
 prev: /art/accessories/creating/texture-painting
 ---
 
-**Rigging** is the process that enables the clothing object to move and deform with a Roblox character's R15 rig. In this tutorial, you'll parent the clothing item to Roblox's provided R15 armature and verify the Automatic Skinning Transfer data. After rigging, be sure to test out some basic poses to ensure that your clothes move and stretch correctly with any character body.
+**Rigging** is the process that enables the clothing object to move and deform with a Roblox character's rigging armature. In this tutorial, you'll parent the clothing item to Roblox's provided [standard R15 rig](../../../avatar/character-bodies/specifications.md#standard-r15-rigs) and verify the Automatic Skinning Transfer data. After rigging, be sure to test out some basic poses to ensure that your clothes move and stretch correctly with any character body.
 
 <GridContainer numColumns="2">
   <figure>
@@ -20,15 +20,15 @@ prev: /art/accessories/creating/texture-painting
 
 The rigging process requires the following:
 
-1. Download and append an R15 armature to your project.
+1. Download and append a standard R15 armature to your project.
 2. Parent the rig with Blender's automatic weights.
 3. Test poses.
 
 ## Transfer armature
 
-Roblox provides an R15 base armature that you can import into your own project. While it is possible to create your own R15 armature rig, importing a premade rig saves you time and reduces the potential for error.
+Roblox provides base rigging armatures that you can import into your own project. While it is possible to create your own rigs, importing a premade rig with the proper configuration saves you time and reduces the potential for error.
 
-To import the R15 character armature into your file:
+To import a standard R15 rig into your file:
 
 1. Download Roblox's [Rig_and_Attachments_Template.blend](../../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip). Do not open this project.
 2. In your current clothing project, return to **Object Mode**.

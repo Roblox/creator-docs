@@ -81,6 +81,9 @@
         },
         "security": [
           {
+            "roblox-legacy-cookie": []
+          },
+          {
             "roblox-api-key": []
           },
           {
@@ -189,6 +192,9 @@
         },
         "security": [
           {
+            "roblox-legacy-cookie": []
+          },
+          {
             "roblox-api-key": []
           },
           {
@@ -289,6 +295,9 @@
           "apiKeyWithHttpService": false
         },
         "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
           {
             "roblox-api-key": []
           },
@@ -399,6 +408,9 @@
         },
         "security": [
           {
+            "roblox-legacy-cookie": []
+          },
+          {
             "roblox-api-key": []
           },
           {
@@ -506,6 +518,9 @@
           "apiKeyWithHttpService": false
         },
         "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
           {
             "roblox-api-key": []
           },
@@ -627,6 +642,9 @@
         },
         "security": [
           {
+            "roblox-legacy-cookie": []
+          },
+          {
             "roblox-api-key": []
           },
           {
@@ -737,6 +755,9 @@
           "apiKeyWithHttpService": false
         },
         "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
           {
             "roblox-api-key": []
           },
@@ -858,6 +879,9 @@
         },
         "security": [
           {
+            "roblox-legacy-cookie": []
+          },
+          {
             "roblox-api-key": []
           },
           {
@@ -958,6 +982,9 @@
           "apiKeyWithHttpService": false
         },
         "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
           {
             "roblox-api-key": []
           },
@@ -1074,6 +1101,9 @@
           "apiKeyWithHttpService": false
         },
         "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
           {
             "roblox-api-key": []
           },
@@ -17833,6 +17863,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -17929,6 +17960,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -18017,6 +18049,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -18109,6 +18142,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -18180,6 +18214,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -18268,6 +18303,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -18370,6 +18406,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -18474,6 +18511,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -18578,6 +18616,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -18674,6 +18713,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -18762,6 +18802,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -18854,6 +18895,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -18927,6 +18969,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -19015,6 +19058,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -19117,6 +19161,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -19221,6 +19266,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -19317,6 +19363,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -19405,6 +19452,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -19497,6 +19545,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -19598,6 +19647,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -19694,6 +19744,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -19782,6 +19833,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -19874,6 +19926,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -19947,6 +20000,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -20032,6 +20086,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -20131,6 +20186,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -20232,6 +20288,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -20339,6 +20396,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -20433,6 +20491,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -20534,6 +20593,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -20629,6 +20689,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -20712,6 +20773,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -20804,6 +20866,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -20892,6 +20955,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -20990,6 +21054,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -21066,6 +21131,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -21167,6 +21233,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -21364,6 +21431,7 @@
             "description": "77: Content localization set settings return error code invalid\r\n79: Invalid content instance settings\r\n80: Invalid quota settings\r\n81: Invalid change agent\r\n82: Failed to update UniverseDisplayInformation content instance auto translation settings"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -21440,6 +21508,7 @@
             "description": "0: An unknown error occurred.\r\n22: Invalid language code\r\n83: Failed to get UniverseDisplayInformation content instance auto translation settings\r\n84: Count of language code is larger than max batch get size"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -30499,147 +30568,6 @@
         }
       }
     },
-    "/v1/autolocalization/games/{gameId}/autolocalizationtable": {
-      "patch": {
-        "tags": ["Localization"],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "gameId",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.SetAutolocalizationTableForGameRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.SetAutolocalizationTableForGameRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          }
-        },
-        "deprecated": true,
-        "servers": [
-          {
-            "url": "https://gameinternationalization.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "description": "Use the Autolocalization controller in LocalizationTables API",
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/localization#gameinternationalization_patch_v1_autolocalization_games__gameId__autolocalizationtable"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://localizationtables.roblox.com/v1/autolocalization/games/{gameId}/autolocalizationtable",
-            "httpMethod": "PATCH",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/localization#localizationtables_patch_v1_autolocalization_games__gameId__autolocalizationtable"
-          }
-        ]
-      },
-      "post": {
-        "tags": ["Localization"],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "gameId",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.GameAutolocalizationInformationResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.GameAutolocalizationInformationResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          }
-        },
-        "deprecated": true,
-        "servers": [
-          {
-            "url": "https://gameinternationalization.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "description": "Use the Autolocalization controller in LocalizationTables API",
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/localization#gameinternationalization_post_v1_autolocalization_games__gameId__autolocalizationtable"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/legacy-localization-tables/v1/autolocalization/games/{gameId}/autolocalizationtable",
-            "httpMethod": "POST",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/localization#post_legacy_localization_tables_v1_autolocalization_games__gameId__autolocalizationtable"
-          }
-        ]
-      }
-    },
     "/v1/autolocalization/games/{gameId}/autolocalizationtable#localizationtables.roblox.com": {
       "patch": {
         "tags": ["Localization"],
@@ -30770,94 +30698,6 @@
         ]
       }
     },
-    "/v1/autolocalization/games/{gameId}/settings": {
-      "patch": {
-        "tags": ["Localization"],
-        "summary": "Sets a game's auto-localization related settings",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "gameId",
-            "description": "The id of the game.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.SetAutolocalizationSettingsForGameRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.SetAutolocalizationSettingsForGameRequest"
-              }
-            }
-          },
-          "description": "The request body.",
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.ApiEmptyResponseModel"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "14: Invalid game id"
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n18: You do not have permission to manage this game"
-          },
-          "503": {
-            "description": "17: Feature is disabled"
-          }
-        },
-        "deprecated": true,
-        "servers": [
-          {
-            "url": "https://gameinternationalization.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "description": "Use the Autolocalization controller in LocalizationTables API",
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/localization#gameinternationalization_patch_v1_autolocalization_games__gameId__settings"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/legacy-localization-tables/v1/autolocalization/games/{gameId}/settings",
-            "httpMethod": "PATCH",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/localization#patch_legacy_localization_tables_v1_autolocalization_games__gameId__settings"
-          }
-        ]
-      }
-    },
     "/v1/autolocalization/games/{gameId}/settings#localizationtables.roblox.com": {
       "patch": {
         "tags": ["Localization", "Universes"],
@@ -30940,57 +30780,6 @@
             "url": "https://apis.roblox.com/legacy-localization-tables/v1/autolocalization/games/{gameId}/settings",
             "httpMethod": "PATCH",
             "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/localization#patch_legacy_localization_tables_v1_autolocalization_games__gameId__settings"
-          }
-        ]
-      }
-    },
-    "/v1/autolocalization/metadata": {
-      "get": {
-        "tags": ["Metadata"],
-        "summary": "Metadata for AutoLocalization Configuration",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.AutoLocalizationMetadataResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.AutoLocalizationMetadataResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          }
-        },
-        "deprecated": true,
-        "servers": [
-          {
-            "url": "https://gameinternationalization.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "description": "Use the Autolocalization controller in LocalizationTables API",
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/metadata#gameinternationalization_get_v1_autolocalization_metadata"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/legacy-localization-tables/v1/autolocalization/metadata",
-            "httpMethod": "GET",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/localization#get_legacy_localization_tables_v1_autolocalization_metadata"
           }
         ]
       }
@@ -31091,6 +30880,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -31154,6 +30944,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -31231,6 +31022,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -32005,6 +31797,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -32172,6 +31965,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -32254,6 +32048,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -32340,6 +32135,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -32405,6 +32201,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -32487,6 +32284,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -32583,6 +32381,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -32681,6 +32480,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -33325,12 +33125,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClientSettingsApi.Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
+                  "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClientSettingsApi.Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
+                  "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse"
                 }
               }
             }
@@ -34129,6 +33929,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -34219,6 +34020,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -34301,6 +34103,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -34387,6 +34190,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -34454,6 +34258,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -34536,6 +34341,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -34632,6 +34438,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -34730,6 +34537,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -36118,6 +35926,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -36200,6 +36009,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -36286,6 +36096,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -36676,6 +36487,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -36736,6 +36548,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -36898,6 +36711,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -36988,6 +36802,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37070,6 +36885,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37156,6 +36972,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37223,6 +37040,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37302,6 +37120,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37395,6 +37214,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37490,6 +37310,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37638,6 +37459,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37728,6 +37550,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37816,6 +37639,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37911,6 +37735,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -38000,6 +37825,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -46312,76 +46138,6 @@
         ]
       }
     },
-    "/v1/localizationtable/gametables/{gameId}": {
-      "patch": {
-        "tags": ["Localization", "Universes"],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "gameId",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.AssociateLocalizationTablesToGameRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.AssociateLocalizationTablesToGameRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.AssociateLocalizationTablesToGameResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.AssociateLocalizationTablesToGameResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://gameinternationalization.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/localization#gameinternationalization_patch_v1_localizationtable_gametables__gameId_"
-        }
-      }
-    },
     "/v1/marAssetHash/{marAssetHash}/marCheckSum/{marCheckSum}": {
       "get": {
         "tags": ["Assets"],
@@ -47543,6 +47299,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -47607,6 +47364,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -47680,6 +47438,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -47729,6 +47488,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -49587,6 +49347,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -49656,6 +49417,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -49720,6 +49482,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -49816,6 +49579,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -49900,6 +49664,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -49970,6 +49735,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -50034,6 +49800,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -50122,6 +49889,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -50305,6 +50073,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -50375,6 +50144,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -50424,6 +50194,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -51547,6 +51318,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -51623,6 +51395,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -51665,6 +51438,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -51707,6 +51481,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -53492,6 +53267,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -53569,6 +53345,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -55019,6 +54796,15 @@
             "in": "query",
             "name": "includeBackground",
             "description": "Whether to include a background in the thumbnail (defaults to false)",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "in": "query",
+            "name": "includeProfileFrame",
+            "description": "Whether to composite the user's equipped profile frame into the thumbnail (defaults to false)",
             "schema": {
               "type": "boolean",
               "default": false
@@ -65156,6 +64942,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -69215,30 +69002,6 @@
           "rank": {
             "type": "integer",
             "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ClientSettingsApi.Roblox.ClientSettings.Api.Models.Response.ClientVersionResponse": {
-        "type": "object",
-        "properties": {
-          "version": {
-            "type": "string"
-          },
-          "clientVersionUpload": {
-            "type": "string"
-          },
-          "bootstrapperVersion": {
-            "type": "string"
-          },
-          "nextClientVersionUpload": {
-            "type": "string"
-          },
-          "nextClientVersion": {
-            "type": "string"
-          },
-          "forceInstall": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -77062,6 +76825,10 @@
           "groupAffiliatePayoutRobux": {
             "type": "integer",
             "format": "int64"
+          },
+          "creatorRewardsPayoutRobux": {
+            "type": "integer",
+            "format": "int64"
           }
         },
         "additionalProperties": false
@@ -83052,6 +82819,9 @@
           },
           "nextClientVersion": {
             "type": "string"
+          },
+          "forceInstall": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -83858,49 +83628,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.GameInternationalization.Api.AssociateLocalizationTablesToGameRequest": {
-        "type": "object",
-        "properties": {
-          "tables": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.GameInternationalization.Api.LocalizationTableGameAssociation"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.GameInternationalization.Api.AssociateLocalizationTablesToGameResponse": {
-        "type": "object",
-        "properties": {
-          "success": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.GameInternationalization.Api.AutoLocalizationMetadataResponse": {
-        "type": "object",
-        "properties": {
-          "isReactVersionEnabledForAutoLocalizationSettings": {
-            "description": "Is React Implementation of AutoLocalization Settings Enabled",
-            "type": "boolean"
-          },
-          "isTabbedUIEnabledForConfigureLocalizationPage": {
-            "description": "Is Tabbed UI Enabled for Configure Localization Page",
-            "type": "boolean"
-          },
-          "isAutomaticTranslationToggleUIEnabled": {
-            "description": "Is Toggle UI Enabled for Automatic Translations",
-            "type": "boolean"
-          },
-          "isAutomaticTranslationQuotaUIEnabled": {
-            "description": "Is Quota UI Enabled for Automatic Translations",
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.GameInternationalization.Api.AutomaticTranslationStatusTargetLanguage": {
         "type": "object",
         "properties": {
@@ -83961,26 +83688,6 @@
           },
           "errorCode": {
             "format": "int32",
-            "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.GameInternationalization.Api.GameAutolocalizationInformationResponse": {
-        "type": "object",
-        "properties": {
-          "isAutolocalizationEnabled": {
-            "type": "boolean"
-          },
-          "shouldUseLocalizationTable": {
-            "type": "boolean"
-          },
-          "autoLocalizationTableId": {
-            "format": "uuid",
-            "type": "string"
-          },
-          "assetId": {
-            "format": "int64",
             "type": "integer"
           }
         },
@@ -84047,7 +83754,7 @@
             "type": "string"
           },
           "state": {
-            "description": "Enum for image status. ['Approved' = 0, 'PendingReview' = 1, 'UnAvailable' = 2, 'Rejected' = 3, 'Error' = 4]",
+            "description": "Enum for image status.",
             "enum": [
               "Approved",
               "PendingReview",
@@ -84074,7 +83781,7 @@
             "type": "string"
           },
           "state": {
-            "description": "Enum for image status. ['Approved' = 0, 'PendingReview' = 1, 'UnAvailable' = 2, 'Rejected' = 3, 'Error' = 4]",
+            "description": "Enum for image status.",
             "enum": [
               "Approved",
               "PendingReview",
@@ -84100,7 +83807,7 @@
             "type": "string"
           },
           "state": {
-            "description": "Enum for image status. ['Approved' = 0, 'PendingReview' = 1, 'UnAvailable' = 2, 'Rejected' = 3, 'Error' = 4]",
+            "description": "Enum for image status.",
             "enum": [
               "Approved",
               "PendingReview",
@@ -84127,7 +83834,7 @@
             "type": "string"
           },
           "state": {
-            "description": "Enum for image status. ['Approved' = 0, 'PendingReview' = 1, 'UnAvailable' = 2, 'Rejected' = 3, 'Error' = 4]",
+            "description": "Enum for image status.",
             "enum": [
               "Approved",
               "PendingReview",
@@ -84182,7 +83889,7 @@
             "type": "integer"
           },
           "contentType": {
-            "description": "The enum representing the type of request while requesting name/description history ['UniverseDisplayNames' = 0, 'UniverseDisplayDescriptions' = 1, 'BadgeDisplayName' = 2, 'BadgeDisplayDescription' = 3, 'DeveloperProductDisplayName' = 4, 'DeveloperProductDisplayDescription' = 5, 'GamePassDisplayName' = 6, 'GamePassDisplayDescription' = 7]",
+            "description": "The enum representing the type of request while requesting name/description history",
             "enum": [
               "UniverseDisplayNames",
               "UniverseDisplayDescriptions",
@@ -84241,7 +83948,7 @@
             "type": "string"
           },
           "languageOrLocaleType": {
-            "description": "An indicator that says whether the passed in language/locale code represents a language or locale. ['Language' = 0, 'Locale' = 1]",
+            "description": "An indicator that says whether the passed in language/locale code represents a language or locale.",
             "enum": ["Language", "Locale"],
             "type": "string"
           },
@@ -84299,7 +84006,7 @@
             "type": "string"
           },
           "languageCodeType": {
-            "description": "An enum to distinguish between locale codes and language codes. ['Language' = 0, 'Locale' = 1]",
+            "description": "An enum to distinguish between locale codes and language codes.",
             "enum": ["Language", "Locale"],
             "type": "string"
           },
@@ -84313,7 +84020,7 @@
         "type": "object",
         "properties": {
           "languageCodeType": {
-            "description": "The language code type. ['Language' = 0, 'Locale' = 1]",
+            "description": "The language code type.",
             "enum": ["Language", "Locale"],
             "type": "string"
           },
@@ -84347,19 +84054,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.GameInternationalization.Api.LocalizationTableGameAssociation": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "uuid",
-            "type": "string"
-          },
-          "dissociate": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.GameInternationalization.Api.MediaAssetResponse": {
         "type": "object",
         "properties": {
@@ -84370,7 +84064,7 @@
             "type": "string"
           },
           "state": {
-            "description": "Enum for image status. ['Approved' = 0, 'PendingReview' = 1, 'UnAvailable' = 2, 'Rejected' = 3, 'Error' = 4]",
+            "description": "Enum for image status.",
             "enum": [
               "Approved",
               "PendingReview",
@@ -84481,7 +84175,7 @@
         "type": "object",
         "properties": {
           "languageCodeType": {
-            "description": "The language code type. ['Language' = 0, 'Locale' = 1]",
+            "description": "The language code type.",
             "enum": ["Language", "Locale"],
             "type": "string"
           },
@@ -84524,7 +84218,7 @@
             "type": "string"
           },
           "reportType": {
-            "description": "The report type ['GameTranslationStatus' = 0, 'GameTranslationStatusForTranslator' = 1, 'GameTranslationStatusForTranslatorGroup' = 2, 'Test' = 3]",
+            "description": "The report type",
             "enum": [
               "GameTranslationStatus",
               "GameTranslationStatusForTranslator",
@@ -84547,28 +84241,6 @@
           "reportGenerationStatus": {
             "description": " ['InProgress' = 0, 'Ready' = 1, 'Unavailable' = 2]",
             "enum": ["inProgress", "ready", "unavailable"],
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.GameInternationalization.Api.SetAutolocalizationSettingsForGameRequest": {
-        "type": "object",
-        "properties": {
-          "isAutolocalizationEnabled": {
-            "type": "boolean"
-          },
-          "shouldUseLocalizationTable": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.GameInternationalization.Api.SetAutolocalizationTableForGameRequest": {
-        "type": "object",
-        "properties": {
-          "tableId": {
-            "format": "uuid",
             "type": "string"
           }
         },
@@ -84664,7 +84336,7 @@
             "type": "integer"
           },
           "translationStatus": {
-            "description": "The enum representing a translation status. ['Approved' = 0]",
+            "description": "The enum representing a translation status.",
             "enum": ["Approved"],
             "type": "string"
           },
@@ -84681,7 +84353,7 @@
         "type": "object",
         "properties": {
           "category": {
-            "description": "The category of the translation counts. ['InGameContent' = 0]",
+            "description": "The category of the translation counts.",
             "enum": ["InGameContent"],
             "type": "string"
           },
@@ -84710,7 +84382,7 @@
             "type": "integer"
           },
           "status": {
-            "description": "The status of the response for the requested game. ['LanguageOrLocaleSupportedForGame' = 0, 'LanguageOrLocaleNotSupportedForGame' = 1, 'LanguageOrLocaleIsSource' = 2, 'InsufficientPermission' = 3, 'GameDoesNotExist' = 4, 'GameDoesNotHaveTable' = 5, 'UnknownError' = 6]",
+            "description": "The status of the response for the requested game.",
             "enum": [
               "LanguageOrLocaleSupportedForGame",
               "LanguageOrLocaleNotSupportedForGame",
@@ -84736,7 +84408,7 @@
         "type": "object",
         "properties": {
           "status": {
-            "description": "The status of the response for the requested game. ['Success' = 1, 'LanguageOrLocaleNotSupportedForGame' = 2]",
+            "description": "The status of the response for the requested game.",
             "enum": ["Success", "LanguageOrLocaleNotSupportedForGame"],
             "type": "string"
           },
@@ -84751,7 +84423,7 @@
             "type": "string"
           },
           "languageCodeType": {
-            "description": "An enum to distinguish between locale codes and language codes. ['Language' = 0, 'Locale' = 1]",
+            "description": "An enum to distinguish between locale codes and language codes.",
             "enum": ["Language", "Locale"],
             "type": "string"
           },
@@ -90141,6 +89813,10 @@
           "includeBackground": {
             "description": "Whether to include a background in avatar thumbnails (defaults to false)",
             "type": "boolean"
+          },
+          "includeProfileFrame": {
+            "description": "Whether to composite the user's equipped profile frame into the thumbnail (defaults to false).\r\nWhen true the returned image has the frame baked in server-side.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -90175,7 +89851,7 @@
             "type": "boolean"
           },
           "tradeEligibility": {
-            "description": "The trade eligibility status of the user. ['Unknown' = 0, 'Eligible' = 1, 'IneligibleTradeSystemDisabled' = 2, 'IneligibleCannotTradeWithRoblox' = 3, 'IneligibleUserNotFound' = 4, 'IneligibleMissingPremiumMembership' = 5, 'IneligibleLegalOrRegulatoryRestrictions' = 6]",
+            "description": "The trade eligibility status of the user. ['Unknown' = 0, 'Eligible' = 1, 'IneligibleTradeSystemDisabled' = 2, 'IneligibleCannotTradeWithRoblox' = 3, 'IneligibleUserNotFound' = 4, 'IneligibleMissingPremiumMembership' = 5, 'IneligibleLegalOrRegulatoryRestrictions' = 6, 'IneligibleFreeTradesLimitReached' = 7]",
             "enum": [
               "Unknown",
               "Eligible",
@@ -90183,9 +89859,16 @@
               "IneligibleCannotTradeWithRoblox",
               "IneligibleUserNotFound",
               "IneligibleMissingPremiumMembership",
-              "IneligibleLegalOrRegulatoryRestrictions"
+              "IneligibleLegalOrRegulatoryRestrictions",
+              "IneligibleFreeTradesLimitReached"
             ],
             "type": "string"
+          },
+          "freeTradesAllowance": {
+            "$ref": "#/components/schemas/Roblox.Trades.Api.Models.V2.FreeTradesAllowanceResponse"
+          },
+          "currencyTransferEligibility": {
+            "$ref": "#/components/schemas/Roblox.Trades.Api.Models.V2.CurrencyTransferEligibilityResponse"
           }
         },
         "additionalProperties": false
@@ -90218,6 +89901,40 @@
               "CannotTradeWithSelf",
               "CallingUserPrivacySettingsRestricted"
             ],
+            "type": "string"
+          },
+          "currencyTransferEligibility": {
+            "$ref": "#/components/schemas/Roblox.Trades.Api.Models.V2.CurrencyTransferEligibilityResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Trades.Api.Models.V2.CurrencyTransferEligibilityResponse": {
+        "type": "object",
+        "properties": {
+          "canSend": {
+            "type": "boolean"
+          },
+          "canRequest": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Trades.Api.Models.V2.FreeTradesAllowanceResponse": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "remaining": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "window": {
+            "description": " ['Day' = 1, 'Week' = 2, 'Month' = 3, 'Year' = 4, 'Lifetime' = 5]",
+            "enum": ["day", "week", "month", "year", "lifetime"],
             "type": "string"
           }
         },
@@ -95080,6 +94797,14 @@
           "privateServerEngagementPayoutsTotal": {
             "type": "integer",
             "format": "int64"
+          },
+          "creatorRewardsPayoutsTotal": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "subscriptionReferralPayoutsTotal": {
+            "type": "integer",
+            "format": "int64"
           }
         },
         "additionalProperties": false
@@ -95116,7 +94841,9 @@
           "CurrencyTransfer",
           "RobloxSelectTransfer",
           "PrivateServerEngagementPayout",
-          "CurrencySubscriptionStipend"
+          "CurrencySubscriptionStipend",
+          "SubscriptionReferralPayout",
+          "CreatorRewardsPayout"
         ],
         "type": "string"
       },
@@ -95193,6 +94920,12 @@
             "type": "boolean"
           },
           "HasPrivateServerEngagementPayout": {
+            "type": "boolean"
+          },
+          "HasCreatorRewardsPayout": {
+            "type": "boolean"
+          },
+          "HasSubscriptionReferralPayout": {
             "type": "boolean"
           }
         },
@@ -98346,16 +98079,12 @@
           "get_legacy_localization_tables_v1_localization_table_tables__tableId__entry_count",
           "localizationtables_get_v1_localization_table_tables__tableId__entry_count",
           "economy_get_v1_user_currency",
-          "gameinternationalization_patch_v1_autolocalization_games__gameId__autolocalizationtable",
-          "gameinternationalization_post_v1_autolocalization_games__gameId__autolocalizationtable",
-          "gameinternationalization_patch_v1_autolocalization_games__gameId__settings",
           "gameinternationalization_get_v1_automatic_translation_games__gameId__feature_status",
           "gameinternationalization_get_v1_automatic_translation_games__gameId__quota",
           "gameinternationalization_get_v1_automatic_translation_languages__languageCode__target_languages",
           "gameinternationalization_get_v1_game_localization_status__gameId__translation_counts",
           "gameinternationalization_get_v1_game_localization_status_translation_counts_for_language_or_locale",
           "gameinternationalization_get_v1_game_thumbnails_games__gameId__images",
-          "gameinternationalization_patch_v1_localizationtable_gametables__gameId_",
           "gameinternationalization_get_v1_name_description_games__gameId_",
           "gameinternationalization_get_v1_name_description_metadata",
           "gameinternationalization_get_v1_source_language_games__gameId_",
@@ -98472,7 +98201,6 @@
           "clientsettings_get_v2_ota_version__binaryType_",
           "clientsettings_get_v2_user_channel",
           "friends_get_v1_metadata",
-          "gameinternationalization_get_v1_autolocalization_metadata",
           "gameinternationalization_get_v1_name_description_metadata",
           "gameinternationalization_get_v1_supported_languages_metadata",
           "gameinternationalization_get_v1_translation_analytics_metadata",
@@ -98818,7 +98546,6 @@
           "gameinternationalization_get_v1_game_localization_status__gameId__translation_counts",
           "gameinternationalization_get_v1_game_localization_status_translation_counts_for_language_or_locale",
           "gameinternationalization_get_v1_game_thumbnails_games__gameId__images",
-          "gameinternationalization_patch_v1_localizationtable_gametables__gameId_",
           "gameinternationalization_get_v1_name_description_games__gameId_",
           "gameinternationalization_get_v1_source_language_games__gameId_",
           "gameinternationalization_get_v1_supported_languages_games__gameId_",

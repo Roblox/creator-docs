@@ -5,17 +5,8 @@
 name: VisibilityCheckDispatcher
 type: class
 memory_category: Instances
-summary: |
-  Service that schedules and runs viewability checks for immersive ad instances
-  in a place.
-description: |
-  Not accessible from scripts. `Class.VisibilityCheckDispatcher` measures the
-  viewability of on-screen ads, such as those rendered by `Class.AdGui`. On
-  every `Class.RunService` heartbeat, it selects pending ad instances and runs
-  the on-screen and occlusion checks that determine whether an ad impression
-  should be counted, then reports the results through `Class.AdService`.
-
-  This service is created and managed by the engine.
+summary: ''
+description: ''
 code_samples: []
 inherits:
   - Instance

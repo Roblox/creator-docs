@@ -4,49 +4,73 @@
 
 name: ScopeCheckResult
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates the outcome of an `ExperienceAuthService` scope-authorization
+  request.
+description: |
+  Returned by an `ExperienceAuthService` scope-authorization callback to
+  indicate whether the player granted, denied, or failed to complete a
+  permission-consent flow. Callers such as `Class.AssetService` and
+  `Class.AvatarCreationService` inspect this value to decide whether to proceed
+  with the authorized action or surface an appropriate error to the developer.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: ConsentAccepted
-    summary: ''
+    summary: |
+      The player accepted the authorization prompt and a valid token was issued
+      for the requested scopes.
     value: 0
     tags: []
     deprecation_message: ''
   - name: InvalidScopes
-    summary: ''
+    summary: |
+      The requested scopes are not recognized or are not permitted for the
+      calling context.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Timeout
-    summary: ''
+    summary: |
+      The scope-check request exceeded the configured timeout period before the
+      player responded.
     value: 2
     tags: []
     deprecation_message: ''
   - name: NoUserInput
-    summary: ''
+    summary: |
+      The authorization prompt was dismissed without any explicit player action,
+      such as when the player disconnects or the UI is closed without a
+      response.
     value: 3
     tags: []
     deprecation_message: ''
   - name: BackendError
-    summary: ''
+    summary: |
+      The Roblox backend returned an error or unexpected HTTP status when
+      exchanging the consent grant for an authorization token.
     value: 4
     tags: []
     deprecation_message: ''
   - name: UnexpectedError
-    summary: ''
+    summary: |
+      An unexpected error occurred that is not covered by a more specific result
+      code.
     value: 5
     tags: []
     deprecation_message: ''
   - name: InvalidArgument
-    summary: ''
+    summary: |
+      One or more arguments passed to the scope-check call were invalid, such as
+      an empty scope list, a null player instance, or a player who is no longer
+      in the experience.
     value: 6
     tags: []
     deprecation_message: ''
   - name: ConsentDenied
-    summary: ''
+    summary: |
+      The player explicitly declined the authorization prompt.
     value: 7
     tags: []
     deprecation_message: ''

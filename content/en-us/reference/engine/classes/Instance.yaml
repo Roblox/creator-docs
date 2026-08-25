@@ -189,7 +189,6 @@ descendants:
   - MouseService
   - MultipleDocumentInterfaceInstance
   - NetworkSettings
-  - NotificationService
   - OpenCloudApiV1
   - OpenCloudService
   - PackageLink
@@ -265,7 +264,6 @@ descendants:
   - SurfaceAppearance
   - TaskScheduler
   - Team
-  - TeamCreateData
   - Teams
   - TeleportAsyncResult
   - TeleportOptions
@@ -368,12 +366,10 @@ descendants:
   - StudioScreenshotCapture
   - StudioTestService
   - StudioTheme
-  - TeamCreateService
   - StudioService
   - StyleBase
   - StyleDerive
   - StyleLink
-  - Annotation
   - RemoteCommandService
   - UniqueIdLookupService
   - GetTextBoundsParams

@@ -9,7 +9,7 @@ We used the following systems to support both the [foundational gameplay systems
 
 ## UseManager
 
-**UseManager** provided a simple API to apply a grabbed object onto something, like a piece of layered clothing onto a mannequin. The main function for this API is `UseManager.AddUse` (tags, targetObjects, distance, onSuccess, onNothingEquipped, onWrongEquipped, extraData), which binds a set of tags to **targetObjects**. When a player has an object with one of the tags and clicks on a targetObject, the onSuccess callback function is called. Other call functions allowed us to show players extra visual info if either a click is made without a grabbed item or with the wrong type of item.
+**UseManager** provided a simple API to apply a grabbed object onto something, like a layered accessory onto a mannequin. The main function for this API is `UseManager.AddUse` (tags, targetObjects, distance, onSuccess, onNothingEquipped, onWrongEquipped, extraData), which binds a set of tags to **targetObjects**. When a player has an object with one of the tags and clicks on a targetObject, the onSuccess callback function is called. Other call functions allowed us to show players extra visual info if either a click is made without a grabbed item or with the wrong type of item.
 
 We could remove the "use" with `UseManager.RemoveUse`, which was usually helpful when a mission was finished or a specific item was "used". In addition, we could add or remove targets with `AddUseTargets` and `RemoveUseTargets`.
 

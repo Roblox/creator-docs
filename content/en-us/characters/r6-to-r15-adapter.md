@@ -7,7 +7,7 @@ description: The R6 to R15 adapter enables R15 avatar characters to join your R6
 This feature is only applicable to developers who manage an active game with **R6** avatar characters enabled.
 </Alert>
 
-The **R6 to R15 Adapter** allows R15 avatars to join your R6 game. All avatars in the game will still use the R6-like scale and movement systems. The adapter allows your game to take advantage of modern R15 components, such as layered clothing and animatable heads, with minimal performance or gameplay impact to your game.
+The **R6 to R15 Adapter** allows R15 avatars to join your R6 game. All avatars in the game will still use the R6-like scale and movement systems. The adapter allows your game to take advantage of modern R15 components, such as layered accessories and dynamic heads, with minimal performance or gameplay impact to your game.
 
 It's important to understand how the adapter uses [adapter parts](#adapter-parts) and review the feature's [known limitations](#known-limitations) before [enabling](#enable-the-r6-to-r15-adapter) and testing the adapter for your game.
 

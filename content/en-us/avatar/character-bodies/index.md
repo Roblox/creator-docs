@@ -94,7 +94,7 @@ When texturing parts of your character model's body, ensure that your character 
 
 Inside of the avatar's physical body is a non-rendered rigging armature that allows the character to articulate its limbs. Often referred to as joints or bones, a rigging armature includes skinning data that allows connections between limbs to bend organically, such as the character's knees and elbows.
 
-[Standard character rigs](./specifications.md#standard-rigs), often referred to as **R15** rigs, require 15 poseable joints to articulate the character's 15 body parts. However, if you want to create [higher-fidelity](./specifications.md#higher-fidelity-rigs) rigs with a greater level of realism, there are up to 37 additional optional joints you can create for articulated hands, shoulders, and spine movements.
+[Standard avatar rigs](./specifications.md#standard-r15-rigs) (R15) require 15 poseable joints to articulate the character's 15 body parts. However, if you want to create higher-fidelity characters with a greater level of realism, there are up to 37 additional optional joints for [advanced R15 rigs](./specifications.md#advanced-r15-rigs) that you can create for articulated hands, shoulders, and spine movements.
 
 In Studio, each joint of the rigging armature is represented by `Class.Bone` objects that connect the character's body part `Class.MeshPart` objects together. `Class.Bone` objects must follow a specific hierarchy and naming convention for the avatar to function properly in Studio and on the Marketplace. For more information, see [Rigging](./specifications.md#rigging).
 
@@ -135,7 +135,7 @@ Attachment points set the specific points where rigid accessories and in-game eq
 When you import a rig with these visual representations, the spheres are created as `Class.Attachment` objects using standardized names.
 
 <Alert severity = 'info'>
-When users wear layered clothing, the clothing isn't attached directly to the attachment, but it does reference the associated attachment point during ragdoll and dismemberment animations.
+When users wear a layered accessory, the layered accessory isn't attached directly to the attachment, but it does reference the associated attachment point during ragdoll and dismemberment animations.
 </Alert>
 
 ## Creation process
@@ -188,7 +188,7 @@ There are a variety of resources available for creators of all backgrounds to ge
   </tr>
   <tr>
     <td>Rigging and skinning</td>
-    <td>[Rigging and skinning overview](../../art/modeling/rigging.md)<br /><br />[Humanoid rig requirements](./specifications.md#rig)<br /><br />[Rigging facial bones](../../art/characters/facial-animation/create-basic-heads.md#rigging)<br /><br />[Automatic Skinning Transfer](../automatic-skinning-transfer.md)<br /><br />[Skinning facial bones](../../art/characters/facial-animation/create-basic-heads.md#skin-face-bones)</td>
+    <td>[Rigging and skinning overview](../../art/modeling/rigging.md)<br /><br />[Humanoid rig requirements](./specifications.md#rigging)<br /><br />[Rigging facial bones](../../art/characters/facial-animation/create-basic-heads.md#rigging)<br /><br />[Automatic Skinning Transfer](../automatic-skinning-transfer.md)<br /><br />[Skinning facial bones](../../art/characters/facial-animation/create-basic-heads.md#skin-face-bones)</td>
   </tr>
 
   <tr>

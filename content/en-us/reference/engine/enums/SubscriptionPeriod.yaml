@@ -4,14 +4,21 @@
 
 name: SubscriptionPeriod
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the billing period for a `Class.MarketplaceService` subscription
+  product.
+description: |
+  Describes the recurring billing interval of a subscription product sold
+  through `Class.MarketplaceService`. The value is returned in the
+  `SubscriptionPeriod` field of the dictionary produced by
+  `Class.MarketplaceService:GetSubscriptionProductInfoAsync()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Month
-    summary: ''
+    summary: |
+      The subscription renews on a monthly billing cycle.
     value: 0
     tags: []
     deprecation_message: ''

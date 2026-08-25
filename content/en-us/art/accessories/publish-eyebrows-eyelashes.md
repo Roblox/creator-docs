@@ -3,7 +3,7 @@ title: Publish bodies with eyelashes and eyebrows
 description: Eyelashes and eyebrows are optional accessory items you can equip to an avatar to publish in the Marketplace.
 ---
 
-Eyelashes and eyebrows are cosmetics that can help emphasize facial features and create a unique way of customizing a character. Similar to clothing, eyelashes and eyebrows are [3D layered clothing](../../avatar/layered-accessories/index.md) that can stretch and fit over different face shapes and can deform and stretch with character face animations.
+Eyelashes and eyebrows are cosmetics that can help emphasize facial features and create a unique way of customizing a character. Similar to clothing, eyelashes and eyebrows are [3D layered accessories](../../avatar/layered-accessories/index.md) that can stretch and fit over different face shapes and can deform and stretch with character face animations.
 
 <GridContainer numColumns="3">
 <figure>

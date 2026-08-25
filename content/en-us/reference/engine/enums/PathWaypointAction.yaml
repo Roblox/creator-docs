@@ -25,7 +25,9 @@ items:
     tags: []
     deprecation_message: ''
   - name: Custom
-    summary: ''
+    summary: |
+      A developer-defined custom action is needed to traverse a
+      `Class.PathfindingLink` to reach the next waypoint.
     value: 2
     tags: []
     deprecation_message: ''

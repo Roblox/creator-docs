@@ -114,7 +114,7 @@ end
 
 ## SLIM for avatars
 
-Platform avatars outside of the currently streamed area are not visible by default. Enabling SLIM avatars renders [standard‑rig](../../avatar/character-bodies/specifications.md#standard-rigs) player characters&nbsp;— regardless of how many accessories or clothing layers they have&nbsp;— as lightweight, animated stand‑ins that maintain visual fidelity at a fraction of the rendering cost.
+Platform avatars outside of the currently streamed area are not visible by default. Enabling SLIM avatars renders [standard](../../avatar/character-bodies/specifications.md) player characters&nbsp;— regardless of how many accessories or clothing layers they have&nbsp;— as lightweight, animated stand‑ins that maintain visual fidelity at a fraction of the rendering cost.
 
 <Tabs>
 <TabItem label="Audience in Far Distance">
@@ -159,7 +159,7 @@ Platform avatars outside of the currently streamed area are not visible by defau
 </TabItem>
 </Tabs><br />
 
-The key SLIM-specific property for avatars is `Class.Workspace.EnableSLIMAvatars` which should be set to `Enum.RolloutState.Enabled|Enabled` in the [Properties](../../studio/properties.md) window, alongside `Class.Model.LevelOfDetail|LevelOfDetail` set to `Enum.ModelLevelOfDetail.SLIM|SLIM` on your non‑avatar world models.
+The key SLIM-specific property for avatars is `Class.Workspace.EnableSLIMAvatars` which should be set to `Enum.RolloutState.Enabled|Enabled` in the **Properties** window, alongside `Class.Model.LevelOfDetail|LevelOfDetail` set to `Enum.ModelLevelOfDetail.SLIM|SLIM` on your non‑avatar world models.
 
 <img src="../../assets/studio/properties/Workspace-EnableSLIMAvatars.png" width="320" alt="The Properties window with the EnableSLIMAvatars property set to Enabled." />
 
@@ -172,7 +172,7 @@ With `Class.Workspace.EnableSLIMAvatars|EnableSLIMAvatars` enabled, the engine:
 <Alert severity="success">
 <AlertTitle>Supported Avatars</AlertTitle>
 <ul>
-<li style={{marginBottom: '10px'}}>R15 standard‑rig player avatars, including body, head, layered clothing, and accessories.</li>
+<li style={{marginBottom: '10px'}}>R15 avatars with a body, dynamic head, [standard](../../avatar/character-bodies/specifications.md#standard-r15-rigs) or [advanced](../../avatar/character-bodies/specifications.md#advanced-r15-rigs) R15 rig, and rigid/layered accessories.</li>
 <li>Avatar changes made between the `Class.Player.CharacterAdded|CharacterAdded` event and `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event.</li>
 </ul>
 </Alert>
@@ -181,7 +181,7 @@ With `Class.Workspace.EnableSLIMAvatars|EnableSLIMAvatars` enabled, the engine:
 	<AlertTitle>Excluded Avatars</AlertTitle>
 	<ul>
 	<li style={{marginBottom: '10px'}}>R6 avatars.</li>
-	<li style={{marginBottom: '10px'}}>NPC characters (even R15 standard-rig).</li>
+	<li style={{marginBottom: '10px'}}>NPC characters (even those with a standard or advanced R15 rig).</li>
 	<li style={{marginBottom: '10px'}}>Avatars with custom proportions, body scaling, or experience-applied avatar settings.</li>
 	<li>Avatar changes made after the `Class.Player.CharacterAppearanceLoaded|CharacterAppearanceLoaded` event (equipping tools, accessory changes, `Class.Highlight` additions, etc.).</li>
 	</ul>
@@ -223,7 +223,7 @@ Note that avatars must have been transcoded in a SLIM-enabled game before they a
 	</tr>
 	<tr>
 		<td>**Avatar restrictions**</td>
-		<td>[SLIM avatars](#slim-for-avatars) only support R15 [standard‑rig](../../avatar/character-bodies/specifications.md#standard-rigs) player characters. R6 rigs, NPCs, and avatars with custom proportions fall back to default rendering.</td>
+		<td>[SLIM avatars](#slim-for-avatars) only support R15 player characters. R6 rigs, NPCs, and avatars with custom proportions fall back to default rendering.</td>
 	</tr>
 	<tr>
 		<td>**Cloud dependency**</td>
@@ -287,7 +287,7 @@ SLIM regenerates UV mappings (how textures are projected onto 3D surfaces) durin
 <AccordionDetails>
 - Verify `Class.Workspace.EnableSLIMAvatars` is set to `Enum.RolloutState.Enabled|Enabled`.
 - Test with multiple clients using [Server and Clients](../../studio/testing-modes.md#multi-client-simulation) test mode (requires at least 2 clients).
-- Ensure the avatar uses a standard R15 rig without custom proportions.
+- Ensure the avatar uses a [standard](../../avatar/character-bodies/specifications.md#standard-r15-rigs) or [advanced](../../avatar/character-bodies/specifications.md#advanced-r15-rigs) R15 rig without custom proportions.
 - Confirm the game doesn't modify the avatar after the `Class.Player.CharacterAppearanceLoaded` event.
 </AccordionDetails>
 </BaseAccordion>

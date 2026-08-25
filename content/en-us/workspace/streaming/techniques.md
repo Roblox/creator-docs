@@ -23,7 +23,7 @@ Once `Class.Workspace.StreamingEnabled|StreamingEnabled` is toggled on for the `
 <tbody>
 	<tr>
 		<td>`Class.Workspace.EnableSLIMAvatars|EnableSLIMAvatars`</td>
-		<td>Use `Enum.RolloutState.Enabled|Enabled` to render standard rig avatars as lightweight, animated stand‑ins when appropriate. See [SLIM avatars](#slim-avatars) for more info.</td>
+		<td>Use `Enum.RolloutState.Enabled|Enabled` to render R15 avatars as lightweight, animated stand‑ins when appropriate. See [SLIM avatars](#slim-avatars) for more info.</td>
 	</tr>
 	<tr>
 		<td>`Class.Workspace.ModelStreamingBehavior|ModelStreamingBehavior`</td>
@@ -87,13 +87,13 @@ Beyond setting [model level‑of‑detail](#model-level-of-detail), the structur
 
 ## SLIM avatars
 
-Platform avatars outside of the currently streamed area are not visible by default, but enabling `Class.Workspace.EnableSLIMAvatars` renders [standard rig](../../avatar/character-bodies/specifications.md#standard-rigs) avatars as lightweight, animated stand‑ins when appropriate. Effectively, the engine:
+Platform avatars outside of the currently streamed area are not visible by default, but enabling `Class.Workspace.EnableSLIMAvatars` renders R15 avatars as lightweight, animated stand‑ins when appropriate. Effectively, the engine:
 
 - Renders a SLIM version when an actual avatar model streams out.
 - Swaps between SLIM and full-resolution representations based on available resources, even inside the streaming radius.
 - Throttles SLIM animations based on scene importance and available bandwidth.
 
-SLIM avatars support R15 standard-rig player characters with body, head, layered clothing, and accessories. R6 avatars, NPCs, and avatars with custom proportions are excluded. For the full list of supported and excluded avatar configurations, performance data, and troubleshooting tips, see [SLIM avatars](./slim.md#enabling-slim-for-avatars).
+SLIM avatars support R15 player characters with a body, dynamic head, [standard](../../avatar/character-bodies/specifications.md#standard-r15-rigs) or [advanced](../../avatar/character-bodies/specifications.md#advanced-r15-rigs) R15 rig, and rigid/layered accessories. R6 avatars, NPCs, and avatars with custom proportions are excluded. For the full list of supported and excluded avatar configurations, performance data, and troubleshooting tips, see [SLIM avatars](./slim.md#enabling-slim-for-avatars).
 
 ## Script patterns
 
@@ -380,7 +380,7 @@ The following patterns also may also apply and should be carefully considered:
 
 - `Class.BasePart.Touched` events, `Class.ProximityPrompt|ProximityPrompts`, `Class.DragDetector|DragDetectors`, and `Class.ClickDetector|ClickDetectors` do not operate for players whose client doesn't have the associated part/model streamed in. If interaction must be possible from any range, the model needs to be [persistent](./index.md#persistent) or the interaction needs a different mechanism.
 
-- For `Class.PathfindingService` and client‑side pathfinding, the pathfinder only sees streamed‑in geometry on the client and it may route through obstacles that exist on the server. See [here](../../characters/pathfinding.md#streaming-compatibility) for strategies.
+- For `Class.PathfindingService` and client‑side pathfinding, the pathfinder only sees streamed‑in geometry on the client and it may route through obstacles that exist on the server. For strategies, see [Pathfinding - Strategies](../../characters/pathfinding.md#streaming-compatibility) for strategies.
 
 ## Realistic test conditions
 

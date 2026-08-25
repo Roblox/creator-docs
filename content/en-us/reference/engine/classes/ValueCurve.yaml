@@ -6,7 +6,7 @@ name: ValueCurve
 type: class
 memory_category: Instances
 summary: |
-  A sorted list of time-value pairs that define a curve. Used to animate a any
+  A sorted list of time-value pairs that define a curve. Used to animate any
   type of value.
 description: |
   An instance representing a 1D value curve encoded via a sorted list of
@@ -83,7 +83,8 @@ methods:
           The index in the existing set of keys held by this `Class.ValueCurve`.
     returns:
       - type: ValueCurveKey
-        summary: ''
+        summary: |
+          A copy of the `Datatype.ValueCurveKey` stored at the given `index`.
     tags: []
     deprecation_message: ''
     security: None
@@ -109,7 +110,10 @@ methods:
           the time of the last key held by this `Class.ValueCurve`.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of two indices bracketing `time`: the index of the last key
+          at or before `time`, and the index of the first key at or after
+          `time`.
     tags: []
     deprecation_message: ''
     security: None

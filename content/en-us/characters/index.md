@@ -53,7 +53,7 @@ Avatars are able to offer this functionality because they must include the follo
     </tr>
     <tr>
       <td>Rigging armature with standardized naming conventions and a joint hierarchy</td>
-      <td>Consistent amount of poseable joints for animation support. There are 15 required poseable joints, but you can add up to 37 additional joints for [higher-fidelity rigs](../avatar/character-bodies/specifications.md#higher-fidelity-rigs).</td>
+      <td>Consistent amount of poseable joints for animation support. There are 15 required poseable joints for [standard R15 rigs](../avatar/character-bodies/specifications.md#standard-r15-rigs), but you can add up to 37 additional joints for [advanced R15 rigs](../avatar/character-bodies/specifications.md#advanced-r15-rigs).</td>
     </tr>
     <tr>
       <td>`Class.Humanoid` object</td>
@@ -76,10 +76,10 @@ Avatars are able to offer this functionality because they must include the follo
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant='buttonLarge'>What are higher-fidelity rigs?</Typography>
+<Typography variant='buttonLarge'>What are advanced R15 rigs?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Standard avatar rigs, often referred to as R15 rigs, require 15 poseable joints to articulate the character's 15 body parts. However, if you want to create higher-fidelity rigs with a greater level of realism, there are up to 37 additional optional joints you can create for articulated hands, shoulders, and spine movements.
+Standard avatar rigs require 15 poseable joints to articulate the character's 15 body parts. However, if you want to create higher-fidelity characters with a greater level of realism, there are up to 37 additional optional joints for **advanced R15 rigs** you can create for articulated hands, shoulders, and spine movements.
 
 These optional joints include:
 
@@ -89,7 +89,7 @@ These optional joints include:
 - **Fingers**: Up to 15 joints per hand (3 phalanges × 5 fingers)
 - **Toes**: `LeftToeBase` and `RightToeBase` for foot articulation
 
-For more information, see [Body specifications - Higher-fidelity rigs](../avatar/character-bodies/specifications.md#higher-fidelity-rigs).
+For more information, see [Body specifications - Advanced R15 rigs](../avatar/character-bodies/specifications.md#advanced-r15-rigs).
 </AccordionDetails>
 </BaseAccordion>
 
@@ -179,7 +179,7 @@ The following features provide support for different stages of the character cre
 [Avatar Setup](../avatar-setup/index.md) is the fastest path from a raw mesh to a player character as it automatically processes custom models into avatar character assets. If your characters don't have all of the components they need to move, animate, and wear accessories, Avatar Setup can generate all missing components, such as:
 
 - **Partitions** - Separates the character's body into the standard 15 body parts.
-- **Rigging data** - Adds a standard or higher-fidelity rigging armature to your character's body to enable movement and animation.
+- **Rigging data** - Adds a [R15 rigging armature](../avatar/character-bodies/specifications.md#rigging) to your character's body to enable movement and animation.
 - **Skinning data** - Adds weights and influences to various surfaces of your character's body, ensuring an organic and natural flexibility during movement.
 - **Facial animations** - Generates the FACS poses, facial rigging, skinning, and animation data required for facial animations.
 - **Cages** - Adds the required inner and outer cages to your character's body parts so that it can wear layered accessories.
@@ -202,7 +202,7 @@ For information on configuration standards to ensure all Avatar Setup features w
 - **Avatar requirements > Custom rig** - Your custom rigs can instantly use the full animation library of emotes and movement states.
 - **Custom rig > Avatar requirements** - The animations you create on your custom rigs can instantly retarget to avatars with standard rigging armatures.
 
-This also applies to hands and fingers in higher-fidelity rigs; when you assign your character's hand joints using the Adaptive Animation system, finger animations for one hand's proportions instantly adapt to different hand geometries.
+This also applies to hands and fingers in [advanced R15 rigs](../avatar/character-bodies/specifications.md#advanced-r15-rigs); when you assign your character's hand joints using the Adaptive Animation system, finger animations for one hand's proportions instantly adapt to different hand geometries.
 
 <img src="../assets/avatar/adaptive-animation/Assign-Joints-A.png" width="50%" alt="" />
 

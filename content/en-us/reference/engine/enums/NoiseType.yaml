@@ -4,14 +4,22 @@
 
 name: NoiseType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the noise algorithm used by a `Noise` instance's `NoiseType`
+  property.
+description: |
+  Selects the procedural noise algorithm applied when sampling through a `Noise`
+  instance. The chosen value determines which kernel `SampleDirectional()`
+  evaluates; different values support different sampling modes. The default
+  value of `NoiseType` is `Enum.NoiseType.SimplexGabor`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: SimplexGabor
-    summary: ''
+    summary: |
+      Uses an OpenSimplex2 body-centered cubic (BCC) lattice with a Gabor
+      sinusoidal kernel for anisotropic directional noise sampling.
     value: 0
     tags: []
     deprecation_message: ''

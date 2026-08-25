@@ -43,6 +43,33 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
+  - name: Animation.AnimationContent
+    summary: |
+      A reference to the animation asset associated with this `Class.Animation`.
+    description: |
+      The `Datatype.Content`-typed reference to the animation asset for this
+      `Class.Animation`. It is the underlying storage for
+      `Class.Animation.AnimationId|AnimationId` and accepts animation asset
+      URIs; setting either property updates the other.
+
+      Requires `Animation` security and is not accessible from regular scripts.
+      For most use cases, use `Class.Animation.AnimationId|AnimationId` instead,
+      which provides unrestricted access to the same animation reference as a
+      string content ID.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
   - name: Animation.AnimationId
     summary: |
       Asset ID of the animation an `Class.Animation` object is referencing.

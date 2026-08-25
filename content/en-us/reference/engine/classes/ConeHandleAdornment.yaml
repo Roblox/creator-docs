@@ -40,8 +40,12 @@ properties:
       - Basic
       - UI
   - name: ConeHandleAdornment.Hollow
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether the cone is drawn as a hollow shell rather than a
+      solid, capped cone.
+    description: |
+      When `Hollow` is `true`, the cone is drawn as an open shell without its
+      base cap; when `false`, the default, it is drawn as a solid, capped cone.
     code_samples: []
     type: boolean
     tags: []
@@ -78,8 +82,23 @@ properties:
       - Basic
       - UI
   - name: ConeHandleAdornment.Shading
-    summary: ''
-    description: ''
+    summary: |
+      Determines how the cone adornment is shaded and whether it draws through
+      geometry that would otherwise occlude it.
+    description: |
+      Selects the material and render pass used to draw the cone via
+      `Enum.AdornShading`. Defaults to `Enum.AdornShading|Default`, which draws
+      the cone unlit and occluded by scene geometry.
+
+      `Enum.AdornShading|Shaded` and `Enum.AdornShading|XRayShaded` light the
+      cone with the scene's lighting. `Enum.AdornShading|XRay` and
+      `Enum.AdornShading|XRayShaded` draw through occluding geometry.
+      `Enum.AdornShading|AlwaysOnTop` draws on top of everything with no depth
+      testing.
+
+      The legacy `Class.HandleAdornment.AlwaysOnTop` property only applies while
+      `Shading` is `Enum.AdornShading|Default`; any other value controls the
+      render pass on its own.
     code_samples: []
     type: AdornShading
     tags: []

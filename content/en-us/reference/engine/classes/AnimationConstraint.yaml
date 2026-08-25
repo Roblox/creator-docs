@@ -14,10 +14,10 @@ description: |
 
   As part of the
   [Avatar Joint Upgrade](https://devforum.roblox.com/t/avatar-joint-upgrade-for-physically-simulated-character-movement-is-now-live/4298561),
-  `AnimationConstraint` is the **replacement for `Class.Motor6D`** in R15 player
-  character rigs. When
-  `Class.StarterPlayer.AvatarJointUpgrade|AvatarJointUpgrade` is enabled (the
-  default for new experiences), player characters spawn with
+  `AnimationConstraint` is the **replacement for `Class.Motor6D`** in
+  [R15 player character rigs](../../../avatar/character-bodies/specifications.md#rigging).
+  When `Class.StarterPlayer.AvatarJointUpgrade|AvatarJointUpgrade` is enabled
+  (the default for new experiences), player characters spawn with
   AnimationConstraints instead of Motor6Ds. Unlike Motor6D, AnimationConstraint
   supports both kinematic animation and force-based physical simulation —
   enabling ragdoll physics, arm strength, and other physically simulated

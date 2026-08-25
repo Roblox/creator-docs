@@ -5,8 +5,18 @@
 name: AnimationNodeDefinition
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A single node within an animation graph, connected to other nodes through
+  named input pins.
+description: |
+  Represents one node in an animation graph, the node-based system that combines
+  animation clips and poses at runtime. Its
+  `Class.AnimationNodeDefinition.NodeType|NodeType` determines how the node
+  processes animation, such as playing a clip, blending or overlaying two
+  inputs, masking, or adjusting playback speed, while its
+  `Class.AnimationNodeDefinition.NodeId|NodeId` uniquely identifies it within
+  the graph. Nodes connect to one another through named input pins; changing a
+  node's type resets its input pins to the default set for that type.
 code_samples: []
 inherits:
   - Instance
@@ -15,8 +25,11 @@ tags: []
 deprecation_message: ''
 properties:
   - name: AnimationNodeDefinition.NodeId
-    summary: ''
-    description: ''
+    summary: |
+      A string that uniquely identifies this node within its animation graph.
+    description: |
+      A unique identifier used to reference this node among the other nodes in
+      its graph. Defaults to an empty string.
     code_samples: []
     type: string
     tags: []
@@ -32,8 +45,14 @@ properties:
     capabilities:
       - Animation
   - name: AnimationNodeDefinition.NodeType
-    summary: ''
-    description: ''
+    summary: |
+      The kind of node this definition represents within its animation graph.
+    description: |
+      Determines how the node processes animation within the graph, for example
+      a clip source, an additive or overlay blend, a mask, or a speed adjustment
+      (see `Enum.AnimationNodeType`). Defaults to
+      `Enum.AnimationNodeType|InvalidNode`. Changing this value resets the
+      node's input pins to the default set defined for the new type.
     code_samples: []
     type: AnimationNodeType
     tags: []

@@ -57,17 +57,36 @@ methods:
     capabilities:
       - Capture
   - name: CaptureService:CheckUploadCaptureStatusAsync
-    summary: ''
-    description: ''
+    summary: |
+      Polls the status of an in-progress capture upload started by
+      `Class.CaptureService:StartUploadCaptureAsync()|StartUploadCaptureAsync()`.
+    description: |
+      Client-side function that checks the status of a capture upload started
+      with
+      `Class.CaptureService:StartUploadCaptureAsync()|StartUploadCaptureAsync()`,
+      using the returned `token`. Returns a tuple of the current
+      `Enum.UploadCaptureResult` and, once the upload finishes successfully, the
+      asset ID of the uploaded capture.
+
+      Poll until a terminal state. While processing, the result is
+      `Enum.UploadCaptureResult.UploadPending` and the asset ID is `0`.
+      `Enum.UploadCaptureResult.Success` includes the final asset ID;
+      `Enum.UploadCaptureResult.CaptureModerated` means moderation rejected the
+      capture; `Enum.UploadCaptureResult.UploadFailed` means the upload did not
+      complete.
     code_samples: []
     parameters:
       - name: token
         type: string
         default:
-        summary: ''
+        summary: |
+          The token returned by
+          `Class.CaptureService:StartUploadCaptureAsync()|StartUploadCaptureAsync()`
+          that identifies the in-progress upload.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          Tuple of (result: `Enum.UploadCaptureResult`, assetId: `number`)
     tags:
       - Yields
     deprecation_message: ''
@@ -76,7 +95,8 @@ methods:
     capabilities:
       - Capture
   - name: CaptureService:PromptCaptureGalleryPermissionAsync
-    summary: ''
+    summary: |
+      Prompts the user for permission to access their local capture gallery.
     description: |
       This client-side function prompts a user for permission to access their
       local captures. Once they have accepted or rejected the prompt, it returns
@@ -185,7 +205,8 @@ methods:
     capabilities:
       - Capture
   - name: CaptureService:ReadCapturesFromGalleryAsync
-    summary: ''
+    summary: |
+      Returns a paginated list of captures from the user's gallery.
     description: |
       This client-side function returns a paginated list of captures from the
       user's gallery as a `Class.CapturesPages` object sorted
@@ -227,17 +248,39 @@ methods:
     capabilities:
       - Capture
   - name: CaptureService:StartUploadCaptureAsync
-    summary: ''
-    description: ''
+    summary: |
+      Begins uploading a capture to the asset system and returns a token used to
+      poll the upload's status.
+    description: |
+      Client-side function that begins uploading a `Class.Capture` (for example,
+      one from
+      `Class.CaptureService:ReadCapturesFromGalleryAsync()|ReadCapturesFromGalleryAsync()`)
+      to the asset system. Unlike
+      `Class.CaptureService:UploadCaptureAsync()|UploadCaptureAsync()`, which
+      blocks until the asset is created, this returns as soon as the upload
+      starts with a tuple of `Enum.UploadCaptureResult` and a `token` string.
+      Use this when the user might leave before the upload finishes; a pending
+      `UploadCaptureAsync` is lost if the player leaves. Pass the token to
+      `Class.CaptureService:CheckUploadCaptureStatusAsync()|CheckUploadCaptureStatusAsync()`
+      to poll for completion and the resulting asset ID.
+
+      The user must grant gallery access through
+      `Class.CaptureService:PromptCaptureGalleryPermissionAsync()|PromptCaptureGalleryPermissionAsync()`;
+      without it, the result is `Enum.UploadCaptureResult.NeedPermission`. The
+      capture must be eligible and present in the gallery. Uploads are
+      rate-limited per user and return
+      `Enum.UploadCaptureResult.UploadQuotaReached` when exceeded.
     code_samples: []
     parameters:
       - name: capture
         type: Capture
         default:
-        summary: ''
+        summary: |
+          The `Class.Capture` to upload.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          Tuple of (result: `Enum.UploadCaptureResult`, token: `string`)
     tags:
       - Yields
     deprecation_message: ''
@@ -271,10 +314,14 @@ methods:
       - name: captureParams
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          A dictionary of optional parameters that modify capture behavior.
+          Currently non-operational.
     returns:
       - type: VideoCaptureStartedResult
-        summary: ''
+        summary: |
+          A `Enum.VideoCaptureStartedResult` indicating whether the video
+          recording started successfully.
     tags:
       - Yields
     deprecation_message: ''
@@ -336,7 +383,8 @@ methods:
     capabilities:
       - Capture
   - name: CaptureService:UploadCaptureAsync
-    summary: ''
+    summary: |
+      Uploads a capture to the asset system and returns the result and asset ID.
     description: |
       This client-side function uploads a capture, like one retrieved from
       `ReadCapturesFromGalleryAsync`, to the asset system. It returns a tuple of
@@ -347,7 +395,9 @@ methods:
       - This function will only work properly if the Maturity and Compliance
         questionnaire has been filled out for the experience.
       - For video capture types, there is an upload limit of 20 videos per day
-        per user.
+        per user; when that limit is exceeded, the result is
+        `Enum.UploadCaptureResult.UploadQuotaReached`, which lets you
+        distinguish quota exhaustion from other failures.
       - This function can take up to several minutes to finish executing, and
         the user will need to remain in the experience.
     code_samples:
@@ -382,7 +432,9 @@ events:
       - name: captureType
         type: CaptureType
         default:
-        summary: ''
+        summary: |
+          An `Enum.CaptureType` indicating whether the capture is a screenshot
+          or video.
     tags: []
     deprecation_message: ''
     security: None
@@ -400,21 +452,32 @@ events:
       - name: captureType
         type: CaptureType
         default:
-        summary: ''
+        summary: |
+          An `Enum.CaptureType` indicating whether the capture was a screenshot
+          or video.
     tags: []
     deprecation_message: ''
     security: None
     capabilities:
       - Capture
   - name: CaptureService.CaptureSaved
-    summary: ''
-    description: ''
+    summary: |
+      Fires when a screenshot capture is saved to the user's gallery.
+    description: |
+      Fires when a screenshot capture is saved to the user's gallery. Provides a
+      `captureInfo` dictionary with `contentId`, `filePath`, and `type`. Fires
+      only for screenshot captures, not video captures.
+
+      Deprecated; use `Class.CaptureService.UserCaptureSaved|UserCaptureSaved`
+      instead, which fires with the saved capture's `contentId` directly.
     code_samples: []
     parameters:
       - name: captureInfo
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A dictionary containing `contentId`, `filePath`, and `type` fields
+          describing the saved capture.
     tags:
       - Deprecated
     deprecation_message: |

@@ -110,7 +110,8 @@ functions:
           The ending index of the table concatenation.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The concatenated string of table elements joined by the separator.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -135,14 +136,20 @@ functions:
       - name: count
         type: number
         default:
-        summary: ''
+        summary: |
+          The number of elements to allocate in the array portion of the new
+          table.
       - name: value
         type: Variant
         default:
-        summary: ''
+        summary: |
+          The value to fill each element with. If omitted, elements are left as
+          `nil`.
     returns:
       - type: table
-        summary: ''
+        summary: |
+          A new table with the array portion pre-allocated to `count` elements,
+          filled with `value` if provided.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -168,18 +175,23 @@ functions:
       - name: haystack
         type: table
         default:
-        summary: ''
+        summary: |
+          The array-like table to search through.
       - name: needle
         type: Variant
         default:
-        summary: ''
+        summary: |
+          The value to search for within the table.
       - name: init
         type: number
         default:
-        summary: ''
+        summary: |
+          The index at which to begin searching. Defaults to `1`.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The numeric index of the first occurrence of `needle`, or `nil` if not
+          found.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -276,7 +288,9 @@ functions:
           The table whose size is being measured.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The length of the array portion of the table, equivalent to the `#`
+          operator.
     tags:
       - Deprecated
     code_samples: []
@@ -285,7 +299,16 @@ functions:
     summary: |
       Inserts the provided value to the target position of the array.
     description: |
-      Inserts the provided value to the target position of the array.
+      Inserts `value` into array `t` at position `pos`, shifting up the elements
+      `t[pos], t[pos+1], ..., t[#t]` by one position. The position must be
+      between `1` and `#t` (inclusive) for the shift to occur; the value is then
+      written at `t[pos]`.
+
+      ```lua
+      local t = {"a", "b", "c"}
+      table.insert(t, 2, "new")
+      print(table.concat(t, ", ")) --> a, new, b, c
+      ```
     parameters:
       - name: t
         type: Array
@@ -312,7 +335,15 @@ functions:
     summary: |
       Appends the provided value to the end of the array.
     description: |
-      Appends the provided value to the end of the array.
+      Appends `value` to the end of array `t` at position `#t + 1`. Unlike the
+      positional overload, no existing elements are shifted, making this the
+      most efficient way to grow an array by one element.
+
+      ```lua
+      local t = {"a", "b", "c"}
+      table.insert(t, "d")
+      print(table.concat(t, ", ")) --> a, b, c, d
+      ```
     parameters:
       - name: t
         type: Array
@@ -361,10 +392,13 @@ functions:
       - name: t
         type: table
         default:
-        summary: ''
+        summary: |
+          The table to scan for numeric keys.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The largest positive numeric key in the table, or `0` if the table has
+          no numeric keys.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -441,10 +475,13 @@ functions:
       - name: values...
         type: Variant
         default:
-        summary: ''
+        summary: |
+          The values to store sequentially in the new table.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          A new table with arguments at keys `1` through `n`, plus an `n` field
+          storing the total argument count.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -471,7 +508,9 @@ functions:
           The index of the element being removed.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The value of the element that was removed, or nothing if the position
+          is out of bounds.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -494,7 +533,8 @@ functions:
       - name: t
         type: Array
         default:
-        summary: ''
+        summary: |
+          The array to sort in place.
       - name: comp
         type: function
         default: nil
@@ -536,7 +576,9 @@ functions:
           The index of the last element to unpack.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          The elements `list[i], list[i+1], ..., list[j]` as individual return
+          values.
     tags: []
     code_samples: []
     deprecation_message: ''

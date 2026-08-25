@@ -15,9 +15,9 @@ The following downloadable files are available for your use:
 
 ## References
 
-### Higher-fidelity rigs
+### Advanced R15 rigs
 
-The following [higher-fidelity](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) humanoid rigs include additional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
+The following [advanced R15 rigs](../avatar/character-bodies/specifications.md#advanced-r15-rigs) include additional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
 
@@ -30,7 +30,7 @@ The following [higher-fidelity](../avatar/character-bodies/specifications.md#hig
 <center> <img src="../assets/art/resources/Mannequin-Resource.png" width="100%" /> </center>
 </figure>
 <figure>
-A comprehensive `.zip` folder of a AA avatar-ready character body, including a dynamic head, fingers, layered clothing, and 2K PBR textures.
+A comprehensive `.zip` folder of a AA avatar-ready character body, including a dynamic head, fingers, layered accessories, and 2K PBR textures.
 </figure>
 </CardContent>
 
@@ -50,7 +50,7 @@ A comprehensive `.zip` folder of a AA avatar-ready character body, including a d
 <center> <img src="../assets/art/resources/Robuta-Resource.png" width="100%" /> </center>
 </figure>
 <figure>
-A comprehensive `.zip` folder of an anime-style, avatar-ready character body, including a dynamic head, fingers, layered clothing and rigid accessory assets, and 2K PBR textures.
+A comprehensive `.zip` folder of an anime-style, avatar-ready character body, including a dynamic head, fingers, rigid and layered accessory assets, and 2K PBR textures.
 </figure>
 </CardContent>
 
@@ -70,7 +70,7 @@ A comprehensive `.zip` folder of an anime-style, avatar-ready character body, in
 <center> <img src="../assets/art/resources/HipToBeSquare-Resource.png" width="100%" /> </center>
 </figure>
 <figure>
-A comprehensive `.zip` folder of a blocky-style, avatar-ready character body, including a dynamic head, fingers, layered clothing and rigid accessory assets, and color, roughness, and metal PBR textures.
+A comprehensive `.zip` folder of a blocky-style, avatar-ready character body, including a dynamic head, fingers, rigid and layered accessory assets, and color, roughness, and metal PBR textures.
 </figure>
 </CardContent>
 
@@ -90,7 +90,7 @@ A comprehensive `.zip` folder of a blocky-style, avatar-ready character body, in
 <center> <img src="../assets/art/resources/HigherFidelityRoxie-Resource.png" width="100%" /> </center>
 </figure>
 <figure>
-A comprehensive `.zip` folder of an avatar-ready character body, including a dynamic head, fingers, layered clothing and rigid accessory assets, and PBR textures. When you import this model, set **Rig Scale** to **Rthro Narrow**.
+A comprehensive `.zip` folder of an avatar-ready character body, including a dynamic head, fingers, rigid and layered accessory assets, and PBR textures. When you import this model, set **Rig Scale** to **Rthro Narrow**.
 </figure>
 <br />
 
@@ -104,9 +104,9 @@ A comprehensive `.zip` folder of an avatar-ready character body, including a dyn
 </Grid>
 </Grid>
 
-### Standard rigs
+### Standard R15 rigs
 
-The following [standard](../avatar/character-bodies/specifications.md#standard-rigs) humanoid rigs include the standard amount of bones or joints. Finished assets like Nature Girl and Stylish Male include clothing and accessory items that may cause validation errors unless they are removed.
+The following [standard R15 rigs](../avatar/character-bodies/specifications.md#standard-r15-rigs) include the standard amount of bones or joints. Finished assets like Nature Girl and Stylish Male include clothing and accessory items that may cause validation errors unless they are removed.
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
 
@@ -228,7 +228,7 @@ A Blocky character model with an animatable head and a full body cage.
 <center> <img src="../assets/art/resources/Lola-Resource.png" width="100%" /> </center>
 </figure>
 <figure>
-A skinned R15 character created from the <a href="../art/modeling/skin-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../avatar/character-bodies/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.
+A skinned R15 character created from the <a href="../art/modeling/skin-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../avatar/character-bodies/specifications.md#inner-and-outer-cages), this model can't equip rigid or layered accessories.
 </figure>
 <br />
 
@@ -365,12 +365,12 @@ The following are base rig, attachment, and cage files for avatar item creation 
 <Card style={{height: '100%'}}>
 <CardContent style={{marginBottom:'66px'}}>
 
-<center>R15 Rig and Attachments</center>
+<center>Standard R15 Rig and Attachments</center>
 <figure>
 <center> <img src="../assets/art/resources/Rig-And-Attachments-Resource.png" width="100%" /> </center>
 </figure>
 <figure>
-Standard armature rig template for various software. Use this template for rigging **bodies** and **clothing** items.
+Template for various software that includes a [standard R15 rig](../avatar/character-bodies/specifications.md#standard-r15-rigs) and attachments. Use this template for rigging **bodies** and **clothing** items.
 </figure>
 
 </CardContent>
@@ -427,7 +427,7 @@ Project files for creation, includes the 15 individual body part cages required 
 <center> <img src="../assets/art/Generic-Icon.png" width="100%" /> </center>
 </figure>
 <figure>
-Template file containing all content from previous templates, includes rig skeleton, body cages, attachment points. <br /> <br /> Use this template to rig and cage bodies and clothing.
+Template file containing all content from previous templates, includes [standard R15 rig](../avatar/character-bodies/specifications.md#standard-r15-rigs), body cages, attachment points.<br /> <br /> Use this template to rig and cage bodies and clothing.
 </figure>
 
 </CardContent>
@@ -476,7 +476,7 @@ A blank mannequin using Roblox's [Classic](../avatar/character-bodies/specificat
 <center> <img src="../assets/art/resources/Body-Scale-Rthro-Normal.png" width="100%" /> </center>
 </figure>
 <figure>
-A blank mannequin using Roblox's [Rthro Normal](../avatar/character-bodies/specifications.md#normal) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
+A blank mannequin using Roblox's [Rthro Normal](../avatar/character-bodies/specifications.md#normal) avatar proportions.<br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
 </figure>
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
@@ -521,7 +521,7 @@ If you are using Roblox's avatar template files, you must perform the [cleanup s
 </Alert>
 
 <Alert severity = 'warning'>
-Some of the template files include additional mesh assets for eyebrows and eyelashes. These eyebrows and eyelashes versions may not be fully compatible with the template body. For the latest information on eyebrows and eyelashes, see [Makeup](../avatar/makeup/index.md#components-of-makeup).
+Some of the template files include additional mesh assets for eyebrows and eyelashes. These eyebrows and eyelashes versions may not be fully compatible with the template body. For the latest information on eyebrows and eyelashes, see [Layered accessory specifications - Face accessories](../avatar/layered-accessories/specifications.md#face-accessories).
 </Alert>
 
 <Grid container style={{margin: -6}}>

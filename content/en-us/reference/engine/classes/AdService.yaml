@@ -25,13 +25,7 @@ methods:
     summary: |
       Creates an `Datatype.AdReward` to give users who watch a video ad.
     description: |
-      Constructs an `Datatype.AdReward` that wraps the given developer product
-      so it can be passed to
-      `Class.AdService:ShowRewardedVideoAdAsync()|ShowRewardedVideoAdAsync`.
-      When the user watches the entire rewarded video ad, the developer product
-      identified by `devProductId` is granted through the
-      `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callback with a
-      `ProductPurchaseChannel` of `Enum.ProductPurchaseChannel.AdReward`.
+      Creates a reward to give users who watch an entire video ad.
     code_samples: []
     parameters:
       - name: devProductId
@@ -41,9 +35,7 @@ methods:
           The ID of the developer product you want to grant as a reward.
     returns:
       - type: AdReward
-        summary: |
-          An `Datatype.AdReward` configured as a developer-product reward for
-          the specified product.
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
@@ -89,24 +81,7 @@ methods:
       Checks a `Class.Player`'s eligibility to be shown an
       [ad integration](../../../production/promotion/ad-integrations.md)
       campaign.
-    description: |
-      `Class.AdService:GetCampaignEligibilityAsync()|GetCampaignEligibilityAsync`
-      checks whether a `Class.Player` is eligible to be shown a specific
-      [ad integration](../../../production/promotion/ad-integrations.md)
-      campaign, returning a dictionary that looks like
-      `{ IsEligible: boolean }`.
-
-      Call this method and confirm that `result.IsEligible` is `true` before you
-      display any of the campaign's ad integration assets or register their
-      disclosure buttons with
-      `Class.AdService:RegisterDisclosureButton()|RegisterDisclosureButton`. All
-      ad integration assets should remain hidden until the `Class.Player` is
-      confirmed eligible.
-
-      When called from the client, the `player` argument defaults to the
-      `Class.Players.LocalPlayer|LocalPlayer`. When called from the server,
-      `player` is required. The call raises an error if the supplied
-      `campaignId` exceeds the maximum allowed length.
+    description: ''
     code_samples:
       - AdService-AdIntegrations
     parameters:
@@ -141,29 +116,13 @@ methods:
     description: |
       This method may only be called from a `Class.Script` with
       `Enum.RunContext.Client`.
-
-      Registers a `Class.GuiButton` for ad opportunity tracking. Once
-      registered, the system periodically checks whether the button is visible
-      and unobstructed (the topmost input-sinking element at its center point).
-      These visibility transitions are reported as ad opportunity impressions
-      and used to measure the rate at which users are presented with, and choose
-      to watch, rewarded video ads.
-
-      The `instance` must be a `Class.GuiButton` that is a descendant of a
-      `Class.ScreenGui` under `Class.PlayerGui`. If the instance is moved out of
-      a valid hierarchy at runtime, tracking pauses automatically and resumes
-      when it returns to a valid ancestor. Call
-      `Class.AdService:UnregisterAdOpportunity()|UnregisterAdOpportunity` to
-      stop tracking the instance.
     code_samples:
       - AdService-RegisterAdOpportunityAsync
     parameters:
       - name: instance
         type: Instance
         default:
-        summary: |
-          The `Class.GuiButton` to track as a rewarded video ad opportunity.
-          Must be a descendant of a `Class.ScreenGui`.
+        summary: ''
       - name: placementId
         type: int64?
         default:
@@ -309,27 +268,14 @@ methods:
     capabilities:
       - Monetization
   - name: AdService:UnregisterAdOpportunity
-    summary: |
-      Stops tracking an instance that was previously registered with
-      `Class.AdService:RegisterAdOpportunityAsync()|RegisterAdOpportunityAsync`.
-    description: |
-      Removes `instance` from the ad opportunity tracker so that it no longer
-      counts toward the rewarded video ad opportunity reporting started by
-      `Class.AdService:RegisterAdOpportunityAsync()|RegisterAdOpportunityAsync`.
-      Call it once an instance should no longer be treated as an ad opportunity,
-      such as when its associated UI is closed or removed.
-
-      If the supplied `instance` is not currently being tracked, this method has
-      no effect.
+    summary: ''
+    description: ''
     code_samples: []
     parameters:
       - name: instance
         type: Instance
         default:
-        summary: |
-          The instance to stop tracking. This should be an instance that you
-          previously passed to
-          `Class.AdService:RegisterAdOpportunityAsync()|RegisterAdOpportunityAsync`.
+        summary: ''
     returns:
       - type: ()
         summary: ''

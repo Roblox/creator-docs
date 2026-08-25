@@ -10,8 +10,9 @@ summary: |
   accessories, colors, scales, animations, and emotes.
 description: |
   **HumanoidDescription** is an object that stores a description of a
-  `Class.Humanoid` for R6 and R15 rigs. It can be
-  `Class.Humanoid:ApplyDescriptionAsync()|applied` in order to set a rig's
+  `Class.Humanoid` for R6 and
+  [R15 rigs](../../../avatar/character-bodies/specifications.md#rigging). It can
+  be `Class.Humanoid:ApplyDescriptionAsync()|applied` in order to set a rig's
   scaling, clothing (`Class.Shirt`, `Class.Pants`, `Class.ShirtGraphic`),
   `Class.Accessory|Accessories`, `Class.Animation|Animations` and
   `Class.BodyColors`.

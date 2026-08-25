@@ -4,64 +4,82 @@
 
 name: SavedQualitySetting
 type: enum
-summary: ''
-description: ''
+summary: |
+  Represents the user's saved graphics quality preference, stored in
+  `Class.UserGameSettings.SavedQualityLevel`.
+description: |
+  Represents the user's saved graphics quality preference, stored in
+  `Class.UserGameSettings.SavedQualityLevel`. When set to
+  `Enum.SavedQualitySetting.Automatic`, the engine selects quality automatically
+  based on device performance; otherwise the chosen level (1–10) is persisted
+  across sessions and applied as the initial quality setting on next launch.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Automatic
-    summary: ''
+    summary: |
+      Graphics quality is determined automatically based on device performance.
     value: 0
     tags: []
     deprecation_message: ''
   - name: QualityLevel1
-    summary: ''
+    summary: |
+      Saved graphics quality level 1 — the lowest explicit quality setting.
     value: 1
     tags: []
     deprecation_message: ''
   - name: QualityLevel2
-    summary: ''
+    summary: |
+      Saved graphics quality level 2.
     value: 2
     tags: []
     deprecation_message: ''
   - name: QualityLevel3
-    summary: ''
+    summary: |
+      Saved graphics quality level 3.
     value: 3
     tags: []
     deprecation_message: ''
   - name: QualityLevel4
-    summary: ''
+    summary: |
+      Saved graphics quality level 4.
     value: 4
     tags: []
     deprecation_message: ''
   - name: QualityLevel5
-    summary: ''
+    summary: |
+      Saved graphics quality level 5.
     value: 5
     tags: []
     deprecation_message: ''
   - name: QualityLevel6
-    summary: ''
+    summary: |
+      Saved graphics quality level 6.
     value: 6
     tags: []
     deprecation_message: ''
   - name: QualityLevel7
-    summary: ''
+    summary: |
+      Saved graphics quality level 7.
     value: 7
     tags: []
     deprecation_message: ''
   - name: QualityLevel8
-    summary: ''
+    summary: |
+      Saved graphics quality level 8.
     value: 8
     tags: []
     deprecation_message: ''
   - name: QualityLevel9
-    summary: ''
+    summary: |
+      Saved graphics quality level 9.
     value: 9
     tags: []
     deprecation_message: ''
   - name: QualityLevel10
-    summary: ''
+    summary: |
+      Saved graphics quality level 10 — the highest explicit quality setting.
     value: 10
     tags: []
     deprecation_message: ''

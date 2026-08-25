@@ -42,7 +42,7 @@ After you open the test place in Studio, import your custom character model.
 2. Select your custom character `.fbx` file.
 3. Verify the following:
 
-   1. With the highest level object selected, ensure **Rig Type** is set to R15.
+   1. With the highest level object selected, ensure **Rig Type** is set to **R15**.
 
       <img src="../../../assets/art/avatar/basic-creation/Testing-Rig-Type.png" />
 

@@ -4,19 +4,24 @@
 
 name: PhysicalConstraintType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the type of physical joint created when importing a rigged asset.
+description: |
+  Controls which joint class connects bones in an imported rig skeleton.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: AnimationConstraint
-    summary: ''
+    summary: |
+      Import creates `Class.AnimationConstraint` instances to connect the rig's
+      bone joints.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Motor6D
-    summary: ''
+    summary: |
+      Import creates `Class.Motor6D` instances to connect the rig's bone joints.
     value: 1
     tags: []
     deprecation_message: ''

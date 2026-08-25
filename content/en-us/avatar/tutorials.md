@@ -168,7 +168,7 @@ style={{position: "relative"}}>
 </Step>
 <Step style={{marginTop: -36}}>
 <a href="../art/accessories/creating/armature-setup.md">
-<StepLabel optional="Attach your clothing model to an R15 rig." >
+<StepLabel optional="Attach your clothing model to a standard R15 rig." >
 <h5 style={{marginTop: 36}}>Rig</h5>
 </StepLabel></a>
 </Step>

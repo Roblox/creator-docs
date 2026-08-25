@@ -46,9 +46,9 @@ items:
     value: 3
     tags: []
     deprecation_message: ''
-  - name: Scalable
+  - name: Tunable
     summary: |
-      Collision model that supports precision scaling of convex decomposition
+      Collision model that supports precision tuning of convex decomposition
       fidelity.
     value: 4
     tags: []

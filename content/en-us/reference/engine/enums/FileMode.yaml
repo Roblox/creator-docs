@@ -4,19 +4,31 @@
 
 name: FileMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether `Class.FileSystemService` normalizes line endings when
+  reading or writing files.
+description: |
+  The `FileMode` enum is passed to `Class.FileSystemService:ReadFile()` and
+  `Class.FileSystemService:WriteFile()` to control line-ending handling.
+  `Enum.FileMode.Text` normalizes `\r\n` sequences to `\n` on both read and
+  write, ensuring consistent cross-platform behavior when working with text
+  content. `Enum.FileMode.Binary` performs no transformation, preserving every
+  byte exactly as stored on disk.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Binary
-    summary: ''
+    summary: |
+      Reads or writes raw bytes with no line-ending transformation, preserving
+      all characters exactly as stored on disk.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Text
-    summary: ''
+    summary: |
+      Reads or writes file content with `\r\n` sequences normalized to `\n`,
+      ensuring consistent line endings across platforms.
     value: 1
     tags: []
     deprecation_message: ''

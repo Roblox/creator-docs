@@ -4,24 +4,36 @@
 
 name: LocationType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies how `HeatmapService` determines a player's representative world
+  position for heatmap data collection.
+description: |
+  Controls which point in 3D space is sampled as a player's location when
+  `HeatmapService` records positional heatmap events. The value is stored per
+  `Class.Player` and defaults to `Enum.LocationType.Character`. See the items
+  below for each sampling mode.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Character
-    summary: ''
+    summary: |
+      Use the player's character model world position as the heatmap location
+      (default).
     value: 0
     tags: []
     deprecation_message: ''
   - name: Camera
-    summary: ''
+    summary: |
+      Use the current workspace camera's world position as the player's heatmap
+      location.
     value: 1
     tags: []
     deprecation_message: ''
   - name: ObjectPosition
-    summary: ''
+    summary: |
+      Use the world position of a configured target object as the player's
+      heatmap location.
     value: 2
     tags: []
     deprecation_message: ''

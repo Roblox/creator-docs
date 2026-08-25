@@ -4,24 +4,35 @@
 
 name: RsvpStatus
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates a player's RSVP response to a Roblox experience event.
+description: |
+  Indicates a player's RSVP response to a Roblox experience event.
+  `Class.SocialService:GetEventRsvpStatusAsync()` returns a value of this enum
+  to reflect whether a player has responded to an event invitation, and
+  `PromptRsvpToEventCompleted` passes both the new and previous status as
+  `RsvpStatus` values when a player finishes interacting with the RSVP prompt.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      The player has not yet responded to the event invitation; this is the
+      default RSVP state.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Going
-    summary: ''
+    summary: |
+      The player has accepted the event invitation and confirmed they are going.
     value: 1
     tags: []
     deprecation_message: ''
   - name: NotGoing
-    summary: ''
+    summary: |
+      The player has declined the event invitation and indicated they are not
+      going.
     value: 2
     tags: []
     deprecation_message: ''

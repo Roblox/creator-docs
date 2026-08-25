@@ -79,7 +79,11 @@ methods:
     parameters: []
     returns:
       - type: List<FloatCurve>
-        summary: ''
+        summary: |
+          An array of the child `Class.FloatCurve` instances that drive the
+          components of the animated value, in the order listed at the top of
+          this page. Any expected child curve that does not yet exist is created
+          as an empty `Class.FloatCurve` and included in the result.
     tags: []
     deprecation_message: ''
     security: None

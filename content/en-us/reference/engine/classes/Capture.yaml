@@ -8,7 +8,14 @@ memory_category: Instances
 summary: |
   A class which defines a piece of content, such as a screenshot or video, taken
   in-experience.
-description: ''
+description: |
+  Represents a single piece of content — a screenshot or a video — captured
+  within an experience. A `Class.Capture` records metadata about that content,
+  including when it was taken (`Class.Capture.CaptureTime`), what kind of
+  content it is (`Class.Capture.CaptureType`), the place and experience it
+  originated from (`Class.Capture.SourcePlaceId` and
+  `Class.Capture.SourceUniverseId`), and where its underlying file is stored
+  (`Class.Capture.LocalId` and `Class.Capture.FilePathString`).
 code_samples: []
 inherits:
   - Object
@@ -21,8 +28,12 @@ tags:
 deprecation_message: ''
 properties:
   - name: Capture.CaptureTime
-    summary: ''
-    description: ''
+    summary: |
+      The date and time at which the capture was taken.
+    description: |
+      The date and time at which the capture was taken, as a
+      `Datatype.DateTime`. It defaults to the moment the `Class.Capture` is
+      created. This property is read-only.
     code_samples: []
     type: DateTime
     tags:
@@ -40,8 +51,12 @@ properties:
     capabilities:
       - Capture
   - name: Capture.CaptureType
-    summary: ''
-    description: ''
+    summary: |
+      Indicates whether the capture is a screenshot or a video.
+    description: |
+      Indicates the kind of content the capture holds, as an `Enum.CaptureType`
+      value. Defaults to `Enum.CaptureType.Screenshot`. This property is
+      read-only.
     code_samples: []
     type: CaptureType
     tags:
@@ -59,8 +74,13 @@ properties:
     capabilities:
       - Capture
   - name: Capture.FilePathString
-    summary: ''
-    description: ''
+    summary: |
+      The local filesystem path to the capture's file, as a string.
+    description: |
+      The path to the capture's file on the local filesystem, returned as a
+      string. It resolves to the file backing the capture in local capture
+      storage, or an empty string when no file is associated with the capture.
+      This property is read-only.
     code_samples: []
     type: string
     tags:
@@ -78,8 +98,13 @@ properties:
     capabilities:
       - Capture
   - name: Capture.LocalId
-    summary: ''
-    description: ''
+    summary: |
+      A temporary local identifier for the capture's stored file.
+    description: |
+      A local identifier for the capture's stored file, in the form
+      `rbxtemp://<key>`. It is empty until the capture has been saved to local
+      capture storage, after which it references the stored file by key. This
+      property is read-only.
     code_samples: []
     type: string
     tags:
@@ -97,8 +122,12 @@ properties:
     capabilities:
       - Capture
   - name: Capture.SourcePlaceId
-    summary: ''
-    description: ''
+    summary: |
+      The ID of the place in which the capture was taken.
+    description: |
+      The `Class.DataModel.PlaceId|PlaceId` of the place in which the capture
+      was taken. Defaults to `0` when the source place is unknown or unset. This
+      property is read-only.
     code_samples: []
     type: int64
     tags:
@@ -116,8 +145,12 @@ properties:
     capabilities:
       - Capture
   - name: Capture.SourceUniverseId
-    summary: ''
-    description: ''
+    summary: |
+      The ID of the experience in which the capture was taken.
+    description: |
+      The universe (experience) ID of the experience in which the capture was
+      taken. Defaults to `0` when the source universe is unknown or unset. This
+      property is read-only.
     code_samples: []
     type: int64
     tags:

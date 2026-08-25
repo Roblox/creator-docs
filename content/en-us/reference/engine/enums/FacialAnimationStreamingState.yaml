@@ -4,34 +4,47 @@
 
 name: FacialAnimationStreamingState
 type: enum
-summary: ''
-description: ''
+summary: |
+  A bitmask enum describing which facial animation streaming capabilities are
+  active for a user or service.
+description: |
+  `FacialAnimationStreamingState` is a bitmask enum that represents which facial
+  animation streaming modalities are currently enabled. Values can be combined
+  via bitwise OR to represent multiple active states simultaneously. It covers
+  both per-user opt-in state and place- or server-level enablement.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      Indicates that no facial animation streaming is active.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Audio
-    summary: ''
+    summary: |
+      Indicates that audio-based facial animation streaming is enabled for the
+      user.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Video
-    summary: ''
+    summary: |
+      Indicates that video-based facial animation streaming is enabled for the
+      user.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Place
-    summary: ''
+    summary: |
+      Indicates that facial animation streaming is enabled at the place level.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Server
-    summary: ''
+    summary: |
+      Indicates that facial animation streaming is enabled at the server level.
     value: 8
     tags: []
     deprecation_message: ''

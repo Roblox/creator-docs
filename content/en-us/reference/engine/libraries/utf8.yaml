@@ -47,10 +47,14 @@ functions:
       - name: codepoints
         type: Tuple<int>
         default:
-        summary: ''
+        summary: |
+          Zero or more integer codepoints in the range `[0, 0x10ffff]` to
+          encode.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A string containing the concatenated UTF-8 byte sequences for each
+          codepoint.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -78,11 +82,15 @@ functions:
           The string to iterate over.
     returns:
       - type: function
-        summary: ''
+        summary: |
+          The iterator function that, on each call, returns the byte position
+          and codepoint of the next character.
       - type: string
-        summary: ''
+        summary: |
+          The input string (passed as the invariant state to the iterator).
       - type: int
-        summary: ''
+        summary: |
+          The initial control value (`0`) for the iterator.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -99,7 +107,8 @@ functions:
       - name: str
         type: string
         default:
-        summary: ''
+        summary: |
+          The UTF-8 encoded string to extract codepoints from.
       - name: i
         type: int
         default: 1
@@ -113,7 +122,9 @@ functions:
           returned. If excluded, this will default to the value of `i`.
     returns:
       - type: Tuple<int>
-        summary: ''
+        summary: |
+          The codepoints as integers for all characters that start between byte
+          positions `i` and `j`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -129,7 +140,8 @@ functions:
       - name: s
         type: string
         default:
-        summary: ''
+        summary: |
+          The UTF-8 encoded string to measure.
       - name: i
         type: int
         default: 1
@@ -142,7 +154,9 @@ functions:
           The ending position.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The number of UTF-8 codepoints in the specified range, or `nil`
+          followed by the byte position of the first invalid byte sequence.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -162,18 +176,26 @@ functions:
       - name: s
         type: string
         default:
-        summary: ''
+        summary: |
+          The UTF-8 encoded string to search within.
       - name: 'n'
         type: int
         default:
-        summary: ''
+        summary: |
+          The character offset to seek. Positive values count forward, negative
+          values count backward, and `0` finds the start of the character at
+          byte position `i`.
       - name: i
         type: int
         default: 1
-        summary: ''
+        summary: |
+          The byte position from which to start counting. Defaults to `1` when
+          `n` is non-negative and `#s + 1` when `n` is negative.
     returns:
       - type: int?
-        summary: ''
+        summary: |
+          The byte position where the target codepoint begins, or `nil` if the
+          character is not within the string.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -196,18 +218,25 @@ functions:
       - name: str
         type: string
         default:
-        summary: ''
+        summary: |
+          The UTF-8 encoded string to iterate over for grapheme clusters.
       - name: i
         type: number
         default:
-        summary: ''
+        summary: |
+          The starting byte position within the string. Negative values count
+          from the end.
       - name: j
         type: number
         default:
-        summary: ''
+        summary: |
+          The ending byte position within the string. Negative values count from
+          the end.
     returns:
       - type: function
-        summary: ''
+        summary: |
+          An iterator function that returns the start and end byte positions of
+          each grapheme cluster.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -221,10 +250,13 @@ functions:
       - name: str
         type: string
         default:
-        summary: ''
+        summary: |
+          The UTF-8 encoded string to normalize.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The NFC-normalized string with decomposed characters composed into
+          their precomposed equivalents.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -242,7 +274,9 @@ functions:
           The string to convert.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The NFD-normalized string with precomposed characters decomposed into
+          their component parts.
     tags: []
     code_samples: []
     deprecation_message: ''

@@ -4,8 +4,15 @@
 
 name: SubscriptionPaymentStatus
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the payment outcome for a single entry in a user's subscription
+  payment history.
+description: |
+  The `SubscriptionPaymentStatus` enum describes whether a billing cycle for a
+  `Class.MarketplaceService` subscription was successfully charged or
+  subsequently refunded. It appears as the `subscriptionPaymentStatus` field on
+  each record returned by
+  `Class.MarketplaceService:GetUserSubscriptionPaymentHistoryAsync()`.
 code_samples: []
 tags: []
 deprecation_message: ''

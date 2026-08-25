@@ -27,7 +27,9 @@ deprecation_message: ''
 properties: []
 methods:
   - name: RecommendationService:GenerateItemListAsync
-    summary: ''
+    summary: |
+      Returns a paginated list of personalized recommendation items for the
+      specified request configuration.
     description: |
       This function returns a paginated list of recommended items based on a
       given request. The request can specify criteria such as configuration
@@ -63,10 +65,10 @@ methods:
         config, you must pass the `UserId` in the `CustomContexts`.
       - `RecentlyAdded`: Returns items sorted by how recent they are, and
         displays the most recently added public content first.
-      - `MaximizeJoins`: (Coming soon) Optimizes recommendations to prioritize
-        game joins. This configuration is currently exclusive to Roblox Moments
-        and focuses on maximizing interactions leading to a teleport. In
-        contrast, `MaximizePlays` is purely optimizing `Play` actions.
+      - `MaximizeJoins`: Optimizes recommendations to prioritize game joins.
+        This configuration is exclusive to Roblox Moments and focuses on
+        maximizing interactions leading to a teleport. In contrast,
+        `MaximizePlays` is purely optimizing `Play` actions.
       - `PlayerOwnedItems`: Displays the user's own creations sorted by creation
         time. This config requires user authentication because it displays
         private items. This config is only available on the **client**.
@@ -95,14 +97,15 @@ methods:
             `"other"` as these values are reserved by the Creator Hub.
           - `PageSize` &mdash; The number of items returned for each page.
           - `BoostCustomTags` &mdash; A list of string tags. Any item with this
-            tag will be boosted in ranking. Note: only supports boosting one tag
-            now.
+            tag will be boosted in ranking. Supports boosting one tag.
           - `CustomContexts` &mdash; A table of key-value pairs used to pass in
             additional context data for ranking. For example, `UserId` for a
             Server script.
     returns:
       - type: RecommendationPages
-        summary: ''
+        summary: |
+          A `RecommendationPages` object containing the paginated list of
+          recommended items for the given request configuration.
     tags:
       - Yields
     deprecation_message: ''
@@ -111,7 +114,8 @@ methods:
     capabilities:
       - Basic
   - name: RecommendationService:GetRecommendationItemAsync
-    summary: ''
+    summary: |
+      Retrieves a single registered recommendation item by its `ItemId`.
     description: |
       This function returns a single recommendation item by its `ItemId`. This
       is useful for getting the details of a specific item without having to
@@ -151,7 +155,9 @@ methods:
     capabilities:
       - Basic
   - name: RecommendationService:LogActionEvent
-    summary: ''
+    summary: |
+      Logs a user action, such as a reaction or play, taken on a recommended
+      item.
     description: |
       This function logs a user action on a recommended item, such as a "like,"
       "share," or "purchase." It requires the `itemId` of the item and a
@@ -207,7 +213,8 @@ methods:
             `Enum.RecommendationActionType.RemoveReaction|RemoveReaction`.
     returns:
       - type: ()
-        summary: ''
+        summary: |
+          No return value.
     tags: []
     deprecation_message: ''
     security: None
@@ -215,7 +222,8 @@ methods:
     capabilities:
       - Basic
   - name: RecommendationService:LogImpressionEvent
-    summary: ''
+    summary: |
+      Logs an impression event, such as a user viewing a recommended item.
     description: |
       This function logs an impression event, such as a user viewing a
       recommended item. It requires the `itemId` and a `tracingId` to associate
@@ -268,7 +276,8 @@ methods:
             `Positive` if the view is considered good.
     returns:
       - type: ()
-        summary: ''
+        summary: |
+          No return value.
     tags: []
     deprecation_message: ''
     security: None
@@ -276,7 +285,9 @@ methods:
     capabilities:
       - Basic
   - name: RecommendationService:LogPreferenceEvent
-    summary: ''
+    summary: |
+      Logs a user preference signal, such as follow or mute, toward a user,
+      universe, or custom content tag.
     description: |
       This function logs a user preference signal, such as follow, unfollow,
       mute, or unmute, directed at another user, a universe, or a custom content
@@ -335,7 +346,8 @@ methods:
           recommendation feed.
     returns:
       - type: ()
-        summary: ''
+        summary: |
+          No return value.
     tags: []
     deprecation_message: ''
     security: None
@@ -343,7 +355,9 @@ methods:
     capabilities:
       - Basic
   - name: RecommendationService:RegisterItemAsync
-    summary: ''
+    summary: |
+      Registers a new item on the server so it can be included in
+      recommendations, returning the generated `ItemId` and `ReferenceId`.
     description: |
       This function registers a new item to be included in recommendations. It
       requires a `player` object and a `registerRecommendationItemsRequest`
@@ -439,7 +453,8 @@ methods:
     capabilities:
       - Basic
   - name: RecommendationService:RemoveItemAsync
-    summary: ''
+    summary: |
+      Removes a registered item from the recommendation system by its `ItemId`.
     description: |
       This function removes an item from the recommendation system. It takes the
       `itemId` of the item to be deleted as a parameter.
@@ -471,7 +486,8 @@ methods:
     capabilities:
       - Basic
   - name: RecommendationService:UpdateItemAsync
-    summary: ''
+    summary: |
+      Updates the mutable attributes of an existing recommendation item.
     description: |
       This function updates the attributes of an existing recommendation item.
       It takes an `updateRecommendationItemRequest` dictionary containing the

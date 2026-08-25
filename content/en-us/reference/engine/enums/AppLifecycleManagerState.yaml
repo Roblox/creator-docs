@@ -4,29 +4,52 @@
 
 name: AppLifecycleManagerState
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the current lifecycle state of the Roblox application as reported by
+  `AppLifecycleObserverService:GetCurrentState()`.
+description: |
+  Reports the application lifecycle state returned by
+  `AppLifecycleObserverService:GetCurrentState()` and related events.
+  Transitions follow `Enum.AppLifecycleManagerState.Detached` →
+  `Enum.AppLifecycleManagerState.Active` →
+  `Enum.AppLifecycleManagerState.Inactive` →
+  `Enum.AppLifecycleManagerState.Hidden` →
+  `Enum.AppLifecycleManagerState.Detached`; intermediate states are traversed
+  automatically when the application jumps between non-adjacent states.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Detached
-    summary: ''
+    summary: |
+      The application has not yet started or is shutting down. This is the
+      initial state before the lifecycle manager is created and the final state
+      entered during application termination.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Active
-    summary: ''
+    summary: |
+      The application is in the foreground and has input focus. This is the
+      normal running state where the user is actively interacting with the
+      experience.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Inactive
-    summary: ''
+    summary: |
+      The application is visible but does not have input focus. On iOS this
+      occurs during transitions such as incoming calls or notification center
+      pull-down; on macOS it corresponds to the application resigning active
+      status.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Hidden
-    summary: ''
+    summary: |
+      The application is fully in the background and not visible to the user. On
+      mobile platforms this corresponds to the app being backgrounded; on
+      desktop it corresponds to the window being minimized or fully occluded.
     value: 3
     tags: []
     deprecation_message: ''

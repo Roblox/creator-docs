@@ -61,8 +61,15 @@ properties:
       can_save: false
     capabilities: []
   - name: StudioService.DraggerSolveConstraints
-    summary: ''
-    description: ''
+    summary: |
+      Reflects whether Studio's draggers solve constraints while moving objects.
+    description: |
+      Reflects whether Studio's move, scale, and rotate draggers solve
+      constraints while dragging, so that manipulating one part of a constrained
+      mechanism moves the connected parts according to their constraints. This
+      property is read-only and defaults to `false`. Plugins that implement
+      their own dragging tools can read it to match the user's current dragger
+      behavior.
     code_samples: []
     type: boolean
     tags:
@@ -79,8 +86,12 @@ properties:
       can_save: false
     capabilities: []
   - name: StudioService.DrawConstraintsOnTop
-    summary: ''
-    description: ''
+    summary: |
+      Deprecated property that previously controlled whether constraints were
+      drawn on top of other objects in the viewport.
+    description: |
+      This property is deprecated and no longer has any effect: constraints can
+      no longer be drawn "on top" of other objects in the 3D viewport.
     code_samples: []
     type: boolean
     tags:
@@ -148,12 +159,12 @@ properties:
   - name: StudioService.Secrets
     summary: |
       A JSON string storing the local secrets for the current experience, used
-      internally by Studio to support HttpService:GetSecret().
+      by Studio to support HttpService:GetSecret().
     description: |
-      **Secrets** is an internal property that stores the
-      [local secrets](../../../cloud-services/secrets.md) configured for the
-      current experience. This property is not accessible to creators; secrets
-      are consumed at runtime through `HttpService:GetSecret()`.
+      **Secrets** stores the [local secrets](../../../cloud-services/secrets.md)
+      configured for the current experience. This property is not accessible to
+      creators; secrets are consumed at runtime through
+      `HttpService:GetSecret()`.
     code_samples: []
     type: string
     tags: []
@@ -168,8 +179,16 @@ properties:
       can_save: true
     capabilities: []
   - name: StudioService.ShowConstraintDetails
-    summary: ''
-    description: ''
+    summary: |
+      Reflects whether constraint details are drawn in the 3D viewport.
+    description: |
+      Reflects whether Studio draws constraint details in the 3D viewport,
+      mirroring the **Constraint Details** toggle in the toolbar's **Model**
+      tab. When enabled, constraints such as
+      `Class.WeldConstraint|WeldConstraints` and
+      `Class.NoCollisionConstraint|NoCollisionConstraints` are drawn and become
+      selectable in the viewport. This property is read-only and defaults to
+      `false`.
     code_samples: []
     type: boolean
     tags:
@@ -186,8 +205,12 @@ properties:
       can_save: false
     capabilities: []
   - name: StudioService.ShowWeldDetails
-    summary: ''
-    description: ''
+    summary: |
+      Reflects whether weld details are drawn in the 3D viewport.
+    description: |
+      Reflects whether Studio draws weld details in the 3D viewport. When
+      enabled, `Class.WeldConstraint|WeldConstraints` between parts are
+      visualized. This property is read-only and defaults to `false`.
     code_samples: []
     type: boolean
     tags:
@@ -290,10 +313,14 @@ methods:
       - name: className
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the Roblox class to retrieve the Explorer window icon for.
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A dictionary containing `Image`, `ImageRectOffset`, and
+          `ImageRectSize` fields that can be applied to an `Class.ImageLabel` to
+          display the class icon.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -311,7 +338,9 @@ methods:
     parameters: []
     returns:
       - type: int64
-        summary: ''
+        summary: |
+          The UserId of the logged-in Studio user, or 0 if the user is not
+          logged in.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -321,7 +350,14 @@ methods:
     summary: |
       Prompts the current Studio user to select one file to add as a
       `Class.File`.
-    description: ''
+    description: |
+      This function prompts the current Studio user to select one file, which
+      will then be loaded as a `Class.File`.
+
+      See also:
+
+      - `Class.StudioService:PromptImportFiles()`, the same function but for
+        loading a list of files instead of a single file
     code_samples: []
     parameters:
       - name: fileTypeFilter
@@ -383,7 +419,16 @@ methods:
     summary: |
       Prompts the current Studio user to select files to add as
       `Class.File|Files`.
-    description: ''
+    description: |
+      This function prompts the current Studio user to select one or more files,
+      which will then be loaded as `Class.File|Files`.
+
+      Throws an error if the fileTypeFilter was an empty list.
+
+      See also:
+
+      - `Class.StudioService:PromptImportFilesAsync()`, the same function but
+        for loading a list of files instead of a single file
     code_samples: []
     parameters:
       - name: fileTypeFilter

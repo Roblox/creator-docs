@@ -130,7 +130,7 @@ Face accessories, such as eyebrows and eyelashes, are unique layered accessories
 
 Layered accessories require additional configuration in a 3D modeling software, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview). To achieve the layering effect, your layered accessories must meet the following requirements:
 
-- Layered accessories must be [weighted and bound](#rigging-and-skinning) to a [standard](../character-bodies/specifications.md#standard-rigs) or [higher-fidelity](../character-bodies/specifications.md#higher-fidelity-rigs) rigging armature.
+- Layered accessories must be [weighted and bound](#rigging-and-skinning) to a [R15 rigging armature](../character-bodies/specifications.md#rigging).
 - Layered accessories must contain an [inner mesh cage](#inner-cage) and an [outer mesh cage](#outer-cage).
 - Layered accessories must continue to follow any applicable [custom mesh requirements](../../art/modeling/specifications.md), such as best practices on watertightness, textures, and polycount budgets.
 

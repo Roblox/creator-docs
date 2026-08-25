@@ -4,10 +4,18 @@
 
 name: ExperienceEventStatus
 type: enum
-summary: ''
-description: |
-  Represents the lifecycle state of an experience event returned by
+summary: |
+  Describes the lifecycle state of a Roblox experience event as returned by
   `Class.SocialService`.
+description: |
+  Describes the lifecycle state of a Roblox experience event.
+  `Class.SocialService:GetExperienceEventAsync()` and
+  `Class.SocialService:GetUpcomingExperienceEventsAsync()` return event
+  dictionaries whose `Status` field is a value of this enum, derived from the
+  `eventStatus` field in the virtual-events API response.
+  `GetUpcomingExperienceEventsAsync()` filters out events whose status is
+  `Cancelled`, `Moderated`, or `Unpublished`, so only `Active` events appear in
+  that list.
 code_samples: []
 tags: []
 deprecation_message: ''

@@ -5,20 +5,8 @@
 name: AdGui
 type: class
 memory_category: Internal
-summary: |
-  A surface-based GUI that displays immersive ads on a face of a `Class.Part` in
-  the 3D world.
-description: |
-  `Class.AdGui` is a `Class.SurfaceGuiBase` that renders immersive display ads
-  onto a face of the `Class.Part` it's adorned to. When no ad is available, it
-  shows the developer-supplied `Class.AdGui.FallbackImage`, or a default Roblox
-  fallback image when that property is empty.
-
-  To render ads, the `Class.AdGui` must be adorned to a block `Class.Part`
-  that's a descendant of `Class.Workspace`, must be the only surface GUI on that
-  face, and must be at least the minimum eligible size. When these conditions
-  aren't met, the object displays a placeholder image in Studio's edit view and
-  renders nothing in a running experience.
+summary: ''
+description: ''
 code_samples: []
 inherits:
   - SurfaceGuiBase
@@ -27,13 +15,8 @@ tags: []
 deprecation_message: ''
 properties:
   - name: AdGui.AdShape
-    summary: |
-      Determines the shape of the ad displayed by the `Class.AdGui`.
-    description: |
-      Determines the shape of the ad rendered by the `Class.AdGui`, including
-      the creative's aspect ratio on the part surface. Defaults to
-      `Enum.AdShape|HorizontalRectangle`, which is the only served shape aside
-      from the sentinel `Enum.AdShape|Undefined`.
+    summary: ''
+    description: ''
     code_samples: []
     type: AdShape
     tags: []
@@ -69,12 +52,8 @@ properties:
       - UI
       - Monetization
   - name: AdGui.FallbackImage
-    summary: |
-      The image the `Class.AdGui` displays when no ad is available to serve.
-    description: |
-      A developer-supplied image that the `Class.AdGui` displays when it has no
-      served ad to render. Defaults to an empty content string; while empty, the
-      `Class.AdGui` renders a default Roblox fallback image instead.
+    summary: ''
+    description: ''
     code_samples: []
     type: ContentId
     tags: []
@@ -89,41 +68,9 @@ properties:
       can_save: true
     capabilities:
       - UI
-  - name: AdGui.FallbackImageContent
-    summary: |
-      The `Datatype.Content` equivalent of `Class.AdGui.FallbackImage` that
-      supports asset URIs and `Class.EditableImage` objects.
-    description: |
-      A `Datatype.Content`-typed property that holds the fallback image the
-      `Class.AdGui` displays when no served ad is available. It is the
-      content-typed backing for `Class.AdGui.FallbackImage` (a legacy
-      `TextureId` string); writing to either property updates the same
-      underlying storage. Unlike `FallbackImage`, this property accepts
-      [asset URIs](../../../projects/assets/index.md#asset-uris) and references
-      to `Class.EditableImage` objects. When empty, the `Class.AdGui` renders a
-      default Roblox fallback image instead.
-    code_samples: []
-    type: Content
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Appearance
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - UI
   - name: AdGui.Status
-    summary: |
-      Indicates whether the `Class.AdGui` is currently displaying a served ad.
-    description: |
-      A read-only property that reports whether the `Class.AdGui` is actively
-      displaying a served ad. It's `Enum.AdUnitStatus|Active` when the
-      `Class.AdGui` is rendering ad content, and `Enum.AdUnitStatus|Inactive`
-      otherwise.
+    summary: ''
+    description: ''
     code_samples: []
     type: AdUnitStatus
     tags:

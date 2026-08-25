@@ -4,19 +4,30 @@
 
 name: ExperienceAuthScope
 type: enum
-summary: ''
-description: ''
+summary: |
+  Enumerates the authorization scopes an experience can request when prompting a
+  creator for permission to access their assets.
+description: |
+  Enumerates the authorization scopes passed to `ExperienceAuthService` when an
+  experience needs to request specific permissions from a creator. Each value
+  maps to an underlying OAuth-style token scope: `CreatorAssetsCreate` resolves
+  to `asset:*:read,write`, granting the experience read and write access to the
+  creator's assets for the duration of the session.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: DefaultScope
-    summary: ''
+    summary: |
+      The base scope (value `0`) representing no additional permissions; used
+      internally when no specific asset authorization is required.
     value: 0
     tags: []
     deprecation_message: ''
   - name: CreatorAssetsCreate
-    summary: ''
+    summary: |
+      Requests read and write access to the creator's assets; maps to the
+      `asset:*:read,write` authorization token scope.
     value: 1
     tags: []
     deprecation_message: ''

@@ -65,7 +65,7 @@ To install the Calisthenics Tool in Blender:
 
 ## Use the Calisthenics Tool
 
-After installation, you can use the Calisthenics Tool whenever you want to test a [standard](../../avatar/character-bodies/specifications.md#standard-rigs) rigging armature with skinning data. With the Calisthenics Tool, you can check how a character body would move with generic animations, as well as attach reference rigid accessories to verify attachment during these movements. The tool also includes an option to automatically export your character, removing reference animation and accessory data.
+After installation, you can use the Calisthenics Tool whenever you want to test a [standard R15](../../avatar/character-bodies/specifications.md#standard-r15-rigs) rigging armature with skinning data. With the Calisthenics Tool, you can check how a character body would move with generic animations, as well as attach reference rigid accessories to verify attachment during these movements. The tool also includes an option to automatically export your character, removing reference animation and accessory data.
 
 You can try out the Calisthenics Tool using an [example character body model](../../assets/modeling/skinned-meshes/calisthenic-tool/Fish-Character-No-FACS.fbx).
 
@@ -83,7 +83,7 @@ If you encounter any errors or warnings when setting armature or playing animati
 
 To test animations:
 
-1. Open a Blender project with an existing character body with a [standard](../../avatar/character-bodies/specifications.md#standard-rigs) rigging armature, or import an appropriate character model `.fbx` using **File** > **Import** > **FBX (.fbx)**.
+1. Open a Blender project with an existing character body with a [standard R15 rig](../../avatar/character-bodies/specifications.md#standard-r15-rigs), or import an appropriate character model `.fbx` using **File** > **Import** > **FBX (.fbx)**.
 
 2. For easier visualization, hide non-rendered mesh objects, such as armature, cages, and attachments to better preview the reference animations.
 

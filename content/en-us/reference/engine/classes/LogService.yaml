@@ -141,11 +141,26 @@ methods:
     description: |
       Returns a table of tables, each with the message string, message type, and
       timestamp of a message that the client displays in the **Output** window.
+      Each inner table contains the following keys:
+
+      - `message` (string) -- the rendered message text.
+      - `messageType` (`Enum.MessageType`) -- the log level (MessageOutput,
+        MessageInfo, MessageWarning, or MessageError).
+      - `timestamp` (number) -- the time the message was emitted, in seconds.
+      - `context` (dictionary) -- the structured key-value pairs if the message
+        was emitted via a structured logging method; absent otherwise.
+
+      The history is capped at a maximum of 512 entries by default. Calling
+      `Class.LogService:ClearOutput()` empties the history, so subsequent calls
+      return only entries logged after the clear.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of tables, each containing `message` (string), `messageType`
+          (`Enum.MessageType`), `timestamp` (number, in seconds), and optionally
+          `context` (dictionary) for entries logged with structured context.
     tags: []
     deprecation_message: ''
     security: None
@@ -332,22 +347,52 @@ events:
     summary: |
       Fires when the client outputs text.
     description: |
-      Fires when the client outputs text.
+      Fires whenever a message is logged through the engine's output system,
+      including calls to `Global.LuaGlobals.print()`,
+      `Global.RobloxGlobals.warn()`, and the structured logging methods on
+      `Class.LogService`. The `message` parameter contains the fully rendered
+      text (template placeholders already replaced). The `context` parameter
+      carries the structured key-value pairs when the message was emitted via a
+      method that accepts a context table; otherwise it is nil.
+
+      ```lua
+      local LogService = game:GetService("LogService")
+
+      LogService.MessageOut:Connect(function(message, messageType, context)
+      	if messageType == Enum.MessageType.MessageError then
+      		print("Error:", message)
+      	end
+      	if context then
+      		-- Access structured data from structured logging calls
+      		for key, value in context do
+      			print(key, "=", value)
+      		end
+      	end
+      end)
+      ```
     code_samples:
       - LogService-MessageOut1
     parameters:
       - name: message
         type: string
         default:
-        summary: ''
+        summary: |
+          The fully rendered message string after any template placeholder
+          substitution.
       - name: messageType
         type: MessageType
         default:
-        summary: ''
+        summary: |
+          A `Enum.MessageType` value indicating the severity level of the
+          message.
       - name: context
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A dictionary of key-value pairs provided when the message was logged
+          via a structured logging method (`Class.LogService:Output()`,
+          `Class.LogService:Info()`, `Class.LogService:Warn()`, or
+          `Class.LogService:Error()`), or nil if no context was supplied.
     tags: []
     deprecation_message: ''
     security: None

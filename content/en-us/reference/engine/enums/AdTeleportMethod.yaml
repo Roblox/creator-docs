@@ -4,42 +4,29 @@
 
 name: AdTeleportMethod
 type: enum
-summary: |
-  Describes the method by which a player teleports during an immersive ad portal
-  flow.
-description: |
-  Describes the user-initiated method by which a player teleports during an
-  immersive ad portal flow, distinguishing forward travel to the advertiser's
-  experience from a return to the publisher's experience.
+summary: ''
+description: ''
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Undefined
-    summary: |
-      Default uninitialized sentinel value indicating that no teleport method
-      has been determined yet.
+    summary: ''
     value: 0
     tags: []
     deprecation_message: ''
   - name: PortalForward
-    summary: |
-      The player teleported forward to the advertiser's destination experience
-      by walking into an `Class.AdPortal`.
+    summary: ''
     value: 1
     tags: []
     deprecation_message: ''
   - name: InGameMenuBackButton
-    summary: |
-      The player initiated a return teleport to the publisher's experience by
-      pressing the back button in the in-game menu.
+    summary: ''
     value: 2
     tags: []
     deprecation_message: ''
   - name: UIBackButton
-    summary: |
-      The player initiated a return teleport to the publisher's experience by
-      pressing a back button rendered in the ad destination's UI overlay.
+    summary: ''
     value: 3
     tags: []
     deprecation_message: ''

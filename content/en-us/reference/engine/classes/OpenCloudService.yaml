@@ -5,8 +5,13 @@
 name: OpenCloudService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Deprecated. Do not use for new work; prefer `Class.HttpService` for
+  in-experience HTTP requests.
+description: |
+  Deprecated. Do not use for new work; prefer `Class.HttpService` for
+  in-experience HTTP requests. See the
+  [In-experience HTTP requests guide](../../../cloud-services/http-service.md).
 code_samples: []
 inherits:
   - Instance
@@ -23,8 +28,11 @@ deprecation_message: |
 properties: []
 methods:
   - name: OpenCloudService:GetApiV1
-    summary: ''
-    description: ''
+    summary: |
+      Returns an `Class.OpenCloudApiV1` object. Always raises an error.
+    description: |
+      Deprecated. Always raises an error with the message
+      `"API is not enabled"`.
     code_samples: []
     parameters: []
     returns:
@@ -39,29 +47,40 @@ methods:
     capabilities:
       - Network
   - name: OpenCloudService:InvokeAsync
-    summary: ''
-    description: ''
+    summary: |
+      Deprecated. Dispatches a named Open Cloud call and returns its result.
+    description: |
+      Deprecated. Do not use for new work.
+
+      Dispatches a server-side Open Cloud call identified by `version` and
+      `methodName` with the given `arguments` and optional `headers`, and
+      returns the response dictionary.
     code_samples: []
     parameters:
       - name: version
         type: string
         default:
-        summary: ''
+        summary: |
+          API version string identifying the call surface.
       - name: methodName
         type: string
         default:
-        summary: ''
+        summary: |
+          Name of the Open Cloud method to invoke.
       - name: arguments
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A dictionary of arguments forwarded with the call.
       - name: headers
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          Optional request headers dictionary.
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A dictionary containing the response.
     tags:
       - Yields
       - Deprecated
