@@ -37,11 +37,11 @@ To understand the U.S. 18+ DevEx rate's eligibility criteria, it's important to 
 	</tr>
 	<tr>
 		<td><b>R6</b></td>
-		<td>A basic humanoid rig with 6 body parts and 6 poseable joints.</td>
+		<td>Basic character body with 6 body parts and 6 poseable joints.</td>
 	</tr>
 	<tr>
 		<td><b>R15</b></td>
-		<td>A [standard humanoid rig](../../avatar/character-bodies/specifications.md#standard-rigs) with 15 body parts and 15 poseable joints.</td>
+		<td>Default character body with 15 body parts and a rigging armature. [Standard R15 rigs](../../avatar/character-bodies/specifications.md#standard-r15-rigs) include 15 poseable joints, and [advanced R15 rigs](../../avatar/character-bodies/specifications.md#advanced-r15-rigs) can include up to 37 additional joints for a higher level of realism.</td>
 	</tr>
 </tbody>
 </table>
@@ -65,7 +65,7 @@ All Earned Robux must be in complete compliance with Roblox's [Terms of Use](htt
 
 Games that qualify for the U.S. 18+ DevEx rate must include player characters that spend **100% of active playtime** as one of the following:
 
-- Platform avatars with a [standard](../../avatar/character-bodies/specifications.md#standard-rigs) or [higher-fidelity](../../avatar/character-bodies/specifications.md#higher-fidelity-rigs) rig
+- Platform avatars with a [standard](../../avatar/character-bodies/specifications.md#standard-r15-rigs) or [advanced](../../avatar/character-bodies/specifications.md#advanced-r15-rigs) R15 rig
 - Custom human-form characters with the following characteristics:
   - Approximately 1 head, 2 legs, and 2 arms
   - 12 limb parts or 12 limb joints that are equally distributed among limbs

@@ -18,7 +18,8 @@ deprecation_message: |
   Tickets have been removed, so this Enum shouldn't need to be used.
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Use the default currency (Robux), equivalent to not specifying a currency.
     value: 0
     tags: []
     deprecation_message: ''

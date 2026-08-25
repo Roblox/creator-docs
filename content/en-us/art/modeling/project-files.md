@@ -145,7 +145,7 @@ A Blocky character model with an animatable head and a full body cage.
 <center> <img src="../../assets/art/resources/Lola-Resource.png" width="100%" alt="A pink-haired character complete with brown jacket, goggles, leggings, and pants."/> </center>
 </figure>
 <figure>
-A skinned R15 character created from the <a href="../../art/modeling/skin-a-humanoid-model.md">Skin a humanoid model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../avatar/character-bodies/specifications.md#outer-cages), this model can't equip layered clothing or accessories.
+A skinned R15 avatar character created from the <a href="../../art/modeling/skin-a-humanoid-model.md">Skin a humanoid model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../avatar/character-bodies/specifications.md#outer-cages), this model can't equip layered accessories.
 </figure>
 <br />
 
@@ -452,7 +452,7 @@ Blender and .fbx template files with pre-baked avatar components.
 <center> <img src="../../assets/art/resources/Rig-And-Attachments-Resource.png" width="100%" alt="A Blender visualization of bones and attachment meshes in a neutral humanoid pose."/> </center>
 </figure>
 <figure>
-Standard armature rig template for Blender. Use this template for rigging **bodies** and **clothing** items.
+[Standard R15 rig](../../avatar/character-bodies/specifications.md#standard-r15-rigs) template for Blender. Use this template for rigging **bodies** and **clothing** items.
 </figure>
 
 </CardContent>

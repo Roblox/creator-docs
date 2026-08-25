@@ -4,8 +4,15 @@
 
 name: ProductLocationRestriction
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the purchase locations permitted for an avatar item.
+description: |
+  Specifies the purchase locations permitted for an avatar item, as returned in
+  the `AllowedSaleLocations` field of the product info table from
+  `Class.MarketplaceService:GetProductInfo()`. The item creator sets the
+  restriction on the Marketplace; it controls whether the item can be sold
+  in-experience and in which experiences. See `Enum.ProductLocationRestriction`
+  items for each restriction.
 code_samples: []
 tags: []
 deprecation_message: ''

@@ -4,14 +4,31 @@
 
 name: IntermediateMeshGenerationResult
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates the type of result delivered via the intermediate-result callback
+  during an asynchronous mesh-generation operation.
+description: |
+  `IntermediateMeshGenerationResult` is returned as the first argument to the
+  optional intermediate-result callback supplied to
+  `Class.GenerationService:GenerateMeshAsync()|GenerateMeshAsync()`. When the
+  backend finishes producing an intermediate version of the mesh before the
+  final result is ready, the callback fires with a value from this enum together
+  with a `generationId` string and a `contextId` string. The only current member
+  is `Enum.IntermediateMeshGenerationResult.HighQualityMesh`.
+
+  `GenerateMeshAsync` and `InternalGenerateMeshAsync` are deprecated; new code
+  should use
+  `Class.GenerationService:GenerateModelAsync()|GenerateModelAsync()`, which
+  returns the generated `Model` directly to the calling coroutine and does not
+  use this enum.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: HighQualityMesh
-    summary: ''
+    summary: |
+      Signals that the intermediate mesh delivered to the callback is
+      high-quality.
     value: 0
     tags: []
     deprecation_message: ''

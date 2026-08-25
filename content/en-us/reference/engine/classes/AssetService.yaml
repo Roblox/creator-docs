@@ -881,45 +881,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - LoadUnownedAsset
-  - name: AssetService:PromptCreateAssetAsync
-    summary: |
-      Allows in-experience asset creation for users by prompting a publish
-      dialog.
-    description: |
-      Allows in-experience asset creation for users by prompting a publish
-      dialog. When called, it presents a dialog to the user, allowing them to
-      enter a name, description, and preview the asset. Upon submitting, it
-      saves the asset to the user's inventory. Can only be invoked on the server
-      side.
-    code_samples: []
-    parameters:
-      - name: player
-        type: Player
-        default:
-        summary: |
-          The user who submits an asset creation.
-      - name: instance
-        type: Instance
-        default:
-        summary: |
-          The asset to be created. Currently can't contain scripts or nest
-          non-public assets.
-      - name: assetType
-        type: AssetType
-        default:
-        summary: |
-          The asset type. Currently can only be `Enum.AssetType.Model`.
-    returns:
-      - type: Tuple
-        summary: |
-          The `Enum.PromptCreateAssetResult` and asset ID pair if successful.
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - AssetCreateUpdate
   - name: AssetService:PromptImportAnimationClipFromVideoAsync
     summary: |
       Prompts the specified player to select and upload a video, which is then

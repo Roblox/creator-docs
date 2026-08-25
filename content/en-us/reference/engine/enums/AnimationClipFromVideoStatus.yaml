@@ -4,69 +4,98 @@
 
 name: AnimationClipFromVideoStatus
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates the current status or final outcome of a video-to-animation
+  conversion started by
+  `Class.AssetService:PromptImportAnimationClipFromVideoAsync()`.
+description: |
+  Describes the status of a video-to-animation conversion initiated by
+  `Class.AssetService:PromptImportAnimationClipFromVideoAsync()`. Values in this
+  enum are reported both as progress updates through the method's
+  `progressCallback` and as the final outcome in the returned tuple.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Initializing
-    summary: ''
+    summary: |
+      The video-to-animation job is being set up on the server.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Pending
-    summary: ''
+    summary: |
+      The job has been queued on the server and is waiting for processing
+      resources to become available.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Processing
-    summary: ''
+    summary: |
+      The server is actively analyzing the video and extracting motion-capture
+      data to generate the animation clip.
     value: 2
     tags: []
     deprecation_message: ''
   - name: ErrorGeneric
-    summary: ''
+    summary: |
+      The server-side video processing encountered an unspecified error.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Success
-    summary: ''
+    summary: |
+      The video was successfully converted into an `Class.AnimationClip`, which
+      is returned as the second element of the result tuple.
     value: 6
     tags: []
     deprecation_message: ''
   - name: ErrorVideoTooLong
-    summary: ''
+    summary: |
+      Processing failed because the uploaded video exceeds the maximum allowed
+      duration (15 seconds).
     value: 7
     tags: []
     deprecation_message: ''
   - name: ErrorNoPersonDetected
-    summary: ''
+    summary: |
+      Processing failed because no person could be detected in the video; the
+      video must show a person fully in frame, facing the camera.
     value: 8
     tags: []
     deprecation_message: ''
   - name: ErrorVideoUnstable
-    summary: ''
+    summary: |
+      Processing failed because the video is too shaky for reliable motion
+      capture; a more stable recording is required.
     value: 9
     tags: []
     deprecation_message: ''
   - name: Timeout
-    summary: ''
+    summary: |
+      Processing could not be completed in time, typically due to high request
+      volume on the video processing backend.
     value: 10
     tags: []
     deprecation_message: ''
   - name: Cancelled
-    summary: ''
+    summary: |
+      The player declined the consent prompt or provided no input, so the video
+      upload was not started.
     value: 11
     tags: []
     deprecation_message: ''
   - name: ErrorMultiplePeople
-    summary: ''
+    summary: |
+      Processing failed because more than one person was detected in the video;
+      the video must contain a single person fully in frame.
     value: 12
     tags: []
     deprecation_message: ''
   - name: ErrorUploadingVideo
-    summary: ''
+    summary: |
+      The client-side video upload failed before the video reached the
+      processing backend.
     value: 2001
     tags: []
     deprecation_message: ''

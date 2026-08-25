@@ -4,7 +4,8 @@
 
 name: UploadCaptureResult
 type: enum
-summary: ''
+summary: |
+  Describes the outcome of a `Class.CaptureService:UploadCaptureAsync()` call.
 description: |
   Represents the result of uploading a capture to the asset system.
 code_samples: []
@@ -12,42 +13,58 @@ tags: []
 deprecation_message: ''
 items:
   - name: Success
-    summary: ''
+    summary: |
+      The capture was successfully uploaded and registered as an asset.
     value: 0
     tags: []
     deprecation_message: ''
   - name: NeedPermission
-    summary: ''
+    summary: |
+      The experience has not been granted developer gallery read and upload
+      permission, so the capture cannot be uploaded.
     value: 1
     tags: []
     deprecation_message: ''
   - name: CaptureModerated
-    summary: ''
+    summary: |
+      The capture was rejected by Roblox content moderation and cannot be
+      uploaded.
     value: 2
     tags: []
     deprecation_message: ''
   - name: CaptureNotInGallery
-    summary: ''
+    summary: |
+      The capture no longer exists in the user's gallery and cannot be uploaded.
     value: 3
     tags: []
     deprecation_message: ''
   - name: IneligibleCapture
-    summary: ''
+    summary: |
+      The capture is not eligible for upload to this experience, either because
+      it is a permanent system capture or the experience permissions grant was
+      rejected.
     value: 4
     tags: []
     deprecation_message: ''
   - name: UploadQuotaReached
-    summary: ''
+    summary: |
+      The user has reached their daily capture upload quota and the upload was
+      not completed.
     value: 5
     tags: []
     deprecation_message: ''
   - name: UploadPending
-    summary: ''
+    summary: |
+      The upload is still in progress and the asset has not yet been assigned an
+      ID; poll `Class.CaptureService:CheckUploadCaptureStatusAsync()` again to
+      check for completion.
     value: 6
     tags: []
     deprecation_message: ''
   - name: UploadFailed
-    summary: ''
+    summary: |
+      The upload completed but a backend processing error occurred, so the
+      capture was not saved as an asset.
     value: 7
     tags: []
     deprecation_message: ''

@@ -137,7 +137,8 @@ methods:
     capabilities:
       - Basic
   - name: PathfindingService:CreatePath
-    summary: ''
+    summary: |
+      Creates a `Class.Path` object based on the given agent parameters.
     description: |
       Creates a `Class.Path` object based on various agent parameters. Valid
       keys and values in the `agentParameters` table are as follows:

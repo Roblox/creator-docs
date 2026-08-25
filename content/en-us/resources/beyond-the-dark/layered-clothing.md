@@ -28,9 +28,9 @@ We ultimately settled on a single character design that we named "The Visitor," 
 
 The base body is essentially the lowest layer of the layered clothing system. This can be anything from our character's body in underwear, to a fishman or even a blocky avatar.
 
-Layered Clothing Checklist:
+Layered accessory checklist:
 
-- The body geo, cage parts, and skeleton must conform to the R15 schema.
+- The body geo, cage parts, and skeleton must conform to the [standard R15 schema](../../avatar/character-bodies/specifications.md).
 - The body cage must use the cage supplied by Roblox.
 - The cage should be in the same number of parts as the body geo, with the suffix \_OuterCage.
   - LeftUpperArm_Geo (mesh)
@@ -56,7 +56,7 @@ The silhouette, or the shape of your character, should also be distinct and disc
   <img src="../../assets/resources/beyond-the-dark/layered-clothing/Silhouette-2.png" />
 </GridContainer>
 
-An important note about the base character: Since this is a player avatar, and we wanted to eventually release the body and clothing on the Marketplace, it still needs to follow the R15 schema. This includes the body being separated into 15 parts.
+An important note about the base character: since this is a player avatar, and we wanted to eventually release the body and clothing on the Marketplace, it still needs to follow the [standard R15 schema](../../avatar/character-bodies/specifications.md). This includes the body being separated into 15 parts.
 
 <GridContainer numColumns="2">
   <img src="../../assets/resources/beyond-the-dark/layered-clothing/Character-Model.png" />
@@ -224,8 +224,8 @@ We found the following guidelines useful when building Layered Clothing:
 - The way you name your clothes is arbitrary, but both cages need to have this naming format:
   - [clothing name]**\_InnerCage**
   - [clothing name]**\_OuterCage**
-- You must skin clothing to the R15 skeleton with a maximum of **4** influences.
-- Your R15 skeleton must follow this naming schema.
+- You must skin clothing to the [standard R15](../../avatar/character-bodies/specifications.md#standard-r15-rigs) skeleton with a maximum of **4** influences.
+- Your standard R15 skeleton must follow this naming schema.
 
 With those guidelines in mind, here are the steps we followed to build the space suit:
 

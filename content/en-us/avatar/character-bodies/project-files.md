@@ -12,9 +12,9 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
 <Tabs>
   <TabItem label="Models">
 
-**Higher-fidelity rigs**
+**Advanced R15 rigs**
 
-The following [higher-fidelity](../../avatar/character-bodies/specifications.md#higher-fidelity-rigs) humanoid rigs include additional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
+The following [advanced R15 rigs](../../avatar/character-bodies/specifications.md#advanced-r15-rigs) include additional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
 
 <table>
 <thead>
@@ -43,9 +43,9 @@ The following [higher-fidelity](../../avatar/character-bodies/specifications.md#
 </tbody>
 </table>
 
-**Standard rigs**
+**Standard R15 rigs**
 
-The following [standard](../../avatar/character-bodies/specifications.md#standard-rigs) humanoid rigs include the standard amount of bones or joints.
+The following [standard R15 rigs](../../avatar/character-bodies/specifications.md#standard-r15-rigs) include the standard amount of bones or joints.
 
 <table>
 <thead>
@@ -57,7 +57,7 @@ The following [standard](../../avatar/character-bodies/specifications.md#standar
 <tbody>
   <tr>
     <td><a href="../../assets/modeling/skinned-meshes/Lola.fbx" download>Lola.fbx</a></td>
-    <td>A skinned character with a [standard humanoid rig](specifications.md#standard-rigs) created from the <a href="../../art/modeling/skin-a-humanoid-model.md">Skin a humanoid model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../avatar/character-bodies/specifications.md#inner-and-outer-cages), this model can't equip layered accessories.</td>
+    <td>A skinned character with a [standard R15 rig](specifications.md#standard-r15-rigs) created from the <a href="../../art/modeling/skin-a-humanoid-model.md">Skin a humanoid model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../avatar/character-bodies/specifications.md#inner-and-outer-cages), this model can't equip layered accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/avatar/dynamic-heads/reference-files/Fish-Person.zip" download>Fish-Person.zip</a></td>
@@ -110,7 +110,7 @@ The following [standard](../../avatar/character-bodies/specifications.md#standar
   <tbody>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.blend</a></td>
-    <td>Starting rigging armature template for Blender. Contains a rigging armature with correct [standard humanoid rig](specifications.md#standard-rigs) naming conventions and attachment points. Use this template for rigging character bodies and layered accessories.</td>
+    <td>Starting rigging armature template for Blender. Contains a [standard R15 rig](./specifications.md#standard-r15-rigs) with correct naming conventions and attachment points. Use this template for rigging character bodies and layered accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Body_Cage_Templates.zip" download>Body_Cage_Template.blend</a></td>
@@ -135,7 +135,7 @@ The following [standard](../../avatar/character-bodies/specifications.md#standar
 <tbody>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.ma</a></td>
-    <td>Starting rigging armature template for Maya. Contains a rigging armature with correct [standard humanoid rig](specifications.md#standard-rigs) naming conventions and attachment points. Use this template for creating character bodies and layered accessories.</td>
+    <td>Starting rigging armature template for Maya. Contains a [standard R15 rig](./specifications.md#standard-r15-rigs) with correct naming conventions and attachment points. Use this template for creating character bodies and layered accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Body_Cage_Templates.zip" download>Body_Cage_Template.ma</a></td>
@@ -164,7 +164,7 @@ The following [standard](../../avatar/character-bodies/specifications.md#standar
 <tbody>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.fbx</a></td>
-    <td>Starting rigging armature template for general modeling software. Contains a rigging armature with correct [standard humanoid rig](specifications.md#standard-rigs) naming conventions and attachment points. Use this template for creating character bodies and layered accessories.</td>
+    <td>Starting rigging armature template for general modeling software. Contains a [standard R15 rig](./specifications.md#standard-r15-rigs) with correct naming conventions and attachment points. Use this template for creating character bodies and layered accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Body_Cage_Templates.zip" download>Body_Cage_Template.fbx</a></td>

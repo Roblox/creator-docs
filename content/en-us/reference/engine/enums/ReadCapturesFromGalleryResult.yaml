@@ -4,7 +4,9 @@
 
 name: ReadCapturesFromGalleryResult
 type: enum
-summary: ''
+summary: |
+  Describes the outcome of a
+  `Class.CaptureService:ReadCapturesFromGalleryAsync()` call.
 description: |
   Represents the result of reading captures from a user's gallery.
 code_samples: []
@@ -12,12 +14,16 @@ tags: []
 deprecation_message: ''
 items:
   - name: Success
-    summary: ''
+    summary: |
+      The read operation completed successfully and capture data has been
+      returned.
     value: 0
     tags: []
     deprecation_message: ''
   - name: NeedPermission
-    summary: ''
+    summary: |
+      The read operation failed because the experience has not been granted
+      permission to access the user's capture gallery.
     value: 1
     tags: []
     deprecation_message: ''

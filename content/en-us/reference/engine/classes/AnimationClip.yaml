@@ -31,10 +31,22 @@ deprecation_message: ''
 properties:
   - name: AnimationClip.Length
     summary: |
-      Returns the length (in seconds) of this `Class.AnimationClip`. This will
-      return `0` until the animation has fully loaded and thus may not be
-      immediately available.
-    description: ''
+      The length in seconds of this clip. Returns `0` until the animation has
+      fully loaded.
+    description: |
+      The read-only length, in seconds, of this `Class.AnimationClip`, computed
+      from the timing of the underlying animation data (its keyframes or
+      curves).
+
+      Because a clip's animation data may still be downloading when the property
+      is first accessed, `Length` returns `0` until the animation has fully
+      loaded. Poll for a non-zero value if you need the duration right away.
+
+      `Class.AnimationTrack` instances load an `Class.AnimationClip` when an
+      `Class.Animation` is requested via its
+      `Class.Animation.AnimationId|AnimationId`, and
+      `Class.AnimationTrack.Length` reflects the underlying
+      `Class.AnimationClip` value.
     code_samples: []
     type: float
     tags:

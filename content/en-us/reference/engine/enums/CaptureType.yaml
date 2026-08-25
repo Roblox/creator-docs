@@ -4,19 +4,27 @@
 
 name: CaptureType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates whether a capture is a screenshot or a video recording.
+description: |
+  Indicates whether a capture is a screenshot or a video recording.
+  `Class.CaptureService` passes this value in
+  `Class.CaptureService.CaptureBegan` and `Class.CaptureService.CaptureEnded`,
+  and accepts an array of `Enum.CaptureType` values as the `captureTypeFilters`
+  argument of `Class.CaptureService:ReadCapturesFromGalleryAsync()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Screenshot
-    summary: ''
+    summary: |
+      The capture is a screenshot image.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Video
-    summary: ''
+    summary: |
+      The capture is a video recording.
     value: 2
     tags: []
     deprecation_message: ''

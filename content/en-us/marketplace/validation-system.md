@@ -205,13 +205,13 @@ When an avatar asset fails validation, Studio returns error messages that descri
   </tr>
   <tr>
     <td>`Body part is skinned to a virtual joint which is not part of the R15plus schema.`</td>
-    <td>This error triggers when a body part's mesh has vertex weights assigned to a bone/joint name that does not appear in the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy.<br /><br />To fix it, in your 3D modeling software, remove all skin weights from unauthorized joints and reassign those vertices to the official higher-fidelity bone hierarchy.</td>
-    <td>This check validates that each body part mesh is only skinned (weighted) to joints that are part of the official higher-fidelity rig hierarchy. Skinning to unauthorized joints could cause unpredictable deformations or exploit avatar rendering.</td>
+    <td>This error triggers when a body part's mesh has vertex weights assigned to a bone/joint name that does not appear in the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy.<br /><br />To fix it, in your 3D modeling software, remove all skin weights from unauthorized joints and reassign those vertices to the official advanced R15 bone hierarchy.</td>
+    <td>This check validates that each body part mesh is only skinned (weighted) to joints that are part of the official advanced R15 rig hierarchy. Skinning to unauthorized joints could cause unpredictable deformations or exploit avatar rendering.</td>
   </tr>
   <tr>
     <td>`Bone is too far outside of the MeshPart. Please put it closer to the MeshPart size boundary.`</td>
     <td>This error triggers when a `Class.Bone` instance's world position (transformed into the `Class.MeshPart` instance's local space) exceeds the mesh's half-extents multiplied by the tolerance factor.<br /><br />To fix it, reposition the bone inside or very near the mesh boundary in your 3D modeling software.</td>
-    <td>This check validates that all `Class.Bone` instances within a body part are positioned within the physical bounds of their parent `Class.MeshPart`, with a small tolerance multiplier. Bones represent skeletal joints for higher-fidelity rigs; if placed far outside the mesh, they would cause extreme deformation artifacts during animation.</td>
+    <td>This check validates that all `Class.Bone` instances within a body part are positioned within the physical bounds of their parent `Class.MeshPart`, with a small tolerance multiplier. Bones represent skeletal joints for rigs; if placed far outside the mesh, they would cause extreme deformation artifacts during animation.</td>
   </tr>
   <tr>
     <td>`Bone has a transform property, but this is not yet enabled for Marketplace uploads. Please reset it to the identity CFrame.`</td>
@@ -290,8 +290,8 @@ When an avatar asset fails validation, Studio returns error messages that descri
   </tr>
   <tr>
     <td>`CurveAnimation contains body part Folder which has an invalid hierarchy: unexpected child or structure issue found.`</td>
-    <td>This error triggers when an unexpected child is found in a `Class.Folder`, when curve children are incorrectly structured, when `Class.FaceControls` exceed the maximum allowed count, or when grandchildren appear where they should not.<br /><br />To fix this, ensure your animation's `Class.Folder` structure matches the expected [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy with only valid sub-folders and curves at each level.</td>
-    <td>This check validates that the bone `Class.Folder` hierarchy within a `Class.CurveAnimation` follows the correct higher-fidelity rig hierarchy. It walks the entire tree of body part `Class.Folder` and bone `Class.Folder` instances, verifying that each `Class.Folder` only contains children that are expected for its position in the hierarchy (correct bone names, **Position**/**Rotation** curves, `Class.FaceControls` instances, and child body parts).</td>
+    <td>This error triggers when an unexpected child is found in a `Class.Folder`, when curve children are incorrectly structured, when `Class.FaceControls` exceed the maximum allowed count, or when grandchildren appear where they should not.<br /><br />To fix this, ensure your animation's `Class.Folder` structure matches the expected [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy with only valid sub-folders and curves at each level.</td>
+    <td>This check validates that the bone `Class.Folder` hierarchy within a `Class.CurveAnimation` follows the correct advanced R15 rig hierarchy. It walks the entire tree of body part `Class.Folder` and bone `Class.Folder` instances, verifying that each `Class.Folder` only contains children that are expected for its position in the hierarchy (correct bone names, **Position**/**Rotation** curves, `Class.FaceControls` instances, and child body parts).</td>
   </tr>
   <tr>
     <td>`CurveAnimation contains HRD/DRD bone folders which are not yet supported. Please remove all bone sub-folders before uploading.`</td>
@@ -301,17 +301,17 @@ When an avatar asset fails validation, Studio returns error messages that descri
   <tr>
     <td>`Folder in CurveAnimation is not a recognized HRD/DRD bone name. Animation sub-folders must be either valid R15 body parts or recognized bone names.`</td>
     <td>This error triggers when a `Class.Folder` has animation data but its name does not correspond to any valid [body part](../avatar/character-bodies/specifications.md#body-parts) or [bone](../avatar/character-bodies/specifications.md#rigging) in the rigging armature (such as `HeadBase`, `Spine`, or `Chest`).<br /><br />To fix this, rename or remove any animation `Class.Folder` that doesn't use the specified official body part or bone names.</td>
-    <td>This check validates that all folders containing animation tracks within a `Class.CurveAnimation` use recognized bone or body part names from the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy. It scans every `Class.Folder` descendant that has animation tracks (**Position**/**Rotation** curves) and verifies the `Class.Folder` name matches either a known body part name or a known `Class.HumanoidRigDescription`/`Class.DigitsRigDescription` bone name.</td>
+    <td>This check validates that all folders containing animation tracks within a `Class.CurveAnimation` use recognized bone or body part names from the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy. It scans every `Class.Folder` descendant that has animation tracks (**Position**/**Rotation** curves) and verifies the `Class.Folder` name matches either a known body part name or a known `Class.HumanoidRigDescription`/`Class.DigitsRigDescription` bone name.</td>
   </tr>
   <tr>
     <td>`Bone folder requires its parent bone to also be present in the animation.`</td>
     <td>This error triggers when a child bone `Class.Folder` is present in the animation but its required parent bone in the skeleton hierarchy is missing.<br /><br />To fix this, add the missing parent bone `Class.Folder` to your animation, or remove the child bone that requires it.</td>
-    <td>This check validates that the bone hierarchy in a `Class.CurveAnimation` respects parent-child relationships defined in the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy. When a bone is animated, its parent bone in the skeleton chain must also be present in the animation to maintain a valid kinematic chain.</td>
+    <td>This check validates that the bone hierarchy in a `Class.CurveAnimation` respects parent-child relationships defined in the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy. When a bone is animated, its parent bone in the skeleton chain must also be present in the animation to maintain a valid kinematic chain.</td>
   </tr>
   <tr>
     <td>`Bone in CurveAnimation has a Position (translation) track. HRD/DRD bones may only be rotated; position tracks cause joint separation and are not allowed. Please remove the position animation from this bone.`</td>
     <td>This error triggers when a bone `Class.Folder` contains a **Position** (`Class.Vector3Curve`) track with keyframes, indicating the bone is being moved rather than just rotated.<br /><br />To fix this, remove the **Position** track from the affected bone `Class.Folder` and animate it using only rotation (`Class.EulerRotationCurve`).</td>
-    <td>This check validates that bone folders within a `Class.CurveAnimation` only contain rotation data, not positional translation data. `Class.HumanoidRigDescription`/`Class.DigitsRigDescription` bones in the higher-fidelity rig hierarchy are designed to rotate around their joints; translating them would cause visible joint separation and broken limb connections.</td>
+    <td>This check validates that bone folders within a `Class.CurveAnimation` only contain rotation data, not positional translation data. `Class.HumanoidRigDescription`/`Class.DigitsRigDescription` bones in the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy are designed to rotate around their joints; translating them would cause visible joint separation and broken limb connections.</td>
   </tr>
   <tr>
     <td>`Bone in CurveAnimation moves too far from its start position. Maximum allowed translation is limited. Please reduce the bone's positional movement.`</td>
@@ -461,7 +461,7 @@ When an avatar asset fails validation, Studio returns error messages that descri
   <tr>
     <td>`CurveAnimation contains positional separation of body parts. Only LowerTorso can change position. All other body parts can only change their orientation. A body part moves more than the allowed distance from its parent. Please fix the animation.`</td>
     <td>This error triggers when any body part other than `LowerTorso` has a computed position magnitude that exceeds the per-part maximum movement threshold.<br /><br />To fix this, reduce the positional separation of the offending body part by relying on rotation rather than translation for movement.</td>
-    <td>This check validates that body parts in a `Class.CurveAnimation` do not separate from their parent joints by more than the allowed distance. In the animation system for avatars with [standard rigs](../avatar/character-bodies/specifications.md#standard-rigs), only the `LowerTorso` is permitted to change position freely; all other body parts should move primarily through rotation relative to their parent.</td>
+    <td>This check validates that body parts in a `Class.CurveAnimation` do not separate from their parent joints by more than the allowed distance. In the animation system for avatars with [standard R15 rigs](../avatar/character-bodies/specifications.md#standard-r15-rigs), only the `LowerTorso` is permitted to change position freely; all other body parts should move primarily through rotation relative to their parent.</td>
   </tr>
   <tr>
     <td>`CurveAnimation contains more than one AnimationRigData children. Please ensure there is only one AnimationRigData child.`</td>
@@ -475,13 +475,13 @@ When an avatar asset fails validation, Studio returns error messages that descri
   </tr>
   <tr>
     <td>`AnimationRigData failed internal R15 validation. Please ensure the AnimationRigData is set up correctly.`</td>
-    <td>This error triggers when the `Class.AnimationRigData` instance fails the engine's `IsValidR15()` check, indicating the rig metadata is malformed, incomplete, or does not match the expected [standard rig](../avatar/character-bodies/specifications.md#standard-rigs) hierarchy.<br /><br />To fix this, re-export your animation from a properly configured **standard rig** in the Animation Editor to regenerate valid rig data.</td>
-    <td>This check validates that the `Class.AnimationRigData` within a `Class.CurveAnimation` passes the engine's internal standard rig validation. The rig data must correctly describe a valid standard avatar skeleton for the animation to play back properly.</td>
+    <td>This error triggers when the `Class.AnimationRigData` instance fails the engine's `IsValidR15()` check, indicating the rig metadata is malformed, incomplete, or does not match the expected [standard R15 rig](../avatar/character-bodies/specifications.md#standard-r15-rigs) hierarchy.<br /><br />To fix this, re-export your animation from a properly configured **standard R15 rig** in the Animation Editor to regenerate valid rig data.</td>
+    <td>This check validates that the `Class.AnimationRigData` within a `Class.CurveAnimation` passes the engine's internal standard R15 rig validation. The rig data must correctly describe a valid standard avatar skeleton for the animation to play back properly.</td>
   </tr>
   <tr>
     <td>`AnimationRigData failed R15+ internal validation. Please ensure the AnimationRigData is set up correctly for bone animations.`</td>
-    <td>This error triggers when the `Class.AnimationRigData` instance fails the engine's `IsValidR15Plus()` check in an animation that contains bone folders, indicating the rig metadata does not properly describe the extended [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy.<br /><br />To fix this, re-export your animation from a properly configured **higher-fidelity rig** that includes the `Class.HumanoidRigDescription`/`Class.DigitsRigDescription` bone definitions.</td>
-    <td>This check validates that the `Class.AnimationRigData` within a bone-containing `Class.CurveAnimation` passes the engine's internal higher-fidelity rig validation. Bone animations require rig data that includes the extended skeleton definition beyond the standard rig.</td>
+    <td>This error triggers when the `Class.AnimationRigData` instance fails the engine's `IsValidR15Plus()` check in an animation that contains bone folders, indicating the rig metadata does not properly describe the extended [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy.<br /><br />To fix this, re-export your animation from a properly configured **advanced R15 rig** that includes the `Class.HumanoidRigDescription`/`Class.DigitsRigDescription` bone definitions.</td>
+    <td>This check validates that the `Class.AnimationRigData` within a bone-containing `Class.CurveAnimation` passes the engine's internal advanced R15 rig validation. Bone animations require rig data that includes the extended skeleton definition beyond the standard R15 rig.</td>
   </tr>
   <tr>
     <td>`In CurveAnimation, a body part is rotating too fast. The rotation speed exceeds the maximum allowed degrees per second. Please fix the animation.`</td>
@@ -626,7 +626,7 @@ When an avatar asset fails validation, Studio returns error messages that descri
   <tr>
     <td>`Head MeshPart has facial animations for a joint which cannot be used in FACS. Please rename this joint then reimport your head.`</td>
     <td>This error fires when the head mesh's FACS data references a joint name that is reserved for the body skeleton (such as the standardized [rigging](../avatar/character-bodies/specifications.md#rigging) joint names or allowed [skinning transfer](../avatar/automatic-skinning-transfer.md) names).<br /><br />To fix this, rename the conflicting joint in your 3D modeling software to a non-reserved name and re-export the head.</td>
-    <td>This check ensures that FACS data on a dynamic head does not drive joints that belong to the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy or skinning transfer schema. FACS should only animate facial-specific joints, not body rig joints.</td>
+    <td>This check ensures that FACS data on a dynamic head does not drive joints that belong to the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy or skinning transfer schema. FACS should only animate facial-specific joints, not body rig joints.</td>
   </tr>
   <tr>
     <td>`Missing HSR data. Please try again.`</td>
@@ -666,32 +666,32 @@ When an avatar asset fails validation, Studio returns error messages that descri
   <tr>
     <td>`Found Bone, but you must use HumanoidRigDescription to use Bones.`</td>
     <td>This error fires when `Class.Bone` instances exist inside a `Class.MeshPart` that does not have a `Class.HumanoidRigDescription` child, meaning the bones cannot be properly interpreted by the animation system.<br /><br />To fix this, either add a correctly configured `Class.HumanoidRigDescription` to the `Class.MeshPart`, or remove the `Class.Bone` instances.</td>
-    <td>This check validates that the bone hierarchy within each `Class.MeshPart` of an avatar body or dynamic head conforms to the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy and is correctly registered in the `Class.HumanoidRigDescription`. Any `Class.Bone` instances require an associated `Class.HumanoidRigDescription` to define how the skeleton is structured.</td>
+    <td>This check validates that the bone hierarchy within each `Class.MeshPart` of an avatar body or dynamic head conforms to the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy and is correctly registered in the `Class.HumanoidRigDescription`. Any `Class.Bone` instances require an associated `Class.HumanoidRigDescription` to define how the skeleton is structured.</td>
   </tr>
   <tr>
     <td>`You cannot include a DigitsRigDescription without a HumanoidRigDescription.`</td>
     <td>This error fires when a `Class.DigitsRigDescription` exists on a `Class.MeshPart` that has no `Class.HumanoidRigDescription`.<br /><br />To fix this, add a `Class.HumanoidRigDescription` to the same `Class.MeshPart`, or remove the `Class.DigitsRigDescription` if finger articulation is not needed.</td>
-    <td>This check validates that the bone hierarchy within each `Class.MeshPart` of an avatar body or dynamic head conforms to the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy and is correctly registered in the `Class.HumanoidRigDescription`. A `Class.DigitsRigDescription` requires an accompanying `Class.HumanoidRigDescription` as the primary rig definition.</td>
+    <td>This check validates that the bone hierarchy within each `Class.MeshPart` of an avatar body or dynamic head conforms to the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy and is correctly registered in the `Class.HumanoidRigDescription`. A `Class.DigitsRigDescription` requires an accompanying `Class.HumanoidRigDescription` as the primary rig definition.</td>
   </tr>
   <tr>
     <td>`Instance is in a bone tree but not part of the defined R15plus schema.`</td>
-    <td>This error fires when an instance (bone or other object) exists in the bone hierarchy but its name and class combination is not recognized by the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy.<br /><br />To fix this, remove or rename the instance to match one of the allowed bone/attachment names in the higher-fidelity rig hierarchy.</td>
-    <td>This check validates that the bone hierarchy within each `Class.MeshPart` of an avatar body or dynamic head conforms to the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy and is correctly registered in the `Class.HumanoidRigDescription`. Every instance that appears as a descendant of a `Class.Bone` must be defined in the expected higher-fidelity rig hierarchy.</td>
+    <td>This error fires when an instance (bone or other object) exists in the bone hierarchy but its name and class combination is not recognized by the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy.<br /><br />To fix this, remove or rename the instance to match one of the allowed bone/attachment names in the advanced R15 rig hierarchy.</td>
+    <td>This check validates that the bone hierarchy within each `Class.MeshPart` of an avatar body or dynamic head conforms to the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy and is correctly registered in the `Class.HumanoidRigDescription`. Every instance that appears as a descendant of a `Class.Bone` must be defined in the expected advanced R15 rig hierarchy.</td>
   </tr>
   <tr>
     <td>`Instance shows up more than once, but may only exist once within a bone hierarchy.`</td>
     <td>This error fires when two or more instances share the same name within a single `Class.MeshPart` instance's bone tree, creating ambiguity in the rig definition.<br /><br />To fix this, remove or rename the duplicate instances so each bone name appears exactly once in the hierarchy.</td>
-    <td>This check validates that the bone hierarchy within each `Class.MeshPart` of an avatar body or dynamic head conforms to the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy and is correctly registered in the `Class.HumanoidRigDescription`. Each named bone or attachment must appear exactly once in the hierarchy.</td>
+    <td>This check validates that the bone hierarchy within each `Class.MeshPart` of an avatar body or dynamic head conforms to the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy and is correctly registered in the `Class.HumanoidRigDescription`. Each named bone or attachment must appear exactly once in the hierarchy.</td>
   </tr>
   <tr>
     <td>`Bone is allowed, but you must map it explicitly in the HumanoidRigDescription or DigitsRigDescription.`</td>
     <td>This error fires when a bone has a valid schema name and exists in the hierarchy, but is not mapped in the `Class.HumanoidRigDescription` or `Class.DigitsRigDescription`.<br /><br />To fix this, update the `Class.HumanoidRigDescription`/`Class.DigitsRigDescription` to link to this bone instance using the correct joint label.</td>
-    <td>This check validates that the bone hierarchy within each `Class.MeshPart` of an avatar body or dynamic head conforms to the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy and is correctly registered in the `Class.HumanoidRigDescription`. Each `Class.Bone` instance must be explicitly linked in the `Class.HumanoidRigDescription` or `Class.DigitsRigDescription` so the animation system knows how to drive it.</td>
+    <td>This check validates that the bone hierarchy within each `Class.MeshPart` of an avatar body or dynamic head conforms to the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy and is correctly registered in the `Class.HumanoidRigDescription`. Each `Class.Bone` instance must be explicitly linked in the `Class.HumanoidRigDescription` or `Class.DigitsRigDescription` so the animation system knows how to drive it.</td>
   </tr>
   <tr>
     <td>`Instance is underneath the wrong parent based on the existing bone hierarchy.`</td>
-    <td>This error fires when an instance is parented to the wrong bone or attachment relative to what the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy expects given the other bones present.<br /><br />To fix this, reparent the instance to the correct parent as indicated in the error message.</td>
-    <td>This check validates that the bone hierarchy within each `Class.MeshPart` of an avatar body or dynamic head conforms to the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy and is correctly registered in the `Class.HumanoidRigDescription`. The parent-child relationships between bones and attachments must follow the schema-defined hierarchy.</td>
+    <td>This error fires when an instance is parented to the wrong bone or attachment relative to what the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy expects given the other bones present.<br /><br />To fix this, reparent the instance to the correct parent as indicated in the error message.</td>
+    <td>This check validates that the bone hierarchy within each `Class.MeshPart` of an avatar body or dynamic head conforms to the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy and is correctly registered in the `Class.HumanoidRigDescription`. The parent-child relationships between bones and attachments must follow the schema-defined hierarchy.</td>
   </tr>
   <tr>
     <td>`Failed to load texture field for Decal. Make sure TextureContent exists and is valid and try again.`</td>
@@ -766,12 +766,12 @@ When an avatar asset fails validation, Studio returns error messages that descri
   <tr>
     <td>`A required attachment must exist exactly once within the body part's descendants.`</td>
     <td>This error fires when a required attachment is missing or appears more than once (or as the wrong class) within a `Class.MeshPart` instance's descendants.<br /><br />To fix this, add the missing attachment to the correct body part in Studio with the [exact expected name](../avatar/character-bodies/specifications.md#attachments) and ensure it is a `Class.Attachment` instance.</td>
-    <td>This check validates that each body part mesh contains all required joint and rig attachments defined in the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy. These attachments are necessary for the avatar rig to assemble correctly and for animations and accessories to attach at the proper points.</td>
+    <td>This check validates that each body part mesh contains all required joint and rig attachments defined in the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy. These attachments are necessary for the avatar rig to assemble correctly and for animations and accessories to attach at the proper points.</td>
   </tr>
   <tr>
     <td>`A joint property is set in the HRD/DRD outside the acceptable range.`</td>
     <td>This error fires when a joint's size or range value in the `Class.HumanoidRigDescription` or `Class.DigitsRigDescription` exceeds the permitted minimum or maximum.<br /><br />To fix this, adjust the specified property value in your rig description to fall within the allowed range shown in the error message.</td>
-    <td>This check validates that all numeric properties on the `Class.HumanoidRigDescription` and `Class.DigitsRigDescription` fall within acceptable bounds. These properties control joint size, range of motion, and origin offset for the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) skeleton.</td>
+    <td>This check validates that all numeric properties on the `Class.HumanoidRigDescription` and `Class.DigitsRigDescription` fall within acceptable bounds. These properties control joint size, range of motion, and origin offset for the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) skeleton.</td>
   </tr>
   <tr>
     <td>`HumanoidRigDescription has an originOffset outside of bounds. OriginOffset must have no rotation and be within acceptable limits.`</td>
@@ -785,8 +785,8 @@ When an avatar asset fails validation, Studio returns error messages that descri
   </tr>
   <tr>
     <td>`A standard R15 joint rig attachment is not connected to the HRD.`</td>
-    <td>This error fires when a [standard rig](../avatar/character-bodies/specifications.md#standard-rigs) joint's rig attachment exists on a `Class.MeshPart` but the `Class.HumanoidRigDescription` does not link to it, often because the `Class.HumanoidRigDescription` is configured for `Class.Motor6D` joints instead of `Class.AttachmentConstraint` joints.<br /><br />To fix this, update your `Class.HumanoidRigDescription` to link to the correct rig attachment instance.</td>
-    <td>This check validates that all numeric properties on the `Class.HumanoidRigDescription` and `Class.DigitsRigDescription` fall within acceptable bounds and that standard rig joints are properly linked. Each body part that has a rig attachment must have that attachment correctly referenced by the `Class.HumanoidRigDescription`.</td>
+    <td>This error fires when a [standard R15 rig](../avatar/character-bodies/specifications.md#standard-r15-rigs) joint's rig attachment exists on a `Class.MeshPart` but the `Class.HumanoidRigDescription` does not link to it, often because the `Class.HumanoidRigDescription` is configured for `Class.Motor6D` joints instead of `Class.AttachmentConstraint` joints.<br /><br />To fix this, update your `Class.HumanoidRigDescription` to link to the correct rig attachment instance.</td>
+    <td>This check validates that all numeric properties on the `Class.HumanoidRigDescription` and `Class.DigitsRigDescription` fall within acceptable bounds and that standard R15 rig joints are properly linked. Each body part that has a rig attachment must have that attachment correctly referenced by the `Class.HumanoidRigDescription`.</td>
   </tr>
   <tr>
     <td>`Optional joint is incorrectly mapped in the HRD. It must be mapped to the correct bone.`</td>
@@ -826,27 +826,27 @@ When an avatar asset fails validation, Studio returns error messages that descri
   <tr>
     <td>`Instance named JointRotation is reserved for attachments that are children of an attachment.`</td>
     <td>This error fires when an instance named `JointRotation` exists but is not a `Class.Attachment` or its parent is not a `Class.Attachment`.<br /><br />To fix this, ensure any instance named `JointRotation` is of `Class.Attachment` and is a direct child of a rig attachment (e.g., `LeftShoulderRigAttachment` or `RightShoulderRigAttachment`).</td>
-    <td>This check validates that `JointRotation` attachment instances in an avatar or dynamic head conform to the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy requirements for joint rotation overrides. `JointRotation` must be a `Class.Attachment` parented to another `Class.Attachment`.</td>
+    <td>This check validates that `JointRotation` attachment instances in an avatar or dynamic head conform to the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy requirements for joint rotation overrides. `JointRotation` must be a `Class.Attachment` parented to another `Class.Attachment`.</td>
   </tr>
   <tr>
     <td>`Instance has a JointRotation child, but this is not part of the allowed R15plus schema.`</td>
     <td>This error fires when a `JointRotation` attachment is parented to an attachment that is not on the allowed list (`LeftShoulderRigAttachment` and `RightShoulderRigAttachment`).<br /><br />To fix this, move or remove the `JointRotation` from the unsupported parent attachment.</td>
-    <td>This check validates that `JointRotation` attachment instances in an avatar or dynamic head conform to the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy requirements for joint rotation overrides. `JointRotation` children are only permitted on specific recognized rig attachments.</td>
+    <td>This check validates that `JointRotation` attachment instances in an avatar or dynamic head conform to the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy requirements for joint rotation overrides. `JointRotation` children are only permitted on specific recognized rig attachments.</td>
   </tr>
   <tr>
     <td>`A rig attachment cannot have more than 1 JointRotation child.`</td>
     <td>This error fires when a single rig attachment has two or more `JointRotation` children.<br /><br />To fix this, remove the extra `JointRotation` instances so that only one remains per parent attachment.</td>
-    <td>This check validates that `JointRotation` attachment instances in an avatar or dynamic head conform to the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy requirements for joint rotation overrides. Each allowed parent attachment may contain at most one `JointRotation` child.</td>
+    <td>This check validates that `JointRotation` attachment instances in an avatar or dynamic head conform to the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy requirements for joint rotation overrides. Each allowed parent attachment may contain at most one `JointRotation` child.</td>
   </tr>
   <tr>
     <td>`JointRotation has been rotated, but Marketplace uploads may not adjust this instance yet. Please reset orientation.`</td>
     <td>This error fires when the `JointRotation` attachment's orientation deviates more than the allowed threshold (default: 1 degree) from the expected rotation for this asset type and parent.<br /><br />To fix this, reset the `JointRotation` `Datatype.CFrame` orientation to the expected value shown in the error message.</td>
-    <td>This check validates that `JointRotation` attachment instances in an avatar or dynamic head conform to the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy requirements for joint rotation overrides. For specific asset types, the `JointRotation` orientation must match a predefined expected value.</td>
+    <td>This check validates that `JointRotation` attachment instances in an avatar or dynamic head conform to the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy requirements for joint rotation overrides. For specific asset types, the `JointRotation` orientation must match a predefined expected value.</td>
   </tr>
   <tr>
     <td>`JointRotation has been moved, but Marketplace uploads may not adjust this instance yet. Please reset position.`</td>
     <td>This error fires when the `JointRotation` attachment's position deviates more than the allowed threshold from the zero vector.<br /><br />To fix this, reset the `JointRotation` `Datatype.CFrame` position to (`0`, `0`, `0`) relative to its parent attachment.</td>
-    <td>This check validates that `JointRotation` attachment instances in an avatar or dynamic head conform to the [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy requirements for joint rotation overrides. `JointRotation` attachments must remain at the origin position of their parent attachment.</td>
+    <td>This check validates that `JointRotation` attachment instances in an avatar or dynamic head conform to the [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy requirements for joint rotation overrides. `JointRotation` attachments must remain at the origin position of their parent attachment.</td>
   </tr>
   <tr>
     <td>`Detected too many coplanar triangles intersecting in the model mesh. Edit the mesh to reduce coplanar triangle intersections.`</td>
@@ -906,12 +906,12 @@ When an avatar asset fails validation, Studio returns error messages that descri
   <tr>
     <td>`To upload an asset to Roblox, you must select exactly 1 instance and the associated upload type.`</td>
     <td>This error fires when the upload input contains anything other than exactly one instance.<br /><br />To fix this, select only a single root instance (the top-level `Class.Accessory`, `Class.MeshPart`, or other asset root) before initiating the upload process.</td>
-    <td>This check validates that exactly one root instance has been provided for upload when the asset type does not use the [standard rig](../avatar/character-bodies/specifications.md#standard-rigs) `Class.Folder` structure. Submitting zero or multiple instances would create ambiguity about which instance to publish.</td>
+    <td>This check validates that exactly one root instance has been provided for upload when the asset type does not use the [standard R15 rig](../avatar/character-bodies/specifications.md#standard-r15-rigs) `Class.Folder` structure. Submitting zero or multiple instances would create ambiguity about which instance to publish.</td>
   </tr>
   <tr>
     <td>`Upload format does not match expected folder structure. Please try again or file a bug report.`</td>
-    <td>This error fires when the upload does not contain all three required folders, when R6 has unexpected children, or when the `Class.Folder` contents do not match.<br /><br />To fix this, ensure your body part export follows the standard rig `Class.Folder` [template](../avatar/resources.md#project-files) with matching `R15ArtistIntent` and `R15Fixed` content.</td>
-    <td>This check validates that body part uploads using the standard rig `Class.Folder` structure contain exactly three properly named folders (`R15ArtistIntent`, `R15Fixed`, and `R6`) with the correct hierarchy. This structure is required for body parts that support multiple avatar scale configurations.</td>
+    <td>This error fires when the upload does not contain all three required folders, when R6 has unexpected children, or when the `Class.Folder` contents do not match.<br /><br />To fix this, ensure your body part export follows the [standard R15 rig](../avatar/character-bodies/specifications.md#standard-r15-rigs) `Class.Folder` [template](../avatar/resources.md#project-files) with matching `R15ArtistIntent` and `R15Fixed` content.</td>
+    <td>This check validates that body part uploads using the [standard R15 rig](../avatar/character-bodies/specifications.md#standard-r15-rigs) `Class.Folder` structure contain exactly three properly named folders (`R15ArtistIntent`, `R15Fixed`, and `R6`) with the correct hierarchy. This structure is required for body parts that support multiple avatar scale configurations.</td>
   </tr>
   <tr>
     <td>`SurfaceAppearance has an invalid AlphaMode. Expected Overlay.`</td>
@@ -926,32 +926,32 @@ When an avatar asset fails validation, Studio returns error messages that descri
   <tr>
     <td>`Handle contains a skinning transfer joint, which is only allowed when WrapLayer.AutoSkin is set to EnabledOverride.`</td>
     <td>This error fires when the **Handle** mesh contains a [skinning transfer](../avatar/automatic-skinning-transfer.md#special-skinning-transfer-joints) joint, such as `RBX_Leader` or `RBX_Follower`, but the `Class.WrapLayer.AutoSkin` property is not set to `EnabledOverride`.<br /><br />To fix this, set `Class.WrapLayer.AutoSkin|AutoSkin` to `EnabledOverride` to enable skinning transfer, or remove the transfer joints from the mesh.</td>
-    <td>This check validates that the skinning (bone weighting) on a layered accessory handle mesh follows the allowed [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy, including correct use of skinning transfer joints for specialized accessory types. Transfer joints enable automatic skin-weight transfer for items like eyelashes.</td>
+    <td>This check validates that the skinning (bone weighting) on a layered accessory handle mesh follows the allowed [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy, including correct use of skinning transfer joints for specialized accessory types. Transfer joints enable automatic skin-weight transfer for items like eyelashes.</td>
   </tr>
   <tr>
     <td>`Handle is skinned to a joint which is not part of the allowed schema. Only standard R15 joints and skinning transfer joints are permitted.`</td>
-    <td>This error fires when the **Handle** mesh contains a bone/joint that is neither a [standard rig](../avatar/character-bodies/specifications.md#standard-rigs) joint nor an allowed [skinning transfer](../avatar/automatic-skinning-transfer.md#special-skinning-transfer-joints) joint.<br /><br />To fix this, remove the unrecognized joint from your mesh's skinning data in your 3D modeling software, keeping only standard rig joints and allowed skinning transfer joints.</td>
-    <td>This check validates that the skinning on a layered accessory **Handle** mesh follows the allowed [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy, including correct use of [skinning transfer](../avatar/automatic-skinning-transfer.md#special-skinning-transfer-joints) joints for specialized accessory types. Only recognized joint names are permitted in the mesh bone data.</td>
+    <td>This error fires when the **Handle** mesh contains a bone/joint that is neither a [standard R15 rig](../avatar/character-bodies/specifications.md#standard-r15-rigs) joint nor an allowed [skinning transfer](../avatar/automatic-skinning-transfer.md#special-skinning-transfer-joints) joint.<br /><br />To fix this, remove the unrecognized joint from your mesh's skinning data in your 3D modeling software, keeping only [standard R15 rig](../avatar/character-bodies/specifications.md#standard-r15-rigs) joints and allowed skinning transfer joints.</td>
+    <td>This check validates that the skinning on a layered accessory **Handle** mesh follows the allowed [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy, including correct use of [skinning transfer](../avatar/automatic-skinning-transfer.md#special-skinning-transfer-joints) joints for specialized accessory types. Only recognized joint names are permitted in the mesh bone data.</td>
   </tr>
   <tr>
     <td>`Vertices skinned to transfer joints must be fully weighted.`</td>
     <td>This error fires when one or more vertices that are skinned to a transfer joint like have less than full weight assigned to it, meaning other joints share influence on those vertices.<br /><br />To fix this, in your 3D modeling softwarre, ensure all vertices assigned to transfer joints have their weight fully normalized to those joints alone.</td>
-    <td>This check validates that the skinning on a layered accessory **Handle** mesh follows the allowed [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy, including correct use of [skinning transfer](../avatar/automatic-skinning-transfer.md#special-skinning-transfer-joints) joints for specialized accessory types. Vertices assigned to transfer joints must have 100% of their weight on those joints.</td>
+    <td>This check validates that the skinning on a layered accessory **Handle** mesh follows the allowed [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy, including correct use of [skinning transfer](../avatar/automatic-skinning-transfer.md#special-skinning-transfer-joints) joints for specialized accessory types. Vertices assigned to transfer joints must have 100% of their weight on those joints.</td>
   </tr>
   <tr>
     <td>`This asset type must use skinning transfer. Please set WrapLayer. AutoSkin to EnabledOverride.`</td>
     <td>This error fires when an eyebrow or eyelash accessory does not have `Class.WrapLayer.AutoSkin` set to `EnabledOverride`, which is mandatory for these types to properly follow facial deformation.<br /><br />To fix this, set the `Class.WrapLayer.AutoSkin|AutoSkin` property to `EnabledOverride`.</td>
-    <td>This check validates that the skinning on a layered accessory **Handle** mesh follows the allowed [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy, including correct use of [skinning transfer](../avatar/automatic-skinning-transfer.md#special-skinning-transfer-joints) joints for specialized accessory types. Certain accessory types are required to use the skinning transfer system, such as eyebrows and eyelashes.</td>
+    <td>This check validates that the skinning on a layered accessory **Handle** mesh follows the allowed [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy, including correct use of [skinning transfer](../avatar/automatic-skinning-transfer.md#special-skinning-transfer-joints) joints for specialized accessory types. Certain accessory types are required to use the skinning transfer system, such as eyebrows and eyelashes.</td>
   </tr>
   <tr>
     <td>`This asset type must use skinning transfer, but is missing a required transfer joint.`</td>
     <td>This error fires when an eyebrow or eyelash accessory is missing one of the required skinning transfer joints from its mesh bone data, such as `RBX_Leader` or `RBX_Follower`.<br /><br />To fix this, add the missing transfer joint to your mesh's skeleton and properly weight the relevant vertices to it.</td>
-    <td>This check validates that the skinning on a layered accessory **Handle** mesh follows the allowed [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy, including correct use of [skinning transfer](../avatar/automatic-skinning-transfer.md#special-skinning-transfer-joints) joints for specialized accessory types. Eyebrow and eyelash accessories must contain all required skinning transfer joints.</td>
+    <td>This check validates that the skinning on a layered accessory **Handle** mesh follows the allowed [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy, including correct use of [skinning transfer](../avatar/automatic-skinning-transfer.md#special-skinning-transfer-joints) joints for specialized accessory types. Eyebrow and eyelash accessories must contain all required skinning transfer joints.</td>
   </tr>
   <tr>
     <td>`Handle is skinned to a standard body joint, but this asset type must only use skinning transfer joints.`</td>
-    <td>This error fires when an eyebrow or eyelash accessory has vertices weighted to [standard rig](../avatar/character-bodies/specifications.md#standard-rigs) joints, such as `Head` or `Neck`, instead of exclusively using the required transfer joints.<br /><br />To fix this, re-skin your mesh so all vertices are weighted only to the allowed skinning transfer joints listed in the error.</td>
-    <td>This check validates that the skinning on a layered accessory **Handle** mesh follows the allowed [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) hierarchy, including correct use of [skinning transfer](../avatar/automatic-skinning-transfer.md#special-skinning-transfer-joints) joints for specialized accessory types. Eyebrow and eyelash accessories must be exclusively skinned to transfer joints, not standard rig joints.</td>
+    <td>This error fires when an eyebrow or eyelash accessory has vertices weighted to [standard R15 rig](../avatar/character-bodies/specifications.md#standard-r15-rigs) joints, such as `Head` or `Neck`, instead of exclusively using the required transfer joints.<br /><br />To fix this, re-skin your mesh so all vertices are weighted only to the allowed skinning transfer joints listed in the error.</td>
+    <td>This check validates that the skinning on a layered accessory **Handle** mesh follows the allowed [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy, including correct use of [skinning transfer](../avatar/automatic-skinning-transfer.md#special-skinning-transfer-joints) joints for specialized accessory types. Eyebrow and eyelash accessories must be exclusively skinned to transfer joints, not [standard R15 rig](../avatar/character-bodies/specifications.md#standard-r15-rigs) joints.</td>
   </tr>
   <tr>
     <td>`Accessory does not have a Handle. Cannot validate layered clothing out of bounds.`</td>
@@ -1249,7 +1249,7 @@ The validation service will run in the background and report back results in the
 
 ### Measure_Cage_Mesh_Distance
 
-`Measure_Cage_Mesh_Distance` is a validation check that scores how closely the layered clothing's outer cage tracks the rendered mesh, flagging when a cage drifts too far away or pushes inside the mesh.
+`Measure_Cage_Mesh_Distance` is a validation check that scores how closely the layered accessory's outer cage tracks the rendered mesh, flagging when a cage drifts too far away or pushes inside the mesh.
 
 <Table tableStyle={{tableLayout:"fixed", width:"100%", wordBreak:"break-word"}}>
   <thead>
@@ -1337,7 +1337,7 @@ The validation service will run in the background and report back results in the
 
 ### Measure_Cage_UV
 
-`Measure_Cage_UV` is a validation check that checks whether the inner and outer cage UVs match the layered clothing template; UVs that don't match the layered clothing template break how the asset wraps over the body.
+`Measure_Cage_UV` is a validation check that checks whether the inner and outer cage UVs match the layered accessory template; UVs that don't match the layered accessory template break how the asset wraps over the body.
 
 <Table tableStyle={{tableLayout:"fixed", width:"100%", wordBreak:"break-word"}}>
   <thead>
@@ -1363,7 +1363,7 @@ The validation service will run in the background and report back results in the
 
 ### Measure_Cage_UV_Avatar
 
-`Measure_Cage_UV_Avatar` is a validation check that checks that each [body part](../avatar/character-bodies/specifications.md#body-parts) has a cage that keeps its UVs on the standard template; wrong cage UVs distort how layered clothing wraps over the body.
+`Measure_Cage_UV_Avatar` is a validation check that checks that each [body part](../avatar/character-bodies/specifications.md#body-parts) has a cage that keeps its UVs on the standard template; wrong cage UVs distort how layered accessories wraps over the body.
 
 <Table tableStyle={{tableLayout:"fixed", width:"100%", wordBreak:"break-word"}}>
   <thead>
@@ -1376,13 +1376,13 @@ The validation service will run in the background and report back results in the
 <tbody>
   <tr>
     <td>`There are {incorrect_uv_count} UV values in cage {cage_name} that are incorrect or do not belong to the template. Please correct the cage UV.`</td>
-    <td>This error triggers when any [body part cage](../avatar/character-bodies/specifications.md#outer-cages) has more incorrect UV values than the per-part threshold (default `7` incorrect UVs).<br /><br />To fix it, re-export the affected body part cage from a [standard rig template](../avatar/resources.md#project-files) without altering its UV layout.</td>
-    <td>This check validates that UV coordinates on body part cages match the expected [standard rig template](../avatar/resources.md#project-files) values across all body parts in a full body bundle. Each body part cage must preserve template UVs for the deformation system to correctly map clothing across the entire avatar.</td>
+    <td>This error triggers when any [body part cage](../avatar/character-bodies/specifications.md#outer-cages) has more incorrect UV values than the per-part threshold (default `7` incorrect UVs).<br /><br />To fix it, re-export the affected body part cage from a [standard R15 rig template](../avatar/resources.md#project-files) without altering its UV layout.</td>
+    <td>This check validates that UV coordinates on body part cages match the expected [standard R15 rig template](../avatar/resources.md#project-files) values across all body parts in a full body bundle. Each body part cage must preserve template UVs for the deformation system to correctly map clothing across the entire avatar.</td>
   </tr>
   <tr>
     <td>`Asset quality warning: Cage UV score is {score} for {cage_name}. Incorrect UV count: {incorrect_uv_count}.`</td>
-    <td>This warning triggers when any body part cage UV score is below `100`, indicating template UV deviations.<br /><br />To address it, check the reported body part cage and verify its UV coordinates match the [standard rig template](../avatar/resources.md#project-files) precisely.</td>
-    <td>This check evaluates the accuracy of cage UV coordinates across all body part cages in a full body bundle against the [standard rig template](../avatar/resources.md#project-files). Correct UVs on every body part cage ensure that layered accessories map correctly across the full avatar without seams or distortion.</td>
+    <td>This warning triggers when any body part cage UV score is below `100`, indicating template UV deviations.<br /><br />To address it, check the reported body part cage and verify its UV coordinates match the [standard R15 rig template](../avatar/resources.md#project-files) precisely.</td>
+    <td>This check evaluates the accuracy of cage UV coordinates across all body part cages in a full body bundle against the [standard R15 rig template](../avatar/resources.md#project-files). Correct UVs on every body part cage ensure that layered accessories map correctly across the full avatar without seams or distortion.</td>
   </tr>
 </tbody>
 </Table>
@@ -1471,7 +1471,7 @@ The validation service will run in the background and report back results in the
 
 ### Measure_Joint_Number
 
-`Measure_Joint_Number` is a validation check that scores the body rig's [joint setup](../avatar/character-bodies/specifications.md#rigging) against the expected configuration. The body rig's joint setup includes the joint counts in the left and right hands for [higher-fidelity](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) rigs.
+`Measure_Joint_Number` is a validation check that scores the body rig's [joint setup](../avatar/character-bodies/specifications.md#rigging) against the expected configuration. The body rig's joint setup includes the joint counts in the left and right hands for [advanced R15 rigs](../avatar/character-bodies/specifications.md#advanced-r15-rigs).
 
 <Table tableStyle={{tableLayout:"fixed", width:"100%", wordBreak:"break-word"}}>
   <thead>
@@ -1484,7 +1484,7 @@ The validation service will run in the background and report back results in the
 <tbody>
   <tr>
     <td>`Asset quality: joint configuration scored {score} (joints: {joint_number}, left hand: {left_hand_joint_number}, right hand: {right_hand_joint_number}).`</td>
-    <td>This warning triggers when the joint configuration score is below `100`, indicating the skeleton has a non-standard joint count or asymmetric hand joint distribution.<br /><br />To address it, review your rig to ensure it follows the expected [rig hierarchy](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) with symmetric hand joints.</td>
+    <td>This warning triggers when the joint configuration score is below `100`, indicating the skeleton has a non-standard joint count or asymmetric hand joint distribution.<br /><br />To address it, review your rig to ensure it follows the expected [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) hierarchy with symmetric hand joints.</td>
     <td>This check evaluates the skeletal joint configuration of a full body avatar bundle, measuring total joint count and hand joint distribution. Proper joint counts ensure the avatar can animate correctly with standard Roblox animations and support features like finger tracking.</td>
   </tr>
 </tbody>

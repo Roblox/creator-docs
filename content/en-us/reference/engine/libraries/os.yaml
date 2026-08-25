@@ -285,11 +285,13 @@ functions:
       - name: t2
         type: int
         default:
-        summary: ''
+        summary: |
+          The later time value, as returned by `Library.os.time()`.
       - name: t1
         type: int
         default:
-        summary: ''
+        summary: |
+          The earlier time value, as returned by `Library.os.time()`.
     returns:
       - type: int
         summary: ''

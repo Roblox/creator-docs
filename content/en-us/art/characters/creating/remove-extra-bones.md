@@ -8,7 +8,7 @@ prev: /art/characters/creating/combine-head-geometry
 The helper bones used to help place the head geometries also require removal to validate correctly. While these extra bones do not include any skinning data, do not delete any of the facial animation bones parented within DynamicHead, as these include important skinning data that drives facial animation.
 
 <Alert severity = 'error'>
-Failure to [combine head geometry](../../characters/creating/combine-head-geometry.md) and remove head bones will cause issues with validation, as the character will no longer adhere to the expected R15 geometry and joint hierarchy.
+Failure to [combine head geometry](../../characters/creating/combine-head-geometry.md) and remove head bones will cause issues with validation, as the character will no longer adhere to the standard [geometry](../../../avatar/character-bodies/specifications.md#body-parts) and [joint hierarchy](../../../avatar/character-bodies/specifications.md#rigging).
 </Alert>
 
 Remove the additional head bones by selecting them and deleting them in edit mode:

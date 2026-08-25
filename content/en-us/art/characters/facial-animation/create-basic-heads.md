@@ -37,7 +37,7 @@ The reference character model provided is meant for educational purposes and doe
   <tbody>
     <tr>
       <td>[Cubie-Model-Only.blend](../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie-Model-Only.blend)</td>
-      <td>A Blender project file containing a R15 Cubie character model without facial data. </td>
+      <td>A Blender project file containing a Cubie avatar character model with a [standard R15 rig](../../../avatar/character-bodies/specifications.md#standard-r15-rigs), but without facial data. </td>
     </tr>
     <tr>
       <td>[Cubie-Eye-Bones-Skinned.blend](../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie-Eye-Bones-Skinned.blend)</td>
@@ -70,7 +70,7 @@ Many character models already include a head with distinct facial features, but 
 - **Lip vertices** - If you want your character to use its mouth, separate the lip vertices so that the mouth can open.
 - **Inner components** - If your character has inner mouth components, such as a tongue and teeth, model a mouth bag within the head mesh to contain these features. If your character uses eye sockets, model a similar eye bag to contain these features.
 - **No extra data** - Ensure that all children face parts of the Head_Geo don't contain history or frozen transformations.
-- **Outer cage** - Make sure the character model has an outer cage to support face accessories and layered clothing. For more information, see [Cage Mesh Requirements](../../../avatar/character-bodies/specifications.md#inner-and-outer-cages).
+- **Outer cage** - Make sure the character model has an outer cage to support face accessories and layered accessories. For more information, see [Cage Mesh Requirements](../../../avatar/character-bodies/specifications.md#inner-and-outer-cages).
 
 You can follow along the rest of this head creation process using a [rigged Cubie character](../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie-Model-Only.blend) that meets these modeling requirements. This version doesn't include any facial rigging or pose data so you can use it as reference in this guide.
 
@@ -80,7 +80,7 @@ Your character must have an internal bone structure to drive the vertices of the
 
 ### RootFaceJoint
 
-The **RootFaceJoint** is a bone that is parented under the standard R15 head bone. This root bone must parent all other face bones. In Blender, you can quickly add a bone by **extruding** a child bone from the head bone and then map the bone name as a property in the Head_Geo mesh. The RootFaceJoint bone object is commonly named "DynamicHead" in the reference templates and examples, but you can use any name as long as you [map the root bone](#map) in custom properties.
+The **RootFaceJoint** is a bone that is parented under the [R15 rigging armature's](../../../avatar/character-bodies/specifications.md#rigging) head bone. This root bone must parent all other face bones. In Blender, you can quickly add a bone by **extruding** a child bone from the head bone and then map the bone name as a property in the Head_Geo mesh. The RootFaceJoint bone object is commonly named `DynamicHead` in the reference templates and examples, but you can use any name as long as you [map the root bone](#map) in custom properties.
 
 To add a RootFaceJoint bone:
 

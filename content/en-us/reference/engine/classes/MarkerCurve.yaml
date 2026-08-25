@@ -50,7 +50,9 @@ methods:
       - name: index
         type: int
         default:
-        summary: ''
+        summary: |
+          One-based index of the marker to retrieve, ordered chronologically.
+          Must be within range or the call throws.
     returns:
       - type: Dictionary
         summary: |

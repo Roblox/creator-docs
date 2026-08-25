@@ -26,7 +26,7 @@ Set up the project by opening the [rig template project](../../assets/modeling/m
 
 To import and parent the accessory model:
 
-1. In Blender, open the [rig template project](../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip). This file contains the default armature required for layered clothing.
+1. In Blender, open the [rig template project](../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip). This file contains the default armature required for layered accessories.
 
    <img
    alt="Blender Mannequin Template Project"
@@ -116,7 +116,7 @@ To modify cages for your accessory model:
    <video controls width="80%" src="../../assets/accessories/6_lc-blender-adjusting-outer-cage-vertices.mp4">
    </video>
 
-A finished outer cage should completely cover the accessory with minimal extra space. For comparison, you can download a completed caged version of the Tshirt model [here](../../assets/accessories/reference-files/Tshirt-caged.fbx).
+A finished outer cage should completely cover the accessory with minimal extra space. For comparison, you can download a [completed caged version](../../assets/accessories/reference-files/Tshirt-caged.fbx) of the Tshirt model.
 
 <video controls width="80%" src="../../assets/accessories/8_lc-blender-finished-outer-cage.mp4"></video>
 

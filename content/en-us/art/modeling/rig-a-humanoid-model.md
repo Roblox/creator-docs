@@ -9,7 +9,7 @@ This advanced guide covers the process of rigging a humanoid model in Blender us
 
 To rig a humanoid model in Blender:
 
-- [Import a character model](#import-model) into a template file to easily access a premade R15 bone structure.
+- [Import a character model](#import-model) into a template file to easily access a premade [standard R15 rig](../../avatar/character-bodies/specifications.md#standard-r15-rigs).
 - [Create, size, and position bones](#set-bones-and-armature) symmetrically for a humanoid character.
 - [Parent](#parent-armature) multiple meshes to a single armature to bind the skeleton rig.
 - [Assign full influence](#assign-meshes-to-bones) to each mesh object and bone by assigning influences.
@@ -57,7 +57,7 @@ At any point during the skinning process, you can also toggle one of the various
 In this guide, set up X-Axis Mirroring to make symmetrical changes to the left and right bones before repositioning the bones to the imported model. Try to maintain symmetry whenever possible when rigging a model.
 
 <Alert severity="warning">
-If modifying bones or creating a new bone structure, keep in mind the <a href="../../avatar/character-bodies/specifications.md#humanoid-rigs">specific bone hierarchy and naming requirements</a> for R15 character models.
+If modifying bones or creating a new bone structure, it's important to ensure it follows the standardized bone hierarchy and naming conventions for either a [standard](../../avatar/character-bodies/specifications.md#standard-r15-rigs) or [advanced](../../avatar/character-bodies/specifications.md#advanced-r15-rigs) R15 rigging armature for avatar character models.
 </Alert>
 
 ### Enable x-axis mirror

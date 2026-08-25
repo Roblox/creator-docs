@@ -43,7 +43,7 @@ After you finish your recording, you can [fine-tune](../animation/editor.md#keyf
 
 ## Body
 
-The **Animation Capture - Body** allows you to quickly generate high-quality, realistic full-body animations for your R15 rigs by uploading videos to use to track the body's movement and generate corresponding keyframes. This significantly speeds up the manual process of creating animations, and allows you to personalize your avatars and NPCs with life-like mannerisms in a few minutes.
+The **Animation Capture - Body** allows you to quickly generate high-quality, realistic full-body animations for your [R15 rigs](../avatar/character-bodies/specifications.md#rigging) by uploading videos to use to track the body's movement and generate corresponding keyframes. This significantly speeds up the manual process of creating animations, and allows you to personalize your avatars and NPCs with life-like mannerisms in a few minutes.
 
 <BetaAlert betaName="Live Animation Creator" leadIn="To import a video for animation creation, you must first enable the beta feature through " leadOut="." components={props.components} />
 

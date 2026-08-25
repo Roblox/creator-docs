@@ -4,44 +4,61 @@
 
 name: AppUpdateStatus
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates the result of an application update check performed by
+  `AppUpdateService`.
+description: |
+  Indicates the result of an application update check performed by
+  `CheckForUpdate()`. The returned status tells the Lua app layer whether an
+  update is available, what kind of channel assignment produced it, or whether
+  the check was unsupported or failed.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Unknown
-    summary: ''
+    summary: |
+      The default state before any update check has been performed.
     value: 0
     tags: []
     deprecation_message: ''
   - name: NotSupported
-    summary: ''
+    summary: |
+      The platform does not support application updates.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Failed
-    summary: ''
+    summary: |
+      The update check failed due to an error such as a network failure or
+      missing initialization.
     value: 2
     tags: []
     deprecation_message: ''
   - name: NotAvailable
-    summary: ''
+    summary: |
+      No update is currently required; the client is already running the latest
+      version for its channel.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Available
-    summary: ''
+    summary: |
+      An update is available through a public channel or production deployment.
     value: 4
     tags: []
     deprecation_message: ''
   - name: AvailableBoundChannel
-    summary: ''
+    summary: |
+      An update is available because the user is explicitly bound to a private
+      or public channel.
     value: 5
     tags: []
     deprecation_message: ''
   - name: AvailableBetaProgram
-    summary: ''
+    summary: |
+      An update is available because the user opted into a beta program backed
+      by a channel.
     value: 6
     tags: []
     deprecation_message: ''

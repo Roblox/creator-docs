@@ -4,104 +4,130 @@
 
 name: VideoError
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates the result of a video operation in the engine's video subsystem.
+description: |
+  `VideoError` represents the outcome of video operations performed by the
+  engine. Values are surfaced through video-related callbacks and APIs to
+  describe why an operation succeeded or failed.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Ok
-    summary: ''
+    summary: |
+      The video operation completed successfully without error.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Eof
-    summary: ''
+    summary: |
+      The end of the video stream or file has been reached.
     value: 1
     tags: []
     deprecation_message: ''
   - name: EAgain
-    summary: ''
+    summary: |
+      No data is available at this moment; the caller should retry the
+      operation.
     value: 2
     tags: []
     deprecation_message: ''
   - name: BadParameter
-    summary: ''
+    summary: |
+      An invalid or out-of-range parameter was supplied to the video operation.
     value: 3
     tags: []
     deprecation_message: ''
   - name: AllocFailed
-    summary: ''
+    summary: |
+      A memory allocation required for the video operation failed.
     value: 4
     tags: []
     deprecation_message: ''
   - name: CodecInitFailed
-    summary: ''
+    summary: |
+      The video codec failed to initialize.
     value: 5
     tags: []
     deprecation_message: ''
   - name: CodecCloseFailed
-    summary: ''
+    summary: |
+      The video codec failed to shut down cleanly.
     value: 6
     tags: []
     deprecation_message: ''
   - name: DecodeFailed
-    summary: ''
+    summary: |
+      The video decoder failed to decode a frame from the stream.
     value: 7
     tags: []
     deprecation_message: ''
   - name: ParsingFailed
-    summary: ''
+    summary: |
+      Parsing the video stream or container format failed.
     value: 8
     tags: []
     deprecation_message: ''
   - name: Unsupported
-    summary: ''
+    summary: |
+      The requested video operation or format is not supported on this platform.
     value: 9
     tags: []
     deprecation_message: ''
   - name: Generic
-    summary: ''
+    summary: |
+      A generic or unclassified error occurred in the video subsystem.
     value: 10
     tags: []
     deprecation_message: ''
   - name: DownloadFailed
-    summary: ''
+    summary: |
+      The video asset could not be downloaded.
     value: 11
     tags: []
     deprecation_message: ''
   - name: StreamNotFound
-    summary: ''
+    summary: |
+      The requested video stream could not be found.
     value: 12
     tags: []
     deprecation_message: ''
   - name: EncodeFailed
-    summary: ''
+    summary: |
+      The video encoder failed to encode a frame.
     value: 13
     tags: []
     deprecation_message: ''
   - name: CreateFailed
-    summary: ''
+    summary: |
+      Creating a required video resource or object failed.
     value: 14
     tags: []
     deprecation_message: ''
   - name: NoPermission
-    summary: ''
+    summary: |
+      The video operation was denied because the required permission, such as
+      camera access, has not been granted.
     value: 15
     tags: []
     deprecation_message: ''
   - name: NoService
-    summary: ''
+    summary: |
+      The required video service is unavailable on this device or platform.
     value: 16
     tags: []
     deprecation_message: ''
   - name: ReleaseFailed
-    summary: ''
+    summary: |
+      Releasing a video resource failed.
     value: 17
     tags: []
     deprecation_message: ''
   - name: Unknown
-    summary: ''
+    summary: |
+      An unknown or unrecognized error occurred; this value covers errors that
+      have no specific classification in this enum.
     value: 18
     tags: []
     deprecation_message: ''

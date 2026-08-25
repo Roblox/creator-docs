@@ -40,8 +40,25 @@ properties:
       - Basic
       - UI
   - name: PyramidHandleAdornment.Shading
-    summary: ''
-    description: ''
+    summary: |
+      The `Enum.AdornShading` mode that controls shading and whether the pyramid
+      draws through occluding geometry.
+    description: |
+      An `Enum.AdornShading` value that selects the material and render pass
+      used to draw the pyramid. Defaults to `Enum.AdornShading|Default`, which
+      draws the pyramid unlit and occluded by scene geometry like an ordinary
+      world object.
+
+      `Enum.AdornShading|Shaded` and `Enum.AdornShading|XRayShaded` light the
+      pyramid with the scene's lighting instead of drawing it unlit, while
+      `Enum.AdornShading|XRay` and `Enum.AdornShading|XRayShaded` draw the
+      pyramid through geometry that would otherwise occlude it.
+      `Enum.AdornShading|AlwaysOnTop` draws the pyramid on top of everything
+      else with no depth testing.
+
+      The legacy `Class.HandleAdornment.AlwaysOnTop` property only takes effect
+      while `Shading` is `Enum.AdornShading|Default`; any other `Shading` value
+      determines the render pass on its own.
     code_samples: []
     type: AdornShading
     tags: []

@@ -21,7 +21,9 @@ items:
     tags: []
     deprecation_message: ''
   - name: TShirt
-    summary: ''
+    summary: |
+      The asset is a classic t-shirt (a flat image applied to the avatar's
+      torso).
     value: 2
     tags: []
     deprecation_message: ''
@@ -261,12 +263,14 @@ items:
     tags: []
     deprecation_message: ''
   - name: EarAccessory
-    summary: ''
+    summary: |
+      The asset is an ear accessory.
     value: 57
     tags: []
     deprecation_message: ''
   - name: EyeAccessory
-    summary: ''
+    summary: |
+      The asset is an eye accessory.
     value: 58
     tags: []
     deprecation_message: ''
@@ -283,93 +287,116 @@ items:
     tags: []
     deprecation_message: ''
   - name: TShirtAccessory
-    summary: ''
+    summary: |
+      The asset is a layered clothing accessory representing a t-shirt.
     value: 64
     tags: []
     deprecation_message: ''
   - name: ShirtAccessory
-    summary: ''
+    summary: |
+      The asset is a layered clothing accessory representing a shirt.
     value: 65
     tags: []
     deprecation_message: ''
   - name: PantsAccessory
-    summary: ''
+    summary: |
+      The asset is a layered clothing accessory representing pants.
     value: 66
     tags: []
     deprecation_message: ''
   - name: JacketAccessory
-    summary: ''
+    summary: |
+      The asset is a layered clothing accessory representing a jacket.
     value: 67
     tags: []
     deprecation_message: ''
   - name: SweaterAccessory
-    summary: ''
+    summary: |
+      The asset is a layered clothing accessory representing a sweater.
     value: 68
     tags: []
     deprecation_message: ''
   - name: ShortsAccessory
-    summary: ''
+    summary: |
+      The asset is a layered clothing accessory representing shorts.
     value: 69
     tags: []
     deprecation_message: ''
   - name: LeftShoeAccessory
-    summary: ''
+    summary: |
+      The asset is a layered clothing accessory representing a left shoe.
     value: 70
     tags: []
     deprecation_message: ''
   - name: RightShoeAccessory
-    summary: ''
+    summary: |
+      The asset is a layered clothing accessory representing a right shoe.
     value: 71
     tags: []
     deprecation_message: ''
   - name: DressSkirtAccessory
-    summary: ''
+    summary: |
+      The asset is a layered clothing accessory representing a dress or skirt.
     value: 72
     tags: []
     deprecation_message: ''
   - name: FontFamily
-    summary: ''
+    summary: |
+      The asset is a font family used for text rendering.
     value: 73
     tags: []
     deprecation_message: ''
   - name: EyebrowAccessory
-    summary: ''
+    summary: |
+      The asset is a layered eyebrow accessory.
     value: 76
     tags: []
     deprecation_message: ''
   - name: EyelashAccessory
-    summary: ''
+    summary: |
+      The asset is a layered eyelash accessory.
     value: 77
     tags: []
     deprecation_message: ''
   - name: MoodAnimation
-    summary: ''
+    summary: |
+      The asset is a mood animation that defines a static facial expression for
+      a character.
     value: 78
     tags: []
     deprecation_message: ''
   - name: DynamicHead
-    summary: ''
+    summary: |
+      The asset is a head with facial animation support.
     value: 79
     tags: []
     deprecation_message: ''
   - name: FaceMakeup
-    summary: ''
+    summary: |
+      The asset is face makeup applied to a character's head via texture
+      transfer.
     value: 88
     tags: []
     deprecation_message: ''
   - name: LipMakeup
-    summary: ''
+    summary: |
+      The asset is lip makeup applied to a character's face via texture
+      transfer.
     value: 89
     tags: []
     deprecation_message: ''
   - name: EyeMakeup
-    summary: ''
+    summary: |
+      The asset is eye makeup applied to a character's face via texture
+      transfer.
     value: 90
     tags: []
     deprecation_message: ''
-  - name: VoxelFragment
-    summary: ''
-    value: 91
+  - name: AvatarBackground
+    summary: |
+      The asset is an avatar background used as a scene backdrop in avatar
+      previews.
+    value: 92
     tags: []
     deprecation_message: ''
   - name: TextDocument

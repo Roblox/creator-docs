@@ -5,7 +5,10 @@
 name: MicroProfilerService
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A service that connects the engine's MicroProfiler to the data model, feeding
+  context into profile dumps and letting privileged scripts capture them to
+  disk.
 description: ''
 code_samples: []
 inherits:
@@ -18,7 +21,9 @@ tags:
 deprecation_message: ''
 properties:
   - name: MicroProfilerService.ContextLabel
-    summary: ''
+    summary: |
+      A script-set label embedded into MicroProfiler profile dumps to identify
+      the context a capture was taken in.
     description: ''
     code_samples: []
     type: string
@@ -33,6 +38,139 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-methods: []
-events: []
+methods:
+  - name: MicroProfilerService:GetDataInRange
+    summary: |
+      Reads profiling capture data from a slot into a provided Luau buffer.
+    description: |
+      This method is not intended for direct use. Instead, use LibMP, which
+      calls it internally and provides a richer, higher-level Luau API for
+      accessing MicroProfiler data.
+    code_samples: []
+    parameters:
+      - name: slotId
+        type: int
+        default:
+        summary: ''
+      - name: offset
+        type: int
+        default:
+        summary: ''
+      - name: size
+        type: int
+        default:
+        summary: ''
+      - name: destBuffer
+        type: buffer
+        default:
+        summary: ''
+      - name: destBufferOffset
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: |
+          The number of bytes actually copied into `destBuffer` starting at
+          `destBufferOffset`. Returns `0` if the read fails.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Logging
+  - name: MicroProfilerService:GetDataSize
+    summary: |
+      Returns the total byte count of profiling data stored in a slot.
+    description: |
+      This method is not intended for direct use. Instead, use LibMP, which
+      calls it internally and provides a richer, higher-level Luau API for
+      accessing MicroProfiler data.
+    code_samples: []
+    parameters:
+      - name: slotId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: |
+          The total size, in bytes, of the profiling data available in the slot.
+          Returns `0` when no data is available.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Logging
+  - name: MicroProfilerService:ProcessCommand
+    summary: |
+      Dispatches a binary command to the MicroProfiler control channel and
+      writes the response into a buffer.
+    description: |
+      This method is not intended for direct use. Instead, use LibMP, which
+      calls it internally and provides a richer, higher-level Luau API for
+      accessing MicroProfiler data.
+    code_samples: []
+    parameters:
+      - name: cmdBuf
+        type: buffer
+        default:
+        summary: ''
+      - name: cmdOffset
+        type: int
+        default:
+        summary: ''
+      - name: cmdSize
+        type: int
+        default:
+        summary: ''
+      - name: respBuf
+        type: buffer
+        default:
+        summary: ''
+      - name: respOffset
+        type: int
+        default:
+        summary: ''
+      - name: respSize
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: |
+          The number of bytes written into `respBuf` as the command response.
+          Returns `0` if the command is not run.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Logging
+events:
+  - name: MicroProfilerService.DataChanged
+    summary: |
+      Fires when profiling data in a slot has changed since the last frame.
+    description: |
+      This event is not intended for direct use. Instead, use LibMP, which
+      consumes it internally and provides a richer, higher-level Luau API for
+      accessing MicroProfiler data.
+    code_samples: []
+    parameters:
+      - name: slotId
+        type: int
+        default:
+        summary: ''
+      - name: flags
+        type: int
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities:
+      - Logging
 callbacks: []

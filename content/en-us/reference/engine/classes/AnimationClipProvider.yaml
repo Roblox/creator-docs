@@ -123,7 +123,15 @@ methods:
     summary: |
       This function returns an `Class.InventoryPages` object which can be used
       to iterate over animations owned by a specific user.
-    description: ''
+    description: |
+      This function returns an `Class.InventoryPages` object which can be used
+      to iterate over animations owned by a specific user. It yields until the
+      first page of results is loaded from the website. The `userId` must be a
+      positive number; otherwise the call errors.
+
+      This function is deprecated. Use
+      `Class.AnimationClipProvider:GetAnimationsAsync()|GetAnimationsAsync`
+      instead, which behaves identically.
     code_samples: []
     parameters:
       - name: userId
@@ -172,17 +180,31 @@ methods:
     capabilities:
       - Animation
   - name: AnimationClipProvider:GetClipEvaluatorAsync
-    summary: ''
-    description: ''
+    summary: |
+      Returns a `ClipEvaluator` for the `Class.AnimationClip` at the given
+      content ID, loaded asynchronously.
+    description: |
+      Fetches the `Class.AnimationClip` at the specified `assetId` and returns a
+      `ClipEvaluator` that wraps it. A `ClipEvaluator` samples the clip at an
+      arbitrary time to produce an animation pose, so you can read animation
+      data directly instead of playing it back through an `Class.Animator`.
+
+      The `assetId` must be an animation asset on Roblox. Yields until the clip
+      is loaded and should be wrapped in a `pcall`. Loads through the same path
+      as
+      `Class.AnimationClipProvider:GetAnimationClipAsync()|GetAnimationClipAsync`,
+      at the local player animation priority.
     code_samples: []
     parameters:
       - name: assetId
         type: ContentId
         default:
-        summary: ''
+        summary: |
+          The content ID of the animation to load.
     returns:
       - type: ClipEvaluator
-        summary: ''
+        summary: |
+          A `ClipEvaluator` that can sample the loaded `Class.AnimationClip`.
     tags:
       - Yields
     deprecation_message: ''

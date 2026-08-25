@@ -4,24 +4,39 @@
 
 name: CameraSpeedAdjustBinding
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls which input gesture adjusts the Studio camera's fly speed while
+  navigating.
+description: |
+  Controls which mouse-and-keyboard gesture is used to adjust the Studio
+  camera's fly speed while navigating in the 3D viewport. The selected binding
+  intercepts the mouse scroll wheel (or touchpad pan gesture) when the
+  designated modifier is active, changing camera speed instead of zooming. This
+  setting is exposed in Studio's **Camera** preferences as
+  `Camera Speed Adjust Binding` and defaults to
+  `Enum.CameraSpeedAdjustBinding.RmbScroll`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      No input gesture is bound to camera speed adjustment; the scroll wheel
+      always zooms.
     value: 0
     tags: []
     deprecation_message: ''
   - name: RmbScroll
-    summary: ''
+    summary: |
+      Scrolling while holding the right mouse button adjusts the camera fly
+      speed instead of zooming.
     value: 1
     tags: []
     deprecation_message: ''
   - name: AltScroll
-    summary: ''
+    summary: |
+      Scrolling while holding Alt adjusts the camera fly speed instead of
+      zooming.
     value: 2
     tags: []
     deprecation_message: ''

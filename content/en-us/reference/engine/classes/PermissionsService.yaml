@@ -5,21 +5,8 @@
 name: PermissionsService
 type: class
 memory_category: Instances
-summary: |
-  Internal service for asset permissions and Studio plugin consent; not
-  accessible from creator scripts.
-description: |
-  Not creator-facing: all members require `RobloxScript` security and can only
-  be called from Roblox core scripts. Tracks permissions associated with assets
-  in two roles:
-
-  - Stores an experience's third-party content settings — whether third-party
-    assets, purchases, and teleports are allowed, and whether rewarded on-demand
-    ads are allowed. These settings are initialized from the universe's settings
-    and can be queried through the service.
-  - In Roblox Studio, stores and retrieves permissions granted to an installed
-    plugin (such as approved HTTP domains and script-injection consent) and
-    drives the dialogs that prompt a user to grant or deny those permissions.
+summary: ''
+description: ''
 code_samples: []
 inherits:
   - Instance

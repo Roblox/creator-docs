@@ -4,19 +4,31 @@
 
 name: FileSystemWalkMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether `Class.FileSystemService:Walk()` descends into
+  subdirectories.
+description: |
+  Controls whether `Class.FileSystemService:Walk()` traverses only the immediate
+  entries of the target directory or also descends recursively into
+  subdirectories. Pass one of these values as the `mode` argument to `Walk`;
+  when `mode` is omitted the method defaults to
+  `Enum.FileSystemWalkMode.NonRecursive`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: NonRecursive
-    summary: ''
+    summary: |
+      Visits only the immediate entries of the specified directory, without
+      descending into subdirectories.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Recursive
-    summary: ''
+    summary: |
+      Visits all entries in the specified directory and all of its
+      subdirectories, incrementing the iterator's `Depth` field for each level
+      descended.
     value: 1
     tags: []
     deprecation_message: ''

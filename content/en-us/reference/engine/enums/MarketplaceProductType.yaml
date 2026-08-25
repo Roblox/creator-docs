@@ -16,13 +16,15 @@ deprecation_message: ''
 items:
   - name: AvatarAsset
     summary: |
-      Avatar asset
+      A standalone avatar item (such as an accessory, clothing, or body part)
+      sold individually in the Avatar Shop.
     value: 1
     tags: []
     deprecation_message: ''
   - name: AvatarBundle
     summary: |
-      Avatar bundle
+      A curated collection of avatar items sold together as a single package in
+      the Avatar Shop.
     value: 2
     tags: []
     deprecation_message: ''

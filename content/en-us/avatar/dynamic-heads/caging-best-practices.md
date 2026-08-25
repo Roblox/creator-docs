@@ -9,7 +9,7 @@ The following information applies to character creators who are looking to impro
 
 A character's dynamic head cage helps define the surface of the 3D model. The cage also plays an important role in Marketplace [head validation](./specifications.md#facial-landmarks), so it's important properly construct cages to ensure accurate fitting with head accessories and animations.
 
-The following information and examples are best practices that are applicable to face caging as well as other caging processes. For additional best practices for caging, see [layered clothing caging best practices](../layered-accessories/caging-best-practices.md).
+The following information and examples are best practices that are applicable to face caging as well as other caging processes. For additional best practices for caging, see [Layered accessory caging best practices](../layered-accessories/caging-best-practices.md).
 
 ## General
 
@@ -24,7 +24,7 @@ The following information and examples are best practices that are applicable to
 
 ### Equidistant geometry
 
-Try to keep geometry equidistant whenever possible. This helps mitigate texture and layered clothing distortion. Keep in mind that this isn't always possible.
+Try to keep geometry equidistant whenever possible. This helps mitigate texture and layered accessory distortion. Keep in mind that this isn't always possible.
 
 <GridContainer numColumns="2">
 <figure><img src="../../assets/makeup/caging-examples/Equidistant-A.png" /></figure>  

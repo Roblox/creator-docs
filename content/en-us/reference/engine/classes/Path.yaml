@@ -80,10 +80,14 @@ methods:
       - name: start
         type: int
         default:
-        summary: ''
+        summary: |
+          The 1-based index of the waypoint from which to begin checking for
+          occlusion.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The 1-based index of the first blocked waypoint starting from `start`,
+          or `-1` if the path is not blocked.
     tags:
       - Yields
     deprecation_message: |
@@ -137,7 +141,9 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of `Datatype.Vector3` positions for each waypoint in the
+          path.
     tags:
       - Deprecated
     deprecation_message: |
@@ -191,7 +197,8 @@ events:
       - name: blockedWaypointIdx
         type: int
         default:
-        summary: ''
+        summary: |
+          The 1-based index of the waypoint at which the path became blocked.
     tags: []
     deprecation_message: ''
     security: None
@@ -212,7 +219,8 @@ events:
       - name: unblockedWaypointIdx
         type: int
         default:
-        summary: ''
+        summary: |
+          The 1-based index of the waypoint at which the path became unblocked.
     tags: []
     deprecation_message: ''
     security: None

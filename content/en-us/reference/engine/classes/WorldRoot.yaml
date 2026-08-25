@@ -122,14 +122,27 @@ methods:
     simulationAccess: true
   - name: WorldRoot:BulkMoveTo
     summary: |
-      Moves a table of `Class.BasePart|BaseParts` to a table of
+      Moves an array of `Class.BasePart|BaseParts` to an array of
       `Datatype.CFrame|CFrames`.
     description: |
-      This function moves a table of `Class.BasePart|BaseParts` to a table of
+      This function moves an array of `Class.BasePart|BaseParts` to an array of
       `Datatype.CFrame|CFrames` without necessarily firing the default property
       `Class.Object.Changed|Changed` events. This provides a very fast way to
       move large numbers of parts, as you don't have to pay the cost of separate
       property sets for each individual part.
+
+      Both `partList` and `cframeList` are sequential arrays (Luau tables with
+      integer indices starting at 1), not dictionaries. Each part at index `i`
+      in `partList` is moved to the `Datatype.CFrame|CFrame` at index `i` in
+      `cframeList`. The arrays must contain the same number of entries.
+
+      ```lua
+      local Workspace = game:GetService("Workspace")
+
+      local partList = { Workspace.Part1, Workspace.Part2 }
+      local cframeList = { CFrame.new(0, 5, 0), CFrame.new(10, 5, 0) }
+      Workspace:BulkMoveTo(partList, cframeList, Enum.BulkMoveMode.FireCFrameChanged)
+      ```
 
       The third argument allows you to further optimize the movement operation.
       By default, the `Class.Object.Changed|Changed` event of each part fires
@@ -150,13 +163,14 @@ methods:
         type: Instances
         default:
         summary: |
-          A table of `Class.BasePart|BaseParts` to be moved.
+          An array of `Class.BasePart|BaseParts` to be moved. Each entry is
+          matched by index to the corresponding entry in `cframeList`.
       - name: cframeList
         type: Array
         default:
         summary: |
-          A table of `Datatype.CFrame|CFrames` that the parts will be moved to,
-          matched by index to `partList`.
+          An array of `Datatype.CFrame|CFrames` that the parts will be moved to,
+          matched by index to `partList`. Both arrays must be the same length.
       - name: eventMode
         type: BulkMoveMode
         default: FireAllEvents

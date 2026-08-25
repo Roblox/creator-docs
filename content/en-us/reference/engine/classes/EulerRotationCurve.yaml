@@ -60,10 +60,14 @@ methods:
       - name: time
         type: float
         default:
-        summary: ''
+        summary: |
+          The time, in seconds, at which to sample the three channel curves.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of three values holding the sampled `X`, `Y`, and `Z` Euler
+          angles; any channel whose curve is missing or has no key at `time` is
+          returned as `nil`.
     tags: []
     deprecation_message: ''
     security: None
@@ -83,10 +87,15 @@ methods:
       - name: time
         type: float
         default:
-        summary: ''
+        summary: |
+          The time, in seconds, at which to sample the curve.
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          A `Datatype.CFrame` whose rotation is composed from the `X`, `Y`, and
+          `Z` Euler angles sampled at `time`, applied in the order given by
+          `Class.EulerRotationCurve.RotationOrder`; empty channels are treated
+          as zero.
     tags: []
     deprecation_message: ''
     security: None
@@ -104,7 +113,8 @@ methods:
     parameters: []
     returns:
       - type: FloatCurve
-        summary: ''
+        summary: |
+          The `Class.FloatCurve` controlling the `X` Euler angle channel.
     tags: []
     deprecation_message: ''
     security: None
@@ -122,7 +132,8 @@ methods:
     parameters: []
     returns:
       - type: FloatCurve
-        summary: ''
+        summary: |
+          The `Class.FloatCurve` controlling the `Y` Euler angle channel.
     tags: []
     deprecation_message: ''
     security: None
@@ -140,7 +151,8 @@ methods:
     parameters: []
     returns:
       - type: FloatCurve
-        summary: ''
+        summary: |
+          The `Class.FloatCurve` controlling the `Z` Euler angle channel.
     tags: []
     deprecation_message: ''
     security: None

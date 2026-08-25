@@ -75,24 +75,6 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
-  - name: DataModel.Environment
-    summary: ''
-    description: ''
-    code_samples: []
-    type: string
-    tags:
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: State
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities: []
   - name: DataModel.GameId
     summary: |
       Describes the ID of the experience that the place running on the server
@@ -443,8 +425,13 @@ properties:
       can_save: true
     capabilities: []
   - name: DataModel.RunService
-    summary: ''
-    description: ''
+    summary: |
+      A reference to the `Class.RunService` service.
+    description: |
+      A reference to the `Class.RunService` service. Always points to
+      `Class.RunService` and is never `nil`. You can also retrieve it with
+      `Class.ServiceProvider:GetService()|GetService()`, for example
+      `game:GetService("RunService")`.
     code_samples: []
     type: RunService
     tags:

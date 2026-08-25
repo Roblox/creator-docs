@@ -214,5 +214,61 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DynamicGeneration
+  - name: GenerationService:SegmentMeshAsync
+    summary: |
+      Segments an existing `Class.MeshPart` into multiple named parts according
+      to a provided schema, returning a `Class.Model` organized by the schema
+      groups.
+    description: |
+      Segments an existing `Class.MeshPart` into multiple named parts according
+      to a provided schema and returns a `Class.Model` with the segmented parts
+      organized by the schema groups.
+
+      The `schema` parameter accepts the same structure as
+      `Class.GenerationService:GenerateModelAsync()|GenerateModelAsync()`:
+      either a `PredefinedSchema` string (such as `"Car5"` for a five-part
+      vehicle chassis or `"Body1"` for a single-mesh output) or a
+      `SchemaDefinition` table with a `Groups` array of custom part names.
+
+      This method can only be called from Roblox Studio (edit mode or plugin
+      context). For published mesh assets, the caller must have edit permission
+      for the asset. Wrap calls in `Global.LuaGlobals.pcall()` to handle errors
+      such as permission failures or mesh export issues.
+    code_samples: []
+    parameters:
+      - name: meshPart
+        type: MeshPart
+        default:
+        summary: |
+          The `Class.MeshPart` to segment. Must contain mesh geometry (either an
+          `Class.EditableMesh` or a published mesh asset the caller has edit
+          permission for).
+      - name: schema
+        type: Dictionary
+        default:
+        summary: |
+          A table specifying how to segment the mesh. Provide exactly one of
+          `PredefinedSchema` (a string such as `"Car5"` or `"Body1"`) or
+          `SchemaDefinition` (a table with a `Groups` array of part-name strings
+          defining the segmentation structure).
+      - name: options
+        type: Dictionary?
+        default:
+        summary: |
+          Has no effect.
+    returns:
+      - type: Tuple
+        summary: |
+          A tuple containing a `Class.Model` whose children are organized
+          according to the specified schema (each group as a child `Class.Model`
+          with a `Class.MeshPart` inside), and a table with a `UUID` key holding
+          the backend job identifier.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DynamicGeneration
 events: []
 callbacks: []

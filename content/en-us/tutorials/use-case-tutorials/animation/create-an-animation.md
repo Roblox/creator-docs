@@ -20,7 +20,7 @@ After you complete this tutorial, you will have an asset ID for your animation, 
 
 ## Add rig
 
-**Rigs**, or collections of parts connected by joints like `Class.Bone` or `Class.Motor6D` objects, are necessary to create character animations because they include the internal structure you need to move and rotate body parts into different poses. While you can [create your own rigs](../../../art/modeling/rig-a-humanoid-model.md) using external 3D modeling tools, Studio provides several pre-built rigs that you can access through the [Rig Generator](../../../studio/rig-builder.md) tool.
+**Rigs**, or collections of parts connected by joints like `Class.Bone` or `Class.Motor6D` objects, are necessary to create character animations because they include the internal structure you need to move and rotate body parts into different poses. While you can [create your own rigs](../../../art/modeling/rig-a-humanoid-model.md) using external 3D modeling tools, Studio provides several pre-built [standard](../../../avatar/character-bodies/specifications.md#standard-r15-rigs) and [advanced](../../../avatar/character-bodies/specifications.md#advanced-r15-rigs) R15 rigs that you can access through the [Rig Generator](../../../studio/rig-builder.md) tool.
 
 <GridContainer numColumns="3">
   <figure>

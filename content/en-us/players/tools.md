@@ -40,7 +40,7 @@ If you want to place collectible tools as pickups around the 3D world and anchor
 
 #### Set the handle
 
-To enable players to carry tools around, one part of the tool needs to be named `Handle`. This is where the tool will attach to the character model's `RightHand` part (R15) or <Typography noWrap>`Right Arm`</Typography> part (R6).
+To enable players to carry tools around, one part of the tool needs to be named `Handle`. This is where the tool will attach to the character model's `RightHand` [body part](../avatar/character-bodies/specifications.md#body-parts) (R15) or <Typography noWrap>`Right Arm`</Typography> part (R6).
 
 If the tool is composed of just one `Class.MeshPart`, simply name that part `Handle`. Otherwise, you can include a separate part named `Handle` as a **direct child** of the parent `Class.Tool` and then attach it to another part with a `Class.WeldConstraint` or [mechanical constraint](../physics/mechanical-constraints.md).
 

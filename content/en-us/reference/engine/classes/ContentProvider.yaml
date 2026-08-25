@@ -148,10 +148,13 @@ methods:
       - name: contentId
         type: ContentId
         default:
-        summary: ''
+        summary: |
+          The ID of the content to monitor for fetch status changes.
     returns:
       - type: RBXScriptSignal
-        summary: ''
+        summary: |
+          An `Datatype.RBXScriptSignal` that fires when the
+          `Enum.AssetFetchStatus` of the given content changes.
     tags: []
     deprecation_message: ''
     security: None
@@ -159,13 +162,27 @@ methods:
     capabilities:
       - AssetManagement
   - name: ContentProvider:ListEncryptedAssets
-    summary: ''
-    description: ''
+    summary: |
+      Returns an array of the asset IDs that currently have a registered
+      encryption key.
+    description: |
+      Returns an array containing every asset ID that currently has an
+      encryption key registered on this `Class.ContentProvider`, whether the key
+      was registered directly through
+      `Class.ContentProvider:RegisterEncryptedAsset()|RegisterEncryptedAsset()`
+      or through
+      `Class.ContentProvider:RegisterSessionEncryptedAsset()|RegisterSessionEncryptedAsset()`.
+
+      The default key set through
+      `Class.ContentProvider:RegisterDefaultEncryptionKey()|RegisterDefaultEncryptionKey()`
+      is not included, because it isn't associated with any specific asset.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of the asset IDs that currently have an encryption key
+          registered on this `Class.ContentProvider`.
     tags: []
     deprecation_message: ''
     security: None
@@ -188,7 +205,8 @@ methods:
       - name: contentId
         type: ContentId
         default:
-        summary: ''
+        summary: |
+          The content URL of the asset to preload.
     returns:
       - type: ()
         summary: ''
@@ -263,14 +281,23 @@ methods:
     capabilities:
       - AssetManagement
   - name: ContentProvider:RegisterDefaultEncryptionKey
-    summary: ''
-    description: ''
+    summary: |
+      Registers a fallback encryption key used to decrypt any encrypted asset
+      that doesn't have its own key registered.
+    description: |
+      Sets a fallback encryption key that the `Class.ContentProvider` uses to
+      decrypt any encrypted asset that isn't matched by a key registered for a
+      specific asset through
+      `Class.ContentProvider:RegisterEncryptedAsset()|RegisterEncryptedAsset()`.
+      When an asset is fetched, the engine first looks for a key registered for
+      that asset's ID; if none exists, it falls back to this default key.
     code_samples: []
     parameters:
       - name: encryptionKey
         type: string
         default:
-        summary: ''
+        summary: |
+          The key to use as the default for decrypting encrypted assets.
     returns:
       - type: ()
         summary: ''
@@ -281,14 +308,23 @@ methods:
     capabilities:
       - AssetManagement
   - name: ContentProvider:RegisterDefaultSessionKey
-    summary: ''
-    description: ''
+    summary: |
+      Decrypts the provided session key and registers the result as the default
+      encryption key.
+    description: |
+      Decrypts `sessionKey` using the session's cryptographic context and then
+      registers the decrypted result as the default encryption key, exactly as
+      `Class.ContentProvider:RegisterDefaultEncryptionKey()|RegisterDefaultEncryptionKey()`
+      does. Use this variant when the key is delivered to the client in
+      session-encrypted form rather than as plaintext.
     code_samples: []
     parameters:
       - name: sessionKey
         type: string
         default:
-        summary: ''
+        summary: |
+          The session-encrypted key to decrypt and register as the default
+          encryption key.
     returns:
       - type: ()
         summary: ''
@@ -299,18 +335,27 @@ methods:
     capabilities:
       - AssetManagement
   - name: ContentProvider:RegisterEncryptedAsset
-    summary: ''
-    description: ''
+    summary: |
+      Registers an encryption key used to decrypt a specific encrypted asset.
+    description: |
+      Associates `encryptionKey` with the given `assetId` so that, when the
+      `Class.ContentProvider` fetches that asset, it uses the key to decrypt the
+      downloaded file. A key registered for a specific asset takes precedence
+      over the default key set through
+      `Class.ContentProvider:RegisterDefaultEncryptionKey()|RegisterDefaultEncryptionKey()`.
+      The method throws an error if `assetId` isn't a valid asset ID.
     code_samples: []
     parameters:
       - name: assetId
         type: ContentId
         default:
-        summary: ''
+        summary: |
+          The asset to associate the encryption key with.
       - name: encryptionKey
         type: string
         default:
-        summary: ''
+        summary: |
+          The key used to decrypt the specified asset.
     returns:
       - type: ()
         summary: ''
@@ -321,18 +366,29 @@ methods:
     capabilities:
       - AssetManagement
   - name: ContentProvider:RegisterSessionEncryptedAsset
-    summary: ''
-    description: ''
+    summary: |
+      Decrypts the provided session key and registers it as the encryption key
+      for a specific asset.
+    description: |
+      Decrypts `sessionKey` using the session's cryptographic context and then
+      registers the decrypted result as the encryption key for `contentId`,
+      exactly as
+      `Class.ContentProvider:RegisterEncryptedAsset()|RegisterEncryptedAsset()`
+      does. Use this variant when the per-asset key is delivered to the client
+      in session-encrypted form rather than as plaintext.
     code_samples: []
     parameters:
       - name: contentId
         type: ContentId
         default:
-        summary: ''
+        summary: |
+          The asset to associate the decrypted key with.
       - name: sessionKey
         type: string
         default:
-        summary: ''
+        summary: |
+          The session-encrypted key to decrypt and register for the specified
+          asset.
     returns:
       - type: ()
         summary: ''
@@ -343,8 +399,17 @@ methods:
     capabilities:
       - AssetManagement
   - name: ContentProvider:UnregisterDefaultEncryptionKey
-    summary: ''
-    description: ''
+    summary: |
+      Clears the default encryption key previously set on the
+      `Class.ContentProvider`.
+    description: |
+      Removes the default encryption key registered through
+      `Class.ContentProvider:RegisterDefaultEncryptionKey()|RegisterDefaultEncryptionKey()`,
+      so that assets without a specifically registered key are no longer
+      decrypted with a fallback key. Keys registered for individual assets
+      through
+      `Class.ContentProvider:RegisterEncryptedAsset()|RegisterEncryptedAsset()`
+      are unaffected.
     code_samples: []
     parameters: []
     returns:
@@ -357,14 +422,20 @@ methods:
     capabilities:
       - AssetManagement
   - name: ContentProvider:UnregisterEncryptedAsset
-    summary: ''
-    description: ''
+    summary: |
+      Removes the encryption key registered for a specific asset.
+    description: |
+      Removes the encryption key associated with `assetId` by
+      `Class.ContentProvider:RegisterEncryptedAsset()|RegisterEncryptedAsset()`,
+      so the asset is no longer decrypted with that key. If no key is registered
+      for the asset, the call has no effect.
     code_samples: []
     parameters:
       - name: assetId
         type: ContentId
         default:
-        summary: ''
+        summary: |
+          The asset whose registered encryption key should be removed.
     returns:
       - type: ()
         summary: ''
@@ -376,14 +447,19 @@ methods:
       - AssetManagement
 events:
   - name: ContentProvider.AssetFetchFailed
-    summary: ''
-    description: ''
+    summary: |
+      Fires when the `Class.ContentProvider` fails to fetch an asset, passing
+      the asset's ID.
+    description: |
+      Fires when an asset requested through the `Class.ContentProvider` fails to
+      be fetched, passing the content ID of the asset that failed.
     code_samples: []
     parameters:
       - name: assetId
         type: ContentId
         default:
-        summary: ''
+        summary: |
+          The content ID of the asset that failed to load.
     tags: []
     deprecation_message: ''
     security: None

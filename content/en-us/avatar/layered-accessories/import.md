@@ -74,7 +74,7 @@ To generate your layered accessory:
 
    <img src="../../assets/art/accessories/creating/AFT-Select-Type-Pants.png" />
 
-1. [Test](../../avatar/accessory-fitting-tool.md#test-accessories) out various sample characters and animations to make sure your layered clothing is deforming and moving correctly.
+1. [Test](../../avatar/accessory-fitting-tool.md#test-accessories) out various sample characters and animations to make sure your layered accessory is deforming and moving correctly.
 
    - If necessary, make minor cage adjustments using the editing features. Larger cage changes may require returning to your third-party modeling software and re-exporting the asset.
 
