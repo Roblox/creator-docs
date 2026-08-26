@@ -87,8 +87,7 @@ properties:
     type: boolean
     tags:
       - Deprecated
-    deprecation_message: |
-      This property should not be used for new work.
+    deprecation_message: ''
     security:
       read: None
       write: None

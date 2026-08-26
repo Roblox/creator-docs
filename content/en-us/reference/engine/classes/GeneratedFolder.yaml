@@ -43,7 +43,10 @@ methods:
       - name: part
         type: BasePart
         default:
-        summary: ''
+        summary: |
+          The `Class.BasePart` inside this `GeneratedFolder` to designate as the
+          `Class.Model.PrimaryPart|PrimaryPart` of the resulting
+          `Class.ProceduralModel`.
     returns:
       - type: ()
         summary: ''

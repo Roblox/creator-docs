@@ -5,8 +5,19 @@
 name: StudioCaptureService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A Studio-only service that lets plugins capture screenshots of the active
+  place's 3D viewport.
+description: |
+  `StudioCaptureService` is a Studio-only service that lets plugins capture
+  screenshots of the active place's 3D viewport. Use
+  `Class.StudioCaptureService:RequestScreenshotPermissionAsync()|RequestScreenshotPermissionAsync()`
+  to obtain the user's permission,
+  `Class.StudioCaptureService:CanCaptureScreenshot()|CanCaptureScreenshot()` to
+  check whether a capture is currently possible, and
+  `Class.StudioCaptureService:CaptureScreenshot()|CaptureScreenshot()` to
+  request an image of the current view. All members require plugin security and
+  are only available within Studio.
 code_samples: []
 inherits:
   - Instance
@@ -19,43 +30,93 @@ deprecation_message: ''
 properties: []
 methods:
   - name: StudioCaptureService:CanCaptureScreenshot
-    summary: ''
-    description: ''
+    summary: |
+      Returns whether a screenshot can currently be captured.
+    description: |
+      Returns `false` when there is a known reason a screenshot cannot be
+      captured — for example, when this is not the active `Class.DataModel` or
+      the plugin does not have permission — and `true` otherwise. A return value
+      of `true` does not guarantee that
+      `Class.StudioCaptureService:CaptureScreenshot()|CaptureScreenshot()` will
+      succeed, because conditions can change between the two calls.
     code_samples: []
     parameters: []
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          A boolean that is `false` when a screenshot is known to be
+          uncapturable, or `true` otherwise.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
   - name: StudioCaptureService:CaptureScreenshot
-    summary: ''
-    description: ''
+    summary: |
+      Captures a screenshot of the active place according to the provided
+      options.
+    description: |
+      Captures a screenshot of the active `Class.DataModel` according to
+      `screenshotOptions` and returns a `Class.StudioScreenshotCapture` in the
+      requested format. If an image of the requested size cannot be captured at
+      the requested position, the capture fails rather than clipping the image.
+
+      The `screenshotOptions` dictionary accepts the following keys:
+
+      - `Position` — a `Datatype.Vector2` top-left offset of the captured
+        region. Must be non-negative and defaults to `(0, 0)`.
+      - `CaptureSize` — a `Datatype.Vector2` size of the region to capture. Both
+        components must be positive.
+      - `OutputSize` — a `Datatype.Vector2` size of the returned image. Both
+        components must be positive; when it differs from `CaptureSize`,
+        `ResampleMode` must also be provided.
+      - `ResampleMode` — the resampling filter used when `OutputSize` differs
+        from `CaptureSize`.
+      - `Format` — an `Enum.StudioCaptureScreenshotFormat` for the returned
+        buffer. Defaults to `Enum.StudioCaptureScreenshotFormat.RGBA8`.
+      - `UICaptureMode` — an `Enum.UICaptureMode` controlling whether UI is
+        included in the capture. Defaults to `Enum.UICaptureMode.All`.
+
+      The returned `Class.StudioScreenshotCapture` is populated asynchronously:
+      its image buffer becomes available only after the capture and encoding
+      complete, and any errors are reported on the capture object.
     code_samples: []
     parameters:
       - name: screenshotOptions
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A dictionary of options controlling the capture, such as `Position`,
+          `CaptureSize`, `OutputSize`, `ResampleMode`, `Format`, and
+          `UICaptureMode`.
     returns:
       - type: StudioScreenshotCapture
-        summary: ''
+        summary: |
+          A `Class.StudioScreenshotCapture` that holds the requested image in
+          the requested format.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
   - name: StudioCaptureService:RequestScreenshotPermissionAsync
-    summary: ''
-    description: ''
+    summary: |
+      Requests the user's permission for the plugin to capture screenshots from
+      the Studio 3D view.
+    description: |
+      This yielding function asks the user to grant the plugin permission to
+      capture screenshots from their Studio 3D view, returning `true` if
+      permission is granted and `false` otherwise. It can return immediately
+      without prompting when the plugin's permission is already known from an
+      earlier session, and it returns `false` without prompting when the global
+      screenshot setting is disabled.
     code_samples: []
     parameters: []
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          A boolean that is `true` if the user granted permission and `false`
+          otherwise.
     tags:
       - Yields
     deprecation_message: ''

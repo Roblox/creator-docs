@@ -213,7 +213,21 @@ properties:
     summary: |
       Customizes gamepad selection behavior in the down direction.
     description: |
-      Customizes gamepad selection behavior in the down direction.
+      `Class.GuiBase2d.SelectionBehaviorDown|SelectionBehaviorDown` customizes
+      how gamepad selection moves in the down direction out of a selection
+      group. It only has an effect when
+      `Class.GuiBase2d.SelectionGroup|SelectionGroup` is `true`;
+      `SelectionGroup` is `false` by default, and while it remains `false` this
+      property has no effect.
+
+      Its default value is `Enum.SelectionBehavior.Escape`, which prioritizes
+      buttons within the selection group but allows the selection to move to a
+      `Class.GuiObject` outside the group in the down direction if no suitable
+      button is found inside. Setting it to `Enum.SelectionBehavior.Stop`
+      instead constrains the selection to the group, preventing it from moving
+      downward out of the group.
+
+      See also `Class.GuiBase2d.SelectionGroup|SelectionGroup`.
     code_samples: []
     type: SelectionBehavior
     tags: []
@@ -232,7 +246,21 @@ properties:
     summary: |
       Customizes gamepad selection behavior in the left direction.
     description: |
-      Customizes gamepad selection behavior in the left direction.
+      `Class.GuiBase2d.SelectionBehaviorLeft|SelectionBehaviorLeft` customizes
+      how gamepad selection moves in the left direction out of a selection
+      group. It only has an effect when
+      `Class.GuiBase2d.SelectionGroup|SelectionGroup` is `true`;
+      `SelectionGroup` is `false` by default, and while it remains `false` this
+      property has no effect.
+
+      Its default value is `Enum.SelectionBehavior.Escape`, which prioritizes
+      buttons within the selection group but allows the selection to move to a
+      `Class.GuiObject` outside the group in the left direction if no suitable
+      button is found inside. Setting it to `Enum.SelectionBehavior.Stop`
+      instead constrains the selection to the group, preventing it from moving
+      leftward out of the group.
+
+      See also `Class.GuiBase2d.SelectionGroup|SelectionGroup`.
     code_samples: []
     type: SelectionBehavior
     tags: []
@@ -251,7 +279,21 @@ properties:
     summary: |
       Customizes gamepad selection behavior in the right direction.
     description: |
-      Customizes gamepad selection behavior in the right direction.
+      `Class.GuiBase2d.SelectionBehaviorRight|SelectionBehaviorRight` customizes
+      how gamepad selection moves in the right direction out of a selection
+      group. It only has an effect when
+      `Class.GuiBase2d.SelectionGroup|SelectionGroup` is `true`;
+      `SelectionGroup` is `false` by default, and while it remains `false` this
+      property has no effect.
+
+      Its default value is `Enum.SelectionBehavior.Escape`, which prioritizes
+      buttons within the selection group but allows the selection to move to a
+      `Class.GuiObject` outside the group in the right direction if no suitable
+      button is found inside. Setting it to `Enum.SelectionBehavior.Stop`
+      instead constrains the selection to the group, preventing it from moving
+      rightward out of the group.
+
+      See also `Class.GuiBase2d.SelectionGroup|SelectionGroup`.
     code_samples: []
     type: SelectionBehavior
     tags: []
@@ -270,7 +312,20 @@ properties:
     summary: |
       Customizes gamepad selection behavior in the up direction.
     description: |
-      Customizes gamepad selection behavior in the up direction.
+      `Class.GuiBase2d.SelectionBehaviorUp|SelectionBehaviorUp` customizes how
+      gamepad selection moves in the up direction out of a selection group. It
+      only has an effect when `Class.GuiBase2d.SelectionGroup|SelectionGroup` is
+      `true`; `SelectionGroup` is `false` by default, and while it remains
+      `false` this property has no effect.
+
+      Its default value is `Enum.SelectionBehavior.Escape`, which prioritizes
+      buttons within the selection group but allows the selection to move to a
+      `Class.GuiObject` outside the group in the up direction if no suitable
+      button is found inside. Setting it to `Enum.SelectionBehavior.Stop`
+      instead constrains the selection to the group, preventing it from moving
+      upward out of the group.
+
+      See also `Class.GuiBase2d.SelectionGroup|SelectionGroup`.
     code_samples: []
     type: SelectionBehavior
     tags: []
@@ -343,11 +398,15 @@ events:
       - name: previousSelection
         type: GuiObject
         default:
-        summary: ''
+        summary: |
+          The `Class.GuiObject` that was previously selected before the
+          selection changed, or nil if nothing was selected.
       - name: newSelection
         type: GuiObject
         default:
-        summary: ''
+        summary: |
+          The `Class.GuiObject` that is now selected after the selection
+          changed, or nil if nothing is selected.
     tags: []
     deprecation_message: ''
     security: None

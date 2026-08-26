@@ -98,7 +98,6 @@ descendants:
   - CustomEventReceiver
   - CustomLog
   - DataModelMesh
-  - DataModelSession
   - DataStoreGetOptions
   - DataStoreIncrementOptions
   - DataStoreInfo
@@ -187,7 +186,6 @@ descendants:
   - ModerationService
   - Mouse
   - MouseService
-  - MultipleDocumentInterfaceInstance
   - NetworkSettings
   - OpenCloudApiV1
   - OpenCloudService

@@ -144,13 +144,33 @@ properties:
       - Basic
 methods:
   - name: ProceduralModel:ForceGeneration
-    summary: ''
-    description: ''
+    summary: |
+      Immediately runs any pending generation instead of waiting for the
+      scheduled regeneration.
+    description: |
+      Generation is normally scheduled soon after a parameter changes so work
+      can be deferred for performance. `ForceGeneration()` instead runs any
+      pending generation synchronously and returns whether the
+      `Class.ProceduralModel` is up to date.
+
+      If nothing is pending, returns `true` without regenerating. Otherwise runs
+      the generator to completion under a hard timeout, then returns `true` only
+      if the model is no longer waiting to regenerate and produced no
+      `Class.ProceduralModel.GenerationError|GenerationError`. On failure or
+      timeout, returns `false` and re-queues normal scheduled generation. Unlike
+      scheduled generation, a forced generation doesn't yield to preserve the
+      frame budget, so `parameters:Pause()` inside the generator returns without
+      pausing.
+
+      Throws if called from within a generator's `OnGenerate` function.
     code_samples: []
     parameters: []
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Whether the `ProceduralModel` is up to date after the call: `true` if
+          generation completed successfully or nothing needed to be regenerated,
+          `false` otherwise.
     tags: []
     deprecation_message: ''
     security: None

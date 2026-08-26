@@ -126,7 +126,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - Basic
   - name: TweenService:SmoothDamp

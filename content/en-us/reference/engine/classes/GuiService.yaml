@@ -418,11 +418,14 @@ methods:
       - name: selectionName
         type: string
         default:
-        summary: ''
+        summary: |
+          A unique name identifying this selection group.
       - name: selectionParent
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.GuiObject` whose selectable descendants form the navigation
+          group.
     returns:
       - type: ()
         summary: ''
@@ -506,17 +509,31 @@ methods:
     capabilities:
       - UI
   - name: GuiService:DismissNotification
-    summary: ''
-    description: ''
+    summary: |
+      Dismisses a notification previously shown by
+      `Class.GuiService:SendNotification()|SendNotification()`.
+    description: |
+      Dismisses the notification identified by `notificationId`, which is the
+      string returned when the notification was created with
+      `Class.GuiService:SendNotification()|SendNotification()`. If the
+      notification was created with an `OnDismiss` callback, that callback is
+      invoked. Returns `true` when a matching notification is found and
+      dismissed, or `false` when no active notification has the given
+      `notificationId`.
     code_samples: []
     parameters:
       - name: notificationId
         type: string
         default:
-        summary: ''
+        summary: |
+          The identifier returned by
+          `Class.GuiService:SendNotification()|SendNotification()` for the
+          notification to dismiss.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if a matching notification was found and dismissed; `false` if
+          no active notification has the given `notificationId`.
     tags: []
     deprecation_message: ''
     security: None
@@ -619,10 +636,13 @@ methods:
       - name: screenInsets
         type: ScreenInsets
         default:
-        summary: ''
+        summary: |
+          The `Enum.ScreenInsets` value indicating which inset area to query.
     returns:
       - type: Rect
-        summary: ''
+        summary: |
+          A `Datatype.Rect` of the usable region for the specified
+          `Enum.ScreenInsets` area.
     tags: []
     deprecation_message: ''
     security: None
@@ -732,12 +752,17 @@ methods:
 
       Note that you should **not** use this property in an attempt to verify if
       the player is on a console or not. Instead, consider reading
-      `Class.GuiService.ViewportDisplaySize|ViewportDisplaySize`.
+      `Class.GuiService.ViewportDisplaySize|ViewportDisplaySize`. This method is
+      hardcoded to return `true` whenever the client runs on a console,
+      regardless of how the player is actually interacting with the device,
+      making it an unreliable proxy for rendering context.
     code_samples: []
     parameters: []
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the client is using the ten foot interface (console UI
+          mode); `false` otherwise.
     tags: []
     deprecation_message: |
       This method has been superseded by the
@@ -761,7 +786,8 @@ methods:
       - name: selectionName
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the selection group to remove.
     returns:
       - type: ()
         summary: ''
@@ -800,17 +826,78 @@ methods:
     capabilities:
       - UI
   - name: GuiService:SendNotification
-    summary: ''
-    description: ''
+    summary: |
+      Displays a notification described by `notificationInfo` and returns a
+      unique identifier for it.
+    description: |
+      Displays a notification built from the `notificationInfo` dictionary using
+      Roblox's native notification UI, and returns a unique identifier string
+      for the notification. The following fields of `notificationInfo` are
+      recognized:
+
+      <table>
+      <thead>
+        <tr>
+        	<th>Field</th>
+        	<th>Type</th>
+        	<th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        	<td><code>Title</code></td>
+        	<td><code>string</code></td>
+        	<td>The notification's title text.</td>
+        </tr>
+        <tr>
+        	<td><code>Text</code></td>
+        	<td><code>string</code></td>
+        	<td>The notification's body text.</td>
+        </tr>
+        <tr>
+        	<td><code>Icon</code></td>
+        	<td><code>string</code></td>
+        	<td>An image asset to display with the notification.</td>
+        </tr>
+        <tr>
+        	<td><code>Buttons</code></td>
+        	<td><code>{[ButtonInfo]}</code></td>
+        	<td>An array of button definitions. Each entry is a table with a <code>Text</code> (<code>string</code>), a <code>ButtonType</code> (<code>Enum.NotificationButtonType</code>), and an <code>OnActivated</code> (<code>function</code>) callback invoked when the button is pressed.</td>
+        </tr>
+        <tr>
+        	<td><code>OnDisplay</code></td>
+        	<td><code>function</code></td>
+        	<td>Invoked when the notification is shown.</td>
+        </tr>
+        <tr>
+        	<td><code>OnDismiss</code></td>
+        	<td><code>function</code></td>
+        	<td>Invoked when the notification is dismissed.</td>
+        </tr>
+      </tbody>
+      </table>
+
+      The returned identifier can be passed to
+      `Class.GuiService:DismissNotification()|DismissNotification()` to dismiss
+      the notification programmatically; an empty string is returned if the
+      notification could not be queued.
     code_samples: []
     parameters:
       - name: notificationInfo
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          A dictionary describing the notification. Recognized fields are
+          `Title` (string), `Text` (string), `Icon` (string), `Buttons` (an
+          array of button tables, each with a `Text` string, a `ButtonType`
+          `Enum.NotificationButtonType` value, and an `OnActivated` callback),
+          and `OnDisplay`/`OnDismiss` callback functions.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A unique identifier string for the notification, which can be passed
+          to `Class.GuiService:DismissNotification()|DismissNotification()`.
+          Returns an empty string if the notification could not be queued.
     tags: []
     deprecation_message: ''
     security: None
@@ -827,7 +914,8 @@ methods:
       - name: isOpen
         type: boolean
         default:
-        summary: ''
+        summary: |
+          Whether to open (`true`) or close (`false`) the emotes menu.
     returns:
       - type: ()
         summary: ''

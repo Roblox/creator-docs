@@ -1241,6 +1241,10 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 30
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
           }
         },
         "x-roblox-scopes": [
@@ -1255,6 +1259,9 @@
         "security": [
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics:read"]
           }
         ],
         "externalDocs": {
@@ -1387,6 +1394,10 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 30
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
           }
         },
         "x-roblox-scopes": [
@@ -1401,6 +1412,9 @@
         "security": [
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics:read"]
           }
         ],
         "externalDocs": {
@@ -1521,6 +1535,10 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 3000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 3000
           }
         },
         "x-roblox-scopes": [
@@ -1535,6 +1553,9 @@
         "security": [
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics:read"]
           }
         ],
         "externalDocs": {
@@ -1655,6 +1676,10 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 3000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 3000
           }
         },
         "x-roblox-scopes": [
@@ -1669,6 +1694,9 @@
         "security": [
           {
             "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics:read"]
           }
         ],
         "externalDocs": {
@@ -19353,9 +19381,6 @@
           "400": {
             "description": "14: Invalid game id\r\n52: Image dimensions are invalid"
           },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
           "500": {
             "description": "0: An unknown error occurred."
           },
@@ -25781,7 +25806,7 @@
     },
     "/server-management/v1/universes/{universeId}/places/{placeId}/game-servers:filter-options": {
       "get": {
-        "tags": ["Places"],
+        "tags": ["Observability"],
         "summary": "Gets available filter options for game servers.",
         "operationId": "GameServers_GetFilterOptions",
         "parameters": [
@@ -25892,13 +25917,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/places#GameServers_GetFilterOptions"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/observability#GameServers_GetFilterOptions"
         }
       }
     },
     "/server-management/v1/universes/{universeId}/places/{placeId}/versions/{versionNumber}/game-servers": {
       "get": {
-        "tags": ["Places"],
+        "tags": ["Observability"],
         "summary": "Lists game servers for a specific place version.",
         "operationId": "GameServers_ListGameServers",
         "parameters": [
@@ -26041,13 +26066,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/places#GameServers_ListGameServers"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/observability#GameServers_ListGameServers"
         }
       }
     },
     "/server-management/v1/universes/{universeId}/places/{placeId}/versions/{versionNumber}/game-servers/{jobId}/logs": {
       "get": {
-        "tags": ["Places"],
+        "tags": ["Observability"],
         "summary": "Lists game server logs for a specific server job id",
         "operationId": "GameServers_ListGameServerLogs",
         "parameters": [
@@ -26092,7 +26117,7 @@
           {
             "name": "MaxPageSize",
             "in": "query",
-            "description": "The maximum number of game servers to return. The service might return\r\nfewer than this value. If unspecified, at most 25 game servers are\r\nreturned. The maximum value is 100 and higher values are set to 100.",
+            "description": "The maximum number of log entries to return. Defaults to 25 and values above 100 are\r\ncapped at 100.",
             "schema": {
               "maximum": 100,
               "minimum": 1,
@@ -26103,7 +26128,7 @@
           {
             "name": "PageToken",
             "in": "query",
-            "description": "A page token, received from a previous call, to retrieve a subsequent page.\r\nWhen paginating, all other parameters provided to the subsequent call must\r\nmatch the call that provided the page token.",
+            "description": "An opaque token from a previous response. Preserve the other query parameters when\r\nrequesting the next page.",
             "schema": {
               "type": "string"
             }
@@ -26111,7 +26136,7 @@
           {
             "name": "OrderBy",
             "in": "query",
-            "description": "Sorting is supported only for a single field at a time.\r\nExample: \"orderBy\": \"uptime\"\r\nDefaults to ascending, but descending ordering is also supported by\r\nincluding the \" desc\" suffix. For example: \"orderBy\": \"uptime desc\".",
+            "description": "Sorts by `message_timestamp` or `log_severity`. Append ` desc` for descending order.\r\nEach endpoint defines its own default when this value is omitted.",
             "schema": {
               "type": "string"
             }
@@ -26119,7 +26144,7 @@
           {
             "name": "Filter",
             "in": "query",
-            "description": "This field may be set in order to filter the resources returned.\r\n- CEL filtering is supported on all fields.\r\n- Supported operators &&, <, <=, >, >=, ==, and `in`",
+            "description": "Filters log entries with CEL. Use `severity` with equality or `in`, `message_timestamp`\r\nwith comparisons, or `search` with equality or inequality for case-insensitive full-text matching.",
             "schema": {
               "type": "string"
             }
@@ -26199,13 +26224,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/places#GameServers_ListGameServerLogs"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/observability#GameServers_ListGameServerLogs"
         }
       }
     },
     "/server-management/v1/universes/{universeId}/restarts": {
       "get": {
-        "tags": ["Universes"],
+        "tags": ["Observability"],
         "summary": "List restart statuses for a universe.",
         "operationId": "Restarts_ListRestartStatuses",
         "parameters": [
@@ -26294,11 +26319,11 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#Restarts_ListRestartStatuses"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/observability#Restarts_ListRestartStatuses"
         }
       },
       "post": {
-        "tags": ["Universes"],
+        "tags": ["Observability"],
         "summary": "Launch a game server restart for a universe.",
         "operationId": "Restarts_LaunchRestart",
         "parameters": [
@@ -26422,13 +26447,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#Restarts_LaunchRestart"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/observability#Restarts_LaunchRestart"
         }
       }
     },
     "/server-management/v1/universes/{universeId}/restarts:forecast": {
       "get": {
-        "tags": ["Universes"],
+        "tags": ["Observability"],
         "summary": "Forecast the impact of restarting game servers for a universe.",
         "operationId": "Restarts_ForecastRestart",
         "parameters": [
@@ -26517,7 +26542,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#Restarts_ForecastRestart"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/observability#Restarts_ForecastRestart"
         }
       }
     },
@@ -35911,9 +35936,6 @@
           "400": {
             "description": "14: Invalid game id\r\n52: Image dimensions are invalid"
           },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
           "500": {
             "description": "0: An unknown error occurred."
           },
@@ -38400,7 +38422,7 @@
     },
     "/v1/games/vip-servers/{universeId}": {
       "post": {
-        "tags": ["Private servers", "Universes"],
+        "tags": ["Private servers"],
         "operationId": "PrivateServers_CreatePrivateServer",
         "parameters": [
           {
@@ -38593,7 +38615,7 @@
     },
     "/v1/games/{placeId}/private-servers": {
       "get": {
-        "tags": ["Private servers", "Universes"],
+        "tags": ["Private servers"],
         "operationId": "PrivateServers_GetPrivateServerList",
         "parameters": [
           {
@@ -48552,6 +48574,7 @@
     },
     "/v1/preferences/publishing": {
       "delete": {
+        "tags": ["Assets", "Creator Store"],
         "parameters": [
           {
             "in": "query",
@@ -48585,9 +48608,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_delete_v1_preferences_publishing"
+        }
       },
       "get": {
+        "tags": ["Assets", "Creator Store"],
         "parameters": [
           {
             "in": "query",
@@ -48630,9 +48657,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_get_v1_preferences_publishing"
+        }
       },
       "patch": {
+        "tags": ["Assets", "Creator Store"],
         "requestBody": {
           "content": {
             "application/json": {
@@ -48683,9 +48714,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_patch_v1_preferences_publishing"
+        }
       },
       "post": {
+        "tags": ["Assets", "Creator Store"],
         "requestBody": {
           "content": {
             "application/json": {
@@ -48736,7 +48771,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_post_v1_preferences_publishing"
+        }
       }
     },
     "/v1/presence/users": {
@@ -48819,7 +48857,7 @@
     },
     "/v1/private-servers/enabled-in-universe/{universeId}": {
       "get": {
-        "tags": ["Private servers", "Universes"],
+        "tags": ["Private servers"],
         "operationId": "PrivateServers_PrivateServersEnabledInUniverse",
         "parameters": [
           {
@@ -48865,7 +48903,7 @@
     },
     "/v1/private-servers/my-private-servers": {
       "get": {
-        "tags": ["Private servers", "Universes"],
+        "tags": ["Private servers"],
         "operationId": "PrivateServers_GetMyPrivateServers",
         "parameters": [
           {
@@ -52539,7 +52577,7 @@
     },
     "/v1/universes/{universeId}/configuration/vip-servers": {
       "get": {
-        "tags": ["Private servers", "Universes"],
+        "tags": ["Private servers"],
         "summary": "Get settings for an owned universe's VIP servers.",
         "parameters": [
           {
@@ -60210,7 +60248,7 @@
     },
     "/v1/vip-servers/{id}": {
       "get": {
-        "tags": ["Metadata", "Private servers", "Universes"],
+        "tags": ["Metadata", "Private servers"],
         "operationId": "PrivateServers_GetPrivateServer",
         "parameters": [
           {
@@ -60253,7 +60291,7 @@
         }
       },
       "patch": {
-        "tags": ["Private servers", "Universes"],
+        "tags": ["Private servers"],
         "operationId": "PrivateServers_UpdatePrivateServer",
         "parameters": [
           {
@@ -60329,7 +60367,7 @@
     },
     "/v1/vip-servers/{id}/permissions": {
       "patch": {
-        "tags": ["Groups", "Private servers", "Universes"],
+        "tags": ["Groups", "Private servers"],
         "operationId": "PrivateServers_UpdatePrivateServerPermissions",
         "parameters": [
           {
@@ -60405,7 +60443,7 @@
     },
     "/v1/vip-servers/{id}/subscription": {
       "patch": {
-        "tags": ["Private servers", "Universes"],
+        "tags": ["Private servers"],
         "operationId": "PrivateServers_UpdatePrivateServerSubscription",
         "parameters": [
           {
@@ -83180,6 +83218,9 @@
           "isCaptchaRequired": {
             "description": "Captcha is set to true if captcha is required from user to perform action",
             "type": "boolean"
+          },
+          "notificationMuted": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -97395,6 +97436,10 @@
           "inventory_get_v2_users__userId__inventory",
           "itemconfiguration_post_v1_creations_get_asset_details",
           "itemconfiguration_get_v1_creations_get_assets",
+          "itemconfiguration_get_v1_preferences_publishing",
+          "itemconfiguration_post_v1_preferences_publishing",
+          "itemconfiguration_patch_v1_preferences_publishing",
+          "itemconfiguration_delete_v1_preferences_publishing",
           "publish_get_v1_asset_quotas",
           "publish_post_v1_audio",
           "publish_post_v1_audio_verify",
@@ -97603,7 +97648,11 @@
           "Saves_GetSaves",
           "Saves_CreateSave",
           "Saves_DeleteSave",
-          "Saves_BulkDeleteSaves"
+          "Saves_BulkDeleteSaves",
+          "itemconfiguration_get_v1_preferences_publishing",
+          "itemconfiguration_post_v1_preferences_publishing",
+          "itemconfiguration_patch_v1_preferences_publishing",
+          "itemconfiguration_delete_v1_preferences_publishing"
         ]
       }
     },
@@ -98249,6 +98298,22 @@
       }
     },
     {
+      "name": "Observability",
+      "description": "Monitor and manage game servers for an experience.\n\nCommon use cases include:\n\n- Server discovery: [List active game servers](#GameServers_ListGameServers) for a specific place version and [retrieve available filter options](#GameServers_GetFilterOptions)\n- Log retrieval: [Inspect logs](#GameServers_ListGameServerLogs) for a specific game server\n- Server restarts: [Forecast the impact](#Restarts_ForecastRestart) of a restart, [launch it](#Restarts_LaunchRestart), and [monitor its status](#Restarts_ListRestartStatuses)\n",
+      "x-roblox-tag-info": {
+        "path": "observability",
+        "content": "HTTP APIs for monitoring and managing game servers on Roblox Cloud.",
+        "ordering": [
+          "GameServers_GetFilterOptions",
+          "GameServers_ListGameServers",
+          "GameServers_ListGameServerLogs",
+          "Restarts_ForecastRestart",
+          "Restarts_ListRestartStatuses",
+          "Restarts_LaunchRestart"
+        ]
+      }
+    },
+    {
       "name": "Places",
       "description": "Manage places, update instance properties, and publish place versions programmatically. See the [Engine Instances Guide](/cloud/guides/instance) and [Place Publishing Guide](/cloud/guides/usage-place-publishing).\n\nCommon use cases include:\n\n- Automated publishing: Publish place updates from CI/CD pipelines with version control and rollback support\n- Instance management: [Read](#Cloud_GetInstance) and [update](#Cloud_UpdateInstance) Script, LocalScript, and ModuleScript objects in collaborative sessions\n- Luau execution: [Run Luau scripts](#Cloud_CreateLuauExecutionSessionTask__Using_Universes) on specific place versions for testing or automation\n",
       "x-roblox-tag-info": {
@@ -98275,9 +98340,6 @@
           "develop_get_v1_places__placeId__teamcreate_active_session_members",
           "delete_legacy_develop_v2_teamtest__placeId_",
           "develop_delete_v2_teamtest__placeId_",
-          "GameServers_GetFilterOptions",
-          "GameServers_ListGameServers",
-          "GameServers_ListGameServerLogs",
           "Places_CreatePlaceVersionApiKey",
           "develop_patch_v1_places__placeId_",
           "develop_post_v1_places__placeId_",
@@ -98424,7 +98486,7 @@
     },
     {
       "name": "Universes",
-      "description": "Manage experiences (universes), publish updates, and communicate with live servers. See the [Messaging Usage Guide](/cloud/guides/usage-messaging) and [Place Publishing Guide](/cloud/guides/usage-place-publishing).\n\nCommon use cases include:\n\n- **Cross-Server Messaging**: [Send announcements](#Cloud_PublishUniverseMessage), trigger events, or update all players across servers using the Messaging Service\n- Server management: [Restart servers](#Cloud_RestartUniverseServers) after deploying updates or to clear cached state\n- User restrictions: [Ban or restrict users](#Cloud_UpdateUserRestriction__Using_Universes) from your experience at the universe or place level\n- Playtester access: [List](#develop_get_v1_universes__universeId__configuration_playtesters), [add](#develop_post_v1_universes__universeId__configuration_playtesters), or [remove](#develop_delete_v1_universes__universeId__configuration_playtesters) playtesters for a universe\n",
+      "description": "Manage experiences (universes), publish updates, and communicate with live servers. See the [Messaging Usage Guide](/cloud/guides/usage-messaging) and [Place Publishing Guide](/cloud/guides/usage-place-publishing).\n\nCommon use cases include:\n\n- **Cross-Server Messaging**: [Send announcements](#Cloud_PublishUniverseMessage), trigger events, or update all players across servers using the Messaging Service\n- User restrictions: [Ban or restrict users](#Cloud_UpdateUserRestriction__Using_Universes) from your experience at the universe or place level\n- Playtester access: [List](#develop_get_v1_universes__universeId__configuration_playtesters), [add](#develop_post_v1_universes__universeId__configuration_playtesters), or [remove](#develop_delete_v1_universes__universeId__configuration_playtesters) playtesters for a universe\n",
       "x-roblox-tag-info": {
         "path": "universes",
         "content": "HTTP APIs for working with universes on Roblox Cloud, including subscriptions, place and instance updates, user restrictions, and more.",
@@ -98512,9 +98574,6 @@
           "localizationtables_post_v1_autolocalization_games__gameId__autolocalizationtable",
           "patch_legacy_localization_tables_v1_autolocalization_games__gameId__settings",
           "localizationtables_patch_v1_autolocalization_games__gameId__settings",
-          "Restarts_ForecastRestart",
-          "Restarts_ListRestartStatuses",
-          "Restarts_LaunchRestart",
           "CrossServerMessaging_Publish",
           "Places_CreatePlaceVersionApiKey",
           "get_cloud_v2_universes__universeId__secrets_public_key",
@@ -98530,7 +98589,6 @@
           "develop_get_v1_universes__universeId_",
           "develop_get_v1_universes__universeId__configuration",
           "develop_patch_v1_universes__universeId__configuration",
-          "develop_get_v1_universes__universeId__configuration_vip_servers",
           "develop_get_v1_universes__universeId__places",
           "develop_get_v1_universes_multiget",
           "develop_get_v1_user_groups_canmanagegamesoritems",
@@ -98555,7 +98613,6 @@
           "gameinternationalization_post_v1_user_localization_settings_universe__universeId_",
           "gameinternationalization_get_v2_supported_languages_games__gameId_",
           "games_get_v1_games",
-          "PrivateServers_GetPrivateServerList",
           "games_get_v1_games__universeId__favorites",
           "games_post_v1_games__universeId__favorites",
           "games_get_v1_games__universeId__favorites_count",
@@ -98567,14 +98624,7 @@
           "games_get_v1_games_multiget_place_details",
           "games_get_v1_games_multiget_playability_status",
           "games_get_v1_games_recommendations_game__universeId_",
-          "PrivateServers_CreatePrivateServer",
           "Voting_MultiGetGameVoteStatus",
-          "PrivateServers_PrivateServersEnabledInUniverse",
-          "PrivateServers_GetMyPrivateServers",
-          "PrivateServers_GetPrivateServer",
-          "PrivateServers_UpdatePrivateServer",
-          "PrivateServers_UpdatePrivateServerPermissions",
-          "PrivateServers_UpdatePrivateServerSubscription",
           "games_get_v2_games__universeId__media",
           "games_get_v2_groups__groupId__games",
           "games_get_v2_groups__groupId__gamesV2",
