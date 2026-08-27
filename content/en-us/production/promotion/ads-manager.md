@@ -11,7 +11,7 @@ The **Ads Manager** offers you control over your ad campaigns, empowering you to
 
 ## Set up an ad account
 
-To access the Ads Manager, you must set up an ad account with a verified email on a Roblox account registered for users aged 13 years or older.
+To access the Ads Manager, you must set up an ad account on a Roblox account registered for users aged 13 years or older with either a verified age or a verified email.
 
 When setting up an account, you can choose between creating a personal or a business ads account. A personal account is for individuals who want to advertise on Roblox, while a business account manages a company's ad presence on Roblox.
 
