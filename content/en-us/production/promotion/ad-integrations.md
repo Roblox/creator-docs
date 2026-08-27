@@ -52,7 +52,7 @@ To register your ad integration campaign:
 2. Go to **Ad integrations**.
 3. Click **Register**.
 4. Under **Integration details**:
-    1. Select between 1 and 20 experiences that you own and that are eligible for ad integrations. If any selected experience fails validation, the campaign isn't registered.
+    1. Select the game you want to add the integration to.
     2. Enter the name of the advertiser. This is the name users see in ad disclosures within your game.
     3. Select an advertiser category from the drop-down options. If your advertiser doesn't fit into any of the available categories, select **None of the above**. The moderation team will review your submission and may update the category if needed.
     4. Select a start and end to the campaign.
