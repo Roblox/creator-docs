@@ -25,8 +25,8 @@ description: |
   - Top-left: `(0, 0)`
   - Bottom-right: `(Size.X - 1, Size.Y - 1)`
 
-  When you use `Class.AssetService:PromptCreateAssetAsync()` to publish an
-  object that has a `Datatype.Content` property which references an
+  When you use `Class.AssetService:PromptCreatePlatformContentAsync()` to
+  publish an object that has a `Datatype.Content` property which references an
   `EditableImage`, the editable image is published as an image and the property
   is set to a new asset ID.
 

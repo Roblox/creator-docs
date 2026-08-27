@@ -7,7 +7,12 @@ type: enum
 summary: |
   Indicates the status of a `Class.TextChatMessage`.
 description: |
-  Indicates the status of a `Class.TextChatMessage`.
+  Indicates the status of a `Class.TextChatMessage`. The
+  `Class.TextChatMessage.Status` property is set by
+  `Class.TextChannel:SendAsync()` to report the outcome of an attempted send. A
+  status of `Enum.TextChatMessageStatus.Success` means the message passed all
+  server-side checks; any other value identifies the reason the message was
+  blocked or has not yet completed delivery.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -63,7 +68,9 @@ items:
     tags: []
     deprecation_message: ''
   - name: ModerationTimeout
-    summary: ''
+    summary: |
+      Message can't be sent because the user has an active moderation timeout on
+      chat.
     value: 9
     tags: []
     deprecation_message: ''

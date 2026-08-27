@@ -20,53 +20,30 @@ items:
   - name: Unknown
     summary: |
       The transcoding status has not yet been determined. This is the initial
-      state before the model has been queried. Shown as magenta in the debug
-      tint overlay.
+      state before the model has been queried. Shown as yellow in the debug tint
+      overlay.
     value: 0
     tags: []
     deprecation_message: ''
-  - name: NoHash
-    summary: |
-      The model is SLIM-enabled but does not yet have a generated hash, so
-      transcoding has not been requested. Shown as cyan in the debug tint
-      overlay.
-    value: 1
-    tags: []
-    deprecation_message: ''
-  - name: NotUploaded
-    summary: |
-      The model has not been uploaded to the content-delivery network. Shown as
-      orange in the debug tint overlay.
-    value: 2
-    tags: []
-    deprecation_message: ''
-  - name: Uploaded
-    summary: |
-      The model has been uploaded to the content-delivery network but has not
-      yet been transcoded into SLIM assets. Shown as yellow in the debug tint
-      overlay.
-    value: 3
-    tags: []
-    deprecation_message: ''
-  - name: InProgress
+  - name: Transcoding
     summary: |
       SLIM transcoding is currently in progress on the backend. The model is
       expected to transition to Succeeded or Failed once transcoding completes.
       Shown as blue in the debug tint overlay.
-    value: 4
+    value: 1
     tags: []
     deprecation_message: ''
   - name: Succeeded
     summary: |
       Transcoding completed successfully and the SLIM assets are available for
       streaming. Shown as green in the debug tint overlay.
-    value: 5
+    value: 2
     tags: []
     deprecation_message: ''
   - name: Failed
     summary: |
       Transcoding did not complete successfully. Shown as red in the debug tint
       overlay.
-    value: 6
+    value: 3
     tags: []
     deprecation_message: ''

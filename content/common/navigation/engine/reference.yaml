@@ -4631,11 +4631,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/HoverAnimateSpeed.yaml
         ignoreTranslation: true
-      - title: HttpCachePolicy
-        path: /reference/engine/enums/HttpCachePolicy
-        type: engineapi
-        source: /reference/engine/enums/HttpCachePolicy.yaml
-        ignoreTranslation: true
       - title: HttpCompression
         path: /reference/engine/enums/HttpCompression
         type: engineapi

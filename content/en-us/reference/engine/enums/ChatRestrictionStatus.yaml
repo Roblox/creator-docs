@@ -4,24 +4,42 @@
 
 name: ChatRestrictionStatus
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the chat restriction status that a third-party platform reports for
+  a user.
+description: |
+  The `ChatRestrictionStatus` enum represents whether a user is permitted to
+  participate in text or voice chat as determined by a third-party platform such
+  as Xbox or PlayStation. Platform-level restrictions reflect parental controls,
+  age restrictions, or account-level communication settings that the platform
+  enforces independently of Roblox. This status is surfaced through properties
+  such as `Class.Player.ThirdPartyTextChatRestrictionStatus`,
+  `FriendCommunicationRestrictionStatus`, and `VoiceChatRestrictionStatus`, all
+  of which default to `Enum.ChatRestrictionStatus.Unknown` until the platform
+  reports a definitive value.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Unknown
-    summary: ''
+    summary: |
+      The platform's chat restriction status for the user has not yet been
+      determined; this is the default value for all ChatRestrictionStatus
+      properties.
     value: 0
     tags: []
     deprecation_message: ''
   - name: NotRestricted
-    summary: ''
+    summary: |
+      The third-party platform has confirmed the user has no chat restrictions
+      in effect.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Restricted
-    summary: ''
+    summary: |
+      The third-party platform has reported the user is restricted from chat,
+      typically due to parental controls or platform communication settings.
     value: 2
     tags: []
     deprecation_message: ''

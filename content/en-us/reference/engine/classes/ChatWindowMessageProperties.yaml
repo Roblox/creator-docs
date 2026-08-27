@@ -5,7 +5,9 @@
 name: ChatWindowMessageProperties
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  Customizes the appearance of an individual text chat message displayed in the
+  chat window.
 description: |
   Can be used to customize the appearance of text chat messages sent to the
   ChatWindow. Inherits from `Class.TextChatMessageProperies`. To create a new

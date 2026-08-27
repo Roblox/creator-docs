@@ -5,8 +5,15 @@
 name: BubbleChatMessageProperties
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Overrides `Class.BubbleChatConfiguration` properties for an individual bubble
+  chat message.
+description: |
+  Overrides `Class.BubbleChatConfiguration` properties for an individual bubble
+  chat message. Return an instance of this class from the
+  `Class.TextChatService.OnBubbleAdded` callback to customize the appearance of
+  a single message's bubble; any property set here takes precedence over the
+  game-wide `Class.BubbleChatConfiguration`.
 code_samples: []
 inherits:
   - TextChatMessageProperties
@@ -72,8 +79,11 @@ properties:
     capabilities:
       - Chat
   - name: BubbleChatMessageProperties.TailVisible
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether the tail at the bottom of the chat bubble is visible.
+    description: |
+      Determines whether the tail at the bottom of the chat bubble is visible.
+      Defaults to `true`.
     code_samples: []
     type: boolean
     tags: []

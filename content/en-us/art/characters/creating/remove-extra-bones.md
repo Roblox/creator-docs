@@ -20,7 +20,9 @@ Remove the additional head bones by selecting them and deleting them in edit mod
 
 3. Expand the Joints hierarchy by holding **shift** and clicking the expansion dropdown.
 4. In the viewport, select any bone and switch to **Edit Mode**.
-   <img src="../../../assets/art/avatar/basic-creation/Select-Bone-Objects.png" />
 5. Under the Head joint, hold **shift** and select all the head children joints except DynamicHead.
+
+   <img src="../../../assets/art/avatar/basic-creation/Select-Bone-Objects.png" />
+
 6. With the extra head bones selected, right click in the viewport and select **Delete Selected Bones**.
    <video controls src="../../../assets/art/avatar/basic-creation/Cleanup_01-1.mp4" width="100%"></video>

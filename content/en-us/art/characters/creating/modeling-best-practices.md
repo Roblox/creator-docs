@@ -29,7 +29,7 @@ Extreme geometric changes, even if the vertices are not deleted, can still adver
 
 ## Edge flow
 
-Edge flow is a common modeling concept of ensuring that the vertices of your model naturally follow the organic curvature of your model's shape. When making changes to your model's topography, you should maintain a natural edge flow by ensuring that your vertices remain a proportionate distance from each other and follow the common muscle groups and contours of your model.
+Edge flow is a common modeling concept of ensuring that the vertices of your model naturally follow the organic curvature of your model's shape. When making changes to your model's topology, you should maintain a natural edge flow by ensuring that your vertices remain a proportionate distance from each other and follow the common muscle groups and contours of your model.
 
 Even when maintaining edge flow, you should avoid sculpting certain regions of the character model. The following are examples of important sections of the face that follow a natural edge flow and should be kept in a similar shape:
 
@@ -50,7 +50,7 @@ Even when maintaining edge flow, you should avoid sculpting certain regions of t
       <TabItem label = "Narrow">
          <img src="../../../assets/art/avatar/basic-creation/Edge-Flow-Nasolabial-B.png" />
       </TabItem></Tabs></td>
-    <td>**Forehead Wrinkles and Nasolabial Edges**: The edge lines for the forehead wrinkles and nasolabial edges are vital for various expressions involving the mouth, forehead furrowing, eyebrow movement and cheeks. If you modify these sections of your topography, ensure that you retain the original shape whenever possible, and that they maintain a similar relative relationship to each other. </td>
+    <td>**Forehead Wrinkles and Nasolabial Edges**: The edge lines for the forehead wrinkles and nasolabial edges are vital for various expressions involving the mouth, forehead furrowing, eyebrow movement, and cheeks.<br /><br /><Alert severity = "warning">If you modify these sections of your topology, ensure that you retain the original shape whenever possible, and that they maintain a similar relative relationship to each other.</Alert></td>
   </tr>
   <tr>
   <td>
@@ -61,7 +61,7 @@ Even when maintaining edge flow, you should avoid sculpting certain regions of t
       <TabItem label = "Narrow">
          <img src="../../../assets/art/avatar/basic-creation/Edge-Flow-Mouth-B.png" />
       </TabItem></Tabs></td>
-    <td>**Mouth and Lip Edges**: The topography surrounding the lips and mouth have circular mesh structures for the mouth to open and close. This structure can fold the mesh to shape the lips to naturally visualize *a*, *e*, *i*, *o*, and *u* vowel sounds. The neutral shape is a closed mouth, and the edge flows around the mouth in a continuous line to accurately fold and deform the expected mouth shapes.<br /><br />In this tutorial, we don't recommend modifying this area of the facial topography because of the risk of adversely affecting the underlying tongue, upper and lower jaw, and saved facial data. You can use a sculpting mask to ensure that this area is not affected by any modeling changes.</td>
+    <td>**Mouth and Lip Edges**: The topology surrounding the lips and mouth has circular mesh structures for the mouth to open and close. This structure can fold the mesh to shape the lips to naturally visualize *a*, *e*, *i*, *o*, and *u* vowel sounds. The neutral shape is a closed mouth, and the edge flows around the mouth in a continuous line to accurately fold and deform the expected mouth shapes.<br /><br /><Alert severity = "warning">For this tutorial, it's recommended to not modify this area of the facial topology because of the risk of adversely affecting the underlying tongue, upper and lower jaw, and saved facial data. You can use a sculpting mask to ensure that this area is not affected by any modeling changes.</Alert></td>
 
   </tr>
   <tr>
@@ -73,7 +73,7 @@ Even when maintaining edge flow, you should avoid sculpting certain regions of t
       <TabItem label = "Narrow">
          <img src="../../../assets/art/avatar/basic-creation/Edge-Flow-Eyes-B.png" />
       </TabItem></Tabs></td>
-    <td>**Eyes**: The eyelids have enough mesh lines on the eyelids to close the eyes. The continuous lines on the eyelids enable the eyelids to deform and fold as expected when blinking or widening. <br /><br />In this tutorial, it isn't recommended to modify this area of the facial topography because of the risk of adversely affecting the underlying eyeball meshes and saved facial data that contribute to accurate expressions. You can use a sculpting mask to ensure that this area is not affected by any modeling changes.</td>
+    <td>**Eyes**: The eyelids have enough mesh lines to close the eyes. The continuous lines on the eyelids enable the eyelids to deform and fold as expected when blinking or widening. <br /><br /><Alert severity = "warning">For this tutorial, it's recommended to not modify this area of the facial topology because of the risk of adversely affecting the underlying eyeball meshes and saved facial data that contribute to accurate expressions. You can use a sculpting mask to ensure that this area is not affected by any modeling changes.</Alert></td>
   </tr>
 
   <tr>
@@ -85,7 +85,7 @@ Even when maintaining edge flow, you should avoid sculpting certain regions of t
       <TabItem label = "Narrow">
          <img src="../../../assets/art/avatar/basic-creation/Edge-Flow-Eyebrow-B.png" />
       </TabItem></Tabs></td>
-    <td>**Eyelids and Eyebrows**: The eyelids and eyebrows require adequate space between the two regions.<br /><br />If modifying the topography above the eyes, keep in mind that the eyelids and eyebrows require a natural space between the two regions. Both the eyelids and eyebrows can shift and change positions with various facial expressions and, if improperly modeled, can clash into each other during a facial pose.</td>
+    <td>**Eyelids and Eyebrows**: The eyelids and eyebrows require adequate space between the two regions.<br /><br /><Alert severity = "warning">If modifying the topology above the eyes, keep in mind that the eyelids and eyebrows require a natural space between the two regions. Both the eyelids and eyebrows can shift and change positions with various facial expressions and, if improperly modeled, can clash into each other during a facial pose.</Alert></td>
   </tr>
 </tbody>
 </table>

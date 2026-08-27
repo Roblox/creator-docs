@@ -22368,6 +22368,7 @@
             "description": "0: Token Validation Failed"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -22460,6 +22461,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -22515,6 +22517,7 @@
             "description": "0: Authorization has been denied for this request."
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -22570,6 +22573,7 @@
             "description": "0: Authorization has been denied for this request."
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -22643,6 +22647,7 @@
             "description": "2: You do not have permission to get this table."
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -22716,6 +22721,7 @@
             "description": "2: You do not have permission to get this table."
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -22815,6 +22821,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -22915,6 +22922,7 @@
             "description": "2: You do not have permission to get this table."
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -23019,6 +23027,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -23110,6 +23119,7 @@
             "description": "2: You do not have permission to get this table."
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -30436,6 +30446,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -30514,6 +30525,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -30524,72 +30536,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/localization#localizationtables_post_v1_auto_localization_table_games__gameId__auto_scrape_cleanup_request"
-        }
-      }
-    },
-    "/v1/auto-localization-table/games/{gameId}/ingestion": {
-      "patch": {
-        "tags": ["Localization", "Universes"],
-        "summary": "Ingests entries for auto localization. Needs to be an authorized user.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "gameId",
-            "description": "The game id.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/Roblox.LocalizationTables.Api.IngestAutoScrapedContentForGameRequest"
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "object"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "10: Maximum entries exceeded. Please keep the number of entries per request below the maximum.\r\n13: Request body can't be null\r\n16: Entries can't be null or empty\r\n34: Actor provided is invalid"
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed"
-          },
-          "503": {
-            "description": "17: Feature is disabled"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://localizationtables.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/localization#localizationtables_patch_v1_auto_localization_table_games__gameId__ingestion"
         }
       }
     },
@@ -30650,6 +30596,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -30703,6 +30650,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -30789,6 +30737,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -30838,6 +30787,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -45445,6 +45395,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -45491,6 +45442,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -45552,6 +45504,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -45612,6 +45565,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -45679,6 +45633,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -45772,6 +45727,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -45866,6 +45822,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -45964,6 +45921,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -46055,6 +46013,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -46140,6 +46099,7 @@
             "url": "https://localizationtables.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -65777,14 +65737,14 @@
             "schema": {
               "type": "array",
               "items": {
-                "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94]",
+                "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95]",
                 "enum": [
                   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21,
                   22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38,
                   39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53,
                   54, 55, 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
                   71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85,
-                  86, 87, 88, 89, 90, 91, 92, 93, 94
+                  86, 87, 88, 89, 90, 91, 92, 93, 94, 95
                 ]
               }
             }
@@ -67880,22 +67840,6 @@
           }
         },
         "description": "The Roblox.Groups.Api.PayoutRequest.",
-        "required": true
-      },
-      "Roblox.LocalizationTables.Api.IngestAutoScrapedContentForGameRequest": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.IngestAutoScrapedContentForGameRequest"
-            }
-          },
-          "text/json": {
-            "schema": {
-              "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.IngestAutoScrapedContentForGameRequest"
-            }
-          }
-        },
-        "description": "The request body.",
         "required": true
       },
       "Roblox.PrivateMessages.Api.Models.BatchMessagesRequest": {
@@ -87913,14 +87857,14 @@
           },
           "assetType": {
             "format": "int32",
-            "description": "The asset type id of asset with id Roblox.Inventory.Api.V2.UserAssetItemModelV2.AssetId. ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94]",
+            "description": "The asset type id of asset with id Roblox.Inventory.Api.V2.UserAssetItemModelV2.AssetId. ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95]",
             "enum": [
               1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
               24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
               75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
-              91, 92, 93, 94
+              91, 92, 93, 94, 95
             ],
             "type": "integer"
           },
@@ -88507,47 +88451,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.LocalizationTables.Api.AutoScrapeEntry": {
-        "type": "object",
-        "properties": {
-          "context": {
-            "type": "string"
-          },
-          "source": {
-            "type": "string"
-          },
-          "screenshot": {
-            "type": "string"
-          },
-          "meta": {
-            "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.AutoScrapeEntryMetadata"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.LocalizationTables.Api.AutoScrapeEntryMetadata": {
-        "type": "object",
-        "properties": {
-          "text": {
-            "type": "string"
-          },
-          "userId": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "osPlatform": {
-            "type": "string"
-          },
-          "sessionId": {
-            "format": "uuid",
-            "type": "string"
-          },
-          "matchedEntry": {
-            "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.MatchedEntry"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.LocalizationTables.Api.CreateTableRequest": {
         "type": "object",
         "properties": {
@@ -88596,7 +88499,7 @@
             "type": "integer"
           },
           "sortOrder": {
-            "description": "In which order the data is sorted. ['Asc' = 1, 'Desc' = 2]",
+            "description": "In which order the data is sorted.",
             "enum": ["Asc", "Desc"],
             "type": "string"
           }
@@ -88738,7 +88641,7 @@
             "description": "A set of translation feedback reasons for the given entry identifier.",
             "type": "array",
             "items": {
-              "description": "Enum for translation feedback reason. ['None' = 0, 'Untranslated' = 1, 'Inaccurate' = 2, 'SpellingOrGrammar' = 3, 'Inappropriate' = 4]",
+              "description": "Enum for translation feedback reason.",
               "enum": [
                 "None",
                 "Untranslated",
@@ -88855,6 +88758,12 @@
           "assetId": {
             "format": "int64",
             "type": "integer"
+          },
+          "shouldUseImageLocalizationTable": {
+            "type": "boolean"
+          },
+          "isAutoLocalizationForImageEnabled": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -88996,7 +88905,7 @@
             "type": "string"
           },
           "ownerType": {
-            "description": "Enum for valid OwnerTypes. ['User' = 0, 'Group' = 1]",
+            "description": "Enum for valid OwnerTypes.",
             "enum": ["User", "Group"],
             "type": "string"
           },
@@ -89006,50 +88915,6 @@
           },
           "assetId": {
             "format": "int64",
-            "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.LocalizationTables.Api.IngestAutoScrapedContentForGameRequest": {
-        "description": "An ingest content request to IngestAutoScrapedContentForGame.",
-        "type": "object",
-        "properties": {
-          "entries": {
-            "description": "The entries of an ingest content request.",
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.AutoScrapeEntry"
-            }
-          },
-          "metadata": {
-            "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.IngestContentMetadata"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.LocalizationTables.Api.IngestContentMetadata": {
-        "description": "The metadata of an ingest content request.",
-        "type": "object",
-        "properties": {
-          "placeInformation": {
-            "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.IngestContentMetadataPlaceInformation"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.LocalizationTables.Api.IngestContentMetadataPlaceInformation": {
-        "description": "The place information metadata of an ingest content request.",
-        "type": "object",
-        "properties": {
-          "placeId": {
-            "format": "int64",
-            "description": "The place id of an ingest content request.",
-            "type": "integer"
-          },
-          "placeVersionNumber": {
-            "format": "int32",
-            "description": "The place version number of an ingest content request.",
             "type": "integer"
           }
         },
@@ -89081,19 +88946,6 @@
           "isAutomaticTranslationFilterEnabled": {
             "description": "Is filter for automatic translations on UI is enabled",
             "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.LocalizationTables.Api.MatchedEntry": {
-        "type": "object",
-        "properties": {
-          "source": {
-            "type": "string"
-          },
-          "matchedParamIndex": {
-            "format": "int32",
-            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -89179,6 +89031,12 @@
             "type": "boolean"
           },
           "shouldUseLocalizationTable": {
+            "type": "boolean"
+          },
+          "shouldUseImageLocalizationTable": {
+            "type": "boolean"
+          },
+          "isAutoLocalizationForImageEnabled": {
             "type": "boolean"
           }
         },
@@ -98158,7 +98016,6 @@
           "locale_get_v1_locales_user_localization_locus_supported_locales",
           "localizationtables_post_v1_auto_localization_table_games__gameId__assets_generation_request",
           "localizationtables_post_v1_auto_localization_table_games__gameId__auto_scrape_cleanup_request",
-          "localizationtables_patch_v1_auto_localization_table_games__gameId__ingestion",
           "localizationtables_get_v1_localization_table_metadata",
           "localizationtables_post_v1_localization_table_tables",
           "localizationtables_post_v1_localization_table_tables__tableId__entries_translation_feedback",
@@ -98633,7 +98490,6 @@
           "inventory_get_v1_users__userId__places_inventory",
           "localizationtables_post_v1_auto_localization_table_games__gameId__assets_generation_request",
           "localizationtables_post_v1_auto_localization_table_games__gameId__auto_scrape_cleanup_request",
-          "localizationtables_patch_v1_auto_localization_table_games__gameId__ingestion",
           "notifications_get_v2_stream_notifications_get_latest_game_updates",
           "publish_post_v1_games__gameId__thumbnail_image",
           "thumbnails_get_v1_games__universeId__thumbnails",

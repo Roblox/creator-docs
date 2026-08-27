@@ -38,7 +38,9 @@ properties:
       Determines whether a user has chat translation enabled. If `true`,
       messages the user receives will be translated into their preferred
       language. Use `Class.TextChatMessage.Translation` to get the message
-      translation.
+      translation. This property is client-side only and reflects the user's own
+      preference; read it from a `Class.LocalScript` to adapt custom chat UIs
+      when the user toggles translation.
     code_samples: []
     type: boolean
     tags:
@@ -250,6 +252,33 @@ properties:
       can_save: true
     capabilities:
       - Chat
+  - name: TextChatService.PlatformIntegratedChat
+    summary: |
+      Determines whether platform-integrated chat is enabled for the experience.
+      Requires `RobloxScript` security.
+    description: |
+      Requires `RobloxScript` security; not accessible from experience scripts.
+      Controls whether platform-integrated chat is enabled for the experience.
+      When set to `Enum.RolloutState.Enabled`,
+      `Class.TextChatService.OnIncomingMessage` and
+      `Class.TextChannel.OnIncomingMessage` callbacks from developer scripts are
+      not invoked, and only CoreScripts can set those callbacks. When set to
+      `Enum.RolloutState.Disabled`, behavior is explicitly disabled. Defaults to
+      `Enum.RolloutState.Default`.
+    code_samples: []
+    type: RolloutState
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Chat
 methods:
   - name: TextChatService:CanUserChatAsync
     summary: |
@@ -269,10 +298,13 @@ methods:
       - name: userId
         type: User
         default:
-        summary: ''
+        summary: |
+          The `Class.Player.UserId` of the user whose chat permission is being
+          checked.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          A boolean indicating whether the user has permission to chat.
     tags:
       - Yields
     deprecation_message: ''
@@ -299,14 +331,17 @@ methods:
       - name: userIdFrom
         type: User
         default:
-        summary: ''
+        summary: |
+          The `Class.Player.UserId` of the potential message sender.
       - name: userIdTo
         type: User
         default:
-        summary: ''
+        summary: |
+          The `Class.Player.UserId` of the potential message receiver.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          A boolean indicating whether the two users can exchange messages.
     tags:
       - Yields
     deprecation_message: ''
@@ -416,11 +451,14 @@ methods:
       status and chat settings.
 
       This method is server-side only and intended for real-time use cases such
-      as matchmaking and teleporting. Chat group IDs are unique to the current
-      universe, may change over time, and should not be stored once the user has
-      left the experience. While you can hold onto the data returned for the
-      purposes of gameplay while the user is in the experience, this data should
-      not be stored after they've left.
+      as matchmaking and teleporting. It is more efficient than calling
+      `Class.TextChatService:CanUsersChatAsync()` pairwise when evaluating many
+      players at once, since pairwise checks scale as N^2 and cannot be merged
+      across player lists. Chat group IDs are unique to the current universe,
+      may change over time, and should not be stored once the user has left the
+      experience. While you can hold onto the data returned for the purposes of
+      gameplay while the user is in the experience, this data should not be
+      stored after they've left.
 
       To use this method, you must enable **Chat & Voice Groups APIs** in
       **Experience Settings** ⟩ **Communication** in Roblox Studio and agree to
@@ -462,11 +500,13 @@ events:
       - name: partOrCharacter
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The part or character that the bubble chat is displayed above.
       - name: textChatMessage
         type: TextChatMessage
         default:
-        summary: ''
+        summary: |
+          The `Class.TextChatMessage` associated with the bubble.
     tags: []
     deprecation_message: ''
     security: None
@@ -637,7 +677,9 @@ callbacks:
       **before** any `Class.TextChannel.OnIncomingMessage` callbacks.
 
       This should be defined only once in the source code. Multiple bindings
-      will override one another in a non‑deterministic manner.
+      will override one another in a non‑deterministic manner. This callback is
+      not invoked when `Class.TextChatService.PlatformIntegratedChat` is set to
+      `Enum.RolloutState.Enabled`.
     code_samples: []
     parameters:
       - name: message

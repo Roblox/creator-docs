@@ -5,16 +5,13 @@
 name: PromptPublishAssetResult
 type: enum
 summary: |
-  Describes the result of an `Class.AssetService:PromptCreateAssetAsync()` call.
+  Deprecated result enum for the `OpenPublishResultModal` event.
 description: |
-  Describes the result of an `Class.AssetService:PromptCreateAssetAsync()` call.
-  The result is returned to the experience server after the publish flow
-  completes, regardless of whether the publish succeeded or failed.
+  Deprecated result enum for the `OpenPublishResultModal` event. Use
+  `Enum.PromptCreatePlatformContentResult` instead.
 
-  This enum was also used with the now-deprecated `OpenPublishResultModal`
-  event. The current equivalent is `Enum.PromptCreateAssetResult`, which is
-  returned by the `OpenCreateResultModal` event and is the result type for
-  `Class.AssetService:PromptCreateAssetAsync()`.
+  `Enum.PromptCreateAssetResult` is a separate result enum returned by the
+  `OpenCreateResultModal` event.
 code_samples: []
 tags: []
 deprecation_message: ''

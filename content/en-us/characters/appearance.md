@@ -110,7 +110,7 @@ local humanoidDescriptionFromOutfit = Players:GetHumanoidDescriptionFromOutfitId
 
 Use the following sample code to create a `Class.HumanoidDescription` from a user ID using `Class.Players:GetHumanoidDescriptionFromUserId()`:
 
-```lua  title="Generate a HumanoidDescription from a user ID"
+```lua title="Generate a HumanoidDescription from a user ID"
 local Players = game:GetService("Players")
 
 local userId = 491243243
@@ -252,7 +252,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 Caged accessories, like layered accessories, use `Class.WrapTarget` and `Class.WrapLayer` to stretch and wrap over a target `Class.Model`. Layered accessories can work with both standard [player characters](../characters/index.md#player-characters) and non-R15 models.
 
-Custom implementation of layered accessories, such as a model using a unique cage UV map, cannot be uploaded and published to the Marketplace. For more information, see [Layered accessory specifications](../avatar/layered-accessories/specifications.md).
+Custom implementation of layered accessories, such as a model using a unique cage UV map, cannot be uploaded and published to the Marketplace. However, you can [create custom cage meshes](../art/modeling/cage-meshes/index.md) for in-game assets like buildings, game-specific clothing, and props.
 
 Whether you are implementing layered accessories on an [R15 rigging armature](../avatar/character-bodies/specifications.md#rigging), or using a custom rig, ensure that your accessories and bodies include the following:
 

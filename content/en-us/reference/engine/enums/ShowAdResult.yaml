@@ -4,8 +4,14 @@
 
 name: ShowAdResult
 type: enum
-summary: ''
-description: ''
+summary: |
+  Result codes returned by `Class.AdService:ShowRewardedVideoAdAsync()`
+  indicating whether a rewarded video ad completed successfully or why it did
+  not.
+description: |
+  Result codes returned by `Class.AdService:ShowRewardedVideoAdAsync()`
+  indicating whether a rewarded video ad completed successfully or why it did
+  not.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -45,7 +51,9 @@ items:
     tags: []
     deprecation_message: ''
   - name: InsufficientMemory
-    summary: ''
+    summary: |
+      The device does not have sufficient video memory available to display the
+      ad.
     value: 6
     tags: []
     deprecation_message: ''

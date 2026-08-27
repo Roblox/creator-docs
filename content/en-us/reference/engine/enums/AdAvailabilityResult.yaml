@@ -4,8 +4,10 @@
 
 name: AdAvailabilityResult
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates whether an ad is available or the reason it cannot be shown.
+description: |
+  Indicates whether an ad is available or the reason it cannot be shown.
 code_samples: []
 tags: []
 deprecation_message: ''

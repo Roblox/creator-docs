@@ -13,13 +13,27 @@ prev: /art/characters/creating/sculpting
   <figure><img src="../../../assets/art/avatar/basic-creation/Post-Texturing.png" /><figcaption>Model after texturing</figcaption></figure>
 </GridContainer>
 
-Each template comes with a color texture map, which you can alter and modify using Blender's texture editing tools. Since most Roblox avatars can take advantage of custom skin tones, it's important to understand how to [preview custom skin tones](../../../art/characters/creating/index.md#preview-skin-tones) in Blender to verify how your final asset will look in a Roblox game.
+Each template comes with a color texture map, which you can alter and modify using Blender's texture editing tools. Since most Roblox avatars can take advantage of custom skin tones, it's important to understand how to [preview custom skin tones](../../../art/characters/creating/blender-configurations.md#preview-skin-tones) in Blender to verify how your final asset will look in a Roblox game.
 
 For the purpose of demonstrating the basic texturing process, this tutorial goes over basic texture painting setup, applies a completely opaque texture over parts of the character eyes, and partially opaque details over the face. You can apply these same techniques to other parts of your character geometry.
 
 <Alert severity = 'warning'>
-When texturing parts of your character model's body, ensure that your character model includes a modesty layer over sensitive regions. See [Community Standards](../../../marketplace/marketplace-policy.md) for more information on Roblox's policies.
+When texturing parts of your character model's body, ensure that your character model includes a modesty layer over sensitive regions. For more information, see [Marketplace policy - Modesty layers](../../../marketplace/marketplace-policy.md#modesty-layers).
 </Alert>
+
+## Texture settings
+
+If you're using a Blender downloadable template, it's important to keep in mind that Blender requires you to **manually** save your textures in the Texture Paint tab's 2D view window. If you just save your `.blend` project file, your textures do **_not_** save with it. This can cause you to lose hours of work if you don't periodically save your progress as you go.
+
+<img src="../../../assets/art/avatar/basic-creation/Blender-Save-Image.png" width="80%"/>
+
+Blender 5.2 and later versions offer a texture setting to override this behavior:
+
+1. In the topbar, navigate to **Edit** > **Preferences**. The **Preferences** window displays.
+1. In the vertical navigation, select the **Save & Load** tab.
+1. In the **Blend Files** section, set **Save Modified Images** to **Always Save**.
+
+   <img src="../../../assets/art/avatar/basic-creation/Blender-Always-Save-Setting.png" width="80%"/>
 
 ## Set texture resolution
 

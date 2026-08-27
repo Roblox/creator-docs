@@ -359,7 +359,11 @@ methods:
     parameters: []
     returns:
       - type: ChatWindowMessageProperties
-        summary: ''
+        summary: |
+          A new `Class.ChatWindowMessageProperties` instance whose values you
+          can modify and return from a `Class.TextChatService.OnChatWindowAdded`
+          callback to customize how individual messages appear in the chat
+          window.
     tags: []
     deprecation_message: ''
     security: None
