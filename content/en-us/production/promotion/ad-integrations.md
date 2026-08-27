@@ -52,7 +52,7 @@ To register your ad integration campaign:
 2. Go to **Ad integrations**.
 3. Click **Register**.
 4. Under **Integration details**:
-    1. Select the game you want to add the integration to.
+    1. Select between 1 and 20 experiences that you own and that are eligible for ad integrations. If any selected experience fails validation, the campaign isn't registered.
     2. Enter the name of the advertiser. This is the name users see in ad disclosures within your game.
     3. Select an advertiser category from the drop-down options. If your advertiser doesn't fit into any of the available categories, select **None of the above**. The moderation team will review your submission and may update the category if needed.
     4. Select a start and end to the campaign.
@@ -65,9 +65,9 @@ To register your ad integration campaign:
 
 <img src="../../assets/promotion/ad-integrations/AdIntegrations-Registration.png" width="80%" />
 
-As you fill out the form, the **Your revenue share** box updates with an estimated revenue share cost for the campaign. For more details, see [Revenue share](#revenue-share).
+As you fill out the form, the **Your revenue share** box displays an estimated revenue share cost for each selected experience and the campaign total. For more details, see [Revenue share](#revenue-share).
 
-Before the campaign begins, you can edit the start date, end date, campaign name, and advertiser name. Once the campaign starts, only the end date can be updated.
+Before the campaign begins, you can update its selected experiences, start date, end date, campaign name, and advertiser name. Once the campaign starts, its experience selection can't be changed and only the end date can be updated.
 
 We recommend registering campaigns as early as possible and submitting them at least 5 days before the campaign start date.
 
@@ -79,7 +79,7 @@ If you register a campaign without assets, make sure to edit the campaign and as
 
 ### Asset deployment
 
-Before an ad integration campaign can go live, make sure all registered and moderated assets are implemented in your game. You must check user eligibility and add the required ad labeling and disclosure.
+Before an ad integration campaign can go live, make sure all registered and moderated assets are implemented in each selected experience where the campaign runs. You must check user eligibility and add the required ad labeling and disclosure.
 
 #### User eligibility
 
@@ -156,7 +156,7 @@ To submit additional assets or models to an existing ad integration campaign:
 3. Enter the IDs of the individual assets or models you want to add to the campaign.
 4. Click **Save**.
 
-Roblox reviews and moderates all submitted assets, and [their status](#asset-status) directly affects your [campaign status](#campaign-status). Moderation is typically completed within 48 hours.
+Roblox reviews and moderates all submitted assets once at the campaign level. Approved assets can be used across all experiences associated with the campaign, and [their status](#asset-status) directly affects your [campaign status](#campaign-status). Moderation is typically completed within 48 hours.
 
 <Alert severity="info">
 If you add assets to an active campaign, the entire campaign will only be served to users aged 18 and over while the new assets are under review. To avoid this, create separate campaigns with fixed start and end dates for each asset drop.
