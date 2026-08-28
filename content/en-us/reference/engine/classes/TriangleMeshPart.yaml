@@ -22,6 +22,7 @@ descendants:
   - PartOperation
 tags:
   - NotCreatable
+  - NotBrowsable
 deprecation_message: ''
 properties:
   - name: TriangleMeshPart.CollisionFidelity

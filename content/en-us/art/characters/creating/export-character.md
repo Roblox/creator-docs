@@ -12,14 +12,16 @@ Whether you are exporting your character for testing, or are performing a final 
 
 To export your character:
 
-1. In the topbar, click **File** > **Export** > **FBX (.fbx)**. The Blender file browser window displays.
-2. Set **Path Mode** to **Copy** and enable the **Embed Textures** icon.
-3. In the Include section, enable **Custom Properties**.
-4. Expand the Armature section and uncheck **Add Leaf Bones**.
-5. Enable **Bake Animation**.
-6. Expand Bake Animation and **uncheck NLA Strips**, **All Actions**, and **Force Start/End Keyframes**.
-7. In Bake Animation, set **Simplify** to **0.0**.
-8. Click the **Export FBX** button. Save the `.fbx` to the directory of your choice.
+1. In the topbar, navigate to **File** > **Export** > **FBX (.fbx)**. The Blender file browser window displays.
+1. Set **Path Mode** to **Copy** and enable the **Embed Textures** icon.
+1. In the **Include** section, enable **Custom Properties**.
+1. Expand the **Armature** section and disable **Add Leaf Bones**.
+1. Enable **Bake Animation**, expand the section, then:
+
+   1. Disable **NLA Strips**, **All Actions**, and **Force Start/End Keyframes**.
+   1. Set **Simplify** to **0.0**.
+
+1. Click the **Export FBX** button and save the `.fbx` to the directory of your choice.
 
 <img src="../../../assets/art/avatar/basic-creation/Export-Settings.png" width = "60%" />
 
@@ -30,7 +32,7 @@ After exporting your .fbx file, see [Test characters](../../../art/characters/te
 <Alert severity = 'success'>
 After importing the `Class.Model` character to Studio, you can now perform the following with this asset:
 
-- [Upload the character](../../../art/accessories/creating-rigid/publishing.md) to the Marketplace.
+- [Upload the character](../../../marketplace/publish-to-marketplace.md) to the Marketplace.
 - Use the humanoid character on an existing game by applying a [HumanoidDescription](../../../characters/appearance.md#manually-modify-appearance)to the `Class.Model` object.
 - Save the asset to your [Toolbox](../../../projects/assets/toolbox.md) to share or use within any of your games.
 

@@ -49,10 +49,10 @@ When adding fine details to your texture, increase the image resolution of your 
 
 To change your texture image resolution:
 
-1. Starting from Layout mode, select the **Head_Geo**.
-2. Switch to **Texture Paint** mode.
-3. In the left Paint window, select **Image** > **Resize**.
-4. Set the texture size:
-   1. Use **2048** or **4096** for a higher res for detailed texture work.
-   2. Use **1024** for the default Roblox-supported resolution.
+1. In the **Layout** tab, select the `Head_Geo`.
+1. Switch to the **Texture Paint** tab, then in the 2D view window, select **Image** > **Resize**.
+1. Set the texture size:
+   - Use **2048** or **4096** for a higher resolution when creating detailed texture work.
+   - Use **1024** for the default Roblox-supported resolution.
+
       <video controls src="../../../assets/art/avatar/basic-creation/Texturing_09.mp4" width="100%"></video>

@@ -25,33 +25,35 @@ If your character body shape incorporates many changes with different body parts
 
 To begin caging your character:
 
-1. Starting from the Layout Tab, hide everything in the Outliner except the **Head_OuterCage** and the **Head_Geo** objects.
+1. In the **Layout** tab, hide everything in the Outliner except the `Head_OuterCage` and the `Head_Geo` objects.
 
    <img src="../../../assets/art/avatar/basic-creation/Caging-Outer-Cage-Objects.png" />
    <video controls src="../../../assets/art/avatar/basic-creation/Caging_01.mp4" width="100%"></video>
 
-2. With the **Head_OuterCage** selected, navigate to **Object Properties** > **Viewport Display** and set the **Display As** to **Wire**. Toggle this setting back to **Solid** when you are finished.
+1. With `Head_OuterCage` selected, navigate to **Object Properties** > **Viewport Display** and set the **Display As** to **Wire**.
+
    <video controls src="../../../assets/art/avatar/basic-creation/Caging_02.mp4" width="100%"></video>
-3. Click on the **Head_OuterCage** object and switch to **Edit Mode**.
-4. Enable **X-Axis symmetry** and **Topology Mirror** to ensure you are making symmetrical vertex changes to your cage.
+
+1. Switch to **Edit** mode, then enable **X-Axis symmetry** and **Topology Mirror** to ensure you are making symmetrical vertex changes to your cage.
 
    <img src="../../../assets/art/avatar/basic-creation/Caging-Symmetry-Settings.png" />
 
-5. Switch to **Edit Mode**.
-6. Using the **Grab tool** (<kbd>G</kbd>), click and grab parts of the cage mesh and align it to fit tightly over the goblin head mesh. Keep the following in mind:
+1. Using the **Grab** tool (<kbd>G</kbd>), click and grab parts of the cage mesh and align it to fit tightly over the goblin head mesh. Keep the following in mind:
 
-   1. **Never delete any of the cage vertices.** Missing vertices can cause errors and issues with equipping clothing accessories.
-   2. If editing the base of your head cage, ensure that the base of the Head cage aligns with the top of the UpperTorso cage.
-   3. In different Select modes, hold <kbd>Shift</kbd> and click multiple vertices/edges/faces to select and edit the geometry.
-   4. You can verify a tight fit by grabbing vertices and moving them into the Head_Geo mesh to check where the meshes intersect and moving the cage vertices until the cage mesh just covers the head mesh.
+   - **Never delete any of the cage vertices.** Missing vertices can cause errors and issues with equipping clothing accessories.
+   - If editing the base of your head cage, ensure that the base of the `Head` cage aligns with the top of the `UpperTorso` cage.
+   - In different Select modes, hold <kbd>Shift</kbd> and click multiple vertices/edges/faces to select and edit the geometry.
+   - You can verify a tight fit by grabbing vertices and moving them into the `Head_Geo` mesh to check where the meshes intersect and moving the cage vertices until the cage mesh just covers the head mesh.
 
       <video controls src="../../../assets/art/avatar/basic-creation/Caging_03.mp4" width="100%"></video>
 
-   5. Toggle visibility on your different mesh objects to improve visibility and access to vertices.
-   6. After the wireframe is tightly fitted over the head mesh, set the **Display As** back to **Solid** and spot check and fix any intersecting vertices.
+   - Toggle visibility on your different mesh objects to improve visibility and access to vertices.
+
+1. After the wireframe is tightly fitted over the head mesh, set the **Display As** back to **Solid** and spot check and fix any intersecting vertices.
+
       <video controls src="../../../assets/art/avatar/basic-creation/Caging_04.mp4" width="100%"></video>
 
-Your final product should feature a cage mesh that sits directly over the head mesh without any of the Head_Geo geometry intersecting through the solid sections of the cage.
+Your final product should feature a cage mesh that sits directly over the head mesh without any of the `Head_Geo` geometry intersecting through the solid sections of the cage.
 
 <img src="../../../assets/art/avatar/basic-creation/Post-Caging.png" />
 

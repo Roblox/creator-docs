@@ -193,7 +193,6 @@ descendants:
   - PackageService
   - Pages
   - ParticleEmitter
-  - PatchMapping
   - Path
   - PathfindingLink
   - PathfindingModifier

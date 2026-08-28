@@ -18,13 +18,12 @@ Center attachment points at their respective locations. Each attachment should o
 This tutorial only changes the head of your model, so you only need to adjust the **Hat**, **Hair** and **FaceFront** attachments. To enable visibility and verify your head attachment point:
 
 1. If you haven't already, enable [disabled objects](../../../art/characters/creating/index.md#disabled-objects) in your Outliner.
-2. In the Outliner, find the Joints parent object.
-3. Hold <kbd>Shift</kbd> and click the **Hide** icon for the Joints object to hide everything.
-4. Expand the Joints object and un-hide the Head_Geo and Hat_Att and Hair_Att.
+1. In the Outliner, find the `Joints` parent object.
+1. Hold <kbd>Shift</kbd> and click the **Hide** icon for the `Joints` object to hide everything.
+1. Expand the `Joints` object's hierarchy and unhide `Head_Geo`, `Hat_Att`, `Hair_Att`, and `FaceFront_Att`.
    1. If required, disable **Disable In Viewport** <img src="../../../assets/art/blender-ui/Disabled-Icon.png" style={{marginBottom:"0px;"}} width="20px"/> next to the \_Att objects.
-5. Toggle Visibility for the **Hat_Att**, **Hair_Att**, and **FaceFront_Att**.
-6. Verify the placement of the attachments. The goblin's head is shorter than the starting template, so the attachments require minor vertical adjustment.
-7. Select the attachments
-8. Switch to **Edit** Mode.
-9. Using the Grab tool, position the attachments vertically along the y-axis until they are about halfway embedded in the head.
+1. In the viewport, verify the placement of the attachments. The goblin's head is shorter than the starting template, so the attachments require minor vertical adjustment.
+1. Select the attachments, then switch to **Edit** mode.
+1. Using the **Grab** tool, position the attachments vertically along the y-axis until they are about halfway embedded in the head.
+
    <video controls muted src="../../../assets/art/avatar/basic-creation/Cleanup_02.mp4" width="100%"></video>

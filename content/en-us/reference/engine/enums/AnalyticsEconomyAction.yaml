@@ -4,7 +4,9 @@
 
 name: AnalyticsEconomyAction
 type: enum
-summary: ''
+summary: |
+  Describes the type of economic transaction in
+  `Class.AnalyticsService:FireInGameEconomyEvent()`.
 description: |
   This enum is used as an argument in
   `Class.AnalyticsService:FireInGameEconomyEvent()`.

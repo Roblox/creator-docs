@@ -4,8 +4,17 @@
 
 name: AnalyticsEconomyTransactionType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Categorizes the context of an in-experience economic transaction for use with
+  `Class.AnalyticsService:LogEconomyEvent()`.
+description: |
+  This enum provides recommended values for the `transactionType` parameter of
+  `Class.AnalyticsService:LogEconomyEvent()`. Because `transactionType` is typed
+  as a string, pass the `Name` property of the enum item (for example,
+  `Enum.AnalyticsEconomyTransactionType.IAP.Name`). Using these standard values
+  enables Roblox-provided analytics charts to break down economy data by
+  transaction context. Custom strings are also accepted; the experience is
+  limited to 20 unique transaction types total.
 code_samples: []
 tags: []
 deprecation_message: ''

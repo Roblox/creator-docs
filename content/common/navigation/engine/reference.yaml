@@ -2117,11 +2117,6 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/PatchBundlerFileWatch.yaml
                 ignoreTranslation: true
-              - title: PatchMapping
-                path: /reference/engine/classes/PatchMapping
-                type: engineapi
-                source: /reference/engine/classes/PatchMapping.yaml
-                ignoreTranslation: true
               - title: Path
                 path: /reference/engine/classes/Path
                 type: engineapi
@@ -6085,11 +6080,6 @@ navigation:
         path: /reference/engine/enums/WaterForce
         type: engineapi
         source: /reference/engine/enums/WaterForce.yaml
-        ignoreTranslation: true
-      - title: WebSocketState
-        path: /reference/engine/enums/WebSocketState
-        type: engineapi
-        source: /reference/engine/enums/WebSocketState.yaml
         ignoreTranslation: true
       - title: WebStreamClientState
         path: /reference/engine/enums/WebStreamClientState

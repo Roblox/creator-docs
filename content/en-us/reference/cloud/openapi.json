@@ -21708,6 +21708,7 @@
                 "PublishPlace",
                 "UpdateRolesetRank",
                 "UpdateRolesetData",
+                "UpdateRoleSetPosition",
                 "BanMember",
                 "UnbanMember",
                 "CreateForumCategory",
@@ -40148,6 +40149,7 @@
                 "PublishPlace",
                 "UpdateRolesetRank",
                 "UpdateRolesetData",
+                "UpdateRoleSetPosition",
                 "BanMember",
                 "UnbanMember",
                 "CreateForumCategory",
@@ -43280,6 +43282,14 @@
             "schema": {
               "type": "integer",
               "format": "int64"
+            }
+          },
+          {
+            "in": "query",
+            "name": "includePrivate",
+            "required": true,
+            "schema": {
+              "type": "boolean"
             }
           }
         ],
@@ -49170,6 +49180,14 @@
                 "format": "int64",
                 "type": "integer"
               }
+            }
+          },
+          {
+            "in": "query",
+            "name": "includePrivate",
+            "required": true,
+            "schema": {
+              "type": "boolean"
             }
           }
         ],
@@ -55629,7 +55647,7 @@
                 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
                 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73,
                 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
-                90, 91, 92, 93, 94
+                90, 91, 92, 93, 94, 95
               ]
             }
           },
@@ -72685,6 +72703,32 @@
         },
         "description": "Represents the permissions on a role."
       },
+      "GroupsApi.Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "type": {
+            "format": "int32",
+            "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95]",
+            "enum": [
+              1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
+              24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
+              41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
+              59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
+              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
+              91, 92, 93, 94, 95
+            ],
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "HomepageThumbnail": {
         "required": [
           "assetId",
@@ -85007,6 +85051,10 @@
           "isContentRestricted": {
             "description": "Indicates whether this experience is content-restricted and has had its details wiped.\r\nWhen true, the content fields (name, description, creator, etc.) contain placeholder or\r\nempty values rather than the real data. Consumers should branch on this flag instead of\r\ninferring restriction from placeholder text.",
             "type": "boolean"
+          },
+          "creationSource": {
+            "description": "How the experience was created, as reported by hydration (e.g. \"build\").\r\nOmitted when hydration does not return a value.",
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -86342,6 +86390,10 @@
             "description": "The role color. ['Invalid' = 0, 'Blue' = 1, 'Green' = 2, 'Purple' = 3, 'Yellow' = 4, 'Orange' = 5, 'Red' = 6, 'Magenta' = 7, 'Teal' = 8, 'Turquoise' = 9, 'Rust' = 10, 'Pistachio' = 11, 'Midnight' = 12, 'Lavender' = 13, 'Pink' = 14, 'Crimson' = 15, 'Plum' = 16]",
             "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
             "type": "integer"
+          },
+          "isPrivate": {
+            "description": "Whether the role is private (only visible to members with permission).\r\nOmitted from the response when false.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -86382,6 +86434,10 @@
             "description": "The role color. ['Invalid' = 0, 'Blue' = 1, 'Green' = 2, 'Purple' = 3, 'Yellow' = 4, 'Orange' = 5, 'Red' = 6, 'Magenta' = 7, 'Teal' = 8, 'Turquoise' = 9, 'Rust' = 10, 'Pistachio' = 11, 'Midnight' = 12, 'Lavender' = 13, 'Pink' = 14, 'Crimson' = 15, 'Plum' = 16]",
             "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
             "type": "integer"
+          },
+          "isPrivate": {
+            "description": "Whether the role is private (only visible to members with permission).\r\nOmitted from the response when false.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -86649,6 +86705,10 @@
           "usingGroupFunds": {
             "description": "Setting to use group funds or not.",
             "type": "boolean"
+          },
+          "isPrivate": {
+            "description": "Optional. When true the role is only visible to members with permission to see private roles.\r\nDefaults to false (public). Only accessible to group owners.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -86673,6 +86733,10 @@
             "format": "int32",
             "description": "Optional. The color of the roleset (GroupRoleSetColorType value, e.g. 0 = Invalid, 1 = Blue).\r\nWhen omitted, only name and description are updated and the existing color is left unchanged.\r\nWhen set, name, description, and color are updated via UpdateGroupRoleSetProperties.",
             "type": "integer"
+          },
+          "isPrivate": {
+            "description": "Optional. When set, updates the visibility of the roleset.\r\nOnly accessible to group owners.\r\nThe base (guest) role cannot be made private.",
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -86720,7 +86784,7 @@
             "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Core.CreatorType_"
           },
           "rootPlace": {
-            "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_"
+            "$ref": "#/components/schemas/GroupsApi.Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_"
           },
           "created": {
             "format": "date-time",

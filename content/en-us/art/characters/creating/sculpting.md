@@ -21,7 +21,7 @@ You can use Blender's other sculpting tools, though it's important to use a tool
 To begin sculpting the head:
 
 1. With the template project opened, hide the other Geo objects to isolate the head mesh.
-1. Select the **Head_Geo** mesh object and switch to **Sculpting** mode.
+1. Select the `Head_Geo` mesh object and switch to **Sculpting** mode.
 1. At the top right of the viewport:
    1. Enable **X-Axis Symmetry**.
    1. Enable **Wireframe** view.
@@ -40,8 +40,8 @@ To begin sculpting the head:
 
       1. Expand the surface near the ear to broaden the base
       1. Grab and extend each ear, ensuring it connects smoothly to the base and vertices remain proportionally spaced when possible.
-      1. Try the Flatten tool to straighten and align a region.
-      1. Use the Elastic Deform tool to stretch and pull multiple vertices.
+      1. Try the **Flatten** tool to straighten and align a region.
+      1. Try the **Elastic Deform** tool to stretch and pull multiple vertices.
 
          <video controls muted src="../../../assets/art/avatar/basic-creation/Sculpting_03.mp4" width="100%"></video>
 
