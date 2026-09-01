@@ -94,14 +94,26 @@ app doesn't make it broadly accessible. Instead, it remains in **private mode**
 with a limit of 10 unique users. This mode is helpful for testing and
 debugging within your team.
 
+To submit your app for review, provide the following information:
+
+- An **App Category** from the [Creator Third Party App Policy](https://en.help.roblox.com/hc/en-us/articles/37924211313044-Creator-Third-Party-App-Policy) that matches your app and requested permission scopes.
+- A **Demo Video** that shows the end-to-end authorization flow and how your app uses each requested permission scope.
+- A description that explains why your app belongs in the selected category and how it uses each requested permission scope.
+
+<Alert severity="info">
+  Request only the minimum permission scopes that your app needs. Roblox does
+  not approve scopes for planned or future functionality.
+</Alert>
+
 If you want to extend the user base for your app, you need to publish it in
 public mode by submitting it for review:
 
 1. Go to the [OAuth 2.0 apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
 1. Click the **Edit and Publish** button for the app that you want to publish.
-1. Fill in all the required information and click the **Review and Publish**
-   button. A message with limits on your app permissions during the pending
-   review period appears.
+1. Fill in all the required information, including the app category, demo
+   video, and description, then click the **Review and Publish** button. A
+   message with limits on your app permissions during the pending review period
+   appears.
 1. Click **Submit for Review**.
 
 While your app review is pending, you can't edit or submit another request until
