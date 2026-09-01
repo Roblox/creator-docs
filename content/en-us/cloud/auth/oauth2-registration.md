@@ -97,8 +97,8 @@ debugging within your team.
 To submit your app for review, provide the following information:
 
 - An **App Category** from the [Creator Third Party App Policy](https://en.help.roblox.com/hc/en-us/articles/37924211313044-Creator-Third-Party-App-Policy) that matches your app and requested permission scopes.
-- A **Demo Video** that shows the end-to-end authorization flow and how your app uses each requested permission scope.
-- A description that explains why your app belongs in the selected category and how it uses each requested permission scope.
+- A **Demo Video** that shows the end-to-end authorization flow and how your app uses the requested permission scopes.
+- A description that explains why your app belongs in the selected category and how it uses the requested permission scopes.
 
 <Alert severity="info">
   Request only the minimum permission scopes that your app needs. Roblox does
