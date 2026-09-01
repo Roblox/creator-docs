@@ -6516,7 +6516,7 @@
           },
           "value": {
             "$ref": "#/components/schemas/GoogleProtobufValue",
-            "description": "The value of the entry."
+            "description": "The value of the entry.\n\nWhen a stored value contains a non-finite Luau number that JSON can't\nrepresent, Open Cloud responses replace the number with a tagged JSON\nobject:\n\n* Positive infinity: `{\"m\": null, \"t\": \"numeric\", \"v\": \"inf\"}`\n* Negative infinity: `{\"m\": null, \"t\": \"numeric\", \"v\": \"-inf\"}`\n* NaN: `{\"m\": null, \"t\": \"numeric\", \"v\": \"nan\"}`"
           },
           "id": {
             "readOnly": true,

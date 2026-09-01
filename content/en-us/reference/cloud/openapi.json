@@ -68988,6 +68988,194 @@
         },
         "additionalProperties": false
       },
+      "CatalogApi.Roblox.Catalog.Api.CatalogSearchDetailedResponseItemV2": {
+        "description": "This is the beta (non game-engine) version of our hydration model representing asset or bundle in marketplace.",
+        "type": "object",
+        "properties": {
+          "bundledItems": {
+            "description": "The System.Collections.Generic.IEnumerable`1 contained in the bundle, serialized if item is a bundle.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Catalog.Api.BundleItemDetailModelV2"
+            }
+          },
+          "taxonomy": {
+            "description": "The taxonomy ids and names for this item.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Catalog.Api.TaxonomyModel"
+            }
+          },
+          "itemCreatedUtc": {
+            "format": "date-time",
+            "description": "The UTC creation date-time of the asset or bundle.",
+            "type": "string"
+          },
+          "discountInformation": {
+            "$ref": "#/components/schemas/Roblox.Catalog.Api.DiscountInformation"
+          },
+          "id": {
+            "format": "int64",
+            "description": "The Item Id.",
+            "type": "integer"
+          },
+          "itemType": {
+            "format": "int32",
+            "description": "The Roblox.Catalog.Api.CatalogSearchDetailedResponseItem.ItemType item type. ['Asset' = 1, 'Bundle' = 2]",
+            "enum": [1, 2],
+            "type": "integer"
+          },
+          "assetType": {
+            "format": "int32",
+            "description": "The Roblox.Platform.Assets.AssetType serialized if item is an asset.",
+            "enum": [
+              1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
+              24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
+              41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
+              59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
+              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
+              91, 92, 93, 94, 95
+            ],
+            "type": "integer"
+          },
+          "bundleType": {
+            "format": "int32",
+            "description": "The Roblox.Platform.Bundles.Core.BundleType serialized if item is a bundle.",
+            "enum": [1, 2, 3, 4],
+            "type": "integer"
+          },
+          "isRecolorable": {
+            "description": "Gets or sets the property whether a bundle is recolorable or not. Not serialized for asset.",
+            "type": "boolean"
+          },
+          "name": {
+            "description": "The item name.",
+            "type": "string"
+          },
+          "description": {
+            "description": "The item description.",
+            "type": "string"
+          },
+          "productId": {
+            "format": "int64",
+            "description": "The product id of corresponding item.",
+            "type": "integer"
+          },
+          "itemStatus": {
+            "description": "The System.Collections.Generic.IEnumerable`1 if item has Roblox.Catalog.Api.CatalogItemStatus.",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "description": "Catalog item status enum. ['New' = 1, 'Sale' = 2, 'SaleTimer' = 7, 'IsFAE' = 8]",
+              "enum": [1, 2, 7, 8],
+              "type": "integer"
+            }
+          },
+          "itemRestrictions": {
+            "description": "The System.Collections.Generic.IEnumerable`1 if item has Roblox.Catalog.Api.CatalogItemRestriction.",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "description": "Catalog item restriction enum. ['ThirteenPlus' = 1, 'LimitedUnique' = 2, 'Limited' = 3, 'BuildersClub' = 4, 'TurboBuildersClub' = 5, 'OutrageousBuildersClub' = 6, 'Rthro' = 7, 'Live' = 8, 'Collectible' = 9]",
+              "enum": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+              "type": "integer"
+            }
+          },
+          "creatorHasVerifiedBadge": {
+            "description": "The verified status of a creator.",
+            "type": "boolean"
+          },
+          "creatorType": {
+            "format": "int32",
+            "description": "The Roblox.Catalog.Api.CatalogSearchDetailedResponseItem.CreatorType of the item's creator.",
+            "enum": [0, 1, 2],
+            "type": "integer"
+          },
+          "creatorTargetId": {
+            "format": "int64",
+            "description": "The creator id of the item's creator.",
+            "type": "integer"
+          },
+          "creatorName": {
+            "description": "The creator name of the item's creator.",
+            "type": "string"
+          },
+          "price": {
+            "format": "int64",
+            "description": "The item's price.",
+            "type": "integer"
+          },
+          "lowestPrice": {
+            "format": "int64",
+            "description": "The item's lowest price, only if the item is resellable and there are resellers.",
+            "type": "integer"
+          },
+          "lowestResalePrice": {
+            "format": "int64",
+            "description": "The item's lowest resale price, only if the item is resellable and there are resellers, including current user.",
+            "type": "integer"
+          },
+          "priceStatus": {
+            "description": "The localized string item status if the item's price should not be displayed.",
+            "type": "string"
+          },
+          "unitsAvailableForConsumption": {
+            "format": "int64",
+            "description": "The number of items in stock, only if the item is resellable and is limitedEdition.",
+            "type": "integer"
+          },
+          "favoriteCount": {
+            "format": "int64",
+            "description": "The number of times the item has been favorited.",
+            "type": "integer"
+          },
+          "offSaleDeadline": {
+            "format": "date-time",
+            "description": "When the item will go off sale, if the item has an off deadline.",
+            "type": "string"
+          },
+          "collectibleItemId": {
+            "description": "The item's collectible item id.\r\nIt is an UUID if a item is collectible type. Otherwise, it is null.",
+            "type": "string"
+          },
+          "totalQuantity": {
+            "format": "int64",
+            "description": "The collectible or limited-unique item's total quantity of unique instances.",
+            "type": "integer"
+          },
+          "saleLocationType": {
+            "format": "int32",
+            "description": "The sale location type of the item. ['NotApplicable' = 0, 'ShopOnly' = 1, 'MyExperiencesOnly' = 2, 'ShopAndMyExperiences' = 3, 'ExperiencesById' = 4, 'ShopAndAllExperiences' = 5, 'ExperiencesDevApiOnly' = 6, 'ShopAndExperiencesById' = 7]",
+            "enum": [0, 1, 2, 3, 4, 5, 6, 7],
+            "type": "integer"
+          },
+          "hasResellers": {
+            "description": "An indicator if the item has resellers or not (null if not resellable).",
+            "type": "boolean"
+          },
+          "isOffSale": {
+            "description": "An indicator if the item is off sale or not.",
+            "type": "boolean"
+          },
+          "quantityLimitPerUser": {
+            "format": "int32",
+            "description": "Quantity limit for how many instances a user can buy.",
+            "type": "integer"
+          },
+          "supportsHeadShapes": {
+            "description": "Whether the item supports head shapes.",
+            "type": "boolean"
+          },
+          "timedOptions": {
+            "description": "The timed options for the item.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Catalog.Api.TimedOption"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "CategoryResponse": {
         "type": "object",
         "properties": {
@@ -70263,7 +70451,7 @@
           },
           "value": {
             "$ref": "#/components/schemas/GoogleProtobufValue",
-            "description": "The value of the entry."
+            "description": "The value of the entry.\n\nWhen a stored value contains a non-finite Luau number that JSON can't\nrepresent, Open Cloud responses replace the number with a tagged JSON\nobject:\n\n* Positive infinity: `{\"m\": null, \"t\": \"numeric\", \"v\": \"inf\"}`\n* Negative infinity: `{\"m\": null, \"t\": \"numeric\", \"v\": \"-inf\"}`\n* NaN: `{\"m\": null, \"t\": \"numeric\", \"v\": \"nan\"}`"
           },
           "id": {
             "readOnly": true,
@@ -82293,7 +82481,7 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Roblox.Catalog.Api.CatalogSearchDetailedResponseItemV2"
+              "$ref": "#/components/schemas/CatalogApi.Roblox.Catalog.Api.CatalogSearchDetailedResponseItemV2"
             }
           }
         },

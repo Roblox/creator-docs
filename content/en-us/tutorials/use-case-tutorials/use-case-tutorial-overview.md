@@ -821,7 +821,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 </AccordionSummary>
 <AccordionDetails>
 
-- [Customize the camera](../../workspace/camera.md)
+- [Customize the camera](../../workspace/camera/index.md)
 - [Mouse and keyboard input](../../input/mouse-and-keyboard.md)
 - [Mobile input](../../input/mobile.md)
 - [Gamepad input](../../input/gamepad.md)

@@ -17,7 +17,9 @@ description: |
   that channel.
 
   Messages from different TextChannels can be separated into different tabs in
-  the chat window using `Class.ChannelTabsConfiguration`.
+  the chat window using `Class.ChannelTabsConfiguration`. Multiple channels with
+  the same name might cause unexpected behavior with the chat window, even if
+  the player isn't a member of the other channels.
 
   To learn more, see
   [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).

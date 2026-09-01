@@ -11,11 +11,11 @@ You can configure common camera settings directly within Studio's `Class.Starter
 
 1. In the **Explorer** window, select the **StarterPlayer** object.
 
-   <img src="../assets/studio/explorer/StarterPlayer.png" width="320" alt="StarterPlayer in Explorer" />
+   <img src="../../assets/studio/explorer/StarterPlayer.png" width="320" alt="StarterPlayer in Explorer" />
 
 1. In the **Properties** window, scroll down to locate the **Camera** section. You can configure the following properties directly or through a script.
 
-   <img src="../assets/studio/properties/StarterPlayer-Camera-Group.png" width="320" alt="Camera properties on StarterPlayer in Properties Window" />
+   <img src="../../assets/studio/properties/StarterPlayer-Camera-Group.png" width="320" alt="Camera properties on StarterPlayer in Properties Window" />
 
 ### Zoom distance
 
@@ -77,7 +77,7 @@ The `Class.StarterPlayer.DevCameraOcclusionMode|DevCameraOcclusionMode` property
 </table>
 
 <figure>
-  <video controls src="../assets/workspace/camera/Camera-Occlusion.mp4" width="90%" alt="Camera occlusion mode: Zoom vs. Invisicam"></video>
+  <video controls src="../../assets/workspace/camera/Camera-Occlusion.mp4" width="90%" alt="Camera occlusion mode: Zoom vs. Invisicam"></video>
   <figcaption>**Zoom** and **Invisicam** occlusion modes</figcaption>
 </figure>
 
@@ -118,7 +118,7 @@ The `Class.StarterPlayer.DevComputerCameraMovementMode|DevComputerCameraMovement
 
 ## Script the camera
 
-Each player [client](../projects/client-server.md) has its own `Class.Camera` object residing in the local `Class.Workspace`, accessible through the `Class.Workspace.CurrentCamera` property. You can override Roblox's default camera scripts by setting its `Class.Camera.CameraType|CameraType` to `Enum.CameraType|Scriptable` and then, most commonly, control the camera through the following properties.
+Each player [client](../../projects/client-server.md) has its own `Class.Camera` object residing in the local `Class.Workspace`, accessible through the `Class.Workspace.CurrentCamera` property. You can override Roblox's default camera scripts by setting its `Class.Camera.CameraType|CameraType` to `Enum.CameraType|Scriptable` and then, most commonly, control the camera through the following properties.
 
 <table>
 <thead>
