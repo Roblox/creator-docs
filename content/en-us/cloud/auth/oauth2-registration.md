@@ -58,7 +58,9 @@ To ensure proper access control and security within your app, you must add
   for your app.
 
 <Alert severity="info">
-Each app is expected to request the minimal number of scopes needed for its function. The set of scopes for an app must fall under a single app category listed in the [Creator Third Party App Policy](https://en.help.roblox.com/hc/en-us/articles/37924211313044-Creator-Third-Party-App-Policy).
+  Each app is expected to request the minimum number of scopes needed for its
+  function. The set of scopes for an app must fall under a single app category
+  listed in the [Creator Third Party App Policy](https://en.help.roblox.com/hc/en-us/articles/37924211313044-Creator-Third-Party-App-Policy). When you submit your app for review, select the **App Category** that matches your app and requested permission scopes.
 </Alert>
 
 ## Add redirect URLs
@@ -96,7 +98,6 @@ debugging within your team.
 
 To submit your app for review, provide the following information:
 
-- An **App Category** from the [Creator Third Party App Policy](https://en.help.roblox.com/hc/en-us/articles/37924211313044-Creator-Third-Party-App-Policy) that matches your app and requested permission scopes.
 - A public **Demo Video** link that is no longer than 3 minutes and meets the following requirements:
   - Begins with the user signed out and shows the user clicking **Sign In With Roblox** to trigger the OAuth consent dialog.
   - Shows the same registration details that you provide with your submission.
@@ -113,10 +114,9 @@ public mode by submitting it for review:
 
 1. Go to the [OAuth 2.0 apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
 1. Click the **Edit and Publish** button for the app that you want to publish.
-1. Fill in all the required information, including the app category, demo
-   video, and description, then click the **Review and Publish** button. A
-   message with limits on your app permissions during the pending review period
-   appears.
+1. Fill in all the required information, including the demo video and
+   description, then click the **Review and Publish** button. A message with
+   limits on your app permissions during the pending review period appears.
 1. Click **Submit for Review**.
 
 While your app review is pending, you can't edit or submit another request until
