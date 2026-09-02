@@ -111,6 +111,13 @@ debugging within your team.
 If you want to extend the user base for your app, you need to publish it in
 public mode by submitting it for review:
 
+1. Go to the [OAuth 2.0 apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
+1. Click the **Edit and Publish** button for the app that you want to publish.
+1. Fill in all the required information, including the demo video and
+   description, then click the **Review and Publish** button. A message with
+   limits on your app permissions during the pending review period appears.
+1. Click **Submit for Review**.
+
 To submit your app for review, provide the following information:
 
 - A public **Demo Video** link that is no longer than 3 minutes and meets the following requirements:
@@ -122,13 +129,6 @@ To submit your app for review, provide the following information:
   Request only the minimum permission scopes that your app needs. Roblox does
   not approve scopes for planned or future functionality.
 </Alert>
-
-1. Go to the [OAuth 2.0 apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
-1. Click the **Edit and Publish** button for the app that you want to publish.
-1. Fill in all the required information, including the demo video and
-   description, then click the **Review and Publish** button. A message with
-   limits on your app permissions during the pending review period appears.
-1. Click **Submit for Review**.
 
 While your app review is pending, you can't edit or submit another request until
 the current review request is approved or rejected. Your app remains in
