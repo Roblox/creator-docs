@@ -124,7 +124,7 @@ The following information is required for your submission:
   - Begins with the user signed out and shows the exact user action, such as
     clicking **Sign In with Roblox**, that triggers the OAuth consent dialog.
     The video must show the entire authorization flow through the redirect back
-    to your app.
+    to your app, including content in your original app after the redirect.
   - Shows the same registration details that you provide with your submission.
 - A description that explains why your app belongs in the selected category and how it uses the requested permission scopes.
 
