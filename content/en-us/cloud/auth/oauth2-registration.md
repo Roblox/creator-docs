@@ -108,6 +108,9 @@ app doesn't make it broadly accessible. Instead, it remains in **private mode**
 with a limit of 10 unique users. This mode is helpful for testing and
 debugging within your team.
 
+If you want to extend the user base for your app, you need to publish it in
+public mode by submitting it for review:
+
 To submit your app for review, provide the following information:
 
 - A public **Demo Video** link that is no longer than 3 minutes and meets the following requirements:
@@ -119,9 +122,6 @@ To submit your app for review, provide the following information:
   Request only the minimum permission scopes that your app needs. Roblox does
   not approve scopes for planned or future functionality.
 </Alert>
-
-If you want to extend the user base for your app, you need to publish it in
-public mode by submitting it for review:
 
 1. Go to the [OAuth 2.0 apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
 1. Click the **Edit and Publish** button for the app that you want to publish.
