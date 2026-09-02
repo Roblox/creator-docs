@@ -58,23 +58,22 @@ To ensure proper access control and security within your app, you must add
   for your app.
 
 <Alert severity="info">
-  First, select the **App Category** that best matches your app. The available
-  permission scopes update to show only the scopes for the selected category.
-  Each app is expected to request the minimum number of scopes needed for its
-  function. The set of scopes for an app must fall under a single app category
-  listed in the [Creator Third Party App Policy](https://en.help.roblox.com/hc/en-us/articles/37924211313044-Creator-Third-Party-App-Policy).
+  First, select the **App Category** that best matches your app:
+
+  - **Account Linking Tools** help facilitate account linking between Roblox and
+    an external app for the purposes of mapping user profiles.
+  - **Creation & Productivity Tools** are digital services or products primarily
+    used for creating and editing content, and managing experience lifecycle.
+  - **Analytics & Insights Tools** enable developers to analyze data about their
+    apps, experiences, assets, or users.
+  - **User Tools** enhance the UI, accessibility, or overall experience of using
+    Roblox.
+
+  The available permission scopes update to show only the scopes for the
+  selected category. Each app is expected to request the minimum number of
+  scopes needed for its function. The set of scopes for an app must fall under
+  a single app category listed in the [Creator Third Party App Policy](https://en.help.roblox.com/hc/en-us/articles/37924211313044-Creator-Third-Party-App-Policy).
 </Alert>
-
-Select the category that best describes your app:
-
-- **Account Linking Tools** help facilitate account linking between Roblox and
-  an external app for the purposes of mapping user profiles.
-- **Creation & Productivity Tools** are digital services or products primarily
-  used for creating and editing content, and managing experience lifecycle.
-- **Analytics & Insights Tools** enable developers to analyze data about their
-  apps, experiences, assets, or users.
-- **User Tools** enhance the UI, accessibility, or overall experience of using
-  Roblox.
 
 ## Add redirect URLs
 
