@@ -89,19 +89,34 @@ You can filter by the following metrics:
     <td></td>
   </tr>
   <tr>
-    <td>Active payer status</td>
-    <td>Top 15%, intermediate 35%, casual 50%, lapsed, never</td>
-    <td>Percentile-based within your game, not a fixed value. **Top 15%** includes users who fall into the 85-100th percentile of spenders for your game, **Intermediate 35%** 50-84th, and **Casual 50%** 0-49th. **Lapsed** indicates users who haven't spent in the past 30 days, and **Never** is users who've never spent. Recalculated daily. See **Platform spender status** for status outside of your game.</td>
-  </tr>
-  <tr>
     <td>When user first played</td>
     <td>0-30 days ago, 31-90 days ago, 91-180 days ago, 181-365 days ago, 365+ days ago, never</td>
     <td>It's uncommon, but users can purchase a game pass and never actually play the game. You might see these users on the revenue chart.</td>
   </tr>
   <tr>
+    <td>Active payer status</td>
+    <td>Top 15%, intermediate 35%, casual 50%, lapsed, never</td>
+    <td>Percentile-based within your game, not a fixed value. **Top 15%** includes users who fall into the 85-100th percentile of spenders for your game, **Intermediate 35%** 50-84th, and **Casual 50%** 0-49th. **Lapsed** indicates users who haven't spent in the past 30 days, and **Never** is users who've never spent. Recalculated daily. See **Platform spender status** for status outside of your game.</td>
+  </tr>
+  <tr>
+    <td>In-experience activity status</td>
+    <td>Early, active, lapsed, reactivated, never played</td>
+    <td>Based on play activity in your game. **Early** is the first 30 days after a user first plays. **Active** means the user played at least one session in the last 30 days and isn't Early or Reactivated. **Lapsed** means the user played no sessions in the last 30 days. **Reactivated** is the first 30 days after the user returns from being Lapsed. **Never played** means the user has never played the game. Recalculated daily.</td>
+  </tr>
+  <tr>
+    <td>User engagement</td>
+    <td>Inactive (0 days), low (1 day), medium (2-3 days), high (4-7 days)</td>
+    <td>Based on the number of days the user played your game in the last 7 days. Recalculated daily.</td>
+  </tr>
+  <tr>
     <td>Platform spender status</td>
     <td>Active, other</td>
     <td>Fixed value, not percentile-based. **Active** includes users who've spent $9.99 or more anywhere on Roblox in the last 60 days. **Other** includes all other users.<br /><br />This definition is consistent with the [Creator Rewards program](../../creator-rewards.md), so you can better understand the behavior of players who earn you Daily Engagement Rewards.[^1]</td>
+  </tr>
+  <tr>
+    <td>Platform activity status</td>
+    <td>New signup, active, lapsed, reactivated</td>
+    <td>Based on play activity across Roblox. **New signup** is the first 60 days after signup. **Active** means the user played at least one session in the last 60 days and isn't a New signup or Reactivated. **Lapsed** means the user played no sessions in the last 60 days. **Reactivated** is the first 60 days after the user returns from being Lapsed. Recalculated daily.</td>
   </tr>
   <tr>
     <td>Platform</td>
@@ -270,23 +285,8 @@ You can apply a breakdown to analyze each chart in a more specific category by c
     <td></td>
   </tr>
   <tr>
-    <td>Platform</td>
-    <td>Computer, phone, tablet, console, VR</td>
-    <td>Users might be counted more than once if they use multiple devices.</td>
-  </tr>
-  <tr>
-    <td>OS (operating system)</td>
-    <td>Android, iOS, Windows, macOS, PlayStation, etc.</td>
-    <td>Users might be counted more than once if they use multiple devices.</td>
-  </tr>
-  <tr>
     <td>Gender</td>
     <td>Female, male, unknown</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Source</td>
-    <td>Home recommendation, search, teleports, sponsored ads, etc.</td>
     <td></td>
   </tr>
   <tr>
@@ -300,6 +300,11 @@ You can apply a breakdown to analyze each chart in a more specific category by c
     <td>Also includes an "other" category and total DAU.</td>
   </tr>
   <tr>
+    <td>Source</td>
+    <td>Home recommendation, search, teleports, sponsored ads, etc.</td>
+    <td></td>
+  </tr>
+  <tr>
     <td>When user first played</td>
     <td>0-30 days ago, 31-90 days ago, 91-180 days ago, 181-365 days ago, 365+ days ago, never</td>
     <td>It's uncommon, but users can purchase a game pass and never actually play the game. You might see these users on the revenue chart.</td>
@@ -310,9 +315,34 @@ You can apply a breakdown to analyze each chart in a more specific category by c
     <td>Percentile-based within your game, not a fixed value. **Top 15%** includes users who fall into the 85-100th percentile of spenders for your game, **Intermediate 35%** 50-84th, and **Casual 50%** 0-49th. **Lapsed** indicates users who haven't spent in the past 30 days, and **Never** is users who've never spent. Recalculated daily. See **Platform spender status** for status outside of your game.</td>
   </tr>
   <tr>
+    <td>In-experience activity status</td>
+    <td>Early, active, lapsed, reactivated, never played</td>
+    <td>Based on play activity in your game. **Early** is the first 30 days after a user first plays. **Active** means the user played at least one session in the last 30 days and isn't Early or Reactivated. **Lapsed** means the user played no sessions in the last 30 days. **Reactivated** is the first 30 days after the user returns from being Lapsed. **Never played** means the user has never played the game. Recalculated daily.</td>
+  </tr>
+  <tr>
+    <td>User engagement</td>
+    <td>Inactive (0 days), low (1 day), medium (2-3 days), high (4-7 days)</td>
+    <td>Based on the number of days the user played your game in the last 7 days. Recalculated daily.</td>
+  </tr>
+  <tr>
     <td>Platform spender status</td>
     <td>Active, other</td>
     <td>Fixed value, not percentile-based. **Active** includes users who've spent $9.99 or more anywhere on Roblox in the last 60 days. **Other** includes all other users.<br /><br />This definition is consistent with the [Creator Rewards program](../../creator-rewards.md), so you can better understand the behavior of players who earn you Daily Engagement Rewards.[^1]</td>
+  </tr>
+  <tr>
+    <td>Platform activity status</td>
+    <td>New signup, active, lapsed, reactivated</td>
+    <td>Based on play activity across Roblox. **New signup** is the first 60 days after signup. **Active** means the user played at least one session in the last 60 days and isn't a New signup or Reactivated. **Lapsed** means the user played no sessions in the last 60 days. **Reactivated** is the first 60 days after the user returns from being Lapsed. Recalculated daily.</td>
+  </tr>
+  <tr>
+    <td>Platform</td>
+    <td>Computer, phone, tablet, console, VR</td>
+    <td>Users might be counted more than once if they use multiple devices.</td>
+  </tr>
+  <tr>
+    <td>OS (operating system)</td>
+    <td>Android, iOS, Windows, macOS, PlayStation, etc.</td>
+    <td>Users might be counted more than once if they use multiple devices.</td>
   </tr>
 </tbody>
 </table>
@@ -330,7 +360,6 @@ Roblox automatically generates a `.csv` (comma-separated values) file for your s
 1. In your [Account Info Settings](https://www.roblox.com/my/account#!/info), add and verify your email address for receiving the data download link.
 2. In your [Security Settings](https://www.roblox.com/my/account#!/security), set up an **Authenticator App** as the 2-Step Verification method for your account.
 3. Navigate to your or your group's transactions page.
-
    1. For your personal sales data, navigate to the [My Transactions](https://www.roblox.com/transactions) page.
    2. For your group's sales data:
       1. Navigate to the [Groups](https://www.roblox.com/groups) page and select the target group.
@@ -357,9 +386,9 @@ On the `.csv` sales data sheet, each sold item has the following attributes and 
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
 | Buyer User ID      | User ID of the user who purchased the item.                                                                                                                                                                             | `123456789`                           |
 | Sale Date and Time | Date and time of the transaction in UTC.                                                                                                                                                                                | `2022-07-15T19:04:30.397Z`            |
-| Sale Location      | The location in which the user bought the item, such as a game and the Marketplace.                                                                                                                              | `WebSite`, `Marketplace`, `Game`      |
-| Universe ID        | The unique identifier of the game that the purchased item belongs to. Only applicable for items that belong to a game, like a pass.                                                                        | `987654321`                           |
-| Universe           | The name of the game that the purchased item belongs to. Only applicable for items that belong to a game, like a pass.                                                                                     | `My Awesome Game`               |
+| Sale Location      | The location in which the user bought the item, such as a game and the Marketplace.                                                                                                                                     | `WebSite`, `Marketplace`, `Game`      |
+| Universe ID        | The unique identifier of the game that the purchased item belongs to. Only applicable for items that belong to a game, like a pass.                                                                                     | `987654321`                           |
+| Universe           | The name of the game that the purchased item belongs to. Only applicable for items that belong to a game, like a pass.                                                                                                  | `My Awesome Game`                     |
 | Asset ID           | The unique identifier of the item.                                                                                                                                                                                      | `234565432`                           |
 | Asset Name         | The name of the item.                                                                                                                                                                                                   | `My Avatar Shirt`, `My Server`        |
 | Asset Type         | The type of the item, which can be a [Roblox asset type](../../projects/assets/index.md#asset-types) or a [developer product](../../production/monetization/developer-products.md) type.                                | `Game Pass`, `Private Server`, `Mesh` |
