@@ -389,6 +389,8 @@ navigation:
         path: /input/mobile
       - title: Gamepad
         path: /input/gamepad
+      - title: Micro gamepad
+        path: /input/micro-gamepad
   - title: Audio
     path: /audio/
     section:
