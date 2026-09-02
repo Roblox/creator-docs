@@ -97,7 +97,10 @@ debugging within your team.
 To submit your app for review, provide the following information:
 
 - An **App Category** from the [Creator Third Party App Policy](https://en.help.roblox.com/hc/en-us/articles/37924211313044-Creator-Third-Party-App-Policy) that matches your app and requested permission scopes.
-- A **Demo Video** that shows the end-to-end authorization flow and how your app uses the requested permission scopes.
+- A public **Demo Video** link that is no longer than 3 minutes and meets the following requirements:
+  - Begins with the user signed out and shows the user clicking **Sign In With Roblox** to trigger the OAuth consent dialog.
+  - Shows the same registration details that you provide with your submission.
+  - Shows the end-to-end authorization flow and how your app uses the requested permission scopes.
 - A description that explains why your app belongs in the selected category and how it uses the requested permission scopes.
 
 <Alert severity="info">
