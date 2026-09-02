@@ -65,7 +65,7 @@ To ensure proper access control and security within your app, you must add
   listed in the [Creator Third Party App Policy](https://en.help.roblox.com/hc/en-us/articles/37924211313044-Creator-Third-Party-App-Policy).
 </Alert>
 
-## Add redirect URLs
+Select the category that best describes your app:\n\n- **Account Linking Tools** help facilitate account linking between Roblox and\n  an external app for the purposes of mapping user profiles.\n- **Creation & Productivity Tools** are digital services or products primarily\n  used for creating and editing content, and managing experience lifecycle.\n- **Analytics & Insights Tools** enable developers to analyze data about their\n  apps, experiences, assets, or users.\n- **User Tools** enhance the UI, accessibility, or overall experience of using\n  Roblox.\n\n## Add redirect URLs
 
 **Redirect URLs** are the reentry points of your app that users are redirected
 to when they finish authorizing your app. Ensure your
