@@ -118,7 +118,7 @@ public mode by submitting it for review:
    limits on your app permissions during the pending review period appears.
 1. Click **Submit for Review**.
 
-To submit your app for review, provide the following information:
+The following information is required for your submission:
 
 - A public **Demo Video** link that is no longer than 3 minutes and meets the following requirements:
   - Begins with the user signed out and shows the user clicking **Sign In With Roblox** to trigger the OAuth consent dialog.
