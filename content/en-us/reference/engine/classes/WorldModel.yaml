@@ -6,7 +6,7 @@ name: WorldModel
 type: class
 memory_category: BaseParts
 summary: |
-  Extends limited physics for its children on to a parent `Class.ViewportFrame`.
+  Extends limited physics to its children.
 description: |
   When parented to a `Class.ViewportFrame`, `WorldModel` extends limited physics
   for its children on to that `Class.ViewportFrame`. For example,
@@ -14,6 +14,11 @@ description: |
   animated and spatially queried (for example by raycasts) but those parts are
   **not** simulated. Furthermore, you can put `Class.Humanoid` characters in the
   `WorldModel` and their joints will be set up correctly for animation.
+
+  `WorldModel` also exposes the
+  `Class.WorldModel.UseWorkspaceCollisionGroups|UseWorkspaceCollisionGroups`
+  property to determine whether it uses `Class.Workspace` collision groups or
+  its own independent collision groups for queries.
 
   To avoid possible performance issues, make sure to only create `WorldModels`
   when you want to show them and to delete `WorldModels` that are currently not
@@ -24,7 +29,32 @@ inherits:
 descendants: []
 tags: []
 deprecation_message: ''
-properties: []
+properties:
+  - name: WorldModel.UseWorkspaceCollisionGroups
+    summary: |
+      Determines whether this `WorldModel` uses `Class.Workspace` collision
+      groups or its own independent collision groups for queries.
+    description: |
+      When `false` (default), this `WorldModel` uses its own collision groups
+      for all collision-related behavior.
+
+      When `true`, this `WorldModel` uses `Class.Workspace` collision groups.
+      Additionally, the collision group state of this `WorldModel` can continue
+      to be modified.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
 methods: []
 events: []
 callbacks: []

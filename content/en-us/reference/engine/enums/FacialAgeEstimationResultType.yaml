@@ -4,24 +4,33 @@
 
 name: FacialAgeEstimationResultType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the outcome of a facial age estimation inquiry initiated by
+  `Class.FacialAgeEstimationService`.
+description: |
+  Describes the outcome of a facial age estimation inquiry initiated by
+  `Class.FacialAgeEstimationService`. The result type is reported as the `type`
+  field of the dictionary returned by
+  `Class.FacialAgeEstimationService:InquiryAsync()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Complete
-    summary: ''
+    summary: |
+      The facial age estimation inquiry finished successfully.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Cancel
-    summary: ''
+    summary: |
+      The facial age estimation inquiry was cancelled before it could complete.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Error
-    summary: ''
+    summary: |
+      The facial age estimation inquiry failed due to an error.
     value: 2
     tags: []
     deprecation_message: ''

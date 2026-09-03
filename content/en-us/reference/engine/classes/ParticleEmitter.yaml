@@ -930,6 +930,35 @@ properties:
       can_save: true
     capabilities:
       - Basic
+  - name: ParticleEmitter.TextureContent
+    summary: |
+      The image rendered on particles. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris).
+    description: |
+      The image rendered on particles. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris).
+
+      This property is the `Datatype.Content` equivalent of
+      `Class.ParticleEmitter.Texture|Texture`. Assigning `TextureContent`
+      updates `Texture`. The appearance of the texture is influenced by
+      `Class.ParticleEmitter.Color|Color`,
+      `Class.ParticleEmitter.Transparency|Transparency`,
+      `Class.ParticleEmitter.LightInfluence|LightInfluence`, and
+      `Class.ParticleEmitter.LightEmission|LightEmission`.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
   - name: ParticleEmitter.TimeScale
     summary: |
       Value between 0 and 1 that controls the speed of the particle effect.

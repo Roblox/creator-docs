@@ -7,7 +7,14 @@ type: enum
 summary: |
   Controls the `Class.Workspace.MeshPartHeadsAndAccessories` feature.
 description: |
-  Controls the `Class.Workspace.MeshPartHeadsAndAccessories` feature.
+  Controls whether the `Class.Workspace` loads R15 avatar heads and accessories
+  as `Class.MeshPart` objects. When set to `Default` or `Enabled`, heads and
+  accessories resolve through the `MeshPart`-based avatar pipeline, which
+  supports modern rendering, layered clothing, and `Class.MeshPart`-specific
+  deformation. When set to `Disabled`, heads and accessories use the legacy
+  `Class.SpecialMesh`-based pipeline.
+
+  `Class.Workspace.MeshPartHeadsAndAccessories` defaults to `Default`.
 code_samples: []
 tags: []
 deprecation_message: ''

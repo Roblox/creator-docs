@@ -4,7 +4,8 @@
 
 name: GearGenreSetting
 type: enum
-summary: ''
+summary: |
+  Controls which gear genres are permitted in a place.
 description: |
   The GearGenreSetting Enum sets what types of gear are allowed in a place.
 code_samples: []

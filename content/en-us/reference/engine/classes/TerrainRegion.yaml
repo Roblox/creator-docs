@@ -5,7 +5,9 @@
 name: TerrainRegion
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  An object that stores a chunk of terrain voxel data, produced by
+  `Class.Terrain:CopyRegion()` and consumed by `Class.Terrain:PasteRegion()`.
 description: |
   A TerrainRegion is a snapshot of `Class.Terrain` retrieved from the
   `Class.Terrain:CopyRegion()` method. Can be later pasted into the Terrain
@@ -47,7 +49,11 @@ properties:
     summary: |
       The size of this TerrainRegion in cells.
     description: |
-      The size of this TerrainRegion in cells.
+      Returns a `Datatype.Vector3` whose components indicate the number of
+      terrain cells along each axis of the stored region. Each terrain cell
+      occupies 4 studs in world space, so multiplying by 4 gives the region's
+      world-space dimensions. The value is set when the region is captured by
+      `Class.Terrain:CopyRegion()` and cannot be changed afterward.
     code_samples: []
     type: Vector3
     tags:

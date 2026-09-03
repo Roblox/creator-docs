@@ -17,6 +17,14 @@ navigation:
         path: /avatar/character-bodies/export
       - title: Import into Studio
         path: /avatar/character-bodies/import
+      - title: Test bodies
+        section:
+          - title: Overview
+            path: /avatar/character-bodies/test
+          - title: Test in Blender
+            path: /avatar/character-bodies/test-blender
+          - title: Test in Studio
+            path: /avatar/character-bodies/test-studio
   - title: Makeup
     section:
       - title: Overview

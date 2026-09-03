@@ -73,7 +73,7 @@ To export your character body in Blender as a `.fbx` file:
 <Alert severity = 'success'>
 You now have a `.fbx` file that you can [import into Studio](import.md) as a `Class.Model` character. Once the character body is in Studio, you can:
 
-- [Test your character](../../art/characters/testing/index.md) using various Studio tooling and workflows.
+- [Test your character](./test.md) using various Studio tooling and workflows.
 - [Upload the character](../../marketplace/publish-to-marketplace.md) to the Marketplace.
 - Use the character in an existing game project by applying a [HumanoidDescription](../../characters/appearance.md#manually-modify-appearance) to the `Class.Model` object.
 - [Save the character](../../projects/assets/toolbox.md) to your **Toolbox** to use within any of your games or share with other creators.
@@ -103,7 +103,7 @@ To export your character body in Maya as a `.fbx` file:
 <Alert severity = 'success'>
 You now have a `.fbx` file that you can [import into Studio](import.md) as a `Class.Model` character. Once the character body is in Studio, you can:
 
-- [Test your character](../../art/characters/testing/index.md) using various Studio tooling and workflows.
+- [Test your character](./test.md) using various Studio tooling and workflows.
 - [Upload the character](../../art/accessories/creating-rigid/publishing.md) to the Marketplace.
 - Use the character in an existing game project by applying a [HumanoidDescription](../../characters/appearance.md#manually-modify-appearance) to the `Class.Model` object.
 - [Save the character](../../projects/assets/toolbox.md) to your **Toolbox** to use within any of your games or share with other creators.

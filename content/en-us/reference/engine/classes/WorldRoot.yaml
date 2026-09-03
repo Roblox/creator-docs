@@ -187,6 +187,64 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     simulationAccess: true
+  - name: WorldRoot:CollisionGroupsAreCollidable
+    summary: |
+      Returns whether the two groups will collide in this world.
+    description: |
+      Returns whether the two specified collision groups will collide in this
+      world. This method will also return `true` if either of the groups are
+      unregistered in this world, as the default collision mask collides with
+      all groups.
+    code_samples: []
+    parameters:
+      - name: name1
+        type: string
+        default:
+        summary: ''
+      - name: name2
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Physics
+  - name: WorldRoot:CollisionGroupSetCollidable
+    summary: |
+      Sets the collision status between two groups in this world.
+    description: |
+      Sets the collision status between two groups in this world. This method
+      will throw an error if either of the groups is unregistered in this world,
+      so it's recommended that you confirm each group's registration through
+      `Class.WorldRoot:IsCollisionGroupRegistered()` before making this call.
+    code_samples: []
+    parameters:
+      - name: name1
+        type: string
+        default:
+        summary: ''
+      - name: name2
+        type: string
+        default:
+        summary: ''
+      - name: collidable
+        type: boolean
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Physics
   - name: WorldRoot:FindPartOnRay
     summary: |
       Returns the first `Class.BasePart` or `Class.Terrain` cell intersecting
@@ -586,6 +644,23 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: WorldRoot:GetMaxCollisionGroups
+    summary: |
+      Returns the maximum number of collision groups in this world.
+    description: |
+      Returns the maximum number of collision groups the engine supports per
+      world. This value is currently 32.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Physics
   - name: WorldRoot:GetPartBoundsInBox
     summary: |
       Returns an array of parts whose **bounding boxes** overlap a given box.
@@ -738,6 +813,45 @@ methods:
     thread_safety: Safe
     capabilities: []
     simulationAccess: true
+  - name: WorldRoot:GetRegisteredCollisionGroups
+    summary: |
+      Returns a table with info on all of this world's collision groups.
+    description: |
+      Returns a table with info on all of this world's collision groups. Each
+      value in the returned table is itself a table and containing two members:
+
+      <table>
+        <thead>
+          <tr>
+            <th>Member</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>mask</td>
+            <td>integer</td>
+            <td>The collision group's mask; only for internal use.</td>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>string</td>
+            <td>Name of the collision group.</td>
+          </tr>
+        </tbody>
+      </table>
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Physics
   - name: WorldRoot:IKMoveTo
     summary: |
       Moves the specified part to the specified location via inverse kinematics
@@ -808,6 +922,29 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     simulationAccess: true
+  - name: WorldRoot:IsCollisionGroupRegistered
+    summary: |
+      Checks if a collision group is registered in this world.
+    description: |
+      Checks if a collision group is registered in this world. It's recommended
+      that you call this method before calling methods that throw errors for
+      unregistered collision groups, such as
+      `Class.WorldRoot:CollisionGroupSetCollidable()`.
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: boolean
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Physics
   - name: WorldRoot:IsRegion3Empty
     summary: |
       Returns a bool indicating whether there are no `Class.BasePart|BaseParts`
@@ -986,6 +1123,77 @@ methods:
     thread_safety: Safe
     capabilities: []
     simulationAccess: true
+  - name: WorldRoot:RegisterCollisionGroup
+    summary: |
+      Registers a new collision group in this world with the given name.
+    description: |
+      Registers a new collision group in this world with the given name. The
+      name cannot be `"Default"`.
+
+      Note that this method has a slight performance overhead based on the
+      number of `Class.BasePart|BaseParts` in the world, so it's recommended
+      that you register all collision groups at edit time through the Studio
+      [editor](../../../workspace/collisions.md#collision-groups) and call
+      `Class.WorldRoot:UnregisterCollisionGroup()|UnregisterCollisionGroup()`
+      and `Class.WorldRoot:RenameCollisionGroup()|RenameCollisionGroup()` as
+      infrequently as possible.
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Physics
+  - name: WorldRoot:RenameCollisionGroup
+    summary: |
+      Renames specified collision group in this world.
+    description: |
+      Renames the specified registered collision group in this world, but does
+      **not** rename the `Class.BasePart.CollisionGroup|CollisionGroup` property
+      of parts that utilize the group. The first argument of this method is the
+      name of the group to rename, the second argument is the new name for the
+      group. If the specified group does not exist, this method will not do
+      anything. The naming conventions for the new name follow the same rules as
+      if the group was being created with
+      `Class.WorldRoot:RegisterCollisionGroup()|RegisterCollisionGroup()`.
+
+      This method will throw a runtime error in the following circumstances:
+
+      - Invalid or empty name provided for either argument.
+      - The method is called from a client.
+
+      Note that this method has a slight performance overhead based on the
+      number of `Class.BasePart|BaseParts` in the world, so it's recommended
+      that you register all collision groups at edit time through the Studio
+      [editor](../../../workspace/collisions.md#collision-groups) and rename
+      them as infrequently as possible.
+    code_samples: []
+    parameters:
+      - name: from
+        type: string
+        default:
+        summary: ''
+      - name: to
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Physics
   - name: WorldRoot:Shapecast
     summary: |
       Casts the shape of a given `Class.BasePart` in a direction and returns a
@@ -1151,5 +1359,41 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
+  - name: WorldRoot:UnregisterCollisionGroup
+    summary: |
+      Unregisters the collision group for the given name in this world.
+    description: |
+      Unregisters the collision group for the given name in this world, with the
+      following behaviors:
+
+      - If an invalid name is provided, the method will not do anything.
+      - If the reserved name `"Default"` is provided **or** if the method is
+        called from a client, it will throw an error.
+      - If there are any parts in the collision group when it is removed, those
+        parts will still maintain the same collision group name. The physical
+        behavior of parts in a removed group is undefined, so it's recommended
+        to move any parts in a removed group to another group, such as the
+        `"Default"` group.
+
+      Note that this method has a slight performance overhead based on the
+      number of `Class.BasePart|BaseParts` in the world, so it's recommended
+      that you register all collision groups at edit time through the Studio
+      [editor](../../../workspace/collisions.md#collision-groups) and call this
+      method as infrequently as possible.
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Physics
 events: []
 callbacks: []

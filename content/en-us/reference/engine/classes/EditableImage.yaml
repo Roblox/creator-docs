@@ -109,7 +109,8 @@ properties:
       - DynamicGeneration
 methods:
   - name: EditableImage:Destroy
-    summary: ''
+    summary: |
+      Destroys the image contents and immediately reclaims the memory they use.
     description: |
       Destroys the contents of the image, immediately reclaiming used memory.
     code_samples: []
@@ -261,6 +262,74 @@ methods:
           - `BlendIntensity` (number) as the value between `0` and `1` which
             controls how much of the projection is blended into the resulting
             image.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DynamicGeneration
+  - name: EditableImage:SampleImageProjected
+    summary: |
+      Projects pixels from an `Class.EditableMesh` texture into this
+      `EditableImage`.
+    description: |
+      Projects the pixels in `sourceTexture`, using the UV mapping of
+      `sourceMesh`, onto this `EditableImage`. This is the inverse of
+      `Class.EditableImage:DrawImageProjected()|DrawImageProjected()`: it reads
+      from the mesh texture and writes the sampled pixels into this image in
+      place.
+
+      Only mesh surfaces facing the projector and within the projection volume
+      are sampled. When multiple mesh surfaces project to the same destination
+      pixel, the closest surface is used. This makes the method suitable for
+      sampling a brush-sized region, modifying it in place, and then using
+      `Class.EditableImage:DrawImageProjected()|DrawImageProjected()` to write
+      it back onto a texture.
+    code_samples: []
+    parameters:
+      - name: sourceMesh
+        type: EditableMesh
+        default:
+        summary: |
+          The `Class.EditableMesh` that maps `sourceTexture` onto the surface
+          being sampled.
+      - name: sourceTexture
+        type: EditableImage
+        default:
+        summary: |
+          The `EditableImage` from which pixels are sampled.
+      - name: projectionConfig
+        type: Dictionary
+        default:
+        summary: |
+          Projection configuration dictionary containing the following key-value
+          pairs:
+
+          - `Direction` (`Datatype.Vector3`) where the projector is facing.
+          - `Position` (`Datatype.Vector3`) as the projector position in local
+            space with respect to the mesh.
+          - `Size` (`Datatype.Vector3`) as the size of the projector. The **X**
+            and **Y** components specify its dimensions, while the **Z**
+            component specifies the projection depth.
+          - `Up` (`Datatype.Vector3`) as the up vector of the projector in local
+            space with respect to the mesh.
+      - name: brushConfig
+        type: Dictionary
+        default:
+        summary: |
+          Brush configuration dictionary containing the following key-value
+          pairs:
+
+          - `AlphaBlendType` (`Enum.ImageAlphaType`) which determines how the
+            sampled alpha values are blended.
+          - `ColorBlendType` (`Enum.ImageCombineType`) which determines how the
+            sampled color values are blended.
+          - `FadeAngle` (number) as the angle in degrees at which the projection
+            begins to fade based on the surface normal. A value of `180` applies
+            no normal-angle fade.
     returns:
       - type: ()
         summary: ''

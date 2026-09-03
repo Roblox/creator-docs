@@ -434,7 +434,8 @@ properties:
       property's value.
     code_samples: []
     type: InputSink
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None

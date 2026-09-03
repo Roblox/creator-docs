@@ -140,15 +140,6 @@ navigation:
         path: /art/characters/facial-animation/create-face-accessories
       - title: Publish eyebrows and eyelashes
         path: /art/accessories/publish-eyebrows-eyelashes
-      - title: Test characters
-        path: /art/characters/testing/
-        section:
-          - title: Overview
-            path: /art/characters/testing/
-          - title: In Blender
-            path: /art/characters/testing/blender
-          - title: In Studio
-            path: /art/characters/testing/studio
   - heading: Advanced paths
   - title: Overview
     path: /tutorials/curriculums/curriculum-overview

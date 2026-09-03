@@ -414,6 +414,35 @@ properties:
       can_save: true
     capabilities:
       - Basic
+  - name: Beam.TextureContent
+    summary: |
+      The texture displayed on the beam. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris).
+    description: |
+      The texture displayed on the beam. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris).
+
+      If this property is set to `Datatype.Content.none`, the beam displays as a
+      solid line colored by its `Class.Beam.Color|Color` property. The
+      appearance of the texture can be further modified by
+      `Class.Beam.Color|Color`, `Class.Beam.Transparency|Transparency`, and
+      scaling is determined by `Class.Beam.TextureMode|TextureMode`,
+      `Class.Beam.TextureLength|TextureLength`, `Class.Beam.Width0|Width0`, and
+      `Class.Beam.Width1|Width1`.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
   - name: Beam.TextureLength
     summary: |
       Sets the length of the beam's texture, dependent on

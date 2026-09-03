@@ -129,6 +129,7 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
+    simulationAccess: true
   - name: TweenService:SmoothDamp
     summary: |
       Smoothly interpolates a value towards a target, simulating a critically

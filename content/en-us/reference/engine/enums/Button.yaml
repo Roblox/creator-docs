@@ -14,13 +14,15 @@ deprecation_message: ''
 items:
   - name: Dismount
     summary: |
-      The Dismount button.
+      Represents the dismount action that can be bound on a `Class.Controller`
+      to detect when a player triggers the dismount input.
     value: 8
     tags: []
     deprecation_message: ''
   - name: Jump
     summary: |
-      The Jump button.
+      Represents the jump action that can be bound on a `Class.Controller` to
+      detect when a player triggers the jump input.
     value: 32
     tags: []
     deprecation_message: ''

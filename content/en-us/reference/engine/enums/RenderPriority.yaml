@@ -17,31 +17,33 @@ deprecation_message: ''
 items:
   - name: First
     summary: |
-      This should run first.
+      The lowest reserved priority level; callbacks run before all other
+      standard priorities.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Input
     summary: |
-      This should run as second.
+      Runs after `First`; intended for input-processing callbacks.
     value: 100
     tags: []
     deprecation_message: ''
   - name: Camera
     summary: |
-      This should run after Input.
+      Runs after `Input`; intended for camera-update callbacks.
     value: 200
     tags: []
     deprecation_message: ''
   - name: Character
     summary: |
-      This should run after Camera.
+      Runs after `Camera`; intended for character-response callbacks.
     value: 300
     tags: []
     deprecation_message: ''
   - name: Last
     summary: |
-      This should run as last, after Character.
+      The highest reserved priority level; callbacks run after all other
+      standard priorities.
     value: 2000
     tags: []
     deprecation_message: ''

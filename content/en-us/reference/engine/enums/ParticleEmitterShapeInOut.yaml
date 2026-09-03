@@ -4,24 +4,34 @@
 
 name: ParticleEmitterShapeInOut
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls the direction particles travel when emitted from a shaped
+  `Class.ParticleEmitter`.
+description: |
+  Controls whether particles emitted from a `Class.ParticleEmitter` travel
+  outward from, inward toward, or in both directions relative to the emitter
+  shape surface. Used with the `Class.ParticleEmitter.ShapeInOut` property,
+  which defaults to `Enum.ParticleEmitterShapeInOut.Outward`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Outward
-    summary: ''
+    summary: |
+      Particles emit directed outward away from the emitter shape surface.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Inward
-    summary: ''
+    summary: |
+      Particles emit directed inward toward the center of the emitter shape.
     value: 1
     tags: []
     deprecation_message: ''
   - name: InAndOut
-    summary: ''
+    summary: |
+      Particles emit in both outward and inward directions from the emitter
+      shape surface, chosen randomly per particle.
     value: 2
     tags: []
     deprecation_message: ''

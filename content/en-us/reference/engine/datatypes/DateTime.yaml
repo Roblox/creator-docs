@@ -50,9 +50,7 @@ description: |
     <td><code>Minute</code></td><td>0&ndash;59</td><td >&mdash;</td>
   </tr>
   <tr>
-    <td><code>Second</code></td><td>0&ndash;60</td><td>Usually
-    0&ndash;59, sometimes 60 to accommodate leap seconds in certain
-    systems.</td>
+    <td><code>Second</code></td><td>0&ndash;59</td><td >&mdash;</td>
   </tr> <tr>
     <td><code>Millisecond</code></td><td>0&ndash;999</td><td >&mdash;</td>
   </tr>
@@ -442,7 +440,10 @@ constructors:
       - name: unixTimestamp
         type: number
         default:
-        summary: ''
+        summary: |
+          The number of seconds since January 1st, 1970 at 00:00 UTC (the Unix
+          epoch). Must be between -17,987,443,200 and 253,402,300,799
+          (approximately years 1400 to 9999).
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -457,7 +458,10 @@ constructors:
       - name: unixTimestampMillis
         type: number
         default:
-        summary: ''
+        summary: |
+          The number of milliseconds since January 1st, 1970 at 00:00 UTC (the
+          Unix epoch). Must be between -17,987,443,200,000 and
+          253,402,300,799,999 (approximately years 1400 to 9999).
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -483,31 +487,38 @@ constructors:
       - name: year
         type: number
         default: 1970
-        summary: ''
+        summary: |
+          The year value, between 1400 and 9999.
       - name: month
         type: number
         default: 1
-        summary: ''
+        summary: |
+          The month value, between 1 and 12.
       - name: day
         type: number
         default: 1
-        summary: ''
+        summary: |
+          The day of the month, between 1 and 31.
       - name: hour
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The hour value, between 0 and 23.
       - name: minute
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The minute value, between 0 and 59.
       - name: second
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The second value, between 0 and 60.
       - name: millisecond
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The millisecond value, between 0 and 999.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -533,31 +544,38 @@ constructors:
       - name: year
         type: number
         default: 1970
-        summary: ''
+        summary: |
+          The year value, between 1400 and 9999.
       - name: month
         type: number
         default: 1
-        summary: ''
+        summary: |
+          The month value, between 1 and 12.
       - name: day
         type: number
         default: 1
-        summary: ''
+        summary: |
+          The day of the month, between 1 and 31.
       - name: hour
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The hour value, between 0 and 23.
       - name: minute
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The minute value, between 0 and 59.
       - name: second
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The second value, between 0 and 60.
       - name: millisecond
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The millisecond value, between 0 and 999.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -576,7 +594,8 @@ constructors:
       - name: isoDate
         type: string
         default:
-        summary: ''
+        summary: |
+          An ISO 8601 date-time string in UTC, such as `"2020-01-02T10:30:45Z"`.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -682,11 +701,15 @@ methods:
       - name: format
         type: string
         default:
-        summary: ''
+        summary: |
+          A format string containing tokens that are replaced with date and time
+          values, such as `"LL"` or `"YYYY-MM-DD"`.
       - name: locale
         type: string
         default:
-        summary: ''
+        summary: |
+          A BCP 47 locale identifier (such as `"en-us"`) that determines
+          language and formatting conventions.
     returns:
       - type: string
         summary: ''
@@ -714,11 +737,15 @@ methods:
       - name: format
         type: string
         default:
-        summary: ''
+        summary: |
+          A format string containing tokens that are replaced with date and time
+          values, such as `"LL"` or `"YYYY-MM-DD"`.
       - name: locale
         type: string
         default:
-        summary: ''
+        summary: |
+          A BCP 47 locale identifier (such as `"en-us"`) that determines
+          language and formatting conventions.
     returns:
       - type: string
         summary: ''

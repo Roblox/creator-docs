@@ -5,8 +5,20 @@
 name: PlayerListConfiguration
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Controls the built-in player list, the `Class.CoreGui` element that displays
+  the players currently in the experience.
+description: |
+  `Class.PlayerListConfiguration` is the per-element configuration object that
+  controls the built-in player list — the `Class.CoreGui` element that displays
+  the players currently in the experience. It's created automatically as a child
+  of the `Class.CoreGuiConfiguration` service and is reached through
+  `Class.CoreGuiConfiguration.PlayerListConfiguration`.
+
+  It inherits `Class.BaseCoreGuiConfiguration.Enabled|Enabled` to toggle whether
+  the player list is displayed, and adds
+  `Class.PlayerListConfiguration.Open|Open` to control whether the list is
+  currently open.
 code_samples: []
 inherits:
   - BaseCoreGuiConfiguration
@@ -17,8 +29,11 @@ tags:
 deprecation_message: ''
 properties:
   - name: PlayerListConfiguration.Open
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether the built-in player list is currently open.
+    description: |
+      When `true`, the built-in player list is open and shown to the player;
+      when `false`, the list is closed. Defaults to `true`.
     code_samples: []
     type: boolean
     tags: []

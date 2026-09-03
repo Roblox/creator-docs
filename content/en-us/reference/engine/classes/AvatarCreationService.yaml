@@ -38,9 +38,9 @@ methods:
       Auto-setup has specific model requirements and accepts certain
       configurations of models. For more information, see
       [Auto-setup requirements](../../../avatar-setup/auto-setup-requirements.md).
-      In addition to the above requirements, the input model must use
-      `Class.EditableMesh` and `Class.EditableImage` objects for all mesh and
-      texture assets.
+
+      **Note**: this API requires the `Enable Mesh / Image APIs` setting to be
+      turned on under Content Settings for your experience.
     code_samples:
       - AvatarCreationService-AutoSetupAvatarAsync
     parameters:
@@ -84,6 +84,9 @@ methods:
       `Class.AvatarCreationService:LoadAvatar2DPreviewAsync()|LoadAvatar2DPreviewAsync()`
       to retrieve the preview image on the client. This API can only be used on
       the game server.
+
+      **Note**: this API requires the `Enable Mesh / Image APIs` setting to be
+      turned on under Content Settings for your experience.
     code_samples:
       - AvatarCreationService-GenerateAvatar2DPreviewAsync
     parameters:
@@ -120,6 +123,9 @@ methods:
       method is then called to retrieve the generated
       `Class.HumanoidDescription` avatar. This API can only be used on the game
       server.
+
+      **Note**: this API requires the `Enable Mesh / Image APIs` setting to be
+      turned on under Content Settings for your experience.
     code_samples:
       - AvatarCreationService-GenerateAvatarAsync
     parameters:
@@ -382,6 +388,9 @@ methods:
     description: |
       Load an AvatarGeneration 2D preview as an `Class.EditableImage` on the
       client for the given previewId. This API can only be used on the client.
+
+      **Note**: this API requires the `Enable Mesh / Image APIs` setting to be
+      turned on under Content Settings for your experience.
     code_samples:
       - AvatarCreationService-LoadAvatar2DPreviewAsync
     parameters:
@@ -423,6 +432,9 @@ methods:
       Once the method has been invoked on both the client and server, the data
       associated with the generation ID will be erased and subsequent calls to
       his method with the same generation ID will fail.
+
+      **Note**: this API requires the `Enable Mesh / Image APIs` setting to be
+      turned on under Content Settings for your experience.
     code_samples:
       - AvatarCreationService-LoadGeneratedAvatarAsync
     parameters:
@@ -993,6 +1005,49 @@ events:
         default:
         summary: |
           The final `Enum.ModerationStatus` result after moderation completion.
+    tags: []
+    deprecation_message: |
+      This event is deprecated. Use
+      `Class.AvatarCreationService.AvatarOutfitModerationCompleted` instead; the
+      replacement event supports avatar outfits and other in-experience-created
+      outfit types.
+    security: None
+    capabilities:
+      - DynamicGeneration
+  - name: AvatarCreationService.AvatarOutfitModerationCompleted
+    summary: |
+      Fires on the client when moderation completes for an in-experience-created
+      outfit.
+    description: |
+      Fires on the client when an in-experience-created outfit's moderation
+      status changes from `Enum.ModerationStatus.NotReviewed|NotReviewed` to
+      another status. Use this event for any in-experience-created outfit type.
+      Current outfit creation flows include
+      `Class.AvatarCreationService:PromptCreateAvatarAsync()|PromptCreateAvatarAsync()`.
+      Future in-experience outfit types will use this event as well
+      (`Class.AvatarCreationService.AvatarModerationCompleted|AvatarModerationCompleted`
+      is deprecated).
+
+      Use `outfitType` to determine the kind of outfit that completed
+      moderation. This event is informational: an outfit cannot be used until
+      its moderation status permits it.
+    code_samples: []
+    parameters:
+      - name: outfitId
+        type: int64
+        default:
+        summary: |
+          The outfit ID of the outfit that has completed moderation.
+      - name: moderationStatus
+        type: ModerationStatus
+        default:
+        summary: |
+          The final `Enum.ModerationStatus` result after moderation completion.
+      - name: outfitType
+        type: OutfitType
+        default:
+        summary: |
+          The `Enum.OutfitType` of the moderated outfit.
     tags: []
     deprecation_message: ''
     security: None

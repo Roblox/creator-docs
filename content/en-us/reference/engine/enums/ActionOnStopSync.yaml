@@ -4,24 +4,30 @@
 
 name: ActionOnStopSync
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies how Roblox Studio handles local files when file sync stops.
+description: |
+  Controls the behavior selected by the
+  `Class.Studio.ActionOnStopSync|ActionOnStopSync` setting.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: AlwaysAsk
-    summary: ''
+    summary: |
+      Prompts before deleting local files when file sync stops.
     value: 0
     tags: []
     deprecation_message: ''
   - name: KeepLocalFiles
-    summary: ''
+    summary: |
+      Keeps local files when file sync stops.
     value: 1
     tags: []
     deprecation_message: ''
   - name: DeleteLocalFiles
-    summary: ''
+    summary: |
+      Deletes local files when file sync stops.
     value: 2
     tags: []
     deprecation_message: ''

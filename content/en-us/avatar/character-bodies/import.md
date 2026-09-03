@@ -78,5 +78,5 @@ With this new character `Class.Model`, you can perform any of the following:
 - Save the model to your [Toolbox](../../projects/assets/toolbox.md) or make it public on the [Creator Store](../../production/creator-store.md) to use within any of your games or share with other creators.
 
 <Alert severity = 'warning'>
-Character creation is a complex process that requires lots of testing and iteration. For information on importing your character model into a test place and verifying your avatar and related components, see [Test characters](../../art/characters/testing/index.md).
+Character creation is a complex process that requires lots of testing and iteration. For information on importing your character model into a test place and verifying your avatar and related components, see [Test character bodies](./test.md).
 </Alert>

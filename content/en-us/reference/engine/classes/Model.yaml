@@ -392,7 +392,8 @@ methods:
     parameters: []
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          A `Datatype.CFrame` representing a central position in the model.
     tags:
       - Deprecated
     deprecation_message: |
@@ -413,7 +414,8 @@ methods:
     parameters: []
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          The `Datatype.Vector3` size of the `Class.Model`.
     tags:
       - Deprecated
     deprecation_message: |
@@ -471,7 +473,8 @@ methods:
     parameters: []
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          The `Datatype.CFrame` of the model's `Class.Model.PrimaryPart`.
     tags:
       - Deprecated
     deprecation_message: ''
@@ -739,7 +742,9 @@ methods:
       - name: newScaleFactor
         type: float
         default:
-        summary: ''
+        summary: |
+          The new scale factor for the model, which must be a positive non-zero
+          number. A value of 1 represents the model's original size.
     returns:
       - type: ()
         summary: ''

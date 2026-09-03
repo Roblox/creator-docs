@@ -4,8 +4,13 @@
 
 name: RecommendationActionType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the type of action a user took on a recommended item, used when
+  logging action events via `Class.RecommendationService:LogActionEvent()`.
+description: |
+  Action a user performed on a recommended item. Pass as the first argument to
+  `Class.RecommendationService:LogActionEvent()` to record interaction signals
+  used for personalization.
 code_samples: []
 tags: []
 deprecation_message: ''

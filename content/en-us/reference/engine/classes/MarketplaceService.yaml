@@ -226,7 +226,9 @@ methods:
     parameters: []
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          A `Class.Pages` object whose entries describe the current experience's
+          developer products.
     tags:
       - Yields
     deprecation_message: ''
@@ -754,7 +756,9 @@ methods:
           The ID of the subscription to check.
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A dictionary containing the subscription product information described
+          in the following table.
     tags:
       - Yields
     deprecation_message: ''
@@ -869,7 +873,9 @@ methods:
           The ID of the subscription to check.
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A dictionary containing the user's subscription details described in
+          the following table.
     tags:
       - Yields
     deprecation_message: ''
@@ -1001,14 +1007,19 @@ methods:
       - name: user
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` whose subscription payment history you want to
+          retrieve.
       - name: subscriptionId
         type: string
         default:
-        summary: ''
+        summary: |
+          The ID of the subscription whose payment history you want to retrieve.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of payment-history entries, ordered from most recent to least
+          recent, as described in the following table.
     tags:
       - Yields
     deprecation_message: ''
@@ -1068,7 +1079,9 @@ methods:
           The ID of the subscription to check for.
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A dictionary containing the user's subscription status described in
+          the following table.
     tags:
       - Yields
     deprecation_message: ''
@@ -1333,11 +1346,13 @@ methods:
       - name: player
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` to prompt.
       - name: bundleId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The ID of the bundle to purchase.
     returns:
       - type: ()
         summary: ''
@@ -1359,11 +1374,13 @@ methods:
       - name: user
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` to prompt.
       - name: subscriptionId
         type: string
         default:
-        summary: ''
+        summary: |
+          The ID of the subscription to cancel.
     returns:
       - type: ()
         summary: ''
@@ -1385,11 +1402,16 @@ methods:
       - name: player
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` to prompt.
       - name: gamePassId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The pass ID to purchase. This is the `TargetId` returned by
+          `Class.MarketplaceService:GetProductInfo()|GetProductInfo()` when
+          `Enum.InfoType` is `GamePass`. It is not the pass's asset ID and not
+          its `ProductId`.
     returns:
       - type: ()
         summary: ''
@@ -1448,19 +1470,23 @@ methods:
       - name: player
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` to prompt.
       - name: productId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The ID of the developer product to purchase.
       - name: equipIfPurchased
         type: boolean
         default: true
-        summary: ''
+        summary: |
+          Ignored.
       - name: currencyType
         type: CurrencyType
         default: Default
-        summary: ''
+        summary: |
+          Ignored.
     returns:
       - type: ()
         summary: ''
@@ -1498,15 +1524,18 @@ methods:
       - name: player
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` to prompt.
       - name: assetId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The ID of the asset to purchase.
       - name: equipIfPurchased
         type: boolean
         default: true
-        summary: ''
+        summary: |
+          Ignored.
       - name: currencyType
         type: CurrencyType
         default: Default
@@ -1800,7 +1829,8 @@ methods:
           ID.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Whether the user owns the pass.
     tags:
       - Yields
     deprecation_message: ''
@@ -1867,22 +1897,29 @@ events:
     capabilities:
       - PromptExternalPurchase
   - name: MarketplaceService.PromptBundlePurchaseFinished
-    summary: ''
-    description: ''
+    summary: |
+      Fires when a bundle purchase prompt closes.
+    description: |
+      This event fires when a purchase prompt for a bundle closes. Use
+      `Class.MarketplaceService:PlayerOwnsBundleAsync()|PlayerOwnsBundleAsync()`
+      to verify ownership instead of trusting this client-originated event.
     code_samples: []
     parameters:
       - name: player
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` who received the prompt.
       - name: bundleId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The ID of the bundle shown in the prompt.
       - name: wasPurchased
         type: boolean
         default:
-        summary: ''
+        summary: |
+          Whether the bundle was purchased.
     tags: []
     deprecation_message: ''
     security: None

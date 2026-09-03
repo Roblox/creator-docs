@@ -5,7 +5,7 @@ prev: /art/characters/creating/export-textures
 ---
 
 <Alert severity = 'warning'>
-It's important to test your assets multiple times at every point of the asset creation process, whether it is within Blender or after importing into Studio. See [Test characters](../../../art/characters/testing/index.md) for more information.
+It's important to test your assets multiple times at every point of the asset creation process, whether it is within Blender or after importing into Studio. See [Test characters](../../../avatar/character-bodies/test.md) for more information.
 </Alert>
 
 Whether you are exporting your character for testing, or are performing a final export out of Blender, you must apply the appropriate export settings to ensure that Blender exports the proper character data.
@@ -26,7 +26,7 @@ To export your character:
 <img src="../../../assets/art/avatar/basic-creation/Export-Settings.png" width = "60%" />
 
 <Alert severity = 'warning'>
-After exporting your .fbx file, see [Test characters](../../../art/characters/testing/index.md) for steps on importing your character model into a test place and verifying your avatar and related components.
+After exporting your .fbx file, see [Test character bodies](../../../avatar/character-bodies/test.md) for steps on importing your character model into a test place and verifying your avatar and related components.
 </Alert>
 
 <Alert severity = 'success'>

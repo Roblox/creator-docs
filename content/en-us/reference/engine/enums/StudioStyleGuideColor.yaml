@@ -4,8 +4,15 @@
 
 name: StudioStyleGuideColor
 type: enum
-summary: ''
-description: ''
+summary: |
+  An enum that lists color roles used by Studio themes, passed to
+  `Class.StudioTheme:GetColor()` to retrieve the correct theme color for a given
+  UI element in a plugin.
+description: |
+  Named color roles in Roblox Studio's theming system. Each item is a UI color
+  slot, not a literal color. Pass with `Enum.StudioStyleGuideModifier` to
+  `Class.StudioTheme:GetColor()` to get the active theme's `Datatype.Color3` so
+  plugin widgets adapt when the user switches Light/Dark themes.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -36,7 +43,8 @@ items:
     tags: []
     deprecation_message: ''
   - name: Notification
-    summary: ''
+    summary: |
+      The background color of message box and dialog notification panels.
     value: 4
     tags: []
     deprecation_message: ''
@@ -68,32 +76,43 @@ items:
     tags: []
     deprecation_message: ''
   - name: FilterButtonDefault
-    summary: ''
+    summary: |
+      The default background color of filter buttons in the Script Analysis
+      widget.
     value: 9
     tags: []
     deprecation_message: ''
   - name: FilterButtonHover
-    summary: ''
+    summary: |
+      The background color of filter buttons in the Script Analysis widget when
+      hovered.
     value: 10
     tags: []
     deprecation_message: ''
   - name: FilterButtonChecked
-    summary: ''
+    summary: |
+      The background color of filter buttons in the Script Analysis widget when
+      they are in a checked (active) state.
     value: 11
     tags: []
     deprecation_message: ''
   - name: FilterButtonAccent
-    summary: ''
+    summary: |
+      The accent color drawn on the top and left edges of filter buttons in the
+      Script Analysis widget.
     value: 12
     tags: []
     deprecation_message: ''
   - name: FilterButtonBorder
-    summary: ''
+    summary: |
+      The border color of filter buttons in the Script Analysis widget.
     value: 13
     tags: []
     deprecation_message: ''
   - name: FilterButtonBorderAlt
-    summary: ''
+    summary: |
+      The border color of filter buttons in the Script Analysis widget when they
+      are hovered or checked.
     value: 14
     tags: []
     deprecation_message: ''
@@ -141,17 +160,22 @@ items:
     tags: []
     deprecation_message: ''
   - name: Item
-    summary: ''
+    summary: |
+      The background color of items listed in the Explorer and Properties
+      windows.
     value: 22
     tags: []
     deprecation_message: ''
   - name: TableItem
-    summary: ''
+    summary: |
+      The background color of row items in table views such as the Game Settings
+      window.
     value: 23
     tags: []
     deprecation_message: ''
   - name: CategoryItem
-    summary: ''
+    summary: |
+      The background color of category header items in the Properties widget.
     value: 24
     tags: []
     deprecation_message: ''
@@ -186,7 +210,9 @@ items:
     tags: []
     deprecation_message: ''
   - name: CurrentMarker
-    summary: ''
+    summary: |
+      The color of the current-item marker, such as the blue selection indicator
+      in the logout menu in the Light theme.
     value: 30
     tags: []
     deprecation_message: ''
@@ -197,7 +223,8 @@ items:
     tags: []
     deprecation_message: ''
   - name: DropShadow
-    summary: ''
+    summary: |
+      The color used for drop-shadow decorations on floating panels and menus.
     value: 32
     tags: []
     deprecation_message: ''
@@ -208,327 +235,421 @@ items:
     tags: []
     deprecation_message: ''
   - name: Light
-    summary: ''
+    summary: |
+      The light role color from the Qt widget palette, used for the lightest
+      shading of 3D widget effects.
     value: 34
     tags: []
     deprecation_message: ''
   - name: Dark
-    summary: ''
+    summary: |
+      The dark role color from the Qt widget palette, used for the darkest
+      shading of 3D widget effects.
     value: 35
     tags: []
     deprecation_message: ''
   - name: Mid
-    summary: ''
+    summary: |
+      The mid role color from the Qt widget palette, used between the button and
+      dark shading for 3D widget effects.
     value: 36
     tags: []
     deprecation_message: ''
   - name: MainText
-    summary: ''
+    summary: |
+      The primary text color used throughout Studio's UI.
     value: 37
     tags: []
     deprecation_message: ''
   - name: SubText
-    summary: ''
+    summary: |
+      The color of secondary text such as status labels shown in the Team Create
+      widget for offline users and place owners.
     value: 38
     tags: []
     deprecation_message: ''
   - name: TitlebarText
-    summary: ''
+    summary: |
+      The text color displayed in dock widget title bars and Ribbon tabs.
     value: 39
     tags: []
     deprecation_message: ''
   - name: BrightText
-    summary: ''
+    summary: |
+      The color of text displayed inside input fields and other high-contrast
+      contexts.
     value: 40
     tags: []
     deprecation_message: ''
   - name: DimmedText
-    summary: ''
+    summary: |
+      The color of placeholder or dimmed text shown in empty input fields.
     value: 41
     tags: []
     deprecation_message: ''
   - name: LinkText
-    summary: ''
+    summary: |
+      The color of hyperlink text in Studio panels and documentation views.
     value: 42
     tags: []
     deprecation_message: ''
   - name: WarningText
-    summary: ''
+    summary: |
+      The color of warning messages, such as those displayed in the Output
+      window.
     value: 43
     tags: []
     deprecation_message: ''
   - name: ErrorText
-    summary: ''
+    summary: |
+      The color of error messages, such as those displayed in the Output window.
     value: 44
     tags: []
     deprecation_message: ''
   - name: InfoText
-    summary: ''
+    summary: |
+      The color of informational messages, such as those displayed in the Output
+      window.
     value: 45
     tags: []
     deprecation_message: ''
   - name: SensitiveText
-    summary: ''
+    summary: |
+      The color used to display sensitive information text, such as certain
+      messages in the Output window.
     value: 46
     tags: []
     deprecation_message: ''
   - name: ScriptSideWidget
-    summary: ''
+    summary: |
+      The background color of the Script Editor's side gutter, which displays
+      fold icons and breakpoint markers.
     value: 47
     tags: []
     deprecation_message: ''
   - name: ScriptBackground
-    summary: ''
+    summary: |
+      The background color of the Script Editor canvas.
     value: 48
     tags: []
     deprecation_message: ''
   - name: ScriptText
-    summary: ''
+    summary: |
+      The default text color for unclassified tokens in the Script Editor.
     value: 49
     tags: []
     deprecation_message: ''
   - name: ScriptSelectionText
-    summary: ''
+    summary: |
+      The foreground text color of the active text selection in the Script
+      Editor.
     value: 50
     tags: []
     deprecation_message: ''
   - name: ScriptSelectionBackground
-    summary: ''
+    summary: |
+      The background color of the active text selection in the Script Editor.
     value: 51
     tags: []
     deprecation_message: ''
   - name: ScriptFindSelectionBackground
-    summary: ''
+    summary: |
+      The background color of text matched by the current find query in the
+      Script Editor.
     value: 52
     tags: []
     deprecation_message: ''
   - name: ScriptMatchingWordSelectionBackground
-    summary: ''
+    summary: |
+      The background color of all occurrences of the word under the cursor
+      highlighted as matching selections in the Script Editor.
     value: 53
     tags: []
     deprecation_message: ''
   - name: ScriptOperator
-    summary: ''
+    summary: |
+      The color of operator symbols in the Script Editor.
     value: 54
     tags: []
     deprecation_message: ''
   - name: ScriptNumber
-    summary: ''
+    summary: |
+      The color of numeric literals in the Script Editor.
     value: 55
     tags: []
     deprecation_message: ''
   - name: ScriptString
-    summary: ''
+    summary: |
+      The color of string literals in the Script Editor.
     value: 56
     tags: []
     deprecation_message: ''
   - name: ScriptComment
-    summary: ''
+    summary: |
+      The color of comment text in the Script Editor.
     value: 57
     tags: []
     deprecation_message: ''
   - name: ScriptKeyword
-    summary: ''
+    summary: |
+      The color of Lua reserved keywords that don't have a more specific color
+      role in the Script Editor.
     value: 58
     tags: []
     deprecation_message: ''
   - name: ScriptBuiltInFunction
-    summary: ''
+    summary: |
+      The color of recognized built-in global identifiers in the Script Editor,
+      including non-function globals.
     value: 59
     tags: []
     deprecation_message: ''
   - name: ScriptWarning
-    summary: ''
+    summary: |
+      The color of warning markers and underlines in the Script Editor.
     value: 60
     tags: []
     deprecation_message: ''
   - name: ScriptError
-    summary: ''
+    summary: |
+      The color of error markers and underlines in the Script Editor.
     value: 61
     tags: []
     deprecation_message: ''
   - name: ScriptInformation
-    summary: ''
+    summary: |
+      The color of informational diagnostic markers in the Script Editor.
     value: 62
     tags: []
     deprecation_message: ''
   - name: ScriptHint
-    summary: ''
+    summary: |
+      The color of hint diagnostic underlines and scrollbar markers in the
+      Script Editor.
     value: 63
     tags: []
     deprecation_message: ''
   - name: ScriptWhitespace
-    summary: ''
+    summary: |
+      The color of rendered whitespace characters (spaces and tabs) when
+      whitespace display is enabled in the Script Editor.
     value: 64
     tags: []
     deprecation_message: ''
   - name: ScriptRuler
-    summary: ''
+    summary: |
+      The color of the column ruler line displayed in the Script Editor when the
+      ruler is enabled.
     value: 65
     tags: []
     deprecation_message: ''
   - name: DocViewCodeBackground
-    summary: ''
+    summary: |
+      The background color of inline code blocks in the Script Editor's
+      documentation view.
     value: 66
     tags: []
     deprecation_message: ''
   - name: DebuggerCurrentLine
-    summary: ''
+    summary: |
+      The highlight color applied to the line currently paused on in the script
+      debugger.
     value: 67
     tags: []
     deprecation_message: ''
   - name: DebuggerErrorLine
-    summary: ''
+    summary: |
+      The highlight color applied to a line that caused a debugger error or
+      runtime exception.
     value: 68
     tags: []
     deprecation_message: ''
   - name: DiffFilePathText
-    summary: ''
+    summary: |
+      The text color of the file path displayed in the header row of a diff
+      view.
     value: 69
     tags: []
     deprecation_message: ''
   - name: DiffTextHunkInfo
-    summary: ''
+    summary: |
+      The text color of hunk-info lines (the `@@` header rows) in the diff view.
     value: 70
     tags: []
     deprecation_message: ''
   - name: DiffTextNoChange
-    summary: ''
+    summary: |
+      The text color of unchanged context lines in the diff view.
     value: 71
     tags: []
     deprecation_message: ''
   - name: DiffTextAddition
-    summary: ''
+    summary: |
+      The text color of added lines in the diff view.
     value: 72
     tags: []
     deprecation_message: ''
   - name: DiffTextDeletion
-    summary: ''
+    summary: |
+      The text color of deleted lines in the diff view.
     value: 73
     tags: []
     deprecation_message: ''
   - name: DiffTextSeparatorBackground
-    summary: ''
+    summary: |
+      The background color of hunk-separator rows in the diff view text area.
     value: 74
     tags: []
     deprecation_message: ''
   - name: DiffTextNoChangeBackground
-    summary: ''
+    summary: |
+      The background color of unchanged context lines in the diff view.
     value: 75
     tags: []
     deprecation_message: ''
   - name: DiffTextAdditionBackground
-    summary: ''
+    summary: |
+      The background color of added lines in the diff view.
     value: 76
     tags: []
     deprecation_message: ''
   - name: DiffTextDeletionBackground
-    summary: ''
+    summary: |
+      The background color of deleted lines in the diff view.
     value: 77
     tags: []
     deprecation_message: ''
   - name: DiffLineNum
-    summary: ''
+    summary: |
+      The text color of line numbers in the diff view gutter.
     value: 78
     tags: []
     deprecation_message: ''
   - name: DiffLineNumSeparatorBackground
-    summary: ''
+    summary: |
+      The background color of line-number cells in the diff gutter for
+      hunk-separator rows.
     value: 79
     tags: []
     deprecation_message: ''
   - name: DiffLineNumNoChangeBackground
-    summary: ''
+    summary: |
+      The background color of line-number cells in the diff gutter for unchanged
+      lines.
     value: 80
     tags: []
     deprecation_message: ''
   - name: DiffLineNumAdditionBackground
-    summary: ''
+    summary: |
+      The background color of line-number cells in the diff gutter for added
+      lines.
     value: 81
     tags: []
     deprecation_message: ''
   - name: DiffLineNumDeletionBackground
-    summary: ''
+    summary: |
+      The background color of line-number cells in the diff gutter for deleted
+      lines.
     value: 82
     tags: []
     deprecation_message: ''
   - name: DiffFilePathBackground
-    summary: ''
+    summary: |
+      The background color of the file-path header row in a diff view.
     value: 83
     tags: []
     deprecation_message: ''
   - name: DiffFilePathBorder
-    summary: ''
+    summary: |
+      The border color of the file-path header row in a diff view.
     value: 84
     tags: []
     deprecation_message: ''
   - name: ChatIncomingBgColor
-    summary: ''
+    summary: |
+      The background color of incoming messages in the Studio chat widget.
     value: 85
     tags: []
     deprecation_message: ''
   - name: ChatIncomingTextColor
-    summary: ''
+    summary: |
+      The text color of incoming messages in the Studio chat widget.
     value: 86
     tags: []
     deprecation_message: ''
   - name: ChatOutgoingBgColor
-    summary: ''
+    summary: |
+      The background color of outgoing messages in the Studio chat widget.
     value: 87
     tags: []
     deprecation_message: ''
   - name: ChatOutgoingTextColor
-    summary: ''
+    summary: |
+      The text color of outgoing messages in the Studio chat widget.
     value: 88
     tags: []
     deprecation_message: ''
   - name: ChatModeratedMessageColor
-    summary: ''
+    summary: |
+      The color used to display moderated or filtered messages in the Studio
+      chat widget.
     value: 89
     tags: []
     deprecation_message: ''
   - name: Separator
-    summary: ''
+    summary: |
+      The color of separator lines that divide sections within Studio panels.
     value: 90
     tags: []
     deprecation_message: ''
   - name: ButtonBorder
-    summary: ''
+    summary: |
+      The border color of standard clickable buttons.
     value: 91
     tags: []
     deprecation_message: ''
   - name: ButtonText
-    summary: ''
+    summary: |
+      The label text color of standard clickable buttons.
     value: 92
     tags: []
     deprecation_message: ''
   - name: InputFieldBorder
-    summary: ''
+    summary: |
+      The border color of text input fields throughout Studio.
     value: 93
     tags: []
     deprecation_message: ''
   - name: CheckedFieldBackground
-    summary: ''
+    summary: |
+      The background color of checkbox and checked-state input fields.
     value: 94
     tags: []
     deprecation_message: ''
   - name: CheckedFieldBorder
-    summary: ''
+    summary: |
+      The border color of checkbox and checked-state input fields.
     value: 95
     tags: []
     deprecation_message: ''
   - name: CheckedFieldIndicator
-    summary: ''
+    summary: |
+      The color of the check mark or indicator drawn inside a checked input
+      field.
     value: 96
     tags: []
     deprecation_message: ''
   - name: HeaderSection
-    summary: ''
+    summary: |
+      The background color of section header rows in Studio widgets such as the
+      Properties window.
     value: 97
     tags: []
     deprecation_message: ''
   - name: Midlight
-    summary: ''
+    summary: |
+      The midlight role color from the Qt widget palette, used between the
+      button and light shading for 3D widget effects.
     value: 98
     tags: []
     deprecation_message: ''
@@ -540,152 +661,193 @@ items:
     tags: []
     deprecation_message: ''
   - name: DialogButton
-    summary: ''
+    summary: |
+      The background color of standard buttons in modal dialog boxes.
     value: 100
     tags: []
     deprecation_message: ''
   - name: DialogButtonText
-    summary: ''
+    summary: |
+      The label text color of standard buttons in modal dialog boxes.
     value: 101
     tags: []
     deprecation_message: ''
   - name: DialogButtonBorder
-    summary: ''
+    summary: |
+      The border color of standard buttons in modal dialog boxes.
     value: 102
     tags: []
     deprecation_message: ''
   - name: DialogMainButton
-    summary: ''
+    summary: |
+      The background color of the primary action button (such as OK or Save) in
+      modal dialog boxes.
     value: 103
     tags: []
     deprecation_message: ''
   - name: DialogMainButtonText
-    summary: ''
+    summary: |
+      The label text color of the primary action button in modal dialog boxes.
     value: 104
     tags: []
     deprecation_message: ''
   - name: InfoBarWarningBackground
-    summary: ''
+    summary: |
+      The background color of the warning bar that appears at the top of a
+      widget to surface important notices.
     value: 105
     tags: []
     deprecation_message: ''
   - name: InfoBarWarningText
-    summary: ''
+    summary: |
+      The text color of warning messages inside the info bar warning strip.
     value: 106
     tags: []
     deprecation_message: ''
   - name: ScriptEditorCurrentLine
-    summary: ''
+    summary: |
+      The background highlight color applied to the line containing the cursor
+      in the Script Editor.
     value: 107
     tags: []
     deprecation_message: ''
   - name: ScriptMethod
-    summary: ''
+    summary: |
+      The color of function-call target identifiers in the Script Editor,
+      including bare functions and indexed methods.
     value: 108
     tags: []
     deprecation_message: ''
   - name: ScriptProperty
-    summary: ''
+    summary: |
+      The color of property name identifiers in the Script Editor.
     value: 109
     tags: []
     deprecation_message: ''
   - name: ScriptNil
-    summary: ''
+    summary: |
+      The color of the `nil` literal in the Script Editor.
     value: 110
     tags: []
     deprecation_message: ''
   - name: ScriptBool
-    summary: ''
+    summary: |
+      The color of boolean literals (`true` and `false`) in the Script Editor.
     value: 111
     tags: []
     deprecation_message: ''
   - name: ScriptFunction
-    summary: ''
+    summary: |
+      The color of the `function` keyword token in the Script Editor.
     value: 112
     tags: []
     deprecation_message: ''
   - name: ScriptLocal
-    summary: ''
+    summary: |
+      The color of the `local` keyword in the Script Editor.
     value: 113
     tags: []
     deprecation_message: ''
   - name: ScriptSelf
-    summary: ''
+    summary: |
+      The color of the `self` identifier in the Script Editor.
     value: 114
     tags: []
     deprecation_message: ''
   - name: ScriptLuauKeyword
-    summary: ''
+    summary: |
+      The color of Luau-specific keywords (such as type annotation keywords) in
+      the Script Editor.
     value: 115
     tags: []
     deprecation_message: ''
   - name: ScriptFunctionName
-    summary: ''
+    summary: |
+      The color of function name identifiers in the Script Editor.
     value: 116
     tags: []
     deprecation_message: ''
   - name: ScriptTodo
-    summary: ''
+    summary: |
+      The highlight color applied to TODO annotations in script comments.
     value: 117
     tags: []
     deprecation_message: ''
   - name: ScriptBracket
-    summary: ''
+    summary: |
+      The color of parentheses, braces, and square brackets in the Script
+      Editor.
     value: 118
     tags: []
     deprecation_message: ''
   - name: AttributeCog
-    summary: ''
+    summary: |
+      The color of the attribute cog icon shown in the Properties widget.
     value: 119
     tags: []
     deprecation_message: ''
   - name: AICOOverlayText
-    summary: ''
+    summary: |
+      The text color used inside the AI companion (AICO) overlay panel.
     value: 128
     tags: []
     deprecation_message: ''
   - name: AICOOverlayButtonBackground
-    summary: ''
+    summary: |
+      The background color of buttons in the AI companion (AICO) overlay panel.
     value: 129
     tags: []
     deprecation_message: ''
   - name: AICOOverlayButtonBackgroundHover
-    summary: ''
+    summary: |
+      The background color of buttons in the AI companion (AICO) overlay panel
+      when hovered.
     value: 130
     tags: []
     deprecation_message: ''
   - name: AICOOverlayButtonBackgroundPressed
-    summary: ''
+    summary: |
+      The background color of buttons in the AI companion (AICO) overlay panel
+      when pressed.
     value: 131
     tags: []
     deprecation_message: ''
   - name: OnboardingCover
-    summary: ''
+    summary: |
+      The overlay color used to dim non-focused areas during onboarding flows.
     value: 132
     tags: []
     deprecation_message: ''
   - name: OnboardingHighlight
-    summary: ''
+    summary: |
+      The highlight color used to draw attention to a UI element during
+      onboarding flows.
     value: 133
     tags: []
     deprecation_message: ''
   - name: OnboardingShadow
-    summary: ''
+    summary: |
+      The shadow color used beneath highlighted elements during onboarding
+      flows.
     value: 134
     tags: []
     deprecation_message: ''
   - name: BreakpointMarker
-    summary: ''
+    summary: |
+      The color of the breakpoint marker shown in the script editor gutter.
     value: 136
     tags: []
     deprecation_message: ''
   - name: DiffLineNumHover
-    summary: ''
+    summary: |
+      The text color of line numbers in the diff gutter when hovered.
     value: 137
     tags: []
     deprecation_message: ''
   - name: DiffLineNumSeparatorBackgroundHover
-    summary: ''
+    summary: |
+      The background color of line-number cells in the diff gutter for
+      hunk-separator rows when hovered.
     value: 138
     tags: []
     deprecation_message: ''
