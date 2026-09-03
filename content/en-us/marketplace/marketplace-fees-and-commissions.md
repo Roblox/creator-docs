@@ -13,7 +13,7 @@ You receive a commission every time users purchase your item. If users purchase 
 To upload an avatar asset to the Marketplace, you must:
 
 1. Verify your account through your own [government ID](../production/publishing/account-verification.md#verify-through-government-id) or a linked [parental account](https://about.roblox.com/parental-controls) with government ID verification.
-2. Pay an upload fee of **80 Robux** per submission.
+2. Pay an upload fee of **80 Robux** per submission. Items that use an [emissive mask](../art/modeling/surface-appearance.md#emissive-mask) require an upload fee of **500 Robux** instead.
 
 In general, upload fees are not refunded if an item is rejected through moderation. If your asset clears the uploading process, your asset is ready to publish to the Marketplace.
 
@@ -260,6 +260,143 @@ See the following guidelines:
   <img src="../assets/publishing/marketplace/Transaction-Report.png" alt="Transaction report filtered by Publishing Advance Rebates." width="100%" />
 
 - If a sale occurs after Roblox processes rebates, you may need to wait until the next day's processing to receive the rebate credit and see the rebate in the transaction report.
+
+### Emissive publishing advance
+
+Avatar items that use an [emissive mask](../art/modeling/surface-appearance.md#emissive-mask) require a higher non-limited publishing advance than the standard rate for their asset type. The non-limited publishing advance for an emissive item is 5 times the standard non-limited publishing advance for its asset type. The paid limited publishing advance and free limited publishing fee remain the same as the standard rate.
+
+<table>
+<thead>
+  <tr>
+    <th>**Avatar asset type**</th>
+    <th>**Non-limited publishing advance**</th>
+    <th>**Paid limited publishing advance**</th>
+    <th>**Free limited publishing fee**</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Hat / head accessory</td>
+    <td>7500</td>
+    <td>13000</td>
+    <td>500</td>
+  </tr>
+  <tr>
+    <td>Face accessory</td>
+    <td>7500</td>
+    <td>13000</td>
+    <td>500</td>
+  </tr>
+  <tr>
+    <td>Dynamic head bundle</td>
+    <td>7500</td>
+    <td>10000</td>
+    <td>400</td>
+  </tr>
+  <tr>
+    <td>Full mask</td>
+    <td>7500</td>
+    <td>13000</td>
+    <td>450</td>
+  </tr>
+  <tr>
+    <td>Body bundle</td>
+    <td>12500</td>
+    <td>20000</td>
+    <td>500</td>
+  </tr>
+  <tr>
+    <td>Bodysuit</td>
+    <td>12500</td>
+    <td>20000</td>
+    <td>500</td>
+  </tr>
+  <tr>
+    <td>Back accessory</td>
+    <td>5000</td>
+    <td>15000</td>
+    <td>500</td>
+  </tr>
+  <tr>
+    <td>Front accessory</td>
+    <td>5000</td>
+    <td>15000</td>
+    <td>300</td>
+  </tr>
+  <tr>
+    <td>Neck accessory</td>
+    <td>5000</td>
+    <td>15000</td>
+    <td>300</td>
+  </tr>
+  <tr>
+    <td>Shoulder accessory</td>
+    <td>5000</td>
+    <td>15000</td>
+    <td>300</td>
+  </tr>
+  <tr>
+    <td>Waist accessory</td>
+    <td>5000</td>
+    <td>15000</td>
+    <td>350</td>
+  </tr>
+  <tr>
+    <td>Hair accessory</td>
+    <td>5000</td>
+    <td>6000</td>
+    <td>350</td>
+  </tr>
+  <tr>
+    <td>Jacket</td>
+    <td>3000</td>
+    <td>5000</td>
+    <td>350</td>
+  </tr>
+  <tr>
+    <td>Pants</td>
+    <td>3000</td>
+    <td>5000</td>
+    <td>350</td>
+  </tr>
+  <tr>
+    <td>Sweater</td>
+    <td>3000</td>
+    <td>5000</td>
+    <td>350</td>
+  </tr>
+  <tr>
+    <td>T-shirt</td>
+    <td>3000</td>
+    <td>5000</td>
+    <td>350</td>
+  </tr>
+  <tr>
+    <td>Shirt</td>
+    <td>3000</td>
+    <td>5000</td>
+    <td>300</td>
+  </tr>
+  <tr>
+    <td>Shorts</td>
+    <td>3000</td>
+    <td>5000</td>
+    <td>300</td>
+  </tr>
+  <tr>
+    <td>Dresses and skirts</td>
+    <td>3000</td>
+    <td>5000</td>
+    <td>300</td>
+  </tr>
+  <tr>
+    <td>Shoe bundle</td>
+    <td>3000</td>
+    <td>5000</td>
+    <td>300</td>
+  </tr>
+</tbody>
+</table>
 
 ## Commissions
 

@@ -459,6 +459,10 @@ A grayscale `Class.SurfaceAppearance.EmissiveMaskContent|EmissiveMaskContent` co
 
 The associated `Class.SurfaceAppearance.EmissiveTint|EmissiveTint` property determines the tinting color for emissive contribution, and `Class.SurfaceAppearance.EmissiveStrength|EmissiveStrength` determines the strength of emissive contribution.
 
+<Alert severity = 'info'>
+You can use emissive masks on avatar items published to the Marketplace, not just objects inside experiences. This applies to 3D accessories and layered clothing, and to avatar bodies, where any single emissive body part classifies the whole body as an emissive item. 2D clothing doesn't support emissive qualities. Emissive support doesn't yet extend to makeup, though Face Makeup, Lip Makeup, and Eye Makeup will gain support for emissive qualities in a future update. Creating emissive items through In-Experience Creation (IEC) also isn't supported at launch and is planned as a follow-up release. Items published to the Marketplace must keep `Class.SurfaceAppearance.EmissiveStrength|EmissiveStrength` between 0 and 40 to pass validation.
+</Alert>
+
 <GridContainer numColumns="3">
 <figure>
 <img src="../../assets/modeling/surface-appearance/EmissiveStrength-Half.png" alt="An orange sphere with a jack-o-lantern emissive mask at 50% strength."/>

@@ -5771,61 +5771,6 @@
         }
       }
     },
-    "/cloud/v2/users/{user_id}": {
-      "get": {
-        "tags": ["Cloud"],
-        "summary": "Get User",
-        "description": "Gets a user's basic and advanced information.\n\nTo access a user's public information, no additional scopes are required.\n\nTo access a user's verification status, you need the following scopes:\n* user.advanced:read\n\nTo access a user's social account information, you need the following\nscopes:\n* user.social:read",
-        "operationId": "Cloud_GetUser",
-        "parameters": [
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "The user ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/User"
-                }
-              }
-            }
-          }
-        },
-        "x-visibility": "BETA",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "x-roblox-scopes": [
-          {
-            "description": "Grants access to read a user&#x27;s verification status.",
-            "name": "user.advanced:read"
-          },
-          {
-            "description": "Grants access to read a user&#x27;s social account information.",
-            "name": "user.social:read"
-          }
-        ],
-        "x-roblox-docs": {
-          "category": "Users and groups",
-          "methodProperties": {
-            "scopes": []
-          },
-          "resource": {
-            "$ref": "#/components/schemas/User",
-            "name": "User"
-          }
-        }
-      }
-    },
     "/cloud/v2/users/{user_id}/asset-quotas": {
       "get": {
         "tags": ["Cloud"],
@@ -6045,90 +5990,6 @@
           "resource": {
             "$ref": "#/components/schemas/UserNotification",
             "name": "UserNotification"
-          }
-        }
-      }
-    },
-    "/cloud/v2/users/{user_id}:generateThumbnail": {
-      "get": {
-        "tags": ["Cloud"],
-        "summary": "Generate User Thumbnail",
-        "description": "Generates and returns the URL for the user's avatar thumbnail.",
-        "operationId": "Cloud_GenerateUserThumbnail",
-        "parameters": [
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "The user ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "size",
-            "in": "query",
-            "description": "Size of the generated thumbnail. The generated thumbnail will have `size *\nsize` dimension.\n\nCurrently supported values:\n48, 50, 60, 75, 100, 110, 150, 180, 352, 420, 720\nDefault is 420.",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "format",
-            "in": "query",
-            "description": "Specify the format of the generated thumbnail. Default is `PNG`.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | FORMAT_UNSPECIFIED | Default UserThumbnail Format -- set to png |\n  | PNG | Generate thumbnail in `.png` format |\n  | JPEG | Generate thumbnail in `.jpg` format |",
-            "schema": {
-              "example": "FORMAT_UNSPECIFIED",
-              "enum": ["FORMAT_UNSPECIFIED", "PNG", "JPEG"],
-              "type": "string",
-              "format": "enum"
-            }
-          },
-          {
-            "name": "shape",
-            "in": "query",
-            "description": "Specify the shape of the thumbnail. Default is `ROUND` (circular).\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | SHAPE_UNSPECIFIED | Default UserThumbnail Shape -- set to round |\n  | ROUND | Generate thumbnail as a circle. |\n  | SQUARE | Generate thumbnail as a rectangle. |",
-            "schema": {
-              "example": "SHAPE_UNSPECIFIED",
-              "enum": ["SHAPE_UNSPECIFIED", "ROUND", "SQUARE"],
-              "type": "string",
-              "format": "enum"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Operation"
-                }
-              }
-            }
-          }
-        },
-        "x-long-running-operation-parameters": {
-          "metadata": {
-            "$ref": "#/components/schemas/GenerateUserThumbnailMetadata"
-          },
-          "response": {
-            "$ref": "#/components/schemas/GenerateUserThumbnailResponse"
-          }
-        },
-        "x-visibility": "BETA",
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "x-roblox-docs": {
-          "category": "Users and groups",
-          "methodProperties": {
-            "scopes": []
-          },
-          "resource": {
-            "$ref": "#/components/schemas/User",
-            "name": "User"
           }
         }
       }
@@ -6644,21 +6505,6 @@
           }
         },
         "description": "Contains a generated audio asset in MPEG-2 Audio Layer III (MP3) format."
-      },
-      "GenerateUserThumbnailMetadata": {
-        "type": "object",
-        "properties": {},
-        "description": "Represents metadata about the long-running operation corresponding to a\nGenerateUserThumbnail request.\n\nThis is the type of the `Operation.metadata` field in the response to\n`GetOperation` requests for GenerateUserThumbnail operations."
-      },
-      "GenerateUserThumbnailResponse": {
-        "type": "object",
-        "properties": {
-          "imageUri": {
-            "type": "string",
-            "description": "URI for the generated thumbnail."
-          }
-        },
-        "description": "Returns the URL for the user's avatar thumbnail."
       },
       "GetInstanceMetadata": {
         "type": "object",

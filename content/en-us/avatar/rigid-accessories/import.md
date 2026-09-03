@@ -83,6 +83,6 @@ With this `Class.Accessory` object, you can perform any of the following:
 
 - Begin the process of [uploading and publishing](../../marketplace/publish-to-marketplace.md#upload-an-asset) the rigid accessory to the Marketplace.
 
-- Use the rigid accessory in your current game by equipping it to character models with [HumanoidDescription](../../characters/appearance.md#manually-modify-appearance), or by dragging and dropping the rigid accessory under the appropriate character `Class.Model` object.
+- Use the rigid accessory in your current game by equipping it to character models with a [`HumanoidDescription`](../../characters/appearance.md#manually-modify-appearance), or by dragging and dropping the rigid accessory under the appropriate character `Class.Model` object.
 
 - Save the rigid accessory to your [Toolbox](../../projects/assets/toolbox.md) or make it public on the [Creator Store](../../production/creator-store.md) to use within any of your games or share with other creators.
