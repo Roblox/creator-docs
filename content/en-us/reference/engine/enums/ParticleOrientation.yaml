@@ -4,29 +4,36 @@
 
 name: ParticleOrientation
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies how a particle's rendered geometry is oriented.
+description: |
+  Controls the orientation mode used by `Class.ParticleEmitter.Orientation`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: FacingCamera
-    summary: ''
+    summary: |
+      Orients particles as billboards that face the camera.
     value: 0
     tags: []
     deprecation_message: ''
   - name: FacingCameraWorldUp
-    summary: ''
+    summary: |
+      Orients particles toward the camera while keeping them upright on the
+      world Y axis.
     value: 1
     tags: []
     deprecation_message: ''
   - name: VelocityParallel
-    summary: ''
+    summary: |
+      Orients particles parallel to their direction of movement.
     value: 2
     tags: []
     deprecation_message: ''
   - name: VelocityPerpendicular
-    summary: ''
+    summary: |
+      Orients particles perpendicular to their direction of movement.
     value: 3
     tags: []
     deprecation_message: ''

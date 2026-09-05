@@ -42,7 +42,7 @@ methods:
     returns:
       - type: AdReward
         summary: |
-          An `Datatype.AdReward` configured as a developer-product reward for
+          An `Datatype.AdReward` configured as a developer product reward for
           the specified product.
     tags: []
     deprecation_message: ''
@@ -315,7 +315,7 @@ methods:
     description: |
       Removes `instance` from the ad opportunity tracker so that it no longer
       counts toward the rewarded video ad opportunity reporting started by
-      `Class.AdService:RegisterAdOpportunityAsync()|RegisterAdOpportunityAsync`.
+      `Class.AdService:RegisterAdOpportunityAsync()|RegisterAdOpportunityAsync()`.
       Call it once an instance should no longer be treated as an ad opportunity,
       such as when its associated UI is closed or removed.
 
@@ -329,7 +329,7 @@ methods:
         summary: |
           The instance to stop tracking. This should be an instance that you
           previously passed to
-          `Class.AdService:RegisterAdOpportunityAsync()|RegisterAdOpportunityAsync`.
+          `Class.AdService:RegisterAdOpportunityAsync()|RegisterAdOpportunityAsync()`.
     returns:
       - type: ()
         summary: ''

@@ -24,10 +24,12 @@ description: |
   connected to this part. Animation rigs branch out from the model's root part
   through such joints.
 
-  In a R15 character rig, the root part is the HumanoidRootPart. The LowerTorso
-  is connected to the HumanoidRootPart by the a motor named 'Root'. Therefore,
-  the `Datatype.CFrame` of a Pose named 'LowerTorso' in a `Class.Keyframe` would
-  be applied to the motor named 'Root', and not the LowerTorso itself.
+  In an
+  [R15 character rig](../../../avatar/character-bodies/specifications.md#rigging),
+  the root part is the HumanoidRootPart. The LowerTorso is connected to the
+  HumanoidRootPart by the a motor named 'Root'. Therefore, the `Datatype.CFrame`
+  of a Pose named 'LowerTorso' in a `Class.Keyframe` would be applied to the
+  motor named 'Root', and not the LowerTorso itself.
 
   Poses are arranged in a `Class.Keyframe` based on joint hierarchy. This means,
   the Pose's `Datatype.CFrame` is applied to the motor connecting the part

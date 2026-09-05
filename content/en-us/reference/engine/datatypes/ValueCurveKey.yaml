@@ -50,7 +50,9 @@ constructors:
       - name: Interpolation
         type: KeyInterpolationMode
         default:
-        summary: ''
+        summary: |
+          The interpolation mode for the curve segment starting at this key.
+          Defaults to `Enum.KeyInterpolationMode.Constant` if omitted.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -62,8 +64,28 @@ properties:
       The key interpolation mode for the segment started by this
       `Datatype.ValueCurveKey`.
     description: |
-      Defines this key's interpolation mode for the segment started by this
-      `Datatype.ValueCurveKey`.
+      Specifies the interpolation mode used for the curve segment that begins at
+      this key and ends at the next key on the `Class.ValueCurve`. Each segment
+      of the curve can use a different interpolation mode. The default value is
+      `Enum.KeyInterpolationMode.Constant`.
+
+      The available modes are:
+
+      - **Constant** — the segment holds the value of this key until the next
+        key.
+      - **Linear** — the segment linearly interpolates between this key's value
+        and the next key's value.
+      - **Cubic** — the segment uses a cubic Hermite spline defined by this
+        key's `Datatype.ValueCurveKey.RightTangent|RightTangent` and the next
+        key's `Datatype.ValueCurveKey.LeftTangent|LeftTangent`.
+
+      Not all value types support Linear or Cubic interpolation. Non-numerical
+      types such as strings, booleans, and enums revert to Constant
+      interpolation regardless of this setting.
+
+      Changing this property to a non-cubic mode automatically clears the
+      `Datatype.ValueCurveKey.RightTangent|RightTangent` of this key, because
+      only cubic segments use a right tangent.
     default:
     code_samples: []
     tags: []
@@ -73,7 +95,10 @@ properties:
     summary: |
       The time position of this `Datatype.ValueCurveKey`.
     description: |
-      The time position of this `Datatype.ValueCurveKey`.
+      The time position of this `Datatype.ValueCurveKey` along the curve.
+      Defaults to `0`. Keys within a `Class.ValueCurve` are stored sorted by
+      their time values; the time determines where in the animation timeline
+      this key's value applies.
     default:
     code_samples: []
     tags: []
@@ -83,7 +108,14 @@ properties:
     summary: |
       The value of this `Datatype.ValueCurveKey`.
     description: |
-      The value of this `Datatype.ValueCurveKey`.
+      The value stored in this `Datatype.ValueCurveKey`. Defaults to `nil`. Can
+      hold any supported Luau type, including numbers, booleans, strings,
+      `Datatype.Vector2`, `Datatype.Vector3`, `Datatype.CFrame`,
+      `Datatype.UDim`, `Datatype.UDim2`, `Datatype.NumberRange`,
+      `Datatype.NumberSequence`, `Datatype.ColorSequence`, and enums. All keys
+      on a single `Class.ValueCurve` must hold values of the same type;
+      attempting to insert a key whose value type differs from existing keys
+      produces an error.
     default:
     code_samples: []
     tags: []
@@ -93,7 +125,14 @@ properties:
     summary: |
       The tangent to the right of this `Datatype.ValueCurveKey`.
     description: |
-      The tangent to the right of this `Datatype.ValueCurveKey`.
+      The outgoing tangent (slope) at this key, used when the
+      `Datatype.ValueCurveKey.Interpolation|Interpolation` is
+      `Enum.KeyInterpolationMode.Cubic`. Defaults to `nil` (unset); when unset,
+      an effective tangent of `0` is used during curve evaluation. Attempting to
+      set this property on a key whose interpolation mode is not Cubic throws a
+      runtime error. This property is automatically cleared when
+      `Datatype.ValueCurveKey.Interpolation|Interpolation` is changed to a
+      non-cubic mode.
     default:
     code_samples: []
     tags: []
@@ -103,7 +142,13 @@ properties:
     summary: |
       The tangent to the left of this `Datatype.ValueCurveKey`.
     description: |
-      The tangent to the left of this `Datatype.ValueCurveKey`.
+      The incoming tangent (slope) at this key, used when the preceding segment
+      uses `Enum.KeyInterpolationMode.Cubic` interpolation. Defaults to `nil`
+      (unset); when unset, an effective tangent of `0` is used during curve
+      evaluation. Unlike `Datatype.ValueCurveKey.RightTangent|RightTangent`,
+      this property can be set on any key regardless of its own interpolation
+      mode, because it defines the slope at the endpoint of the preceding cubic
+      segment.
     default:
     code_samples: []
     tags: []

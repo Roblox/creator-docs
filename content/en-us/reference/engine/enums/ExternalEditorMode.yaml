@@ -4,19 +4,33 @@
 
 name: ExternalEditorMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether Roblox Studio opens scripts in the operating system's default
+  editor or in a user-selected external editor.
+description: |
+  Controls whether Roblox Studio opens scripts in the operating system's default
+  editor or in a specific editor chosen by the user. Used by the
+  `ExternalEditorMode` property of `Class.Studio`. The default value is
+  `Enum.ExternalEditorMode.SystemDefault`.
+
+  When set to `Enum.ExternalEditorMode.UserSelectedEditor`, the
+  `Class.Studio.ExternalEditorSelection` property becomes active and determines
+  which editor executable Studio launches.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: SystemDefault
-    summary: ''
+    summary: |
+      Studio opens scripts using the operating system's default application for
+      the file type.
     value: 0
     tags: []
     deprecation_message: ''
   - name: UserSelectedEditor
-    summary: ''
+    summary: |
+      Studio opens scripts using the external editor executable specified in
+      `Class.Studio.ExternalEditorSelection`.
     value: 1
     tags: []
     deprecation_message: ''

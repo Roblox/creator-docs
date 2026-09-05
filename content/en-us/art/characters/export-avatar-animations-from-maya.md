@@ -8,7 +8,7 @@ description: Explains the process for exporting avatar animations from Maya.
 <GridContainer numColumns="2">
   <figure>
     <img width="40%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Overview-Mannequin.jpg" alt="A humanoid mannequin in Maya with IK controls." />
-    <figcaption>R15 mannequin reference</figcaption>
+    <figcaption>Mannequin reference</figcaption>
   </figure>
   <figure>
     <video controls src="../../assets/animation/exporting-avatar-animations-from-maya/Moving-Rig.mp4" alt="An angled side view of the same humanoid mannequin walking in place." width="40%"></video>
@@ -17,7 +17,7 @@ description: Explains the process for exporting avatar animations from Maya.
 </GridContainer>
 
 <Alert severity="info">
-    This guide uses a downloadable [R15-Mannequin-Rig.ma](../../assets/animation/exporting-avatar-animations-from-maya/R15-Mannequin-Rig.ma) file that contains an R15 mannequin that you can use as a reference to create and export animations. If you choose to animate on your own R15 rig, the same rig configuration and export settings apply.
+    This guide uses a downloadable [R15-Mannequin-Rig.ma](../../assets/animation/exporting-avatar-animations-from-maya/R15-Mannequin-Rig.ma) file that contains a mannequin with a [standard R15 rig](../../avatar/character-bodies/specifications.md#standard-r15-rigs) that you can use as a reference to create and export animations. If you choose to animate on your own standard R15 rig, the same rig configuration and export settings apply.
 </Alert>
 
 ## Configure the rig
@@ -26,7 +26,7 @@ Before you export your avatar animation from Maya, you must configure your rig t
 
 ### Hierarchy and naming conventions
 
-Studio requires a specific hierarchy and naming conventions for a humanoid rig's internal joint structure so that it can recognize what you're importing as an avatar animation. If you aren't using the downloadable R15 mannequin reference rig to create your animations, make sure your rig uses the following joint hierarchy and naming convention exactly as it is:
+Studio requires a specific hierarchy and naming conventions for a humanoid rig's internal joint structure so that it can recognize what you're importing as an avatar animation. If you aren't using the downloadable standard R15 rig to create your animations, make sure your rig uses the following joint hierarchy and naming convention exactly as it is:
 
 - Root
 - HumanoidRootPart

@@ -4,34 +4,52 @@
 
 name: ReservedHighlightId
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies the built-in reserved role assigned to a `Class.Highlight` via its
+  `ReservedId` property.
+description: |
+  `ReservedHighlightId` enumerates the system-reserved roles used to distinguish
+  Studio selection, hover, active (last-selected), and CSG visualization
+  `Class.Highlight` instances from ordinary developer-created ones. The
+  `ReservedId` property (accessible only at `RobloxScript` security level and
+  hidden from the Properties panel) stores this value. Its default is
+  `Enum.ReservedHighlightId.Standard`, which marks the instance as a normal,
+  non-reserved highlight available for general scripted use.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Standard
-    summary: ''
+    summary: |
+      Marks a `Class.Highlight` as a standard, non-reserved instance not tied to
+      any built-in system state.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Active
-    summary: ''
+    summary: |
+      Marks a `Class.Highlight` as the last-selected object in Studio.
     value: 131072
     tags: []
     deprecation_message: ''
   - name: Hover
-    summary: ''
+    summary: |
+      Marks a `Class.Highlight` as the hover-state indicator, applied to an
+      object currently under the mouse cursor.
     value: 262144
     tags: []
     deprecation_message: ''
   - name: Selection
-    summary: ''
+    summary: |
+      Marks a `Class.Highlight` as the selection-state indicator, applied to a
+      selected object in Studio.
     value: 524288
     tags: []
     deprecation_message: ''
   - name: NegatedPart
-    summary: ''
+    summary: |
+      Marks a `Class.Highlight` used for CSG negated-part visualization in
+      Roblox Studio.
     value: 1048576
     tags: []
     deprecation_message: ''

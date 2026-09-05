@@ -10,7 +10,7 @@ keywords:
 
 **Avatar Setup** helps accelerate the avatar character body, rigid accessory, and layered accessory creation process by automatically processing custom models into avatar assets. If your characters and rigid/layered accessories don't have all essential components for publishing to the [Marketplace](https://www.roblox.com/catalog), Avatar Setup can perform the following for your 3D models:
 
-- **Rigging** — Adds a [standard](../avatar/character-bodies/specifications.md#standard-rigs) or [higher-fidelity](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) rigging armature to your body model to enable movement and animation.
+- **Rigging** — Adds a [R15 rigging armature](../avatar/character-bodies/specifications.md#rigging) to your body model to enable movement and animation.
 - **Skinning** — Adds weights and influences to various surfaces of your mesh, ensuring an organic and natural flexibility during movement.
 - **Facial animation** — Generates the FACS poses, facial rigging, skinning, and animation data required for facial animation and avatar chat.
 - **Caging** — Adds the required cages to your asset, enabling it to support layered accessories.
@@ -190,7 +190,7 @@ To run Avatar Setup:
       </AccordionDetails>
       </BaseAccordion>
 
-   1. If your character includes a [higher-fidelity rig](../avatar/character-bodies/specifications.md#higher-fidelity-rigs) with additional joints, enable **Create R15 with optional joints**.
+   1. If your character includes an [advanced R15 rig](../avatar/character-bodies/specifications.md#advanced-r15-rigs) with additional joints, enable **Create R15 with optional joints**.
    1. If you want to manually align the front direction of your character with the negative Z-axis in world space, enable **Manually Align Front**. While auto-setup does this automatically for you, it can sometimes fail to properly determine the front of your character.
    1. If you want to add a post-processing step to significantly improve the alignment of your character's head cage with the head model and its facial features, enable **Improve facial caging**. This is particularly important if you plan on using [makeup](../avatar/makeup/index.md) with your character.
    1. If you are importing a development avatar and want to skip the auto-decimation of input meshes with resolution above the triangle budgets required for the Marketplace, disable **Reduce triangle count**.

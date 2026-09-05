@@ -15,25 +15,29 @@ deprecation_message: ''
 items:
   - name: Blue
     summary: |
-      Blue chat color.
+      The blue chat color; the default value passed to
+      `Class.Chat:Chat()|Chat()` and `ChatLocal()`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Green
     summary: |
-      Green chat color.
+      The green chat color, passed as the `color` argument to
+      `Class.Chat:Chat()|Chat()` or `ChatLocal()`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Red
     summary: |
-      Red chat color.
+      The red chat color, passed as the `color` argument to
+      `Class.Chat:Chat()|Chat()` or `ChatLocal()`.
     value: 2
     tags: []
     deprecation_message: ''
   - name: White
     summary: |
-      White chat color.
+      The white chat color, passed as the `color` argument to
+      `Class.Chat:Chat()|Chat()` or `ChatLocal()`.
     value: 3
     tags: []
     deprecation_message: ''

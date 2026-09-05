@@ -23,6 +23,14 @@ Although the Open Cloud APIs access the same underlying data stores and are simi
 
 - **Data serialization**: All Open Cloud endpoints require you to serialize data before sending it. Serialization means converting an object into a string. Deserialization is the opposite, converting a string into an object. The Engine API serializes and deserializes entry content automatically, but for Open Cloud, you must generate or parse your entry to and from JSON on your own.
 
+## Non-finite numbers
+
+Data store entries written through the Engine API can contain non-finite Luau numbers. Because JSON can't represent these numbers, Open Cloud responses replace them with tagged JSON objects in the returned entry value:
+
+- Positive infinity (`inf`): `{"m": null, "t": "numeric", "v": "inf"}`
+- Negative infinity (`-inf`): `{"m": null, "t": "numeric", "v": "-inf"}`
+- NaN (`nan`): `{"m": null, "t": "numeric", "v": "nan"}`
+
 ## Permissions
 
 Data stores often store sensitive information, such as user profiles and virtual currency. To maintain security, each Open Cloud method has corresponding permissions, called **scopes**, that you must add to your API key, such as the `universe-datastores.control:list` scope for the [List Data Stores](/cloud/reference/DataStore#Cloud_ListDataStores) method. If you don't add the required permissions, your API call returns an error. See the reference documentation for the required scopes for each endpoint.

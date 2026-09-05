@@ -5,8 +5,30 @@
 name: StudioTheme
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A collection of colors that make up a Roblox Studio theme, letting a plugin
+  query the color of a Studio UI element for the theme the user currently has
+  active.
+description: |
+  A **StudioTheme** represents one of Roblox Studio's UI color themes, such as
+  the built-in **Light** and **Dark** themes, as a palette of colors loaded from
+  the theme's definition. Each color is identified by a
+  `Enum.StudioStyleGuideColor` element (the UI element) together with a
+  `Enum.StudioStyleGuideModifier` (the element's state, which defaults to
+  `Default`), so a plugin can match its appearance to whichever theme the user
+  currently has active.
+
+  Access the currently active theme through `Class.Studio.Theme`, then call
+  `Class.StudioTheme:GetColor()` to look up an individual color:
+
+  ```lua
+  local theme = settings().Studio.Theme
+  local color = theme:GetColor(Enum.StudioStyleGuideColor.MainBackground)
+  ```
+
+  Because a user can switch the active theme at any time, listen for
+  `Class.Studio.ThemeChanged` to refresh your plugin's colors when the theme
+  changes.
 code_samples: []
 inherits:
   - Instance

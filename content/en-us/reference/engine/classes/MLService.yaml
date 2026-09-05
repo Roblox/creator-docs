@@ -5,8 +5,14 @@
 name: MLService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A service that runs in-engine machine learning inference by loading model
+  bundles and creating inference sessions.
+description: |
+  `MLService` loads machine learning model bundles and produces
+  `Class.MLSession` objects used to run inference on the client. It fetches a
+  model asset and constructs a neural network session from the downloaded
+  bundle, which the returned `Class.MLSession` then executes.
 code_samples: []
 inherits:
   - Instance
@@ -19,17 +25,26 @@ deprecation_message: ''
 properties: []
 methods:
   - name: MLService:CreateSessionAsync
-    summary: ''
-    description: ''
+    summary: |
+      Creates an `Class.MLSession` for the model bundle identified by the given
+      asset ID.
+    description: |
+      Fetches the model bundle identified by `assetId`, constructs a neural
+      network session from it, and resolves with a `Class.MLSession` wrapping
+      that session. As a yield function, it returns only once the model has been
+      downloaded and the session created; if the asset cannot be fetched or the
+      bundle is invalid, it raises an error instead of returning a session.
     code_samples: []
     parameters:
       - name: assetId
         type: string
         default:
-        summary: ''
+        summary: |
+          The asset ID of the model bundle to load.
     returns:
       - type: MLSession
-        summary: ''
+        summary: |
+          An `Class.MLSession` created from the loaded model bundle.
     tags:
       - Yields
     deprecation_message: ''

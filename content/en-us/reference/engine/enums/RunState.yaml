@@ -4,24 +4,29 @@
 
 name: RunState
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the current run state of Roblox Studio's simulation.
+description: |
+  Represents the simulation state exposed by `Class.RunService.RunState`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Stopped
-    summary: ''
+    summary: |
+      The simulation is stopped.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Running
-    summary: ''
+    summary: |
+      The simulation is running.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Paused
-    summary: ''
+    summary: |
+      The simulation is paused.
     value: 2
     tags: []
     deprecation_message: ''

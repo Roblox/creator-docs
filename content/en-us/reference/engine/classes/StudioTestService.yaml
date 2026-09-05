@@ -96,8 +96,19 @@ tags:
 deprecation_message: ''
 properties:
   - name: StudioTestService.EditModeActive
-    summary: ''
-    description: ''
+    summary: |
+      Plugin-facing. Indicates whether the session is the idle edit
+      `Class.DataModel` with no Studio test session running.
+    description: |
+      Plugin-facing; requires plugin security and is readable only from plugins
+      and the command bar. Indicates whether the session is the edit
+      `Class.DataModel` with no Studio test session currently running. Defaults
+      to `true`.
+
+      In the edit `Class.DataModel`, this is `true` while Studio is idle and
+      becomes `false` during an in-Studio play or Team Test session, returning
+      to `true` when that session stops. In the server and client
+      `Class.DataModel` of a running Test or Run session, it is `false`.
     code_samples: []
     type: boolean
     tags: []
@@ -113,7 +124,8 @@ properties:
     capabilities: []
 methods:
   - name: StudioTestService:AddPlayers
-    summary: ''
+    summary: |
+      Adds additional simulated clients to the running multiplayer test session.
     description: |
       Adds `numPlayers` additional client DataModels to the running test
       session. Useful for simulating staggered joins, testing lobby-to-game
@@ -130,7 +142,9 @@ methods:
       - name: numPlayers
         type: int
         default:
-        summary: ''
+        summary: |
+          The number of additional client DataModels to add. Must be between 1
+          and 8.
     returns:
       - type: ()
         summary: ''
@@ -140,7 +154,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioTestService:CanLeaveTest
-    summary: ''
+    summary: |
+      Returns whether the calling client DataModel can disconnect from the test.
     description: |
       Returns `true` if the calling client DataModel is allowed to disconnect
       from the test, and `false` otherwise. Check this before calling
@@ -153,14 +168,16 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the client can leave, `false` otherwise.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
   - name: StudioTestService:EndTest
-    summary: ''
+    summary: |
+      Ends the current Studio test session from the server DataModel.
     description: |
       Ends the current Studio test session if called from the server
       `Class.DataModel`, even if the test was not started by this service.
@@ -192,7 +209,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioTestService:ExecuteMultiplayerTestAsync
-    summary: ''
+    summary: |
+      Launches a multiplayer test session and yields until it completes.
     description: |
       Launches a multiplayer test session with one server and `numPlayers`
       client DataModels. Yields until the test completes and returns the value
@@ -214,14 +232,18 @@ methods:
       - name: numPlayers
         type: int
         default:
-        summary: ''
+        summary: |
+          The number of client DataModels to create. Must be between 1 and 8.
       - name: args
         type: Variant
         default:
-        summary: ''
+        summary: |
+          An optional Roblox-serializable value forwarded to scripts inside the
+          test session.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The value passed to `Class.StudioTestService:EndTest()`.
     tags:
       - Yields
     deprecation_message: ''
@@ -229,7 +251,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioTestService:ExecutePlayModeAsync
-    summary: ''
+    summary: |
+      Starts a solo Test session and yields until it ends.
     description: |
       Starts a solo **Test** session and yields until that session ends.
 
@@ -257,7 +280,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioTestService:ExecuteRunModeAsync
-    summary: ''
+    summary: |
+      Starts a Run test session and yields until it ends.
     description: |
       Starts a **Run** test session and yields until that session ends.
 
@@ -285,7 +309,9 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioTestService:GetTestArgs
-    summary: ''
+    summary: |
+      Returns the argument passed to the method that started the current test
+      session.
     description: |
       Returns the argument passed to
       `Class.StudioTestService:ExecutePlayModeAsync()` or
@@ -310,7 +336,8 @@ methods:
     thread_safety: Unsafe
     capabilities: []
   - name: StudioTestService:LeaveTest
-    summary: ''
+    summary: |
+      Disconnects the calling client from the active multiplayer test.
     description: |
       Disconnects the calling client from the active multiplayer test. Useful
       for testing player leave and reconnection logic, cleanup-on-disconnect

@@ -89,7 +89,7 @@ You can track your automatic translation quota usage on your game's localization
 <img src="../../assets/localization/Automatic-Translation-Quotas.png"
      width="800" alt="The Localization Languages section depicting the Automatic Translation Quotas at the top of the page, including the date of the monthly quota renewal." />
 
-Quotas are calculated on a **per-character** and **per-language basis**. For example, translating the source string "hello" into all 15 automatic translation-supported languages will count as 5×15 (75) characters towards your quota.
+Quotas are calculated on a **per-character** and **per-language basis**. For example, automatically translating the source string "hello" into 10 different languages will count as 5×10 (50) characters towards your quota.
 
 ### Automatic translation updates
 

@@ -4,24 +4,34 @@
 
 name: RestPose
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines how the initial joint rest pose is established when importing a
+  rigged 3D model.
+description: |
+  Controls the source from which the mesh importer derives the initial (rest)
+  pose for all joints when building a rig from a 3D file.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Uses the first animation clip found in the source file to define the
+      initial joint rest pose on import.
     value: 0
     tags: []
     deprecation_message: ''
   - name: RotationsReset
-    summary: ''
+    summary: |
+      Resets all joint rotations to zero so that the imported rig starts from an
+      identity rest pose.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Custom
-    summary: ''
+    summary: |
+      Uses a specific animation clip, identified by its index in the file, to
+      set the initial joint rest pose on import.
     value: 2
     tags: []
     deprecation_message: ''

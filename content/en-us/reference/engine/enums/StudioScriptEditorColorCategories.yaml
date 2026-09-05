@@ -4,244 +4,331 @@
 
 name: StudioScriptEditorColorCategories
 type: enum
-summary: ''
-description: ''
+summary: |
+  Color categories used to theme the Script Editor in Roblox Studio.
+description: |
+  Identifies visual element categories whose colors can be customized in the
+  Roblox Studio Script Editor theme system. Each value is a distinct syntactic
+  or UI region in the editor.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Fallback foreground color used for script text that does not match any
+      more specific syntax category.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Operator
-    summary: ''
+    summary: |
+      Color applied to operator tokens such as `+`, `-`, `*`, `/`, `==`, and
+      `..` in scripts.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Number
-    summary: ''
+    summary: |
+      Color applied to numeric literal tokens in scripts.
     value: 2
     tags: []
     deprecation_message: ''
   - name: String
-    summary: ''
+    summary: |
+      Color applied to string literal tokens, including quoted strings and
+      long-string literals.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Comment
-    summary: ''
+    summary: |
+      Color applied to comment tokens (single-line `--` and block `--[[ ]]`
+      comments) in scripts.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Keyword
-    summary: ''
+    summary: |
+      Color applied to Luau reserved keywords such as `if`, `then`, `else`,
+      `do`, `end`, `return`, and `while`.
     value: 5
     tags: []
     deprecation_message: ''
   - name: Builtin
-    summary: ''
+    summary: |
+      Color applied to Luau built-in functions and standard library identifiers
+      in scripts.
     value: 6
     tags: []
     deprecation_message: ''
   - name: Method
-    summary: ''
+    summary: |
+      Color applied to method call identifiers in scripts.
     value: 7
     tags: []
     deprecation_message: ''
   - name: Property
-    summary: ''
+    summary: |
+      Color applied to property access identifiers (tokens following a `.`
+      operator) in scripts.
     value: 8
     tags: []
     deprecation_message: ''
   - name: Nil
-    summary: ''
+    summary: |
+      Color applied to the `nil` literal token in scripts.
     value: 9
     tags: []
     deprecation_message: ''
   - name: Bool
-    summary: ''
+    summary: |
+      Foreground color used to highlight boolean literals (`true` and `false`)
+      in scripts.
     value: 10
     tags: []
     deprecation_message: ''
   - name: Function
-    summary: ''
+    summary: |
+      Color applied to the `function` keyword token in function declarations.
     value: 11
     tags: []
     deprecation_message: ''
   - name: Local
-    summary: ''
+    summary: |
+      Color applied to the `local` keyword token in local variable and function
+      declarations.
     value: 12
     tags: []
     deprecation_message: ''
   - name: Self
-    summary: ''
+    summary: |
+      Color applied to the `self` identifier token in method bodies.
     value: 13
     tags: []
     deprecation_message: ''
   - name: LuauKeyword
-    summary: ''
+    summary: |
+      Color applied to Luau-specific type annotation keywords such as `type` and
+      `typeof`.
     value: 14
     tags: []
     deprecation_message: ''
   - name: FunctionName
-    summary: ''
+    summary: |
+      Color applied to the identifier that names a function in its declaration.
     value: 15
     tags: []
     deprecation_message: ''
   - name: TODO
-    summary: ''
+    summary: |
+      Color applied to `TODO` markers found inside comments in scripts.
     value: 16
     tags: []
     deprecation_message: ''
   - name: Background
-    summary: ''
+    summary: |
+      Main background color of the Script Editor canvas.
     value: 17
     tags: []
     deprecation_message: ''
   - name: SelectionText
-    summary: ''
+    summary: |
+      Foreground color for text within the currently selected range in the
+      Script Editor.
     value: 18
     tags: []
     deprecation_message: ''
   - name: SelectionBackground
-    summary: ''
+    summary: |
+      Background highlight color for the currently selected text range in the
+      Script Editor.
     value: 19
     tags: []
     deprecation_message: ''
   - name: FindSelectionBackground
-    summary: ''
+    summary: |
+      Background highlight color applied to text ranges matched by a Find or
+      Replace operation.
     value: 20
     tags: []
     deprecation_message: ''
   - name: MatchingWordBackground
-    summary: ''
+    summary: |
+      Background highlight color applied to all occurrences of the word under
+      the cursor when word-highlight is active.
     value: 21
     tags: []
     deprecation_message: ''
   - name: Warning
-    summary: ''
+    summary: |
+      Color used for warning-severity diagnostic markers and underlines in
+      scripts.
     value: 22
     tags: []
     deprecation_message: ''
   - name: Error
-    summary: ''
+    summary: |
+      Color used for error-severity diagnostic markers and underlines in
+      scripts.
     value: 23
     tags: []
     deprecation_message: ''
   - name: Info
-    summary: ''
+    summary: |
+      Color used for information-severity diagnostic markers in scripts.
     value: 24
     tags: []
     deprecation_message: ''
   - name: Hint
-    summary: ''
+    summary: |
+      Color used for hint-severity diagnostic markers in scripts.
     value: 25
     tags: []
     deprecation_message: ''
   - name: Whitespace
-    summary: ''
+    summary: |
+      Color used to render visible whitespace characters (spaces and tabs) when
+      that display option is enabled.
     value: 26
     tags: []
     deprecation_message: ''
   - name: ActiveLine
-    summary: ''
+    summary: |
+      Background highlight color applied to the line that currently contains the
+      text cursor.
     value: 27
     tags: []
     deprecation_message: ''
   - name: DebuggerCurrentLine
-    summary: ''
+    summary: |
+      Background highlight color for the line the debugger is currently paused
+      on.
     value: 28
     tags: []
     deprecation_message: ''
   - name: DebuggerErrorLine
-    summary: ''
+    summary: |
+      Background highlight color for a line that caused a runtime error during a
+      debugging session.
     value: 29
     tags: []
     deprecation_message: ''
   - name: Ruler
-    summary: ''
+    summary: |
+      Color of the vertical column ruler line drawn at the configured
+      character-width limit in the Script Editor.
     value: 30
     tags: []
     deprecation_message: ''
   - name: Bracket
-    summary: ''
+    summary: |
+      Color applied to bracket characters such as `(`, `)`, `[`, `]`, `{`, and
+      `}` in scripts.
     value: 31
     tags: []
     deprecation_message: ''
   - name: Type
-    summary: ''
+    summary: |
+      Color applied to Luau type name tokens in type annotations and
+      declarations.
     value: 32
     tags: []
     deprecation_message: ''
   - name: MenuPrimaryText
-    summary: ''
+    summary: |
+      Primary text color for items listed in autocomplete and context-menu
+      popups.
     value: 33
     tags: []
     deprecation_message: ''
   - name: MenuSecondaryText
-    summary: ''
+    summary: |
+      Secondary text color (for example, type annotations or documentation
+      hints) in autocomplete popups.
     value: 34
     tags: []
     deprecation_message: ''
   - name: MenuSelectedText
-    summary: ''
+    summary: |
+      Text color of the currently highlighted item in autocomplete and
+      context-menu popups.
     value: 35
     tags: []
     deprecation_message: ''
   - name: MenuBackground
-    summary: ''
+    summary: |
+      Background color for autocomplete and context-menu popups in the Script
+      Editor.
     value: 36
     tags: []
     deprecation_message: ''
   - name: MenuSelectedBackground
-    summary: ''
+    summary: |
+      Background color of the currently highlighted item in autocomplete and
+      context-menu popups.
     value: 37
     tags: []
     deprecation_message: ''
   - name: MenuScrollbarBackground
-    summary: ''
+    summary: |
+      Background color of the scrollbar track inside autocomplete and
+      context-menu popups.
     value: 38
     tags: []
     deprecation_message: ''
   - name: MenuScrollbarHandle
-    summary: ''
+    summary: |
+      Color of the scrollbar thumb (handle) inside autocomplete and context-menu
+      popups.
     value: 39
     tags: []
     deprecation_message: ''
   - name: MenuBorder
-    summary: ''
+    summary: |
+      Border color for autocomplete and context-menu popups in the Script
+      Editor.
     value: 40
     tags: []
     deprecation_message: ''
   - name: DocViewCodeBackground
-    summary: ''
+    summary: |
+      Background color for inline code blocks rendered in the documentation
+      viewer panel within Studio.
     value: 41
     tags: []
     deprecation_message: ''
   - name: AICOOverlayText
-    summary: ''
+    summary: |
+      Text color for labels displayed in the AI Code Overlay panel.
     value: 42
     tags: []
     deprecation_message: ''
   - name: AICOOverlayButtonBackground
-    summary: ''
+    summary: |
+      Background color for AI Code Overlay action buttons in their default
+      (idle) state.
     value: 43
     tags: []
     deprecation_message: ''
   - name: AICOOverlayButtonBackgroundHover
-    summary: ''
+    summary: |
+      Background color for AI Code Overlay action buttons when the pointer
+      hovers over them.
     value: 44
     tags: []
     deprecation_message: ''
   - name: AICOOverlayButtonBackgroundPressed
-    summary: ''
+    summary: |
+      Background color for AI Code Overlay action buttons while they are being
+      pressed.
     value: 45
     tags: []
     deprecation_message: ''
   - name: IndentationRuler
-    summary: ''
+    summary: |
+      Color of the vertical guide lines drawn at each indentation level in the
+      script editor gutter.
     value: 46
     tags: []
     deprecation_message: ''

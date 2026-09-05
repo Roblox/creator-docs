@@ -36,6 +36,36 @@ descendants:
 tags: []
 deprecation_message: ''
 properties:
+  - name: Decal.AutoLocalize
+    summary: |
+      When set to `true`, the decal's image asset is eligible for automatic
+      localization capture.
+    description: |
+      When set to `true`, the decal's image asset is eligible for automatic
+      localization through the Automatic Asset Capture system. The
+      `Class.LocalizationService` uses this property to determine whether the
+      decal's `Class.Decal.ColorMapContent|ColorMapContent` should be captured
+      and potentially replaced with a localized version.
+
+      This property only applies to non-PBR decals. If any PBR maps
+      (`Class.Decal.NormalMapContent|NormalMapContent`,
+      `Class.Decal.RoughnessMapContent|RoughnessMapContent`, or
+      `Class.Decal.MetalnessMapContent|MetalnessMapContent`) are set, automatic
+      localization capture is suppressed to avoid inconsistent rendering.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Localization
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
   - name: Decal.Color3
     summary: |
       The `Datatype.Color3` tint of the `Class.Decal`.
@@ -135,8 +165,19 @@ properties:
     capabilities:
       - Basic
   - name: Decal.MetalnessMap
-    summary: ''
-    description: ''
+    summary: |
+      Content ID that determines the metalness map of the surface.
+    description: |
+      This property takes a content ID that determines the metalness map applied
+      to the surface. A metalness map controls how metallic the surface appears
+      at each point, blending between a dielectric (non-metal) and a metallic
+      response to light. It defaults to an empty content, in which case no
+      metalness map is applied.
+
+      Assigning a normal, roughness, or metalness map makes the `Class.Decal` a
+      physically based rendering (PBR) surface. To assign this map from a
+      `Datatype.Content` object, use
+      `Class.Decal.MetalnessMapContent|MetalnessMapContent`.
     code_samples: []
     type: ContentId
     tags:
@@ -153,8 +194,18 @@ properties:
     capabilities:
       - Basic
   - name: Decal.MetalnessMapContent
-    summary: ''
-    description: ''
+    summary: |
+      `Datatype.Content` object that determines the metalness map of the
+      surface.
+    description: |
+      This property takes a `Datatype.Content` object that determines the
+      metalness map applied to the surface. A metalness map controls how
+      metallic the surface appears at each point, blending between a dielectric
+      (non-metal) and a metallic response to light. It defaults to an empty
+      content, in which case no metalness map is applied.
+
+      Assigning a normal, roughness, or metalness map makes the `Class.Decal` a
+      physically based rendering (PBR) surface.
     code_samples: []
     type: Content
     tags: []
@@ -170,8 +221,19 @@ properties:
     capabilities:
       - Basic
   - name: Decal.NormalMap
-    summary: ''
-    description: ''
+    summary: |
+      Content ID that determines the normal map of the surface.
+    description: |
+      This property takes a content ID that determines the normal map applied to
+      the surface. A normal map perturbs the surface normals used in lighting
+      calculations, adding the appearance of fine detail such as bumps and
+      grooves without changing the underlying geometry. It defaults to an empty
+      content, in which case no normal map is applied.
+
+      Assigning a normal, roughness, or metalness map makes the `Class.Decal` a
+      physically based rendering (PBR) surface. To assign this map from a
+      `Datatype.Content` object, use
+      `Class.Decal.NormalMapContent|NormalMapContent`.
     code_samples: []
     type: ContentId
     tags:
@@ -188,8 +250,17 @@ properties:
     capabilities:
       - Basic
   - name: Decal.NormalMapContent
-    summary: ''
-    description: ''
+    summary: |
+      `Datatype.Content` object that determines the normal map of the surface.
+    description: |
+      This property takes a `Datatype.Content` object that determines the normal
+      map applied to the surface. A normal map perturbs the surface normals used
+      in lighting calculations, adding the appearance of fine detail such as
+      bumps and grooves without changing the underlying geometry. It defaults to
+      an empty content, in which case no normal map is applied.
+
+      Assigning a normal, roughness, or metalness map makes the `Class.Decal` a
+      physically based rendering (PBR) surface.
     code_samples: []
     type: Content
     tags: []
@@ -225,8 +296,19 @@ properties:
     capabilities:
       - Basic
   - name: Decal.RoughnessMap
-    summary: ''
-    description: ''
+    summary: |
+      Content ID that determines the roughness map of the surface.
+    description: |
+      This property takes a content ID that determines the roughness map applied
+      to the surface. A roughness map controls how rough or smooth the surface
+      appears at each point, which in turn determines how sharp or blurry its
+      reflections are. It defaults to an empty content, in which case no
+      roughness map is applied.
+
+      Assigning a normal, roughness, or metalness map makes the `Class.Decal` a
+      physically based rendering (PBR) surface. To assign this map from a
+      `Datatype.Content` object, use
+      `Class.Decal.RoughnessMapContent|RoughnessMapContent`.
     code_samples: []
     type: ContentId
     tags:
@@ -243,8 +325,18 @@ properties:
     capabilities:
       - Basic
   - name: Decal.RoughnessMapContent
-    summary: ''
-    description: ''
+    summary: |
+      `Datatype.Content` object that determines the roughness map of the
+      surface.
+    description: |
+      This property takes a `Datatype.Content` object that determines the
+      roughness map applied to the surface. A roughness map controls how rough
+      or smooth the surface appears at each point, which in turn determines how
+      sharp or blurry its reflections are. It defaults to an empty content, in
+      which case no roughness map is applied.
+
+      Assigning a normal, roughness, or metalness map makes the `Class.Decal` a
+      physically based rendering (PBR) surface.
     code_samples: []
     type: Content
     tags: []
@@ -260,7 +352,8 @@ properties:
     capabilities:
       - Basic
   - name: Decal.Shiny
-    summary: ''
+    summary: |
+      Deprecated property that previously set the shininess of the decal.
     description: |
       This property dictates how shiny the decal is. It takes a value between
       `0` and `1`, where `1` is "fully shiny."
@@ -283,7 +376,8 @@ properties:
     capabilities:
       - Basic
   - name: Decal.Specular
-    summary: ''
+    summary: |
+      Deprecated property that previously set the specularity of the decal.
     description: |
       Sets the specularity, which is how the surface responds to light being
       shined on it.
@@ -342,6 +436,31 @@ properties:
     security:
       read: None
       write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+  - name: Decal.TexturePackContent
+    summary: |
+      Engine-managed `Datatype.Content` that stores the compressed runtime
+      texture-pack data for PBR decals.
+    description: |
+      Managed by the engine and not accessible from scripts. A
+      `Datatype.Content` that holds the decal's compressed runtime texture data.
+      When the `Class.Decal` is a physically based rendering (PBR) surface, the
+      engine packs its color, normal, roughness, and metalness maps into a
+      single texture-pack asset and references it here. Defaults to an empty
+      content.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxEngineSecurity
+      write: RobloxEngineSecurity
     thread_safety: ReadSafe
     category: Appearance
     serialization:

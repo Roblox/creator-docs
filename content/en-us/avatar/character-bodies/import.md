@@ -22,7 +22,7 @@ To import your asset as a character body model:
    - For additional information on import settings and troubleshooting, see [Importer](../../studio/importer.md).
 
 1. In the **Rig General** section,
-   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you are importing a [higher-fidelity rig](./specifications.md#higher-fidelity-rigs), set **Rig Type** to **Custom Humanoid**.
+   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you are importing an [advanced R15 rig](./specifications.md#advanced-r15-rigs), set **Rig Type** to **Custom Humanoid**.
    1. Set **Rig Scale** to the appropriate [Body Scale](./specifications.md#body-scale) of your character.
    1. Set **Constraint Type** to **Joint Upgrade**.
 
@@ -69,7 +69,7 @@ If your textures didn't load correctly, you can import them manually using the [
 
 With this new character `Class.Model`, you can perform any of the following:
 
-- If your character includes a [higher-fidelity rig](./specifications.md#higher-fidelity-rigs), add a `Class.HumanoidRigDescription` and/or `Class.DigitsRigDescription` objects for Marketplace and animation requirements. You may need to use the [Adaptive Animation](../../characters/adaptive-animation.md) plugin to remap your joints and set a baseline t-pose reference to better support your animations.
+- If your character includes an [advanced R15 rig](./specifications.md#advanced-r15-rigs), add `Class.HumanoidRigDescription` and/or `Class.DigitsRigDescription` objects for Marketplace and animation requirements. You may need to use the [Adaptive Animation](../../characters/adaptive-animation.md) plugin to remap your joints and set a baseline t-pose reference to better support your animations.
 - Begin the process of [uploading and publishing](../../marketplace/publish-to-marketplace.md#upload-an-asset) the character model to the Marketplace. This involves some additional validation and moderation steps.
 - Use the model in your current game and modify the model's appearance with [HumanoidDescription](../../characters/appearance.md#manually-modify-appearance).
 
@@ -78,5 +78,5 @@ With this new character `Class.Model`, you can perform any of the following:
 - Save the model to your [Toolbox](../../projects/assets/toolbox.md) or make it public on the [Creator Store](../../production/creator-store.md) to use within any of your games or share with other creators.
 
 <Alert severity = 'warning'>
-Character creation is a complex process that requires lots of testing and iteration. For information on importing your character model into a test place and verifying your avatar and related components, see [Test characters](../../art/characters/testing/index.md).
+Character creation is a complex process that requires lots of testing and iteration. For information on importing your character model into a test place and verifying your avatar and related components, see [Test character bodies](./test.md).
 </Alert>

@@ -21,8 +21,20 @@ tags:
 deprecation_message: ''
 properties:
   - name: TextChatMessage.BubbleChatMessageProperties
-    summary: ''
-    description: ''
+    summary: |
+      A reference to the `Class.BubbleChatMessageProperties` that overrides the
+      appearance of this message's chat bubble.
+    description: |
+      A reference to the `Class.BubbleChatMessageProperties` instance that
+      overrides `Class.BubbleChatConfiguration` properties for this individual
+      message's chat bubble.
+
+      This property is `nil` by default. It is populated when your
+      `Class.TextChatService.OnBubbleAdded` callback returns a
+      `Class.BubbleChatMessageProperties` instance: the returned instance is
+      stored here on the resulting `Class.TextChatMessage`. Any properties set
+      on it take precedence over the shared `Class.BubbleChatConfiguration` when
+      the message's bubble is rendered.
     code_samples: []
     type: BubbleChatMessageProperties
     tags: []
@@ -38,8 +50,21 @@ properties:
     capabilities:
       - Chat
   - name: TextChatMessage.ChatWindowMessageProperties
-    summary: ''
-    description: ''
+    summary: |
+      A reference to the `Class.ChatWindowMessageProperties` that overrides the
+      appearance of this message in the chat window.
+    description: |
+      A reference to the `Class.ChatWindowMessageProperties` instance that
+      overrides `Class.ChatWindowConfiguration` properties for this individual
+      message as displayed in the chat window.
+
+      This property is `nil` by default. It is populated when your
+      `Class.TextChatService.OnChatWindowAdded` callback returns a
+      `Class.ChatWindowMessageProperties` instance, typically created with
+      `Class.ChatWindowConfiguration:DeriveNewMessageProperties()`: the returned
+      instance is stored here on the resulting `Class.TextChatMessage`. Any
+      properties set on it take precedence over the shared
+      `Class.ChatWindowConfiguration` when the message is rendered.
     code_samples: []
     type: ChatWindowMessageProperties
     tags: []

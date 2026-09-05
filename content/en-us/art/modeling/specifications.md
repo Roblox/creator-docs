@@ -33,7 +33,7 @@ See the following specifications for general geometry:
 
 ## Rigging and skinning
 
-Roblox supports third-party meshes with an internal rig, or skeleton structure that can be used as additional articulation points in your model. See [Character rigs](../../avatar/character-bodies/specifications.md#rigging) for specific standards for a standard or higher-fidelity character rig.
+Roblox supports third-party meshes with an internal rig, or skeleton structure that can be used as additional articulation points in your model. For more information on the specific standards for R15 rigs, see [Character body specifications - Rigging](../../avatar/character-bodies/specifications.md#rigging).
 
 <GridContainer numColumns="2">
   <figure>
@@ -73,7 +73,7 @@ See the following requirements for assets with animation:
 Inner and Outer cages are non-rendered meshes that Roblox uses to define the inner and outer surfaces of a mesh using a `Class.WrapLayer` or `Class.WrapTarget` instance. These cages are most often used with characters and accessories, though you can use cage meshes for any mesh object.
 
 <Alert severity="warning">
-Character models must include an outer cage in order to properly equip layered clothing and accessories. See [Character body specifications](../../avatar/character-bodies/specifications.md) for additional information.
+Character models must include an outer cage in order to properly equip layered accessories. For more information, see [Character body specifications](../../avatar/character-bodies/specifications.md).
 </Alert>
 
 For general use, see the following requirements for adding inner and outer cage meshes to your model:

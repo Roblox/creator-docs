@@ -23,17 +23,23 @@ tags: []
 deprecation_message: ''
 items:
   - name: CustomField01
-    summary: ''
+    summary: |
+      The first custom field key, used to provide a breakdown dimension in
+      Roblox-provided analytics charts.
     value: 0
     tags: []
     deprecation_message: ''
   - name: CustomField02
-    summary: ''
+    summary: |
+      The second custom field key, used to provide a breakdown dimension in
+      Roblox-provided analytics charts.
     value: 1
     tags: []
     deprecation_message: ''
   - name: CustomField03
-    summary: ''
+    summary: |
+      The third custom field key, used to provide a breakdown dimension in
+      Roblox-provided analytics charts.
     value: 2
     tags: []
     deprecation_message: ''

@@ -127,7 +127,9 @@ functions:
       - name: functionOrThread
         type: function | thread
         default:
-        summary: ''
+        summary: |
+          A function or a thread returned by `Library.coroutine.create()` to be
+          called/resumed after the duration elapses.
       - name: ...
         type: Variant
         default:

@@ -98,9 +98,9 @@ Create your first avatar body
 
 ### Rigging armature
 
-Inside of the avatar's physical body is a non-rendered [rigging armature](../avatar/character-bodies/specifications.md#rigging) that allows the character to articulate its limbs.  Often referred to as joints or bones, rigging armature includes skinning data that allows connections between limbs to bend organically, such as the character's knees and elbows.
+Inside of the avatar's physical body is a non-rendered [rigging armature](../avatar/character-bodies/specifications.md#rigging) that allows the character to articulate its limbs. Often referred to as joints or bones, rigging armature includes skinning data that allows connections between limbs to bend organically, such as the character's knees and elbows.
 
-Standard avatar rigs, often referred to as R15 rigs, require 15 poseable joints to articulate the character's 15 body parts. However, if you want to create higher-fidelity rigs with a greater level of realism, there are up to 37 additional optional joints you can create for articulated hands, shoulders, and spine movements. Each joint must follow a specific hierarchy and naming convention for the avatar to function properly in Studio and on the Marketplace.
+**Standard avatar rigs** require 15 poseable joints to articulate the character's 15 body parts. However, if you want to create higher-fidelity characters with a greater level of realism, there are up to 37 additional optional joints for **advanced R15 rigs** that you can create for articulated hands, shoulders, and spine movements. Each joint must follow a specific hierarchy and naming convention for the avatar to function properly in Studio and on the Marketplace.
 
 If your avatar's geometry doesn't have a rigging armature, Roblox provides [Avatar Setup](../avatar-setup/index.md), a tool that automatically generates a Marketplace-ready rig to the character's body model to enable movement and animation.
 
@@ -353,7 +353,7 @@ Create your first layered accessory
 </Grid>
 <Grid item xs={12} lg={6} style={{ display: 'flex', flexDirection: 'column', width: '100%', minHeight: 'min(70vh, 640px)' }}>
 
-<MediaPanel src="../assets/avatar-anatomy/layered-accessories/no-clothing.png" alt="Avatar without layered clothing" scale={0.88} >
+<MediaPanel src="../assets/avatar-anatomy/layered-accessories/no-clothing.png" alt="Avatar without layered accessories" scale={0.88} >
 <MediaPanelOption id="jacket-1" label="Jacket 1" src="../assets/avatar-anatomy/layered-accessories/jacket-1.png" alt="Avatar wearing jacket 1" scale={0.88} />
 <MediaPanelOption id="jacket-2" label="Jacket 2" src="../assets/avatar-anatomy/layered-accessories/jacket-2.png" alt="Avatar wearing jacket 2" scale={0.88} />
 <MediaPanelOption id="jacket-3" label="Jacket 3" src="../assets/avatar-anatomy/layered-accessories/jacket-3.png" alt="Avatar wearing jacket 3" scale={0.88} />

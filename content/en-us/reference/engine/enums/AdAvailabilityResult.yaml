@@ -7,11 +7,7 @@ type: enum
 summary: |
   Indicates whether an ad is available or the reason it cannot be shown.
 description: |
-  Returned as the `AdAvailabilityResult` field in the dictionary from
-  `Class.AdService:GetAdAvailabilityNowAsync()`.
-  `Enum.AdAvailabilityResult.IsAvailable` means an ad is ready to display; any
-  other `Enum.AdAvailabilityResult` value explains why the ad request could not
-  be fulfilled.
+  Indicates whether an ad is available or the reason it cannot be shown.
 code_samples: []
 tags: []
 deprecation_message: ''

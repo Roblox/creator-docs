@@ -5,7 +5,9 @@
 name: Path2D
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  Represents a 2D cubic spline path that renders a stroked curve under any
+  `Class.GuiObject`.
 description: |
   `Path2D` is a UI instance that represents a 2D spline. It can be placed under
   any `Class.GuiObject` and be edited directly in the viewport using built‑in
@@ -26,7 +28,9 @@ properties:
     summary: |
       Connects the first and last control points when enabled.
     description: |
-      Connects the first and last control points when enabled.
+      When set to `true`, the path forms a closed loop by connecting the last
+      control point back to the first. The closure only takes effect when the
+      path has at least 3 control points. Defaults to `false`.
     code_samples: []
     type: boolean
     tags: []
@@ -45,7 +49,9 @@ properties:
     summary: |
       Determines the color of the `Class.Path2D`.
     description: |
-      Determines the color of the `Class.Path2D`.
+      Determines the stroke color used to render the `Class.Path2D`. Defaults to
+      `[0, 0, 0]` (black). A child `Class.UIGradient` can override the solid
+      color with a gradient fill.
     code_samples: []
     type: Color3
     tags: []
@@ -64,7 +70,10 @@ properties:
     summary: |
       Index of the currently selected `Datatype.Path2DControlPoint`.
     description: |
-      Index of the currently selected `Datatype.Path2DControlPoint`.
+      The 1-based index of the currently selected control point. Defaults to `1`
+      and is clamped to the range [1, number of control points]. Changing this
+      value updates `Class.Path2D.SelectedControlPointData` to reflect the
+      control point at the new index.
     code_samples: []
     type: int
     tags:
@@ -85,8 +94,11 @@ properties:
       `Datatype.Path2DControlPoint` data type representing the currently
       selected control point.
     description: |
-      `Datatype.Path2DControlPoint` data type representing the currently
-      selected control point, if any.
+      A read-only computed property that returns the
+      `Datatype.Path2DControlPoint` at the index specified by
+      `Class.Path2D.SelectedControlPoint`. If the path has no control points,
+      returns a default-constructed `Datatype.Path2DControlPoint` (position and
+      tangents all at `{0, 0, 0, 0}`).
     code_samples: []
     type: Path2DControlPoint
     tags:
@@ -106,7 +118,8 @@ properties:
     summary: |
       Determines how thick the `Class.Path2D` path is.
     description: |
-      Determines how thick the `Class.Path2D` path is.
+      Determines the stroke width of the `Class.Path2D` in pixels. Defaults to
+      `1` and is clamped to the range [0, 100].
     code_samples: []
     type: float
     tags: []
@@ -177,7 +190,9 @@ methods:
     parameters: []
     returns:
       - type: Rect
-        summary: ''
+        summary: |
+          The `Datatype.Rect` bounding box that encloses the path, expanded by
+          its rendered thickness.
     tags: []
     deprecation_message: ''
     security: None
@@ -195,7 +210,8 @@ methods:
       - name: index
         type: int
         default:
-        summary: ''
+        summary: |
+          The 1-based index of the control point to return.
     returns:
       - type: Path2DControlPoint
         summary: |
@@ -235,7 +251,8 @@ methods:
     parameters: []
     returns:
       - type: float
-        summary: ''
+        summary: |
+          The total length of the path.
     tags: []
     deprecation_message: ''
     security: None
@@ -246,12 +263,16 @@ methods:
     summary: |
       Returns the maximum allowed number of control points.
     description: |
-      Returns the maximum allowed number of control points.
+      Returns `100`, the hard upper limit on the number of control points a
+      `Class.Path2D` can contain. Attempting to add points beyond this limit via
+      `Class.Path2D:InsertControlPoint()` or `Class.Path2D:SetControlPoints()`
+      throws an error.
     code_samples: []
     parameters: []
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The maximum number of control points a `Class.Path2D` supports.
     tags: []
     deprecation_message: ''
     security: None
@@ -331,7 +352,8 @@ methods:
           The value to query the `Class.Path2D` at.
     returns:
       - type: Vector2
-        summary: ''
+        summary: |
+          The tangent in parameter space.
     tags: []
     deprecation_message: ''
     security: None
@@ -452,7 +474,8 @@ methods:
       - name: point
         type: Path2DControlPoint
         default:
-        summary: ''
+        summary: |
+          The new `Datatype.Path2DControlPoint` value to store at the index.
     returns:
       - type: ()
         summary: ''
@@ -467,7 +490,12 @@ events:
     summary: |
       Fires any time control points change.
     description: |
-      Fires any time control points change.
+      Fires whenever the path's control-point data is mutated. This includes
+      calls to `Class.Path2D:SetControlPoints()`,
+      `Class.Path2D:InsertControlPoint()`, `Class.Path2D:UpdateControlPoint()`,
+      and `Class.Path2D:RemoveControlPoint()`. Does not fire for changes to
+      visual properties such as `Class.Path2D.Color3` or
+      `Class.Path2D.Thickness`.
     code_samples: []
     parameters: []
     tags: []

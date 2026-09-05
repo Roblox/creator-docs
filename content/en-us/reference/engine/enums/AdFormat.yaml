@@ -8,9 +8,7 @@ summary: |
   Specifies the format of an ad used with `Class.AdService` methods.
 description: |
   Specifies the format of an ad passed to `Class.AdService` methods such as
-  `Class.AdService:GetAdAvailabilityNowAsync()` and `IsAdLoaded()`. The only
-  supported value is `Enum.AdFormat.RewardedVideo` — a full-screen video ad that
-  rewards the viewer upon completion.
+  `Class.AdService:GetAdAvailabilityNowAsync()`.
 code_samples: []
 tags: []
 deprecation_message: ''

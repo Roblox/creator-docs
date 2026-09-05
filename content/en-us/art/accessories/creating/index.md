@@ -7,7 +7,7 @@ next: /art/accessories/creating/modeling-setup
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/C-DwGRBHvmE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 <br /><br />
 
-You can create your own custom layered accessory for avatars using Blender and Roblox's downloadable project templates. These project templates include [components required for layered clothing](../../../avatar/layered-accessories/index.md#layered-accessory-components), and can double as a mannequin to quickly begin shaping and sculpting your clothing assets. By the end of this tutorial, you will have a clothing asset that contains all the required components for a layered clothing accessory on the Marketplace.
+You can create your own custom layered accessory for avatars using Blender and Roblox's downloadable project templates. These project templates include [components required for layered accessories](../../../avatar/layered-accessories/index.md#layered-accessory-components), and can double as a mannequin to quickly begin shaping and sculpting your clothing assets. By the end of this tutorial, you will have a clothing asset that contains all the required components for a layered accessory on the Marketplace.
 
 <Alert severity ='info'>
 While this content and the provided examples cover the Blender workflow and tools, you can apply the same concepts to other third-party modeling applications.

@@ -4,39 +4,58 @@
 
 name: MeshScaleUnit
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the real-world unit of length that a source 3D mesh file was
+  authored in, used by the mesh importer to scale geometry to Roblox studs.
+description: |
+  Specifies the unit of length used when the source 3D asset was modeled. The
+  mesh importer reads this value and applies a conversion factor so that the
+  imported geometry is proportionally sized in Roblox studs. Choosing the
+  correct unit ensures that a 1-meter object in the source file arrives at the
+  correct stud dimensions.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Stud
-    summary: ''
+    summary: |
+      Treats the source mesh as authored in Roblox studs, applying no unit
+      conversion on import.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Meter
-    summary: ''
+    summary: |
+      Treats the source mesh as authored in meters and scales it to Roblox studs
+      on import.
     value: 1
     tags: []
     deprecation_message: ''
   - name: CM
-    summary: ''
+    summary: |
+      Treats the source mesh as authored in centimeters and scales it to Roblox
+      studs on import.
     value: 2
     tags: []
     deprecation_message: ''
   - name: MM
-    summary: ''
+    summary: |
+      Treats the source mesh as authored in millimeters and scales it to Roblox
+      studs on import.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Foot
-    summary: ''
+    summary: |
+      Treats the source mesh as authored in feet and scales it to Roblox studs
+      on import.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Inch
-    summary: ''
+    summary: |
+      Treats the source mesh as authored in inches and scales it to Roblox studs
+      on import.
     value: 5
     tags: []
     deprecation_message: ''

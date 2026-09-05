@@ -5,8 +5,14 @@
 name: OpenCloudApiV1
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Deprecated Open Cloud API surface for in-experience cloud operations such as
+  user notifications.
+description: |
+  Deprecated Open Cloud API class for in-experience cloud operations. Do not use
+  it for new work. Use `Class.HttpService` with the
+  [In-experience HTTP requests](../../../cloud-services/http-service.md)
+  workflow instead.
 code_samples: []
 inherits:
   - Instance
@@ -22,17 +28,29 @@ deprecation_message: |
 properties: []
 methods:
   - name: OpenCloudApiV1:CreateModel
-    summary: ''
-    description: ''
+    summary: |
+      Creates and returns an `OpenCloudModel` container for a registered model
+      type name.
+    description: |
+      Deprecated. Creates and returns an `OpenCloudModel` container of the given
+      type name. The factory instantiates a model object that can hold Open
+      Cloud data structures (such as a user-notification payload) for use with
+      other `Class.OpenCloudApiV1` methods.
+
+      The `name` parameter must match a registered model type (for example,
+      `"UserNotification"`). The returned container wraps a typed model instance
+      whose properties are accessible from Luau via PascalCase keys.
     code_samples: []
     parameters:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The registered model type name (for example, `"UserNotification"`).
     returns:
       - type: OpenCloudModel
-        summary: ''
+        summary: |
+          An `OpenCloudModel` container wrapping a typed model instance.
     tags:
       - Deprecated
       - CustomLuaState
@@ -43,21 +61,36 @@ methods:
     capabilities:
       - Network
   - name: OpenCloudApiV1:CreateUserNotificationAsync
-    summary: ''
-    description: ''
+    summary: |
+      Deprecated method that attempted to send a user notification via Open
+      Cloud; always errors.
+    description: |
+      Deprecated. Attempted to send a notification to the specified user via the
+      Open Cloud Notifications API. Always errors with
+      `"API CreateUserNotificationAsync is not enabled."`
+
+      The `user` parameter is the target user identifier and `userNotification`
+      is an `OpenCloudModel` container (created via
+      `Class.OpenCloudApiV1:CreateModel()`) populated with notification payload
+      fields.
     code_samples: []
     parameters:
       - name: user
         type: string
         default:
-        summary: ''
+        summary: |
+          The target user identifier.
       - name: userNotification
         type: OpenCloudModel
         default:
-        summary: ''
+        summary: |
+          An `OpenCloudModel` container (from
+          `Class.OpenCloudApiV1:CreateModel()`) populated with notification
+          payload fields.
     returns:
       - type: OpenCloudModel
-        summary: ''
+        summary: |
+          Unused; the call always errors.
     tags:
       - Yields
       - Deprecated

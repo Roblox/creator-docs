@@ -98,6 +98,8 @@ The following objects are automatically created in Studio if they are detected b
 - `Class.WrapLayer` - Created when Studio detects a mesh object with `_InnerCage` and similarly named mesh object with `_OuterCage` at the end of their names.
 - `Class.FaceControls` - Created when Studio detects an avatar character head and the appropriate facial animation data in the model.
 
+For more information on how the `Class.WrapTarget` and `Class.WrapLayer` objects reshape and layer meshes, see [Cage meshes](../../art/modeling/cage-meshes/index.md).
+
 ## Resources
 
 There are a variety of resources available for creators of all backgrounds to get started with custom 3D assets.

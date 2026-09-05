@@ -23,8 +23,15 @@ tags:
 deprecation_message: ''
 properties:
   - name: NetworkSettings.EmulatedTotalMemoryInMB
-    summary: ''
-    description: ''
+    summary: |
+      The total device memory, in MiB, that the client emulates when testing
+      under a simulated device.
+    description: |
+      Sets the total amount of memory, in MiB, that the client pretends the
+      device has when testing under a simulated device. Studio's device emulator
+      writes this property when you select a device to emulate. Values are
+      clamped to a minimum of `0`, and the property defaults to the machine's
+      actual total physical memory.
     code_samples: []
     type: int
     tags:
@@ -65,8 +72,13 @@ properties:
     capabilities:
       - Network
   - name: NetworkSettings.HttpProxyEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Whether the client routes HTTP traffic through the proxy configured by
+      `Class.NetworkSettings.HttpProxyURL`.
+    description: |
+      When `true`, the client routes its HTTP traffic through the proxy server
+      specified by `Class.NetworkSettings.HttpProxyURL|HttpProxyURL`. This
+      property defaults to `false`.
     code_samples: []
     type: boolean
     tags: []
@@ -82,8 +94,14 @@ properties:
     capabilities:
       - Network
   - name: NetworkSettings.HttpProxyURL
-    summary: ''
-    description: ''
+    summary: |
+      The address of the proxy server used when
+      `Class.NetworkSettings.HttpProxyEnabled` is `true`.
+    description: |
+      Specifies the address of the proxy server through which the client routes
+      its HTTP traffic when
+      `Class.NetworkSettings.HttpProxyEnabled|HttpProxyEnabled` is `true`. This
+      property defaults to an empty string.
     code_samples: []
     type: string
     tags: []
@@ -346,34 +364,7 @@ properties:
     description: |
       When set to `true`, debug information is printed to the **Output** window
       regarding the replication of instances when
-      `Class.Workspace.StreamingEnabled` is set to `true`. Note that this
-      documentation may become outdated in the future, as Roblox's network code
-      is always changing behind the scenes.
-
-      #### Streaming Capacity Update
-
-      When the client's streaming capacity is updated, the following debug
-      message will be printed:
-
-      `clientInstanceQuota {1}, packet in queue {2}, predictedTotalInstanceProcessTime {3}, avgStreamDataReadTime {4}, avgInstancesPerStreamData {5}`
-
-      - `{1}` — The ID of the client instance quota.
-      - `{2}` — The current number of incoming packets that have been queued.
-      - `{3}` — A prediction for how long it will take to update the quota.
-      - `{4}` — The current average time it takes to read the stream data.
-      - `{5}` — The average number of instances in the stream data.
-
-      #### Instance Quota Update
-
-      When the client receives an instance quota update, the following debug
-      message will be printed:
-
-      `Received new client instance quota: {1}, max region radius: {2}`
-
-      - `{1}` — The ID of the client instance quota.
-      - `{2}` — The maximum radius of space around the client's
-        `Class.Player.ReplicationFocus` that can have physical instances
-        streamed in.
+      `Class.Workspace.StreamingEnabled` is set to `true`.
     code_samples: []
     type: boolean
     tags: []

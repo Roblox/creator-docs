@@ -139,38 +139,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-  - name: SoundService.DiffractionEnabled
-    summary: |
-      Controls whether sound bends around corners globally when acoustic
-      simulation is active.
-    description: |
-      Controls at a global level whether `Class.AudioEmitter|AudioEmitters` and
-      `Class.AudioListener|AudioListeners` simulate diffraction (sound bending
-      around corners) as part of acoustic simulation. Defaults to `true`.
-
-      Diffraction repositions the perceived audio source to the edge of an
-      obstacle. This property only has an effect when both
-      `Class.SoundService.AcousticSimulationEnabled|AcousticSimulationEnabled`
-      **and** `Class.SoundService.OcclusionEnabled|OcclusionEnabled` are `true`.
-      If occlusion is off, sound passes straight through obstacles, so it has no
-      reason to bend around corners. If set to `false`, no emitter or listener
-      simulates diffraction regardless of their individual settings. Individual
-      emitters and listeners can override this global setting via their own
-      diffraction settings.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Audio
   - name: SoundService.DistanceFactor
     summary: |
       The number of studs to be considered a meter by `Class.SoundService` when
@@ -327,40 +295,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-  - name: SoundService.OcclusionEnabled
-    summary: |
-      Controls whether sound is muffled through walls globally when acoustic
-      simulation is active.
-    description: |
-      Controls at a global level whether Class.AudioEmitter|AudioEmitters and
-      `Class.AudioListener|AudioListeners` simulate occlusion (sound muffled
-      through walls and other geometry) as part of acoustic simulation. Defaults
-      to `true`.
-
-      When active, a low-pass filter is applied based on the density of
-      materials and thickness of obstacles between emitters and listeners. This
-      property only has an effect when
-      `Class.SoundService.AcousticSimulationEnabled|AcousticSimulationEnabled`
-      is `true`. If set to `false`, no emitter or listener simulates occlusion
-      regardless of their individual settings, and
-      `Class.SoundService.DiffractionEnabled|DiffractionEnabled` also has no
-      effect because diffraction relies on occlusion data. Individual emitters
-      and listeners can override this global setting via their own occlusion
-      settings.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Audio
   - name: SoundService.RespectFilteringEnabled
     summary: |
       Sets whether `Class.Sound` playback from a client will replicate to the
@@ -373,41 +307,6 @@ properties:
       this property is `false`, other clients will also hear the sound.
 
       Default is `true`, meaning filtering is enabled.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Audio
-  - name: SoundService.ReverbEnabled
-    summary: |
-      Controls whether sound receives environmental reverb globally when
-      acoustic simulation is active.
-    description: |
-      Controls at a global level whether `Class.AudioEmitter|AudioEmitters` and
-      `Class.AudioListener|AudioListeners` simulate environmental reverberation
-      (sound echoing off walls and surfaces) as part of acoustic simulation.
-      Defaults to `true`.
-
-      When active, a reverb effect is computed from the size and material
-      properties of the surrounding environment. This property only has an
-      effect when
-      `Class.SoundService.AcousticSimulationEnabled|AcousticSimulationEnabled`
-      is `true`. If set to `false`, no emitter or listener applies environmental
-      reverb regardless of their individual settings. Individual emitters and
-      listeners can override this global setting via their own reverb settings.
-
-      This does not affect `Class.SoundService.AmbientReverb|AmbientReverb`,
-      which applies preset reverb to `Class.Sound|Sounds` in the legacy sound
-      system.
     code_samples: []
     type: boolean
     tags: []

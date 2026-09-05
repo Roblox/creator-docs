@@ -4,29 +4,36 @@
 
 name: CharacterControlMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies which character controller implementation an experience uses.
+description: |
+  Controls the character controller selected by
+  `Class.StarterPlayer.LuaCharacterController`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Uses Roblox's default character controller selection.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Legacy
-    summary: ''
+    summary: |
+      Uses the legacy character controller.
     value: 1
     tags: []
     deprecation_message: ''
   - name: NoCharacterController
-    summary: ''
+    summary: |
+      Does not load a character controller.
     value: 2
     tags: []
     deprecation_message: ''
   - name: LuaCharacterController
-    summary: ''
+    summary: |
+      Uses the Luau character controller.
     value: 3
     tags: []
     deprecation_message: ''

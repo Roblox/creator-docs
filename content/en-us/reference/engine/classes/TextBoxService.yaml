@@ -5,8 +5,10 @@
 name: TextBoxService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A service that manages a user's `Class.TextBox` state during gameplay.
+description: |
+  Engine-managed service with no scriptable members.
 code_samples: []
 inherits:
   - Instance

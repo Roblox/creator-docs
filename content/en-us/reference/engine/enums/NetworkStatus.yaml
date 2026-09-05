@@ -4,24 +4,34 @@
 
 name: NetworkStatus
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the device's current network reachability state as reported by
+  `ConnectivityService`.
+description: |
+  Describes the device's current network reachability state as tracked by
+  `ConnectivityService`. The engine's connectivity subsystem monitors
+  platform-level network availability and updates the `NetworkStatus` property
+  with one of these values whenever the state changes.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Unknown
-    summary: ''
+    summary: |
+      The network connection state has not yet been determined or is unavailable
+      on the current platform.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Connected
-    summary: ''
+    summary: |
+      The device has an active network connection.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Disconnected
-    summary: ''
+    summary: |
+      The device does not currently have a network connection.
     value: 2
     tags: []
     deprecation_message: ''

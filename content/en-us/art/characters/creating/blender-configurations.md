@@ -7,19 +7,19 @@ prev: /art/characters/creating/head-objects
 
 The Blender project files of each template include additional helper configurations that are not included in the raw `.fbx` template files. If you intend on using Blender for your character creation process, it's important to understand the additions included in the `.blend` versions of the template and what they do.
 
-### Hierarchy
+## Hierarchy
 
 The following is a breakdown of what is included in each Blender template file:
 
 <GridContainer numColumns="2">
   <figure>
 - **Cage**: Contains the character's 15 outer body cage meshes.
-- **Joints**: The parent armature object that includes the following objects:
-  - The **bones** that make up the character's rigging armature.
-  - The **_Geo** mesh objects that make up the avatar appearance.
-  - The **_Att** attachment objects that define where accessories attach when equipped.
-  - The **animation data** for saving facial animation data and poses.
-- **Fill** and **Sun**: These objects are used to provide lighting, allowing you to preview your characters in a neutral lighting similar to a Studio baseplate. These are not part of the avatar character.
+- **Joints**: The parent armature object contains the following objects:
+  - **Bones** that make up the character's rigging armature.
+  - **_Geo** mesh objects that make up the avatar appearance.
+  - **_Att** attachment objects that define where accessories attach when equipped.
+  - **Animation data** for saving facial animation data and poses.
+- **Fill** and **Sun**: These objects are used to provide lighting, allowing you to preview your characters in neutral lighting similar to a Studio baseplate. These are **not** part of the avatar character.
 </figure>
 
   <figure><img
@@ -28,7 +28,7 @@ The following is a breakdown of what is included in each Blender template file:
   width="800" /><figcaption>Blender Project Hierarchy</figcaption></figure>
 </GridContainer>
 
-### Disabled objects
+## Disabled objects
 
 When using the template project files for Blender, you might notice some objects, like attachment objects, are permanently hidden in the Viewport even when toggling the **Hide In Viewport** icon <img src="../../../assets/art/blender-ui/Visibility-Icon.png" style={{marginBottom:"0px;"}} width="20px"/>. Since attachment objects are often not modified until the end of the character creation process, these objects have **Disable In Viewport** <img src="../../../assets/art/blender-ui/Disabled-Icon.png" style={{marginBottom:"0px;"}} width="20px"/> enabled to make the organization of your project more efficient, especially when bulk toggling object visibility.
 
@@ -45,7 +45,7 @@ If you need access to disabled objects, use the following instructions to access
 3. The **Disable In Viewport** icon <img src="../../../assets/art/blender-ui/Disabled-Icon.png" style={{marginBottom:"0px;"}}/> now appears next to every object in the Outliner. Toggle the icon to change the Disabled status for your objects.
    <img src="../../../assets/art/blender-ui/Outliner-Disabled-Enabled.png" />
 
-### Custom skin tones
+## Custom skin tones
 
 The Blender project files include a shader configuration that allows you to preview custom skin tones, similar to how they display in Roblox if users customize their skin tones.
 
@@ -57,7 +57,7 @@ Textures with full or partial transparency allow the underlying `Class.Part.Colo
   <figure><img src="../../../assets/art/avatar/templates/Custom-Skin-Tones.png" /><figcaption>The same avatar character using the same texture map. Each model has different underlying part colors except where the texture map applies a full color. </figcaption></figure>
 </GridContainer>
 
-#### Preview skin tones
+### Preview skin tones
 
 <Alert severity = 'warning'>
 You must use **Blender 3.4+** to ensure that the helper shader configurations render correctly. If you are using a previous version of Blender, textures may not render as expected.
@@ -74,28 +74,24 @@ For this Blender shader configuration, keep in mind the following requirements:
 To preview your character's skin tone in Blender:
 
 1. In **Layout**, select any geometry object, such as **Head_Geo**.
-2. Go to the **Shading** tab.
-3. In the Node panel, ensure **Object** is selected.
-4. Find the **PartColor** node that is attached to the **Mix** node.
-5. Pick a color and value on the node to apply a reference custom skin tone.
-   <video
-   controls
-   src="../../../assets/art/avatar/basic-creation/Color_Picker_01.mp4"
-   width="100%"></video>
+1. Navigate to the **Shading** tab, then in the node panel, set the **Shader Type** dropdown menu to **Object**.
+1. Find the **PartColor** node that is attached to the **Mix** node, then pick a color and value on the node to apply a reference custom skin tone.
 
-#### Export setup
+   <video controls src="../../../assets/art/avatar/basic-creation/Color_Picker_01.mp4" width="100%"></video>
+
+### Export setup
 
 While the skin tone preview is a critical element to verifying your templates color and tone compatibility in Roblox, it prevents your color texture map from automatically being packaged with the final `.fbx` file. There are two ways to resolve this before exporting your model:
 
-1. In the Shading tab, disconnect the **Mix** node and replace it with the **ColorMap** node.
-2. Export your textures manually as separate image files and add them later in Studio.
+- In the **Shading** tab, disconnect the **Mix** node and replace it with the **ColorMap** node.
+- Export your textures manually as separate image files and add them later in Studio.
 
 For instructions on how to perform either export workflow, see [Export textures](../../../art/characters/creating/export-textures.md).
 
-### Scene scale
+## Scene scale
 
-<Alert severity = 'warning'>
-You can skip this section if you are using the Blender downloadable templates. The `.blend` versions of the templates already contain many of the project settings required when setting up a Blender project configuration.
+<Alert severity = 'info'>
+You can skip this section if you are using a Blender downloadable template. The `.blend` versions of the templates already contain many of the project settings required when setting up a Blender project configuration.
 </Alert>
 
 When creating Roblox assets in a modeling application, it's important to ensure your `.fbx` exports scale correctly. During export, set **Transform** > **Apply Scalings** to **FBX Unit Scale**.
@@ -104,10 +100,10 @@ When creating Roblox assets in a modeling application, it's important to ensure 
 
 If you run into scaling issues on import, see [Blender FBX scaling](../../../art/blender.md#adjust-scale-fbx) for alternative approaches.
 
-### Animation range
+## Animation range
 
-<Alert severity = 'warning'>
-You can skip this section if you are using the Blender downloadable templates. The `.blend` versions of the templates already contain many of the project settings required when setting up a Blender project configuration.
+<Alert severity = 'info'>
+You can skip this section if you are using a Blender downloadable template. The `.blend` versions of the templates already contain many of the project settings required when setting up a Blender project configuration.
 </Alert>
 
 For custom characters with facial animation, ensure that the timeline range is set between 0 and 330:

@@ -440,7 +440,7 @@ The reporting table includes:
   </tr>
   <tr>
     <td>**Robux Earnings**</td>
-    <td>Cumulative Robux earnings as a result of your campaign. Excludes subscriptions, engagement payouts, and immesive ads.</td>
+    <td>Cumulative Robux earnings as a result of your campaign. Excludes subscriptions, but includes ad revenue and Creator Rewards, as well as in-game purchases.</td>
   </tr>
 </tbody>
 </table>

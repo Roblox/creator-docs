@@ -1112,5 +1112,9 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
+    open_cloud_equivalents:
+      - path: GET /v1/localization-table/tables/{tableId}/entries
+        relationship: related
+        note: LocalizationService:GetTranslatorForPlayerAsync loads localization data for a player's locale and returns a runtime Translator that also uses in-experience localization tables, whereas GET /v1/localization-table/tables/{tableId}/entries returns raw entries for a specified cloud table without selecting a player locale or creating a Translator.
 events: []
 callbacks: []

@@ -183,14 +183,14 @@ The server provides the following tools:
 <tbody>
   <tr>
     <td>`list_roblox_studios`</td>
-    <td>Lists all connected Studio instances, including their name, ID, and active status. This is useful when multiple Studio windows are open.</td>
-  </tr>
-  <tr>
-    <td>`set_active_studio`</td>
-    <td>Sets a Studio instance as active so that all subsequent tool calls target that instance.</td>
+    <td>Lists all connected Studio instances, including their name, Studio instance ID, and place ID. Local places that don't have a place ID are listed by name only. Useful when multiple Studio windows are open; if two open Studio instances share the same name, the place ID lets you tell apart.</td>
   </tr>
 </tbody>
 </table>
+
+<Alert severity="info">
+Every tool call takes a `studio_id` parameter that names the Studio instance it targets, so agents address Studio instances explicitly instead of relying on session state. Use `list_roblox_studios` to look up the ID of the instance you want.
+</Alert>
 
 ## Enable the MCP server in Studio
 
@@ -286,9 +286,9 @@ cmd.exe /c %LOCALAPPDATA%\Roblox\mcp.bat
 
 ## Use multiple Studio instances
 
-You can connect a single MCP client to multiple running instances of Studio at the same time. The server automatically determines which instance to use based on context (for example, if you reference a specific game or an object that exists only in that instance).
+You can connect a single MCP client to multiple running instances of Studio at the same time. Every tool call includes a `studio_id` that identifies the Studio instance to target, which makes workflows with multiple Studio instances and multiple agents or clients reliable.
 
-You can manually switch instances using `list_roblox_studios` and `set_active_studio`.
+Use `list_roblox_studios` to list the connected instances with their names, Studio instance IDs, and place IDs. Then pass the ID of the instance you want as `studio_id` on subsequent calls.
 
 ## Verify your connection
 

@@ -13,9 +13,7 @@ Along with asset updates, reimport remembers the file and settings used to impor
 
 Reimport supports the following entry points in the Explorer. Reimport also supports [packages](../../projects/assets/packages.md), allowing you to reimport batches of asset instances at once.
 
-- `Class.Model` - The reimport feature scans the container, updating any changed `Class.MeshPart` and `Class.SurfaceAppearance` instances and adding newly created ones, while leaving your existing properties unchanged.
-  - `Class.MeshPart` - Reimport replaces meshes based off of mesh names saved in Studio and the external 3D file. For specific behavior, see [MeshPart detection](#meshpart-detection).
-  - `Class.SurfaceAppearance` - Reimport replaces images for PBR textures based off of filenames. For specific behavior, see [SurfaceAppearance detection](#surfaceappearance-detection).
+- `Class.Model` - The reimport feature scans the container, updating any changed `Class.MeshPart` and `Class.SurfaceAppearance` instances and adding newly created ones, while leaving your existing properties unchanged. Reimport replaces meshes based off of mesh names saved in Studio and the external 3D file (see [MeshPart detection](#meshpart-detection)). It replaces images for PBR textures based off of filenames (see [SurfaceAppearance detection](#surfaceappearance-detection)).
 - `Class.SurfaceAppearance` or `Class.Decal` (selected directly) - Reimport uploads all texture maps found in the same folder as the selected file in one operation.
 
 <Alert severity = 'info'>

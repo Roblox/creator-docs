@@ -9,7 +9,7 @@ The **Rig Generator** tool lets you quickly insert basic pre-built character rig
 
    <img src="../assets/studio/general/Toolbar-Character.png" width="800" alt="Character button highlighted in Studio's toolbar." />
 
-1. From the popup, select from the available options. You can insert either a legacy **R6** rig consisting of 6 mesh objects, or an **R15** rig which consists of 15 mesh objects and significantly expands upon the R6's limited motion range.
+1. From the popup, select from the available options. You can insert either a legacy **R6** rig consisting of 6 mesh objects, or an **R15** rig which consists of 15 mesh objects, a [standard R15 rig](../avatar/character-bodies/specifications.md#standard-r15-rigs), and a significant expansion upon the R6's limited motion range.
 
    <Alert severity="warning">
    Note that you can only equip clothing and other layerable accessories to **R15** models.

@@ -17,7 +17,9 @@ description: |
   that channel.
 
   Messages from different TextChannels can be separated into different tabs in
-  the chat window using `Class.ChannelTabsConfiguration`.
+  the chat window using `Class.ChannelTabsConfiguration`. Multiple channels with
+  the same name might cause unexpected behavior with the chat window, even if
+  the player isn't a member of the other channels.
 
   To learn more, see
   [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
@@ -187,7 +189,10 @@ methods:
       - name: requester
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` whose direct-message permissions gate the channel;
+          only users who can send direct messages to this player are delivered
+          messages on the channel.
     returns:
       - type: ()
         summary: ''
@@ -312,7 +317,10 @@ callbacks:
           The `Class.TextSource` of the user who will be receiving the message.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A truthy value (such as `true`, `1`, or a non-empty string) to deliver
+          the message to the given client, or a falsy value (including `nil`) to
+          withhold it from that client.
     tags: []
     deprecation_message: ''
     security: None

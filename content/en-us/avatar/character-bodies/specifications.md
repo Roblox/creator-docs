@@ -455,7 +455,7 @@ See the following specifications for the individual mesh objects that make up a 
 <Alert severity = 'info'>
 <AlertTitle>Interested in creating a higher-fidelity avatar?</AlertTitle>
 <br></br>
-Higher-fidelity character body models require the same 15 mesh objects and naming structure. The only difference is that the mesh objects in higher-fidelity character body models can have additional internal bones or joints. When these bones or joints are present in a character body model, their corresponding mesh objects need to be [skinned](#skinning) for accurate deformation.
+Higher-fidelity character body models require the same 15 mesh objects and naming structure. The only difference is that the mesh objects in higher-fidelity character body models can have [additional internal joints](#advanced-r15-rigs) in their rigging armatures. When these joints are present in a character body model, their corresponding mesh objects need to be [skinned](#skinning) for accurate deformation.
 </Alert>
 
 ### Face accessories
@@ -614,9 +614,9 @@ Unlike generic rigs, humanoid models require a specific hierarchy and naming con
   </figure>
 </GridContainer>
 
-### Standard rigs
+### Standard R15 rigs
 
-The following requirements are for standard humanoid rigs.
+The following requirements are for **standard R15** rigs.
 
 - **Rig Hierarchy** - Humanoid rigs require a specific bone or joint hierarchy and naming convention:
 
@@ -663,11 +663,11 @@ The following requirements are for standard humanoid rigs.
 - **LowerTorso and Root** - The LowerTorso and Root bone or joint position must be set to `0`, `0`, `0`.
 - **Pose** - Export your character model in an I-Pose, A-Pose, or T-Pose for the best Studio compatibility. The LeftUpperArm and RightUpperArm bones can be exported with rotation values to meet this requirement.
 
-### Higher-fidelity rigs
+### Advanced R15 rigs
 
-Higher-fidelity humanoid rigs have the same requirements as standard rigs, but they support up to 37 additional optional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
+**Advanced R15** rigs have the same requirements as standard rigs, but they support up to 37 additional optional bones or joints for a higher level of realism with articulated hands, shoulders, and spine movements.
 
-You do not need to include every optional bone or joint for a higher-fidelity humanoid rig, but each optional bone or joint you include must follow a specific hierarchy and naming convention for the respective body part.
+You do not need to include every optional bone or joint for an advanced R15 rig, but each optional bone or joint you include must follow a specific hierarchy and naming convention for the respective body part.
 
 <Tabs>
 <TabItem key = "1" label="Torso">
@@ -789,12 +789,12 @@ You do not need to include every optional bone or joint for a higher-fidelity hu
 Make sure that you skin each additional bone or joint's corresponding mesh object for accurate deformation.
 </Alert>
 
-After you [import a higher-fidelity character rig](./import.md) into Studio, you **must** insert a `Class.HumanoidRigDescription` and/or `Class.DigitsRigDescription` objects into your rig to be able to sell your character on the Marketplace, and for your animations to work properly:
+After you [import an advanced R15 character rig](./import.md) into Studio, you **must** insert `Class.HumanoidRigDescription` and/or `Class.DigitsRigDescription` objects into your rig to be able to sell your character on the Marketplace, and for your animations to work properly:
 
 - `Class.HumanoidRigDescription` objects are necessary for animating individual body parts and adjusting behavioral characteristics of the rig, such as each bone or joint's size and range of motion.
 - `Class.DigitsRigDescription` objects are necessary for hand articulation. Your character needs one for each hand with optional bone or joints.
 
-Both of these object types detect bones or joints by their naming conventions, so it is very important to ensure every optional bone or joint is named correctly following the table above **before** you import your character rig into Studio. For a set of higher-fidelity rigs that you can reference, see [Resources - Higher-fidelity rigs](../../avatar/resources.md#higher-fidelity-rigs).
+Both of these object types detect bones or joints by their naming conventions, so it is very important to ensure every optional bone or joint is named correctly following the table above **before** you import your character rig into Studio. For a set of advanced R15 rigs that you can reference, see [Resources - Advanced R15 rigs](../../avatar/resources.md#advanced-r15-rigs).
 
 ## Skinning
 

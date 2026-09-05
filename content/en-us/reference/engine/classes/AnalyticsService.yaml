@@ -314,10 +314,11 @@ methods:
       Returns coarse player segment buckets for the current experience.
     description: |
       This server-only method returns coarse segment buckets for a player in the
-      current experience. If a cached result is not already available, the
-      method may yield while the engine fetches the segment data. Successfully
-      fetched results are cached per player for the lifetime of the server
-      session.
+      current experience. Use these buckets at runtime to personalize content or
+      gate features for specific player groups. If a cached result is not
+      already available, the method may yield while the engine fetches the
+      segment data. Successfully fetched results are cached per player for the
+      lifetime of the server session.
 
       If segment data is unavailable, this method does not throw. Instead, it
       returns `HasData = false` and all enum fields are set to `Unknown`.
@@ -569,6 +570,66 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
+  - name: AnalyticsService:LogJourneyEvent
+    summary: |
+      Logs a journey event used to track non-linear player paths through an
+      experience.
+    description: |
+      Logs a journey event used to track non-linear player paths through an
+      experience. Unlike funnels, which track ordered sequential steps, journeys
+      track graph-like player paths where players can move between named nodes
+      in any order. Each call records that a player reached a specific node
+      within a named journey. The resulting data is visualized as a Sankey
+      diagram in Creator Hub, showing how players distribute across paths in the
+      experience.
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The player who triggered the journey event.
+      - name: journeyName
+        type: string
+        default:
+        summary: |
+          The name of the journey. This should be the same for all nodes in the
+          journey. Cannot be empty and cannot contain a comma `,`, double quote
+          `"`, single quote `'`, or newline character.
+      - name: nodeName
+        type: string
+        default:
+        summary: |
+          The name of the node the player reached in the journey. Cannot be
+          empty, cannot contain a comma `,`, double quote `"`, single quote `'`,
+          or newline character, and cannot start with `__` (double underscore),
+          which is reserved.
+      - name: journeySessionId
+        type: string
+        default:
+        summary: |
+          Optional unique identifier for the journey session. This should be the
+          same for all nodes in a single session of the journey. If provided,
+          cannot contain a comma `,`, double quote `"`, single quote `'`, or
+          newline character.
+      - name: customFields
+        type: Dictionary
+        default: nil
+        summary: |
+          Optional dictionary of custom fields that will provide breakdowns in
+          Roblox-provided charts. Only specific keys, provided by
+          `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
+          Limited to 8,000 unique combinations of values across the three custom
+          fields per experience.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
   - name: AnalyticsService:LogOnboardingFunnelStepEvent
     summary: |
       Logs an event used to track user actions stepping through an onboarding
@@ -635,19 +696,32 @@ methods:
       - name: progressionPathName
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the progression path this event belongs to, such as a
+          world, chapter, or level group. This groups related progression events
+          together. Cannot be empty and cannot contain a comma `,`, double quote
+          `"`, single quote `'`, or newline character.
       - name: level
         type: int
         default:
-        summary: ''
+        summary: |
+          The numeric level the player is progressing through within the
+          progression path.
       - name: levelName
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the level associated with this event. This field is used
+          for display purposes in Roblox-provided charts.
       - name: customFields
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          Optional dictionary of custom fields that will provide breakdowns in
+          Roblox-provided charts. Only specific keys, provided by
+          `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
+          Limited to 8,000 unique combinations of values across the three custom
+          fields per experience.
     returns:
       - type: ()
         summary: ''
@@ -675,23 +749,42 @@ methods:
       - name: progressionPathName
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the progression path this event belongs to, such as a
+          world, chapter, or level group. This groups related progression events
+          together. Cannot be empty and cannot contain a comma `,`, double quote
+          `"`, single quote `'`, or newline character.
       - name: status
         type: AnalyticsProgressionType
         default:
-        summary: ''
+        summary: |
+          The progression status to record, provided as an
+          `Enum.AnalyticsProgressionType` value such as `Start`, `Complete`, or
+          `Fail`. The `Class.AnalyticsService:LogProgressionStartEvent()`,
+          `Class.AnalyticsService:LogProgressionCompleteEvent()`, and
+          `Class.AnalyticsService:LogProgressionFailEvent()` methods are
+          shortcuts that set this status for you.
       - name: level
         type: int
         default:
-        summary: ''
+        summary: |
+          The numeric level the player is progressing through within the
+          progression path.
       - name: levelName
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the level associated with this event. This field is used
+          for display purposes in Roblox-provided charts.
       - name: customFields
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          Optional dictionary of custom fields that will provide breakdowns in
+          Roblox-provided charts. Only specific keys, provided by
+          `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
+          Limited to 8,000 unique combinations of values across the three custom
+          fields per experience.
     returns:
       - type: ()
         summary: ''
@@ -717,19 +810,32 @@ methods:
       - name: progressionPathName
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the progression path this event belongs to, such as a
+          world, chapter, or level group. This groups related progression events
+          together. Cannot be empty and cannot contain a comma `,`, double quote
+          `"`, single quote `'`, or newline character.
       - name: level
         type: int
         default:
-        summary: ''
+        summary: |
+          The numeric level the player is progressing through within the
+          progression path.
       - name: levelName
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the level associated with this event. This field is used
+          for display purposes in Roblox-provided charts.
       - name: customFields
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          Optional dictionary of custom fields that will provide breakdowns in
+          Roblox-provided charts. Only specific keys, provided by
+          `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
+          Limited to 8,000 unique combinations of values across the three custom
+          fields per experience.
     returns:
       - type: ()
         summary: ''
@@ -755,19 +861,32 @@ methods:
       - name: progressionPathName
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the progression path this event belongs to, such as a
+          world, chapter, or level group. This groups related progression events
+          together. Cannot be empty and cannot contain a comma `,`, double quote
+          `"`, single quote `'`, or newline character.
       - name: level
         type: int
         default:
-        summary: ''
+        summary: |
+          The numeric level the player is progressing through within the
+          progression path.
       - name: levelName
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the level associated with this event. This field is used
+          for display purposes in Roblox-provided charts.
       - name: customFields
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          Optional dictionary of custom fields that will provide breakdowns in
+          Roblox-provided charts. Only specific keys, provided by
+          `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
+          Limited to 8,000 unique combinations of values across the three custom
+          fields per experience.
     returns:
       - type: ()
         summary: ''

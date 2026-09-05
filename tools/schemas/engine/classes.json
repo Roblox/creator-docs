@@ -203,6 +203,38 @@
           "simulationAccess": {
             "description": "Whether the method is available in RunService:BindToSimulation. Boolean. Automated.",
             "type": "boolean"
+          },
+          "open_cloud_equivalents": {
+            "$id": "open_cloud_equivalents",
+            "description": "Backend / Open Cloud endpoints this method calls or corresponds to. Object list. Automated.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "description": "The backend / Open Cloud endpoint this method calls or corresponds to (HTTP verb + path). String. Automated.",
+                  "type": "string"
+                },
+                "relationship": {
+                  "description": "How the endpoint relates to this method: a full or partial Open Cloud equivalent, or a related endpoint. Enum. Automated.",
+                  "type": "string",
+                  "enum": ["equivalent_full", "equivalent_partial", "related"]
+                },
+                "note": {
+                  "description": "Optional human-readable note about the mapping. String or null. Automated.",
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": ["path", "relationship", "note"],
+              "additionalProperties": false
+            }
           }
         },
         "required": [

@@ -19,19 +19,24 @@ deprecation_message: ''
 items:
   - name: Default
     summary: |
-      Uses the engine-default avatar unification state.
+      Resolves to the engine's current built-in default for avatar unification,
+      which currently behaves the same as `Disabled`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
     summary: |
-      Avatar unification is disabled.
+      Disables the R6-to-R15 adapter; R6 avatars in an R6 experience load using
+      the standard R6 rig with no adapter parts applied.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
     summary: |
-      Avatar unification is enabled.
+      Enables the R6-to-R15 adapter; R6 avatars joining an R6 experience receive
+      invisible R15 adapter `Class.MeshPart|MeshParts` welded to their R6-named
+      joints, preserving R6 scale while enabling R15 features such as layered
+      clothing and animatable heads.
     value: 2
     tags: []
     deprecation_message: ''

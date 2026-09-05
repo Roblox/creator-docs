@@ -4,11 +4,11 @@ description: Use Roblox's supplied template models to create your own unique ava
 next: /art/characters/creating/template-files
 ---
 
-You can create your own custom avatar character using Blender and one of Roblox's downloadable template models. Using templates can save you a lot of time by skipping the complex processes of setting up your armature, rigging, skinning, and configuring your character for face animations.
+You can create your own custom avatar character body using Blender and one of Roblox's downloadable template models. Using templates can save you a lot of time by skipping the complex processes of setting up your armature, rigging, skinning, and configuring your character for face animations.
 
 This tutorial is intended for creators of all skill levels with moderate Blender experience to create a unique character by:
 
-1. Selecting a base template that include time-saving Blender configurations.
+1. Selecting a base template that includes time-saving Blender configurations
 2. Modeling using non-destructive sculpting workflows
 3. Texturing using Blender's texture paint tools
 4. Caging an asset by editing the template's cage mesh objects

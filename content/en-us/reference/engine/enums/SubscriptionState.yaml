@@ -4,8 +4,17 @@
 
 name: SubscriptionState
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the current subscription state of a user's in-experience
+  subscription product.
+description: |
+  The `SubscriptionState` enum describes the current subscription state of a
+  user with respect to a specific in-experience subscription product. It is
+  returned in the `SubscriptionState` key of the table from
+  `Class.MarketplaceService:GetUserSubscriptionDetailsAsync()`, which must be
+  called from a server-side `Class.Script`. See `Enum.SubscriptionState` for the
+  lifecycle values (never subscribed, active with or without renewal, renewal
+  payment pending, and expired).
 code_samples: []
 tags: []
 deprecation_message: ''

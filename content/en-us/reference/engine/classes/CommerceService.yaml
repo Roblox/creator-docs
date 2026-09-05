@@ -98,7 +98,7 @@ methods:
         default:
         summary: |
           The `Class.Player` to prompt with the purchase flow. When called from
-          a `LocalScript`, this must be the local player.
+          a client script, this must be the local player.
       - name: commerceProductId
         type: string
         default:
@@ -132,7 +132,7 @@ methods:
         default:
         summary: |
           The `Class.Player` for whom the browser opens. When called from a
-          `LocalScript`, this must be the local player.
+          client script, this must be the local player.
       - name: url
         type: string
         default:

@@ -6,7 +6,7 @@ prev: /art/characters/creating/final-checks
 ---
 
 <Alert severity = 'warning'>
-It's important to test your assets multiple times at every point of the asset creation process, whether it is within Blender or after importing into Studio. See [Test characters](../../../art/characters/testing/index.md) for more information.
+It's important to test your assets multiple times at every point of the asset creation process, whether it is within Blender or after importing into Studio. For more information, see [Test character bodies](../../../avatar/character-bodies/test.md).
 </Alert>
 
 Whether you are exporting your character for testing, or are performing a final export out of Blender, you must apply the appropriate export settings to ensure that Blender exports the proper character data.
@@ -30,16 +30,21 @@ Embedding the texture maps to your `.fbx` export can simplify the Blender export
 
 To prepare your textures to embed with export:
 
-1. In Object mode, select any part of the character.
-2. Navigate to the **Shading** tab.
-3. Ensure the **Type of Data** dropdown is set to **Object**.
+1. In **Object** mode, select any part of the character.
+1. Navigate to the **Shading** tab, then in the node editor, set **Shader Type** to **Object**.
+
    <img src="../../../assets/art/avatar/basic-creation/Cleanup-Object-Select.png" width = "60%"/>
 
-4. Find the node that connects to the **Principled BSDF's Base Color**.
+1. Find the node that connects to the **Principled BSDF's Base Color** node.
+
    <img src="../../../assets/art/avatar/basic-creation/Cleanup-Mix-Node.png" />
-5. Click and drag the line from **Base Color** to disconnect the node.
+
+1. Click and drag the line from **Base Color** to disconnect the node.
+
    <img src="../../../assets/art/avatar/basic-creation/Cleanup-Disconnect-Node.png" />
-6. Find the **file26** node with the color texture map and click and drag the **Color** to **Principled BSDF's color** node.
+
+1. Find the **file26** node with the color texture map and click and drag the **Color** to the **Principled BSDF's Base Color** node.
+
    <img src="../../../assets/art/avatar/basic-creation/Cleanup-Node-B.png" />
    <video controls src="../../../assets/art/avatar/basic-creation/Exporting_01.mp4" width="100%"></video>
 
@@ -51,4 +56,5 @@ To export your texture image files:
 
 1. Navigate to **File** > **External Data** > **Unpack Resources**.
 2. Select **Use files in current directory** to save in the same directory as your project. Blender exports your image files to a textures directory in your project's parent directory.
+
    <img src="../../../assets/art/avatar/basic-creation/Exporting-Pack-Resources.png" width = "55%"/>

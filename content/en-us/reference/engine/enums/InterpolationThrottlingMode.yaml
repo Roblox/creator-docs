@@ -4,24 +4,38 @@
 
 name: InterpolationThrottlingMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether the engine reduces the physics interpolation update rate for
+  distant assemblies when the client is under load. Used by the deprecated
+  `Class.Workspace.InterpolationThrottling` property.
+description: |
+  Controls whether the engine reduces the physics interpolation update rate for
+  distant assemblies when the client is under load. This enum is consumed by the
+  deprecated `Class.Workspace.InterpolationThrottling` property, which is no
+  longer exposed in Studio or recommended for use in new experiences.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      The engine automatically throttles physics interpolation for distant
+      assemblies when client frame time is high.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      Physics interpolation throttling is unconditionally disabled; all
+      assemblies interpolate at the full rate regardless of client load.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: |
+      Physics interpolation throttling is unconditionally enabled; distant
+      assemblies have their interpolation update rate reduced even when the
+      client is not under load.
     value: 2
     tags: []
     deprecation_message: ''

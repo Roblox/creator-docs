@@ -126,9 +126,10 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities:
       - Basic
+    simulationAccess: true
   - name: TweenService:SmoothDamp
     summary: |
       Smoothly interpolates a value towards a target, simulating a critically

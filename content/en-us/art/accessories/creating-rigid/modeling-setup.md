@@ -21,33 +21,34 @@ Whether you are using an existing shape or creating your own 3D object, it's imp
 
 In a new Blender file, delete everything except the starter cube, then create the basic shape of the treasure chest.
 
-1. In a new project, select the non-cube objects and press <kbd>X</kbd> to delete.
-2. Select the cube and press <kbd>S</kbd> for scale.
-   1. Press <kbd>Y</kbd> to lock scaling to the y-axis.
-   2. Drag with the mouse to create a rectangle.
-3. Switch to Edit mode (<kbd>Tab</kbd>).
-4. Near the Edit mode dropdown, select the Face selection.
-5. Select the top face of the box and press <kbd>E</kbd> to extrude.
-6. Drag your mouse to extrude the lid. Extend the lid to about half the height of the main body.
+1. In a new project, select all non-cube objects and press <kbd>X</kbd> to delete.
+1. Convert the cube into a rectangle.
+   1. Select the cube and press <kbd>S</kbd> for scale.
+   1. Press <kbd>Y</kbd> to lock scaling to the Y axis.
+   1. Drag with the mouse to create a rectangle.
+1. Create the top of the treasure chest.
+   1. Switch to **Edit** mode, then press <kbd>3</kbd> to switch to face selection.
+   1. Select the top face of the box and press <kbd>E</kbd> to activate the **Extrude** tool.
+   1. Drag your mouse to extrude the lid. Extend the lid to about half the height of the main body.
 
 ## Rounded lid
 
 <video controls src="../../../assets/art/accessories/creating-rigid/Rounded-Lid.mp4" width="100%"></video>
+
 Create the rounded lid shape using segmentation:
 
-1. Near the Edit mode dropdown, select the Line selection.
-2. Holding <kbd>Shift</kbd>, click the top front and back lines of your chest.
-3. With both lines selected, press <kbd>Ctrl</kbd><kbd>B</kbd>/<kbd>⌘</kbd><kbd>B</kbd> to bevel.
-4. In the context menu at the bottom right, set the number of segments to `6` and enable **Clamp Overlap**.
+1. Press <kbd>2</kbd> to switch to edge selection.
+1. Holding <kbd>Shift</kbd>, click the top front and back edges of your chest.
+1. With both edges selected, press <kbd>Ctrl</kbd><kbd>B</kbd>/<kbd>⌘</kbd><kbd>B</kbd> to activate the **Bevel** tool.
+1. Navigate to the contextual menu at the bottom right, then set the number of segments to `6` and enable **Clamp Overlap**.
 
 ### Merge vertices
 
-Sometimes tools like the **Bevel** tool may move vertices very close to each other without merging them. Use the Merge Vertices function to ensure that your object shares vertices wherever possible.
+Sometimes tools like the **Bevel** tool may move vertices very close to each other without merging them. Use the **Merge Vertices** function to ensure that your object shares vertices wherever possible.
 
-1. Near the Edit mode dropdown, select the Vertices selection.
-2. Press <kbd>A</kbd> to select all vertices.
-3. Right-click and select **Merge Vertices by Distance**.
-4. In the pop-up modal, set the distance to `.01`.
+1. Press <kbd>1</kbd> to switch to vertex selection, then press <kbd>A</kbd> to select all vertices of your object.
+1. Right-click anywhere in the viewport, then select **Merge Vertices by Distance** from the contextual menu.
+1. In the pop-up modal, set the distance to `.01`.
 
 ## Side insets
 
@@ -55,12 +56,11 @@ Sometimes tools like the **Bevel** tool may move vertices very close to each oth
 
 Create the left and right insets of your chest:
 
-1. Near the Edit mode dropdown, select the Face selection.
-2. Hold <kbd>Shift</kbd> and click both sides of your shape. This selects both the left and right faces.
-3. Press <kbd>I</kbd> for inset. Drag the mouse to adjust the amount of inset for the new face.
-   1. Set the inset about the size of your bevel segmentations.
-4. With your new insets selected, right-click and select **Extrude Along Normals**.
-5. Use the mouse to drag and adjust the distance of extrusion into the chest.
+1. Press <kbd>3</kbd> to switch to face selection.
+1. Holding <kbd>Shift</kbd>, click both sides of your shape. This selects both the left and right faces.
+1. Press <kbd>I</kbd> to activate the **Inset** tool. Drag the mouse to adjust the amount of inset for the new face to about the size of your bevel segments.
+1. With your new insets selected, right-click anywhere in the viewport, then select **Extrude Along Normals** from the contextual menu.
+1. Use the mouse to drag and adjust the distance of extrusion into the chest.
 
 ## Front insets
 
@@ -72,13 +72,12 @@ Create the front and back insets of your chest by creating new lines and then ex
 
 To create your vertical loop cuts:
 
-1. Near the Edit mode dropdown, select the Line selection.
-2. Press <kbd>A</kbd> to select the entire chest.
-3. Use <kbd>Ctrl</kbd><kbd>R</kbd>/<kbd>⌘</kbd><kbd>R</kbd> to create a loop cut.
-4. Using your mouse, hover over the object until the highlighted cut is vertical. Click to confirm.
-5. In the context menu, set the number of cuts to `2`.
-6. With the new lines selected, press <kbd>S</kbd> to scale and <kbd>Y</kbd> to scale within the y-axis.
-7. Use the mouse to drag the lines until they nearly reach the edges of your chest. Click to confirm.
+1. Press <kbd>2</kbd> to switch to edge selection, then press <kbd>A</kbd> to select the entire chest.
+1. Use <kbd>Ctrl</kbd><kbd>R</kbd>/<kbd>⌘</kbd><kbd>R</kbd> to create a loop cut.
+1. Using your mouse, hover over the object until the highlighted cut is vertical, then click to confirm.
+1. In the contextual menu, set the number of cuts to `2`.
+1. With the new lines selected, press <kbd>S</kbd> to scale and <kbd>Y</kbd> to scale within the Y axis.
+1. Use the mouse to drag the lines until they nearly reach the edges of your chest, then click to confirm.
 
 ### Horizontal loop cuts
 
@@ -86,26 +85,27 @@ To create your vertical loop cuts:
 
 To create your horizontal loop cuts:
 
-1. Select the chest, and press <kbd>Ctrl</kbd><kbd>R</kbd>/<kbd>⌘</kbd><kbd>R</kbd> to loop cut.
-2. Using the mouse, click to confirm a horizontal cut.
-3. Using the context menu, set the number of cuts to `2`.
-4. To straighten each line across your object, select the one of your new lines:
+1. Select the chest, and press <kbd>Ctrl</kbd><kbd>R</kbd>/<kbd>⌘</kbd><kbd>R</kbd> to loop cut, then click to confirm a horizontal cut.
+1. In the contextual menu, set the number of cuts to `2`.
+1. To straighten each line across your object:
+   1. Click one of your new lines.
    1. Press <kbd>S</kbd> for scale.
-   2. Press <kbd>Z</kbd> to scale within the z-axis.
-   3. Press <kbd>0</kbd> to set the scale value to `0` across the z-axis.
-5. Repeat step 4 with the other line.
-6. Position the top line near the top below the segmentations.
-7. Position the bottom line near the bottom.
-   1. Enable **Magnet Snapping** so the bottom line merges with the existing vertices and lines from the side insets.
+   1. Press <kbd>Z</kbd> to scale within the Z axis.
+   1. Press <kbd>0</kbd> to set the scale value to `0` across the Z axis.
+   1. Repeat for the other line.
+1. Position the top line near the top below the segmentations.
+1. Position the bottom line near the bottom.
+1. Enable **Magnet Snapping** so the bottom line merges with the existing vertices and lines from the side insets.
 
 ### Extrusions
 
 Create the extrusions for the front, top, and back of the chest.
 
-1. Near the Edit mode dropdown, select the Face selection.
-2. Hold <kbd>Alt</kbd>/<kbd>⌥</kbd> and click on your front faces to select the front, top, and back faces.
-3. With the faces selected, hold <kbd>Shift</kbd> and click on the metal borders to deselect them. The front and back faces, and the top segmentations, should remain selected.
-4. Right click and select **Extrude Faces Along Normals**. Drag the mouse to extrude the faces about the same width as the metal borders.
+1. Press <kbd>3</kbd> to switch to face selection.
+1. Hold <kbd>Alt</kbd>/<kbd>⌥</kbd> and click on your front faces to select the front, top, and back faces.
+1. With the faces selected, hold <kbd>Shift</kbd> and click on the metal borders to deselect them. The front and back faces, and the top segmentations, should remain selected.
+1. Right-click anywhere in the viewport, then select **Extrude Faces Along Normals** from the contextual menu.
+1. Drag the mouse to extrude the faces about the same width as the metal borders.
 
 ## Complete border
 
@@ -117,20 +117,19 @@ The chest is almost ready, but is still missing the continuous metal border acro
 
 Delete the faces of the top side metal borders:
 
-1. Near the Edit mode dropdown, select the Face selection.
-2. Starting on any side, shift click the three faces of the top metal border.
-3. Press <kbd>X</kbd> to delete.
-4. Repeat steps 2-3 on the other side.
+1. Starting on any side, hold <kbd>Shift</kbd> and click the three faces of the top metal border.
+1. Press <kbd>X</kbd> to delete.
+1. Repeat this process for the other side.
 
 ### Add faces
 
 Add new faces to the sides that complete the geometry of the treasure chest box.
 
-1. Near the Edit mode dropdown, select the Line selection.
-2. Starting with any side, Hold <kbd>Shift</kbd> and click the two top corner edges of the missing face.
-3. Right click and select **New Face from Edges** to create a top face.
-4. Repeat steps 2-3 with the bottom corner edges to create a bottom face.
-5. On the other side of the chest, repeat steps 2-4 to complete the metal border.
+1. Press <kbd>2</kbd> to switch to edge selection.
+1. Starting with any side, hold <kbd>Shift</kbd> and click the two top corner edges of the missing face.
+1. Right-click anywhere in the viewport, then select **New Face from Edges** from the contextual menu to create a top face.
+1. Repeat steps 2-3 with the bottom corner edges to create a bottom face.
+1. On the other side of the chest, repeat steps 2-4 to complete the metal border.
 
 <Alert severity='success'>
 You've completed the modeling section of this tutorial. If desired, download a [reference version](../../../assets/art/accessories/creating-rigid/Chest-Modeling-Complete.blend) of this stage of the project for comparison.

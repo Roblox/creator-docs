@@ -180,7 +180,10 @@ functions:
             inspected.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          One value per character in `options`, in the order they appear: source
+          identifier (`s`), line number (`l`), function name (`n`), parameter
+          count and whether variadic (`a`), or the function itself (`f`).
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -241,7 +244,10 @@ functions:
             inspected.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          One value per character in `options`, in the order they appear: source
+          identifier (`s`), line number (`l`), function name (`n`), parameter
+          count and whether variadic (`a`), or the function itself (`f`).
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -305,7 +311,10 @@ functions:
             inspected.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          One value per character in `options`, in the order they appear: source
+          identifier (`s`), line number (`l`), function name (`n`), parameter
+          count and whether variadic (`a`), or the function itself (`f`).
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -314,15 +323,15 @@ functions:
       Starts profiling for a label.
     description: |
       Starts profiling for a
-      [MicroProfiler](../../../studio/microprofiler/index.md) label.
+      [MicroProfiler](/performance-optimization/microprofiler/index.md) label.
     parameters:
       - name: label
         type: string
         default:
         summary: |
           The text that this
-          [MicroProfiler](../../../studio/microprofiler/index.md) label
-          displays.
+          [MicroProfiler](/performance-optimization/microprofiler/index.md)
+          label displays.
     returns:
       - type: ()
         summary: ''
@@ -335,8 +344,8 @@ functions:
       `Library.debug.profilebegin()` opened.
     description: |
       Stops profiling for the most recent
-      [MicroProfiler](../../../studio/microprofiler/index.md) label that
-      `Library.debug.profilebegin()` opened.
+      [MicroProfiler](/performance-optimization/microprofiler/index.md) label
+      that `Library.debug.profilebegin()` opened.
     parameters: []
     returns:
       - type: ()
@@ -362,15 +371,17 @@ functions:
       Assigns a custom tag to the current thread's memory category.
     description: |
       Assigns a custom tag name to the current thread's memory category in the
-      [Developer Console](../../../studio/developer-console.md). Useful for
-      analyzing memory usage of multiple threads in the same script which would
-      otherwise be grouped together under the same tag/name. Returns the name of
-      the current thread's previous memory category.
+      [Developer Console](/studio/developer-console.md). Useful for analyzing
+      memory usage of multiple threads in the same script which would otherwise
+      be grouped together under the same tag/name. Returns the name of the
+      current thread's previous memory category.
     parameters:
       - name: tag
         type: string
         default:
-        summary: ''
+        summary: |
+          The custom name to assign to the current thread's memory category in
+          the Developer Console.
     returns:
       - type: string
         summary: |
@@ -398,8 +409,8 @@ functions:
     description: |
       Displays a table of native code size of individual functions and scripts.
       This function is only available in the Command Bar in Studio. More details
-      can be found on the
-      [Native Code Generation](../../../luau/native-code-gen.md) page.
+      can be found on the [Native Code Generation](/luau/native-code-gen.md)
+      page.
     parameters: []
     returns:
       - type: ()

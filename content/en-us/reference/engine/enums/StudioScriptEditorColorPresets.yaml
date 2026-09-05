@@ -4,29 +4,36 @@
 
 name: StudioScriptEditorColorPresets
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies a script editor syntax-color preset in Roblox Studio.
+description: |
+  Controls the preset selected by the **Script Editor Color Preset** Studio
+  setting.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: RobloxDefault
-    summary: ''
+    summary: |
+      Uses Roblox Studio's default script editor colors.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Extra1
-    summary: ''
+    summary: |
+      Uses the first alternate script editor color preset.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Extra2
-    summary: ''
+    summary: |
+      Uses the second alternate script editor color preset.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Custom
-    summary: ''
+    summary: |
+      Uses the creator's custom script editor colors.
     value: 3
     tags: []
     deprecation_message: ''

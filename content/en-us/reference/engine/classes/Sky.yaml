@@ -32,9 +32,11 @@ deprecation_message: ''
 properties:
   - name: Sky.CelestialBodiesShown
     summary: |
-      Sets whether the sun, moon, and stars will show.
+      Sets whether the sun, moon, and stars will render in the skybox.
     description: |
-      Sets whether the sun, moon, and stars will show.
+      Determines whether the sun, moon, and stars are rendered in the skybox.
+      Defaults to `true`. When set to `false`, the sun, moon, and stars are
+      hidden, regardless of the values of other properties.
     code_samples: []
     type: boolean
     tags: []
@@ -52,10 +54,10 @@ properties:
   - name: Sky.MoonAngularSize
     summary: |
       The perceived angular size of the moon while using this skybox, in
-      degrees.
+      degrees. Defaults to `11` and is clamped to the range `[0, 60]`.
     description: |
-      The perceived angular size of the moon while using this skybox, in
-      degrees.
+      The perceived angular size of the moon while using this skybox, measured
+      in degrees.
     code_samples: []
     type: float
     tags: []
@@ -71,8 +73,11 @@ properties:
     capabilities:
       - Environment
   - name: Sky.MoonTextureContent
-    summary: ''
-    description: ''
+    summary: |
+      The image displayed for the moon while using this skybox.
+    description: |
+      The `Datatype.Content` image displayed for the moon while using this
+      skybox. Defaults to `rbxasset://sky/moon.jpg`.
     code_samples: []
     type: Content
     tags: []
@@ -91,7 +96,8 @@ properties:
     summary: |
       The texture of the moon while using this skybox.
     description: |
-      The texture of the moon while using this skybox.
+      The texture asset ID for the moon while using this skybox. Defaults to
+      `rbxasset://sky/moon.jpg`.
     code_samples: []
     type: ContentId
     tags: []
@@ -107,8 +113,11 @@ properties:
     capabilities:
       - Environment
   - name: Sky.SkyboxBackContent
-    summary: ''
-    description: ''
+    summary: |
+      The image displayed on the back surface of the skybox.
+    description: |
+      The `Datatype.Content` image displayed on the back surface of the skybox.
+      Defaults to `rbxasset://textures/sky/sky512_bk.tex`.
     code_samples: []
     type: Content
     tags: []
@@ -127,7 +136,8 @@ properties:
     summary: |
       The URL link to a picture for the back surface of the sky.
     description: |
-      The URL link to a picture for the back surface of the sky.
+      The texture asset ID for the back surface of the skybox. Defaults to
+      `rbxasset://textures/sky/sky512_bk.tex`.
     code_samples: []
     type: ContentId
     tags: []
@@ -146,7 +156,8 @@ properties:
     summary: |
       Asset ID for the bottom surface of the skybox.
     description: |
-      Asset ID for the bottom surface of the skybox.
+      The texture asset ID for the bottom surface of the skybox. Defaults to
+      `rbxasset://textures/sky/sky512_dn.tex`.
     code_samples: []
     type: ContentId
     tags: []
@@ -162,8 +173,11 @@ properties:
     capabilities:
       - Environment
   - name: Sky.SkyboxDownContent
-    summary: ''
-    description: ''
+    summary: |
+      The image displayed on the bottom surface of the skybox.
+    description: |
+      The `Datatype.Content` image displayed on the bottom surface of the
+      skybox. Defaults to `rbxasset://textures/sky/sky512_dn.tex`.
     code_samples: []
     type: Content
     tags: []
@@ -179,8 +193,11 @@ properties:
     capabilities:
       - Environment
   - name: Sky.SkyboxFrontContent
-    summary: ''
-    description: ''
+    summary: |
+      The image displayed on the front surface of the skybox.
+    description: |
+      The `Datatype.Content` image displayed on the front surface of the skybox.
+      Defaults to `rbxasset://textures/sky/sky512_ft.tex`.
     code_samples: []
     type: Content
     tags: []
@@ -199,7 +216,8 @@ properties:
     summary: |
       Asset ID for the front surface of the skybox.
     description: |
-      Asset ID for the front surface of the skybox.
+      The texture asset ID for the front surface of the skybox. Defaults to
+      `rbxasset://textures/sky/sky512_ft.tex`.
     code_samples: []
     type: ContentId
     tags: []
@@ -215,8 +233,11 @@ properties:
     capabilities:
       - Environment
   - name: Sky.SkyboxLeftContent
-    summary: ''
-    description: ''
+    summary: |
+      The image displayed on the left surface of the skybox.
+    description: |
+      The `Datatype.Content` image displayed on the left surface of the skybox.
+      Defaults to `rbxasset://textures/sky/sky512_lf.tex`.
     code_samples: []
     type: Content
     tags: []
@@ -235,7 +256,8 @@ properties:
     summary: |
       Asset ID for the left surface of the skybox.
     description: |
-      Asset ID for the left surface of the skybox.
+      The texture asset ID for the left surface of the skybox. Defaults to
+      `rbxasset://textures/sky/sky512_lf.tex`.
     code_samples: []
     type: ContentId
     tags: []
@@ -301,8 +323,11 @@ properties:
     capabilities:
       - Environment
   - name: Sky.SkyboxRightContent
-    summary: ''
-    description: ''
+    summary: |
+      The image displayed on the right surface of the skybox.
+    description: |
+      The `Datatype.Content` image displayed on the right surface of the skybox.
+      Defaults to `rbxasset://textures/sky/sky512_rt.tex`.
     code_samples: []
     type: Content
     tags: []
@@ -321,7 +346,8 @@ properties:
     summary: |
       Asset ID for the right surface of the skybox.
     description: |
-      Asset ID for the right surface of the skybox.
+      The texture asset ID for the right surface of the skybox. Defaults to
+      `rbxasset://textures/sky/sky512_rt.tex`.
     code_samples: []
     type: ContentId
     tags: []
@@ -340,7 +366,8 @@ properties:
     summary: |
       Asset ID for the top surface of the skybox.
     description: |
-      Asset ID for the top surface of the skybox.
+      The texture asset ID for the top surface of the skybox. Defaults to
+      `rbxasset://textures/sky/sky512_up.tex`.
     code_samples: []
     type: ContentId
     tags: []
@@ -356,8 +383,11 @@ properties:
     capabilities:
       - Environment
   - name: Sky.SkyboxUpContent
-    summary: ''
-    description: ''
+    summary: |
+      The image displayed on the top surface of the skybox.
+    description: |
+      The `Datatype.Content` image displayed on the top surface of the skybox.
+      Defaults to `rbxasset://textures/sky/sky512_up.tex`.
     code_samples: []
     type: Content
     tags: []
@@ -397,6 +427,7 @@ properties:
       The perceived angular size of the sun while using this skybox, in degrees.
     description: |
       The perceived angular size of the sun while using this skybox, in degrees.
+      Defaults to `21` and is clamped to the range `[0, 60]`.
     code_samples: []
     type: float
     tags: []
@@ -412,8 +443,11 @@ properties:
     capabilities:
       - Environment
   - name: Sky.SunTextureContent
-    summary: ''
-    description: ''
+    summary: |
+      The image displayed for the sun while using this skybox.
+    description: |
+      The `Datatype.Content` image displayed for the sun while using this
+      skybox. Defaults to `rbxasset://sky/sun.jpg`.
     code_samples: []
     type: Content
     tags: []
@@ -432,7 +466,8 @@ properties:
     summary: |
       The texture of the sun while using this skybox.
     description: |
-      The texture of the sun while using this skybox.
+      The texture asset ID for the sun while using this skybox. Defaults to
+      `rbxasset://sky/sun.jpg`.
     code_samples: []
     type: ContentId
     tags: []

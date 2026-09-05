@@ -4,24 +4,37 @@
 
 name: GraphicsOptimizationMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the player's preferred trade-off between rendering quality and frame
+  rate when using manual graphics quality.
+description: |
+  Preferred trade-off between visual quality and performance for
+  `Class.UserGameSettings.GraphicsOptimizationMode` when the player uses
+  **manual** graphics quality. This setting has no effect when graphics quality
+  is automatic. Defaults to `Enum.GraphicsOptimizationMode.Balanced`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Performance
-    summary: ''
+    summary: |
+      Prefers frame rate over visual fidelity, corresponding to manual render
+      quality levels 1–3.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Balanced
-    summary: ''
+    summary: |
+      Middle-ground preference, corresponding to manual render quality levels
+      4–7. This is the default of
+      `Class.UserGameSettings.GraphicsOptimizationMode`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Quality
-    summary: ''
+    summary: |
+      Prefers visual fidelity over frame rate, corresponding to manual render
+      quality levels 8–10.
     value: 2
     tags: []
     deprecation_message: ''

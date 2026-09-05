@@ -136,11 +136,15 @@ methods:
       `Class.AnimationTrack.IsPlaying` being `true`; as a result,
       `Class.Animator:GetTrackByAnimationId()|GetTrackByAnimationId()` may be a
       better option to get a specific `Class.AnimationTrack` by its asset ID.
+      Fading tracks are automatically stopped and removed from this list once
+      their blend weight reaches zero.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of currently active `Class.AnimationTrack|AnimationTracks` on
+          this `Class.Animator`, including tracks that are fading out.
     tags: []
     deprecation_message: ''
     security: None
@@ -235,7 +239,8 @@ methods:
           The `Class.Animation` to be used.
     returns:
       - type: AnimationTrack
-        summary: ''
+        summary: |
+          A new `Class.AnimationTrack` linked to the given `Class.Animation`.
     tags: []
     deprecation_message: ''
     security: None
@@ -298,7 +303,8 @@ events:
       - name: animationTrack
         type: AnimationTrack
         default:
-        summary: ''
+        summary: |
+          The `Class.AnimationTrack` that began playing.
     tags: []
     deprecation_message: ''
     security: None

@@ -58,6 +58,7 @@ https://datawiz.ca/
 https://desktop.github.com/
 https://developer.microsoft.com/en-us/microsoft-edge/webview2/
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+https://digital-strategy.ec.europa.eu/en/policies/dsa-out-court-dispute-settlement
 https://digitaldragon.co/camps/thanksgiving-week-camp-roblox/
 https://digitalsake.com/
 https://digitane.jp/
@@ -816,3 +817,4 @@ https://www.irs.gov/forms-pubs/about-form-1099-nec
 https://help.tipalti.com/hc/en-us/articles/31314361313815-Payment-methods-coverage-US-ROW
 https://www.youtube-nocookie.com/embed/dVmnD5pn3QI
 https://www.youtube-nocookie.com/embed/Fg-Ksoa7b-s?si=SwXhzsIjkyMKSUkJ
+https://en.help.roblox.com/hc/en-us/articles/23607654421524-Reporting-Illegal-Content-in-the-European-Union

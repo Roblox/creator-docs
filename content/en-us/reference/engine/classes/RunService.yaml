@@ -145,28 +145,21 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties:
-  - name: RunService.ClientGitHash
-    summary: ''
-    description: ''
-    code_samples: []
-    type: string
-    tags:
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - Basic
   - name: RunService.RunState
-    summary: ''
-    description: ''
+    summary: |
+      The current run state of the game's simulation.
+    description: |
+      An `Enum.RunState` value that reflects whether the game's simulation is
+      stopped, running, or paused. Reading reports the current state; setting it
+      transitions the simulation, equivalent to `Class.RunService:Run()`,
+      `Class.RunService:Pause()`, and `Class.RunService:Stop()` for the
+      corresponding states. Defaults to `Enum.RunState.Stopped`. Setting this
+      property requires `Plugin` security.
+
+      The state reported here backs the context methods on `Class.RunService`:
+      it is `Running` when `Class.RunService:IsRunning()|IsRunning()` returns
+      `true`, and `Stopped` when `Class.RunService:IsEdit()|IsEdit()` returns
+      `true`.
     code_samples: []
     type: RunState
     tags:
@@ -335,7 +328,9 @@ methods:
           priority, the order between them is unspecified. Defaults to 2000.
     returns:
       - type: RBXScriptConnection
-        summary: ''
+        summary: |
+          An `Datatype.RBXScriptConnection` that can be disconnected to unbind
+          the function from the simulation step.
     tags: []
     deprecation_message: ''
     security: None
@@ -363,7 +358,9 @@ methods:
           The `Class.Instance` for which to check prediction status.
     returns:
       - type: PredictionStatus
-        summary: ''
+        summary: |
+          The `Enum.PredictionStatus` of the given instance, indicating whether
+          it is predicted, authoritative, or not participating in prediction.
     tags: []
     deprecation_message: ''
     security: None
@@ -419,6 +416,33 @@ methods:
     thread_safety: Safe
     capabilities:
       - Basic
+  - name: RunService:IsResimulating
+    summary: |
+      Returns whether the client is currently in a resimulation step after a
+      misprediction in the server authority model.
+    description: |
+      Returns `true` if the engine is currently replaying simulation steps after
+      detecting a misprediction in the server authority model; returns `false`
+      otherwise. When the server's authoritative state diverges from the
+      client's predicted state, the client rolls back and rapidly resimulates
+      all affected steps within a single frame. During that resimulation pass,
+      `Class.RunService:BindToSimulation()|BindToSimulation()` callbacks and
+      property-changed signals fire again for each replayed step, which can
+      cause unwanted side effects such as duplicate sound playback or redundant
+      network requests.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: boolean
+        summary: |
+          Whether the engine is currently resimulating.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities:
+      - Basic
+    simulationAccess: true
   - name: RunService:IsRunMode
     summary: |
       Returns whether a **Run** playtest has been initiated in Studio.

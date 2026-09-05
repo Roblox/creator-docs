@@ -104,39 +104,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-  - name: AudioEmitter.DiffractionEnabled
-    summary: |
-      Controls whether sound from this `Class.AudioEmitter` bends around corners
-      when acoustic simulation is active.
-    description: |
-      Controls whether diffraction (sound bending around corners) is applied to
-      this `Class.AudioEmitter` when heard by an `Class.AudioListener`. When set
-      to `Enum.SimulationMode.Default`, the effective value is inherited from
-      `Class.SoundService`. When set to `Enum.SimulationMode.Enabled` or
-      `Enum.SimulationMode.Disabled`, it overrides the service-level setting for
-      this emitter.
-
-      Diffraction repositions the perceived audio source to the edge of an
-      obstacle. Both the `Class.AudioEmitter` and `Class.AudioListener` must
-      have diffraction effectively enabled for the effect to occur on their
-      audio path. Diffraction also requires occlusion to be enabled. If
-      occlusion is off, sound passes straight through obstacles, so it has no
-      reason to bend around corners and this property has no effect. Defaults to
-      `Enum.SimulationMode.Default`.
-    code_samples: []
-    type: SimulationMode
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Simulation
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Audio
   - name: AudioEmitter.DistanceAttenuation
     summary: |
       Represents how the perceived volume of the emitted sound changes as the
@@ -226,45 +193,6 @@ properties:
       can_save: true
     capabilities:
       - Audio
-  - name: AudioEmitter.OcclusionEnabled
-    summary: |
-      Controls whether sound from this `Class.AudioEmitter` is muffled when
-      obstructed by geometry.
-    description: |
-      Controls whether occlusion (sound muffled through walls and other
-      geometry) is applied to this `Class.AudioEmitter` when heard by an
-      `Class.AudioListener`. When set to `Enum.SimulationMode.Default`, the
-      effective value is inherited from `Class.SoundService`. When set to
-      `Enum.SimulationMode.Enabled` or `Enum.SimulationMode.Disabled`, it
-      overrides the service-level setting for this emitter.
-
-      When active, a low-pass filter is applied based on the density of
-      materials and thickness of obstacles between the emitter and listener.
-      Both the `Class.AudioEmitter` and `Class.AudioListener` must have
-      occlusion effectively enabled for the effect to occur on their audio path.
-      Disabling occlusion also disables
-      `Class.AudioEmitter.DiffractionEnabled|DiffractionEnabled`, since
-      diffraction relies on occlusion data.
-
-      Only relevant when
-      `Class.AudioEmitter.AcousticSimulationEnabled|AcousticSimulationEnabled`
-      is `true`.
-
-      Defaults to `Enum.SimulationMode.Default`.
-    code_samples: []
-    type: SimulationMode
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Simulation
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Audio
   - name: AudioEmitter.PositionInstance
     summary: |
       The `Class.Instance` whose position and orientation is used as the
@@ -311,42 +239,6 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Emission
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Audio
-  - name: AudioEmitter.ReverbEnabled
-    summary: |
-      Controls whether sound from this `Class.AudioEmitter` receives
-      environmental reverb when acoustic simulation is active.
-    description: |
-      Controls whether environmental reverberation (sound echoing off walls and
-      surfaces) is applied to this `Class.AudioEmitter` when heard by an
-      `Class.AudioListener`. When set to `Enum.SimulationMode.Default`, the
-      effective value is inherited from `Class.SoundService`. When set to
-      `Enum.SimulationMode.Enabled` or `Enum.SimulationMode.Disabled`, it
-      overrides the service-level setting for this emitter.
-
-      When active, a reverb effect is computed from the size and material
-      properties of the surrounding environment. Both the `Class.AudioEmitter`
-      and `Class.AudioListener` must have reverb effectively enabled for the
-      effect to occur on their audio path.
-
-      Only relevant when
-      `Class.AudioEmitter.AcousticSimulationEnabled|AcousticSimulationEnabled`
-      is `true`.
-
-      Defaults to `Enum.SimulationMode.Default`.
-    code_samples: []
-    type: SimulationMode
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Simulation
     serialization:
       can_load: true
       can_save: true

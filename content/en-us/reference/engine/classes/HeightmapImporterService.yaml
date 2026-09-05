@@ -5,8 +5,17 @@
 name: HeightmapImporterService
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A Studio-only service that backs the Terrain Editor's heightmap import tool,
+  converting heightmap and colormap images into voxel `Class.Terrain`.
+description: |
+  Studio-only Terrain Editor service; members require elevated security and are
+  not callable from experience scripts. Powers **Import Heightmap**: given a
+  `Datatype.Region3` and the asset IDs of a grayscale heightmap plus an optional
+  colormap, samples the images and generates smooth-voxel `Class.Terrain` in
+  that region — heightmap luminance drives height; colormap colors map to the
+  nearest terrain `Enum.Material`, falling back to a supplied default and
+  warning when too many pixels are unmatched.
 code_samples: []
 inherits:
   - Instance

@@ -5,7 +5,9 @@
 name: SkateboardController
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  Translates player input into throttle and steer axis values for a
+  `Class.SkateboardPlatform`.
 description: |
   A SkateboardController is an object responsible for translating PlayerActions
   to movements with a `Class.SkateboardPlatform`.
@@ -79,7 +81,9 @@ events:
       - name: axis
         type: string
         default:
-        summary: ''
+        summary: |
+          A string, either `"Throttle"` or `"Steer"`, indicating which input
+          state of the skateboard controller changed.
     tags: []
     deprecation_message: ''
     security: None

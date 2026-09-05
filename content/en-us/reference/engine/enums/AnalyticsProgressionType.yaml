@@ -4,29 +4,44 @@
 
 name: AnalyticsProgressionType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the player's progression status in a level-progression event logged
+  by `Class.AnalyticsService:LogProgressionEvent()`.
+description: |
+  Passed as the `status` argument to
+  `Class.AnalyticsService:LogProgressionEvent()` to indicate whether a player is
+  starting, completing, or failing a level attempt. The convenience methods
+  `Class.AnalyticsService:LogProgressionStartEvent()`,
+  `Class.AnalyticsService:LogProgressionCompleteEvent()`, and
+  `Class.AnalyticsService:LogProgressionFailEvent()` set this value
+  automatically; use `Enum.AnalyticsProgressionType.Custom|Custom` for
+  progression events that fall outside the standard lifecycle.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Custom
-    summary: ''
+    summary: |
+      A custom progression status for events outside the standard
+      start/fail/complete lifecycle.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Start
-    summary: ''
+    summary: |
+      The player started the level attempt.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Fail
-    summary: ''
+    summary: |
+      The player failed the level attempt.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Complete
-    summary: ''
+    summary: |
+      The player completed the level successfully.
     value: 3
     tags: []
     deprecation_message: ''

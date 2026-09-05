@@ -28,8 +28,21 @@ tags: []
 deprecation_message: ''
 properties:
   - name: TextChatCommand.AutocompleteVisible
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether the `Class.TextChatCommand` is shown as a suggestion in
+      the chat autocomplete menu.
+    description: |
+      Whether this `Class.TextChatCommand` appears as a suggestion in the chat
+      autocomplete menu. Defaults to `true`.
+
+      When `true`, `Class.TextChatCommand.PrimaryAlias|PrimaryAlias` is offered
+      in the autocomplete list. Set to `false` to hide it from suggestions; the
+      command still works when typed in full via
+      `Class.TextChatCommand.PrimaryAlias|PrimaryAlias` or
+      `Class.TextChatCommand.SecondaryAlias|SecondaryAlias`.
+
+      Autocomplete itself is controlled by
+      `Class.ChatInputBarConfiguration.AutocompleteEnabled`.
     code_samples: []
     type: boolean
     tags: []
@@ -97,7 +110,20 @@ properties:
     summary: |
       A secondary alias used to trigger the `Class.TextChatCommand`.
     description: |
-      A secondary alias used to trigger the `Class.TextChatCommand`.
+      A secondary alias used to trigger the `Class.TextChatCommand`, in addition
+      to its `Class.TextChatCommand.PrimaryAlias|PrimaryAlias`.
+
+      If a user sends a message with `Class.TextChannel:SendAsync()` that
+      matches the `Class.TextChatCommand.SecondaryAlias|SecondaryAlias`, the
+      message is not sent and instead `Class.TextChatCommand.Triggered` is
+      fired, exactly as it is for the
+      `Class.TextChatCommand.PrimaryAlias|PrimaryAlias`. Matching is
+      case-insensitive, and the alias must be followed by the end of the message
+      or a space, so a `Class.TextChatCommand.SecondaryAlias|SecondaryAlias` of
+      `"/e"` matches `"/e"` and `"/e dance"` but not `"/emote"`.
+
+      Defaults to an empty string, in which case only the
+      `Class.TextChatCommand.PrimaryAlias|PrimaryAlias` triggers the command.
     code_samples: []
     type: string
     tags: []

@@ -105,7 +105,10 @@ methods:
       in the current experience and must not have already started. If the event
       has already started, this method will return an error.
 
-      Note that you can use
+      Use
+      `Class.SocialService:GetUpcomingExperienceEventsAsync()|GetUpcomingExperienceEventsAsync()`
+      to obtain a valid event ID at runtime rather than hardcoding one. Note
+      that you can use
       `Class.SocialService:PromptRsvpToEventAsync()|PromptRsvpToEventAsync()` to
       prompt the player to change their RSVP status for the event.
     code_samples:
@@ -142,13 +145,7 @@ methods:
 
       - `Id` (string)
       - `Title` (string)
-      - `Subtitle` (string)
       - `Description` (string)
-      - `DisplayTitle` (string)
-      - `DisplaySubtitle` (string)
-      - `DisplayDescription` (string)
-      - `ThumbnailIds` (array of numbers): Asset IDs for the event thumbnails.
-        The first ID is the primary thumbnail.
       - `StartTime` (dictionary)
         - `Day` (number)
         - `Year` (number)
@@ -261,7 +258,9 @@ methods:
       - name: partyId
         type: string
         default:
-        summary: ''
+        summary: |
+          The unique identifier of the party to retrieve member data for,
+          corresponding to a `Class.Player.PartyId` value.
     returns:
       - type: Array
         summary: |
@@ -295,7 +294,9 @@ methods:
       - name: partyId
         type: string
         default:
-        summary: ''
+        summary: |
+          The unique identifier of the party to filter players by, corresponding
+          to a `Class.Player.PartyId` value.
     returns:
       - type: List<Player>
         summary: |
@@ -318,6 +319,10 @@ methods:
       The array includes only events that are currently active or have not yet
       ended, excluding cancelled, moderated, or unpublished events. Results are
       sorted so the soonest start time appears first.
+
+      Use this method to discover valid event IDs at runtime rather than
+      hardcoding them; hardcoded IDs become stale when events end and cause RSVP
+      prompts to fail until the experience is republished.
 
       If the service indicates there are no matching events, this method returns
       an empty array. Requests may raise a `HttpError <status>` message if the
@@ -570,7 +575,9 @@ methods:
     capabilities:
       - Social
   - name: SocialService:PromptLinkSharingAsync
-    summary: ''
+    summary: |
+      Generates an expiring share link and prompts the given `Class.Player` with
+      the platform share sheet.
     description: |
       This call is restricted to server scripts. After a link is successfully
       generated, the target player will either be prompted to open a share sheet
@@ -780,14 +787,21 @@ events:
     capabilities:
       - Social
   - name: SocialService.ShareSheetClosed
-    summary: ''
-    description: ''
+    summary: |
+      Fires when the player closes the share sheet opened by
+      `Class.SocialService:PromptLinkSharingAsync()|PromptLinkSharingAsync()`.
+    description: |
+      Fires on the server when the player closes or dismisses the platform share
+      sheet that was opened as a result of a successful call to
+      `Class.SocialService:PromptLinkSharingAsync()|PromptLinkSharingAsync()`.
+      The `player` argument is the `Class.Player` who closed the share sheet.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` who closed the share sheet.
     tags: []
     deprecation_message: ''
     security: None

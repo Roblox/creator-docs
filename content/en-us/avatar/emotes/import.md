@@ -11,7 +11,7 @@ It's important to ensure your emote meets Roblox's [emote specifications](./spec
 
 To import your asset as an animation:
 
-1. If you don't already have a character body with a [standard](../character-bodies/specifications.md#standard-rigs) rigging armature, add one to your project in Studio.
+1. If you don't already have a character body with a [standard R15 rig](../character-bodies/specifications.md#standard-r15-rigs), add one to your project in Studio.
 
    1. In the **Avatar** tab, click the **Character** button.
 

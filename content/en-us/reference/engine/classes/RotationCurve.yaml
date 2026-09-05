@@ -51,10 +51,12 @@ methods:
       - name: index
         type: int
         default:
-        summary: ''
+        summary: |
+          Index of the key to return.
     returns:
       - type: RotationCurveKey
-        summary: ''
+        summary: |
+          Copy of the `Datatype.RotationCurveKey` stored at `index`.
     tags: []
     deprecation_message: ''
     security: None
@@ -75,10 +77,12 @@ methods:
       - name: time
         type: float
         default:
-        summary: ''
+        summary: |
+          Time to look up within the curve.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          Array with the indices of the keys that bracket `time`.
     tags: []
     deprecation_message: ''
     security: None

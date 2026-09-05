@@ -49,6 +49,10 @@ For more information on subscription events and their fields, see the [Subscript
 - **Commerce Product Order Refunded** - When a user has received a refund for their commerce product order, or the order was cancelled.
 - **Commerce Product Order Paid** - When a user has paid for their commerce product order. Please note that duplicate webhook events are possible, so you should deduplicate events using the unique commerce order ID.
 
+### Refunds
+
+- **Transaction Refunded** - When a user refunds a transaction, a message is sent containing the transaction and the refunded user.
+
 ## Configure webhooks on Creator Dashboard
 
 To receive notifications through webhooks, you need to configure a webhook that subscribes to certain events for triggering notifications. For group-owned games, only group owners can configure and receive webhook notifications.

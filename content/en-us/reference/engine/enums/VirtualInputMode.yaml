@@ -4,24 +4,36 @@
 
 name: VirtualInputMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the current operational state of a `Class.VirtualInputManager`.
+description: |
+  Describes the current operational state of a `Class.VirtualInputManager`. The
+  service reports a value from this enum to indicate whether it is idle,
+  actively capturing input events, or replaying a previously captured sequence.
+  Transitions are driven by calls to `StartRecording()`, `StopRecording()`,
+  `StartPlaying()`, and `StopPlaying()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      The `Class.VirtualInputManager` is idle and neither recording nor playing
+      back input.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Recording
-    summary: ''
+    summary: |
+      The `Class.VirtualInputManager` is actively capturing input events into a
+      sequence.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Playing
-    summary: ''
+    summary: |
+      The `Class.VirtualInputManager` is replaying a previously recorded input
+      sequence.
     value: 2
     tags: []
     deprecation_message: ''

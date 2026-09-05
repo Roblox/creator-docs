@@ -97,6 +97,8 @@ When implementing funnels, a `funnelSessionId` can help you track your events bu
 - **Store funnels** - Use `funnelSessionId` to distinguish between different sessions of the same user in a recurring funnel, such as opening the shop multiple times in a single session in the [earlier example](#track-recurring-funnels). In cases like this, where the player may open the shop multiple times in a single session, it is recommended to use a GUID as the `funnelSessionId`.
 - **Item upgrades** - Use `funnelSessionId` to distinguish between different item upgrade paths, generally over a longer time period than a single play session. Rather than use a GUID as in the store funnel case, you can often build a unique key based on the item being upgraded, for example: `<playerId>-<itemId>`.
 
+Analytics only tracks the 10 most recent unique `funnelSessionId` values per user for each funnel. If a user reuses a `funnelSessionId` that isn't among their 10 most recent for that funnel, the funnel counts it as a new session.
+
 ## Initial step
 
 Funnels start when the first step is logged. If you want to start a funnel immediately on player join, log the first step on the `PlayerAdded` event.

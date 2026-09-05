@@ -133,7 +133,7 @@ The **Clothing** tab contains controls for layered and classic clothing.
     <td>
       <ul>
         <li>**Player Choice** (default): Keep user's avatar clothing.</li>
-        <li>**Custom Clothing**: Lets you override a user's layered clothing equip slot or classic clothing type to a custom ID. If you check the box to override, but leave the **Asset ID** field blank, it will remove all player clothing in that equip slot.</li>
+        <li>**Custom Clothing**: Lets you override a user's layered accessory equip slot or classic clothing type to a custom ID. If you check the box to override, but leave the **Asset ID** field blank, it will remove all player clothing in that equip slot.</li>
       </ul>
     </td>
   </tr>
@@ -176,7 +176,7 @@ The **Accessories** tab contains settings related to accessories in your game.
   </tr>
   <tr>
     <td>**Accessory Behaviors**</td>
-    <td>Controls to enable/disable accessory behaviors like **VFX** and **Sound**.</td>
+    <td>Controls to enable/disable accessory behaviors like **VFX**, **Sound**, and **Emissives**.</td>
   </tr>
 </tbody>
 </table>

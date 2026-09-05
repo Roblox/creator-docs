@@ -4,24 +4,30 @@
 
 name: AutoIndentRule
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies how Roblox Studio automatically indents lines in the script editor.
+description: |
+  Controls the behavior selected by the **Auto Indent Rule** Studio setting.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: 'Off'
-    summary: ''
+    summary: |
+      Disables automatic indentation.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Absolute
-    summary: ''
+    summary: |
+      Indents new lines according to the script's block structure.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Relative
-    summary: ''
+    summary: |
+      Indents new lines according to the script's block structure and the
+      indentation of the reference line.
     value: 2
     tags: []
     deprecation_message: ''

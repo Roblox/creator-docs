@@ -1,5 +1,5 @@
 ---
-title: Rigid accessory creation
+title: Create your first rigid accessory
 description: This tutorial covers the basic steps required to publish a custom asset on the Marketplace.
 next: /art/accessories/creating-rigid/modeling-setup
 ---
@@ -7,14 +7,12 @@ next: /art/accessories/creating-rigid/modeling-setup
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/Eed29gV0hLA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 <br /><br />
 
-Rigid accessories are 3D objects that users can equip to their avatar characters in a game or through Roblox's [Marketplace](https://www.roblox.com/catalog) and [Avatar Editor](https://www.roblox.com/my/avatar).
+**Rigid accessories** are 3D objects that attach to attachment points around an avatar character's body. When users purchase rigid accessories on the [Marketplace](https://www.roblox.com/catalog), such as props, weapons, and hats, they can adjust the position and rotation of the item away from the attachment point according to their avatar's body type.
 
-Unlike clothing or bodies, rigid accessories do not require additional configuration in a third-party application beyond modeling and texturing, rigid accessories are typically the most basic type of 3D avatar item to create.
-
-This tutorial covers the basics of each step in the workflow to create your own simple 3D model in Blender and import it into Studio. From there, you can upload the accessory to the Marketplace to sell, save the asset to your toolbox, or use the asset in your games.
+This tutorial covers the basics of how to create a simple 3D model in Blender, import it into Studio, then convert it into a Marketplace-ready `Class.Accessory` object that you can sell, save to your toolbox, or use within your games.
 
 <Alert severity = 'warning'>
-Creating, building, and sharing on Roblox is free. However, the last step of listing your item to sell requires a Roblox Plus or Premium account, an upload fee, and a publishing advance. For more information, see the [Marketplace policy](../../../marketplace/marketplace-policy.md#creator-requirements).
+Creating, building, and sharing on Roblox is free. However, the last step of listing your item on the Marketplace requires a Roblox Plus or Premium account, an upload fee, and a publishing advance. For more information, see [Marketplace policies](../../../marketplace/marketplace-policy.md#creator-requirements).
 </Alert>
 
 <GridContainer numColumns="2">

@@ -30,56 +30,77 @@ You can configure the gradient by:
 
 - Setting its [colors](#color-sequence) through a `Datatype.ColorSequence` in the gradient's `Class.UIGradient.Color|Color` property.
 - Setting its [transparency](#transparency) through a `Datatype.NumberSequence` in the gradient's `Class.UIGradient.Transparency|Transparency` property.
-- Choosing the gradient's starting point (inside or outside the parent's bounds) through the `Class.UIGradient.Offset|Offset` property.
-- Choosing the gradient's angle through the `Class.UIGradient.Rotation|Rotation` property.
+- Choosing the gradient's [type](#type) through the `Class.UIGradient.Type|Type` property.
+- Choosing the gradient's [starting point](#offset-and-rotation) (inside or outside the parent's bounds) through the `Class.UIGradient.Offset|Offset` property.
+- Choosing the gradient's [angle](#offset-and-rotation) through the `Class.UIGradient.Rotation|Rotation` property.
+- Choosing the gradient's [scale](#scale) through the `Class.UIGradient.Scale|Scale` property.
+- Choosing the gradient's [edge sampling](#tile-mode) behavior through the `Class.UIGradient.TileMode|TileMode` property.
 
 ### Color sequence
 
 To set a gradient's color sequence:
 
 1. In the [Explorer](../studio/explorer.md) window, select the `Class.UIGradient`.
-1. In the [Properties](../studio/properties.md) window, click inside the `Class.UIGradient.Color|Color` property field, then click the **&ctdot;** button to the right of the input box. A color sequence pop-up displays.
+1. In the [Properties](../studio/properties.md) window, click inside the `Class.UIGradient.Color|Color` property field, then click the **&ctdot;** button to the right of the input box.
 
    <img src="../assets/studio/properties/UIGradient-Open-ColorSequence-Window.png" width="320" />
 
-   Each triangle on the bottom axis of the color sequence is a **keypoint** that determines the color value at that point.
+1. Each triangle on the bottom axis of the color sequence is a **keypoint** that determines the color value at that point.
 
    <img src="../assets/studio/general/ColorSequence-White-Keypoints-Labeled.png" width="628" alt="Color sequence popup from white to white" />
 
-1. Click a keypoint in the color sequence, then click the small square next to **Color** to open the **Colors** pop-up window.
-1. Select the desired color for the keypoint.
-
-   <img src="../assets/studio/general/ColorSequence-Red-White.png" width="628" alt="Color sequence popup from red to white" />
-
-1. If needed, you can:
-   - Add another keypoint by clicking anywhere on the graph.
-   - Drag an existing keypoint to a new position, or select a keypoint and enter a specific time value through the **Time** input.
-   - Delete a keypoint by selecting it and clicking the **Delete** button.
-   - Reset the sequence by clicking the **Reset** button.
+   1. Click a keypoint in the color sequence to select or reposition it, or add another keypoint by clicking anywhere on the graph.
+   2. Click the small square next to **Color** to open the **Colors** pop-up window, then select the desired color for the keypoint.
+   3. If needed, repeat these steps to add/adjust colors across the graph.
 
 ### Transparency
 
 To adjust a gradient's transparency across its range:
 
 1. In the [Explorer](../studio/explorer.md) window, select the `Class.UIGradient`.
-1. In the [Properties](../studio/properties.md) window, click inside the `Class.UIGradient.Transparency|Transparency` property field, then click the **&ctdot;** button to the right of the input box. A number sequence pop-up displays.
+1. In the [Properties](../studio/properties.md) window, click inside the `Class.UIGradient.Transparency|Transparency` property field, then click the **&ctdot;** button to the right of the input box.
 
    <img src="../assets/studio/properties/UIGradient-Open-NumberSequence-Window.png"
    width="320" />
 
-   Each square across the number sequence graph is a
-   **keypoint** that determines the transparency value at that point.
+1. Each square across the number sequence graph is a **keypoint** that determines the transparency value at that point.
 
    <img src="../assets/studio/general/NumberSequence-0-0-Keypoints-Labeled.png" width="828" alt="Keypoints labeled in number sequence popup" />
 
-1. Click and drag any keypoint around, or select a keypoint and enter a specific time/value combination through the **Time** and **Value** inputs.
+   1. Click a keypoint in the number sequence to select or reposition it, or add another keypoint by clicking anywhere on the graph.
+   2. Enter a specific time/value combination through the **Time** and **Value** inputs.
+   3. If needed, repeat these steps to add/adjust transparency levels across the graph.
 
-   <img src="../assets/studio/general/NumberSequence-0-1.png" width="828" alt="Number sequence popup from 0 to 1" />
+### Type
 
-1. If needed, you can:
-   - Add another keypoint by clicking anywhere on the graph.
-   - Delete a keypoint by selecting it and clicking the **Delete** button.
-   - Reset the sequence by clicking the **Reset** button.
+A gradient's `Class.UIGradient.Type|Type` property sets its type from among `Enum.GradientType.Linear|Linear`, `Enum.GradientType.Radial|Radial`, or `Enum.GradientType.Conical|Conical`.
+
+- `Enum.GradientType.Linear|Linear` — The color/transparency sequence transitions in a straight line across the element. The direction is controlled by its [rotation](#offset-and-rotation) and the position by its [offset](#offset-and-rotation). This is the default.
+
+- `Enum.GradientType.Radial|Radial` — The color/transparency sequence radiates outward from the element's center, optionally shifted by `Class.UIGradient.Offset|Offset`. The radius is defined by the average of the element's width and height divided by two, effectively $\text{(width+height)/4}$. `Class.UIGradient.Rotation|Rotation` has no effect on a radial gradient.
+
+- `Enum.GradientType.Conical|Conical` — The color/transparency sequence sweeps clockwise around the center of the element, optionally shifted by `Class.UIGradient.Offset|Offset`. `Class.UIGradient.Rotation|Rotation` controls the starting and ending angle of the sweep. By default this sweeps from `0` to `360` degrees, but `Class.UIGradient.Scale|Scale` values less than `1` can reduce that angle.
+
+<Grid container spacing={3}>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
+	<figure>
+    <img src="../assets/ui/ui-objects/UIGradient-Type-Linear.png" width="376" />
+    <figcaption>`Class.UIGradient.Type|Type` = `Enum.GradientType.Linear|Linear`</figcaption>
+  </figure>
+</Grid>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
+	<figure>
+    <img src="../assets/ui/ui-objects/UIGradient-Type-Radial.png" width="376" />
+    <figcaption>`Class.UIGradient.Type|Type` = `Enum.GradientType.Radial|Radial`</figcaption>
+  </figure>
+</Grid>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
+	<figure>
+    <img src="../assets/ui/ui-objects/UIGradient-Type-Conical.png" width="376" />
+    <figcaption>`Class.UIGradient.Type|Type` = `Enum.GradientType.Conical|Conical`</figcaption>
+  </figure>
+</Grid>
+</Grid>
 
 ### Offset and rotation
 
@@ -125,6 +146,66 @@ Similarly, when you rotate the gradient, the control points also rotate:
   <figure>
     <img src="../assets/ui/ui-objects/UIGradient-Rotation-Neg-90.png" width="376" />
     <figcaption>`Class.UIGradient.Rotation|Rotation` = `-90`</figcaption>
+  </figure>
+</Grid>
+</Grid>
+
+### Scale
+
+A gradient's `Class.UIGradient.Scale|Scale` multiplies the extent of the gradient, controlling how much of the color/transparency sequence is visible within the element.
+
+- When `Class.UIGradient.Scale|Scale` is less than `1`, the gradient spans less than the full extent. The remaining color/transparency is filled in according to the `Class.UIGradient.TileMode|TileMode` property.
+
+- When `Class.UIGradient.Scale|Scale` is greater than `1`, the gradient spans more than the full extent and only a part of the color/transparency is visible.
+
+<Grid container spacing={3}>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
+  <figure>
+    <img src="../assets/ui/ui-objects/UIGradient-Scale-1.0.png" width="376" />
+    <figcaption>`Class.UIGradient.Scale|Scale` = `1`</figcaption>
+  </figure>
+</Grid>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
+  <figure>
+    <img src="../assets/ui/ui-objects/UIGradient-Scale-0.25.png" width="376" />
+    <figcaption>`Class.UIGradient.Scale|Scale` = `0.25`</figcaption>
+  </figure>
+</Grid>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
+  <figure>
+    <img src="../assets/ui/ui-objects/UIGradient-Scale-1.8.png" width="376" />
+    <figcaption>`Class.UIGradient.Scale|Scale` = `1.8`</figcaption>
+  </figure>
+</Grid>
+</Grid>
+
+### Tile Mode
+
+The `Class.UIGradient.TileMode|TileMode` property sets how the gradient repeats when the full sequence does not fully cover the parent element.
+
+- `Enum.GradientTileMode.Clamp|Clamp` — Default mode where the color/transparency values at the start and end of the sequence extend infinitely, so the start values fill any area before the gradient and the end values fill any area after it.
+
+- `Enum.GradientTileMode.Repeat|Repeat` — The gradient repeats by wrapping the color/transparency sequence tiles seamlessly from end back to start. This can produce a visible seam if the first and last color/transparency values in the sequence differ.
+
+- `Enum.GradientTileMode.Mirror|Mirror` — The gradient reflects at each boundary so the color/transparency sequence ping‑pongs. This produces a smooth repetition with no seam, since the direction reverses at each tile edge.
+
+<Grid container spacing={3}>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
+  <figure>
+    <img src="../assets/ui/ui-objects/UIGradient-TileMode-Clamp.png" width="376" />
+    <figcaption>`Class.UIGradient.TileMode|TileMode` = `Enum.GradientTileMode.Clamp|Clamp`</figcaption>
+  </figure>
+</Grid>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
+  <figure>
+    <img src="../assets/ui/ui-objects/UIGradient-TileMode-Repeat.png" width="376" />
+    <figcaption>`Class.UIGradient.TileMode|TileMode` = `Enum.GradientTileMode.Repeat|Repeat`</figcaption>
+  </figure>
+</Grid>
+<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
+  <figure>
+    <img src="../assets/ui/ui-objects/UIGradient-TileMode-Mirror.png" width="376" />
+    <figcaption>`Class.UIGradient.TileMode|TileMode` = `Enum.GradientTileMode.Mirror|Mirror`</figcaption>
   </figure>
 </Grid>
 </Grid>

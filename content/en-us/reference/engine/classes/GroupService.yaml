@@ -97,7 +97,9 @@ methods:
           The group's ID.
     returns:
       - type: StandardPages
-        summary: ''
+        summary: |
+          A `Class.StandardPages` object containing group information tables for
+          each of the specified group's allies.
     tags:
       - Yields
     deprecation_message: ''
@@ -164,7 +166,9 @@ methods:
           The group's ID.
     returns:
       - type: StandardPages
-        summary: ''
+        summary: |
+          A `Class.StandardPages` object containing group information tables for
+          each of the specified group's enemies.
     tags:
       - Yields
     deprecation_message: ''

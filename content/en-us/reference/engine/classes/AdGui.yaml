@@ -11,7 +11,7 @@ summary: |
 description: |
   `Class.AdGui` is a `Class.SurfaceGuiBase` that renders immersive display ads
   onto a face of the `Class.Part` it's adorned to. When no ad is available, it
-  shows the developer-supplied `Class.AdGui.FallbackImage`, or a default Roblox
+  shows the creator-supplied `Class.AdGui.FallbackImage`, or a default Roblox
   fallback image when that property is empty.
 
   To render ads, the `Class.AdGui` must be adorned to a block `Class.Part`
@@ -72,7 +72,7 @@ properties:
     summary: |
       The image the `Class.AdGui` displays when no ad is available to serve.
     description: |
-      A developer-supplied image that the `Class.AdGui` displays when it has no
+      A creator-supplied image that the `Class.AdGui` displays when it has no
       served ad to render. Defaults to an empty content string; while empty, the
       `Class.AdGui` renders a default Roblox fallback image instead.
     code_samples: []

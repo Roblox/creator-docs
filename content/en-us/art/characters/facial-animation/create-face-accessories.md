@@ -7,12 +7,12 @@ description: Face accessories are 3D accessories that move and animate with a li
    <b>This guide covers advanced topics.</b> Before you begin, you should have prior knowledge on modeling, UV mapping, rigging, animation, and how to set up a character in [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview).
 </Alert>
 
-A face accessory is a cosmetic `Class.Accessory` that attaches to the head and can include items such as hair, eyebrows, glasses, and facial hair. To create a face accessory that is compatible with animatable heads, you use a similar design process as [layered clothing](../../../avatar/layered-accessories/index.md#creation-process) to allow your accessory model to deform and stretch on a head when the head is posed or animated.
+A face accessory is a cosmetic `Class.Accessory` that attaches to the head and can include items such as hair, eyebrows, glasses, and facial hair. To create a face accessory that is compatible with animatable heads, you use a similar design process as [layered accessories](../../../avatar/layered-accessories/index.md#creation-process) to allow your accessory model to deform and stretch on a head when the head is posed or animated.
 
 To create a face accessory, use a third-party modeling tool, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview), to create a 3D model with the following requirements:
 
 - The accessory model must meet Studio's [mesh requirements](../../../avatar/character-bodies/specifications.md).
-- The model must be parented (Blender) or bound (Maya) to an R15 character rig.
+- The model must be parented (Blender) or bound (Maya) to an [R15 character rig](../../../avatar/character-bodies/specifications.md#rigging).
 - The model must include an inner and outer cage.
 
 This guide covers the basic process in Blender for applying rigging and cage data to a basic reference model using the Cubie model referenced in [Create basic heads](../../../art/characters/facial-animation/create-basic-heads.md).
@@ -94,7 +94,7 @@ To set up your Blender project:
 
    <img src="../../../assets/avatar/dynamic-heads/creating-face-accessories/Importing-Cubie.png" width="80%" />
 
-4. To simplify the workspace, you can delete the R15 inner and outer cage mesh objects since you will later import a full-body cage in the [Caging](#caging) step.
+4. To simplify the workspace, you can delete the inner and outer cage mesh objects since you will later import a full-body cage in the [Caging](#caging) step.
 
    <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-face-accessories/videos/Removing-Character-Cage.mp4">
    </video>
@@ -130,7 +130,7 @@ If you are skinning your accessory in your modeling software on a character mode
 
 ## Caging
 
-The caging process for face accessories is similar to caging layered clothing accessories and shares the same modeling and caging requirements. After rigging, import a full-body inner and outer cage to your project, rename the cages, then stretch the vertices of the Outer Cage to cover the accessory model with minimal space.
+The caging process for face accessories is similar to caging layered accessories and shares the same modeling and caging requirements. After rigging, import a full-body inner and outer cage to your project, rename the cages, then stretch the vertices of the Outer Cage to cover the accessory model with minimal space.
 
 To cage the eyebrow accessory:
 

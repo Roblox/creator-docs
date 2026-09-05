@@ -5,7 +5,7 @@ next: /art/characters/creating/blender-configurations
 prev: /art/characters/creating/template-files
 ---
 
-In each template file, each avatar body includes extra head mesh objects and face armature bones. Separating these objects within the templates allow you to make easier changes to each of these separate objects, as demonstrated during the texturing step.
+Each avatar character body template includes extra head mesh objects and face armature bones. Separating these objects within the templates allows you to make easier changes to each of these separate objects, as demonstrated during the texturing section of this tutorial.
 
 To avoid validation errors, you must [join](../../../art/characters/creating/combine-head-geometry.md) and [remove](../../../art/characters/creating/remove-extra-bones.md) these extra objects during the cleanup process prior to exporting.
 

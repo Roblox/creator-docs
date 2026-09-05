@@ -86,7 +86,7 @@ export const sections = [
       },
       {
         title: "Rig and cage avatars",
-        description: "Import character models and let Studio automatically rig and cage them to support layered clothing.",
+        description: "Import character models and let Studio automatically rig and cage them to support layered accessories.",
         image: "./assets/avatar/avatar-setup/Skin-Tone-Selector.png",
         links: [{ text: "Avatar Setup tool", href: "./art/modeling/avatar-setup/" }]
       }

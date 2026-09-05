@@ -4,8 +4,15 @@
 
 name: PhysicsSteppingMethod
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how the physics engine advances simulation time for assemblies in a
+  `Class.Workspace`.
+description: |
+  The `PhysicsSteppingMethod` enum determines the timestep arbiter strategy used
+  by the physics engine for all simulated assemblies in a place. It is set via
+  the `Class.Workspace.PhysicsSteppingMethod` property. The default value is
+  `Enum.PhysicsSteppingMethod.Default`, which currently resolves to the same
+  behavior as `Enum.PhysicsSteppingMethod.Adaptive`.
 code_samples: []
 tags: []
 deprecation_message: ''

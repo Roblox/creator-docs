@@ -4,29 +4,45 @@
 
 name: ChatCallbackType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies a hook point in the legacy Luau chat pipeline for use with
+  `Class.Chat:RegisterChatCallback()` and `Class.Chat:InvokeChatCallback()`.
+description: |
+  Enumerates the callback hook points available in the legacy Luau chat system.
+  Pass a value to `Class.Chat:RegisterChatCallback()` to bind a function to the
+  corresponding event, and to `Class.Chat:InvokeChatCallback()` to invoke the
+  registered function for that event. Each value targets either the client or
+  the server; attempting to register a server-only callback on the client (or
+  vice versa) raises an error.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: OnCreatingChatWindow
-    summary: ''
+    summary: |
+      Client-only callback invoked before the chat window is constructed,
+      allowing custom settings to be supplied.
     value: 1
     tags: []
     deprecation_message: ''
   - name: OnClientSendingMessage
-    summary: ''
+    summary: |
+      Client-only callback reserved for when the client sends a message; not
+      currently invoked.
     value: 2
     tags: []
     deprecation_message: ''
   - name: OnClientFormattingMessage
-    summary: ''
+    summary: |
+      Client-only callback invoked before a message is displayed, allowing its
+      display data to be modified.
     value: 3
     tags: []
     deprecation_message: ''
   - name: OnServerReceivingMessage
-    summary: ''
+    summary: |
+      Server-only callback invoked when the server receives a message from a
+      speaker, allowing the message to be modified or suppressed.
     value: 17
     tags: []
     deprecation_message: ''

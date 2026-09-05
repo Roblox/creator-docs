@@ -74,8 +74,15 @@ properties:
       A `Class.HapticEffect` instance that will play when the `Class.GuiButton`
       is being hovered.
     description: |
-      A `Class.HapticEffect` instance that will play when the `Class.GuiButton`
-      is being hovered.
+      A `Class.HapticEffect` that the engine plays the first time the pointer
+      moves over the button, when the button transitions from its idle state to
+      its hover state. Assign a `Class.HapticEffect` to give hover feedback (for
+      example, a light effect on gamepad or mobile); leave it unset for no hover
+      haptics.
+
+      The effect plays through the standard `Class.HapticService` mixer, so
+      whether the player actually feels vibration depends on their device and
+      haptic settings. This property defaults to `nil` (no effect).
     code_samples: []
     type: HapticEffect
     tags: []
@@ -116,8 +123,13 @@ properties:
       A `Class.HapticEffect` instance that will play when the `Class.GuiButton`
       is being pressed.
     description: |
-      A `Class.HapticEffect` instance that will play when the `Class.GuiButton`
-      is being pressed.
+      A `Class.HapticEffect` that the engine plays when the button enters its
+      pressed state. Assign a `Class.HapticEffect` to give press or click
+      feedback; leave it unset for no press haptics.
+
+      The effect plays through the standard `Class.HapticService` mixer, so
+      whether the player actually feels vibration depends on their device and
+      haptic settings. This property defaults to `nil` (no effect).
     code_samples: []
     type: HapticEffect
     tags: []
@@ -136,7 +148,18 @@ properties:
     summary: |
       A boolean property which indicates whether the object has been selected.
     description: |
-      A boolean property which indicates whether the object has been selected.
+      When set to `true`, the button renders in a highlighted "selected" state
+      instead of its normal idle appearance. This property defaults to `false`,
+      and the engine never changes it automatically; set it yourself to mark a
+      button as selected.
+
+      `Selected` only has a visual effect on the legacy `Enum.ButtonStyle`
+      presets (the `Roblox*` styles) with
+      `Class.GuiButton.AutoButtonColor|AutoButtonColor` enabled, where it swaps
+      in the button's highlighted image. It has no effect under the default
+      `Class.GuiButton.Style|Style` of `Custom`. It is unrelated to gamepad and
+      controller UI navigation; the currently focused element is tracked
+      separately by `Class.GuiService.SelectedObject|SelectedObject`.
     code_samples: []
     type: boolean
     tags: []
@@ -156,8 +179,19 @@ properties:
       Sets the style of the `Class.GuiButton` based on a list of pre-determined
       styles.
     description: |
-      Sets the style of the `Class.GuiButton` based on a list of pre-determined
-      styles.
+      Sets the button's overall appearance from a fixed set of
+      `Enum.ButtonStyle` presets. The default value is `Custom`, which applies
+      no built-in styling and lets you control the button's appearance entirely
+      through properties such as
+      `Class.GuiObject.BackgroundColor3|BackgroundColor3` and, for an
+      `Class.ImageButton`, its images.
+
+      A legacy method of applying a fixed set of Roblox-themed button styles.
+      The remaining presets (`RobloxButton`, `RobloxButtonDefault`,
+      `RobloxRoundButton`, `RobloxRoundDefaultButton`, and
+      `RobloxRoundDropdownButton`) render Roblox-themed button art. New
+      interfaces should keep `Custom` and style the button directly. This
+      property defaults to `Enum.ButtonStyle.Custom`.
     code_samples: []
     type: ButtonStyle
     tags: []
@@ -191,11 +225,16 @@ events:
       - name: inputObject
         type: InputObject
         default:
-        summary: ''
+        summary: |
+          An `Class.InputObject` representing the user input that activated the
+          button.
       - name: clickCount
         type: int
         default:
-        summary: ''
+        summary: |
+          The number of consecutive rapid activations, starting at 0 for the
+          first activation and incrementing with each subsequent activation
+          within quick succession of the previous one.
     tags: []
     deprecation_message: ''
     security: None

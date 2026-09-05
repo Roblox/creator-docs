@@ -4,7 +4,9 @@
 
 name: InfoType
 type: enum
-summary: ''
+summary: |
+  Specifies the type of product information returned by
+  `Class.MarketplaceService:GetProductInfoAsync()`.
 description: |
   Used to represent the possible information formats returnable by
   `Class.MarketplaceService:GetProductInfoAsync()`.
@@ -32,12 +34,14 @@ items:
     tags: []
     deprecation_message: ''
   - name: Subscription
-    summary: ''
+    summary: |
+      The product is a subscription.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Bundle
-    summary: ''
+    summary: |
+      The product is a bundle.
     value: 4
     tags: []
     deprecation_message: ''

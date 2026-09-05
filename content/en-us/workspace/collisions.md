@@ -25,10 +25,8 @@ comes in contact with another, or with a [Terrain](../parts/terrain.md) voxel. I
 
 The following code pattern shows how the `Class.BasePart.Touched|Touched` event can be connected to a custom `onTouched()` function. Note that the event sends the `otherPart` argument to the function, indicating the other part involved in the collision.
 
-```lua title="Part Collision" highlight="3-5, 7"
-local Workspace = game:GetService("Workspace")
-
-local part = Workspace.Part
+```lua title="Part Collision"
+local part = workspace.Part
 
 local function onTouched(otherPart)
 	print(part.Name .. " collided with " .. otherPart.Name)
@@ -39,10 +37,8 @@ part.Touched:Connect(onTouched)
 
 Note that the `Class.BasePart.Touched|Touched` event can fire multiple times in quick succession based on subtle physical collisions, such as when a moving object "settles" into a resting position or when a collision involves a [multi‑part model](#model-collisions). To avoid triggering more `Class.BasePart.Touched|Touched` events than necessary, you can implement a simple debounce system which enforces a "cooldown" period through an instance [attribute](../studio/properties.md#instance-attributes).
 
-```lua title="Part Collision With Cooldown" highlight="3, 6, 9-12"
-local Workspace = game:GetService("Workspace")
-
-local part = Workspace.Part
+```lua title="Part Collision With Cooldown"
+local part = workspace.Part
 
 local COOLDOWN_TIME = 1
 
@@ -65,10 +61,8 @@ The `Class.BasePart.TouchEnded|TouchEnded` event fires when the entire collision
 
 The following code pattern shows how the `Class.BasePart.TouchEnded|TouchEnded` event can be connected to a custom `onTouchEnded()` function. Like `Class.BasePart.Touched|Touched`, the event sends the `otherPart` argument to the function, indicating the other part involved.
 
-```lua title="Non-Collision Detection" highlight="3-5, 7"
-local Workspace = game:GetService("Workspace")
-
-local part = Workspace.Part
+```lua title="Non-Collision Detection"
+local part = workspace.Part
 
 local function onTouchEnded(otherPart)
 	print(part.Name .. " is no longer touching " .. otherPart.Name)
@@ -83,7 +77,7 @@ Collision **filtering** defines which physical parts collide with others. You ca
 
 ### Collision groups
 
-Collision **groups** let you assign `Class.BasePart|BaseParts` to dedicated groups and specify whether or not they collide with those in other groups. Parts within non‑colliding groups pass through each other completely, even if both parts have their `Class.BasePart.CanCollide|CanCollide` property set to `true`.
+Collision **groups** let you assign `Class.BasePart|BaseParts` to dedicated groups and specify whether or not they collide with those in other groups. Parts within non‑colliding groups pass through each other completely, even if both parts have their `Class.BasePart.CanCollide|CanCollide` property set to `true`. Collision groups are created and configured on a `Class.Workspace` or `Class.WorldModel` basis.
 
 <figure>
   <video src="../assets/physics/collisions/Collision-Groups.mp4" controls width="100%" alt="Video of spinning objects in different collision groups colliding or not colliding"></video>
@@ -92,24 +86,23 @@ Collision **groups** let you assign `Class.BasePart|BaseParts` to dedicated grou
 
 You can easily set up collision groups through Studio's **Collision Groups** editor, accessible through Studio's **Window**&nbsp;⟩ **3D** menu.
 
-The editor functions in either **List&nbsp;View** which favors [docking](../studio/ui-overview.md#reposition-windows) to the left or right side of Studio, or in a wider **Table&nbsp;View**, which favors docking to the top or bottom.
-
-<Tabs>
-  <TabItem label="List View">
-    <img src="../assets/studio/collision-groups-editor/List-View.png" width="500" height="176" alt="List View example in Collision Groups Editor" />
-  </TabItem>
-  <TabItem label="Table View">
-    <img src="../assets/studio/collision-groups-editor/Table-View.png" width="500" height="176" alt="Table View example in Collision Groups Editor" />
-  </TabItem>
-</Tabs>
-
 #### Register groups
+
+`Class.Workspace` stores its own configurable state of collision groups. Additionally, any `Class.WorldModel|WorldModel` can opt to use its own collision groups for queries.
 
 <Tabs>
 <TabItem label="Studio Editor">
 The editor includes one **Default** collision group which cannot be renamed or deleted. All `Class.BasePart|BaseParts` automatically belong to this default group unless assigned to another group, meaning that they will collide with all other objects in the **Default** group.
 
 To create a new collision group:
+
+1. By default, groups are registered on `Class.Workspace`, but if you have at least one `Class.WorldModel` in your place, a selection dropdown will appear at the top of the collision groups editor. Use the dropdown to configure collision groups across different `Class.WorldModel` instances.
+
+   <img src="../assets/studio/collision-groups-editor/Active-World-Dropdown.png" width="500" alt="Workspace indicated as the collision group editor's currently active world" />
+
+   For any `Class.WorldModel`, you can toggle on **Use Workspace collision groups** to make it use `Class.Workspace` collision groups for its queries.
+
+   <img src="../assets/studio/collision-groups-editor/WorldModel-Use-Workspace-Collision-Groups.png" width="500" alt="Checkbox indicated to toggle a WorldModel's UseWorkspaceCollisionGroups property" />
 
 1. Click the **Add Group** button along the top of the editor panel, enter a new group name, and press <kbd>Enter</kbd>. The new group appears in both columns of list view, or in both the left column and upper row of table view.
 
@@ -128,17 +121,38 @@ To create a new collision group:
 
 </TabItem>
 <TabItem label="Scripting">
-To create a new collision group through scripting, include the `Class.PhysicsService` service and register the group with `Class.PhysicsService:RegisterCollisionGroup()`. It may be helpful to pre-declare your group names in local variables, as the same strings can be used for [assigning objects](#assign-objects-to-groups) and [configuring groups](#configure-group-collisions) within the same script.
+To create a new collision group through scripting, register the group with `Class.WorldRoot:RegisterCollisionGroup()|RegisterCollisionGroup()`. It may be helpful to pre-declare your group names in local variables, as the same strings can be used for [assigning objects](#assign-objects-to-groups) and [configuring groups](#configure-group-collisions) within the same script.
 
-```lua title="Collision Group Setup" highlight="1,3,4,7,8"
-local PhysicsService = game:GetService("PhysicsService")
-
+```lua title="Collision Group Setup"
 local cubes = "Cubes"
 local doors = "Doors"
 
--- Register two collision groups
-PhysicsService:RegisterCollisionGroup(cubes)
-PhysicsService:RegisterCollisionGroup(doors)
+-- Register two collision groups on Workspace
+workspace:RegisterCollisionGroup(cubes)
+workspace:RegisterCollisionGroup(doors)
+```
+
+If you have a `Class.WorldModel` in your place, you can manage collision groups of a particular `Class.WorldModel` by invoking collision group management methods on that model, separately from those on `Class.Workspace`. You can also enable `Class.WorldModel.UseWorkspaceCollisionGroups|UseWorkspaceCollisionGroups` to make the model use `Class.Workspace` collision groups for its queries; however, calling collision group methods on that model will continue to read/write only to that model's group states, not back to `Class.Workspace`.
+
+```lua title="Collision Group Setup in Two Scopes"
+local worldModel = workspace.WorldModel
+
+-- Register two collision groups on Workspace
+workspace:RegisterCollisionGroup("Projectile")
+workspace:RegisterCollisionGroup("Wall")
+workspace:CollisionGroupSetCollidable("Projectile", "Wall", false)
+
+-- Register two collision groups on the WorldModel
+worldModel:RegisterCollisionGroup("Projectile")
+worldModel:RegisterCollisionGroup("Wall")
+worldModel:CollisionGroupSetCollidable("Projectile", "Wall", true)
+
+-- Confirm collision group states are distinct
+workspace:CollisionGroupsAreCollidable("Projectile", "Wall")  --> false
+worldModel:CollisionGroupsAreCollidable("Projectile", "Wall") --> true
+
+-- Optionally set the WorldModel to use Workspace collision groups for queries
+worldModel.UseWorkspaceCollisionGroups = true
 ```
 
 <Alert severity="warning">
@@ -166,20 +180,18 @@ In the following example, objects in the **Cubes** group will **not** collide wi
 </Tabs>
 </TabItem>
 <TabItem label="Scripting">
-To configure how objects in two collision groups interact, call `Class.PhysicsService:CollisionGroupSetCollidable()|CollisionGroupSetCollidable()`, providing the two collision groups and a boolean `true` (collidable) or `false` (non‑collidable). If objects in the same group should or shouldn't collide with each other, use that group name for both the first and second parameters.
+To configure how objects in two collision groups interact, call `Class.WorldRoot:CollisionGroupSetCollidable()|CollisionGroupSetCollidable()` on `Class.Workspace` or the target `Class.WorldModel`, providing the two collision groups and a boolean `true` (collidable) or `false` (non‑collidable). If objects in the same group should or shouldn't collide with each other within that model, use that group name for both the first and second parameters.
 
-```lua title="Collision Group Setup" highlight="15"
-local PhysicsService = game:GetService("PhysicsService")
-
+```lua title="Collision Group Setup"
 local cubes = "Cubes"
 local doors = "Doors"
 
--- Register two collision groups
-PhysicsService:RegisterCollisionGroup(cubes)
-PhysicsService:RegisterCollisionGroup(doors)
+-- Register two collision groups in Workspace
+workspace:RegisterCollisionGroup(cubes)
+workspace:RegisterCollisionGroup(doors)
 
 -- Set cubes to be non-collidable with doors
-PhysicsService:CollisionGroupSetCollidable(cubes, doors, false)
+workspace:CollisionGroupSetCollidable(cubes, doors, false) 
 ```
 
 </TabItem>
@@ -196,36 +208,35 @@ To assign objects to groups you've [registered](#register-groups) through the St
 
    <img src="../assets/studio/collision-groups-editor/Add-To-Group.png" width="500" alt="Plus button indicated in Collision Groups Editor for adding selected parts to a group" />
 
-Once assigned, the new group is reflected under the object's `Class.BasePart.CollisionGroup|CollisionGroup` property.
+   Once assigned, the new group is reflected under the object's `Class.BasePart.CollisionGroup|CollisionGroup` property.
 
-<img src="../assets/physics/collisions/BasePart-CollisionGroup.png" width="320" alt="Chosen collision group indicated as the part's CollisionGroup property" />
+   <img src="../assets/physics/collisions/BasePart-CollisionGroup.png" width="320" alt="Chosen collision group indicated as the part's CollisionGroup property" />
+
 </TabItem>
 <TabItem label="Scripting">
-To add a `Class.BasePart` to a collision group through scripting, simply assign the group's **string name**, previously registered through `Class.PhysicsService:RegisterCollisionGroup()|RegisterCollisionGroup()`, to the part's `Class.BasePart.CollisionGroup|CollisionGroup` property.
+To add a `Class.BasePart` to a collision group through scripting, simply assign the group's **string name**, previously registered through `Class.WorldRoot:RegisterCollisionGroup()|RegisterCollisionGroup()`, to the part's `Class.BasePart.CollisionGroup|CollisionGroup` property.
 
-```lua title="Collision Group Setup" highlight="7,8,11,12"
-local PhysicsService = game:GetService("PhysicsService")
-local Workspace = game:GetService("Workspace")
-
+```lua title="Collision Group Setup"
 local cubes = "Cubes"
 local doors = "Doors"
 
--- Register two collision groups
-PhysicsService:RegisterCollisionGroup(cubes)
-PhysicsService:RegisterCollisionGroup(doors)
+-- Register two collision groups in Workspace
+workspace:RegisterCollisionGroup(cubes)
+workspace:RegisterCollisionGroup(doors)
 
 -- Set cubes to be non-collidable with doors
-PhysicsService:CollisionGroupSetCollidable(cubes, doors, false)
+workspace:CollisionGroupSetCollidable(cubes, doors, false)
 
 -- Assign an object to each group
-Workspace.Cube1.CollisionGroup = cubes
-Workspace.Door1.CollisionGroup = doors
+workspace.Cube1.CollisionGroup = cubes
+workspace.Cube1.CollisionGroup = cubes
+workspace.Door1.CollisionGroup = doors
 ```
 
 </TabItem>
 </Tabs>
 
-#### StudioSelectable collision group
+#### StudioSelectable group
 
 Tools in Studio use the collision filtering system to determine which objects are candidates for selection when clicking in the 3D viewport. Objects whose assigned collision group does **not** collide with **StudioSelectable** will be ignored.
 
@@ -237,15 +248,14 @@ For plugin code, it's recommended that you assign `"StudioSelectable"` as the co
 
 ```lua title="Recommended Plugin Selection Raycast"
 local UserInputService = game:GetService("UserInputService")
-local Workspace = game:GetService("Workspace")
 
 local raycastParams = RaycastParams.new()
 raycastParams.CollisionGroup = "StudioSelectable"  -- To follow the convention
 raycastParams.BruteForceAllSlow = true  -- So that parts with CanQuery of "false" can be selected
 
 local mouseLocation = UserInputService:GetMouseLocation()
-local mouseRay = Workspace.CurrentCamera:ViewportPointToRay(mouseLocation.X, mouseLocation.Y)
-local filteredSelectionHit = Workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 10000, raycastParams)
+local mouseRay = workspace.CurrentCamera:ViewportPointToRay(mouseLocation.X, mouseLocation.Y)
+local filteredSelectionHit = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 10000, raycastParams)
 ```
 
 ### Part-to-part filtering
@@ -265,11 +275,10 @@ Roblox player characters collide with each other by default. This can lead to
 interesting but unintended gameplay, such as characters jumping on top of each other to reach specific areas. If this behavior is undesirable, you can prevent it through the following `Class.Script` in `Class.ServerScriptService`.
 
 ```lua title="Script - Disable Character Collisions"
-local PhysicsService = game:GetService("PhysicsService")
 local Players = game:GetService("Players")
 
-PhysicsService:RegisterCollisionGroup("Characters")
-PhysicsService:CollisionGroupSetCollidable("Characters", "Characters", false)
+workspace:RegisterCollisionGroup("Characters")
+workspace:CollisionGroupSetCollidable("Characters", "Characters", false)
 
 local function onDescendantAdded(descendant)
 	-- Set collision group for any part descendant
@@ -297,7 +306,7 @@ end)
 `Class.Model` objects are containers for parts rather than inheriting from `Class.BasePart`, so they can't directly connect to `Class.BasePart.Touched` or `Class.BasePart.TouchEnded` events. To determine whether a model triggers a collision events, you need to loop through its children and connect the custom `onTouched()` and `onTouchEnded()` functions to each child `Class.BasePart`.
 
 <Alert severity='info'>
-For joined parts by [solid modeling](../parts/solid-modeling.md) instead of `Class.Model` objects, see [Mesh and Solid Modeling Collisions](#mesh-and-solid-model-collisions).
+For joined parts by [solid modeling](../parts/solid-modeling.md) instead of `Class.Model` objects, see [mesh and solid model collisions](#mesh-and-solid-model-collisions).
 </Alert>
 
 The following code sample connects all `Class.BasePart|BaseParts` of a multi‑part model to collision events and tracks the total number of collisions with other parts.
@@ -366,4 +375,4 @@ The `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` property has th
 To view collision fidelity in Studio, toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
-For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance optimization](../performance-optimization/improve.md#physics-computation).
+For more information on the performance impact of collision fidelity options and how to mitigate them, see [performance optimization](../performance-optimization/improve.md#physics-computation).

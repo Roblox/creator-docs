@@ -60,7 +60,9 @@ methods:
     parameters: []
     returns:
       - type: FloatCurve
-        summary: ''
+        summary: |
+          The `Class.FloatCurve` controlling the X channel, or a newly created
+          empty `Class.FloatCurve` if none exists yet.
     tags: []
     deprecation_message: ''
     security: None
@@ -79,7 +81,9 @@ methods:
     parameters: []
     returns:
       - type: FloatCurve
-        summary: ''
+        summary: |
+          The `Class.FloatCurve` controlling the Y channel, or a newly created
+          empty `Class.FloatCurve` if none exists yet.
     tags: []
     deprecation_message: ''
     security: None
@@ -98,7 +102,9 @@ methods:
     parameters: []
     returns:
       - type: FloatCurve
-        summary: ''
+        summary: |
+          The `Class.FloatCurve` controlling the Z channel, or a newly created
+          empty `Class.FloatCurve` if none exists yet.
     tags: []
     deprecation_message: ''
     security: None

@@ -268,7 +268,7 @@ Serialization and deserialization support the following Luau data types:
 - [Nil](../../luau/nil.md)
 - [Booleans](../../luau/booleans.md)
 - [Numbers](../../luau/numbers.md)
-  - You should not store the special numeric values `inf`, `-inf`, and `nan`, because these values don't conform to JSON standards. You can't access keys that contain these values with Open Cloud.
+  - You should not store the special numeric values `inf`, `-inf`, and `nan`, because these values don't conform to JSON standards. When you retrieve an entry containing these values through Open Cloud, the response represents them as tagged JSON objects. For details, see [Non-finite numbers](../../cloud/guides/data-stores/index.md#non-finite-numbers).
 - [Strings](../../luau/strings.md)
 - [Tables](../../luau/tables.md)
   - Tables must only contain other supported data types

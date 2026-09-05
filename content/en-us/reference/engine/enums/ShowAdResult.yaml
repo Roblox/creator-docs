@@ -9,10 +9,9 @@ summary: |
   indicating whether a rewarded video ad completed successfully or why it did
   not.
 description: |
-  `ShowAdResult` enumerates the possible outcomes of a call to
-  `Class.AdService:ShowRewardedVideoAdAsync()`. Check the returned value to
-  determine whether to grant a reward to the player and how to handle each
-  failure case.
+  Result codes returned by `Class.AdService:ShowRewardedVideoAdAsync()`
+  indicating whether a rewarded video ad completed successfully or why it did
+  not.
 code_samples: []
 tags: []
 deprecation_message: ''

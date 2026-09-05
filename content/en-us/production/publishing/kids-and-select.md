@@ -143,7 +143,7 @@ You only need to meet the subscription requirement or pay the optional fee when 
 To reach users who are at least 16 years old, creators of individual-owned games or [group](../../projects/groups.md) owners of group-owned games must meet the following requirements:
 
 1. **Account verification** - Have an account that is in good standing and at least 2 days old.
-1. **Age verification** - Verify your age through [facial age estimation](https://about.roblox.com/age-estimation), [phone number](./account-verification.md#verify-through-phone-number), or [government ID](./account-verification.md#verify-through-government-id).
+1. **Age verification** - Verify your age through [facial age estimation](https://about.roblox.com/age-estimation) or [government ID](./account-verification.md#verify-through-government-id).
 1. **Content maturity label and descriptors** - Complete the [Maturity & Compliance Questionnaire](../promotion/content-maturity.md).
 
 ## Expedited review

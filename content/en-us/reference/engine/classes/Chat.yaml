@@ -60,8 +60,14 @@ properties:
       Toggles whether the default chat framework should be automatically loaded
       when the game runs.
     description: |
-      Toggles whether the default chat framework should be automatically loaded
-      when the game runs.
+      When set to `true` (the default), the engine inserts the default Luau chat
+      system scripts (such as `ChatScript` and `BubbleChat`) into the `Chat`
+      service at runtime. Setting this to `false` prevents the legacy chat
+      framework from loading, which is useful if you are replacing it with a
+      custom chat implementation or migrating to `Class.TextChatService`.
+
+      This property defaults to `true`. It is not writable by scripts at
+      runtime.
     code_samples: []
     type: boolean
     tags: []
@@ -82,8 +88,13 @@ methods:
       Will return false if the player with the specified `Class.Player.UserId`
       is not allowed to chat because of their account settings.
     description: |
-      Will return false if the player with the specified `Class.Player.UserId`
-      is not allowed to chat because of their account settings.
+      Returns whether the player identified by `userId` is permitted to use
+      in-game text chat. The check evaluates the player's chat privacy mode,
+      third-party platform restrictions, and any active moderation timeouts.
+
+      On the server, the specified player must be connected to the current
+      server; otherwise the call errors. On the client, the method must be
+      called only for the local player's `Class.Player.UserId`.
     code_samples: []
     parameters:
       - name: userId
@@ -105,8 +116,13 @@ methods:
       Will return false if the two users cannot communicate because their
       account settings do not allow it.
     description: |
-      Will return false if the two users cannot communicate because their
-      account settings do not allow it.
+      Returns whether two players are permitted to exchange chat messages with
+      each other. The method evaluates user blocking, age-based communication
+      constraints, and chat privacy mode compatibility between the two accounts.
+
+      This method can only be called from server-side `Class.Script|Scripts`.
+      Both players must be connected to the current server; otherwise the call
+      errors.
     code_samples: []
     parameters:
       - name: userIdFrom
@@ -456,7 +472,12 @@ events:
     summary: |
       Fires when `Class.Chat:Chat()` is called.
     description: |
-      Fires when `Class.Chat:Chat()` is called.
+      Fires when `Class.Chat:Chat()` is called. The event passes the part or
+      character the message is associated with, the message string, and the
+      `Enum.ChatColor`. When fired on the server, the event replicates to all
+      connected clients. The default `BubbleChat` `Class.LocalScript` listens
+      for this event and displays a chat bubble above the specified part or
+      character.
     code_samples: []
     parameters:
       - name: part

@@ -5,8 +5,22 @@
 name: StopWatchReporter
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A service that times named tasks and reports their durations, classified by
+  device platform and country code. Not available to creator scripts.
+description: |
+  Not available to creator scripts. `Class.StopWatchReporter` is used by the
+  Roblox app to measure the duration of logic flows. Each measurement is
+  classified by device platform and country code.
+
+  The service groups timing measurements into named reports. Starting a task
+  begins timing a named task within a report and returns an integer task ID;
+  finishing a task stops that task's timer; and sending a report finalizes it,
+  submitting the elapsed time of each finished task and preventing any further
+  tasks from being added to that report.
+
+  Timing is only collected on the Android and iOS clients; on other platforms
+  these methods do nothing and starting a task returns `-1`.
 code_samples: []
 inherits:
   - Instance

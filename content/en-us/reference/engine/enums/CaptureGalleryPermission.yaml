@@ -4,7 +4,9 @@
 
 name: CaptureGalleryPermission
 type: enum
-summary: ''
+summary: |
+  Specifies the scope of permissions an experience requests for accessing the
+  device's capture gallery.
 description: |
   Used to specify the scope of permissions for accessing the user's capture
   gallery.
@@ -13,7 +15,9 @@ tags: []
 deprecation_message: ''
 items:
   - name: ReadAndUpload
-    summary: ''
+    summary: |
+      Requests permission to read captures from and upload captures to the
+      device's gallery.
     value: 0
     tags: []
     deprecation_message: ''

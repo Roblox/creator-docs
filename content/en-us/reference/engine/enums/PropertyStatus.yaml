@@ -4,24 +4,36 @@
 
 name: PropertyStatus
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates the validation state of a property as displayed in Roblox Studio's
+  Properties panel.
+description: |
+  Indicates the validation state of a property as displayed in Roblox Studio's
+  Properties panel. This enum is returned by the `PropertyStatusStudio` property
+  on `Class.Instance` and by `GetOverrideStatus()` on `Class.MaterialService` to
+  communicate whether a property's current value is valid, has a recoverable
+  issue, or is in an error state.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Ok
-    summary: ''
+    summary: |
+      The property value is valid; no status indicator is shown in Studio.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Warning
-    summary: ''
+    summary: |
+      The property value has a recoverable issue; Studio displays a warning
+      indicator on the instance.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Error
-    summary: ''
+    summary: |
+      The property value is invalid and cannot be resolved; Studio displays an
+      error indicator on the instance.
     value: 2
     tags: []
     deprecation_message: ''

@@ -59,10 +59,10 @@ When `Class.Bone` objects are used in animation, they affect the appearance of t
 
 Rigged models use a naming convention starting with "R" and ending with the number of individual meshes that make up the model. This is used to quickly identify the type and number of meshes that a model has. Although R6 and R15 models are common, a model can be of varying subjects, sizes and can have any number of individual meshes, such as a R5, R20, or R200.
 
-- **R1** refers to a single mesh that is rigged, or associated with an internal skeleton structure. Many models, such as a tree or accessory item, are good candidates to be made into an R1 model. Even humanoid characters, such as NPCs, can be created as R1 models but they will not be able to take full advantage of the animation and humanoid options available for R15 characters.
+- **R1** refers to a single mesh that is rigged, or associated with an internal skeleton structure. Many models, such as a tree or accessory item, are good candidates to be made into an R1 model. Even NPC humanoid characters can be created as R1 models, but they will not be able to take full advantage of the animation and humanoid options available for R15 characters.
 
   See [Rig a simple mesh](../../art/modeling/rig-a-simple-mesh.md) for instructions on turning a basic mesh into an R1 model in Blender.
 
-- **R15** typically refers to humanoid models used as player or avatar characters. An R15 model is made up of 15 specific meshes that are parented to a single rig. A R15 character model often includes skinning data to allow the model to bend and pose naturally. Roblox uses the R15 standard for all avatars, and requires the [R15 technical specifications](../../avatar/character-bodies/specifications.md) to ensure universal behavior and quality.
+- **R15** typically refers to humanoid models used as player or avatar characters. An R15 model is made up of 15 specific meshes that are parented to a single [R15 rig](../../avatar/character-bodies/specifications.md#rigging). An R15 character model often includes skinning data to allow the model to bend and pose naturally. Roblox uses the R15 standard for all avatars, and requires the [technical specifications](../../avatar/character-bodies/specifications.md) to ensure universal behavior and quality.
 
   See [Rig a humanoid model](../../art/modeling/rig-a-humanoid-model.md) for instructions on turning a character model into an R15 humanoid model in Blender.

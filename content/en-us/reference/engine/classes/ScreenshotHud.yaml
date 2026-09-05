@@ -51,6 +51,29 @@ properties:
       can_save: true
     capabilities:
       - UI
+  - name: ScreenshotHud.CameraButtonIconContent
+    summary: |
+      The image content used as the icon for the camera button.
+    description: |
+      The image `Datatype.Content` used as the icon for the camera button on the
+      `Class.ScreenshotHud`. This is the `Datatype.Content`-type equivalent of
+      the legacy `Class.ScreenshotHud.CameraButtonIcon` property and supports
+      asset URIs. When set, the camera button displays the specified image
+      instead of the default icon.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
   - name: ScreenshotHud.CameraButtonPosition
     summary: |
       Screen location of the camera button.
@@ -133,8 +156,15 @@ properties:
     capabilities:
       - UI
   - name: ScreenshotHud.HideCoreGuiForCaptures
-    summary: ''
-    description: ''
+    summary: |
+      Whether Roblox's core GUI is hidden while a screenshot is captured.
+    description: |
+      Determines whether Roblox's core GUI is hidden while a screenshot is
+      captured through the `Class.ScreenshotHud`. Defaults to `true`, so any
+      enabled `Enum.CoreGuiType` elements are hidden for the duration of the
+      capture and restored afterward. A saved capture is only flagged as
+      GUI-free when both this property and
+      `Class.ScreenshotHud.HidePlayerGuiForCaptures` are enabled.
     code_samples: []
     type: boolean
     tags: []
@@ -150,8 +180,16 @@ properties:
     capabilities:
       - UI
   - name: ScreenshotHud.HidePlayerGuiForCaptures
-    summary: ''
-    description: ''
+    summary: |
+      Whether the local player's GUI is hidden while a screenshot is captured.
+    description: |
+      Determines whether the local player's GUI is hidden while a screenshot is
+      captured through the `Class.ScreenshotHud`. Defaults to `true`, so any
+      enabled `Class.ScreenGui` instances under the
+      `Class.Players.LocalPlayer`'s `Class.PlayerGui` are hidden for the
+      duration of the capture and restored afterward. A saved capture is only
+      flagged as GUI-free when both this property and
+      `Class.ScreenshotHud.HideCoreGuiForCaptures` are enabled.
     code_samples: []
     type: boolean
     tags: []
@@ -190,9 +228,9 @@ properties:
       - UI
   - name: ScreenshotHud.UsernameOverlayEnabled
     summary: |
-      Currently disabled with no effect.
+      Has no effect.
     description: |
-      Currently disabled with no effect.
+      Currently has no effect.
     code_samples: []
     type: boolean
     tags:

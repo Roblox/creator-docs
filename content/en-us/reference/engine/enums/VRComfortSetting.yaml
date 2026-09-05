@@ -4,29 +4,44 @@
 
 name: VRComfortSetting
 type: enum
-summary: ''
-description: ''
+summary: |
+  Named presets for VR comfort assists such as vignette, smooth rotation, and
+  third-person follow camera.
+description: |
+  Named presets for VR comfort assists. `Comfort`, `Normal`, and `Expert` are
+  fixed combinations of vignette, smooth rotation, and third-person follow
+  camera. `Custom` is not a fixed combination: it lets those assists be
+  configured independently. The `Class.UserGameSettings` property that stores
+  this value is RobloxScript-secured and hidden from the Properties window.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Comfort
-    summary: ''
+    summary: |
+      Most restrictive comfort preset: enables vignette, disables smooth
+      rotation, and disables the third-person follow camera.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Normal
-    summary: ''
+    summary: |
+      Default balanced preset: enables vignette and third-person follow camera
+      while keeping smooth rotation disabled.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Expert
-    summary: ''
+    summary: |
+      Least restrictive comfort preset: disables vignette and enables both
+      smooth rotation and the third-person follow camera.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Custom
-    summary: ''
+    summary: |
+      Lets vignette, smooth rotation, and third-person follow camera be
+      configured independently rather than as a fixed preset.
     value: 3
     tags: []
     deprecation_message: ''

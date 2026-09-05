@@ -1533,8 +1533,8 @@ methods:
         type: HumanoidRigType
         default:
         summary: |
-          The `Enum.RigType` that the outfit will be created for if the player
-          confirms the prompt.
+          The `Enum.HumanoidRigType` that the outfit will be created for if the
+          player confirms the prompt.
       - name: outfitOptions
         type: Dictionary
         default: nil
@@ -1607,13 +1607,14 @@ methods:
   - name: AvatarEditorService:PromptSaveAvatar
     summary: |
       Prompts the `Class.Players.LocalPlayer` to update their avatar based on
-      the given `Class.HumanoidDescription` and `Enum.RigType` of R6 or R15.
+      the given `Class.HumanoidDescription` and `Enum.HumanoidRigType` of R6 or
+      R15.
     description: |
       This function prompts the `Class.Players.LocalPlayer` to update their
-      avatar based on the given `Class.HumanoidDescription` and `Enum.RigType`
-      (R6 or R15). Does not yield and can get the result by listening to the
-      PromptSaveAvatarCompleted event. This is similar to how other prompts such
-      as PromptPurchase work.
+      avatar based on the given `Class.HumanoidDescription` and
+      `Enum.HumanoidRigType` (R6 or R15). Does not yield and can get the result
+      by listening to the PromptSaveAvatarCompleted event. This is similar to
+      how other prompts such as PromptPurchase work.
     code_samples: []
     parameters:
       - name: humanoidDescription
@@ -1625,8 +1626,8 @@ methods:
         type: HumanoidRigType
         default:
         summary: |
-          The `Enum.RigType` that the avatar will be saved for if the player
-          confirms the prompt.
+          The `Enum.HumanoidRigType` that the avatar will be saved for if the
+          player confirms the prompt.
     returns:
       - type: ()
         summary: ''
@@ -1688,12 +1689,12 @@ methods:
         type: HumanoidDescription
         default:
         summary: |
-          A HumanoidDescription that represents the new outfit data.
+          A `Class.HumanoidDescription` that represents the new outfit data.
       - name: rigType
         type: HumanoidRigType
         default:
         summary: |
-          The HumanoidRigType to update the outfit to.
+          The `Enum.HumanoidRigType` to update the outfit to.
     returns:
       - type: ()
         summary: ''

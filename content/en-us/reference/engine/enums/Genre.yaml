@@ -7,7 +7,11 @@ type: enum
 summary: |
   Used to represent the type of game.
 description: |
-  Used to represent the type of game.
+  `Genre` categorizes an experience by its play-style theme. Its only consumer
+  is the `Class.DataModel.Genre` property, which is deprecated and no longer
+  functional — reading `Class.DataModel.Genre` may throw an error. The enum
+  values are listed here for reference only; new experiences should not depend
+  on this enum.
 code_samples: []
 tags:
   - Deprecated

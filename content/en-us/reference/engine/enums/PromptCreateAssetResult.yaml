@@ -5,10 +5,11 @@
 name: PromptCreateAssetResult
 type: enum
 summary: |
-  Describes the result of an `Class.AssetService:PromptCreateAssetAsync()` call.
+  Describes the result of a
+  `Class.AvatarCreationService:PromptCreateAvatarAssetAsync()` call.
 description: |
-  Outcome of `Class.AssetService:PromptCreateAssetAsync()` after a player
-  responds to the in-experience asset-creation prompt. Distinguishes a
+  Outcome of `Class.AvatarCreationService:PromptCreateAvatarAssetAsync()` after
+  a player responds to the in-game asset creation prompt. Distinguishes a
   successful publish from failure modes such as moderation rejection, declined
   consent, insufficient Robux, validation failure, or upload errors.
 code_samples: []

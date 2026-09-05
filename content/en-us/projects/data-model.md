@@ -143,7 +143,7 @@ For example, you can set a camera to follow user movements or stay fixed in a
 particular location. You can also adjust the field of view, distance, and angle
 to create different visual effects of how users view your 3D world.
 
-For more information, see [customize the camera](../workspace/camera.md).
+For more information, see [customize the camera](../workspace/camera/index.md).
 
 <h4>Terrain</h4>
 

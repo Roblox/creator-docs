@@ -397,13 +397,28 @@ properties:
     simulationAccess: true
 methods:
   - name: IKControl:GetChainCount
-    summary: ''
-    description: ''
+    summary: |
+      Returns the number of segments in the IK chain between the
+      `Class.IKControl.ChainRoot|ChainRoot` and the
+      `Class.IKControl.EndEffector|EndEffector`.
+    description: |
+      Returns the number of segments in the IK chain, meaning the number of
+      parent-child links between the `Class.IKControl.ChainRoot|ChainRoot` and
+      the `Class.IKControl.EndEffector|EndEffector`. A chain of three parts has
+      a count of `2`.
+
+      The chain always has one more node than it has segments, so the valid
+      indices for `Class.IKControl:GetNodeWorldCFrame()|GetNodeWorldCFrame()`
+      and `Class.IKControl:GetNodeLocalCFrame()|GetNodeLocalCFrame()` range from
+      `1` to the returned count plus `1`. This returns `0` when the
+      `Class.IKControl` doesn't resolve to a valid chain, such as when its
+      required properties aren't set.
     code_samples: []
     parameters: []
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The number of segments in the chain, or `0` if the chain isn't valid.
     tags: []
     deprecation_message: ''
     security: None
@@ -411,13 +426,28 @@ methods:
     capabilities:
       - Animation
   - name: IKControl:GetChainLength
-    summary: ''
-    description: ''
+    summary: |
+      Returns the total length, in studs, of the IK chain between the
+      `Class.IKControl.ChainRoot|ChainRoot` and the
+      `Class.IKControl.EndEffector|EndEffector`.
+    description: |
+      Returns the total length of the IK chain in studs, computed as the sum of
+      the world-space distances between each consecutive part from the
+      `Class.IKControl.EndEffector|EndEffector` up to the
+      `Class.IKControl.ChainRoot|ChainRoot`. This is the maximum reach of the
+      chain: a `Class.IKControl.Target|Target` placed farther than this distance
+      from the chain's base can't be reached, and the chain extends toward it as
+      far as it can.
+
+      This returns `0` when the `Class.IKControl` doesn't resolve to a valid
+      chain, such as when its required properties aren't set.
     code_samples: []
     parameters: []
     returns:
       - type: float
-        summary: ''
+        summary: |
+          The combined length of the chain in studs, or `0` if the chain isn't
+          valid.
     tags: []
     deprecation_message: ''
     security: None
@@ -425,17 +455,37 @@ methods:
     capabilities:
       - Animation
   - name: IKControl:GetNodeLocalCFrame
-    summary: ''
-    description: ''
+    summary: |
+      Returns the `Datatype.CFrame` of the chain node at the given index,
+      relative to its parent node in the chain.
+    description: |
+      Returns the `Datatype.CFrame` of the node at the given `index` in the
+      solved IK chain, relative to its parent node. Nodes are ordered from the
+      `Class.IKControl.ChainRoot|ChainRoot` at index `1` to the
+      `Class.IKControl.EndEffector|EndEffector` at
+      `Class.IKControl:GetChainCount()|GetChainCount()` plus `1`.
+
+      This reflects the pose most recently produced by the solver. Use
+      `Class.IKControl:GetNodeWorldCFrame()|GetNodeWorldCFrame()` for the same
+      node in world space. If the `index` is outside the valid range, or the
+      `Class.IKControl` hasn't resolved a valid chain, this returns the identity
+      `Datatype.CFrame`.
     code_samples: []
     parameters:
       - name: index
         type: int
         default:
-        summary: ''
+        summary: |
+          The 1-based position of the node in the chain, from `1` (the
+          `Class.IKControl.ChainRoot|ChainRoot`) up to
+          `Class.IKControl:GetChainCount()|GetChainCount()` plus `1` (the
+          `Class.IKControl.EndEffector|EndEffector`).
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          The node's `Datatype.CFrame` in the local space of its parent node, or
+          the identity `Datatype.CFrame` if the index is out of range or the
+          chain hasn't been solved.
     tags: []
     deprecation_message: ''
     security: None
@@ -443,17 +493,37 @@ methods:
     capabilities:
       - Animation
   - name: IKControl:GetNodeWorldCFrame
-    summary: ''
-    description: ''
+    summary: |
+      Returns the world-space `Datatype.CFrame` of the chain node at the given
+      index.
+    description: |
+      Returns the world-space `Datatype.CFrame` of the node at the given `index`
+      in the solved IK chain. Nodes are ordered from the
+      `Class.IKControl.ChainRoot|ChainRoot` at index `1` to the
+      `Class.IKControl.EndEffector|EndEffector` at
+      `Class.IKControl:GetChainCount()|GetChainCount()` plus `1`.
+
+      This reflects the pose most recently produced by the solver. Use
+      `Class.IKControl:GetNodeLocalCFrame()|GetNodeLocalCFrame()` for the same
+      node relative to its parent. If the `index` is outside the valid range, or
+      the `Class.IKControl` hasn't resolved a valid chain, this returns the
+      identity `Datatype.CFrame`.
     code_samples: []
     parameters:
       - name: index
         type: int
         default:
-        summary: ''
+        summary: |
+          The 1-based position of the node in the chain, from `1` (the
+          `Class.IKControl.ChainRoot|ChainRoot`) up to
+          `Class.IKControl:GetChainCount()|GetChainCount()` plus `1` (the
+          `Class.IKControl.EndEffector|EndEffector`).
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          The node's world-space `Datatype.CFrame`, or the identity
+          `Datatype.CFrame` if the index is out of range or the chain hasn't
+          been solved.
     tags: []
     deprecation_message: ''
     security: None
@@ -461,13 +531,29 @@ methods:
     capabilities:
       - Animation
   - name: IKControl:GetRawFinalTarget
-    summary: ''
-    description: ''
+    summary: |
+      Returns the world-space target `Datatype.CFrame` the solver aims for
+      before `Class.IKControl.SmoothTime|SmoothTime` smoothing is applied.
+    description: |
+      Returns the `Datatype.CFrame` that the solver aims the
+      `Class.IKControl.EndEffector|EndEffector` at on the current frame, before
+      `Class.IKControl.SmoothTime|SmoothTime` smoothing is applied. This is the
+      `Class.IKControl.Target|Target` after `Class.IKControl.Weight|Weight`,
+      `Class.IKControl.Offset|Offset`, and
+      `Class.IKControl.EndEffectorOffset|EndEffectorOffset` are factored in. For
+      a `LookAt` `Class.IKControl.Type|Type`, it's the world position the chain
+      is oriented toward.
+
+      Compare with
+      `Class.IKControl:GetSmoothedFinalTarget()|GetSmoothedFinalTarget()`, which
+      returns the same target after smoothing. The two are equal when
+      `Class.IKControl.SmoothTime|SmoothTime` is `0`.
     code_samples: []
     parameters: []
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          The final target `Datatype.CFrame`, in world space, before smoothing.
     tags: []
     deprecation_message: ''
     security: None
@@ -475,13 +561,27 @@ methods:
     capabilities:
       - Animation
   - name: IKControl:GetSmoothedFinalTarget
-    summary: ''
-    description: ''
+    summary: |
+      Returns the world-space target `Datatype.CFrame` the solver aims for after
+      `Class.IKControl.SmoothTime|SmoothTime` smoothing is applied.
+    description: |
+      Returns the `Datatype.CFrame` that the solver aims the
+      `Class.IKControl.EndEffector|EndEffector` at on the current frame, after
+      `Class.IKControl.SmoothTime|SmoothTime` smoothing has been applied to the
+      raw target from `Class.IKControl:GetRawFinalTarget()|GetRawFinalTarget()`.
+      Smoothing uses a critically damped spring that eases toward the raw value
+      over roughly `Class.IKControl.SmoothTime|SmoothTime` seconds.
+
+      Because `Class.IKControl.SmoothTime|SmoothTime` defaults to `0.05`, this
+      value trails `Class.IKControl:GetRawFinalTarget()|GetRawFinalTarget()`
+      slightly while the target moves. When `SmoothTime` is `0`, this returns
+      the same `Datatype.CFrame` as `GetRawFinalTarget`.
     code_samples: []
     parameters: []
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          The final target `Datatype.CFrame`, in world space, after smoothing.
     tags: []
     deprecation_message: ''
     security: None

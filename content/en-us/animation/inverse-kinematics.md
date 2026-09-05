@@ -130,7 +130,7 @@ The following instructions describe the process of adding a `Class.HingeConstrai
 
 #### Elbow
 
-Characters with [standard rigs](../avatar/character-bodies/specifications.md#standard-rigs) already include attachments in their joints that you can use to apply the elbow constraint. For the elbow, both the LeftUpperArm and the LeftLowerArm include a `LeftElbowRigAttachment`. Along with adding a constraint, you also need to add additional child attachments to each part's `LeftElbowRigAttachment` to specify which axis the elbow can rotate about.
+Characters with [R15 rigs](../avatar/character-bodies/specifications.md#rigging) already include attachments in their joints that you can use to apply the elbow constraint. For the elbow, both the LeftUpperArm and the LeftLowerArm include a `LeftElbowRigAttachment`. Along with adding a constraint, you also need to add additional child attachments to each part's `LeftElbowRigAttachment` to specify which axis the elbow can rotate about.
 
 To add the `Class.HingeConstraint` and child attachments:
 

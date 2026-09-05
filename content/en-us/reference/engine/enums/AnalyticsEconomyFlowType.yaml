@@ -4,8 +4,17 @@
 
 name: AnalyticsEconomyFlowType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the direction of currency flow in an economy event logged by
+  `Class.AnalyticsService:LogEconomyEvent()`.
+description: |
+  Passed as the `flowType` argument to
+  `Class.AnalyticsService:LogEconomyEvent()` to indicate whether an
+  in-experience currency transaction is adding currency to or removing currency
+  from a player's balance. Use `Enum.AnalyticsEconomyFlowType.Source|Source`
+  when the player gains currency (for example, purchasing coins with Robux or
+  earning gold from gameplay) and `Enum.AnalyticsEconomyFlowType.Sink|Sink` when
+  the player spends currency (for example, buying an item from a shop).
 code_samples: []
 tags: []
 deprecation_message: ''

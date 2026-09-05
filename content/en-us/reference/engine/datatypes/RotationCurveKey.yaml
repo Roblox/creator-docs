@@ -51,7 +51,9 @@ constructors:
       - name: Interpolation
         type: KeyInterpolationMode
         default:
-        summary: ''
+        summary: |
+          The interpolation mode for the segment started by this key. Defaults
+          to `Enum.KeyInterpolationMode.Cubic`.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -63,8 +65,19 @@ properties:
       The key interpolation mode for the segment started by this
       `Datatype.RotationCurveKey`.
     description: |
-      Defines the key interpolation mode for the segment started by this
-      `Datatype.RotationCurveKey`.
+      Defines the interpolation mode used for the curve segment that begins at
+      this key and ends at the next key. Possible values are
+      `Enum.KeyInterpolationMode.Constant` (holds the key's value until the next
+      key), `Enum.KeyInterpolationMode.Linear` (linearly interpolates between
+      this key and the next using spherical linear interpolation), and
+      `Enum.KeyInterpolationMode.Cubic` (uses a cubic hermite spline shaped by
+      `Datatype.RotationCurveKey.RightTangent|RightTangent` and the next key's
+      `Datatype.RotationCurveKey.LeftTangent|LeftTangent`). Defaults to
+      `Enum.KeyInterpolationMode.Cubic`.
+
+      Setting this property to a non-cubic mode automatically clears
+      `Datatype.RotationCurveKey.RightTangent|RightTangent` (because tangent
+      slope is only meaningful in cubic segments).
     default:
     code_samples: []
     tags: []
@@ -74,7 +87,10 @@ properties:
     summary: |
       The time position of this `Datatype.RotationCurveKey`.
     description: |
-      The time position of this `Datatype.RotationCurveKey`.
+      The time position of this `Datatype.RotationCurveKey` along the curve's
+      timeline, in seconds. Keys within a `Class.RotationCurve` are kept sorted
+      by ascending time; inserting a key at the same time as an existing key
+      replaces the existing key. Defaults to `0`.
     default:
     code_samples: []
     tags: []
@@ -84,7 +100,9 @@ properties:
     summary: |
       The `Datatype.CFrame` value of this `Datatype.RotationCurveKey`.
     description: |
-      The `Datatype.CFrame` value of this `Datatype.RotationCurveKey`.
+      The rotation stored at this key, represented as a `Datatype.CFrame`. Only
+      the rotational component of the CFrame is used; the positional component
+      is ignored. Defaults to `Datatype.CFrame.identity`.
     default:
     code_samples: []
     tags: []
@@ -94,7 +112,13 @@ properties:
     summary: |
       The tangent to the right of this `Datatype.RotationCurveKey`.
     description: |
-      The tangent to the right of this `Datatype.RotationCurveKey`.
+      The outgoing tangent (slope) at this key, controlling the shape of the
+      cubic segment that extends toward the next key. Defaults to `0`. This
+      property can only be set when
+      `Datatype.RotationCurveKey.Interpolation|Interpolation` is
+      `Enum.KeyInterpolationMode.Cubic`; attempting to set it on a key with a
+      different interpolation mode raises a runtime error. Returns `nil` if the
+      tangent has not been explicitly assigned.
     default:
     code_samples: []
     tags: []
@@ -104,7 +128,13 @@ properties:
     summary: |
       The tangent to the left of this `Datatype.RotationCurveKey`.
     description: |
-      The tangent to the left of this `Datatype.RotationCurveKey`.
+      The incoming tangent (slope) at this key, controlling the shape of the
+      cubic segment arriving from the previous key. Defaults to `0`. Unlike
+      `Datatype.RotationCurveKey.RightTangent|RightTangent`, this property can
+      be set on a key regardless of its own interpolation mode, because the
+      preceding segment may use cubic interpolation and needs a defined slope at
+      its endpoint. Returns `nil` if the tangent has not been explicitly
+      assigned.
     default:
     code_samples: []
     tags: []

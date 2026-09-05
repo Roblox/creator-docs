@@ -5,8 +5,27 @@
 name: StudioScreenshotCapture
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Represents a single screenshot captured from Studio, exposing the resulting
+  image buffer and the parameters the capture was taken with.
+description: |
+  Studio-only capture result that requires plugin security — not available in
+  published experiences. Produced by
+  `Class.StudioCaptureService:CaptureScreenshot()|CaptureScreenshot()` and
+  `CapturePluginGui()`. It holds the encoded image data together with the region
+  and format used for the capture, and reports progress through
+  `Class.StudioScreenshotCapture.BufferStatus|BufferStatus`.
+
+  The image is populated asynchronously.
+  `Class.StudioScreenshotCapture.BufferStatus|BufferStatus` defaults to
+  `Enum.StudioCaptureBufferStatus.NotStarted`, becomes
+  `Enum.StudioCaptureBufferStatus.Pending` while capturing and encoding,
+  `Enum.StudioCaptureBufferStatus.Ready` once the image is available, or
+  `Enum.StudioCaptureBufferStatus.Error` if capture failed. Retrieve the image
+  with `Class.StudioScreenshotCapture:GetBuffer()|GetBuffer()`, read failure
+  details with `Class.StudioScreenshotCapture:GetErrors()|GetErrors()`, and
+  produce a resized copy with
+  `Class.StudioScreenshotCapture:ScaleAsync()|ScaleAsync()`.
 code_samples: []
 inherits:
   - Instance
@@ -17,8 +36,18 @@ tags:
 deprecation_message: ''
 properties:
   - name: StudioScreenshotCapture.BufferFormat
-    summary: ''
-    description: ''
+    summary: |
+      The pixel format of the image data returned by
+      `Class.StudioScreenshotCapture:GetBuffer()|GetBuffer()`.
+    description: |
+      The `Enum.StudioCaptureScreenshotFormat` the capture's image data is
+      encoded in, and therefore the format of the buffer returned by
+      `Class.StudioScreenshotCapture:GetBuffer()|GetBuffer()`. Defaults to
+      `Enum.StudioCaptureScreenshotFormat.RGBA8`, in which the buffer holds four
+      bytes (red, green, blue, alpha) per pixel; when
+      `Enum.StudioCaptureScreenshotFormat.PNG`, the buffer holds a PNG-encoded
+      image. This property is read-only and reflects the `Format` requested when
+      the capture was created.
     code_samples: []
     type: StudioCaptureScreenshotFormat
     tags:
@@ -35,8 +64,18 @@ properties:
       can_save: true
     capabilities: []
   - name: StudioScreenshotCapture.BufferStatus
-    summary: ''
-    description: ''
+    summary: |
+      Reflects the current state of the capture as its image data is produced.
+    description: |
+      The `Enum.StudioCaptureBufferStatus` describing where the capture is in
+      its lifecycle. Defaults to `Enum.StudioCaptureBufferStatus.NotStarted`, is
+      set to `Enum.StudioCaptureBufferStatus.Pending` while the image is being
+      captured and encoded, becomes `Enum.StudioCaptureBufferStatus.Ready` once
+      the image data is available, and becomes
+      `Enum.StudioCaptureBufferStatus.Error` if the capture fails. Only when the
+      value is `Enum.StudioCaptureBufferStatus.Ready` does
+      `Class.StudioScreenshotCapture:GetBuffer()|GetBuffer()` return image data;
+      otherwise that method raises an error. This property is read-only.
     code_samples: []
     type: StudioCaptureBufferStatus
     tags:
@@ -53,8 +92,18 @@ properties:
       can_save: true
     capabilities: []
   - name: StudioScreenshotCapture.OriginalSize
-    summary: ''
-    description: ''
+    summary: |
+      The size, in pixels, of the region available for capture from
+      `Class.StudioScreenshotCapture.Position|Position` to the edge of the
+      Studio view.
+    description: |
+      The pixel size of the capturable region measured from
+      `Class.StudioScreenshotCapture.Position|Position` to the bottom-right
+      corner of the Studio view, computed as the screen resolution minus the
+      capture position and clamped to be non-negative. It describes the source
+      area before any cropping or scaling, as distinct from
+      `Class.StudioScreenshotCapture.Resolution|Resolution`, which is the pixel
+      size of the encoded image. This property is read-only.
     code_samples: []
     type: Vector2
     tags:
@@ -71,8 +120,14 @@ properties:
       can_save: true
     capabilities: []
   - name: StudioScreenshotCapture.Position
-    summary: ''
-    description: ''
+    summary: |
+      The top-left corner, in pixels, of the captured region within the Studio
+      view.
+    description: |
+      The pixel offset of the top-left corner of the captured region from the
+      top-left of the Studio view. It reflects the `Position` supplied when the
+      capture was requested, defaulting to `(0, 0)` when none is given. This
+      property is read-only.
     code_samples: []
     type: Vector2
     tags:
@@ -89,8 +144,15 @@ properties:
       can_save: true
     capabilities: []
   - name: StudioScreenshotCapture.Resolution
-    summary: ''
-    description: ''
+    summary: |
+      The pixel dimensions of the captured image.
+    description: |
+      The width and height, in pixels, of the encoded image held by the capture.
+      It is set once the image has been captured and encoded (when
+      `Class.StudioScreenshotCapture.BufferStatus|BufferStatus` becomes
+      `Enum.StudioCaptureBufferStatus.Ready`), and for a capture produced by
+      `Class.StudioScreenshotCapture:ScaleAsync()|ScaleAsync()` it equals the
+      requested output size. This property is read-only.
     code_samples: []
     type: Vector2
     tags:
@@ -107,8 +169,13 @@ properties:
       can_save: true
     capabilities: []
   - name: StudioScreenshotCapture.UICaptureMode
-    summary: ''
-    description: ''
+    summary: |
+      Indicates which user-interface layers were included in the capture.
+    description: |
+      The `Enum.UICaptureMode` that determines which user interface is
+      composited into the captured image. Defaults to `Enum.UICaptureMode.All`,
+      meaning all UI is included, and reflects the `UICaptureMode` requested
+      when the capture was created. This property is read-only.
     code_samples: []
     type: UICaptureMode
     tags:
@@ -126,47 +193,86 @@ properties:
     capabilities: []
 methods:
   - name: StudioScreenshotCapture:GetBuffer
-    summary: ''
-    description: ''
+    summary: |
+      Returns the captured image data as a buffer in the capture's pixel format.
+    description: |
+      Returns the captured screenshot as a `buffer` encoded in the capture's
+      `Class.StudioScreenshotCapture.BufferFormat|BufferFormat`. This method
+      only succeeds when
+      `Class.StudioScreenshotCapture.BufferStatus|BufferStatus` is
+      `Enum.StudioCaptureBufferStatus.Ready`; if the image is not yet available
+      or the capture failed, it raises an error instead of returning a buffer.
     code_samples: []
     parameters: []
     returns:
       - type: buffer
-        summary: ''
+        summary: |
+          A buffer containing the captured image data in the capture's
+          `Class.StudioScreenshotCapture.BufferFormat|BufferFormat`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
   - name: StudioScreenshotCapture:GetErrors
-    summary: ''
-    description: ''
+    summary: |
+      Returns an array of error messages recorded during the capture.
+    description: |
+      Returns an array of the error messages recorded for this capture. The
+      array is empty when no errors have occurred; when
+      `Class.StudioScreenshotCapture.BufferStatus|BufferStatus` is
+      `Enum.StudioCaptureBufferStatus.Error`, it contains one or more messages
+      describing why the capture or scale failed.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          An array of strings describing any errors that occurred during the
+          capture.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
   - name: StudioScreenshotCapture:ScaleAsync
-    summary: ''
-    description: ''
+    summary: |
+      Produces a new capture containing a resized copy of this capture's image.
+    description: |
+      Returns a new `Class.StudioScreenshotCapture` whose image is computed from
+      this capture, resized to `newSize` using the given `Enum.ResamplerMode`.
+      The original capture is not modified. `Enum.ResamplerMode.Default`
+      resamples with bilinear filtering, while `Enum.ResamplerMode.Pixelated`
+      uses nearest-neighbor (point) sampling; the scaled capture inherits this
+      capture's `Class.StudioScreenshotCapture.Position|Position`,
+      `Class.StudioScreenshotCapture.OriginalSize|OriginalSize`,
+      `Class.StudioScreenshotCapture.BufferFormat|BufferFormat`, and
+      `Class.StudioScreenshotCapture.UICaptureMode|UICaptureMode`.
+
+      This method yields until the scaled image has been encoded. It errors if
+      `newSize` is not positive, or if this capture's
+      `Class.StudioScreenshotCapture.BufferStatus|BufferStatus` is not
+      `Enum.StudioCaptureBufferStatus.Ready`.
     code_samples: []
     parameters:
       - name: strategy
         type: ResamplerMode
         default:
-        summary: ''
+        summary: |
+          The `Enum.ResamplerMode` used to resample the image.
+          `Enum.ResamplerMode.Default` applies bilinear filtering;
+          `Enum.ResamplerMode.Pixelated` applies nearest-neighbor (point)
+          sampling.
       - name: newSize
         type: Vector2
         default:
-        summary: ''
+        summary: |
+          The width and height, in pixels, of the scaled image.
     returns:
       - type: StudioScreenshotCapture
-        summary: ''
+        summary: |
+          A new `Class.StudioScreenshotCapture` whose image is this capture
+          scaled to `newSize`.
     tags:
       - Yields
     deprecation_message: ''

@@ -5,9 +5,11 @@
 name: TickCountSampleMethod
 type: enum
 summary: |
-  Controls the precision of a timer.
+  Controls the precision and performance trade-off used when sampling the
+  current time.
 description: |
-  Compute time using a faster, but less precise method.
+  Controls the precision and performance trade-off used when sampling the
+  current time via `Class.DebugSettings.TickCountPreciseOverride`.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -20,8 +22,8 @@ items:
     deprecation_message: ''
   - name: Benchmark
     summary: |
-      Dynamically decide between using ''Fast'' and ''Precise'' depending on
-      performance.
+      Dynamically decide between using `Fast` and `Precise` depending on the
+      value of `DebugSettings.TickCountPreciseOverride`.
     value: 1
     tags: []
     deprecation_message: ''

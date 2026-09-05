@@ -21,28 +21,20 @@ items:
     value: 0
     tags: []
     deprecation_message: ''
-  - name: LOD
+  - name: LevelOfDetail
     summary: |
-      Colors each mesh by its current level of detail using a blue-to-red
-      heatmap. Blue indicates the lowest detail and warmer colors indicate
-      higher detail. Useful for verifying that distant meshes are streaming at
-      reduced fidelity.
+      Colors each mesh by its current level of detail. Blue is the coarsest, red
+      the finest, and every rank in between maps to a fixed color. A given color
+      always means the same LOD rank across every mesh, with the exception that
+      each mesh's own highest available LOD is always shown red.
     value: 1
     tags: []
     deprecation_message: ''
-  - name: Meshes
+  - name: DataModelState
     summary: |
-      Assigns a distinct color to each individual mesh within a model. Useful
-      for identifying mesh boundaries and verifying how a model is split into
-      separate mesh parts.
-    value: 2
-    tags: []
-    deprecation_message: ''
-  - name: Zone
-    summary: |
-      Colors meshes by streaming zone. Green indicates the high-fidelity zone
-      where the DataModel is present.; yellow indicates the low-fidelity zone
-      where the DataModel is absent).
+      Colors SLIM models by whether their DataModel instances are streamed in or
+      out. Green indicates streamed in (full DataModel present); yellow
+      indicates streamed out (a placeholder). Both are still rendered via SLIM.
     value: 5
     tags: []
     deprecation_message: ''

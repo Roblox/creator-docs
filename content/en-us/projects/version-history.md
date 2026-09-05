@@ -41,6 +41,15 @@ Version notes are required when publishing so you can clearly track what changes
 3. Enter a version name and any notes you might have.
 4. Click **Publish**.
 
+## Generate publish notes
+
+Studio can automatically draft publish notes for you by summarizing all of the version notes your team wrote between the previous publish and the current one. Because the summary is generated only from those version notes, no notes between the two publishes means no summary is generated; the more consistently your team logs notes on their saves, the more complete the summary is.
+
+Generated notes are always optional and are never saved without your approval. You can edit, keep, or dismiss any summary before writing it to the version notes. To generate publish notes, use either of the following methods:
+
+- Go to **File** &rang; **Publish with Notes**, review and edit the drafted summary, then publish.
+- Go to **Window** &rang; **Version History**, then click **Edit Notes** on a published version.
+
 ## Restore to a previous version
 
 You can restore to a previous place version through Studio or the Creator Dashboard. This action creates a new version of the place.

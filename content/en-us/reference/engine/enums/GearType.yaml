@@ -4,7 +4,9 @@
 
 name: GearType
 type: enum
-summary: ''
+summary: |
+  Categorizes gear items by type for use with deprecated gear-allowlist
+  properties.
 description: |
   The GearType Enum is used as an argument in
   `Class.DataModel:IsGearTypeAllowed()`. Gear may have more than one

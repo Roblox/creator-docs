@@ -54,7 +54,9 @@ description: |
   `Class.TextBox.SelectionStart|SelectionStart` properties. Using
   `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal`, you can
   detect when a selection changes. Additionally, it is possible for players to
-  copy and paste text within a TextBox, enabling basic clipboard support.
+  copy and paste text within a TextBox, enabling basic clipboard support. When
+  the cursor moves outside the visible area while typing or navigating, the
+  `TextBox` automatically scrolls its viewport to keep the cursor in view.
 
   **Text Filtering Notice** Games that facilitate player-to-player communication
   using text, such as custom chat or nametags, must properly filter such text
@@ -91,8 +93,38 @@ properties:
     capabilities:
       - UI
   - name: TextBox.ContentText
-    summary: ''
-    description: ''
+    summary: |
+      A copy of `Class.TextBox.Text` that contains exactly what is being
+      rendered by the `Class.TextBox`.
+    description: |
+      This property provides a copy of `Class.TextBox.Text|Text` that contains
+      exactly what is being rendered by the `Class.TextBox`. This is useful for
+      eliminating style tags used for [rich text](../../../ui/rich-text.md)
+      markup; for example, when `Class.TextBox.RichText|RichText` is enabled,
+      the `Class.TextBox.ContentText|ContentText` property shows the text as it
+      appears to the user.
+
+      <table>
+          <thead>
+              <tr>
+                  <th>RichText</th>
+                  <th>Text</th>
+                  <th>ContentText</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><code>false</code></td>
+                  <td>&lt;b&gt;Hello,&lt;br/&gt; world!&lt;/b&gt;</td>
+                  <td>&lt;b&gt;Hello,&lt;br/&gt; world!&lt;/b&gt;</td>
+              </tr>
+              <tr>
+                  <td><code>true</code></td>
+                  <td>&lt;b&gt;Hello,&lt;br/&gt; world!&lt;/b&gt;</td>
+                  <td>Hello,<br/> world!</td>
+              </tr>
+          </tbody>
+        </table>
     code_samples: []
     type: string
     tags:
@@ -287,8 +319,22 @@ properties:
     capabilities:
       - UI
   - name: TextBox.OpenTypeFeatures
-    summary: ''
-    description: ''
+    summary: |
+      Applies OpenType typographic features to the text rendered by the
+      `Class.TextBox`.
+    description: |
+      Comma-separated list of OpenType feature tags applied when the
+      `Class.TextBox` shapes and renders its text, such as `zero` for slashed
+      zeros or `ss03` for a stylistic set. Defaults to an empty string (no
+      additional features).
+
+      Each entry uses standard OpenType feature-string syntax (for example,
+      `zero` or `ss03`). Only a supported subset is applied; an unsupported
+      feature, malformed string, or bracketed partial-enabling syntax (for
+      example, `zero[1:3]`) is rejected, with the reason in
+      `Class.TextBox.OpenTypeFeaturesError|OpenTypeFeaturesError`.
+
+      Supports [styling](../../../ui/styling/index.md).
     code_samples: []
     type: string
     tags: []
@@ -304,8 +350,20 @@ properties:
     capabilities:
       - UI
   - name: TextBox.OpenTypeFeaturesError
-    summary: ''
-    description: ''
+    summary: |
+      Read-only property that describes why the `Class.TextBox.OpenTypeFeatures`
+      string could not be applied.
+    description: |
+      Read-only error, if any, from parsing and applying
+      `Class.TextBox.OpenTypeFeatures|OpenTypeFeatures`. Defaults to an empty
+      string when the requested features applied successfully.
+
+      An error is produced when:
+
+      - The feature string is malformed and cannot be parsed.
+      - A requested feature is not in the supported set.
+      - A bracketed range syntax is used (partial feature enabling is not
+        supported).
     code_samples: []
     type: string
     tags:
@@ -545,8 +603,16 @@ properties:
     capabilities:
       - UI
   - name: TextBox.TextDirection
-    summary: ''
-    description: ''
+    summary: |
+      Direction in which the text is rendered.
+    description: |
+      `Enum.TextDirection` in which the `Class.TextBox` renders its text.
+      Defaults to `Enum.TextDirection.Auto`, which picks direction from the text
+      content so right-to-left scripts render right-to-left.
+      `Enum.TextDirection.LeftToRight` and `Enum.TextDirection.RightToLeft`
+      force left-to-right or right-to-left rendering.
+
+      Supports [styling](../../../ui/styling/index.md).
     code_samples: []
     type: TextDirection
     tags: []
@@ -864,14 +930,15 @@ methods:
       - UI
   - name: TextBox:IsFocused
     summary: |
-      Returns `true` if the `TextBox` is focused or `false` if it is not.
+      Whether the TextBox currently has focus.
     description: |
       Returns `true` if the `TextBox` is focused or `false` if it is not.
     code_samples: []
     parameters: []
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Returns `true` if the `TextBox` is focused or `false` if it is not.
     tags: []
     deprecation_message: ''
     security: None
@@ -891,7 +958,10 @@ methods:
       - name: submitted
         type: boolean
         default: false
-        summary: ''
+        summary: |
+          Whether the `Class.TextBox.FocusLost` event's `enterPressed` parameter
+          reports `true`, as if the player pressed Enter to submit text.
+          Defaults to `false`.
     returns:
       - type: ()
         summary: ''

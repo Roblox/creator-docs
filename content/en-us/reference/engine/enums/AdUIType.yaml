@@ -9,7 +9,7 @@ summary: |
 description: |
   Describes the type of ad creative that an `Class.AdGui` is currently rendering
   on its surface. Managed by the engine based on the creative asset served to
-  the ad slot; see `Enum.AdUIType` items for the possible values.
+  the ad slot.
 code_samples: []
 tags: []
 deprecation_message: ''

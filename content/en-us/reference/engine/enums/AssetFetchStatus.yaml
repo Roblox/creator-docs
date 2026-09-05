@@ -4,8 +4,20 @@
 
 name: AssetFetchStatus
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the download state of an asset requested through
+  `Class.ContentProvider`.
+description: |
+  Describes the download state of an asset requested through
+  `Class.ContentProvider`. Every content ID has exactly one status at any given
+  time, transitioning from `Enum.AssetFetchStatus.None` (never requested) to
+  `Enum.AssetFetchStatus.Loading` (fetch in progress) and finally to a terminal
+  state of `Enum.AssetFetchStatus.Success`, `Enum.AssetFetchStatus.Failure`, or
+  `Enum.AssetFetchStatus.TimedOut`.
+
+  Query the current status with `Class.ContentProvider:GetAssetFetchStatus()`
+  and listen for transitions with
+  `Class.ContentProvider:GetAssetFetchStatusChangedSignal()`.
 code_samples: []
 tags: []
 deprecation_message: ''

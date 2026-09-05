@@ -75,7 +75,7 @@ Certain modifications are acceptable, as long as they don't misrepresent the cor
 <Card>
 <CardContent style={{paddingBottom: '0px'}}>
 <Alert severity="success" variant="outlined">
-**Camera Work** — Using varied camera angles for aesthetic or cinematic purposes is fine, as long as they showcase real gameplay. Studio's [free camera mode](#free-camera-mode) is especially helpful for capturing different vantage points.
+**Camera Work** — Using varied camera angles for aesthetic or cinematic purposes is fine, as long as they showcase real gameplay. Studio's [free camera mode](../../workspace/camera/free-camera.md) is especially helpful for capturing different vantage points.
 </Alert>
 <Alert severity="success" variant="outlined">
 **Minor Post-Processing** — Small adjustments like brightness, contrast, or minor visual effects are acceptable if they don't fundamentally alter the visual fidelity of the actual game. It's also acceptable to overlay your game's logo or branding in a video.
@@ -116,63 +116,9 @@ To prevent misleading players, please adhere to the following policies. Videos w
 
 ## Free camera mode
 
-Studio's **free camera mode** is a useful tool to capture in-game screenshots and videos because it allows you to move the camera to vantage points which may not be possible through the default view camera. To enable free camera mode:
+The run-time **free camera mode** (freecam) allows you to manipulate the camera to vantage points which may not be possible through the default view camera, making it a useful tool for capturing cinematic screenshots and video. Press <kbd>Left Shift</kbd> + <kbd>P</kbd> during a solo playtest to toggle it on or off.
 
-1. Go to a game where you have server-side [Developer Console](../../studio/developer-console.md) access.
-2. Initiate a solo [playtesting](../../studio/testing-modes.md#playtesting) session.
-
-   <img src="../../assets/studio/general/Mezzanine-Testing-Mode-Test.png" width="800" alt="Test option in the testing modes dropdown of Studio's mezzanine." />
-
-3. Press <kbd>Left Shift</kbd> and <kbd>P</kbd>.
-
-Once in free camera mode, you can use the following controls:
-
-<table>
-<thead>
-  <tr>
-    <th>Keys/shortcuts</th>
-    <th>Action</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td>
-    <td>Moves the camera forward/left/back/right.</td>
-  </tr>
-  <tr>
-    <td><kbd>Q</kbd> <kbd>E</kbd></td>
-    <td>Moves the camera down/up.</td>
-  </tr>
-	<tr>
-    <td><kbd>Z</kbd> <kbd>C</kbd></td>
-    <td>Tilts the camera left/right (roll).</td>
-  </tr>
-  <tr>
-    <td><kbd>Z</kbd> <kbd>C</kbd></td>
-    <td>Tilts the camera left/right (roll).</td>
-  </tr>
-  <tr>
-    <td><kbd>Shift</kbd></td>
-    <td>In combination with any movement key, changes the camera speed.</td>
-  </tr>
-  <tr>
-    <td>**Right mouse button**</td>
-    <td>When pressed, dragging the mouse moves the camera view around.</td>
-  </tr>
-  <tr>
-    <td>**Mouse scroll wheel**</td>
-    <td>Zooms the camera in or out.</td>
-  </tr>
-  <tr>
-    <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>Shift</kbd><kbd>G</kbd> (Mac)</td>
-    <td>Disables all `Class.CoreGui|CoreGuis` but not developer-created GUIs.</td>
-  </tr>
-  <tr>
-    <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>C</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>Shift</kbd><kbd>C</kbd> (Mac)</td>
-    <td>Disables all developer-created GUIs but not `Class.CoreGui|CoreGuis`.</td>
-  </tr>
-</tbody>
-</table>
+For the full list of controls, the config menu, and custom freecam post-processing effects, see [free camera mode](../../workspace/camera/free-camera.md).
 
 ## Home page personalization
 

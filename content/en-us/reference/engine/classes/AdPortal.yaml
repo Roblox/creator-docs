@@ -9,11 +9,11 @@ summary: |
   A portal that teleports players to a sponsored experience as part of immersive
   ads.
 description: |
-  An `AdPortal` is a developer-created instance that must be parented to a
-  `Class.Part` — attempting to parent it elsewhere throws an error. When added
-  to the data model, it registers itself with the ad service to be served portal
-  ads on rotation, and it uses a child `Class.AdGui` to display the current ad's
-  banner image and destination label above the portal.
+  An `AdPortal` is an instance that must be parented to a `Class.Part` —
+  attempting to parent it elsewhere throws an error. When added to the data
+  model, it registers itself with `Class.AdService` to be served portal ads on
+  rotation, and it uses a child `Class.AdGui` to display the current ad's banner
+  image and destination label above the portal.
 
   When the local player's character touches the parent part, the portal
   teleports that player to the sponsored experience associated with the
@@ -28,7 +28,7 @@ deprecation_message: ''
 properties:
   - name: AdPortal.PortalInvalidReason
     summary: |
-      A developer-facing message explaining why the portal is currently invalid,
+      A creator-facing message explaining why the portal is currently invalid,
       if it is.
     description: |
       Holds a human-readable explanation of why the `Class.AdPortal` is not in a
@@ -38,7 +38,7 @@ properties:
       a misconfigured child `Class.AdGui`.
 
       This property is read-only and defaults to an empty string (`""`). It is
-      intended for surfacing configuration problems to developers in Studio.
+      intended for surfacing configuration problems to creators in Studio.
     code_samples: []
     type: string
     tags:

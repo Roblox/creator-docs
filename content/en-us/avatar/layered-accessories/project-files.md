@@ -69,7 +69,7 @@ The following `.fbx`, `.blend`, and `.ma` template and reference project files a
   <tbody>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.blend</a></td>
-    <td>Starting rigging armature template for Blender. Contains a rigging armature with correct [standard humanoid rig](../character-bodies/specifications.md#standard-rigs) naming conventions and attachment points. Use this template for rigging bodies and layered accessories.</td>
+    <td>Starting rigging armature template for Blender. Contains a [standard R15 rig](../character-bodies/specifications.md#standard-r15-rigs) with correct naming conventions and attachment points. Use this template for rigging bodies and layered accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip" download>Clothing_Cage_Template.blend</a></td>
@@ -94,7 +94,7 @@ The following `.fbx`, `.blend`, and `.ma` template and reference project files a
 <tbody>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.ma</a></td>
-    <td>Starting rigging armature template for Maya. Contains a rigging armature with correct [standard humanoid rig](../character-bodies/specifications.md#standard-rigs) naming conventions and attachment points. Use this template for creating character bodies and layered accessories.</td>
+    <td>Starting rigging armature template for Maya. Contains a [standard R15 rig](../character-bodies/specifications.md#standard-r15-rigs) with correct naming conventions and attachment points. Use this template for creating character bodies and layered accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip" download>Clothing_Cage_Template.ma</a></td>
@@ -123,7 +123,7 @@ The following `.fbx`, `.blend`, and `.ma` template and reference project files a
 <tbody>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.fbx</a></td>
-    <td>Starting rigging armature template for general modeling software. Contains a rigging armature with correct [standard humanoid rig](../character-bodies/specifications.md#standard-rigs) naming conventions and attachment points. Use this template for creating character bodies and layered accessories.</td>
+    <td>Starting rigging armature template for general modeling software. Contains a [standard R15 rig](../character-bodies/specifications.md#standard-r15-rigs) with correct naming conventions and attachment points. Use this template for creating character bodies and layered accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip" download>Clothing_Cage_Template.fbx</a></td>

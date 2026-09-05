@@ -156,7 +156,24 @@ For example, if you generate a skateboard and define five parts (`body`, `left r
     </Grid>
   </Grid>
 
-<h4 style={{marginTop: '36px'}}>Recommended part names</h4>
+#### Segment imported meshes
+
+You can also segment individual meshes that you import into Studio with the [3D Importer](../studio/importer.md). Segmenting an imported mesh lets you modify individual parts without editing and reimporting the original model. For example, you can apply different materials or scripts to specific parts, or replace individual components like the wheels of a car, the hilt of a sword, or the arms of a robot.
+
+<Alert severity="info">
+Mesh segmentation is in early preview, and results depend on the topology of the input mesh. For the most reliable results, use the [recommended part names](#recommended-part-names) for supported object types.
+</Alert>
+
+To segment an imported mesh:
+
+1. Select the `Class.MeshPart` in the workspace. Make sure to select the mesh itself, not a parent `Class.Model` or other instance.
+2. Open Assistant and enter `/segment_mesh`.
+3. Enter up to five names for the parts you want to create. You can use any part names, but the [recommended part names](#recommended-part-names) for common object types produce the most reliable results.
+4. Click **Confirm**. Assistant segments the mesh into the specified parts and replaces the original mesh in the workspace with the segmented version.
+
+To create more than five parts, run `/segment_mesh` again on the segmented mesh.
+
+#### Recommended part names
 
 While any generated asset can be segmented, the recommended part names below currently produce the most reliable results for their corresponding object types.
 

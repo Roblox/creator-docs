@@ -678,7 +678,8 @@ properties:
       A reference to the humanoid's _Left Leg_ part.
     description: |
       A reference to the humanoid's _Left Leg_ part. The value of this property
-      will always be `nil` if the humanoid's `Enum.RigType` is set to R15.
+      will always be `nil` if the humanoid's `Class.Humanoid.RigType|RigType` is
+      set to R15.
     code_samples: []
     type: BasePart
     tags:
@@ -914,7 +915,8 @@ properties:
       A reference to the humanoid's _Right Leg_ part.
     description: |
       A reference to the humanoid's _Right Leg_ part. The value of this property
-      will always be `nil` if the humanoid's RigType is set to R15.
+      will always be `nil` if the humanoid's `Class.Humanoid.RigType|RigType` is
+      set to R15.
     code_samples: []
     type: BasePart
     tags:

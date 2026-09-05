@@ -11,7 +11,7 @@ The **Avatar Validation Tool** is a supplemental Blender add-on you can use to q
 
 <img src="../../assets/art/avatar/Validation-Tool-Preview.png" width="100%" />
 
-This tool can save you time by checking for common validation specifications before you export your model, but it doesn't provide a comprehensive verification of all aspects of your character model. You should always continually test your character model, including testing your characters [in Studio](../../art/characters/testing/studio.md) and verifying on your own if your model meets Roblox's [character specifications](../../avatar/character-bodies/specifications.md).
+This tool can save you time by checking for common validation specifications before you export your model, but it doesn't provide a comprehensive verification of all aspects of your character model. You should always continually test your character model, including testing your characters [in Studio](../../avatar/character-bodies/test-studio.md) and verifying on your own if your model meets Roblox's [character body specifications](../../avatar/character-bodies/specifications.md).
 
 ## Install
 
@@ -60,7 +60,7 @@ To use the validation tool on your asset:
    <video controls src="../../assets/art/avatar/Validation-Tool-Test.mp4" width="100%"></video>
 
 <Alert severity = 'info'>
-This validation tool only checks for common validation issues. You should always continually test your character model, including testing your characters [in Studio](../../art/characters/testing/studio.md) and verifying on your own if your model meets Roblox's [character specifications](../../avatar/character-bodies/specifications.md).
+This validation tool only checks for common validation issues. You should always continually test your character model, including testing your characters [in Studio](../../avatar/character-bodies/test-studio.md) and verifying on your own if your model meets Roblox's [character body specifications](../../avatar/character-bodies/specifications.md).
 </Alert>
 
 ## Checks and troubleshooting

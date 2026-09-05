@@ -52,10 +52,12 @@ methods:
       - name: index
         type: int
         default:
-        summary: ''
+        summary: |
+          One-based index of the key to retrieve.
     returns:
       - type: FloatCurveKey
-        summary: ''
+        summary: |
+          Copy of the `Datatype.FloatCurveKey` stored at `index`.
     tags: []
     deprecation_message: ''
     security: None
@@ -76,10 +78,13 @@ methods:
       - name: time
         type: float
         default:
-        summary: ''
+        summary: |
+          Time value to locate within the curve's sorted keys.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          Array of two one-based indices that bracket `time`: the last key at or
+          before `time` and the first key at or after it.
     tags: []
     deprecation_message: ''
     security: None

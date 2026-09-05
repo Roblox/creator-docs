@@ -4,19 +4,35 @@
 
 name: CameraNavigationModel
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines the camera navigation paradigm used in the Roblox Studio editor
+  viewport.
+description: |
+  The **CameraNavigationModel** enum selects the camera navigation paradigm for
+  the Roblox Studio editor viewport. It is used by the
+  `Class.Studio.CameraNavigationModel` property to choose between the classic
+  Roblox navigation model (`Enum.CameraNavigationModel.Roblox`) and an
+  industry-standard model (`Enum.CameraNavigationModel.IndustryCompatible`) that
+  matches conventions found in other professional 3D applications.
+
+  `Class.Studio.CameraNavigationModel` defaults to
+  `Enum.CameraNavigationModel.Roblox`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Roblox
-    summary: ''
+    summary: |
+      Classic Roblox Studio camera navigation model with linear zoom and
+      focus-locked orbiting; the default value.
     value: 0
     tags: []
     deprecation_message: ''
   - name: IndustryCompatible
-    summary: ''
+    summary: |
+      Camera navigation model that follows industry-standard 3D application
+      conventions, with non-linear zoom and simultaneous WASD-plus-orbit
+      movement.
     value: 1
     tags: []
     deprecation_message: ''

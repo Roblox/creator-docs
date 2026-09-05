@@ -4,19 +4,30 @@
 
 name: TextFilterContext
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates whether text submitted to `Class.TextService:FilterStringAsync()` or
+  `Class.TextService:FilterAndTranslateStringAsync()` is intended for a public
+  or private audience, controlling the strictness of the text filtering backend.
+description: |
+  Indicates whether text submitted to `Class.TextService:FilterStringAsync()` or
+  `Class.TextService:FilterAndTranslateStringAsync()` is intended for a public
+  or private audience, controlling the strictness of the text filtering backend.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: PublicChat
-    summary: ''
+    summary: |
+      Indicates the string will be visible to all players or a broad public
+      audience, applying the strictest level of text filtering.
     value: 1
     tags: []
     deprecation_message: ''
   - name: PrivateChat
-    summary: ''
+    summary: |
+      Indicates the string is part of a private conversation between specific
+      users, applying filtering appropriate for one-to-one or small-group
+      exchanges.
     value: 2
     tags: []
     deprecation_message: ''

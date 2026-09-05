@@ -185,7 +185,12 @@ navigation:
           - title: Highlighting
             path: /effects/highlighting
       - title: Camera
-        path: /workspace/camera
+        path: /workspace/camera/
+        section:
+          - title: Overview
+            path: /workspace/camera/
+          - title: Free camera mode
+            path: /workspace/camera/free-camera
       - title: Spatial data
         section:
           #- title: Object World Space
@@ -384,6 +389,8 @@ navigation:
         path: /input/mobile
       - title: Gamepad
         path: /input/gamepad
+      - title: Micro gamepad
+        path: /input/micro-gamepad
   - title: Audio
     path: /audio/
     section:

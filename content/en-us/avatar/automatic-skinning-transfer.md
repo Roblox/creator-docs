@@ -37,7 +37,7 @@ While Automatic Skinning Transfer often works better than manual skinning, there
 Automatic Skinning Transfer may not work well for certain detailed accessory types, such as eyelashes or eyebrows. To get a more controlled skinning transfer result, you have the option to skin accessory geometry to one of two specially named joints: `RBX_Leader` and `RBX_Follower`.
 
 <Alert severity = 'info'>
-It's best to create these joints/bones directly beneath the `Root` joint in your hierarchy for simplicity and clarity. These joints/bones won't be detected as a part of your character model's [standard](./character-bodies/specifications.md#standard-rigs) rigging armature on import.
+It's best to create these joints/bones directly beneath the `Root` joint in your hierarchy for simplicity and clarity. These joints/bones won't be detected as a part of your character model's [rigging armature](../avatar/character-bodies/specifications.md#rigging) on import.
 </Alert>
 
 Any vertices skinned to `RBX_Leader` undergo the same transfer process that exists today. However, any vertices skinned to `RBX_Follower` transfer based on their nearest leader vertex. This allows for better results in situations like an eyelash where the tip of an eyelash strand would normally transfer to somewhere on the brow area rather than follow the base of the eyelash strand when moving.

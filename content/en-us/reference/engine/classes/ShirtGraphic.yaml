@@ -81,13 +81,12 @@ properties:
       - AvatarAppearance
   - name: ShirtGraphic.TextureContent
     summary: |
-      A `Datatype.Content` property that references the t-shirt texture image,
-      supporting asset URIs and `Class.EditableImage` objects.
+      Specifies the asset URI of the t-shirt texture.
     description: |
-      Holds the t-shirt texture as a `Datatype.Content` value. Supports
-      [asset URIs](../../../projects/assets/index.md#asset-uris) and
-      `Class.EditableImage` objects, unlike legacy `Class.ShirtGraphic.Graphic`,
-      which only accepts string-based asset IDs.
+      Specifies the t-shirt texture using an
+      [asset URI](../../../projects/assets/index.md#asset-uris). Although this
+      property uses Datatype.Content, it does not support `Class.EditableImage`
+      objects.
 
       Setting either `TextureContent` or `Class.ShirtGraphic.Graphic` updates
       the other; both share the same texture data.

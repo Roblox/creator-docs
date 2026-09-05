@@ -39,6 +39,30 @@ properties:
     capabilities:
       - Basic
       - UI
+  - name: ImageHandleAdornment.ImageContent
+    summary: |
+      The image content displayed by this adornment.
+    description: |
+      Sets the image displayed by this adornment as a `Datatype.Content` value.
+      It is the backing content for `Class.ImageHandleAdornment.Image` and
+      defaults to `rbxasset://textures/SurfacesDefault.png`. The rendered image
+      is tinted by the inherited `Class.HandleAdornment.Color3` property and
+      affected by `Class.HandleAdornment.Transparency`.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+      - UI
   - name: ImageHandleAdornment.Size
     summary: |
       Size of the image in studs.

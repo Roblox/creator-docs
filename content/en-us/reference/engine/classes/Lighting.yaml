@@ -268,8 +268,16 @@ properties:
     capabilities:
       - Environment
   - name: Lighting.ExtendLightRangeTo120
-    summary: ''
-    description: ''
+    summary: |
+      Unused. Light `Class.PointLight.Range|Range` is always clamped to 120
+      studs.
+    description: |
+      Unused. The maximum `Class.PointLight.Range|Range` of `Class.PointLight`,
+      `Class.SpotLight`, and `Class.SurfaceLight` objects is always 120 studs;
+      this property does not change that clamp.
+
+      This property is typed as `Enum.RolloutState`. It is non-scriptable and
+      hidden in the Studio Properties window.
     code_samples: []
     type: RolloutState
     tags:
@@ -417,7 +425,12 @@ properties:
       The artistic intent behind lighting in the experience.
     description: |
       `LightingStyle` indicates the artistic intent behind lighting in the
-      experience, as an `Enum.LightingStyle` option.
+      experience, as an `Enum.LightingStyle` option. `Enum.LightingStyle.Soft`
+      is the stylized look; `Enum.LightingStyle.Realistic` is the naturalistic
+      look. The actual shadowing path also depends on
+      `Class.Lighting.PrioritizeLightingQuality|PrioritizeLightingQuality` (for
+      example, Soft with that property enabled uses shadow maps rather than
+      voxel lighting).
     code_samples: []
     type: LightingStyle
     tags: []
@@ -806,7 +819,9 @@ events:
       added or removed from `Lighting`.
     description: |
       This event fires when a `Lighting` property is changed or a `Class.Sky` is
-      added or removed from `Lighting`, with some exceptions:
+      added or removed from `Lighting`. See the `skyChanged` parameter for when
+      that flag is `true` versus `false`. Some Lighting property changes never
+      fire this event:
 
       - Changing `Class.Lighting.GlobalShadows|GlobalShadows` will not fire this
         event.
@@ -821,7 +836,11 @@ events:
       - name: skyChanged
         type: boolean
         default:
-        summary: ''
+        summary: |
+          `true` when a `Class.Sky` is added or removed, or when a Sky property
+          other than `Class.Sky.SkyboxOrientation` changes. `false` for Lighting
+          property changes, Atmosphere property changes, and SkyboxOrientation
+          changes.
     tags: []
     deprecation_message: ''
     security: None

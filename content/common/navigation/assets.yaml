@@ -48,6 +48,14 @@ navigation:
         path: /art/modeling/project-files
       - title: Rigging and skinning
         path: /art/modeling/rigging
+      - title: Cage meshes
+        section:
+          - title: Overview
+            path: /art/modeling/cage-meshes/
+          - title: Create cages in Blender
+            path: /art/modeling/cage-meshes/create-cages
+          - title: Apply deformation
+            path: /art/modeling/cage-meshes/apply-deformation
       - title: Blender / Maya export settings
         path: /art/modeling/export-requirements
 

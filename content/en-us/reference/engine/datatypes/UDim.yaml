@@ -9,7 +9,20 @@ summary: |
   an absolute offset.
 description: |
   The `Datatype.UDim` data type represents a one-dimensional value with two
-  components, a relative scale and an absolute offset in pixels.
+  components: a relative scale and an absolute offset in logical pixels. At
+  evaluation time, the engine computes the final pixel value as
+  `Scale * referenceMeasurement + Offset`, where the reference measurement is
+  typically the size of a parent `Class.GuiObject` along the corresponding axis.
+
+  UDim values appear individually in properties such as
+  `Class.UICorner.CornerRadius`, `Class.UIPadding.PaddingTop`, and
+  `Class.UIStroke.Thickness`, or paired as a `Datatype.UDim2` for
+  two-dimensional sizing and positioning.
+
+  ```lua
+  -- 50% of the parent plus 10 extra logical pixels
+  local dimension = UDim.new(0.5, 10)
+  ```
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -18,16 +31,30 @@ constructors:
     summary: |
       Returns a `Datatype.UDim` from the given components.
     description: |
-      Returns a `Datatype.UDim` from the given components.
+      Returns a new `Datatype.UDim` from the given `Scale` and `Offset`
+      components. Both parameters are optional and default to `0` when omitted;
+      calling `UDim.new()` with no arguments produces a UDim equivalent to
+      `UDim.new(0, 0)`.
+
+      ```lua
+      local fullScale = UDim.new(1, 0)    -- 100% of parent, no pixel offset
+      local fixedPixels = UDim.new(0, 200) -- 0% scale, 200 pixel offset
+      local mixed = UDim.new(0.5, 20)      -- 50% of parent plus 20 pixels
+      ```
     parameters:
       - name: Scale
         type: number
         default:
-        summary: ''
+        summary: |
+          The relative scale component, expressed as a fraction of the reference
+          measurement (for example, `0.5` for 50% of the parent size along the
+          corresponding axis). Defaults to `0`.
       - name: Offset
         type: number
         default:
-        summary: ''
+        summary: |
+          The absolute pixel offset added after the scale is applied. Stored as
+          an integer. Defaults to `0`.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -38,7 +65,12 @@ properties:
     summary: |
       The relative scale component of the `Datatype.UDim`.
     description: |
-      The relative scale component of the `Datatype.UDim`.
+      The relative scale component of the `Datatype.UDim`, expressed as a
+      fraction of a reference measurement (typically the corresponding axis of a
+      parent `Class.GuiObject`). A value of `1` represents the full reference
+      measurement, `0.5` represents half, and `0` means the scale contributes
+      nothing to the resolved pixel value. Defaults to `0` when not specified in
+      the constructor. This property is read-only.
     default:
     code_samples: []
     tags: []
@@ -48,7 +80,11 @@ properties:
     summary: |
       The absolute offset component of the `Datatype.UDim`.
     description: |
-      The absolute offset component of the `Datatype.UDim` in pixels.
+      The absolute offset component of the `Datatype.UDim` in pixels. This value
+      is added to the resolved scale portion (`Scale * referenceMeasurement`) to
+      produce the final pixel measurement. The offset is stored as an integer.
+      Defaults to `0` when not specified in the constructor. This property is
+      read-only.
     default:
     code_samples: []
     tags: []
@@ -62,8 +98,9 @@ math_operations:
       Produces a `Datatype.UDim` representing the sum of the two `Datatype.UDim`
       values.
     description: |
-      Produces a `Datatype.UDim` representing the sum of the two `Datatype.UDim`
-      values.
+      Produces a `Datatype.UDim` whose `Scale` is the sum of the two operands'
+      scales and whose `Offset` is the sum of their offsets. Each component is
+      added independently: `UDim.new(a.Scale + b.Scale, a.Offset + b.Offset)`.
     type_a: UDim
     type_b: UDim
     return_type: UDim
@@ -76,8 +113,10 @@ math_operations:
       Produces a `Datatype.UDim` representing the difference between the two
       `Datatype.UDim` values.
     description: |
-      Produces a `Datatype.UDim` representing the difference between the two
-      `Datatype.UDim` values.
+      Produces a `Datatype.UDim` whose `Scale` is the difference of the two
+      operands' scales and whose `Offset` is the difference of their offsets.
+      Each component is subtracted independently:
+      `UDim.new(a.Scale - b.Scale, a.Offset - b.Offset)`.
     type_a: UDim
     type_b: UDim
     return_type: UDim

@@ -9,10 +9,7 @@ summary: |
   immersive ad UI overlay of an `Class.AdGui`.
 description: |
   Describes the type of user-interaction or system event that occurred on the
-  immersive ad UI overlay of an `Class.AdGui`. These values are passed to
-  `HandleLuaUIEvent()` to notify the engine of player actions on ad playback
-  controls (play, pause, volume, fullscreen, close) or programmatic state
-  changes (play/pause triggered by the system).
+  immersive ad UI overlay of an `Class.AdGui`.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -70,8 +67,8 @@ items:
     deprecation_message: ''
   - name: PlayEventTriggered
     summary: |
-      A system-initiated play/resume event that clears the force-pause state set
-      by `PauseEventTriggered` and resumes video playback if the stream is open.
+      A system-initiated play/resume event that clears the force-pause state and
+      resumes video playback if the stream is open.
     value: 7
     tags: []
     deprecation_message: ''
@@ -80,7 +77,7 @@ items:
       A system-initiated pause event, used when the engine needs to force-pause
       the video (for example, when a dropdown menu opens over the ad). Prevents
       viewability-based auto-play from resuming playback until a corresponding
-      `PlayEventTriggered` clears that pause.
+      system event clears that pause.
     value: 8
     tags: []
     deprecation_message: ''

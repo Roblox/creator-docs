@@ -24,6 +24,10 @@ For more information, see [Chat window](./chat-window.md) and [Bubble chat](./bu
 	If `Class.TextChatService.CreateDefaultTextChannels` is set to `true`, the service automatically creates two text channels, `RBXGeneral` and `RBXSystem`. You can manually create additional `Class.TextChannel` instances and parent them to `Class.TextChatService`, as well.
 	</Alert>
 
+  <Alert severity="warning">
+	Having multiple `Class.TextChannel|TextChannels` with the same name can cause unintended behavior with the default [chat window](../chat/chat-window.md).
+	</Alert>
+
 - `Class.TextSource` — A user in a `Class.TextChannel`. Text sources are directly parented to the `Class.TextChannel` when `Class.TextChannel:AddUserAsync()|AddUserAsync()` is called. Text sources contains detailed permissions of a user in the channel, such as their ability to send messages. If a single user is in multiple text channels, they are associated with multiple text sources.
 
 - `Class.TextChatMessage` — A message in a text channel. Chat messages contain basic information such as the sender of the message, the original message, the filtered message, and the creation timestamp.

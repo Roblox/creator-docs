@@ -4,39 +4,44 @@
 
 name: SubscriptionExpirationReason
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the reason a user's subscription has expired.
+description: |
+  `Enum.SubscriptionExpirationReason` describes why a subscription entered the
+  `Enum.SubscriptionState.Expired|Expired` state. It appears under the
+  `ExpirationReason` key in the `ExpirationDetails` table returned by
+  `Class.MarketplaceService:GetUserSubscriptionDetailsAsync()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: ProductInactive
     summary: |
-      Subscription product is inactive.
+      The subscription product is inactive.
     value: 0
     tags: []
     deprecation_message: ''
   - name: ProductDeleted
     summary: |
-      Subscription product has been deleted.
+      The subscription product was deleted.
     value: 1
     tags: []
     deprecation_message: ''
   - name: SubscriberCancelled
     summary: |
-      Subscriber has cancelled the subscription.
+      The subscriber cancelled the subscription.
     value: 2
     tags: []
     deprecation_message: ''
   - name: SubscriberRefunded
     summary: |
-      Subscriber has been refunded.
+      The subscriber received a refund that ended the subscription.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Lapsed
     summary: |
-      Subscription has lapsed.
+      The subscription expired because payment lapsed.
     value: 4
     tags: []
     deprecation_message: ''

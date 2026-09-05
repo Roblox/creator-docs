@@ -4,24 +4,38 @@
 
 name: BenefitType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates the type of virtual benefit granted to a user when they purchase a
+  commerce product through `Class.CommerceService`.
+description: |
+  The `BenefitType` enum classifies the virtual items that a user receives as
+  part of a `Class.CommerceService` commerce product purchase. Each benefit
+  entry returned by `Class.CommerceService:GetCommerceProductInfoAsync()`
+  includes a `BenefitType` field that identifies whether the granted item is a
+  developer product, an individual avatar asset, or an avatar bundle.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: DeveloperProduct
-    summary: ''
+    summary: |
+      The benefit is a developer product whose receipt is delivered through
+      `Class.MarketplaceService:BindReceiptHandler()` upon purchase of a
+      commerce product.
     value: 0
     tags: []
     deprecation_message: ''
   - name: AvatarAsset
-    summary: ''
+    summary: |
+      The benefit is a single avatar asset granted to the user's inventory upon
+      purchase of a commerce product.
     value: 1
     tags: []
     deprecation_message: ''
   - name: AvatarBundle
-    summary: ''
+    summary: |
+      The benefit is an avatar bundle granted to the user's inventory upon
+      purchase of a commerce product.
     value: 2
     tags: []
     deprecation_message: ''

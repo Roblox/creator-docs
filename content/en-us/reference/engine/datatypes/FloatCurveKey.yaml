@@ -50,7 +50,9 @@ constructors:
       - name: Interpolation
         type: KeyInterpolationMode
         default:
-        summary: ''
+        summary: |
+          The interpolation mode for the curve segment starting at this key.
+          Defaults to `Enum.KeyInterpolationMode|Cubic` when omitted.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -62,8 +64,24 @@ properties:
       The key interpolation mode for the segment started by this
       `Datatype.FloatCurveKey`.
     description: |
-      Defines this key interpolation mode for the segment started by this
-      `Datatype.FloatCurveKey`.
+      Specifies the interpolation mode used for the curve segment that begins at
+      this key and ends at the next key on the `Class.FloatCurve`. Each segment
+      of the curve can use a different interpolation mode. The default value is
+      `Enum.KeyInterpolationMode.Cubic`.
+
+      The available modes are:
+
+      - **Constant** — the segment holds the value of this key until the next
+        key.
+      - **Linear** — the segment linearly interpolates between this key's value
+        and the next key's value.
+      - **Cubic** — the segment uses a cubic Hermite spline defined by this
+        key's `Datatype.FloatCurveKey.RightTangent|RightTangent` and the next
+        key's `Datatype.FloatCurveKey.LeftTangent|LeftTangent`.
+
+      Changing this property to a non-cubic mode automatically clears the
+      `Datatype.FloatCurveKey.RightTangent|RightTangent` of this key, because
+      only cubic segments use a right tangent.
     default:
     code_samples: []
     tags: []
@@ -73,7 +91,10 @@ properties:
     summary: |
       The time position of this `Datatype.FloatCurveKey`.
     description: |
-      The time position of this `Datatype.FloatCurveKey`.
+      The time position of this `Datatype.FloatCurveKey` along the curve's
+      timeline. The default value is `0`. Keys within a `Class.FloatCurve` are
+      kept sorted in ascending time order; if you insert a key at a time that
+      already exists on the curve, the existing key at that time is replaced.
     default:
     code_samples: []
     tags: []
@@ -83,7 +104,11 @@ properties:
     summary: |
       The value of this `Datatype.FloatCurveKey`.
     description: |
-      The value of this `Datatype.FloatCurveKey`.
+      The numerical output value at this key's position on the curve. The
+      default value is `0`. When a `Class.FloatCurve` is sampled at this key's
+      `Datatype.FloatCurveKey.Time|Time`, the curve evaluates to this value
+      (subject to any interpolation with neighboring keys depending on the
+      sampling time).
     default:
     code_samples: []
     tags: []
@@ -93,7 +118,15 @@ properties:
     summary: |
       The tangent to the right of this `Datatype.FloatCurveKey`.
     description: |
-      The tangent to the right of this `Datatype.FloatCurveKey`.
+      The slope of the curve leaving this key toward the next key. The default
+      value is `nil`, which means the tangent is automatically computed (an
+      effective value of `0` is used during evaluation). This property can only
+      be set when `Datatype.FloatCurveKey.Interpolation|Interpolation` is
+      `Enum.KeyInterpolationMode.Cubic`; attempting to set it on a key with
+      Constant or Linear interpolation raises a runtime error. Pairing a
+      different RightTangent value on this key with a different
+      `Datatype.FloatCurveKey.LeftTangent|LeftTangent` value on the next key
+      creates a discontinuity in slope (a "corner") at the next key.
     default:
     code_samples: []
     tags: []
@@ -103,7 +136,13 @@ properties:
     summary: |
       The tangent to the left of this `Datatype.FloatCurveKey`.
     description: |
-      The tangent to the left of this `Datatype.FloatCurveKey`.
+      The slope of the curve arriving at this key from the previous key. The
+      default value is `nil`, which means the tangent is automatically computed
+      (an effective value of `0` is used during evaluation). Unlike
+      `Datatype.FloatCurveKey.RightTangent|RightTangent`, this property can be
+      set on a key with any interpolation mode, because the preceding segment
+      may itself use cubic interpolation and therefore needs a defined left
+      tangent at this endpoint.
     default:
     code_samples: []
     tags: []

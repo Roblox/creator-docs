@@ -4,9 +4,11 @@
 
 name: AnalyticsLogLevel
 type: enum
-summary: ''
+summary: |
+  Specifies the severity level of an analytics log event passed to
+  `Class.AnalyticsService:FireLogEvent()`.
 description: |
-  This enum is used as an argument in `Class.AnalyticsService.LogEvent` to
+  This enum is used as an argument in `Class.AnalyticsService:FireLogEvent()` to
   describe the error severity level.
 code_samples: []
 tags: []
@@ -26,7 +28,9 @@ items:
     tags: []
     deprecation_message: ''
   - name: Information
-    summary: ''
+    summary: |
+      Used for general informational messages that highlight progress or state
+      changes during normal operation.
     value: 2
     tags: []
     deprecation_message: ''

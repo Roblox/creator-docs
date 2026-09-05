@@ -42,6 +42,8 @@ navigation:
         path: /production/publishing/RTBF-and-creators
       - title: DMCA
         path: /production/publishing/dmca-guidelines
+      - title: EU DSA IP Reporting
+        path: /production/publishing/dsa-ip-reporting
       - title: Generative AI
         path: /generative-AI
       - title: AI data sharing

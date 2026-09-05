@@ -4,29 +4,45 @@
 
 name: CompletionAcceptanceBehavior
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how the Script Editor inserts or replaces text when an autocomplete
+  suggestion is accepted with Enter or Tab.
+description: |
+  Controls how the Script Editor treats existing text **after** the cursor when
+  you accept an autocomplete suggestion with Enter or Tab. Accepting a
+  completion always replaces the typed prefix **before** the cursor. The active
+  value is stored in `Class.Studio.AutocompleteAcceptanceBehavior`, which
+  defaults to `Enum.CompletionAcceptanceBehavior.InsertOnEnterReplaceOnTab`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Insert
-    summary: ''
+    summary: |
+      Accepting a completion with either Enter or Tab inserts the suggestion
+      without replacing existing text after the cursor.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Replace
-    summary: ''
+    summary: |
+      Accepting a completion with either Enter or Tab replaces existing text
+      after the cursor with the full suggestion text.
     value: 1
     tags: []
     deprecation_message: ''
   - name: ReplaceOnEnterInsertOnTab
-    summary: ''
+    summary: |
+      Pressing Enter replaces existing text after the cursor; pressing Tab
+      inserts without replacing text after the cursor.
     value: 2
     tags: []
     deprecation_message: ''
   - name: InsertOnEnterReplaceOnTab
-    summary: ''
+    summary: |
+      Pressing Enter inserts without replacing text after the cursor; pressing
+      Tab replaces text after the cursor. This is the default of
+      `Class.Studio.AutocompleteAcceptanceBehavior`.
     value: 3
     tags: []
     deprecation_message: ''

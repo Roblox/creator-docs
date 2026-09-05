@@ -4,34 +4,51 @@
 
 name: AdornShading
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines the shading material and render pass used to draw a handle
+  adornment.
+description: |
+  Used by the `Shading` property on handle adornments
+  (`Class.BoxHandleAdornment`, `Class.SphereHandleAdornment`,
+  `Class.CylinderHandleAdornment`, `Class.ConeHandleAdornment`,
+  `Class.PyramidHandleAdornment`) to control whether the adornment is drawn
+  unlit or lit by the scene, and whether it renders through occluding geometry
+  or on top of everything.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Draws the adornment unlit and occluded by scene geometry like an ordinary
+      world object.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Shaded
-    summary: ''
+    summary: |
+      Draws the adornment lit by scene lighting and occluded by scene geometry.
     value: 1
     tags: []
     deprecation_message: ''
   - name: XRay
-    summary: ''
+    summary: |
+      Draws the adornment unlit and visible through geometry that would
+      otherwise occlude it.
     value: 2
     tags: []
     deprecation_message: ''
   - name: XRayShaded
-    summary: ''
+    summary: |
+      Draws the adornment lit by scene lighting and visible through geometry
+      that would otherwise occlude it.
     value: 3
     tags: []
     deprecation_message: ''
   - name: AlwaysOnTop
-    summary: ''
+    summary: |
+      Draws the adornment unlit on top of all other geometry with no depth
+      testing.
     value: 4
     tags: []
     deprecation_message: ''

@@ -31,7 +31,7 @@ Genre, gameplay, and visual style are common factors in a player's decision to t
 While not necessary for consideration, it's recommended that your game:
 
 - Includes optimizations for both console and mobile devices.
-- Supports custom or [R15](../avatar/character-bodies/specifications.md#standard-rigs) rigs, [layered accessories](../avatar/layered-accessories/index.md), and [dynamic heads](../avatar/dynamic-heads/index.md).
+- Supports custom or [R15 rigs](../avatar/character-bodies/specifications.md#rigging), [layered accessories](../avatar/layered-accessories/index.md), and [dynamic heads](../avatar/dynamic-heads/index.md).
 - Uses [experience events](../production/promotion/experience-events.md) for regular updates and future events.
 </Alert>
 
