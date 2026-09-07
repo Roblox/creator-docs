@@ -105,33 +105,16 @@ export const getLinksOfTypeFromContentString = (
   text: string,
   linkType: LinkType
 ): LinkInfo[] => {
-  // Initialize an array to store the starting index of each line
-  // Line 1 starts at index 0
-  const newLineIndexes: number[] = [0];
   let lineNumber = 1;
-
-  // Loop through the text to find each newline character
-  // When you find a newline, store the starting index of the next line
-  for (let i = 0; i < text.length; i++) {
-    if (text[i] === '\n') {
-      newLineIndexes[lineNumber] = i + 1;
-      lineNumber++;
-    }
-  }
+  let nextNewline = text.indexOf('\n');
 
   const regex =
     linkType === LinkType.Asset ? ASSET_LINK_REGEX : PAGE_LINK_REGEX;
-  const matches = Array.from(text.matchAll(regex));
-
-  // Map through each match to create an array of LinkInfo objects
-  // For each match, find its line number and populate the object accordingly
-  const links: LinkInfo[] = matches.map((match) => {
-    // -1 represents "not found"
-    const index = match.index ?? -1;
-    let lineNumber = -1;
-    if (index !== -1) {
-      // Find the line number where the index of the match exists
-      lineNumber = newLineIndexes.findIndex((startIdx) => startIdx > index);
+  // Matches arrive in document order, so each newline only needs one visit.
+  const links: LinkInfo[] = Array.from(text.matchAll(regex), (match) => {
+    while (nextNewline !== -1 && nextNewline < match.index!) {
+      lineNumber++;
+      nextNewline = text.indexOf('\n', nextNewline + 1);
     }
     return {
       ref: match[1] || match[2] || match[3],

@@ -87,6 +87,30 @@ describe('isRobloxUrl', () => {
 });
 
 describe('getLinksOfTypeFromContentString', () => {
+  test.each([LinkType.Page, LinkType.Asset])(
+    'tracks line numbers across consecutive calls for link type %p',
+    (linkType) => {
+      const link =
+        linkType === LinkType.Page ? '[link](a.md)' : '![image](a.png)';
+      const ref = linkType === LinkType.Page ? 'a.md' : 'a.png';
+      for (const newline of ['\n', '\r\n']) {
+        const text = [link + link, '', link, link].join(newline);
+        for (const suffix of ['', newline]) {
+          expect(
+            getLinksOfTypeFromContentString(text + suffix, linkType)
+          ).toEqual([1, 1, 3, 4].map((lineNumber) => ({ ref, lineNumber })));
+        }
+      }
+      expect(getLinksOfTypeFromContentString(link, linkType)).toEqual([
+        { ref, lineNumber: 1 },
+      ]);
+      expect(getLinksOfTypeFromContentString('', linkType)).toEqual([]);
+      expect(
+        getLinksOfTypeFromContentString('No links\n here', linkType)
+      ).toEqual([]);
+    }
+  );
+
   const fileText = `---
 title: Great Title
 description: One sentence description of the page.
