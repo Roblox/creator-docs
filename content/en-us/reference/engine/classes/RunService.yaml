@@ -145,25 +145,6 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties:
-  - name: RunService.ClientGitHash
-    summary: ''
-    description: ''
-    code_samples: []
-    type: string
-    tags:
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities:
-      - Basic
   - name: RunService.RunState
     summary: |
       The current run state of the game's simulation.

@@ -5,35 +5,35 @@
 name: GradientTileMode
 type: enum
 summary: |
-  Controls how a `Class.UIGradient` tiles when its gradient sequence doesn't
-  span the full render area.
+  Used alongside `Class.UIGradient.TileMode` to set how the gradient repeats.
 description: |
-  `GradientTileMode` determines what happens when a `Class.UIGradient`'s
-  color/transparency sequence covers less than the full length of the UI element
-  it modifies. The default mode is `Enum.GradientTileMode.Clamp`, which is also
-  the default value of `Class.UIGradient.TileMode`.
+  Used alongside `Class.UIGradient.TileMode` to set how the gradient repeats
+  when the full sequence does not fully cover the parent `Class.GuiObject`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Clamp
     summary: |
-      Extends the gradient's terminal colors beyond the defined sequence range
-      without repeating.
+      Default mode where the color/transparency values at the start and end of
+      the sequence extend infinitely, so the start values fill any area before
+      the gradient and the end values fill any area after it.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Repeat
     summary: |
-      Repeats the gradient sequence from the start each time it reaches the end,
-      producing a tiled pattern.
+      The gradient repeats by wrapping the color/transparency sequence tiles
+      seamlessly from end back to start. This can produce a visible seam if the
+      first and last color/transparency values in the sequence differ.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Mirror
     summary: |
-      Repeats the gradient by reversing direction with each tile, producing a
-      mirrored pattern.
+      The gradient reflects at each boundary so the color/transparency sequence
+      ping-pongs. This produces a smooth repetition with no seam, since the
+      direction reverses at each tile edge.
     value: 2
     tags: []
     deprecation_message: ''

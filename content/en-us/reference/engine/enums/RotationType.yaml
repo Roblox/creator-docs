@@ -4,19 +4,32 @@
 
 name: RotationType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how a player character's body rotation is determined — relative to
+  the camera direction or relative to the movement direction.
+description: |
+  `RotationType` is used by `Class.UserGameSettings.RotationType` to specify how
+  the local player's character orients its body. With
+  `Enum.RotationType.MovementRelative` (the default), the character turns to
+  face whichever direction it is moving. With
+  `Enum.RotationType.CameraRelative`, the character's body continuously aligns
+  with the camera's look direction, enabling first-person-style aiming where the
+  character faces wherever the player is looking regardless of movement
+  direction.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: MovementRelative
-    summary: ''
+    summary: |
+      The character's body rotation follows the direction of movement.
     value: 0
     tags: []
     deprecation_message: ''
   - name: CameraRelative
-    summary: ''
+    summary: |
+      The character's body rotation continuously follows the camera's look
+      direction.
     value: 1
     tags: []
     deprecation_message: ''

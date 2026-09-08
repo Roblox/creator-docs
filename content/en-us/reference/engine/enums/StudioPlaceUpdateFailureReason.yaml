@@ -4,19 +4,26 @@
 
 name: StudioPlaceUpdateFailureReason
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes why a place publish or update operation failed in Roblox Studio.
+description: |
+  Describes why a place publish or update operation failed in Roblox Studio.
+  This enum is passed as the `reason` parameter of the `GamePublishFinished`
+  event when `success` is `false`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Other
-    summary: ''
+    summary: |
+      The place publish or update failed for an unspecified or generic reason.
     value: 0
     tags: []
     deprecation_message: ''
   - name: TeamCreateConflict
-    summary: ''
+    summary: |
+      The place publish failed because a Team Create server currently holds a
+      lock on the place.
     value: 1
     tags: []
     deprecation_message: ''

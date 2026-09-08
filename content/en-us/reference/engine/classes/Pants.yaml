@@ -69,13 +69,12 @@ properties:
       - AvatarAppearance
   - name: Pants.PantsTemplateContent
     summary: |
-      A `Datatype.Content` property that references the pants texture image,
-      supporting asset URIs and `Class.EditableImage` objects.
+      Specifies the asset URI of the pants texture.
     description: |
-      Holds the pants texture as a `Datatype.Content` value. Supports
-      [asset URIs](../../../projects/assets/index.md#asset-uris) and
-      `Class.EditableImage` objects, unlike legacy `Class.Pants.PantsTemplate`,
-      which only accepts string-based asset IDs.
+      Specifies the pants texture using an
+      [asset URI](../../../projects/assets/index.md#asset-uris). Although this
+      property uses Datatype.Content, it does not support `Class.EditableImage`
+      objects.
 
       Setting either `PantsTemplateContent` or `Class.Pants.PantsTemplate`
       updates the other; both reflect the same texture.

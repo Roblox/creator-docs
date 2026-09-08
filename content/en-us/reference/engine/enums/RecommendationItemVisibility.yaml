@@ -4,19 +4,30 @@
 
 name: RecommendationItemVisibility
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether a registered recommendation item is publicly discoverable or
+  restricted to private access.
+description: |
+  Controls whether a recommendation item registered via
+  `Class.RecommendationService:RegisterItemAsync()` or updated via
+  `Class.RecommendationService:UpdateItemAsync()` is publicly discoverable by
+  the recommendation system or kept private. Pass the desired value in the
+  `Visibility` field of the request dictionary.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Private
-    summary: ''
+    summary: |
+      The recommendation item is not surfaced to other players by the
+      recommendation system.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Public
-    summary: ''
+    summary: |
+      The recommendation item is discoverable and may be surfaced to other
+      players by the recommendation system.
     value: 1
     tags: []
     deprecation_message: ''

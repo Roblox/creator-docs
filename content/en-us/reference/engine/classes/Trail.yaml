@@ -398,6 +398,42 @@ properties:
       can_save: true
     capabilities:
       - Basic
+  - name: Trail.TextureContent
+    summary: |
+      The texture displayed on the trail. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris).
+    description: |
+      The texture displayed on the trail. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris).
+
+      This property is the `Datatype.Content` equivalent of
+      `Class.Trail.Texture|Texture`. Assigning `TextureContent` updates
+      `Texture`.
+
+      If this property is set to `Datatype.Content.none`, the trail displays as
+      a solid plane colored by its `Class.Trail.Color|Color` property. The
+      appearance of the texture can be further modified by
+      `Class.Trail.Color|Color` and `Class.Trail.Transparency|Transparency`.
+      Scaling of the texture is determined by the distance between
+      `Class.Trail.Attachment0|Attachment0` and
+      `Class.Trail.Attachment1|Attachment1`, as well as
+      `Class.Trail.TextureMode|TextureMode`,
+      `Class.Trail.TextureLength|TextureLength`, and
+      `Class.Trail.WidthScale|WidthScale`.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
   - name: Trail.TextureLength
     summary: |
       Sets the length of the trail's texture, dependent on

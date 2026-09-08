@@ -237,7 +237,7 @@ Publishing to a **Public** audience or **Limited** audience (playtesters, friend
 To reach **16+** and **Trusted Friends**:
 
 - Have an account that is in good standing and at least 2 days old.
-- Complete an age check through [facial age estimation](https://about.roblox.com/age-estimation), [phone number](./account-verification.md#verify-through-phone-number), or [government ID](./account-verification.md#verify-through-government-id).
+- Complete an age check through [facial age estimation](https://about.roblox.com/age-estimation) or [government ID](./account-verification.md#verify-through-government-id).
 - Complete the [content maturity & compliance](../promotion/content-maturity.md) questionnaire.
 
 To reach **all ages** including [Roblox Kids and Select](./kids-and-select.md), you must meet all of the previous requirements **plus**:

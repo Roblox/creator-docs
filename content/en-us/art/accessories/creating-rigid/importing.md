@@ -13,27 +13,24 @@ Studio's Importer provides a quick and easy way to import third-party 3D `.fbx` 
 
 To import your asset ([downloadable reference](../../../assets/art/accessories/creating-rigid/Chest-Texturing-Complete.fbx)):
 
-1. From Studio's **File** menu, select **Importer**.
-2. In the file browser, select the `.fbx` file saved locally. The Importer loads a preview of the object.
-   1. If textures don't load for your asset, continue to the next step and add textures manually later.
-3. Select **Import**.
-   1. The asset populates in your workspace as a `Class.Model` that contains a `Class.MeshPart` with the appropriate textures applied as a `Class.MeshPart.TextureID`.
-   2. If textures were not imported correctly, follow the instructions below to add the file manually.
+1. In the **Home** tab, click the **Import** button to open the Importer. A file browser opens.
+1. Select your rigid accessory's `.fbx` or `.gltf` file. The Importer loads a preview of the rigid accessory.
+1. Select **Import**. The asset populates in your workspace as a `Class.Model` with the appropriate textures applied as a `Class.MeshPart.TextureID`.
 
 <BaseAccordion>
-<AccordionSummary>Add textures manually</AccordionSummary>
+<AccordionSummary>Textures didn't load correctly?</AccordionSummary>
 <AccordionDetails>
 
-If textures didn't load correctly, add them manually. You may need to save and publish your game in order to access the [Asset Manager](../../../projects/assets/manager.md).
+If your textures didn't load correctly, you can import them manually using the [Asset Manager](../../../projects/assets/manager.md):
 
-1.  In the **Asset Manager**, click the **Import** button.
-2.  Upload your image file.
-3.  After moderation clears for your image, select the `Class.MeshPart` parented within your imported `Class.Model`.
-4.  In the **TextureID** property, select the value field and add the asset ID of the texture image.
+1. In the **Asset Manager**, click the **Import** button. If you are unable to access the Asset Manager, save and publish your game first.
+1. Upload your image file.
+1. After moderation clears your image, select the `Class.MeshPart` parented within your imported `Class.Model`.
+1. In the **TextureID** property, select the value field and add the asset ID of the texture image.
 
 </AccordionDetails>
 </BaseAccordion>
 
 <Alert severity = 'success'>
-After successful import, your model object should populate in your project as a `Class.Model` with the appropriate textures applied. See [Importer](../../../studio/importer.md) for additional information on import settings and troubleshooting.
+After successful import, your model object populates in your project as a `Class.Model` with the appropriate textures applied. See [Importer](../../../studio/importer.md) for additional information on import settings and troubleshooting.
 </Alert>

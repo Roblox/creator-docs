@@ -4,8 +4,14 @@
 
 name: TonemapperPreset
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls which tone-mapping algorithm `Class.ColorGradingEffect` applies to
+  the rendered scene.
+description: |
+  Controls which tone-mapping algorithm `Class.ColorGradingEffect` applies to
+  the rendered scene. Assign one of these values to
+  `Class.ColorGradingEffect.TonemapperPreset` to choose between the current
+  Roblox visual style and the legacy pre-2019 appearance.
 code_samples: []
 tags: []
 deprecation_message: ''

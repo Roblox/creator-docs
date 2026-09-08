@@ -147,7 +147,7 @@ The remainder of this tutorial uses a pre-made model. This model includes parts 
    end
    ```
 
-3. Playtest the experigameence to confirm that when the player touches a collectable, it both disappears and plays a sound.
+3. Playtest the game to confirm that when the player touches a collectable, it both disappears and plays a sound.
 
    <video controls muted>
    <source src="../../../assets/tutorials/in-game-sounds/ingameSounds-collectables.mp4" />

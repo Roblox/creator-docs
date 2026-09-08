@@ -5,22 +5,27 @@
 name: OutputLayoutMode
 type: enum
 summary: |
-  Sets the layout mode of the output.
+  Specifies the orientation of the Output panel in Roblox Studio.
 description: |
-  Sets the layout mode of the output.
+  `OutputLayoutMode` controls how the Output panel is oriented and docked within
+  the Roblox Studio window. The selected value is exposed through the
+  `Output Layout Mode` property on the `Class.Studio` settings object. Defaults
+  to `Enum.OutputLayoutMode.Vertical`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Horizontal
     summary: |
-      The output layout is horizontal (x-axis).
+      Docks the Output panel horizontally along the top or bottom edge of the
+      Studio window.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Vertical
     summary: |
-      The output layout is vertical (y-axis).
+      Docks the Output panel vertically along the left or right edge of the
+      Studio window.
     value: 1
     tags: []
     deprecation_message: ''

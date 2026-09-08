@@ -1031,7 +1031,8 @@ methods:
       - name: faceId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Stable ID of the face for which to find adjacent faces.
     returns:
       - type: Array
         summary: |
@@ -1201,8 +1202,11 @@ methods:
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetCenter
-    summary: ''
-    description: ''
+    summary: |
+      Returns the center of the mesh's axis-aligned bounding box in local space.
+    description: |
+      Returns the center of the `EditableMesh` bounding box in the mesh's local
+      object space.
     code_samples: []
     parameters: []
     returns:
@@ -1474,7 +1478,8 @@ methods:
       - name: faceId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Stable ID of the face for which to get vertex IDs.
     returns:
       - type: Array
         summary: |
@@ -1642,8 +1647,11 @@ methods:
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:GetSize
-    summary: ''
-    description: ''
+    summary: |
+      Returns the size of the mesh's axis-aligned bounding box in local space.
+    description: |
+      Returns the size of the `EditableMesh` bounding box in the mesh's local
+      object space.
     code_samples: []
     parameters: []
     returns:
@@ -2081,7 +2089,8 @@ methods:
     capabilities:
       - DynamicGeneration
   - name: EditableMesh:RaycastLocal
-    summary: ''
+    summary: |
+      Casts a ray against the mesh in local object space.
     description: |
       Casts a ray and returns a point of intersection, face ID, and barycentric
       coordinates. The inputs and outputs of this method are in the mesh's local
@@ -2125,7 +2134,8 @@ methods:
       - name: boneId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Stable ID of the bone to remove.
     returns:
       - type: ()
         summary: ''
@@ -2145,7 +2155,8 @@ methods:
       - name: faceId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Stable ID of the face to remove.
     returns:
       - type: ()
         summary: ''

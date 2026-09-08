@@ -6,7 +6,7 @@ prev: /art/characters/creating/final-checks
 ---
 
 <Alert severity = 'warning'>
-It's important to test your assets multiple times at every point of the asset creation process, whether it is within Blender or after importing into Studio. For more information, see [Test characters](../../../art/characters/testing/index.md).
+It's important to test your assets multiple times at every point of the asset creation process, whether it is within Blender or after importing into Studio. For more information, see [Test character bodies](../../../avatar/character-bodies/test.md).
 </Alert>
 
 Whether you are exporting your character for testing, or are performing a final export out of Blender, you must apply the appropriate export settings to ensure that Blender exports the proper character data.

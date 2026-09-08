@@ -148,12 +148,16 @@ items:
     tags: []
     deprecation_message: ''
   - name: GeometryCSG
-    summary: ''
+    summary: |
+      Geometry mesh data for CSG objects such as `Class.UnionOperation` and
+      `Class.PartOperation`.
     value: 24
     tags: []
     deprecation_message: ''
   - name: GraphicsSlimModels
-    summary: ''
+    summary: |
+      Rendering memory for SLIM (streamed level-of-detail instance mesh) model
+      data.
     value: 25
     tags: []
     deprecation_message: ''

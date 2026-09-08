@@ -4,22 +4,32 @@
 
 name: UITheme
 type: enum
-summary: ''
-description: ''
+summary: |
+  Deprecated Studio UI color theme (`Light` or `Dark`).
+description: |
+  A deprecated enum that previously represented the Studio UI color theme. It
+  was exposed through the `UI_Theme` property (also deprecated) and contained
+  `Enum.UITheme.Light` and `Enum.UITheme.Dark`. The enum is retained only for
+  backward compatibility with existing plugins that reference it; it has no
+  effect. Use `Class.Studio.Theme` to read or set the current
+  `Class.StudioTheme`.
 code_samples: []
 tags: []
 deprecation_message: |
   This enum refers to a deprecated setting and should not be used for new work.
+  Use `Class.Studio.Theme` (`Class.StudioTheme`) instead.
 items:
   - name: Light
-    summary: ''
+    summary: |
+      The light Studio UI color theme. Deprecated; has no effect.
     value: 0
     tags:
       - Deprecated
     deprecation_message: |
       This option is deprecated.
   - name: Dark
-    summary: ''
+    summary: |
+      The dark Studio UI color theme. Deprecated; has no effect.
     value: 1
     tags:
       - Deprecated

@@ -775,7 +775,8 @@ methods:
     parameters: []
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The camera's current Y-axis inversion multiplier.
     tags: []
     deprecation_message: ''
     security: None
@@ -824,7 +825,8 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Whether the user's Roblox window is in full screen mode.
     tags: []
     deprecation_message: ''
     security: None
@@ -840,7 +842,8 @@ methods:
     parameters: []
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Whether the current client session is running in Roblox Studio.
     tags: []
     deprecation_message: ''
     security: None
@@ -933,7 +936,8 @@ events:
       - name: isFullscreen
         type: boolean
         default:
-        summary: ''
+        summary: |
+          Whether the user's Roblox window is now in full screen mode.
     tags: []
     deprecation_message: ''
     security: None
@@ -950,7 +954,8 @@ events:
       - name: isStudioMode
         type: boolean
         default:
-        summary: ''
+        summary: |
+          Whether the client session is now running in Roblox Studio.
     tags: []
     deprecation_message: ''
     security: None

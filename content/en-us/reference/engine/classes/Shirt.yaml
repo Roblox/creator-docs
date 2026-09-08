@@ -68,14 +68,12 @@ properties:
       - AvatarAppearance
   - name: Shirt.ShirtTemplateContent
     summary: |
-      A `Datatype.Content` property that references the shirt texture image,
-      supporting asset URIs and `Class.EditableImage` objects.
+      Specifies the asset URI of the shirt texture.
     description: |
-      Holds the shirt texture as a `Datatype.Content` value. It supports
-      [asset URIs](../../../projects/assets/index.md#asset-uris) and
-      `Class.EditableImage` objects, unlike the legacy
-      `Class.Shirt.ShirtTemplate` property which only accepts string-based asset
-      IDs.
+      Specifies the shirt texture using an
+      [asset URI](../../../projects/assets/index.md#asset-uris). Although this
+      property uses Datatype.Content, it does not support `Class.EditableImage`
+      objects.
 
       Setting `ShirtTemplateContent` updates `Class.Shirt.ShirtTemplate`;
       likewise, setting `ShirtTemplate` updates this property. Both share the

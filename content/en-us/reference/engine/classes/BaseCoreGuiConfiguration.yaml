@@ -5,8 +5,19 @@
 name: BaseCoreGuiConfiguration
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Base class for the configuration objects that control individual built-in
+  `Class.CoreGui` elements.
+description: |
+  `Class.BaseCoreGuiConfiguration` is the base class inherited by the
+  per-element configuration objects that control Roblox's built-in
+  `Class.CoreGui` elements: `Class.PlayerListConfiguration`,
+  `Class.SelfViewConfiguration`, and `Class.CapturesViewConfiguration`. Each of
+  these concrete configuration objects is created automatically as a child of
+  the `Class.CoreGuiConfiguration` service.
+
+  It defines the shared `Class.BaseCoreGuiConfiguration.Enabled|Enabled`
+  property that toggles whether the corresponding core GUI element is enabled.
 code_samples: []
 inherits:
   - Instance
@@ -20,8 +31,17 @@ tags:
 deprecation_message: ''
 properties:
   - name: BaseCoreGuiConfiguration.Enabled
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether the built-in `Class.CoreGui` element controlled by this
+      configuration object is enabled.
+    description: |
+      When `true`, the built-in `Class.CoreGui` element associated with the
+      inheriting configuration object is enabled; when `false`, that element is
+      disabled. Enabled is not the same as currently shown. Defaults to `true`.
+
+      Each concrete subclass — `Class.PlayerListConfiguration`,
+      `Class.SelfViewConfiguration`, and `Class.CapturesViewConfiguration` —
+      inherits this property to toggle its respective element.
     code_samples: []
     type: boolean
     tags: []

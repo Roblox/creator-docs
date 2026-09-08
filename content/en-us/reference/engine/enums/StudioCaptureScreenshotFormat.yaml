@@ -4,19 +4,31 @@
 
 name: StudioCaptureScreenshotFormat
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the pixel format of the image buffer stored in a
+  `Class.StudioScreenshotCapture` object.
+description: |
+  Specifies the pixel format used when
+  `Class.StudioCaptureService:CaptureScreenshot()` stores the captured image.
+  Pass this value as the `Format` key in the options table to
+  `Class.StudioCaptureService:CaptureScreenshot()`; it is then reflected as the
+  read-only `Class.StudioScreenshotCapture.BufferFormat` property. When `Format`
+  is omitted, the capture defaults to
+  `Enum.StudioCaptureScreenshotFormat.RGBA8`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: RGBA8
-    summary: ''
+    summary: |
+      The buffer contains raw, uncompressed RGBA pixel data with 8 bits per
+      channel (4 bytes per pixel).
     value: 0
     tags: []
     deprecation_message: ''
   - name: PNG
-    summary: ''
+    summary: |
+      The buffer contains a complete PNG-encoded image.
     value: 1
     tags: []
     deprecation_message: ''

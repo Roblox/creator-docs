@@ -3,6 +3,11 @@
 **output/
 **dist/
 
+# Frozen forum-doc-eval question sets. These are the benchmark's instrument and
+# are persisted on the forum-doc-eval/state branch, not here; a copy committed to
+# the repository would shadow the restored one and silently split the benchmark.
+/tools/forum-doc-eval/questions/
+
 # Files
 .DS_Store
 **.env

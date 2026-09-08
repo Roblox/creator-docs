@@ -4,8 +4,18 @@
 
 name: RecommendationImpressionType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the outcome of rendering a recommended item, passed to
+  `Class.RecommendationService:LogImpressionEvent()` to indicate whether the
+  item was shown to the user.
+description: |
+  `RecommendationImpressionType` is used as the `impressionType` argument to
+  `Class.RecommendationService:LogImpressionEvent()`. It tells the Roblox
+  recommendation backend whether a given item was successfully rendered on the
+  client (`Enum.RecommendationImpressionType.View`) or whether a rendering error
+  prevented the user from seeing it
+  (`Enum.RecommendationImpressionType.NotViewable`). The backend uses
+  `NotViewable` as a negative signal when ranking future recommendations.
 code_samples: []
 tags: []
 deprecation_message: ''

@@ -7,9 +7,13 @@ type: enum
 summary: |
   Thread pooling scheme for the task scheduler.
 description: |
-  Controls the thread pooling scheme of the underlying 'TaskScheduler'.
+  Controls the thread pooling scheme used by `Class.TaskScheduler`. The selected
+  value determines how many worker threads the task scheduler allocates for
+  background work. `Class.TaskScheduler.ThreadPoolConfig` defaults to `Auto`.
 
-  See TaskScheduler for details.
+  The `PerCore` variants scale the thread count with the number of physical CPU
+  cores reported by the operating system. The `Threads` variants use an absolute
+  count regardless of hardware. `Auto` lets the scheduler choose internally.
 code_samples: []
 tags: []
 deprecation_message: ''

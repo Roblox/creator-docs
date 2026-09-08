@@ -5,7 +5,8 @@
 name: Studio
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  Represents Roblox Studio's script editor settings.
 description: |
   The Studio object is a settings object that is exclusive to Roblox Studio. It
   can be found in Roblox Studio's settings under the Studio tab.
@@ -118,25 +119,6 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
-  - name: Studio.ActionOnAutoResumeSync
-    summary: |
-      Sets the action Studio takes when auto-resuming file sync.
-    description: |
-      Sets the action Studio takes when auto-resuming file sync. This must be
-      set in Studio Settings > Studio tab.
-    code_samples: []
-    type: ActionOnAutoResumeSync
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Directories
-    serialization:
-      can_load: true
-      can_save: true
     capabilities: []
   - name: Studio.ActionOnStopSync
     summary: |

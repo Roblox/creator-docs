@@ -4,24 +4,43 @@
 
 name: ParticleFlipbookTextureCompatible
 type: enum
-summary: ''
-description: ''
+summary: |
+  Indicates whether a `Class.ParticleEmitter`'s flipbook texture dimensions are
+  compatible with the selected flipbook layout.
+description: |
+  Describes runtime compatibility between a `Class.ParticleEmitter`'s texture
+  and its `Class.ParticleEmitter.FlipbookLayout|FlipbookLayout`. Flipbook
+  playback requires a 1024×1024 texture; if the texture does not meet this
+  requirement, the engine sets
+  `Enum.ParticleFlipbookTextureCompatible.NotCompatible` and disables flipbook
+  playback. The value begins as `Enum.ParticleFlipbookTextureCompatible.Unknown`
+  and transitions to `Enum.ParticleFlipbookTextureCompatible.Compatible` or
+  `Enum.ParticleFlipbookTextureCompatible.NotCompatible` once texture dimensions
+  are resolved. Set automatically by the engine; not writable from scripts.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: NotCompatible
-    summary: ''
+    summary: |
+      The `Class.ParticleEmitter`'s flipbook texture dimensions are incompatible
+      with the active flipbook layout (the texture must be 1024×1024); flipbook
+      playback is suppressed.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Compatible
-    summary: ''
+    summary: |
+      The `Class.ParticleEmitter`'s flipbook texture dimensions are confirmed
+      compatible with the active flipbook layout; flipbook playback proceeds
+      normally.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Unknown
-    summary: ''
+    summary: |
+      Compatibility has not yet been determined; this is the initial state
+      before the engine resolves the flipbook texture dimensions.
     value: 2
     tags: []
     deprecation_message: ''

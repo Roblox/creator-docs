@@ -5,7 +5,9 @@
 name: VehicleController
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  An object responsible for translating a seated player's directional input into
+  throttle and steering for a `Class.VehicleSeat`.
 description: |
   A VehicleController is an object responsible for translating
   `Enum.PlayerActions` to movements with a `Class.VehicleSeat`.

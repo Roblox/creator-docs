@@ -176,7 +176,7 @@ The **Accessories** tab contains settings related to accessories in your game.
   </tr>
   <tr>
     <td>**Accessory Behaviors**</td>
-    <td>Controls to enable/disable accessory behaviors like **VFX** and **Sound**.</td>
+    <td>Controls to enable/disable accessory behaviors like **VFX**, **Sound**, and **Emissives**.</td>
   </tr>
 </tbody>
 </table>

@@ -5,7 +5,8 @@
 name: CornerWedgePart
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A type of `Class.BasePart` that has a corner wedge shape.
 description: |
   This is a corner piece which has the same properties as a `Class.Part`.
 code_samples: []

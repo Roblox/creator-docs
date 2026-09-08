@@ -22,13 +22,15 @@ items:
     deprecation_message: ''
   - name: Disabled
     summary: |
-      Retargeting disabled.
+      Animation retargeting is off; animations play exactly as authored without
+      adapting joint transforms to the character's body proportions.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
     summary: |
-      Retargeting enabled.
+      Animation retargeting is always active; the Animator adapts animations to
+      the character's body proportions regardless of the platform default.
     value: 2
     tags: []
     deprecation_message: ''

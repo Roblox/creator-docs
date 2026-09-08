@@ -240,7 +240,7 @@ properties:
       have unintended consequences.
 
       For more information, see
-      [Scripting the Camera](../../../workspace/camera.md#scripting-the-camera).
+      [Script the camera](../../../workspace/camera/index.md#script-the-camera).
     code_samples: []
     type: Camera
     tags:
@@ -505,14 +505,12 @@ properties:
     capabilities: []
   - name: Workspace.ImprovedAnimationConstraint
     summary: |
-      Controls whether `Class.AnimationConstraint|AnimationConstraints` use the
-      improved soft-formulation controller.
+      Controls whether improved behavior is enabled for
+      `Class.AnimationConstraint|AnimationConstraints`.
     description: |
-      Controls whether `Class.AnimationConstraint|AnimationConstraints` drive
-      their target using an improved soft controller based on strength and
-      damping instead of the legacy proportional-derivative controller.
-
-      `Enum.RolloutState|Default` follows the current engine-wide rollout state.
+      When enabled, `Class.AnimationConstraint|AnimationConstraints` use
+      separate strength and damping settings for linear and angular motion.
+      `Enum.RolloutState|Default` follows the default for this feature.
     code_samples: []
     type: RolloutState
     tags:
@@ -532,13 +530,8 @@ properties:
       Controls whether the experience uses the improved physics replication path
       between the server and clients.
     description: |
-      Controls whether physics uses the improved state replication path when
-      sending physics state between the server and clients. When set to
-      `Enum.RolloutState|Enabled`, the server advertises this configuration so
-      connected clients enable the improved path. Setting it to
-      `Enum.RolloutState|Disabled` opts the place out.
-
-      `Enum.RolloutState|Default` follows the current engine-wide rollout state.
+      When enabled, the experience uses the improved physics replication path.
+      `Enum.RolloutState|Default` follows the default for this feature.
     code_samples: []
     type: RolloutState
     tags:
@@ -575,8 +568,12 @@ properties:
       can_save: false
     capabilities: []
   - name: Workspace.InterpolationThrottling
-    summary: ''
-    description: ''
+    summary: |
+      Deprecated setting that configured the interpolation throttling mode; it
+      no longer takes effect.
+    description: |
+      This property has `Physics` read security and `Plugin` write security. It
+      is hidden in the Studio Properties window. Do not use it for new work.
     code_samples: []
     type: InterpolationThrottlingMode
     tags:
@@ -866,16 +863,12 @@ properties:
     capabilities: []
   - name: Workspace.PredictiveStreamingMode
     summary: |
-      Controls whether the engine makes instance streaming decisions.
-      predictively.
+      Controls whether the engine can make predictive streaming decisions.
     description: |
-      Determines whether the engine streams instances predictively, pre-fetching
-      content the player is likely to need soon (such as along pathfinding
-      routes and near spawn locations) rather than streaming based only on the
-      player's current position. `Enum.PredictiveStreamingMode|Enabled` allows
-      the engine to make streaming decisions predictively, while
-      `Enum.PredictiveStreamingMode|Disabled` turns it off.
-      `Enum.PredictiveStreamingMode|Default` currently behaves the same as
+      When enabled, the engine can prepare content for anticipated changes to a
+      player's replication focus. This includes movement along likely paths,
+      predicted spawn locations, and large changes in focus position.
+      `Enum.PredictiveStreamingMode|Default` currently behaves like
       `Enum.PredictiveStreamingMode|Disabled`.
     code_samples: []
     type: PredictiveStreamingMode
@@ -1369,23 +1362,9 @@ methods:
       Applies Roblox's recommended instance streaming settings to the
       `Class.Workspace`.
     description: |
-      Sets the `Class.Workspace` instance streaming properties to their
-      recommended values in a single call, changing only the properties whose
-      current values differ from the recommendation. This method is primarily
-      intended to assist with converting an experience to instance streaming.
-      The properties and their recommended values are:
-
-      - `Class.Workspace.StreamingEnabled` &rarr; enabled
-      - `Class.Workspace.StreamingMinRadius` &rarr; 64
-      - `Class.Workspace.StreamingTargetRadius` &rarr; 1024
-      - `Class.Workspace.ModelStreamingBehavior` &rarr;
-        `Enum.ModelStreamingBehavior|Improved`
-      - `Class.Workspace.StreamingIntegrityMode` &rarr;
-        `Enum.StreamingIntegrityMode|PauseOutsideLoadedArea`
-      - `Class.Workspace.StreamOutBehavior` &rarr;
-        `Enum.StreamOutBehavior|Opportunistic`
-
-      This method can only be called from plugins.
+      Applies the current recommended instance streaming settings to the
+      `Class.Workspace`. Only settings that differ from their recommended values
+      are changed.
     code_samples: []
     parameters: []
     returns:
@@ -1839,7 +1818,9 @@ events:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The player who has received all current persistent models and
+          part-less atomic models.
     tags: []
     deprecation_message: ''
     security: None

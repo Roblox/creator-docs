@@ -750,7 +750,7 @@ properties:
       replicates the value through another private property to solve backward
       compatibility issues.
     code_samples:
-      - PhysicsService-RegisterCollisionGroup
+      - WorldRoot-RegisterCollisionGroup
     type: string
     tags:
       - NotReplicated
@@ -773,7 +773,7 @@ properties:
       the part's collision group. Parts start off in the `"Default"` group whose
       ID is 0. If a part is unregistered, the value becomes -1. This value
       cannot be less than -1 and it cannot exceed
-      `Class.PhysicsService:GetMaxCollisionGroups()`. Invalid IDs are clamped.
+      `Class.WorldRoot:GetMaxCollisionGroups()`. Invalid IDs are clamped.
 
       Although this property can be directly changed, it's recommended that you
       specify the collision group by setting `Class.BasePart.CollisionGroup` to

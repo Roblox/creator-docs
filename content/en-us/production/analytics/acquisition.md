@@ -84,6 +84,10 @@ Here's a list of all the available acquisition sources:
   </tr>
 </table>
 
+<Alert severity="info">
+If your game has [beta mode](../publishing/publish-games-and-places.md#audience) enabled, all other analytics remain available, but **Home recommendations** metrics are zero; games in beta mode aren't included in **Recommended For You**, so they can't receive any traffic from it.
+</Alert>
+
 ## Acquisition attribution
 
 You can view the acquisition dashboard by [acquisition source](#acquisition-sources) or by [share links](../promotion/share-links.md). The dashboard categorizes results for both views as follows:
@@ -162,9 +166,9 @@ Here are some tips to get users to visit your game from external sources:
 2. **Create a user community**: Users in your community can share feedback, suggestions, bug reports, fan art, and more. Engage with your community regularly by hosting events and replying to comments and suggestions.
 3. **Partner with other creators and influencers**: You can partner with other creators who make similar games to grow together. You can also reach out to influencers who have large followings on platforms like YouTube or Twitch to see if they're willing to use or review your game.
 4. **Create [share links](../promotion/share-links.md)**: Track your off-platform user acquisition and use the **New users funnel** table to understand:
-    - **Users with qualified plays**: How many new users are joining from each link?
-    - **7-day playtime per user**: Which links are bringing in users who engage the most?
-    - **D7 retention**: Which platforms drive users that keep coming back?
-    - **30-day revenue per user**: Which channels are attracting users who spend in-game?
+   - **Users with qualified plays**: How many new users are joining from each link?
+   - **7-day playtime per user**: Which links are bringing in users who engage the most?
+   - **D7 retention**: Which platforms drive users that keep coming back?
+   - **30-day revenue per user**: Which channels are attracting users who spend in-game?
 
 <img src="../../assets/analytics/acquisition/Share-Link-Acquisition-Dashboard.png" width= "100%" alt="Chart indicating new users funnel by share links."/>

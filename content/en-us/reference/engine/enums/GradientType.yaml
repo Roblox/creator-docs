@@ -5,41 +5,39 @@
 name: GradientType
 type: enum
 summary: |
-  Specifies the shape of a gradient applied by a `Class.UIGradient`.
+  Used alongside `Class.UIGradient.Type` to set the shape of the gradient.
 description: |
-  Determines the geometric shape used when blending the colors and transparency
-  of a `Class.UIGradient`. Read from `Class.UIGradient.Type`, which defaults to
-  `Enum.GradientType.Linear`.
-
-  - `Enum.GradientType.Linear` — colors transition along a straight line across
-    the UI element, controlled by `Class.UIGradient.Rotation` and
-    `Class.UIGradient.Offset`.
-  - `Enum.GradientType.Radial` — colors radiate outward from a center point,
-    with `Class.UIGradient.Offset` shifting the center and
-    `Class.UIGradient.Scale` controlling the spread radius.
-  - `Enum.GradientType.Conical` — colors sweep angularly around a center point
-    (like a pie chart), with `Class.UIGradient.Rotation` setting the start angle
-    and `Class.UIGradient.Offset` shifting the pivot.
+  Used alongside `Class.UIGradient.Type` to set the shape of the gradient as
+  linear, radial, or conical.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Linear
     summary: |
-      Colors transition along a straight line across the UI element.
+      The color/transparency sequence transitions in a straight line across the
+      element. The direction is controlled by
+      `Class.UIGradient.Rotation|Rotation` and the position by
+      `Class.UIGradient.Offset|Offset`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Radial
     summary: |
-      Colors radiate outward from a center point in concentric rings.
+      The color/transparency sequence radiates outward from the element's
+      center, optionally shifted by `Class.UIGradient.Offset|Offset`. The radius
+      is defined by the average of the element's width and height divided by
+      two, effectively `(width+height)/4`. `Class.UIGradient.Rotation|Rotation`
+      has no effect on a radial gradient.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Conical
     summary: |
-      Colors sweep angularly around a center point, producing a cone-like or
-      pie-chart gradient.
+      The color/transparency sequence sweeps clockwise around the center of the
+      element, optionally shifted by `Class.UIGradient.Offset|Offset`.
+      `Class.UIGradient.Rotation|Rotation` controls the starting angle of the
+      sweep.
     value: 2
     tags: []
     deprecation_message: ''

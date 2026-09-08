@@ -15,18 +15,17 @@ If you are creating your own accessory object, it's important to clean up your p
 
 To export your model as a `.fbx`:
 
-1. In the topbar, click **File**.
-2. Select **Export**, then **FBX (.fbx)**.
-3. On the right-hand side of the file view window, change the **Path Mode** property to **Copy**, then toggle the **Embed Textures** button.
+1. In the topbar, click **File** > **Export** > **FBX (.fbx)**. The **Blender File View** window displays.
+1. On the right-hand side, set **Path Mode** to **Copy**, then toggle the **Embed Textures** button.
 
    <img src="../../../assets/modeling/skinned-meshes/Blender-Export-Settings-1.png" width="320" />
 
-4. Set the **Transform** > **Apply Scalings** to **FBX Unit Scale**. If you run into scaling issues on import, see [Blender FBX scaling](../../../art/blender.md#adjust-scale-fbx) for alternative approaches.
+1. In the **Transform** section, set **Apply Scalings** to **FBX Unit Scale**. If you run into scaling issues on import, see [Blender FBX scaling](../../../art/blender.md#adjust-scale-fbx) for alternative approaches.
 
    <img src="../../../assets/modeling/skinned-meshes/Blender-Export-Settings-5.png" width="320" />
 
-5. Click the **Export FBX** button.
+1. Click the **Export FBX** button.
 
 <Alert severity = 'success'>
-You've completed the exporting section of this tutorial. If desired, download a [reference sample](../../../assets/art/accessories/creating-rigid/Rigid_Mask_Export.fbx) of this exported file for comparison. You can use this reference in the next importing step.
+You've completed the exporting section of this tutorial. If desired, download a [reference sample](../../../assets/art/accessories/creating-rigid/Chest-Texturing-Complete.fbx) of this exported file for comparison. You can use this reference in the next importing step.
 </Alert>

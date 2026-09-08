@@ -31,7 +31,11 @@ descendants: []
 tags:
   - NotCreatable
   - Service
-deprecation_message: ''
+deprecation_message: |
+  This service has been deprecated in favor of per-world collision group
+  configuration through `Class.WorldRoot` which should be used for collision
+  group management. Existing `Class.PhysicsService` calls will forward to
+  `Class.Workspace`.
 properties: []
 methods:
   - name: PhysicsService:CollisionGroupContainsPart
@@ -95,7 +99,10 @@ methods:
           `true` if the two groups are set to collide, `false` otherwise. Also
           returns `true` if either group is unregistered.
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.WorldRoot:CollisionGroupsAreCollidable()` which should be used for
+      all new work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -131,7 +138,10 @@ methods:
       - type: ()
         summary: ''
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.WorldRoot:CollisionGroupSetCollidable()` which should be used for
+      all new work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -159,8 +169,8 @@ methods:
       - Deprecated
     deprecation_message: |
       This method has been superseded by
-      `Class.PhysicsService:RegisterCollisionGroup()|RegisterCollisionGroup()`
-      which should be used for all new work.
+      `Class.WorldRoot:RegisterCollisionGroup()|RegisterCollisionGroup()` which
+      should be used for all new work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -266,7 +276,7 @@ methods:
       - Deprecated
     deprecation_message: |
       This method has been superseded by
-      `Class.PhysicsService:GetRegisteredCollisionGroups()|GetRegisteredCollisionGroups()`
+      `Class.WorldRoot:GetRegisteredCollisionGroups()|GetRegisteredCollisionGroups()`
       which should be used for all new work.
     security: None
     thread_safety: Unsafe
@@ -285,7 +295,10 @@ methods:
         summary: |
           The maximum number of collision groups supported, currently 32.
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.WorldRoot:GetMaxCollisionGroups()` which should be used for all new
+      work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -327,7 +340,10 @@ methods:
           An array of tables, each containing `name` (string) and `mask`
           (integer) fields for a registered collision group.
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.WorldRoot:GetRegisteredCollisionGroups()` which should be used for
+      all new work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -354,7 +370,10 @@ methods:
           `true` if a collision group with the given name is registered, `false`
           otherwise.
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.WorldRoot:IsCollisionGroupRegistered()` which should be used for
+      all new work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -386,7 +405,10 @@ methods:
       - type: ()
         summary: ''
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.WorldRoot:RegisterCollisionGroup()` which should be used for all
+      new work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -421,7 +443,7 @@ methods:
       - Deprecated
     deprecation_message: |
       This method has been superseded by
-      `Class.PhysicsService:UnregisterCollisionGroup()|UnregisterCollisionGroup()`
+      `Class.WorldRoot:UnregisterCollisionGroup()|UnregisterCollisionGroup()`
       which should be used for all new work.
     security: None
     thread_safety: Unsafe
@@ -466,7 +488,10 @@ methods:
       - type: ()
         summary: ''
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.WorldRoot:RenameCollisionGroup()` which should be used for all new
+      work.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -543,7 +568,10 @@ methods:
       - type: ()
         summary: ''
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been superseded by
+      `Class.WorldRoot:UnregisterCollisionGroup()` which should be used for all
+      new work.
     security: None
     thread_safety: Unsafe
     capabilities:

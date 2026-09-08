@@ -25,6 +25,8 @@ navigation:
   - heading: Dashboards
   - title: Overview
     path: /production/analytics/analytics-dashboard
+  - title: Custom dashboards
+    path: /production/analytics/custom-dashboards
   - title: Performance
     path: /production/analytics/performance
   - title: Retention

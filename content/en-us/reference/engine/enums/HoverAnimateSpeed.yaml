@@ -4,7 +4,8 @@
 
 name: HoverAnimateSpeed
 type: enum
-summary: ''
+summary: |
+  Specifies the animation speed of the hover highlight in Roblox Studio.
 description: |
   Specifies how frequently the hover animation flashes.
 code_samples: []

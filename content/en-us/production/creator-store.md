@@ -206,7 +206,7 @@ To distribute an asset through the Creator Hub:
 1. Configure settings for your asset's details page.
    1. Fill out the **Name** and **Description** fields.
    1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If you are ID or phone verified, add up to one video and 5 thumbnail images that showcase your asset's appearance or functionality.
-   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Try in Roblox** section, choose the default Roblox experigameence or provide a custom game for customers to test your asset.
+   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Try in Roblox** section, choose the default Roblox game or provide a custom game for customers to test your asset.
 1. In the **Distribution** section, toggle on **Distribute on Creator Store**.
 1. If you have a seller account and want to sell a plugin or model, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset displays on the Creator Store as free to all creators.
 1. Click the **Save Changes** button. After a few moments, the asset becomes public and visible on the Creator Store.

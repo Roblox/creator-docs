@@ -9,7 +9,7 @@ summary: |
   Collection of menu settings for Roblox Studio.
 description: |
   The base object used for Roblox Studio's settings menu. Can be accessed by
-  using the `settings()` function.
+  using the `settings()` function, which requires the Plugin capability.
 
   ## Settings classes under the GlobalSettings
 
@@ -34,16 +34,27 @@ methods:
     summary: |
       Returns the value of an FFlag if it exists.
     description: |
-      Returns the value of an FFlag if it exists.
+      Looks up the fast flag registered under `name` and returns its current
+      value as a boolean: `true` when the flag's value is `true`, and `false`
+      otherwise. Provide the flag's registered name without its type prefix, for
+      example `MyFeature` rather than `FFlagMyFeature`. If no flag with that
+      name is defined in the engine, the method raises an error instead of
+      returning a value, so avoid querying flags that might not exist. Access it
+      through the `settings()` global (requires the Plugin capability), as in
+      `settings():GetFFlag("MyFeature")`.
     code_samples: []
     parameters:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The registered name of the fast flag to query, without its type prefix
+          (for example, `MyFeature` rather than `FFlagMyFeature`).
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` when the named flag's value is `true`, and `false` otherwise;
+          raises an error if no flag with that name is defined.
     tags: []
     deprecation_message: ''
     security: None
@@ -53,16 +64,25 @@ methods:
     summary: |
       Returns the value of an FVariable, if it exists.
     description: |
-      Returns the value of an FVariable, if it exists.
+      Looks up the fast variable registered under `name` and returns its current
+      value as a string. Provide the variable's registered name without its type
+      prefix. As with `Class.GlobalSettings:GetFFlag()`, if no variable with
+      that name is defined in the engine, the method raises an error rather than
+      returning a value. Access it through the `settings()` global (requires the
+      Plugin capability), as in `settings():GetFVariable("MyValue")`.
     code_samples: []
     parameters:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The registered name of the fast variable to query, without its type
+          prefix (for example, `MyValue` rather than `FIntMyValue`).
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The current value of the named fast variable as a string; raises an
+          error if no variable with that name is defined.
     tags: []
     deprecation_message: ''
     security: None

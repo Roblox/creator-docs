@@ -21,28 +21,30 @@ Adding your asset to the Marketplace involves 2 steps:
 
 To upload your accessory:
 
-1. **(Recommended)** Create a thumbnail of your accessory to ensure your thumbnail correctly captures the look of your accessory.
-   For instructions, see [custom thumbnails](../../../marketplace/custom-thumbnails.md).
-2. In the **Explorer**, right-click your accessory object and select **Save to Roblox…** from the contextual menu.
-3. In the **Asset Configuration** window, set the **Content Type** to **Avatar Item**.
-4. Complete the following fields (you can adjust these later):
+1. **(Recommended)** [Create a custom thumbnail of your accessory](../../../marketplace/custom-thumbnails.md) to ensure your thumbnail correctly captures the look of your accessory.
 
-   1. **Title**: The name of your accessory.
-   2. **Description**: A short description of your asset.
-   3. **Asset Category**: The type of accessory. This should match the Accessory Type selected during the [fitting and conversion](../../../art/accessories/creating-rigid/converting.md) process.
-   4. **Creator**: Use the dropdown to select if you'd like to publish this asset as an individual or as part of an associated group.
+   <Alert severity = 'warning'>
+   You cannot create a custom thumbnail after you upload your rigid accessory.
+   </Alert>
 
-5. After you select the **Asset Category**, Studio begins validating the asset to ensure that it matches Roblox's accessory technical requirements.
-6. If the validation is successful, you can submit the asset to the upload and moderation queue for a fee. See [Fees and commissions](../../../marketplace/marketplace-fees-and-commissions.md) for current fee information.
+1. In the **Explorer** window, right-click your accessory object and select **Save to Roblox…** from the contextual menu.
+1. In the **Asset Configuration** window, set the **Content Type** to **Avatar Item**.
+1. Complete the following fields (you can adjust these later):
+
+   - **Title**: The name of your accessory.
+   - **Description**: A short description of your asset.
+   - **Asset Category**: The type of accessory. This should match the Accessory Type selected during the [fitting and conversion](../../../art/accessories/creating-rigid/converting.md) process.
+   - **Creator**: Use the dropdown to select if you'd like to publish this asset as an individual or as part of an associated group.
+
+1. After you select the **Asset Category**, Studio begins validating the asset to ensure that it matches Roblox's accessory technical requirements. If the validation is successful, you can submit the asset to the upload and moderation queue for a fee. For more information on fees, see [Marketplace fees and commissions](../../../marketplace/marketplace-fees-and-commissions.md).
 
 ## Publish
 
-After uploading your accessory, the asset is added to the moderation queue and may take up to 24 hours to clear.
+After uploading your accessory, the asset is added to the moderation queue and may take up to 24 hours to clear. You can check your accessory's moderation status in the [Creator Hub](https://create.roblox.com/dashboard/creations).
 
-You can check your accessory's moderation status in the [Creator Hub](https://create.roblox.com/dashboard/creations).
-
-After moderation completes, your item's publishing details become available to edit and enable for sale. See the following for an overview on the various sale options available:
+After moderation is complete, your rigid accessory's publishing details become available to edit and enable for sale. See the following for an overview on the various sale options available:
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/swQW2VS9ZMA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 <br />
+
 After listing an asset to the Marketplace, you can return to this page to edit your item's sale details, or take the item offsale.

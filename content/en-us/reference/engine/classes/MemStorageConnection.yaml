@@ -5,8 +5,17 @@
 name: MemStorageConnection
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Represents a live binding created by `Bind()` on `Class.MemStorageService`
+  that runs a callback whenever a memory-storage key changes.
+description: |
+  A `MemStorageConnection` is the object returned by the `Bind()` and
+  `BindAndFire()` methods of `Class.MemStorageService`. It wraps the underlying
+  subscription to a memory-storage key: while the connection is retained, the
+  callback supplied at bind time is invoked on each update to that key. The
+  connection is parented to the `Class.MemStorageService` that created it.
+  Calling `Class.MemStorageConnection:Disconnect()`, or allowing the object to
+  be destroyed, detaches it and stops any further callbacks.
 code_samples: []
 inherits:
   - Instance
@@ -18,8 +27,16 @@ deprecation_message: ''
 properties: []
 methods:
   - name: MemStorageConnection:Disconnect
-    summary: ''
-    description: ''
+    summary: |
+      Ends the binding so its callback no longer runs when the associated
+      memory-storage key changes.
+    description: |
+      Detaches the connection from its parent `Class.MemStorageService` and
+      disconnects the underlying subscription, so the callback supplied when the
+      connection was created is no longer invoked when the key is updated. This
+      is also called automatically when the `Class.MemStorageConnection` is
+      destroyed. Once disconnected, a connection cannot be re-established; bind
+      again to resume receiving updates.
     code_samples: []
     parameters: []
     returns:

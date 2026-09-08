@@ -34,11 +34,13 @@ methods:
       - name: button
         type: Button
         default:
-        summary: ''
+        summary: |
+          The `Enum.Button` to bind.
       - name: caption
         type: string
         default:
-        summary: ''
+        summary: |
+          The text to display for the bound button.
     returns:
       - type: ()
         summary: ''
@@ -81,10 +83,12 @@ methods:
       - name: button
         type: Button
         default:
-        summary: ''
+        summary: |
+          The `Enum.Button` whose pressed state to check.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          Whether the specified button is currently pressed.
     tags: []
     deprecation_message: ''
     security: None
@@ -120,7 +124,8 @@ methods:
       - name: button
         type: Button
         default:
-        summary: ''
+        summary: |
+          The `Enum.Button` to unbind.
     returns:
       - type: ()
         summary: ''
@@ -144,7 +149,8 @@ events:
       - name: button
         type: Button
         default:
-        summary: ''
+        summary: |
+          The `Enum.Button` whose pressed state changed.
     tags: []
     deprecation_message: ''
     security: None

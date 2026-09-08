@@ -7,28 +7,34 @@ type: enum
 summary: |
   The computer movement type in-use by the client.
 description: |
-  The computer movement type in-use by the client.
+  Describes the movement control scheme currently active for the local player on
+  a computer. This value is read from
+  `Class.UserGameSettings.ComputerMovementMode` and reflects the scheme in use
+  at runtime, whether chosen by the player or enforced by the developer via
+  `Class.StarterPlayer.DevComputerMovementMode`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
     summary: |
-      The default is KeyboardMouse.
+      The movement mode has not been explicitly set and behaves identically to
+      `KeyboardMouse`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: KeyboardMouse
     summary: |
-      The player's character is controlled using the keyboard and mouse.
+      The player moves their character using keyboard keys and steers the camera
+      with the mouse.
     value: 1
     tags: []
     deprecation_message: ''
   - name: ClickToMove
     summary: |
-      The player can right-click in the game world and their character will move
-      there. In addition, the player can also control their character with their
-      mouse and keyboard.
+      The player moves their character by clicking a destination in the game
+      world; the character automatically navigates there and jumps over
+      surmountable obstacles.
     value: 2
     tags: []
     deprecation_message: ''

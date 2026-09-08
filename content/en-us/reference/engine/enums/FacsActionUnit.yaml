@@ -4,259 +4,313 @@
 
 name: FacsActionUnit
 type: enum
-summary: ''
-description: ''
+summary: |
+  Identifies a Facial Action Coding System pose for facial animation.
+description: |
+  Represents a Facial Action Coding System (FACS) pose used by
+  `Class.EditableMesh` facial-animation methods such as
+  `Class.EditableMesh:GetFacsPose()` and `Class.EditableMesh:SetFacsPose()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: ChinRaiserUpperLip
-    summary: ''
+    summary: |
+      Moves the upper lip upward when the chin raiser is engaged.
     value: 0
     tags: []
     deprecation_message: ''
   - name: ChinRaiser
-    summary: ''
+    summary: |
+      Raises the chin and moves the lower lip upward.
     value: 1
     tags: []
     deprecation_message: ''
   - name: FlatPucker
-    summary: ''
+    summary: |
+      Moves the mouth corners inward and presses the lips against the teeth.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Funneler
-    summary: ''
+    summary: |
+      Forms an O shape with the mouth.
     value: 3
     tags: []
     deprecation_message: ''
   - name: LowerLipSuck
-    summary: ''
+    summary: |
+      Rolls the lower lip over the teeth.
     value: 4
     tags: []
     deprecation_message: ''
   - name: LipPresser
-    summary: ''
+    summary: |
+      Presses the lips together.
     value: 5
     tags: []
     deprecation_message: ''
   - name: LipsTogether
-    summary: ''
+    summary: |
+      Brings the lips together relative to the jaw-drop pose.
     value: 6
     tags: []
     deprecation_message: ''
   - name: MouthLeft
-    summary: ''
+    summary: |
+      Moves the mouth to the character's left.
     value: 7
     tags: []
     deprecation_message: ''
   - name: MouthRight
-    summary: ''
+    summary: |
+      Moves the mouth to the character's right.
     value: 8
     tags: []
     deprecation_message: ''
   - name: Pucker
-    summary: ''
+    summary: |
+      Puckers the lips into a kiss-like shape.
     value: 9
     tags: []
     deprecation_message: ''
   - name: UpperLipSuck
-    summary: ''
+    summary: |
+      Rolls the upper lip over the teeth.
     value: 10
     tags: []
     deprecation_message: ''
   - name: LeftCheekPuff
-    summary: ''
+    summary: |
+      Puffs the left cheek.
     value: 11
     tags: []
     deprecation_message: ''
   - name: LeftDimpler
-    summary: ''
+    summary: |
+      Moves the left mouth corner backward to form a dimple.
     value: 12
     tags: []
     deprecation_message: ''
   - name: LeftLipCornerDown
-    summary: ''
+    summary: |
+      Lowers the left mouth corner into a frown.
     value: 13
     tags: []
     deprecation_message: ''
   - name: LeftLowerLipDepressor
-    summary: ''
+    summary: |
+      Lowers the left side of the lower lip to reveal the lower teeth.
     value: 14
     tags: []
     deprecation_message: ''
   - name: LeftLipCornerPuller
-    summary: ''
+    summary: |
+      Raises the left mouth corner into a smile.
     value: 15
     tags: []
     deprecation_message: ''
   - name: LeftLipStretcher
-    summary: ''
+    summary: |
+      Stretches the left mouth corner outward.
     value: 16
     tags: []
     deprecation_message: ''
   - name: LeftUpperLipRaiser
-    summary: ''
+    summary: |
+      Raises the left side of the upper lip to reveal the upper teeth.
     value: 17
     tags: []
     deprecation_message: ''
   - name: RightCheekPuff
-    summary: ''
+    summary: |
+      Puffs the right cheek.
     value: 18
     tags: []
     deprecation_message: ''
   - name: RightDimpler
-    summary: ''
+    summary: |
+      Moves the right mouth corner backward to form a dimple.
     value: 19
     tags: []
     deprecation_message: ''
   - name: RightLipCornerDown
-    summary: ''
+    summary: |
+      Lowers the right mouth corner into a frown.
     value: 20
     tags: []
     deprecation_message: ''
   - name: RightLowerLipDepressor
-    summary: ''
+    summary: |
+      Lowers the right side of the lower lip to reveal the lower teeth.
     value: 21
     tags: []
     deprecation_message: ''
   - name: RightLipCornerPuller
-    summary: ''
+    summary: |
+      Raises the right mouth corner into a smile.
     value: 22
     tags: []
     deprecation_message: ''
   - name: RightLipStretcher
-    summary: ''
+    summary: |
+      Stretches the right mouth corner outward.
     value: 23
     tags: []
     deprecation_message: ''
   - name: RightUpperLipRaiser
-    summary: ''
+    summary: |
+      Raises the right side of the upper lip to reveal the upper teeth.
     value: 24
     tags: []
     deprecation_message: ''
   - name: JawDrop
-    summary: ''
+    summary: |
+      Lowers the jaw to open the mouth.
     value: 25
     tags: []
     deprecation_message: ''
   - name: JawLeft
-    summary: ''
+    summary: |
+      Moves the mouth and jaw toward the character's left.
     value: 26
     tags: []
     deprecation_message: ''
   - name: JawRight
-    summary: ''
+    summary: |
+      Moves the mouth and jaw toward the character's right.
     value: 27
     tags: []
     deprecation_message: ''
   - name: Corrugator
-    summary: ''
+    summary: |
+      Moves the left and right eyebrows inward.
     value: 28
     tags: []
     deprecation_message: ''
   - name: LeftBrowLowerer
-    summary: ''
+    summary: |
+      Lowers the left eyebrow.
     value: 29
     tags: []
     deprecation_message: ''
   - name: LeftOuterBrowRaiser
-    summary: ''
+    summary: |
+      Raises the outer part of the left eyebrow.
     value: 30
     tags: []
     deprecation_message: ''
   - name: LeftNoseWrinkler
-    summary: ''
+    summary: |
+      Raises the left nostril and wrinkles the left side of the nose.
     value: 31
     tags: []
     deprecation_message: ''
   - name: LeftInnerBrowRaiser
-    summary: ''
+    summary: |
+      Raises the inner half of the left eyebrow.
     value: 32
     tags: []
     deprecation_message: ''
   - name: RightBrowLowerer
-    summary: ''
+    summary: |
+      Lowers the right eyebrow.
     value: 33
     tags: []
     deprecation_message: ''
   - name: RightOuterBrowRaiser
-    summary: ''
+    summary: |
+      Raises the outer part of the right eyebrow.
     value: 34
     tags: []
     deprecation_message: ''
   - name: RightInnerBrowRaiser
-    summary: ''
+    summary: |
+      Raises the inner half of the right eyebrow.
     value: 35
     tags: []
     deprecation_message: ''
   - name: RightNoseWrinkler
-    summary: ''
+    summary: |
+      Raises the right nostril and wrinkles the right side of the nose.
     value: 36
     tags: []
     deprecation_message: ''
   - name: EyesLookDown
-    summary: ''
+    summary: |
+      Moves the gaze downward.
     value: 37
     tags: []
     deprecation_message: ''
   - name: EyesLookLeft
-    summary: ''
+    summary: |
+      Moves the gaze to the left.
     value: 38
     tags: []
     deprecation_message: ''
   - name: EyesLookUp
-    summary: ''
+    summary: |
+      Moves the gaze upward.
     value: 39
     tags: []
     deprecation_message: ''
   - name: EyesLookRight
-    summary: ''
+    summary: |
+      Moves the gaze to the right.
     value: 40
     tags: []
     deprecation_message: ''
   - name: LeftCheekRaiser
-    summary: ''
+    summary: |
+      Raises the left cheek and squints the left eye.
     value: 41
     tags: []
     deprecation_message: ''
   - name: LeftEyeUpperLidRaiser
-    summary: ''
+    summary: |
+      Raises the left upper eyelid to reveal more of the eye above the iris.
     value: 42
     tags: []
     deprecation_message: ''
   - name: LeftEyeClosed
-    summary: ''
+    summary: |
+      Closes the left eyelid.
     value: 43
     tags: []
     deprecation_message: ''
   - name: RightCheekRaiser
-    summary: ''
+    summary: |
+      Raises the right cheek and squints the right eye.
     value: 44
     tags: []
     deprecation_message: ''
   - name: RightEyeUpperLidRaiser
-    summary: ''
+    summary: |
+      Raises the right upper eyelid to reveal more of the eye above the iris.
     value: 45
     tags: []
     deprecation_message: ''
   - name: RightEyeClosed
-    summary: ''
+    summary: |
+      Closes the right eyelid.
     value: 46
     tags: []
     deprecation_message: ''
   - name: TongueDown
-    summary: ''
+    summary: |
+      Bends the tongue downward.
     value: 47
     tags: []
     deprecation_message: ''
   - name: TongueOut
-    summary: ''
+    summary: |
+      Extends the tip of the tongue out of the mouth.
     value: 48
     tags: []
     deprecation_message: ''
   - name: TongueUp
-    summary: ''
+    summary: |
+      Bends the tongue upward.
     value: 49
     tags: []
     deprecation_message: ''

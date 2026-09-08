@@ -4,7 +4,9 @@
 
 name: RecommendationItemContentType
 type: enum
-summary: ''
+summary: |
+  Describes the content type of an item registered with
+  `Class.RecommendationService`.
 description: |
   This enum describes the content type of the recommendation item. It is
   designed to be generic.

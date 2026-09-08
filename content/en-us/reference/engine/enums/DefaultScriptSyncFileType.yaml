@@ -4,19 +4,27 @@
 
 name: DefaultScriptSyncFileType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls the file extension used when Studio's script sync feature saves
+  script instances to the filesystem.
+description: |
+  Specifies whether Studio writes synced script files with a `.lua` or `.luau`
+  extension when using the file sync (external editor) workflow. The active
+  value is read from `Class.Studio.DefaultScriptSyncFileType`. Defaults to
+  `Enum.DefaultScriptSyncFileType.Luau`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Lua
-    summary: ''
+    summary: |
+      Script files are synced to the filesystem with a `.lua` extension.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Luau
-    summary: ''
+    summary: |
+      Script files are synced to the filesystem with a `.luau` extension.
     value: 1
     tags: []
     deprecation_message: ''

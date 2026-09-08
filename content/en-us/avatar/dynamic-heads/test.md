@@ -13,7 +13,7 @@ When importing a dynamic head that supports facial animation into Studio, Studio
 
 To set up heads with facial animation in your game:
 
-1. [Import a model with an animatable head](../../art/characters/testing/studio.md#import). You can either create your own or use one of the provided reference model files.
+1. [Import a model with an animatable head](../character-bodies/import.md). You can either create your own or use one of the provided reference model files.
 2. <Chip label="OPTIONAL" size="small" variant="outlined" /> [Import face accessories](#import-face-accessories) you want to deform with the facial expressions of your head. You can either create your own or use one of the provided reference accessory files.
 3. [Animate the head](#animate-heads) in the **Animation Editor** by either adding in individual animation tracks, or by using the **Face Animation Editor**.
 

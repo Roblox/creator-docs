@@ -4,19 +4,27 @@
 
 name: ParticleEmitterShapeStyle
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls whether a `Class.ParticleEmitter` emits particles from the surface or
+  the volume of its shape.
+description: |
+  Controls whether a `Class.ParticleEmitter` emits particles from the surface or
+  throughout the volume of the shape defined by `Class.ParticleEmitter.Shape`.
+  Used with the `Class.ParticleEmitter.ShapeStyle` property, which defaults to
+  `Enum.ParticleEmitterShapeStyle.Volume`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Volume
-    summary: ''
+    summary: |
+      Particles emit from throughout the interior volume of the emitter shape.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Surface
-    summary: ''
+    summary: |
+      Particles emit only from the outer surface of the emitter shape.
     value: 1
     tags: []
     deprecation_message: ''

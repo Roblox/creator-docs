@@ -5,7 +5,9 @@
 name: ReflectionService
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  A service that allows scripts to query the engine's API at runtime for
+  information about classes, properties, methods, and events.
 description: |
   `ReflectionService` allows scripts to query the engine for details about its
   API, including required security permissions, functionality, and inheritance

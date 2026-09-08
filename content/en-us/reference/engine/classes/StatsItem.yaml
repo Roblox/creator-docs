@@ -23,26 +23,7 @@ descendants:
 tags:
   - NotCreatable
 deprecation_message: ''
-properties:
-  - name: StatsItem.DisplayName
-    summary: ''
-    description: ''
-    code_samples: []
-    type: string
-    tags:
-      - Hidden
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: PluginSecurity
-      write: PluginSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities: []
+properties: []
 methods:
   - name: StatsItem:GetValue
     summary: |
@@ -53,7 +34,8 @@ methods:
     parameters: []
     returns:
       - type: double
-        summary: ''
+        summary: |
+          The numeric value of the stats item.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -68,7 +50,8 @@ methods:
     parameters: []
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The value of the stats item formatted as a string.
     tags: []
     deprecation_message: ''
     security: PluginSecurity

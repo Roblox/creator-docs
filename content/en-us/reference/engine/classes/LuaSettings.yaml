@@ -5,7 +5,8 @@
 name: LuaSettings
 type: class
 memory_category: Instances
-summary: ''
+summary: |
+  Settings related to how the engine handles Luau, its dialect of Lua.
 description: |
   The LuaSettings allows you to change certain properties, in regards to how
   Roblox handles Luau, its dialect of Lua. It is labeled as **Lua** in the

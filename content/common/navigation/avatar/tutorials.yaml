@@ -9,10 +9,10 @@ navigation:
       - title: Rigid accessories
         path: /art/accessories/creating-rigid/
         navigation: /avatar/tutorials-accessories.yaml
-      - title: Clothing
+      - title: Layered accessories
         path: /art/accessories/creating
         navigation: /avatar/tutorials-clothing.yaml
-      - title: Bodies
+      - title: Character bodies
         path: /art/characters/creating
         navigation: /avatar/tutorials-bodies.yaml
       - heading: Use cases
@@ -27,11 +27,10 @@ navigation:
       - title: Publish eyebrows and eyelashes
         path: /art/accessories/publish-eyebrows-eyelashes
       - title: Test characters
-        path: /art/characters/testing/
         section:
           - title: Overview
-            path: /art/characters/testing/
-          - title: In Blender
-            path: /art/characters/testing/blender
-          - title: In Studio
-            path: /art/characters/testing/studio
+            path: /avatar/character-bodies/test
+          - title: Test in Blender
+            path: /avatar/character-bodies/test-blender
+          - title: Test in Studio
+            path: /avatar/character-bodies/test-studio

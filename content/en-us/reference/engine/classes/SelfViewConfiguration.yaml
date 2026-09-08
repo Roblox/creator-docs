@@ -5,8 +5,20 @@
 name: SelfViewConfiguration
 type: class
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Controls the built-in self view, the `Class.CoreGui` element that shows a
+  player a preview of their own character within an experience.
+description: |
+  `Class.SelfViewConfiguration` is the configuration object for the built-in
+  self view — the `Class.CoreGui` element that shows a player a preview of their
+  own character within an experience. A single instance is created automatically
+  as a child of the `Class.CoreGuiConfiguration` service and is reached through
+  `Class.CoreGuiConfiguration.SelfViewConfiguration`.
+
+  It inherits `Class.BaseCoreGuiConfiguration.Enabled|Enabled`, which toggles
+  whether the self view is available, and adds
+  `Class.SelfViewConfiguration.Open|Open`, which you can read and write to open
+  or close the view.
 code_samples: []
 inherits:
   - BaseCoreGuiConfiguration
@@ -17,8 +29,13 @@ tags:
 deprecation_message: ''
 properties:
   - name: SelfViewConfiguration.Open
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether the built-in self view is currently open.
+    description: |
+      When `true`, the self view is open; when `false`, it is closed. Defaults
+      to `false`. This property does not update when the view is shown or hidden
+      through `Class.SocialService:ShowSelfView()` or
+      `Class.SocialService:HideSelfView()`.
     code_samples: []
     type: boolean
     tags: []

@@ -4,24 +4,30 @@
 
 name: LoadDynamicHeads
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies whether player characters load dynamic heads.
+description: |
+  Controls dynamic-head loading through
+  `Class.StarterPlayer.EnableDynamicHeads`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Uses Roblox's default dynamic-head loading behavior.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      Disables loading dynamic heads.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: |
+      Enables loading dynamic heads.
     value: 2
     tags: []
     deprecation_message: ''

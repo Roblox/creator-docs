@@ -4,7 +4,9 @@
 
 name: RecommendationPreferenceTargetType
 type: enum
-summary: ''
+summary: |
+  Identifies the kind of entity that a preference signal targets when logged via
+  `Class.RecommendationService:LogPreferenceEvent()|LogPreferenceEvent()`.
 description: |
   The kind of entity a preference signal targets when logged via
   `Class.RecommendationService.LogPreferenceEvent|LogPreferenceEvent`.

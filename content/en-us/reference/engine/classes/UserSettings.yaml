@@ -35,19 +35,22 @@ methods:
       Returns true if the specified user feature is enabled. This will throw an
       error if the user feature does not exist.
 
-      This function checks against a list of FFlags, whose name starts with
-      "User". The function is intended to be used by Roblox-created scripts, and
-      functions similarly to `Class.GlobalSettings:GetFFlag()`.
+      This function checks user features whose names start with `"User"`. It is
+      intended for Roblox-created scripts.
     code_samples:
       - IsUserFeatureEnabled-Sample
     parameters:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the user feature to check. Must begin with the `User`
+          prefix.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the named user feature exists and is enabled; otherwise
+          `false`.
     tags: []
     deprecation_message: ''
     security: None

@@ -4,34 +4,42 @@
 
 name: StudioStyleGuideModifier
 type: enum
-summary: ''
-description: ''
+summary: |
+  Specifies the interaction state of a Roblox Studio interface element.
+description: |
+  Used with `Class.StudioTheme:GetColor()` to retrieve the theme color for an
+  interface element in a particular interaction state.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Uses the element's default state color.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Selected
-    summary: ''
+    summary: |
+      Uses the color for a selected element.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Pressed
-    summary: ''
+    summary: |
+      Uses the color for a pressed element.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      Uses the color for a disabled element.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Hover
-    summary: ''
+    summary: |
+      Uses the color for an element under the pointer.
     value: 4
     tags: []
     deprecation_message: ''

@@ -4,9 +4,13 @@
 
 name: CreatorType
 type: enum
-summary: ''
+summary: |
+  Indicates whether the currently running place is owned by an individual user
+  or a group.
 description: |
-  The ownership type of the open place.
+  Indicates whether the currently running place is owned by an individual user
+  (`Enum.CreatorType.User`) or a group (`Enum.CreatorType.Group`). Read from
+  properties such as `Class.DataModel.CreatorType`.
 code_samples: []
 tags: []
 deprecation_message: ''

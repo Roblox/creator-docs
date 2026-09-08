@@ -46,7 +46,7 @@ Create and sell your first basic rigid accessory.
 </Grid>
 </Grid>
 
-**Rigid accessories** are 3D assets that attach to an avatar according to the attachment points around the character's body. When users purchase rigid accessories on the Marketplace, such as props, weapons, and hats, they can adjust the position and rotation of the item away from the attachment point according to their avatar's body type.
+**Rigid accessories** are 3D objects that attach to attachment points around an avatar character's body. When users purchase rigid accessories on the [Marketplace](https://www.roblox.com/catalog), such as props, weapons, and hats, they can adjust the position and rotation of the item away from the attachment point according to their avatar's body type.
 
 There are two main layers of a rigid accessory that structure how the accessory looks and works on the platform:
 

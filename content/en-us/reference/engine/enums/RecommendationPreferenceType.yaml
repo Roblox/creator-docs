@@ -4,7 +4,10 @@
 
 name: RecommendationPreferenceType
 type: enum
-summary: ''
+summary: |
+  Identifies the type of preference action (follow, unfollow, mute, or unmute)
+  passed to
+  `Class.RecommendationService:LogPreferenceEvent()|LogPreferenceEvent()`.
 description: |
   The type of preference signal logged via
   `Class.RecommendationService.LogPreferenceEvent|LogPreferenceEvent`.
