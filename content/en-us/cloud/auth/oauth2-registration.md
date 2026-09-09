@@ -129,10 +129,10 @@ The following information is required for your submission:
 - A justification explaining why your app belongs in the selected category and how it uses the requested permission scopes.
 
 <Alert severity="info">
-  Roblox uses your demo video and justification only to review your submission
-  and does not make them public. Request only the minimum permission scopes
-  that your app needs. Roblox does not approve scopes for planned or future
-  functionality.
+Roblox uses your demo video and justification only to review your submission
+and does not make them public. Request only the minimum permission scopes
+that your app needs. Roblox does not approve scopes for planned or future
+functionality.
 </Alert>
 
 While your app review is pending, you can't edit or submit another request until
