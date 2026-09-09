@@ -799,7 +799,7 @@
       "patch": {
         "tags": ["Cloud"],
         "summary": "Update Group Membership",
-        "description": "**Deprecated.** Use AssignGroupRole and UnassignGroupRole instead.\nUpdates the group membership for a particular group member. This action\nrequires the requester to be able to manage lower ranked members. Guest or\nOwner ranks cannot be assigned, and a requester cannot change their own\nrank.",
+        "description": "**Deprecated.** Use AssignGroupRole and UnassignGroupRole instead.\nUpdates the group membership for a particular group member. This action\nrequires the requester to be able to assign or remove roles below their\nhighest role. The requester cannot change their own roles.",
         "operationId": "Cloud_UpdateGroupMembership",
         "parameters": [
           {
@@ -1006,7 +1006,7 @@
       "get": {
         "tags": ["Cloud"],
         "summary": "List Group Roles",
-        "description": "List roles in a group.\n\nThe permissions field for roles is viewable based on the requester's access\nand scopes.\n\nPermissions for the guest role are always visible - a scope is not needed.\n\nIf the requester is a member of the group and has the `group:read` scope,\npermissions in their role are visible.\n\nIf the requester is the owner of the group and has the `group:read` scope,\npermissions in all roles are visible.",
+        "description": "List roles in a group.\n\nRoles can be public or private. The response includes private roles and\ntheir fields only when the acting user is permitted to view them. The\nendpoint does not provide a public-roles-only view.\n\nThe permissions field for roles is viewable based on the requester's access\nand scopes.\n\nPermissions for the guest role are always visible - a scope is not needed.\n\nIf the requester is a member of the group and has the `group:read` scope,\npermissions in their role are visible.\n\nIf the requester is the owner of the group and has the `group:read` scope,\npermissions in all roles are visible.",
         "operationId": "Cloud_ListGroupRoles",
         "parameters": [
           {

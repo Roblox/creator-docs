@@ -12,6 +12,28 @@ Roblox offers various programs for creators on the platform to provide additiona
 <Card variant="filled" style={{height: "100%"}}>
 <CardContent>
 
+<h4>Android TV Pilot Program</h4>
+<figure>
+<Chip
+        color="success"
+        label="Status: Open"
+        size="medium"
+        variant="filled"/>
+</figure>
+<Typography variant='body1'>Helps a curated cohort of creators optimize or create experiences for TV remote play on Android TV</Typography>
+</CardContent>
+<CardActions>
+<Button href="/creator-programs/android-tv-pilot" variant="contained" color="secondary" size='large'>Learn More</Button>
+</CardActions>
+</Card>
+</Grid>
+</Grid>
+
+<Grid item container Medium={12} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container wrap="nowrap" direction="column">
+<Card variant="filled" style={{height: "100%"}}>
+<CardContent>
+
 <h4>Brand Developer Directory and Roblox Partner Program</h4>
 <figure>
 <Chip

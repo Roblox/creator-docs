@@ -4100,7 +4100,7 @@
       "patch": {
         "tags": ["Groups"],
         "summary": "Update Group Membership",
-        "description": "**Deprecated.** Use AssignGroupRole and UnassignGroupRole instead.\nUpdates the group membership for a particular group member. This action\nrequires the requester to be able to manage lower ranked members. Guest or\nOwner ranks cannot be assigned, and a requester cannot change their own\nrank.",
+        "description": "**Deprecated.** Use AssignGroupRole and UnassignGroupRole instead.\nUpdates the group membership for a particular group member. This action\nrequires the requester to be able to assign or remove roles below their\nhighest role. The requester cannot change their own roles.",
         "operationId": "Cloud_UpdateGroupMembership",
         "parameters": [
           {
@@ -4370,7 +4370,7 @@
       "get": {
         "tags": ["Groups"],
         "summary": "List Group Roles",
-        "description": "List roles in a group.\n\nThe permissions field for roles is viewable based on the requester's access\nand scopes.\n\nPermissions for the guest role are always visible - a scope is not needed.\n\nIf the requester is a member of the group and has the `group:read` scope,\npermissions in their role are visible.\n\nIf the requester is the owner of the group and has the `group:read` scope,\npermissions in all roles are visible.",
+        "description": "List roles in a group.\n\nRoles can be public or private. The response includes private roles and\ntheir fields only when the acting user is permitted to view them. The\nendpoint does not provide a public-roles-only view.\n\nThe permissions field for roles is viewable based on the requester's access\nand scopes.\n\nPermissions for the guest role are always visible - a scope is not needed.\n\nIf the requester is a member of the group and has the `group:read` scope,\npermissions in their role are visible.\n\nIf the requester is the owner of the group and has the `group:read` scope,\npermissions in all roles are visible.",
         "operationId": "Cloud_ListGroupRoles",
         "parameters": [
           {
@@ -44279,6 +44279,7 @@
           "apiKeyWithHttpService": false
         },
         "security": [
+          {},
           {
             "roblox-legacy-cookie": []
           }
@@ -57167,7 +57168,7 @@
       "post": {
         "tags": ["Users"],
         "summary": "Get users by usernames.",
-        "description": "This endpoint will also check previous usernames.\r\nDoes not require X-CSRF-Token protection because this is essentially a get request but as a POST to avoid URI limits.",
+        "description": "This endpoint will also check previous usernames.\nDoes not require X-CSRF-Token protection because this is essentially a get request but as a POST to avoid URI limits.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -58703,7 +58704,7 @@
                 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
                 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73,
                 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
-                90, 91, 92, 93, 94, 95
+                90, 91, 92, 93, 94, 95, 96
               ]
             }
           },
@@ -61989,7 +61990,7 @@
     "/v1/users/{userId}/items/{itemType}/{itemTargetId}": {
       "get": {
         "tags": ["Assets", "Inventories", "Users"],
-        "summary": "Gets owned items of the specified item type. Game Servers can make requests for any user, but can only make requests for game passes that belong to the place sending the request.\r\nPlace creators can make requests as if they were the Game Server.",
+        "summary": "Gets owned items of the specified item type. Game Servers can make requests for any user, but can only make requests for game passes that belong to the place sending the request.\nPlace creators can make requests as if they were the Game Server.",
         "parameters": [
           {
             "in": "path",
@@ -66109,7 +66110,7 @@
     "/v2/inventory/asset/{assetId}": {
       "delete": {
         "tags": ["Assets", "Inventories"],
-        "summary": "Give up an asset owned by the authenticated user.\r\nAssets that are created by Roblox user or are limited edition are not eligible for deletion\r\nand will return NotEligibleForDelete.",
+        "summary": "Give up an asset owned by the authenticated user.\nAssets that are created by Roblox user or are limited edition are not eligible for deletion\nand will return NotEligibleForDelete.",
         "parameters": [
           {
             "in": "path",
@@ -70846,14 +70847,14 @@
             "schema": {
               "type": "array",
               "items": {
-                "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95]",
+                "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96]",
                 "enum": [
                   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21,
                   22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38,
                   39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53,
                   54, 55, 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
                   71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85,
-                  86, 87, 88, 89, 90, 91, 92, 93, 94, 95
+                  86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96
                 ]
               }
             }
@@ -92301,10 +92302,10 @@
         "properties": {
           "playabilityStatus": {
             "format": "int32",
-            "description": "The actual playability status of the universe including the reason if unplayable ['UnplayableOtherReason' = 0, 'Playable' = 1, 'GuestProhibited' = 2, 'GameUnapproved' = 3, 'IncorrectConfiguration' = 4, 'UniverseRootPlaceIsPrivate' = 5, 'InsufficientPermissionFriendsOnly' = 6, 'InsufficientPermissionGroupOnly' = 7, 'DeviceRestricted' = 8, 'UnderReview' = 9, 'PurchaseRequired' = 10, 'AccountRestricted' = 11, 'TemporarilyUnavailable' = 12, 'PlaceHasNoPublishedVersion' = 13, 'ComplianceBlocked' = 14, 'ContextualPlayabilityRegionalAvailability' = 15, 'ContextualPlayabilityRegionalCompliance' = 16, 'ContextualPlayabilityAgeRecommendationParentalControls' = 17, 'ContextualPlayabilityExperienceBlockedParentalControls' = 18, 'ContextualPlayabilityAgeGated' = 19, 'ContextualPlayabilityUnverifiedSeventeenPlusUser' = 20, 'FiatPurchaseRequired' = 21, 'FiatPurchaseDeviceRestricted' = 22, 'ContextualPlayabilityUnrated' = 23, 'ContextualPlayabilityAgeGatedByDescriptor' = 24, 'ContextualPlayabilityGeneral' = 25, 'ContextualPlayabilityAgeCheckRequired' = 26, 'ContextualPlayabilityRequireParentApproval' = 27, 'ContextualPlayabilityCoreGated' = 28]",
+            "description": "The actual playability status of the universe including the reason if unplayable ['UnplayableOtherReason' = 0, 'Playable' = 1, 'GuestProhibited' = 2, 'GameUnapproved' = 3, 'IncorrectConfiguration' = 4, 'UniverseRootPlaceIsPrivate' = 5, 'InsufficientPermissionFriendsOnly' = 6, 'InsufficientPermissionGroupOnly' = 7, 'DeviceRestricted' = 8, 'UnderReview' = 9, 'PurchaseRequired' = 10, 'AccountRestricted' = 11, 'TemporarilyUnavailable' = 12, 'PlaceHasNoPublishedVersion' = 13, 'ComplianceBlocked' = 14, 'ContextualPlayabilityRegionalAvailability' = 15, 'ContextualPlayabilityRegionalCompliance' = 16, 'ContextualPlayabilityAgeRecommendationParentalControls' = 17, 'ContextualPlayabilityExperienceBlockedParentalControls' = 18, 'ContextualPlayabilityAgeGated' = 19, 'ContextualPlayabilityUnverifiedSeventeenPlusUser' = 20, 'FiatPurchaseRequired' = 21, 'FiatPurchaseDeviceRestricted' = 22, 'ContextualPlayabilityUnrated' = 23, 'ContextualPlayabilityAgeGatedByDescriptor' = 24, 'ContextualPlayabilityGeneral' = 25, 'ContextualPlayabilityAgeCheckRequired' = 26, 'ContextualPlayabilityRequireParentApproval' = 27, 'ContextualPlayabilityCoreGated' = 28, 'ContextualPlayabilityTrustedFriendRequired' = 29]",
             "enum": [
               0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
-              19, 20, 21, 22, 23, 24, 25, 26, 27, 28
+              19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
             ],
             "type": "integer"
           },
@@ -92330,6 +92331,9 @@
           "demoModeAvailable": {
             "description": "Whether the game supports demo play for users who have not purchased it.\r\nOnly set when PlayabilityStatus is PurchaseRequired or FiatPurchaseRequired.",
             "type": "boolean"
+          },
+          "privatePlaytestInfo": {
+            "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.PrivatePlaytestInfoResponse"
           }
         },
         "additionalProperties": false
@@ -92360,6 +92364,26 @@
           },
           "secondaryActionText": {
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Games.Api.Models.Response.PrivatePlaytestInfoResponse": {
+        "description": "Private playtest eligibility for the authenticated user.",
+        "type": "object",
+        "properties": {
+          "isPlayable": {
+            "description": "Whether the user is eligible to play as a private playtester.",
+            "type": "boolean"
+          },
+          "playabilityStatus": {
+            "format": "int32",
+            "description": "The private playtest eligibility status. ['UnplayableOtherReason' = 0, 'Playable' = 1, 'GuestProhibited' = 2, 'GameUnapproved' = 3, 'IncorrectConfiguration' = 4, 'UniverseRootPlaceIsPrivate' = 5, 'InsufficientPermissionFriendsOnly' = 6, 'InsufficientPermissionGroupOnly' = 7, 'DeviceRestricted' = 8, 'UnderReview' = 9, 'PurchaseRequired' = 10, 'AccountRestricted' = 11, 'TemporarilyUnavailable' = 12, 'PlaceHasNoPublishedVersion' = 13, 'ComplianceBlocked' = 14, 'ContextualPlayabilityRegionalAvailability' = 15, 'ContextualPlayabilityRegionalCompliance' = 16, 'ContextualPlayabilityAgeRecommendationParentalControls' = 17, 'ContextualPlayabilityExperienceBlockedParentalControls' = 18, 'ContextualPlayabilityAgeGated' = 19, 'ContextualPlayabilityUnverifiedSeventeenPlusUser' = 20, 'FiatPurchaseRequired' = 21, 'FiatPurchaseDeviceRestricted' = 22, 'ContextualPlayabilityUnrated' = 23, 'ContextualPlayabilityAgeGatedByDescriptor' = 24, 'ContextualPlayabilityGeneral' = 25, 'ContextualPlayabilityAgeCheckRequired' = 26, 'ContextualPlayabilityRequireParentApproval' = 27, 'ContextualPlayabilityCoreGated' = 28, 'ContextualPlayabilityTrustedFriendRequired' = 29]",
+            "enum": [
+              0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+              19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+            ],
+            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -94863,14 +94887,14 @@
           },
           "assetType": {
             "format": "int32",
-            "description": "The asset type id of asset with id Roblox.Inventory.Api.V2.UserAssetItemModelV2.AssetId. ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95]",
+            "description": "The asset type id of asset with id Roblox.Inventory.Api.V2.UserAssetItemModelV2.AssetId. ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96]",
             "enum": [
               1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
               24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
               75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
-              91, 92, 93, 94, 95
+              91, 92, 93, 94, 95, 96
             ],
             "type": "integer"
           },
@@ -95912,6 +95936,10 @@
             "items": {
               "$ref": "#/components/schemas/Roblox.LocalizationTables.Api.CursorEntryIdentifier"
             }
+          },
+          "sourceType": {
+            "enum": ["Invalid", "Text", "AssetImage"],
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -96816,7 +96844,7 @@
             "type": "boolean"
           },
           "tradeEligibility": {
-            "description": "The trade eligibility status of the user. ['Unknown' = 0, 'Eligible' = 1, 'IneligibleTradeSystemDisabled' = 2, 'IneligibleCannotTradeWithRoblox' = 3, 'IneligibleUserNotFound' = 4, 'IneligibleMissingPremiumMembership' = 5, 'IneligibleLegalOrRegulatoryRestrictions' = 6, 'IneligibleFreeTradesLimitReached' = 7]",
+            "description": "The trade eligibility status of the user. ['Unknown' = 0, 'Eligible' = 1, 'IneligibleTradeSystemDisabled' = 2, 'IneligibleCannotTradeWithRoblox' = 3, 'IneligibleUserNotFound' = 4, 'IneligibleMissingPremiumMembership' = 5, 'IneligibleLegalOrRegulatoryRestrictions' = 6, 'IneligibleFreeTradesLimitReached' = 7, 'IneligibleAgeCheckRequired' = 8]",
             "enum": [
               "Unknown",
               "Eligible",
@@ -96825,7 +96853,8 @@
               "IneligibleUserNotFound",
               "IneligibleMissingPremiumMembership",
               "IneligibleLegalOrRegulatoryRestrictions",
-              "IneligibleFreeTradesLimitReached"
+              "IneligibleFreeTradesLimitReached",
+              "IneligibleAgeCheckRequired"
             ],
             "type": "string"
           },
@@ -98016,7 +98045,7 @@
         "additionalProperties": false
       },
       "Roblox.Users.Api.AuthenticatedGetUserResponse": {
-        "description": "A response model representing absolute minimal authenticating user information.\r\nNo new attributes should be added to this response since it is in the critical path of app launch and we want to minimize dependencies.",
+        "description": "A response model representing absolute minimal authenticating user information.\nNo new attributes should be added to this response since it is in the critical path of app launch and we want to minimize dependencies.",
         "type": "object",
         "properties": {
           "id": {
@@ -98238,7 +98267,7 @@
         "additionalProperties": false
       },
       "Roblox.Users.Api.MultiGetUserResponse": {
-        "description": "<p>A response model specific to multi-get user.</p>\r\n<p>\r\n            Note: Currently the MultiGet responses don't have all the data that the single gets have, to reduce payload size!\r\n            We might want to revisit this decision in the future.\r\n            </p>",
+        "description": "<p>A response model specific to multi-get user.</p>\n<p>\n            Note: Currently the MultiGet responses don't have all the data that the single gets have, to reduce payload size!\n            We might want to revisit this decision in the future.\n            </p>",
         "type": "object",
         "properties": {
           "hasVerifiedBadge": {

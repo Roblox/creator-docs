@@ -140,7 +140,7 @@ description: |
   end)
   ```
 
-  #### Stable vertex/face IDs
+  #### Stable IDs
 
   Many `EditableMesh` methods take **vertex**, **normal**, **UV**, **color** and
   **face** IDs. These are represented as integers in Luau but they require some
@@ -154,11 +154,16 @@ description: |
   through the table returned by `Class.EditableMesh:GetVertices()|GetVertices()`
   or `Class.EditableMesh:GetFaces()|GetFaces()`.
 
+  For debugging purposes, it can be very helpful to get a more readable string
+  for a stable ID with `Class.EditableMesh:IdDebugString()|IdDebugString()`.
+
   #### Split vertex attributes
 
   A **vertex** is a corner of a face, and topologically connects faces together.
-  Vertices can have several attributes: position, normal, UV coordinate, color,
-  and transparency.
+  Each vertex has a single **position**, while its **normal**, **UV
+  coordinate**, and **color** (with transparency) are stored per face corner. A
+  vertex shared by multiple faces can use the same values on every face, or
+  different values on each.
 
   Sometimes it's useful for all faces that touch a vertex to use the same
   attribute values, but sometimes you'll want different faces to use different
@@ -318,9 +323,12 @@ properties:
 methods:
   - name: EditableMesh:AddBone
     summary: |
-      Adds a new bone and returns a stable bone ID.
+      Adds a new bone and returns a bone ID.
     description: |
-      Adds a new bone and returns a stable bone ID.
+      Adds a new bone to the mesh and returns a bone ID that persists across
+      topology changes. An error is thrown if the bone name is already in use,
+      the parent ID is invalid, or the mesh already contains the maximum number
+      of bones.
     code_samples: []
     parameters:
       - name: boneProperties
@@ -330,7 +338,8 @@ methods:
           Options table containing bone parameters:
 
           - `Name` — A string that specifies the bone name. Note that all bone
-            names in a mesh must be unique.
+            names in a mesh must be unique, and the maximum length is 100
+            characters.
           - `ParentId` — Optional bone ID of the new bone's parent.
           - `CFrame` — Initial `Datatype.CFrame` of the bone in the bind pose of
             the mesh, in the mesh's local space.
@@ -339,7 +348,7 @@ methods:
     returns:
       - type: int64
         summary: |
-          Stable bone ID of the new bone.
+          Bone ID of the new bone.
     tags: []
     deprecation_message: ''
     security: None
@@ -348,9 +357,9 @@ methods:
       - DynamicGeneration
   - name: EditableMesh:AddColor
     summary: |
-      Adds a new color to the geometry and returns a stable color ID.
+      Adds a new color to the geometry and returns a color ID.
     description: |
-      Adds a new color to the geometry and returns a stable color ID.
+      Adds a new vertex color attribute to the mesh and returns a color ID.
     code_samples: []
     parameters:
       - name: color
@@ -362,11 +371,12 @@ methods:
         type: float
         default:
         summary: |
-          The color alpha (transparency).
+          The color alpha (transparency). `0` is fully transparent, and `1` is
+          fully opaque.
     returns:
       - type: int64
         summary: |
-          Stable color ID of the new color.
+          Color ID of the new color.
     tags: []
     deprecation_message: ''
     security: None
@@ -375,10 +385,10 @@ methods:
       - DynamicGeneration
   - name: EditableMesh:AddNormal
     summary: |
-      Adds a new normal to the geometry and returns a stable normal ID.
+      Adds a new normal to the geometry and returns a normal ID.
     description: |
-      Adds a new normal to the geometry and returns a stable normal ID. If the
-      normal value isn't specified, the normal will be automatically calculated.
+      Adds a new normal to the geometry and returns a normal ID. If the normal
+      value isn't specified, the normal will be automatically calculated.
     code_samples: []
     parameters:
       - name: normal
@@ -390,7 +400,7 @@ methods:
     returns:
       - type: int64
         summary: |
-          Stable normal ID of the new normal.
+          Normal ID of the new normal.
     tags: []
     deprecation_message: ''
     security: None
@@ -399,15 +409,15 @@ methods:
       - DynamicGeneration
   - name: EditableMesh:AddTriangle
     summary: |
-      Adds a new triangle to the mesh and returns a stable face ID.
+      Adds a new triangle to the mesh and returns a face ID.
     description: |
-      Adds a new triangle to the mesh and returns a stable face ID.
+      Adds a new triangle to the mesh and returns a face ID.
 
       #### Automatic attribute assignment
 
-      `AddTriangle` only takes vertex (position) IDs as arguments. For each
-      vertex of the new triangle, it automatically assigns normal, UV, and color
-      attributes using the following logic:
+      `AddTriangle` only takes vertex IDs as arguments. For each vertex of the
+      new triangle, it automatically assigns normal, UV, and color attributes
+      using the following logic:
 
       - If the vertex **already belongs to another face**, the new triangle
         corner **reuses** the same normal, UV, and color IDs from the existing
@@ -512,7 +522,7 @@ methods:
     returns:
       - type: int64
         summary: |
-          Stable face ID of the new face.
+          Face ID of the new face.
     tags: []
     deprecation_message: ''
     security: None
@@ -521,9 +531,9 @@ methods:
       - DynamicGeneration
   - name: EditableMesh:AddUV
     summary: |
-      Adds a new UV to the geometry and returns a stable UV ID.
+      Adds a new UV to the geometry and returns a UV ID.
     description: |
-      Adds a new UV to the geometry and returns a stable UV ID.
+      Adds a new UV coordinate attribute to the mesh and returns a UV ID.
     code_samples: []
     parameters:
       - name: uv
@@ -534,7 +544,7 @@ methods:
     returns:
       - type: int64
         summary: |
-          Stable UV ID of the new UV.
+          UV ID of the new UV.
     tags: []
     deprecation_message: ''
     security: None
@@ -543,9 +553,11 @@ methods:
       - DynamicGeneration
   - name: EditableMesh:AddVertex
     summary: |
-      Adds a new vertex to the geometry and returns a stable vertex ID.
+      Adds a new vertex to the geometry and returns a vertex ID.
     description: |
-      Adds a new vertex to the geometry and returns a stable vertex ID.
+      Adds a new vertex to the mesh and returns a vertex ID. The position is
+      specified in the mesh's local object space. An error is thrown if the mesh
+      already contains 60,000 vertices.
     code_samples: []
     parameters:
       - name: p
@@ -556,7 +568,7 @@ methods:
     returns:
       - type: int64
         summary: |
-          Stable vertex ID of the new vertex.
+          Vertex ID of the new vertex.
     tags: []
     deprecation_message: ''
     security: None
@@ -571,13 +583,15 @@ methods:
       Creates new mesh elements of the given attribute type and returns their
       IDs in the same order as the input data. This method always requires an
       explicit `Enum.MeshAttribute` because its input is raw values with no
-      existing IDs to inspect.
+      existing IDs to inspect. Throws an error if the attribute type is invalid,
+      the data format does not match, or adding the elements would exceed mesh
+      limits.
 
       ```lua
       local vIds = mesh:BatchAdd(Enum.MeshAttribute.Vertex, positions)     -- Positions: {Vector3}
       local nIds = mesh:BatchAdd(Enum.MeshAttribute.Normal, normals)       -- Normals: {Vector3}
       local uIds = mesh:BatchAdd(Enum.MeshAttribute.UV, uvs)               -- UVs: {Vector2}
-      local cIds = mesh:BatchAdd(Enum.MeshAttribute.Color, colors, alphas) -- Colors: {Color3}, Alphas (optional): {number}
+      local cIds = mesh:BatchAdd(Enum.MeshAttribute.Color, colors, alphas) -- Colors: {Color3}, Alphas: {number}
       local fIds = mesh:BatchAdd(Enum.MeshAttribute.Face, {
           {vIds[1], vIds[2], vIds[3]},
           {vIds[1], vIds[3], vIds[4]},
@@ -597,9 +611,9 @@ methods:
           Values to initialize the new elements. An array of `Datatype.Vector3`
           for `Enum.MeshAttribute|Vertex` or `Enum.MeshAttribute|Normal`; an
           array of `Datatype.Vector2` for `Enum.MeshAttribute|UV`; an array of
-          `Datatype.Color3` followed by an optional array of alpha numbers for
-          `Enum.MeshAttribute|Color`; a 2D array of vertex-ID arrays for
-          `Enum.MeshAttribute|Face`.
+          `Datatype.Color3` followed by a matching array of alpha numbers (same
+          length) for `Enum.MeshAttribute|Color`; a 2D array of vertex-ID arrays
+          for `Enum.MeshAttribute|Face`.
     returns:
       - type: Array
         summary: |
@@ -615,7 +629,9 @@ methods:
     summary: |
       Returns the per-corner attribute IDs for each face in a batch.
     description: |
-      Returns, for each face, the array of per-corner attribute IDs.
+      Returns, for each face, the array of per-corner attribute IDs, one per
+      corner in the same order as
+      `Class.EditableMesh:GetFaceVertices()|GetFaceVertices()`.
 
       ```lua
       local faceNormals = mesh:BatchGetFaceAttributes(Enum.MeshAttribute.Normal, faceIds) -- {{normalId}}
@@ -627,9 +643,10 @@ methods:
         type: MeshAttribute
         default:
         summary: |
-          The attribute to retrieve for each face's corners, for example
-          `Enum.MeshAttribute.Normal`, `Enum.MeshAttribute.UV`, or
-          `Enum.MeshAttribute.Color`.
+          The attribute to retrieve for each face's corners. Must be
+          `Enum.MeshAttribute.Vertex`, `Enum.MeshAttribute.Normal`,
+          `Enum.MeshAttribute.Color`, or `Enum.MeshAttribute.UV`;
+          `Enum.MeshAttribute.Face` is not supported and throws an error.
       - name: faceIds
         type: Array
         default:
@@ -652,7 +669,7 @@ methods:
       Returns attribute values for each ID in a batch.
     description: |
       Returns attribute values for the given IDs in the same order as the input.
-      The return type is determined by the ID type; no enum is needed.
+      Passing an empty array returns an empty result.
 
       ```lua
       local positions = mesh:BatchGetValues(vertexIds)     -- {Vector3}
@@ -666,7 +683,10 @@ methods:
         type: Array
         default:
         summary: |
-          IDs of the elements to read. All must be the same type.
+          IDs of the elements to read. All must be the same attribute type —
+          vertex, normal, color, or UV. The attribute is determined by the ID
+          type, so no `Enum.MeshAttribute` argument is needed. Mixing types, or
+          passing face or bone IDs, throws an error.
     returns:
       - type: Tuple
         summary: |
@@ -685,9 +705,9 @@ methods:
     summary: |
       Returns the attribute IDs associated with each vertex in a batch.
     description: |
-      Returns, for each vertex, the array of associated attribute IDs. For
-      example, using `Enum.MeshAttribute.Face` returns every face that
-      references each vertex.
+      Returns, for each vertex, the array of associated attribute IDs, gathered
+      across all faces adjacent to that vertex. For example, using
+      `Enum.MeshAttribute.Face` returns every face that references each vertex.
 
       ```lua
       local adjFaces = mesh:BatchGetVertexAttributes(Enum.MeshAttribute.Face, vertexIds) -- {{faceId}}
@@ -698,8 +718,12 @@ methods:
         type: MeshAttribute
         default:
         summary: |
-          The attribute type to look up, for example `Enum.MeshAttribute.Face`
-          to get every face that references each vertex.
+          The attribute type to look up. Must be `Enum.MeshAttribute.Face`
+          (faces that reference each vertex), `Enum.MeshAttribute.Normal`,
+          `Enum.MeshAttribute.Color`, or `Enum.MeshAttribute.UV`;
+          `Enum.MeshAttribute.Vertex` is not supported and throws an error (to
+          read vertex positions, use
+          `Class.EditableMesh:BatchGetValues()|BatchGetValues()`).
       - name: vertexIds
         type: Array
         default:
@@ -733,7 +757,10 @@ methods:
         type: MeshAttribute
         default:
         summary: |
-          The attribute to retrieve.
+          The attribute to retrieve. Must be `Enum.MeshAttribute.Normal`,
+          `Enum.MeshAttribute.Color`, or `Enum.MeshAttribute.UV`;
+          `Enum.MeshAttribute.Vertex` and `Enum.MeshAttribute.Face` are not
+          supported and throw an error.
       - name: vertexIds
         type: Array
         default:
@@ -743,7 +770,8 @@ methods:
         type: Array
         default:
         summary: |
-          Faces that identify each corner.
+          Faces that identify each corner. Must be the same length as
+          `vertexIds`.
     returns:
       - type: Array
         summary: |
@@ -760,7 +788,11 @@ methods:
     summary: |
       Removes a batch of faces.
     description: |
-      Removes a batch of faces.
+      Removes a batch of faces. As with
+      `Class.EditableMesh:RemoveFace()|RemoveFace()`, the vertices and
+      attributes used by the removed faces are not automatically deleted; call
+      `Class.EditableMesh:RemoveUnused()|RemoveUnused()` afterward to clean up
+      unused elements.
 
       ```lua
       mesh:BatchRemove(faceIds)
@@ -771,7 +803,8 @@ methods:
         type: Array
         default:
         summary: |
-          Face IDs to remove.
+          Face IDs to remove. An invalid or already-removed ID throws an error
+          and removes nothing; duplicate IDs are collapsed to a single removal.
     returns:
       - type: ()
         summary: ''
@@ -801,14 +834,16 @@ methods:
         type: Array
         default:
         summary: |
-          Faces to update.
+          Face IDs to update. Must be the same length as `attrIdArrays`.
       - name: attrIdArrays
         type: Array
         default:
         summary: |
           2D array. `attrIdArrays[i]` is the list of attribute IDs for the
-          corners of `faceIds[i]`. Each inner array must have one entry per
-          corner of the face.
+          corners of `faceIds[i]`, in order. Each inner array must have one
+          entry per corner of the face. All IDs must be of the same attribute
+          type — vertex, normal, color, or UV; mixing types (or passing another
+          ID type) throws an error.
     returns:
       - type: ()
         summary: ''
@@ -824,7 +859,8 @@ methods:
       Writes attribute values to a batch of mesh element IDs.
     description: |
       Writes attribute values to the given IDs. `values[i]` is written to
-      `ids[i]`.
+      `ids[i]`; the `ids` and `values` arrays must be the same length, unless
+      `values` is `nil` to reset normals.
 
       For color IDs, pass an array of `Datatype.Color3` to set the colors, or an
       array of numbers to set the alphas. Mixing types in one call is an error.
@@ -843,7 +879,10 @@ methods:
         type: Array
         default:
         summary: |
-          IDs of the elements to write. All must be the same type.
+          IDs of the elements to write. All must be the same attribute type —
+          vertex, normal, color, or UV. The attribute is determined by the ID
+          type, so no `Enum.MeshAttribute` argument is needed. Mixing types, or
+          passing face or bone IDs, throws an error.
       - name: values
         type: Array
         default:
@@ -881,17 +920,20 @@ methods:
         type: Array
         default:
         summary: |
-          Vertices that identify each corner.
+          Vertex IDs that identify each corner.
       - name: faceIds
         type: Array
         default:
         summary: |
-          Faces that identify each corner.
+          Face IDs that identify each corner. Must be the same length as
+          `vertexIds`.
       - name: attrIds
         type: Array
         default:
         summary: |
-          Attribute IDs to assign.
+          Attribute IDs to assign, one per pair; must be the same length as
+          `vertexIds`. All must be the same attribute type — normal, color, or
+          UV; passing a vertex or face ID throws an error.
     returns:
       - type: ()
         summary: ''
@@ -949,7 +991,9 @@ methods:
       on the mesh in local object space, and the barycentric coordinate of the
       position within the face. See
       `Class.EditableMesh:RaycastLocal()|RaycastLocal()` for more information on
-      barycentric coordinates.
+      barycentric coordinates. When the mesh is skinned, this query operates
+      against the bind-pose geometry, not the deformed mesh as it appears at
+      runtime.
     code_samples: []
     parameters:
       - name: point
@@ -972,8 +1016,9 @@ methods:
     summary: |
       Finds the closest vertex to a specific point in space.
     description: |
-      Finds the closest vertex to a specific point in space and returns a stable
-      vertex ID.
+      Finds the closest vertex to a specific point in space and returns a vertex
+      ID. When the mesh is skinned, this query operates against the bind-pose
+      geometry, not the deformed mesh as it appears at runtime.
     code_samples: []
     parameters:
       - name: toThisPoint
@@ -984,7 +1029,7 @@ methods:
     returns:
       - type: int64
         summary: |
-          Closest stable vertex ID to the specified point in space.
+          Closest vertex ID to the specified point in space.
     tags: []
     deprecation_message: ''
     security: None
@@ -995,8 +1040,9 @@ methods:
     summary: |
       Finds all vertices within a specific sphere.
     description: |
-      Finds all vertices within a specific sphere and returns a list of stable
-      vertex IDs.
+      Finds all vertices within a specific sphere and returns a list of vertex
+      IDs. When the mesh is skinned, this query operates against the bind-pose
+      geometry, not the deformed mesh as it appears at runtime.
     code_samples: []
     parameters:
       - name: center
@@ -1012,7 +1058,7 @@ methods:
     returns:
       - type: Array
         summary: |
-          List of stable vertex IDs within the requested sphere.
+          List of vertex IDs within the requested sphere.
     tags: []
     deprecation_message: ''
     security: None
@@ -1023,7 +1069,7 @@ methods:
     summary: |
       Returns a list of faces adjacent to a given face.
     description: |
-      Given a stable face ID, returns a list of adjacent faces.
+      Given a face ID, returns a list of adjacent faces.
 
       <img src="../../../assets/engine-api/classes/EditableMesh/GetAdjacentTriangles.png" alt="Adjacent faces indicated around requested face" width="120" />
     code_samples: []
@@ -1032,7 +1078,7 @@ methods:
         type: int64
         default:
         summary: |
-          Stable ID of the face for which to find adjacent faces.
+          Face ID for which to get adjacent faces.
     returns:
       - type: Array
         summary: |
@@ -1047,7 +1093,7 @@ methods:
     summary: |
       Returns a list of vertices adjacent to a given vertex.
     description: |
-      Given a stable vertex ID, returns a list of adjacent vertices.
+      Given a vertex ID, returns a list of adjacent vertices.
 
       <img src="../../../assets/engine-api/classes/EditableMesh/GetAdjacentVertices.png" alt="Adjacent vertices indicated around requested vertex" width="120" />
     code_samples: []
@@ -1143,7 +1189,8 @@ methods:
     summary: |
       Returns the bone name.
     description: |
-      Returns the bone name.
+      Returns the name string of the bone identified by the given bone ID. Bone
+      names are unique within the mesh and can be up to 100 characters long.
     code_samples: []
     parameters:
       - name: boneId
@@ -1165,7 +1212,8 @@ methods:
     summary: |
       Returns the parent bone ID, if any.
     description: |
-      Returns the parent bone ID, if any.
+      Returns the bone ID of the parent bone in the bone hierarchy. If the bone
+      has no parent, returns `0`.
     code_samples: []
     parameters:
       - name: boneId
@@ -1188,13 +1236,13 @@ methods:
     summary: |
       Returns all bones of the mesh.
     description: |
-      Returns all bones of the mesh as a list of stable bone IDs.
+      Returns all bones of the mesh as a list of bone IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
         summary: |
-          List of stable bone IDs.
+          List of bone IDs.
     tags: []
     deprecation_message: ''
     security: None
@@ -1203,10 +1251,10 @@ methods:
       - DynamicGeneration
   - name: EditableMesh:GetCenter
     summary: |
-      Returns the center of the mesh's axis-aligned bounding box in local space.
+      Returns the center of the mesh's axis-aligned bounding box.
     description: |
-      Returns the center of the `EditableMesh` bounding box in the mesh's local
-      object space.
+      Returns the center of the mesh's axis-aligned bounding box, in the mesh's
+      local object space.
     code_samples: []
     parameters: []
     returns:
@@ -1223,7 +1271,9 @@ methods:
     summary: |
       Returns the color for the given color ID.
     description: |
-      Returns the color for the given color ID.
+      Returns the `Datatype.Color3` value stored at the given color ID. Use
+      `Class.EditableMesh:GetColorAlpha()|GetColorAlpha()` to retrieve the alpha
+      component separately.
     code_samples: []
     parameters:
       - name: colorId
@@ -1234,7 +1284,7 @@ methods:
     returns:
       - type: Color3?
         summary: |
-          Color for the requested stable color ID.
+          Color for the requested color ID.
     tags: []
     deprecation_message: ''
     security: None
@@ -1245,7 +1295,9 @@ methods:
     summary: |
       Returns the color alpha (transparency) at the given color ID.
     description: |
-      Returns the color alpha (transparency) at the given stable color ID.
+      Returns the alpha component of the vertex color at the given color ID as a
+      number between `0` (fully transparent) and `1` (fully opaque). Use
+      `Class.EditableMesh:GetColor()|GetColor()` to retrieve the RGB component.
     code_samples: []
     parameters:
       - name: colorId
@@ -1256,7 +1308,7 @@ methods:
     returns:
       - type: float?
         summary: |
-          Color alpha at the request stable color ID.
+          Color alpha at the request color ID.
     tags: []
     deprecation_message: ''
     security: None
@@ -1267,13 +1319,13 @@ methods:
     summary: |
       Returns all colors of the mesh.
     description: |
-      Returns all colors of the mesh as a list of stable color IDs.
+      Returns all colors of the mesh as a list of color IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
         summary: |
-          List of stable color IDs.
+          List of color IDs.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1285,7 +1337,12 @@ methods:
     summary: |
       Returns the face's color IDs for the vertices on the face.
     description: |
-      Returns the face's color IDs for the vertices on the face.
+      Returns an array of color IDs, one per vertex corner of the specified
+      face, in the same order as
+      `Class.EditableMesh:GetFaceVertices()|GetFaceVertices()`. Use these IDs
+      with `Class.EditableMesh:GetColor()|GetColor()` and
+      `Class.EditableMesh:GetColorAlpha()|GetColorAlpha()` to read the actual
+      color values.
     code_samples: []
     parameters:
       - name: faceId
@@ -1308,7 +1365,11 @@ methods:
     summary: |
       Returns the face's normal IDs for the vertices on the face.
     description: |
-      Returns the face's normal IDs for the vertices on the face.
+      Returns an array of normal IDs, one per vertex corner of the specified
+      face, in the same order as
+      `Class.EditableMesh:GetFaceVertices()|GetFaceVertices()`. Use these IDs
+      with `Class.EditableMesh:GetNormal()|GetNormal()` to read the actual
+      normal vectors.
     code_samples: []
     parameters:
       - name: faceId
@@ -1331,13 +1392,13 @@ methods:
     summary: |
       Returns all faces of the mesh.
     description: |
-      Returns all faces of the mesh as a list of stable face IDs.
+      Returns all faces of the mesh as a list of face IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
         summary: |
-          List of stable face IDs.
+          List of face IDs.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1449,7 +1510,11 @@ methods:
     summary: |
       Returns the face's UV IDs for the vertices on the face.
     description: |
-      Returns the face's UV IDs for the vertices on the face.
+      Returns an array of UV IDs, one per vertex corner of the specified face,
+      in the same order as
+      `Class.EditableMesh:GetFaceVertices()|GetFaceVertices()`. Use these IDs
+      with `Class.EditableMesh:GetUV()|GetUV()` to read the actual UV
+      coordinates.
     code_samples: []
     parameters:
       - name: faceId
@@ -1472,14 +1537,15 @@ methods:
     summary: |
       Returns the face's vertex IDs.
     description: |
-      Returns the face's vertex IDs.
+      Returns an array of vertex IDs that define the corners of the given face,
+      in the same order used when the face was created.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
         summary: |
-          Stable ID of the face for which to get vertex IDs.
+          Face ID for which to get the vertex IDs.
     returns:
       - type: Array
         summary: |
@@ -1570,7 +1636,12 @@ methods:
     summary: |
       Returns all FACS action units that have poses defined.
     description: |
-      Returns all FACS action units that have poses defined.
+      Returns an array of `Enum.FacsActionUnit` values representing all base
+      FACS poses currently defined on this mesh. Use each returned value with
+      `Class.EditableMesh:GetFacsPose()|GetFacsPose()` to retrieve the bone
+      transforms for that pose. See also
+      `Class.EditableMesh:GetFacsCorrectivePoses()|GetFacsCorrectivePoses()` for
+      corrective poses.
     code_samples: []
     parameters: []
     returns:
@@ -1588,7 +1659,10 @@ methods:
     summary: |
       Returns the normal vector for the given normal ID.
     description: |
-      Returns the normal vector for the given normal ID.
+      Returns the `Datatype.Vector3` normal vector at the given normal ID. If
+      the normal vector was manually specified it will return that vector. If
+      the normal vector was not specified or was reset, this will return an
+      automatically calculated normal vector based on the shape of the mesh.
     code_samples: []
     parameters:
       - name: normalId
@@ -1610,13 +1684,13 @@ methods:
     summary: |
       Returns all normals of the mesh.
     description: |
-      Returns all normals of the mesh as a list of stable normal IDs.
+      Returns all normals of the mesh as a list of normal IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
         summary: |
-          List of stable normal IDs.
+          List of normal IDs.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1635,7 +1709,7 @@ methods:
         type: int64
         default:
         summary: |
-          Stable vertex ID for which to get the position.
+          Vertex ID for which to get the position.
     returns:
       - type: Vector3
         summary: |
@@ -1648,10 +1722,10 @@ methods:
       - DynamicGeneration
   - name: EditableMesh:GetSize
     summary: |
-      Returns the size of the mesh's axis-aligned bounding box in local space.
+      Returns the size of the mesh's axis-aligned bounding box.
     description: |
-      Returns the size of the `EditableMesh` bounding box in the mesh's local
-      object space.
+      Returns the size of the mesh's axis-aligned bounding box, in the mesh's
+      local object space.
     code_samples: []
     parameters: []
     returns:
@@ -1668,7 +1742,8 @@ methods:
     summary: |
       Returns UV coordinates at the given UV ID.
     description: |
-      Returns UV coordinates at the given UV ID.
+      Returns the `Datatype.Vector2` texture coordinate stored at the given UV
+      ID. UV coordinates map the mesh surface to a 2D texture.
     code_samples: []
     parameters:
       - name: uvId
@@ -1690,13 +1765,13 @@ methods:
     summary: |
       Returns all UVs of the mesh.
     description: |
-      Returns all UVs of the mesh as a list of stable UV IDs.
+      Returns all UVs of the mesh as a list of UV IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
         summary: |
-          List of stable UV IDs.
+          List of UV IDs.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1708,7 +1783,11 @@ methods:
     summary: |
       Returns all bone IDs that are associated with the vertex for skinning.
     description: |
-      Returns all bone IDs that are associated with the vertex for skinning.
+      Returns an array of bone IDs that influence the given vertex during
+      skinning deformation. A vertex can be influenced by up to 4 bones. The
+      returned array corresponds index-by-index with the weights returned by
+      `Class.EditableMesh:GetVertexBoneWeights()|GetVertexBoneWeights()` for the
+      same vertex.
     code_samples: []
     parameters:
       - name: vertexId
@@ -1731,7 +1810,10 @@ methods:
       Returns skinning blend weights for each bone that is associated with the
       vertex.
     description: |
-      Returns skinning blend weights for each bone that is associated with the
+      Returns an array of blend weights (each between `0` and `1`) for the bones
+      influencing this vertex during skeletal deformation. The returned array
+      corresponds index-by-index with the bone IDs returned by
+      `Class.EditableMesh:GetVertexBones()|GetVertexBones()` for the same
       vertex.
     code_samples: []
     parameters:
@@ -1755,14 +1837,16 @@ methods:
     summary: |
       Returns the color IDs of the faces attached to the given vertex.
     description: |
-      Returns the color IDs of the faces attached to the given vertex.
+      Returns an array of color IDs used on all face corners that reference the
+      given vertex. A vertex shared by multiple faces can have different color
+      IDs on each face (a color seam); this method returns all of them.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
         summary: |
-          Stable vertex ID to find color IDs.
+          Vertex ID to find color IDs.
     returns:
       - type: Array
         summary: |
@@ -1778,23 +1862,26 @@ methods:
     summary: |
       Returns the color ID of a vertex/face pair.
     description: |
-      Returns the color ID of a vertex/face pair.
+      Returns the color ID assigned to a specific corner of a face, identified
+      by the vertex/face pair. This is useful when a vertex is shared by
+      multiple faces and you need the color for one particular face corner
+      rather than all of them.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
         summary: |
-          Stable vertex ID.
+          Vertex ID.
       - name: faceId
         type: int64
         default:
         summary: |
-          Stable face ID.
+          Face ID.
     returns:
       - type: int64
         summary: |
-          Stable color ID of the vertex/face pair.
+          Color ID of the vertex/face pair.
     tags: []
     deprecation_message: ''
     security: None
@@ -1805,23 +1892,26 @@ methods:
     summary: |
       Returns the normal ID of a vertex/face pair.
     description: |
-      Returns the normal ID of a vertex/face pair.
+      Returns the normal ID assigned to a specific corner of a face, identified
+      by the vertex/face pair. This is useful when a vertex has split normals (a
+      sharp edge) and you need the normal for one particular face corner rather
+      than all of them.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
         summary: |
-          Stable vertex ID.
+          Vertex ID.
       - name: faceId
         type: int64
         default:
         summary: |
-          Stable face ID.
+          Face ID.
     returns:
       - type: int64
         summary: |
-          Stable normal ID of the vertex/face pair.
+          Normal ID of the vertex/face pair.
     tags: []
     deprecation_message: ''
     security: None
@@ -1832,14 +1922,16 @@ methods:
     summary: |
       Returns the face IDs of the faces attached to the given vertex.
     description: |
-      Returns the face IDs of the faces attached to the given vertex.
+      Returns an array of face IDs for all faces that have the given vertex as
+      one of their corners. Use this to traverse the mesh topology around a
+      vertex, for example to find all faces affected by moving a vertex.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
         summary: |
-          Stable vertex ID to find faces for.
+          Vertex ID to find faces for.
     returns:
       - type: Array
         summary: |
@@ -1855,23 +1947,25 @@ methods:
     summary: |
       Returns the UV ID of a vertex/face pair.
     description: |
-      Returns the UV ID of a vertex/face pair.
+      Returns the UV ID assigned to a specific corner of a face, identified by
+      the vertex/face pair. This is useful when a vertex has a UV seam and you
+      need the UV for one particular face corner rather than all of them.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
         summary: |
-          Stable vertex ID.
+          Vertex ID.
       - name: faceId
         type: int64
         default:
         summary: |
-          Stable face ID.
+          Face ID.
     returns:
       - type: int64
         summary: |
-          Stable UV ID of the vertex/face pair.
+          UV ID of the vertex/face pair.
     tags: []
     deprecation_message: ''
     security: None
@@ -1882,14 +1976,16 @@ methods:
     summary: |
       Returns the normal IDs of the faces attached to the given vertex.
     description: |
-      Returns the normal IDs of the faces attached to the given vertex.
+      Returns an array of normal IDs used on all face corners that reference the
+      given vertex. A vertex shared by multiple faces can have different normal
+      IDs on each face (a hard/sharp edge); this method returns all of them.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
         summary: |
-          Stable vertex ID to find normal IDs.
+          Vertex ID to find normal IDs.
     returns:
       - type: Array
         summary: |
@@ -1905,14 +2001,16 @@ methods:
     summary: |
       Returns the UV IDs of the faces attached to the given vertex.
     description: |
-      Returns the UV IDs of the faces attached to the given vertex.
+      Returns an array of UV IDs used on all face corners that reference the
+      given vertex. A vertex shared by multiple faces can have different UV IDs
+      on each face (a UV seam); this method returns all of them.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
         summary: |
-          Stable vertex ID to find UV IDs.
+          Vertex ID to find UV IDs.
     returns:
       - type: Array
         summary: |
@@ -1926,15 +2024,17 @@ methods:
       - DynamicGeneration
   - name: EditableMesh:GetVertices
     summary: |
-      Returns all vertices as a list of stable vertex IDs.
+      Returns all vertices as a list of vertex IDs.
     description: |
-      Returns all vertices as a list of stable vertex IDs.
+      Returns all vertex IDs in the mesh as a list of IDs. The IDs may not be
+      contiguous. Use this list to iterate over vertices safely, rather than
+      assuming consecutive numbering.
     code_samples: []
     parameters: []
     returns:
       - type: Array
         summary: |
-          List of stable vertex IDs.
+          List of vertex IDs.
     tags: []
     deprecation_message: ''
     security: None
@@ -2043,10 +2143,10 @@ methods:
       - DynamicGeneration
   - name: EditableMesh:IdDebugString
     summary: |
-      Returns a string describing a stable ID, useful for debugging purposes.
+      Returns a string describing an ID, useful for debugging purposes.
     description: |
-      Returns a string describing a stable ID, useful for debugging purposes,
-      like `f17` or `v12`, containing the type, ID number, and version.
+      Returns a string describing an ID, useful for debugging purposes, like
+      `f17` or `v12`, containing the type, ID number, and version.
     code_samples: []
     parameters:
       - name: id
@@ -2090,11 +2190,13 @@ methods:
       - DynamicGeneration
   - name: EditableMesh:RaycastLocal
     summary: |
-      Casts a ray against the mesh in local object space.
+      Casts a ray and returns the intersection point, face ID, and barycentric
+      coordinates.
     description: |
       Casts a ray and returns a point of intersection, face ID, and barycentric
       coordinates. The inputs and outputs of this method are in the mesh's local
-      object space.
+      object space. When the mesh is skinned, this raycast operates against the
+      bind-pose geometry, not the deformed mesh as it appears at runtime.
 
       A **barycentric coordinate** is a way of specifying a point within a face
       as a weighted combination of the 3 vertices of the face. This is useful as
@@ -2126,16 +2228,17 @@ methods:
       - DynamicGeneration
   - name: EditableMesh:RemoveBone
     summary: |
-      Removes a bone using its stable bone ID.
+      Removes a bone using its bone ID.
     description: |
-      Removes a bone using its stable bone ID.
+      Removes a bone from the mesh using its bone ID. Any vertex skinning
+      weights that referenced the removed bone are also cleared.
     code_samples: []
     parameters:
       - name: boneId
         type: int64
         default:
         summary: |
-          Stable ID of the bone to remove.
+          Bone ID of the bone to remove.
     returns:
       - type: ()
         summary: ''
@@ -2147,16 +2250,19 @@ methods:
       - DynamicGeneration
   - name: EditableMesh:RemoveFace
     summary: |
-      Removes a face using its stable face ID.
+      Removes a face using its face ID.
     description: |
-      Removes a face using its stable face ID.
+      Removes a face from the mesh using its face ID. The vertices and
+      attributes that were used by the face are **not** automatically deleted;
+      call `Class.EditableMesh:RemoveUnused()|RemoveUnused()` afterward if you
+      want to clean up unused vertices and attributes.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
         summary: |
-          Stable ID of the face to remove.
+          Face ID of the face to remove.
     returns:
       - type: ()
         summary: ''
@@ -2178,7 +2284,7 @@ methods:
     returns:
       - type: Array
         summary: |
-          All of the removed stable IDs.
+          All of the removed IDs.
     tags: []
     deprecation_message: ''
     security: None
@@ -2197,7 +2303,7 @@ methods:
         type: int64
         default:
         summary: |
-          Stable normal ID to reset.
+          Normal ID to reset.
     returns:
       - type: ()
         summary: ''
@@ -2293,7 +2399,10 @@ methods:
     summary: |
       Set a parent for a bone.
     description: |
-      Set a parent for a bone.
+      Sets the parent of a bone in the bone hierarchy. Pass a valid bone ID to
+      parent the bone, or `0` to make it a root bone. The engine validates that
+      the new parent does not create a cycle in the bone hierarchy and throws an
+      error if the parent ID is invalid or would produce a circular dependency.
     code_samples: []
     parameters:
       - name: boneId
@@ -2319,14 +2428,17 @@ methods:
     summary: |
       Sets the color for a color ID.
     description: |
-      Sets the color for a color ID.
+      Sets the `Datatype.Color3` value for a color ID. This changes the vertex
+      color for every face corner that references this color ID. Use
+      `Class.EditableMesh:SetColorAlpha()|SetColorAlpha()` to change the alpha
+      component separately.
     code_samples: []
     parameters:
       - name: colorId
         type: int64
         default:
         summary: |
-          Stable color ID for which to set the color.
+          Color ID for which to set the color.
       - name: color
         type: Color3
         default:
@@ -2345,14 +2457,17 @@ methods:
     summary: |
       Sets the color alpha (transparency) for a color ID.
     description: |
-      Sets the color alpha (transparency) for a color ID.
+      Sets the alpha (transparency) component of the vertex color at the given
+      color ID. The value is a number between `0` (fully transparent) and `1`
+      (fully opaque). This changes the alpha for every face corner that
+      references this color ID.
     code_samples: []
     parameters:
       - name: colorId
         type: int64
         default:
         summary: |
-          Stable color ID for which to set the color alpha.
+          Color ID for which to set the color alpha.
       - name: alpha
         type: float
         default:
@@ -2371,7 +2486,11 @@ methods:
     summary: |
       Sets the face's vertex colors to new color IDs.
     description: |
-      Sets the face's vertex colors to new color IDs.
+      Assigns new color IDs to the corners of a face, replacing whatever color
+      IDs were previously set. The array must contain one color ID per vertex of
+      the face, in the same winding order as
+      `Class.EditableMesh:GetFaceVertices()|GetFaceVertices()`. Use this to
+      create a color seam at a vertex shared by multiple faces.
     code_samples: []
     parameters:
       - name: faceId
@@ -2383,7 +2502,7 @@ methods:
         type: Array
         default:
         summary: |
-          List of new stable color IDs to use for the given face's vertices.
+          List of new color IDs to use for the given face's vertices.
     returns:
       - type: ()
         summary: ''
@@ -2398,7 +2517,12 @@ methods:
     summary: |
       Sets the face's vertex normals to new normal IDs.
     description: |
-      Sets the face's vertex normals to new normal IDs.
+      Assigns new normal IDs to the corners of a face, replacing whatever normal
+      IDs were previously set. The array must contain one normal ID per vertex
+      of the face, in the same winding order as
+      `Class.EditableMesh:GetFaceVertices()|GetFaceVertices()`. Use this to
+      create a hard/sharp edge by giving adjacent faces different normals at the
+      same vertex.
     code_samples: []
     parameters:
       - name: faceId
@@ -2410,7 +2534,7 @@ methods:
         type: Array
         default:
         summary: |
-          List of new stable normal IDs to use for the given face's vertices.
+          List of new normal IDs to use for the given face's vertices.
     returns:
       - type: ()
         summary: ''
@@ -2425,7 +2549,11 @@ methods:
     summary: |
       Sets the face's vertex UVs to new UV IDs.
     description: |
-      Sets the face's vertex UVs to new UV IDs.
+      Assigns new UV IDs to the corners of a face, replacing whatever UV IDs
+      were previously set. The array must contain one UV ID per vertex of the
+      face, in the same winding order as
+      `Class.EditableMesh:GetFaceVertices()|GetFaceVertices()`. Use this to
+      create a UV seam at a vertex shared by multiple faces.
     code_samples: []
     parameters:
       - name: faceId
@@ -2437,7 +2565,7 @@ methods:
         type: Array
         default:
         summary: |
-          List of new stable UV IDs to use for the given face's vertices.
+          List of new UV IDs to use for the given face's vertices.
     returns:
       - type: ()
         summary: ''
@@ -2452,7 +2580,9 @@ methods:
     summary: |
       Sets the face's vertices to new vertex IDs.
     description: |
-      Sets the face's vertices to new vertex IDs.
+      Replaces the vertex IDs at each corner of the given face, in winding
+      order. The existing normal, UV, and color attributes on each corner are
+      preserved.
     code_samples: []
     parameters:
       - name: faceId
@@ -2464,7 +2594,7 @@ methods:
         type: Array
         default:
         summary: |
-          List of new stable vertex IDs to use for the given face.
+          List of new vertex IDs to use for the given face.
     returns:
       - type: ()
         summary: ''
@@ -2480,8 +2610,13 @@ methods:
       Set `Datatype.CFrame` for an individual bone in a specific FACS action
       unit.
     description: |
-      Set `Datatype.CFrame` for an individual bone in a specific FACS action
-      unit.
+      Sets the `Datatype.CFrame` for a single bone within a specific FACS action
+      unit pose, without modifying the other bones in that pose. The bone must
+      be virtual. The `Datatype.CFrame` transforms the bone from its initial
+      bind-pose position to the target pose position, in the mesh's local space.
+      Use this for incremental edits to a FACS pose; use
+      `Class.EditableMesh:SetFacsPose()|SetFacsPose()` to set all bones in a
+      pose at once.
     code_samples: []
     parameters:
       - name: action
@@ -2515,7 +2650,14 @@ methods:
     summary: |
       Set pose for all bones in a specific FACS corrective pose.
     description: |
-      Set pose for all bones in a specific FACS corrective pose.
+      Sets all bone transforms for a FACS corrective pose, which overrides the
+      blended result of 2 or 3 base poses when they are active simultaneously.
+      The `actions` array must contain exactly 2 or 3 `Enum.FacsActionUnit`
+      values that identify the combination. All referenced bones must be
+      virtual. The `boneIds` and `cframes` arrays must be the same length; each
+      `Datatype.CFrame` transforms the bone from the bind pose to the corrective
+      target, in the mesh's local space. Throws if the action combination is not
+      a valid corrective.
     code_samples: []
     parameters:
       - name: actions
@@ -2552,7 +2694,12 @@ methods:
     summary: |
       Set pose for all bones in a specific FACS action unit.
     description: |
-      Set pose for all bones in a specific FACS action unit.
+      Sets all bone transforms for a FACS base pose (a single action unit). The
+      `boneIds` and `cframes` arrays must be the same length; each
+      `Datatype.CFrame` transforms the bone from the bind pose to the target
+      pose, in the mesh's local space. All referenced bones must be virtual
+      (non-virtual bones throw an error). This replaces any previously defined
+      pose for the given action unit.
     code_samples: []
     parameters:
       - name: action
@@ -2596,7 +2743,7 @@ methods:
         type: int64
         default:
         summary: |
-          Stable normal ID for which to set the normal vector.
+          Normal ID for which to set the normal vector.
       - name: normal
         type: Vector3
         default:
@@ -2615,14 +2762,17 @@ methods:
     summary: |
       Sets a vertex position in the mesh's local object space.
     description: |
-      Sets a vertex position in the mesh's local object space.
+      Sets a vertex position in the mesh's local object space. Please note that
+      collision and other physics data on linked `Class.MeshPart|MeshParts` is
+      not updated until you call `Class.AssetService:CreateMeshPartAsync()` and
+      `Class.MeshPart:ApplyMesh()`.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
         summary: |
-          Stable vertex ID of the vertex to position.
+          Vertex ID of the vertex to position.
       - name: p
         type: Vector3
         default:
@@ -2641,7 +2791,8 @@ methods:
     summary: |
       Sets UV coordinates for a UV ID.
     description: |
-      Sets UV coordinates for a UV ID.
+      Sets the `Datatype.Vector2` texture coordinate for a UV ID. This changes
+      the UV mapping for every face corner that references this UV ID.
     code_samples: []
     parameters:
       - name: uvId
@@ -2738,24 +2889,28 @@ methods:
     summary: |
       Sets the color ID of a vertex/face pair.
     description: |
-      Sets the color ID of a vertex/face pair.
+      Sets the color ID for a specific corner of a face, identified by the
+      vertex/face pair. This is equivalent to changing just one element of the
+      array set by `Class.EditableMesh:SetFaceColors()|SetFaceColors()`, and is
+      useful for creating or removing a color seam at a single vertex without
+      affecting the other corners of the face.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
         summary: |
-          Stable vertex ID.
+          Vertex ID.
       - name: faceId
         type: int64
         default:
         summary: |
-          Stable face ID.
+          Face ID.
       - name: colorId
         type: int64
         default:
         summary: |
-          Stable color ID to set for the vertex/face pair.
+          Color ID to set for the vertex/face pair.
     returns:
       - type: ()
         summary: ''
@@ -2769,24 +2924,28 @@ methods:
     summary: |
       Sets the normal ID of a vertex/face pair.
     description: |
-      Sets the normal ID of a vertex/face pair.
+      Sets the normal ID for a specific corner of a face, identified by the
+      vertex/face pair. This is equivalent to changing just one element of the
+      array set by `Class.EditableMesh:SetFaceNormals()|SetFaceNormals()`, and
+      is useful for creating or removing a hard edge at a single vertex without
+      affecting the other corners of the face.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
         summary: |
-          Stable vertex ID.
+          Vertex ID.
       - name: faceId
         type: int64
         default:
         summary: |
-          Stable face ID.
+          Face ID.
       - name: normalId
         type: int64
         default:
         summary: |
-          Stable normal ID to set for the vertex/face pair.
+          Normal ID to set for the vertex/face pair.
     returns:
       - type: ()
         summary: ''
@@ -2800,24 +2959,28 @@ methods:
     summary: |
       Sets the UV ID of a vertex/face pair.
     description: |
-      Sets the UV ID of a vertex/face pair.
+      Sets the UV ID for a specific corner of a face, identified by the
+      vertex/face pair. This is equivalent to changing just one element of the
+      array set by `Class.EditableMesh:SetFaceUVs()|SetFaceUVs()`, and is useful
+      for creating or removing a UV seam at a single vertex without affecting
+      the other corners of the face.
     code_samples: []
     parameters:
       - name: vertexId
         type: int64
         default:
         summary: |
-          Stable vertex ID.
+          Vertex ID.
       - name: faceId
         type: int64
         default:
         summary: |
-          Stable face ID.
+          Face ID.
       - name: uvId
         type: int64
         default:
         summary: |
-          Stable UV ID to set for the vertex/face pair.
+          UV ID to set for the vertex/face pair.
     returns:
       - type: ()
         summary: ''
