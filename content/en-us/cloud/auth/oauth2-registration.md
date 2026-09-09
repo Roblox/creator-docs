@@ -72,7 +72,7 @@ First, select the **App Category** that best matches your app:
 The available permission scopes update to show only the scopes for the selected
 category. Each app is expected to request the minimum number of scopes needed
 for its function. The set of scopes for an app must fall under a single app
-category listed in the [Creator Third Party App Policy](https://en.help.roblox.com/hc/en-us/articles/37924211313044-Creator-Third-Party-App-Policy).
+category listed in the [Creator Third-Party App Policy](https://en.help.roblox.com/hc/en-us/articles/37924211313044-Creator-Third-Party-App-Policy).
 </Alert>
 
 ## Add redirect URLs
