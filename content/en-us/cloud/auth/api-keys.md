@@ -70,7 +70,7 @@ To prevent this, we **strongly recommend** creating a separate API key on a dedi
 
 1. Create a new, dedicated Roblox account for your automation.
 1. Invite the new account to your group.
-1. Assign it a group role with the minimum permissions required for its task (e.g., only "Create and edit group experiences").
+1. Assign it a group role with only the permissions required for its task.
 1. Log in to the new account and follow the steps in the section above to [create an API key](#create-api-keys).
 1. Use the generated API key for group resource automation.
 
