@@ -140,7 +140,7 @@ See [Bodies](../avatar/character-bodies/index.md).
 
 ## Animations
 
-See [Emotes](../avatar/emotes/index.md).
+See [Animation packs](../avatar/animation-packs.md) and [Emotes](../avatar/emotes/index.md).
 
 <table>
   <thead>
@@ -150,6 +150,10 @@ See [Emotes](../avatar/emotes/index.md).
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>Animation packs</td>
+      <td>A coordinated set of avatar locomotion animations for states such as idling, walking, running, jumping, falling, climbing, and swimming.</td>
+    </tr>
     <tr>
       <td>Emotes</td>
       <td>A triggered animation sequence that performs a specific social action or gesture, such as waving or dancing.</td>

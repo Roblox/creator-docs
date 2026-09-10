@@ -9,20 +9,18 @@ The **Ads Manager** offers you control over your ad campaigns, empowering you to
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/5HcH-9E7USc?si=IDla-YBxiO_E-O0q" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Set up an ad account
+## Getting started
 
-To access the Ads Manager, you must set up an ad account with a verified email on a Roblox account registered for users aged 13 years or older.
+To access the Ads Manager, you must be aged 13 years or older and use a Roblox account with a verified email address.
 
-When setting up an account, you can choose between creating a personal or a business ads account. A personal account is for individuals who want to advertise on Roblox, while a business account manages a company's ad presence on Roblox.
-
-To set up an ad account:
+To get started:
 
 1. Create an ad account.
-   1. Go to the [Ads Manager](https://ads.roblox.com) portal while signed into your Roblox account and click **Create ad account**.
-   2. Choose a personal account or a business account.
-   3. Check the box to confirm your information and click **Create ad account**.
+   1. Go to the [Ads Manager](https://create.roblox.com/advertise) portal while signed into your Roblox account and click **Start creating**.
+   2. Click **Create campaign**.
+   3. Choose a time zone for your personal ad account, review the [Roblox advertising terms](https://en.help.roblox.com/hc/articles/15494846263060), and click **Save**.
 2. Add a payment method to your ad account.
-   1. Go to **Bills & Payments** > **Payment Settings**.
+   1. Go to **Billing & payments** > **Payment settings**.
    2. Click **Add Payment Method**.
    3. Attach a credit or debit card to your account or buy ad credits.
       - To add a card to your account, select the **Card** tab, enter your information, and click **Save and Authenticate**. This option is available for users 18 and above. A temporary $1.00 USD hold will be placed on the card and refunded after verification is complete within 7 business days.
@@ -38,16 +36,18 @@ Any Roblox user aged 13 and above can convert Robux to ad credits and use it for
 
 When converting Robux to ad credits, consider the following:
 
-- 1 ad credit is equivalent to 263 Robux.
+- Robux earned at the U.S. 18+ exchange rate are converted first. You will see a preview of the exact conversion details.
 - 1 ad credit is the minimum conversion requirement.
 
 This minimum conversion requirement streamlines the conversion process, prevents inaccuracies, and makes sure that you have enough ad credits to support meaningful advertising campaigns.
 
-<img src="../../assets/promotion/ads-manager/Ad-Credits.png" width="780" />
+<img src="../../assets/promotion/ads-manager/Ad-Credits-2026.png" width="780" />
 
 ## Manage your ads
 
 Use the Ads Manager to create and manage ad campaigns for your games. With this tool, you can set budgets, select creatives, and control delivery settings while monitoring and adjusting your campaigns over time.
+
+Ads Manager supports group-owned games. Use the Creator Hub group switcher to select a group, then choose a time zone for the group's ad account after reviewing the [Roblox advertising terms](https://en.help.roblox.com/hc/articles/15494846263060). Review the Ads Manager [permissions guide](#group-permissions) to learn more about giving users in your group access to Ads Manager.
 
 ### Ad campaign components
 
@@ -89,9 +89,15 @@ When you create an ad campaign, you must set budgeting parameters to control cam
 - A **daily budget** is the maximum amount you pay for your ads per day.
 - A **lifetime budget** is the maximum amount you pay for your ads for the entire duration of the campaign.
 
-You can pay for campaign budgets using either your debit or credit card on file, or your existing ad credit balance. If you fund a campaign with ad credits, you can't modify it after it's published. If you have unused ad credits after your campaign ends, those credits are refunded to your account.
+You can pay for campaign budgets using either your debit or credit card on file, or your personal ad credit balance. For group-owned games, you can also select the group's ad credit balance. If you have unused ad credits after your campaign ends, those credits are refunded to your account.
+
+<Alert severity='warning'>
+The payment method cannot be changed after a campaign is published.
+</Alert>
 
 During campaign creation, you can enable **auto-reload** to automatically purchase ad credits when your account runs out. When auto-reload is triggered, Roblox reloads one day's worth of ad credits, and continues to reload daily as needed to keep your campaign running.
+
+Converting group earnings to ad credit and enabling auto-reload on group-funded campaigns require the "Configure and spend group revenue" permission. Group roles and permissions can be configured in [Creator Hub](https://create.roblox.com/dashboard/group/roles).
 
 <h5 style={{marginTop: '36px'}}>Creatives</h5>
 
@@ -504,13 +510,25 @@ The reporting table includes:
 </tbody>
 </table>
 
+## Group permissions
+
+Group roles and permissions are managed in [Creator Hub](https://create.roblox.com/dashboard/group/roles).
+
+To grant a user in your group access to Ads Manager, add the "Create Ad campaigns for the group" permission to a role, then add that role to the desired user.
+
+### Group ad credit
+
+The "Configure and spend group revenue" permission allows the user to convert group-earned Robux to group ad credit. Once group ad credit is available, it can be used to fund campaigns by any user with the "Create Ad campaigns for the group" permission. The only exception is enabling auto-reload on a group-funded campaign; enabling auto-reload also requires the "spend group revenue" permission.
+
+<img src="../../assets/promotion/ads-manager/group-permissions.png" width="780" />
+
 ## Billing
 
-The ads billing tool charges you for ad placements on Roblox using the payment method you have on file. To view billing information, go to **Billing & Payments** > **Payment Activity**.
+The ads billing tool charges you for ad placements on Roblox using the payment method you have on file. To view billing information, go to **Billing & payments** > **Payment activity**.
 
 <h5 style={{marginTop: '36px'}}>Credit and debit cards</h5>
 
-<Alert severity = 'warning'>
+<Alert severity='warning'>
 For first-time credit card users, \$5 USD will be charged upon campaign submission and used toward your first bill. Any unused balance will be refunded.
 </Alert>
 

@@ -13,6 +13,8 @@ In order to publish and sell assets on the Marketplace, your account or group mu
 
 <Alert severity = 'info'>
   The following publishing instructions apply to 3D accessories and clothing assets. See [Classic clothing](../avatar/classic-clothing.md) for information on uploading and selling classic 2D clothing.
+
+To create and publish a locomotion animation set, see [Create and publish animation packs](../avatar/animation-packs.md).
 </Alert>
 
 ## Upload and publish limits
