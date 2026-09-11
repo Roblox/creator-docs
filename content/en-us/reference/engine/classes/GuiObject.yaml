@@ -893,6 +893,7 @@ properties:
     tags:
       - Hidden
       - NotReplicated
+      - Deprecated
     deprecation_message: |
       This property is deprecated and indexing it will return
       `Class.GuiObject.BackgroundTransparency|BackgroundTransparency`.
@@ -1027,7 +1028,8 @@ methods:
       - type: boolean
         summary: |
           Whether the tween will play.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       This function is deprecated in favor of using `Class.TweenService`, which
       allows for better customization using an object-oriented and event-based
@@ -1095,7 +1097,8 @@ methods:
       - type: boolean
         summary: |
           Whether the tween will play.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       This function is deprecated in favor of using `Class.TweenService`, which
       allows for better customization using an object-oriented and event-based
@@ -1169,7 +1172,8 @@ methods:
       - type: boolean
         summary: |
           Whether the tween will play.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       This function is deprecated in favor of using `Class.TweenService`, which
       allows for better customization using an object-oriented and event-based

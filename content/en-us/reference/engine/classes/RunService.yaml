@@ -176,6 +176,69 @@ properties:
     capabilities:
       - Basic
 methods:
+  - name: RunService:BindToAnimation
+    summary: |
+      Binds a custom function to be called at a fixed frequency before Animators
+      update when fixed simulation is enabled, or immediately before
+      `BindToSimulation` callbacks otherwise.
+    description: |
+      `BindToAnimation()` binds a custom function to be called at a fixed
+      frequency which is independent of the frame rate. When
+      `Class.Workspace.UseFixedSimulation` is enabled, these functions are
+      invoked before Animators update, making this the fixed-frequency
+      counterpart to `Class.RunService.PreAnimation|PreAnimation`. When fixed
+      simulation is disabled, they instead run immediately before
+      `Class.RunService:BindToSimulation()|BindToSimulation()` callbacks, so no
+      pre-animation ordering should be assumed. In the server authority model,
+      bound functions will also get called when the client needs to resimulate.
+
+      Like `Class.RunService:BindToSimulation()|BindToSimulation()`, the bound
+      function is meant for physics controllers and prediction, so an error will
+      trigger if you read or write from unsynchronized properties or call an
+      unsynchronized method. This error is meant to help guide you in writing a
+      pure, synchronized simulation.
+
+      To synchronize inaccessible properties, you should store the relevant data
+      in [attributes](../../../studio/properties.md#instance-attributes) and
+      update the relevant property in
+      `Class.RunService.PostSimulation|PostSimulation` or
+      `Class.RunService.RenderStepped|RenderStepped` by reading from attributes.
+      This will leverage attribute synchronization to keep the property fully
+      synchronized through the rollback mechanism.
+    code_samples: []
+    parameters:
+      - name: function
+        type: Function
+        default:
+        summary: |
+          The function to call. This function will be passed one parameter
+          called `deltaTime`, which shows the elapsed time since the callback's
+          previous invocation.
+      - name: frequency
+        type: StepFrequency
+        default: Hz30
+        summary: |
+          Optional `Enum.StepFrequency` value indicating the frequency at which
+          to call the bound function. Defaults to `Enum.StepFrequency.Hz30`.
+      - name: priority
+        type: int
+        default: 2000
+        summary: |
+          Optional priority of the binding as an integer; it determines the
+          order in which bound functions are called within a simulation step.
+          Lower numbers are called first. If two bindings have the same
+          priority, the order between them is unspecified. Defaults to 2000.
+    returns:
+      - type: RBXScriptConnection
+        summary: |
+          A `Datatype.RBXScriptConnection` that can be disconnected to
+          unregister the callback.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
   - name: RunService:BindToRenderStep
     summary: |
       Given a string name of a function and a priority, this method binds the

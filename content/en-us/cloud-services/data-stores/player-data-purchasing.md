@@ -14,7 +14,6 @@ Most games on Roblox use these APIs to implement some form of a player data syst
 Below are some of the most common problems player data systems attempt to solve:
 
 - **In Memory Access:** `Class.DataStoreService` requests make web requests that operate asynchronously and are subject to rate limits. This is appropriate for an initial load at the start of the session, but not for high frequency read and write operations during the normal course of gameplay. Most developers' player data systems store this data in-memory on the Roblox server, limiting `Class.DataStoreService` requests to the following scenarios:
-
   - Initial read at the start of a session
   - Final write at the end of the session
   - Periodic writes at an interval to mitigate the scenario where the final write fails
@@ -67,23 +66,33 @@ As `Class.DataStoreService` makes web requests under the hood, its requests are 
 A common "gotcha" can occur if you attempt to handle data store failures like this:
 
 ```lua
+local MAX_ATTEMPTS = 5
+local BASE_DELAY = 2
+local MAX_DELAY = 32
+
 local function retrySetAsync(dataStore, key, value)
-	for _ = 1, MAX_ATTEMPTS do
+	for attempt = 1, MAX_ATTEMPTS do
 		local success, result = pcall(dataStore.SetAsync, dataStore, key, value)
 
 		if success then
-			break
+			return result
 		end
 
-		task.wait(TIME_BETWEEN_ATTEMPTS)
+		if attempt < MAX_ATTEMPTS then
+			local backoff = math.min(MAX_DELAY, BASE_DELAY * (2 ^ (attempt - 1)))
+			local jitter = math.random() * backoff
+			task.wait(math.min(MAX_DELAY, backoff + jitter))
+		end
 	end
 end
 ```
 
-While this is a perfectly valid retry mechanism for a generic function, it is not suitable for `Class.DataStoreService` requests because it does not guarantee the order in which requests are made. Preserving the order of requests is important for `Class.DataStoreService` requests because they interact with state. Consider the following scenario:
+Retry transient failures with exponential backoff and random jitter so that servers don't retry simultaneously. Cap the delay and number of attempts.
+
+Even with that delay pattern, this retry mechanism is not suitable for `Class.DataStoreService` requests because it does not guarantee the order in which requests are made. Preserving the order of requests is important for `Class.DataStoreService` requests because they interact with state. Consider the following scenario:
 
 1. Request A is made to set the value of key `K` to 1.
-1. The request fails, so a retry is scheduled to run in 2 seconds.
+1. The request fails, so a retry is scheduled to run after the backoff delay.
 1. Before the retry occurs, request B sets the value of `K` to 2, but the retry of request A immediately overwrites this value and sets `K` to 1.
 
 Even though `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` operates on the latest version of the key's value, `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` requests must still be processed in order to avoid invalid transient states (for example, a purchase subtracts coins before a coin addition gets processed, resulting in negative coins).
@@ -160,7 +169,6 @@ Session locking addresses this vulnerability by ensuring that when a player's `C
 The transformation function passed into `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` for each request performs the following operations:
 
 1. Verifies the key is safe to access, abandoning the operation if it is not. "Safe to access" means:
-
    - The key's metadata object does not include an unrecognized `LockId` value that was last updated less than the lock expiry time ago. This accounts for respecting a lock placed by another server and for ignoring that lock if it expired.
 
    - If this server has placed its own `LockId` value in the key's metadata previously, then this value is still in the key's metadata. This accounts for the situation where another server has taken over this server's lock (by expiry or by force) and later released it. Alternatively phrased, even if `LockId` is `nil`, another server could still have replaced and removed a lock in the time since you locked the key.
@@ -168,7 +176,6 @@ The transformation function passed into `Class.GlobalDataStore:UpdateAsync()|Upd
 2. `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` performs the `Class.GlobalDataStore|DataStore` operation the consumer of `SessionLockedDataStoreWrapper` requested. For example, `Class.GlobalDataStore:GetAsync()|GetAsync()` translates to `function(value) return value end`.
 
 3. Depending on the parameters passed into the request, `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` either locks or unlocks the key:
-
    1. If the key is to be locked, `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` sets the `LockId` in the key's metadata to a GUID. This GUID is stored in-memory on the server so it can be verified the next time it accesses the key. If the server already has a lock on this key, it makes no changes. It also schedules a task to warn you if you don't access the key again to maintain the lock within the lock's expiration time.
 
    2. If the key is to be unlocked, `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` removes the `LockId` in the key's metadata.
@@ -309,15 +316,34 @@ Modules that provide an interface for code to synchronously read and write playe
 <img src="../../assets/data/player-data-purchasing/data-save-diagram.png" alt="A process diagram illustrating the saving system" width="60%" />
 
 1. When the player leaves the game, the system takes the following steps:
-
    1. Check if it is safe to write the player's data to the data store. Scenarios where it would be unsafe include the player's data failing to load or still undergoing loading.
    1. Make a request through the `SessionLockedDataStoreWrapper` to write the current in-memory data value to the data store and remove the session lock once complete.
    1. Clears the player's data (and other variables such as metadata and error statuses) from server memory.
 
 1. On a periodic loop, the server writes each player's data to the data store (provided it is safe to save). This welcome redundancy mitigates loss in case of a server crash and is also necessary to maintain the session lock.
 
-1. When a request to shutdown the server is received, the following occurs in a `Class.DataModel:BindToClose()|BindToClose` callback:
+   The sample starts one shared loop after `AUTO_SAVE_INTERVAL` seconds (180 by default) and then saves every loaded player in parallel. That loop does not offset servers or players, so servers that start at similar times can flush together.
 
+   Offset each player's first save by a random duration within the interval so that live servers don't all write at the same time:
+
+   ```lua
+   local AUTO_SAVE_INTERVAL = 180
+
+   local function startAutoSave(player)
+   	task.spawn(function()
+   		task.wait(math.random() * AUTO_SAVE_INTERVAL)
+
+   		while player.Parent do
+   			if canSave(player) then
+   				savePlayerData(player)
+   			end
+   			task.wait(AUTO_SAVE_INTERVAL)
+   		end
+   	end)
+   end
+   ```
+
+1. When a request to shut down the server is received, the following occurs in a `Class.DataModel:BindToClose()|BindToClose` callback:
    1. A request is made to save each player's data in the server, following the process normally gone through when a player leaves the server. These requests are made in parallel, as `Class.DataModel:BindToClose()|BindToClose` callbacks only have 30 seconds to complete.
    1. To expedite the saves, all other requests in each key's queue are cleared from the underlying `DataStoreWrapper` (see [Retries](#retries)).
    1. The callback doesn't return until all requests have completed.
