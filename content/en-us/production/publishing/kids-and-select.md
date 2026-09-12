@@ -3,28 +3,30 @@ title: Roblox Kids and Select
 description: Explains the Roblox Kids and Select account types and the publishing requirements for reaching audiences under 16.
 ---
 
-<Alert severity="info">
-This feature is actively rolling out. For the latest timelines, updates, and announcements, see the <a href="https://devforum.roblox.com/t/alternate-publishing-requirements-for-roblox-kids-and-select/4630944">DevForum announcement</a>.
-</Alert>
-
-Roblox is launching a unified safety and publishing framework to align content with user age. This update introduces two new age-based account types named **Roblox Kids** and **Roblox Select**, sets new verification requirements for creators who create content for all ages, and establishes a new [evaluation process](#for-all-ages-including-kids-and-select-accounts) for any game available to users under 16.
+Roblox applies a unified safety and publishing framework that aligns content with user age. Two age-based account types, **Roblox Kids** and **Roblox Select**, set verification requirements for creators who publish content for all ages, and require any game available to users under 16 to pass an [evaluation process](#for-all-ages-including-kids-and-select-accounts).
 
 Parents and guardians can link accounts and modify their child's access. To learn more, see [parental controls](https://about.roblox.com/parental-controls).
 
 ## Account types
 
-Roblox accounts are assigned to one of three tiers based on the user's age-checked age:
+Roblox assigns accounts to one of three tiers based on age. A self-declared age sets a temporary tier until the account completes an age check, which unlocks full access for the checked age tier:
 
 <table>
 <thead>
   <tr>
     <th></th>
-    <th>**Roblox Kids**<br />(Age-checked 5-8)</th>
-    <th>**Roblox Select**<br />(Age-checked 9-15)</th>
-    <th>**Roblox**<br />(Age-checked 16+)</th>
+    <th>**Roblox Kids**</th>
+    <th>**Roblox Select**</th>
+    <th>**Roblox**</th>
   </tr>
 </thead>
 <tbody>
+  <tr>
+    <td>**Account assignment**</td>
+    <td>Self-declared age 5-8, or age-checked age 5-8</td>
+    <td>Self-declared age 9 or older (until age-checked), or age-checked age 9-15</td>
+    <td>Age-checked age 16 or older</td>
+  </tr>
   <tr>
     <td>**Content ratings**</td>
     <td>Minimal or Mild</td>
@@ -33,8 +35,8 @@ Roblox accounts are assigned to one of three tiers based on the user's age-check
   </tr>
   <tr>
     <td>**Chat**</td>
-    <td>Off by default. Can be enabled through a linked parental account.</td>
-    <td>If available in your region, chat is gradually introduced with safeguards.</td>
+    <td>Off by default. Once age-checked, chat can be enabled through a linked parent account.</td>
+    <td>Off for self-declared accounts. Once age-checked, chat is gradually introduced with safeguards where available.</td>
     <td>If available in your region, chat is on by default.</td>
   </tr>
   <tr>
@@ -46,17 +48,11 @@ Roblox accounts are assigned to one of three tiers based on the user's age-check
 </tbody>
 </table>
 
-<Alert severity="info">
-Age ranges may vary by region. Ages are based on facial age checks and a parent can correct a child's age if necessary.
-</Alert>
-
 For information on how content maturity labels determine which account types can access your game, see [Content maturity and compliance](../promotion/content-maturity.md).
 
 ## Publishing requirements
 
-Publishing requirements depend on the target audience. For more information on publishing games, see [Publish games and places](../publishing/publish-games-and-places.md#publish-games).
-
-The following table summarizes what creators must satisfy to reach each audience:
+Publishing requirements depend on the target audience. The following table summarizes what creators must satisfy to reach each audience:
 
 <table>
 <thead>
@@ -75,7 +71,7 @@ The following table summarizes what creators must satisfy to reach each audience
     <td>✓</td>
   </tr>
   <tr>
-    <td>**ID-verified creator account**</td>
+    <td>**Verified creator account**<br /><br /><ul><li>[Facial age estimation](https://about.roblox.com/age-estimation) for creators under 18 years old</li><li>[Government ID](./account-verification.md#verify-through-government-id) for creators 18 years old or older</li></ul></td>
     <td>✓</td>
     <td>✓</td>
     <td>-</td>
@@ -110,12 +106,16 @@ The following table summarizes what creators must satisfy to reach each audience
 <sup>2</sup> Evaluation process requires 250 unique plays from highly engaged players in the last 60 days.<br />
 <sup>3</sup> Restricted content is limited to 18+ users.
 
+<Alert severity="info">
+For more information on publishing games, see [Publish games and places](../publishing/publish-games-and-places.md#publish-games).
+</Alert>
+
 ### For all ages (including Kids and Select accounts)
 
 To reach users who are under 16 years old, creators of individual-owned games or [group](../../projects/groups.md) owners of group-owned games must meet the following requirements for a higher bar of accountability:
 
-1. **Account verification** - Have an account that is in good standing.
-1. **ID verification** - Verify your account through [government ID](./account-verification.md#verify-through-government-id) or linked [parental account](https://about.roblox.com/parental-controls).
+1. **Account status** - Have an account that is in good standing.
+1. **Account verification** - Verify your account through [facial age estimation](https://about.roblox.com/age-estimation) if you are under 18 years old, or through [government ID](./account-verification.md#verify-through-government-id) if you are 18 years old or older.
 1. **Two-factor authentication** - Enable [2FA](https://en.help.roblox.com/hc/en-us/articles/212459863-Add-2-Step-Verification-to-Your-Account) on your Roblox account.
 1. **Publishing fee or subscription** - Meet **one** of the following requirements:
    - Maintain an active [Roblox Plus](../monetization/roblox-plus.md) or [Roblox Premium](https://www.roblox.com/premium/membership) subscription for 2 consecutive months.
@@ -142,13 +142,13 @@ You only need to meet the subscription requirement or pay the optional fee when 
 
 To reach users who are at least 16 years old, creators of individual-owned games or [group](../../projects/groups.md) owners of group-owned games must meet the following requirements:
 
-1. **Account verification** - Have an account that is in good standing and at least 2 days old.
+1. **Account status** - Have an account that is in good standing and at least 2 days old.
 1. **Age verification** - Verify your age through [facial age estimation](https://about.roblox.com/age-estimation) or [government ID](./account-verification.md#verify-through-government-id).
 1. **Content maturity label and descriptors** - Complete the [Maturity & Compliance Questionnaire](../promotion/content-maturity.md).
 
 ## Expedited review
 
-If you're planning a timed launch or running an off-platform campaign and need to know exactly when your game will be ready for all ages, you can secure an expedited review for Roblox Kids and Select accounts by paying a one-time, refundable fee of 100,000 Robux per game.
+If you're planning a timed launch or running an off-platform campaign and need to know exactly when your game will be ready for all ages, you can secure an expedited review for Roblox Kids and Select accounts by paying a one-time, refundable fee of 50,000 Robux per game.
 
 The expedited review fee is intended to provide launch flexibility and financial accountability for qualified creators who haven't yet met the highly engaged age-checked player requirement for Kids and Select accounts. While it accelerates safety and compliance reviews, all games must continue to meet the same standards as other Roblox Kids and Select games.
 
@@ -207,14 +207,6 @@ We'll keep evolving these criteria over time to capture more genuine players, wi
 </AccordionDetails>
 </BaseAccordion>
 
-<BaseAccordion>
-<AccordionSummary>
-<Typography variant='buttonLarge'>Will the highly engaged player requirements change over time?</Typography>
-</AccordionSummary>
-<AccordionDetails>
-Yes. We took an intentionally conservative approach at launch to make sure our safety systems have enough data to accurately evaluate games. We're working to expand eligibility so more compliant games can qualify in the coming weeks and months.
-</AccordionDetails>
-</BaseAccordion>
 <BaseAccordion>
 <AccordionSummary>
 <Typography variant='buttonLarge'>Will I lose my publishing fee if my game loses eligibility?</Typography>
