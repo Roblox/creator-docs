@@ -4,12 +4,13 @@ description: The Character Controller Library (CCL) is a modular framework for b
 ---
 
 import ActionSlots from '../../includes/action-slots.md'
+import Enable from '../../includes/studio/character-controller.md'
 
 The **Character Controller Library** (CCL) is a modular framework for building character movement and behaviors through attributes and Luau scripts. This architecture replaces rigid `Class.Humanoid` state machines with a flexible, extensible system for character mechanics.
 
-<Alert severity="success">
-The CCL is **opt-in** through the [Avatar Settings](../../studio/avatar-settings.md#movement) window and games can continue using the legacy movement system.
-</Alert>
+## Enable CCL
+
+<Enable components={props.components} />
 
 ## Abilities
 

@@ -476,6 +476,20 @@ methods:
       `Class.ScreenGui` to the `Class.PlayerGui` in the start place while the
       teleport is initiating.
 
+      #### External references
+
+      The teleport GUI and all of its descendants are carried to the destination
+      place, but any property that references an `Class.Instance` **outside**
+      the GUI's own tree is cleared during the teleport. For example, a
+      `Class.Sound` inside the GUI whose `Class.Sound.SoundGroup|SoundGroup`
+      points to a `Class.SoundGroup` under `Class.SoundService` will arrive with
+      that reference set to `nil`, because the target lives outside the GUI and
+      cannot safely cross the boundary between servers.
+
+      References that point to other instances **within** the GUI tree are
+      preserved. If your loading screen depends on an external instance,
+      recreate that instance inside the GUI tree.
+
       #### Studio Limitation
 
       Note that this service does not work during playtesting in Roblox Studio;
@@ -526,12 +540,32 @@ methods:
       TeleportService:SetTeleportSetting("isCrouching", isCrouching)
       ```
 
-      The stored value can take one of the following forms:
+      The stored value may only contain value types. It cannot contain
+      `Class.Instance|Instances` or other types that reference engine state, as
+      these cannot safely cross the boundary between servers.
 
-      - A table without mixed keys (all strings or all integers)
-      - A string
-      - A number
-      - A bool
+      Allowed values:
+
+      - Primitives: a `bool`, a `number`, or a `string`
+      - Value types such as `Datatype.Vector3`, `Datatype.CFrame`,
+        `Datatype.Color3`, `Datatype.UDim2`, `Datatype.NumberSequence`,
+        `Datatype.ColorSequence`, `Enum` items, and similar
+      - A table without mixed keys (all strings or all integers) containing only
+        the allowed types above
+
+      Not allowed (these will be removed before the teleport completes):
+
+      - `Class.Instance` and instance references
+      - `Datatype.RBXScriptConnection|Connections`, `Datatype.RBXScriptSignal`,
+        and functions
+      - `SharedTable`
+      - Types that reference engine or `Class.DataModel` state, such as
+        `Class.InputObject`, `Datatype.RaycastParams`, and
+        `Datatype.RaycastResult`
+
+      If a stored setting contains a disallowed type, that value is removed and
+      an error is written to the developer console. Convert instance references
+      to plain values (for example, a numeric ID or a string path).
 
       If data is already stored under the given key, the previous value will be
       overwritten by the new value.

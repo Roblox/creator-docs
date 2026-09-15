@@ -50,7 +50,7 @@ Create and sell your first basic layered accessory.
 </Grid>
 </Grid>
 
-**Layered accessories**, often referred to as **layered clothing**, are 3D assets that stretch and fit on an avatar's body according to their rigging armature and cage meshes. When users purchase layered accessories on the Marketplace, such as jackets, dresses, and cardigans, they expect it to move with the character's animations and layer appropriately on top of existing clothing the character is wearing.
+**Layered accessories**, often referred to as **layered clothing**, are 3D assets that stretch and fit on an avatar character's body according to their rigging armature and cage meshes. When users purchase layered accessories on the Marketplace, such as jackets, dresses, and cardigans, they expect it to move with the character's animations and layer appropriately on top of existing clothing the character is wearing.
 
 There are three main layers of a layered accessory that structure how the accessory looks and works on the platform:
 

@@ -1089,6 +1089,45 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Monetization
+  - name: MarketplaceService:OpenShop
+    summary: |
+      Opens a personalized in-game Shop for the given player.
+    description: |
+      Opens an [in-game Shop](../../../production/monetization/shop.md) as an
+      overlay window for the given `Class.Player`. Shop displays a personalized
+      list of the experience's
+      [passes](../../../production/monetization/passes.md) and
+      [developer products](../../../production/monetization/developer-products.md)
+      ranked for the user.
+
+      A default Shop is generated automatically for every game and requires no
+      additional developer setup. You can customize which items appear in the
+      shop from Creator Hub.
+
+      This method can be called from either a server `Class.Script` or a
+      `Class.LocalScript`. When called from a `Class.LocalScript`, `player` must
+      match the local player.
+
+      You can call this method in response to any user action, such as a button
+      click, the player reaching a specific location, or joining the experience.
+    code_samples:
+      - MarketplaceService-OpenShop
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` for whom to open the shop. If called from a
+          `Class.LocalScript`, this must be the local player.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService:PlayerOwnsAsset
     summary: |
       Returns whether the given user has the given asset.

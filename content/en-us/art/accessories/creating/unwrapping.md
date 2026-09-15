@@ -22,12 +22,12 @@ This tutorial does not cover [PBR textures](../../modeling/surface-appearance.md
   </figure>
 </GridContainer>
 
-The texturing process requires the following steps:
+The next three texturing sections cover the following processes:
 
-1. Create seams in your mesh to define how Blender unwraps your 3D object.
-2. Unwrap the UV of your model, creating a distinct front and back 2D surface to apply textures on based on your seams.
-3. Create a new texture image to save as your 2D map.
-4. Paint a custom texture using Blender's Texture Paint tools.
+1. Creating seams in your mesh to define how Blender unwraps your 3D object.
+1. Unwrapping the UV of your model to create a distinct front and back 2D surface to apply textures on based on your seams.
+1. Creating a new texture image to save as your 2D map.
+1. Painting a custom texture using Blender's Texture Paint tools.
 
 ## Create seams
 
@@ -35,11 +35,12 @@ To begin texturing, you must first generate a **UV map**, or 2D projection, of t
 
 To create seams that naturally separate the front and back of the shirt:
 
-1. With your clothing object selected, switch to **Edit mode**.
-2. In the top-left, navigate to the Select modes and select **Edge select**.
-3. Hold <kbd>Alt</kbd> and click on the center vertical edges of your shirt. The detected edge highlights.
-4. Whenever a complete edge is selected, **right-click** and select **Make Seam**. The edge highlights to indicate the seam in your model.
-5. **Repeat steps 3-4** to create a continuous seam across your mesh.
+1. With **LongSleeve** active, switch to **Edit** mode.
+1. Press <kbd>2</kbd> to switch to edge selection.
+1. Hold <kbd>Alt</kbd> and click on the center vertical edges of your shirt. The detected edge highlights.
+1. Whenever a complete edge is selected, right-click in the viewport and select **Make Seam** from the contextual menu. The edge highlights to indicate the seam in your model.
+1. Repeat to create a continuous seam across your mesh.
+
    <video controls src="../../../assets/art/accessories/creating/Texturing_01.mp4" width="100%"></video>
 
 ## UV unwrap
@@ -54,8 +55,8 @@ After applying the seams, Blender now knows how to "unwrap" the mesh surface ont
 
 To UV Unwrap your object by your selected seams:
 
-1. While in Edit mode, press <kbd>A</kbd> to highlight all vertices.
-2. At the top of the viewport, select **UV** > **Unwrap**.
-3. Switch to **Texture Paint** mode, your UVs display on the left window when your object is selected.
+1. While still in **Edit** mode, press <kbd>A</kbd> to highlight all vertices.
+1. At the top of the viewport, select **UV** > **Unwrap**.
+1. Switch to **Texture Paint** mode. Your UVs display on the left window when your t-shirt is active.
 
    <video controls src="../../../assets/art/accessories/creating/Texturing_02.mp4" width="100%"></video>

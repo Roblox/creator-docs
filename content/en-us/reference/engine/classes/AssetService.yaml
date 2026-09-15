@@ -273,6 +273,57 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DynamicGeneration
+  - name: AssetService:CreateDecalAsync
+    summary: |
+      Creates a new `Class.Decal` object using the provided
+      `Class.EditableImage` content maps.
+    description: |
+      Creates a new `Class.Decal` object using the provided color and physically
+      based rendering (PBR) content maps. Each supported key sets the
+      corresponding `Class.Decal` content property. All maps are optional
+      individually, but at least one must be provided; a color texture is not
+      required.
+
+      Use `Datatype.Content.fromObject()` to wrap a `Class.EditableImage` for
+      each map. Asset IDs, URI-based content, and `Datatype.Content.none` are
+      not accepted. To use an image asset, first load it with
+      `Class.AssetService:CreateEditableImageAsync()`, then wrap the returned
+      `Class.EditableImage` with `Datatype.Content.fromObject()`.
+
+      Omitted maps remain unset. All other `Class.Decal` properties retain their
+      default values, and the returned decal has no parent. Set its
+      `Class.Decal.Face|Face` and parent it to a `Class.BasePart` to display it
+      on the desired face.
+
+      Unrecognized keys are ignored with a warning. The method raises an error
+      if no supported maps are provided, or if any supported key has a value
+      that is not `Datatype.Content` containing a `Class.EditableImage`.
+    code_samples: []
+    parameters:
+      - name: content
+        type: Dictionary
+        default:
+        summary: |
+          Dictionary containing one or more of the following key-value pairs.
+          Each value must be a `Datatype.Content` object containing a
+          `Class.EditableImage`:
+
+          - `TextureContent` — The decal's color texture.
+          - `NormalMapContent` — The decal's normal map.
+          - `MetalnessMapContent` — The decal's metalness map.
+          - `RoughnessMapContent` — The decal's roughness map.
+    returns:
+      - type: Decal
+        summary: |
+          A new `Class.Decal` instance with the given maps from the `content`
+          parameter.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
   - name: AssetService:CreateEditableImage
     summary: |
       Creates a new `Class.EditableImage`.

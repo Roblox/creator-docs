@@ -7,10 +7,12 @@ next: /art/accessories/creating/modeling-setup
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/C-DwGRBHvmE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 <br /><br />
 
-You can create your own custom layered accessory for avatars using Blender and Roblox's downloadable project templates. These project templates include [components required for layered accessories](../../../avatar/layered-accessories/index.md#layered-accessory-components), and can double as a mannequin to quickly begin shaping and sculpting your clothing assets. By the end of this tutorial, you will have a clothing asset that contains all the required components for a layered accessory on the Marketplace.
+**Layered accessories**, often referred to as **layered clothing**, are 3D objects that stretch and fit on an avatar character's body according to their rigging armature and cage meshes. When users purchase layered accessories on the [Marketplace](https://www.roblox.com/catalog), such as jackets, dresses, and cardigans, they expect it to move with the character's animations and layer appropriately on top of existing clothing the character is wearing.
 
-<Alert severity ='info'>
-While this content and the provided examples cover the Blender workflow and tools, you can apply the same concepts to other third-party modeling applications.
+This tutorial covers the basics of how to create a simple 3D model t-shirt in Blender using downloadable project templates with all [components required for layered accessories](../../../avatar/layered-accessories/index.md#layered-accessory-components), import it into Studio, then convert it into a Marketplace-ready `Class.Accessory` object that you can sell, save to your toolbox, or use within your games as a layered accessory.
+
+<Alert severity = 'warning'>
+Creating, building, and sharing on Roblox is free. However, the last step of listing your item on the Marketplace requires a Roblox Plus or Premium account, an upload fee, and a publishing advance. For more information, see [Marketplace policies](../../../marketplace/marketplace-policy.md#creator-requirements).
 </Alert>
 
 <GridContainer numColumns="2">
@@ -34,5 +36,5 @@ This tutorial is intended for creators with moderate Blender experience and uses
 6. Importing and converting the model to an accessory in Studio.
 
 <Alert severity ='info'>
-This tutorial covers a **basic workflow** for 3D clothing creation. There are many external resources for different techniques, processes, and refinements you can incorporate for creating clothing, such as using Blender's various sewing and cloth simulation tools and PBR textures.
+While this content and the provided examples cover the Blender workflow and tools, you can apply the same concepts to other third-party modeling applications.
 </Alert>

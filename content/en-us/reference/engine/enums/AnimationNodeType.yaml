@@ -108,3 +108,10 @@ items:
     value: 13
     tags: []
     deprecation_message: ''
+  - name: OneShotNode
+    summary: |
+      A layering node that plays a one-shot pose over a looping base pose on
+      trigger, blending it in and back out.
+    value: 14
+    tags: []
+    deprecation_message: ''

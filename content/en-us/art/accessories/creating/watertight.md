@@ -5,7 +5,7 @@ next: /art/accessories/creating/unwrapping
 prev: /art/accessories/creating/sculpting
 ---
 
-With the shirt shape finalized, make your mesh **watertight** by "sealing" the holes at the neck, waist, and wrist. A watertight shape ensures that only the top visible surface of the mesh is exposed at any angle. If an asset is not watertight, it may expose backfaces, or single sided faces, that could affect the rendering of your asset and performance when equipped.
+With the t-shirt shape finalized, make your mesh **watertight** by "sealing" the holes at the neck, waist, and wrist. A watertight shape ensures that only the top visible surface of the mesh is exposed at any angle. If an asset is not watertight, it may expose backfaces (single-sided faces) that could affect the rendering of your asset and performance when equipped to a character.
 
 <GridContainer numColumns="2">
   <figure>
@@ -18,14 +18,14 @@ With the shirt shape finalized, make your mesh **watertight** by "sealing" the h
   </figure>
 </GridContainer>
 
-To make your mesh watertight:
+To make your t-shirt watertight:
 
-1. Select your mesh and switch to **Edit Mode**.
-2. Starting with any hole in the mesh, hold <kbd>Alt</kbd> and click the **last edge** on the mesh. The entire edge highlights.
-3. Press <kbd>E</kbd> to extrude the mesh and click after a small length is added.
-4. With the new edge still selected, right-click and select **Merge Vertices** > **At Center**.
-5. Press <kbd>G</kbd> to grab the new vertex and reposition it within your clothing mesh.
-6. **Repeat steps 2-5** until all the interior-exposing holes of your mesh are closed.
+1. With **LongSleeve** active, switch to **Edit** mode.
+1. Starting with any hole in the mesh, hold <kbd>Alt</kbd> and click the **last edge** on the mesh. The entire edge highlights.
+1. Press <kbd>E</kbd> to extrude the mesh, then click after a small extrusion is added.
+1. With the new edge still selected, right-click and select **Merge Vertices** > **At Center** from the contextual menu.
+1. Press <kbd>G</kbd> to grab the new vertex and reposition it within your t-shirt mesh.
+1. Repeat until all the interior-exposing holes of your mesh are closed.
 
    <video controls src="../../../assets/art/accessories/creating/Modeling_08.mp4" width="100%"></video>
 
