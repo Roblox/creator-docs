@@ -29,7 +29,7 @@ The first step in authoring a custom ability is to create an `AbilityDefinition`
         local Identifiers = AvatarAbilities.Identifiers
         local Rule = AvatarAbilities.Rule
         local Sensor = Identifiers.Sensor
-        local All, Not = Rule.All, Rule.Not
+        local All, Any, Not = Rule.All, Rule.Any, Rule.Not
         ```
 
 ## Ability definition
@@ -42,7 +42,7 @@ local AvatarAbilities = require("@rbx/AvatarAbilities")
 local Identifiers = AvatarAbilities.Identifiers
 local Rule = AvatarAbilities.Rule
 local Sensor = Identifiers.Sensor
-local All, Not = Rule.All, Rule.Not
+local All, Any, Not = Rule.All, Rule.Any, Rule.Not
 
 local Dash: AvatarAbilities.AbilityDefinition = {
 	Name = "Dash",

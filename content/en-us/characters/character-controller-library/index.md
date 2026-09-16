@@ -74,7 +74,7 @@ local Identifiers = AvatarAbilities.Identifiers
 local Ability = Identifiers.Ability
 local Rule = AvatarAbilities.Rule
 local Sensor = Identifiers.Sensor
-local All, Not = Rule.All, Rule.Not
+local All, Any, Not = Rule.All, Rule.Any, Rule.Not
 
 local Running: AvatarAbilities.AbilityDefinition = {
 	Name = Ability.Running,
@@ -91,7 +91,7 @@ local Identifiers = AvatarAbilities.Identifiers
 local Ability = Identifiers.Ability
 local Rule = AvatarAbilities.Rule
 local Sensor = Identifiers.Sensor
-local All, Not = Rule.All, Rule.Not
+local All, Any, Not = Rule.All, Rule.Any, Rule.Not
 
 local FallingDown: AvatarAbilities.AbilityDefinition = {
 	Name = Ability.FallingDown,
@@ -133,7 +133,7 @@ local AvatarAbilities = require("@rbx/AvatarAbilities")
 local Identifiers = AvatarAbilities.Identifiers
 local Rule = AvatarAbilities.Rule
 local Sensor = Identifiers.Sensor
-local All, Not = Rule.All, Rule.Not
+local All, Any, Not = Rule.All, Rule.Any, Rule.Not
 
 local Dash: AvatarAbilities.AbilityDefinition = {
 	Name = "Dash",
@@ -194,7 +194,7 @@ local AvatarAbilities = require("@rbx/AvatarAbilities")
 local Identifiers = AvatarAbilities.Identifiers
 local Rule = AvatarAbilities.Rule
 local Sensor = Identifiers.Sensor
-local All, Not = Rule.All, Rule.Not
+local All, Any, Not = Rule.All, Rule.Any, Rule.Not
 
 local Dive: AvatarAbilities.AbilityDefinition = {
 	Name = "Dive",
@@ -240,7 +240,7 @@ local Identifiers = AvatarAbilities.Identifiers
 local Ability = Identifiers.Ability
 local Rule = AvatarAbilities.Rule
 local Sensor = Identifiers.Sensor
-local All, Not = Rule.All, Rule.Not
+local All, Any, Not = Rule.All, Rule.Any, Rule.Not
 
 local Sprinting: AvatarAbilities.AbilityDefinition = {
 	Name = Ability.Sprinting,
@@ -268,7 +268,7 @@ local AvatarAbilities = require("@rbx/AvatarAbilities")
 local Identifiers = AvatarAbilities.Identifiers
 local Rule = AvatarAbilities.Rule
 local Sensor = Identifiers.Sensor
-local All, Not = Rule.All, Rule.Not
+local All, Any, Not = Rule.All, Rule.Any, Rule.Not
 
 local Dash: AvatarAbilities.AbilityDefinition = {
 	Name = "Dash",
@@ -325,7 +325,8 @@ local AvatarAbilities = require("@rbx/AvatarAbilities")
 
 local Rule = AvatarAbilities.Rule
 local Sensor = AvatarAbilities.Identifiers.Sensor
-local All, Input, Not = Rule.All, Rule.Input, Rule.Not
+local All, Any, Not = Rule.All, Rule.Any, Rule.Not
+local Input = Rule.Input
 
 local Glide: AvatarAbilities.AbilityDefinition = {
 	Name = "Glide",

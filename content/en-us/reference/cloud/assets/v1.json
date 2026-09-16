@@ -87,27 +87,7 @@
             "language": "Create Asset",
             "script": "curl --location --request POST 'https://apis.roblox.com/assets/v1/assets' \\\n--header 'x-api-key: {apiKey}' \\\n--form 'request=\"{ \n  \\\"assetType\\\": \\\"Model\\\",  \n  \\\"displayName\\\": \\\"Name\\\", \n  \\\"description\\\": \\\"This is a description\\\", \n  \\\"creationContext\\\": { \n    \\\"creator\\\": { \n      \\\"userId\\\": \\\"${userId}\\\" \n    } \n  } \n}\"' \\\n--form 'fileContent=@\"/filepath/model.fbx\";type=model/fbx' \n"
           }
-        ],
-        "x-roblox-rate-limits": {
-          "perIp": {
-            "period": "MINUTE",
-            "maxInPeriod": 120
-          },
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 120
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 120
-          }
-        },
-        "x-roblox-throttling-limit": {
-          "perApiKey": {
-            "periodInSeconds": "60",
-            "maxInPeriod": 120
-          }
-        }
+        ]
       }
     },
     "/v1/assets/{assetId}": {
@@ -183,27 +163,7 @@
             "language": "Get Asset with readMask",
             "script": "curl --location --request GET 'https://apis.roblox.com/assets/v1/assets/{assetId}?readMask={read_mask}' \\\n--header 'x-api-key: {apiKey}'"
           }
-        ],
-        "x-roblox-rate-limits": {
-          "perIp": {
-            "period": "MINUTE",
-            "maxInPeriod": 120
-          },
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 120
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 120
-          }
-        },
-        "x-roblox-throttling-limit": {
-          "perApiKey": {
-            "periodInSeconds": "60",
-            "maxInPeriod": 120
-          }
-        }
+        ]
       },
       "patch": {
         "tags": ["Assets"],
@@ -312,27 +272,7 @@
             "language": "Update Social Links",
             "script": "curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/{assetId}?updateMask=twitchSocialLink%2CgithubSocialLink' \\\n--header 'x-api-key: {apiKey}' \\\n--form 'request=\"{\\\"assetId\\\": \\\"{assetId}\\\", \\\"twitchSocialLink\\\": {\\\"title\\\": \\\"Optional title\\\", \\\"uri\\\": \\\"https://twitch.tv/your-channel\\\"}, \\\"githubSocialLink\\\": {\\\"title\\\": \\\"Optional title\\\", \\\"uri\\\": \\\"https://github.com/your-repo\\\"}}\"'"
           }
-        ],
-        "x-roblox-rate-limits": {
-          "perIp": {
-            "period": "MINUTE",
-            "maxInPeriod": 120
-          },
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 120
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 120
-          }
-        },
-        "x-roblox-throttling-limit": {
-          "perApiKey": {
-            "periodInSeconds": "60",
-            "maxInPeriod": 120
-          }
-        }
+        ]
       }
     },
     "/v1/assets/{assetId}:archive": {
@@ -387,27 +327,7 @@
             "language": "Archive Asset",
             "script": "curl --location 'https://apis.roblox.com/assets/v1/assets/{assetid}:archive' \\\n--header 'x-api-key: {apiKey}' \\\n--header 'Content-Type: application/json'"
           }
-        ],
-        "x-roblox-rate-limits": {
-          "perIp": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
-        "x-roblox-throttling-limit": {
-          "perApiKey": {
-            "periodInSeconds": "60",
-            "maxInPeriod": 100
-          }
-        }
+        ]
       }
     },
     "/v1/assets/{assetId}:restore": {
@@ -462,27 +382,7 @@
             "language": "Restore Asset",
             "script": "curl --location 'https://apis.roblox.com/assets/v1/assets/{assetid}:restore' \\\n--header 'x-api-key: {apiKey}' \\\n--header 'Content-Type: application/json'"
           }
-        ],
-        "x-roblox-rate-limits": {
-          "perIp": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
-        "x-roblox-throttling-limit": {
-          "perApiKey": {
-            "periodInSeconds": "60",
-            "maxInPeriod": 100
-          }
-        }
+        ]
       }
     },
     "/v1/assets/{assetId}/versions/{versionNumber}": {
@@ -540,27 +440,7 @@
             "language": "Get Asset Version",
             "script": "curl --location 'https://apis.roblox.com/assets/v1/assets/{assetId}/versions/{versionNumber}' \\\n--header 'x-api-key: {apiKey}'"
           }
-        ],
-        "x-roblox-rate-limits": {
-          "perIp": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
-        "x-roblox-throttling-limit": {
-          "perApiKey": {
-            "periodInSeconds": "60",
-            "maxInPeriod": 100
-          }
-        }
+        ]
       }
     },
     "/v1/assets/{assetId}/versions": {
@@ -627,27 +507,7 @@
             "language": "List Asset Versions",
             "script": "curl --location 'https://apis.roblox.com/assets/v1/assets/{assetid}/versions?pageToken=&maxPageSize=' \\\n--header 'x-api-key: {apiKey}'"
           }
-        ],
-        "x-roblox-rate-limits": {
-          "perIp": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
-        "x-roblox-throttling-limit": {
-          "perApiKey": {
-            "periodInSeconds": "60",
-            "maxInPeriod": 100
-          }
-        }
+        ]
       }
     },
     "/v1/assets/{assetId}/versions:rollback": {
@@ -713,32 +573,12 @@
           { "name": "asset:read" },
           { "name": "asset:write" }
         ],
-        "x-roblox-rate-limits": {
-          "perIp": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Rollback Asset Versions",
             "script": "curl --location 'https://apis.roblox.com/assets/v1/assets/{assetid}/versions:rollback' \\\n--header 'x-api-key: {apiKey}' \\\n--header 'Content-Type: application/json' \\\n--data '{\\\"assetVersion\\\":\\\"assets/{assetId}/versions/{versionNumber}\\\"}'"
           }
-        ],
-        "x-roblox-throttling-limit": {
-          "perApiKey": {
-            "periodInSeconds": "60",
-            "maxInPeriod": 100
-          }
-        }
+        ]
       }
     },
     "/v1/operations/{operationId}": {
@@ -801,27 +641,7 @@
             "language": "Get Operation",
             "script": "curl --location 'https://apis.roblox.com/assets/v1/operations/{operationId}' \\\n--header 'x-api-key: {apiKey}'\n"
           }
-        ],
-        "x-roblox-rate-limits": {
-          "perIp": {
-            "period": "MINUTE",
-            "maxInPeriod": 300
-          },
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 300
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 300
-          }
-        },
-        "x-roblox-throttling-limit": {
-          "perApiKey": {
-            "periodInSeconds": "60",
-            "maxInPeriod": 100
-          }
-        }
+        ]
       }
     }
   },

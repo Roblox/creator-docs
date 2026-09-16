@@ -460,7 +460,7 @@ Higher-fidelity character body models require the same 15 mesh objects and namin
 
 ### Face accessories
 
-Face accessories, such as eyebrows and eyelashes, are unique layered accessories that you can bundle with an avatar character body upload. At this time, eyebrows and eyelashes can't be uploaded as standalone accessories and must be bundled with a character body. For more information on face accessories, see [Layered accessory specifications - Face accessories](../layered-accessories/specifications.md#face-accessories).
+Face accessories, such as eyebrows and eyelashes, are unique layered accessories that you can bundle with an avatar character body upload. Eyebrows and eyelashes cannot be uploaded as standalone accessories and must be bundled either with a character body or [makeup assets](../makeup/specifications.md). For more information on face accessories, see [Layered accessory specifications - Face accessories](../layered-accessories/specifications.md#face-accessories).
 
 ### Visibility
 
