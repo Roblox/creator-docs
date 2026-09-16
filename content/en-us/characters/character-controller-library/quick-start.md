@@ -160,6 +160,9 @@ To set ability configurations for all characters through a script:
         end
 
         Players.PlayerAdded:Connect(onPlayerAdded)
+    	for _, player in Players:GetPlayers() do
+    		task.spawn(onPlayerAdded, player)
+    	end
         ```
 
 ### Controllers
@@ -300,4 +303,7 @@ To set controller configurations for all characters through a script:
         end
 
         Players.PlayerAdded:Connect(onPlayerAdded)
+    	for _, player in Players:GetPlayers() do
+    		task.spawn(onPlayerAdded, player)
+    	end
         ```
