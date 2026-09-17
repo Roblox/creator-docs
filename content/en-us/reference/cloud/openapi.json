@@ -73,7 +73,8 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:read",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -184,7 +185,8 @@
         "x-roblox-scopes": [
           {
             "name": "ad.billing:read",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -288,7 +290,8 @@
         "x-roblox-scopes": [
           {
             "name": "ad.billing:read",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -400,7 +403,8 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:read",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -511,7 +515,8 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:read",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -634,7 +639,8 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -748,7 +754,8 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:read",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -871,7 +878,8 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -975,7 +983,8 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:read",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -1094,7 +1103,8 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:read",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -10447,7 +10457,7 @@
             "schema": {
               "type": "integer",
               "format": "int32",
-              "default": 0
+              "default": 10
             }
           },
           {
@@ -10595,7 +10605,7 @@
     },
     "/cloud/v2/users/{user_id}/operations/{operation_id}": {
       "get": {
-        "tags": ["Users"],
+        "tags": ["Avatars", "Thumbnails", "Users"],
         "summary": "Get User Thumbnail Generation Operation",
         "description": "Gets the status and result of a\r\n[Generate User Thumbnail](https://create.roblox.com/docs/cloud/reference/features/users#Cloud_GenerateUserThumbnail)\r\nlong-running operation.\r\n            \r\nCall this with the operation `path` returned by Generate User Thumbnail,\r\npolling until `done` is `true`. Once complete, `response.imageUri` contains\r\nthe generated thumbnail URL.",
         "operationId": "Cloud_GetUserThumbnailGenerationOperation",
@@ -10654,7 +10664,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/users#Cloud_GetUserThumbnailGenerationOperation"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/avatars#Cloud_GetUserThumbnailGenerationOperation"
         }
       }
     },
@@ -26246,7 +26256,8 @@
         "x-roblox-scopes": [
           {
             "name": "universe.thumbnail:read",
-            "targetResourceSpecifier": "universes"
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -26390,7 +26401,8 @@
         "x-roblox-scopes": [
           {
             "name": "universe.thumbnail:write",
-            "targetResourceSpecifier": "universes"
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -26537,7 +26549,8 @@
         "x-roblox-scopes": [
           {
             "name": "universe.thumbnail:write",
-            "targetResourceSpecifier": "universes"
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -26650,7 +26663,8 @@
         "x-roblox-scopes": [
           {
             "name": "universe.thumbnail:write",
-            "targetResourceSpecifier": "universes"
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -26763,7 +26777,8 @@
         "x-roblox-scopes": [
           {
             "name": "universe.thumbnail:read",
-            "targetResourceSpecifier": "universes"
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -26886,7 +26901,8 @@
         "x-roblox-scopes": [
           {
             "name": "universe.thumbnail:write",
-            "targetResourceSpecifier": "universes"
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -26996,7 +27012,8 @@
         "x-roblox-scopes": [
           {
             "name": "universe.thumbnail:read",
-            "targetResourceSpecifier": "universes"
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -34095,6 +34112,7 @@
     },
     "/v1/external/{identityProviderId}/sso/native/nonce": {
       "post": {
+        "tags": ["Accounts"],
         "summary": "Reserves a nonce for a native SSO sign-in attempt.",
         "description": "The web flow gets its nonce from M:Roblox.Authentication.Api.Controllers.V1.ExternalIdentitiesGatewayController.OAuthInit(System.Int64,System.String,System.Threading.CancellationToken), which native clients never call\r\nbecause they have no authorization redirect. They call this instead, pass the nonce to the\r\nprovider SDK, and post the resulting id_token to /access.\r\n            \r\nThe client must pass this value to the SDK verbatim. Both providers treat the nonce as an\r\nopaque string and echo it into the id_token unchanged, and redemption looks the value up as\r\nissued. The SHA256(nonce) convention seen in Apple examples belongs to Firebase, which hashes\r\non its own side before comparing; hashing here would make the lookup miss.",
         "parameters": [
@@ -34128,7 +34146,10 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}]
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_external__identityProviderId__sso_native_nonce"
+        }
       }
     },
     "/v1/external/{identityProviderId}/sso/oauth/callback": {
@@ -34181,6 +34202,7 @@
         }
       },
       "post": {
+        "tags": ["Accounts"],
         "summary": "OAuth callback for identity providers that POST the authorization code as form fields (Apple form_post).\r\nApple's first-auth `user` JSON is parsed and carried to identity storage; the form\r\n`id_token` is ignored. Web login exchanges code via PKCE and does\r\nnot treat a form id_token as proof.",
         "parameters": [
           {
@@ -34213,7 +34235,10 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}]
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_external__identityProviderId__sso_oauth_callback"
+        }
       }
     },
     "/v1/external/{identityProviderId}/sso/oauth/init": {
@@ -34263,6 +34288,7 @@
     },
     "/v1/external/{identityProviderId}/sso/saml/assertion-consumer-service": {
       "post": {
+        "tags": ["Accounts"],
         "summary": "SAML Assertion Consumer Service endpoint that external identity provider calls post user authentication.",
         "parameters": [
           {
@@ -34301,7 +34327,10 @@
           {
             "url": "https://auth.roblox.com"
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_external__identityProviderId__sso_saml_assertion_consumer_service"
+        }
       }
     },
     "/v1/favorites/assets/{assetId}/count": {
@@ -44585,6 +44614,7 @@
     },
     "/v1/localization-table/tables/{tableId}/asset-entries": {
       "get": {
+        "tags": ["Localization"],
         "summary": "Gets a page of asset (image) entries for the specified table, along with the table's\r\nper-locale asset translations.",
         "parameters": [
           {
@@ -44654,7 +44684,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/localization#localizationtables_get_v1_localization_table_tables__tableId__asset_entries"
+        }
       }
     },
     "/v1/localization-table/tables/{tableId}/entries": {
@@ -46957,6 +46990,7 @@
     },
     "/v1/passkey/RenameCredential": {
       "post": {
+        "tags": ["Accounts"],
         "summary": "Rename a credential for the specified user.",
         "requestBody": {
           "content": {
@@ -47016,7 +47050,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_passkey_RenameCredential"
+        }
       }
     },
     "/v1/passkey/StartAuthentication": {
@@ -58274,68 +58311,6 @@
         }
       }
     },
-    "/v1/users/{userId}/premium-upsell-precheck": {
-      "get": {
-        "tags": ["User profiles", "Users"],
-        "summary": "Premium upsell precheck",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "User ID",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "query",
-            "name": "universeId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "query",
-            "name": "placeId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://premiumfeatures.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/user-profiles#premiumfeatures_get_v1_users__userId__premium_upsell_precheck"
-        }
-      }
-    },
     "/v1/users/{userId}/promotion-channels": {
       "get": {
         "tags": ["Accounts", "User profiles", "Users"],
@@ -59067,48 +59042,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/user-profiles#users_get_v1_users__userId__username_history"
-        }
-      }
-    },
-    "/v1/users/{userId}/validate-membership": {
-      "get": {
-        "tags": ["User profiles", "Users"],
-        "summary": "Get if a user has a Premium membership",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "User ID",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://premiumfeatures.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/user-profiles#premiumfeatures_get_v1_users__userId__validate_membership"
         }
       }
     },
@@ -67849,7 +67782,8 @@
         "x-roblox-scopes": [
           {
             "name": "universe.event:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -67937,7 +67871,8 @@
         "x-roblox-scopes": [
           {
             "name": "universe.event:read",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -68082,7 +68017,8 @@
         "x-roblox-scopes": [
           {
             "name": "universe.event:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -68236,7 +68172,8 @@
         "x-roblox-scopes": [
           {
             "name": "universe.event:read",
-            "targetResourceSpecifier": "universes"
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -68371,7 +68308,8 @@
         "x-roblox-scopes": [
           {
             "name": "universe.event:write",
-            "targetResourceSpecifier": "universes"
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -71422,7 +71360,7 @@
                 "$ref": "#/components/schemas/ExperimentApiErrorType"
               }
             ],
-            "description": "Broad category of the failure.\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_VARIANT_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_VARIANT_LABEL\n\nEXPERIMENT_API_ERROR_TYPE_MUST_HAVE_EXACTLY_ONE_BASELINE_VARIANT\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_OVERLAPPING_RUNTIME\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_INVALID_SCORING_CONFIGURATIONS\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_UNEXPECTED_PRODUCT_TYPE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_EMPTY_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_EMPTY_VARIANT_METADATA\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_WEIGHT_MUST_BE_POSITIVE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_WEIGHTS_UNBALANCED\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_PLACE_CONFIG_REQUIRES_SCORING_ID_OR_DEFAULT\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_MISSING_VARIANT\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_MISSING_KEY\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_MISSING_VALUE\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_KEY_ALREADY_IN_USE\n\nEXPERIMENT_API_ERROR_TYPE_SYSTEM_ERROR\n\nEXPERIMENT_API_ERROR_TYPE_EXPERIMENT_RESULTS_NOT_FOUND\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_TARGETING_CRITERIA\n\nEXPERIMENT_API_ERROR_TYPE_TARGETING_NOT_ALLOWED\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_DURATION\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_CONFIG_NOT_FOUND\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_EXPERIMENT_NAME\n\nEXPERIMENT_API_ERROR_TYPE_CONDITIONAL_CONFIG_REQUIRES_NULL_BASELINE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_CONTROL_VARIANT_MUST_MATCH_CURRENT_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANTS_MUST_COVER_SAME_PLACES\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_HAS_DUPLICATE_PLACES",
+            "description": "Broad category of the failure.\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_VARIANT_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_VARIANT_LABEL\n\nEXPERIMENT_API_ERROR_TYPE_MUST_HAVE_EXACTLY_ONE_BASELINE_VARIANT\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_OVERLAPPING_RUNTIME\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_INVALID_SCORING_CONFIGURATIONS\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_UNEXPECTED_PRODUCT_TYPE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_EMPTY_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_EMPTY_VARIANT_METADATA\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_WEIGHT_MUST_BE_POSITIVE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_WEIGHTS_UNBALANCED\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_PLACE_CONFIG_REQUIRES_SCORING_ID_OR_DEFAULT\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_MISSING_VARIANT\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_MISSING_KEY\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_MISSING_VALUE\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_KEY_ALREADY_IN_USE\n\nEXPERIMENT_API_ERROR_TYPE_SYSTEM_ERROR\n\nEXPERIMENT_API_ERROR_TYPE_EXPERIMENT_RESULTS_NOT_FOUND\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_TARGETING_CRITERIA\n\nEXPERIMENT_API_ERROR_TYPE_TARGETING_NOT_ALLOWED\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_DURATION\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_CONFIG_NOT_FOUND\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_EXPERIMENT_NAME\n\nEXPERIMENT_API_ERROR_TYPE_CONDITIONAL_CONFIG_REQUIRES_NULL_BASELINE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_CONTROL_VARIANT_MUST_MATCH_CURRENT_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANTS_MUST_COVER_SAME_PLACES\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_HAS_DUPLICATE_PLACES\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_KEY_HAS_RESERVED_PREFIX",
             "x-enum-varnames": [
               "InvalidVariantConfiguration",
               "InvalidVariantLabel",
@@ -71449,7 +71387,8 @@
               "ConditionalConfigRequiresNullBaseline",
               "MatchmakingControlVariantMustMatchCurrentConfiguration",
               "MatchmakingVariantsMustCoverSamePlaces",
-              "MatchmakingVariantHasDuplicatePlaces"
+              "MatchmakingVariantHasDuplicatePlaces",
+              "ConfigsKeyHasReservedPrefix"
             ]
           },
           "errorCode": {
@@ -71502,10 +71441,11 @@
           "EXPERIMENT_API_ERROR_TYPE_CONDITIONAL_CONFIG_REQUIRES_NULL_BASELINE",
           "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_CONTROL_VARIANT_MUST_MATCH_CURRENT_CONFIGURATION",
           "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANTS_MUST_COVER_SAME_PLACES",
-          "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_HAS_DUPLICATE_PLACES"
+          "EXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_HAS_DUPLICATE_PLACES",
+          "EXPERIMENT_API_ERROR_TYPE_CONFIGS_KEY_HAS_RESERVED_PREFIX"
         ],
         "type": "string",
-        "description": "Validation failures.\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_VARIANT_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_VARIANT_LABEL\n\nEXPERIMENT_API_ERROR_TYPE_MUST_HAVE_EXACTLY_ONE_BASELINE_VARIANT\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_OVERLAPPING_RUNTIME\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_INVALID_SCORING_CONFIGURATIONS\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_UNEXPECTED_PRODUCT_TYPE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_EMPTY_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_EMPTY_VARIANT_METADATA\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_WEIGHT_MUST_BE_POSITIVE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_WEIGHTS_UNBALANCED\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_PLACE_CONFIG_REQUIRES_SCORING_ID_OR_DEFAULT\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_MISSING_VARIANT\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_MISSING_KEY\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_MISSING_VALUE\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_KEY_ALREADY_IN_USE\n\nEXPERIMENT_API_ERROR_TYPE_SYSTEM_ERROR\n\nEXPERIMENT_API_ERROR_TYPE_EXPERIMENT_RESULTS_NOT_FOUND\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_TARGETING_CRITERIA\n\nEXPERIMENT_API_ERROR_TYPE_TARGETING_NOT_ALLOWED\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_DURATION\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_CONFIG_NOT_FOUND\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_EXPERIMENT_NAME\n\nEXPERIMENT_API_ERROR_TYPE_CONDITIONAL_CONFIG_REQUIRES_NULL_BASELINE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_CONTROL_VARIANT_MUST_MATCH_CURRENT_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANTS_MUST_COVER_SAME_PLACES\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_HAS_DUPLICATE_PLACES",
+        "description": "Validation failures.\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_VARIANT_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_VARIANT_LABEL\n\nEXPERIMENT_API_ERROR_TYPE_MUST_HAVE_EXACTLY_ONE_BASELINE_VARIANT\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_OVERLAPPING_RUNTIME\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_INVALID_SCORING_CONFIGURATIONS\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_UNEXPECTED_PRODUCT_TYPE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_EMPTY_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_EMPTY_VARIANT_METADATA\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_WEIGHT_MUST_BE_POSITIVE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_WEIGHTS_UNBALANCED\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_PLACE_CONFIG_REQUIRES_SCORING_ID_OR_DEFAULT\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_MISSING_VARIANT\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_MISSING_KEY\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_MISSING_VALUE\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_KEY_ALREADY_IN_USE\n\nEXPERIMENT_API_ERROR_TYPE_SYSTEM_ERROR\n\nEXPERIMENT_API_ERROR_TYPE_EXPERIMENT_RESULTS_NOT_FOUND\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_TARGETING_CRITERIA\n\nEXPERIMENT_API_ERROR_TYPE_TARGETING_NOT_ALLOWED\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_DURATION\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_VARIANT_CONFIG_NOT_FOUND\n\nEXPERIMENT_API_ERROR_TYPE_INVALID_EXPERIMENT_NAME\n\nEXPERIMENT_API_ERROR_TYPE_CONDITIONAL_CONFIG_REQUIRES_NULL_BASELINE\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_CONTROL_VARIANT_MUST_MATCH_CURRENT_CONFIGURATION\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANTS_MUST_COVER_SAME_PLACES\n\nEXPERIMENT_API_ERROR_TYPE_MATCHMAKING_VARIANT_HAS_DUPLICATE_PLACES\n\nEXPERIMENT_API_ERROR_TYPE_CONFIGS_KEY_HAS_RESERVED_PREFIX",
         "x-enum-varnames": [
           "InvalidVariantConfiguration",
           "InvalidVariantLabel",
@@ -71532,7 +71472,8 @@
           "ConditionalConfigRequiresNullBaseline",
           "MatchmakingControlVariantMustMatchCurrentConfiguration",
           "MatchmakingVariantsMustCoverSamePlaces",
-          "MatchmakingVariantHasDuplicatePlaces"
+          "MatchmakingVariantHasDuplicatePlaces",
+          "ConfigsKeyHasReservedPrefix"
         ]
       },
       "ExperimentConfigEntry": {
@@ -97979,7 +97920,10 @@
           "auth_get_v1_auth_metadata",
           "auth_get_v1_client_assertion",
           "auth_get_v1_external__identityProviderId__sso_oauth_callback",
+          "auth_post_v1_external__identityProviderId__sso_oauth_callback",
           "auth_get_v1_external__identityProviderId__sso_oauth_init",
+          "auth_post_v1_external__identityProviderId__sso_native_nonce",
+          "auth_post_v1_external__identityProviderId__sso_saml_assertion_consumer_service",
           "auth_post_v1_external_access",
           "auth_post_v1_external_login",
           "auth_post_v1_external_loginAndLink",
@@ -97993,6 +97937,7 @@
           "auth_post_v1_logoutfromallsessionsandreauthenticate",
           "auth_get_v1_metadata",
           "auth_post_v1_passkey_DeleteCredentialBatch",
+          "auth_post_v1_passkey_RenameCredential",
           "auth_post_v1_passkey_finish_preauth_registration",
           "auth_post_v1_passkey_FinishRegistration",
           "auth_post_v1_passkey_ListCredentials",
@@ -98214,12 +98159,13 @@
     },
     {
       "name": "Avatars",
-      "description": "Customize user avatars and manage outfits programmatically, including [retrieving a user's avatar configuration](#avatar_get_v4_avatar_users__userId_), body colors, scales, and [thumbnail generation](#Cloud_GenerateUserThumbnail).\n",
+      "description": "Customize user avatars and manage outfits programmatically, including [retrieving a user's avatar configuration](#avatar_get_v4_avatar_users__userId_), body colors, scales, [thumbnail generation](#Cloud_GenerateUserThumbnail), and [thumbnail generation operation retrieval](#Cloud_GetUserThumbnailGenerationOperation).\n",
       "x-roblox-tag-info": {
         "path": "avatars",
         "content": "HTTP APIs for working with avatars on Roblox Cloud.",
         "ordering": [
           "Cloud_GenerateUserThumbnail",
+          "Cloud_GetUserThumbnailGenerationOperation",
           "avatar_get_v1_avatar",
           "avatar_get_v1_avatar_rules",
           "avatar_get_v1_avatar_metadata",
@@ -98741,7 +98687,7 @@
     },
     {
       "name": "Localization",
-      "description": "Extend [built-in Roblox localization features](production/localization) with automation.\n\nCommon use cases include:\n\n- Content translation: Update localized names and descriptions for [badges](#patch_legacy_game_internationalization_v1_badges__badgeId__description_language_codes__languageCode_), [game passes](#patch_legacy_game_internationalization_v1_game_passes__gamePassId__description_language_codes__languageCode_), and [developer products](#patch_legacy_game_internationalization_v1_developer_products__developerProductId__description_language_codes__languageCode_)\n- Localization tables: [Manage localization table entries](#patch_legacy_localization_tables_v1_localization_table_tables__tableId_) for in-game text\n- Automatic translation: [Configure automatic translation settings](#patch_legacy_localization_tables_v1_autolocalization_games__gameId__settings) for supported languages\n",
+      "description": "Extend [built-in Roblox localization features](production/localization) with automation.\n\nCommon use cases include:\n\n- Content translation: Update localized names and descriptions for [badges](#patch_legacy_game_internationalization_v1_badges__badgeId__description_language_codes__languageCode_), [game passes](#patch_legacy_game_internationalization_v1_game_passes__gamePassId__description_language_codes__languageCode_), and [developer products](#patch_legacy_game_internationalization_v1_developer_products__developerProductId__description_language_codes__languageCode_)\n- Localization tables: [Manage localization table entries](#patch_legacy_localization_tables_v1_localization_table_tables__tableId_) and [retrieve localized asset entries](#localizationtables_get_v1_localization_table_tables__tableId__asset_entries) for in-game text\n- Automatic translation: [Configure automatic translation settings](#patch_legacy_localization_tables_v1_autolocalization_games__gameId__settings) for supported languages\n",
       "x-roblox-tag-info": {
         "path": "localization",
         "content": "HTTP APIs for localization on Roblox Cloud.",
@@ -98843,6 +98789,7 @@
           "localizationtables_patch_v1_localization_table_tables__tableId_",
           "get_legacy_localization_tables_v1_localization_table_tables__tableId__entries",
           "localizationtables_get_v1_localization_table_tables__tableId__entries",
+          "localizationtables_get_v1_localization_table_tables__tableId__asset_entries",
           "post_legacy_localization_tables_v1_localization_table_tables__tableId__entries_translation_history",
           "localizationtables_post_v1_localization_table_tables__tableId__entries_translation_history",
           "get_legacy_localization_tables_v1_localization_table_tables__tableId__entry_count",
@@ -99126,12 +99073,13 @@
     },
     {
       "name": "Thumbnails",
-      "description": "Generate and retrieve thumbnails for [users](#Cloud_GenerateUserThumbnail), [experiences](#post_legacy_game_internationalization_v1_game_thumbnails_games__gameId__language_codes__languageCode__image), [badges](#post_legacy_publish_v1_badges__badgeId__icon), and [avatar images](#Cloud_GenerateUserThumbnail). in various formats.\n",
+      "description": "Generate and retrieve thumbnails for [users](#Cloud_GenerateUserThumbnail), [experiences](#post_legacy_game_internationalization_v1_game_thumbnails_games__gameId__language_codes__languageCode__image), [badges](#post_legacy_publish_v1_badges__badgeId__icon), and [avatar images](#Cloud_GenerateUserThumbnail) in various formats. [Retrieve thumbnail-generation status](#Cloud_GetUserThumbnailGenerationOperation) as part of the user thumbnail workflow.\n",
       "x-roblox-tag-info": {
         "path": "thumbnails",
         "content": "HTTP APIs for working with user thumbnails on Roblox Cloud.",
         "ordering": [
           "Cloud_GenerateUserThumbnail",
+          "Cloud_GetUserThumbnailGenerationOperation",
           "post_legacy_game_internationalization_v1_game_thumbnails_games__gameId__language_codes__languageCode__alt_text",
           "gameinternationalization_post_v1_game_thumbnails_games__gameId__language_codes__languageCode__alt_text",
           "post_legacy_game_internationalization_v1_game_thumbnails_games__gameId__language_codes__languageCode__image",
@@ -99376,8 +99324,6 @@
           "groups_delete_v1_user_groups_primary",
           "groups_post_v1_user_groups_primary",
           "groups_get_v1_users__userId__groups_primary_role",
-          "premiumfeatures_get_v1_users__userId__premium_upsell_precheck",
-          "premiumfeatures_get_v1_users__userId__validate_membership",
           "Presence_GetUserPresences",
           "users_get_v1_users__userId_",
           "users_patch_v1_users__userId__display_names",
@@ -99389,7 +99335,7 @@
     },
     {
       "name": "Users",
-      "description": "Retrieve user information, manage inventories, and restrict users from your experience. See the [Inventory Guide](/cloud/guides/inventory) for code examples.\n\nCommon use cases include:\n\n- User lookup: [Search users by username](#users_get_v1_users_search) or ID and [retrieve profile information](#Cloud_GetUser)\n- Inventory access: [List user-owned items](#Cloud_ListInventoryItems), badges, and collectibles\n- User restrictions: [Manage experience-level bans](#Cloud_UpdateUserRestriction__Using_Universes) and access restrictions\n",
+      "description": "Retrieve user information, manage inventories, and restrict users from your experience. See the [Inventory Guide](/cloud/guides/inventory) for code examples.\n\nCommon use cases include:\n\n- User lookup: [Search users by username](#users_get_v1_users_search) or ID and [retrieve profile information](#Cloud_GetUser)\n- Avatar thumbnails: [Generate a user thumbnail](#Cloud_GenerateUserThumbnail) and [retrieve its generation operation](#Cloud_GetUserThumbnailGenerationOperation)\n- Inventory access: [List user-owned items](#Cloud_ListInventoryItems), badges, and collectibles\n- User restrictions: [Manage experience-level bans](#Cloud_UpdateUserRestriction__Using_Universes) and access restrictions\n",
       "x-roblox-tag-info": {
         "path": "users",
         "content": "HTTP APIs for working with users on Roblox Cloud, including inventory items, restrictions, subscriptions, and more.",
@@ -99400,8 +99346,6 @@
           "Cloud_GetUser",
           "users_get_v1_users__userId_",
           "Presence_GetUserPresences",
-          "premiumfeatures_get_v1_users__userId__premium_upsell_precheck",
-          "premiumfeatures_get_v1_users__userId__validate_membership",
           "accountinformation_get_v1_users__userId__promotion_channels",
           "users_get_v1_display_names_validate",
           "users_get_v1_users__userId__display_names_validate",

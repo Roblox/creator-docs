@@ -697,40 +697,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: TestService:RegisterTest
-    summary: |
-      Registers a test case with the service and returns the resulting
-      `TestCase`.
-    description: |
-      Registers a test case described by `testOptions` and returns the created
-      `TestCase`. The dictionary must include the non-empty string fields
-      `SuiteName` and `TestCaseName`, and may include an optional numeric
-      `Timeout` field that sets how long the case is allowed to run before it
-      times out. Registering the same suite and test-case name a second time
-      raises an error.
-
-      This member only functions during V2 test runs or when running in Roblox
-      Studio. In any other context it records an error and returns no value.
-    code_samples: []
-    parameters:
-      - name: testOptions
-        type: Dictionary
-        default:
-        summary: |
-          A dictionary describing the test, requiring the string fields
-          `SuiteName` and `TestCaseName` and optionally a numeric `Timeout`
-          field.
-    returns:
-      - type: TestCase
-        summary: |
-          The registered `TestCase`, or no value when registration isn't
-          supported in the current context.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - InternalTest
   - name: TestService:Require
     summary: |
       Prints whether a condition is true along with a description string.
@@ -824,37 +790,6 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: TestService:TakeSnapshot
-    summary: |
-      Captures a named screenshot snapshot during a test run.
-    description: |
-      Captures a screenshot associated with `snapshotname` and routes it through
-      the test rendering pipeline. When `source` is provided and a V2 test run
-      is active, the snapshot's suite and test names are resolved from the
-      source script's `Suite` and `TestName` attributes; otherwise default names
-      are used. The `source` parameter defaults to `nil`.
-    code_samples: []
-    parameters:
-      - name: snapshotname
-        type: string
-        default:
-        summary: |
-          The name to associate with the captured snapshot.
-      - name: source
-        type: Instance
-        default: nil
-        summary: |
-          An optional script instance whose `Suite` and `TestName` attributes
-          name the snapshot; defaults to `nil`.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - InternalTest
   - name: TestService:Warn
     summary: |
       Prints if a condition is `true`, otherwise prints a warning.
