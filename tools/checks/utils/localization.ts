@@ -16,6 +16,7 @@ import { areEqualFileImports, FileImports, getFileImports } from './imports.js';
 
 export enum Locale {
   AR_001 = 'ar-001',
+  // Roblox Supported Languages
   ID_ID = 'id-id',
   DE_DE = 'de-de',
   EN_US = 'en-us',
@@ -31,6 +32,25 @@ export enum Locale {
   ZH_TW = 'zh-tw',
   JA_JP = 'ja-jp',
   KO_KR = 'ko-kr',
+  // EU Languages
+  NL_NL = 'nl-nl',
+  PT_PT = 'pt-pt',
+  BG_BG = 'bg-bg',
+  HR_HR = 'hr-hr',
+  CS_CZ = 'cs-cz',
+  DA_DK = 'da-dk',
+  ET_EE = 'et-ee',
+  FI_FI = 'fi-fi',
+  EL_GR = 'el-gr',
+  HU_HU = 'hu-hu',
+  GA_IE = 'ga-ie',
+  LV_LV = 'lv-lv',
+  LT_LT = 'lt-lt',
+  MT_MT = 'mt-mt',
+  RO_RO = 'ro-ro',
+  SK_SK = 'sk-sk',
+  SL_SI = 'sl-si',
+  SV_SE = 'sv-se',
 }
 
 const LOCALE_REGEX = /\/([a-z]{2}-[a-z]{2}|ar-001)\//;

@@ -3321,6 +3321,11 @@ navigation:
         type: engineapi
         source: /reference/engine/datatypes/Instance.yaml
         ignoreTranslation: true
+      - title: InstanceHandle
+        path: /reference/engine/datatypes/InstanceHandle
+        type: engineapi
+        source: /reference/engine/datatypes/InstanceHandle.yaml
+        ignoreTranslation: true
       - title: NumberRange
         path: /reference/engine/datatypes/NumberRange
         type: engineapi
