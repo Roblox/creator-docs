@@ -62,7 +62,7 @@ The cage mesh objects in the template include some helper vertex color propertie
 
 To remove extra attribute data:
 
-1. With **LongSleeve** active, navigate to the **Properties** panel > **Object Data Properties** > **Color Attributes**.
+1. With **LongSleeve** active, navigate to the Properties Editor > **Object Data Properties** tab > **Color Attributes**.
 
    <img src="../../../assets/art/accessories/creating/Modeling-Clear-Vertex-Colors.png" />
 

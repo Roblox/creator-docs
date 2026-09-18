@@ -19,7 +19,7 @@ Create the general shape of your t-shirt by trimming sections of your duplicated
 To trim your clothing shape:
 
 1. Select **LongSleeve**, then switch to **Edit** mode.
-1. In the top right corner of the viewport, enable **X-Ray mode**.
+1. In the top right corner of the viewport, enable **Wireframe** mode.
 1. Click and drag over parts of the mesh that you do not want to include in your shirt, then press <kbd>X</kbd> and select **Vertices** from the contextual menu to delete these sections of your mesh.
 1. Repeat until you reach your desired clothing shape.
 
@@ -43,7 +43,7 @@ With the basic shape created, subdivide the surface of your t-shirt to add verti
 To add and smooth your vertices:
 
 1. Switch to **Object** mode.
-1. With **LongSleeve** active, navigate to the **Properties** panel > **Modifier Properties**.
+1. With **LongSleeve** active, navigate to the **Modifier Properties** tab in the Properties Editor.
 1. Select **Add Modifier** > **Subdivision Surface**, then click the **Apply** button with the default settings.
 1. In the viewport, right-click the object and select **Shade Smooth** from the contextual menu to eliminate the creases on your t-shirt.
 

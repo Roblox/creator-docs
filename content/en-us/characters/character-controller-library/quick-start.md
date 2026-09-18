@@ -128,42 +128,42 @@ To set ability configurations for all characters through a script:
 1.  Create a new server-side `Class.Script` within `Class.ServerScriptService` and rename it to `AbilitiesScript`.
 2.  Copy and paste the following code into the new script. This example multiplies the base movement speed for the `Running` ability by `2`. Feel free to adjust other ability attributes such as those described in the table above.
 
-        ```lua title="Script in ServerScriptService"
-        local Players = game:GetService("Players")
-        local AvatarAbilities = require("@rbx/AvatarAbilities")
+		```lua title="Script in ServerScriptService"
+		local Players = game:GetService("Players")
+		local AvatarAbilities = require("@rbx/AvatarAbilities")
 
-        local function waitForAbilityConfiguration(character, abilityName, timeout)
-            local deadline = time() + timeout
-            while character.Parent and time() < deadline do
-                local ability = AvatarAbilities.getAbilityConfigurationForCharacter(character, abilityName)
-                if ability then
-                    return ability
-                end
-                task.wait()
-            end
-            return nil
-        end
+		local function waitForAbilityConfiguration(character, abilityName, timeout)
+			local deadline = time() + timeout
+			while character.Parent and time() < deadline do
+				local ability = AvatarAbilities.getAbilityConfigurationForCharacter(character, abilityName)
+				if ability then
+					return ability
+				end
+				task.wait()
+			end
+			return nil
+		end
 
-        local function onCharacterAdded(character)
-            local running = waitForAbilityConfiguration(character, "Running", 10)
-            if running then
-                -- Double base movement speed.
-                running:SetAttribute("SpeedMultiplier", 2)
-            end
-        end
+		local function onCharacterAdded(character)
+			local running = waitForAbilityConfiguration(character, "Running", 10)
+			if running then
+				-- Double base movement speed
+				running:SetAttribute("SpeedMultiplier", 2)
+			end
+		end
 
-        local function onPlayerAdded(player)
-            if player.Character then
-                onCharacterAdded(player.Character)
-            end
-            player.CharacterAdded:Connect(onCharacterAdded)
-        end
+		local function onPlayerAdded(player)
+			if player.Character then
+				onCharacterAdded(player.Character)
+			end
+			player.CharacterAdded:Connect(onCharacterAdded)
+		end
 
-        Players.PlayerAdded:Connect(onPlayerAdded)
-    	for _, player in Players:GetPlayers() do
-    		onPlayerAdded(player)
-    	end
-        ```
+		Players.PlayerAdded:Connect(onPlayerAdded)
+		for _, player in Players:GetPlayers() do
+			onPlayerAdded(player)
+		end
+		```
 
 ### Controllers
 
@@ -249,61 +249,61 @@ To set controller configurations for all characters through a script:
 1.  Create a new server-side `Class.Script` within `Class.ServerScriptService` and rename it to `ControllerScript`.
 2.  Copy and paste the following code into the new script. This example increases ground‑based moving/turning speed as well adds a slight acceleration and deceleration time. Feel free to adjust other properties such as those described in the tables above or for each class as documented (`Class.ControllerManager`; `Class.GroundController`; `Class.AirController`; `Class.ClimbController`; `Class.SwimController`).
 
-        ```lua title="Script in ServerScriptService"
-        local Players = game:GetService("Players")
-        local AvatarAbilities = require("@rbx/AvatarAbilities")
+```lua title="Script in ServerScriptService"
+local Players = game:GetService("Players")
+local AvatarAbilities = require("@rbx/AvatarAbilities")
 
-        local function waitForAbilityConfiguration(character, abilityName, timeout)
-            local deadline = time() + timeout
-            while character.Parent and time() < deadline do
-                local ability = AvatarAbilities.getAbilityConfigurationForCharacter(character, abilityName)
-                if ability then
-                    return ability
-                end
-                task.wait()
-            end
-            return nil
-        end
+local function waitForAbilityConfiguration(character, abilityName, timeout)
+	local deadline = time() + timeout
+	while character.Parent and time() < deadline do
+		local ability = AvatarAbilities.getAbilityConfigurationForCharacter(character, abilityName)
+		if ability then
+			return ability
+		end
+		task.wait()
+	end
+	return nil
+end
 
-        local function waitForChildOfClass(parent, className, timeout)
-            local deadline = time() + timeout
-            local child = parent:FindFirstChildOfClass(className)
-            while not child and parent.Parent and time() < deadline do
-                task.wait()
-                child = parent:FindFirstChildOfClass(className)
-            end
-            return child
-        end
+local function waitForChildOfClass(parent, className, timeout)
+	local deadline = time() + timeout
+	local child = parent:FindFirstChildOfClass(className)
+	while not child and parent.Parent and time() < deadline do
+		task.wait()
+		child = parent:FindFirstChildOfClass(className)
+	end
+	return child
+end
 
-        local function onCharacterAdded(character)
-            -- Running provisions the ground controller when it registers.
-            if not waitForAbilityConfiguration(character, "Running", 10) then
-                return
-            end
+local function onCharacterAdded(character)
+	-- Running provisions the ground controller when it registers
+	if not waitForAbilityConfiguration(character, "Running", 10) then
+		return
+	end
 
-            local controllerManager = waitForChildOfClass(character, "ControllerManager", 10)
-            if controllerManager then
-                local groundController = waitForChildOfClass(controllerManager, "GroundController", 10)
-                if groundController then
-                    -- Double the move and turn speeds
-                    groundController.MoveSpeedFactor *= 2
-                    groundController.TurnSpeedFactor *= 2
-                    -- Add slight acceleration and deceleration
-                    groundController.AccelerationTime = 0.2
-                    groundController.DecelerationTime = 0.4
-                end
-            end
-        end
+	local controllerManager = waitForChildOfClass(character, "ControllerManager", 10)
+	if controllerManager then
+		local groundController = waitForChildOfClass(controllerManager, "GroundController", 10)
+		if groundController then
+			-- Double the move and turn speeds
+			groundController.MoveSpeedFactor *= 2
+			groundController.TurnSpeedFactor *= 2
+			-- Add slight acceleration and deceleration
+			groundController.AccelerationTime = 0.2
+			groundController.DecelerationTime = 0.4
+		end
+	end
+end
 
-        local function onPlayerAdded(player)
-            if player.Character then
-                onCharacterAdded(player.Character)
-            end
-            player.CharacterAdded:Connect(onCharacterAdded)
-        end
+local function onPlayerAdded(player)
+	if player.Character then
+		onCharacterAdded(player.Character)
+	end
+	player.CharacterAdded:Connect(onCharacterAdded)
+end
 
-        Players.PlayerAdded:Connect(onPlayerAdded)
-    	for _, player in Players:GetPlayers() do
-    		onPlayerAdded(player)
-    	end
-        ```
+Players.PlayerAdded:Connect(onPlayerAdded)
+for _, player in Players:GetPlayers() do
+	onPlayerAdded(player)
+end
+```

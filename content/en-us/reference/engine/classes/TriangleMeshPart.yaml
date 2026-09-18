@@ -13,7 +13,8 @@ description: |
   and `Class.PartOperation` inherit. It was created to consolidate the
   management of physical geometry properties between the two sub-classes. It
   implements the read-only
-  `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity`.
+  `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` and
+  `Class.TriangleMeshPart.CollisionPrecision|CollisionPrecision`.
 code_samples: []
 inherits:
   - BasePart
@@ -22,7 +23,6 @@ descendants:
   - PartOperation
 tags:
   - NotCreatable
-  - NotBrowsable
 deprecation_message: ''
 properties:
   - name: TriangleMeshPart.CollisionFidelity
@@ -43,6 +43,31 @@ properties:
     security:
       read: None
       write: None
+    thread_safety: ReadSafe
+    category: Collision
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities:
+      - Basic
+  - name: TriangleMeshPart.CollisionPrecision
+    summary: |
+      Quantifies how precise or performant a `Enum.CollisionFidelity.Tunable`
+      collision geometry is, from `0` to `1`.
+    description: |
+      This property describes the precision-to-performance tradeoff of the
+      part's collision geometry when `Class.TriangleMeshPart.CollisionFidelity`
+      is set to `Enum.CollisionFidelity.Tunable`. A value of `0` favors maximum
+      performance with the simplest collision mesh, while a value of `1` favors
+      maximum precision with a collision mesh that closely matches the visual
+      mesh.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
     thread_safety: ReadSafe
     category: Collision
     serialization:

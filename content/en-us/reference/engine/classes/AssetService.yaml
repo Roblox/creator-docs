@@ -317,8 +317,7 @@ methods:
         summary: |
           A new `Class.Decal` instance with the given maps from the `content`
           parameter.
-    tags:
-      - Yields
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -965,8 +964,7 @@ methods:
         summary: |
           The `Enum.PromptCreatePlatformContentResult` and asset ID pair if
           successful.
-    tags:
-      - Yields
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

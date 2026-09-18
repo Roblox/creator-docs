@@ -23,8 +23,8 @@ To begin sculpting the head:
 1. With the template project opened, hide the other Geo objects to isolate the head mesh.
 1. Select the `Head_Geo` mesh object and switch to **Sculpting** mode.
 1. At the top right of the viewport:
-   1. Enable **X-Axis Symmetry**.
-   1. Enable **Wireframe** view.
+   1. Enable **X-Axis symmetry**.
+   1. Enable **Wireframe** mode.
 
    <video controls src="../../../assets/art/avatar/basic-creation/Sculpting_01.mp4" width="100%"></video>
 

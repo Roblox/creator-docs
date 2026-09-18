@@ -224,7 +224,7 @@ methods:
     code_samples: []
     parameters:
       - name: mesh
-        type: EditableMesh
+        type: Object
         default:
         summary: |
           The `Class.EditableMesh` used to project into.
@@ -291,7 +291,7 @@ methods:
     code_samples: []
     parameters:
       - name: sourceMesh
-        type: EditableMesh
+        type: Object
         default:
         summary: |
           The `Class.EditableMesh` that maps `sourceTexture` onto the surface

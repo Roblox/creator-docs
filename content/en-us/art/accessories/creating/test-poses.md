@@ -19,7 +19,7 @@ This tutorial doesn't cover the process of weight-painting. For additional resou
 
 To test your t-shirt's movement:
 
-1. With your armature active, navigate to the **Properties** panel > **Armature properties**.
+1. With your armature active, navigate to the Properties Editor > **Armature Properties** tab.
 1. In **Viewport Display** > **Show**, enable **In Front**. The **In Front** property enables you to easily see and access the bones for posing.
 
    <img src="../../../assets/art/accessories/creating/Rigging-Bones-In-Front.png" />

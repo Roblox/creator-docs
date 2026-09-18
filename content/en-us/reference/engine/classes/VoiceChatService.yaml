@@ -98,7 +98,8 @@ properties:
       property has no effect and built-in controls will be hidden.
     code_samples: []
     type: RolloutState
-    tags: []
+    tags:
+      - NotBrowsable
     deprecation_message: ''
     security:
       read: RobloxScriptSecurity

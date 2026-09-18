@@ -214,7 +214,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
-    simulationAccess: true
   - name: WorldRoot:CollisionGroupSetCollidable
     summary: |
       Sets the collision status between two groups in this world.
@@ -246,7 +245,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
-    simulationAccess: true
   - name: WorldRoot:FindPartOnRay
     summary: |
       Returns the first `Class.BasePart` or `Class.Terrain` cell intersecting
@@ -663,7 +661,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
-    simulationAccess: true
   - name: WorldRoot:GetPartBoundsInBox
     summary: |
       Returns an array of parts whose **bounding boxes** overlap a given box.
@@ -855,7 +852,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
-    simulationAccess: true
   - name: WorldRoot:IKMoveTo
     summary: |
       Moves the specified part to the specified location via inverse kinematics
@@ -949,7 +945,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
-    simulationAccess: true
   - name: WorldRoot:IsRegion3Empty
     summary: |
       Returns a bool indicating whether there are no `Class.BasePart|BaseParts`
@@ -1157,7 +1152,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
-    simulationAccess: true
   - name: WorldRoot:RenameCollisionGroup
     summary: |
       Renames specified collision group in this world.
@@ -1200,7 +1194,6 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
-    simulationAccess: true
   - name: WorldRoot:Shapecast
     summary: |
       Casts the shape of a given `Class.BasePart` in a direction and returns a
@@ -1402,6 +1395,5 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Physics
-    simulationAccess: true
 events: []
 callbacks: []

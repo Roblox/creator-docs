@@ -74,6 +74,35 @@ properties:
       can_save: false
     capabilities:
       - Physics
+  - name: Motor6D.EnableSkinning
+    summary: |
+      Internal-only (`RobloxScript`); whether this joint is included in the mesh
+      skinning skeleton for the model it belongs to.
+    description: |
+      Requires `RobloxScript` security and is not accessible from regular
+      scripts. When `true` (the default), this `Class.Motor6D` is treated as a
+      bone connection in the mesh skinning skeleton. The joint is included when
+      computing connected components for skinned mesh deformation.
+
+      When set to `false`, the joint is excluded from the skeleton, effectively
+      detaching `Class.JointInstance.Part1|Part1` from the skinning graph. The
+      part still follows physics and animation normally, but it no longer
+      contributes to `Class.WrapLayer` or other mesh-skinning deformations that
+      rely on the skeleton topology.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Physics
   - name: Motor6D.ParentName
     summary: |
       Read-only name of the joint's parent part, mirroring the

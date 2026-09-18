@@ -961,7 +961,8 @@ methods:
     returns:
       - type: ()
         summary: ''
-    tags: []
+    tags:
+      - NotBrowsable
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

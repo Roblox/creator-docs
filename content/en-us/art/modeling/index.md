@@ -133,7 +133,7 @@ If you are interested in specific avatar creation topics, use the following tabl
   </tr>
   <tr>
     <td>Rigging and skinning</td>
-    <td>[Rigging and skinning overview](../../art/modeling/rigging.md)<br /><br />[Basic mesh rigging](../../art/modeling/rig-a-simple-mesh.md) <br /><br />[Facial bone rigging](../../art/characters/facial-animation/create-basic-heads.md#rigging)<br /><br />[Facial bone skinning](../../art/characters/facial-animation/create-basic-heads.md#skin-face-bones)<br /><br />[Avatar rigging requirements](../../avatar/character-bodies/specifications.md#rigging)<br /><br />[Automatic skinning transfer](../../avatar/automatic-skinning-transfer.md)</td>
+    <td>[Rigging and skinning overview](../../art/modeling/rigging.md)<br /><br />[Basic mesh rigging](../../art/modeling/rig-a-simple-mesh.md) <br /><br />[Facial bone rigging](../../art/characters/facial-animation/create-basic-heads.md#rig-and-skin-the-head)<br /><br />[Facial bone skinning](../../art/characters/facial-animation/create-basic-heads.md#skin-joints)<br /><br />[Avatar rigging requirements](../../avatar/character-bodies/specifications.md#rigging)<br /><br />[Automatic skinning transfer](../../avatar/automatic-skinning-transfer.md)</td>
   </tr>
 
   <tr>

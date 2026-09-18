@@ -73,8 +73,7 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:read",
-            "targetResourceSpecifier": "",
-            "firstPartyOAuthOnly": true
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -403,8 +402,7 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:read",
-            "targetResourceSpecifier": "",
-            "firstPartyOAuthOnly": true
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -515,8 +513,7 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:read",
-            "targetResourceSpecifier": "",
-            "firstPartyOAuthOnly": true
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -639,8 +636,7 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:write",
-            "targetResourceSpecifier": "",
-            "firstPartyOAuthOnly": true
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -754,8 +750,7 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:read",
-            "targetResourceSpecifier": "",
-            "firstPartyOAuthOnly": true
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -878,8 +873,7 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:write",
-            "targetResourceSpecifier": "",
-            "firstPartyOAuthOnly": true
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -983,8 +977,7 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:read",
-            "targetResourceSpecifier": "",
-            "firstPartyOAuthOnly": true
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -1103,8 +1096,7 @@
         "x-roblox-scopes": [
           {
             "name": "ad.campaign:read",
-            "targetResourceSpecifier": "",
-            "firstPartyOAuthOnly": true
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -67782,8 +67774,7 @@
         "x-roblox-scopes": [
           {
             "name": "universe.event:write",
-            "targetResourceSpecifier": "",
-            "firstPartyOAuthOnly": true
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -67871,8 +67862,7 @@
         "x-roblox-scopes": [
           {
             "name": "universe.event:read",
-            "targetResourceSpecifier": "",
-            "firstPartyOAuthOnly": true
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -68017,8 +68007,7 @@
         "x-roblox-scopes": [
           {
             "name": "universe.event:write",
-            "targetResourceSpecifier": "",
-            "firstPartyOAuthOnly": true
+            "targetResourceSpecifier": ""
           }
         ],
         "x-roblox-engine-usability": {
@@ -68172,8 +68161,7 @@
         "x-roblox-scopes": [
           {
             "name": "universe.event:read",
-            "targetResourceSpecifier": "universes",
-            "firstPartyOAuthOnly": true
+            "targetResourceSpecifier": "universes"
           }
         ],
         "x-roblox-engine-usability": {
@@ -68308,8 +68296,7 @@
         "x-roblox-scopes": [
           {
             "name": "universe.event:write",
-            "targetResourceSpecifier": "universes",
-            "firstPartyOAuthOnly": true
+            "targetResourceSpecifier": "universes"
           }
         ],
         "x-roblox-engine-usability": {

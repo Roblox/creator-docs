@@ -34,7 +34,7 @@ To set up your project:
    1. Set **LongSleeve** to unselectable to prevent accidental edits to the t-shirt mesh.
    <img src="../../../assets/art/accessories/creating/Caging-Outliner-Setup.png" />
 
-1. With **LongSleeve_OuterCage** active, navigate to the **Properties** panel > **Object Properties**, then enable **Wireframe**. This helps easily visualize and access the mesh.
+1. With **LongSleeve_OuterCage** active, navigate to the **Object Properties** tab in the Properties Editor, then enable **Wireframe**. This helps easily visualize and access the mesh.
 
    <img src="../../../assets/art/accessories/creating/Caging-Outer-Cage-Properties.png" />
 

@@ -60,7 +60,7 @@ local Dash: AvatarAbilities.AbilityDefinition = {
 	},
 }
 
-function Dash.OnStart(managerCtx: AvatarAbilities.ManagerContext, _abilityCtx: AvatarAbilities.AbilityContext)
+function Dash.OnStart(managerCtx: AvatarAbilities.ManagerContext, abilityCtx: AvatarAbilities.AbilityContext)
 	local rootPart = managerCtx.AbilityOwner.PrimaryPart
 	if rootPart then
 		rootPart:ApplyImpulse(managerCtx.RootLookVector * 80 * rootPart.AssemblyMass)
@@ -164,12 +164,14 @@ local function onCharacterAdded(character: Model)
 	end
 end
 
-local function onPlayer(player: Player)
+local function onPlayerAdded(player: Player)
 	player.CharacterAdded:Connect(onCharacterAdded)
 	if player.Character then task.spawn(onCharacterAdded, player.Character) end
 end
-Players.PlayerAdded:Connect(onPlayer)
-for _, player in Players:GetPlayers() do onPlayer(player) end
+Players.PlayerAdded:Connect(onPlayerAdded)
+for _, player in Players:GetPlayers() do
+	onPlayerAdded(player)
+end
 ```
 
 Although registration occurs on the server, ability callbacks run in both the predicted client simulation and the authoritative server simulation. Keep callback behavior deterministic so both simulations produce the same result.

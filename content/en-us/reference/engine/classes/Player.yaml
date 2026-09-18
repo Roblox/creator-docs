@@ -2033,7 +2033,7 @@ methods:
     parameters:
       - name: level
         type: VerifiedLevel
-        default: Low
+        default:
         summary: |
           The verification level to check. Defaults to `Enum.VerifiedLevel.Low`.
     returns:

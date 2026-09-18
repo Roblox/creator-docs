@@ -18,8 +18,8 @@ To add clothing details:
 
 1. With **LongSleeve** active, switch to **Sculpt** mode.
 1. In the top right corner of the viewport:
-   1. Disable **X-Ray mode**.
-   1. Enable **X Axis Symmetry** to perform symmetrical edits.
+   1. Disable **Wireframe** mode.
+   1. Enable **X-Axis symmetry** to perform symmetrical edits.
 1. Select the **Elastic Deform** tool at `.5` strength to stretch parts of vertices to completely cover the mannequin.
 
    1. Use <kbd>F</kbd> to change the radius of the brush.
@@ -28,7 +28,7 @@ To add clothing details:
       <video controls src="../../../assets/art/accessories/creating/Modeling_05.mp4" width="100%"></video>
 
 1. Select the **Cloth** tool, then:
-   1. Disable **X Axis Symmetry**. The **Cloth** tool can produce unexpected results with symmetry enabled.
+   1. Disable **X-Axis symmetry**. The **Cloth** tool can produce unexpected results with symmetry enabled.
    1. Click and drag on your mesh to add a cloth-like surface to your mesh. Adjust the settings to change the strength of the deformations.
 
    <video controls src="../../../assets/art/accessories/creating/Modeling_06.mp4" width="100%"></video>

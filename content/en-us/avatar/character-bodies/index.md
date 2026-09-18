@@ -188,7 +188,7 @@ There are a variety of resources available for creators of all backgrounds to ge
   </tr>
   <tr>
     <td>Rigging and skinning</td>
-    <td>[Rigging and skinning overview](../../art/modeling/rigging.md)<br /><br />[Humanoid rig requirements](./specifications.md#rigging)<br /><br />[Rigging facial bones](../../art/characters/facial-animation/create-basic-heads.md#rigging)<br /><br />[Automatic Skinning Transfer](../automatic-skinning-transfer.md)<br /><br />[Skinning facial bones](../../art/characters/facial-animation/create-basic-heads.md#skin-face-bones)</td>
+    <td>[Rigging and skinning overview](../../art/modeling/rigging.md)<br /><br />[Humanoid rig requirements](./specifications.md#rigging)<br /><br />[Rigging facial bones](../../art/characters/facial-animation/create-basic-heads.md#rig-and-skin-the-head)<br /><br />[Automatic Skinning Transfer](../automatic-skinning-transfer.md)<br /><br />[Skinning facial bones](../../art/characters/facial-animation/create-basic-heads.md#skin-joints)</td>
   </tr>
 
   <tr>
