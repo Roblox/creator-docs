@@ -63,7 +63,7 @@ With the tool's window open:
    <img src="../assets/studio/texture-generator/Art-Style.png" width="360" alt="Art Style options in the Texture Generator window" />
 
    1. Expand the **Art Style** section of the tool's window.
-   2. Specify an image asset that you've already [imported](../projects/assets/manager.md#importing-assets) to Roblox, or upload an image using the built‑in asset picker.
+   2. Specify an image asset that you've already [imported](../projects/assets/manager.md#asset-import) to Roblox, or upload an image using the built‑in asset picker.
    3. Adjust the **Strength** value. A lower value blends the image more subtly while a higher value makes it the dominant style.
 
 4. In the prompt text box input below the preview pane, enter a prompt describing your desired texture, for instance:
@@ -192,6 +192,7 @@ The following prompting tips enable the tool to provide better and more consiste
 - Include texture attributes like material types, colors, patterns, wear and tear, etc. The more constraints you give the tool, the better it can generate what you have in mind.
 - Use descriptive phrases instead of single words for key items, for example "worn&nbsp;leather" instead of just "leather."
 - Add styling cues like "cinematic," "photorealistic," "cartoon," or "low&nbsp;poly" to influence the overall look.
+
 </TabItem>
 <TabItem label="Generation angle">
 The generation angle sets the most important view of your mesh which will be prioritized during generation. Changing this angle when [generating textures](#generate-textures) can often help eliminate inconsistencies in textures.
@@ -199,6 +200,7 @@ The generation angle sets the most important view of your mesh which will be pri
 - Setting the generation angle to highlight the meaningful faces of your mesh will result in better generations.
 - For flat objects like plates, swords, and fences, make sure the generation angle displays a view with a high surface area.
 - For humanoid and animal meshes, experiment with different generation angles, such as a head-on view of the face and a side view profile, to find the most consistent and coherent texture.
+
 </TabItem>
 <TabItem label="Iterative refinement">
 Generating the most suitable textures is an iterative process. It helps to preview often and tweak prompts incrementally to reach your vision.
@@ -206,5 +208,6 @@ Generating the most suitable textures is an iterative process. It helps to previ
 - If a texture doesn't meet your expectations, identify what to change instead of starting over. For example, tweak the color or pattern description.
 - Change the prompt word order. Words at the beginning of the prompt can have more weight when generating.
 - Generate several previews to compare different prompts, or try the same prompts with different [seeds](#advanced-options) to get a preview that fits your vision.
+
 </TabItem>
 </Tabs>
