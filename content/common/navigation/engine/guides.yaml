@@ -49,7 +49,7 @@ navigation:
                 path: /workspace/streaming/
               - title: Techniques
                 path: /workspace/streaming/techniques
-              - title: Frustum Streaming
+              - title: Frustum streaming
                 path: /workspace/streaming/frustum
               - title: SLIM
                 path: /workspace/streaming/slim

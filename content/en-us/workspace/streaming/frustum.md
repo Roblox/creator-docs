@@ -21,7 +21,7 @@ Frustum streaming is completely opt-in and works best for gameplay where the cam
 
 ## Configure frustum streaming
 
-Frustum streaming is controlled per player through the `Class.Player.FrustumStreaming` property, which can only be set on the server. The property accepts values from `Enum.FrustumStreamingMode`:
+Frustum streaming is controlled per player through the `FrustumStreaming` property on `Class.Player`, which can only be set on the server. The property accepts the following values:
 
 <table>
 <thead>
@@ -32,19 +32,19 @@ Frustum streaming is controlled per player through the `Class.Player.FrustumStre
 </thead>
 <tbody>
   <tr>
-    <td>`Enum.FrustumStreamingMode.Default|Default`</td>
+    <td>Default</td>
     <td>The starting value. Currently behaves the same as **Disabled**.</td>
   </tr>
   <tr>
-    <td>`Enum.FrustumStreamingMode.Automatic|Automatic`</td>
+    <td>Automatic</td>
     <td>The engine decides when to activate frustum streaming based on current performance and camera movement. This is the best choice for most games. The engine enables frustum streaming when any of the following conditions are met: <br /><br /> - The camera field of view becomes relatively narrow (for example, a sniper scope). <br /> - The player moves at high speed in a consistent direction (for example, a racing game). <br /> - The camera moves far from the replication focus (for example, a free camera).</td>
   </tr>
   <tr>
-    <td>`Enum.FrustumStreamingMode.Enabled|Enabled`</td>
+    <td>Enabled</td>
     <td>Frustum streaming is always active and continues to process.</td>
   </tr>
   <tr>
-    <td>`Enum.FrustumStreamingMode.Disabled|Disabled`</td>
+    <td>Disabled</td>
     <td>Frustum streaming is deactivated and does not process.</td>
   </tr>
 </tbody>
@@ -66,7 +66,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 ## Control frustum streaming manually
 
-For gameplay scenarios that require granular control, set `Class.Player.FrustumStreaming` to `Enum.FrustumStreamingMode.Enabled|Enabled` or `Enum.FrustumStreamingMode.Disabled|Disabled` directly. For example, if a player equips a sniper rifle, you can force frustum streaming on at the start of the equip animation so that distant instances are already loading when the player looks down the scope.
+For gameplay scenarios that require granular control, set `FrustumStreaming` to **Enabled** or **Disabled** directly. For example, if a player equips a sniper rifle, you can force frustum streaming on at the start of the equip animation so that distant instances are already loading when the player looks down the scope.
 
 ```lua
 -- Server Script
@@ -117,7 +117,7 @@ No. Frustum streaming is completely optional. If you don't enable it, streaming 
 <Typography variant="buttonLarge">Does frustum streaming change how client-side scripts work?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Normal <a href="./techniques">streaming techniques</a> still apply. Be aware that instances in the field of view stream in, and if <code>Class.Workspace.StreamOutBehavior</code> is set to <code>Enum.StreamOutBehavior.Opportunistic|Opportunistic</code>, looking away causes those instances to stream out after a short delay.
+Normal [streaming techniques](./techniques.md) still apply. Be aware that instances in the field of view stream in, and if `Class.Workspace.StreamOutBehavior` is set to `Enum.StreamOutBehavior.Opportunistic|Opportunistic`, looking away causes those instances to stream out after a short delay.
 </AccordionDetails>
 </BaseAccordion>
 
@@ -144,7 +144,7 @@ If your game doesn't use instance streaming, all instances are already present o
 <Typography variant="buttonLarge">How does frustum streaming relate to replication foci?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Streaming is a union of the primary streaming radius (cube), frustum streaming, and any active replication foci. A replication focus stays loaded as long as it exists, even if the camera isn't looking at it. In contrast, a frustum that rotates away from an area causes that area to begin streaming out (in <code>Enum.StreamOutBehavior.Opportunistic|Opportunistic</code> mode). In <code>Enum.StreamOutBehavior.LowMemory|LowMemory</code> mode, both frustum and replication focus content stays loaded until memory pressure forces stream-out.
+Streaming is a union of the primary streaming radius (cube), frustum streaming, and any active replication foci. A replication focus stays loaded as long as it exists, even if the camera isn't looking at it. In contrast, a frustum that rotates away from an area causes that area to begin streaming out (in `Enum.StreamOutBehavior.Opportunistic|Opportunistic` mode). In `Enum.StreamOutBehavior.LowMemory|LowMemory` mode, both frustum and replication focus content stays loaded until memory pressure forces stream-out.
 </AccordionDetails>
 </BaseAccordion>
 
