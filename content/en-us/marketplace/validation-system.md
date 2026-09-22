@@ -12,6 +12,8 @@ The UGC validation system runs each time you:
 
 During this process, the UGC validation system looks at your asset to see if it meets the requirements in validation categories that are specific to its asset type. For a comprehensive list of these requirements, see [Body specifications](../avatar/character-bodies/specifications.md), [Dynamic head specifications](../avatar/dynamic-heads/specifications.md), [Makeup specifications](../avatar/makeup/specifications.md), [Rigid accessory specifications](../avatar/rigid-accessories/specifications.md), and [Layered accessory specifications](../avatar/layered-accessories/specifications.md).
 
+For requirements and upload steps specific to locomotion animations, see [Create and publish animation packs](../avatar/animation-packs.md).
+
 When an avatar asset passes validation, you can proceed with the Studio upload process by paying the upload fee, submitting the asset for moderation, and selling it on the Marketplace, or the player can proceed to purchase the avatar asset they created within an experience.
 
 <br></br>

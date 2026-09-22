@@ -97,6 +97,121 @@ properties:
       can_save: true
     capabilities:
       - AvatarAppearance
-methods: []
+methods:
+  - name: WrapTarget:CreateTextureInCageSpaceAsync
+    summary: |
+      Creates a new `Class.EditableImage` in cage UV space from a texture in the
+      parent `Class.MeshPart`'s UV space.
+    description: |
+      Creates a new `Class.EditableImage` by transferring `texture` from the UV
+      space of this `Class.WrapTarget`'s parent `Class.MeshPart` into the UV
+      space of the WrapTarget's cage. This method yields until the transfer is
+      complete and does not modify the input image.
+
+      For example, after a player paints makeup onto a head mesh in an
+      in-experience creation tool, use this method to transfer the texture into
+      cage UV space before uploading it for use with
+      `Class.WrapTextureTransfer`. This method also supports cage-space texture
+      transfers unrelated to makeup. To transfer a texture in the opposite
+      direction, use `Class.WrapTarget:CreateTextureInTargetSpaceAsync()`.
+
+      Use `options` to specify a region of cage UV space. Each supplied bound
+      must be a finite `Datatype.Vector2`. If both bounds are supplied,
+      `MaxUVBounds` must be greater than `MinUVBounds` on both axes.
+      Unrecognized option keys raise an error.
+
+      This method requires the WrapTarget to be parented to a `Class.MeshPart`
+      with valid mesh and cage data. It raises an error if the input or options
+      are invalid, required mesh data cannot be loaded, or the transfer fails.
+      If the device-specific editable memory budget is exhausted, it returns
+      `nil`. See `Class.EditableImage` for additional usage requirements.
+    code_samples: []
+    parameters:
+      - name: texture
+        type: EditableImage
+        default:
+        summary: |
+          The `Class.EditableImage` in the UV space of this `Class.WrapTarget`'s
+          parent `Class.MeshPart`.
+      - name: options
+        type: Dictionary?
+        default:
+        summary: |
+          Optional dictionary containing controls for the transfer:
+
+          - `MinUVBounds` – A `Datatype.Vector2` specifying the minimum cage UV
+            bound.
+          - `MaxUVBounds` – A `Datatype.Vector2` specifying the maximum cage UV
+            bound.
+
+          Each omitted bound is calculated from the cage mesh. If neither is
+          specified, the bounds include the entire cage.
+    returns:
+      - type: EditableImage
+        summary: |
+          A new `Class.EditableImage` in cage UV space, or `nil` if the
+          device-specific editable memory budget is exhausted.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AvatarAppearance
+      - DynamicGeneration
+  - name: WrapTarget:CreateTextureInTargetSpaceAsync
+    summary: |
+      Creates a new `Class.EditableImage` in the parent `Class.MeshPart`'s UV
+      space from a texture in cage UV space.
+    description: |
+      Creates a new `Class.EditableImage` by transferring `texture` from cage UV
+      space into the UV space of this `Class.WrapTarget`'s parent
+      `Class.MeshPart`. This method yields until the transfer is complete and
+      does not modify the input image.
+
+      The `wrapTextureTransfer` supplies the optional reference cage through
+      `Class.WrapTextureTransfer.ReferenceCageMeshContent` and the cage UV
+      bounds through `Class.WrapTextureTransfer.UVMinBound` and
+      `Class.WrapTextureTransfer.UVMaxBound`. Use a WrapTextureTransfer under a
+      `Class.Decal` on the same MeshPart as the WrapTarget.
+
+      For example, use this method to transfer a makeup texture you own into a
+      head mesh's UV space so players can edit it directly on the head in an
+      in-experience creation tool. This method also supports target-space
+      texture transfers unrelated to makeup. To transfer the edited texture back
+      into cage UV space, use
+      `Class.WrapTarget:CreateTextureInCageSpaceAsync()`.
+
+      This method requires the WrapTarget to be parented to a `Class.MeshPart`
+      with valid mesh and cage data. It raises an error if either input is
+      invalid, required mesh data cannot be loaded, or the transfer fails. If
+      the device-specific editable memory budget is exhausted, it returns `nil`.
+      See `Class.EditableImage` for additional usage requirements.
+    code_samples: []
+    parameters:
+      - name: texture
+        type: EditableImage
+        default:
+        summary: |
+          The `Class.EditableImage` in cage UV space.
+      - name: wrapTextureTransfer
+        type: WrapTextureTransfer
+        default:
+        summary: |
+          The `Class.WrapTextureTransfer` associated with the same parent
+          `Class.MeshPart` as this `Class.WrapTarget`.
+    returns:
+      - type: EditableImage
+        summary: |
+          A new `Class.EditableImage` in the parent `Class.MeshPart`'s UV space,
+          or `nil` if the device-specific editable memory budget is exhausted.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AvatarAppearance
+      - DynamicGeneration
 events: []
 callbacks: []

@@ -5,7 +5,7 @@ next: /art/accessories/creating/test-poses
 prev: /art/accessories/creating/texture-painting
 ---
 
-**Rigging** is the process that enables the clothing object to move and deform with a Roblox character's rigging armature. In this tutorial, you'll parent the clothing item to Roblox's provided [standard R15 rig](../../../avatar/character-bodies/specifications.md#standard-r15-rigs) and verify the Automatic Skinning Transfer data. After rigging, be sure to test out some basic poses to ensure that your clothes move and stretch correctly with any character body.
+**Rigging** is the process that enables the clothing object to move and deform with a Roblox character's rigging armature. In this tutorial, you'll parent the t-shirt to Roblox's provided [standard R15 rig](../../../avatar/character-bodies/specifications.md#standard-r15-rigs) and verify the Automatic Skinning Transfer data. After rigging, be sure to test out some basic poses to ensure that your clothes move and stretch correctly with any character body.
 
 <GridContainer numColumns="2">
   <figure>
@@ -18,11 +18,11 @@ prev: /art/accessories/creating/texture-painting
   </figure>
 </GridContainer>
 
-The rigging process requires the following:
+The next two rigging sections cover the following processes:
 
-1. Download and append a standard R15 armature to your project.
-2. Parent the rig with Blender's automatic weights.
-3. Test poses.
+1. Downloading and appending a standard R15 armature to your project.
+1. Parenting the rig with Blender's automatic weights.
+1. Testing poses.
 
 ## Transfer armature
 
@@ -30,21 +30,21 @@ Roblox provides base rigging armatures that you can import into your own project
 
 To import a standard R15 rig into your file:
 
-1. Download Roblox's [Rig_and_Attachments_Template.blend](../../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip). Do not open this project.
-2. In your current clothing project, return to **Object Mode**.
-3. Navigate to **File** > **Append**, and select the saved **Rig_And_Attachment.blend** file. An additional folder structure appears.
+1. Download Roblox's [Rig_and_Attachments_Template.blend](../../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip), but do not open this project.
+1. In your current clothing project, return to **Object** mode.
+1. Navigate to **File** > **Append**, and select the saved **Rig_And_Attachments_Template.blend** file. An additional folder structure appears.
 
    <img src="../../../assets/art/accessories/creating/Rigging-Append-Browser.png" />
 
-4. Select **Armature** > **Armature** and press **Append**. An armature object is added to your workspace.
+1. Select **Armature** > **Armature** and press **Append**. An armature object is added to your workspace.
 
    <img src="../../../assets/art/accessories/creating/Rigging-Armature-Appended.png" />
 
-5. The armature may need reorientation with the following steps:
+1. Reorient the armature:
 
-   1. With the armature selected, open the **Item tool** sidebar.
-   2. Adjust the rotation so the armature is correctly aligned with your mesh.
-   3. After alignment, navigate to **Object** > **Apply** > **All Transforms** to freeze your new rotation values.
+   1. With the armature active, open the **Item tool** sidebar.
+   1. Adjust the rotation so the armature is correctly aligned with your mesh.
+   1. After alignment, navigate to **Object** > **Apply** > **All Transforms** to freeze your new rotation values.
 
       <img src="../../../assets/art/accessories/creating/Rigging-Freeze-Transforms.png" />
 
@@ -52,13 +52,12 @@ To import a standard R15 rig into your file:
 
 ## Parent armature
 
-With the armature rig in place, you can use Blender's **Parent with Automatic Weights** functionality to quickly set your clothing mesh as a child of the armature. This feature also applies vertex weighting, or **skinning**, automatically to your mesh, which can save you significant time over skinning your clothing manually.
+With the armature rig in place, you can use Blender's **Parent with Automatic Weights** functionality to quickly set your t-shirt mesh as a child of the armature. This feature also applies vertex weighting, or **skinning**, automatically to your mesh, which can save you significant time over skinning your clothing manually.
 
-To parent the clothing to the rig:
+To parent the t-shirt to the rig:
 
-1. Select the clothing mesh object.
-2. Hold shift and click the **Armature** object. Ensure that the armature object is the last object selected.
-3. Right-click and select **Parent** > **With Automatic Weights**.
+1. Select **LongSleeve**, then hold <kbd>Shift</kbd> and click the **Armature** object. Ensure that the armature object is the last object selected.
+1. Right-click in the viewport, then select **Parent** > **With Automatic Weights** from the contextual menu.
 
 <img src="../../../assets/art/accessories/creating/Rigging-Auto-Weights.png" />
 

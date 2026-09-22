@@ -11,7 +11,7 @@ After importing your asset into Studio, you can begin **fitting** your imported 
 
 To fit and generate your accessory:
 
-1. In the toolbar's **Avatar** tab, click **Accessory** to open the AFT. The **Accessory Fitting Tool** panel displays.
+1. In the **Avatar** tab, click **Accessory** to open the AFT. The **Accessory Fitting Tool** panel displays.
 1. In the panel:
 
    1. Select the **Part** field, then in the **Explorer** window, select the rigid accessory `Class.MeshPart` object.
@@ -34,7 +34,7 @@ To fit and generate your accessory:
    <video controls src="../../../assets/art/accessories/creating-rigid/Testing.mp4" width="100%"></video>
 
 <Alert severity = 'success'>
-After successful fitting and converting, your 3D model populates in your project as a `Class.Accessory`. With this `Class.Accessory` you can perform any of the following:
+After successful fitting and converting, your 3D model populates in your project as a `Class.Accessory`. With your new `Class.Accessory` you can perform any of the following:
 
 - [Upload the accessory](../../../art/accessories/creating-rigid/publishing.md) to the Marketplace.
 - Use the accessory in your current game by equipping it to character models with a [`HumanoidDescription`](../../../characters/appearance.md#manually-modify-appearance), or by dragging and dropping the accessory under the appropriate character `Class.Model` object.

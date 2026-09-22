@@ -3321,6 +3321,11 @@ navigation:
         type: engineapi
         source: /reference/engine/datatypes/Instance.yaml
         ignoreTranslation: true
+      - title: InstanceHandle
+        path: /reference/engine/datatypes/InstanceHandle
+        type: engineapi
+        source: /reference/engine/datatypes/InstanceHandle.yaml
+        ignoreTranslation: true
       - title: NumberRange
         path: /reference/engine/datatypes/NumberRange
         type: engineapi
@@ -3604,6 +3609,11 @@ navigation:
         path: /reference/engine/enums/AnimationClipFromVideoStatus
         type: engineapi
         source: /reference/engine/enums/AnimationClipFromVideoStatus.yaml
+        ignoreTranslation: true
+      - title: AnimationNodeBlendMode
+        path: /reference/engine/enums/AnimationNodeBlendMode
+        type: engineapi
+        source: /reference/engine/enums/AnimationNodeBlendMode.yaml
         ignoreTranslation: true
       - title: AnimationNodeType
         path: /reference/engine/enums/AnimationNodeType
@@ -4684,11 +4694,6 @@ navigation:
         path: /reference/engine/enums/KeyInterpolationMode
         type: engineapi
         source: /reference/engine/enums/KeyInterpolationMode.yaml
-        ignoreTranslation: true
-      - title: Language
-        path: /reference/engine/enums/Language
-        type: engineapi
-        source: /reference/engine/enums/Language.yaml
         ignoreTranslation: true
       - title: LeftRight
         path: /reference/engine/enums/LeftRight

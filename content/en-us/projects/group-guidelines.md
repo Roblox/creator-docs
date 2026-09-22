@@ -18,7 +18,7 @@ Roblox groups and **all content uploaded to them** must follow Roblox's [Communi
 Group owners play a crucial role in maintaining a safe and positive environment within their groups.
 
 - Group owners should make a reasonable effort to address and mitigate harmful behavior within their communities and groups.
-- Group owners are responsible for utilizing Roblox-provided moderation tools such as [activity history](./groups.md#group-activity-history) to proactively ensure a healthy environment and moderate potentially violative content.
+- Group owners are responsible for utilizing Roblox-provided moderation tools such as [group audit logs](./groups.md#group-audit-logs) to proactively ensure a healthy environment and moderate potentially violative content.
 
 ## Violations and consequences
 

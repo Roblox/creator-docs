@@ -50,7 +50,7 @@ Create and sell your first basic layered accessory.
 </Grid>
 </Grid>
 
-**Layered accessories**, often referred to as **layered clothing**, are 3D assets that stretch and fit on an avatar's body according to their rigging armature and cage meshes. When users purchase layered accessories on the Marketplace, such as jackets, dresses, and cardigans, they expect it to move with the character's animations and layer appropriately on top of existing clothing the character is wearing.
+**Layered accessories**, often referred to as **layered clothing**, are 3D assets that stretch and fit on an avatar character's body according to their rigging armature and cage meshes. When users purchase layered accessories on the Marketplace, such as jackets, dresses, and cardigans, they expect it to move with the character's animations and layer appropriately on top of existing clothing the character is wearing.
 
 There are three main layers of a layered accessory that structure how the accessory looks and works on the platform:
 
@@ -181,7 +181,7 @@ There are a variety of resources available for creators of all backgrounds to ge
   </tr>
   <tr>
     <td>Rigging and skinning</td>
-    <td>[Rigging and skinning overview](../../art/modeling/rigging.md)<br /><br />[Humanoid rigging requirements](../../avatar/character-bodies/specifications.md#rigging)<br /><br />[Rigging facial bones](../../art/characters/facial-animation/create-basic-heads.md#rigging)<br /><br />[Auto skin transfer](../../avatar/automatic-skinning-transfer.md)<br /><br />[Skin facial bones](../../art/characters/facial-animation/create-basic-heads.md#skin-face-bones)</td>
+    <td>[Rigging and skinning overview](../../art/modeling/rigging.md)<br /><br />[Humanoid rigging requirements](../../avatar/character-bodies/specifications.md#rigging)<br /><br />[Rigging facial bones](../../art/characters/facial-animation/create-basic-heads.md#rig-and-skin-the-head)<br /><br />[Auto skin transfer](../../avatar/automatic-skinning-transfer.md)<br /><br />[Skin facial bones](../../art/characters/facial-animation/create-basic-heads.md#skin-joints)</td>
   </tr>
   <tr>
     <td>Testing and validation</td>

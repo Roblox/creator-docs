@@ -14,7 +14,7 @@ Studio's Importer provides a quick and easy way to import third-party 3D `.fbx` 
 To import your asset ([downloadable reference](../../../assets/art/accessories/creating-rigid/Chest-Texturing-Complete.fbx)):
 
 1. In the **Home** tab, click the **Import** button to open the Importer. A file browser opens.
-1. Select your rigid accessory's `.fbx` or `.gltf` file. The Importer loads a preview of the rigid accessory.
+1. Select your asset's `.fbx` file. The Importer loads a preview of the rigid accessory.
 1. Select **Import**. The asset populates in your workspace as a `Class.Model` with the appropriate textures applied as a `Class.MeshPart.TextureID`.
 
 <BaseAccordion>

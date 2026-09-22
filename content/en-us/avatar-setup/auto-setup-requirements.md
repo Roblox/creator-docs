@@ -154,7 +154,7 @@ To ensure that Avatar Setup uses your **own custom body rig** instead of generat
 To ensure that Avatar Setup uses your **own custom face rig with FACS data**:
 
 - A [standard](../avatar/character-bodies/specifications.md#standard-r15-rigs) or [advanced](../avatar/character-bodies/specifications.md#advanced-r15-rigs) R15 rigging armature is required when submitting custom facial rigs and facial animation data. Review [supported character body inputs](#character-bodies) to ensure you are submitting a supported body input and facial rig combination.
-- Facial rig must include a `RootFaceJoint` bone (usually [mapped](../art/characters/facial-animation/create-basic-heads.md#map) as `DynamicHead`) whose parent is the `Head` joint of the standard rigging armature.
+- Facial rig must include a `RootFaceJoint` bone (usually [mapped](../art/characters/facial-animation/create-basic-heads.md#map-each-pose) as `DynamicHead`) whose parent is the `Head` joint of the standard rigging armature.
 - All the other facial animation joints are descendants of the `RootFaceJoint`, and not direct children of the `Head` joint.
 - Animations need to be provided for the [17 required poses](../avatar/character-bodies/specifications.md#facial-animations), at minimum.
 - Neutral animation must map to frame `0`.

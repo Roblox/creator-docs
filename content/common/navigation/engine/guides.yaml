@@ -360,10 +360,10 @@ navigation:
         section:
           - title: Overview
             path: /characters/character-controller-library/
-          - title: Abilities
-            path: /characters/character-controller-library/abilities
-          - title: Controllers
-            path: /characters/character-controller-library/controllers
+          - title: Quick start
+            path: /characters/character-controller-library/quick-start
+          - title: Custom abilities
+            path: /characters/character-controller-library/custom-abilities
       - title: Name and health display
         path: /characters/name-health-display
       - title: Adaptive Animation
@@ -486,14 +486,17 @@ navigation:
         section:
           - title: Animation Editor
             path: /animation/editor
-          - title: Curve Editor
-            path: /animation/curve-editor
+            section:
+              - title: Overview
+                path: /animation/editor
+              - title: Curve Editor
+                path: /animation/curve-editor
+              - title: Animation events
+                path: /animation/events
+              - title: Animation capture
+                path: /animation/capture
           - title: Graph Editor
             path: /animation/graph-editor
-          - title: Animation events
-            path: /animation/events
-          - title: Animation capture
-            path: /animation/capture
           - title: Inverse kinematics
             path: /animation/inverse-kinematics
       - title: Use animations

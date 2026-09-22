@@ -133,12 +133,13 @@ You can dynamically control a mesh's level of detail using its `Enum.RenderFidel
 
 ### Collision fidelity
 
-**Collision fidelity** determines how closely the visual representation of a mesh matches its physical bounds. The `Class.MeshPart.CollisionFidelity` property has the following options, in order of fidelity and performance impact from lowest to highest:
+**Collision fidelity** determines how closely the visual representation of a mesh matches its physical bounds. The `Class.MeshPart.CollisionFidelity` property has the following options:
 
 - **Box** — Creates a bounding collision box, ideal for small or non‑interactive objects.
 - **Hull** — Generates a convex hull, suitable for objects with less pronounced indentations or cavities.
 - **Default** — Produces an approximate collision shape that supports concavity, suitable for complex objects with semi-detailed interaction needs.
 - **PreciseConvexDecomposition** — Offers the most precise fidelity but still not a 1:1 representation of the visual. This option has the most expensive performance cost and takes longer for the engine to compute.
+- **Tunable** — Setting `Class.MeshPart.CollisionFidelity` to `Enum.CollisionFidelity.Tunable|Tunable` reveals a `Class.MeshPart.CollisionPrecision|CollisionPrecision` slider in the **Properties** window. Sliding up produces more precise, more expensive collision geometry, while sliding down produces coarser, cheaper geometry, all without switching to a different fidelity option. The default `Class.MeshPart.CollisionPrecision|CollisionPrecision` value isn't fixed; the engine intelligently picks the appropriate precision, and therefore cost, based on the size of the mesh.
 
 <Tabs>
   <TabItem label="Original Mesh">
@@ -155,6 +156,9 @@ You can dynamically control a mesh's level of detail using its `Enum.RenderFidel
   </TabItem>
 	<TabItem label="Precise">
     <img src="../assets/physics/collisions/Collision-Fidelity-Precise.jpg" width="600" height="500" alt="Collision fidelity of PreciseConvexDecomposition shown for mesh" />
+  </TabItem>
+	<TabItem label="Tunable">
+    <video controls src="../assets/physics/collisions/Collision-Fidelity-Tunable.mp4"></video>
   </TabItem>
 </Tabs>
 

@@ -11,7 +11,7 @@ Group ownership of games helps creators collaborate and operate as independent s
 
 ## Group creation
 
-Creating a group costs 100 Robux. New groups maintain certain capabilities on the legacy [Groups](https://www.roblox.com/communities) pages, but improved workflows and options for [configuring roles/permissions](#roles-and-permissions) and inviting members are only available on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+Creating a group costs 100 Robux. You can manage its [roles and permissions](#roles-and-permissions) from the [Creator Dashboard](https://create.roblox.com/dashboard/creations) or [Communities](https://www.roblox.com/communities).
 
 <Alert severity="warning">
 Before creating a group, carefully read through the [rules and expectations](./group-guidelines.md) for group management.
@@ -19,10 +19,7 @@ Before creating a group, carefully read through the [rules and expectations](./g
 
 To create a new group:
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations), expand the account switcher in the upper‑left, and click the **+** button.
-
-   <img src="../assets/creator-dashboard/Group-Create-Group-Button.png" width="257" alt="Create Group button on the Creator Dashboard" />
-
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations), expand the account switcher in the upper‑left, and click the **plus (+)** button.
 2. On the **Create Group** page, upload an image for the group logo and enter the group name.
 3. When ready, click the **Purchase** button. Once the group is created, you'll be directed to the group profile page where you can modify the group's details, including adding up to three social links.
 
@@ -34,52 +31,56 @@ Group members can be assigned one or multiple **roles** within a group, and each
 Role configuration is only accessible if you're the group owner or you have permission to create, configure, and assign group roles.
 </Alert>
 
-<Alert severity="error">
-Roles created using the legacy [Groups](https://www.roblox.com/communities) pages will continue to operate on the legacy system and can only be managed through the legacy workflow. If permissions were granted to a legacy role, **the member will continue to have those permissions**, so it's recommended that you revoke permissions/roles in the legacy system and then migrate members to the new system.
-</Alert>
-
 1. From the [Creator Dashboard](https://create.roblox.com/dashboard/creations), expand the account switcher in the upper‑left and select the group.
-2. Expand the account switcher again, select **Settings** under the group's name, then select **Roles**.
+2. Expand the account switcher again and select **Roles**.
 3. For each role, carefully confirm the permissions under the **Permissions** tab.
 
-   <img src="../assets/creator-dashboard/Group-Roles-Permissions-Tab.png" width="780" alt="Permissions tab indicated for a group role on the Creator Dashboard." />
+   Permissions are organized into **General**, **Creation**, and **Community** categories. The sections below describe the permissions available in each category.
 
-	 <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Group Permissions</Typography></AccordionSummary>
+   ### General
+
+    <BaseAccordion>
+   <AccordionSummary><Typography variant="subtitle2">General permissions</Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-       <td width="40%">**Add or remove group members**</td>
-       <td>Members with this role can [invite](#manage-members) and [remove](#member-removal) other members.</td>
+       <td width="40%">**Manage roles**</td>
+       <td>Members with this permission can create, edit, delete, reorder, and assign or unassign roles below their highest role. They can only edit permissions they already hold.</td>
      </tr>
      <tr>
-       <td>**Add or remove [role] role members**</td>
-       <td>Members with this role can give or remove the role to/from other members in the group. This permission is useful for roles that should have some management permissions but not at the super‑admin level.</td>
+       <td>**Assign or remove roles from members**</td>
+       <td>Members with this permission can assign or unassign roles below their highest role to any member.</td>
      </tr>
      <tr>
-       <td>**Configure limited roles**</td>
-       <td>Members with this role can configure the roles they are assigned and assign permissions to those roles that they themselves have.</td>
+       <td>**Invite or approve members**</td>
+       <td>Members with this permission can invite people to the group and approve join requests.</td>
      </tr>
      <tr>
-       <td>**Administrate all roles**</td>
-       <td>Members with this role can create, delete, and configure any role in the group. This is a super‑admin permission, as it provides nearly full access.</td>
+       <td>**Kick members**</td>
+       <td>Members with this permission can remove members whose highest role is below their own.</td>
      </tr>
      <tr>
-       <td>**Configure group profile**</td>
-       <td>Members with this role can update the group's name, description, and other metadata. Does not include transferring ownership, which only the owner can do.</td>
+       <td>**Ban members**</td>
+       <td>Members with this permission can ban members whose highest role is below their own.</td>
      </tr>
      <tr>
-       <td>**View group activity history**</td>
-       <td>Members with this role can view [group activity history](#group-activity-history).</td>
+       <td>**View audit logs**</td>
+       <td>Members with this permission can view [group audit logs](#group-audit-logs).</td>
+     </tr>
+     <tr>
+       <td>**Manage allies and enemies**</td>
+       <td>Members with this permission can manage the group's allies and enemies.</td>
      </tr>
    </tbody>
    </table>
    </AccordionDetails>
    </BaseAccordion>
 
-	 <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Experience Permissions</Typography></AccordionSummary>
+   ### Creation
+
+    <BaseAccordion>
+   <AccordionSummary><Typography variant="subtitle2">Creations</Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
@@ -96,40 +97,50 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
        <td>Members with this role can both edit games, as above, and also publish games to Roblox. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**View all analytics for group experiences**</td>
-       <td>Members with this role can access the [analytics](../production/analytics/index.md) of all games owned by the group, even if they don't have edit access. Optionally available as a [per‑game permission](./configure-games.md).</td>
-     </tr>
-     <tr>
-       <td>**Create and configure share links**</td>
+       <td>**Create and manage share links**</td>
        <td>Members with this role can create/configure [share links](../production/promotion/share-links.md).</td>
      </tr>
      <tr>
-       <td>**Create and configure experience events**</td>
+       <td>**Create and manage experience events**</td>
        <td>Members with this role can create/configure [experience events](../production/promotion/experience-events.md).</td>
      </tr>
      <tr>
-       <td>**Configure bans for all group experiences**</td>
-       <td>Members with this role can ban and manage banned users for all games owned by the group.</td>
+       <td>**Access read-only chat (must be 18+) and manage bans for all group experiences**</td>
+       <td>Members with this role can view all in-game chat messages and ban or manage banned users across all games owned by the group.</td>
      </tr>
      <tr>
-       <td>**Access read-only chat and configure bans for all group experiences**</td>
-       <td>Members with this role can view all in-game chat messages and ban or manage banned users across all games owned by the group.<br/><br/>To view in-game chat messages, enable **Read-only view** in the in-game settings.</td>
-     </tr>
-     <tr>
-       <td>**Configure monetization for all group experiences**</td>
+       <td>**Manage monetization for all group experiences**</td>
        <td>Members with this role can manage monetization products such as [passes](../production/monetization/passes.md), [developer products](../production/monetization/developer-products.md), [subscriptions](../production/monetization/subscriptions.md), and more. Optionally available as a [per-game permission](./configure-games.md).</td>
      </tr>
      <tr>
        <td>**List, create, update, and delete secrets for all group experiences**</td>
-       <td>Members with this role can see the list of [secrets](../cloud-services/secrets.md) and can create, update, and delete secrets for all games owned by the group. Optionally available as a [per‑game permission](./configure-games.md).</td>
+       <td>Members with this role can see the list of [secrets](../cloud-services/secrets.md) and can create, update, and delete secrets for all games owned by the group. Members with this role require **Edit all group experiences** permission to view the Secrets page. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
    </tbody>
    </table>
    </AccordionDetails>
    </BaseAccordion>
 
-	 <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Group Revenue</Typography></AccordionSummary>
+    <BaseAccordion>
+   <AccordionSummary><Typography variant="subtitle2">Analytics</Typography></AccordionSummary>
+   <AccordionDetails>
+   <table>
+   <tbody>
+     <tr>
+       <td width="40%">**View all analytics for group experiences**</td>
+       <td>Members with this role can access the [analytics](../production/analytics/index.md) of all games owned by the group, even if they don't have edit access. Optionally available as a [per-game permission](./configure-games.md).</td>
+     </tr>
+     <tr>
+       <td>**Create and manage alerts**</td>
+       <td>Members with this role can create and manage analytics alerts. Pair this permission with **View all analytics for group experiences** to see alert annotations directly on metrics graphs.</td>
+     </tr>
+   </tbody>
+   </table>
+   </AccordionDetails>
+   </BaseAccordion>
+
+    <BaseAccordion>
+   <AccordionSummary><Typography variant="subtitle2">Monetization</Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
@@ -138,11 +149,11 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
        <td>Members with this role can view the group Robux balance, any configured recurring split payouts, and revenue logging features.</td>
      </tr>
      <tr>
-      <td>**Configure and spend group revenue**</td>
+      <td>**Manage and spend group revenue**</td>
       <td>Members with this role can view all group revenue, as above, and also directly manage it. This includes setting up [recurring payouts](#recurring-payouts) and sending [one‑time payouts](#one-time-payouts) to collaborators.</td>
      </tr>
      <tr>
-       <td>**Create ad campaigns for the group**</td>
+       <td>**Create Ad campaigns for the group**</td>
        <td>Members with this role can advertise the group.</td>
      </tr>
    </tbody>
@@ -151,12 +162,12 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
    </BaseAccordion>
 
    <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Avatar Item Permissions</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2">Avatar items</Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-      <td width="40%">**Configure avatar items**</td>
+       <td width="40%">**Manage avatar items**</td>
       <td>Members with this role can configure avatar items such as clothing.</td>
      </tr>
      <tr>
@@ -168,26 +179,22 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
    </AccordionDetails>
    </BaseAccordion>
 
-	 <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Open Cloud Permissions</Typography></AccordionSummary>
+    <BaseAccordion>
+   <AccordionSummary><Typography variant="subtitle2">API</Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-       <td width="40%">**Manage own API keys**</td>
-       <td>Members with this role can configure and upload their own [Open Cloud API keys](../cloud/auth/api-keys.md) to the group, but not configure everyone else's.</td>
-     </tr>
-     <tr>
-      <td>**Manage all API keys**</td>
-      <td>Members with this role can upload their own [Open Cloud API keys](../cloud/auth/api-keys.md) to the group, as well as configure everyone else's.</td>
+       <td width="40%">**Manage API keys**</td>
+       <td>Members with this role can manage [Open Cloud API keys](../cloud/auth/api-keys.md) for the group.</td>
      </tr>
    </tbody>
    </table>
    </AccordionDetails>
    </BaseAccordion>
 
-	 <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Asset Permissions</Typography></AccordionSummary>
+    <BaseAccordion>
+   <AccordionSummary><Typography variant="subtitle2">Development items</Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
@@ -196,7 +203,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
       <td>Members with this role can view development items owned by the group, for example **Audio**.</td>
      </tr>
      <tr>
-      <td>**Create and configure development items**</td>
+       <td>**Create and manage development items**</td>
       <td>Members with this role can upload and configure asset development items such as **Decals**.</td>
      </tr>
      <tr>
@@ -208,22 +215,158 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
    </AccordionDetails>
    </BaseAccordion>
 
-	 <BaseAccordion>
+    <BaseAccordion>
    <AccordionSummary><Typography variant="subtitle2">Data Stores</Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-      <td width="40%">**View data stores for all group experiences**</td>
+       <td width="40%">**View Data Stores for all group experiences**</td>
       <td>Members with this role can view data stores for all group games through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md), but they cannot delete data. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
-      <td>**Edit data stores for all group experiences**</td>
+       <td>**Edit Data Stores for all group experiences**</td>
       <td>Members with this role can delete specific keys within data stores for all group games through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
-      <td>**Delete data stores for all group experiences**</td>
+       <td>**Delete Data Stores for all group experiences**</td>
       <td>Members with this role can delete entire data stores for all group games through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Optionally available as a [per‑game permission](./configure-games.md).</td>
+     </tr>
+   </tbody>
+   </table>
+   </AccordionDetails>
+   </BaseAccordion>
+
+   <BaseAccordion>
+   <AccordionSummary><Typography variant="subtitle2">Notifications</Typography></AccordionSummary>
+   <AccordionDetails>
+   <table>
+   <tbody>
+     <tr>
+       <td width="40%">**List, create, update, and delete webhooks for all group experiences**</td>
+       <td>Members with this role can list, create, update, and delete webhooks for all group experiences.</td>
+     </tr>
+   </tbody>
+   </table>
+   </AccordionDetails>
+   </BaseAccordion>
+
+   <BaseAccordion>
+   <AccordionSummary><Typography variant="subtitle2">Communication</Typography></AccordionSummary>
+   <AccordionDetails>
+   <table>
+   <tbody>
+     <tr>
+       <td width="40%">**Manage support tickets for all group experiences**</td>
+       <td>Members with this role can manage support tickets for all group experiences.</td>
+     </tr>
+   </tbody>
+   </table>
+   </AccordionDetails>
+   </BaseAccordion>
+
+   <BaseAccordion>
+   <AccordionSummary><Typography variant="subtitle2">Legacy</Typography></AccordionSummary>
+   <AccordionDetails>
+   <table>
+   <tbody>
+     <tr>
+       <td width="40%">**Create and edit access to this group's resources**</td>
+       <td>Members with this role can create and edit access to the group's resources.</td>
+     </tr>
+   </tbody>
+   </table>
+   </AccordionDetails>
+   </BaseAccordion>
+
+   ### Community
+
+   <BaseAccordion>
+   <AccordionSummary><Typography variant="subtitle2">Posts</Typography></AccordionSummary>
+   <AccordionDetails>
+   <table>
+   <tbody>
+     <tr>
+       <td width="40%">**View community announcements**</td>
+       <td>Members with this role can view community announcements.</td>
+     </tr>
+     <tr>
+       <td>**Create community announcements**</td>
+       <td>Members with this role can create community announcements.</td>
+     </tr>
+   </tbody>
+   </table>
+   </AccordionDetails>
+   </BaseAccordion>
+
+   <BaseAccordion>
+   <AccordionSummary><Typography variant="subtitle2">Forums</Typography></AccordionSummary>
+   <AccordionDetails>
+   <table>
+   <tbody>
+     <tr>
+       <td width="40%">**Manage categories**</td>
+       <td>Members with this role can manage forum categories.</td>
+     </tr>
+     <tr>
+       <td>**Create posts**</td>
+       <td>Members with this role can create forum posts.</td>
+     </tr>
+     <tr>
+       <td>**Remove posts**</td>
+       <td>Members with this role can remove forum posts.</td>
+     </tr>
+     <tr>
+       <td>**Lock posts**</td>
+       <td>Members with this role can lock forum posts.</td>
+     </tr>
+     <tr>
+       <td>**Pin posts**</td>
+       <td>Members with this role can pin forum posts.</td>
+     </tr>
+     <tr>
+       <td>**Create comments**</td>
+       <td>Members with this role can create comments on forum posts.</td>
+     </tr>
+     <tr>
+       <td>**Remove comments**</td>
+       <td>Members with this role can remove comments from forum posts.</td>
+     </tr>
+   </tbody>
+   </table>
+   </AccordionDetails>
+   </BaseAccordion>
+
+   <BaseAccordion>
+   <AccordionSummary><Typography variant="subtitle2">Content moderation</Typography></AccordionSummary>
+   <AccordionDetails>
+   <table>
+   <tbody>
+     <tr>
+       <td width="40%">**Manage content moderation**</td>
+       <td>Members with this role can manage content moderation.</td>
+     </tr>
+     <tr>
+       <td>**View content moderation**</td>
+       <td>Members with this role can view content moderation.</td>
+     </tr>
+   </tbody>
+   </table>
+   </AccordionDetails>
+   </BaseAccordion>
+
+   <BaseAccordion>
+   <AccordionSummary><Typography variant="subtitle2">Miscellaneous</Typography></AccordionSummary>
+   <AccordionDetails>
+   <table>
+   <tbody>
+     <tr>
+       <td width="40%">**Bypass slow mode**</td>
+       <td>Members with this role can bypass slow mode.</td>
+     </tr>
+     <tr>
+       <td>**View community analytics**</td>
+       <td>Members with this role can view community analytics.</td>
      </tr>
    </tbody>
    </table>
@@ -231,15 +374,28 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
    </BaseAccordion><br />
 
 4. <Chip label="IMPORTANT" size="small" variant="outlined" color="warning" /> Click the **Save Changes** button to apply the permission settings.
-5. <Chip label="OPTIONAL" size="small" variant="outlined" /> Click the **Settings** tab and choose a color for the role, then click **Save Changes**.
-
-   <img src="../assets/creator-dashboard/Group-Roles-Settings-Tab.png" width="780" alt="Settings tab indicated for a group role on the Creator Dashboard." />
-
-    <img src="../assets/creator-dashboard/Group-Roles-Role-Color.png" width="780" alt="Color options indicated for a group role on the Creator Dashboard." />
+5. <Chip label="OPTIONAL" size="small" variant="outlined" /> Click the **Settings** tab and choose a color and visibility setting for the role, then click **Save Changes**.
 
    <Alert severity="info">
    A role's **Settings** section is also where group owners and members with sufficient permissions can remove a role entirely through the **Delete Role** button.
    </Alert>
+
+Roles are listed in hierarchy order: a role higher in the list has more
+authority than a role below it. This order matters because some permissions
+only let members manage roles below their own highest role.
+
+Each role is either **public** or **private**. Public roles can be shown on a
+Community page and in experiences. Private roles are shown only on role and
+permission management surfaces to authorized members, or to members who hold
+the private role. Visibility changes where a role appears; it doesn't change
+the permissions the role grants.
+
+<Alert severity="warning">
+To grant **Manage roles**, **Assign or remove roles from members**, **Create and
+edit access to this group's resources**, **Manage and spend group revenue**, or
+**Delete Data Stores for all group experiences**, you must have two-step
+verification enabled.
+</Alert>
 
 ## Manage members
 
@@ -247,40 +403,24 @@ Roles created using the legacy [Groups](https://www.roblox.com/communities) page
 Member configuration is only accessible if you're the group owner or you have permission to manage other members and their roles.
 </Alert>
 
-Once [roles](#roles-and-permissions) have been configured for the group, members can be invited and assigned from either the **Members** tab within a specific role or from the **Collaboration**&nbsp;&rang; **Members** page.
+To manage members from the Creator Dashboard:
 
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../assets/creator-dashboard/Group-Roles-Add-Members.png" width="400" alt="Add members button indicated for a group role on the Creator Dashboard." />
-    <figcaption>Collaboration &rang; Roles &rang; Members tab</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/creator-dashboard/Group-Members-Invite-Button.png" width="400" alt="Invite button indicated in the group's Members section on the Creator Dashboard." />
-    <figcaption>Collaboration &rang; Members &rang; Member tab</figcaption>
-  </figure>
-</GridContainer>
+1. Expand the account switcher in the upper-left and select the group.
+2. Expand the account switcher again and select **Members**.
+3. Use the **Member** tab to search for existing members or filter them by role. Use the **Invited** tab to review pending invitations.
 
-From the add/invite popup, locate a creator by typing their username into the search field. Creators will be notified when invited to your group (a customizable setting within the creator notification system), or you can copy the **group link** and share it with invited creators through other means.
+To add a member, click **Invite** and search for their username. Roblox notifies invited creators according to their notification preferences. You can also copy the group link and share it directly.
 
 ### Manage roles
 
-To assign roles to a member, hover over their name, click the **Add&nbsp;Role** button, and then manage roles from the popup.
+You can manage role assignments from either the **Members** page or a specific role:
 
-<img src="../assets/creator-dashboard/Group-Members-Assign-Role.png" width="840" alt="Assign roles to a group member on the Creator Dashboard." />
-
-To quickly unassign a role from a member, hover over it and click the **&times;** button.
-
-<img src="../assets/creator-dashboard/Group-Members-Unassign-Role.png" width="840" alt="Hover-over showing how to unassign a role from a group member on the Creator Dashboard." />
-
-<Alert severity="error">
-Currently, roles configured through the legacy [Groups](https://www.roblox.com/communities) pages appear for each member. If permissions were granted to a role through the legacy system, **the member will continue to have those permissions**, so it's recommended that you revoke permissions/roles in the legacy system and then migrate members to the new system.
-</Alert>
+- On the **Members** page, click the **plus (+)** button next to a member to open the role menu. To assign a role, click the **plus (+)** button next to it under **Add roles**. To unassign a role, click the **minus (-)** button next to it under **Current roles**, or click the **&times;** button on an assigned role next to the member's name.
+- On the **Roles** page, select a role and open its **Members** tab. Click **Add members** to search for group members and assign them to the role. To unassign a member, click the **minus (-)** button at the end of their row.
 
 ### Member removal
 
-To remove a member entirely, hover over their name, click the **&#8942;** button, and then select the removal option. A dialog will appear for you to confirm the action.
-
-<img src="../assets/creator-dashboard/Group-Members-Remove-Member.png" width="840" alt="Hover-over showing how to remove a member from a group on the Creator Dashboard." />
+To remove a member from the group, click the **&#8942;** button at the end of their row, select **Kick user**, and confirm the action.
 
 ## Manage payouts
 
@@ -361,9 +501,14 @@ Consider the following scenario where a group game **Laser Maze** is split 40%&n
 Note that revenue from [private server](../production/monetization/private-servers.md) subscriptions does not change if you adjust split percentages at a later time, meaning that if a player buys a private server subscription, the split percentages at time of purchase will apply to that particular subscription forever (until it is canceled). This policy may be changed in the future.
 </Alert>
 
-## Group activity history
+## Group audit logs
 
-Group members with the **View group activity history** permission can view detailed activity such as role changes and publishing actions from the **Activity&nbsp;History** section under **Collaboration** on the Creator Dashboard. This is also a useful way for group owners to moderate activity that may violate [group guidelines](./group-guidelines.md).
+Group members with the **View audit logs** permission can review group changes using these group management surfaces:
+
+- On the Creator Dashboard, select **Activity&nbsp;History** under **Collaboration**.
+- On Communities, open the community's configuration page and select **Audit Log**.
+
+Group owners can use these logs to monitor activity that might violate [group guidelines](./group-guidelines.md).
 
 ## Intellectual property protection
 

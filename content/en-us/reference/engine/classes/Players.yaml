@@ -1232,7 +1232,8 @@ methods:
     description: |
       Returns the profile configuration of the user specified by the given
       `Class.Player.UserId` as a dictionary. The dictionary can include a
-      `backgroundAssetId` field for the user's profile background asset ID.
+      `BackgroundAssetId` field for the user's profile background asset ID and a
+      `FrameAssetId` field for the user's profile frame image asset ID.
 
       Can only be called from the server and is throttled to a limited number of
       requests per minute.

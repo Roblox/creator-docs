@@ -242,7 +242,7 @@ To reach **16+** and **Trusted Friends**:
 
 To reach **all ages** including [Roblox Kids and Select](./kids-and-select.md), you must meet all of the previous requirements **plus**:
 
-- Verify your account through [government ID](./account-verification.md#verify-through-government-id) or linked [parental account](https://about.roblox.com/parental-controls).
+- Verify your account through [facial age estimation](https://about.roblox.com/age-estimation) if you are under 18 years old, or through [government ID](./account-verification.md#verify-through-government-id) if you are 18 years old or older.
 - Enable [2FA](https://en.help.roblox.com/hc/en-us/articles/212459863-Add-2-Step-Verification-to-Your-Account) on your Roblox account.
 - Meet **one** of the following:
   - Maintain an active [Roblox Plus](../monetization/roblox-plus.md) or [Roblox Premium](https://www.roblox.com/premium/membership) subscription for 2 consecutive months.
@@ -264,14 +264,11 @@ To pay the publishing fee:
 1. In the [Creator Hub](https://create.roblox.com/dashboard/creations), select the game you want to release to users of all ages.
 1. In the left-hand navigation, navigate to **Audience** > **Reach**.
 1. Under **Experience reach**, navigate to the **Refundable publishing fee** section, then click the blue **Pay** button. A pop-up dialog displays.
-
-   <img src="../../assets/publishing/Publishing-Fee.png" width="80%" />
-
 1. Click the **Pay 1,000** button to confirm your payment.
 
 #### Expedited review fee
 
-The **expedited review** fee is a one-time, refundable fee of 100,000 Robux per game that allows you to accelerate the safety and compliance reviews required to publish your game to users of all ages. This fee is intended to provide launch flexibility and financial accountability for qualified creators who haven't yet met the highly engaged age-checked player requirement for Kids and Select accounts.
+The **expedited review** fee is a one-time, refundable fee of 50,000 Robux per game that allows you to accelerate the safety and compliance reviews required to publish your game to users of all ages. This fee is intended to provide launch flexibility and financial accountability for qualified creators who haven't yet met the highly engaged age-checked player requirement for Kids and Select accounts.
 
 <Alert severity="info">
 While the expedited review fee accelerates safety and compliance reviews for creators planning a timed launch or running an off-platform campaign and need to know exactly when their game will be ready for all ages, **all games must continue to meet the same standards as other Roblox Kids and Select games**.
@@ -284,10 +281,7 @@ To pay the expedited review fee:
 1. In the [Creator Hub](https://create.roblox.com/dashboard/creations), select the game you want to expedite for a safety review.
 1. In the left-hand navigation, navigate to **Audience** > **Reach**.
 1. Under **Experience reach**, navigate to the blue alert, then click the gray **Pay** button. A pop-up dialog displays.
-
-   <img src="../../assets/publishing/Expedited-Review-Fee.png" width="80%" />
-
-1. Click the **Pay 100,000** button to confirm your payment.
+1. Click the **Pay 50,000** button to confirm your payment.
 
 <Alert severity="warning">
 If a minor violation is found during the 48-hour review, you must make the appropriate adjustments to your game, then resubmit. The 48-hour clock restarts from the point of resubmission.

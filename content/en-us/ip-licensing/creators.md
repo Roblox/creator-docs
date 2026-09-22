@@ -5,7 +5,7 @@ description: How to use IP licensing as a creator.
 
 Creating games using approved popular IP can make your content more recognizable to users and help you reach new audiences that already know and love certain characters, settings, and storylines.
 
-As a creator, you can browse the [Licenses catalog](https://create.roblox.com/explore/licenses) and request to use an available IP in your game. A license allows you to create a full Roblox game based on an IP while following the conditions and revenue share outlined by the rights holder.
+As a creator, you can browse the [Licenses catalog](https://create.roblox.com/explore/licenses) and request to use an available IP in your game. A license allows you to create a full Roblox game based on an IP or to sell licensed content within an eligible experience. In both cases, you must follow the conditions and revenue share outlined by the rights holder.
 
 <Alert severity="warning">
   Roblox takes intellectual property infringement very seriously. Publishing content on Roblox that uses someone else's IP rights without permission violates the [Roblox Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) and might result in the removal of the content and your Roblox account.
@@ -26,13 +26,19 @@ To explore available licenses in the Licenses catalog:
   Before requesting to use an IP license, make sure your game is public.
 </Alert>
 
-To request to use an IP license in your game:
+### Full game licenses
+
+A **full game license** allows you to create an entire Roblox experience
+based on an IP. Before you apply, review the license's revenue share, duration,
+content standards, and brand guidelines.
+
+To request a full game license:
 
 1. In the **Explore** dropdown in the Creator Hub, click **Licenses**.
-2. Select an IP from the available licenses.
+2. Select a **Full game** license from the available licenses.
 3. Click **Request license**.
 4. Select the game you want to use for this license request and click **Next**.
-5. Under **Intent**, enter more details about your game in the form of a pitch. This can help the rights holder make a decision about your license request. For more information about writing a pitch, see [Pitch details](#pitch-details).
+5. Under **Pitch**, enter more details about your game. This can help the rights holder make a decision about your license request. For more information about writing a pitch, see [Pitch details](#pitch-details).
 6. (For perpetual licenses) Under **Experience readiness**, select one of the following:
    - **Yes, my experience is ready to use this intellectual property** if you're done incorporating the IP into your game. Revenue share will start as soon as the license agreement becomes active.
    - **No, I need time to incorporate this intellectual property into my experience** if you're not done incorporating the IP into your game. Revenue share won't start immediately, but the rights holder can still turn on monetization at any time.
@@ -40,9 +46,25 @@ To request to use an IP license in your game:
 8. Acknowledge licensing terms, review the guidelines and restrictions, and click **Next**.
 9. Click **Submit** to submit your license request. The rights holder then reviews your request and can approve it, reject it, or (for perpetual licenses) send a [conditional approval](#respond-to-a-conditional-offer) that asks you to make changes before the agreement activates.
 
-<Alert severity="info">
-  You can currently only request or be offered a license for a full game, where the IP is central to and present throughout the game.
-</Alert>
+### In-game sales licenses
+
+An **in-game sales license** applies to a specific eligible experience and
+grants you permission to sell IP-based developer products and game passes
+within that experience. Before you apply, review the license's experience
+eligibility requirements, revenue share, duration, content standards, and brand
+guidelines.
+
+To request an in-game sales license:
+
+1. In the **Explore** dropdown in the Creator Hub, click **Licenses**.
+2. Select an **In-game sales** license from the available licenses.
+3. Click **Request license**.
+4. Select the game you want to use for this license request and click **Next**.
+5. Under **Pitch**, enter more details about your game. This can help the rights holder make a decision about your license request. For more information about writing a pitch, see [Pitch details](#pitch-details).
+6. Under **Designate IP sales products**, add the relevant developer product and game pass IDs.
+7. (For time-limited licenses) Under **Proposed date range**, use the calendar to set the proposed dates that your game will incorporate the IP. Start and end times for time-limited licenses are based on midnight UTC.
+8. Acknowledge licensing terms, review the guidelines and restrictions, and click **Next**.
+9. Click **Submit** to submit your license request. The rights holder then reviews your request and can approve it, reject it, or (for perpetual licenses) send a [conditional approval](#respond-to-a-conditional-offer) that asks you to make changes before the agreement activates.
 
 <Alert severity="warning">
   Early use of IP in your game may lead to early activation of a license request or accepted license agreement.
@@ -55,6 +77,8 @@ To request to use an IP license in your game:
 ### Pitch details
 
 Including a well-written pitch with your request can make the rights holder more likely to approve your license request. Your pitch should convey a compelling idea and show that you are confident in your ability to execute this creative vision.
+
+You can attach images to your pitch if they comply with Roblox's [Community Standards](https://about.roblox.com/community-standards). Image attachments are optional for full game license requests and required for in-game sales license requests.
 
 We recommend that you include the following information in your pitch:
 
@@ -130,7 +154,7 @@ After you receive a standard offer, you can:
 
 ### Conditional offers
 
-A **conditional offer** means the rights holder wants to license your game, but you must update your game to meet their content standards before the agreement can activate. Conditional offers do **not** auto-activate after 14 days. Conditional offer can only be sent from a match of your game.  
+A **conditional offer** means the rights holder wants to license your game, but you must update your game to meet their content standards before the agreement can activate. Conditional offers do **not** auto-activate after 14 days. Conditional offers can only be sent from a match of your game.
 
 After you receive a conditional offer or conditional approval, you have **14 days** to:
 

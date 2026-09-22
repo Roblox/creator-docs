@@ -121,7 +121,7 @@ For [group](../projects/groups.md) games, only the group owner or members with s
 If you're the group owner or a member with sufficient permissions, you can configure collaboration across **all** group games, for example grant **Edit** permission to an "Audio&nbsp;Artist" group role so they can fine-tune audio playback across multiple group games.
 
 1. From the [Creator Dashboard](https://create.roblox.com/dashboard/creations), expand the account switcher in the upper‑left and select the group.
-1. Expand the account switcher again, select **Settings** under the group's name, then select **Roles**.
+1. Expand the account switcher again and select **Roles**.
 1. Enable [Edit all group experiences](../projects/groups.md#roles-and-permissions) for roles that should have editing permission. Remember to click **Save Changes** for each role that you change.
 
    In Studio's **Manage Collaborators** window for any group-owned game, eligible roles display **Edit** permission but are muted to indicate that you can't change the permission level from Studio.
@@ -371,7 +371,7 @@ During a collaborative session, Studio automatically saves the project to the cl
 
 ## Revert to previous versions
 
-The owner of a game can revert changes made by other editors. See [here](../projects/configure-games.md#access-version-history) for instructions.
+The owner of a game can revert changes made by other editors. See [access version history](../projects/configure-games.md#access-version-history) for instructions.
 
 <Alert severity="error">
 Be careful when reverting changes. If anyone is currently editing the game in a collaborative session, their changes may still auto‑save and overwrite the revert action. To ensure that nobody else is editing the place when you revert, [disable collaboration](#disable-collaboration).

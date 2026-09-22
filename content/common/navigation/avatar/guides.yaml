@@ -65,6 +65,8 @@ navigation:
         path: /avatar/classic-clothing
   - title: Animations
     section:
+      - title: Animation packs
+        path: /avatar/animation-packs
       - title: Emotes
         section:
           - title: Overview

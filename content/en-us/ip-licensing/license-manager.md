@@ -33,11 +33,38 @@ To create your license listing:
 
 <img src="../assets/ip-licensing/CreateListingStep.png" width="50%" />
 
-Once your listing has been created, you will be redirected to the listing details page. To add a license to your listing:
+### Add a license
+
+Once your listing has been created, you will be redirected to the listing
+details page. The License Manager supports the following license types:
+
+#### Full game licenses
+
+A **full game license** grants creators permission to build an entire
+experience around your IP. The form includes license details, duration,
+monetization, experience eligibility, guidelines and restrictions, and privacy
+settings.
+
+<img src="../assets/ip-licensing/full-game-license-form.png" width="500" alt="Create License form with Full game selected as the license type" />
+
+#### In-game sales license
+
+An **in-game sales license** grants creators permission to sell IP-based
+developer products and game passes within eligible experiences. Each license
+applies to a specific eligible experience and uses one revenue share rate. In
+the form, select **Collab** as the license type and **In-game** as the sale
+location.
+
+<img src="../assets/ip-licensing/in-game-license-form.png" width="500" alt="Create License form with Collab selected as the license type and In-game selected as the sale location" />
+
+To add a license to your listing:
 
 1. Click **Add license** in the top-right corner.
-2. Under **License details**, enter a title and a description. If you make your license public, the title and description will become public-facing and be visible to creators.
-3. Under **Duration**:
+2. Under **License terms**, select one of the following configurations:
+   - For a full game license, set **License type** to **Full game**.
+   - For an in-game sales license, set **License type** to **Collab**, then set **Sale location** to **In-game**.
+3. Under **License details**, enter a title and a description. If you make your license public, the title and description will become public-facing and be visible to creators.
+4. Under **Duration**:
 
    1. Set a **Duration type**, either **Time-limited** or **Perpetual**:
       - **Time-limited** licenses grant the use of your IP within defined date boundaries and will auto-terminate an active agreement on the end date.
@@ -52,7 +79,7 @@ Once your listing has been created, you will be redirected to the listing detail
    </Alert>
    2. Set a **Duration range** (Time-limited only), a defined date boundary you expect your IP usage to be active for. The creator will specify a start and end date within this boundary. Start and end times for time-limited licenses are based on midnight UTC.
 
-4. Under **Monetization**:
+5. Under **Monetization**:
 
    1. Set a **revenue share rate** between 0% and 95%. This is the revenue percentage you want to receive from games using your IP, and is shown to creators when they request to use your IP through a license listing.
    2. Select one of the following for the **default revenue share timing**:
@@ -64,14 +91,14 @@ Once your listing has been created, you will be redirected to the listing detail
    Time-limited licenses are set to monetize on activation by default, and this preference cannot be changed. Time-limited licenses will begin monetizing on the day the agreement is active, which will be the start date designated by the creator.
    </Alert>
 
-5. Under **Experience eligibility**, select the criteria you want games to meet in order to request to use the license. Creators whose games don't meet these requirements aren't eligible to request to use your IP. To allow all creators to request, leave the default values.
+6. Under **Experience eligibility**, select the criteria you want games to meet in order to request to use the license. Creators whose games don't meet these requirements aren't eligible to request to use your IP. To allow all creators to request, leave the default values.
    - For **Minimum average last 7 daily active users (DAU)**, choose between no requirement, greater than 1,000 DAU, or greater than 25,000 DAU.
    - For **Maximum maturity rating**, choose between minimal, mild, moderate, and restricted. See [Maturity labels](../production/promotion/content-maturity.md#questionnaire-categories) for more information about different maturity ratings.
-6. Under **Guidelines and restrictions**:
+7. Under **Guidelines and restrictions**:
    1. Enter the scope of your IP license. Include general background about the IP and clarify if any parts of the IP can or cannot be referenced by creators in their game.
    2. Under **Content standards**, set the rules that creators must follow when using your IP.
    3. <Chip label="OPTIONAL" size="small" variant="outlined" /> Under **Brand guidelines**, upload a file to provide creators with creative direction.
-7. Under **Privacy**, select one of the following:
+8. Under **Privacy**, select one of the following:
 
    - **Public** to make the license listing public and visible to all creators. This option also allows all eligible creators to request to use the license.
    - **Private** to make the license only available to creators that you reach out to directly and that have games that match your IP.
@@ -80,10 +107,8 @@ Once your listing has been created, you will be redirected to the listing detail
    Because time-limited licenses cannot be used in license offers, they should be marked as **Public** once ready so that creators can request the license with proposed dates.
    </Alert>
 
-8. Click **Create**.
-9. Licenses must undergo moderation review for their name, description, scope of license, and brand guidelines document (if provided). Click **Submit for review**.
-
-<img src="../assets/ip-licensing/AddLicenseStep.png" width="50%" />
+9. Click **Create**.
+10. Licenses must undergo moderation review for their name, description, scope of license, and brand guidelines document (if provided). Click **Submit for review**.
 
 After you have created a license listing, you can go to **My licenses** ⟩ **[IP license listing]** to make changes to both the listing and its associated licenses:
 

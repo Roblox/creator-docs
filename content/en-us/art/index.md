@@ -419,8 +419,8 @@ The following is a list of common 3D art resources ordered by subject, as well a
 <a href="./modeling/rigging.md"><Typography variant='body1' style={{marginBottom: 12}}>Rigging and skinning overview</Typography></a>
 <a href="../avatar/character-bodies/specifications.md#rigging"><Typography variant='body1' style={{marginBottom: 12}}>Avatar rig requirements</Typography></a>
 <a href="./modeling/rig-a-simple-mesh.md"><Typography variant='body1' style={{marginBottom: 12}}>Rig basic meshes</Typography></a>
-<a href="./characters/facial-animation/create-basic-heads.md#rigging"><Typography variant='body1' style={{marginBottom: 12}}>Rig facial bones</Typography></a>
-<a href="./characters/facial-animation/create-basic-heads.md#skin-face-bones"><Typography variant='body1' style={{marginBottom: 12}}>Skin facial bones</Typography></a>
+<a href="./characters/facial-animation/create-basic-heads.md#rig-and-skin-the-head"><Typography variant='body1' style={{marginBottom: 12}}>Rig facial bones</Typography></a>
+<a href="./characters/facial-animation/create-basic-heads.md#skin-joints"><Typography variant='body1' style={{marginBottom: 12}}>Skin facial bones</Typography></a>
 <a href="../avatar/automatic-skinning-transfer.md"><Typography variant='body1' style={{marginBottom: 12}}>Auto skin transfer</Typography></a>
 
 </Grid>

@@ -39,6 +39,15 @@ navigation:
   - heading: Testing tools
   - title: Testing modes
     path: /studio/testing-modes
+  - title: Device Simulator
+    path: /studio/device-simulator
+    section:
+      - title: Overview
+        path: /studio/device-simulator
+      - title: Network Simulator
+        path: /studio/network-simulator
+      - title: Controller Emulator
+        path: /studio/controller-emulator
   - title: Output
     path: /studio/output
   - title: Developer Console

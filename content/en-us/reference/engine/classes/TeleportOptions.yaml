@@ -182,6 +182,36 @@ methods:
       If no `teleportData` was set in the teleportation function this
       GetLocalPlayerTeleportData() will return `nil`.
 
+      #### Allowed data types
+
+      Teleport data may only contain value types. It cannot contain
+      `Class.Instance|Instances` or other types that reference engine state, as
+      these cannot safely cross the boundary between servers.
+
+      Allowed:
+
+      - Primitives: `bool`, `number`, and `string`
+      - Value types such as `Datatype.Vector3`, `Datatype.CFrame`,
+        `Datatype.Color3`, `Datatype.UDim2`, `Datatype.NumberSequence`,
+        `Datatype.ColorSequence`, `Enum` items, and similar
+      - Tables and arrays (without mixed keys) containing only the allowed types
+        above, nested up to a reasonable depth and size
+
+      Not allowed (these will be removed from the data before the teleport
+      completes):
+
+      - `Class.Instance` and instance references
+      - `Datatype.RBXScriptConnection|Connections`, `Datatype.RBXScriptSignal`,
+        and functions
+      - `SharedTable`
+      - Types that reference engine or `Class.DataModel` state, such as
+        `Class.InputObject`, `Datatype.RaycastParams`, and
+        `Datatype.RaycastResult`
+
+      If teleport data contains a disallowed type, that value is removed and an
+      error is written to the developer console. Convert instance references to
+      plain values (for example, a numeric ID or a string path).
+
       For more information on how to send and receive user data along with
       teleports, see, see
       [Teleporting Between Places](../../../projects/teleport.md#sending-user-data-along-with-teleports).

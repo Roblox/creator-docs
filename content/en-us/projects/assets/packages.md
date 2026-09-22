@@ -208,7 +208,7 @@ To change package permissions for a collaborator, such as a friend or group:
   </TabItem>
   <TabItem key = "2" label="To games">
 
-To grant package access to a game, the game must be editable to either you or a group that you belong to in which you have the **Create and edit group experiences** role permission.
+To grant package access to a game, the game must be editable to either you or a group that you belong to in which you have the **Create and edit access to this group's resources** role permission.
 
 To change package permissions for a game:
 

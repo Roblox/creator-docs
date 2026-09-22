@@ -17,7 +17,7 @@ To texture the face:
       1. Set **Radius** to **5px**.
       1. Set **Strength** to **0.300**.
 
-   1. In **Symmetry**, enable **X Axis Mirroring**.
+   1. In **Symmetry**, enable **X-Axis Mirroring**.
 
          <img src="../../../assets/art/avatar/basic-creation/Texture-Symmetry-Tool-Setting.png" />
 

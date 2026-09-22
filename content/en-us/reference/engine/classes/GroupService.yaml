@@ -60,7 +60,7 @@ methods:
               Id = 23415609
           },
           EmblemUrl = "http://www.roblox.com/asset/?id=60428602",
-          Description = "We fight alongside the balance to make sure no one becomes to powerful",
+          Description = "We fight alongside the balance to make sure no one becomes too powerful",
           Roles = {
               [1] = {
                   Name = "Apprentice",
@@ -129,7 +129,7 @@ methods:
               Id = 23415609
           },
           EmblemUrl = "http://www.roblox.com/asset/?id=60428602",
-          Description = "We fight alongside the balance to make sure no one becomes to powerful",
+          Description = "We fight alongside the balance to make sure no one becomes too powerful",
           Roles = {
               [1] = {
                   Name = "Apprentice",
@@ -195,7 +195,7 @@ methods:
               Id = 23415609
           },
           EmblemUrl = "http://www.roblox.com/asset/?id=60428602",
-          Description = "We fight alongside the balance to make sure no one becomes to powerful",
+          Description = "We fight alongside the balance to make sure no one becomes too powerful",
           Roles = {
               [1] = {
                   Name = "Apprentice",
@@ -332,18 +332,20 @@ methods:
 
       Each entry in the `Roles` array has the following structure:
 
-      | Key  | Type   | Description              |
-      | ---- | ------ | ------------------------ |
-      | Id   | int64  | Unique role ID           |
-      | Name | string | Display name of the role |
-      | Rank | int    | Rank value (0–255)       |
+      | Key  | Type    | Description              |
+      | ---- | ------- | ------------------------ |
+      | Id   | integer | Unique role ID           |
+      | Name | string  | Display name of the role |
+      | Rank | integer | Rank value (0–255)       |
 
-      The `Roles` array is ordered as returned by the backend. Only public roles
-      are included.
+      The `Roles` array is ordered from the highest role to the lowest role.
+      Only public roles are included. A role's `Rank` value is retained for
+      backwards compatibility, but does not determine its position in the role
+      hierarchy. Use the stable `Id` to identify a role.
 
       This method supersedes `Class.Player:GetRankInGroupAsync()` and
-      `Class.Player:GetRoleInGroupAsync()`, which only return a single role and
-      may produce arbitrary results when a user holds multiple roles.
+      `Class.Player:GetRoleInGroupAsync()`, which return only the member's
+      highest public role.
 
       This call may not yield the most up-to-date information. Results are
       cached per user and group, so multiple calls with the same `userId` and
@@ -371,9 +373,9 @@ methods:
       - type: Variant
         summary: |
           A table with two fields: `IsMember` (boolean) and `Roles` (array of
-          public role tables). Each role table contains `Id` (int64), `Name`
-          (string), and `Rank` (int). The array is ordered as returned by the
-          backend.
+          public role tables). Each role table contains `Id` (integer), `Name`
+          (string), and `Rank` (integer). The array is ordered from highest to
+          lowest role.
     tags:
       - Yields
     deprecation_message: ''

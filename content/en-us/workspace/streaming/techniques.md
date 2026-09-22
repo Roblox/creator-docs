@@ -433,6 +433,6 @@ To use the AI skill in your game:
 
    1. [Enable and connect the MCP server in Studio](../../studio/mcp.md).
    1. Open your game in Studio.
-   1. <a href="../../../roblox-streaming-conversion-v1.0.zip" download>Download the skill</a> and, in your AI client, open the unzipped folder (`roblox-streaming-conversion`) as the current project.
+   1. <a href="../../assets/workspace/streaming/roblox-streaming-conversion-v1.0.zip" download>Download the skill</a> and, in your AI client, open the unzipped folder (`roblox-streaming-conversion`) as the current project.
    1. Run the skill with `/rbx-convert-to-streaming`.
    1. As with any AI output, verify the results and playtest your game extensively under [realistic test conditions](#realistic-test-conditions).

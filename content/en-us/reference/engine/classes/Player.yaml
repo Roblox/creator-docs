@@ -1714,10 +1714,9 @@ methods:
       - Yields
       - Deprecated
     deprecation_message: |
-      This method only returns a single role rank and may produce arbitrary
-      results when a user holds multiple roles. Use
-      `Class.GroupService:GetRolesInGroupAsync()` instead, which returns all
-      roles.
+      This method returns only the rank value of the member's highest public
+      role. Use `Class.GroupService:GetRolesInGroupAsync()` instead, which
+      returns all public roles.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1790,10 +1789,9 @@ methods:
       - Yields
       - Deprecated
     deprecation_message: |
-      This method only returns a single role name and may produce arbitrary
-      results when a user holds multiple roles. Use
+      This method returns only the member's highest public role. Use
       `Class.GroupService:GetRolesInGroupAsync()` instead, which returns all
-      roles.
+      public roles.
     security: None
     thread_safety: Unsafe
     capabilities:

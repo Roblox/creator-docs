@@ -8,11 +8,19 @@ With the `Class.Model` in your project, the last step in the process of clothing
 
 To generate the accessory object:
 
-1. In the toolbar's **Avatar** tab, click **Accessory** to open the AFT.
-2. Select the `Class.Model` of the clothing item in the viewport. The tool's text field populates with the name of the object selected. Alternatively, you can select the object within the **Explorer** window.
-3. Test out various sample characters, clothing, and animations. See [Test accessories](../../../avatar/accessory-fitting-tool.md#test-accessories) for additional information.
-   - If required, make minor cage adjustments using the editing features. Larger cage changes may require returning to your third-party modeling software and re-exporting the asset.
-4. When ready to generate your accessory, click **Generate MeshPart Accessory**. The accessory object with your model populates in your workspace.
+1. In the **Avatar** tab, click **Accessory** to open the AFT. The **Accessory Fitting Tool** panel displays.
+1. In the panel:
+
+   1. Select the **Part** field, then in the **Explorer** window, select the layered accessory `Class.MeshPart` object.
+   1. Back in the panel, click the **Next** button. The **Asset Type** page displays.
+
+1. In the **Asset Type** page:
+
+   1. Set asset type to **Clothing**, then use the dropdown menu to select the clothing type. This tutorial sets it to **Shirt**.
+   1. Click the **Next** button. A preview panel displays with a default character wearing your layered accessory.
+
+1. Test out various sample characters, clothing, and animations. If necessary, make minor cage adjustments using the editing features, or larger cage changes back in your third-party modeling software. For more information on this process, see [Accessory Fitting Tool - Test accessories](../../../avatar/accessory-fitting-tool.md#test-accessories).
+1. After previewing your asset, click the **Generate MeshPart Accessory** button. Your 3D model populates in your project as an `Class.Accessory` object.
 
 <GridContainer numColumns="2">
   <figure>
@@ -26,10 +34,10 @@ To generate the accessory object:
 </GridContainer>
 
 <Alert severity = 'success'>
-Congratulations, you've completed your clothing tutorial. With this accessory, you can:
+Congratulations, you've completed the layered accessory tutorial. With your new `Class.Accessory`, you can perform any of the following:
 
-- Equip the accessory on an avatar-ready character by drag and dropping the accessory on an existing model, or using [HumanoidDescription](../../../characters/appearance.md#manually-modify-appearance).
-- Save the accessory as an [avatar asset](../../../projects/assets/index.md#for-avatars) for use in a game later.
-- If you meet certain account requirements, you can [upload your asset](../../../marketplace/publish-to-marketplace.md) for moderation and start selling it on the Marketplace.
+- [Upload the accessory](../../../art/accessories/creating-rigid/publishing.md) to the Marketplace.
+- Use the accessory in your current game by equipping it to character models with a [`HumanoidDescription`](../../../characters/appearance.md#manually-modify-appearance), or by dragging and dropping the accessory under the appropriate character `Class.Model` object.
+- Save the accessory to your [Toolbox](../../../projects/assets/toolbox.md) to share or use within any of your games.
 
 </Alert>

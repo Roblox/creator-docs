@@ -3,298 +3,9 @@ title: Asset Manager
 description: The Asset Manager lets you manage places and bulk import assets into your game.
 ---
 
-import BetaAlert from '../../includes/beta-features/beta-alert.md'
-
 The **Asset Manager**, accessible from Studio's **Window** menu or **Home** tab, lets you manage [places](../../production/publishing/publish-games-and-places.md) and bulk import assets into your game, including [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [packages](../../projects/assets/packages.md), [audio](../../audio/assets.md), and [models](../../parts/models.md).
 
-## Current
-
-<Alert severity="info">
-The following sections outline the current Asset Manager. The [V2 Beta](#v2-beta) is documented below.
-</Alert>
-
-### Asset folders
-
-Assets are organized within folders based on their type. You can switch between **grid view** and **list view** by clicking the view toggle button.
-
-<img src="../../assets/studio/asset-manager/View-Toggle.png" width="460" alt="The Asset Manager window with the View toggle button highlighted." />
-
-### Importing assets
-
-The legacy **bulk import** tool is ideal for importing up to 50 files in one batch. Imported assets enter the moderation queue and are only visible to you within their respective [folder](#asset-folders) and within the **Inventory** tab of the [Toolbox](../../projects/assets/toolbox.md). This bulk import tool is only available in the current version of the Asset Manager. The latest Asset Manager version utilizes the Studio [Importer](../../studio/importer.md).
-
-<img src="../../assets/studio/asset-manager/Import-Button-V1.png" alt="The Asset Manager window with the Bulk Import button highlighted." width="360" />
-
-<table>
-<thead>
-  <tr>
-    <th>Asset&nbsp;Type</th>
-    <th>Details</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>**Image**</td>
-    <td>You can import images in `.png`, `.jpg`, `.gif`, `.tga`, or `.bmp` format for use as [textures/decals](../../parts/textures-decals.md) on parts, [image labels](../../ui/labels.md), [mesh textures](../../parts/meshes.md#adding-textures), textures for [custom materials](../../parts/materials.md), textures for [special effects](../../environment/index.md#special-effects), and more.</td>
-  </tr>
-  <tr>
-    <td>**Mesh**</td>
-    <td>You can bulk import meshes in either `.fbx` or `.obj` format, although this workflow does not support complex meshes such as those with rigging, skinning, or animation data. For complex meshes, it's recommended that you use the [Importer](../../studio/importer.md).</td>
-  </tr>
-  <tr>
-    <td>**Audio**</td>
-    <td>You can import audio assets that you are certain you have permission to use in `.ogg`, `.mp3`, `.flac`, or `.wav` format. If you're uncertain whether you have permission to use an audio file, the [Creator Store](../../production/creator-store.md) has a variety of free-to-use audio, including more than 100,000 professionally-produced audio assets. See [Audio Assets](../../audio/assets.md) for details.</td>
-  </tr>
-</tbody>
-</table>
-
-### Insert assets
-
-You can insert assets into the [Explorer](../../studio/explorer.md) window hierarchy by dragging-and-dropping or by right-clicking the asset name/tile and selecting **Insert**.
-
-Behavior of dragging-and-dropping into the 3D viewport varies by asset type:
-
-<table>
-<thead>
-  <tr>
-    <th>Asset&nbsp;Type</th>
-    <th>Drag-and-Drop Behavior</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>**Image**</td>
-    <td>If hovering over a valid parent object like a `Class.BasePart`, creates a new `Class.Decal` inside that parent with its `Class.Decal.ColorMapContent|ColorMapContent` property preset to the asset ID.</td>
-  </tr>
-  <tr>
-    <td>**Mesh**</td>
-    <td>Inserts the asset as a new `Class.MeshPart` in the workspace with its `Class.MeshPart.MeshId|MeshId` property preset to the asset ID.</td>
-  </tr>
-  <tr>
-    <td>**Audio**</td>
-    <td>Creates a new `Class.Sound` object in the workspace with its `Class.Sound.SoundId|SoundId` property preset to the asset ID.</td>
-  </tr>
-	<tr>
-    <td>**Package**</td>
-    <td>Inserts a copy of the package into the workspace.</td>
-  </tr>
-</tbody>
-</table>
-
-### Quick actions
-
-Quick actions are accessible by right-clicking an asset name/tile and selecting a context option.
-
-<Tabs>
-<TabItem label="Places">
-<table>
-<thead>
-  <tr>
-    <th>Quick Action</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>**Rename**</td>
-    <td>Lets you enter a new name for the place.</td>
-  </tr>
-  <tr>
-    <td>**Copy&nbsp;ID&nbsp;to&nbsp;Clipboard**</td>
-    <td>Copies the place ID to the clipboard.</td>
-  </tr>
-  <tr>
-    <td>**View History**</td>
-    <td>Opens the place version history, letting you view previous commits (publish actions) and their date/time. If desired, you can roll back to a previous version by selecting it and clicking the <b>Open</b> button.</td>
-  </tr>
-  <tr>
-    <td>**Remove From Game**</td>
-    <td>Completely removes the place from the game. Not applicable to the [starting place](../../production/publishing/publish-games-and-places.md#change-start-place).</td>
-  </tr>
-</tbody>
-</table>
-</TabItem>
-<TabItem label="Images">
-<table>
-<thead>
-  <tr>
-    <th>Quick Action</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>**Edit Asset**</td>
-    <td>Lets you edit general details such as the image title and description.</td>
-  </tr>
-  <tr>
-    <td>**Rename Alias**</td>
-    <td>Renames the image alias in the **Asset Manager**.</td>
-  </tr>
-  <tr>
-    <td>**Insert**</td>
-    <td>Inserts the image into the selected instance (or the workspace).</td>
-  </tr>
-  <tr>
-    <td>**Copy&nbsp;ID&nbsp;to&nbsp;Clipboard**</td>
-    <td>Copies the image ID to the clipboard.</td>
-  </tr>
-  <tr>
-    <td>**Remove From Game**</td>
-    <td>Removes the image from the **Asset Manager** but does not remove its instances from the game.</td>
-  </tr>
-</tbody>
-</table>
-</TabItem>
-<TabItem label="Meshes">
-<table>
-<thead>
-  <tr>
-    <th>Quick Action</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>**Edit Asset**</td>
-    <td>Lets you edit general details such as the mesh title and description.</td>
-  </tr>
-  <tr>
-    <td>**Rename Alias**</td>
-    <td>Renames the mesh alias in the **Asset Manager**.</td>
-  </tr>
-  <tr>
-    <td>**Insert**</td>
-    <td>Inserts the mesh into the workspace.</td>
-  </tr>
-  <tr>
-    <td>**Insert With Location**</td>
-    <td>Inserts the mesh into the workspace, retaining location data stored during the mesh import process.</td>
-  </tr>
-  <tr>
-    <td>**Copy ID to Clipboard**</td>
-    <td>Copies the mesh ID to the clipboard.</td>
-  </tr>
-  <tr>
-    <td>**Copy&nbsp;Mesh&nbsp;ID&nbsp;to&nbsp;Clipboard**</td>
-    <td>Copies the mesh `Class.MeshPart.TextureID` to the clipboard.</td>
-  </tr>
-  <tr>
-    <td>**Remove From Game**</td>
-    <td>Removes the mesh from the **Asset Manager** but does not remove its instances from the game.</td>
-  </tr>
-</tbody>
-</table>
-</TabItem>
-<TabItem label="Packages">
-<table>
-<thead>
-  <tr>
-    <th>Quick Action</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>**Insert**</td>
-    <td>Inserts a copy of the package into the workspace.</td>
-  </tr>
-  <tr>
-    <td>**View on Website**</td>
-    <td>Opens up your browser to the package asset page.</td>
-  </tr>
-  <tr>
-    <td>**Copy&nbsp;ID&nbsp;to&nbsp;Clipboard**</td>
-    <td>Copies the package ID to the clipboard.</td>
-  </tr>
-  <tr>
-    <td>**Package Details**</td>
-    <td>Lets you manage basic package details, access permissions, and package versions.</td>
-  </tr>
-</tbody>
-</table>
-</TabItem>
-<TabItem label="Audio">
-<table>
-<thead>
-  <tr>
-    <th>Quick Action</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>**Edit Asset**</td>
-    <td>Lets you edit general details such as the audio title and description.</td>
-  </tr>
-  <tr>
-    <td>**Rename Alias**</td>
-    <td>Renames the item alias in the **Asset Manager**.</td>
-  </tr>
-  <tr>
-    <td>**Insert**</td>
-    <td>Inserts the audio as a `Class.Sound` object into the selected instance (or the workspace).</td>
-  </tr>
-  <tr>
-    <td>**Copy&nbsp;ID&nbsp;to&nbsp;Clipboard**</td>
-    <td>Copies the audio file ID to the clipboard.</td>
-  </tr>
-  <tr>
-    <td>**Remove From Game**</td>
-    <td>Removes the audio from the **Asset Manager** but does not remove its instances from the game.</td>
-  </tr>
-</tbody>
-</table>
-</TabItem>
-</Tabs>
-
-### Asset inspection
-
-You can closely inspect an image, mesh, package, or audio file by hovering over its thumbnail in [grid view](#asset-folders) and clicking the "magnify" icon, or by right-clicking its name in [list view](#asset-folders) and selecting **Asset&nbsp;Preview**.
-
-<img src="../../assets/studio/asset-manager/Asset-Inspect-Icon.png" width="400" alt="A preview view of an asset in the Asset Manager. The Insect Asset icon is highlighted." />
-
-When previewing 3D assets like meshes, you can move the virtual camera around to get a better view from all angles. For videos, you can preview the entire video in the popup.
-
-<Grid container spacing={3}>
-<Grid item>
-<video src="../../assets/studio/general/3D-Asset-Preview.mp4" controls width="315"></video>
-</Grid>
-<Grid item>
-<table size="small">
-<thead>
-  <tr>
-    <th>Action</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Left mouse button&nbsp;+ drag</td>
-    <td>Rotate around the object.</td>
-  </tr>
-  <tr>
-    <td>Right mouse button&nbsp;+ drag</td>
-    <td>Pan left, right, up, or down.</td>
-  </tr>
-  <tr>
-    <td>Mouse scroll wheel</td>
-    <td>Zoom in or out.</td>
-  </tr>
-</tbody>
-</table>
-</Grid>
-</Grid>
-
-In the lower-right corner of the preview frame, the **composition** button reveals the full hierarchy of the asset including `Class.Script|Scripts`, `Class.MeshPart|MeshParts`, `Class.Animation|Animations`, and more.
-
-<img src="../../assets/studio/general/Preview-Panel-Hierarchy.png" width="560" alt="A preview view of an asset in the Asset Manager, and the full hierarchy of the asset displays underneath the 3D representation. The Asset Composition icon is highlighted." />
-
-## V2 Beta
-
-<BetaAlert betaName="Revamped Asset Manager" leadIn="The revamped Asset Manager is currently in beta. Enable it through " leadOut="." components={props.components} />
-
-### Inventory sorting
+## Inventory sorting
 
 Assets are sorted by various **inventories** as selected through the collapsible menu on the left side of the window. If you don't see the sorting list, click the expand/collapse button in the lower‑left area of the window.
 
@@ -322,7 +33,7 @@ Assets are sorted by various **inventories** as selected through the collapsible
   </tbody>
   </table>
 
-### Folders
+## Folders
 
 Folders let you organize assets and other folders into a hierarchy within an inventory. You can create folders inside **My&nbsp;Inventory**, inside **Group&nbsp;Inventories** that support folder operations, and inside an open game's inventory under **Project**.
 
@@ -337,7 +48,7 @@ Folders have the following limits:
 The first time folders are initialized for an account, a brief setup period may apply. If folder operations aren't yet available, the sidebar shows a warning icon next to the affected account; click it to refresh readiness. Setup typically completes within a few minutes.
 </Alert>
 
-#### Create, rename, and delete
+### Create, rename, and delete
 
 Right-click in the sidebar or main view to access folder actions.
 
@@ -370,14 +81,14 @@ Right-click in the sidebar or main view to access folder actions.
 
 Folder names cannot contain `\`, `/`, `:`, `*`, `?`, `"`, `<`, `>`, or `|`, and cannot end with a period. Names beginning with a period (for example, `.hidden`) are allowed.
 
-#### Navigate
+### Navigate
 
 You can navigate the folder hierarchy from either panel:
 
 - **Sidebar** — Use the expand arrow to reveal subfolders, or single-click a folder to open it.
 - **Main view** — Double-click a folder to drill into it. Click the parent entry in the sidebar, or use the back arrow, to return.
 
-#### Move items
+### Move items
 
 You can move both assets and folders, but only within the same inventory. Cross-inventory moves (for example, from **My&nbsp;Inventory** into a **group** inventory) aren't supported.
 
@@ -402,7 +113,7 @@ You can move both assets and folders, but only within the same inventory. Cross-
 
 You can move multiple items at once. Moving a folder into itself or into one of its own descendants is blocked, and invalid destinations are not highlighted as drop targets or are grayed out in the **Move** dialog.
 
-#### Search and folders
+### Search and folders
 
 When you type a search query, results include a separate **Folders** section listing matching folders alongside asset results. Double-click a folder result to exit search mode and navigate into that folder.
 
@@ -410,14 +121,14 @@ When you type a search query, results include a separate **Folders** section lis
 Drag-and-drop and the **Move** dialog are disabled while viewing search results. Navigate to a folder or inventory first, then reorganize.
 </Alert>
 
-#### Unsupported scopes
+### Unsupported scopes
 
 Folder operations aren't available in the following views:
 
 - **Places&nbsp;In&nbsp;Experience** — Places can't be organized into folders.
 - **Recent&nbsp;Uploads** — Read-only for organizational purposes.
 
-### Asset display options
+## Asset display options
 
 In the main panel, assets for the selected [inventory](#inventory-sorting) are displayed. To toggle the view type, click on the **view&nbsp;type** button and select either **List** or **Grid**. While in grid view, asset tiles can be resized through the slider widget.
 
@@ -435,7 +146,7 @@ In **Grid** view, ordering is controlled through the **sort** button:
 
 <img src="../../assets/studio/asset-manager/Grid-View-Ordering.png" width="600" alt="Location of the sort button for Grid view within the Asset Manager." />
 
-### Asset type filters
+## Asset type filters
 
 The **filter items** button lets you control which assets are displayed.
 
@@ -472,7 +183,7 @@ The **filter items** button lets you control which assets are displayed.
   </tbody>
 </table>
 
-### Asset import
+## Asset import
 
 The **asset import** button lets you import one or more assets of any asset type. Imported assets enter the moderation queue and, upon approval, are added to the inventory of the user/group that owns the game.
 
@@ -480,7 +191,7 @@ The **asset import** button lets you import one or more assets of any asset type
 
 For more information on supported file types and other features, see [Importer](../../studio/importer.md).
 
-### Insert and quick actions
+## Insert and quick actions
 
 Quick actions are accessible by right‑clicking an asset name/tile and selecting an option from the context menu. Note that places offer unique actions versus other assets.
 
@@ -563,7 +274,7 @@ Quick actions are accessible by right‑clicking an asset name/tile and selectin
 </TabItem>
 </Tabs>
 
-### Search query language
+## Search query language
 
 Use the search query language to refine how you find assets in your Asset Manager inventory. You can combine keywords, operators, and tags to filter, prioritize, or exclude results.
 

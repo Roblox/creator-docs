@@ -90,20 +90,6 @@
             "description": "Server internal error / Unknown error."
           }
         },
-        "x-roblox-rate-limits": {
-          "perIp": {
-            "period": "MINUTE",
-            "maxInPeriod": 10000
-          },
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          }
-        },
         "security": [
           {
             "roblox-api-key": ["universe-messaging-service:publish"]
