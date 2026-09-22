@@ -167,7 +167,7 @@ methods:
           description for the supported syntax.
       - name: root
         type: Instance
-        default:
+        default: nil
         summary: |
           The instance whose descendants are searched. Pass this to restrict the
           search to a subtree, such that instances outside that subtree never

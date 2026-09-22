@@ -23,6 +23,7 @@ descendants:
   - PartOperation
 tags:
   - NotCreatable
+  - NotBrowsable
 deprecation_message: ''
 properties:
   - name: TriangleMeshPart.CollisionFidelity
@@ -63,7 +64,8 @@ properties:
       mesh.
     code_samples: []
     type: float
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None

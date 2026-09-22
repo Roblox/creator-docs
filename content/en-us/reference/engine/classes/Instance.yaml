@@ -48,7 +48,6 @@ descendants:
   - AudioEcho
   - AudioEmitter
   - AudioEqualizer
-  - AudioFDNReverb
   - AudioFader
   - AudioFilter
   - AudioFlanger
@@ -61,8 +60,6 @@ descendants:
   - AudioReverb
   - AudioSearchParams
   - AudioSpeechToText
-  - AudioStreamReader
-  - AudioStreamWriter
   - AudioTextToSpeech
   - AudioTremolo
   - AvatarCreationService
@@ -237,7 +234,6 @@ descendants:
   - SharedTableRegistry
   - Sky
   - Smoke
-  - SmoothVoxelsUpgraderService
   - SocialService
   - Sound
   - SoundEffect
@@ -302,8 +298,6 @@ descendants:
   - RenderSettings
   - StopWatchReporter
   - VirtualInputManager
-  - FileSystemService
-  - ProcessService
   - CreatorStoreService
   - InputAction
   - InputBinding

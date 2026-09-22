@@ -151,7 +151,8 @@ methods:
         summary: |
           A new `Class.EditableImage` in cage UV space, or `nil` if the
           device-specific editable memory budget is exhausted.
-    tags: []
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -204,7 +205,8 @@ methods:
         summary: |
           A new `Class.EditableImage` in the parent `Class.MeshPart`'s UV space,
           or `nil` if the device-specific editable memory budget is exhausted.
-    tags: []
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

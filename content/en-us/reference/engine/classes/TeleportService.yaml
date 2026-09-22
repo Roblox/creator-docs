@@ -828,6 +828,7 @@ methods:
           `Class.Player|Players` were teleported to.
     tags:
       - Yields
+      - Deprecated
     deprecation_message: |
       Use `Class.TeleportService:TeleportAsync()|TeleportAsync()` instead. For a
       migration guide, see
@@ -886,7 +887,8 @@ methods:
     returns:
       - type: ()
         summary: ''
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       Use `Class.TeleportService:TeleportAsync()|TeleportAsync()` instead. For a
       migration guide, see
@@ -946,7 +948,8 @@ methods:
     returns:
       - type: ()
         summary: ''
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       Use `Class.TeleportService:TeleportAsync()|TeleportAsync()` instead. For a
       migration guide, see
@@ -1001,7 +1004,8 @@ methods:
     returns:
       - type: ()
         summary: ''
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       Use `Class.TeleportService:TeleportAsync()|TeleportAsync()` instead. For a
       migration guide, see

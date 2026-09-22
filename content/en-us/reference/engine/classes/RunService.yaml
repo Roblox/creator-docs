@@ -216,13 +216,13 @@ methods:
           previous invocation.
       - name: frequency
         type: StepFrequency
-        default:
+        default: Hz30
         summary: |
           Optional `Enum.StepFrequency` value indicating the frequency at which
           to call the bound function. Defaults to `Enum.StepFrequency.Hz30`.
       - name: priority
         type: int
-        default:
+        default: 2000
         summary: |
           Optional priority of the binding as an integer; it determines the
           order in which bound functions are called within a simulation step.

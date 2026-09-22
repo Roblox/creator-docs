@@ -80,7 +80,7 @@ Each ad campaign has a single goal that determines who Roblox shows the campaign
 
 <h5 style={{marginTop: '36px'}}>Automated bidding</h5>
 
-With auto-bidding, you set an ad budget and duration and Roblox automatically calculates the bid that will get you the most plays at the lowest cost.
+With auto-bidding, you set an ad budget and duration and Roblox automatically calculates the bid that will get you the best performance at the lowest cost. If your game is engaging for users, you can get even better performance through ads system discounts designed for games that make Roblox overall healthier.
 
 <h5 style={{marginTop: '36px'}}>Budgets</h5>
 
@@ -445,8 +445,8 @@ The reporting table includes:
     <td>How much time players spent in your game as a result of your campaign.</td>
   </tr>
   <tr>
-    <td>**Robux Earnings**</td>
-    <td>Cumulative Robux earnings as a result of your campaign. Excludes subscriptions, but includes ad revenue and Creator Rewards, as well as in-game purchases.</td>
+    <td>**Earnings**</td>
+    <td>Cumulative earnings as a result of your campaign. Excludes subscriptions, but includes ad revenue and Creator Rewards, as well as in-game purchases. Displayed in Robux, as well as the value in USD at the appropriate DevEx rate.</td>
   </tr>
 </tbody>
 </table>
@@ -509,6 +509,18 @@ The reporting table includes:
   </tr>
 </tbody>
 </table>
+
+### Campaign details
+
+Click a campaign name in the reporting table to open a view of its details. The details view shows more about a campaign's performance beyond the summary row, including a breakdown of your metrics at the asset level. Use this breakdown to compare how each creative in the campaign performed and adjust your creatives accordingly.
+
+The campaign details view also includes a chart of your campaign's key metric over time. **Plays** campaigns show daily plays, and **Earnings** campaigns show daily earnings, so you can see how performance trends across the campaign's duration. For dates that are still accruing data, the chart shows a dotted line.
+
+<h5 style={{marginTop: '36px'}}>Return on ad spend (Earnings campaigns)</h5>
+
+Earnings campaigns include a **ROAS** (return on ad spend) metric. ROAS is the USD value of the earnings attributed to your campaign divided by the amount you spent over the selected period.
+
+While a campaign's attribution window is still open and earnings are still accruing, the card shows **Estimated ROAS** instead, an estimate of what your ROAS will be once earnings are fully accrued.
 
 ## Group permissions
 

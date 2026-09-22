@@ -32,6 +32,8 @@ items:
   - name: Add
     summary: |
       Adds pixels from the source and pixels from the destination together.
+      Source RGB values are scaled by the source alpha, while source alpha is
+      added directly to destination alpha.
     value: 3
     tags: []
     deprecation_message: ''
@@ -62,7 +64,9 @@ items:
     deprecation_message: ''
   - name: Subtract
     summary: |
-      Subtracts pixels of the source from pixels of the destination.
+      Subtracts pixels of the source from pixels of the destination. Source RGB
+      values are scaled by the source alpha, while source alpha is subtracted
+      directly from destination alpha.
     value: 7
     tags: []
     deprecation_message: ''
