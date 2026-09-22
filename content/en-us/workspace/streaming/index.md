@@ -15,7 +15,7 @@ Instance streaming is controlled through the `Class.Workspace.StreamingEnabled` 
 <img src="../../assets/studio/properties/Workspace-StreamingEnabled.png" width="320" alt="The Properties window with the StreamingEnabled property enabled." />
 
 <Alert severity="success">
-Once you review this technical guide, it's recommended that you review the [streaming techniques](./techniques.md) guide on how to use streaming efficiently and effectively, and the [SLIM](./slim.md) guide for enabling high‑fidelity level‑of‑detail on models and avatars.
+Once you review this technical guide, it's recommended that you review the [streaming techniques](./techniques.md) guide on how to use streaming efficiently and effectively, the [frustum streaming](./frustum.md) guide for streaming instances based on camera view, and the [SLIM](./slim.md) guide for enabling high-fidelity level-of-detail on models and avatars.
 </Alert>
 
 ## Technical behavior
