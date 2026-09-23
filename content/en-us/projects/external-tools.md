@@ -75,6 +75,10 @@ In Roblox Studio, open the `.rbxl` file you just built, open the Rojo plugin, an
 
 Rojo projects have certain naming requirements for files, numerous configuration options, and some limitations, all of which are covered in the [Rojo documentation](https://rojo.space/docs/v7/).
 
+<Alert severity="info">
+For guidance around organizing your code, see [Script types and locations](../scripting/locations.md#recommendations) and the projects in [Roblox/resources](https://github.com/Roblox/resources).
+</Alert>
+
 ## Package managers
 
 Roblox has a robust set of included APIs, but if you want to make use of community software packages in a consistent, reproducible way, you need a package manager. [Wally](https://wally.run/) is a popular option. You can install it through Rokit, just like Rojo.

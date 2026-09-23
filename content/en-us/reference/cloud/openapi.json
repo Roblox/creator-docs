@@ -25062,7 +25062,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 120
           }
         },
         "x-roblox-scopes": [
@@ -25228,7 +25228,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 120
           }
         },
         "x-roblox-scopes": [
@@ -33949,7 +33949,7 @@
             "description": "31: No linked account found for SSO login."
           },
           "403": {
-            "description": "0: Token Validation Failed"
+            "description": "0: Token Validation Failed\r\n44: Login is unavailable in your country."
           },
           "500": {
             "description": "0: An unexpected error occurred."
@@ -34003,7 +34003,7 @@
             }
           },
           "403": {
-            "description": "0: Token Validation Failed"
+            "description": "0: Token Validation Failed\r\n44: Login is unavailable in your country."
           }
         },
         "servers": [
@@ -36748,6 +36748,7 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -36808,6 +36809,7 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -36880,7 +36882,7 @@
             "description": "The thumbnail format",
             "schema": {
               "type": "string",
-              "enum": ["Png", "Jpeg", "Webp"],
+              "enum": ["Png", "Jpeg", "Webp", "Ico", "Icns"],
               "default": "Png"
             }
           },
@@ -36977,6 +36979,7 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37045,6 +37048,7 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37229,6 +37233,7 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37403,6 +37408,7 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37483,6 +37489,7 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37540,6 +37547,7 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -37552,73 +37560,6 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#games_get_v1_games__universeId__favorites_count"
         }
-      }
-    },
-    "/v1/games/{universeId}/media": {
-      "get": {
-        "tags": ["Thumbnails", "Universes"],
-        "summary": "Get the game media data",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "universeId",
-            "description": "The id of the universe we get media data from.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Games.Api.Models.Response.GameMediaItem_"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Games.Api.Models.Response.GameMediaItem_"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "3: The universe's root place is invalid."
-          },
-          "404": {
-            "description": "2: The requested universe does not exist."
-          }
-        },
-        "deprecated": true,
-        "servers": [
-          {
-            "url": "https://games.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "description": "Use https://games.roblox.com/v2/games/{universeId}/media instead",
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnails#games_get_v1_games__universeId__media"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://games.roblox.com/v2/games/{universeId}/media",
-            "httpMethod": "GET",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/thumbnails#games_get_v2_games__universeId__media"
-          }
-        ]
       }
     },
     "/v1/games/{universeId}/thumbnails": {
@@ -43751,7 +43692,7 @@
             }
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n1: Invalid login ticket.\r\n2: Invalid result token.\r\n3: Invalid user.\r\n4: Authentication failure."
+            "description": "0: Token Validation Failed\r\n1: Invalid login ticket.\r\n2: Invalid result token.\r\n3: Invalid user.\r\n4: Authentication failure.\r\n44: Login is unavailable in your country."
           }
         },
         "servers": [
@@ -45094,7 +45035,7 @@
             "description": "0: An unexpected error occurred.\r\n3: Username and Password are required. Please try again.\r\n8: Login with received credential type is not supported."
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n1: Incorrect username or password. Please try again.\r\n2: You must pass the robot test before logging in.\r\n4: Account has been locked. Please request a password reset.\r\n5: Unable to login. Please use Social Network sign on.\r\n6: Account issue. Please contact Support.\r\n9: Unable to login with provided credentials. Default login is required.\r\n10: Received credentials are unverified.\r\n12: Existing login session found. Please log out first.\r\n14: The account is unable to log in. Please log in to the LuoBu app.\r\n15: Too many attempts. Please wait a bit.\r\n27: The account is unable to login. Please log in with the VNG app."
+            "description": "0: Token Validation Failed\r\n1: Incorrect username or password. Please try again.\r\n2: You must pass the robot test before logging in.\r\n4: Account has been locked. Please request a password reset.\r\n5: Unable to login. Please use Social Network sign on.\r\n6: Account issue. Please contact Support.\r\n9: Unable to login with provided credentials. Default login is required.\r\n10: Received credentials are unverified.\r\n12: Existing login session found. Please log out first.\r\n14: The account is unable to log in. Please log in to the LuoBu app.\r\n15: Too many attempts. Please wait a bit.\r\n27: The account is unable to login. Please log in with the VNG app.\r\n44: Login is unavailable in your country."
           },
           "429": {
             "description": "7: Too many attempts. Please wait a bit."
@@ -45169,7 +45110,7 @@
             "description": "0: An unexpected error occurred.\r\n3: Username and Password are required. Please try again.\r\n8: Login with received credential type is not supported."
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n1: Incorrect username or password. Please try again.\r\n2: You must pass the robot test before logging in.\r\n4: Account has been locked. Please request a password reset.\r\n5: Unable to login. Please use Social Network sign on.\r\n6: Account issue. Please contact Support.\r\n9: Unable to login with provided credentials. Default login is required.\r\n10: Received credentials are unverified.\r\n12: Existing login session found. Please log out first.\r\n14: The account is unable to log in. Please log in to the LuoBu app.\r\n15: Too many attempts. Please wait a bit.\r\n27: The account is unable to login. Please log in with the VNG app.\r\n43: This account is not eligible for this platform."
+            "description": "0: Token Validation Failed\r\n1: Incorrect username or password. Please try again.\r\n2: You must pass the robot test before logging in.\r\n4: Account has been locked. Please request a password reset.\r\n5: Unable to login. Please use Social Network sign on.\r\n6: Account issue. Please contact Support.\r\n9: Unable to login with provided credentials. Default login is required.\r\n10: Received credentials are unverified.\r\n12: Existing login session found. Please log out first.\r\n14: The account is unable to log in. Please log in to the LuoBu app.\r\n15: Too many attempts. Please wait a bit.\r\n27: The account is unable to login. Please log in with the VNG app.\r\n43: This account is not eligible for this platform.\r\n44: Login is unavailable in your country."
           },
           "429": {
             "description": "7: Too many attempts. Please wait a bit."
@@ -47944,7 +47885,7 @@
             "description": "The thumbnail format",
             "schema": {
               "type": "string",
-              "enum": ["Png", "Jpeg", "Webp"],
+              "enum": ["Png", "Jpeg", "Webp", "Ico", "Icns"],
               "default": "Png"
             }
           },
@@ -49335,7 +49276,7 @@
             "description": "Bad request\r\n16: User agreement ids are null.\r\n21: Empty account switch blob required"
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n2: Captcha Failed.\r\n4: Invalid Birthday.\r\n5: Invalid Username.\r\n6: Username already taken.\r\n7: Invalid Password.\r\n8: Password and Username are same.\r\n9: Password is too simple.\r\n10: Email is invalid.\r\n11: Asset is invalid.\r\n12: Too many attempts. Please wait a bit.\r\n17: One time Passcode session was not valid\r\n22: Maximum logged in accounts limit reached."
+            "description": "0: Token Validation Failed\r\n2: Captcha Failed.\r\n4: Invalid Birthday.\r\n5: Invalid Username.\r\n6: Username already taken.\r\n7: Invalid Password.\r\n8: Password and Username are same.\r\n9: Password is too simple.\r\n10: Email is invalid.\r\n11: Asset is invalid.\r\n12: Too many attempts. Please wait a bit.\r\n17: One time Passcode session was not valid\r\n22: Maximum logged in accounts limit reached.\r\n44: Login is unavailable in your country."
           },
           "429": {
             "description": "3: Too many attempts. Please wait a bit."
@@ -49400,7 +49341,7 @@
             "description": "Bad request\r\n16: User agreement ids are null.\r\n21: Empty account switch blob required"
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n2: Captcha Failed.\r\n4: Invalid Birthday.\r\n5: Invalid Username.\r\n6: Username already taken.\r\n7: Invalid Password.\r\n8: Password and Username are same.\r\n9: Password is too simple.\r\n10: Email is invalid.\r\n11: Asset is invalid.\r\n12: Too many attempts. Please wait a bit.\r\n17: One time Passcode session was not valid\r\n22: Maximum logged in accounts limit reached.\r\n29: Account Linking already exists on this account\r\n30: Account Linking required but failed"
+            "description": "0: Token Validation Failed\r\n2: Captcha Failed.\r\n4: Invalid Birthday.\r\n5: Invalid Username.\r\n6: Username already taken.\r\n7: Invalid Password.\r\n8: Password and Username are same.\r\n9: Password is too simple.\r\n10: Email is invalid.\r\n11: Asset is invalid.\r\n12: Too many attempts. Please wait a bit.\r\n17: One time Passcode session was not valid\r\n22: Maximum logged in accounts limit reached.\r\n29: Account Linking already exists on this account\r\n30: Account Linking required but failed\r\n44: Login is unavailable in your country."
           },
           "429": {
             "description": "3: Too many attempts. Please wait a bit."
@@ -60956,7 +60897,7 @@
     "/v2/compression-dictionaries": {
       "get": {
         "tags": ["Metadata"],
-        "summary": "Returns a listing of all known compression dictionaries, including their SHA256 and creation date.\r\nThis will be sorted by creation date, with the most recent dictionaries first.",
+        "summary": "Returns a listing of all known compression dictionaries, including their SHA256 and creation date.\nThis will be sorted by creation date, with the most recent dictionaries first.",
         "responses": {
           "200": {
             "description": "OK"
@@ -61063,6 +61004,7 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -61438,7 +61380,7 @@
             }
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n1: Invalid login ticket.\r\n2: Invalid result token.\r\n3: Invalid user.\r\n4: Authentication failure."
+            "description": "0: Token Validation Failed\r\n1: Invalid login ticket.\r\n2: Invalid result token.\r\n3: Invalid user.\r\n4: Authentication failure.\r\n44: Login is unavailable in your country."
           }
         },
         "servers": [
@@ -61558,7 +61500,7 @@
             "description": "0: An unexpected error occurred.\r\n3: Username and Password are required. Please try again.\r\n8: Login with received credential type is not supported."
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n1: Incorrect username or password. Please try again.\r\n2: You must pass the robot test before logging in.\r\n4: Account has been locked. Please request a password reset.\r\n5: Unable to login. Please use Social Network sign on.\r\n6: Account issue. Please contact Support.\r\n9: Unable to login with provided credentials. Default login is required.\r\n10: Received credentials are unverified.\r\n12: Existing login session found. Please log out first.\r\n14: The account is unable to log in. Please log in to the LuoBu app.\r\n15: Too many attempts. Please wait a bit.\r\n27: The account is unable to login. Please log in with the VNG app."
+            "description": "0: Token Validation Failed\r\n1: Incorrect username or password. Please try again.\r\n2: You must pass the robot test before logging in.\r\n4: Account has been locked. Please request a password reset.\r\n5: Unable to login. Please use Social Network sign on.\r\n6: Account issue. Please contact Support.\r\n9: Unable to login with provided credentials. Default login is required.\r\n10: Received credentials are unverified.\r\n12: Existing login session found. Please log out first.\r\n14: The account is unable to log in. Please log in to the LuoBu app.\r\n15: Too many attempts. Please wait a bit.\r\n27: The account is unable to login. Please log in with the VNG app.\r\n44: Login is unavailable in your country."
           },
           "429": {
             "description": "7: Too many attempts. Please wait a bit."
@@ -61626,7 +61568,7 @@
             "description": "0: An unexpected error occurred.\r\n3: Username and Password are required. Please try again.\r\n8: Login with received credential type is not supported."
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n1: Incorrect username or password. Please try again.\r\n2: You must pass the robot test before logging in.\r\n4: Account has been locked. Please request a password reset.\r\n5: Unable to login. Please use Social Network sign on.\r\n6: Account issue. Please contact Support.\r\n9: Unable to login with provided credentials. Default login is required.\r\n10: Received credentials are unverified.\r\n12: Existing login session found. Please log out first.\r\n14: The account is unable to log in. Please log in to the LuoBu app.\r\n15: Too many attempts. Please wait a bit.\r\n27: The account is unable to login. Please log in with the VNG app.\r\n43: This account is not eligible for this platform."
+            "description": "0: Token Validation Failed\r\n1: Incorrect username or password. Please try again.\r\n2: You must pass the robot test before logging in.\r\n4: Account has been locked. Please request a password reset.\r\n5: Unable to login. Please use Social Network sign on.\r\n6: Account issue. Please contact Support.\r\n9: Unable to login with provided credentials. Default login is required.\r\n10: Received credentials are unverified.\r\n12: Existing login session found. Please log out first.\r\n14: The account is unable to log in. Please log in to the LuoBu app.\r\n15: Too many attempts. Please wait a bit.\r\n27: The account is unable to login. Please log in with the VNG app.\r\n43: This account is not eligible for this platform.\r\n44: Login is unavailable in your country."
           },
           "429": {
             "description": "7: Too many attempts. Please wait a bit."
@@ -61935,7 +61877,7 @@
     "/v2/ota-version/{binaryType}": {
       "get": {
         "tags": ["Metadata"],
-        "summary": "Get OTA information for a specific binary type with a given version on some channel.\r\nReturns empty list if no updates are found or channel/application with the given version does not exist in CVS.",
+        "summary": "Get OTA information for a specific binary type with a given version on some channel.\nReturns empty list if no updates are found or channel/application with the given version does not exist in CVS.",
         "parameters": [
           {
             "in": "path",
@@ -62366,7 +62308,7 @@
             "description": "3: Request was empty.\r\n11: The password reset ticket is invalid.\r\n12: The user is invalid.\r\n20: The password is invalid.\r\n21: Passwords do not match."
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n16: The ticket is expired.\r\n17: The nonce is expired."
+            "description": "0: Token Validation Failed\r\n16: The ticket is expired.\r\n17: The nonce is expired.\r\n44: Login is unavailable in your country."
           },
           "500": {
             "description": "0: Unknown error occured."
@@ -63857,7 +63799,7 @@
             "description": "Bad request\r\n16: User agreement ids are null.\r\n21: Empty account switch blob required"
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n2: Captcha Failed.\r\n4: Invalid Birthday.\r\n5: Invalid Username.\r\n6: Username already taken.\r\n7: Invalid Password.\r\n8: Password and Username are same.\r\n9: Password is too simple.\r\n10: Email is invalid.\r\n11: Asset is invalid.\r\n12: Too many attempts. Please wait a bit.\r\n17: One time Passcode session was not valid\r\n22: Maximum logged in accounts limit reached."
+            "description": "0: Token Validation Failed\r\n2: Captcha Failed.\r\n4: Invalid Birthday.\r\n5: Invalid Username.\r\n6: Username already taken.\r\n7: Invalid Password.\r\n8: Password and Username are same.\r\n9: Password is too simple.\r\n10: Email is invalid.\r\n11: Asset is invalid.\r\n12: Too many attempts. Please wait a bit.\r\n17: One time Passcode session was not valid\r\n22: Maximum logged in accounts limit reached.\r\n44: Login is unavailable in your country."
           },
           "429": {
             "description": "3: Too many attempts. Please wait a bit."
@@ -63915,7 +63857,7 @@
             "description": "Bad request\r\n16: User agreement ids are null.\r\n21: Empty account switch blob required"
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n2: Captcha Failed.\r\n4: Invalid Birthday.\r\n5: Invalid Username.\r\n6: Username already taken.\r\n7: Invalid Password.\r\n8: Password and Username are same.\r\n9: Password is too simple.\r\n10: Email is invalid.\r\n11: Asset is invalid.\r\n12: Too many attempts. Please wait a bit.\r\n17: One time Passcode session was not valid\r\n22: Maximum logged in accounts limit reached.\r\n29: Account Linking already exists on this account\r\n30: Account Linking required but failed"
+            "description": "0: Token Validation Failed\r\n2: Captcha Failed.\r\n4: Invalid Birthday.\r\n5: Invalid Username.\r\n6: Username already taken.\r\n7: Invalid Password.\r\n8: Password and Username are same.\r\n9: Password is too simple.\r\n10: Email is invalid.\r\n11: Asset is invalid.\r\n12: Too many attempts. Please wait a bit.\r\n17: One time Passcode session was not valid\r\n22: Maximum logged in accounts limit reached.\r\n29: Account Linking already exists on this account\r\n30: Account Linking required but failed\r\n44: Login is unavailable in your country."
           },
           "429": {
             "description": "3: Too many attempts. Please wait a bit."
@@ -65974,6 +65916,7 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -66066,6 +66009,7 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -67189,7 +67133,7 @@
             "description": "1: User is invalid.\r\n5: Invalid two step verification ticket.\r\n10: Invalid verification token."
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n11: Maxium logged in accounts limit reached."
+            "description": "0: Token Validation Failed\r\n11: Maxium logged in accounts limit reached.\r\n44: Login is unavailable in your country."
           }
         },
         "servers": [
@@ -84160,7 +84104,8 @@
         "additionalProperties": false
       },
       "Roblox.ClientSettings.Api.Models.Response.AndroidBinaryResponse": {
-        "description": "Contains information about an Android Binary Module for a given channel.\r\nincluding its module name, the names of its libraries, and whether the channel supports Android binaries.",
+        "description": "Contains information about an Android Binary Module for a given channel.\nincluding its module name, the names of its libraries, and whether the channel supports Android binaries.",
+        "required": ["libraryNames"],
         "type": "object",
         "properties": {
           "moduleName": {
@@ -84179,6 +84124,7 @@
       },
       "Roblox.ClientSettings.Api.Models.Response.BetaProgramInfo": {
         "description": "Beta program information included in the user channel response.",
+        "required": ["id", "name"],
         "type": "object",
         "properties": {
           "name": {
@@ -84245,6 +84191,7 @@
       },
       "Roblox.ClientSettings.Api.Models.Response.OtaVersionResponse": {
         "description": "Response for endpoints returning ota information.",
+        "required": ["downloadUrl", "name", "version"],
         "type": "object",
         "properties": {
           "name": {
@@ -84332,7 +84279,7 @@
             "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.BetaProgramInfo"
           },
           "isFlagOnly": {
-            "description": "Whether the channel is flag-only. A flag-only channel uses production binaries.\r\nIf the channel is not flag-only, this is omitted.",
+            "description": "Whether the channel is flag-only. A flag-only channel uses production binaries.\nIf the channel is not flag-only, this is omitted.",
             "type": "boolean"
           }
         },
@@ -86114,48 +86061,6 @@
             "format": "int64",
             "description": "Favorites count.",
             "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Games.Api.Models.Response.GameMediaItem": {
-        "description": "Response model for getting the game media item",
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "description": "The media item id.",
-            "type": "integer"
-          },
-          "assetTypeId": {
-            "format": "int64",
-            "description": "The media item type id",
-            "type": "integer"
-          },
-          "assetType": {
-            "description": "The media item type, Image or YouTubeVideo",
-            "type": "string"
-          },
-          "imageId": {
-            "format": "int64",
-            "description": "The media item image id",
-            "type": "integer"
-          },
-          "videoHash": {
-            "description": "The media item video hash",
-            "type": "string"
-          },
-          "videoTitle": {
-            "description": "The video title for video items.",
-            "type": "string"
-          },
-          "approved": {
-            "description": "The media item is approved or not",
-            "type": "boolean"
-          },
-          "altText": {
-            "description": "The media item's alt text",
-            "type": "string"
           }
         },
         "additionalProperties": false
@@ -90732,6 +90637,7 @@
           },
           "window": {
             "description": " ['Day' = 1, 'Week' = 2, 'Month' = 3, 'Year' = 4, 'Lifetime' = 5]",
+            "default": "month",
             "enum": ["day", "week", "month", "year", "lifetime"],
             "type": "string"
           }
@@ -92961,18 +92867,6 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.GameDetailResponse"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Web.WebAPI.Models.ApiArrayResponse_Roblox.Games.Api.Models.Response.GameMediaItem_": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Roblox.Games.Api.Models.Response.GameMediaItem"
             }
           }
         },
@@ -99078,7 +98972,6 @@
           "post_legacy_publish_v1_badges__badgeId__icon",
           "publish_post_v1_badges__badgeId__icon",
           "avatar_post_v1_avatar_redraw_thumbnail",
-          "games_get_v1_games__universeId__media",
           "games_get_v2_games__universeId__media",
           "groups_patch_v1_groups_icon",
           "thumbnails_get_v1_asset_thumbnail_animated",
@@ -99262,7 +99155,6 @@
           "games_get_v1_games__universeId__favorites",
           "games_post_v1_games__universeId__favorites",
           "games_get_v1_games__universeId__favorites_count",
-          "games_get_v1_games__universeId__media",
           "Voting_VoteGame",
           "Voting_GetGameVoteStatus",
           "Voting_GetGameVoteStatusForUser",

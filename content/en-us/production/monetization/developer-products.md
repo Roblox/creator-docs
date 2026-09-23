@@ -48,7 +48,7 @@ Starting May 30, 2026, cross-game developer product sales will be disabled. If y
 </Alert>
 
 <Alert severity="info">
-If you're using [price optimization](./price-optimization.md), make sure to place the script inside a `Class.LocalScript` so that users see personalized product prices.
+If you're using [price optimization](./price-optimization.md), make sure the script runs on the client so that users see personalized product prices.
 </Alert>
 
 Before selling developer products, make sure you are properly processing sales receipts and granting users their purchased products. To do so, you must:

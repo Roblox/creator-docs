@@ -254,7 +254,7 @@ sound.Parent = Workspace
 sound:Play()
 ```
 
-Alternatively, if the place will feature multiple tracks, you can play a specific track from a `Class.LocalScript`:
+Alternatively, if the place will feature multiple tracks, you can play a specific track from a client script:
 
 ```lua
 local SoundService = game:GetService("SoundService")

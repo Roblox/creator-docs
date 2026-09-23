@@ -135,7 +135,7 @@ A big part of adapting to a new development environment is configuring it to mee
 For more information about configuring Studio for scripting, see [Script Editor](../studio/script-editor.md).
 
 <Alert severity="success">
-To use your favorite text editor and version control system rather than the built-in editor, see [Script Sync](./sync.md).
+Many developers prefer to use an external text editor and version control system rather than the built-in editor. See [Script Sync](./sync.md) and [third-party tools](../projects/external-tools.md).
 </Alert>
 
 ## Your second script

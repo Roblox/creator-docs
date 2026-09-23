@@ -167,7 +167,7 @@ Players.PlayerAdded:Connect(leaderboardSetup)
 
 ### Hide the leaderboard
 
-To hide the leaderboard, such as on a menu screen or during a cutscene, place a `Class.LocalScript` within `Class.StarterGui` or `Class.StarterPlayerScripts` containing a call to `Class.StarterGui:SetCoreGuiEnabled()|StarterGui`.
+To hide the leaderboard, such as on a menu screen or during a cutscene, call `Class.StarterGui:SetCoreGuiEnabled()|SetCoreGuiEnabled()` from a client script.
 
 ```lua
 local StarterGui = game:GetService("StarterGui")

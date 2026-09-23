@@ -36,7 +36,7 @@ It is currently not possible to control Roblox Studio's debugger from an externa
 
 You can sync individual scripts, but we **highly** recommend syncing folders; if you sync a folder, Script Sync automatically syncs its child folders and scripts, which lets you create, delete, and rename scripts without having to enable syncing each time.
 
-After you set up Script Sync, you almost certainly want to [add an LSP extension](#set-up-a-language-server) to your text editor.
+After you set up Script Sync, you almost certainly want to [add an LSP extension](#set-up-a-language-server) to your text editor. For guidance around organizing your code, see [Script types and locations](./locations.md#recommendations)
 
 <Alert severity="success">
 You only have to set up syncing once. When you restart Studio and open your place, Script Sync remembers what you were syncing and resumes automatically.

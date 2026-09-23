@@ -60,7 +60,7 @@ Starting May 30, 2026, cross-game pass sales will be disabled. If your game reli
 </Alert>
 
 <Alert severity="info">
-If you're using [price optimization](./price-optimization.md), make sure to place the script inside a `Class.LocalScript` so that users see personalized pass prices.
+If you're using [price optimization](./price-optimization.md), make sure the script runs on the client so that users see personalized pass prices.
 </Alert>
 
 You can sell passes in two ways:

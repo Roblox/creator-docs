@@ -269,7 +269,7 @@ Some `Class.DragDetector.DragStyle|DragStyle` modes allow users to hold down a *
 
 When the `Class.DragDetector.RunLocally|RunLocally` property is false (default), the client interprets all input to produce data that it sends to the server to perform the drag. In this mode, all custom event signals and registered functions must be in server `Class.Script|Scripts`.
 
-When the `Class.DragDetector.RunLocally|RunLocally` property is true, no events are replicated to the server. All custom event signals and registered functions must be in client `Class.LocalScript|LocalScripts` and you must use [remote events](../scripting/events/remote.md) to propagate necessary changes to the server.
+When the `Class.DragDetector.RunLocally|RunLocally` property is true, no events are replicated to the server. All custom event signals and registered functions must be in client scripts, and you must use [remote events](../scripting/events/remote.md) to propagate necessary changes to the server.
 
 ## Script responses to clicking and dragging
 

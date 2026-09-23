@@ -85,7 +85,7 @@ A side-scrolling view keeps the camera at a fixed position relative to the side 
    ```
 
 <Alert severity="info">
-Only a user can see their own camera configuration, so it is always controlled using `Class.LocalScript`.
+Only a user can see their own camera configuration, so it is always controlled from a client script.
 </Alert>
 
 ### Point the camera

@@ -172,27 +172,25 @@ description: |
   the vertex will have 3 different normals (one for each adjacent face). You can
   also have seams in the UV coordinates or sharp changes in the vertex colors.
 
-  When creating faces with `Class.EditableMesh:AddTriangle()|AddTriangle()`,
-  each corner of the new face is automatically assigned a normal, UV, and color
-  attribute. If a vertex already belongs to an existing face, the new face
-  **reuses** that vertex's existing attributes (producing smooth shading and
-  continuous UVs). If the vertex is new, fresh attribute IDs are created with
-  default values (auto-computed normal, UV of `(0, 0)`, white color). To create
-  a seam, you should create new attributes and set them on the face. For
-  example, this code will create a sharp cube:
+  When creating faces with `Class.EditableMesh:AddFace()|AddFace()` or
+  `Class.EditableMesh:AddTriangle()|AddTriangle()`, each corner of the new face
+  is automatically assigned a normal, UV, and color attribute. If a vertex
+  already belongs to an existing face, the new face **reuses** that vertex's
+  existing attributes (producing smooth shading and continuous UVs). If the
+  vertex is new, fresh attribute IDs are created with default values
+  (auto-computed normal, UV of `(0, 0)`, white color). To create a seam, you
+  should create new attributes and set them on the face. For example, this code
+  will create a sharp cube:
 
   ```lua
   local AssetService = game:GetService("AssetService")
 
-  -- Given 4 vertex IDs, adds a new normal and 2 triangles, making a sharp quad
+  -- Given 4 vertex IDs, adds a new normal and a quad face, making a sharp quad
   local function addSharpQuad(editableMesh, vid0, vid1, vid2, vid3)
   	local nid = editableMesh:AddNormal() -- This creates a normal ID which is automatically computed
 
-  	local fid1 = editableMesh:AddTriangle(vid0, vid1, vid2)
-  	editableMesh:SetFaceNormals(fid1, {nid, nid, nid})
-
-  	local fid2 = editableMesh:AddTriangle(vid0, vid2, vid3)
-  	editableMesh:SetFaceNormals(fid2, {nid, nid, nid})
+  	local fid = editableMesh:AddFace({vid0, vid1, vid2, vid3})
+  	editableMesh:SetFaceNormals(fid, {nid, nid, nid, nid})
   end
 
   -- Makes a cube with creased edges between the 6 sides
@@ -289,7 +287,9 @@ description: |
   #### Limitations
 
   `EditableMesh` currently has a limit of 60,000 vertices and 20,000 triangles.
-  Attempting to add too many vertices or triangles will cause an error.
+  Faces can be triangles or quads, and each quad counts as 2 triangles toward
+  the triangle limit. Attempting to add too many vertices or triangles will
+  cause an error.
 code_samples: []
 inherits:
   - Object
@@ -303,7 +303,7 @@ properties:
       Returns `true` if a mesh is fixed-size.
     description: |
       Fixed-sized meshes allow changing the values of vertex attributes but do
-      not allow vertices and triangles to be added or deleted.
+      not allow vertices and faces to be added or deleted.
     code_samples: []
     type: boolean
     tags:
@@ -383,6 +383,128 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - DynamicGeneration
+  - name: EditableMesh:AddFace
+    summary: |
+      Adds a new triangle or quad face to the mesh and returns a face ID.
+    description: |
+      Adds a new face from an array of vertex IDs and returns a stable face ID.
+      A face is either a **triangle** (3 vertex IDs) or a **quad** (4 vertex
+      IDs); any other count throws an error. For adding triangles specifically,
+      it is preferable to use `Class.EditableMesh:AddTriangle()|AddTriangle()`,
+      which is equivalent but slightly more performant as it avoids constructing
+      an array for the vertices.
+
+      For rendering and collision, each quad is internally split into 2
+      triangles, so a quad counts as 2 triangles toward the mesh's triangle
+      limit.
+
+      #### Automatic attribute assignment
+
+      `AddFace()` only takes vertex IDs as arguments. For each vertex of the new
+      face, it automatically assigns normal, UV, and color attributes using the
+      following logic:
+
+      - If the vertex **already belongs to another face**, the new face corner
+        **reuses** the same normal, UV, and color IDs from the existing face.
+        This produces smooth shading and continuous UVs across adjacent faces by
+        default.
+      - If the vertex **does not yet belong to any face**, new normal, UV, and
+        color IDs are created with default values (auto-computed normal, UV
+        coordinate of `(0, 0)`, and white color).
+
+      <img src="../../../assets/engine-api/classes/EditableMesh/Shared-Attributes.png" alt="Two adjacent faces sharing vertex attribute IDs at their common vertices" width="690" />
+
+      #### Overriding attributes after adding a face
+
+      The auto-assigned attributes can be customized after adding a face. The
+      approach depends on whether you want to change attribute **values** while
+      keeping the topology intact, or create entirely new attribute IDs to add
+      or remove **seams** between faces.
+
+      **To change values in-place**, retrieve the auto-created IDs with methods
+      like `Class.EditableMesh:GetVertexFaceUV()|GetVertexFaceUV()` and set
+      their values directly. This is more performant and avoids leaving unused
+      IDs in the mesh:
+
+      ```lua
+      -- Create a triangle
+      local faceId = editableMesh:AddFace({v0, v1, v2})
+
+      -- Get the UV IDs that were automatically created
+      local uvId0 = editableMesh:GetVertexFaceUV(v0, faceId)
+      local uvId1 = editableMesh:GetVertexFaceUV(v1, faceId)
+      local uvId2 = editableMesh:GetVertexFaceUV(v2, faceId)
+
+      -- Set UV values on those existing UV IDs
+      editableMesh:SetUV(uvId0, Vector2.new(0, 0))
+      editableMesh:SetUV(uvId1, Vector2.new(1, 0))
+      editableMesh:SetUV(uvId2, Vector2.new(0, 1))
+      ```
+
+      **To create a seam** — where the same vertex needs different attribute
+      values on different faces (for example, a UV seam or a sharp edge) —
+      create new attribute IDs with `Class.EditableMesh:AddUV()|AddUV()`,
+      `Class.EditableMesh:AddNormal()|AddNormal()`, or
+      `Class.EditableMesh:AddColor()|AddColor()`, then assign them to the face
+      with `Class.EditableMesh:SetFaceUVs()|SetFaceUVs()`,
+      `Class.EditableMesh:SetFaceNormals()|SetFaceNormals()`, or
+      `Class.EditableMesh:SetFaceColors()|SetFaceColors()`:
+
+      ```lua
+      -- Create a triangle
+      local faceId = editableMesh:AddFace({v0, v1, v2})
+
+      -- Create new UV IDs with custom coordinates
+      local uv0 = editableMesh:AddUV(Vector2.new(0, 0))
+      local uv1 = editableMesh:AddUV(Vector2.new(1, 0))
+      local uv2 = editableMesh:AddUV(Vector2.new(0, 1))
+
+      -- Replace the face's UV IDs (creates a seam if the vertex had different UVs on another face)
+      editableMesh:SetFaceUVs(faceId, {uv0, uv1, uv2})
+      ```
+
+      #### Normal sharing and smooth vs. sharp edges
+
+      Because new faces reuse normal IDs from adjacent faces by default, meshes
+      appear smooth. To create a **sharp edge** (crease) between faces, create a
+      separate normal ID for each face and assign it with
+      `Class.EditableMesh:SetFaceNormals()|SetFaceNormals()`:
+
+      <img src="../../../assets/engine-api/classes/EditableMesh/Faceted-Normals.png" alt="Two adjacent faces with separate normal IDs producing flat shading" width="690" />
+
+      ```lua
+      -- Two triangles sharing vertices v0 and v1, but with a sharp edge between them
+      local fid1 = editableMesh:AddFace({v0, v1, v2})
+      local fid2 = editableMesh:AddFace({v0, v3, v1})
+
+      -- Create separate normals for each face to produce a hard edge
+      local n1 = editableMesh:AddNormal() -- Auto-computed for fid1
+      local n2 = editableMesh:AddNormal() -- Auto-computed for fid2
+      editableMesh:SetFaceNormals(fid1, {n1, n1, n1})
+      editableMesh:SetFaceNormals(fid2, {n2, n2, n2})
+      ```
+
+      See also `Class.EditableMesh:SetNormal()|SetNormal()` to manually specify
+      a normal vector, and `Class.EditableMesh:ResetNormal()|ResetNormal()` to
+      revert a normal back to automatic computation.
+    code_samples: []
+    parameters:
+      - name: vertexIds
+        type: Array
+        default:
+        summary: |
+          Array of the new face's vertex IDs, in order around the face. Provide
+          3 IDs to create a triangle or 4 IDs to create a quad.
+    returns:
+      - type: int64
+        summary: |
+          Face ID of the new face.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - DynamicGeneration
   - name: EditableMesh:AddNormal
     summary: |
       Adds a new normal to the geometry and returns a normal ID.
@@ -411,97 +533,16 @@ methods:
     summary: |
       Adds a new triangle to the mesh and returns a face ID.
     description: |
-      Adds a new triangle to the mesh and returns a face ID.
+      Adds a new triangle to the mesh and returns a stable face ID. This is
+      equivalent to passing an array of 3 vertex IDs to
+      `Class.EditableMesh:AddFace()|AddFace()`, but is slightly more performant
+      as it avoids constructing an array for each call.
 
-      #### Automatic attribute assignment
-
-      `AddTriangle` only takes vertex IDs as arguments. For each vertex of the
-      new triangle, it automatically assigns normal, UV, and color attributes
-      using the following logic:
-
-      - If the vertex **already belongs to another face**, the new triangle
-        corner **reuses** the same normal, UV, and color IDs from the existing
-        face. This produces smooth shading and continuous UVs across adjacent
-        faces by default.
-      - If the vertex **does not yet belong to any face**, new normal, UV, and
-        color IDs are created with default values (auto-computed normal, UV
-        coordinate of `(0, 0)`, and white color).
-
-      <img src="../../../assets/engine-api/classes/EditableMesh/Shared-Attributes.png" alt="Two adjacent faces sharing vertex attribute IDs at their common vertices" width="690" />
-
-      #### Overriding attributes after adding a face
-
-      The auto-assigned attributes can be customized after adding a face. The
-      approach depends on whether you want to change attribute **values** while
-      keeping the topology intact, or create entirely new attribute IDs to add
-      or remove **seams** between faces.
-
-      **To change values in-place**, retrieve the auto-created IDs with methods
-      like `Class.EditableMesh:GetVertexFaceUV()|GetVertexFaceUV()` and set
-      their values directly. This is more performant and avoids leaving unused
-      IDs in the mesh:
-
-      ```lua
-      -- Create a triangle
-      local faceId = editableMesh:AddTriangle(v0, v1, v2)
-
-      -- Get the UV IDs that were automatically created
-      local uvId0 = editableMesh:GetVertexFaceUV(v0, faceId)
-      local uvId1 = editableMesh:GetVertexFaceUV(v1, faceId)
-      local uvId2 = editableMesh:GetVertexFaceUV(v2, faceId)
-
-      -- Set UV values on those existing UV IDs
-      editableMesh:SetUV(uvId0, Vector2.new(0, 0))
-      editableMesh:SetUV(uvId1, Vector2.new(1, 0))
-      editableMesh:SetUV(uvId2, Vector2.new(0, 1))
-      ```
-
-      **To create a seam** — where the same vertex needs different attribute
-      values on different faces (for example, a UV seam or a sharp edge) —
-      create new attribute IDs with `Class.EditableMesh:AddUV()|AddUV()`,
-      `Class.EditableMesh:AddNormal()|AddNormal()`, or
-      `Class.EditableMesh:AddColor()|AddColor()`, then assign them to the face
-      with `Class.EditableMesh:SetFaceUVs()|SetFaceUVs()`,
-      `Class.EditableMesh:SetFaceNormals()|SetFaceNormals()`, or
-      `Class.EditableMesh:SetFaceColors()|SetFaceColors()`:
-
-      ```lua
-      -- Create a triangle
-      local faceId = editableMesh:AddTriangle(v0, v1, v2)
-
-      -- Create new UV IDs with custom coordinates
-      local uv0 = editableMesh:AddUV(Vector2.new(0, 0))
-      local uv1 = editableMesh:AddUV(Vector2.new(1, 0))
-      local uv2 = editableMesh:AddUV(Vector2.new(0, 1))
-
-      -- Replace the face's UV IDs (creates a seam if the vertex had different UVs on another face)
-      editableMesh:SetFaceUVs(faceId, {uv0, uv1, uv2})
-      ```
-
-      #### Normal sharing and smooth vs. sharp edges
-
-      Because `AddTriangle` reuses normal IDs from adjacent faces by default,
-      meshes appear smooth. To create a **sharp edge** (crease) between faces,
-      create a separate normal ID for each face and assign it with
-      `Class.EditableMesh:SetFaceNormals()|SetFaceNormals()`:
-
-      <img src="../../../assets/engine-api/classes/EditableMesh/Faceted-Normals.png" alt="Two adjacent faces with separate normal IDs producing flat shading" width="690" />
-
-      ```lua
-      -- Two triangles sharing vertices v0 and v1, but with a sharp edge between them
-      local fid1 = editableMesh:AddTriangle(v0, v1, v2)
-      local fid2 = editableMesh:AddTriangle(v0, v3, v1)
-
-      -- Create separate normals for each face to produce a hard edge
-      local n1 = editableMesh:AddNormal() -- Auto-computed for fid1
-      local n2 = editableMesh:AddNormal() -- Auto-computed for fid2
-      editableMesh:SetFaceNormals(fid1, {n1, n1, n1})
-      editableMesh:SetFaceNormals(fid2, {n2, n2, n2})
-      ```
-
-      See also `Class.EditableMesh:SetNormal()|SetNormal()` to manually specify
-      a normal vector, and `Class.EditableMesh:ResetNormal()|ResetNormal()` to
-      revert a normal back to automatic computation.
+      See `Class.EditableMesh:AddFace()|AddFace()` for information on how all
+      faces are added, including those added by
+      `Class.EditableMesh:AddTriangle()|AddTriangle()`. This includes details
+      related to automatic attribute assignment, overriding attributes, and
+      more.
     code_samples: []
     parameters:
       - name: vertexId0
@@ -522,7 +563,7 @@ methods:
     returns:
       - type: int64
         summary: |
-          Face ID of the new face.
+          Stable face ID of the new face.
     tags: []
     deprecation_message: ''
     security: None
@@ -988,12 +1029,13 @@ methods:
       Finds the closest point on the mesh's surface.
     description: |
       Finds the closest point on the mesh's surface. Returns the face ID, point
-      on the mesh in local object space, and the barycentric coordinate of the
-      position within the face. See
+      on the mesh in local object space, the barycentric coordinates of the
+      position within the face, and the 3 vertex IDs that the barycentric
+      coordinates correspond to. See
       `Class.EditableMesh:RaycastLocal()|RaycastLocal()` for more information on
-      barycentric coordinates. When the mesh is skinned, this query operates
-      against the bind-pose geometry, not the deformed mesh as it appears at
-      runtime.
+      barycentric coordinates, including how they apply to quad faces. When the
+      mesh is skinned, this query operates against the bind-pose geometry, not
+      the deformed mesh as it appears at runtime.
     code_samples: []
     parameters:
       - name: point
@@ -1004,8 +1046,9 @@ methods:
     returns:
       - type: Tuple
         summary: |
-          Tuple of the face ID, point on the mesh in local object space, and the
-          barycentric coordinate of the position within the face.
+          Tuple of the face ID, point on the mesh in local object space, the
+          barycentric coordinate of the position within the face, and the 3
+          vertex IDs that the barycentric coordinate weights.
     tags: []
     deprecation_message: ''
     security: None
@@ -2193,15 +2236,23 @@ methods:
       Casts a ray and returns the intersection point, face ID, and barycentric
       coordinates.
     description: |
-      Casts a ray and returns a point of intersection, face ID, and barycentric
-      coordinates. The inputs and outputs of this method are in the mesh's local
-      object space. When the mesh is skinned, this raycast operates against the
-      bind-pose geometry, not the deformed mesh as it appears at runtime.
+      Casts a ray and returns the face ID, point of intersection, barycentric
+      coordinates, and the 3 vertex IDs that the barycentric coordinates
+      correspond to. The inputs and outputs of this method are in the mesh's
+      local object space. When the mesh is skinned, this raycast operates
+      against the bind-pose geometry, not the deformed mesh as it appears at
+      runtime.
 
-      A **barycentric coordinate** is a way of specifying a point within a face
-      as a weighted combination of the 3 vertices of the face. This is useful as
-      a general way of blending vertex attributes. See this method's code sample
-      as an illustration.
+      A **barycentric coordinate** is a way of specifying a point within a
+      triangle as a weighted combination of the triangle's 3 vertices. This is
+      useful as a general way of blending vertex attributes. See this method's
+      code sample as an illustration.
+
+      Because a barycentric coordinate is defined over exactly 3 vertices, when
+      the hit face is a quad, the coordinate and the returned vertex IDs refer
+      to 3 of the quad's 4 vertices forming the corners of the sub-triangle that
+      was hit. Use the returned vertex IDs, rather than the face's full vertex
+      list, to identify which vertices the weights apply to.
     code_samples:
       - EditableMesh-RaycastLocal
     parameters:
@@ -2218,8 +2269,8 @@ methods:
     returns:
       - type: Tuple
         summary: |
-          Tuple of the point of intersection, face ID, and barycentric
-          coordinates.
+          Tuple of the face ID, point of intersection, barycentric coordinates,
+          and the 3 vertex IDs that the barycentric coordinates weight.
     tags: []
     deprecation_message: ''
     security: None
@@ -2581,8 +2632,14 @@ methods:
       Sets the face's vertices to new vertex IDs.
     description: |
       Replaces the vertex IDs at each corner of the given face, in winding
-      order. The existing normal, UV, and color attributes on each corner are
-      preserved.
+      order. Passing 3 vertex IDs makes the face a triangle and 4 makes it a
+      quad, so this can convert a face between a triangle and a quad while
+      keeping the same face ID.
+
+      The normal, UV, and color attributes on each of the existing corners are
+      preserved. If a new corner is added, it follows the same automatic
+      attribute assignment described in
+      `Class.EditableMesh:AddFace()|AddFace()`.
     code_samples: []
     parameters:
       - name: faceId
@@ -2994,10 +3051,12 @@ methods:
     summary: |
       Splits all faces on the mesh to be triangles.
     description: |
-      Splits all faces on the mesh to be triangles. Currently this does nothing
-      since only triangles can be created, but if your code relies on triangles,
-      it's recommended that you call this method after calling
-      `Class.AssetService:CreateEditableMeshAsync()`.
+      Splits every quad face on the mesh into two triangle faces each. A
+      heuristic is used to determine which diagonal each quad should be split
+      along to produce better-shaped triangles. If your code relies on faces
+      being triangles, call this method after
+      `Class.AssetService:CreateEditableMeshAsync()`, which may produce quad
+      faces.
     code_samples: []
     parameters: []
     returns:
