@@ -1058,7 +1058,8 @@ methods:
       - type: Instance
         summary: |
           The `Class.Translator` instance for the specified locale.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       This function has been deprecated by
       `Class.LocalizationService:GetTranslatorForPlayerAsync()`, which functions

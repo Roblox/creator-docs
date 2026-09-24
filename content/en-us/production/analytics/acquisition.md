@@ -85,7 +85,7 @@ Here's a list of all the available acquisition sources:
 </table>
 
 <Alert severity="info">
-If your game has [beta mode](../publishing/publish-games-and-places.md#audience) enabled, all other analytics remain available, but **Home recommendations** metrics are zero; games in beta mode aren't included in **Recommended For You**, so they can't receive any traffic from it.
+If your game has [Exclude from Recommendations](../publishing/publish-games-and-places.md#audience) enabled, all other analytics remain available, but **Home recommendations** metrics are zero; games excluded from recommendations aren't included in **Recommended For You**, so they can't receive any traffic from it.
 </Alert>
 
 ## Acquisition attribution

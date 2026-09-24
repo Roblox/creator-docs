@@ -78,7 +78,7 @@ In Studio, these geometries are represented as `Class.MeshPart` objects and are 
   <figure><img src="../../assets/art/avatar/Textures-Blue.png" /><figcaption>A texture image map's opacity can combine with the `Class.MeshPart.Color` to apply custom skin tones to characters.</figcaption></figure>
 </GridContainer>
 
-Textures are image files that define the surface appearance of your character. You can create textures using a texture painting program or 3D modeling software. In Studio, you must import textures as image files and access them through the `Class.SurfaceAppearance` instance, or set as a `Class.MeshPart.TextureID` property.
+Textures are image files that define the surface appearance of your character. You can create textures using a texture painting program or 3D modeling software. In Studio, you must import textures as image files and set them to `Class.MeshPart` objects by a child `Class.SurfaceAppearance` object or the mesh's `Class.MeshPart.TextureID|TextureID` property.
 
 <Alert severity = 'warning'>
 When texturing parts of your character model's body, ensure that your character model includes a modesty layer over sensitive regions. See [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410#safety) for more information on Roblox's policies.
@@ -108,7 +108,7 @@ In Studio, each joint of the rigging armature is represented by `Class.Bone` obj
 
 <figure><img src="../../assets/art/avatar/Facial-Animation-Timeline.png" /><figcaption>Each required face pose is saved as a keyframe in the animation timeline.</figcaption></figure>
 
-Facial animation data from either the character's rigging armature or facial joints allow avatars to express emotions with their eyes, mouth, and teeth. Each character includes facial joints, skinning data, animation timeline data, and mapped pose data that allows it. In Studio, these facial animation elements are represented by a `Class.FaceControls` instance.
+Facial animation data from either the character's rigging armature or facial joints allow avatars to express emotions with their eyes, mouth, and teeth. Each character includes facial joints, skinning data, animation timeline data, and mapped pose data that allows these expressions. In Studio, these facial animation elements are represented by a `Class.FaceControls` instance.
 
 ### Cage meshes
 
@@ -130,7 +130,7 @@ If you are caging your own non-template character model, it's important to use o
   <figure><img src="../../assets/art/avatar/Attachments-Data-Model.png" width="100%"/><figcaption>Each avatar character must include their associated 19 attachment points</figcaption></figure>
 </GridContainer>
 
-Attachment points set the specific points where rigid accessories and in-game equipable objects attach to the character's body. These are not rendered on the platform, but they are represented visually as spheres in 3D modeling software when you use Roblox's **R15 Rig and Attachments** [project file](../../avatar/resources.md#project-files).
+Attachment points set the specific points where rigid accessories and in-game equippable objects attach to the character's body. These are not rendered on the platform, but they are represented visually as spheres in 3D modeling software when you use Roblox's **R15 Rig and Attachments** [project file](../../avatar/resources.md#project-files).
 
 When you import a rig with these visual representations, the spheres are created as `Class.Attachment` objects using standardized names.
 

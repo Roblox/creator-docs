@@ -10,34 +10,28 @@ This content is for creators who intend to create dynamic heads designated for t
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/OwhkWzSBnf0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 <br /><br />
 
-Roblox runs a rigorous validation to ensure the asset being uploaded to the Marketplace is compatible with all other assets on the Marketplace. For heads, validation primarily ensures that the head asset includes:
+Roblox runs a rigorous validation to ensure each asset that you upload to the Marketplace is compatible with all other assets on the Marketplace. For dynamic heads, validation primarily ensures that the head asset includes:
 
-- A correctly **configured cage** — to wear clothing and accessories.
-- Correctly configured **facial animation poses** — to perform basic universal expressions, such as blinking and smiling.
+- A correctly **configured outer cage** to wear clothing and accessories.
+- Correctly configured **facial animation poses** to perform basic universal expressions, such as blinking and smiling.
 
-The primary validation check for heads [uses the cage to detect facial animation](#facial-animation-detection). See below for a reference of how validation processes, as well as [common issues](#common-issues).
+The primary validation check for dynamic heads [uses the cage to detect facial animation](#facial-animation-detection). See below for a reference of how validation processes, as well as [common issues](#common-issues).
 
 <Alert severity = 'warning'>
 Validation also checks for other issues, such as poor caging or missing required FACS poses. For more information, see [common issues](#common-issues).
 </Alert>
 
-<Alert severity = "info" variant="outlined" color="primary" >
-<AlertTitle>Avatar Setup recommendation</AlertTitle>
-<br />
-[Avatar Setup](../../avatar-setup/index.md) is an automated tool that automatically generates components for your avatar character, **including the head cage and facial animation** required for Marketplace character models. You can save time by submitting character models without avatar components into the Avatar Setup tool and modifying the output.
+<Alert severity = 'info'>
+[Avatar Setup](../../avatar-setup/index.md) automatically generates components for your avatar characters, **including the head cage and facial animation** required for the Marketplace. You can save time by submitting character models without avatar components into Avatar Setup, then modifying the output. If necessary, you can download your output as a `.gltf`, then adjust the FACS or cage data in your third-party modeling tool.
 
-You can test and refine your Avatar Setup output by using the Avatar setup tool previews. You can even download your output as a `.gltf` and adjust the FACS or cage data in your DCC tools.
-
-You can alternatively manually modify your own cages and FACS animations within your DCC tools, which may require more time or additional iteration in your workflow, such as weight-painting adjustments, to ensure it meets Marketplace policies.
-
-To submit issues or feedback regarding the avatar auto setup tool, submit a [bug report](https://devforum.roblox.com/c/bug-reports/10).
+For issues or feedback regarding Avatar Setup, submit a [bug report](https://devforum.roblox.com/c/bug-reports/10).
 </Alert>
 
 ## Facial animation detection
 
-One of the primary dynamic head validation checks verifies if your head asset has **visually discernable** animations. To achieve this, the validation tool uses the head cage to ["project" landmarks](#landmark-projection) onto your base mesh.
+One of the primary dynamic head validation checks verifies if your head asset has **visually discernible** animations. To achieve this, the validation tool uses the head cage to "project" [facial landmarks](#landmark-projection) onto your base mesh.
 
-After these landmarks created, validation [tests various face animation poses](#facial-animation-detection) to ensure that these landmarks move and deform appropriately. Validation succeeds when it detects appropriate movement of the landmarks for eyes closed, mouth open, and basic happy/sad expressions.
+After these landmarks are created, validation [tests various face animation poses](#test-face-animations) to ensure that these landmarks move and deform appropriately. Validation succeeds when it detects appropriate movement of the landmarks for eyes closed, mouth open, and basic happy/sad expressions.
 
 Failure to either assign landmarks onto the base mesh, or failure to deform landmarks appropriately can occur for several reasons. For more information, see [common issues](#common-issues).
 
@@ -78,7 +72,10 @@ Now that the validation system knows where to check for the eyes and mouth, the 
 - Left and right eyes can close
 - Mouth can open
 - Basic happy and sad expressions
-  - For a full list of basic action units and poses, see [FACS animations](./specifications.md#facs-animation).
+
+<Alert severity = "info">
+For a full list of the minimum FACS poses your dynamic heads need to pass validation, see [Dynamic head specifications - FACS poses](./specifications.md#facs-poses).
+</Alert>
 
 The validation looks for the **relative change in the landmarks**. For example, when testing for right eye closing (FACS pose: `RightEyeClosed`), validation checks if the landmarks move from their original neutral state accordingly.
 
@@ -172,9 +169,9 @@ There may also be cases where the landmarks are correct, but the animation itsel
 
 ### Animation data missing
 
-Heads require [17 specific FACS poses](./specifications.md#facs-animation) that are used to test the 5 basic actions. Regardless of landmarks or other FACS animations, validation immediately fails if the minimum 17 poses were not detected.
+Heads require [17 specific FACS poses](./specifications.md#facs-poses) that are used to test the 5 basic actions. Regardless of landmarks or other FACS animations, validation immediately fails if the minimum 17 poses were not detected.
 
-For information on how to pose and map dynamic heads, see [Creating basic heads](../../art/characters/facial-animation/create-basic-heads.md).
+For information on how to pose and map dynamic heads, see [Create basic dynamic heads](../../art/characters/facial-animation/create-basic-heads.md).
 
 ## Working with non-humanoids
 
@@ -195,7 +192,7 @@ In this case, the cage still applies the expected landscapes to the head surface
 
 <figure>
 <img src="../../assets/art/avatar/Blocky-Head.png"/>
-<figcaption>Validation checks the displacement of the landmarks to verify facial animation. <br /><br />Make sure that your [FACS animations](./specifications.md#facs-animation) properly affect the region where landmarks are applied.</figcaption>
+<figcaption>Validation checks the displacement of the landmarks to verify facial animation. <br /><br />Make sure that your [FACS animations](./specifications.md#facs-poses) properly affect the region where landmarks are applied.</figcaption>
 </figure>
 
 </GridContainer>
@@ -215,7 +212,7 @@ In cases where eyes and mouths might be missing, the validation still projects l
 
 <figure>
 <img src="../../assets/art/avatar/Horn-Head.png"/>
-<figcaption>Validation checks the displacement of the landmarks to verify facial animation. <br /><br />Make sure that your [FACS animations](./specifications.md#facs-animation) properly affect the regions where the landmarks are applied.</figcaption>
+<figcaption>Validation checks the displacement of the landmarks to verify facial animation. <br /><br />Make sure that your [FACS animations](./specifications.md#facs-poses) properly affect the regions where the landmarks are applied.</figcaption>
 </figure>
 
 </GridContainer>

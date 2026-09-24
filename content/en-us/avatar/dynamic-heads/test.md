@@ -4,20 +4,20 @@ description: If you have a model with a live head, you can import the model into
 ---
 
 <Alert severity = 'info'>
-If you are looking to quickly test a character's head animation, use the [Avatar Setup tool](../../avatar-setup/index.md) to load your character and use the presets to preview various facial animations and head accessories.
+If you are looking to quickly test a character's head animation, use [Avatar Setup](../../avatar-setup/index.md) to load your character and use the presets to preview various facial animations and head accessories.
 </Alert>
 
-Manually test your dynamic head creations by importing character models with animatable heads into Studio and use the generated `Class.FaceControls` instance to pose or animate the face.
+Manually test your dynamic head creations by importing character models with dynamic heads into Studio and using the generated `Class.FaceControls` instance to pose or animate the face.
 
-When importing a dynamic head that supports facial animation into Studio, Studio creates a `Class.FaceControls` instance you can use to access and combine these individual poses to create expressions and animations. Unlike typical rigged models, you cannot access the facial `Class.Bone|Bones` of a head mesh directly in Studio.
+When importing a dynamic head into Studio, Studio creates a `Class.FaceControls` instance you can use to access and combine these individual poses to create expressions and animations. Unlike typical rigged models, you cannot access the facial `Class.Bone|Bones` of a head mesh directly in Studio.
 
-To set up heads with facial animation in your game:
+To set up dynamic heads with facial animation data in your game:
 
-1. [Import a model with an animatable head](../character-bodies/import.md). You can either create your own or use one of the provided reference model files.
+1. [Import a model with a dynamic head](../character-bodies/import.md). You can either create your own or use one of the provided reference model files.
 2. <Chip label="OPTIONAL" size="small" variant="outlined" /> [Import face accessories](#import-face-accessories) you want to deform with the facial expressions of your head. You can either create your own or use one of the provided reference accessory files.
-3. [Animate the head](#animate-heads) in the **Animation Editor** by either adding in individual animation tracks, or by using the **Face Animation Editor**.
+3. [Animate the head](#animate-heads) in the **Animation Editor** by either adding in individual animation tracks or by using the **Face Animation Editor**.
 
-If you want to experiment with pre-made heads before [making your own](../../art/characters/facial-animation/create-basic-heads.md), Roblox has a reference game you can access to see how heads interact with Studio's interface, as well as two reference models and accessories you can import directly into your own game:
+If you want to experiment with pre-made dynamic heads before [making your own](../../art/characters/facial-animation/create-basic-heads.md), Roblox provides a reference game for you to see how dynamic heads interact with Studio's interface, as well as two reference models and accessories you can import directly into your own game:
 
 <table>
   <thead>
@@ -37,11 +37,11 @@ If you want to experiment with pre-made heads before [making your own](../../art
     </tr>
     <tr>
       <td>[Goblin Character Model](../../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.zip)</td>
-      <td>A Goblin character model with an animatable head.</td>
+      <td>A Goblin character model with a dynamic head.</td>
     </tr>
     <tr>
       <td>[Blocky Character Model](../../assets/avatar/dynamic-heads/reference-files/BlockyCharacter.fbx)</td>
-      <td>A Blocky character model with an animatable head.</td>
+      <td>A Blocky character model with a dynamic head.</td>
     </tr>
     <tr>
       <td>[Blocky Face Accessories and Clothing](../../assets/avatar/dynamic-heads/reference-files/Blocky-Face-Accessories.zip)</td>
@@ -52,9 +52,9 @@ If you want to experiment with pre-made heads before [making your own](../../art
 
 ## Import face accessories
 
-You can import and equip face accessories that you want to deform with the facial expressions of your head. For example, when you import and equip eyebrows as a face accessory, you can animate the eyebrows to move with the character's eyes.
+You can import and equip face accessories that you want to deform with the facial expressions of your dynamic head. For example, when you import and equip eyebrows as a face accessory, you can animate the eyebrows to move with the character's eyes.
 
-By default, when you import a face accessory, it imports as a `Class.MeshPart` object. Using the [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md) (AFT), you can convert the `Class.MeshPart` into an `Class.Accessory` instance that is compatible with the head.
+When you import a face accessory, it imports as a `Class.MeshPart` object by default. Using the [Accessory Fitting Tool](../../avatar/accessory-fitting-tool.md) (AFT), you can convert the `Class.MeshPart` into an `Class.Accessory` instance that is compatible with the dynamic head.
 
 To import a face accessory:
 
@@ -98,7 +98,7 @@ The following options are available for the `Class.WrapLayer.AutoSkin` property:
 
 ## Animate heads
 
-Animatable head `Class.MeshPart|MeshParts` include a `Class.FaceControls` instance which allows you to access your facial pose properties.
+Dynamic head `Class.MeshPart|MeshParts` include a `Class.FaceControls` instance that allows you to access your facial pose properties.
 
 <GridContainer numColumns="2">
   <figure>

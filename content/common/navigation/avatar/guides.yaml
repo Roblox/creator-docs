@@ -81,13 +81,13 @@ navigation:
         section:
           - title: Overview
             path: /avatar/dynamic-heads/
-          - title: Validation
-            path: /avatar/dynamic-heads/validate
           - title: Specifications
             path: /avatar/dynamic-heads/specifications
           - title: Caging best practices
             path: /avatar/dynamic-heads/caging-best-practices
-          - title: Test in Studio
+          - title: Validation process
+            path: /avatar/dynamic-heads/validate
+          - title: Test dynamic heads
             path: /avatar/dynamic-heads/test
           - title: FACS poses reference
             path: /avatar/dynamic-heads/facs-poses-reference

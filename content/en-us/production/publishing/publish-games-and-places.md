@@ -183,35 +183,35 @@ A game's target audience can be set through its **Audience** setting:
 2. Navigate to **Configure** ⟩ **Settings**.
 3. Under **Audience**, choose from the options below:
 
-		<table>
-		<thead>
-			<tr>
-				<th>Audience</th>
-				<th>Description</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>**Private**</td>
-				<td>Available only to users who have **Edit** permissions for the game.</td>
-			</tr>
-			<tr>
-				<td>**Limited**</td>
-		<td>
-		Available only to those who are part of the selected category of users. Not discoverable to the general public on Roblox.
-		- **Playtesters** — Available to users who have **playtest** permissions for the game.
-		- **Friends** — Available to the game owner's friends. This option only appears for [user‑owned](../../projects/collaboration.md#user-owned-games) games.
-		- **Community Members** — Available only to group members. This option only appears for [group‑owned](../../projects/collaboration.md#group-owned-games) games.
-		</td>
-			</tr>
-			<tr>
-				<td>**Public**</td>
-				<td>Available and discoverable to the general public on Roblox.</td>
-			</tr>
-		</tbody>
-		</table>
+        <table>
+        <thead>
+        	<tr>
+        		<th>Audience</th>
+        		<th>Description</th>
+        	</tr>
+        </thead>
+        <tbody>
+        	<tr>
+        		<td>**Private**</td>
+        		<td>Available only to users who have **Edit** permissions for the game.</td>
+        	</tr>
+        	<tr>
+        		<td>**Limited**</td>
+        <td>
+        Available only to those who are part of the selected category of users. Not discoverable to the general public on Roblox.
+        - **Playtesters** — Available to users who have **playtest** permissions for the game.
+        - **Friends** — Available to the game owner's friends. This option only appears for [user‑owned](../../projects/collaboration.md#user-owned-games) games.
+        - **Community Members** — Available only to group members. This option only appears for [group‑owned](../../projects/collaboration.md#group-owned-games) games.
+        </td>
+        	</tr>
+        	<tr>
+        		<td>**Public**</td>
+        		<td>Available and discoverable to the general public on Roblox.</td>
+        	</tr>
+        </tbody>
+        </table>
 
-4. <Chip label="OPTIONAL" size="small" variant="outlined" /> For **Public** games, you can choose **Enable&nbsp;Beta&nbsp;Mode** to omit the game from the **Recommended&nbsp;For&nbsp;You** category on Roblox. Beta games are still public, but they have more limited reach and exposure. To widen your audience while still remaining in beta, create an ad campaign as outlined in [Ads Manager](../../production/promotion/ads-manager.md). If you enable sponsored ads, the game's analytics charts might show some users from **Recommended&nbsp;For&nbsp;You**.
+4. <Chip label="OPTIONAL" size="small" variant="outlined" /> For **Public** games, you can choose **Exclude&nbsp;from&nbsp;Recommendations** to omit the game from the **Recommended&nbsp;For&nbsp;You** category on Roblox. The game is still public, but has more limited reach and exposure. To widen your audience while still excluded from recommendations, create an ad campaign as outlined in [Ads Manager](../../production/promotion/ads-manager.md). If you enable sponsored ads, the game's analytics charts might show some users from **Recommended&nbsp;For&nbsp;You**.
 
 5. Click **Save Changes**.
 

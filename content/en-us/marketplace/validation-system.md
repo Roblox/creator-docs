@@ -547,7 +547,7 @@ When an avatar asset fails validation, Studio returns error messages that descri
   </tr>
   <tr>
     <td>`Head mesh is missing required FACS controls.`</td>
-    <td>This error fires when one or more of the required Facial Action Coding System (FACS) control poses are completely absent from the head mesh data.<br /><br />To fix this, add the missing blend shapes to your head mesh in your 3D modeling software and ensure each [required control](../avatar/dynamic-heads/specifications.md#facs-animation) name matches the expected FACS naming convention.</td>
+    <td>This error fires when one or more of the required Facial Action Coding System (FACS) control poses are completely absent from the head mesh data.<br /><br />To fix this, add the missing blend shapes to your head mesh in your 3D modeling software and ensure each [required control](../avatar/dynamic-heads/specifications.md#facs-poses) name matches the expected FACS naming convention.</td>
     <td>This check validates that your dynamic head mesh contains all 17 required FACS controls and that those controls are actively deforming the mesh.</td>
   </tr>
   <tr>
@@ -557,7 +557,7 @@ When an avatar asset fails validation, Studio returns error messages that descri
   </tr>
   <tr>
     <td>`Failed validation for dynamic head due to missing FACS information. You need to provide FACS controls for at least 17 poses.`</td>
-    <td>This error fires when the head mesh either contains no FACS data at all or has fewer than the minimum 17 [required pose targets](../avatar/dynamic-heads/specifications.md#facs-animation).<br /><br />To fix this, you must author the head mesh with all required FACS blend shapes in your 3D modeling software before exporting.</td>
+    <td>This error fires when the head mesh either contains no FACS data at all or has fewer than the minimum 17 [required pose targets](../avatar/dynamic-heads/specifications.md#facs-poses).<br /><br />To fix this, you must author the head mesh with all required FACS blend shapes in your 3D modeling software before exporting.</td>
     <td>This check validates that the dynamic head mesh contains valid FACS format data with at least 17 required facial poses.</td>
   </tr>
   <tr>
@@ -602,7 +602,7 @@ When an avatar asset fails validation, Studio returns error messages that descri
   </tr>
   <tr>
     <td>`FACS was detected shrinking your head, but altering the head size is against Marketplace policy for facial animations.`</td>
-    <td>This error fires when one or more [FACS poses](../avatar/dynamic-heads/specifications.md#facs-animation) cause the head mesh to shrink below the minimum allowed percentage of its original size (default: 95%).<br /><br />To fix this, adjust your facial blend shapes so they only move facial features without reducing the overall head volume.</td>
+    <td>This error fires when one or more [FACS poses](../avatar/dynamic-heads/specifications.md#facs-poses) cause the head mesh to shrink below the minimum allowed percentage of its original size (default: 95%).<br /><br />To fix this, adjust your facial blend shapes so they only move facial features without reducing the overall head volume.</td>
     <td>This check ensures that FACS poses on a dynamic head do not significantly alter the overall head size. The head mesh must remain consistent in scale across all FACS pose combinations to prevent abuse or visual glitches.</td>
   </tr>
   <tr>
@@ -1233,8 +1233,8 @@ The validation service will run in the background and report back results in the
 <tbody>
   <tr>
     <td>`Head cage is too far from Head mesh. Maximum distance between head cage and mesh is {max_sdf}, which is above allowed threshold {max_sdf_threshold}.`</td>
-    <td>This error triggers when the maximum distance from any cage vertex to the mesh surface exceeds the allowed threshold (default `0.60` units).<br /><br />To fix it, adjust your [head outer cage](../avatar/dynamic-heads/specifications.md#head-cage) vertices so they sit closer to the head mesh surface without large gaps.</td>
-    <td>This check measures the spatial distance between the [head outer cage](../avatar/dynamic-heads/specifications.md#head-cage) and the [head render mesh](../avatar/character-bodies/specifications.md#body-parts) using signed distance fields (SDF). The cage must wrap closely around the mesh for layered accessories to deform correctly on the head. For more information on caging dynamic heads, see [Dynamic head caging best practices](../avatar/dynamic-heads/caging-best-practices.md).</td>
+    <td>This error triggers when the maximum distance from any cage vertex to the mesh surface exceeds the allowed threshold (default `0.60` units).<br /><br />To fix it, adjust your [head outer cage](../avatar/dynamic-heads/specifications.md#outer-cage) vertices so they sit closer to the head mesh surface without large gaps.</td>
+    <td>This check measures the spatial distance between the [head outer cage](../avatar/dynamic-heads/specifications.md#outer-cage) and the [head render mesh](../avatar/character-bodies/specifications.md#body-parts) using signed distance fields (SDF). The cage must wrap closely around the mesh for layered accessories to deform correctly on the head. For more information on caging dynamic heads, see [Dynamic head caging best practices](../avatar/dynamic-heads/caging-best-practices.md).</td>
   </tr>
   <tr>
     <td>`Head cage intersects with head mesh. {negtiveSDFPercent}% of head cage vertices are inside head mesh.`</td>
@@ -1436,7 +1436,7 @@ The validation service will run in the background and report back results in the
   <tr>
     <td>`Cannot detect mouth open expression for the dynamic head. Please adjust cage landmarks for mouth to match where the mouth on the head and make sure it can open.`</td>
     <td>This error triggers when the mouth open metric falls below the minimum quality threshold, meaning the system cannot detect proper jaw/lip separation.<br /><br />To fix it, adjust the [cage landmarks](../avatar/dynamic-heads/specifications.md#facial-landmarks) around the mouth so they align with the mesh mouth geometry and allow the jaw vertices to move into an open position.</td>
-    <td>This check verifies that the dynamic head can perform [facial expressions](../avatar/dynamic-heads/specifications.md#facs-animation) for opening the mouth using Facial Action Coding System blendshapes. A working mouth open is fundamental for speech animation and emote expressions on avatar heads.</td>
+    <td>This check verifies that the dynamic head can perform [facial expressions](../avatar/dynamic-heads/specifications.md#facs-poses) for opening the mouth using Facial Action Coding System blendshapes. A working mouth open is fundamental for speech animation and emote expressions on avatar heads.</td>
   </tr>
   <tr>
     <td>`Cannot detect smile expression for the dynamic head. Please adjust cage landmarks for the mouth to match where the mouth on the head and make sure it can show smile expression.`</td>
@@ -1460,13 +1460,13 @@ The validation service will run in the background and report back results in the
   </tr>
   <tr>
     <td>`Dynamic heads on the Marketplace have no Head cages. Please create Head cage for the dynamic head.`</td>
-    <td>This error triggers when the Asset Quality Service reports `MISSING_CAGE_INFO`, meaning no cage geometry was found in the head asset.<br /><br />To fix it, create and include a properly structured [inner and outer cage](../avatar/dynamic-heads/specifications.md#head-cage) for the head that conforms to the head cage template.</td>
+    <td>This error triggers when the Asset Quality Service reports `MISSING_CAGE_INFO`, meaning no cage geometry was found in the head asset.<br /><br />To fix it, create and include a properly structured [inner and outer cage](../avatar/dynamic-heads/specifications.md#outer-cage) for the head that conforms to the head cage template.</td>
     <td>This check verifies that the dynamic head asset includes the required head cage mesh used for facial deformation and layered accessory support. The head cage is essential for mapping FACS expressions and enabling clothing to layer properly on the head.</td>
   </tr>
   <tr>
     <td>`Asset quality warning: Dynamic head expression score is {score}.`</td>
     <td>This warning triggers when the dynamic head expression score is below `100`, meaning one or more expressions could be improved even though they pass the minimum threshold.<br /><br />To address it, review which individual expression metrics are scoring lowest and refine those cage landmark positions.</td>
-    <td>This check evaluates the overall expression quality of the dynamic head across all measured facial metrics and produces a composite score. A high score indicates the head can clearly perform all [required facial expressions](../avatar/dynamic-heads/specifications.md#facs-animation).</td>
+    <td>This check evaluates the overall expression quality of the dynamic head across all measured facial metrics and produces a composite score. A high score indicates the head can clearly perform all [required facial expressions](../avatar/dynamic-heads/specifications.md#facs-poses).</td>
   </tr>
 </tbody>
 </Table>

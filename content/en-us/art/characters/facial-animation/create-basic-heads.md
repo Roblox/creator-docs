@@ -20,7 +20,7 @@ You can create or modify an existing model to become a dynamic head in third-par
 
 - The character body must follow Roblox's [modeling requirements](#modeling-requirements) and include appropriate head geometry, such as eyes, a mouth, and teeth.
 - The character body's head must include a [rig](#rig-and-skin-the-head), or internal joint structure, to drive the various deformation of vertices to create facial expressions.
-- The character body must have their facial poses [saved to the animation timeline](#pose-the-joints) and [mapped to the head mesh](#map-each-pose). Typical animatable heads include [50 standard base poses](../../../avatar/dynamic-heads/facs-poses-reference.md) that allow for a diverse range of expressions.
+- The character body must have their facial poses [saved to the animation timeline](#pose-the-joints) and [mapped to the head mesh](#map-each-pose). Typical dynamic heads include [50 standard base poses](../../../avatar/dynamic-heads/facs-poses-reference.md) that allow for a diverse range of expressions.
 
 To help you meet these requirements, this tutorial covers the processes of adding facial joints, posing them into facial expressions, and mapping 5 basic FACS poses on a Cubie reference character in Blender, as well as how to export the model for import into Studio.
 
@@ -308,7 +308,7 @@ To start creating face joint controls:
 
 When posing the joints of your character's head mesh to new positions, follow the [Facial Action Coding System](../../../avatar/dynamic-heads/facs-poses-reference.md) (FACS) as a reference for your facial expression poses. FACS is a comprehensive, anatomically-based system for describing all visually discernible facial movement, and it allows for all facial animations to be shareable between characters. This means that once you create a facial animation, you can reuse it for any character with an [animatable head](../../../avatar/dynamic-heads/index.md) with a `Class.FaceControls` instance.
 
-There are [50 base poses](../../../avatar/dynamic-heads/facs-poses-reference.md) that you can use in Roblox to portray a wide range of face emotions for your characters, but only a **specific** [17 poses](../../../avatar/dynamic-heads/specifications.md#facs-animation) are required to sell a dynamic head on the Marketplace. When you are deciding which poses you need, remember that FACS pose names are always based on the orientation of the character, not the camera. For example, `LeftEyeClosed` closes the character's left eye, which is to the right of the camera view.
+There are [50 base poses](../../../avatar/dynamic-heads/facs-poses-reference.md) that you can use in Roblox to portray a wide range of face emotions for your characters, but only a **specific** [17 poses](../../../avatar/dynamic-heads/specifications.md#facs-poses) are required to sell a dynamic head on the Marketplace. When you are deciding which poses you need, remember that FACS pose names are always based on the orientation of the character, not the camera. For example, `LeftEyeClosed` closes the character's left eye, which is to the right of the camera view.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftEyeClosedA.mp4" width="70%"></video>
@@ -397,7 +397,7 @@ If you don't map your poses, leave any empty strings, or try to import the head 
 
 After you finish posing each FACS pose that your character needs, you must map **each animation frame that you pose** to its corresponding FACS base or combination pose name. Mapping stores the joint positions and translations within the head `Class.MeshPart`, and when you begin to animate your head within the **Animation Editor**, the `Class.FaceControls` instance uses this stored data to transform your character's facial features to the applicable FACS pose.
 
-In addition to your facial poses, you need to map the `RootFaceJoint` so that Studio can properly locate it and hide all of the children joints within the `Class.FaceControls` instance on import. Remember, only a **specific** [17 poses](../../../avatar/dynamic-heads/specifications.md#facs-animation) are required to sell a dynamic head on the Marketplace.
+In addition to your facial poses, you need to map the `RootFaceJoint` so that Studio can properly locate it and hide all of the children joints within the `Class.FaceControls` instance on import. Remember, only a **specific** [17 poses](../../../avatar/dynamic-heads/specifications.md#facs-poses) are required to sell a dynamic head on the Marketplace.
 
 To map your saved poses and the `RootFaceJoint`:
 

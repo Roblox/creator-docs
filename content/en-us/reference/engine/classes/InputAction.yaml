@@ -121,6 +121,27 @@ properties:
       can_save: false
     capabilities:
       - Input
+  - name: InputAction.DisplayName
+    summary: |
+      Localized display name for this action.
+    description: |
+      A custom string used to show a localized display name for this action in
+      UI elements such as a controls help menu.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Input
+    simulationAccess: true
   - name: InputAction.Enabled
     summary: |
       Determines if the `InputAction` is enabled or not.
