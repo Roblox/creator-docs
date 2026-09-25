@@ -1,9 +1,9 @@
 ---
 title: Partitions and data distribution
-description: Explains the concept of a partition and per-partition limits.
+description: Explains the concept of a partition and how memory stores distribute data.
 ---
 
-With the release of the `Class.MemoryStoreHashMap` data structure, Roblox removed all existing limits for individual data structures and replaced them with a single, global "per-partition" throttling limit. The exact limit fluctuates based on internal values and how the automatic partitioning process distributes your data, but generally allows for much higher usage before throttling, particularly for hash maps. This new limit enables flexible usage of memory stores across all data structures.
+The MemoryStores API stores data on partitions so it can scale throughput across data structures. Sorted maps and queues each reside on one partition, while hash maps automatically spread items across many partitions. This page explains how that assignment works.
 
 ## Partitions
 
@@ -23,17 +23,4 @@ Unlike sorted maps and queues, hash maps are allotted multiple partitions, and d
 
 Note how the hash map exists on all partitions, and each partition has some subset of items.
 
-## Limits
-
-Having a per-partition limit allows for higher throughput to all data structures. It also favors hash maps, because they're distributed across all partitions.
-
-For example, consider an example per-partition limit of 50,000 requests per minute (RPM):
-
-- In the very best case, a sorted map and a queue are limited to 50,000 RPM, because each one resides on a single partition.
-- Requests to hash maps are spread across the item keys, which are themselves spread across partitions, so hash maps can have a much higher effective limit before throttling, many times that of the other data structures assuming that requests are spread across many item keys.
-- Although hash maps can achieve higher overall throughput by spreading requests across partitions, individual item keys are still rate limited to maintain system stability. If most of your traffic targets a single item key, that key may still be throttled.
-- To scale effectively and avoid these per-key limits, implement key sharding. Spread reads and writes evenly across multiple item keys to reduce bottlenecks and maintain smooth performance.
-
-<img src="../../assets/data/memory-store/Per-Partition-Limits-4.png" width="100%" />
-
-For this reason, if you don't need sorting or "first in, first out" functionality, hash maps are usually the best choice for a memory store data structure. For more information, see the [best practices](../../cloud-services/memory-stores/best-practices.md).
+For the request limits that apply to each partition and to individual hash map keys, see [Per-partition limits](../../cloud-services/memory-stores/index.md#per-partition-limits). For guidance on spreading load across keys and data structures, see [best practices](../../cloud-services/memory-stores/best-practices.md).

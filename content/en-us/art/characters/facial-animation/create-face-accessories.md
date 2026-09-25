@@ -4,29 +4,29 @@ description: Face accessories are 3D accessories that move and animate with a li
 ---
 
 <Alert severity="warning">
-   <b>This guide covers advanced topics.</b> Before you begin, you should have prior knowledge on modeling, UV mapping, rigging, animation, and how to set up a character in [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview).
+**This tutorial covers advanced topics.** Before you begin, you should have prior knowledge on modeling, UV mapping, rigging, animation, and how to set up a character in [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview).
 </Alert>
 
-A face accessory is a cosmetic `Class.Accessory` that attaches to the head and can include items such as hair, eyebrows, glasses, and facial hair. To create a face accessory that is compatible with [dynamic heads](../../../avatar/dynamic-heads/index.md), you use a similar design process as [layered accessories](../../../avatar/layered-accessories/index.md#creation-process) to allow your accessory model to deform and stretch on a head when the head is posed or animated.
+Face accessories are a type of [layered accessory](../../../avatar/layered-accessories/index.md) that equip to [dynamic heads](../../../avatar/dynamic-heads/index.md). As the head animates and emotes, face accessories like eyebrows, eyelashes, or glasses stretch and deform with the character's facial features.
 
-To create a face accessory, use a third-party modeling tool, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview), to create a 3D model with the following requirements:
+You can create a face accessory model in third-party modeling software, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview). When creating a face accessory, your accessory model must meet the following requirements:
 
-- The accessory model must meet Studio's [mesh requirements](../../../avatar/character-bodies/specifications.md).
-- The model must be parented (Blender) or bound (Maya) to an [R15 character rig](../../../avatar/character-bodies/specifications.md#rigging).
+- The accessory model must meet Studio's [modeling requirements](#modeling-requirements).
+- The model must be parented (Blender) or bound (Maya) to a character with a [standard](../../../avatar/character-bodies/specifications.md#standard-r15-rigs) or [advanced](../../../avatar/character-bodies/specifications.md#advanced-r15-rigs) R15 rig.
 - The model must include an inner and outer cage.
 
-This guide covers the basic process in Blender for applying rigging and cage data to a basic reference model using the Cubie model referenced in [Create basic heads](../../../art/characters/facial-animation/create-basic-heads.md).
+To help you meet these requirements, this tutorial covers the processes of connecting accessories to a Cubie character body's rigging armature from [Create basic dynamic heads](../../../art/characters/facial-animation/create-basic-heads.md), applying skinning data, and adding cages to the accessory, as well as how to export the accessory for import into Studio.
 
 <Alert severity="info">
-   This guide uses <a href="https://www.blender.org/download/releases/3-0/">Blender version 3.0</a>. If you are using another version of Blender, there might be minor differences in UI and settings.
+This tutorial uses <a href="https://www.blender.org/download/releases/5-2/">Blender version 5.2</a>. If you are using another version of Blender, there might be minor differences in UI and settings.
 </Alert>
 
 ## Reference files
 
-The following are face accessory reference files, including all example files from this guide:
+The following face accessory reference files include all checkpoint references throughout this tutorial:
 
 <Alert severity = 'warning'>
-The reference character model provided is meant for educational purposes and does not meet the avatar character [technical specifications](../../../avatar/character-bodies/specifications.md) for general use.
+The reference Cubie character model is for educational purposes only. It does not meet the technical avatar [character body specifications](../../../avatar/character-bodies/specifications.md) to be ready for the Marketplace.
 </Alert>
 
 <table>
@@ -39,11 +39,11 @@ The reference character model provided is meant for educational purposes and doe
 <tbody>
   <tr>
     <td><a href="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie-Complete.fbx">Cubie-Complete.fbx</a></td>
-    <td>The complete Cubie reference character, from <a href="../../characters/facial-animation/create-basic-heads.md">Creating Basic Heads</a>. This file is ready for import into Studio.</td>
+    <td>The complete Cubie reference character, from <a href="../../characters/facial-animation/create-basic-heads.md">Create basic dynamic heads</a>. This file is ready for import into Studio.</td>
   </tr>
   <tr>
     <td><a href="../../../assets/avatar/dynamic-heads/creating-face-accessories/reference-files/Cubie-Cage-Only.fbx">Cubie-Cage-Only.fbx</a></td>
-    <td>The full body <a href="../../../avatar/layered-accessories/project-files.md#caging-meshes">cage mesh</a> of the Cubie reference character. This includes the inner and outer cage meshes.</td>
+    <td>The full body cage mesh of the Cubie reference character. This includes the inner and outer cage meshes.</td>
   </tr>
   <tr>
     <td><a href="../../../assets/avatar/dynamic-heads/creating-face-accessories/reference-files/CubieEyebrow_Geo.fbx">Cubie-Eyebrow-Geo.fbx</a></td>
@@ -51,7 +51,7 @@ The reference character model provided is meant for educational purposes and doe
   </tr>
   <tr>
     <td><a href="../../../assets/avatar/dynamic-heads/creating-face-accessories/reference-files/Cubie-Eyebrow-Rigged-And-Caged.fbx">Cubie-Eyebrow-Rigged-And-Caged.fbx</a></td>
-    <td>The Cubie eyebrow model, correctly rigged and caged following the instructions in this guide. This file is ready for import into Studio.</td>
+    <td>The Cubie eyebrow model, correctly rigged and caged following the instructions in this tutorial. This file is ready for import into Studio.</td>
   </tr>
   <tr>
     <td><a href="../../../assets/avatar/dynamic-heads/creating-face-accessories/reference-files/CubieHawkHair_Geo.fbx">Cubie-Hawk-Hair.fbx</a></td>
@@ -64,108 +64,109 @@ The reference character model provided is meant for educational purposes and doe
 </tbody>
 </table>
 
-## Modeling
+## Modeling requirements
 
-This guide uses a simple eyebrow reference as a demonstration for creating a face accessory. If rigging and caging a different model, ensure that your model meets the [character specifications](../../../avatar/character-bodies/specifications.md) for Studio import.
+This tutorial uses a simple eyebrow reference as a demonstration on how to create a face accessory. If you're rigging and caging a different face accessory, ensure that your accessory model meets Roblox's [layered accessory specifications](../../../avatar/layered-accessories/specifications.md), including the [face accessory](../../../avatar/layered-accessories/specifications.md#face-accessories) requirements.
 
-<img src="../../../assets/avatar/dynamic-heads/creating-face-accessories/Importing-Eyebrows.png" width="70%" />
+If creating your own face accessory mesh, consider the following guidelines:
 
-If creating your own model, consider the following guidelines:
+- Model your face accessory mesh with your character body model for best results and fit.
+- When possible, try to match up the edges of your face accessory's geometry with the edges/vertices of the underlying head topology. This improves the deformation of the accessory with the underlying head model.
+- Some accessories like eyebrows can extrude or slightly intersect the character model mesh to achieve a certain cosmetic look.
+- When working with a face accessory with multiple pieces, such as eyebrows or eyelashes, combine the meshes to a single mesh once you are done modeling and rigging.
+- Face accessory meshes do not require a `_Geo` naming convention.
 
-- Model your accessory with your character model for best results and fit.
-- When possible, try to match up the edges of your model geometry with the edges/vertices of the underlying head topology. This improves the deformation of the accessory with the underlying head model.
-- Some accessories, like eyebrows, can extrude or slightly intersect the character model mesh to achieve a certain cosmetic look.
-- When working with an accessory with multiple pieces, such as eyebrows, combine the meshes to a single mesh once the modeling and fitting is completed.
-- Face accessory meshes do not require a **\_Geo** naming convention.
+## Rig the eyebrows
 
-## Rigging
+**Rigging** is the process of connecting a mesh with an internal rig so that mesh surfaces can rotate and move as joints rotate and move. You must [rig](../../../art/modeling/rigging.md) your face accessory to a character body's bone structure so that the accessory can bend and deform along with the character's facial poses.
 
-You must [rig](../../../art/modeling/rigging.md) your accessory to the character's bone structure so the accessory can bend and deform along with your character's facial poses. After rigging, you can skin your model in your modeling tool, or you can transfer skinning data from your character to the accessory at runtime by using [Automatic skinning transfer](../../../avatar/automatic-skinning-transfer.md).
+After rigging, you can skin your model in your modeling tool, or you can transfer skinning data from your character to the face accessory at runtime by using [Automatic skinning transfer](../../../avatar/automatic-skinning-transfer.md).
 
 ### Project setup
 
-As an example in this guide, we are using the completed [basic Head model](../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie-Complete.fbx) from [Create a basic head](../../../art/characters/facial-animation/create-basic-heads.md) and a [simple eyebrow model](../../../assets/avatar/dynamic-heads/creating-face-accessories/reference-files/CubieEyebrow_Geo.fbx) in a new Blender project.
+This tutorial uses a simple eyebrow model and the complete version of the dynamic head model from [Create basic dynamic heads](../../../art/characters/facial-animation/create-basic-heads.md) in a new Blender project.
 
 To set up your Blender project:
 
 1. Open a new **General** project in Blender.
-2. Select the default shape, camera, and lights, then press <kbd>Delete</kbd>.
-3. Import the character rig you intend to parent the accessory to, in this example: [Cubie-Complete.fbx](../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie-Complete.fbx).
+1. Select the default shape, camera, and lights, then press <kbd>Delete</kbd>.
+1. Import [Cubie-Complete](../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie-Complete.fbx).
 
    <img src="../../../assets/avatar/dynamic-heads/creating-face-accessories/Importing-Cubie.png" width="80%" />
 
-4. To simplify the workspace, you can delete the inner and outer cage mesh objects since you will later import a full-body cage in the [Caging](#caging) step.
+1. To simplify the workspace, delete the inner and outer cage mesh objects. You will import a full-body cage later in the tutorial.
 
-   <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-face-accessories/videos/Removing-Character-Cage.mp4">
-   </video>
+   <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-face-accessories/videos/Removing-Character-Cage.mp4"></video>
 
-5. Import your accessory model, in this example: [CubieEyebrow_Geo.fbx](../../../assets/avatar/dynamic-heads/creating-face-accessories/reference-files/CubieEyebrow_Geo.fbx).
-   1. If required, reposition the accessory model on the face.
-   2. You can hide the armature temporarily to verify model placement.
+1. Import [CubieEyebrow_Geo](../../../assets/avatar/dynamic-heads/creating-face-accessories/reference-files/CubieEyebrow_Geo.fbx). If necessary:
+
+   1. Reposition the accessory model on the face.
+   1. Hide the armature temporarily to verify model placement.
 
    <img src="../../../assets/avatar/dynamic-heads/creating-face-accessories/Importing-Eyebrows.png" width="70%" />
 
-### Parent armature
+### Parent accessory to armature
 
-Connect the mesh object to the character's armature by parenting the armature to the mesh object. To parent the armature:
+Now that you have the accessory in your scene, it's time to connect it to the character's rigging armature so that its joints can move the eyebrows appropriately. It's recommended to parent with automatic weights because it automatically applies influences to your model, which can save you time during the [skinning](#skin-the-eyebrows) process.
 
-1. In Object Mode, hold <kbd>Shift</kbd> and **click** the accessory model and then any of the character bones.
-2. Right click and select **Parent**, then select **With Automatic Weights**.
-   <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-face-accessories/videos/Parent-Armature.mp4">
-   </video>
+To parent your accessory to the armature:
 
-<Alert severity="warning">
-Parenting with Automatic Weights automatically applies some influences to your model which can save some time during the [optional skinning](#optional-skinning) step. You can alternatively **Parent** with **Empty Weights** to not apply any skinning influence to your accessory mesh. See Blender's documentation on [Automatic Weights](https://docs.blender.org/manual/en/latest/animation/armatures/skinning/parenting.html#with-automatic-weights) for more information.
-</Alert>
+1. In **Object** mode, hold <kbd>Shift</kbd> and click **CubieEyebrow**.
+1. While still holding <kbd>Shift</kbd>, click any of the character joints.
+1. Right-click in the viewport, then select **Parent** > **Armature Deform** > **With Automatic Weights**.
 
-### Optional skinning
-
-In many cases, you can skip the [skinning](../../../art/modeling/rigging.md) process for your accessory and use Roblox's [automatic skinning transfer](../../../avatar/automatic-skinning-transfer.md) instead. You can still apply manual skinning through a modeling software and opt to use automatic skinning transfer later. With automatic skinning transfer, your end result and quality may vary.
-
-If you do not intend to apply skinning manually, continue directly to [caging](#caging).
+   <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-face-accessories/videos/Parent-Armature.mp4"></video>
 
 <Alert severity="info">
-If you are skinning your accessory in your modeling software on a character model with a fully posed head, you can test the accessory on various FACS poses saved to the timeline within your modeling software before importing into Studio.
+You can parent with **Empty Weights** to not apply any skinning influence to your accessory mesh, giving you more manual control over the skinning process. For more information, see Blender's official [Automatic Weights](https://docs.blender.org/manual/en/latest/animation/armatures/skinning/parenting.html#with-automatic-weights) documentation.
 </Alert>
 
-## Caging
+## Skin the eyebrows
 
-The caging process for face accessories is similar to caging layered accessories and shares the same modeling and caging requirements. After rigging, import a full-body inner and outer cage to your project, rename the cages, then stretch the vertices of the Outer Cage to cover the accessory model with minimal space.
+**Skinning** is the process of assigning which parts of the mesh surface move and rotate with specific joints. In many cases, you can skip the skinning process for your accessory and use Studio's [Automatic Skinning Transfer](../../../avatar/automatic-skinning-transfer.md) process instead. Alternatively, if you want manual control, you can apply manual skinning in Blender using the same process in [Create basic dynamic heads - Skin joints](./create-basic-heads.md#skin-joints).
+
+<Alert severity="info">
+Because the complete version of the dynamic head model includes a fully rigged and posed head, you can test your accessory on various FACS poses saved to the timeline within Blender, then adjust your skinning data as necessary.
+</Alert>
+
+## Add cages
+
+The caging process for face accessories is similar to caging layered accessories and shares the same modeling and caging requirements. After you finish rigging, it's time to import a full-body inner and outer cage to your project, rename the cages, then stretch the vertices of the Outer Cage to cover the accessory model with minimal space.
 
 To cage the eyebrow accessory:
 
-1. With Blender's .fbx importer, import [`Cubie-Cage-Only.fbx`](../../../assets/avatar/dynamic-heads/creating-face-accessories/reference-files/Cubie-Cage-Only.fbx). This includes a single full-body inner and outer cage mesh for the Cubie model.
+1. Import [Cubie-Cage-Only](../../../assets/avatar/dynamic-heads/creating-face-accessories/reference-files/Cubie-Cage-Only.fbx). This includes a single full-body inner and outer cage mesh for the Cubie model.
+
    <img src="../../../assets/avatar/dynamic-heads/creating-face-accessories/Importing-Cage.png" width="80%" />
-2. Rename cages to begin with "CubieEyebrow" before the **\_InnerCage** and **\_OuterCage** affix.
-3. In Edit mode, extend the outer cage to fit over the accessory with minimal space. Use various material and viewing options to easily manipulate the correct vertices on the outer cage.
+
+1. Rename cages to begin with **CubieEyebrow** before the **\_InnerCage** and **\_OuterCage** affix.
+1. In **Edit** mode, extend the outer cage to fit over the accessory with minimal space. Use various material and viewing options to easily manipulate the correct vertices on the outer cage.
 
    <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-face-accessories/videos/Editing-Outer-Cage.mp4">
    </video>
 
 If you are using automatic skinning transfer, you can ensure that automatic skinning transfer only applies to specific parts of the accessory by removing unnecessary sections of the cage. For more information, see [Automatic Skinning Transfer - Modify character cages](../../../avatar/automatic-skinning-transfer.md#modify-character-cages).
 
-## Export
+## Export your accessory
 
 Export your model when ready to test your accessory model in Studio or when setting up for final export. When exporting face accessories, keep in mind the following guidelines:
 
-- Ensure that the final accessory model follows [Studio's Modeling Requirements](../../../avatar/character-bodies/specifications.md), including properly named mesh and cage objects.
+- Ensure that the final accessory model follows Roblox's [layered accessory specifications](../../../avatar/layered-accessories/specifications.md), including properly named mesh and cage objects.
 - Do not export any unnecessary data, such as animation data, or light and camera objects.
-- If exporting PBR textures, follow [texture modeling requirements](../../../avatar/character-bodies/specifications.md#surfaceappearance) when exporting texture images from your texture software.
+- If exporting PBR textures, follow Roblox's [texture specifications](../../../avatar/layered-accessories/specifications.md#textures) when exporting texture images from your texture software.
 
-To export:
+To export your face accessory:
 
-1. Ensure only the **accessory mesh**, **armature object** and **cages meshes** are exported. Delete all other objects in the workspace.
-   1. You can quickly filter out **Geo** and **Att** named objects in your workspace to quickly delete them.
+1. Ensure only the **accessory mesh**, **armature object** and **cage meshes** are exported. Delete all other objects in the workspace. You can quickly filter out **Geo** and **Att** named objects in your workspace to quickly delete them.
 
-      <video controls width="70%" src="../../../assets/avatar/dynamic-heads/creating-face-accessories/videos/Removing-Extra-Objects.mp4">
-      </video>
+      <video controls width="70%" src="../../../assets/avatar/dynamic-heads/creating-face-accessories/videos/Removing-Extra-Objects.mp4"></video>
 
-2. Follow Studio's [Export Requirements for Blender](../../../avatar/rigid-accessories/export.md) and save the file to your preferred location. The final export of the eyebrow `.fbx` is available for reference.
+1. Follow the [layered accessories export settings](../../../avatar/layered-accessories/export.md#blender-export-settings) and save the file to your preferred location. The final export of the eyebrow `.fbx` is available for reference.
 
 ## Test in Studio
 
-To use your exported model into Studio as an `Class.Accessory`, use the [Accessory Fitting Tool](../../../avatar/accessory-fitting-tool.md) to test and generate the accessory object. At this point, you can equip the accessory to a humanoid character. If you intend to transfer skinning data from your character to the accessory model at runtime, you can enable [automatic skinning transfer](../../../avatar/automatic-skinning-transfer.md) for your accessory.
+To use your exported model into Studio as an `Class.Accessory`, use the [Accessory Fitting Tool](../../../avatar/accessory-fitting-tool.md) to test and generate the accessory object. At this point, you can equip the accessory to a humanoid character. If you intend to transfer skinning data from your character to the accessory model at runtime, also enable [automatic skinning transfer](../../../avatar/automatic-skinning-transfer.md) for your accessory.
 
 <Alert severity="info">
-If following the references provided by this guide, only **EnabledOverride** applies the skinning transfer in Studio, since some skinning data will have been applied to the model during the [parenting](#parent-armature) process.
+If following the references provided by this tutorial, only **EnabledOverride** applies the skinning transfer in Studio, since some skinning data will have been applied to the model during the [parenting](#parent-accessory-to-armature) process.
 </Alert>

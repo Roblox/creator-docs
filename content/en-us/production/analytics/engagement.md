@@ -24,7 +24,7 @@ Average session time is the total time users spend in your game divided by the n
 
 ### Get users into the fun immediately
 
-Usually, the friction of joining and leaving angame is very low on Roblox, so first impressions are extremely important, and you want to get users into the fun part of your game as fast as possible with the following strategies:
+Usually, the friction of joining and leaving a game is very low on Roblox, so first impressions are extremely important, and you want to get users into the fun part of your game as fast as possible with the following strategies:
 
 1. **Ensure users have fun within the first five minutes of joining your game**: Think about what makes your game fun and what makes it stand out from other games. You should be able to communicate these to your users within the first five minutes of joining your game.
 

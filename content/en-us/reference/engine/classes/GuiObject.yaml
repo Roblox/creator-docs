@@ -1444,10 +1444,16 @@ events:
       if it is being tracked in a global variable.
 
       The code below demonstrates how to determine the `Datatype.Vector2` offset
-      of the user's mouse relative to a GUI element:
+      of the user's mouse relative to a GUI element.
+      `Class.GuiObject.AbsolutePosition|AbsolutePosition` is measured inside the
+      screen's GUI inset, while the `x` and `y` arguments of this event are
+      screen coordinates that include it, so the sample calls
+      `Class.GuiService:GetGuiInset()|GetGuiInset()` to reconcile the two spaces
+      instead of assuming a fixed inset size.
 
       ```lua
       local Players = game:GetService("Players")
+      local GuiService = game:GetService("GuiService")
 
       local CustomScrollingFrame = script.Parent
       local SubFrame = CustomScrollingFrame:FindFirstChild("SubFrame")
@@ -1455,11 +1461,12 @@ events:
       local mouse = Players.LocalPlayer:GetMouse()
 
       local function getPosition(X, Y)
+      	local topLeftInset = GuiService:GetGuiInset()
+
       	local gui_X = CustomScrollingFrame.AbsolutePosition.X
       	local gui_Y = CustomScrollingFrame.AbsolutePosition.Y
 
-
-      	local pos = Vector2.new(math.abs(X - gui_X), math.abs(Y - gui_Y - 36))
+      	local pos = Vector2.new(math.abs(X - gui_X), math.abs(Y - gui_Y - topLeftInset.Y))
       	print(pos)
       end
 

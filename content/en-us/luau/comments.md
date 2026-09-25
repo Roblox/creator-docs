@@ -51,6 +51,8 @@ If necessary, you can nest multiple brackets inside a block comment using the sa
 ]=]
 ```
 
+If you place a block comment immediately before a declaration, the Script Editor displays the comment as an on-hover documentation tooltip. This also works for declarations inside type expressions such as `typeof()`. See [Autocomplete features](../studio/script-editor.md#autocomplete-features) for details.
+
 ## Comment directives
 
 Luau uses comments that start with `!` to control features like [type checking](type-checking.md), [native code generation](native-code-gen.md), and [linting](https://luau.org/lint).

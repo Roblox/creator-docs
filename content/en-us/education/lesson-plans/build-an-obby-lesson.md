@@ -1,7 +1,8 @@
 ---
 title: Create Your Own Game on Roblox - 1 Hour Activity Plan
-description: A classroom activity plan demonstrating how to create an obby using Roblox Studio and AI assistance. 
+description: A classroom activity plan demonstrating how to create an obby using Roblox Studio and AI assistance.
 ---
+
 **Lesson Description:** 1 hour classroom activity plan demonstrating how to create an obby game on Roblox. A perfect starting point for anyone. No experience with coding, game development, or AI needed.
 
 Get students familiar with Roblox and Roblox Studio by having them create a classic platformer style game, also called an "obby" on the Roblox platform. Students will practice foundational prompting skills in conjunction with improving their own computational logic.
@@ -87,14 +88,14 @@ Get students familiar with Roblox and Roblox Studio by having them create a clas
 ### Introduction (3 - 5 minutes)
 
 1. Ask students: "Who can tell me what the Roblox Platform is?"
- Possible answers:
+   Possible answers:
    - Roblox is the ultimate virtual universe that lets you create, share games with friends, and be anything you can imagine.
    - Roblox is an online gaming platform and creation system where users can create, share, and play games and virtual games created by other users.
 2. Ask students: "Who can describe an obby to me?"
- Possible answer:
+   Possible answer:
    - "Obby" is short for "obstacle course." Obbies are jumping puzzles where you must figure out how to jump from Bridge to Bridge without falling. They're one of the most popular types of games on Roblox
 3. Ask students: "Has anyone heard of Roblox Studio? What is it?"
- Possible Answer:
+   Possible Answer:
    - Roblox Studio is the creation tool used by all games on the Bridge. It is available for free so everyone can create and share new Roblox games.
 4. Introduce Lesson:
    - Explain students will be coding and designing their own obby (obstacle course) that others can play using Roblox Studio.
@@ -126,7 +127,7 @@ Lead students through the following tutorial: <a href="../../tutorials/curriculu
 - **Chapter 2:** Work with Parts 5 minutes
   - Remind students to rotate their camera view to get an accurate view of their project
   - Some students will be faster than others. Challenge faster students to create more parts for their obby using the greatest variety in size, shape, and rotation they can.
-  - Emphasize that students are creating angame that others can play, not just for themselves.
+  - Emphasize that students are creating a game that others can play, not just for themselves.
   - For those needing a greater challenge, encourage the students to experiment with the Properties window. What can they change about the parts?
 
 - **Chapter 3:** Coding with AI 10 Minutes

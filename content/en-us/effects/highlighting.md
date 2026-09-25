@@ -3,7 +3,7 @@ title: Highlighting objects
 description: Highlighting objects lets you call attention to specific objects within your game.
 ---
 
-The `Class.Highlight` instance is a visual effect which you can use to call attention to a specific object within angame. Every highlight effect has a silhouette **outline** that surrounds the object and a solid overlay
+The `Class.Highlight` instance is a visual effect which you can use to call attention to a specific object within a game. Every highlight effect has a silhouette **outline** that surrounds the object and a solid overlay
 **interior** that displays over the object. You can customize both of these components independently to modify the highlight's visual appearance.
 
 <GridContainer numColumns="3">

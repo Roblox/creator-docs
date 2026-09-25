@@ -33,7 +33,7 @@ This tutorial uses <a href="https://www.blender.org/download/releases/5-2/">Blen
 The following dynamic head reference files include all checkpoint references throughout this tutorial:
 
 <Alert severity = 'warning'>
-The reference Cubie character model is for educational purposes only. It does not meet the avatar character [technical specifications](../../../avatar/character-bodies/specifications.md) to be ready for the Marketplace.
+The reference Cubie character model is for educational purposes only. It does not meet the technical avatar [character body specifications](../../../avatar/character-bodies/specifications.md) to be ready for the Marketplace.
 </Alert>
 
 <table>

@@ -86,7 +86,28 @@ For a single sorted map or queue, the following size and item count limits apply
 
 ### Per-partition limits
 
-See [per-partition limits](per-partition-limits.md).
+In addition to the game-level [request unit quota](#api-request-limits), memory stores apply request limits to each partition as a safeguard that protects the stability of the service for all games. These limits aren't a quota that your game is allocated, and they aren't a hard ceiling on the throughput your game can achieve. The following values are estimates. They are configured on the Roblox backend and can change, so don't design against them as fixed numbers.
+
+Every request counts toward the limit of the [partition](../../cloud-services/memory-stores/per-partition-limits.md#partitions) that holds the item, whatever the data structure. You can currently expect throttling to begin at roughly **30,000 request units per minute** for a single partition, so aim to stay well below that rate. How much of that limit a data structure consumes depends on how its items are distributed:
+
+- **Sorted maps and queues** each reside on a single partition, so every request to one of these data structures counts toward the same partition limit.
+- **Hash maps** spread their items across many partitions, so traffic spread across many item keys rarely approaches the limit of any one partition.
+
+Hash maps have an additional limit on each item key of approximately **5,000 write request units per minute** and **15,000 read request units per minute**. This per-key limit applies on top of the per-partition limit, so a frequently accessed key can hit either one. The per-key limit applies only to single-key operations: the read limit applies to `Class.MemoryStoreHashMap:GetAsync()`, the write limit applies to `Class.MemoryStoreHashMap:SetAsync()` and `Class.MemoryStoreHashMap:RemoveAsync()`, and `Class.MemoryStoreHashMap:UpdateAsync()` counts against both the read and write limits. `Class.MemoryStoreHashMap:ListItemsAsync()` scans partitions rather than a single key, so only the per-partition limit applies to it.
+
+<img src="../../assets/data/memory-store/Per-Partition-Limits-4.png" width="100%" />
+
+If you don't need sorting or first-in, first-out functionality, a hash map is usually the best choice because it can spread load across partitions.
+
+When requests exceed a partition or per-key limit, the service throttles them and returns a `PartitionRequestsOverLimit` status code, which you can monitor with the [observability](../../cloud-services/memory-stores/observability.md) dashboard.
+
+If you expect a data structure or an item key to receive a high, sustained request rate, [shard](../../cloud-services/memory-stores/best-practices.md#distribute-load-with-sharding) it so that the load spreads across more partitions or keys. Spread reads and writes evenly across multiple item keys to stay within per-key limits. You can also reduce the request rate by caching values on the server and rechecking them after an interval, batching requests where possible, and applying [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) when you receive throttling responses.
+
+<Alert severity="info">
+We strive to be as transparent as possible about rate limits, but additional, undocumented limits might apply, including for DDoS protection and service stability. Always ensure your game handles throttling responses. See [Troubleshooting](#troubleshooting) for guidance.
+
+If you hit an undocumented rate limit that blocks your use case (or you would like higher limits), leave feedback explaining your needs in the [Developer Forum](https://devforum.roblox.com/).
+</Alert>
 
 ## Best practices
 
@@ -174,7 +195,7 @@ The following table lists and describes all status codes of API responses availa
     </tr>
     <tr>
       <td>PartitionRequestsOverLimit</td>
-      <td>Exceeds partition request unit limit.</td>
+      <td>Exceeds a <a href="#per-partition-limits">per-partition or per-key request unit limit</a>.</td>
     </tr>
     <tr>
       <td>TotalRequestsOverLimit</td>

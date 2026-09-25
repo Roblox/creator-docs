@@ -620,7 +620,7 @@ navigation:
             path: /cloud-services/memory-stores/hash-map
           - title: Observability
             path: /cloud-services/memory-stores/observability
-          - title: Per-partition limits
+          - title: Partitions and data distribution
             path: /cloud-services/memory-stores/per-partition-limits
           - title: Best practices
             path: /cloud-services/memory-stores/best-practices

@@ -145,7 +145,13 @@ methods:
 
       - `Id` (string)
       - `Title` (string)
+      - `Subtitle` (string)
       - `Description` (string)
+      - `DisplayTitle` (string)
+      - `DisplaySubtitle` (string)
+      - `DisplayDescription` (string)
+      - `ThumbnailIds` (array of numbers): Asset IDs for the event thumbnails.
+        The first ID is the primary thumbnail.
       - `StartTime` (dictionary)
         - `Day` (number)
         - `Year` (number)

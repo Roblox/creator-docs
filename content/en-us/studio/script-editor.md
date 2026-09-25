@@ -37,7 +37,15 @@ The Script Editor's autocomplete features generate code-related information that
 
    <img src="../assets/studio/script-editor/Autocomplete-API.png" width="780" alt="Autocomplete showing suggestions based on a Roblox Engine API." />
 
-- **On-hover tooltips** that you can customize with your own defined documentation.
+- **On-hover tooltips** that you can customize with your own defined documentation. Place a [block comment](../luau/comments.md#block-comments) immediately before a function, variable, or other declaration, and the Script Editor shows that comment as a tooltip when you hover over the name later. This also works when the declaration appears inside a type expression, such as `typeof()`:
+
+  ```lua
+  export type Icon = {
+  	new: typeof(--[[Constructs an empty icon.]] function(): Icon
+  		return (nil :: any) :: Icon
+  	end),
+  }
+  ```
 
    <img src="../assets/studio/script-editor/Autocomplete-CustomDocs.png" width="780" alt="Autocomplete showing custom documentation." />
 

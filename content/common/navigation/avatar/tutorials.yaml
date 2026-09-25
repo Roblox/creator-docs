@@ -20,7 +20,7 @@ navigation:
         path: /art/accessories/from-existing
       - title: Rig and cage an existing model
         path: /art/accessories/rig-and-cage-existing-models
-      - title: Create basic heads
+      - title: Create basic dynamic heads
         path: /art/characters/facial-animation/create-basic-heads
       - title: Create face accessories
         path: /art/characters/facial-animation/create-face-accessories

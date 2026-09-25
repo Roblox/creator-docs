@@ -92,7 +92,7 @@ methods:
       these callbacks to process messages as soon as they arrive, as well as
       respond to open, close, and error events.
 
-      There is a limit of six total clients allowed at one time. Close streams
+      There is a limit of four total clients allowed at one time. Close streams
       that you no longer need with `Class.WebStreamClient:Close()`. When the
       stream is no longer needed, you should disconnect any associated
       `Datatype.RBXScriptConnection|RBXScriptConnections` to avoid memory leaks.
