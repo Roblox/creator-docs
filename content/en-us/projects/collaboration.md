@@ -122,7 +122,7 @@ If you're the group owner or a member with sufficient permissions, you can confi
 
 1. From the [Creator Dashboard](https://create.roblox.com/dashboard/creations), expand the account switcher in the upper‑left and select the group.
 1. Expand the account switcher again and select **Roles**.
-1. Enable [Edit all group experiences](../projects/groups.md#roles-and-permissions) for roles that should have editing permission. Remember to click **Save Changes** for each role that you change.
+1. Enable [Edit experiences](../projects/groups.md#roles-and-permissions) for roles that should have editing permission. Remember to click **Save Changes** for each role that you change.
 
    In Studio's **Manage Collaborators** window for any group-owned game, eligible roles display **Edit** permission but are muted to indicate that you can't change the permission level from Studio.
 

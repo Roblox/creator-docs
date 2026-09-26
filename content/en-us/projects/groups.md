@@ -65,6 +65,10 @@ Role configuration is only accessible if you're the group owner or you have perm
        <td>Members with this permission can ban members whose highest role is below their own.</td>
      </tr>
      <tr>
+       <td>**Configure group profile**</td>
+       <td>Members with this permission can configure the group profile.</td>
+     </tr>
+     <tr>
        <td>**View audit logs**</td>
        <td>Members with this permission can view [group audit logs](#group-audit-logs).</td>
      </tr>
@@ -85,36 +89,36 @@ Role configuration is only accessible if you're the group owner or you have perm
    <table>
    <tbody>
      <tr>
-      <td width="40%">**Playtest all group experiences**</td>
+      <td width="40%">**Playtest experiences**</td>
       <td>Members with this role can play all games owned by the group, whether they're private or public. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**Edit all group experiences**</td>
+       <td>**Edit experiences**</td>
        <td>Members with this role can edit all games and [assets](../projects/assets/index.md) owned by the group and use all features in the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Does not include editing a game outside of a [collaborative](../projects/collaboration.md) session or saving a place from one game into another game. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**Edit and publish all group experiences**</td>
+       <td>**Publish experiences**</td>
        <td>Members with this role can both edit games, as above, and also publish games to Roblox. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**Create and manage share links**</td>
+       <td>**Manage share links**</td>
        <td>Members with this role can create/configure [share links](../production/promotion/share-links.md).</td>
      </tr>
      <tr>
-       <td>**Create and manage experience events**</td>
+       <td>**Manage experience events**</td>
        <td>Members with this role can create/configure [experience events](../production/promotion/experience-events.md).</td>
      </tr>
      <tr>
-       <td>**Access read-only chat (must be 18+) and manage bans for all group experiences**</td>
+       <td>**Access read-only chat (must be 18+) and manage experience bans**</td>
        <td>Members with this role can view all in-game chat messages and ban or manage banned users across all games owned by the group.</td>
      </tr>
      <tr>
-       <td>**Manage monetization for all group experiences**</td>
+       <td>**Manage monetization for experiences**</td>
        <td>Members with this role can manage monetization products such as [passes](../production/monetization/passes.md), [developer products](../production/monetization/developer-products.md), [subscriptions](../production/monetization/subscriptions.md), and more. Optionally available as a [per-game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**List, create, update, and delete secrets for all group experiences**</td>
-       <td>Members with this role can see the list of [secrets](../cloud-services/secrets.md) and can create, update, and delete secrets for all games owned by the group. Members with this role require **Edit all group experiences** permission to view the Secrets page. Optionally available as a [per‑game permission](./configure-games.md).</td>
+       <td>**Manage secrets for experiences**</td>
+       <td>Members with this role can see the list of [secrets](../cloud-services/secrets.md) and can create, update, and delete secrets for all games owned by the group. Members with this role require **Edit experiences** permission to view the Secrets page. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
    </tbody>
    </table>
@@ -127,12 +131,12 @@ Role configuration is only accessible if you're the group owner or you have perm
    <table>
    <tbody>
      <tr>
-       <td width="40%">**View all analytics for group experiences**</td>
+       <td width="40%">**View analytics for experiences**</td>
        <td>Members with this role can access the [analytics](../production/analytics/index.md) of all games owned by the group, even if they don't have edit access. Optionally available as a [per-game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**Create and manage alerts**</td>
-       <td>Members with this role can create and manage analytics alerts. Pair this permission with **View all analytics for group experiences** to see alert annotations directly on metrics graphs.</td>
+       <td>**Manage alerts**</td>
+       <td>Members with this role can create and manage analytics alerts. Pair this permission with **View analytics for experiences** to see alert annotations directly on metrics graphs.</td>
      </tr>
    </tbody>
    </table>
@@ -153,7 +157,7 @@ Role configuration is only accessible if you're the group owner or you have perm
       <td>Members with this role can view all group revenue, as above, and also directly manage it. This includes setting up [recurring payouts](#recurring-payouts) and sending [one‑time payouts](#one-time-payouts) to collaborators.</td>
      </tr>
      <tr>
-       <td>**Create Ad campaigns for the group**</td>
+       <td>**Create ad campaigns for the group**</td>
        <td>Members with this role can advertise the group.</td>
      </tr>
    </tbody>
@@ -167,12 +171,12 @@ Role configuration is only accessible if you're the group owner or you have perm
    <table>
    <tbody>
      <tr>
-       <td width="40%">**Manage avatar items**</td>
-      <td>Members with this role can configure avatar items such as clothing.</td>
+       <td width="40%">**Create avatar items**</td>
+       <td>Members with this role can create avatar items such as clothing.</td>
      </tr>
      <tr>
-       <td>**Create avatar items**</td>
-       <td>Members with this role can create avatar items such as clothing.</td>
+       <td>**Configure avatar items**</td>
+      <td>Members with this role can configure sales details, restocks, and sponsorships for existing group avatar items.</td>
      </tr>
    </tbody>
    </table>
@@ -203,7 +207,7 @@ Role configuration is only accessible if you're the group owner or you have perm
       <td>Members with this role can view development items owned by the group, for example **Audio**.</td>
      </tr>
      <tr>
-       <td>**Create and manage development items**</td>
+       <td>**Manage development items**</td>
       <td>Members with this role can upload and configure asset development items such as **Decals**.</td>
      </tr>
      <tr>
@@ -221,15 +225,15 @@ Role configuration is only accessible if you're the group owner or you have perm
    <table>
    <tbody>
      <tr>
-       <td width="40%">**View Data Stores for all group experiences**</td>
+       <td width="40%">**View Data Stores for experiences**</td>
       <td>Members with this role can view data stores for all group games through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md), but they cannot delete data. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**Edit Data Stores for all group experiences**</td>
+       <td>**Edit Data Stores for experiences**</td>
       <td>Members with this role can delete specific keys within data stores for all group games through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**Delete Data Stores for all group experiences**</td>
+       <td>**Delete Data Stores for experiences**</td>
       <td>Members with this role can delete entire data stores for all group games through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
    </tbody>
@@ -243,7 +247,7 @@ Role configuration is only accessible if you're the group owner or you have perm
    <table>
    <tbody>
      <tr>
-       <td width="40%">**List, create, update, and delete webhooks for all group experiences**</td>
+       <td width="40%">**Manage webhooks for experiences**</td>
        <td>Members with this role can list, create, update, and delete webhooks for all group experiences.</td>
      </tr>
    </tbody>
@@ -257,7 +261,7 @@ Role configuration is only accessible if you're the group owner or you have perm
    <table>
    <tbody>
      <tr>
-       <td width="40%">**Manage support tickets for all group experiences**</td>
+       <td width="40%">**Manage support tickets for experiences**</td>
        <td>Members with this role can manage support tickets for all group experiences.</td>
      </tr>
    </tbody>
@@ -271,7 +275,7 @@ Role configuration is only accessible if you're the group owner or you have perm
    <table>
    <tbody>
      <tr>
-       <td width="40%">**Create and edit access to this group's resources**</td>
+       <td width="40%">**Manage access to this group's resources**</td>
        <td>Members with this role can create and edit access to the group's resources.</td>
      </tr>
    </tbody>
@@ -343,12 +347,12 @@ Role configuration is only accessible if you're the group owner or you have perm
    <table>
    <tbody>
      <tr>
-       <td width="40%">**Manage content moderation**</td>
-       <td>Members with this role can manage content moderation.</td>
+       <td width="40%">**View content moderation**</td>
+       <td>Members with this role can view content moderation.</td>
      </tr>
      <tr>
-       <td>**View content moderation**</td>
-       <td>Members with this role can view content moderation.</td>
+       <td>**Manage content moderation**</td>
+       <td>Members with this role can manage content moderation.</td>
      </tr>
    </tbody>
    </table>
@@ -391,9 +395,9 @@ the private role. Visibility changes where a role appears; it doesn't change
 the permissions the role grants.
 
 <Alert severity="warning">
-To grant **Manage roles**, **Assign or remove roles from members**, **Create and
-edit access to this group's resources**, **Manage and spend group revenue**, or
-**Delete Data Stores for all group experiences**, you must have two-step
+To grant **Manage roles**, **Assign or remove roles from members**, **Manage
+access to this group's resources**, **Manage and spend group revenue**, or
+**Delete Data Stores for experiences**, you must have two-step
 verification enabled.
 </Alert>
 

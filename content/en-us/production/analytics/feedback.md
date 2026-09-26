@@ -15,7 +15,7 @@ To view your game's feedback analytics:
 2. In the **Audience** menu on the left, select **Feedback**.
 
 <Alert severity="info">
-You can view feedback for both individual and [group](../../projects/groups.md)-owned games. To view the latter, you need to have the **View all analytics for group experiences** permission within the group.
+You can view feedback for both individual and [group](../../projects/groups.md)-owned games. To view the latter, you need to have the **View analytics for experiences** permission within the group.
 </Alert>
 
 To dive deeper into player feedback, see the [feedback insight reports](./insights.md#player-feedback-reports).

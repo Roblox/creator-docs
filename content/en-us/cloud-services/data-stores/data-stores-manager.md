@@ -15,7 +15,7 @@ To give members of your group access to the Data Stores Manager, you can [grant 
 - **View Data Stores** lets them view the Data Stores Manager page in the Creator Hub.
 - **Edit Data Stores** lets them delete keys.
 - **Delete Data Stores** lets them delete data stores.
-- **Edit all group experiences** gives them full access to all of the functionality of the Data Stores Manager.
+- **Edit experiences** gives them full access to all of the functionality of the Data Stores Manager.
 </Alert>
 
 To access the Data Stores Manager:

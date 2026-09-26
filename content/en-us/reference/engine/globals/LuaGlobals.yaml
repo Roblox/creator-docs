@@ -192,6 +192,9 @@ functions:
       Returns the metatable of the given table `t` if it has one, otherwise
       returns `nil`. If `t` does have a metatable, and the `__metatable`
       metamethod is set, it returns that value instead.
+
+      This function doesn't error when `t` isn't a table; it returns `nil`
+      for all non-table types.
     parameters:
       - name: t
         type: Variant

@@ -172,7 +172,7 @@ After you specify its intensity, you must also specify how often the violence oc
 
 **Question 1: Does this experience depict any blood?**
 
-Blood is the red liquid that flows through human and animal bodies that's essential to life. If your experience includes blood, including within any [asset type](../../projects/assets/index.md#asset-types), you must disclose it within the Maturity & Compliance Questionnaire.
+Blood is one of the primary liquids that flows through human and animal bodies that's essential to life. If your experience includes blood, including within any [asset type](../../projects/assets/index.md#asset-types), you must disclose it within the Maturity & Compliance Questionnaire.
 
 **Question 2: How realistic is the blood?**
 
@@ -414,7 +414,13 @@ If your experience is a social hangout that includes private spaces, you must di
 
 **Question 1: Does this experience include free-form user creation?**
 
-Free-form user creation refers to features that allow players to create anything within an experience, such as writing words or making illustrations on a chalkboard. While this applies to in-experience, free-form drawing or creation tools, it does not apply to in-experience creations that players assemble with 3D assets, such as building a house or creating an outfit, or anything that goes through Roblox moderation before it's published or replicated.
+Free-form user creation refers to features that allow players to create the following within an experience for other users to see:
+
+- Freehand drawing, painting, writing, or spray paint on any visible 2D or 3D surface.
+- Blank pixel canvases or grids where players can mark any cell.
+- Temporary, per-round, or timed-reveal drawings, if another player can see them.
+
+Free-form user creation does **not** apply to in-experience creations that players assemble with 3D assets, such as building a house or creating an outfit, or anything that goes through Roblox moderation before it's published or replicated.
 
 If your experience includes free-form user creation features, you must disclose it within the Maturity & Compliance Questionnaire. Free-form user creation is only available to players that are at least 16 years old.
 

@@ -13,7 +13,7 @@ In addition to events, the integrated [update announcements](#announce-experienc
 
 ## Create events
 
-To create an event, you must have the [Edit all group experiences](../../projects/groups.md#roles-and-permissions) permission in a [group‑owned](../../projects/groups.md) experience, or be the sole owner of a user‑owned experience. Currently, you can publish a maximum of 10 ongoing or upcoming events.
+To create an event, you must have the [Manage experience events](../../projects/groups.md#roles-and-permissions) permission or the legacy [Edit experiences](../../projects/groups.md#roles-and-permissions) permission in a [group‑owned](../../projects/groups.md) experience, or be the sole owner of a user‑owned experience. Currently, you can publish a maximum of 10 ongoing or upcoming events.
 
 1. Navigate to an experience's page on the [Creator Dashboard][creatordashboard].
 1. In the left column, expand the **Engagement** branch and click **Events&nbsp;&amp;&nbsp;Updates**.

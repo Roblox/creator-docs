@@ -125,7 +125,7 @@ Restricted assets must be explicitly granted permission before they are visible 
 To grant a collaborator permission to use one of your restricted assets, the following must be true:
 
 - To grant to an individual creator: the creator must be your [friend](https://en.help.roblox.com/hc/en-us/articles/203313580-How-to-Make-Friends) on the platform.
-- To grant to a group: you must have [Edit all group experiences](../../projects/groups.md#roles-and-permissions) permission in that group.
+- To grant to a group: you must have [Edit experiences](../../projects/groups.md#roles-and-permissions) permission in that group.
 
 When you grant an individual creator permission:
 
@@ -191,7 +191,7 @@ To grant permissions across multiple assets at once, or to bulk-share assets wit
 Once a game has permission to use a restricted asset, you cannot revoke access to the asset.
 </Alert>
 
-To grant a game permission to use one of your restricted assets, the game must be editable to either you or a group that you belong to in which you have the [Edit all group experiences](../../projects/groups.md#roles-and-permissions) permission.
+To grant a game permission to use one of your restricted assets, the game must be editable to either you or a group that you belong to in which you have the [Edit experiences](../../projects/groups.md#roles-and-permissions) permission.
 
 Once a game has permission to use a restricted asset, anyone with **Edit** access to that game can:
 
