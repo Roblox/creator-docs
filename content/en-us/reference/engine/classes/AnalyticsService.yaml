@@ -356,6 +356,31 @@ methods:
       		<td><code>Enum.PlayerPlatformSpenderStatus</code></td>
       		<td>The player's platform-wide spender status bucket, including whether the player falls outside the active spender bucket.</td>
       	</tr>
+      	<tr>
+      		<td><code>ExperienceActivationStatus</code></td>
+      		<td><code>Enum.ExperienceActivationStatus</code></td>
+      		<td>Whether the player is new, active, lapsed, or reactivated in this experience, based on the last 30 days.</td>
+      	</tr>
+      	<tr>
+      		<td><code>EngagementLevel</code></td>
+      		<td><code>Enum.EngagementLevel</code></td>
+      		<td>How many days the player played this experience in the last 7 days, represented as a bucket.</td>
+      	</tr>
+      	<tr>
+      		<td><code>PlatformActivationStatus</code></td>
+      		<td><code>Enum.PlayerPlatformActivationStatus</code></td>
+      		<td>Whether the player is new, active, lapsed, or reactivated on Roblox, based on the last 60 days.</td>
+      	</tr>
+      	<tr>
+      		<td><code>UserNewReturningStatus</code></td>
+      		<td><code>Enum.UserNewReturningStatus</code></td>
+      		<td>Whether the player is new to this experience or has played it before.</td>
+      	</tr>
+      	<tr>
+      		<td><code>UserAcquisitionSource</code></td>
+      		<td><code>Enum.UserAcquisitionSource</code></td>
+      		<td>How the player first found this experience.</td>
+      	</tr>
       </table>
     code_samples:
       - AnalyticsService-GetPlayerSegmentsAsync

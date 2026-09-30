@@ -348,7 +348,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: PluginSecurity
+      write: None
     thread_safety: ReadSafe
     category: Behavior
     serialization:
@@ -373,7 +373,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: PluginSecurity
+      write: None
     thread_safety: ReadSafe
     category: Behavior
     serialization:
@@ -626,14 +626,15 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Scripting
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - PluginOrOpenCloud
   - name: Workspace.MeshPartHeadsAndAccessories
     summary: |
       Sets whether character Heads and Accessories should be downloaded as
@@ -1089,7 +1090,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: PluginSecurity
+      write: None
     thread_safety: ReadSafe
     category: Streaming
     serialization:

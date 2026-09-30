@@ -521,3 +521,26 @@ Group members with permission to edit all group games can enable the [Place Copy
 - Confirm that each member is [assigned the appropriate role](#manage-roles).
 - Check that each group role has the correct [permissions](#roles-and-permissions).
 - Confirm that the [Place Copying](./configure-games.md#allow-copying) setting is disabled before private assets are added.
+
+## Additional localizations for this page
+
+For additional, localized versions of this page that aren't available in the site's language picker, see the following links:
+
+- [Bulgarian (български)](https://create.roblox.com/docs/bg-bg/projects/groups)
+- [Croatian (hrvatski)](https://create.roblox.com/docs/hr-hr/projects/groups)
+- [Czech (čeština)](https://create.roblox.com/docs/cs-cz/projects/groups)
+- [Danish (dansk)](https://create.roblox.com/docs/da-dk/projects/groups)
+- [Dutch (Nederlands)](https://create.roblox.com/docs/nl-nl/projects/groups)
+- [Estonian (eesti)](https://create.roblox.com/docs/et-ee/projects/groups)
+- [Finnish (suomi)](https://create.roblox.com/docs/fi-fi/projects/groups)
+- [Greek (Ελληνικά)](https://create.roblox.com/docs/el-gr/projects/groups)
+- [Hungarian (magyar)](https://create.roblox.com/docs/hu-hu/projects/groups)
+- [Irish (Gaeilge)](https://create.roblox.com/docs/ga-ie/projects/groups)
+- [Latvian (latviešu)](https://create.roblox.com/docs/lv-lv/projects/groups)
+- [Lithuanian (lietuvių)](https://create.roblox.com/docs/lt-lt/projects/groups)
+- [Maltese (Malti)](https://create.roblox.com/docs/mt-mt/projects/groups)
+- [Portuguese - Portugal (português)](https://create.roblox.com/docs/pt-pt/projects/groups)
+- [Romanian (română)](https://create.roblox.com/docs/ro-ro/projects/groups)
+- [Slovak (slovenčina)](https://create.roblox.com/docs/sk-sk/projects/groups)
+- [Slovenian (slovenščina)](https://create.roblox.com/docs/sl-si/projects/groups)
+- [Swedish (svenska)](https://create.roblox.com/docs/sv-se/projects/groups)

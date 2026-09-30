@@ -271,3 +271,26 @@ at least $9.99 in the last 60 days.
   creators in control, with more transparency into the actions they can take to earn higher rewards.
   With Creator Rewards, creators who publish engaging content can earn, directly from Roblox, for
   the engagement their content drives on the platform.
+
+## Additional localizations for this page
+
+For additional, localized versions of this page that aren't available in the site's language picker, see the following links:
+
+- [Bulgarian (български)](https://create.roblox.com/docs/bg-bg/creator-rewards)
+- [Croatian (hrvatski)](https://create.roblox.com/docs/hr-hr/creator-rewards)
+- [Czech (čeština)](https://create.roblox.com/docs/cs-cz/creator-rewards)
+- [Danish (dansk)](https://create.roblox.com/docs/da-dk/creator-rewards)
+- [Dutch (Nederlands)](https://create.roblox.com/docs/nl-nl/creator-rewards)
+- [Estonian (eesti)](https://create.roblox.com/docs/et-ee/creator-rewards)
+- [Finnish (suomi)](https://create.roblox.com/docs/fi-fi/creator-rewards)
+- [Greek (Ελληνικά)](https://create.roblox.com/docs/el-gr/creator-rewards)
+- [Hungarian (magyar)](https://create.roblox.com/docs/hu-hu/creator-rewards)
+- [Irish (Gaeilge)](https://create.roblox.com/docs/ga-ie/creator-rewards)
+- [Latvian (latviešu)](https://create.roblox.com/docs/lv-lv/creator-rewards)
+- [Lithuanian (lietuvių)](https://create.roblox.com/docs/lt-lt/creator-rewards)
+- [Maltese (Malti)](https://create.roblox.com/docs/mt-mt/creator-rewards)
+- [Portuguese - Portugal (português)](https://create.roblox.com/docs/pt-pt/creator-rewards)
+- [Romanian (română)](https://create.roblox.com/docs/ro-ro/creator-rewards)
+- [Slovak (slovenčina)](https://create.roblox.com/docs/sk-sk/creator-rewards)
+- [Slovenian (slovenščina)](https://create.roblox.com/docs/sl-si/creator-rewards)
+- [Swedish (svenska)](https://create.roblox.com/docs/sv-se/creator-rewards)

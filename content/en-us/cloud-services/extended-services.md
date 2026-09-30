@@ -28,12 +28,12 @@ To unlock and use Extended Services:
 1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), go to **Creations** and select a game.
 2. Go to **Extended Services**.
 3. If you haven't entered your account details and payment information yet, click **Add missing information** on the top banner.
-    1. Enter your account information. The **Account type**, **Tax ID type**, and **Tax ID** fields are optional.
-        - You can also go to **Finances** ⟩ **Account Information** under the **Extended Services** section to manage your account information. You don't need to update anything else on this page.
-    2. Click **Next**.
-    3. Enter a payment method. You can enter a new payment method or select from the available payment options already associated with your Roblox account.
-        - You can also go to **Finances** ⟩ **Payments** to add new payment methods, or go to **Finances** ⟩ **Billing** to set a new default payment method.
-    4. Click **Save**.
+   1. Enter your account information. The **Account type**, **Tax ID type**, and **Tax ID** fields are optional.
+      - You can also go to **Finances** ⟩ **Account Information** under the **Extended Services** section to manage your account information. You don't need to update anything else on this page.
+   2. Click **Next**.
+   3. Enter a payment method. You can enter a new payment method or select from the available payment options already associated with your Roblox account.
+      - You can also go to **Finances** ⟩ **Payments** to add new payment methods, or go to **Finances** ⟩ **Billing** to set a new default payment method.
+   4. Click **Save**.
 
 <h5>Account status</h5>
 
@@ -84,8 +84,8 @@ To access the Extended Services billing dashboard:
 
 1. Go to **Finances** ⟩ **Billing**.
 2. Select the **Cloud services** tab to display the following:
-    - Your pending balance, including month-to-date cost
-    - Your billing history, including all Extended Services billing activity across your games
+   - Your pending balance, including month-to-date cost
+   - Your billing history, including all Extended Services billing activity across your games
 
 For a detailed breakdown of your current pending balance costs, click **View Details** next to your payment method. For a detailed invoice of a previous bill, click **View Bill** under **Billing history**.
 
@@ -288,3 +288,26 @@ Extended Services is available in the following countries:
     </tr>
   </tbody>
 </table>
+
+## Additional localizations for this page
+
+For additional, localized versions of this page that aren't available in the site's language picker, see the following links:
+
+- [Bulgarian (български)](https://create.roblox.com/docs/bg-bg/cloud-services/extended-services)
+- [Croatian (hrvatski)](https://create.roblox.com/docs/hr-hr/cloud-services/extended-services)
+- [Czech (čeština)](https://create.roblox.com/docs/cs-cz/cloud-services/extended-services)
+- [Danish (dansk)](https://create.roblox.com/docs/da-dk/cloud-services/extended-services)
+- [Dutch (Nederlands)](https://create.roblox.com/docs/nl-nl/cloud-services/extended-services)
+- [Estonian (eesti)](https://create.roblox.com/docs/et-ee/cloud-services/extended-services)
+- [Finnish (suomi)](https://create.roblox.com/docs/fi-fi/cloud-services/extended-services)
+- [Greek (Ελληνικά)](https://create.roblox.com/docs/el-gr/cloud-services/extended-services)
+- [Hungarian (magyar)](https://create.roblox.com/docs/hu-hu/cloud-services/extended-services)
+- [Irish (Gaeilge)](https://create.roblox.com/docs/ga-ie/cloud-services/extended-services)
+- [Latvian (latviešu)](https://create.roblox.com/docs/lv-lv/cloud-services/extended-services)
+- [Lithuanian (lietuvių)](https://create.roblox.com/docs/lt-lt/cloud-services/extended-services)
+- [Maltese (Malti)](https://create.roblox.com/docs/mt-mt/cloud-services/extended-services)
+- [Portuguese - Portugal (português)](https://create.roblox.com/docs/pt-pt/cloud-services/extended-services)
+- [Romanian (română)](https://create.roblox.com/docs/ro-ro/cloud-services/extended-services)
+- [Slovak (slovenčina)](https://create.roblox.com/docs/sk-sk/cloud-services/extended-services)
+- [Slovenian (slovenščina)](https://create.roblox.com/docs/sl-si/cloud-services/extended-services)
+- [Swedish (svenska)](https://create.roblox.com/docs/sv-se/cloud-services/extended-services)

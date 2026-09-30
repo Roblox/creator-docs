@@ -4325,10 +4325,20 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/EmitterPositionType.yaml
         ignoreTranslation: true
+      - title: EngagementLevel
+        path: /reference/engine/enums/EngagementLevel
+        type: engineapi
+        source: /reference/engine/enums/EngagementLevel.yaml
+        ignoreTranslation: true
       - title: EnviromentalPhysicsThrottle
         path: /reference/engine/enums/EnviromentalPhysicsThrottle
         type: engineapi
         source: /reference/engine/enums/EnviromentalPhysicsThrottle.yaml
+        ignoreTranslation: true
+      - title: ExperienceActivationStatus
+        path: /reference/engine/enums/ExperienceActivationStatus
+        type: engineapi
+        source: /reference/engine/enums/ExperienceActivationStatus.yaml
         ignoreTranslation: true
       - title: ExperienceAuthScope
         path: /reference/engine/enums/ExperienceAuthScope
@@ -5034,6 +5044,11 @@ navigation:
         path: /reference/engine/enums/PlayerExitReason
         type: engineapi
         source: /reference/engine/enums/PlayerExitReason.yaml
+        ignoreTranslation: true
+      - title: PlayerPlatformActivationStatus
+        path: /reference/engine/enums/PlayerPlatformActivationStatus
+        type: engineapi
+        source: /reference/engine/enums/PlayerPlatformActivationStatus.yaml
         ignoreTranslation: true
       - title: PlayerPlatformSpenderStatus
         path: /reference/engine/enums/PlayerPlatformSpenderStatus
@@ -5820,6 +5835,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/UploadCaptureResult.yaml
         ignoreTranslation: true
+      - title: UserAcquisitionSource
+        path: /reference/engine/enums/UserAcquisitionSource
+        type: engineapi
+        source: /reference/engine/enums/UserAcquisitionSource.yaml
+        ignoreTranslation: true
       - title: UserCFrame
         path: /reference/engine/enums/UserCFrame
         type: engineapi
@@ -5834,6 +5854,11 @@ navigation:
         path: /reference/engine/enums/UserInputType
         type: engineapi
         source: /reference/engine/enums/UserInputType.yaml
+        ignoreTranslation: true
+      - title: UserNewReturningStatus
+        path: /reference/engine/enums/UserNewReturningStatus
+        type: engineapi
+        source: /reference/engine/enums/UserNewReturningStatus.yaml
         ignoreTranslation: true
       - title: VelocityConstraintMode
         path: /reference/engine/enums/VelocityConstraintMode

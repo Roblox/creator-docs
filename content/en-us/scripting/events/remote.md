@@ -360,6 +360,51 @@ You can use a `Class.Script` to call a function on the client by calling the `Cl
 
 For actions that don't require two-way communications, such as updating a GUI, use a `Class.RemoteEvent` and communicate from [server to client](#server-client).
 
+## Delivery guarantees
+
+Each remote type makes different promises about whether a message arrives and in what order. These promises only apply to a single connection in a single direction, meaning from the server to one specific client, or from one specific client to the server.
+
+### RemoteEvents
+
+`Class.RemoteEvent|RemoteEvents` are reliable and ordered:
+
+- If a message is lost in transit, Roblox retransmits it until it arrives, as long as the recipient stays connected.
+- Messages arrive in the order you fire them, **including across different `Class.RemoteEvent` instances**. For example, if the server fires event **A**, then **B**, then **A** again to the same client, that client receives **A**, **B**, **A**. This applies whether you use `Class.RemoteEvent:FireClient()|FireClient()` or `Class.RemoteEvent:FireAllClients()|FireAllClients()`.
+- If a client fires events faster than the [throttling](#throttling-and-size-limits) limit, the server processes the excess events later instead of dropping them, and they keep their order.
+
+A reliable, ordered message can still fail to reach your code in the following cases:
+
+- **No handler is connected.** If nothing is connected to `Class.RemoteEvent.OnServerEvent|OnServerEvent` or `Class.RemoteEvent.OnClientEvent|OnClientEvent` when a message arrives, Roblox queues it and delivers it, in order, as soon as a handler connects. The queue is limited in both count and memory. Once it's full, Roblox discards further messages and logs a `Remote event invocation` error to the [Output](../../studio/output.md) window.
+- **The recipient disconnects.** Messages that haven't been delivered when a client leaves are lost.
+
+Ordering applies to when each handler **starts**, not when it finishes. If a handler yields, such as by calling `Library.task.wait()` or `Class.Instance:WaitForChild()|WaitForChild()`, Roblox can start handling the next message before the earlier handler resumes.
+
+### RemoteFunctions
+
+`Class.RemoteFunction|RemoteFunctions` send invocations and responses reliably, so Roblox retransmits lost messages as long as both sides stay connected. Because `Class.RemoteFunction:InvokeServer()|InvokeServer()` and `Class.RemoteFunction:InvokeClient()|InvokeClient()` yield until a response arrives, a single thread can't have more than one invocation in flight. Separate threads can invoke at the same time, though, and if a callback yields, responses can come back in a different order than the invocations were sent.
+
+If no callback is assigned to `Class.RemoteFunction.OnServerInvoke|OnServerInvoke` or `Class.RemoteFunction.OnClientInvoke|OnClientInvoke`, Roblox queues invocations until one is. This queue has the same kind of limits as the `Class.RemoteEvent` queue.
+
+<Alert severity="warning">
+Roblox doesn't guarantee the relative order of `Class.RemoteFunction` invocations and `Class.RemoteEvent` messages. They often arrive in the order you send them, but they're queued separately while no handler is connected, and a yielding callback can delay a response. If your code depends on strict ordering, send all related messages through the same remote type or include your own sequence number.
+</Alert>
+
+### UnreliableRemoteEvents
+
+`Class.UnreliableRemoteEvent|UnreliableRemoteEvents` guarantee neither delivery nor order. They also have no ordering relationship with `Class.RemoteEvent|RemoteEvents` or `Class.RemoteFunction|RemoteFunctions`. Roblox might drop a message in any of the following cases, without resending it:
+
+- The message is lost in transit.
+- The network is congested and the message waits too long to send.
+- The payload is larger than 1,000 bytes.
+- The client fires faster than the [throttling](#throttling-and-size-limits) limit. Unlike a `Class.RemoteEvent`, the server drops the excess messages instead of delaying them.
+- Nothing is connected to `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` or `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` when the message arrives. Unlike a `Class.RemoteEvent`, Roblox discards the message immediately instead of queuing it.
+
+Roblox also doesn't wait for an earlier message to arrive before processing a later one, so messages can arrive out of order. If order matters, include a timestamp or sequence number in each message and ignore messages older than the latest one you've handled.
+
+### Throttling and size limits
+
+Client-to-server messages are subject to a rate limit that each remote type shares across all of its instances. For current limits, see the **Throttling** section of `Class.RemoteEvent` and the payload limits in `Class.UnreliableRemoteEvent`.
+
 ## Argument limitations
 
 When you fire a `Class.RemoteEvent` or invoke a `Class.RemoteFunction`, it forwards any arguments that you pass with the event or to the callback function. Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or others can be passed, as well as Luau types such as numbers, strings, and booleans, although you should carefully explore the following limitations.

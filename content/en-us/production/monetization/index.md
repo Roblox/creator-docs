@@ -183,3 +183,26 @@ As general guidance, avoid using pushy or urgent messages when interacting with 
     </tr>
   </tbody>
 </table>
+
+## Additional localizations for this page
+
+For additional, localized versions of this page that aren't available in the site's language picker, see the following links:
+
+- [Bulgarian (български)](https://create.roblox.com/docs/bg-bg/production/monetization)
+- [Croatian (hrvatski)](https://create.roblox.com/docs/hr-hr/production/monetization)
+- [Czech (čeština)](https://create.roblox.com/docs/cs-cz/production/monetization)
+- [Danish (dansk)](https://create.roblox.com/docs/da-dk/production/monetization)
+- [Dutch (Nederlands)](https://create.roblox.com/docs/nl-nl/production/monetization)
+- [Estonian (eesti)](https://create.roblox.com/docs/et-ee/production/monetization)
+- [Finnish (suomi)](https://create.roblox.com/docs/fi-fi/production/monetization)
+- [Greek (Ελληνικά)](https://create.roblox.com/docs/el-gr/production/monetization)
+- [Hungarian (magyar)](https://create.roblox.com/docs/hu-hu/production/monetization)
+- [Irish (Gaeilge)](https://create.roblox.com/docs/ga-ie/production/monetization)
+- [Latvian (latviešu)](https://create.roblox.com/docs/lv-lv/production/monetization)
+- [Lithuanian (lietuvių)](https://create.roblox.com/docs/lt-lt/production/monetization)
+- [Maltese (Malti)](https://create.roblox.com/docs/mt-mt/production/monetization)
+- [Portuguese - Portugal (português)](https://create.roblox.com/docs/pt-pt/production/monetization)
+- [Romanian (română)](https://create.roblox.com/docs/ro-ro/production/monetization)
+- [Slovak (slovenčina)](https://create.roblox.com/docs/sk-sk/production/monetization)
+- [Slovenian (slovenščina)](https://create.roblox.com/docs/sl-si/production/monetization)
+- [Swedish (svenska)](https://create.roblox.com/docs/sv-se/production/monetization)

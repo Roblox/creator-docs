@@ -26,3 +26,26 @@ Groups that violate Roblox's [Community Standards](https://en.help.roblox.com/hc
 
 - **Member Violations** — While group owners are not **directly** penalized for member violations, repeated failure to address violations within a group can result in future restrictions on group ownership. An owner whose group is permanently removed will not be able to own a new group for 90 days. Multiple permanent removals will result in a complete loss of group ownership privileges for the owner.
 - **Owner Violations** — Group owners who are found to be using their group to promote or facilitate violations of Roblox's Community Standards (through uploading or encouraging the upload of violative content) will face enforcement actions on their own accounts and possibly the permanent deletion of their group.
+
+## Additional localizations for this page
+
+For additional, localized versions of this page that aren't available in the site's language picker, see the following links:
+
+- [Bulgarian (български)](https://create.roblox.com/docs/bg-bg/projects/group-guidelines)
+- [Croatian (hrvatski)](https://create.roblox.com/docs/hr-hr/projects/group-guidelines)
+- [Czech (čeština)](https://create.roblox.com/docs/cs-cz/projects/group-guidelines)
+- [Danish (dansk)](https://create.roblox.com/docs/da-dk/projects/group-guidelines)
+- [Dutch (Nederlands)](https://create.roblox.com/docs/nl-nl/projects/group-guidelines)
+- [Estonian (eesti)](https://create.roblox.com/docs/et-ee/projects/group-guidelines)
+- [Finnish (suomi)](https://create.roblox.com/docs/fi-fi/projects/group-guidelines)
+- [Greek (Ελληνικά)](https://create.roblox.com/docs/el-gr/projects/group-guidelines)
+- [Hungarian (magyar)](https://create.roblox.com/docs/hu-hu/projects/group-guidelines)
+- [Irish (Gaeilge)](https://create.roblox.com/docs/ga-ie/projects/group-guidelines)
+- [Latvian (latviešu)](https://create.roblox.com/docs/lv-lv/projects/group-guidelines)
+- [Lithuanian (lietuvių)](https://create.roblox.com/docs/lt-lt/projects/group-guidelines)
+- [Maltese (Malti)](https://create.roblox.com/docs/mt-mt/projects/group-guidelines)
+- [Portuguese - Portugal (português)](https://create.roblox.com/docs/pt-pt/projects/group-guidelines)
+- [Romanian (română)](https://create.roblox.com/docs/ro-ro/projects/group-guidelines)
+- [Slovak (slovenčina)](https://create.roblox.com/docs/sk-sk/projects/group-guidelines)
+- [Slovenian (slovenščina)](https://create.roblox.com/docs/sl-si/projects/group-guidelines)
+- [Swedish (svenska)](https://create.roblox.com/docs/sv-se/projects/group-guidelines)

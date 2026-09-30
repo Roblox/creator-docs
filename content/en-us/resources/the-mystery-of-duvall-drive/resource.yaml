@@ -1,0 +1,1528 @@
+schemaVersion: 1
+resource:
+  id: mystery-of-duvall-drive
+  route: /resources/the-mystery-of-duvall-drive
+  title: The Mystery of Duvall Drive
+  sections:
+    - type: intro
+      id: introduction
+      hero:
+        eyebrow: Roblox Learn
+        entryLabel: Enter the story
+        image: assets/resources/mystery-of-duvall-drive/overview/overview.png
+        alt: The Duvall Drive house at night beneath a swirling purple storm.
+        kicker: A development story
+        title: |-
+          The Mystery of
+          Duvall Drive
+        caption: Original imagery from the Roblox development team.
+        subtitle: A familiar house. An unfamiliar world.
+        ctas:
+          - label: Play in browser
+            href: https://play.roblox.com/WebClient/WebClient.html?placeId=7902470429
+            tone: primary
+            open: popup
+          - label: View on Roblox
+            href: https://www.roblox.com/games/7902470429
+            tone: secondary
+    - type: toc
+      id: contents
+      title: A house is never just a house.
+      text: |-
+        The driveway disappears into the trees. Somewhere above the roof, the sky
+        is coming apart.
+
+        In *The Mystery of Duvall Drive*, an abandoned family home becomes a study in
+        how to build belief. Its rooms invite exploration, its objects hold clues, and
+        its familiar spaces can turn into something impossible.
+
+        Behind that illusion is a series of practical choices: a floor plan tested
+        before it was beautiful, materials designed to be reused, sound that guides
+        attention, and systems that keep a shared mystery moving. This is the story of
+        how those choices came together.
+
+        [Begin with the first sketch ↗](#construct-the-house)
+      include:
+        - concept
+        - task
+  chapters:
+    - id: construct-the-house
+      order: 1
+      sections:
+        - type: concept
+          id: construct-the-house
+          navLabel: Construct the house
+          hero:
+            title: A house with something to hide.
+            description:
+              Before the storm, before the secrets, there was a floor plan. The
+              first challenge was making a house worth getting lost in.
+            image: assets/resources/mystery-of-duvall-drive/constructing-the-house/overview.png
+            alt:
+              A dimly lit library with a fireplace, wooden furniture, and a classical
+              bust.
+            caption:
+              The finished interior. Its atmosphere rests on decisions made while the
+              house was still a collection of simple shapes.
+          blocks:
+            - type: markdown
+              markdown: >-
+                The road bends before the house comes into view. Trees interrupt
+                the sightline. The driveway rises, and the building begins to
+                loom. Long before a player touches a puzzle, the architecture is
+                already telling them how to feel.
+
+
+                That approach was designed on paper first. The team mapped the
+                story beats they wanted players to encounter, then arranged the
+                road, hills, lake, and house around them. A glimpse mattered
+                more than a complete reveal. The storm could wait until the
+                player had a reason to come closer.
+
+
+                ## Draw the experience, not just the rooms
+
+
+                Inside, every room needed a purpose. It could hold a surprise, a
+                clue, a puzzle, or an opportunity to learn something about the
+                family. The floor plan became a way of pacing those discoveries
+                without assuming everyone would explore in the same order.
+
+
+                Harder puzzles moved farther from the front door. An attic and a
+                basement made room for both gameplay and atmosphere. The house
+                had to feel plausible enough to explore, but strange enough to
+                keep curiosity alive.
+            - type: figure
+              image: assets/resources/mystery-of-duvall-drive/constructing-the-house/blueprint-whole-house.png
+              alt:
+                An early floor plan of the house, annotated with ideas for rooms and
+                encounters.
+              caption:
+                'The first blueprint was also a story map: a place to work out what
+                might happen, and where.'
+            - type: markdown
+              markdown: >-
+                ## Get it playable before it gets precious
+
+
+                Simple parts and temporary Creator Store assets let the team
+                start playtesting within the first few days. In those early
+                versions, visual polish was beside the point. Could players find
+                the house? Did the approach take too long? Was a room inviting,
+                confusing, or simply too large?
+
+
+                They built with an avatar beside the geometry, checking
+                doorways, stairs, and furniture against a body rather than a
+                number. Both blocky and more realistic characters needed to
+                belong in the same space. Small, inexpensive changes at this
+                stage protected the layout from much more expensive corrections
+                later.
+            - type: quote
+              attribution: From the original development notes
+              markdown: No amount of experience guarantees your first ideas are the best ones.
+            - type: yolo
+              component: ModelFigure
+              props:
+                title: Three rooms. One readable route.
+                poster: assets/resources/mystery-of-duvall-drive/constructing-the-house/blueprint-whole-house.png
+                caption:
+                  Turn the blockout around and follow the blue route through the
+                  openings. This illustrative model explores the principle; it is not the
+                  original Duvall Drive house.
+                description:
+                  The archive floor plan is shown before loading. The interactive
+                  example is a separate, simplified three-room blockout with open front walls,
+                  connecting doorways, and a blue strip marking the route. Each room contains
+                  a small blue placeholder for a discovery.
+                posterAlt: The original house floor plan.
+                faces:
+                  - id: floor-0
+                    points:
+                      - - -150
+                        - 0
+                        - -50
+                      - - -50
+                        - 0
+                        - -50
+                      - - -50
+                        - 0
+                        - 50
+                      - - -150
+                        - 0
+                        - 50
+                  - id: back-0
+                    points:
+                      - - -150
+                        - 0
+                        - -50
+                      - - -50
+                        - 0
+                        - -50
+                      - - -50
+                        - 65
+                        - -50
+                      - - -150
+                        - 65
+                        - -50
+                  - id: route-0
+                    accent: true
+                    points:
+                      - - -150
+                        - 1
+                        - -8
+                      - - -50
+                        - 1
+                        - -8
+                      - - -50
+                        - 1
+                        - 8
+                      - - -150
+                        - 1
+                        - 8
+                  - id: discovery-0
+                    accent: true
+                    points:
+                      - - -115
+                        - 0
+                        - -28
+                      - - -95
+                        - 0
+                        - -28
+                      - - -95
+                        - 26
+                        - -28
+                      - - -115
+                        - 26
+                        - -28
+                  - id: floor-1
+                    points:
+                      - - -50
+                        - 0
+                        - -50
+                      - - 50
+                        - 0
+                        - -50
+                      - - 50
+                        - 0
+                        - 50
+                      - - -50
+                        - 0
+                        - 50
+                  - id: back-1
+                    points:
+                      - - -50
+                        - 0
+                        - -50
+                      - - 50
+                        - 0
+                        - -50
+                      - - 50
+                        - 65
+                        - -50
+                      - - -50
+                        - 65
+                        - -50
+                  - id: route-1
+                    accent: true
+                    points:
+                      - - -50
+                        - 1
+                        - -8
+                      - - 50
+                        - 1
+                        - -8
+                      - - 50
+                        - 1
+                        - 8
+                      - - -50
+                        - 1
+                        - 8
+                  - id: discovery-1
+                    accent: true
+                    points:
+                      - - -15
+                        - 0
+                        - -28
+                      - - 5
+                        - 0
+                        - -28
+                      - - 5
+                        - 26
+                        - -28
+                      - - -15
+                        - 26
+                        - -28
+                  - id: floor-2
+                    points:
+                      - - 50
+                        - 0
+                        - -50
+                      - - 150
+                        - 0
+                        - -50
+                      - - 150
+                        - 0
+                        - 50
+                      - - 50
+                        - 0
+                        - 50
+                  - id: back-2
+                    points:
+                      - - 50
+                        - 0
+                        - -50
+                      - - 150
+                        - 0
+                        - -50
+                      - - 150
+                        - 65
+                        - -50
+                      - - 50
+                        - 65
+                        - -50
+                  - id: route-2
+                    accent: true
+                    points:
+                      - - 50
+                        - 1
+                        - -8
+                      - - 150
+                        - 1
+                        - -8
+                      - - 150
+                        - 1
+                        - 8
+                      - - 50
+                        - 1
+                        - 8
+                  - id: discovery-2
+                    accent: true
+                    points:
+                      - - 85
+                        - 0
+                        - -28
+                      - - 105
+                        - 0
+                        - -28
+                      - - 105
+                        - 26
+                        - -28
+                      - - 85
+                        - 26
+                        - -28
+                  - id: wall--150--50
+                    points:
+                      - - -150
+                        - 0
+                        - -50
+                      - - -150
+                        - 0
+                        - 50
+                      - - -150
+                        - 65
+                        - 50
+                      - - -150
+                        - 65
+                        - -50
+                  - id: wall--50--50
+                    points:
+                      - - -50
+                        - 0
+                        - -50
+                      - - -50
+                        - 0
+                        - -15
+                      - - -50
+                        - 65
+                        - -15
+                      - - -50
+                        - 65
+                        - -50
+                  - id: wall--50-15
+                    points:
+                      - - -50
+                        - 0
+                        - 15
+                      - - -50
+                        - 0
+                        - 50
+                      - - -50
+                        - 65
+                        - 50
+                      - - -50
+                        - 65
+                        - 15
+                  - id: lintel--50
+                    points:
+                      - - -50
+                        - 45
+                        - -15
+                      - - -50
+                        - 45
+                        - 15
+                      - - -50
+                        - 65
+                        - 15
+                      - - -50
+                        - 65
+                        - -15
+                  - id: wall-50--50
+                    points:
+                      - - 50
+                        - 0
+                        - -50
+                      - - 50
+                        - 0
+                        - -15
+                      - - 50
+                        - 65
+                        - -15
+                      - - 50
+                        - 65
+                        - -50
+                  - id: wall-50-15
+                    points:
+                      - - 50
+                        - 0
+                        - 15
+                      - - 50
+                        - 0
+                        - 50
+                      - - 50
+                        - 65
+                        - 50
+                      - - 50
+                        - 65
+                        - 15
+                  - id: lintel-50
+                    points:
+                      - - 50
+                        - 45
+                        - -15
+                      - - 50
+                        - 45
+                        - 15
+                      - - 50
+                        - 65
+                        - 15
+                      - - 50
+                        - 65
+                        - -15
+                  - id: wall-150--50
+                    points:
+                      - - 150
+                        - 0
+                        - -50
+                      - - 150
+                        - 0
+                        - 50
+                      - - 150
+                        - 65
+                        - 50
+                      - - 150
+                        - 65
+                        - -50
+            - type: markdown
+              markdown: >-
+                ## Furnish the story
+
+
+                The family were eccentric collectors with an interest in the
+                occult. Their belongings had to tell that story. A shared asset
+                list helped the team decide what to build, what to reuse, and
+                which props deserved an individual treatment.
+
+
+                Public-domain museum scans provided a starting point for some of
+                the antiques, statues, and taxidermy. They still needed work:
+                repairing geometry, rebuilding UVs, reducing mesh complexity,
+                and removing baked-in lighting from textures. The history in
+                those objects was useful; their original scan data was not
+                automatically ready for a game.
+
+
+                Furniture became packages while it was still in blockout form.
+                As finished models arrived, the team could update their
+                instances throughout the house. Packages eventually extended to
+                larger assemblies, making iteration possible even when the rooms
+                were full.
+            - type: callout
+              title: A decision to borrow
+              markdown: >-
+                Make the space playable while it is still easy to change. The
+                right floor plan can survive months
+                  of visual refinement; an untested one makes every finished prop harder to move.
+        - type: task
+          id: workshop-blockout
+          navLabel: Build the walk before the walls
+          title: Build the walk before the walls.
+          description:
+            'Borrow the team’s earliest habit: make a small, playable route
+            before you make a beautiful house.'
+          equipment: YOU’LL NEED / A blank place · simple parts · a test avatar
+          workingView:
+            component: WorkshopImage
+            props:
+              alt: Illustrative three-room blockout with a dotted player route.
+              images:
+                - assets/resources/mystery-of-duvall-drive/workshops/plan-step-1.svg
+                - assets/resources/mystery-of-duvall-drive/workshops/plan-step-2.svg
+                - assets/resources/mystery-of-duvall-drive/workshops/plan-step-3.svg
+                - assets/resources/mystery-of-duvall-drive/workshops/plan-step-4.svg
+          steps:
+            - title: Give three rooms a reason.
+              action:
+                Sketch an entrance, a room with a clue, and a room with a payoff. Write
+                the player’s intended discovery beside each room, then connect
+                them with a route.
+              check:
+                You can explain what each room contributes without describing its
+                furniture.
+              annotation: 'Start with three beats: arrival, discovery, payoff.'
+            - title: Block out the route in Studio.
+              action:
+                Use anchored simple parts for floors, walls, and doorways. Leave
+                materials and small props alone. Keep the route short enough to
+                revise in one sitting.
+              check: There is a continuous, walkable path from the entrance to the payoff.
+              annotation: The solid outline is the space; the dotted line is the experience.
+            - title: Walk it at character scale.
+              action:
+                Start a Test playtest with an avatar. Walk through each doorway and turn
+                inside each room. Note the places where the camera, navigation,
+                or proportions feel awkward.
+              check: The avatar can pass every doorway and turn without fighting the camera.
+              annotation:
+                Judge proportions from the player’s view, not just the overhead
+                plan.
+            - title: Change one thing. Walk it again.
+              action:
+                Stop the test, resize the most troublesome space, and repeat the same
+                route. Ask another person to find the clue without coaching them
+                before adding detail.
+              check:
+                Your tester finds the next beat through the layout, not your
+                instructions.
+              annotation: A successful blockout is easy to read—and still easy to change.
+    - id: materialize-the-world
+      order: 2
+      sections:
+        - type: concept
+          id: materialize-the-world
+          navLabel: Materialize the world
+          hero:
+            title: The feeling is in the finish.
+            description:
+              Rain on stone. Light on leather. A small, carefully chosen palette
+              gave the house its identity—and kept its texture budget in reach.
+            image: assets/resources/mystery-of-duvall-drive/materializing-the-world/overview.png
+            alt: A richly textured room in the Duvall Drive house.
+            caption:
+              Wood, stone, fabric, and light turn a collection of meshes into a place
+              that feels inhabited.
+          blocks:
+            - type: markdown
+              markdown: >-
+                A room can have the right shape and still feel empty. In Duvall
+                Drive, the grain of the wood, the worn surface of a couch, and
+                the sheen of rain-soaked ground do much of the work of making
+                the place believable.
+
+
+                The Craftsman-style house gave the artists more than a visual
+                direction. Its clean lines and natural wood tones offered a
+                practical way to reuse a limited set of materials across
+                furniture, frames, and architecture. Consistency was an artistic
+                choice with a useful technical consequence.
+
+
+                ## A palette that travels
+
+
+                Instead of painting every object from scratch, the team built
+                shared trim maps: textures whose different regions could be
+                arranged across many meshes through their UVs. One set of wood
+                textures could serve a chair, a picture frame, and a larger
+                architectural detail.
+
+
+                The trick was restraint. A conspicuous stain looks natural once
+                and suspicious when it repeats on every surface. Shared textures
+                stayed relatively clean. Objects that genuinely needed
+                distinctive wear could receive a unique texture set.
+            - type: figure
+              image: assets/resources/mystery-of-duvall-drive/materializing-the-world/wood-trim-assets-in-place.png
+              alt:
+                A collection of furniture and architectural pieces using shared wood trim
+                textures.
+              caption:
+                A common wood palette connects different objects while reducing the
+                need for unique texture sets.
+            - type: markdown
+              markdown: >-
+                ## Spend detail where it shows
+
+
+                Color variation stretched the palette further. Alpha masks let
+                the team tint selected areas of a surface without producing a
+                separate color texture for every variation. Leather could change
+                character while retaining the same underlying material work.
+
+
+                Texture resolution was another decision to make with the scene
+                open. The artists reduced individual maps, inspected the result
+                in Studio, and repeated the process until they found a useful
+                balance. Different maps did not always need the same resolution;
+                a non-metallic object did not necessarily need a metalness
+                texture at all.
+            - type: callout
+              title: The useful constraint
+              markdown: >-
+                A shared material should be distinctive enough to support the
+                art direction, but quiet enough to
+                  work on more than one object.
+            - type: markdown
+              markdown: >-
+                ## Take the weather seriously
+
+
+                Outside, the storm needed to leave evidence. Mud, gravel, mulch,
+                and puddles gave the ground a wet, uneven character. Material
+                variants helped the team carry that treatment across terrain and
+                parts, while wet and dry versions distinguished exposed surfaces
+                from sheltered ones.
+
+
+                That distinction matters under a porch. If everything shines
+                equally, the rain stops feeling like weather and starts feeling
+                like a filter. Matching surfaces to their surroundings helped
+                the world hold together.
+            - type: figure
+              image: assets/resources/mystery-of-duvall-drive/materializing-the-world/backyard-wet-material-variants.png
+              alt: Wet ground and puddled material variants in the house's backyard.
+              caption: The storm is visible at ground level, not only in the sky.
+            - type: markdown
+              markdown:
+                The finished palette feels abundant because it is used thoughtfully.
+                The lesson is not to give every asset more texture data. It is
+                to make the available material work harder, and to spend unique
+                detail where a player will actually notice it.
+    - id: immersive-narrative
+      order: 3
+      sections:
+        - type: concept
+          id: immersive-narrative
+          navLabel: Immersive narrative
+          hero:
+            title: Let the house do the talking.
+            description:
+              A scribbled wall. An object that refuses to be ordinary. The story
+              works best when discovering it feels like the player's idea.
+            image: assets/resources/mystery-of-duvall-drive/immersive-narrative/grandfather-room.png
+            alt: The grandfather's room, crowded with research and writing on the walls.
+            caption:
+              The grandfather's obsession is written into the room before a line of
+              interface text appears.
+          blocks:
+            - type: markdown
+              markdown: >-
+                The grandfather's room is in disarray. Research fills the space;
+                thoughts cover the walls. The player can infer an obsession
+                before the game explains it. That was one of the team's central
+                ambitions: let the house carry as much of its own story as
+                possible.
+
+
+                A clue needed to make sense even if no player ever arrived to
+                find it. A large instructional sign would have broken the spell.
+                A chalkboard left by someone consumed by his research could
+                offer guidance and deepen the fiction at the same time.
+
+
+                ## Give attention a hierarchy
+            - type: columns
+              markdown: >-
+                Early on, the team highlighted every object players could
+                interact with. It was too much. The room became a field of
+                competing signals, and the things that mattered to the story
+                lost their distinction.
+
+
+                Restricting highlights to corrupted or dangerous objects made
+                that visual language useful again. The interface did less, and
+                the player could read more. Elsewhere, an arrangement of objects
+                could carry the message on its own: a fallen power line in water
+                did not need a paragraph explaining the danger.
+            - type: figure
+              image: assets/resources/mystery-of-duvall-drive/immersive-narrative/chalkboard.png
+              alt: A chalkboard covered with research and diagrams in the grandfather's room.
+              caption:
+                A clue belongs in the world when it also belongs to the person who left
+                it there.
+            - type: markdown
+              markdown: >-
+                ## Four voices, four jobs
+
+
+                The narrative system separated different kinds of information.
+                Visual cues worked quietly through scenery. Lore took over the
+                screen when a player chose to inspect something important.
+                Thought bubbles offered a brief, personal reaction near an
+                object. Announcements spoke to the whole group.
+
+
+                Those differences protected the rhythm of exploration. A
+                player's private discovery did not have to interrupt everyone
+                else. A moment that changed the shared experience could address
+                everyone at once.
+            - type: steps
+              items:
+                - Visual cues — let the environment suggest
+                - Lore — give a discovery room to unfold
+                - Thought bubbles — keep a reaction personal
+                - Announcements — bring the group into the moment
+            - type: markdown
+              markdown: >-
+                ## Keep the words flexible
+
+
+                Lore used an on-screen overlay; thought bubbles sat in the world
+                near their subjects. Both relied on text elements rather than
+                flattened images of text. That choice let the team style
+                phrases, scale layouts for different devices, and make use of
+                automatic translation.
+
+
+                Announcements reused one interface object, with scripts
+                supplying the words. Changes to the story did not require
+                rebuilding dozens of separate screens. Rich text could even let
+                an otherworldly voice interrupt a sentence.
+
+
+                The effect was theatrical, but the organization was deliberate.
+                The house could whisper to one player, address the whole group,
+                or say nothing at all—and still be understood.
+    - id: stream-in-immersion
+      order: 4
+      sections:
+        - type: concept
+          id: stream-in-immersion
+          navLabel: Stream in immersion
+          hero:
+            title: Build beyond what you can see.
+            description:
+              The world only needs to arrive where the player can experience it.
+              The challenge is making that boundary disappear.
+            image: assets/resources/mystery-of-duvall-drive/streaming-in-immersion/winding-path.png
+            alt: The winding, tree-lined approach to the Duvall Drive house.
+            caption:
+              A bend in the path is both an invitation to explore and a way to
+              control the view.
+          blocks:
+            - type: markdown
+              markdown: >-
+                The house was full of detail, but loading all of it at once was
+                not a reasonable assumption for every device. Instance streaming
+                let the team keep the experience in one place while clients
+                loaded smaller portions around the player.
+
+
+                That solved one problem and exposed another. A distant hillside
+                cannot hide the edge of the world if the hillside has not
+                arrived yet. Streaming had to influence the layout, the scenery,
+                and the scripts—not simply become a setting enabled at the end.
+
+
+                ## Let the route shape the view
+
+
+                The winding driveway already encouraged players to discover the
+                house gradually. It also limited how far they could see. Nearby
+                trees and blocking geometry kept the view enclosed even when
+                more distant scenery was outside the streaming range.
+
+
+                The team placed that cover along the player's route, not just at
+                the map's perimeter. At each point, something close enough to
+                load needed to complete the scene. A performance constraint and
+                a storytelling decision began to reinforce each other.
+            - type: figure
+              image: assets/resources/mystery-of-duvall-drive/streaming-in-immersion/content-streaming.png
+              alt:
+                A view of the Duvall Drive environment showing streamed content around the
+                playable area.
+              caption:
+                The authored world can be larger than the portion a client needs at any
+                given moment.
+            - type: markdown
+              markdown: >-
+                ## Protect the things players expect to see
+
+
+                The storm was different. It was enormous, it was important, and
+                players expected it to exist before they reached the house. A
+                sudden appearance would have exposed the mechanism behind the
+                spectacle.
+
+
+                The team worked with the scale and bounds of the sky models, and
+                adjusted the height of surrounding trees. When the storm was too
+                far away to load, the treeline could interrupt the view
+                naturally. The Pacific Northwest setting made tall trees a
+                convincing part of the solution.
+            - type: callout
+              title: Think like a set designer
+              markdown: >-
+                Ask what the player can see from each point on the path—and
+                which nearby objects must be present
+                  for that view to make sense.
+            - type: markdown
+              markdown: >-
+                ## Write for arrivals and departures
+
+
+                Scripts had to follow the same logic. A client could not scan
+                the world once at startup and assume every object it would ever
+                need was already there. Objects and their dependencies could
+                arrive later, or leave the client again.
+
+
+                Systems needed to initialize new arrivals, wait for the data
+                they required, and release references when content disappeared.
+                Treating those changes as normal made the experience more
+                resilient.
+
+
+                The result was an illusion supported by both disciplines:
+                artists shaped what could be seen, and engineers made the
+                changing contents of that view a routine part of the world.
+        - type: task
+          id: workshop-sightlines
+          navLabel: Design one convincing approach
+          title: Design one convincing approach.
+          description:
+            'A bend in a path can do two jobs: build anticipation and keep the
+            player’s immediate view complete.'
+          equipment: YOU’LL NEED / A test route · nearby scenery · client playtesting
+          workingView:
+            component: WorkshopImage
+            props:
+              alt: Illustrative winding approach with nearby trees framing the player route.
+              images:
+                - assets/resources/mystery-of-duvall-drive/workshops/route-step-1.svg
+                - assets/resources/mystery-of-duvall-drive/workshops/route-step-2.svg
+                - assets/resources/mystery-of-duvall-drive/workshops/route-step-3.svg
+                - assets/resources/mystery-of-duvall-drive/workshops/route-step-4.svg
+          steps:
+            - title: Establish your test conditions.
+              action:
+                In edit mode, select Workspace and confirm StreamingEnabled in
+                Properties. Record your current streaming settings so that later
+                comparisons use the same conditions.
+              check: You know which settings produced the view you are evaluating.
+              annotation: This is a sightline sketch, not a simulation of streaming radii.
+            - title: Put a bend before the reveal.
+              action:
+                Block out a short approach with one turn. Place the destination beyond
+                it, then walk the route in a client playtest and choose three
+                places to stop and look around.
+              check: The destination is revealed gradually instead of appearing all at once.
+              annotation: Three viewing positions make the approach easier to inspect.
+            - title: Complete the near view.
+              action:
+                At each stop, inspect the horizon and both sides of the path. Add nearby
+                trees, a bank, or a wall where the view exposes an unfinished
+                edge; keep navigation clear.
+              check: The close scenery frames the route without hiding where to go.
+              annotation: Place cover along the route—not only around the map’s perimeter.
+            - title: Test the return trip, too.
+              action:
+                Walk away and return. Check both directions on representative devices
+                and watch for missing scenery or broken interactions. A single
+                desktop test cannot guarantee streaming behavior.
+              check:
+                Record visual gaps and interaction failures separately so each gets the
+                right fix.
+              annotation:
+                Streaming depends on the client and conditions; a good view is
+                something to test.
+    - id: develop-a-moving-world
+      order: 5
+      sections:
+        - type: concept
+          id: develop-a-moving-world
+          navLabel: Develop a moving world
+          hero:
+            title: Nothing here stays still.
+            description:
+              A storm draws you closer. A corridor runs away. Movement turns the
+              house from a setting into something that seems to have intentions.
+            image: assets/resources/mystery-of-duvall-drive/developing-a-moving-world/storm-iteration-4.png
+            alt: A swirling storm and bright central eye above the Duvall Drive house.
+            caption:
+              The storm's central eye gives the scene a focal point without giving
+              away the entire mystery.
+          blocks:
+            - type: markdown
+              markdown: >-
+                The storm did not begin as a storm. Early versions explored an
+                obsidian pillar and a vast portal. The eventual design tightened
+                around a smaller eye: bright enough to draw attention, partially
+                concealed enough to invite another step toward the house.
+
+
+                Its force had to register in the world below. Trees moved.
+                Debris crossed the path. Clouds slipped through one another. The
+                sky was not a backdrop; it was something happening to the place.
+
+
+                ## Choreograph the weather
+
+
+                Layered, semi-transparent cloud meshes rotated at different
+                speeds. Their intersections created changing forms, while their
+                modeled surfaces caught light from flashes. A carefully
+                assembled set of moving pieces could feel less predictable than
+                any individual piece really was.
+
+
+                The team gave different effects different jobs. Textured beams
+                carried the prominent lightning strikes, synchronized with sound
+                and post-processing. Particle effects suggested more distant
+                flashes and airborne debris. Rigged trees supplied the larger
+                gesture of wind moving through the grounds.
+            - type: figure
+              image: assets/resources/mystery-of-duvall-drive/developing-a-moving-world/layered-cloud-meshes.png
+              alt: Layers of cloud meshes used to build the swirling storm.
+              caption:
+                The vortex is assembled from layers. Differences in motion help conceal
+                the repetition.
+            - type: markdown
+              markdown: >-
+                ## Make a room break its promise
+
+
+                Inside the corrupted pantry, the team wanted a familiar
+                nightmare: the farther you go, the farther away the end seems to
+                become. The solution was a longer room, concealed wings, and a
+                false wall that moved when players crossed a trigger.
+
+
+                The wall reused ideas from the door system. Start and end
+                markers described where it should move; attached objects
+                traveled with it; audio helped sell the change. A strange effect
+                emerged from a comprehensible mechanism.
+            - type: yolo
+              component: VideoFigure
+              props:
+                src: assets/resources/mystery-of-duvall-drive/developing-a-moving-world/pantry-movement-silent.mp4
+                poster: assets/resources/mystery-of-duvall-drive/developing-a-moving-world/pantry-corrupt-state.png
+                title: Watch the pantry pull away.
+                caption:
+                  A silent version of the original development clip of the expanding
+                  pantry. Pause and replay to study how the retreating wall changes the
+                  apparent length of the room. Playback is under your control.
+                description:
+                  From the player’s perspective, the far wall of the corrupted pantry
+                  moves away down the corridor. Its attached contents travel with it,
+                  revealing more space and making the familiar room appear to stretch.
+                original: assets/resources/mystery-of-duvall-drive/developing-a-moving-world/pantry-movement.mp4
+                silent: true
+            - type: markdown
+              markdown: >-
+                ## Choose motion by what it must do
+
+
+                The corrupted treehouse posed a different question. Its spinning
+                platforms had to carry the players standing on them. Here,
+                physically driven constraints served a purpose that a purely
+                visual movement would not: the surface and the character needed
+                to interact.
+
+
+                That distinction guided the rest of the world. Distant
+                decorative rotation could run locally. A platform affecting
+                shared gameplay needed physical behavior. Tree animation could
+                be reused across rigs with matching joint names, with the
+                animated trees concentrated where their movement mattered most.
+            - type: callout
+              title: The decision behind the effect
+              markdown: >-
+                Start with the relationship between the moving object and the
+                player. Is it scenery to watch, a
+                  timed transformation to experience, or a physical surface to stand on?
+            - type: markdown
+              markdown:
+                Nothing about the resulting world feels still. But its many kinds of
+                movement come from choosing a suitable tool for each kind of
+                interaction, rather than asking one system to do everything.
+        - type: task
+          id: workshop-pantry
+          navLabel: Take apart an impossible room
+          title: Take apart an impossible room.
+          description:
+            An inspection exercise in the editable Duvall Drive project. Follow
+            the pantry illusion from hidden space to moving scenery.
+          equipment:
+            YOU’LL NEED / A local copy of Duvall Drive · Explorer · the original
+            guide
+          workingView:
+            component: WorkshopImage
+            props:
+              image: assets/resources/mystery-of-duvall-drive/developing-a-moving-world/pantry-corrupt-state.png
+              alt: The long corrupted pantry and its concealed side spaces.
+          steps:
+            - title: Find the space behind the trick.
+              action:
+                Open your local project copy and use the guide’s “Make the expanding
+                pantry” section to locate the corrupted pantry. Inspect the long
+                corridor, side wings, and false wall from above.
+              check:
+                You can distinguish the actual room length from the length a player
+                initially sees.
+              annotation:
+                01 / The corridor already exists. The wall conceals how much of it
+                there is.
+            - title: Trace the trigger to the goals.
+              action:
+                Locate the trigger volume described in the guide and the start/end goal
+                parts for the wall. Inspect their positions without changing the
+                scripts yet.
+              check: The player crosses the trigger before reaching the false wall.
+              annotation: 02 / A trigger begins the effect; goal parts describe its endpoints.
+            - title: Inspect what travels together.
+              action:
+                In Explorer, examine the moving wall model and the connections to its
+                loose props. Compare the setup with the guide’s explanation of
+                welding the contents to the wall.
+              check:
+                You can identify which props should travel with the wall and which should
+                stay put.
+              annotation:
+                03 / The illusion breaks if the wall retreats but its contents stay
+                behind.
+            - title: Watch it from the player’s side.
+              action:
+                Reach the pantry sequence in a playtest of your copy. Watch the wall and
+                its contents, then listen for the motion cue. Stop before making
+                changes, and tune only one element at a time.
+              check: The movement, attached props, and sound read as a single event.
+              annotation: 04 / Geometry, motion, and sound have to tell the same story.
+    - id: design-dark-soundscapes
+      order: 6
+      sections:
+        - type: concept
+          id: design-dark-soundscapes
+          navLabel: Design dark soundscapes
+          hero:
+            title: Follow the sound upstairs.
+            description:
+              The house always has something else for you to hear. Sound becomes
+              a reason to leave the room you're in.
+            image: assets/resources/mystery-of-duvall-drive/designing-dark-soundscapes/overview.png
+            alt: An atmospheric interior from the Duvall Drive sound-design showcase.
+            caption:
+              A soundscape connects the room around a player with the spaces they
+              have yet to explore.
+          blocks:
+            - type: markdown
+              markdown: >-
+                A radio plays somewhere in a bedroom. A sink drips. Rain reaches
+                the roof above the attic. In the center of the house, the ritual
+                has its own sound. The team wanted each position to offer a hint
+                of something more intriguing elsewhere.
+
+
+                This was not only a matter of making the house frightening.
+                Familiar sounds gave the place credibility. Abstract sounds
+                pointed toward the impossible things inside it. Either would
+                have been less effective without the other.
+
+
+                ## Give sound a shape
+
+
+                Rain striking a car should not seem to come from a single
+                pinprick on its hood. Room tone should not swivel sharply from
+                one ear to the other every time the camera turns. Those effects
+                make a space feel like an arrangement of audio sources rather
+                than a place.
+
+
+                Volumetric audio let the team describe areas that emitted sound.
+                Inside an emitter, a sound could surround the listener. Outside
+                it, distance and direction became more apparent. That behavior
+                suited rain, room ambience, television static, and the
+                unfamiliar atmosphere of corrupted spaces.
+            - type: figure
+              image: assets/resources/mystery-of-duvall-drive/designing-dark-soundscapes/car-part-volume.png
+              alt:
+                An audio-emitting volume placed around a car to represent rain striking its
+                surface.
+              caption:
+                The sound of rain belongs to a surface, not just a point on that
+                surface.
+            - type: markdown
+              markdown: >-
+                ## Let the important sound through
+
+
+                With so much happening, the mix needed priorities. A puzzle
+                interaction should not fight the wind, footsteps, and background
+                rain for attention. Turning everything up would only make the
+                competition louder.
+
+
+                Nested sound groups gave the team a way to organize the mix.
+                Sounds that communicated progress had higher priority than the
+                constant bed of environmental activity. Compression could
+                briefly lower that background when an important sound played—a
+                technique known as ducking.
+            - type: callout
+              title: Listen for the hierarchy
+              markdown: >-
+                Atmosphere makes the world convincing. Feedback tells the player
+                that something happened. A good
+                  mix leaves room for both, and lets feedback take the foreground when it matters.
+            - type: markdown
+              markdown: >-
+                ## Keep the quiet alive
+
+
+                The quieter moments still needed texture. Layers of rain on
+                different surfaces helped the storm feel present in the player's
+                immediate surroundings. Stable room ambience kept the house from
+                falling silent whenever the player stopped moving.
+
+
+                The result did not rely on a scare arriving every few seconds.
+                Sound could build expectation, establish a direction, and make
+                the distance between two rooms feel worth crossing. In a house
+                built around curiosity, that invitation was part of the
+                navigation.
+    - id: technical-overview
+      order: 7
+      sections:
+        - type: concept
+          id: technical-overview
+          navLabel: Technical overview
+          hero:
+            title: Behind the walls.
+            description:
+              The house can break the rules of reality because its systems agree
+              on the rules of the game.
+            image: assets/resources/mystery-of-duvall-drive/constructing-the-house/final-foyer.png
+            alt: The central foyer of Duvall Drive, where players bring recovered seals.
+            caption:
+              The foyer is a narrative center and a shared destination for the
+              experience's progression systems.
+          blocks:
+            - type: markdown
+              markdown: >-
+                A player picks up an object. A room changes. The group
+                disappears into a corrupted version of the house, solves a
+                puzzle, and returns. To the player, it is one continuous event.
+                Underneath, several systems have to agree about what happens
+                next.
+
+
+                The technical documentation approaches that problem in layers:
+                the requirements of the experience, the systems that control its
+                main flow, and the smaller behaviors that make its rooms work.
+                Reading those layers together reveals how the visual ambition
+                became something the team could actually build and debug.
+
+
+                ## Start with the promises
+            - type: columns
+              markdown: >-
+                The story required more than a collection of independent
+                puzzles. Players needed to enter together, move between normal
+                and corrupted spaces, recover seals, and understand their
+                progress. Those promises established the work the engineering
+                had to support.
+
+
+                They also helped separate concerns. Mission-specific behavior
+                did not all belong in the system managing the overall game. A
+                room could have a distinctive challenge while still using a
+                common way to begin, finish, and return players to the house.
+            - type: steps
+              items:
+                - Requirements — what the player must be able to experience
+                - Foundations — how progression, events, and interaction are
+                  coordinated
+                - Supporting systems — how the world responds in the small
+                  moments
+            - type: markdown
+              markdown: >-
+                ## Make coordination reusable
+
+
+                GameStateManager organized the main flow. EventManager
+                coordinated actions over time: changes in properties, sound,
+                scripts, and camera effects. Missions supplied their own
+                configuration and behavior. Grabbing and using objects connected
+                those systems to the player's actions.
+
+
+                Shared conventions made that division practical. Tags described
+                objects that needed a behavior. Configuration identified mission
+                assets and destinations. Events carried commands between the
+                parts of the system that needed to communicate.
+
+
+                ## Leave a way back into the machinery
+
+
+                The experience is editable in Studio. That matters because an
+                architectural overview can explain why systems are separated,
+                but it cannot substitute for seeing how a particular room uses
+                them.
+
+
+                The next three chapters follow the structure of the original
+                technical notes. They explain the decisions and relationships;
+                each links back to the corresponding reference for names,
+                parameters, and implementation details. The code is easier to
+                read once you know which part of the player's experience it is
+                responsible for.
+    - id: main-design-requirements
+      order: 8
+      sections:
+        - type: concept
+          id: main-design-requirements
+          navLabel: Main design requirements
+          hero:
+            title: Make the impossible predictable.
+            description:
+              Two versions of a room. One shared experience. Designing the rules
+              that let players cross between them.
+            image: assets/resources/mystery-of-duvall-drive/constructing-the-house/package-corrupt-state.png
+            alt: The transformed, corrupted version of a room in the Duvall Drive house.
+            caption:
+              A corrupted room can abandon the architecture of the house while
+              retaining its place in the mission flow.
+          blocks:
+            - type: markdown
+              markdown: >-
+                The house asks players to follow an unusual rhythm. Find a
+                corrupted seal. Enter a changed version of the room. Solve its
+                challenge. Return, collect the restored seal, and bring it to
+                the foyer. Then go looking for the next mystery.
+
+
+                Repeating that rhythm gave a complex experience a recognizable
+                shape. The puzzles could change, but their relationship to the
+                house remained understandable. The engineering needed to make
+                each step dependable.
+
+
+                ## Two rooms, one illusion
+
+
+                Normal and corrupted rooms were not simply different decorations
+                on the same space. The team prepared a distant area—about 6,500
+                studs away along the X axis—where a corrupted room could be
+                cloned when needed. Players moved there for the mission, then
+                returned to the normal room. The temporary version could be
+                destroyed afterward.
+            - type: yolo
+              component: ImageComparison
+              props:
+                title: One room. Two realities.
+                images:
+                  - id: normal
+                    label: Normal
+                    image: assets/resources/mystery-of-duvall-drive/constructing-the-house/package-normal-state.png
+                    alt: The study in its normal state.
+                  - id: corrupted
+                    label: Corrupted
+                    image: assets/resources/mystery-of-duvall-drive/constructing-the-house/package-corrupt-state.png
+                    alt: The transformed, corrupted study.
+            - type: markdown
+              markdown: >-
+                The separation gave the designers freedom to stretch and
+                transform a room beyond the physical footprint of the house.
+                Cutscenes covered the transition so the player experienced a
+                change in reality, rather than a tour of how the level was
+                stored.
+
+
+                ## Keep the group in the same story
+
+
+                A lobby gathered players into groups of five before sending them
+                to a reserved server for the main experience. That arrangement
+                kept late arrivals from dropping into the middle of a narrative
+                they had missed.
+
+
+                Inside the house, game states controlled when a mission could
+                start, when a restored seal could be collected, and when doors
+                should unlock. Short repositioning within puzzles served a
+                different purpose from the initial server transfer; not every
+                movement was the same kind of teleportation.
+
+
+                ## Build a version for finding mistakes
+
+
+                The team also needed to play the experience in a way ordinary
+                players never would. A debug version could skip the lobby and
+                cutscenes, jump through missions, and finish puzzles with a
+                button. Configuration distinguished that environment from the
+                release version.
+
+
+                That shortened the distance between making a change and seeing
+                its consequences. A shared mission framework supplied start and
+                finish hooks, configuration, and a predictable place to attach
+                debugging behavior.
+            - type: callout
+              title: A practical dividing line
+              markdown: >-
+                Shared simulation belongs with the systems responsible for all
+                players. Cosmetic effects can often
+                  be handled locally. Make that decision from the behavior you need, not just where it is easiest to
+                  write the script.
+    - id: foundational-gameplay-systems
+      order: 9
+      sections:
+        - type: concept
+          id: foundational-gameplay-systems
+          navLabel: Foundational gameplay systems
+          hero:
+            title: The machinery of a mystery.
+            description:
+              Behind a seamless transformation is a sequence of carefully
+              coordinated handoffs.
+            image: assets/resources/mystery-of-duvall-drive/immersive-narrative/overview-announcement.png
+            alt: The otherworldly ritual at the heart of the Duvall Drive house.
+            caption:
+              Lighting, camera effects, progression, and interaction have to agree on
+              the same moment.
+          blocks:
+            - type: markdown
+              markdown: >-
+                The screen darkens. Somewhere the player cannot see, a room is
+                being prepared. Content streams in; characters move to their
+                assigned positions. Then the picture returns, and the impossible
+                space is suddenly the one they occupy.
+
+
+                The original implementation separated this transition into
+                warmup, in-flight, and cooldown phases. The distinction was
+                practical: the time an effect takes to play and the time a
+                client needs to receive content are not always the same.
+
+
+                ## Hold the moment together
+
+
+                GameStateManager coordinated the experience's larger sequence:
+                gathering players, starting missions, cloning rooms, moving
+                characters, handling seals, and bringing the group back to the
+                foyer. Most of that state lived on the server, with messages
+                telling clients when to show interface or other local effects.
+
+
+                During a room transition, the warmup concealed the world. The
+                in-flight phase maintained that concealment while streaming and
+                position checks were handled. The cooldown brought the scene
+                back. The implementation also used a timeout, and prevented
+                seating from interfering with the move.
+            - type: steps
+              items:
+                - Warmup — conceal the change and prepare the destination
+                - In flight — coordinate streaming and player arrival
+                - Cooldown — reveal the new room
+            - type: markdown
+              markdown: >-
+                ## Give effects a common clock
+
+
+                EventManager described actions over time. It could interpolate a
+                property, call a script, play sound, or trigger a camera shake.
+                Parameters and a chosen root object let an event work with
+                different groups of objects, including rooms created during
+                play.
+
+
+                That reuse mattered. A lighting change or a reveal did not have
+                to become a separate piece of custom coordination every time.
+                The effect could remain recognizable while its targets and
+                timing changed.
+
+
+                ## Keep a puzzle's identity in the puzzle
+
+
+                Seven missions used several types of challenge; six involved
+                seals. Configuration described the relevant rooms, doors,
+                objects, and destinations. Mission-specific start and completion
+                behavior lived alongside that data, while the broader state
+                system handled the shared progression.
+
+
+                Grabbing was another coordinated action. The client identified
+                the intended object and approached it; the server handled
+                whether it could be held, including conflicts when another
+                player already had it. Releasing an object restored the relevant
+                physical behavior and cleared the grip.
+
+
+                The result is a useful architecture to study because the
+                boundaries have visible reasons. State keeps the group in the
+                same story. Timed events make the story feel continuous.
+                Missions and interactions give players something meaningful to
+                do inside it.
+    - id: supporting-systems
+      order: 10
+      sections:
+        - type: concept
+          id: supporting-systems
+          navLabel: Supporting systems
+          hero:
+            title: The details that keep you believing.
+            description:
+              A door opens the right way. A lost seal finds its way home. Small
+              systems keep the larger illusion from falling apart.
+            image: assets/resources/mystery-of-duvall-drive/constructing-the-house/overview.png
+            alt:
+              The furnished library of the Duvall Drive house, full of objects to inspect
+              and interact with.
+            caption:
+              A believable room depends as much on how its objects respond as on how
+              they look.
+          blocks:
+            - type: markdown
+              markdown: >-
+                A drawer opens when you click it. A piano responds to a touch.
+                An icon changes when you look at something you can pick up.
+                These moments rarely announce themselves as engineering, but
+                their absence is easy to feel.
+
+
+                Duvall Drive organized many of them around tags and small
+                managers. An object could declare what kind of behavior it
+                needed, while a shared system supplied that behavior. That
+                reduced the need to scatter copies of the same script throughout
+                the house.
+
+
+                ## Make interaction legible
+
+
+                Highlights and the central item indicator worked together to
+                explain what deserved attention. A hand, an eye, or a
+                locked-door symbol could communicate what the player was looking
+                at without filling the screen with instructions.
+
+
+                UseManager handled another part of the conversation: whether the
+                object a player held made sense for the target they selected.
+                Different responses could distinguish a successful action from
+                an empty hand or the wrong item. Feedback helped a puzzle feel
+                understandable even before it was solved.
+
+
+                ## Let the room respond
+
+
+                Doors tracked their opening and closing state. Drawers used
+                constrained movement. Texture-atlas animation brought television
+                screens to life. Local rotations supplied motion for decorative
+                objects, while headlamps, seats, and the piano each had their
+                own narrowly defined behavior.
+
+
+                These systems also had to cooperate with the larger experience.
+                Seating could be disabled around a room transition. Highlights
+                needed to disappear when a corrupted room was removed. An
+                interaction that works in a static room is only the beginning of
+                one that works in a changing world.
+            - type: figure
+              image: assets/resources/mystery-of-duvall-drive/immersive-narrative/dog-statue.png
+              alt: An object in the house associated with a piece of lore.
+              caption:
+                An ordinary-looking prop can connect visual attention, interaction, and
+                narrative.
+            - type: markdown
+              markdown: >-
+                ## Protect the player's progress
+
+
+                Some objects could not be allowed to disappear into an
+                unreachable corner. RestorableManager remembered where an
+                important item belonged. If a player dropped it and no one
+                picked it up again within five seconds, the system returned it
+                to its original position.
+
+
+                Respawn volumes served a similar purpose for players in the
+                corrupted rooms. A fall could lead back to a suitable location
+                instead of leaving the mission stuck. These were not elaborate
+                checkpoint systems; they were targeted solutions to ways a
+                shared puzzle could stop being playable.
+            - type: callout
+              title: The last layer of worldbuilding
+              markdown: >-
+                A world feels coherent when it knows how to recover. Design the
+                dropped object, interrupted
+                  interaction, and late-arriving asset as carefully as the ideal sequence.
+            - type: markdown
+              markdown:
+                That care connects the smallest scripts to the largest ambition of the
+                project. The house can remain strange because its responses
+                remain consistent enough for players to trust.
+        - type: task
+          id: workshop-playtest
+          navLabel: Try to break the spell
+          title: Try to break the spell.
+          description:
+            Finish with a test pass, not another prop. One interaction should
+            survive more than the perfect first attempt.
+          equipment:
+            YOU’LL NEED / An interactive room · two test clients · a short bug
+            log
+          workingView:
+            component: WorkshopImage
+            props:
+              image: assets/resources/mystery-of-duvall-drive/constructing-the-house/final-foyer.png
+              alt:
+                The central foyer, a shared space where players return as the story
+                progresses.
+          steps:
+            - title: Write the expected behavior.
+              action:
+                Choose one door, pickup, or puzzle interaction. Write down what starts
+                it, who should see the result, and how the player can recover if
+                they leave it unfinished.
+              check: Your note describes an observable result, not simply “it works.”
+              annotation: 01 / A test needs a promise to check.
+            - title: Test two points of view.
+              action:
+                Choose Server & Clients in Studio’s testing dropdown, select two
+                clients, and start the session. Trigger the interaction in one
+                client while observing the other.
+              check: Shared changes appear for both players; personal feedback stays personal.
+              annotation: 02 / One player acts. The other watches. Compare what each receives.
+            - title: Interrupt the happy path.
+              action:
+                Repeat the interaction, walk away midway, and try approaching it from
+                the second client. Test the recovery behavior you wrote down and
+                record any stuck or duplicated state.
+              check:
+                A player can continue after an interruption, or you have a reproducible
+                bug to fix.
+              annotation: 03 / An unfinished action should not become a permanent dead end.
+            - title: Make the next test repeatable.
+              action:
+                Record the starting state, actions, expected result, and actual result
+                for each failure. End the session; after a fix, rerun the same
+                sequence from a fresh session.
+              check: Someone else can reproduce the failure—or verify the fix—from your notes.
+              annotation: 04 / A useful bug report becomes tomorrow’s regression test.

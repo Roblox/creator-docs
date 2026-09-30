@@ -3111,6 +3111,11 @@ events:
       point. The event continues to fire every 30 seconds for as long as the
       player remains idle.
 
+      Once the player becomes active again, `Idled` stops firing and the elapsed
+      idle time resets. There is no separate event for the transition back to
+      activity. If the player goes idle again later, `Idled` waits the same ~2
+      minutes before firing again.
+
       This event only fires in client scripts, not server scripts; use a
       `Class.RemoteEvent` to notify the server of idle players.
 

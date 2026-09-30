@@ -45,3 +45,26 @@ If you disagree with our decision, you may appeal our decision within six months
 - Your full name (first and last name or entity name)
 
 You may also select a certified out-of-court dispute settlement body to resolve disputes relating to a content moderation decision we take, or seek judicial redress. The European Commission has a [list of accredited out-of-court dispute settlement bodies](https://digital-strategy.ec.europa.eu/en/policies/dsa-out-court-dispute-settlement) for this purpose.
+
+## Additional localizations for this page
+
+For additional, localized versions of this page that aren't available in the site's language picker, see the following links:
+
+- [Bulgarian (български)](https://create.roblox.com/docs/bg-bg/production/publishing/dsa-ip-reporting)
+- [Croatian (hrvatski)](https://create.roblox.com/docs/hr-hr/production/publishing/dsa-ip-reporting)
+- [Czech (čeština)](https://create.roblox.com/docs/cs-cz/production/publishing/dsa-ip-reporting)
+- [Danish (dansk)](https://create.roblox.com/docs/da-dk/production/publishing/dsa-ip-reporting)
+- [Dutch (Nederlands)](https://create.roblox.com/docs/nl-nl/production/publishing/dsa-ip-reporting)
+- [Estonian (eesti)](https://create.roblox.com/docs/et-ee/production/publishing/dsa-ip-reporting)
+- [Finnish (suomi)](https://create.roblox.com/docs/fi-fi/production/publishing/dsa-ip-reporting)
+- [Greek (Ελληνικά)](https://create.roblox.com/docs/el-gr/production/publishing/dsa-ip-reporting)
+- [Hungarian (magyar)](https://create.roblox.com/docs/hu-hu/production/publishing/dsa-ip-reporting)
+- [Irish (Gaeilge)](https://create.roblox.com/docs/ga-ie/production/publishing/dsa-ip-reporting)
+- [Latvian (latviešu)](https://create.roblox.com/docs/lv-lv/production/publishing/dsa-ip-reporting)
+- [Lithuanian (lietuvių)](https://create.roblox.com/docs/lt-lt/production/publishing/dsa-ip-reporting)
+- [Maltese (Malti)](https://create.roblox.com/docs/mt-mt/production/publishing/dsa-ip-reporting)
+- [Portuguese - Portugal (português)](https://create.roblox.com/docs/pt-pt/production/publishing/dsa-ip-reporting)
+- [Romanian (română)](https://create.roblox.com/docs/ro-ro/production/publishing/dsa-ip-reporting)
+- [Slovak (slovenčina)](https://create.roblox.com/docs/sk-sk/production/publishing/dsa-ip-reporting)
+- [Slovenian (slovenščina)](https://create.roblox.com/docs/sl-si/production/publishing/dsa-ip-reporting)
+- [Swedish (svenska)](https://create.roblox.com/docs/sv-se/production/publishing/dsa-ip-reporting)

@@ -97,29 +97,29 @@ Experiments come in two types:
 
 ### Metrics
 
-Experiments track all of the following metrics over the experiment duration.
+Experiments track all of the following metrics over the experiment duration. These metrics are updated every 24 hours while the experiment is running. However, during the first 24 hours of your experiment, Playtime, Payer conversion rate, and ARPU also update every 5 minutes so you can catch critical regressions ([early harm](#early-harm-metrics)) quickly.
 
-Metric | Description
-:--- | :---
-D1 retention | Percentage of players who returned to your game after one day.
-D7 retention | Percentage of players who returned to your game after one week.
-Playtime | Average amount of time players spent within your game. Cumulative for the duration of the experiment.
-ARPU | Average revenue per user. Revenue divided by the number of players. Cumulative for the duration of the experiment.
-ARPPU | Average revenue per paying user. Revenue divided by the number of players who purchased a game-related item. Cumulative for the duration of the experiment.
-Payer conversion rate | Percentage of players who purchased a game-related item.
-Session time | Playtime divided by number of sessions. Cumulative for the duration of the experiment.
+| Metric                | Description                                                                                                                                                 | Early harm?   |
+| :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------ |
+| D1 retention          | Percentage of new players who returned to your game after one day.                                                                                          | No            |
+| D7 retention          | Percentage of new players who returned to your game after one week.                                                                                         | No            |
+| Playtime              | Average amount of time players spent within your game. Cumulative for the duration of the experiment.                                                       | Yes           |
+| ARPU                  | Average revenue per user. Revenue divided by the number of players. Cumulative for the duration of the experiment.                                          | Yes           |
+| ARPPU                 | Average revenue per paying user. Revenue divided by the number of players who purchased a game-related item. Cumulative for the duration of the experiment. | No            |
+| Payer conversion rate | Percentage of players who purchased a game-related item. Cumulative for the duration of the experiment.                                                     | Yes           |
+| Session time          | Playtime divided by number of sessions. Cumulative for the duration of the experiment.                                                                      | No            |
 
 ### Experiment status
 
 The **Experiments** page shows the following statuses for experiments.
 
-Status | Description
-:--- | :---
-Completed | The experiment is over, which happens when you stop it manually, when you reach a decision, or automatically shortly after the decision date (14 days after for in-game, immediately for matchmaking). You can still review the details and results.
-Decision needed | The experiment has reached its decision date. Now is a good time to review the results.
-Running | The experiment is running but has yet to reach its decision date.
-Scheduled | The experiment is scheduled to start at a future date.
-Draft | The experiment hasn't been started or scheduled. You can finish setting it up.
+| Status          | Description                                                                                                                                                                                                                                          |
+| :-------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Completed       | The experiment is over, which happens when you stop it manually, when you reach a decision, or automatically shortly after the decision date (14 days after for in-game, immediately for matchmaking). You can still review the details and results. |
+| Decision needed | The experiment has reached its decision date. Now is a good time to review the results.                                                                                                                                                              |
+| Running         | The experiment is running but has yet to reach its decision date.                                                                                                                                                                                    |
+| Scheduled       | The experiment is scheduled to start at a future date.                                                                                                                                                                                               |
+| Draft           | The experiment hasn't been started or scheduled. You can finish setting it up.                                                                                                                                                                       |
 
 ## Target experiments to specific audiences
 
@@ -231,23 +231,59 @@ If you want the control scheme to persist on subsequent sessions, you likely nee
 
 ## View and interpret results
 
-After an experiment has run for at least 24 hours, click **View** to see details and results.
+Click **View** to see details and results. In the **Details And Progress** tab you can see the total number of players enrolled, as well as the number of players that received the control value and each variant. Viewing this page early in the experiment is useful strictly for making sure the experiment is running properly, **not** for taking action. Before taking action, see [Best practices](#best-practices-for-experiments).
 
 ![The details page for an experiment](../assets/analytics/configs/experiment-details.png)
 
-You can see the total number of players enrolled, as well as the number of players that received the control value and each variant. Viewing this page early in the experiment is useful strictly for making sure the experiment is running properly, **not** for taking action. Before taking action, see [Best practices](#best-practices-for-experiments).
+### Early harm metrics
 
-After the experiment is complete, check the **Results** tab. Look for statistically significant changes in goal metrics, which the dashboard highlights in green or red. These changes are more likely to show the impact of your variant and less likely to be false positives or negatives.
+For the first 24 hours, or until the first daily results land, early harm [metrics](#metrics) update every 5 minutes so you can catch unintended critical harm early. Click **Metrics** to see these results. Look for critically harming metrics highlighted in red.
+
+Hover over a metric and click **View confidence** to see the confidence interval.
+
+![Early Harm Results for an experiment](../assets/analytics/configs/experiment-ehd-results.png)
+
+During this window, results test only for harm, so the confidence interval has no lower bound, only an upper bound. A metric is flagged as critically harmful only if the entire confidence interval falls below the critical harm threshold. In the following example, Playtime is at -12.67% with an upper bound of -2.73%. Even though the estimate is lower than the critical harm threshold of -10% and the entire confidence interval is below 0%, the metric is not classified as critically harmful because the interval is not entirely below the harm threshold.
+
+![Confidence interval for an Early Harm metric](../assets/analytics/configs/experiment-ehd-confidence.png)
+
+Use these results only to guide early stopping decisions in the first 24 hours. **Do not** use them for launch decisions, rely on [daily results](#daily-results) instead.
+
+### Early harm thresholds
+
+Each metric has its own early harm threshold. If a variant's lift falls below this threshold, it will be classified as critically harmful to that metric. However, for metric variant comparisons with fewer than 10,000 players enrolled across the variant and the control, variant lifts are shown but decisions on harm will not be made until the sample size provides enough data to reliably detect harm.
+
+| Metric                  | Early harm threshold  |
+| :---------------------- | :-------------------- |
+| Playtime                | -10%                  |
+| ARPU                    | -20%                  |
+| Payer conversion rate   | -20%                  |
+
+### Early harm notifications
+
+If critical harm is detected in your experiment during the early harm analysis period, a notification is delivered to the game owner and experiment owner for early action. Notifications are delivered via email, Creator Hub notification tray, and through an optional [webhook](../cloud/webhooks/webhook-notifications.md). Upon receiving an early harm notification, you should review the experiment metrics and decide whether or not the experiment should be stopped early.
+
+![Early Harm creator hub notification](../assets/analytics/configs/experiment-ehd-notification.png)
+
+### Daily results
+
+After an experiment has run for at least 24 hours, click **Results** to see the latest results, which update every 24 hours. Look for statistically significant changes in goal metrics, which the dashboard highlights in green or red. These changes are more likely to show the impact of your variant and less likely to be false positives or negatives.
 
 ![The details page for an experiment](../assets/analytics/configs/experiment-results.png)
 
-Hover over any metric to see the **View confidence** button, which shows the confidence interval.
-
-A metric is statistically significant when the confidence interval for its percent change does not overlap with 0%. In the following example, D1 retention is up 17.4%, with lower and upper bounds 8.02% and 22.03%, which makes the change statistically significant.
+A metric is statistically significant when the confidence interval for its percent change does not overlap with 0%. In the following example, ARPU is up 2.37%, with lower and upper bounds 0.55% and 4.19%, which makes the change statistically significant.
 
 ![Confidence interval for a metric](../assets/analytics/configs/experiment-confidence.png)
 
 For convenience, the results page lets you replace the default config value with one of the variants from the experiment.
+
+### Sample ratio mismatch
+
+If your experiment is failing to enroll users into the variants in the expected proportions, an alert banner for **Sample Ratio Mismatch (SRM)** will appear in the experiment results tab. If SRM is detected, it is recommended to stop and restart your experiment.
+
+SRM is checked every 5 minutes for the first 24 hours of your experiment, and then daily after. SRM can invalidate experiment results; do not make launch decisions based on compromised and unreliable results.
+
+![Sample Ratio Mismatch banner](../assets/analytics/configs/srm-banner.png)
 
 ### Make a decision
 
@@ -279,6 +315,7 @@ Your decision determines the config changes that Roblox proposes:
 - **Start with a hypothesis.** Rather than just changing a variable and checking the results, write a cause-and-effect statement about what you changed, what you expect to happen, and why. As you experiment more and more, having a set of written hypotheses to accompany your results can help clarify your thinking and spark new ideas for experiments.
 
 - **Let experiments run for their full durations.** The novelty effect (temporary interest in a change not because it's better, but because it's new) can heavily skew early results, sometimes causing them to swing in and out of statistical significance. Ending experiments early increases the odds of you taking premature action based on anomalous spikes that more data would have smoothed out or even contradicted.
+  - The exception is [early harm](#early-harm-metrics) in the first 24 hours: if metrics are flagged as critically harming or you see [sample ratio mismatch](#sample-ratio-mismatch), review and consider stopping. **Do not** use early harm results for launch decisions.
 
 - **Don't act without statistical significance.** Even seemingly large changes in player behavior might not be statistically significant, generally due to small sample size. If a change isn't statistically significant, ignore it.
 

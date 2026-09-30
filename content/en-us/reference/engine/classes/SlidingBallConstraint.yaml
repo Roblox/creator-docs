@@ -7,14 +7,13 @@ type: class
 memory_category: BaseParts
 summary: |
   The base class for constraints that allow their attachments to slide along an
-  axis but not rotate.
+  axis.
 description: |
   **SlidingBallConstraint** is the base class for constraints that allow their
-  attachments to slide along an axis but not rotate, including
-  `Class.PrismaticConstraint` and `Class.CylindricalConstraint`. This constrains
-  the attachments so that their **X** axes are collinear but pointing in
-  opposite directions. It also constrains the attachments so that their **Y**
-  axes are parallel.
+  attachments to slide along an axis, including `Class.PrismaticConstraint` and
+  `Class.CylindricalConstraint`. The base class does not restrict rotation.
+  `Class.PrismaticConstraint` prevents rotation, while
+  `Class.CylindricalConstraint` allows rotation about an axis.
 
   When configuring this constraint, it may be helpful to study
   [Roblox Units](../../../physics/units.md) to understand how Roblox units

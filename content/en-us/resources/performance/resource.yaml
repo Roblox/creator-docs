@@ -1,0 +1,1229 @@
+schemaVersion: 1
+resource:
+  id: build-for-the-frame
+  route: /resources/performance
+  title: Build for the frame
+  sections:
+    - type: intro
+      id: introduction
+      eyebrow: Performance is part of the design
+      title: |-
+        A world can feel full.
+        A frame doesn't have to.
+      lede:
+        The pets arrive first. Then the coins, bouncing across a bright little neighborhood. Beyond
+        the wall is another place to explore—and beyond that, another.
+      hero:
+        image: assets/resources/performance/cover.webp
+        alt: Colorful pets and coins fill a cardboard-themed neighborhood in Cardboard Box Simulator.
+        kicker: The beauty of a smaller workload
+        subtitle: |-
+          A dense world. A busy server.
+          Room for one more good idea.
+        caption: Original project and imagery by Peter "MrChickenRocket" McNeill.
+        ctas:
+          - label: Play in browser
+            href: https://play.roblox.com/WebClient/WebClient.html?placeId=17841214558
+            tone: primary
+            open: popup
+          - label: View on Roblox
+            href: https://www.roblox.com/games/17841214558/Cardboard-Box-Simulator
+            tone: secondary
+            open: tab
+          - label: Read the original article
+            href: https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146
+            tone: secondary
+            open: tab
+      blocks:
+        - type: markdown
+          markdown: >-
+            It looks like a simple simulator. Underneath, it is a carefully arranged set of
+            decisions about what to draw, what to move, and what to leave alone.
+
+
+            Peter "MrChickenRocket" McNeill brought more than 25 years of game and engine
+            work—including Fruit Ninja, Jetpack Joyride, and Candy Crush—to this editable Roblox
+            project. His DevForum article opens the workshop: budgets, reusable art, visibility,
+            spatial hashing, and a crowd of surprisingly inexpensive pets.
+
+
+            This edition follows the entire article and its six appendixes, with all 48 original
+            content figures. The 2024 measurements remain labeled as case-study observations;
+            current documentation informs the editorial notes.
+        - type: callout
+          title: The original project at a glance
+          markdown: |-
+            - **30** pets per player
+            - **200** coins per player
+            - **≈30** connected zones
+            - **60 FPS** original mobile target
+        - type: markdown
+          markdown: >-
+            ## A long journey. A short view.
+
+
+            The map is part of the method
+
+
+            The snaking route makes a sequence of neighborhoods feel like a much larger adventure.
+            Its walls also help decide which pieces the player needs to see.
+
+
+            [Read the sightlines](#visibility)
+        - type: figure
+          image: assets/resources/performance/map.webp
+          alt:
+            The full map from above, with neighborhoods winding through five-zone rows separated by tall
+            green walls.
+          caption: The map is part of the method
+        - type: figure
+          image: assets/resources/performance/overview-wireframe.webp
+          alt: An elevated view over the collection pit, pets, and scenery in Cardboard Box Simulator.
+          caption:
+            'Under the color: the author reported an average view of roughly 100 scene draws and
+            150,000 triangles. Each capture belongs to its device, settings, and moment in the
+            project.'
+    - type: toc
+      id: chapters
+      title: Follow the frame.
+      include:
+        - concept
+        - task
+  chapters:
+    - id: budgets
+      order: 1
+      sections:
+        - type: concept
+          id: budgets
+          navLabel: Budgets & health checks
+          hero:
+            title: Give every frame a plan.
+            description: Before the first tree, decide how much world a player's device should have to carry.
+            image: assets/resources/performance/stats.webp
+            alt: Cardboard Box Simulator with the original rendering statistics overlay visible.
+            caption: The author's 2024 test view. These are measurements of this project, not platform limits.
+          blocks:
+            - type: markdown
+              markdown: >-
+                A budget is a creative agreement. It gives the artist room to make a town charming,
+                the scripter room to make pets lively, and the player a chance to see both without
+                the experience slowing down. The expensive alternative is discovering the limits
+                after every asset and system has already been built.
+
+
+                Roblox scales rendering quality to help a device keep up. That assistance can change
+                the picture: shorter draw distances, fewer shadows, simpler particles and beams, and
+                reduced material effects. McNeill wanted to preserve his intended look on mobile, so
+                he started with an envelope and divided it among the things competing for a frame.
+
+
+                ## The original working budget
+            - type: callout
+              title: One frame. Two envelopes.
+              markdown: >-
+                Author's 2024 targets, not platform limits:
+
+
+                - **60% / Scenery:** 300,000 triangles and 300 scene draws.
+
+                - **40% / The live world:** 200,000 triangles and 200 scene draws.
+
+                - **Up to eight visible zones:** approximately 40,000 triangles and 40 draws per
+                zone, leaving the other envelope for players, pets, coins, and effects.
+            - type: markdown
+              markdown: >-
+                The 2024 notebook proposed 500,000 visible scene triangles and 500 scene draw calls,
+                with desktop CPU time kept low enough to leave room for slower phones. It also aimed
+                below 1.3 GB of client memory for 2 GB devices and below roughly 50 KB/s of receive
+                traffic. Those last two numbers are historical planning targets; device memory
+                pressure and network behavior cannot be reduced to a universal ceiling.
+
+
+                For this map, about 300,000 triangles and 300 draws belonged to scenery. Another
+                200,000 and 200 draws were reserved for players, pets, coins, and effects. If the
+                layout exposed at most eight zones, that implied roughly 40,000 triangles and 40
+                draws per zone. The arithmetic was intentionally approximate. It made the scope of
+                each little neighborhood understandable before construction started.
+            - type: callout
+              title: A case study, dated August 2024
+              markdown: >-
+                The original targets describe the author's judgment and hardware observations at the
+                time. They
+                  are not current Roblox caps or a guarantee of 60 FPS. Establish your own targets on representative
+                  devices and revisit them as the experience grows.
+            - type: markdown
+              markdown: >-
+                ## Walk the world with the tools open
+
+
+                There is no substitute for touring your own experience. Walk the route, turn around,
+                stand at the busiest junction, and pull the camera back. Repeat the walk with
+                players, pets, and effects present. A quiet spawn point is a useful baseline; it is
+                rarely the hardest frame your game will produce.
+            - type: figure
+              image: assets/resources/performance/stats-panel.webp
+              alt: The expanded rendering statistics panel from the original test.
+              caption:
+                A panel worth learning a few lines at a time. Start with scene draws, triangle counts, and
+                CPU/GPU time.
+            - type: markdown
+              markdown:
+                "The **scene** row is the first checkpoint: it describes the geometry in the current view.
+                The author's pictured view was around 95 draws and 138,634 triangles, comfortably
+                inside his project budget. **Shadow** draws are separate work used to produce
+                shadows. **Total** adds the categories together. **UI** deserves its own attention;
+                the original 150-draw caution was a rule of thumb, not an engine limit. Depth and
+                editor adornments also appear in the readout, so compare like-for-like client
+                views."
+            - type: figure
+              image: assets/resources/performance/scene-readout.webp
+              alt: The Draw Scene statistics row showing draw and triangle counts.
+              caption: 'Scene work: the picture the player sees.'
+            - type: figure
+              image: assets/resources/performance/shadow-readout.webp
+              alt: The Draw Shadow statistics row in the source performance overlay.
+              caption: 'Shadow work: another cost to measure, especially around lights and moving geometry.'
+            - type: markdown
+              markdown: >-
+                Small props may not need to cast shadows. The correct property is
+                `BasePart.CastShadow`. Lights covering large areas, moving shadow casters, and
+                numerous shadow-casting lights are all worth testing. Keep the shadows that define
+                the scene and measure what the less visible ones cost.
+
+
+                ## Follow the slower clock
+
+
+                At 60 FPS, a frame has about 16.67 milliseconds. If the CPU is taking 20 ms while
+                the GPU takes 3 ms, start investigating CPU work—scripts, physics, or engine
+                tasks—rather than assuming a prettier material is the cause. If the GPU dominates,
+                investigate the rendering workload. The diagnosis can change between a desktop and a
+                phone.
+            - type: figure
+              image: assets/resources/performance/cpu-gpu.webp
+              alt: CPU and GPU timing values displayed side by side.
+              caption:
+                The timing comparison helps choose the next investigation. Use MicroProfiler to understand
+                the work behind it.
+            - type: markdown
+              markdown: |-
+                The [MicroProfiler](https://create.roblox.com/docs/performance-optimization/microprofiler) turns that suspicion into a timeline. Look for long tasks, bursts of repeated work, and the difference between a typical frame and a spike. A steady frame-rate cap can hide substantial differences on a fast desktop; examine the timings themselves and test on hardware.
+
+                ## Count memory and traffic, too
+
+                Measure client memory in the actual Roblox client. Studio has editor and plugin overhead, so its total is not a clean estimate of the player's experience. The Developer Console and memory tools make it possible to inspect categories and follow growth over a longer session.
+            - type: figure
+              image: assets/resources/performance/memory-readout.webp
+              alt: The original compact client memory readout.
+              caption: A quick memory check in the original client.
+            - type: figure
+              image: assets/resources/performance/memory-total.webp
+              alt: The total memory row from the original diagnostic display.
+              caption: Compare totals under the same test conditions, then inspect the categories behind them.
+            - type: markdown
+              markdown:
+                Bandwidth is another shared budget. In the 2024 tests, continuously moving assemblies were
+                expensive enough that the author used rough figures of 0.4–0.9 KB/s each and about
+                40–60 assemblies as a planning warning. These were observations, not a fixed
+                replication law. The durable lesson is to load the server with the intended
+                population and inspect receive traffic, latency, and visible update quality
+                together.
+            - type: figure
+              image: assets/resources/performance/bandwidth.webp
+              alt: The network receive statistics line used in the original article.
+              caption:
+                Historical receive statistics. Remote events still consume bandwidth even when continuous
+                transform replication is avoided.
+            - type: markdown
+              markdown:
+                'The plan for hundreds of pets and coins therefore changes: send meaningful state changes,
+                construct cosmetic motion locally, and keep rewards authoritative. That
+                architectural choice will matter much more than shaving a few instructions from a
+                single loop.'
+        - type: task
+          id: workshop-healthcheck
+          navLabel: Capture the same walk, twice
+          title: Capture the same walk, twice.
+          description: Turn a vague feeling that the game is slow into a repeatable measurement you can act on.
+          equipment: YOU'LL NEED / A client build · representative device · a short test route
+          workingView:
+            component: WorkshopImage
+            props:
+              alt: The original rendering statistics over a game view.
+              image: assets/resources/performance/stats.webp
+          steps:
+            - title: Choose the demanding view.
+              action:
+                'Mark three stops: a typical scene, a long sightline, and a crowded interaction. Record the
+                device, graphics setting, population, and camera direction.'
+              check: You can return to the same view with the same conditions.
+              annotation: Begin with a reproducible view, not the best-looking frame.
+            - title: Read both clocks.
+              action:
+                Record scene draws, triangles, CPU time, and GPU time. Capture MicroProfiler around a
+                repeatable slowdown. Look for the work that dominates the frame.
+              check: Your proposed change addresses the measured bottleneck.
+              annotation: CPU and GPU timings tell you where to look next.
+            - title: Change one contributor.
+              action:
+                'Try one focused change: reduce a repeated query, remove a distant detail group, or simplify
+                an expensive lighting setup. Keep a baseline copy.'
+              check: The experiment changes one major variable.
+              annotation: A small experiment makes the cause of a change easier to see.
+            - title: Walk it again.
+              action:
+                Repeat the route and compare frame times, visual quality, memory, and behavior. Keep the
+                change only if its benefit survives the conditions you care about.
+              check: The gain is measured, and the intended experience still works.
+              annotation: A lower number matters when the player's experience improves with it.
+    - id: building
+      order: 2
+      sections:
+        - type: concept
+          id: building
+          navLabel: Map building style
+          hero:
+            title: A small kit. A generous world.
+            description:
+              Reuse the ingredients. Change the composition. Let a consistent material language carry
+              the detail.
+            image: assets/resources/performance/zone.webp
+            alt: A finished colorful Cardboard Box Simulator zone with landscaping and a central collection pit.
+            caption:
+              This zone measured 44,353 triangles and 23 draws in the original project; distance culling
+              reduced the visible workload further.
+          blocks:
+            - type: markdown
+              markdown:
+                The world is arranged as roughly thirty little neighborhoods, each around 100 by 100
+                studs. A pit gives the pets somewhere to work. Paths explain how to move on. Walls,
+                trees, and buildings give the neighborhood an identity. The player sees a sequence
+                of places; the builder sees a repeatable unit with a budget.
+            - type: figure
+              image: assets/resources/performance/zone-plan.webp
+              alt: An overhead view explaining the boundaries, pit, paths, and scenery of a single zone.
+              caption: One zone is small enough to reason about, build, and measure independently.
+            - type: markdown
+              markdown: >-
+                ## Compose with reusable pieces
+
+
+                Kitbashing means assembling a scene from reusable meshes, even intersecting them
+                where it makes sense. It trades some geometric purity for speed and flexibility. In
+                this project, rocks and panels become a vocabulary rather than a separate modeling
+                task every time they appear.
+            - type: figure
+              image: assets/resources/performance/kit-parts.webp
+              alt: The source demonstration showing the reusable rocks and panels used to assemble the map.
+              caption: The original animated kit study. The same few pieces can make many silhouettes.
+            - type: markdown
+              markdown: "[View the original
+                animation](https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/or\
+                iginal/5X/3/3/f/0/33f09e45213edffb20ae32c752cb0e62ad0ebc65.gif)."
+            - type: markdown
+              markdown: >-
+                The performance opportunity is geometry instancing. Repeated opaque meshes with the
+                same mesh ID and material can be batched efficiently, even with differences in
+                position, rotation, scale, and color. The exact draw count depends on renderer state
+                and content, so verify it instead of assuming every reuse produces one draw.
+
+
+                The trees are the clearest example. Each contains three canopy pieces and a trunk,
+                but the canopy and trunk reuse just two mesh/material combinations. The author
+                observed two draws for the trees in his test. Change the proportions and colors and
+                the grove still feels varied; create a unique mesh and material for every tree and
+                that advantage can disappear.
+            - type: figure
+              image: assets/resources/performance/trees.webp
+              alt:
+                The tree construction shown in solid and wireframe views, with repeated canopy meshes and
+                trunks.
+              caption: Variation in scale, rotation, and color creates a grove from a small shared kit.
+            - type: markdown
+              markdown: '## Let the material palette do the work'
+            - type: columns
+              markdown: >-
+                Cardboard, fabric, carpet, plastic, and metal provide a coherent visual language.
+                Relatively simple material choices keep combinations under control, while geometry,
+                color, and occasional vertex-color gradients give surfaces character.
+
+
+                The zone pictured above slightly exceeds its nominal triangle allocation, but its 23
+                draws leave headroom. The point is to understand the combined view, including
+                culling, rather than force every isolated asset under a number that ignores the rest
+                of the frame.
+            - type: figure
+              image: assets/resources/performance/wireframe.webp
+              alt: The finished zone in wireframe, exposing the geometry behind paths, scenery, and props.
+              caption:
+                Wireframe makes hidden complexity visible. Judge the triangles against what they contribute
+                to the player's view.
+            - type: markdown
+              markdown: >-
+                ## Make the pieces you wish you had
+
+
+                Roblox's primitive parts are useful building blocks, and custom meshes can play the
+                same role. A reusable corner finishes many paths. A beveled plank stretches along an
+                axis to make fences. A small cube with a little vertex color becomes a wall system.
+                A coin repeats enough times that its shape and material deserve careful attention.
+            - type: figure
+              image: assets/resources/performance/corner.webp
+              alt: A reusable rounded corner mesh placed along the edge of a footpath.
+              caption: 'The corner: one soft edge, repeated throughout the paths.'
+            - type: figure
+              image: assets/resources/performance/fence.webp
+              alt: A beveled fence plank mesh reused at different lengths.
+              caption: 'The plank: preserve the bevel while varying its length.'
+            - type: figure
+              image: assets/resources/performance/cube.webp
+              alt: The small beveled cube and its vertex-color shading.
+              caption: 'The cube: about 80 triangles in the original kit.'
+            - type: figure
+              image: assets/resources/performance/coin.webp
+              alt: The reusable coin mesh shown close up.
+              caption: 'The coin: a small cost multiplied across a busy scene.'
+            - type: markdown
+              markdown: >-
+                ## Bake a house when it helps
+
+
+                The townhouses began as more than a hundred assorted parts, producing twelve draws
+                per house in the original test. Because the map needed many houses, McNeill grouped
+                the geometry by material and rebuilt each house as six meshes. That reduced both
+                instances and measured draws while preserving the look.
+            - type: figure
+              image: assets/resources/performance/export.webp
+              alt: Studio's Export Selection context menu used to export selected house geometry.
+              caption: The original Studio workflow exports selected geometry to an OBJ mesh.
+            - type: markdown
+              markdown:
+                Work on a duplicate. Group the brick, glass, and other material sets; union appropriate
+                groups; export each selection; then reimport and reassemble the house. Restore
+                anchors and inspect collision, pivots, and appearance. Baking is worthwhile when it
+                improves the workload you measured, not simply because a model contains many parts.
+            - type: figure
+              image: assets/resources/performance/houses.webp
+              alt: The rebuilt townhouses, with separate meshes corresponding to their materials.
+              caption: From 100-plus parts and twelve draws to six mesh instances and six draws in this example.
+            - type: markdown
+              markdown: >-
+                ## Add light with intention
+
+
+                The last touch is modest: small spotlights and point lights break up flat shading in
+                dark corners or broad surfaces. The sample's extra lights were static and did not
+                cast shadows. Large coverage, shadow casting, and moving geometry change the cost,
+                so treat those as separate decisions.
+            - type: figure
+              image: assets/resources/performance/extra-lights.webp
+              alt: The original comparison toggling extra local lights to show variation on shaded surfaces.
+              caption:
+                A little local light changes the reading of a surface. Measure the cost of the specific
+                lighting setup you choose.
+            - type: markdown
+              markdown: "[View the original
+                animation](https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/or\
+                iginal/5X/f/e/d/9/fed950d45761f13b72aa7240aec0918a6043e68e.gif)."
+            - type: markdown
+              markdown:
+                The original used ShadowMap lighting. Today, [LightingStyle and
+                PrioritizeLightingQuality](https://create.roblox.com/docs/environment/lighting)
+                describe the artistic and quality-scaling choices. Appendix F revisits the old
+                comparison in that context.
+        - type: task
+          id: workshop-kit
+          navLabel: Build one kit. Dress one neighborhood
+          title: Build one kit. Dress one neighborhood.
+          description:
+            Use the source's small building vocabulary to practice variety without multiplying
+            unique assets.
+          equipment: YOU'LL NEED / A local project copy · one mesh kit · a fixed camera view
+          workingView:
+            component: WorkshopImage
+            props:
+              alt: The reusable tree meshes in the source project.
+              image: assets/resources/performance/corner.webp
+          steps:
+            - title: Pick four useful shapes.
+              action:
+                Start with a corner, a plank, a block, and a canopy. Decide which materials each needs
+                before scattering them around the scene.
+              check: Each shape has more than one useful placement.
+              annotation: The corner and plank become reusable punctuation for the paths and fences.
+            - title: Vary the composition.
+              action:
+                Change scale, rotation, and color while preserving reusable mesh/material combinations.
+                Judge the silhouette from the walking camera.
+              check: The neighborhood feels varied without a unique asset for every prop.
+              annotation: A grove gets its variety from arrangement as much as geometry.
+            - title: Inspect the wireframe.
+              action:
+                Compare the solid view and wireframe. Find dense geometry that contributes little at the
+                normal camera distance, then simplify one example.
+              check: The silhouette and material character survive the change.
+              annotation: Wireframe exposes the geometry hidden inside a convincing picture.
+            - title: Measure the whole zone.
+              action:
+                Capture scene draws and triangles from the same view. If you bake a part-heavy model,
+                compare the rebuilt version and verify anchors, pivots, and collisions.
+              check: The final zone improves the target workload without breaking the build.
+              annotation: The source's houses show one measured benefit of grouping geometry by material.
+    - id: visibility
+      order: 3
+      sections:
+        - type: concept
+          id: visibility
+          navLabel: Precalculated visibility
+          hero:
+            title: The world beyond the wall.
+            description:
+              A winding route gives the player a sequence of reveals—and gives the renderer less to
+              carry.
+            image: assets/resources/performance/hidden-geometry.webp
+            alt: The source animation revealing geometry behind the large dividing walls of the map.
+            caption:
+              A demonstration recorded in 2024. Current Roblox rendering includes occlusion culling; this
+              example explains the custom system used at the time.
+          blocks:
+            - type: markdown
+              markdown: "[View the original
+                animation](https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/or\
+                iginal/5X/3/9/0/e/390e2babd41094f28cf52f177fa0e3ab06cba0c8.gif)."
+            - type: markdown
+              markdown:
+                'A wall can do two jobs. It can make the next neighborhood feel like a discovery, and it
+                can make a large part of the world irrelevant to the current view. The snaking map
+                creates a particularly useful mismatch: zones may be physically close while
+                remaining completely hidden from one another.'
+            - type: figure
+              image: assets/resources/performance/hidden-map.webp
+              alt: An overview animation exposing the many zones behind the map's walls.
+              caption:
+                The compact layout puts many neighborhoods nearby, even when their contents are invisible
+                from the player's position.
+            - type: markdown
+              markdown: "[View the original
+                animation](https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/or\
+                iginal/5X/e/5/a/5/e5a503507ac76e3c25b34e985481a3b99231cf6f.gif)."
+            - type: markdown
+              markdown: >-
+                ## Begin with the engine you have today
+
+
+                In 2024, the author built a custom visibility system while engine occlusion culling
+                was still forthcoming. Current [performance
+                guidance](https://create.roblox.com/docs/performance-optimization/improve) describes
+                frustum and occlusion culling already performed by the renderer. [Instance
+                streaming](https://create.roblox.com/docs/workspace/streaming) also loads and
+                unloads world content and is enabled by default for new places.
+
+
+                The custom technique remains useful to understand, especially for deliberately
+                organized rooms or zones, but first test the engine's existing behavior. Rendering
+                less geometry, reducing loaded memory, and removing gameplay instances are related
+                decisions with different consequences.
+
+
+                ## Write down what a zone can see
+
+
+                The source divides the map into tagged zone models. Each has a primary part marking
+                a rectangular two-dimensional boundary and a handwritten list of other zones visible
+                from it. If the player stands in the red zone, the orange neighbors remain visible.
+                The yellow zones are unnecessary for that view.
+            - type: figure
+              image: assets/resources/performance/visibility.webp
+              alt:
+                'The source zone diagram: the current zone in red, visible neighbors in orange, and hidden
+                zones in yellow.'
+              caption: A visibility list encodes the sightlines created by the map's walls and turns.
+            - type: figure
+              image: assets/resources/performance/zone-demonstration.webp
+              alt:
+                The camera pulls away from the city zone to reveal which neighboring zones the visibility
+                manager retains.
+              caption:
+                'The intentionally generous camera zoom exposes the trick: only the selected neighboring
+                zones remain.'
+            - type: markdown
+              markdown: "[View the original
+                animation](https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/or\
+                iginal/5X/9/2/2/c/922c7082e56554b932f53c8cf98d2ca31e643d47.gif)."
+            - type: markdown
+              markdown: >-
+                That camera trick is also a test case. A visibility list that works from the
+                character's eye level can fail when the camera pulls back, a player teleports, or a
+                different viewing mode appears. The source leaves the maximum zoom high so you can
+                deliberately break the illusion and inspect the selection.
+
+
+                ## Follow the ZoneManager
+            - type: figure
+              image: assets/resources/performance/zone-manager.webp
+              alt: The ZoneManager location shown in the original project's Explorer.
+              caption: The manager is the place to begin tracing the implementation.
+            - type: figure
+              image: assets/resources/performance/zone-tree.webp
+              alt: The hierarchy of zone models in Explorer.
+              caption: Zone models own the scenery belonging to each neighborhood.
+            - type: figure
+              image: assets/resources/performance/zone-tag.webp
+              alt: The Zone tag applied to a model in the source project.
+              caption: CollectionService gives the manager a discoverable set of zones.
+            - type: markdown
+              markdown:
+                At startup, the manager collects the zones. It checks which boundary contains the player
+                and reacts when that zone changes. The client restores visible models to the world
+                and deparents the others. It does not rebuild the visibility relationship every
+                frame; the map author has already supplied it.
+            - type: figure
+              image: assets/resources/performance/visibility-list.webp
+              alt: The original per-zone configuration listing other zones that can be seen.
+              caption: The hand-authored visibility list is small, explicit, and tied to the map layout.
+            - type: markdown
+              markdown: >-
+                ## Treat removal as a lifecycle decision
+
+
+                Reparenting large models has a cost. Removing client instances can affect
+                collisions, interactions, references, and property updates from the server. A model
+                may also stream in or out independently. Test those cases before adding custom
+                culling to a live experience, and keep authoritative gameplay state separate from
+                optional scenery.
+            - type: callout
+              title: The useful boundary
+              markdown: >-
+                The source demonstrates client-side deparenting in a controlled sample. For a new
+                project, start
+                  with streaming and current rendering behavior, then add a custom visibility layer only when
+                  captures show a benefit and the instance lifecycle is understood.
+            - type: markdown
+              markdown:
+                'The broader design lesson is simple: sightlines are performance decisions. A bend, a
+                wall, or a room transition can make both the story and the visible workload easier
+                to control.'
+        - type: task
+          id: workshop-sightlines
+          navLabel: Draw the world a player can see
+          title: Draw the world a player can see.
+          description:
+            'A paper exercise before a culling script: learn which views the layout actually
+            permits.'
+          equipment: YOU'LL NEED / An overhead map · test avatar · all supported camera modes
+          workingView:
+            component: WorkshopImage
+            props:
+              alt: The source diagram of current, visible, and hidden zones.
+              image: assets/resources/performance/visibility.webp
+          steps:
+            - title: Mark one viewpoint.
+              action:
+                Stand inside a zone and trace the parts of neighboring zones visible past walls and around
+                corners. Include the camera's offset from the character.
+              check: The list describes actual sightlines, not just geometric proximity.
+              annotation: The red zone is the starting point; the walls determine its neighbors.
+            - title: Try to break the view.
+              action:
+                Pull the camera back, look from the highest reachable point, and walk the boundary. Repeat
+                any alternate camera modes the game supports.
+              check: You know where the visibility assumptions stop being true.
+              annotation: The source's zoomed-out view intentionally reveals the culling trick.
+            - title: Measure existing culling.
+              action:
+                Test current engine occlusion and streaming first. Capture the scene with the intended
+                settings and decide whether a custom layer solves a remaining problem.
+              check: There is a measured reason to add custom visibility logic.
+              annotation: The 2024 technique should be evaluated against the engine available today.
+            - title: Check the lifecycle.
+              action:
+                In a local test, exercise respawns, teleports, return visits, streamed arrivals, and
+                interactions at boundaries. Confirm what owns each visual and gameplay record.
+              check: Hidden scenery does not leave stale references or break required interactions.
+              annotation: The model hierarchy and the visibility list need to agree about ownership.
+    - id: distance
+      order: 4
+      sections:
+        - type: concept
+          id: distance
+          navLabel: Distance culling
+          hero:
+            title: Know when detail disappears.
+            description:
+              Keep the close view rich. Stop paying for small things once the player can no longer
+              read them.
+            image: assets/resources/performance/small-details.webp
+            alt: Small grass, pebble, and coin-area details from the source map shown at close range.
+            caption:
+              These details earn their place near the camera. Far away, their contribution becomes
+              difficult to see.
+          blocks:
+            - type: markdown
+              markdown: >-
+                Walk up to a patch of grass and the individual shapes matter. Walk away and the
+                patch becomes a color and a silhouette. The tiny pebbles and pit details that made
+                the close view convincing are still geometry, but they are no longer carrying the
+                same visual weight.
+
+
+                ## Remove a little, learn a lot
+
+
+                The source hides selected small details beyond 300 studs from the camera. Its
+                comparison removes around 50,000 triangles and thirty draws while barely changing
+                the distant view. The distance is a sample setting, not a recommendation for every
+                object or game.
+            - type: figure
+              image: assets/resources/performance/distance-demonstration.webp
+              alt:
+                An animated before-and-after view showing small distant details disappearing with little
+                visible change.
+              caption:
+                Watch the distant scenery. The reported saving in this example is much easier to see in the
+                statistics than in the picture.
+            - type: markdown
+              markdown: "[View the original
+                animation](https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/or\
+                iginal/5X/5/b/7/9/5b792148b842cb08e45c7cbc25f8c562850277e2.gif)."
+            - type: markdown
+              markdown: >-
+                Start with the camera positions your players actually use. Compare the silhouette
+                and texture of the scene before and after removal. A supposedly small object may
+                still be a landmark, a navigation cue, or part of an interaction; those roles matter
+                as much as size.
+
+
+                ## Tag the right candidates
+            - type: figure
+              image: assets/resources/performance/detail-tag.webp
+              alt: The Detail_Small CollectionService tag used by the sample.
+              caption: An explicit tag makes the optimization an authoring choice.
+            - type: markdown
+              markdown:
+                The `DistanceCullingManager` gathers objects tagged `Detail_Small`, remembers their
+                original parents, and updates their visibility relative to the camera. The source
+                has roughly 250 such objects. It does not need to revisit every one on every frame
+                just because the rendering loop is running.
+            - type: figure
+              image: assets/resources/performance/distance-manager.webp
+              alt: The DistanceCullingManager selected in the original project's Explorer.
+              caption: The manager centralizes the work instead of giving every small prop its own update loop.
+            - type: markdown
+              markdown: >-
+                ## Budget the optimization itself
+
+
+                The sample waits until the camera has moved enough to justify checking again, then
+                spreads the checks over frames using a coroutine. Its limit of fifty checks per
+                frame prevents the entire set from landing in one burst. A frame-time budget is the
+                underlying idea; the exact object count should come from profiling.
+            - type: steps
+              items:
+                - Collect tagged details and remember their original parents.
+                - Wait for a meaningful camera movement.
+                - Process a bounded slice of the distance checks.
+                - Restore eligible details as the camera comes closer.
+            - type: markdown
+              markdown: >-
+                If the zone manager has already removed a detail's parent, restoring the detail into
+                that parent should not magically make the entire zone visible. That is a useful
+                property of the sample's hierarchy, but it does not resolve every streamed-instance
+                lifecycle. Test removal, restoration, and destruction with your own systems.
+
+
+                Current alternatives include streaming, model level of detail, and SLIM
+                representations. You can also disable `CastShadow` on small parts where the shadow
+                contributes little. Choose the intervention that addresses the measured cost with
+                the least complexity, then revisit the same camera route to confirm the gain.
+    - id: coins
+      order: 5
+      sections:
+        - type: concept
+          id: coins
+          navLabel: Coins & spatial hashing
+          hero:
+            title: Two hundred coins. A smaller question.
+            description: Let the client make the coins delightful. Let the server decide what they are worth.
+            image: assets/resources/performance/coin-physics.webp
+            alt:
+              The original coin animation showing a small physics cube and a separately rendered spinning
+              coin.
+            caption:
+              'Two jobs, two parts: a temporary local physics proxy creates the bounce; an anchored mesh
+              supplies the picture.'
+          blocks:
+            - type: markdown
+              markdown: "[View the original
+                animation](https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/or\
+                iginal/5X/b/a/8/d/ba8d733e3291ded6f6191a7625f61548ea9c1281.gif)."
+            - type: markdown
+              markdown: >-
+                A coin is doing several jobs at once. It must exist as a reward, appear in the
+                world, bounce in a satisfying way, wait to be collected, and finally disappear into
+                the player. Treating all of that as one continuously replicated physics object makes
+                a small collectible more expensive than it needs to be.
+
+
+                ## Separate the record from the performance
+
+
+                The server creates a coin record with a unique serial number and an owner. It sends
+                a spawn event to that player's client. The client adds the request to a queue so a
+                large reward can arrive across several frames. The stagger is pleasant to watch and
+                avoids creating every visual in the same instant.
+
+
+                To produce the bounce, the client launches a tiny local physics cube. A separate,
+                anchored coin mesh follows its position and spins. After the bounce interval, the
+                proxy is anchored too. The simulation has finished its job; the visible coin can
+                keep moving without paying for ongoing collision simulation.
+            - type: markdown
+              markdown: '### The coin lifecycle: who owns what'
+            - type: steps
+              items:
+                - 'Server: Create the record. Serial, owner, value, lifetime.'
+                - 'Client: Perform the bounce. Queue, local proxy, anchored visual.'
+                - 'Client to server: Request a pickup. Send the serial; animate locally.'
+                - 'Server: Validate and reconcile. Award once; expire or remove the record.'
+            - type: markdown
+              markdown: |-
+                The source's `CoinModule.UpdateCoinsFast` batches visual movement with [WorldRoot:BulkMoveTo](https://create.roblox.com/docs/reference/engine/classes/WorldRoot#BulkMoveTo). That method takes matching arrays of parts and CFrames. Current API guidance recommends using it when part movement is a demonstrated bottleneck; ordinary property updates may already be sufficient for a smaller system.
+
+                When the player reaches a coin, the client plays the pickup animation and sends its serial to the server. The server finds the record and decides whether to award the reward. If a player accumulates too many uncollected coins, the server can expire old records and tell the client to remove the corresponding visuals.
+            - type: callout
+              title: An identifier is not proof of a pickup
+              markdown: >-
+                For a production system, validate ownership, existence, whether the coin was already
+                claimed,
+                  plausible pickup conditions, and request rate. The client can request a reward; the server must
+                  establish that the request is valid. Cosmetic prediction should reconcile with that result.
+            - type: markdown
+              markdown: >-
+                ## Ask about the neighborhood
+
+
+                Now comes the other multiplication problem. Checking the distance from the player to
+                every coin, every frame, repeats work for coins that are nowhere nearby. Spatial
+                hashing changes the question from "which of these 200 coins is close?" to "which
+                small neighborhood should I inspect?"
+
+
+                The sample divides space into cells ten studs across and uses Vector3 values as
+                table keys. Each cell stores its coins. A moving coin updates its membership when it
+                crosses a cell boundary; a stationary coin stops doing that work. Empty regions do
+                not need a preallocated dense grid.
+            - type: figure
+              image: assets/resources/performance/nearby-cells.webp
+              alt: The source spatial grid showing cells and the coins assigned to them.
+              caption: Keep membership in small spatial buckets, then search the buckets near the player.
+            - type: markdown
+              markdown:
+                For the flat layout, a pickup query can inspect the player's cell and eight neighbors
+                before doing exact distance checks on the candidate coins. The grid is a broad
+                filter, not the final collision decision. A coin in a neighboring cell may still be
+                too far away to collect.
+            - type: figure
+              image: assets/resources/performance/pickup-grid.webp
+              alt: The source diagram highlighting only the cells around the player for pickup checks.
+              caption:
+                Nearby cells narrow the candidate set. Exact distance checks decide which candidates are
+                within reach.
+            - type: callout
+              title: 'Try the idea: spatial hashing'
+              markdown: >-
+                Use a flat grid with cells 10 studs wide. For a pickup radius of 5 or 10 studs,
+                inspect a 3 by 3 cell neighborhood. Increase the radius to 20 studs and inspect a 5
+                by 5 neighborhood. Clip the search to the available cells.
+
+
+                The cell search returns candidates. Apply an exact distance check to those
+                candidates to find coins inside the pickup radius. Move the player across a cell
+                boundary and repeat the query; nine cells are not enough for every radius.
+            - type: markdown
+              markdown: |-
+                Nine cells are sufficient for a flat XZ grid only when the pickup radius fits within one cell width. For larger radii, search enough cells in each direction—based on the radius divided by cell size—and still perform an exact check. Multi-floor or truly three-dimensional spaces need a suitable 3D query or additional vertical filtering. Also use floor-based cell coordinates consistently on both sides of zero.
+
+                ## Choose the simpler query when it wins
+
+                The engine provides [WorldRoot:GetPartBoundsInRadius](https://create.roblox.com/docs/reference/engine/classes/WorldRoot#GetPartBoundsInRadius), with `OverlapParams` for filtering. It queries part bounding boxes, so the returned candidates may still need refinement. The author found a custom grid cheap for this particular collection of simple records. That benchmark does not make a custom data structure the right answer for every game.
+            - type: figure
+              image: assets/resources/performance/coin-module.webp
+              alt: The location of the client coin module in the original project.
+              caption:
+                'Follow the complete coin lifecycle in the editable project: spawning, motion, grid
+                membership, pickup, and cleanup.'
+            - type: markdown
+              markdown:
+                Inspect both cost and complexity. A grid must remove expired coins, update moving ones,
+                clear empty buckets as appropriate, and avoid leaving stale references after
+                collection. The best version is one you can measure and keep correct as the
+                experience changes.
+    - id: pets
+      order: 6
+      sections:
+        - type: concept
+          id: pets
+          navLabel: Efficient pets
+          hero:
+            title: A crowd with a light footprint.
+            description:
+              Thirty pets per player becomes 360 in a full server. Build the system for the crowd
+              from the beginning.
+            image: assets/resources/performance/pets.webp
+            alt: The original demonstration of many pets following players and moving around the map.
+            caption:
+              The clients animate the pets from shared state. Spawn, target, and other events still use
+              network traffic.
+          blocks:
+            - type: markdown
+              markdown: "[View the original
+                animation](https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/or\
+                iginal/5X/5/7/c/e/57ceba61389b6f357030d80c3983c9909e80d312.gif)."
+            - type: markdown
+              markdown: >-
+                One pet is easy to love and easy to underestimate. Thirty pets per player across
+                twelve players is a different system: hundreds of visible companions, all needing a
+                position, a ground height, an animation, and a job. Continuous replication of every
+                motion would spend the network budget on a largely cosmetic performance.
+
+
+                ## Give the server the decisions
+
+
+                The server stores the pet records. It tells clients when pets spawn or disappear and
+                when their task changes. In the source, a pet has two principal jobs: follow a slot
+                attached to its owner, or move to a target and dig. When that target is depleted,
+                the pet returns to following.
+
+
+                A client may request a new target, but the server validates the request and
+                broadcasts the resulting task. Rewards and progression remain server decisions.
+                Every client can then render the same intent without receiving a new transform for
+                each pet on each frame.
+            - type: markdown
+              markdown: '### The pet lifecycle: who owns what'
+            - type: steps
+              items:
+                - 'Server: Publish pet state. Spawn or snapshot; owner and target.'
+                - 'Server: Validate the task. Follow or dig; broadcast changed intent.'
+                - 'Each client: Compute the pose. Ground height, movement, gait, PivotTo.'
+                - 'Server: Resolve the outcome. Rewards, depletion, next task, cleanup.'
+            - type: markdown
+              markdown: |-
+                In a production version, make initial state as deliberate as state changes. A newly joined client needs the current pets and their tasks, not just future spawn events. A snapshot and a clear reconciliation strategy prevent pets from being missing, duplicated, or attached to outdated targets after a join or reconnect.
+
+                ## Give the client the performance
+
+                Each client computes the pet's movement toward its target. A ground raycast finds the surface below it. A sinusoidal offset supplies a simple gait. [PVInstance:PivotTo](https://create.roblox.com/docs/reference/engine/classes/PVInstance#PivotTo) positions the pet model from the resulting CFrame.
+
+                This approximation suits decorative companions. A full Humanoid rig brings capabilities the sample does not need, along with additional simulation work. If a pet requires richer character behavior, choose that architecture deliberately and profile the expected population.
+            - type: columns
+              markdown: >-
+                A pet standing still does not necessarily need a new ground raycast. An unchanged
+                transform does not need to be applied again. Those small early exits matter when
+                multiplied by every pet visible to every client.
+
+
+                Keep the animation decision separate, though. A stationary pet may still need a
+                visible idle or gait phase. An optimization that freezes the character is a
+                behavioral change, not a free saving.
+            - type: markdown
+              markdown: >-
+                ## Budget the labels as well as the bodies
+
+
+                The little power readout above a pet is part of the rendering workload too.
+                Distance-cull SurfaceGui labels when they become unreadable. Test a crowd from
+                several camera positions: the nearest pets, the farthest labels, and the worst
+                concentration of companions around a target.
+
+
+                The source's "no bandwidth" flourish refers to avoiding continuous pet-transform
+                replication. Spawn, destroy, task, and snapshot messages still travel across the
+                network. Measure those events under load and avoid sending cosmetic updates at a
+                higher frequency than the visual effect needs.
+            - type: steps
+              items:
+                - Measure the intended full pet population.
+                - Separate authoritative tasks from cosmetic pose.
+                - Skip unchanged spatial work without freezing animation.
+                - Cull unreadable labels and verify the whole frame again.
+            - type: markdown
+              markdown:
+                'This is the same principle as the coins, expressed at a larger scale: share the decisions
+                that matter, compute the pleasant motion close to the player, and let the server
+                remain the source of truth.'
+        - type: task
+          id: workshop-crowd
+          navLabel: Test the crowd you intend to ship
+          title: Test the crowd you intend to ship.
+          description: Use a full-population test to find the costs that a single pet or coin never reveals.
+          equipment: YOU'LL NEED / A client/server test · target population · profiler captures
+          workingView:
+            component: WorkshopImage
+            props:
+              alt: A crowd of pets in Cardboard Box Simulator.
+              image: assets/resources/performance/pets.webp
+          steps:
+            - title: Write down the authority.
+              action:
+                'List who owns each fact: the server owns records, targets, and rewards; clients own
+                cosmetic pose and motion. Trace each remote message to a state change.'
+              check: A client cannot award itself a reward by reporting a visual outcome.
+              annotation: Start with the decisions. The attractive motion comes afterward.
+            - title: Fill the scene.
+              action:
+                Test the intended maximum population and pets per player. Add the expected coins, labels,
+                and effects, then gather around the busiest target.
+              check: The test includes all of the systems that compete in the real frame.
+              annotation: Thirty pets times twelve players is 360 visible companions to budget for.
+            - title: Compare moving and resting.
+              action:
+                Capture active movement and an idle group. Inspect ground queries, pose updates, labels, and
+                event traffic. Skip unchanged work where behavior permits.
+              check: Idle pets cost less without freezing animations that should remain visible.
+              annotation: The profitable early exit depends on what actually changed.
+            - title: Join halfway through.
+              action:
+                Connect another test client after pets and tasks already exist. Verify its initial snapshot,
+                then deplete a target and remove an owner.
+              check: Existing state appears correctly, tasks update, and departed objects are cleaned up.
+              annotation: A correct live event stream also needs a correct starting state.
+    - id: effects
+      order: 7
+      sections:
+        - type: concept
+          id: effects
+          navLabel: Bonus effects & conclusion
+          hero:
+            title: Save room for the lovely things.
+            description:
+              Underwater fog, scrolling surfaces, and a playful waterspout show what the recovered
+              budget can buy.
+            image: assets/resources/performance/water.webp
+            alt: The original animated waterspout demonstration, with the water shape changing over time.
+            caption:
+              A little periodic motion gives the scene life. This is the original demonstration from the
+              project.
+          blocks:
+            - type: markdown
+              markdown: "[View the original
+                animation](https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/or\
+                iginal/5X/e/4/d/7/e4d7187da9ddb08bc56b07e1b637e33d74a18aee.gif)."
+            - type: markdown
+              markdown: >-
+                The reward for optimization is not an empty world. It is room to keep the details
+                that make a player want to stay. With its major costs under control, Cardboard Box
+                Simulator can spend a little on atmosphere: a change in underwater visibility, the
+                motion of a water surface, and the shape of a spout.
+
+
+                ## Make the camera feel underwater
+
+
+                The source uses tagged water volumes. When the camera is inside one, a client effect
+                makes the view foggy and underwater-like; when it leaves, the effect is removed. The
+                check follows the camera because it is the view, rather than simply the character's
+                feet, that needs to change.
+            - type: figure
+              image: assets/resources/performance/underwater.webp
+              alt: The original client effect modules shown in the project's Explorer.
+              caption: A small environment manager connects a tagged volume to what the player sees.
+            - type: markdown
+              markdown: >-
+                In a larger project, coordinate this with the other systems that own fog and
+                lighting. Restore the intended environment state on exit, respawn, or teardown. Two
+                unrelated controllers writing the same setting can create a bug that looks like an
+                art problem.
+
+
+                ## Move the surface, not the whole world
+
+
+                A scrolling texture is enough to imply moving water. The source uses
+                CollectionService to discover the surfaces that need that behavior and updates
+                texture offsets over time. It is a small, centralized effect instead of a separate
+                script attached to every patch of water.
+            - type: figure
+              image: assets/resources/performance/scrolling-water.webp
+              alt: The source texture-scrolling logic for water surfaces.
+              caption: Changing a texture offset can suggest flow without moving the surface geometry.
+            - type: markdown
+              markdown: >-
+                ## Give a spout a rhythm
+
+
+                The waterspout uses sine and cosine to vary its shape. A smooth periodic function
+                supplies continuous motion with little state. Use elapsed time or delta time
+                consistently so the speed does not depend on the client's frame rate.
+            - type: figure
+              image: assets/resources/performance/waterspout-code.webp
+              alt: The original line of periodic math used for the waterspout effect.
+              caption:
+                The effect is simple math, but it still belongs in the frame budget when repeated
+                throughout a scene.
+            - type: markdown
+              markdown: >-
+                Tags provide a common pattern across these small systems. Collect existing tagged
+                instances, respond when tagged instances arrive or leave, and clean up references
+                when they are no longer relevant. The same discipline helps streamed content behave
+                correctly.
+
+
+                ## Return to the first walk
+
+
+                This project begins and ends with the same habit: walk the world and measure it.
+                Reusable geometry makes the scenery cheaper. Visibility and distance decisions
+                narrow the view. Local cosmetic motion keeps the server from carrying every bounce
+                and step. Bounded updates and spatial queries keep the client's work focused.
+
+
+                None of those choices eliminates the need to test the final experience. Put the
+                systems together, invite the intended population, and repeat the route on
+                representative hardware. Then spend the remaining budget on the moments players will
+                notice.
+            - type: callout
+              title: The idea to take with you
+              markdown: Build a world you can measure—and leave enough room to make it memorable.
+            - type: markdown
+              markdown: >-
+                The original article also points toward McNeill's related RDC 2024 presentation. The
+                editable [Cardboard Box
+                Simulator](https://www.roblox.com/games/17841214558/Cardboard-Box-Simulator) is the
+                practical companion: inspect the managers, follow their records, and try the changes
+                in a local copy.
+
+
+                ## Acknowledgments
+
+
+                The original notes thank BIG Games and Preston for the Pet Simulator inspiration,
+                DevFivum, McNeill's family, Robert Ly, Andrew Etter, and Roblox. This edition adapts
+                Peter "MrChickenRocket" McNeill's guest article into an editorial learning format.
+                The implementation and original imagery remain credited to their source; the
+                narrative rewriting and present-day notes are editorial additions.
+    - id: appendixes
+      order: 8
+      sections:
+        - type: concept
+          id: appendixes
+          navLabel: Appendixes A–F
+          hero:
+            title: Keep the field notes close.
+            description:
+              The APIs, tools, and trade-offs behind the story, gathered for the next time you open
+              Studio.
+            image: assets/resources/performance/memory-profiler.webp
+            alt: The detailed client memory tools shown in the original appendix.
+            caption:
+              The original memory-tool interface. Current documentation is linked below because the tools
+              continue to evolve.
+          blocks:
+            - type: markdown
+              markdown: |-
+                A useful performance habit needs somewhere to begin. These appendixes collect the source article's supporting material and point to current documentation for the parts of the platform that have moved on since 2024.
+
+                ## A · The project and the APIs
+
+                Open [Cardboard Box Simulator](https://www.roblox.com/games/17841214558/Cardboard-Box-Simulator) and inspect an editable local copy. Follow the [original DevForum article](https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146) for the source screenshots, code context, and discussion, and [MrChickenRocket](https://x.com/MrChickenRocket) for the author's work.
+            - type: markdown
+              markdown: |-
+                - [BulkMoveTo](https://create.roblox.com/docs/reference/engine/classes/WorldRoot#BulkMoveTo): Move a batch of parts.
+                - [GetPartBoundsInRadius](https://create.roblox.com/docs/reference/engine/classes/WorldRoot#GetPartBoundsInRadius): Query nearby part bounds.
+                - [PivotTo](https://create.roblox.com/docs/reference/engine/classes/PVInstance#PivotTo): Place a model by its pivot.
+                - [CollectionService](https://create.roblox.com/docs/reference/engine/classes/CollectionService): Find and track tagged instances.
+            - type: markdown
+              markdown: |-
+                `WorldRoot:BulkMoveTo` moves matching arrays of parts and CFrames when bulk movement is warranted. `WorldRoot:GetPartBoundsInRadius` supplies a filtered bounding-box overlap query. `PVInstance:PivotTo` positions a model or part by its pivot. `CollectionService` makes tagged instances discoverable through `GetTagged`, `GetInstanceAddedSignal`, and `GetInstanceRemovedSignal`. For a long-lived manager, pair discovery with cleanup.
+
+                ## B · Where streaming fits
+
+                The source strongly recommends instance streaming for large worlds, loading time, and client memory. Its manual visibility demonstration was chosen for a compact map with close but hidden neighboring zones. That is a particular design situation, not an argument against streaming.
+
+                Today, [streaming](https://create.roblox.com/docs/workspace/streaming) dynamically loads and unloads Workspace content and is enabled by default for new places. Design scripts and interactions around instances being temporarily unavailable. When adding another culling system, test both systems together through arrival, removal, return visits, teleports, and respawns.
+
+                ## C · What a draw call means
+
+                A draw call is work submitted to the renderer. Geometry and material state influence how that work can be combined. Repeating opaque meshes with a common mesh ID and material is an opportunity for instancing; scale, rotation, position, and color variation can preserve that opportunity.
+
+                Several seemingly small choices can complicate the picture: transparent objects, unique texture and decal IDs, SurfaceGuis and BillboardGuis, emitters and beams, many terrain materials, complex shadow-light interactions, and heavy bone use on skinned meshes. They are tools with costs, not a list of forbidden features.
+
+                The 2024 article uses one draw per emitter or beam as an explanatory simplification. Avoid treating that as a timeless renderer invariant. Likewise, identical meshes do not guarantee a single draw in every circumstance. Capture the actual view, examine the categories, and change the content that contributes to the bottleneck you found.
+
+                ## D · Read a MicroProfiler capture
+
+                The [MicroProfiler guide](https://create.roblox.com/docs/performance-optimization/microprofiler) explains the timeline, and the [tag reference](https://create.roblox.com/docs/performance-optimization/microprofiler/tag-table) helps decode its labels. Current desktop and Studio access uses Ctrl+F6, or Command+F6 on Mac. Follow the current guide for mobile capture setup.
+
+                Start with an expensive frame. Find tasks that occupy more time than expected, then compare them with an ordinary frame. Watch for loops that repeatedly call engine APIs, excessive raycasts, physics work, and large bursts of instance updates. A capture becomes useful when it suggests a specific change you can test under the same conditions.
+            - type: steps
+              items:
+                - Capture the troublesome route on the target device.
+                - Find a spike and identify its longest tasks.
+                - Use the tag reference to understand unfamiliar work.
+                - Change one system and capture the same route again.
+            - type: markdown
+              markdown: >-
+                ## E · Follow memory over a session
+
+
+                Open the Developer Console with F9 in the actual client and inspect its memory
+                information. The source screenshots show both a quick total and the more detailed
+                memory tools. Studio includes editor and plugin memory, so it is unsuitable for a
+                direct comparison with a standalone client total.
+            - type: figure
+              image: assets/resources/performance/memory-console.webp
+              alt: The memory total shown in the source article's Developer Console.
+              caption: Take the measurement from the real client and keep the test conditions consistent.
+            - type: markdown
+              markdown:
+                Sort by size to make the largest categories easier to find. Then repeat an action, leave
+                an area, return, and watch what remains allocated. Temporary growth and a steadily
+                rising baseline are different patterns; retained references deserve investigation
+                when the corresponding objects or sessions should have ended.
+            - type: figure
+              image: assets/resources/performance/memory-sort.webp
+              alt: The memory tool's size sorting control highlighted in the original appendix.
+              caption:
+                Sorting makes the next investigation manageable. Compare snapshots and session behavior
+                rather than relying on one total.
+            - type: markdown
+              markdown: >-
+                The [current memory
+                guide](https://create.roblox.com/docs/studio/optimization/memory-usage) covers the
+                evolving interface and categories. Streaming is also a major client-memory tool, but
+                it does not clean up unrelated script references for you.
+
+
+                ## F · Revisit the lighting decision
+
+
+                The original project shipped with ShadowMap. McNeill judged it appropriate for a
+                bright outdoor world, while Future offered richer local lighting, reflections, and
+                shading at a different cost. He encouraged readers to compare them in the editable
+                project, especially on metal surfaces and indoors.
+            - type: figure
+              image: assets/resources/performance/lighting-comparison.webp
+              alt:
+                The original animated comparison between ShadowMap and Future, highlighting shading and
+                reflective materials.
+              caption:
+                Historical lighting comparison from 2024. It documents the author's artistic and
+                performance choice at that time.
+            - type: markdown
+              markdown: "[View the original
+                animation](https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/or\
+                iginal/5X/3/e/d/e/3edec90e6cc565fbe37176db5144eae3291d8487.gif)."
+            - type: markdown
+              markdown: >-
+                Current [lighting
+                documentation](https://create.roblox.com/docs/environment/lighting) describes
+                `LightingStyle`: Realistic supplies advanced lighting and shadows, while Soft
+                produces a flatter look with softer lighting. `PrioritizeLightingQuality` determines
+                whether lighting quality or view distance is favored as rendering quality falls.
+
+
+                Choose the artistic intent, then test it on your supported devices. Pay attention to
+                light coverage, shadow casting, and moving geometry. The enduring decision is how to
+                preserve the parts of the image that matter when a device has less time to draw
+                them.

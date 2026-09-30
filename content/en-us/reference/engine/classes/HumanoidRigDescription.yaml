@@ -1145,8 +1145,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Data
     serialization:
@@ -1154,6 +1154,7 @@ properties:
       can_save: true
     capabilities:
       - Animation
+      - PluginOrOpenCloud
   - name: HumanoidRigDescription.RightAnkle
     summary: |
       The right ankle joint instance in the rig hierarchy.

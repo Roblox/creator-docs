@@ -53,6 +53,10 @@ For more information on subscription events and their fields, see the [Subscript
 
 - **Transaction Refunded** - When a user refunds a transaction, a message is sent containing the transaction and the refunded user.
 
+### Experiments
+
+- **Early Harm Detection** - When an experiment is experiencing [critical harm](../../production/experiments.md#early-harm-metrics) during the first 24 hours, a message is sent containing the experiment, the harming metric, and its lift.
+
 ## Configure webhooks on Creator Dashboard
 
 To receive notifications through webhooks, you need to configure a webhook that subscribes to certain events for triggering notifications. For group-owned games, only group owners can configure and receive webhook notifications.
