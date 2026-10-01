@@ -398,7 +398,7 @@ Once [scripts are updated](#script-patterns), test the game thoroughly. Streamin
 
 ## AI streaming conversion skill
 
-To assist with streaming conversion and optimization, Roblox offers an **AI streaming skill**, accessible from the Studio [MCP&nbsp;server](../../studio/mcp.md). The skill automatically evaluates your game, applies recommended configurations, and cleans up compatibility issues, including:
+To assist with streaming conversion and optimization, Roblox offers an **AI streaming skill** that evaluates your game, applies recommended configurations, and cleans up compatibility issues, including:
 
 <Tabs>
 <TabItem label="Model & World Adjustments">
@@ -429,10 +429,9 @@ To use the AI skill in your game:
 
 1. <Chip label="IMPORTANT" size="small" variant="outlined" color="error" /> Back up your game. The conversion process can be complex, so you should **always** save a backup (**File**&nbsp;⟩&nbsp;**Publish&nbsp;to&nbsp;Roblox&nbsp;As**) before running the skill.
 
-2. You can run this skill using any LLM you prefer through the [Model Context Protocol (MCP)](../../studio/mcp.md) in Studio. Higher-end AI models with large context windows are recommended; in Claude Opus, the typical conversion takes 20-30 minutes and utilizes roughly 200,000 tokens of context.
+2. You can run this skill directly in Assistant or using any LLM you prefer through the [Model Context Protocol (MCP)](../../studio/mcp.md) in Studio. Higher-end AI models with large context windows are recommended; for a typical conversion, a frontier model might take 20-30 minutes and utilize roughly 200,000 tokens of context.
 
    1. [Enable and connect the MCP server in Studio](../../studio/mcp.md).
-   1. Open your game in Studio.
-   1. <a href="../../assets/workspace/streaming/roblox-streaming-conversion-v1.0.zip" download>Download the skill</a> and, in your AI client, open the unzipped folder (`roblox-streaming-conversion`) as the current project.
-   1. Run the skill with `/rbx-convert-to-streaming`.
-   1. As with any AI output, verify the results and playtest your game extensively under [realistic test conditions](#realistic-test-conditions).
+   2. Open your game in Studio.
+   3. Open **Assistant Settings** ⟩ **Skills** and ensure that `rbx-convert-to-streaming` is toggled on.
+   4. Prompt Assistant (or your LLM connected via MCP) to use the skill.

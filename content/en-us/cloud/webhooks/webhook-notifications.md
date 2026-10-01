@@ -51,7 +51,16 @@ For more information on subscription events and their fields, see the [Subscript
 
 ### Refunds
 
-- **Transaction Refunded** - When a user refunds a transaction, a message is sent containing the transaction and the refunded user.
+- **Transaction Refunded** - When a user refunds a transaction, a message is sent containing the transaction and the refunded user. This trigger covers developer products, passes, private servers, and paid access. It doesn't include subscriptions. The `EventPayload` includes:
+
+  - The buyer's user ID.
+  - The product type and product ID.
+  - The Robux amount. This is the product's original price, not the amount the buyer paid.
+  - The universe and place where the purchase was made.
+  - The transaction or receipt ID.
+  - The time of the refund.
+
+  When a pass or avatar item is refunded through Roblox Customer Service, Roblox automatically revokes ownership of the item. For developer products, the benefit exists only in your experience's code, so you need to use this notification to remove the granted benefit, such as currency or boosts, from the player's save data yourself. The same applies to any extra functionality your experience grants beyond the base pass or item.
 
 ### Experiments
 
@@ -157,12 +166,10 @@ To verify a signature:
 <TabItem label="Custom endpoints">
 
 1. Extract the timestamp and signature values. All signatures for webhooks with secrets share the same format as a CSV string with these two values following by the prefixes:
-
    - `t`: The timestamp of when the notification was sent.
    - `v1`: The signature value generated using the secret provided by the Creator Dashboard configuration.
 
 1. Re-create the base string of `roblox-signature` by concatenating:
-
    1. The timestamp as a string.
    1. The period character `.`.
    1. The JSON string of the request body.
@@ -217,15 +224,13 @@ The following example shows the payload schema of the **Right To Erasure request
 
 ```json title="Example schema for a Right to Erasure request"
 {
-   "NotificationId": "string",
-   "EventType": "RightToErasureRequest",
-   "EventTime": "2023-12-30T16:24:24.2118874Z",
-   "EventPayload": {
-      "UserId": 1,
-      "GameIds": [
-         1234, 2345
-      ]
-   }
+  "NotificationId": "string",
+  "EventType": "RightToErasureRequest",
+  "EventTime": "2023-12-30T16:24:24.2118874Z",
+  "EventPayload": {
+    "UserId": 1,
+    "GameIds": [1234, 2345]
+  }
 }
 ```
 
@@ -239,53 +244,57 @@ If you use a custom endpoint as your webhook server instead of a third-party too
 const crypto = require('crypto');
 const express = require('express');
 
-const secret = '<your_secret>' // This can be set as an environment variable
+const secret = '<your_secret>'; // This can be set as an environment variable
 
 let app = express();
 app.use(express.json());
 
 app.all('/*', function (req, res) {
-   console.log('New request received');
+  console.log('New request received');
 
-   // Extract the timestamp and signature from header
-   const signatureHeader = req.headers['roblox-signature'].split(',');
-   const timestamp = signatureHeader.find(e => e.startsWith('t=')).substring(2);
-   const signature = signatureHeader.find(e => e.startsWith('v1=')).substring(3);
+  // Extract the timestamp and signature from header
+  const signatureHeader = req.headers['roblox-signature'].split(',');
+  const timestamp = signatureHeader
+    .find((e) => e.startsWith('t='))
+    .substring(2);
+  const signature = signatureHeader
+    .find((e) => e.startsWith('v1='))
+    .substring(3);
 
-   // Ensure the request came within a 300 second window to prevent replay attacks
-   const requestTimestampMs = timestamp * 1000;
-   const windowTimeMs = 300 * 1000;
-   const oldestTimestampAllowed = Date.now() - windowTimeMs;
+  // Ensure the request came within a 300 second window to prevent replay attacks
+  const requestTimestampMs = timestamp * 1000;
+  const windowTimeMs = 300 * 1000;
+  const oldestTimestampAllowed = Date.now() - windowTimeMs;
 
-   if (requestTimestampMs < oldestTimestampAllowed) {
-      return res.status(403).send('Expired Request');
-   }
+  if (requestTimestampMs < oldestTimestampAllowed) {
+    return res.status(403).send('Expired Request');
+  }
 
-   // Validate signature
-   const message = `${timestamp}.${JSON.stringify(req.body)}`;
-   const hmac = crypto.createHmac('sha256', secret);
-   const calculatedSignature = hmac.update(message).digest('base64');
+  // Validate signature
+  const message = `${timestamp}.${JSON.stringify(req.body)}`;
+  const hmac = crypto.createHmac('sha256', secret);
+  const calculatedSignature = hmac.update(message).digest('base64');
 
-   if (signature !== calculatedSignature) {
-      return res.status(401).send('Unauthorized Request');
-   }
+  if (signature !== calculatedSignature) {
+    return res.status(401).send('Unauthorized Request');
+  }
 
-   // Your logic to handle payload
-   const payloadBody = req.body;
-   const eventType = payloadBody['EventType'];
+  // Your logic to handle payload
+  const payloadBody = req.body;
+  const eventType = payloadBody['EventType'];
 
-   if (eventType === 'RightToErasureRequest'){
-      const userId = payloadBody['EventPayload']['UserId'];
-      const gameIds = payloadBody['EventPayload']['GameIds'];
+  if (eventType === 'RightToErasureRequest') {
+    const userId = payloadBody['EventPayload']['UserId'];
+    const gameIds = payloadBody['EventPayload']['GameIds'];
 
-      console.log(`Payload data: UserId=${userId} and GameIds=${gameIds}`);
-      // If you store PII in data stores, use the UserId and GameIds to delete the information from data stores.
-   }
+    console.log(`Payload data: UserId=${userId} and GameIds=${gameIds}`);
+    // If you store PII in data stores, use the UserId and GameIds to delete the information from data stores.
+  }
 
-   return res.json({ message: 'Processed the message successfully' });
+  return res.json({ message: 'Processed the message successfully' });
 });
 
 app.listen(8080, function () {
-   console.log('Server started');
+  console.log('Server started');
 });
 ```

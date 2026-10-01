@@ -633,7 +633,7 @@ properties:
       `Class.Lighting:SetMinutesAfterMidnight()|SetMinutesAfterMidnight()` will
       also change this property.
     code_samples: []
-    type: time_duration
+    type: string
     tags: []
     deprecation_message: ''
     security:

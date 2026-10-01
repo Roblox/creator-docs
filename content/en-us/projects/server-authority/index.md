@@ -77,7 +77,7 @@ columns 1
         TimeStart("<span style="color:Grey; font-size:80%;">TIME</span>")
         space:8
         TimeEnd(" ")
-        
+
         space:10
     end
 
@@ -95,7 +95,7 @@ columns 1
         S6["6"]
         S7["7"]
     end
-    
+
     TimeStart --> TimeEnd
     C1 --"<span style="color:white; background-color:RoyalBlue;">&nbsp; Input (Frame 3) &nbsp;</span>"--> S3
     S3 --"<span style="color:white; background-color:SeaGreen;">&nbsp; Server State (Frame 3) &nbsp;</span>"--> C5
@@ -138,6 +138,12 @@ In the server authority model, the client and the server must both run the core 
 <img src="../../assets/studio/explorer/ReplicatedStorage-Server-Authority.png" width="320" alt="Server authority setup" />
 
 During a resimulation, Roblox will re-run the functions bound to the simulation via `Class.RunService:BindToSimulation()|BindToSimulation()`. Processing player inputs, interacting with synchronized physics objects, and updating the core game state should live inside those bound functions.
+
+Use `Global.RobloxGlobals.time()` for any time-based logic inside a bound simulation function, such as driving an animation speed or oscillating a value over time. When `Class.Workspace.AuthorityMode` is `Enum.AuthorityMode.Server`, `time()` is synchronized between the client and the server and uses fixed-step simulation time. During [resimulation](#rollback-and-resimulation), it rewinds to the authoritative frame and advances as the client replays frames, so it returns a consistent value each time a frame is simulated.
+
+<Alert severity="warning">
+Other time functions don't share this behavior. `Global.RobloxGlobals.tick()` and `Library.os.time()` read the local device clock, while `Library.os.clock()` measures elapsed time from an arbitrary local baseline. They aren't synchronized between the client and the server and don't roll back during resimulation, so avoid them for simulation-affecting logic.
+</Alert>
 
 <Tabs>
 <TabItem label="Simulation">
@@ -210,7 +216,7 @@ Many properties and methods in the engine API reference include the **Simulation
 
 ### Input actions
 
-In a server-authoritative game, the primary way for a client to affect the game's state is through the [Input Action System](../../input/input-action-system.md). These inputs are sent to the server and are replayed during resimulation on the client. As a result, `Class.InputAction|InputActions` should be used for **all inputs that affect the core  simulation** and they should be checked for sanity before they're processed.
+In a server-authoritative game, the primary way for a client to affect the game's state is through the [Input Action System](../../input/input-action-system.md). These inputs are sent to the server and are replayed during resimulation on the client. As a result, `Class.InputAction|InputActions` should be used for **all inputs that affect the core simulation** and they should be checked for sanity before they're processed.
 
 <Alert severity="warning">
 To reiterate, do not use traditional events like `Class.UserInputService.InputBegan` in the core simulation of a server-authoritative game.

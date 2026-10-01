@@ -68,7 +68,7 @@ properties:
       `Class.AudioListener:SetAngleAttenuation()|SetAngleAttenuation()` for
       usage details.
     code_samples: []
-    type: Flyweight
+    type: BinaryString
     tags: []
     deprecation_message: ''
     security:
@@ -118,7 +118,7 @@ properties:
       `Class.AudioListener:SetDistanceAttenuation()|SetDistanceAttenuation()`
       for usage details.
     code_samples: []
-    type: Flyweight
+    type: BinaryString
     tags: []
     deprecation_message: ''
     security:

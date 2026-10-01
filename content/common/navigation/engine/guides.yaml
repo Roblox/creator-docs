@@ -51,6 +51,8 @@ navigation:
                 path: /workspace/streaming/techniques
               - title: SLIM
                 path: /workspace/streaming/slim
+              - title: Frustum streaming
+                path: /workspace/streaming/frustum
           - title: Server authority
             path: /projects/server-authority/
             section:

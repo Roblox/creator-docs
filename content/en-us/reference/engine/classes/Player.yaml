@@ -661,6 +661,34 @@ properties:
       can_save: true
     capabilities:
       - Players
+  - name: Player.FrustumStreaming
+    summary: |
+      Controls the engine's instance streaming behavior for the player's camera
+      view.
+    description: |
+      This property controls the engine's instance streaming behavior for the
+      camera view of the given player. `Enum.FrustumStreamingMode|Enabled` means
+      the player will always stream their camera view.
+      `Enum.FrustumStreamingMode|Automatic` means the engine will decide to
+      stream the camera view based on the player's capability (based on the
+      bandwidth, device memory, etc.) and gameplay suitability.
+      `Enum.FrustumStreamingMode|Disabled` means the player will never stream
+      their camera view. `Enum.FrustumStreamingMode|Default` currently behaves
+      the same as `Enum.FrustumStreamingMode|Disabled`.
+    code_samples: []
+    type: FrustumStreamingMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Players
   - name: Player.GameplayPaused
     summary: |
       Whether player client-side gameplay is currently paused.

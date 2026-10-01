@@ -4460,6 +4460,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/FrameStyle.yaml
         ignoreTranslation: true
+      - title: FrustumStreamingMode
+        path: /reference/engine/enums/FrustumStreamingMode
+        type: engineapi
+        source: /reference/engine/enums/FrustumStreamingMode.yaml
+        ignoreTranslation: true
       - title: FunctionalTestResult
         path: /reference/engine/enums/FunctionalTestResult
         type: engineapi
