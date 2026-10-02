@@ -148,7 +148,7 @@ If you want to distribute a model with a child audio asset that you created, you
 
 When creating models for the Creator Store, ensure:
 
-- The model and its dependencies adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), [DMCA Guidelines](../production/publishing/dmca-guidelines.md), and Creator Store requirements.
+- The model and its dependencies adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), [Intellectual Property guidelines](../production/publishing/ip-guidelines.md), and Creator Store requirements.
 - The model is set to a reasonable scale and orientation so that it's usable out of the box when inserted from the Creator Store.
 - All of the model's dependencies import into Studio without any warnings.
 - Each mesh dependency contains no more than 20,000 triangles.

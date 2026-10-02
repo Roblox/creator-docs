@@ -162,7 +162,7 @@ After you receive a conditional offer or conditional approval, you have **14 day
 - [Dispute the offer](#dispute-the-offer), if the rights holder initiated the offer (dispute is not available when the rights holder conditionally approves a request that you submitted).
 - [Cancel the request](#cancel-a-license), if you submitted the original license request.
 
-If you don't respond within 14 days, the conditional offer or request expires and becomes unsuccessful. The rights holder might then pursue other options, such as filing a [DMCA claim](../production/publishing/dmca-guidelines.md).
+If you don't respond within 14 days, the conditional offer or request expires and becomes unsuccessful. The rights holder might then pursue other options, such as filing an [IP infringement claim](../production/publishing/ip-guidelines.md).
 
 ### Respond to a conditional offer
 
@@ -195,7 +195,7 @@ To dispute a standard or conditional license offer that a rights holder sent to 
 
 If the rights holder accepts your dispute, you will not enter into an agreement with them. However, if the rights holder rejects your dispute, you will receive their license offer again. For a standard offer, you can either wait 14 days for the offer to automatically become active or dispute it one final time. For a conditional offer, rejecting the dispute re-sends the conditional offer with the original feedback and starts a new 14-day window for you to make changes or dispute again.
 
-If you submit a second and final dispute, you will not enter into an agreement with the rights holder. Instead, the offer will be archived, and the rights holder might choose to pursue a [DMCA claim](../production/publishing/dmca-guidelines.md) separately.
+If you submit a second and final dispute, you will not enter into an agreement with the rights holder. Instead, the offer will be archived, and the rights holder might choose to pursue an [IP infringement claim](../production/publishing/ip-guidelines.md) separately.
 
 <Alert severity="info">
   You can't dispute a conditional approval of a license request that you submitted. If you no longer want to proceed, [cancel the request](#cancel-a-license) instead.

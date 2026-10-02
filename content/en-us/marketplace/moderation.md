@@ -12,7 +12,7 @@ Moderations can happen after the item passes initial moderation. If Roblox remov
 If you believe your asset has been incorrectly moderated, you can [file an appeal](https://en.help.roblox.com/hc/en-us/articles/360000245263-Appeal-Your-Content-or-Account-Moderation) with our moderation staff.
 
 <Alert severity = 'info'>
-If you believe an asset is infringing on your IP, or that one of your assets has been incorrectly removed due to IP, submit a [DMCA request](../production/publishing/dmca-guidelines.md).
+If you believe an asset is infringing on your IP, or that one of your assets has been incorrectly removed due to IP, submit an [IP infringement notice](../production/publishing/ip-guidelines.md).
 </Alert>
 
 ## Archive assets

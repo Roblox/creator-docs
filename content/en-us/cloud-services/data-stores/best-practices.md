@@ -60,9 +60,13 @@ Use `SetAsync()` when you create a new key or replace a value that doesn't depen
 
 ### Shard hot keys
 
-Each key has [read and write throughput limits](./error-codes-and-limits.md#throughput-limits). If one logical record consistently reaches these limits after you reduce unnecessary requests, shard it across deterministic keys. Choose a stable shard from an identifier, such as `User_{UserId}_Inventory_{ShardId}`, so every server routes the same data to the same shard.
+Each key has [read and write throughput limits](./error-codes-and-limits.md#throughput-limits). For shared data that many servers read but rarely update, distribute reads across multiple keys that contain copies of the same record. Use this approach only to address **per-key read throttling**, after you reduce unnecessary requests. It doesn't resolve write throttling or increase experience-level or server-level request budgets.
 
-Sharding makes maintaining consistency and performing future migrations more complex. Don't shard data that fits within one key and remains below its throughput limits.
+For example, consider an **Admin Abuse** event that changes the **Weather** across an experience. If every server reads the current weather from a single `Weather` key, that key can reach its read throughput limit even though the weather changes infrequently. Instead, store copies under a fixed set of keys such as `Weather_1`, `Weather_2`, and `Weather_3`. Assign each server a shard at startup, for example by hashing its `Class.DataModel.JobId` into the fixed set, so reads spread across the keys. Each server reads only its assigned copy.
+
+When polling shared keys, including weather copies, add a random initial delay before the first read and bounded random jitter between subsequent reads. Choose a polling interval that balances how quickly servers need to observe changes with the read throughput limit. Avoid having every server read at the same time, such as immediately after a shared event notification. For more information, see [Stagger recurring requests](#stagger-recurring-requests).
+
+When the weather changes, update every copy. These writes aren't atomic across keys, so servers might temporarily read different weather states. Replicating the record adds writes and makes consistency and future migrations more complex. Don't use this approach for data that requires atomic updates across all readers or already remains below its per-key read throughput limit.
 
 ## Build an operations workflow
 

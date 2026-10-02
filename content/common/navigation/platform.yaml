@@ -40,8 +40,8 @@ navigation:
         path: /production/promotion/regional-content-availability
       - title: RTBF and creators
         path: /production/publishing/RTBF-and-creators
-      - title: DMCA
-        path: /production/publishing/dmca-guidelines
+      - title: IP Guidelines
+        path: /production/publishing/ip-guidelines
       - title: EU DSA IP Reporting
         path: /production/publishing/dsa-ip-reporting
       - title: Generative AI

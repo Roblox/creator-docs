@@ -239,7 +239,7 @@ To distribute an asset inside Studio:
 
 ### Asset requirements
 
-Every asset that you distribute and sell on the Creator Store must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and [Digital Millennium Copyright Act](https://create.roblox.com/docs/production/publishing/dmca-guidelines) (DMCA) regarding copyright. If any asset breaks these rules, the asset and your account may be subject to moderation.
+Every asset that you distribute and sell on the Creator Store must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and [Intellectual Property guidelines](./publishing/ip-guidelines.md) regarding copyright. If any asset breaks these rules, the asset and your account may be subject to moderation.
 
 There are limits on the number of assets you can distribute per 30 days, depending on whether you've verified your account. You can verify your account by passing an [age check](https://en.help.roblox.com/hc/en-us/articles/39143693116052-Understanding-Age-Checks-on-Roblox) or using a [government ID](../production/publishing/account-verification.md#verify-through-government-id), but you **cannot** verify with a phone number.
 <table>

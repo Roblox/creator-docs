@@ -32,7 +32,7 @@ If we determine that your notice is valid, we will act quickly to take down the 
 
 ## If you are a Roblox user whose content or account was moderated
 
-If your content is removed due to an IP notice or if your account is suspended or terminated under our IP Policy, Roblox will notify you through Roblox's messaging system and by email (if a verified email address is associated with your account). We strongly encourage you to link an email to your account as a security precaution and so you receive important notifications.
+If your content is removed due to an IP notice or if your account is suspended or terminated under our IP Policy, Roblox will notify you through Roblox's messaging system and by email (if a verified email address is associated with your account). We strongly encourage you to [link an email to your account](https://en.help.roblox.com/hc/en-us/articles/203313380-Keep-Your-Account-Safe) as a security precaution and so you receive important notifications.
 
 ## If you disagree with Roblox's decision on your notice or moderation action
 

@@ -23406,6 +23406,128 @@
         }
       }
     },
+    "/matchmaking-api/v1/matchmaking/universe/{universeId}/start-place": {
+      "delete": {
+        "summary": "Deletes the start place override for a universe.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteStartPlaceOverrideResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}]
+      },
+      "get": {
+        "summary": "Gets the start place override for a universe.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetStartPlaceOverrideResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}]
+      },
+      "post": {
+        "summary": "Sets (creates or updates) the start place override for a universe.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetStartPlaceOverrideRequestBody"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetStartPlaceOverrideRequestBody"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetStartPlaceOverrideRequestBody"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetStartPlaceOverrideRequestBody"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetStartPlaceOverrideResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}]
+      }
+    },
     "/messaging-service/v1/universes/{universeId}/topics/{topic}": {
       "post": {
         "tags": ["Universes"],
@@ -36394,7 +36516,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "text/plain": {
                 "schema": {
@@ -36836,7 +36958,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "text/plain": {
                 "schema": {
@@ -36881,7 +37003,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "text/plain": {
                 "schema": {
@@ -36934,7 +37056,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "text/plain": {
                 "schema": {
@@ -37532,63 +37654,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_patch_v1_groups__groupId__features"
-        }
-      }
-    },
-    "/v1/groups/{groupId}/revenue/summary/{timeFrame}": {
-      "get": {
-        "tags": ["Groups"],
-        "operationId": "RevenueSummary_GetGroupRevenueSummary",
-        "parameters": [
-          {
-            "name": "groupId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "timeFrame",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/RevenueSummaryTimeFrame"
-                }
-              ]
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RevenueSummaryResponse"
-                }
-              }
-            }
-          }
-        },
-        "servers": [
-          {
-            "url": "https://economy.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#RevenueSummary_GetGroupRevenueSummary"
         }
       }
     },
@@ -48062,7 +48127,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}],
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_usernames_validate"
         }
@@ -54706,73 +54776,6 @@
         }
       }
     },
-    "/v2/groups/{groupId}/transactions": {
-      "get": {
-        "tags": ["Groups"],
-        "operationId": "TransactionHistory_GetGroupTransactions",
-        "parameters": [
-          {
-            "name": "groupId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "exclusiveStartRequest",
-            "in": "query",
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Int64ExclusiveStartKeyCursor"
-                }
-              ]
-            }
-          },
-          {
-            "name": "transactionType",
-            "in": "query",
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/TransactionType"
-                }
-              ]
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransactionResponseApiPageResponse"
-                }
-              }
-            }
-          }
-        },
-        "servers": [
-          {
-            "url": "https://economy.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#TransactionHistory_GetGroupTransactions"
-        }
-      }
-    },
     "/v2/identity-verification/login": {
       "post": {
         "tags": ["Accounts"],
@@ -56852,80 +56855,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_revert_invalidate_tickets"
-        }
-      }
-    },
-    "/v2/sales/sales-report-download": {
-      "post": {
-        "tags": ["Universes"],
-        "operationId": "TransactionRecordsApi.SalesReportDownload_PublishSalesReportDownloadMessage",
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/SalesReportDownloadRequest"
-                  }
-                ]
-              }
-            },
-            "application/json": {
-              "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/SalesReportDownloadRequest"
-                  }
-                ]
-              }
-            },
-            "text/json": {
-              "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/SalesReportDownloadRequest"
-                  }
-                ]
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/SalesReportDownloadRequest"
-                  }
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HttpResponseMessage"
-                }
-              }
-            }
-          }
-        },
-        "servers": [
-          {
-            "url": "https://economy.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#TransactionRecordsApi.SalesReportDownload_PublishSalesReportDownloadMessage"
         }
       }
     },
@@ -59166,7 +59095,12 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}],
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v2_usernames_validate"
         }
@@ -59833,215 +59767,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/trades#trades_get_v2_users__userId__tradableItems"
-        }
-      }
-    },
-    "/v2/users/{userId}/transaction-totals": {
-      "get": {
-        "tags": ["Users"],
-        "operationId": "TransactionRecords_GetUserRevenueSummary",
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "usedTypes",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "timeFrame",
-            "in": "query",
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/RevenueSummaryTimeFrame"
-                }
-              ]
-            }
-          },
-          {
-            "name": "transactionType",
-            "in": "query",
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/TransactionType"
-                }
-              ]
-            }
-          },
-          {
-            "name": "exclusiveStartCursor",
-            "in": "query",
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Int64ExclusiveStartKeyCursor"
-                }
-              ]
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransactionTotalsResponse"
-                }
-              }
-            }
-          }
-        },
-        "servers": [
-          {
-            "url": "https://economy.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/users#TransactionRecords_GetUserRevenueSummary"
-        }
-      }
-    },
-    "/v2/users/{userId}/transaction-types": {
-      "get": {
-        "tags": ["Users"],
-        "operationId": "TransactionRecords_GetUsedTransactionTypes",
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransactionUsedTypesResponse"
-                }
-              }
-            }
-          }
-        },
-        "servers": [
-          {
-            "url": "https://economy.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/users#TransactionRecords_GetUsedTransactionTypes"
-        }
-      }
-    },
-    "/v2/users/{userId}/transactions": {
-      "get": {
-        "tags": ["Users"],
-        "operationId": "TransactionRecordsApi.TransactionRecords_GetUserTransactions",
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "exclusiveStartCursor",
-            "in": "query",
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Int64ExclusiveStartKeyCursor"
-                }
-              ]
-            }
-          },
-          {
-            "name": "transactionType",
-            "in": "query",
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/TransactionType"
-                }
-              ]
-            }
-          },
-          {
-            "name": "itemPricingType",
-            "in": "query",
-            "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/ItemPricingType"
-                }
-              ]
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransactionRecordResponseApiPageResponse"
-                }
-              }
-            }
-          }
-        },
-        "servers": [
-          {
-            "url": "https://economy.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/users#TransactionRecordsApi.TransactionRecords_GetUserTransactions"
         }
       }
     },
@@ -61873,31 +61598,6 @@
       "ActionResult": {
         "type": "object",
         "additionalProperties": false
-      },
-      "AgentResponse": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "type": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/AgentType"
-              }
-            ]
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "AgentType": {
-        "enum": ["User", "Group"],
-        "type": "string"
       },
       "AnalyticsQueryPublicApi.BreakdownValue": {
         "required": ["dimension", "value"],
@@ -63896,10 +63596,6 @@
           "seller": ["userSeller", "groupSeller"]
         }
       },
-      "CurrencyHolderType": {
-        "enum": ["Undefined", "User", "Group", "UserKey"],
-        "type": "string"
-      },
       "CursorPagingDirection": {
         "enum": ["Forward", "Backward"],
         "type": "string"
@@ -64217,6 +63913,11 @@
         "additionalProperties": false,
         "description": "Request model for deleting a save",
         "nullable": true
+      },
+      "DeleteStartPlaceOverrideResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "Response for deleting the start place override for a universe."
       },
       "DeploymentStrategy": {
         "enum": ["Invalid", "GradualRollout", "Immediate"],
@@ -65667,23 +65368,6 @@
         "additionalProperties": false,
         "description": "Returns the URL for the user's avatar thumbnail."
       },
-      "GenericCurrencyResponse": {
-        "type": "object",
-        "properties": {
-          "amount": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "type": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/TransactionRecordsApi.CurrencyType"
-              }
-            ]
-          }
-        },
-        "additionalProperties": false
-      },
       "GetExperimentOperationStatusResponse": {
         "type": "object",
         "properties": {
@@ -65898,6 +65582,16 @@
         "additionalProperties": false,
         "description": "Response model for getting saves",
         "nullable": true
+      },
+      "GetStartPlaceOverrideResponse": {
+        "type": "object",
+        "properties": {
+          "dataStoreLocation": {
+            "$ref": "#/components/schemas/DataStoreLocation"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response for getting the start place override for a universe."
       },
       "GetUpdateStatusResponse": {
         "type": "object",
@@ -66584,148 +66278,6 @@
         "type": "string",
         "description": "The type of host of a virtual event."
       },
-      "HttpContent": {
-        "type": "object",
-        "properties": {
-          "headers": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/StringStringIEnumerableKeyValuePair"
-            },
-            "nullable": true,
-            "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "HttpMethod": {
-        "type": "object",
-        "properties": {
-          "method": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "HttpRequestMessage": {
-        "type": "object",
-        "properties": {
-          "version": {
-            "type": "string",
-            "nullable": true
-          },
-          "versionPolicy": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/HttpVersionPolicy"
-              }
-            ]
-          },
-          "content": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/HttpContent"
-              }
-            ],
-            "nullable": true
-          },
-          "method": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/HttpMethod"
-              }
-            ],
-            "nullable": true
-          },
-          "requestUri": {
-            "type": "string",
-            "format": "uri",
-            "nullable": true
-          },
-          "headers": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/StringStringIEnumerableKeyValuePair"
-            },
-            "nullable": true,
-            "readOnly": true
-          },
-          "properties": {
-            "type": "object",
-            "additionalProperties": {
-              "nullable": true
-            },
-            "nullable": true,
-            "readOnly": true,
-            "deprecated": true
-          },
-          "options": {
-            "type": "object",
-            "additionalProperties": {},
-            "nullable": true,
-            "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "HttpResponseMessage": {
-        "type": "object",
-        "properties": {
-          "version": {
-            "type": "string",
-            "nullable": true
-          },
-          "content": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/HttpContent"
-              }
-            ],
-            "nullable": true
-          },
-          "statusCode": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/TransactionRecordsApi.HttpStatusCode"
-              }
-            ]
-          },
-          "reasonPhrase": {
-            "type": "string",
-            "nullable": true
-          },
-          "headers": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/StringStringIEnumerableKeyValuePair"
-            },
-            "nullable": true,
-            "readOnly": true
-          },
-          "trailingHeaders": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/StringStringIEnumerableKeyValuePair"
-            },
-            "nullable": true,
-            "readOnly": true
-          },
-          "requestMessage": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/HttpRequestMessage"
-              }
-            ],
-            "nullable": true
-          },
-          "isSuccessStatusCode": {
-            "type": "boolean",
-            "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
       "HttpValidationProblemDetails": {
         "type": "object",
         "allOf": [
@@ -66750,14 +66302,6 @@
           "nullable": true
         },
         "nullable": true
-      },
-      "HttpVersionPolicy": {
-        "enum": [
-          "RequestVersionOrLower",
-          "RequestVersionOrHigher",
-          "RequestVersionExact"
-        ],
-        "type": "string"
       },
       "HydratedSave": {
         "type": "object",
@@ -66918,42 +66462,6 @@
         "additionalProperties": false,
         "description": "Represents the count of various instance types within an asset.\r\nSee [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance).",
         "nullable": true
-      },
-      "Int64ExclusiveStartKeyCursor": {
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "sortOrder": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/TransactionRecordsApi.SortOrder"
-              }
-            ]
-          },
-          "pagingDirection": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CursorPagingDirection"
-              }
-            ]
-          },
-          "pageNumber": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "discriminator": {
-            "type": "string",
-            "nullable": true
-          },
-          "count": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
       },
       "InventoryItem": {
         "type": "object",
@@ -67149,10 +66657,6 @@
         },
         "additionalProperties": false,
         "description": "Specific fields that are applicable to a private server."
-      },
-      "ItemPricingType": {
-        "enum": ["Undefined", "All", "PaidAndLimited"],
-        "type": "string"
       },
       "LaunchRestartRequest": {
         "type": "object",
@@ -68881,10 +68385,6 @@
         "x-enumNames": ["None", "Current", "Week", "Month", "Year"],
         "x-enum-varnames": ["None", "Current", "Week", "Month", "Year"]
       },
-      "O18EligibilityTag": {
-        "enum": ["None", "O18Eligible", "O18EligibleAndPlus"],
-        "type": "string"
-      },
       "OCV1.Assets.Operation": {
         "type": "object",
         "properties": {
@@ -70416,87 +69916,6 @@
         "type": "object",
         "properties": {},
         "description": "Empty response. May later contain a status."
-      },
-      "RevenueSummaryResponse": {
-        "type": "object",
-        "properties": {
-          "recurringRobuxStipend": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "itemSaleRobux": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "purchasedRobux": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "tradeSystemRobux": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "pendingRobux": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "groupPayoutRobux": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "individualToGroupRobux": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "premiumPayouts": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "groupPremiumPayouts": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "adjustmentRobux": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "immersiveAdPayouts": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "subscriptionPayouts": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "subscriptionClawbacks": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "isShowImmersiveAdPayoutSummaryOnZeroEnabled": {
-            "type": "boolean"
-          },
-          "commissionRobux": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "publishingAdvanceRebates": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "groupAffiliatePayoutRobux": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "creatorRewardsPayoutRobux": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
-        "additionalProperties": false
-      },
-      "RevenueSummaryTimeFrame": {
-        "enum": ["Day", "Week", "Month", "Year"],
-        "type": "string"
       },
       "RevisionChange": {
         "type": "object",
@@ -84720,22 +84139,6 @@
         },
         "additionalProperties": false
       },
-      "RobuxRateBreakdown": {
-        "type": "object",
-        "properties": {
-          "o18": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "standard": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "RpnOperandDto": {
         "type": "object",
         "properties": {
@@ -84809,39 +84212,6 @@
               "type": "string"
             },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "SalesReportDownloadRequest": {
-        "required": ["endDate", "startDate", "targetId", "targetType"],
-        "type": "object",
-        "properties": {
-          "targetId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "targetType": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CurrencyHolderType"
-              }
-            ]
-          },
-          "startDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "endDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "transactionType": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/TransactionType"
-              }
-            ]
           }
         },
         "additionalProperties": false
@@ -85528,6 +84898,21 @@
         "additionalProperties": false,
         "description": "Request to set the matchmaking scoring configuration for a place."
       },
+      "SetStartPlaceOverrideRequestBody": {
+        "type": "object",
+        "properties": {
+          "dataStoreLocation": {
+            "$ref": "#/components/schemas/DataStoreLocation"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request body for setting the start place override for a universe. The universe is\r\nidentified by the route, so it is not part of the body."
+      },
+      "SetStartPlaceOverrideResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "Response for setting the start place override for a universe."
+      },
       "ShutdownAllGameInstancesResponse": {
         "type": "object",
         "properties": {
@@ -85844,23 +85229,6 @@
           "pageNumber": {
             "type": "integer",
             "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "StringStringIEnumerableKeyValuePair": {
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "string",
-            "nullable": true
-          },
-          "value": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -86239,520 +85607,6 @@
         },
         "additionalProperties": false,
         "nullable": true
-      },
-      "TransactionDetailsResponse": {
-        "type": "object",
-        "additionalProperties": false
-      },
-      "TransactionRecordResponse": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "idHash": {
-            "type": "string",
-            "nullable": true
-          },
-          "transactionType": {
-            "type": "string",
-            "nullable": true
-          },
-          "created": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "isPending": {
-            "type": "boolean"
-          },
-          "agent": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/AgentResponse"
-              }
-            ],
-            "nullable": true
-          },
-          "details": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/TransactionDetailsResponse"
-              }
-            ],
-            "nullable": true
-          },
-          "currency": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GenericCurrencyResponse"
-              }
-            ],
-            "nullable": true
-          },
-          "purchaseToken": {
-            "type": "string",
-            "nullable": true
-          },
-          "transactionSubtype": {
-            "type": "string",
-            "nullable": true
-          },
-          "o18EligibilityTag": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/O18EligibilityTag"
-              }
-            ],
-            "nullable": true
-          },
-          "robuxRateBreakdown": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/RobuxRateBreakdown"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "TransactionRecordResponseApiPageResponse": {
-        "type": "object",
-        "properties": {
-          "previousPageCursor": {
-            "type": "string",
-            "nullable": true
-          },
-          "nextPageCursor": {
-            "type": "string",
-            "nullable": true
-          },
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TransactionRecordResponse"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "TransactionRecordsApi.CurrencyType": {
-        "enum": ["Robux", "Tickets"],
-        "type": "string"
-      },
-      "TransactionRecordsApi.HttpStatusCode": {
-        "enum": [
-          "Continue",
-          "SwitchingProtocols",
-          "Processing",
-          "EarlyHints",
-          "OK",
-          "Created",
-          "Accepted",
-          "NonAuthoritativeInformation",
-          "NoContent",
-          "ResetContent",
-          "PartialContent",
-          "MultiStatus",
-          "AlreadyReported",
-          "IMUsed",
-          "MultipleChoices",
-          "MovedPermanently",
-          "Found",
-          "SeeOther",
-          "NotModified",
-          "UseProxy",
-          "Unused",
-          "RedirectKeepVerb",
-          "PermanentRedirect",
-          "BadRequest",
-          "Unauthorized",
-          "PaymentRequired",
-          "Forbidden",
-          "NotFound",
-          "MethodNotAllowed",
-          "NotAcceptable",
-          "ProxyAuthenticationRequired",
-          "RequestTimeout",
-          "Conflict",
-          "Gone",
-          "LengthRequired",
-          "PreconditionFailed",
-          "RequestEntityTooLarge",
-          "RequestUriTooLong",
-          "UnsupportedMediaType",
-          "RequestedRangeNotSatisfiable",
-          "ExpectationFailed",
-          "MisdirectedRequest",
-          "UnprocessableEntity",
-          "Locked",
-          "FailedDependency",
-          "UpgradeRequired",
-          "PreconditionRequired",
-          "TooManyRequests",
-          "RequestHeaderFieldsTooLarge",
-          "UnavailableForLegalReasons",
-          "InternalServerError",
-          "NotImplemented",
-          "BadGateway",
-          "ServiceUnavailable",
-          "GatewayTimeout",
-          "HttpVersionNotSupported",
-          "VariantAlsoNegotiates",
-          "InsufficientStorage",
-          "LoopDetected",
-          "NotExtended",
-          "NetworkAuthenticationRequired"
-        ],
-        "type": "string"
-      },
-      "TransactionRecordsApi.SortOrder": {
-        "enum": ["Asc", "Desc"],
-        "type": "string"
-      },
-      "TransactionResponse": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "idHash": {
-            "type": "string",
-            "nullable": true
-          },
-          "created": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "isPending": {
-            "type": "boolean"
-          },
-          "agent": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/AgentResponse"
-              }
-            ],
-            "nullable": true
-          },
-          "details": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/TransactionDetailsResponse"
-              }
-            ],
-            "nullable": true
-          },
-          "currency": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GenericCurrencyResponse"
-              }
-            ],
-            "nullable": true
-          },
-          "purchaseToken": {
-            "type": "string",
-            "nullable": true
-          },
-          "o18EligibilityTag": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/O18EligibilityTag"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "TransactionResponseApiPageResponse": {
-        "type": "object",
-        "properties": {
-          "previousPageCursor": {
-            "type": "string",
-            "nullable": true
-          },
-          "nextPageCursor": {
-            "type": "string",
-            "nullable": true
-          },
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TransactionResponse"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "TransactionTotalsResponse": {
-        "type": "object",
-        "properties": {
-          "salesTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "purchasesTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "affiliateSalesTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "groupPayoutsTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "currencyPurchasesTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "premiumStipendsTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "tradeSystemEarningsTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "tradeSystemCostsTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "premiumPayoutsTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "groupPremiumPayoutsTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "adSpendTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "developerExchangeTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "pendingRobuxTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "incomingRobuxTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "outgoingRobuxTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "individualToGroupTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "csAdjustmentTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "adsRevsharePayoutsTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "groupAdsRevsharePayoutsTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "subscriptionsRevshareTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "groupSubscriptionsRevshareTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "subscriptionsRevshareOutgoingTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "groupSubscriptionsRevshareOutgoingTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "publishingAdvanceRebatesTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "affiliatePayoutTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "licensingPaymentTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "licensingPaymentClawbackOutgoingTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "incomingRobuxTransferTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "outgoingRobuxTransferTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "robloxSelectIncomingTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "robloxSelectOutgoingTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "privateServerEngagementPayoutsTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "creatorRewardsPayoutsTotal": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "subscriptionReferralPayoutsTotal": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
-        "additionalProperties": false
-      },
-      "TransactionType": {
-        "enum": [
-          "Undefined",
-          "Sale",
-          "Purchase",
-          "AffiliateSale",
-          "DevEx",
-          "GroupPayout",
-          "AdImpressionPayout",
-          "CurrencyPurchase",
-          "TradeRobux",
-          "PremiumStipend",
-          "PendingRobux",
-          "EngagementPayout",
-          "GroupEngagementPayout",
-          "AdSpend",
-          "Summary",
-          "IndividualToGroup",
-          "CSAdjustment",
-          "AdsRevsharePayout",
-          "GroupAdsRevsharePayout",
-          "SubscriptionsRevsharePayout",
-          "GroupSubscriptionsRevsharePayout",
-          "SubscriptionsRevshareClawback",
-          "GroupSubscriptionsRevshareClawback",
-          "PublishingAdvanceRebates",
-          "AffiliatePayout",
-          "LicensingPayment",
-          "LicensingPaymentClawback",
-          "CurrencyTransfer",
-          "RobloxSelectTransfer",
-          "PrivateServerEngagementPayout",
-          "CurrencySubscriptionStipend",
-          "SubscriptionReferralPayout",
-          "CreatorRewardsPayout"
-        ],
-        "type": "string"
-      },
-      "TransactionUsedTypesResponse": {
-        "type": "object",
-        "properties": {
-          "HasPurchase": {
-            "type": "boolean"
-          },
-          "HasSale": {
-            "type": "boolean"
-          },
-          "HasAffiliatePayout": {
-            "type": "boolean"
-          },
-          "HasAffiliateSale": {
-            "type": "boolean"
-          },
-          "HasGroupPayout": {
-            "type": "boolean"
-          },
-          "HasCurrencyPurchase": {
-            "type": "boolean"
-          },
-          "HasTradeRobux": {
-            "type": "boolean"
-          },
-          "HasPremiumStipend": {
-            "type": "boolean"
-          },
-          "HasEngagementPayout": {
-            "type": "boolean"
-          },
-          "HasGroupEngagementPayout": {
-            "type": "boolean"
-          },
-          "HasAdSpend": {
-            "type": "boolean"
-          },
-          "HasDevEx": {
-            "type": "boolean"
-          },
-          "HasPendingRobux": {
-            "type": "boolean"
-          },
-          "HasIndividualToGroup": {
-            "type": "boolean"
-          },
-          "HasCSAdjustment": {
-            "type": "boolean"
-          },
-          "HasAdsRevsharePayout": {
-            "type": "boolean"
-          },
-          "HasGroupAdsRevsharePayout": {
-            "type": "boolean"
-          },
-          "HasSubscriptionsRevsharePayout": {
-            "type": "boolean"
-          },
-          "HasGroupSubscriptionsRevsharePayout": {
-            "type": "boolean"
-          },
-          "HasPublishingAdvanceRebates": {
-            "type": "boolean"
-          },
-          "HasLicensingPayment": {
-            "type": "boolean"
-          },
-          "HasTransfer": {
-            "type": "boolean"
-          },
-          "HasRobloxSelectTransfer": {
-            "type": "boolean"
-          },
-          "HasPrivateServerEngagementPayout": {
-            "type": "boolean"
-          },
-          "HasCreatorRewardsPayout": {
-            "type": "boolean"
-          },
-          "HasSubscriptionReferralPayout": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
       },
       "TranslateTextRequest": {
         "required": ["text"],
@@ -89578,8 +88432,6 @@
           "groups_post_v1_groups__groupId__community_tier_evaluate",
           "groups_get_v1_groups__groupId__features",
           "groups_patch_v1_groups__groupId__features",
-          "RevenueSummary_GetGroupRevenueSummary",
-          "TransactionHistory_GetGroupTransactions",
           "thumbnails_get_v1_groups_icons",
           "develop_get_v1_groups__groupId__universes",
           "develop_get_v1_user_groups_canmanagegamesoritems"
@@ -90211,7 +89063,6 @@
           "develop_get_v1_universes_user_public_publish_eligibility",
           "develop_get_v1_user_universes",
           "develop_patch_v2_universes__universeId__configuration",
-          "TransactionRecordsApi.SalesReportDownload_PublishSalesReportDownloadMessage",
           "economycreatorstats_get_v1_universes__universeId__stats",
           "gameinternationalization_get_v1_automatic_translation_games__gameId__feature_status",
           "gameinternationalization_get_v1_automatic_translation_games__gameId__quota",
@@ -90351,9 +89202,6 @@
           "Cloud_ListUserRestrictionLogs",
           "Cloud_CreateUserNotification",
           "Cloud_GetSubscription",
-          "TransactionRecordsApi.TransactionRecords_GetUserTransactions",
-          "TransactionRecords_GetUserRevenueSummary",
-          "TransactionRecords_GetUsedTransactionTypes",
           "translationroles_get_v1_game_localization_roles_games__gameId__roles__role__assignees"
         ]
       }

@@ -14,7 +14,7 @@ Work with creators by finding existing games that already use your IP and offeri
 To start using these tools, [register as a rights holder](#register-as-a-rights-holder) and [create an IP family](#create-an-ip-family).
 
 <Alert severity="info">
-   For more information about IP and the Digital Millennium Copyright Act (DMCA), see [intellectual property](../marketplace/intellectual-property.md) and [DMCA guidelines](../production/publishing/dmca-guidelines.md).
+   For more information about IP and the Digital Millennium Copyright Act (DMCA), see [intellectual property](../marketplace/intellectual-property.md) and [Intellectual Property guidelines](../production/publishing/ip-guidelines.md).
 </Alert>
 
 <Alert severity="info">

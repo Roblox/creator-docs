@@ -91,7 +91,7 @@ Roblox complies with the [Digital Millennium Copyright Act (DMCA)](https://www.c
 
 Only the IP rights holder knows what rights they have and who they have given permission to use their creations. Because of that, **we rely on rights holders to let us know what they believe infringes their rights by filing a takedown report**.
 
-If you find content on Roblox that you believe infringes your IP rights, please see our [DMCA Guidelines](../production/publishing/dmca-guidelines.md#what-is-the-dmca) for additional information on how to submit an intellectual property takedown notice to us.
+If you find content on Roblox that you believe infringes your IP rights, please see our [Intellectual Property Guidelines](../production/publishing/ip-guidelines.md#copyright-reporting-on-roblox) for additional information on how to submit an intellectual property takedown notice to us.
 
 - Submitting an IP takedown notice to us is a legal process.
 - Only the rights holder or their authorized representative can report content that infringes on their intellectual property rights.
