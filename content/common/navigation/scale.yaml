@@ -29,6 +29,8 @@ navigation:
         path: /production/promotion/social-media-links
       - title: Share links
         path: /production/promotion/share-links
+      - title: Discovery FAQ
+        path: /discovery-faq
 
   - title: Localization
     section:

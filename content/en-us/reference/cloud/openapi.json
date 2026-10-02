@@ -20937,6 +20937,7 @@
             "description": "17: Feature is disabled"
           }
         },
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -26398,7 +26399,7 @@
                   "$ref": "#/components/schemas/SearchCategoryType"
                 }
               ],
-              "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API.",
+              "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API.",
               "x-enumNames": [
                 "Audio",
                 "Model",
@@ -26641,7 +26642,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -26830,7 +26831,7 @@
     "/toolbox-service/v1/saves:bulkDelete": {
       "post": {
         "tags": ["Creator Store"],
-        "summary": "Bulk deletes saves.\r\nMax of 5000 saves per request.",
+        "summary": "Bulk deletes saves.\nMax of 5000 saves per request.",
         "operationId": "Saves_BulkDeleteSaves",
         "requestBody": {
           "content": {
@@ -26858,7 +26859,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -26960,7 +26961,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -27126,6 +27127,7 @@
             "in": "query",
             "description": "The User ID of the creator. Only one of 'userId' and 'groupId' can be present in a query.",
             "schema": {
+              "maximum": 9223372036854776000,
               "minimum": 1,
               "type": "integer",
               "format": "int64",
@@ -27137,6 +27139,7 @@
             "in": "query",
             "description": "The Group ID of the creator. Only one of 'userId' and 'groupId' can be present in a query.",
             "schema": {
+              "maximum": 9223372036854776000,
               "minimum": 1,
               "type": "integer",
               "format": "int64",
@@ -27361,7 +27364,7 @@
                   "$ref": "#/components/schemas/SearchView"
                 }
               ],
-              "description": "This view controls which fields are populated in the search response. A lighter\r\nview will result in faster response times and higher reliability.",
+              "description": "This view controls which fields are populated in the search response. A lighter\nview will result in faster response times and higher reliability.",
               "default": "Core",
               "x-enumNames": ["IDs", "Core", "Full"],
               "x-enum-varnames": ["IDs", "Core", "Full"]
@@ -27394,7 +27397,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -27440,7 +27443,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         },
         "x-roblox-recommended-alternatives": [
@@ -27516,7 +27519,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -27562,7 +27565,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         },
         "x-roblox-engine-usability": {
@@ -37657,6 +37660,240 @@
         }
       }
     },
+    "/v1/groups/{groupId}/payouts/latest": {
+      "get": {
+        "summary": "Gets the latest one-time payout for each requested user.",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "userIds",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicAllOneTimePayoutsResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
+    "/v1/groups/{groupId}/payouts/suggested": {
+      "get": {
+        "summary": "Gets suggested one-time payouts for eligible collaborators.",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicAllOneTimePayoutsResponseModel"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
+    "/v1/groups/{groupId}/payouts/universes": {
+      "get": {
+        "summary": "Gets payout-visible universes for a group.",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicGroupUniversePayoutPageResponseModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
     "/v1/groups/{groupId}/universes": {
       "get": {
         "tags": ["Groups", "Universes"],
@@ -44162,6 +44399,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -46438,6 +46676,78 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/badges#badges_get_v1_universes__universeId__free_badges_quota"
         }
+      }
+    },
+    "/v1/universes/{universeId}/payouts": {
+      "get": {
+        "summary": "Gets recurring payouts for a group-owned universe.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicAllGroupUniversePayoutsResponseModel"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
       }
     },
     "/v1/universes/{universeId}/permissions": {
@@ -54776,6 +55086,776 @@
         }
       }
     },
+    "/v2/groups/{groupId}/invitations": {
+      "get": {
+        "summary": "List open invitations to a group",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Cursor",
+            "in": "query",
+            "description": "Cursor returned by a previous page. Omit for the first page.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Limit",
+            "in": "query",
+            "description": "Page size: 10, 25, 50, or 100. Defaults to 10.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SortOrder",
+            "in": "query",
+            "description": "Sort order. Only `Asc` is currently supported; defaults to `Asc`.",
+            "schema": {
+              "$ref": "#/components/schemas/OrganizationsServiceApi.SortOrder"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GroupInvitationCursorPageResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Invite a user to a group",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "isSecure",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGroupInvitationRequestModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGroupInvitationRequestModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGroupInvitationRequestModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGroupInvitationRequestModel"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GroupInvitation"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
+    "/v2/groups/{groupId}/invitations/{invitationId}": {
+      "delete": {
+        "summary": "Revoke an invitation to a group (member manager)",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "invitationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      },
+      "get": {
+        "summary": "Get an invitation to a group",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "invitationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GroupInvitation"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      },
+      "patch": {
+        "summary": "Accept or decline an invitation to a group (recipient)",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "invitationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGroupInvitationRequestModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGroupInvitationRequestModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGroupInvitationRequestModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGroupInvitationRequestModel"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccessResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
+    "/v2/groups/{groupId}/roles/{roleId}/invitations": {
+      "get": {
+        "summary": "List open invitations to a group that grant a role",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "roleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Cursor",
+            "in": "query",
+            "description": "Cursor returned by a previous page. Omit for the first page.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Limit",
+            "in": "query",
+            "description": "Page size: 10, 25, 50, or 100. Defaults to 10.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SortOrder",
+            "in": "query",
+            "description": "Sort order. Only `Asc` is currently supported; defaults to `Asc`.",
+            "schema": {
+              "$ref": "#/components/schemas/OrganizationsServiceApi.SortOrder"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GroupInvitationCursorPageResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
+    "/v2/groups/{groupId}/users/{userId}/invitation": {
+      "get": {
+        "summary": "Get the open invitation to a group for a user",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GroupInvitation"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
     "/v2/identity-verification/login": {
       "post": {
         "tags": ["Accounts"],
@@ -63107,6 +64187,28 @@
         "additionalProperties": false,
         "description": "Request body for `POST /v3/universes/{universeId}/game-events`.\r\n`universeId` comes from the URL path, not the body.\r\nVirtualEventsApi.Models.V3.Request.CreateGameEventRequest.Visibility is restricted to Public/Private — Moderated is server-side only.\r\nNullable CLR properties allow JSON binding to materialize incomplete requests; required\r\nfields are enforced by the virtual-events gRPC service when `CreateVirtualEvent` runs."
       },
+      "CreateGroupInvitationRequestModel": {
+        "required": ["recipientUserId"],
+        "type": "object",
+        "properties": {
+          "recipientUserId": {
+            "type": "integer",
+            "description": "The user to invite.",
+            "format": "int64"
+          },
+          "roleIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "Group role ids to grant when the invitation is accepted.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request for inviting a user to a group."
+      },
       "CreateMatchmakingPlayerAttributeDefinitionRequest": {
         "type": "object",
         "properties": {
@@ -63301,7 +64403,7 @@
           },
           "collectionName": {
             "type": "string",
-            "description": "Custom collections are not currently supported.\r\nThis field should be omitted.",
+            "description": "Custom collections are not currently supported.\nThis field should be omitted.",
             "nullable": true
           }
         },
@@ -63363,11 +64465,12 @@
         "description": "Represents a creator."
       },
       "CreatorModelV2": {
+        "required": ["creator"],
         "type": "object",
         "properties": {
           "creator": {
             "type": "string",
-            "description": "Deprecated: Please refer to the 'userId' and 'groupId' properties instead.\r\nThe creator type and ID. E.g. user/123 or group/456.",
+            "description": "Deprecated: Please refer to the 'userId' and 'groupId' properties instead.\nThe creator type and ID. E.g. user/123 or group/456.",
             "nullable": true,
             "deprecated": true
           },
@@ -63410,6 +64513,7 @@
         "nullable": true
       },
       "CreatorStoreAsset": {
+        "required": ["asset"],
         "type": "object",
         "properties": {
           "voting": {
@@ -63483,7 +64587,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Represents the capabilities that a model has (e.g. sandboxing).\r\nOnly present for model asset types; AMRS includes it in the response when available.",
+        "description": "Represents the capabilities that a model has (e.g. sandboxing).\nOnly present for model asset types; AMRS includes it in the response when available.",
         "nullable": true
       },
       "CreatorStoreProduct": {
@@ -63906,7 +65010,7 @@
           },
           "collectionName": {
             "type": "string",
-            "description": "Custom collections are not currently supported.\r\nThis field should be omitted.",
+            "description": "Custom collections are not currently supported.\nThis field should be omitted.",
             "nullable": true
           }
         },
@@ -64693,6 +65797,11 @@
         "enum": ["invalid", "enabled", "disabled"],
         "type": "string",
         "description": "The featuring status of a virtual event."
+      },
+      "FetchStatus": {
+        "enum": ["Failure", "Success"],
+        "type": "string",
+        "description": "Describes whether a fetch operation failed or succeeded."
       },
       "FilterField": {
         "enum": ["EngineVersion", "PlaceVersion", "ALL"],
@@ -65886,6 +66995,88 @@
         },
         "x-resource": true
       },
+      "GroupInvitation": {
+        "required": [
+          "groupId",
+          "id",
+          "recipientUserId",
+          "roleIds",
+          "senderUserId",
+          "status",
+          "updatedAt"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The invitation id. Stringified because it can exceed the 2^53-1 JSON number limit."
+          },
+          "groupId": {
+            "type": "integer",
+            "description": "The group the invitation is for.",
+            "format": "int64"
+          },
+          "recipientUserId": {
+            "type": "integer",
+            "description": "The invited user.",
+            "format": "int64"
+          },
+          "senderUserId": {
+            "type": "integer",
+            "description": "The user who sent the invitation.",
+            "format": "int64"
+          },
+          "status": {
+            "$ref": "#/components/schemas/GroupInvitationStatus"
+          },
+          "roleIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "Every group role id attached to the invitation."
+          },
+          "updatedAt": {
+            "type": "string",
+            "description": "When the invitation was last updated (UTC).",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false,
+        "description": "An invitation to join a group."
+      },
+      "GroupInvitationCursorPageResponse": {
+        "required": ["data"],
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GroupInvitation"
+            },
+            "description": "The items in this page."
+          },
+          "nextPageCursor": {
+            "type": "string",
+            "description": "Cursor for the next page, if any.",
+            "nullable": true
+          },
+          "previousPageCursor": {
+            "type": "string",
+            "description": "Cursor for the previous page, if any.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A page of results using groups-api opaque cursor pagination."
+      },
+      "GroupInvitationStatus": {
+        "enum": ["Open", "Accepted", "Declined", "Deleted"],
+        "type": "string",
+        "description": "Status of a group invitation, serialized as its name."
+      },
       "GroupJoinRequest": {
         "type": "object",
         "properties": {
@@ -66292,8 +67483,7 @@
               "type": "array",
               "items": {
                 "type": "string"
-              },
-              "nullable": true
+              }
             },
             "nullable": true
           }
@@ -66304,6 +67494,7 @@
         "nullable": true
       },
       "HydratedSave": {
+        "required": ["creatorStoreAsset", "dateSaved", "owned"],
         "type": "object",
         "properties": {
           "owned": {
@@ -66460,7 +67651,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Represents the count of various instance types within an asset.\r\nSee [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance).",
+        "description": "Represents the count of various instance types within an asset.\nSee [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance).",
         "nullable": true
       },
       "InventoryItem": {
@@ -68254,7 +69445,7 @@
                 "$ref": "#/components/schemas/InstanceCounts"
               }
             ],
-            "description": "The number of studio Instance types in the model.\r\nSee [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance).\r\nThese are broken down into specific types, such as MeshPart, Part, Script,\r\nTool, Animation, etc.",
+            "description": "The number of studio Instance types in the model.\nSee [Instance](https://create.roblox.com/docs/reference/engine/classes/Instance).\nThese are broken down into specific types, such as MeshPart, Part, Script,\nTool, Animation, etc.",
             "nullable": true
           },
           "capabilities": {
@@ -68790,6 +69981,63 @@
         "x-oneOf": {
           "Value": ["value"]
         }
+      },
+      "OrganizationsServiceApi.ErrorCode": {
+        "enum": [
+          "InternalError",
+          "InvalidGroupId",
+          "InvalidUniverseId",
+          "InsufficientPermission",
+          "PermissionNotSupported",
+          "TooManyRequests",
+          "FeatureNotEnabled",
+          "RoleNameReserved",
+          "RoleNotFound",
+          "InvitationNotFound",
+          "UserNotInGroup",
+          "TooManyRoles",
+          "FeatureNotSupportedForRole",
+          "UserInMaxGroups",
+          "NeedsSecureEndpoint",
+          "InsufficientGroupPermission",
+          "TooManyUsers",
+          "GroupFeatureFrozen",
+          "GroupMigrated",
+          "RoleIdMigrationInProgress",
+          "UnificationInProgress",
+          "InvalidPageLimit",
+          "InvalidSortOrder",
+          "InvalidInvitationStatus",
+          "InvalidRequestBody"
+        ],
+        "type": "string",
+        "description": "Error code for OrganizationsServiceApi.Models.Response.ErrorResponse."
+      },
+      "OrganizationsServiceApi.ErrorResponse": {
+        "required": ["code"],
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/OrganizationsServiceApi.ErrorCode"
+          },
+          "message": {
+            "type": "string",
+            "description": "The error message.",
+            "nullable": true
+          },
+          "field": {
+            "type": "string",
+            "description": "Field on which model validation failed.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standard error response model."
+      },
+      "OrganizationsServiceApi.SortOrder": {
+        "enum": ["Asc", "Desc"],
+        "type": "string",
+        "description": "Sort order for groups-api style paginated requests."
       },
       "PaginatedGameEventsResponse": {
         "type": "object",
@@ -69669,6 +70917,118 @@
         },
         "additionalProperties": false,
         "description": "Config-based experiment for a given product. Returned by the Get endpoint and embedded in\r\na successful experiment operation."
+      },
+      "PublicAllGroupUniversePayoutsResponseModel": {
+        "type": "object",
+        "properties": {
+          "payouts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicGroupUniversePayout"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Public response for recurring payouts."
+      },
+      "PublicAllOneTimePayoutsResponseModel": {
+        "type": "object",
+        "properties": {
+          "payouts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicOneTimePayoutResponseModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Public response for one-time payouts."
+      },
+      "PublicGroupUniversePayout": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "percentage": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A recurring payout in the public groups API contract."
+      },
+      "PublicGroupUniversePayoutPageResponseModel": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicUserUniversePayout"
+            },
+            "nullable": true
+          },
+          "nextPageCursor": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPageCursor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Public groups-style payout page."
+      },
+      "PublicOneTimePayout": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false,
+        "description": "One-time payout details in the public groups API contract."
+      },
+      "PublicOneTimePayoutResponseModel": {
+        "type": "object",
+        "properties": {
+          "recipientUserId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "status": {
+            "$ref": "#/components/schemas/FetchStatus"
+          },
+          "oneTimePayout": {
+            "$ref": "#/components/schemas/PublicOneTimePayout"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A one-time payout result in the public groups API contract."
+      },
+      "PublicUserUniversePayout": {
+        "type": "object",
+        "properties": {
+          "universeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "percentage": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A payout-visible universe in the public groups API contract."
       },
       "PublishDraftRequest": {
         "type": "object",
@@ -84298,7 +85658,7 @@
           "FontFamily"
         ],
         "type": "string",
-        "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\r\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API.",
+        "description": "This represents a \"subset\" of Toolbox.Service.CategoryType options and represent the full set\nof \"categories\" (or asset types) that can be searched upon from the toolbox search API.",
         "x-enumNames": [
           "Audio",
           "Model",
@@ -84327,7 +85687,7 @@
                 "$ref": "#/components/schemas/SearchCategoryType"
               }
             ],
-            "description": "The asset type to search within. Optional when Toolbox.Service.SearchCreatorStoreAssetsRequest.CategoryPath\r\nresolves to an asset type; otherwise required.",
+            "description": "The asset type to search within. Optional when Toolbox.Service.SearchCreatorStoreAssetsRequest.CategoryPath\nresolves to an asset type; otherwise required.",
             "nullable": true
           },
           "query": {
@@ -84342,6 +85702,7 @@
             "nullable": true
           },
           "userId": {
+            "maximum": 9223372036854776000,
             "minimum": 1,
             "type": "integer",
             "description": "The User ID of the creator. Only one of 'userId' and 'groupId' can be present in a query.",
@@ -84349,6 +85710,7 @@
             "nullable": true
           },
           "groupId": {
+            "maximum": 9223372036854776000,
             "minimum": 1,
             "type": "integer",
             "description": "The Group ID of the creator. Only one of 'userId' and 'groupId' can be present in a query.",
@@ -84491,6 +85853,7 @@
         "nullable": true
       },
       "SearchCreatorStoreAssetsResponse": {
+        "required": ["creatorStoreAssets", "totalResults"],
         "type": "object",
         "properties": {
           "nextPageToken": {
@@ -84542,7 +85905,7 @@
       "SearchView": {
         "enum": ["IDs", "Core", "Full"],
         "type": "string",
-        "description": "This view controls which fields are populated in the search response. A lighter\r\nview will result in faster response times and higher reliability.",
+        "description": "This view controls which fields are populated in the search response. A lighter\nview will result in faster response times and higher reliability.",
         "x-enumNames": ["IDs", "Core", "Full"],
         "x-enum-varnames": ["IDs", "Core", "Full"]
       },
@@ -85405,6 +86768,18 @@
         },
         "description": "Information about the expiration of a subscription."
       },
+      "SuccessResponse": {
+        "required": ["success"],
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Whether or not the request was successfully executed."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standard success response model."
+      },
       "TargetingCriteria": {
         "type": "object",
         "properties": {
@@ -85545,7 +86920,7 @@
           },
           "categoryPath": {
             "type": "string",
-            "description": "Category Path of the asset, if it exists.\r\ne.g. \"3d__characters\"",
+            "description": "Category Path of the asset, if it exists.\ne.g. \"3d__characters\"",
             "nullable": true
           }
         },
@@ -85554,6 +86929,7 @@
         "nullable": true
       },
       "ToolboxService.CreatorStoreProduct": {
+        "required": ["purchasable", "purchasePrice"],
         "type": "object",
         "properties": {
           "purchasePrice": {
@@ -86156,6 +87532,17 @@
         },
         "additionalProperties": false,
         "description": "Request body for `PATCH /v3/game-events/{eventId}`.\r\nEvery field is optional; null = \"no change\". An empty body is a no-op and returns the current resource."
+      },
+      "UpdateGroupInvitationRequestModel": {
+        "required": ["status"],
+        "type": "object",
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/GroupInvitationStatus"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request for accepting or declining a group invitation."
       },
       "UpdateInstanceMetadata": {
         "type": "object",

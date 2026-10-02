@@ -17,6 +17,7 @@
     "forum-doc-eval:open-prs": "npx tsx tools/forum-doc-eval/openPrs.ts",
     "forum-doc-eval:replay": "npx tsx tools/forum-doc-eval/replay.ts",
     "forum-doc-eval:restore-questions": "npx tsx tools/forum-doc-eval/restoreQuestions.ts",
+    "forum-doc-eval:search-ab": "npx tsx tools/forum-doc-eval/searchAb.ts",
     "forum-doc-eval:webprobe": "npx tsx tools/forum-doc-eval/webProbe.ts",
     "checks": "npx tsx tools/checks/main.ts",
     "redirects": "npx tsx tools/redirects/main.ts",

@@ -231,7 +231,7 @@ Home's **Recommended For You** is not the only discovery surface that Roblox off
 Home is a user's personalized view of Roblox. Outside of the Recommended for You sort, Home also includes **Continue Playing**, **Friends List**, **Sponsored**, **Curated Sorts**, and more. For a deeper dive on some of these sections:
 
 - **Standout Games** has novel games that are hand curated by Roblox that often include unique and in-depth gameplay mechanics, distinctive visual styles, or are in an underrepresented genre on the platform. For more information, see [Standout Games](./creator-programs/standout-games.md).
-- **Live Events** has games that are part of a limited time event that you can complete quests for to unlock rewards. You can see past events from Roblox [here](https://www.roblox.com/groups/4111519/Roblox-Presents#!/about).
+- **Live Events** has games that are part of a limited time event that you can complete quests for to unlock rewards.
 - **Sponsored** lets you invest directly in getting your games discovered by a specific audience segment. For more information, see [Ads Manager](./production/promotion/ads-manager.md#sponsored-experiences).
 
 ### Game details page
@@ -265,3 +265,7 @@ Roblox is [committed](https://devforum.roblox.com/t/discovery-on-roblox-past-pre
 **Notifications** elevate timely and actionable information to users. Historically, Roblox has focused on building and scaling social notifications, such as friend requests and invitations. This system allows for creators to engage with users directly while they are away. Milestones, high scores, [friend activity](https://devforum.roblox.com/t/user-mentions-in-experience-notifications/2980675), and other key moments can be delivered to users as personalized notifications to the notification stream. For additional information and implementation instructions, see [experience notifications](./cloud/guides/experience-notifications.md).
 
 You can also use [in-game notification permission prompts](https://devforum.roblox.com/t/introducing-in-experience-notification-permission-prompts/2909125) to upsell notification opt-in within games. Notifications can help resurrect lapsed users or remind users when they need to take an action.
+
+## Frequently asked questions
+
+For answers to common questions about Discovery and the Recommended for You algorithm, see [Discovery FAQ](./discovery-faq.md).
