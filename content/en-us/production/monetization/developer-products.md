@@ -171,54 +171,75 @@ Do **not** use the `Class.MarketplaceService:PromptProductPurchaseFinished|Promp
 The firing of `PromptProductPurchaseFinished` does not mean that a user has successfully purchased an item.
 </Alert>
 
-#### Test mode
+#### Enable external sales
 
-<Alert severity="warning">
-Items for sale in test mode cost actual Robux. We recommend testing low-cost developer products.
+Roblox surfaces your **Listed** developer products and game passes outside your game, including on the Roblox homepage, in search results, and on the post-purchase page after a player buys Robux. A player can buy your item and then join your game with it already granted.
+
+To make a developer product eligible for external sales:
+
+1. In the **Creator Hub**, go to **Monetization** ⟩ **Shop**.
+2. Mark the developer product **Listed**.
+3. Confirm that you have implemented `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` correctly for the product.
+
+<Alert severity="info">
+Roblox checks your `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` implementation on an ongoing basis. If an issue is detected, the developer product stops showing on surfaces outside your game until you fix it.
 </Alert>
 
-The **test mode** feature helps you validate your purchase flow by simulating a developer product purchase outside your game. You should use test mode to make sure that you have implemented `ProcessReceipt` correctly before enabling external developer product sales.
-
-The developer products you put up for sale in test mode can only be seen by you and by members of your group. They are not visible to users.
-
-To test your implementation:
-
-1. In the **Creator Hub**, go to **Monetization** ⟩ **Developer Products**.
-2. Click the **&vellip;** menu and select **External Purchase Settings**.
-3. In the **External Purchase Settings** page, click **Enable test mode**.
-4. Once test mode is active, return to the **Developer Products** page and select a product to test.
-5. In the **Basic Settings** page, select the **Allow external purchases** checkbox and save your changes.
-6. Go to the **Store** tab of the game details page and purchase the product you made available for sale.
-7. Enter the game and confirm that you have received the product you purchased. The receipt status of the `ProcessReceipt` API should update to **Closed**.
-
-After you test your implemention, Roblox verifies that the test has been successfully completed and allows you to fully activate the feature to sell developer products outside your games.
+Game passes don't require a `ProcessReceipt` fix, but they must also be **Listed** to appear outside your game. We recommend adding a custom icon to each developer product so players can recognize it on external surfaces; if you don't add one, Roblox shows a default icon.
 
 For more information about the `ProcessReceipt` API and its implementation, see the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` page.
 
-#### Enable external sales
+#### Fix a flagged developer product
 
-<Alert severity="info">
-You can only enable external sales after you have used test mode to validate your purchase flow.
+If Roblox detects a `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` issue with one of your **Listed** developer products, a banner appears in **Creator Hub** ⟩ **Monetization** ⟩ **Shop** that links to a report of the affected products. If none of your developer products need a fix, no banner or report appears.
+
+To resolve a flagged developer product:
+
+1. Open the report from the banner. The report lists each **Listed** developer product that needs a `ProcessReceipt` fix, along with its product name and product ID.
+2. Open your game in Roblox Studio and fix the `ProcessReceipt` implementation for the flagged product.
+3. Publish your game.
+4. In the report, select the fixed products and click **Mark as fixed**.
+
+Fixed products leave the report and become eligible to appear outside your game again.
+
+<Alert severity="warning">
+A flagged developer product only loses eligibility to appear outside your game. Players can still buy it through your existing in-game purchase flows while it's flagged.
 </Alert>
-
-To enable external sales:
-
-1. Go to the **External Purchase Settings** page.
-2. Turn on **External Purchases**.
-3. Return to the **Developer Products** page and select the products you want to sell outside of your game.
-4. In the **Basic Settings** page, select the **Allow external purchases** checkbox and save your changes.
-5. Confirm that the products are now available for purchase in the **Store** tab of the game details page.
-
-To disable the external sale of a developer product, select the product on the **Developer Products** page and clear the **Allow external purchases** checkbox.
 
 #### Limitations
 
-- Items for sale in test mode cost actual Robux. We recommend testing low-cost developer products.
-- Items for sale in test mode can only be seen by you or by members of your group.
-- To be sold externally, your developer products **must** have a thumbnail.
-- You should not sell the following outside your game:
-		- Paid random items
-		- Items that are limited to specific quantities, time, place, or user settings and roles
+- To be sold outside your game, a developer product **must** be **Listed** and have `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` implemented correctly.
+- Unlisted developer products never appear in the **Shop** or outside your game.
+- Selling a developer product outside your game doesn't change your standard earnings or purchase handling.
+
+#### Frequently asked questions
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant='buttonLarge'>Why don't I see a banner or report in Creator Hub?</Typography>
+</AccordionSummary>
+<AccordionDetails>
+You only see a banner if Roblox detects a Listed developer product that needs a `ProcessReceipt` fix. If you don't see a banner, no action is needed.
+</AccordionDetails>
+</BaseAccordion>
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant='buttonLarge'>Does the ProcessReceipt report apply to game passes?</Typography>
+</AccordionSummary>
+<AccordionDetails>
+No. The `ProcessReceipt` report only applies to developer products. Both Listed developer products and game passes can be surfaced and sold outside your game.
+</AccordionDetails>
+</BaseAccordion>
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant='buttonLarge'>Does enabling external sales change how much I earn?</Typography>
+</AccordionSummary>
+<AccordionDetails>
+No. External sales give players additional places to find and buy your items. Your purchase handling and standard earnings are unchanged.
+</AccordionDetails>
+</BaseAccordion>
 
 ## Handle a developer product purchase
 
@@ -309,7 +330,8 @@ You can use product intelligence APIs to sort and recommend developer products t
 Because `RankProductsAsync` has a strict rate limit, you should load recommendations once at game join instead of calling it repeatedly.
 </Alert>
 
-	<figcaption>Example: Three "Powers" items ranked for the user</figcaption>
+    <figcaption>Example: Three "Powers" items ranked for the user</figcaption>
+
   <img src="../../assets/monetization/developer-products/RankedItems.png" alt="Three items ranked for the user." width="80%" />
 
 ```lua
@@ -352,7 +374,8 @@ If no recommendations can be determined, `RecommendTopProductsAsync` returns 0 i
 
 In rare cases, calls to the ranking model can be slow. To help prevent added lately for users, we recommend using `task.spawn` to make the call to `RecommendTopProducts` non-blocking.
 
-	<figcaption>Example: A "Top Picks" tab in an in-game store</figcaption>
+    <figcaption>Example: A "Top Picks" tab in an in-game store</figcaption>
+
   <img src="../../assets/monetization/developer-products/StoreTopPicks.png" alt="Top Picks tab of an in-game store." width="90%" />
 
 ```lua

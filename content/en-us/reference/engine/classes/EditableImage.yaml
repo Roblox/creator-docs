@@ -215,19 +215,27 @@ methods:
       - DynamicGeneration
   - name: EditableImage:DrawImageProjected
     summary: |
-      Projects another `EditableImage` into an `Class.EditableMesh` and stores
+      Projects another `EditableImage` onto a surface using an
+      `Class.EditableMesh` or prepared `Class.WrapTextureTransfer` and stores
       the result on this `EditableImage`.
     description: |
-      Projects another `EditableImage` into an `Class.EditableMesh` and stores
-      the result on this `EditableImage` by using the specified projection and
-      brush configuration.
+      Projects another `EditableImage` onto the surface defined by
+      `projectionSource` and stores the result on this `EditableImage` using the
+      source's UV mapping and the specified projection and brush configuration.
+      `projectionSource` accepts an `Class.EditableMesh` or a
+      `Class.WrapTextureTransfer`.
+
+      When passing a `Class.WrapTextureTransfer`, first call
+      `Class.WrapTextureTransfer:PrepareProjectionMeshDataAsync()` and wait for
+      it to complete successfully.
     code_samples: []
     parameters:
-      - name: mesh
+      - name: projectionSource
         type: Object
         default:
         summary: |
-          The `Class.EditableMesh` used to project into.
+          The `Class.EditableMesh` or prepared `Class.WrapTextureTransfer` that
+          provides the geometry and UV mapping for projection.
       - name: projection
         type: Dictionary
         default:
@@ -273,11 +281,13 @@ methods:
       - DynamicGeneration
   - name: EditableImage:SampleImageProjected
     summary: |
-      Projects pixels from an `Class.EditableMesh` texture into this
-      `EditableImage`.
+      Projects pixels from a texture into this `EditableImage` using an
+      `Class.EditableMesh` or prepared `Class.WrapTextureTransfer`.
     description: |
-      Projects the pixels in `sourceTexture`, using the UV mapping of
-      `sourceMesh`, onto this `EditableImage`. This is the inverse of
+      Projects the pixels in `sourceTexture`, using the geometry and UV mapping
+      of `projectionSource`, onto this `EditableImage`. `projectionSource`
+      accepts an `Class.EditableMesh` or a `Class.WrapTextureTransfer`. This is
+      the inverse of
       `Class.EditableImage:DrawImageProjected()|DrawImageProjected()`: it reads
       from the mesh texture and writes the sampled pixels into this image in
       place.
@@ -288,14 +298,18 @@ methods:
       sampling a brush-sized region, modifying it in place, and then using
       `Class.EditableImage:DrawImageProjected()|DrawImageProjected()` to write
       it back onto a texture.
+
+      When passing a `Class.WrapTextureTransfer`, first call
+      `Class.WrapTextureTransfer:PrepareProjectionMeshDataAsync()` and wait for
+      it to complete successfully.
     code_samples: []
     parameters:
-      - name: sourceMesh
+      - name: projectionSource
         type: Object
         default:
         summary: |
-          The `Class.EditableMesh` that maps `sourceTexture` onto the surface
-          being sampled.
+          The `Class.EditableMesh` or prepared `Class.WrapTextureTransfer` that
+          maps `sourceTexture` onto the surface being sampled.
       - name: sourceTexture
         type: EditableImage
         default:

@@ -121,6 +121,92 @@ properties:
       can_save: true
     capabilities:
       - AvatarAppearance
-methods: []
+methods:
+  - name: WrapTextureTransfer:PrepareProjectionMeshDataAsync
+    summary: |
+      Prepares and caches projection data for using this
+      `Class.WrapTextureTransfer` with projected `Class.EditableImage`
+      operations.
+    description: |
+      Prepares this `Class.WrapTextureTransfer` for use as the
+      `projectionSource` in `Class.EditableImage:DrawImageProjected()` and
+      `Class.EditableImage:SampleImageProjected()`. This method takes no
+      parameters, yields until preparation completes, and returns no value.
+
+      This allows projected texture editing, such as painting makeup on a
+      player's current head, without creating an `Class.EditableMesh` from the
+      target asset or requiring permission to create one. The prepared data is
+      cached internally; it is not returned to scripts and cannot be inspected,
+      converted to `Datatype.Content`, or published.
+
+      The `Class.WrapTextureTransfer` must be parented to a `Class.Decal` whose
+      parent is a `Class.MeshPart` with mesh content and a valid
+      `Class.WrapTarget` child. This hierarchy must be in the data model.
+      Configure `Class.WrapTextureTransfer.ReferenceCageMeshContent`,
+      `Class.WrapTextureTransfer.UVMinBound`, and
+      `Class.WrapTextureTransfer.UVMaxBound` as needed before calling this
+      method.
+
+      The prepared data combines the target mesh's positions, normals, and
+      triangle connectivity within the region covered by the transfer with the
+      transferred UVs computed from the current cage configuration and UV
+      bounds. The geometry is scaled to match the target `Class.MeshPart`'s
+      current `Class.BasePart.Size`. Projection positions and directions use the
+      target MeshPart's local space.
+
+      Preparation is reused across projected image operations while the data
+      remains valid. Changes to the target mesh or its size, cage configuration,
+      UV bounds, or hierarchy invalidate the cached data. Call this method again
+      after such a change. Both projection methods raise an error if preparation
+      has not completed successfully or the cached data has been invalidated.
+      Passing an `Class.EditableMesh` to those methods does not require this
+      preparation.
+
+      Use `pcall()` to handle preparation errors, including invalid hierarchy,
+      unavailable mesh or cage data, failed UV transfer, or inputs changing
+      during preparation. Only perform projected image operations after the call
+      succeeds.
+
+      For example, with the head, decal, images, reference cage content, UV
+      bounds, and brush configurations already defined:
+
+      ```lua
+      local projectionTransfer = Instance.new("WrapTextureTransfer")
+      projectionTransfer.ReferenceCageMeshContent = referenceCageContent
+      projectionTransfer.UVMinBound = makeupUVMin
+      projectionTransfer.UVMaxBound = makeupUVMax
+      projectionTransfer.Parent = makeupDecal
+      makeupDecal.Parent = playerHead
+
+      local success, errorMessage = pcall(function()
+          projectionTransfer:PrepareProjectionMeshDataAsync()
+      end)
+
+      if not success then
+          warn("Failed to prepare makeup projection: " .. tostring(errorMessage))
+          return
+      end
+
+      makeupTexture:DrawImageProjected(projectionTransfer, projection, brushConfig)
+      sampledBrush:SampleImageProjected(
+          projectionTransfer,
+          makeupTexture,
+          projection,
+          sampleBrushConfig
+      )
+      ```
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AvatarAppearance
+      - DynamicGeneration
 events: []
 callbacks: []

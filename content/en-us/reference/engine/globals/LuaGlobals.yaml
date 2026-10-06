@@ -187,17 +187,25 @@ functions:
       `Library.debug.info()` instead.
   - name: getmetatable
     summary: |
-      Returns the metatable of the given table.
+      Returns the metatable of the given value.
     description: |
-      Returns the metatable of the given table `t` if it has one, otherwise
+      Returns the metatable of the given value `t` if it has one, otherwise
       returns `nil`. If `t` does have a metatable, and the `__metatable`
       metamethod is set, it returns that value instead.
+
+      `t` can be a value of any type, not only a table, and this function
+      doesn't error when `t` isn't a table. However, it doesn't always return
+      `nil` for non-table values. Strings and many Roblox types, such as
+      `Class.Instance`, have locked metatables, so this function returns the
+      string `"The metatable is locked"` for them. To check whether a value uses
+      a specific metatable, compare the result directly, such as
+      `getmetatable(value) == MyClass`.
     parameters:
       - name: t
         type: Variant
         default:
         summary: |
-          The object to fetch the metatable of.
+          The value to fetch the metatable of.
     returns:
       - type: Variant
         summary: |

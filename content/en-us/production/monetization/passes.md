@@ -159,15 +159,14 @@ Although Roblox itself does **not** record the purchase history of passes by spe
 
 ### Outside your game
 
-To sell a pass on the **Store** tab of the game details page:
+Roblox surfaces your **Listed** passes outside your game, including on the Roblox homepage, in search results, and on the post-purchase page after a player buys Robux. A player can buy your pass and then join your game with it already granted.
 
-1. Go to **Monetization** ⟩ **Passes**.
-2. Hover over the pass and click the **&ctdot;** menu.
-3. Select the pass you want to sell.
-4. Select **Sales**.
-5. Enable to **Item for Sale** toggle.
-6. In the **Price in Robux** field, enter the amount of Robux you want to charge users for the pass. The price you enter affects how much Robux you earn per sale. The minimum price is 1 Robux, and the maximum price is 1 billion Robux.
-7. Click **Save Changes**. The pass populates in the **Store** tab of the game details page.
+To make a pass eligible for external sales:
+
+1. In the **Creator Hub**, go to **Monetization** ⟩ **Shop**.
+2. Mark the pass **Listed**.
+
+Passes don't require a `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` fix, but they must be **Listed** to appear outside your game. We recommend adding a custom icon to each pass so players can recognize it on external surfaces; if you don't add one, Roblox shows a default icon.
 
 ## Assign pass privileges
 
@@ -218,7 +217,8 @@ You can use product intelligence APIs to sort and recommend passes to users. Per
 Because `RankProductsAsync` has a strict rate limit, you should load recommendations once at game join instead of calling it repeatedly.
 </Alert>
 
-	<figcaption>Example: Three "Power" items ranked for the user</figcaption>
+    <figcaption>Example: Three "Power" items ranked for the user</figcaption>
+
   <img src="../../assets/monetization/developer-products/RankedItems.png" alt="Three items ranked for the user." width="80%" />
 
 ```lua
@@ -266,7 +266,8 @@ If no recommendations can be determined, `RecommendTopProductsAsync` returns 0 i
 
 In rare cases, calls to the ranking model can be slow. To help prevent added lately for users, we recommend using `task.spawn` to make the call to `RecommendTopProducts` non-blocking.
 
-	<figcaption>Example: A "Top Picks" tab in an in-game store</figcaption>
+    <figcaption>Example: A "Top Picks" tab in an in-game store</figcaption>
+
   <img src="../../assets/monetization/developer-products/StoreTopPicks.png" alt="Top Picks tab of an in-game store." width="90%" />
 
 ```lua
@@ -288,7 +289,7 @@ task.spawn(function()
         warn("Failed to rank products:", result)
     end
 
-    -- Load the returned items into the store. Make sure to filter out any 
+    -- Load the returned items into the store. Make sure to filter out any
     -- ineligible items from topRankedItems such as developer products the
     -- user can no longer purchase
     for i, rankedItem in ipairs(rankedProducts) do

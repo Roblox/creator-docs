@@ -109,8 +109,8 @@ Role configuration is only accessible if you're the group owner or you have perm
        <td>Members with this role can create/configure [experience events](../production/promotion/experience-events.md).</td>
      </tr>
      <tr>
-       <td>**Access read-only chat (must be 18+) and manage experience bans**</td>
-       <td>Members with this role can view all in-game chat messages and ban or manage banned users across all games owned by the group.</td>
+       <td>**Moderate experiences**</td>
+       <td>Members with this role can view all in-game chat messages (read-only; member must be 18+) and ban or manage banned users across all games owned by the group.</td>
      </tr>
      <tr>
        <td>**Manage monetization for experiences**</td>

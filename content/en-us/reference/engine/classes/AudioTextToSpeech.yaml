@@ -18,6 +18,8 @@ description: |
   You can purchase additional usage using
   [Extended Services](../../../cloud-services/extended-services.md).
 
+  There is also a client-side throttle of 4 requests per second per user.
+
   For a more in-depth look, see
   [Text-to-speech](../../../audio/objects.md#text-to-speech).
 code_samples:
