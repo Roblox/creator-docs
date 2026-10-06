@@ -86,6 +86,8 @@ Server heartbeat is capped at 60 FPS for all games, so lower values might indica
 
 Another symptom of degraded server heartbeat is increased latency (commonly known as ping). The longer the server takes to finish computing its tasks each frame, the longer it takes to process network data sent and received from clients. To check average ping for all players connected to a server, go to the **Server Stats** tab in the [Developer Console](../studio/developer-console.md).
 
+If server heartbeat stays low after you [improve performance](./improve.md), your game might need more CPU than its servers get by default. You can reserve more with [Extended Services for Compute](../cloud-services/extended-services.md#extended-services-for-compute).
+
 ## Client compute
 
 The default client frame rate cap is 60 FPS. However, users can raise their frame rate cap up to 240 FPS on Windows.

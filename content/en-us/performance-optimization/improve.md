@@ -38,6 +38,7 @@ Expensive operations in Luau code take longer to process and can thus impact fra
   [multithreading](../scripting/multithreading.md) for computationally
   expensive tasks that don't need to access the data model.
 - Certain server-side scripts can benefit from [native code generation](../luau/native-code-gen.md), a simple flag that compiles a script to machine code rather than bytecode.
+- If your servers still run out of CPU after you optimize, you can reserve more with [Extended Services for Compute](../cloud-services/extended-services.md#extended-services-for-compute).
 
 ### MicroProfiler scopes
 

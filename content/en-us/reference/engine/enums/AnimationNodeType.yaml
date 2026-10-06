@@ -12,6 +12,10 @@ description: |
   animation graph processes animation. Setting a node's type resets its input
   pins to the default set for that type.
 
+  For nodes that switch between inputs, see
+  [transitions](/animation/graph-editor#transitions) for transition
+  configuration and behavior.
+
   #### ClipNode
 
   <img src="/assets/animation/graph-editor/Clip-Node.png" width="30%" alt="Clip node" />
@@ -54,6 +58,8 @@ description: |
     precise frame they occur. If the clip is trimmed, only markers within the
     defined `[TrimStart, TrimEnd]` interval (inclusive) are emitted.
 
+  <br /><br />
+
   #### SelectNode
 
   <img src="/assets/animation/graph-editor/Select-Node.png" width="30%" alt="Select node" />
@@ -79,6 +85,8 @@ description: |
   - **Event Emission:** Passes through all events from the currently selected
     input only. During a transition, event emission follows
     [global event rules](/animation/graph-editor#global-event-rules).
+
+  <br /><br />
 
   #### PrioritySelectNode
 
@@ -122,6 +130,8 @@ description: |
     input only. During a transition, event emission follows
     [global event rules](/animation/graph-editor#global-event-rules).
 
+  <br /><br />
+
   #### SequenceNode
 
   <img src="/assets/animation/graph-editor/Sequence-Node.png" width="30%" alt="Sequence node" />
@@ -164,6 +174,8 @@ description: |
     input in the sequence only. During a transition, event emission follows
     [global event rules](/animation/graph-editor#global-event-rules).
 
+  <br /><br />
+
   #### RandomSequenceNode
 
   <img src="/assets/animation/graph-editor/Random-Sequence-Node.png" width="30%" alt="Random Sequence node" />
@@ -194,6 +206,8 @@ description: |
   - **Event Emission:** Passes through all events from the currently active
     input in the sequence only. During a transition, event emission follows
     [global event rules](/animation/graph-editor#global-event-rules).
+
+  <br /><br />
 
   #### OverNode
 
@@ -228,6 +242,8 @@ description: |
       - At Weight `0.5`, **Over** events propagate at half weight
       - At Weight `0`, they are silenced.
 
+  <br /><br />
+
   #### AddNode
 
   <img src="/assets/animation/graph-editor/Add-Node.png" width="30%" alt="Add node" />
@@ -252,6 +268,8 @@ description: |
     **Additive** inputs.
   - **Event Emission:** All events from both the Base and Additive inputs are
     passed through unmodified.
+
+  <br /><br />
 
   #### SubtractNode
 
@@ -278,6 +296,74 @@ description: |
     **Input B**.
   - **Event Emission:** All events from both **Input A** and **Input B** are
     passed through unmodified.
+
+  <br /><br />
+
+  #### OneShotNode
+
+  <img src="/assets/animation/graph-editor/OneShot-Node.png" width="30%" alt="OneShot node" />
+
+  Layers a **OneShot** pose over a looping **Base** pose whenever **Trigger**
+  transitions from `false` to `true`, blending it in, holding it while it plays,
+  then blending back out. This covers the common "fire an animation on an event"
+  case (waves, punches, emotes, additive flourishes) in a single node, in place
+  of composing an `OverNode`/`AddNode`/`SubtractNode` with a
+  `PrioritySelectNode` and manually resetting a trigger every frame.
+
+  ##### Inputs
+
+  - **Base**: The looping or continuous pose played when no shot is active.
+  - **OneShot**: The pose played once, layered over **Base**, each time
+    **Trigger** fires.
+
+  ##### Properties
+
+  | Property                  | Type                          | Description                                                                                                                                                                   |
+  | ------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | **Trigger**               | Boolean                       | Starts a shot on the frame this transitions from `false` to `true`. Defaults to `false`.                                                                                      |
+  | **Cancel**                | Boolean                       | Ramps the active shot back out to **Base** on the frame this is `true`, ending it early. Defaults to `false`.                                                                 |
+  | **Interruptible**         | Boolean                       | When `true` (default), a new **Trigger** edge while a shot is already playing restarts it from the top. When `false`, **Trigger** is ignored until the current shot finishes. |
+  | **BlendMode**             | `AnimationNodeBlendMode`      | The blend operation used to combine **OneShot** with **Base**. Defaults to `Over`.                                                                                            |
+  | **TransitionInDuration**  | Number                        | Seconds spent blending **OneShot** in when a shot starts. Negative values are treated as `0`. Defaults to `0.15`.                                                             |
+  | **TransitionInCurve**     | `PoseEasingStyle`             | The easing curve used for the blend-in. Only `Linear` and `CubicV2` take effect; any other value falls back to `Linear`. Defaults to `Linear`.                                |
+  | **TransitionOutDuration** | Number                        | Seconds spent blending **OneShot** back out to **Base** when the shot ends. Negative values are treated as `0`. Defaults to `0.15`.                                           |
+  | **TransitionOutCurve**    | `PoseEasingStyle`             | The easing curve used for the blend-out. Only `Linear` and `CubicV2` take effect; any other value falls back to `Linear`. Defaults to `Linear`.                               |
+  | **TransitionOutWhen**     | `AnimationNodeTransitionWhen` | When the blend-out starts. Defaults to `Finished`.                                                                                                                            |
+
+  **BlendMode** accepts the following values:
+
+  - **Over (default)**: Layers **OneShot** on top of **Base**, matching
+    `Enum.AnimationNodeType.OverNode`.
+  - **Add**: Adds **OneShot** to **Base**, matching
+    `Enum.AnimationNodeType.AddNode`.
+  - **Subtract**: Subtracts **OneShot** from **Base**, matching
+    `Enum.AnimationNodeType.SubtractNode`.
+
+  **TransitionOutWhen** accepts the following values:
+
+  - **Finished (default)**: Starts the blend-out once the shot completes.
+  - **BeforeFinished**: Starts the blend-out one **TransitionOutDuration**
+    earlier, so it lands on the shot's final frame.
+
+  ##### Usage
+
+  In the graph editor, bind **Trigger** to a Trigger parameter rather than a
+  boolean parameter (right-click and select **Insert Parameter**. Chose
+  **Trigger** from the list). A Trigger parameter evaluates like a boolean, but
+  it automatically resets to `false` one frame after being set to `true`. This
+  lets you set it `true` repeatedly — for example while spamming a button —
+  without re-firing the shot every frame or needing to manually reset it from a
+  script; the shot still only starts on a `false`-to-`true` edge of **Trigger**.
+
+  ##### Event data
+
+  - **Event Handling:** The node listens for events from both **Base** and
+    **OneShot**.
+  - **Event Emission:** **Base** events pass through unmodified. **OneShot**
+    events are scaled by the node's current blend weight — silent while
+    inactive, at full weight during the hold phase.
+
+  <br /><br />
 
   #### Blend1DNode
 
@@ -314,6 +400,8 @@ description: |
   - **Event Emission:** Only events from the highest-weight active input
     propagate, scaled by its blend weight. Events from the secondary input are
     silenced.
+
+  <br /><br />
 
   #### Blend2DNode
 
@@ -364,6 +452,8 @@ description: |
     propagate, scaled by its blend weight. Events from the secondary input are
     silenced.
 
+  <br /><br />
+
   #### MaskNode
 
   <img src="/assets/animation/graph-editor/Mask-Node.png" width="30%" alt="Mask node" />
@@ -404,6 +494,8 @@ description: |
   - **Event Emission:** All events from the input **Pose** are passed through
     unmodified.
 
+  <br /><br />
+
   #### SpeedNode
 
   <img src="/assets/animation/graph-editor/Speed-Node.png" width="30%" alt="Speed node" />
@@ -428,6 +520,8 @@ description: |
     unmodified. Note that while the visual playback speed changes, the timing of
     emitted events (such as markers) will scale accordingly with the modified
     playback rate.
+
+  <br /><br />
 
   #### GraphOutput
 

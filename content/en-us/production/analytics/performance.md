@@ -129,7 +129,7 @@ The **Server** tab includes the following charts:
 		</tr>
 		<tr>
 			<td>Cores used per server</td>
-			<td>Line graph showing server CPU core count usage. Low core count usage combined with high server CPU time is an indicator that you should investigate [multithreading](../../scripting/multithreading.md).</td>
+			<td>Line graph showing server CPU core count usage. Low core count usage combined with high server CPU time is an indicator that you should investigate [multithreading](../../scripting/multithreading.md). If core usage stays high after you optimize, you can reserve more server CPU with [Extended Services for Compute](../../cloud-services/extended-services.md#extended-services-for-compute).</td>
 		</tr>
 		<tr>
 			<td>Compute efficiency</td>

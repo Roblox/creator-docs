@@ -1,9 +1,9 @@
 ---
 title: Extended Services
-description: Extended Services is a platform that lets you manage your free and paid services.
+description: Extended Services lets you pay for data store, memory store, and speech usage, and for more server CPU, beyond Roblox's default limits.
 ---
 
-Extended Services is a solution that lets you manage service usage and payment beyond Roblox's default limits.
+Extended Services is a solution that lets you manage service usage and payment beyond Roblox's default limits. It includes data stores, memory stores, text-to-speech, speech-to-text, and compute.
 
 ## Eligibility requirements
 
@@ -77,6 +77,19 @@ Your payment method is charged either at the end of the month when a bill is gen
 You can increase or decrease a service's monthly budget any time. Your service is automatically throttled if you decrease your budget to an amount below your current month-to-date usage, or if you exceed the budget you have set.
 
 Roblox notifies you by email when your usage reaches 80% of your budget, and then again when it reaches 100%.
+
+### Extended Services for Compute
+
+Every game server gets a default amount of CPU, which grows with each player who joins. **Extended Services for Compute** more than doubles the per-player CPU that your game's servers receive.
+
+The vast majority of games on Roblox see no benefit from this service, but games with heavy server-side physics or that make extensive use of [server authority](../projects/server-authority/index.md) hit existing limits. To see if your game can benefit from **Extended Services for Compute**:
+
+- Check [server heartbeat](../performance-optimization/identify.md#server-compute) for persistent drops below 60 FPS.
+- Examine CPU core utilization on the [Performance dashboard](../production/analytics/performance.md#server-charts).
+
+<Alert severity="success">
+Before you pay for more CPU, try to [reduce the work your servers do](../performance-optimization/improve.md).
+</Alert>
 
 ## Manage billing
 

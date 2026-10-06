@@ -266,7 +266,7 @@ player:GetPropertyChangedSignal("GameplayPaused"):Connect(onPauseStateChanged)
 
 The engine includes multiple on-screen debug panels that can be enabled on the client using keyboard shortcuts. To access streaming debug information:
 
-1. Open the **Network Summary** debug overlay via <kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F3</kbd> (Windows) or <kbd>Shift</kbd><kbd>⌘</kbd><kbd>F3</kbd> (Mac).
+1. Open the **Network Stats** debug overlay. In a live experience, press <kbd>Shift</kbd><kbd>F3</kbd>. When playtesting in Studio, press <kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F3</kbd> (Windows) or <kbd>Shift</kbd><kbd>⌘</kbd><kbd>F3</kbd> (Mac).
 2. Once the debug overlay is open, press <kbd>Shift</kbd><kbd>1</kbd> repeatedly to cycle through the available panels. The fourth panel is the **Streaming** debug view which displays useful runtime information:
    - Active streaming settings
    - Currently loaded (streamed in) regions

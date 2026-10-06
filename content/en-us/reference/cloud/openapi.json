@@ -59,7 +59,7 @@
             }
           }
         },
-        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -170,7 +170,7 @@
             }
           }
         },
-        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -275,7 +275,7 @@
             }
           }
         },
-        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -327,7 +327,7 @@
             }
           },
           {
-            "description": "Objective filter (PLAYS or the deprecated ENGAGEMENT)",
+            "description": "Objective filter (PLAYS or ENGAGEMENT)",
             "name": "objective",
             "in": "query",
             "schema": {
@@ -388,7 +388,7 @@
             }
           }
         },
-        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -499,7 +499,7 @@
             }
           }
         },
-        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -622,7 +622,7 @@
             }
           }
         },
-        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -736,7 +736,7 @@
             }
           }
         },
-        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -859,7 +859,7 @@
             }
           }
         },
-        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -963,7 +963,7 @@
             }
           }
         },
-        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -1082,7 +1082,7 @@
             }
           }
         },
-        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -17008,393 +17008,6 @@
         }
       }
     },
-    "/legacy-followings/v1/users/{userId}/universes": {
-      "get": {
-        "tags": ["Interactions", "Universes", "Users"],
-        "summary": "Gets all the followings between a user with userId and universes",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseResponse"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseResponse"
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "User is not authorized for this action."
-          }
-        },
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
-        "x-roblox-scopes": [
-          {
-            "name": "legacy-universe.following:read"
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#get_legacy_followings_v1_users__userId__universes"
-        }
-      }
-    },
-    "/legacy-followings/v1/users/{userId}/universes/{universeId}": {
-      "delete": {
-        "tags": ["Interactions", "Universes", "Users"],
-        "summary": "Deletes the following between a user with userId and universe with universeId",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "path",
-            "name": "universeId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "User is not authorized for this action.\r\n0: Token Validation Failed"
-          }
-        },
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
-        "x-roblox-scopes": [
-          {
-            "name": "legacy-universe.following:write"
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#delete_legacy_followings_v1_users__userId__universes__universeId_"
-        }
-      },
-      "post": {
-        "tags": ["Interactions", "Universes", "Users"],
-        "summary": "Creates the following between a user with userId and universe with universeId",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "path",
-            "name": "universeId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "The user has reached the limit of number of followed universes."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "User is not authorized for this action.\r\n0: Token Validation Failed"
-          }
-        },
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
-        "x-roblox-scopes": [
-          {
-            "name": "legacy-universe.following:write"
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#post_legacy_followings_v1_users__userId__universes__universeId_"
-        }
-      }
-    },
-    "/legacy-followings/v1/users/{userId}/universes/{universeId}/status": {
-      "get": {
-        "tags": ["Interactions", "Universes", "Users"],
-        "summary": "Gets the status of a following relationship between a user and a universe.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "path",
-            "name": "universeId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseStatusResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseStatusResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "User is not authorized for this action."
-          }
-        },
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
-        "x-roblox-scopes": [
-          {
-            "name": "legacy-universe.following:read"
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#get_legacy_followings_v1_users__userId__universes__universeId__status"
-        }
-      }
-    },
-    "/legacy-followings/v2/users/{userId}/universes": {
-      "get": {
-        "tags": ["Interactions", "Universes", "Users"],
-        "summary": "Gets all universes followed by a user.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "The user ID.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.FollowsByTypeResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.FollowsByTypeResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "User is not authorized for this action."
-          }
-        },
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
-          }
-        },
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
-        "x-roblox-scopes": [
-          {
-            "name": "legacy-universe.following:read"
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#get_legacy_followings_v2_users__userId__universes"
-        }
-      }
-    },
     "/legacy-game-internationalization/v1/badges/{badgeId}/description/language-codes/{languageCode}": {
       "patch": {
         "tags": ["Badges", "Localization"],
@@ -23409,6 +23022,7 @@
     },
     "/matchmaking-api/v1/matchmaking/universe/{universeId}/start-place": {
       "delete": {
+        "tags": ["Matchmaking"],
         "summary": "Deletes the start place override for a universe.",
         "parameters": [
           {
@@ -23438,9 +23052,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}]
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/matchmaking#delete_matchmaking_api_v1_matchmaking_universe__universeId__start_place"
+        }
       },
       "get": {
+        "tags": ["Matchmaking"],
         "summary": "Gets the start place override for a universe.",
         "parameters": [
           {
@@ -23470,9 +23088,13 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}]
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/matchmaking#get_matchmaking_api_v1_matchmaking_universe__universeId__start_place"
+        }
       },
       "post": {
+        "tags": ["Matchmaking"],
         "summary": "Sets (creates or updates) the start place override for a universe.",
         "parameters": [
           {
@@ -23517,6 +23139,52 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/SetStartPlaceOverrideResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/matchmaking#post_matchmaking_api_v1_matchmaking_universe__universeId__start_place"
+        }
+      }
+    },
+    "/matchmaking-api/v1/matchmaking/universe/{universeId}/start-place/test": {
+      "get": {
+        "summary": "Tests a user's saved start place in a universe against the place checks gamejoin makes.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TestStartPlaceOverrideResponse"
                 }
               }
             }
@@ -28075,6 +27743,7 @@
     },
     "/v1/account/upgrade": {
       "post": {
+        "tags": ["Accounts"],
         "summary": "Attaches a sign-in credential to the calling account.",
         "description": "The caller is the account being upgraded, so the request carries no user ID and the\nsession is the authorization. The call is safe to retry: each field is compared against\nthe account first, and a field the account already holds is dropped rather than rewritten.\n\nThe moderation filter is bypassed because an account held by a birthday compliance\nrestriction is Suppressed and lifts that restriction through this call. Every upgrade type\nstill passes its own eligibility gate.",
         "requestBody": {
@@ -28132,7 +27801,10 @@
           {
             "url": "https://auth.roblox.com"
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_account_upgrade"
+        }
       }
     },
     "/v1/announcements": {
@@ -31783,20 +31455,7 @@
         "summary": "Returns details for one or more catalog items.",
         "description": "There is an item count limit per request. Exceeding this returns 400 Bad Request.",
         "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Catalog.Api.MultigetItemDetailsRequestModel"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.Catalog.Api.MultigetItemDetailsRequestModel"
-              }
-            }
-          },
-          "description": "Roblox.Catalog.Api.MultigetItemDetailsRequestModel.",
-          "required": true
+          "$ref": "#/components/requestBodies/Roblox.Catalog.Api.MultigetItemDetailsRequestModel"
         },
         "responses": {
           "200": {
@@ -37662,6 +37321,7 @@
     },
     "/v1/groups/{groupId}/payouts/latest": {
       "get": {
+        "tags": ["Groups"],
         "summary": "Gets the latest one-time payout for each requested user.",
         "parameters": [
           {
@@ -37740,11 +37400,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v1_groups__groupId__payouts_latest"
+        }
       }
     },
     "/v1/groups/{groupId}/payouts/suggested": {
       "get": {
+        "tags": ["Groups"],
         "summary": "Gets suggested one-time payouts for eligible collaborators.",
         "parameters": [
           {
@@ -37803,11 +37467,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v1_groups__groupId__payouts_suggested"
+        }
       }
     },
     "/v1/groups/{groupId}/payouts/universes": {
       "get": {
+        "tags": ["Groups", "Universes"],
         "summary": "Gets payout-visible universes for a group.",
         "parameters": [
           {
@@ -37891,7 +37559,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v1_groups__groupId__payouts_universes"
+        }
       }
     },
     "/v1/groups/{groupId}/universes": {
@@ -46425,6 +46096,7 @@
     },
     "/v1/universes/{universeId}/configuration/playtesters/eligibility": {
       "post": {
+        "tags": ["Universes"],
         "summary": "Check whether each candidate user can currently be added as a private playtester.",
         "parameters": [
           {
@@ -46492,7 +46164,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#develop_post_v1_universes__universeId__configuration_playtesters_eligibility"
+        }
       }
     },
     "/v1/universes/{universeId}/configuration/vip-servers": {
@@ -46680,6 +46355,7 @@
     },
     "/v1/universes/{universeId}/payouts": {
       "get": {
+        "tags": ["Groups", "Universes"],
         "summary": "Gets recurring payouts for a group-owned universe.",
         "parameters": [
           {
@@ -46747,7 +46423,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v1_universes__universeId__payouts"
+        }
       }
     },
     "/v1/universes/{universeId}/permissions": {
@@ -47603,6 +47282,7 @@
             "url": "https://contacts.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -47832,6 +47512,7 @@
             "url": "https://contacts.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -47890,6 +47571,7 @@
             "url": "https://contacts.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -52668,299 +52350,6 @@
         }
       }
     },
-    "/v1/users/{userId}/universes": {
-      "get": {
-        "tags": ["Interactions", "Universes", "Users"],
-        "summary": "Gets all the followings between a user with userId and universes",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseResponse"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseResponse"
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "User is not authorized for this action."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://followings.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#followings_get_v1_users__userId__universes"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/legacy-followings/v1/users/{userId}/universes",
-            "httpMethod": "GET",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/interactions#get_legacy_followings_v1_users__userId__universes"
-          }
-        ]
-      }
-    },
-    "/v1/users/{userId}/universes/{universeId}": {
-      "delete": {
-        "tags": ["Interactions", "Universes", "Users"],
-        "summary": "Deletes the following between a user with userId and universe with universeId",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "path",
-            "name": "universeId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "User is not authorized for this action.\r\n0: Token Validation Failed"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://followings.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#followings_delete_v1_users__userId__universes__universeId_"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/legacy-followings/v1/users/{userId}/universes/{universeId}",
-            "httpMethod": "DELETE",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/interactions#delete_legacy_followings_v1_users__userId__universes__universeId_"
-          }
-        ]
-      },
-      "post": {
-        "tags": ["Interactions", "Universes", "Users"],
-        "summary": "Creates the following between a user with userId and universe with universeId",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "path",
-            "name": "universeId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "The user has reached the limit of number of followed universes."
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "User is not authorized for this action.\r\n0: Token Validation Failed"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://followings.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#followings_post_v1_users__userId__universes__universeId_"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/legacy-followings/v1/users/{userId}/universes/{universeId}",
-            "httpMethod": "POST",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/interactions#post_legacy_followings_v1_users__userId__universes__universeId_"
-          }
-        ]
-      }
-    },
-    "/v1/users/{userId}/universes/{universeId}/status": {
-      "get": {
-        "tags": ["Interactions", "Universes", "Users"],
-        "summary": "Gets the status of a following relationship between a user and a universe.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "in": "path",
-            "name": "universeId",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseStatusResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.UserFollowingUniverseStatusResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "User is not authorized for this action."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://followings.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#followings_get_v1_users__userId__universes__universeId__status"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/legacy-followings/v1/users/{userId}/universes/{universeId}/status",
-            "httpMethod": "GET",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/interactions#get_legacy_followings_v1_users__userId__universes__universeId__status"
-          }
-        ]
-      }
-    },
     "/v1/users/{userId}/username-history": {
       "get": {
         "tags": ["User profiles", "Users"],
@@ -55088,6 +54477,7 @@
     },
     "/v2/groups/{groupId}/invitations": {
       "get": {
+        "tags": ["Groups"],
         "summary": "List open invitations to a group",
         "parameters": [
           {
@@ -55200,9 +54590,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v2_groups__groupId__invitations"
+        }
       },
       "post": {
+        "tags": ["Groups"],
         "summary": "Invite a user to a group",
         "parameters": [
           {
@@ -55332,11 +54726,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_post_v2_groups__groupId__invitations"
+        }
       }
     },
     "/v2/groups/{groupId}/invitations/{invitationId}": {
       "delete": {
+        "tags": ["Groups"],
         "summary": "Revoke an invitation to a group (member manager)",
         "parameters": [
           {
@@ -55423,9 +54821,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_delete_v2_groups__groupId__invitations__invitationId_"
+        }
       },
       "get": {
+        "tags": ["Groups"],
         "summary": "Get an invitation to a group",
         "parameters": [
           {
@@ -55512,9 +54914,13 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v2_groups__groupId__invitations__invitationId_"
+        }
       },
       "patch": {
+        "tags": ["Groups"],
         "summary": "Accept or decline an invitation to a group (recipient)",
         "parameters": [
           {
@@ -55636,11 +55042,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_patch_v2_groups__groupId__invitations__invitationId_"
+        }
       }
     },
     "/v2/groups/{groupId}/roles/{roleId}/invitations": {
       "get": {
+        "tags": ["Groups"],
         "summary": "List open invitations to a group that grant a role",
         "parameters": [
           {
@@ -55762,11 +55172,15 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v2_groups__groupId__roles__roleId__invitations"
+        }
       }
     },
     "/v2/groups/{groupId}/users/{userId}/invitation": {
       "get": {
+        "tags": ["Groups"],
         "summary": "Get the open invitation to a group for a user",
         "parameters": [
           {
@@ -55853,7 +55267,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v2_groups__groupId__users__userId__invitation"
+        }
       }
     },
     "/v2/identity-verification/login": {
@@ -60850,70 +60267,6 @@
         }
       }
     },
-    "/v2/users/{userId}/universes": {
-      "get": {
-        "tags": ["Interactions", "Universes", "Users"],
-        "summary": "Gets all universes followed by a user.",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "description": "The user ID.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.FollowsByTypeResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.Followings.Api.Models.FollowsByTypeResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "User is not authorized for this action."
-          }
-        },
-        "servers": [
-          {
-            "url": "https://followings.roblox.com"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#followings_get_v2_users__userId__universes"
-        },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/legacy-followings/v2/users/{userId}/universes",
-            "httpMethod": "GET",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/interactions#get_legacy_followings_v2_users__userId__universes"
-          }
-        ]
-      }
-    },
     "/v3/logout": {
       "post": {
         "tags": ["Accounts"],
@@ -62478,6 +61831,22 @@
           }
         },
         "description": "Roblox.Authentication.Api.Models.SignupRequest",
+        "required": true
+      },
+      "Roblox.Catalog.Api.MultigetItemDetailsRequestModel": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Roblox.Catalog.Api.MultigetItemDetailsRequestModel"
+            }
+          },
+          "text/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Roblox.Catalog.Api.MultigetItemDetailsRequestModel"
+            }
+          }
+        },
+        "description": "Roblox.Catalog.Api.MultigetItemDetailsRequestModel.",
         "required": true
       },
       "Roblox.PrivateMessages.Api.Models.BatchMessagesRequest": {
@@ -78514,90 +77883,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.Followings.Api.Models.FollowsByTypeResponse": {
-        "description": "Data model containing collection of all followed sources of a specific type.",
-        "type": "object",
-        "properties": {
-          "followerType": {
-            "format": "int32",
-            "description": "Type of the follower entity. ['Invalid' = 0, 'User' = 1]",
-            "enum": [0, 1],
-            "type": "integer"
-          },
-          "followerId": {
-            "format": "int64",
-            "description": "ID of the follower entity.",
-            "type": "integer"
-          },
-          "sourceType": {
-            "format": "int32",
-            "description": "Type of the source entity. ['Invalid' = 0, 'Universe' = 1]",
-            "enum": [0, 1],
-            "type": "integer"
-          },
-          "followedSources": {
-            "description": "Followed sources: map of (source ID => follow date)",
-            "type": "object",
-            "additionalProperties": {
-              "format": "date-time",
-              "type": "string"
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Followings.Api.Models.UserFollowingUniverseResponse": {
-        "description": "Model for a user following a universe controller responses",
-        "type": "object",
-        "properties": {
-          "universeId": {
-            "format": "int64",
-            "description": "The id of the universe being followed",
-            "type": "integer"
-          },
-          "userId": {
-            "format": "int64",
-            "description": "The id of the user that is following",
-            "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.Followings.Api.Models.UserFollowingUniverseStatusResponse": {
-        "description": "Model for a user following a universe  state controller responses",
-        "type": "object",
-        "properties": {
-          "UniverseId": {
-            "format": "int64",
-            "description": "The id of the universe.",
-            "type": "integer"
-          },
-          "UserId": {
-            "format": "int64",
-            "description": "The id of the user.",
-            "type": "integer"
-          },
-          "CanFollow": {
-            "description": "If the user can follow the universe.",
-            "type": "boolean"
-          },
-          "IsFollowing": {
-            "description": "If the user is currently following the universe.",
-            "type": "boolean"
-          },
-          "FollowingCountByType": {
-            "format": "int32",
-            "description": "The number of followings between this user and a universe.",
-            "type": "integer"
-          },
-          "FollowingLimitByType": {
-            "format": "int32",
-            "description": "The limit to the number of followings between a user and a universe for a specific user.",
-            "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.Friends.Api.FriendRequest": {
         "description": "A response model representing a friend request.",
         "type": "object",
@@ -78619,8 +77904,8 @@
           },
           "originSourceType": {
             "format": "int32",
-            "description": "The origin source type associated with the friend request. ['Unknown' = 0, 'PlayerSearch' = 1, 'QrCode' = 2, 'InGame' = 3, 'UserProfile' = 4, 'QqContactImporter' = 5, 'WeChatContactImporter' = 6, 'ProfileShare' = 7, 'PhoneContactImporter' = 8, 'FriendRecommendations' = 9, 'UserCommunities' = 10, 'TrustedFriend' = 11, 'SchoolMemberList' = 12]",
-            "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+            "description": "The origin source type associated with the friend request. ['Unknown' = 0, 'PlayerSearch' = 1, 'QrCode' = 2, 'InGame' = 3, 'UserProfile' = 4, 'QqContactImporter' = 5, 'WeChatContactImporter' = 6, 'ProfileShare' = 7, 'PhoneContactImporter' = 8, 'FriendRecommendations' = 9, 'UserCommunities' = 10, 'TrustedFriend' = 11, 'SchoolMemberList' = 12, 'SocialTabsPage' = 13]",
+            "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
             "type": "integer"
           },
           "contactName": {
@@ -78670,7 +77955,7 @@
             "type": "boolean"
           },
           "externalAppDisplayName": {
-            "description": "Used when user is logged in from third party app (e.g. QQ)\r\nExternalAppDisplayName is the name used in that app (e.g. QQ nickname)",
+            "description": "Used when user is logged in from third party app (e.g. QQ)\nExternalAppDisplayName is the name used in that app (e.g. QQ nickname)",
             "type": "string"
           },
           "id": {
@@ -86533,6 +85818,22 @@
         "additionalProperties": false,
         "description": "Response body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:start`."
       },
+      "StartPlaceOverrideTestResult": {
+        "enum": [
+          "Invalid",
+          "Found",
+          "NoOverrideConfigured",
+          "DataStoreEntryNotFound",
+          "DataStoreNotFound",
+          "DataStoreError",
+          "FieldMissing",
+          "ValueParseFailure",
+          "PlaceNotInExperience",
+          "PlaceNotPublished"
+        ],
+        "type": "string",
+        "description": "Whether a user's saved start place passed every check, and if not, why."
+      },
       "State": {
         "type": "string",
         "description": "Whether the asset is active or archived. Unspecified isn't used.",
@@ -86795,6 +86096,22 @@
         },
         "additionalProperties": false,
         "description": "Eligibility criteria scoping which users an experiment can apply to."
+      },
+      "TestStartPlaceOverrideResponse": {
+        "type": "object",
+        "properties": {
+          "result": {
+            "$ref": "#/components/schemas/StartPlaceOverrideTestResult"
+          },
+          "placeId": {
+            "type": "integer",
+            "description": "The place id read from the user's data store entry.\r\nNull when no place id could be read.",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response for testing a user's saved start place in a universe."
       },
       "ThumbnailPersonalizationApi.ModerationStatus": {
         "enum": ["Reviewing", "Rejected", "Approved", "Unspecified"],
@@ -88523,13 +87840,13 @@
             "type": "string"
           },
           "objective": {
-            "description": "The advertising goal of the campaign. `PLAYS` for campaigns created via this API; campaigns from other surfaces may report `AWARENESS`, `REACH`, `ENGAGED_PLAYS`, `VIDEO_VIEWS`, or `ROBUX_SPEND`.",
+            "description": "The advertising goal of the campaign. `PLAYS` or `ENGAGEMENT` for campaigns created via this API; campaigns from other surfaces may report `AWARENESS`, `REACH`, `VIDEO_VIEWS`, or `ROBUX_SPEND`.",
             "type": "string",
             "enum": [
               "PLAYS",
+              "ENGAGEMENT",
               "AWARENESS",
               "REACH",
-              "ENGAGED_PLAYS",
               "VIDEO_VIEWS",
               "ROBUX_SPEND"
             ]
@@ -88593,7 +87910,7 @@
             ]
           },
           "objectives": {
-            "description": "The campaign objectives you can create. Values can be `PLAYS` or the\ndeprecated `ENGAGEMENT` (both create the same campaign).",
+            "description": "The campaign objectives you can create. Values can be `PLAYS` or `ENGAGEMENT`.",
             "type": "array",
             "items": {
               "type": "string",
@@ -88689,7 +88006,7 @@
             "type": "string"
           },
           "objective": {
-            "description": "The advertising goal. Required. Can be `PLAYS` (the deprecated `ENGAGEMENT`\nis also accepted during the transition; both create the same campaign).",
+            "description": "The advertising goal. Required. Can be `PLAYS` or `ENGAGEMENT`. `ENGAGEMENT`\ndoes not support targeting and is not available for every experience.",
             "type": "string",
             "enum": ["PLAYS", "ENGAGEMENT"]
           },
@@ -89209,6 +88526,7 @@
           "users_get_v1_users_authenticated_age_bracket",
           "users_get_v1_users_authenticated_country_code",
           "users_get_v1_users_authenticated_roles",
+          "auth_post_v1_account_upgrade",
           "auth_delete_v1_account_pin",
           "auth_get_v1_account_pin",
           "auth_patch_v1_account_pin",
@@ -89817,8 +89135,19 @@
           "develop_get_v1_user_groups_canmanage",
           "groups_get_v1_groups__groupId__community_feature_freezes",
           "groups_post_v1_groups__groupId__community_tier_evaluate",
+          "groups_get_v1_groups__groupId__payouts_universes",
+          "groups_get_v1_groups__groupId__payouts_latest",
+          "groups_get_v1_groups__groupId__payouts_suggested",
+          "groups_get_v1_universes__universeId__payouts",
           "groups_get_v1_groups__groupId__features",
           "groups_patch_v1_groups__groupId__features",
+          "groups_get_v2_groups__groupId__invitations",
+          "groups_post_v2_groups__groupId__invitations",
+          "groups_get_v2_groups__groupId__invitations__invitationId_",
+          "groups_delete_v2_groups__groupId__invitations__invitationId_",
+          "groups_patch_v2_groups__groupId__invitations__invitationId_",
+          "groups_get_v2_groups__groupId__roles__roleId__invitations",
+          "groups_get_v2_groups__groupId__users__userId__invitation",
           "thumbnails_get_v1_groups_icons",
           "develop_get_v1_groups__groupId__universes",
           "develop_get_v1_user_groups_canmanagegamesoritems"
@@ -89832,16 +89161,6 @@
         "path": "interactions",
         "content": "HTTP APIs for working with favorites, experience notifications, and other player interactions on Roblox Cloud.",
         "ordering": [
-          "get_legacy_followings_v1_users__userId__universes",
-          "followings_get_v1_users__userId__universes",
-          "delete_legacy_followings_v1_users__userId__universes__universeId_",
-          "followings_delete_v1_users__userId__universes__universeId_",
-          "post_legacy_followings_v1_users__userId__universes__universeId_",
-          "followings_post_v1_users__userId__universes__universeId_",
-          "get_legacy_followings_v1_users__userId__universes__universeId__status",
-          "followings_get_v1_users__userId__universes__universeId__status",
-          "get_legacy_followings_v2_users__userId__universes",
-          "followings_get_v2_users__userId__universes",
           "catalog_get_v1_favorites_assets__assetId__count",
           "catalog_get_v1_favorites_bundles__bundleId__count",
           "catalog_get_v1_favorites_users__userId__favorites__assetTypeId__assets",
@@ -90069,6 +89388,9 @@
           "delete_matchmaking_api_v1_matchmaking_server_attribute__attributeId_",
           "get_matchmaking_api_v1_matchmaking_server_attributes__universeId_",
           "get_matchmaking_api_v1_matchmaking_universe__universeId__feature_flags",
+          "get_matchmaking_api_v1_matchmaking_universe__universeId__start_place",
+          "post_matchmaking_api_v1_matchmaking_universe__universeId__start_place",
+          "delete_matchmaking_api_v1_matchmaking_universe__universeId__start_place",
           "post_matchmaking_api_v1_matchmaking_scoring_configuration",
           "get_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId_",
           "patch_matchmaking_api_v1_matchmaking_scoring_configuration__scoringConfigurationId_",
@@ -90374,6 +89696,7 @@
           "develop_get_v1_universes__universeId__configuration_playtesters",
           "develop_post_v1_universes__universeId__configuration_playtesters",
           "develop_delete_v1_universes__universeId__configuration_playtesters",
+          "develop_post_v1_universes__universeId__configuration_playtesters_eligibility",
           "get_legacy_develop_v1_universes__universeId__teamcreate",
           "develop_get_v1_universes__universeId__teamcreate",
           "patch_legacy_develop_v1_universes__universeId__teamcreate",
@@ -90384,16 +89707,6 @@
           "develop_get_v1_universes_multiget_permissions",
           "get_legacy_develop_v1_universes_multiget_teamcreate",
           "develop_get_v1_universes_multiget_teamcreate",
-          "get_legacy_followings_v1_users__userId__universes",
-          "followings_get_v1_users__userId__universes",
-          "delete_legacy_followings_v1_users__userId__universes__universeId_",
-          "followings_delete_v1_users__userId__universes__universeId_",
-          "post_legacy_followings_v1_users__userId__universes__universeId_",
-          "followings_post_v1_users__userId__universes__universeId_",
-          "get_legacy_followings_v1_users__userId__universes__universeId__status",
-          "followings_get_v1_users__userId__universes__universeId__status",
-          "get_legacy_followings_v2_users__userId__universes",
-          "followings_get_v2_users__userId__universes",
           "get_legacy_game_internationalization_v1_game_icon_games__gameId_",
           "gameinternationalization_get_v1_game_icon_games__gameId_",
           "delete_legacy_game_internationalization_v1_game_icon_games__gameId__language_codes__languageCode_",
@@ -90451,6 +89764,8 @@
           "develop_get_v1_user_universes",
           "develop_patch_v2_universes__universeId__configuration",
           "economycreatorstats_get_v1_universes__universeId__stats",
+          "groups_get_v1_groups__groupId__payouts_universes",
+          "groups_get_v1_universes__universeId__payouts",
           "gameinternationalization_get_v1_automatic_translation_games__gameId__feature_status",
           "gameinternationalization_get_v1_automatic_translation_games__gameId__quota",
           "gameinternationalization_get_v1_game_localization_status__gameId__translation_counts",
@@ -90565,16 +89880,6 @@
           "contacts_post_v1_user_get_tags",
           "contacts_get_v1_user_tag_validate",
           "contacts_post_v1_user_tag",
-          "get_legacy_followings_v1_users__userId__universes",
-          "followings_get_v1_users__userId__universes",
-          "post_legacy_followings_v1_users__userId__universes__universeId_",
-          "followings_post_v1_users__userId__universes__universeId_",
-          "get_legacy_followings_v1_users__userId__universes__universeId__status",
-          "followings_get_v1_users__userId__universes__universeId__status",
-          "delete_legacy_followings_v1_users__userId__universes__universeId_",
-          "followings_delete_v1_users__userId__universes__universeId_",
-          "get_legacy_followings_v2_users__userId__universes",
-          "followings_get_v2_users__userId__universes",
           "get_legacy_develop_v1_user_groups_canmanage",
           "develop_get_v1_user_groups_canmanage",
           "develop_get_v1_user_groups_canmanagegamesoritems",
