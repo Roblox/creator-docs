@@ -2329,6 +2329,126 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     simulationAccess: true
+  - name: BasePart:BindToCollisionSummaries
+    summary: |
+      Subscribes to detailed per-frame contact data for the collisions this part
+      is involved in.
+    description: |
+      Subscribes `callback` to the contact data that the physics engine
+      generates for this part while detecting collisions. Once per frame, after
+      the simulation has stepped, `callback` receives an array of summaries
+      describing every contact patch this part was involved in during that
+      frame. Each summary reports where the contact occurred, which direction it
+      faced, and how fast the two parts were moving relative to each other at
+      that point.
+
+      This method is a separate mechanism from `Class.BasePart.Touched`.
+
+      Throws an error if `callback` is `nil`, or if the part is not a descendant
+      of `Class.Workspace`.
+
+      #### Summary Fields
+
+      Each entry in the array passed to `callback` is a table with the following
+      keys:
+
+      <table size="small">
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Type</th>
+          <th>Summary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>Time</code></td>
+          <td><code>number</code></td>
+          <td>Simulation time, in seconds, of the physics substep that produced this summary.</td>
+        </tr>
+        <tr>
+          <td><code>Part0</code></td>
+          <td><code>Class.BasePart</code></td>
+          <td>The subscribed part.</td>
+        </tr>
+        <tr>
+          <td><code>Part1</code></td>
+          <td><code>Class.BasePart</code></td>
+          <td>The other part in the pair, which may be <code>Class.Terrain</code>.</td>
+        </tr>
+        <tr>
+          <td><code>Point</code></td>
+          <td><code>Datatype.Vector3</code></td>
+          <td>Contact point in world space, averaged across the points in the patch.</td>
+        </tr>
+        <tr>
+          <td><code>Normal</code></td>
+          <td><code>Datatype.Vector3</code></td>
+          <td>Unit contact normal for the patch, oriented relative to the subscribed part.</td>
+        </tr>
+        <tr>
+          <td><code>RelativeVelocity</code></td>
+          <td><code>Datatype.Vector3</code></td>
+          <td>Velocity of <code>Part1</code> relative to <code>Part0</code> at the contact point.</td>
+        </tr>
+        <tr>
+          <td><code>Area</code></td>
+          <td><code>number</code></td>
+          <td>Estimated area of the contact patch, in square studs. <code>0</code> for a patch of fewer than three points, such as an edge or corner contact.</td>
+        </tr>
+      </tbody>
+      </table>
+
+      `Normal` is oriented relative to the subscribed part rather than to
+      whichever part the engine happened to list first, so if both parts of a
+      pair are subscribed, each subscription receives its own summary with
+      itself as `Part0` and the normal flipped to match.
+
+      `RelativeVelocity` is the velocity of `Part1` relative to `Part0`, so the
+      magnitude of its projection onto `Normal` is the speed at which the two
+      parts are approaching or separating head-on, and the component tangential
+      to `Normal` describes sliding and glancing contact.
+
+      #### Reporting Behavior
+
+      - Contact recording is enabled only while at least one subscription exists
+        anywhere in the `Class.Workspace`, and the cost of it scales with the
+        number of subscribed parts rather than with the total number of
+        collisions in the scene.
+      - Contacts between multiple sleeping parts do not produce summaries.
+      - Contacts from Parts with `Class.BasePart.CanCollide` set to `false` do
+        not produce summaries.
+      - Physics may run several substeps per frame, so a pair that stays in
+        contact across several of them produces up to one summary per patch per
+        substep, all delivered in the same invocation of `callback`. Use `Time`
+        to order them.
+      - Non-convex collision geometry produces one summary per pair of touching
+        convex hulls, and contact with `Class.Terrain` is split further by
+        contact normal, so either can yield several summaries for the same pair
+        within one substep.
+      - Nothing is replicated. Each client generates summaries for the
+        collisions it owns. See
+        [network ownership](../../../physics/network-ownership.md).
+      - Destroying the part disconnects its subscriptions.
+    code_samples: []
+    parameters:
+      - name: callback
+        type: Function
+        default:
+        summary: |
+          Invoked with an array of summary tables, at most once per frame, if
+          the part was involved in a collision.
+    returns:
+      - type: RBXScriptConnection
+        summary: |
+          A `Datatype.RBXScriptConnection` that ends the subscription when
+          disconnected.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
   - name: BasePart:BreakJoints
     summary: |
       Breaks any surface connection with any adjacent part, including

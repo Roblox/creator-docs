@@ -128,6 +128,50 @@ properties:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: RaycastParams.Margin
+    type: number
+    summary: |
+      Expands the cast shape uniformly in every direction.
+    description: |
+      Expands the cast shape uniformly in every direction. Must be finite and
+      greater than or equal to `0`. Defaults to `0`.
+
+      `Margin` applies to `Class.WorldRoot:Shapecast()`,
+      `Class.WorldRoot:Blockcast()`, `Class.WorldRoot:Spherecast()` and
+      `Class.WorldRoot:Raycast()`. The expanded shape is what the maximum-size
+      limit is checked against, so a large `Margin` can make an otherwise valid
+      cast throw.
+
+      Setting a non-zero `Margin` on a `Class.WorldRoot:Raycast()` makes the
+      operation behave as a sphere cast of that radius.
+    default:
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: RaycastParams.SizeGradient
+    type: number
+    summary: |
+      Scales the cast shape over the length of the cast, tapering the swept
+      volume.
+    description: |
+      Scales the cast shape over the length of the cast. Must be finite and
+      greater than or equal to `-1`. Defaults to `0`, which casts the shape at a
+      constant size.
+
+      The shape starts at its original size and is scaled by `1 + SizeGradient`
+      by the end of the cast, interpolating in between. A `SizeGradient` of
+      `0.5` finishes the cast 50% larger, `-0.5` finishes it at half size, and
+      `-1` shrinks it away entirely.
+
+      `SizeGradient` scales the shape's own size, not
+      `Datatype.RaycastParams.Margin|Margin`, so a cast with both keeps its
+      margin at a constant width along the way. `Class.WorldRoot:Spherecast()`
+      is the exception: radius and margin are one and the same for a sphere, so
+      both scale together.
+    default:
+    code_samples: []
+    tags: []
+    deprecation_message: ''
   - name: RaycastParams.FilterDescendantsInstances
     type: Array
     summary: |

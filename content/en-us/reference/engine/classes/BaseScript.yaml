@@ -137,7 +137,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: PluginSecurity
+      write: None
     thread_safety: ReadSafe
     category: Behavior
     serialization:

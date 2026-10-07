@@ -1250,6 +1250,20 @@ methods:
           If not provided, default values are used where all other parts are
           considered and `Class.Terrain` water is not ignored. The part being
           cast is always excluded from the results.
+      - name: cframeOverride
+        type: CFrame?
+        default:
+        summary: |
+          The `Datatype.CFrame` from which the shape begins the cast. If not
+          provided, the part's own `Class.BasePart.CFrame|CFrame` is used.
+      - name: sizeOverride
+        type: Vector3?
+        default:
+        summary: |
+          The size of the cast shape. If not provided, the part's own
+          `Class.BasePart.Size|Size` is used. Every component must be finite and
+          greater than or equal to `0`, and the shape must not exceed the
+          maximum supported side length.
     returns:
       - type: RaycastResult?
         summary: |
