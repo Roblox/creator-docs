@@ -12,6 +12,8 @@ These systems **_must not_** be used to enable unrestricted, real-time, two-way 
 - Reduce friction in common gameplay moments
 - Preserve Roblox's existing safety and age-based communication protections
 
+Roblox's built-in [Quick Words](../chat/quick-words.md) system is a preset system that already complies with these guidelines. Use it to add custom Quick Words without building your own preset system.
+
 ## Guidelines
 
 If you want to implement this type of system, you must adhere to these guidelines, which are meant to help you comply with our [Community Standards](https://about.roblox.com/community-standards) and [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use).

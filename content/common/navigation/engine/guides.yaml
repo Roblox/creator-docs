@@ -516,6 +516,8 @@ navigation:
             path: /chat/guidelines
           - title: Preset system guidelines
             path: /chat/preset-system-guidelines
+          - title: Quick Words
+            path: /chat/quick-words
           - title: Chat window
             path: /chat/chat-window
           - title: Cross-server chat
