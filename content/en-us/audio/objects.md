@@ -382,6 +382,10 @@ From here, you can trigger your TTS audio with scripts. For code sample referenc
 </tbody>
 </table>
 
+#### Supported languages
+
+By default, Roblox automatically translates text inputs into the player's language and routes the translated text to the appropriate voice ID. Learn more about how this works in `Class.AudioTextToSpeech.AutoLocalize`.
+
 ### Speech-to-text
 
 <Alert severity="warning">

@@ -30,6 +30,46 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
+  - name: AudioTextToSpeech.AutoLocalize
+    summary: |
+      Controls whether `Class.AudioTextToSpeech.Text` is automatically
+      translated into the player's language and routed to an appropriate voice.
+    description: |
+      When set to `true`, `Class.AudioTextToSpeech.Text` is automatically
+      translated into the player's language and routed to the most appropriate
+      `Class.AudioTextToSpeech.VoiceId`. For example, if a female voice ID is
+      used in English, Roblox routes to a female voice for other languages.
+
+      Text-to-speech currently supports automatic translation between the
+      following languages:
+
+      - Arabic
+      - Chinese (Mandarin)
+      - English
+      - French
+      - German
+      - Hindi
+      - Italian
+      - Japanese
+      - Korean
+      - Portuguese
+      - Spanish
+
+      Defaults to `true`.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
   - name: AudioTextToSpeech.IsLoaded
     summary: |
       Denotes whether the `Class.AudioTextToSpeech` object is loaded, buffered,
@@ -231,7 +271,11 @@ properties:
     description: |
       The voice style to be used by `Class.AudioTextToSpeech`. A list of
       available voices and their corresponding VoiceIds can be found in the
-      [text-to-speech guide](../../../audio/objects.md#text-to-speech).
+      [list of artificial voices](../../../audio/objects.md#list-of-artificial-voices).
+
+      Roblox automatically translates `Class.AudioTextToSpeech.Text` into the
+      player's language and routes it to an appropriate voice when
+      `Class.AudioTextToSpeech.AutoLocalize` is `true`.
     code_samples: []
     type: string
     tags: []

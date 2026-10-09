@@ -448,7 +448,7 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Behavior
+    category: AirProperties
     serialization:
       can_load: true
       can_save: true

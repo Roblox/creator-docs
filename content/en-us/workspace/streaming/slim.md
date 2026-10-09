@@ -240,6 +240,36 @@ Note that avatars must have been transcoded in a SLIM-enabled game before they a
 </tbody>
 </table>
 
+## Debugging
+
+To better understand the status of SLIM models, Roblox provides several **debug tint modes** in the **DebugVisualizations**&nbsp;⟩ **SlimTintMode** dropdown of the [Developer Console](../../studio/developer-console.md). Note that this menu is only available to creators who have **Edit** permissions for the game.
+
+<img src="../../assets/optimization/debug-visualizations/SLIM-Tint-Mode-Menu.jpg" width="712" />
+
+There are multiple tint modes to select from. See `Enum.SlimTintMode` for the color mappings of each mode.
+
+<Tabs>
+<TabItem label="LOD">
+`Enum.SlimTintMode.LOD|LOD` colors each mesh by its current level of detail using a blue-to-red heatmap. Blue indicates the lowest detail and warmer colors indicate higher detail.
+
+<video controls width="70%" src="../../assets/optimization/debug-visualizations/SLIM-Tint-Mode-LOD.mp4"></video>
+</TabItem>
+
+<TabItem label="Data Model State">
+`Enum.SlimTintMode.DataModelState|Data Model State` colors meshes by streaming state of the `Class.DataModel`. Green indicates the high-fidelity zone where the `Class.DataModel` is present; yellow indicates the low-fidelity zone where the `Class.DataModel` is absent.
+
+<video controls width="70%" src="../../assets/optimization/debug-visualizations/SLIM-Tint-Mode-DataModel.mp4"></video>
+</TabItem>
+</Tabs><br />
+
+You can also see SLIM debug visualizations in Studio by selecting a tint mode from the [Visualization&nbsp;Options](../../studio/ui-overview.md#visualization-options) menu:
+
+<img src="../../assets/studio/general/Visualization-Options.png" width="780" alt="A close up view of the 3D viewport with the Visualization Options button indicated in the upper-right corner." />
+
+In addition to the `Enum.SlimTintMode.LOD|LOD`/`Enum.SlimTintMode.DataModelState|DataModelState` tint modes, Studio offers the `Enum.SlimTintMode.TranscoderStatus|TranscoderStatus` tint mode. While editing, only this tint mode is available in the visualization options menu; while playing, all the tint modes are available. See `Enum.SlimTranscoderStatus` for the color mappings of each status.
+
+<video controls width="70%" src="../../assets/optimization/debug-visualizations/SLIM-Tint-Mode-Transcoder.mp4"></video>
+
 ## Troubleshooting
 
 <BaseAccordion>

@@ -365,6 +365,14 @@ If your request for creating a new asset or updating an existing asset succeeds,
    2. Select the **Category** of the asset that you want to check.
    3. Find the target asset and click its thumbnail to view the asset.
 
+## Use uploaded assets in Studio
+
+An asset that you upload belongs to the user or group in the `creationContext` of your request, so it's available in Studio like any other asset that creator owns:
+
+- Insert it from the [Toolbox](../../projects/assets/toolbox.md) or the [Asset Manager](../../projects/assets/manager.md#inventory-sorting).
+- Models upload as [packages](../../projects/assets/packages.md), so check **Inventory** ⟩ **My Packages** in the Toolbox (or **Creations** ⟩ **Group Packages** if a group owns them).
+- To use an asset in a property, enter `rbxassetid://` followed by the `assetId` from the operation response in the [Properties](../../studio/properties.md) window. In a script, assign that string to a string property such as `Class.AudioPlayer.Asset`, or pass the `assetId` to `Datatype.Content.fromAssetId()` for a property of type `Datatype.Content`, such as `Class.Decal.ColorMapContent`. For more information, see [rbxassetid](../../projects/assets/index.md#rbxassetid).
+
 ## Add assets API to OAuth 2.0 apps
 
 You can create [OAuth 2.0 applications](../../cloud/auth/oauth2-overview.md) supporting Assets API to allow your users to upload and update assets to Roblox.

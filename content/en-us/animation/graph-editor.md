@@ -31,13 +31,12 @@ To create your own animation graph, similar to the basic example provided in the
 
    <img src="../assets/studio/general/Toolbar-Graph-Editor.png" width="800" alt="Animation Graph Editor indicated in Studio's toolbar." />
 
-3. Select the animatable rig in the 3D viewport and select **Create Graph**.
-4. In the Graph Editor, right-click and select **Clip**.
+3. Select the animatable rig in the 3D viewport. In the graph edtior view, select **Graph** in the top left corner and select **New** to create a new graph.
+4. In the Graph Editor, right-click and select **Insert Node** ⟩ **Clip**.
 
    <img src="../assets/animation/graph-editor/Node-List.png" width="60%" alt="List of nodes in a right-click menu" />
 
 5. In the new Clip node, set the Animation ID.
-
    1. Select the **Animation ID** dropdown.
    2. To submit a specific animation asset ID, click **Import**.
 
@@ -55,7 +54,6 @@ To create your own animation graph, similar to the basic example provided in the
    <img src="../assets/animation/graph-editor/Add-Node.png" width="35%" alt="Add node" />
 
 8. **Connect the Clip nodes to the Add node** by dragging the top-right output connector to the appropriate port:
-
    1. Connect the **Clip** node with the Walking animation to the **Base** port.
    2. Connect the **Clip** node with the Waving animation to the **Additive** port.
 
@@ -66,7 +64,6 @@ To create your own animation graph, similar to the basic example provided in the
    <img src="../assets/animation/graph-editor/Connect-The-Clip-Nodes.png" width="80%" alt="All nodes connected to a final output node" />
 
 10. <Chip label="OPTIONAL" size="small" variant="outlined" /> Assign a parameter to your `Speed` variable.
-
     1. Click and drag the green Speed port to an empty area. A new parameter node displays.
        <img src="../assets/animation/graph-editor/Parameter-Noodle.png" width="80%" alt="Click and dragging connector from Speed port of Clip node." />
 
@@ -134,10 +131,23 @@ The baseline blending behavior applied to the node whenever it switches to a new
 
 <img src="../assets/animation/graph-editor/Transition-Override.png" width="60%" alt="Transition Override" />
 
-Input-specific link properties that supersede the default transition. These are applied when the node transitions **to** that specific input.
+Input-specific link properties that supersede the default transition. Duration and curve overrides apply when the node transitions **to** that input, except for **BeforeFinished** transitions, which use the outgoing input's overrides.
 
 - **TransitionOverrideDuration** (number): Overrides the default transition duration.
 - **TransitionOverrideCurve** (`Enum.PoseEasingStyle`): Overrides the default transition curve. Currently only supports `Enum.PoseEasingStyle.Linear` and `Enum.PoseEasingStyle.CubicV2`
+
+### Transition timing
+
+For sequence node types, the following settings control when the sequence advances to the next input:
+
+- **WaitFor** (`Enum.AnimationNodeWaitFor`): Sets the condition for advancing. Use `Enum.AnimationNodeWaitFor|Finished` (default) to wait for the current input to finish or complete a loop, or `Enum.AnimationNodeWaitFor|Trigger` to advance when **WaitForTrigger** is `true`. Set the node-level default with **DefaultWaitFor**, or override it for an input with **TransitionOverrideWaitFor**.
+  - **When** (`Enum.AnimationNodeTransitionWhen`): Applies when **Wait For** is `Enum.AnimationNodeWaitFor|Finished`. Set the node-level default with **DefaultTransitionWhen**, or override it for the outgoing input with **TransitionOverrideWhen**.
+    - `Enum.AnimationNodeTransitionWhen|Finished` (default): Begins blending after the current input finishes.
+    - `Enum.AnimationNodeTransitionWhen|BeforeFinished`: Begins blending one transition duration before the current input finishes, so the blend overlaps the end of its animation. For example, a 0.2-second transition starts during the final 0.2 seconds of the animation.
+
+`Enum.AnimationNodeType|RandomSequenceNode` also supports **DefaultTransitionWhen** and **TransitionOverrideWhen** to control when blending begins.
+
+For state machine transitions, see [Transition properties](./graph-editor-state-machine.md#transition-properties).
 
 ## Replication
 

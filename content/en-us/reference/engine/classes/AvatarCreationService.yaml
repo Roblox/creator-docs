@@ -505,8 +505,8 @@ methods:
       [token creation](../../../production/monetization/avatar-creation-token.md)
       process.
 
-      For avatar asset creation, the `Class.Instance` is expected to include a
-      new accessory to be created. This includes the following types:
+      For accessory creation, the `Class.Instance` is expected to include a new
+      accessory to be created. This includes the following types:
       `Enum.AvatarAssetType.Hat|Hat`, `Enum.AvatarAssetType.HairAccessory|Hair`,
       `Enum.AvatarAssetType.FaceAccessory|FaceAccessory`,
       `Enum.AvatarAssetType.NeckAccessory|NeckAccessory`,
@@ -520,7 +520,9 @@ methods:
       `Enum.AvatarAssetType.JacketAccessory|JacketAccessory`,
       `Enum.AvatarAssetType.SweaterAccessory|SweaterAccessory`,
       `Enum.AvatarAssetType.ShortsAccessory|ShortsAccessory`,
-      `Enum.AvatarAssetType.DressSkirtAccessory|DressSkirtAccessory`.
+      `Enum.AvatarAssetType.DressSkirtAccessory|DressSkirtAccessory`,
+      `Enum.AvatarAssetType.EyebrowAccessory|EyebrowAccessory`, and
+      `Enum.AvatarAssetType.EyelashAccessory|EyelashAccessory`.
 
       To support this, the `Class.Instance` should be an `Class.Accessory`
       instance or contain an `Class.Accessory` child instance. This should
@@ -535,8 +537,16 @@ methods:
       `Class.MeshPart` should include a `Class.WrapDeformer` with an
       `Class.EditableMesh`.
 
+      This method also supports `Enum.AvatarAssetType.FaceMakeup|FaceMakeup`,
+      `Enum.AvatarAssetType.LipMakeup|LipMakeup`, and
+      `Enum.AvatarAssetType.EyeMakeup|EyeMakeup`. For these types,
+      `assetInstance` must be a `Class.Decal` whose `Class.Decal.TextureContent`
+      references an `Class.EditableImage`, with exactly one
+      `Class.WrapTextureTransfer` child. The accessory and MeshPart requirements
+      above do not apply to these types.
+
       Finally, the provided `Enum.AvatarAssetType` should match the creation
-      type of the token and the type of `Class.Accessory` for upload.
+      type of the token and the type of asset for upload.
     code_samples:
       - AvatarCreationService-PromptCreateAvatarAssetAsync
     parameters:

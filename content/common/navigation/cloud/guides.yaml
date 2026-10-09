@@ -29,6 +29,13 @@ navigation:
         path: /cloud/guides/analytics/
       - title: Supported metrics and dimensions
         path: /cloud/guides/analytics/metrics
+  - title: Analytics alerts
+    path: /cloud/guides/alerts
+    section:
+      - title: Overview
+        path: /cloud/guides/alerts/
+      - title: Supported metrics and dimensions
+        path: /cloud/guides/alerts/metrics
   - title: User inventories
     path: /cloud/guides/inventory
   - title: Engine instances

@@ -3,9 +3,9 @@ title: IP licensing for creators
 description: How to use IP licensing as a creator.
 ---
 
-Creating games using approved popular IP can make your content more recognizable to users and help you reach new audiences that already know and love certain characters, settings, and storylines.
+Creating games and Marketplace items using approved popular IP can make your content more recognizable to users and help you reach new audiences that already know and love certain characters, settings, and storylines.
 
-As a creator, you can browse the [Licenses catalog](https://create.roblox.com/explore/licenses) and request to use an available IP in your game. A license allows you to create a full Roblox game based on an IP or to sell licensed content within an eligible experience. In both cases, you must follow the conditions and revenue share outlined by the rights holder.
+As a creator, you can browse the [Licenses catalog](https://create.roblox.com/explore/licenses) and request to use an available IP in your creations. A license allows you to create a Roblox game or Marketplace item using IP. Your licensed creations must follow the conditions and revenue share outlined by the rights holder.
 
 <Alert severity="warning">
   Roblox takes intellectual property infringement very seriously. Publishing content on Roblox that uses someone else's IP rights without permission violates the [Roblox Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) and might result in the removal of the content and your Roblox account.
@@ -74,11 +74,32 @@ To request an in-game sales license:
   You can cancel a pending license request under certain conditions, including after a rights holder sends a conditional approval. See [Cancel a license](#cancel-a-license) for details.
 </Alert>
 
+### Marketplace licenses
+
+A **Marketplace license** grants you permission to sell IP-based items to users on Marketplace including games that enable Marketplace sales. Each license applies to a specific creation, uses one revenue share rate, and determines whether you can enable Marketplace resale for IP-based items. Before you apply, review the license's experience eligibility requirements, revenue share, duration, content standards, and brand guidelines.
+
+To request a Marketplace license:
+
+1. In the **Explore** dropdown in the Creator Hub, click **Licenses**.
+2. Select a **Marketplace** license from the available licenses.
+3. Click **Request license**.
+4. Select license owner for which group or user you want to use for this license request and click **Next**.
+5. Under **Pitch**, enter more details about how you intend to use the IP. This can help the rights holder make a decision about your license request. For more information about writing a pitch, see [Pitch details](#pitch-details).
+6. (For time-limited licenses) Under **Proposed date range**, use the calendar to set the proposed dates that your game will incorporate the IP. Start and end times for time-limited licenses are based on midnight UTC.
+7. Acknowledge licensing terms, review the guidelines and restrictions, and click **Next**.
+8. Click **Submit** to submit your license request. The rights holder then reviews your request and can approve it, reject it, or (for perpetual licenses) send a [conditional approval](#respond-to-a-conditional-offer) that asks you to make changes before the agreement activates.
+
+<Alert severity="info">
+  You can cancel a pending license request under certain conditions, including after a rights holder sends a conditional approval. See [Cancel a license](#cancel-a-license) for details.
+</Alert>
+
+Once the rights holder has accepted your offer, you will link this license to the IP-based items (and only those items) during publication. Sales of the IP-based items will continue to be subject to marketplace fees, before the revenue share with the rights holder.
+
 ### Pitch details
 
 Including a well-written pitch with your request can make the rights holder more likely to approve your license request. Your pitch should convey a compelling idea and show that you are confident in your ability to execute this creative vision.
 
-You can attach images to your pitch if they comply with Roblox's [Community Standards](https://about.roblox.com/community-standards). Image attachments are optional for full game license requests and required for in-game sales license requests.
+You can attach images to your pitch if they comply with Roblox's [Community Standards](https://about.roblox.com/community-standards). Image attachments are optional for full game license requests and required for in-game sales and Marketplace license requests.
 
 We recommend that you include the following information in your pitch:
 
@@ -90,7 +111,7 @@ We recommend that you include the following information in your pitch:
 
 - **Creative elements**:
 
-  - How your game's visual and audio design will reflect the IP, including character models, environments, UI, and soundscapes. For example, if you're requesting to integrate an IP like the Blair Witch, you can highlight the use of atmospheric visuals and sound effects that evoke suspense and dread.
+  - How your creation's visual and audio design will reflect the IP, including character models, avatar item design, environments, UI, and soundscapes. For example, if you're requesting to integrate an IP like Pingu, you can highlight the use of stylized penguins and arctic scenes.
   - How the story, lore, or signature moments from the IP will be integrated into your game. This could involve recreating iconic scenes, referencing key plot points, or introducing original storylines that fit within the universe of the IP.
   - How you will maintain the integrity of the IP, making sure all creative choices align with the IP's established tone, themes, and content standards.
 
@@ -139,7 +160,7 @@ To view all of your offers and license agreements, go to **Intellectual Property
 
 ## Review a license offer
 
-For licenses with a perpetual duration, rights holders can reach out and make a license offer directly to your game. This can happen if Roblox detects that your game has a high likelihood of making prominent use of a registered IP. Rights holders can send either a **standard offer** or a **conditional offer**.
+For licenses with a perpetual duration, rights holders can reach out and make a license offer directly to your creation. This can happen if Roblox detects that your game has a high likelihood of making prominent use of a registered IP. Rights holders can send either a **standard offer** or a **conditional offer**.
 
 ### Standard offers
 
@@ -154,7 +175,7 @@ After you receive a standard offer, you can:
 
 ### Conditional offers
 
-A **conditional offer** means the rights holder wants to license your game, but you must update your game to meet their content standards before the agreement can activate. Conditional offers do **not** auto-activate after 14 days. Conditional offers can only be sent from a match of your game.
+A **conditional offer** means the rights holder wants to license your creation, but you must update your creation to meet their content standards before the agreement can activate. Conditional offers do **not** auto-activate after 14 days. Conditional offers can only be sent from a match of your game.
 
 After you receive a conditional offer or conditional approval, you have **14 days** to:
 
@@ -170,9 +191,9 @@ To review and complete a conditional offer or conditional approval:
 
 1. Go to **Intellectual Property** ⟩ **Licenses**.
 2. Open the conditional offer or request.
-3. Review the rights holder's feedback, which lists the content standard your game is violating and the specific changes they want.
-4. Update your game to address the requested changes.
-5. Mark the changes as done and confirm that you completed them. The rights holder then reviews your game and either activates the agreement or rejects the changes.
+3. Review the rights holder's feedback, which lists the content standard your creation is violating and the specific changes they want.
+4. Update your creation to address the requested changes.
+5. Mark the changes as done and confirm that you completed them. The rights holder then reviews your creation and either activates the agreement or rejects the changes.
 
 <Alert severity="info">
   After you mark the changes as done, the agreement activates only if the rights holder approves your changes. Roblox does not automatically verify that the changes were made.
@@ -180,7 +201,7 @@ To review and complete a conditional offer or conditional approval:
 
 ### Dispute the offer
 
-To dispute a standard or conditional license offer that a rights holder sent to your game:
+To dispute a standard or conditional license offer that a rights holder sent to you:
 
 1. Go to **Intellectual Property** ⟩ **Licenses** ⟩ **Offers**.
 2. Select the license offer you want to dispute.
@@ -206,16 +227,24 @@ If you submit a second and final dispute, you will not enter into an agreement w
 You can cancel a pending license request if the following conditions are met:
 
 - The rights holder hasn't fully accepted your license request yet. You can still cancel after a rights holder sends a conditional approval, as long as the agreement has not become active.
-- Early IP usage has not been detected in your game.
+- Early IP usage has not been detected in your creation.
 - (For time-limited licenses only) The cancellation is made at least three days before the proposed start date.
 
-If you cancel but still intend to use the IP in your game, you must submit a new license request.
+If you cancel but still intend to use the IP, you must submit a new license request.
 
 To cancel a license request:
 
 1. Navigate to **Intellectual Property** ⟩ **Licenses**.
 2. Select the license request you want to cancel.
 3. In the top-right, select **Cancel** and complete the prompt.
+
+## License expiration & termination
+
+Licenses may expire if time-based or be terminated if you violate the terms of the license. You are responsible for removing your use of the IP in these cases. Rights holders may choose to take action, including legal remedies, if you fail to remove the IP. Licensed Marketplace items are automatically removed from sale.
+
+## Licensed creations can display a badge to users
+
+Licensed creations can display a licensed badge inside the Roblox app. These badges are applied automatically for any creation under license. Rights holders may choose to remove this badge from any licensed creations at their discretion.
 
 ## Transactions
 
@@ -268,11 +297,11 @@ When you enter an agreement with a rights holder, you agree to the revenue share
 </thead>
 <tbody>
   <tr>
-    <td width="55%">**40%** (in this case, 40 Robux) from the sale revenue goes to the game owner in the form of commission.</td>
-    <td width="45%">From the 40 Robux:<br /><br /><ul><li>The license owner receives **4 Robux** (10%).</li><li>The game owner receives the rest, or **36 Robux** (90%).</li></ul></td>
+    <td width="55%">**30%** (in this case, 30 Robux) from the sale revenue goes to the item owner.</td>
+    <td width="45%">From the 30 Robux:<br /><br /><ul><li>The license owner receives **3 Robux** (10%).</li><li>The item creator receives the rest, or **27 Robux** (90%).</li></ul></td>
   </tr>
   <tr>
-    <td colspan="2">**30%** (in this case, 30 Robux) from the sale revenue goes to the owner of the item.</td>
+    <td colspan="2">**40%** (in this case, 40 Robux) from the sale revenue goes to the seller, such as the game owner if the item is sold within a game.</td>
     <td></td>
   </tr>
   <tr>

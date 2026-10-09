@@ -71,6 +71,50 @@ end
 part.TouchEnded:Connect(onTouchEnded)
 ```
 
+### Collision summaries
+
+`Class.BasePart.Touched|Touched` tells you **that** a collision happened, but not where it happened, which direction it came from, or how hard it was. For detailed contact data from the physics engine, call `Class.BasePart:BindToCollisionSummaries()|BindToCollisionSummaries()` on a part. It takes a callback and returns an `Datatype.RBXScriptConnection` that you can disconnect when you no longer need the data. This is a separate API from `Class.BasePart.Touched|Touched`, so don't call it from inside a `Class.BasePart.Touched|Touched` handler.
+
+The callback runs once per frame, after the physics step completes. It receives a table with a summary of every collision the part was involved in during that frame. Each summary describes one contact patch between the subscribed part and another part. Summaries are frozen and can't be changed. Each one has these fields:
+
+| Field              | Type               | Description                                                                                                      |
+| ------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| `Time`             | number             | Simulation time of the substep.                                                                                  |
+| `Part0`            | `Class.BasePart`   | The subscribed part.                                                                                             |
+| `Part1`            | `Class.BasePart`   | The other part in the pair.                                                                                      |
+| `Point`            | `Datatype.Vector3` | Averaged contact point, in world space.                                                                          |
+| `Normal`           | `Datatype.Vector3` | Unit normal. It always points away from `Part0`.                                                                 |
+| `RelativeVelocity` | `Datatype.Vector3` | Velocity of `Part1` relative to `Part0` at the contact point, measured before the solver resolves the collision. |
+| `Area`             | number             | Estimated area of the contact patch.                                                                             |
+
+To get the head-on impact speed, take the dot product of `RelativeVelocity` and `Normal`. To detect glancing hits or sliding, use the tangential component of `RelativeVelocity`. If you want a value closer to a force, combine the speed with the parts' `Class.BasePart.AssemblyMass|AssemblyMass`.
+
+```lua title="Impact-based effects"
+local part = workspace.Part
+
+local function onCollision(summaries)
+	for _, summary in summaries do
+		local impactSpeed = summary.RelativeVelocity:Dot(summary.Normal)
+		if impactSpeed > 10 then
+			print("Hard impact at", summary.Point, "with speed", impactSpeed)
+		end
+	end
+end
+
+local connection = part:BindToCollisionSummaries(onCollision)
+
+-- Later, when you no longer need summaries
+connection:Disconnect()
+```
+
+Keep the following in mind when you use collision summaries:
+
+- Summaries are only generated on the [network owner](../physics/network-ownership.md) that runs the physics simulation, which can be a client or the server. They aren't replicated. If other clients need to know about a collision, process the summary and send only the data they need through your own [remote event](../scripting/events/remote.md).
+- Parts with `Class.BasePart.CanCollide|CanCollide` set to `false` don't produce collision summaries.
+- Complex non-convex parts can produce more than one summary for the same pair of parts.
+- Contacts between two sleeping parts aren't recorded.
+- Processing cost grows with the number of subscribed parts, not with the total number of collisions in the place.
+
 ## Collision filtering
 
 Collision **filtering** defines which physical parts collide with others. You can configure filtering for numerous objects through [collision groups](#collision-groups) or you can control collisions on a [part‑to‑part](#part-to-part-filtering) basis with `Class.NoCollisionConstraint` instances.
@@ -191,7 +235,7 @@ workspace:RegisterCollisionGroup(cubes)
 workspace:RegisterCollisionGroup(doors)
 
 -- Set cubes to be non-collidable with doors
-workspace:CollisionGroupSetCollidable(cubes, doors, false) 
+workspace:CollisionGroupSetCollidable(cubes, doors, false)
 ```
 
 </TabItem>

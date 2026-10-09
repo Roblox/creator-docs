@@ -286,10 +286,11 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Unsafe
     capabilities:
       - Animation
+      - PluginOrOpenCloud
 events:
   - name: Animator.AnimationPlayed
     summary: |
