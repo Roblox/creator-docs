@@ -11,6 +11,8 @@ description: Use funnel events to visualize user progression through key milesto
 
 Once your game begins tracking funnel events, you unlock the Funnel page of the Analytics dashboard on the Creator Hub. You can add tabs to the dashboard for up to ten funnels.
 
+If a user has no events for a funnel for more than 180 days, their saved step expires, and they count as a new user for that funnel if they return.
+
 ## Track funnel events
 
 To track funnel events, first identify the most important funnels in your game and segment them into steps. Because the goal is to understand player behavior, these steps usually correspond to some action or achievement.

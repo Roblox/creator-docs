@@ -47,31 +47,36 @@ SLIM requires the following:
 
 When you publish or playtest a game with SLIM-enabled models, the engine uploads model data to a cloud service that generates optimized composite meshes with multiple levels of detail. At runtime, clients fetch these assets from the CDN and the engine selects the appropriate detail level based on distance and device capability, classifying each SLIM model into rendering zones based on distance from the camera:
 
-<img src="../../assets/optimization/streaming/SLIM-Zones.jpg" width="720" alt="Diagram showing the four SLIM rendering zones radiating from a player character." />
+<img src="../../assets/optimization/streaming/SLIM-Zones.jpg" width="720" alt="Diagram showing the four SLIM rendering zones, colored sky blue, teal, yellow, and vermilion, radiating from a player character." />
 
 <table>
 <thead>
 	<tr>
 		<th>Range</th>
-		<th>Behavior</th>
+		<th>Data Model State</th>
+		<th>Rendering</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
-		<td><ColorSwatch value="rgb(191,0,25)" /></td>
-		<td>Full instances streamed in; traditional part-by-part rendering.</td>
+		<td><ColorSwatch value="rgb(86,180,233)" /></td>
+		<td>Full instances streamed in.</td>
+		<td>Traditional part-by-part rendering.</td>
 	</tr>
 	<tr>
-		<td><ColorSwatch value="rgb(229,55,0)" /></td>
-		<td>Full instances streamed in, but the engine renders the SLIM composite when more efficient.</td>
+		<td><ColorSwatch value="rgb(0,158,115)" /></td>
+		<td>Full instances streamed in.</td>
+		<td>The engine renders the SLIM composite when more efficient.</td>
 	</tr>
 	<tr>
-		<td><ColorSwatch value="rgb(229,132,0)" /></td>
-		<td>Instances streamed out (only a minimal placeholder exists in the `Class.DataModel`, not the full model hierarchy), SLIM composite rendering.</td>
+		<td><ColorSwatch value="rgb(240,228,66)" /></td>
+		<td>Instances streamed out. Only a minimal placeholder exists in the `Class.DataModel`, not the full model hierarchy.</td>
+		<td>SLIM composite rendering.</td>
 	</tr>
 	<tr>
-		<td><ColorSwatch value="rgb(0,173,73)" /></td>
-		<td>Minimal placeholder in the `Class.DataModel`, not rendered.</td>
+		<td><ColorSwatch value="rgb(213,94,0)" /></td>
+		<td>Minimal placeholder in the `Class.DataModel`.</td>
+		<td>Not rendered.</td>
 	</tr>
 </tbody>
 </table>
@@ -256,7 +261,7 @@ There are multiple tint modes to select from. See `Enum.SlimTintMode` for the co
 </TabItem>
 
 <TabItem label="Data Model State">
-`Enum.SlimTintMode.DataModelState|Data Model State` colors meshes by streaming state of the `Class.DataModel`. Green indicates the high-fidelity zone where the `Class.DataModel` is present; yellow indicates the low-fidelity zone where the `Class.DataModel` is absent.
+`Enum.SlimTintMode.DataModelState|DataModelState` colors meshes by streaming state of the `Class.DataModel`. Teal indicates the high-fidelity zone where the `Class.DataModel` is present; yellow indicates the low-fidelity zone where the `Class.DataModel` is absent.
 
 <video controls width="70%" src="../../assets/optimization/debug-visualizations/SLIM-Tint-Mode-DataModel.mp4"></video>
 </TabItem>

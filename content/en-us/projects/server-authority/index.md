@@ -214,6 +214,10 @@ In order to be replicated, an attribute must meet all of the following criteria:
 
 Many properties and methods in the engine API reference include the **Simulation Access** label, for example `Class.BasePart.CFrame`. Properties with this label will be predicted by the server authority system. Additionally, only properties and methods with this label can be accessed inside functions bound with `Class.RunService:BindToSimulation()`.
 
+<Alert severity="warning">
+Simulation restrictions apply based on when code runs, not which Luau thread runs it. Because `Library.task.spawn()` resumes code immediately, calling it from `Class.RunService:BindToSimulation()|BindToSimulation()` runs the new thread during simulation and keeps the simulation restrictions. Use `Library.task.defer()` to schedule code outside simulation and its restrictions.
+</Alert>
+
 ### Input actions
 
 In a server-authoritative game, the primary way for a client to affect the game's state is through the [Input Action System](../../input/input-action-system.md). These inputs are sent to the server and are replayed during resimulation on the client. As a result, `Class.InputAction|InputActions` should be used for **all inputs that affect the core simulation** and they should be checked for sanity before they're processed.
