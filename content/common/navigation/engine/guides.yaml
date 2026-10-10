@@ -102,6 +102,8 @@ navigation:
         path: /parts/materials
       - title: Terrain
         path: /parts/terrain
+      - title: Custom Terrain Materials
+        path: /parts/terrain-materials
       - title: Physics
         path: /physics/
         section:

@@ -17,6 +17,8 @@ Using the editor tools, you can easily [generate](#generate-terrain) and edit te
 
 The following default materials are available for terrain, and you can also apply [custom materials](../parts/materials.md#custom-materials). Materials affect both the shape and appearance of terrain in the world; for example, [animated grass](#grass-animation) renders only on the `Enum.Material.Grass|Grass` material and the `Enum.Material.Water|Water` material [ripples and shimmers](#water-appearance) with a subtle motion.
 
+For the 62-slot **Expanded Terrain** system, which lets you assign custom materials to individual terrain voxels through scripting or the Material Manager, see [Custom Terrain Materials](../parts/terrain-materials.md).
+
 <GridContainer numColumns="4">
   <figure>
     <img src="../assets/modeling/terrain/Material-Asphalt.jpg" alt="Appearance of Asphalt material" />
