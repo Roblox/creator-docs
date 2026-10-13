@@ -77,7 +77,8 @@ If you're setting up webhooks and handling personal data, ensure they comply wit
 To set up a webhook:
 
 1. Select your experience on [Creator Hub](https://create.roblox.com/).
-2. Under **Configure**, select **Webhooks** and click **Add Webhook**.
+1. In the left-hand navigation, navigate to **Configurations** > **Webhooks**.
+1. Click the **Add Webhook** button.
 
    The webhook URL comes from your provider. For example, a Slack URL probably looks like this:
 
@@ -85,11 +86,11 @@ To set up a webhook:
    https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
    ```
 
-3. Enter your webhook URL and a name.
-4. <Chip label="OPTIONAL" size="small" variant="outlined" /> Include a secret, which helps ensure that the notifications you receive are coming from Roblox. For more information, see [Verify webhook security](#verify-webhook-security).
-5. Choose one or more options from the list of [supported triggers](#supported-triggers) of events for which you want to receive notifications.
-6. <Chip label="OPTIONAL" size="small" variant="outlined" /> Use the **Test Response** button to check if your service can receive a sample request.
-7. Click **Save Changes**.
+1. Enter your webhook URL and a name.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Include a secret, which helps ensure that the notifications you receive are coming from Roblox. For more information, see [Verify webhook security](#verify-webhook-security).
+1. Choose one or more options from the list of [supported triggers](#supported-triggers) of events for which you want to receive notifications.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Use the **Test Response** button to check if your service can receive a sample request.
+1. Click **Save Changes**.
 
 <Alert severity="info">
 Currently, you can configure up to 5 webhooks in total.
@@ -127,9 +128,9 @@ Third-party tools usually have their own requirements for webhooks that you need
 You can test whether the webhook you've configured can successfully receive notifications on the [Creator Dashboard](https://create.roblox.com/dashboard/creations):
 
 1. Navigate to the [Webhooks](https://create.roblox.com/settings/webhooks) configuration page.
-2. Select the webhook you want to test from the list of configured webhooks.
-3. Click the pencil icon next to the target webhook.
-4. Click the **Test Response** button.
+1. Select the webhook you want to test from the list of configured webhooks.
+1. Click the pencil icon next to the target webhook.
+1. Click the **Test Response** button.
 
 The system then sends a `SampleNotification` event, which includes the **User ID** of the user who triggered the notification, as shown here:
 
@@ -213,8 +214,8 @@ When the target event of your webhook is triggered, it sends a request to your w
 The **fixed payload schema fields** can help maintain consistency across all webhook requests, with the following fields available:
 
 1. `NotificationId` (string): A unique identifier for each notification sent. If the same `NotificationId` is received twice, it is considered a duplicate.
-2. `EventType` (string): Indicates the type of event for which the notification was triggered.
-3. `EventTime` (string): The timestamp of when the event was triggered.
+1. `EventType` (string): Indicates the type of event for which the notification was triggered.
+1. `EventTime` (string): The timestamp of when the event was triggered.
 
 The **variable payload schema fields** provides flexibility for webhooks to accommodate various types of events, which include:
 

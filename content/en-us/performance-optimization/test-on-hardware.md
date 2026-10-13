@@ -3,7 +3,7 @@ title: Test on hardware
 description: Explains why and how to test your game on real devices to catch performance and usability issues before your players do.
 ---
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/m6zSJpk6neU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe><br />
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/m6zSJpk6neU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 Roblox Studio provides useful emulation tools for [testing different devices](../studio/testing-modes.md), but emulation can't fully replicate what happens on real hardware. Frame rates, memory pressure, thermal throttling, and input latency all behave differently on physical devices. Testing on hardware helps you catch issues that only surface under real-world constraints.
 

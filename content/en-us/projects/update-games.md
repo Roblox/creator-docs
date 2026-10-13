@@ -14,27 +14,27 @@ For time-sensitive updates, you might prefer to deploy early, hide content behin
 To restart servers for release updates:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select the game you want to restart servers for.
-2. Go to **Configure** ⟩ **Server Management**.
-3. Select the places you want to restart.
-4. Click **Restart Servers**.
-5. In the **Confirm Server Restart** dialog:
+1. In the left-hand navigation, navigate to **Configurations** > **Server management**.
+1. Select the places you want to restart.
+1. Click **Restart Servers**.
+1. In the **Confirm Server Restart** dialog:
    1. Select one or both of the following restart options:
       - **Restart only servers with outdated versions** to avoid restarting servers that are running the latest published place version.
       - **Delay server restart** to delay the shutdown of servers and allow players a set time between 1 and 60 minutes to leave the game on their own instead of being temporarily disconnected. This is also known as server bleed-off.
-   2. Click **Restart**.
+   1. Click **Restart**.
 
 <Alert severity="warning">
-   Unless you have a game update workflow that is independent of place version, it's recommended that you always select **Restart only servers with outdated versions** to avoid unnecessarily disconnecting players.
+Unless you have a game update workflow that is independent of place version, it's recommended that you always select **Restart only servers with outdated versions** to avoid unnecessarily disconnecting players.
 </Alert>
 
 After you restart servers, Roblox:
 
 1. Stops all matchmaking to servers designated for shutdown. Players who join your game by clicking the **Play** button will not be matched to these servers, but they can still join them by accepting invites, teleporting, or joining another user from their profile.
-2. Waits for the configured delay time, if you selected the **Delay server restart** option.
-3. Automatically teleports players to the updated version of the game. All players on the same old server are sent to the same replacement server running the new version.
+1. Waits for the configured delay time, if you selected the **Delay server restart** option.
+1. Automatically teleports players to the updated version of the game. All players on the same old server are sent to the same replacement server running the new version.
 
 <Alert severity="info">
-   If you want to completely shut down your game and not allow players to reconnect after you restart your servers, you must make the game private.
+If you want to completely shut down your game and not allow players to reconnect after you restart your servers, you must revoke access to your game from the [public](../production/publishing/publish-games-and-places.md#target-audience).
 </Alert>
 
 ## Notifications on servers

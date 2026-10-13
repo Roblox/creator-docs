@@ -341,6 +341,7 @@ In cases where you need to identify the current body scale of a body part or acc
 
 - **One attachment** - Each rigid accessory requires at least one attachment point to its associated body part.
 - **Naming convention** - The `Class.Attachment` name must follow a specific naming convention depending on the `Class.Accessory.AccessoryType`. The AFT automatically generates an appropriate `Class.Attachment` name.
+- **Head placement** - For accessories that attach to the head, such as hats and hair, position the attachment point so it fits on the visible surface of the head mesh. Attachment points that float away from the visible head violate [Marketplace policy](../../marketplace/marketplace-policy.md#general-creation-guidelines).
 
 If setting or configuring attachments manually in Studio, use the following names for your `Class.Attachment` object according to the accessory type:
 

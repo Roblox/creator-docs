@@ -135,4 +135,4 @@ For an overview of creating your first layered accessory, see the following vide
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/C-DwGRBHvmE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
-<br /> For the full avatar workflow, see [Layered accessories](../../../avatar/layered-accessories/index.md), the [Accessory Fitting Tool](../../../avatar/accessory-fitting-tool.md), and [Automatic Skinning Transfer](../../../avatar/automatic-skinning-transfer.md).
+For the full avatar workflow, see [Layered accessories](../../../avatar/layered-accessories/index.md), the [Accessory Fitting Tool](../../../avatar/accessory-fitting-tool.md), and [Automatic Skinning Transfer](../../../avatar/automatic-skinning-transfer.md).

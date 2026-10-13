@@ -85,18 +85,19 @@ If you were to close Studio now, you would lose every edit you made to your game
 It's recommended to publish to Roblox every ten minutes or after making a big change.
 </Alert>
 
-1. In the top-left corner of your computer, click **File** ⟩ **Publish to Roblox** to open the publishing window.
+1. In the top-left corner of your computer, click **File** > **Publish** to open the publishing window.
 
-1. In the **Publish Experience** window,
+1. In the **Game details** window,
 
+   1. Upload an [icon](../../../production/publishing/experience-icons.md) and [thumbnail](../../../production/publishing/thumbnails.md) to display on your game's main details page.
    1. In the **Name** field, provide a name for your game.
-   1. <Chip label="OPTIONAL" size="small" variant="outlined" /> In the **Description** field, provide a summary of what a player can expect from the game.
-   1. In the **Devices** section, enable every device you want players to use to access your game.
-   1. At the bottom-right of the window, click the **Create** button.
+   1. Set **Genre** and the optional **Subgenre** dropdown menus to what type of gameplay players should expect. For more information, see [Genres](../../../production/publishing/experience-genres.md).
+   1. In the **Description** field, provide a summary of what players can expect from your game.
+   1. Click the **Save** button. Roblox publishes your game to the cloud with a unique `UniverseID`.
 
 Now that your game is published and connected to your account, you can edit it from any computer!
 
 <Alert severity="info">
 <AlertTitle>Saving after publishing</AlertTitle>
-Next time you want to save your work, just go to **File** ⟩ **Publish to Roblox** or use the hotkey combo (<kbd>Alt</kbd><kbd>P</kbd>/<kbd>⌥</kbd><kbd>P</kbd>).
+Next time you want to save your work, just go to **File** > **Publish** or use the hotkey combo (<kbd>Alt</kbd><kbd>P</kbd>/<kbd>⌥</kbd><kbd>P</kbd>).
 </Alert>

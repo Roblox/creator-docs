@@ -7,8 +7,6 @@ prev: /tutorials/curriculums/core/building/create-a-project
 
 <iframe width="800" height="495" src="https://www.youtube-nocookie.com/embed/_ZW5g7er4Zc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br/>
-
 **Creating an environment with terrain** allows you to generate and customize organic materials within the 3D space that look and behave like natural materials from the real world. Using the tools in the [Terrain Editor](../../../../studio/terrain-editor.md), this section teaches you how to generate and sculpt terrain for a small island where players spawn and begin navigating your game.
 
 <Alert severity="info">

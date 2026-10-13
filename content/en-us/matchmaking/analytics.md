@@ -9,8 +9,8 @@ Use the matchmaking analytics dashboard metrics to analyze the impact of individ
 
 To access the matchmaking analytics dashboard:
 
-1. In the **Creator Dashboard**, navigate to **Creations**, then select a game.
-2. In the lefthand navigation, navigate to the **Configure** section, then select **Custom Matchmaking**.
+1. Select a game on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+2. In the left-hand navigation, navigate to **Configurations** > **Custom matchmaking**.
 3. In the horizontal navigation, select the **Analytics** tab.
 
 ## See metrics for a specific place

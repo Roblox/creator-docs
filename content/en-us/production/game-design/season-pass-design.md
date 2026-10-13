@@ -5,8 +5,6 @@ description: Teaches you about best practice guidance on designing season packs.
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/k2gbQI-ggB4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br />
-
 A _season pass_ is a limited-time, quest-based progression systems that is part of an experience's content cadence. Players complete quest objectives to earn rewards for the duration of the pre-defined period of time or "season".
 
 Season passes are time-bound design strategies used in Roblox experiences to deliver new content, promote player retention, and generate revenue. Season passes encourage players to complete tasks, gain pass experience points (XP), and climb through reward tiers. When making a season pass, it's imperative to:

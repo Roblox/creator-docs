@@ -7,8 +7,6 @@ next: /tutorials/curriculums/core/building/create-basic-visual-effects
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/MSGrq7f25lg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br/>
-
 Players can now collect coins and lose them when they die, but the coins don't do anything, and most of the 3D world is inaccessible without the ability to jump very high. This section of the tutorial teaches you how to finish the logic for your game by adding an on-screen button that spends coins to increase jumping power.
 
 ## Create the upgrade button
@@ -24,6 +22,7 @@ In ReplicatedStorage, create a folder named Instances.
 Inside the Instances folder, create a ScreenGui named JumpPurchaseGui with ResetOnSpawn disabled.
 
 Inside JumpPurchaseGui, create a TextButton named JumpButton with the following properties:
+
 - Text: "Upgrade Jump (5 Coins)"
 - TextSize: 25
 - AnchorPoint: 1, 1
@@ -57,6 +56,7 @@ For the upgrade button, you'll create a folder inside **ReplicatedStorage** to h
    <img src="../../../../assets/tutorials/script-an-upgrade-button/Insert-RemoteFunction.png" alt="Studio's Explorer window with the IncreaseJumpPowerFunction script highlighted under the Instances folder." width="320" />
 
 5. Select **StarterPlayer** in the Explorer, then in the **Properties** window enable **CharacterUseJumpPower**. Without this, jump power values are ignored and every character jumps at a fixed height.
+
 </TabItem>
 </Tabs>
 

@@ -5,8 +5,6 @@ description: Prototyping
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/wN4-AERPU9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br />
-
 **Prototyping** is an experimental design process where teams iterate and explore preliminary ideas for games before finalizing and working on them as features. The two common prototyping techniques when it comes to Roblox development are [paper](#paper-prototyping) and [studio](#studio-prototyping) prototyping. The primary benefits of prototyping are:
 
 - **Time efficiency:** The value of prototyping is the speed in which you can iterate and explore solutions to potential problems. Prototyping ensures that you detect design flaws, oversights, and unexpected technical requirements in the early stages of pre-production, instead of months into development. The time and energy required to prototype in the early stages of creating a game is less than the time and energy required to fix costly oversights in the later stages.
@@ -15,8 +13,6 @@ description: Prototyping
 ## Paper prototyping
 
   <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/IJSih2t_jso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-
-  <br />
 
 **Paper prototyping** is the act of designing a game using physical objects to simulate gameplay and player interaction. Examples include:
 
@@ -50,8 +46,6 @@ Despite its benefits, prototyping on paper has drawbacks due to the difference i
 ## Studio prototyping
 
 <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/Q4Cec876KLU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-
-<br />
 
 _Studio prototyping_ is the act of using Roblox Studio to design and iterate the early stages of a game. The benefits of starting directly in Studio for prototyping includes:
 

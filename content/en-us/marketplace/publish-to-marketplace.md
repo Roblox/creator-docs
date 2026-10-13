@@ -4,7 +4,6 @@ description: Explains how to publish user-generated content to the Marketplace.
 ---
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/swQW2VS9ZMA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-<br /><br />
 
 In order to publish and sell assets on the Marketplace, your account or group must first meet [Roblox's Creator and Group requirements](../marketplace/marketplace-policy.md#creator-and-group-requirements). Users who satisfy the requirements and have not hit their [publishing limits](#upload-and-publish-limits), can upload and sell their assets in the following general steps:
 
@@ -62,12 +61,9 @@ When uploading your asset, Studio checks your asset for technical issues, such a
 To upload your asset:
 
 1. In Studio, add the Marketplace item to your workspace.
-
    - For accessories and clothing, the item must be an `Class.Accessory` object. For information on the required specifications, see [Rigid accessory specifications](../avatar/rigid-accessories/specifications.md) and [Layered clothing specifications](../avatar/layered-accessories/specifications.md).
-
      - Upload clothing and accessories as an `Class.Accessory`. For information on converting your `Class.Model` into an `Class.Accessory`, see [Accessory Fitting Tool](../avatar/accessory-fitting-tool.md).
      - If uploading shoes, each shoe must be their own accessory object:
-
        - Name the respective shoe accessories `LeftShoeAccessory` and `RightShoeAccessory`.
        - Select both left and right shoe accessories and right-click ⟩ **Group as a Model** before step 2.
 
@@ -93,7 +89,6 @@ To upload your asset:
    </GridContainer>
 
 5. Once validation completes successfully, an item description dialog displays. Fill out the following fields and follow [metadata best practices](../production/publishing/publish-games-and-places.md#publish-games) when possible.
-
    - **Title**: The name of your asset in the Marketplace.
    - **Creator**: You can set your user or any associated groups as the creator of this asset. The creator can access the Marketplace asset to set prices, benefits, and access sales information.
 
@@ -141,6 +136,8 @@ If a Roblox update breaks an existing asset, [submit a help ticket](https://www.
 </Alert>
 
 Before publishing your asset, it's important to consider if you want to sell your asset as a Limited or Non-Limited item.
+
+If your item uses licensed IP, navigate to the **Item Attributes** section of the **Manage Item** page, then select your approved license from the license dropdown before publishing. For information on how to request a license and how revenue share applies, see [Marketplace licenses](../ip-licensing/creators.md#marketplace-licenses).
 
 ### Metadata
 

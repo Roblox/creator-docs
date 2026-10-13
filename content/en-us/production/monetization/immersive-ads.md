@@ -110,8 +110,6 @@ Even if your game is eligible to serve ads, not all users are eligible to see ad
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/dlItlMLMDCE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br /> <br />
-
 When you insert an ad unit into an eligible game, make sure to check each image ad surface to confirm whether or not it's valid and able to serve ads. For example, you can scale ad units to different sizes to match your game's aesthetics, but you can't make them too small or large, otherwise they become invalid and can't serve ads.
 
 <GridContainer numColumns="2">

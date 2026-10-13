@@ -5,7 +5,6 @@ next: /art/accessories/creating/modeling-setup
 ---
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/C-DwGRBHvmE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-<br /><br />
 
 **Layered accessories**, often referred to as **layered clothing**, are 3D objects that stretch and fit on an avatar character's body according to their rigging armature and cage meshes. When users purchase layered accessories on the [Marketplace](https://www.roblox.com/catalog), such as jackets, dresses, and cardigans, they expect it to move with the character's animations and layer appropriately on top of existing clothing the character is wearing.
 

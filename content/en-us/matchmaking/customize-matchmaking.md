@@ -13,8 +13,8 @@ You can adjust the weights of existing Roblox signals to customize your game's m
 
 To create a custom matchmaking configuration using only Roblox signals:
 
-1. In the **Creator Dashboard**, navigate to **Creations**, then select a game.
-2. In the lefthand navigation, navigate to the **Configure** section, then select **Custom Matchmaking**.
+1. Select a game on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+2. In the left-hand navigation, navigate to **Configurations** > **Custom matchmaking**.
 3. Select the **Configuration** tab and click **Create Configuration**.
 4. In the **Create a Custom Matchmaking Configuration** page, enter a name for your configuration.
 5. Change the weights of the Roblox signals you want to update.
@@ -30,8 +30,8 @@ The new matchmaking configuration shows up in the **Configurations** list of the
 
 To create a custom matchmaking configuration using custom signals:
 
-1. In the **Creator Dashboard**, navigate to **Creations**, then select a game.
-2. In the lefthand navigation, navigate to the **Configure** section, then select **Custom Matchmaking**.
+1. Select a game on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+2. In the left-hand navigation, navigate to **Configurations** > **Custom matchmaking**.
 3. Select the **Configuration** tab and click **Create Configuration**.
 4. In the **Create a Custom Matchmaking Configuration** page, enter a name for your configuration.
 5. Click **Add Custom Signal** and [create a custom signal](#create-a-custom-signal).

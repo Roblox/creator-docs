@@ -95,6 +95,15 @@ To request a Marketplace license:
 
 Once the rights holder has accepted your offer, you will link this license to the IP-based items (and only those items) during publication. Sales of the IP-based items will continue to be subject to marketplace fees, before the revenue share with the rights holder.
 
+To publish an item under an approved Marketplace license, select the applicable license from the license dropdown on the avatar item's configure page when you [publish the item](../marketplace/publish-to-marketplace.md#publish-an-asset). The **Sale Location and Revenue** section then shows the **IP Holder Share**, based on the license's revenue share rate, alongside your expected earnings and other revenue splits. The revenue share also applies when the item is resold.
+
+Keep the following in mind for Marketplace licenses:
+
+- Supported item categories include body items, clothing, accessories, animations, and makeup.
+- Each item can be associated with only one IP license at a time.
+- Each license currently allows up to 100 separate items.
+- You don't need a separate game license to sell licensed Marketplace items inside a game.
+
 ### Pitch details
 
 Including a well-written pitch with your request can make the rights holder more likely to approve your license request. Your pitch should convey a compelling idea and show that you are confident in your ability to execute this creative vision.
@@ -104,25 +113,21 @@ You can attach images to your pitch if they comply with Roblox's [Community Stan
 We recommend that you include the following information in your pitch:
 
 - **Overall vision**:
-
   - What makes your adaption of the IP unique and exciting for players.
   - Your team's relevant experience, including examples of previous games you have developed, along with any previous work involving IP.
   - How you believe the IP integration will engage players, expand the IP's reach, and create new opportunities for monetization and community growth.
 
 - **Creative elements**:
-
   - How your creation's visual and audio design will reflect the IP, including character models, avatar item design, environments, UI, and soundscapes. For example, if you're requesting to integrate an IP like Pingu, you can highlight the use of stylized penguins and arctic scenes.
   - How the story, lore, or signature moments from the IP will be integrated into your game. This could involve recreating iconic scenes, referencing key plot points, or introducing original storylines that fit within the universe of the IP.
   - How you will maintain the integrity of the IP, making sure all creative choices align with the IP's established tone, themes, and content standards.
 
 - **Gameplay**:
-
   - How the main gameplay loops will leverage the IP's unique features. For example, a survival horror IP could include mechanics like stealth, resource management, or cooperative puzzle-solving.
   - How players will interact with the IP. You can describe progression systems, challenges, and rewards that are consistent with the theme of the IP.
   - How your game genre aligns with the IP. For example, an IP like The Strangers might be more aligned with PvE escape games or social deduction horror, while an IP like Fall might be more aligned with high-stakes obbys or survival challenges.
 
 - **Timeline**:
-
   - What the current state of your game is and when you expect the IP to be fully integrated into your game.
 
 For more information about guidelines you must follow when writing your pitch, see [Communication guidelines](./faq.md#communication-guidelines).
@@ -240,7 +245,7 @@ To cancel a license request:
 
 ## License expiration & termination
 
-Licenses may expire if time-based or be terminated if you violate the terms of the license. You are responsible for removing your use of the IP in these cases. Rights holders may choose to take action, including legal remedies, if you fail to remove the IP. Licensed Marketplace items are automatically removed from sale.
+If a license expires or is terminated from a violation in the terms of the license, any associated licensed items are automatically removed from sale. In these cases, you are responsible for removing your use of the IP. If you fail to remove the IP, rights holders may choose to take action, including legal remedies. Users who already bought those licensed items can keep them unless an item is separately moderated.
 
 ## Licensed creations can display a badge to users
 

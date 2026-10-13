@@ -304,7 +304,7 @@ Your decision determines the config changes that Roblox proposes:
 
 ## Best practices for experiments
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/j6OPA95-1O0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen ></iframe><br />
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/j6OPA95-1O0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen ></iframe>
 
 - **Use the minimum detectable effect (MDE)** to decide if your experiment is worth running.
 

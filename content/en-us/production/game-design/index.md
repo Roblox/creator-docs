@@ -5,8 +5,6 @@ description: Design games on Roblox
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/EvikDSBtaCc?si=HCklWoO6H61NVa9x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br />
-
 A designer's role is to create an engaging game for players, retain those players over time, and devise a sustainable monetization model to fund further development. Whether you are a novice designer or a veteran, Roblox offers a variety of resources to help you through the design process.
 
 ## What's new

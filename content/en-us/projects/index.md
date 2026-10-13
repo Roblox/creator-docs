@@ -59,7 +59,7 @@ Game settings are managed from the [Creator Dashboard](https://create.roblox.com
 
 - **Basic Info** &mdash; Basic information about the game, such as its name, description, and genre. Much of the information here is used in your game's listing.
 - **Communication** &mdash; Settings which enable eligible users to use [voice chat](../chat/voice-chat.md) or animate their avatar via their camera within your game.
-- **Permissions** &mdash; Configures who can access your game. New games begin as **private** and can only be edited and joined by you and members of your [group](../projects/groups.md) with the correct permissions. When appropriate, you can [release](../production/publishing/publish-games-and-places.md#make-game-public) the game to the public.
+- **Permissions** &mdash; Configures who can access your game. When games are first published, they are only accessible to you as the creator, users with **Edit** or **Playtest** access, and group members with the appropriate [roles and permissions](../projects/groups.md#roles-and-permissions). When you're ready, you can [release](../production/publishing/publish-games-and-places.md#release-games) the game to a wider audience.
 - **Monetization** &mdash; Options for earning revenue from your game, as outlined in [Monetization](../production/monetization/index.md).
 - **Localization** &mdash; Configuration for different [languages and regions](../production/localization/index.md).
 - **Avatar** &mdash; Settings related to avatars, such as avatar scaling and

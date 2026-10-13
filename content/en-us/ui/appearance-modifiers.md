@@ -48,7 +48,6 @@ To set a gradient's color sequence:
 1. Each triangle on the bottom axis of the color sequence is a **keypoint** that determines the color value at that point.
 
    <img src="../assets/studio/general/ColorSequence-White-Keypoints-Labeled.png" width="628" alt="Color sequence popup from white to white" />
-
    1. Click a keypoint in the color sequence to select or reposition it, or add another keypoint by clicking anywhere on the graph.
    2. Click the small square next to **Color** to open the **Colors** pop-up window, then select the desired color for the keypoint.
    3. If needed, repeat these steps to add/adjust colors across the graph.
@@ -66,7 +65,6 @@ To adjust a gradient's transparency across its range:
 1. Each square across the number sequence graph is a **keypoint** that determines the transparency value at that point.
 
    <img src="../assets/studio/general/NumberSequence-0-0-Keypoints-Labeled.png" width="828" alt="Keypoints labeled in number sequence popup" />
-
    1. Click a keypoint in the number sequence to select or reposition it, or add another keypoint by clicking anywhere on the graph.
    2. Enter a specific time/value combination through the **Time** and **Value** inputs.
    3. If needed, repeat these steps to add/adjust transparency levels across the graph.
@@ -417,19 +415,33 @@ A `Class.UIPadding` object applies top, bottom, left, and/or right padding to th
 
 ## Shadow
 
-A `Class.UIShadow` object renders a drop shadow behind its parent UI instance. Key features include:
+A `Class.UIShadow` object renders a shadow for its parent UI instance. A shadow can follow the parent's rectangular shape or the glyphs of a text object. Shape shadows can appear outside or inside the parent, and mask the area directly behind the parent. Both shape and text shadows can use a color gradient.
 
-- Adjust the shadow's [bluriness](#bluriness).
-- Adjust the shadow's [color and transparency](#color-and-transparency).
-- Adjust the shadow's [offset and spread](#offset-and-spread).
-- If the parent is rotated by `Class.GuiObject.Rotation`, the shadow will also be rotated.
-- If the parent has [round corners](#corners), the shadow will also have round corners.
+If the parent has a `Class.UICorner` or a nonzero `Class.GuiObject.Rotation`, its shape shadow follows the same corners or rotation. `Class.UIShadow` doesn't support `Class.Path2D` or textures.
 
-<Alert severity="info">
-`Class.UIShadow` does not support text. If you add this modifier to a `Class.TextLabel` or `Class.TextButton`, it renders a shadow of the object's rectangular bounding area, not of the text.
-</Alert>
+<BetaAlert betaName="Upgraded UIShadows" leadIn="Some features are currently in beta. Enable them through " leadOut="." components={props.components} />
 
-### Bluriness
+### Shape and text shadows
+
+The `Class.UIShadow.Mode|Mode` property determines what casts the shadow, and both modes can coexist under the same parent.
+
+- `Enum.ApplyShadowMode.Shape|Shape` is the default. The shadow follows the rectangular area of any `Class.GuiObject`.
+- `Enum.ApplyShadowMode.Text|Text` follows the text glyphs of a `Class.TextLabel`, `Class.TextButton`, or `Class.TextBox`. Other UI objects don't render a shadow in this mode.
+
+<GridContainer numColumns="2">
+	<figure>
+    <img src="../assets/ui/ui-objects/UIShadow-Mode-Shape.png" width="424" />
+    <figcaption>`Class.UIShadow.Mode|Mode` = `Enum.ApplyShadowMode.Shape|Shape`</figcaption>
+  </figure>
+	<figure>
+    <img src="../assets/ui/ui-objects/UIShadow-Mode-Text.png" width="424" />
+    <figcaption>`Class.UIShadow.Mode|Mode` = `Enum.ApplyShadowMode.Text|Text`</figcaption>
+  </figure>
+</GridContainer>
+
+`Class.UIShadow.Spread|Spread`, `Class.UIShadow.Inset|Inset`, and `Class.UIShadow.ShowBehindParent|ShowBehindParent` have no effect in text mode.
+
+### Blur
 
 The `Class.UIShadow.BlurRadius|BlurRadius` property determines the shadow's blurriness. A larger value makes the shadow's edges appear softer. Note that the **scale** factor of this `Datatype.UDim` property is relative to the parent's width or height, whichever is shorter.
 
@@ -459,6 +471,13 @@ The `Class.UIShadow.Color|Color` property determines the shadow's color, while `
   </figure>
 </GridContainer>
 
+For a multicolor shadow, insert a `Class.UIGradient` as a child of the `Class.UIShadow`. The gradient affects the shadow without changing the parent's fill.
+
+<figure>
+  <img src="../assets/ui/ui-objects/UIShadow-Color-Gradient.png" width="848" />
+  <figcaption>A `Class.UIGradient` applies a cyan-to-purple gradient to the shape shadow.</figcaption>
+</figure>
+
 ### Offset and spread
 
 The `Class.UIShadow.Offset|Offset` property moves the shadow relative to the parent's position, while `Class.UIShadow.Spread|Spread` expands or shrinks the shadow relative to the parent's size.
@@ -481,3 +500,41 @@ The `Class.UIShadow.Offset|Offset` property moves the shadow relative to the par
     <figcaption>`Class.UIShadow.Spread|Spread` = `{0.3, 0}, {0.3, 0}`</figcaption>
   </figure>
 </GridContainer>
+
+### Inset shadows
+
+Set `Class.UIShadow.Inset|Inset` to `true` to render the shadow on top of and inside the parent instead of behind it. Positive `Class.UIShadow.Spread|Spread` values expand an inset shadow toward the center of the parent.
+
+<GridContainer numColumns="2">
+	<figure>
+    <img src="../assets/ui/ui-objects/UIShadow-Inset-False.png" width="424" />
+    <figcaption>`Class.UIShadow.Inset|Inset` = `false`</figcaption>
+  </figure>
+	<figure>
+    <img src="../assets/ui/ui-objects/UIShadow-Inset-True.png" width="424" />
+    <figcaption>`Class.UIShadow.Inset|Inset` = `true`</figcaption>
+  </figure>
+</GridContainer>
+
+### Reveal content behind a transparent parent
+
+By default, `Class.UIShadow.ShowBehindParent|ShowBehindParent` is `true`, so the entire shape shadow renders, including the portion directly behind the parent. Set it to `false` to mask that portion of the shadow. This prevents the shadow from darkening content visible through a transparent parent.
+
+<GridContainer numColumns="2">
+	<figure>
+    <img src="../assets/ui/ui-objects/UIShadow-ShowBehindParent-True.png" width="424" />
+    <figcaption>`Class.UIShadow.ShowBehindParent|ShowBehindParent` = `true`</figcaption>
+  </figure>
+	<figure>
+    <img src="../assets/ui/ui-objects/UIShadow-ShowBehindParent-False.png" width="424" />
+    <figcaption>`Class.UIShadow.ShowBehindParent|ShowBehindParent` = `false`</figcaption>
+  </figure>
+</GridContainer>
+
+This property has no effect on inset or text shadows.
+
+### Layer shadows
+
+Add multiple `Class.UIShadow` instances to the same parent to combine effects. The `Class.UIShadow.ZIndex|ZIndex` property controls their render order. Shadows with lower values render behind shadows with higher values.
+
+The render order of shadows that share the same `Class.UIShadow.ZIndex|ZIndex` is undefined. Assign each sibling shadow a different value when their order matters.

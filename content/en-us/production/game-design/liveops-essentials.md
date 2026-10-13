@@ -5,8 +5,6 @@ description: LiveOps Essentials is an overview of what live ops are and how to t
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/kNE757v3Bwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br />
-
 **Live operations** (LiveOps) is the post-launch support of a game to maintain player engagement. LiveOps consist of:
 
 - A content cadence

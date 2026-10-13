@@ -5,8 +5,6 @@ description: Explains how to improve engagement metrics for your game.
 
 <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/N2l0BDgSNtQ?si=nSd4PCd8ta_tIC-n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br />
-
 **Engagement** measures how engaging your game is for users.
 
 ## View engagement metrics

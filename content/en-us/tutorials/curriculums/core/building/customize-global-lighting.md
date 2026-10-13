@@ -7,8 +7,6 @@ next: /tutorials/curriculums/core/building/apply-polished-assets
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/VtsWu2G0ZiM?si=TZDy2jahPoWpCBnr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br/>
-
 **Global lighting** controls the overall look and atmosphere of your game. By adjusting a few properties on the `Class.Lighting` service, you can change the color, shadows, time of day, and atmospheric effects of a scene.
 
 In this section, you'll update the lighting to match the [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) sample.

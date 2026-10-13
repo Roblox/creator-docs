@@ -60,7 +60,7 @@ This is a good point at which to check your code and make sure it runs. Testing 
 
 It's important to save the whole project by **publishing** it to Roblox. It's a good idea to publish every ten minutes while you're working or after making a big change.
 
-1. Select **File** → **Publish to Roblox** to open the publishing window.
+1. Select **File** → **Publish** to open the publishing window.
 
 2. Enter a place name and an optional description.
 

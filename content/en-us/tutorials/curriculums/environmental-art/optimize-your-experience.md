@@ -6,8 +6,6 @@ prev: /tutorials/curriculums/environmental-art/construct-your-world
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/vuwn2-atYK8?si=ktbfo_Zx64qIY5AL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br/>
-
 **Optimizing your game** is the process of configuring your assets and Studio settings to keep your frame rate and performance levels high for devices with memory and graphics processing unit (GPU) limitations. This process ensures that nearly every user has the same gameplay and visual experience while they're viewing your environment.
 
 Using the [Environment Art - Optimizing](https://www.roblox.com/games/14447845297/Environment-Art-Optimizing) `.rbxl` file as a reference, this section of the environmental art curriculum shows you how to review and configure your place file for optimal graphics, including guidance on:

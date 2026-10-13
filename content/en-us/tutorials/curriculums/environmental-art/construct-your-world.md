@@ -7,8 +7,6 @@ prev: /tutorials/curriculums/environmental-art/assemble-an-asset-library
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/hOGh8Aw54ko?si=G64hCpV8SUNvO-Ko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br/>
-
 **Constructing your world**, also known as worldbuilding, is the process of decorating the environment with polished assets from your asset library, then adding and configuring additional elements of the 3D space to bring your world to life. This exciting step of the workflow is where you get to see all of your vision and hard work come together into a cohesive environment that is complete and ready for publication.
 
 Using the [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) `.rbxl` file as a reference, this section of the environmental art curriculum shows you how to use and apply your high quality assets and custom materials to your greybox geometry in a way that differentiates each distinct area of the team-based first-person laser tag shooter game, including step-by-step instructions on:

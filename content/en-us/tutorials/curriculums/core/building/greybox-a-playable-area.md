@@ -7,8 +7,6 @@ prev: /tutorials/curriculums/core/building/create-an-environment-with-terrain
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/yQJg1knsbh8?si=rmjdGMyHMFj5BdBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br/>
-
 **Greyboxing** is the process of building a level with simple shapes before investing time in scripting or creating final art assets. It helps you test gameplay, identify layout issues, and make changes quickly while the environment is still easy to modify.
 
 In this section, you'll greybox the sea stack platforms that make up the playable area of the game. Once the layout feels right, you can begin scripting.

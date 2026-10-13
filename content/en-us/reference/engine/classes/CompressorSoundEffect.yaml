@@ -78,7 +78,7 @@ properties:
       in mind this amplification will occur as long as the effect is active,
       regardless of whether the
       `Class.CompressorSoundEffect.Threshold|Threshold` has been reached or not.
-      Range is `0` to `30` (default `0`), measured in dB.
+      Range is `-30` to `30` (default `0`), measured in dB.
     code_samples: []
     type: float
     tags: []

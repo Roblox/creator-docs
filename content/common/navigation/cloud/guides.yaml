@@ -36,6 +36,8 @@ navigation:
         path: /cloud/guides/alerts/
       - title: Supported metrics and dimensions
         path: /cloud/guides/alerts/metrics
+  - title: Error reporting
+    path: /cloud/guides/error-reporting/
   - title: User inventories
     path: /cloud/guides/inventory
   - title: Engine instances

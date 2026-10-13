@@ -8,8 +8,6 @@ description: Immersive ads allow you insert ad units into your game that program
   <iframe width="440" height="247" src="https://www.youtube-nocookie.com/embed/R6HbXwyuHzY" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </GridContainer>
 
-<br /><br />
-
 With rewarded video ads, you can implement a reward mechanism inside your game to incentivize users to watch click-to-play video ads. A rewarded video is a full-screen ad that lasts anywhere from 6 to 30 seconds and that rewards the user with an item after they have finished watching it.
 
 Rewarded video ads let you:

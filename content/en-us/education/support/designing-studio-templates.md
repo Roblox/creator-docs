@@ -95,7 +95,7 @@ Templates can be published either as individual Roblox users or [groups](https:/
 
 With a template ready, it can be published to Roblox, so students can access it online. Once a template is published, educators are responsible for sharing it through a learning management system such as Google Classroom or a messaging system like email.
 
-1. In Roblox Studio, in the top-left, click on **File** ⟩ **Publish to Roblox As**.
+1. In Roblox Studio, in the top-left, click on **File** ⟩ **Publish As**.
 
    <Alert severity="info">
    When students open a template, the first thing they see will be the view of

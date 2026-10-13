@@ -6,7 +6,7 @@ description: Explore the built-in Studio testing modes for games.
 import BetaAlert from '../includes/beta-features/beta-alert.md'
 import PlaytestModes from '../includes/studio/playtest-modes.md'
 
-Because of the underlying [client-server model](../projects/client-server.md) of the Roblox Engine, it's important that you test your game in various modes before [releasing it to the public](../production/publishing/publish-games-and-places.md#make-game-public). All of the testing options are accessible in the left portion of the mezzanine.
+Because of the underlying [client-server model](../projects/client-server.md) of the Roblox Engine, it's important that you test your game in various modes before [releasing it to the public](../production/publishing/publish-games-and-places.md#release-games). All of the testing options are accessible in the left portion of the mezzanine.
 
 <img src="../assets/studio/general/Mezzanine-Testing-Controls.png" width="800" alt="Testing controls indicated in Studio's mezzanine." />
 
@@ -277,7 +277,7 @@ When using Oculus VR, ensure the following:
 
 You can test your game in the Roblox app on Quest without linking your headset to your computer. Use the following steps to access your game on your headset in this mode:
 
-1. In Studio, publish the game and set the game to private.
+1. In Studio, [publish your game](../production/publishing/publish-games-and-places.md#publish-games).
 2. Using your [Creator Dashboard](https://create.roblox.com/dashboard/creations) or the link in Studio, open the game page in your web browser.
 3. On the game page, add the game to your favorites by clicking the **Favorite** icon.
 4. Using your headset, open the standalone Roblox app.

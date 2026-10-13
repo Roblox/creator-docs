@@ -51,7 +51,7 @@ A thumbnail image should be **16:9 aspect ratio** and ideally **1920×1080 pixel
 To upload an image thumbnail for your game:
 
 1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the game you want to upload an image thumbnail for.
-2. Go to **Configure** &rang; **Places** and select a place.
+2. In the left-hand navigation, navigate to **Configurations** > **Places** and select a place.
 3. Click **Thumbnails** in the left nav, then use the **Home Page** tab and the **Experience Detail Page** tab to customize your game's thumbnails for these two spaces.
 
 ### Videos
@@ -65,7 +65,7 @@ To help users understand your game before they join, you can upload an authentic
 To upload a video thumbnail for your game:
 
 1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the game you want to upload a video for.
-2. Go to **Configure** &rang; **Places** and select a place.
+2. In the left-hand navigation, navigate to **Configurations** > **Places** and select a place.
 3. Click **Videos** in the left nav.
 
 Video thumbnails should be **authentic** and [accurately portray in-game content](#video-accuracy) without misleading alterations. **All videos will be reviewed** to ensure they accurately reflect the game and do not violate the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) or [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).

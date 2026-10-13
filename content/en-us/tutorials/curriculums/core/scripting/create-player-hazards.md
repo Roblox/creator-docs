@@ -11,8 +11,6 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowFullScreen></iframe>
 
-<br/>
-
 Right now, players can fall off any platform with no consequence. This section walks you through creating a large invisible hazard at the same height as the water in your game. When a player falls into the hazard, their health is reduced to zero and they respawn at the start of the game.
 
 ## Create a basic water hazard

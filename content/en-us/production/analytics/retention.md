@@ -5,8 +5,6 @@ description: Explains how to improve retention metrics for your game.
 
 <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/LpAU6TheAZ4?si=_1r_ZtlJ3WsrZMUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br />
-
 **Retention** measures how many users return to your game after their first visit in 1 day, 7 days, and 30 days.
 
 ## View retention metrics
@@ -82,8 +80,6 @@ The following example is one path to improve your core loop:
 
 <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/gkFKF9A-snY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br />
-
 To learn more on how to design core loops, see [Core loops](../../production/game-design/core-loops.md).
 
 ### First-time user experience
@@ -109,8 +105,6 @@ You can also use analytics to improve your FTUE:
 Avoid a complex or time consuming FTUE, as you want to get users to the fun as quickly as possible, ideally in 5 minutes or less after entering your game.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XfxbdKtSbOI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-
-<br />
 
 To learn more on how to design your FTUE, see [Onboarding](../../production/game-design/onboarding.md).
 

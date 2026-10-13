@@ -19,7 +19,7 @@ To update your genre:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 2. Click on the thumbnail of the game you want to update the genre for. The game's overview page displays.
-3. In the left-hand navigation, select **Configure** &rang; **Settings**.
+3. In the left-hand navigation, navigate to **Publish Settings** > **Game Details**.
 4. Select the genre of your game. For additional guidance, see [Best Practices](#best-practices).
 5. <Chip label="OPTIONAL" size="small" variant="outlined" /> Select a subgenre if one applies.
 
@@ -31,7 +31,7 @@ To ensure genres are accurate and relevant for users, Roblox regularly reviews g
 
 When Roblox changes your genre, you can appeal the decision if you think Roblox made a mistake:
 
-1. Confirm that Roblox changed your genre by viewing the change on your game's **Settings** page within the Creator Dashboard.
+1. Confirm that Roblox changed your genre by viewing the change on your game's **Game details** page within the Creator Dashboard.
 2. Navigate to [roblox.com/support](http://roblox.com/support).
 3. Confirm that you are logged into your Roblox account with edit permissions for the game.
 4. Select the **Experience Genre** help category, and provide the universe ID for your game. You can find the universe ID for your game on Creator Hub.

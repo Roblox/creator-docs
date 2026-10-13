@@ -29,9 +29,8 @@ The Creator Hub provides a visual interface to manage your RTBF templates withou
 For group games, you must add the **View Analytics** permission to view configs, and the **Edit and publish experience** permission to view, edit, and publish configs. Additionally, the user themself must be [eligible to publish games](https://en.help.roblox.com/hc/en-us/articles/203313890-How-to-Publish-Public-Experiences-on-Roblox).
 </Alert>
 
-1. Navigate to the [Creator Hub](https://create.roblox.com/dashboard/creations).
-1. Select the game you want to configure.
-1. In the left-hand navigation menu, go to **Configure** ⟩ **Data Stores Manager**.
+1. Select a game on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+1. In the left-hand navigation, go to **Configurations** > **Data stores manager**.
 1. Select the **RTBF Deletion** tab.
 1. Click **Create Template**.
 1. Select the **Type** (**Standard Data Store**, **Standard Key**, or **Ordered Key**).
@@ -45,7 +44,7 @@ For group games, you must add the **View Analytics** permission to view configs,
 You can also manage RTBF templates programmatically using the Open Cloud Configs API. This is useful for automation or managing templates at scale.
 
 1. In the Creator Dashboard, [create or edit an API key](https://create.roblox.com/dashboard/credentials) to include the **`universe:read`** and **`universe:write`** permissions for every universe where you want to automate RTBF deletion. For more detail, see [Manage API keys](../../cloud/auth/api-keys.md).
-2. Templates are stored as a JSON configuration named `user_data_templates`. There are two main types:
+1. Templates are stored as a JSON configuration named `user_data_templates`. There are two main types:
 
    - **Key template** — Identifies specific keys. Requires `data_store_type` (`STANDARD` or `ORDERED`), `data_store_name`, and `key_pattern`. `scope_pattern` is optional but recommended.
    - **Data store template** — Identifies an entire data store. Requires `data_store_type` (currently only supports `STANDARD`) and `data_store_pattern`.
@@ -85,7 +84,7 @@ You can also manage RTBF templates programmatically using the Open Cloud Configs
    The `{UserId}` token is **case-sensitive**. If `scope_pattern` is omitted or blank, it defaults to `global`.
 	 </Alert>
 
-3. Next, submit via the Open Cloud [Configs API](/cloud/reference/features/configs). In the following examples, replace `<API_KEY>` and `<UNIVERSE_ID>` in each request, and send all requests to the `DataStoresConfig` repository.
+1. Next, submit via the Open Cloud [Configs API](/cloud/reference/features/configs). In the following examples, replace `<API_KEY>` and `<UNIVERSE_ID>` in each request, and send all requests to the `DataStoresConfig` repository.
 
    <Alert severity="info">
    For additional endpoints and behavior, see the [Cloud API reference](/cloud/reference/features/configs) and the [experience configs](../../cloud/guides/configs.md) guide.
@@ -127,14 +126,14 @@ You can also manage RTBF templates programmatically using the Open Cloud Configs
 			}'
 			```
 
-	 2. Verify your draft via a `GET` request to retrieve and review the draft before it goes live.
+	 1. Verify your draft via a `GET` request to retrieve and review the draft before it goes live.
 
 			```bash
 			curl --location --request GET 'https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/DataStoresConfig/draft' \
 				--header 'x-api-key: <API_KEY>'
 			```
 
-	 3. After verification, send this `POST` request to publish. The only way to undo this action is to restore a previous version. This action also requires that the account associated with the API key is [eligible to publish games](https://en.help.roblox.com/hc/en-us/articles/203313890-How-to-Publish-Public-Experiences-on-Roblox).
+	 1. After verification, send this `POST` request to publish. The only way to undo this action is to restore a previous version. This action also requires that the account associated with the API key is [eligible to publish games](https://en.help.roblox.com/hc/en-us/articles/203313890-How-to-Publish-Public-Experiences-on-Roblox).
 
 			```bash
 			curl --location --request POST 'https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/DataStoresConfig/publish' \
@@ -145,7 +144,7 @@ You can also manage RTBF templates programmatically using the Open Cloud Configs
 			}'
 			```
 
-	 4. After publishing, confirm the configuration is live with this `GET` request.
+	 1. After publishing, confirm the configuration is live with this `GET` request.
 
 			```bash
 			curl --location --request GET 'https://apis.roblox.com/creator-configs-public-api/v1/configs/universes/<UNIVERSE_ID>/repositories/DataStoresConfig/full' \

@@ -15,7 +15,6 @@ Designed to enhance collaboration, the visual graph allows developers to quickly
 ## Build a graph
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/VgMUCph3bOI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-<br />
 
 To begin building logic for an animatable character, access the Animation Graph editor via the Avatar tab in the Studio ribbon. The following steps demonstrate how to initialize a rig and construct a basic node network using default walking and waving animations.
 

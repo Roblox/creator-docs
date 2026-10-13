@@ -9,8 +9,6 @@ import PlaytestModes from '../../../includes/studio/playtest-modes.md'
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/mW2IptQVeL0?si=RbvxFyCI1iYVc-hk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br/>
-
 **Greyboxing your environment**, also known as massing out or blocking your environment, is the process of adding simple shapes to the 3D space to figure out how users will experience gameplay before investing time into polishing assets. This process is crucial for finding issues in the layout of playable areas, such as difficult regions to traverse, unfair advantages from certain vantage points, or assets with disproportionate scale to the user's character.
 
 Using the [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) `.rbxl` file as a reference, this section of the environmental art curriculum shows you how to greybox a standard three lane map layout for a team-based first-person laser tag shooter game, including step-by-step instructions on:

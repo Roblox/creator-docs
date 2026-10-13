@@ -25,7 +25,7 @@ If the transfer does change access, for instance, when you transfer to a group y
 To transfer a game to a group:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and choose the game you want to transfer.
-2. Go to **Configure** ⟩ **Settings**.
+2. In the left-hand navigation, navigate to **Publish Settings** ⟩ **Game details**.
 3. Click **Initiate ownership transfer**.
 4. In the **Transfer Details** dialog, carefully read and acknowledge the implications of the transfer. Then, click **Next**.
 5. Select a group to transfer the game to. You must be able to publish games to this group.
@@ -33,7 +33,7 @@ To transfer a game to a group:
 7. Click **Initiate transfer**. The **Content Settings** page updates to include the pending group's username.
 
    <Alert severity="warning">
-   Once the group accepts the transfer, Roblox makes your game private and closes all servers associated with it. The transfer process typically completes in a few minutes but may take longer for complex games.
+   Once the group accepts the transfer, Roblox revokes access to your game from the public, and closes all servers associated with the game. The transfer process typically completes in a few minutes but may take longer for complex games.
    </Alert>
 
    <Alert severity="info">
@@ -50,10 +50,10 @@ To receive a transferred game:
 4. Click **Accept transfer**.
 
    <Alert severity="warning">
-   Once your group accepts the transfer, Roblox makes the game private and closes all servers associated with it. The transfer process typically completes in a few minutes but may take longer for complex games.
+   Once your group accepts the transfer, Roblox revokes access to your game from the public, and closes all servers associated with the game. The transfer process typically completes in a few minutes but may take longer for complex games.
    </Alert>
 
-5. After the transfer to your group is complete, set up any new permissions you need and make the game public again.
+5. After the transfer to your group is complete, set up any new permissions you need and [release the game](../production/publishing/publish-games-and-places.md#release-games) to the public again.
 
 ## Frequently asked questions
 
@@ -118,8 +118,8 @@ New private server subscriptions respect revenue splitting.
 <Typography variant="subtitle2">Does transferring a game impact discovery?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Transferring a game doesn't impact search as long as the game's title remains the same, the new group owner is not a moderated account, and the game is made public again after the transfer.
+Transferring a game doesn't impact search as long as the game's title remains the same, the new group owner is not a moderated account, and the game is released again after the transfer.
 
-Note that transferring a game can impact discovery for up to 24 hours after the new group owner makes the game public again.
+Note that transferring a game can impact discovery for up to 24 hours after the new group owner releases the game to the public again.
 </AccordionDetails>
 </BaseAccordion>

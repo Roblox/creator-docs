@@ -11,7 +11,7 @@ With Version History, you have access to the following:
 - **Search**: Search across version notes to more easily find the place version you're looking for.
 - **Advanced filtering**: Filter by date range, save type (auto or manual), published saves, collaborator, and whether a save has version notes attached to it.
 - **Tracking collaborators**: Track who was in a place edit session and who saved the place.
-- **Dockable widget**: A Version History widget you can position anywhere in your Studio layout for easier access. You can access this widget by going to **Window** &rang; **Version History**.
+- **Dockable widget**: A Version History widget you can position anywhere in your Studio layout for easier access. You can access this widget by going to **Window** > **Version History**.
 
    <img src="../assets/studio/general/Version-History.png" width="80%" alt="A view of the Version History window." />
 
@@ -21,7 +21,7 @@ Place versions created before Version History was introduced do not include the 
 
 ## Create a save with version notes
 
-1. Go to **File** &rang; **Save to Roblox with Notes**.
+1. Go to **File** > **Save to Roblox with Notes**.
 2. Enter a version name and any notes you might have.
 3. Click **Save**.
 
@@ -36,7 +36,7 @@ You can also use the following keyboard shortcuts to save your current place ver
 
 Version notes are required when publishing so you can clearly track what changes were released to your players. To publish with version notes:
 
-1. Go to **File** &rang; **Publish**.
+1. Go to **File** > **Publish**.
 2. Select **Publish**.
 3. Enter a version name and any notes you might have.
 4. Click **Publish**.
@@ -47,30 +47,30 @@ Studio can automatically draft publish notes for you by summarizing all of the v
 
 Generated notes are always optional and are never saved without your approval. You can edit, keep, or dismiss any summary before writing it to the version notes. To generate publish notes, use either of the following methods:
 
-- Go to **File** &rang; **Publish with Notes**, review and edit the drafted summary, then publish.
-- Go to **Window** &rang; **Version History**, then click **Edit Notes** on a published version.
+- Go to **File** > **Publish with Notes**, review and edit the drafted summary, then publish.
+- Go to **Window** > **Version History**, then click **Edit Notes** on a published version.
 
 ## Restore to a previous version
 
 You can restore to a previous place version through Studio or the Creator Dashboard. This action creates a new version of the place.
 
 <Alert severity="info">
-Restoring a place to a previous version does **not** automatically publish the changes. If the place is [public](../production/publishing/publish-games-and-places.md#make-game-public) and you want the restored version to replace the live version, open the place in Studio, publish it, and [restart your servers](./update-games.md#restart-servers).
+Restoring a place to a previous version does **not** automatically publish the changes. If the place is [public](../production/publishing/publish-games-and-places.md#release-games) and you want the restored version to replace the live version, open the place in Studio, publish it, and [restart your servers](./update-games.md#restart-servers).
 </Alert>
 
 Through Studio:
 
-1. Go to **Window** &rang; **Version History** to open the Version History window.
+1. Go to **Window** > **Version History** to open the Version History window.
 2. Click **&vellip;** next to the version you want to restore to.
 3. Click **Open Local Copy** to open a copy of the place in a new Studio session.
-4. In the new Studio session, go to **File** &rang; **Save to Roblox As**.
+4. In the new Studio session, go to **File** > **Save to Roblox As**.
 5. Select the game and place you want to overwrite.
 6. Confirm the action to restore to that version.
 
 Through the Creator Dashboard:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select a game.
-2. Go to **Configure** &rang; **Places**.
+2. In the left-hand navigation, navigate to **Configurations** > **Places**.
 3. Select the place you want to restore to a previous version.
 4. Go to **Version History**.
 5. Click **Restore** next to the version you want to restore to.

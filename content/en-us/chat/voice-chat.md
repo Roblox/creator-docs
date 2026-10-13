@@ -18,7 +18,7 @@ Voice Chat is enabled by default for verified 13+ users on all new games with a 
 To activate voice for existing games or disable it for new ones:
 
 1. Open your game in Studio.
-1. Open **File** ⟩ **Experience Settings**.
+1. Open **File** > **Experience Settings**.
 1. Navigate to the **Communication** tab on the left side of the window.
 1. Toggle **Enable Voice Chat** to your desired setting.
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> For greater communication among players within your game, toggle on **Enable Camera** to allow eligible players to animate their avatar with their movement.
@@ -28,7 +28,8 @@ To activate voice for existing games or disable it for new ones:
 
 If you previously set the maximum number of players in a place to more than 100, you'll need to reduce it to support Voice Chat.
 
-1. Select the game on the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and then navigate to **Configure** ⟩ **Places**.
+1. Select the game on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+1. In the left-hand navigation, navigate to **Configurations** > **Places**.
 1. Select the desired place and then navigate to Access in the left column.
 1. For **Maximum Visitor Count**, enter a number less than or equal to 100.
 1. Click the **Save Changes** button.

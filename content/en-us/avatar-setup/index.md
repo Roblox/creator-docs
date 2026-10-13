@@ -19,7 +19,7 @@ keywords:
 
 <img src="../assets/studio/general/Toolbar-Avatar-Setup.png" width="800" alt="Avatar Preview button indicated in Avatar tab" />
 
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/Hp9pr2FpZa8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> <br />
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/Hp9pr2FpZa8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 ## Import a 3D asset
 
@@ -338,7 +338,6 @@ The **Attachment Tool** displays all attachment points on the character's body. 
 ### Cage Brush
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/fwbuhzq1D0k" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-<br /><br />
 
 The Cage Brush lets you modify your character's body cage mesh and make adjustments to how layered accessories fit on your character. The following controls provide fine-grain control on your cage edits:
 

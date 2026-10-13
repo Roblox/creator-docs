@@ -6,8 +6,6 @@ hideInPageNavigation: true
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/DKzFkn7q8MQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br /> <br />
-
 <BaseAccordion>
 <AccordionSummary>
 <Typography variant="h4">Prerequisites</Typography>

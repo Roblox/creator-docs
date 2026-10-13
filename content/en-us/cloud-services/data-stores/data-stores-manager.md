@@ -20,8 +20,8 @@ To give members of your group access to the Data Stores Manager, you can [grant 
 
 To access the Data Stores Manager:
 
-1. Go to **Creations** and select a game.
-2. Go to **Configure** ⟩ **Data Stores Manager**.
+1. Select a game on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+2. Go to **Configurations** > **Data stores manager**.
 
 <img src="./../../assets/data/data-store/Data-Stores-Manager-Page.png" alt="Overview of Data Stores Manager page displaying the Summary section, the Data Stores list, and the Keys list." />
 
@@ -58,8 +58,8 @@ When you schedule a data store for permanent deletion, that data store immediate
 
 To schedule a data store or key for permanent deletion:
 
-1. Go to Creations and select a game.
-2. Go to **Configure** ⟩ **Data Stores Manager**.
+1. Select a game on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+2. In the left-hand navigation, go to **Configurations** > **Data stores manager**.
 3. Click the **Action** menu next to the item you want to delete.
 4. Click **Mark for Deletion**.
 

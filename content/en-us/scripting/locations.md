@@ -5,7 +5,7 @@ description: How scripts run in Roblox, and how location impacts that behavior.
 
 import ScriptLocations from '../includes/engine-comparisons/script-locations.md'
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jLNgutvbALY?si=CU8CiDeiQOMIDfDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe><br />
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jLNgutvbALY?si=CU8CiDeiQOMIDfDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 For many developers, the fundamental challenge of adapting to Roblox scripting is the importance of file location and the `Class.Script.RunContext` property. Depending on script type, location in the **Explorer**, and run context, scripts can behave very differently. Certain method calls might fail, objects in your game might be inaccessible, or scripts might not run at all.
 

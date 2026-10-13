@@ -500,6 +500,19 @@ Generally, when placing attachment points, position them so they overlap halfway
     </figure>
   </GridContainer>
 
+For accessories that attach to the head, position the attachment point so it fits on the visible surface of the head mesh. Attachment points that float away from the visible head violate [Marketplace policy](../../marketplace/marketplace-policy.md#general-creation-guidelines).
+
+  <GridContainer numColumns="2">
+    <figure>
+      <img src="../../assets/avatar/character-bodies/Correct-Head-Attachment.png" />
+      <figcaption>Correct placement of head attachments</figcaption>
+    </figure>
+    <figure>
+      <img src="../../assets/avatar/character-bodies/Incorrect-Head-Attachment.png" />
+      <figcaption>Incorrect placement of head attachments</figcaption>
+    </figure>
+  </GridContainer>
+
 Attachments must follow a specific naming convention and positional consistency:
 
 <table>

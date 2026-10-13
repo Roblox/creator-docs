@@ -9,7 +9,7 @@ Congratulations on building your first obby with Roblox Studio! Now that you hav
 
 ## Share with others
 
-When you first publish a game, it's automatically set to **private** so that you're the only one who can play it. However, creating on Roblox is always more fun when you can share what you make with others. See [making games public](../../../production/publishing/publish-games-and-places.md#make-game-public) for steps on how to make your game public.
+When you first publish a game, it's only playable by you as the creator. However, creating on Roblox is always more fun when you can share what you make with others. For steps on inviting early testers to preview your game, see [Invite early testers](../../../production/publishing/publish-games-and-places.md#invite-early-testers). For steps on how to release your game to players, see [Release games](../../../production/publishing/publish-games-and-places.md#release-games).
 
 ## Continue learning
 

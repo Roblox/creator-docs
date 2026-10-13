@@ -23,8 +23,8 @@ Event | Shown in Studio | Shown in Creator Hub
 Place published | &check; | &check;
 Place name changed | &check; | &check;
 Place description changed | &check; | &check;
-Place added to game |  | &check;
-Place removed from game |  | &check;
+Place added to game | | &check;
+Place removed from game | | &check;
 **Allow place to be copied as a template using Create Place API** changed | &check; | &check;
 **Allow place to be updated using Save Place API** changed | &check; | &check;
 
@@ -32,13 +32,13 @@ Place removed from game |  | &check;
 
 Event | Shown in Studio | Shown in Creator Hub
 :--- | :---: | :---:
-Script draft committed | &check; |
+Script draft committed | &check; | &nbsp;
 
 ### Game configuration
 
 Event | Shown in Studio | Shown in Creator Hub
 :--- | :---: | :---:
-Game changed to public or private | &check; | &check;
+Audience access changed | &check; | &check;
 Game name changed | &check; | &check;
 Game description changed | &check; | &check;
 Game archived | &check; | &check;
@@ -60,9 +60,9 @@ Private servers price changed | &check; | &check;
 
 Event | Shown in Studio | Shown in Creator Hub
 :--- | :---: | :---:
-Notification string created |  | &check;
-Notification string deleted |  | &check;
-Notification string updated |  | &check;
+Notification string created | | &check;
+Notification string deleted | | &check;
+Notification string updated | | &check;
 
 For more information, see [Experience notifications](../production/promotion/experience-notifications.md).
 

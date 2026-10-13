@@ -79,7 +79,7 @@ Once the lobby place is published, you'll need to add **five additional places**
    src="../../assets/resources/battle-royale/installation-and-setup/Battle-Royale-Place-Names.png"
    width="80%" />
 
-5. Publish the game again (**File** → **Publish to Roblox**).
+5. Publish the game again (**File** → **Publishx**).
 
 ## Copy and paste place IDs
 
@@ -178,7 +178,7 @@ Each place must be cross-associated so that players can teleport from the lobby 
    }
    ```
 
-6. Publish the game again (**File** → **Publish to Roblox**).
+6. Publish the game again (**File** → **Publish**).
 
 ## Adjust server fill
 

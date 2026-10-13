@@ -32,7 +32,7 @@ To upload a game icon:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. Click on the game you want to upload an icon for. The game's **Overview** page displays.
-1. In the left-hand navigation, under **Configure**, select **Places**.
+1. In the left-hand navigation, navigate to **Configurations** > **Places**.
 1. Click the **start place** marked with a star icon (if the game contains only one place, it will be the only option). The place's **Basic Settings** page displays.
 
    <img src="../../assets/creator-dashboard/Places-Start-Place-No-Icon.png" width="200" alt="Start place tile indicated in Places display on the Creator Dashboard" />

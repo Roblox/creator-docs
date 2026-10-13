@@ -108,7 +108,7 @@ When you are finished making changes to any of the following template texture im
    <Typography variant="label1">Exporting from Photoshop</Typography>
    </AccordionSummary>
    <AccordionDetails>
-   <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/0se12PNhVCI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe><br /><br />
+   <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/0se12PNhVCI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
    <Alert severity = 'info'>
    The video presenter uses **File** > **Export** > **Layers to Files** to export each layer as its own `.png` file.

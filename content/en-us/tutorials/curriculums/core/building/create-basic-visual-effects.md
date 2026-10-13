@@ -7,8 +7,6 @@ next: /tutorials/curriculums/core/building/customize-global-lighting
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/Pk_UX4zMfeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br/>
-
 A static world can feel lifeless. **Visual effects** add motion, make the environment feel more dynamic, and help draw players' attention to important areas.
 
 In this section, you'll use **particle emitters** to create two effects. The first is a glowing flare on top of the tallest sea stack that draws players' eyes upward, and the second is a layer of drifting dust motes that adds atmosphere and depth to the environment.

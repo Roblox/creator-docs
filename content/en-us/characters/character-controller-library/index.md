@@ -28,7 +28,7 @@ Structurally, an ability is a self-contained Luau table that primarily specifies
 <tbody>
   <tr>
     <td>`Name`</td>
-    <td>Name that is allocated a [label](#labels) bit, so [conditions](#conditions) and [conflicts](#conflicts) can reference the ability. Multiple ability definitions can use the same name. The `Class.ModuleScript` name determines the unique configuration key.</td>
+    <td>The ability's unique identity; [conditions](#conditions) and [conflicts](#conflicts) reference it by name. Registering two abilities with the same `Name` throws an error. For a few similar abilities, give each a different `Name` and share a common [label](#labels) in `Labels`. The `Class.ModuleScript` name determines the unique configuration key.</td>
   </tr>
   <tr>
     <td>`Labels`, `TimedLabels`</td>
@@ -44,7 +44,7 @@ Structurally, an ability is a self-contained Luau table that primarily specifies
   </tr>
   <tr>
     <td>`Input`</td>
-    <td>The input which triggers the ability. The CCL injects it into `StartsWhen` and, when you omit `RunsWhile`, uses it as the default continuation condition; see [inputs](#inputs).</td>
+    <td>The input which triggers the ability. `Input.Mode` controls how the input starts and stops the ability; `RunsWhile` holds world conditions only, never the input itself; see [inputs](#inputs).</td>
   </tr>
   <tr>
     <td>`Config`, `State`</td>
@@ -276,41 +276,47 @@ local Dash: AvatarAbilities.AbilityDefinition = {
 }
 ```
 
-- `InputName` is a logical name, not a key. The CCL generates an input sensor and always adds it to `StartsWhen`. Don't add `Rule.Input` to `StartsWhen` yourself.
+- `InputName` is a logical name, not a key. The CCL generates an input sensor and always ANDs it into `StartsWhen`.
 
-- `Mode` defines how this input will be interpreted:
+- `Mode` defines how this input starts and stops the ability. `RunsWhile` never contains the input itself; it holds only world conditions, such as being on the ground or in water, so `Mode` is the sole source of input-driven starting and stopping:
 
   <table>
   <thead>
   <tr>
     <th>Mode</th>
-    <th>Behavior</th>
-    <th>Use Cases</th>
+    <th>Starts</th>
+    <th>Stops From Input</th>
   </tr>
   </thead>
   <tbody>
   <tr>
     <td>`Press`</td>
-    <td>Ability activation is attempted when the input is pressed. Automatically injected into the `StartsWhen` condition.</td>
-    <td>Discrete actions like dash, attack, and throw.</td>
+    <td>On press.</td>
+    <td>Never. The ability ends itself through a conflict, its own `RunsWhile`, or by calling `Stop()`.</td>
   </tr>
   <tr>
     <td>`Hold`</td>
-    <td>Ability runs while the input is held; releasing stops it when the generated input sensor is the `RunsWhile` condition.</td>
-    <td>Sustained actions like sprint, aim, and block.</td>
+    <td>On press.</td>
+    <td>On release.</td>
+  </tr>
+  <tr>
+    <td>`Hold` with `Repeats`</td>
+    <td>On press.</td>
+    <td>Release ends the re-fire, not the cycle already in flight.</td>
   </tr>
   <tr>
     <td>`Toggle`</td>
-    <td>Each press flips the ability on or off when the generated input sensor is the `RunsWhile` condition.</td>
-    <td>Toggled stances or motions like crouch or levitate.</td>
-  </tr>
-  <tr>
-    <td>`Repeat`</td>
-    <td>Like `Hold`, but re-triggers each cycle.</td>
-    <td>Actions that self‑stop and can re‑fire while held.</td>
+    <td>On toggle-on.</td>
+    <td>On toggle-off.</td>
   </tr>
   </tbody>
   </table>
+
+  `Press` suits discrete actions like dash, attack, and throw. `Hold` and `Toggle` suit sustained actions like sprint, aim, block, crouch, and levitate. `Hold` with `Repeats` suits actions that self-stop and re-fire while held, such as repeated jumping.
+
+- `Repeats` (boolean, `Hold` only) makes the ability self-terminate each cycle and re-fire while the input stays held, instead of running continuously for the whole hold.
+
+- `OutlivesInputWhile` (`Hold`/`Toggle` only) is a [condition](#conditions) under which the ability keeps running past release or toggle-off, stopping once the condition clears. Use it when an ability should outlast its input under a specific world condition.
 
 - `ActionSlot` defines an **action slot** which is associated with a list of `Class.InputAction|InputActions` and `Class.InputBinding|InputBindings` within the [Input Action System](../../input/input-action-system.md).
 
@@ -318,7 +324,7 @@ local Dash: AvatarAbilities.AbilityDefinition = {
 
 - `CustomIcon`, `CustomIconActive`, and `CustomIconInvalid` specify Roblox asset IDs for the touch button when the ability is idle, active, or unavailable, respectively.
 
-When you omit `RunsWhile`, the CCL uses the generated input sensor as the continuation condition. When you define `RunsWhile`, it replaces that default. For a `Hold` or `Toggle` ability that must stop when its input becomes inactive, include the `Rule.Input` sentinel directly in the custom condition. `Rule.Input` is a value, not a function:
+`RunsWhile` holds world conditions only. The compiler composes the input's effect into the ability's actual continuation behind the scenes based on `Mode`, so putting the input itself into `StartsWhen` or `RunsWhile` throws an error (don't reference `Rule.Input` there). `Hold` and `Toggle` abilities already stop on release or toggle-off by default, so you don't need to duplicate that in `RunsWhile`:
 
 ```lua
 local AvatarAbilities = require("@rbx/AvatarAbilities")
@@ -326,13 +332,27 @@ local AvatarAbilities = require("@rbx/AvatarAbilities")
 local Rule = AvatarAbilities.Rule
 local Sensor = AvatarAbilities.Identifiers.Sensor
 local All, Any, Not = Rule.All, Rule.Any, Rule.Not
-local Input = Rule.Input
 
 local Glide: AvatarAbilities.AbilityDefinition = {
 	Name = "Glide",
 	Input = { InputName = "Glide", Mode = "Hold", ActionSlot = 6 },
 	StartsWhen = Not(Sensor.Ground),
-	RunsWhile = All(Not(Sensor.Ground), Input),
+	RunsWhile = Not(Sensor.Ground),
+}
+```
+
+To make a `Hold` or `Toggle` ability outlast its input under a world condition, set `OutlivesInputWhile` instead of adding the input to `RunsWhile`. The following `Crouching` ability keeps crouching after the player releases the crouch input, as long as something remains overhead:
+
+```lua
+local AvatarAbilities = require("@rbx/AvatarAbilities")
+
+local Identifiers = AvatarAbilities.Identifiers
+local Sensor = Identifiers.Sensor
+
+local Crouching: AvatarAbilities.AbilityDefinition = {
+	Name = "Crouching",
+	Input = { InputName = "Crouch", Mode = "Hold", OutlivesInputWhile = Sensor.Ceiling, ActionSlot = 3 },
+	RunsWhile = Sensor.Ground,
 }
 ```
 

@@ -7,8 +7,6 @@ prev: /tutorials/curriculums/environmental-art/develop-polished-assets
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/0shiHaGe87s?si=xILCuyVy8dIviZ2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br/>
-
 **Assembling an asset library** is the process of importing and configuring a collection of assets in a central location within your game for easy access and reuse. This process can save you significant time as you prepare to construct your environment, especially if you configure each asset's values to enhance performance and optimize memory usage on mid to low-end devices.
 
 Using the [Environment Art - Assembling](https://www.roblox.com/games/14447787049/Environment-Art-Assembling) `.rbxl` file as a reference, this section of the environmental art curriculum shows you how to assemble an asset library from your polished assets, including step-by-step instructions on:

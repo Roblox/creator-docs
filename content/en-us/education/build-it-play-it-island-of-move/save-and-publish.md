@@ -20,7 +20,7 @@ With the first pose is finished, save the animation.
 
 The animation is saved, but it's important to save the whole project by publishing it to Roblox. It's a good idea to **publish** every ten minutes while you're working or after making a big change.
 
-1. Select **File** → **Publish to Roblox** to open the publishing window.
+1. Select **File** → **Publish** to open the publishing window.
 
 2. Enter a place name and an optional description.
 
@@ -33,5 +33,5 @@ The animation is saved, but it's important to save the whole project by publishi
 
    <Alert severity="info">
    <AlertTitle>Saving after publishing</AlertTitle>
-   Next time you want to save your work, just go to **File** ⟩ **Publish to Roblox** or use the hotkey combo (<kbd>Alt</kbd><kbd>P</kbd>/<kbd>⌥</kbd><kbd>P</kbd>).
+   Next time you want to save your work, just go to **File** ⟩ **Publish** or use the hotkey combo (<kbd>Alt</kbd><kbd>P</kbd>/<kbd>⌥</kbd><kbd>P</kbd>).
    </Alert>

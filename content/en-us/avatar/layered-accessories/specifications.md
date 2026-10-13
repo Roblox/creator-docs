@@ -150,8 +150,6 @@ For more information on basic skinning in a third-party 3D modeling software, su
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/C-DwGRBHvmE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
-<br />
-
 Roblox provides template cages meshes in [layered accessory project files](project-files.md) for you to use as you create your own custom layered accessories. Note that the outer cage is identical to the inner cage by default and must be the only cage adjusted to fit over your custom layered accessory. As a best practice, the shape of the inner and outer cage should match each other before editing the outer cage to completely cover your asset.
 
 <Alert severity="warning">

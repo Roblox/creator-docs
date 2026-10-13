@@ -5,8 +5,6 @@ description: Learn how to design and optimize the First-Time User Experience (FT
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/XfxbdKtSbOI?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br />
-
 **Onboarding**, also known as the First-Time User Experience (FTUE), comprises the first few minutes of gameplay that new players experience. The FTUE introduces the game, interface, and mechanics, and may include tutorials that teach players how to play. The success of a FTUE is determined by how well it achieves two metrics:
 
 - Day 1 retention

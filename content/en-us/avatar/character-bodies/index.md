@@ -5,7 +5,6 @@ description: All Roblox users are represented by an avatar character which can b
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/2My8jE47clI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
-<br /><br />
 **Character bodies** for avatars are models with technical components that work together to create a character that can interact with objects in the 3D space and wear cosmetics, clothing, and accessories. There are four main layers of the avatar body that structure how the character looks and moves on the platform:
 
 - **Body parts & textures** that make up the character's visual appearance.

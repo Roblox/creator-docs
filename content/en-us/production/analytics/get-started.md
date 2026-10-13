@@ -38,8 +38,6 @@ Metrics alone don't always provide the full explanation, but they help reveal wh
 
 <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/N2l0BDgSNtQ?si=nSd4PCd8ta_tIC-n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br />
-
 Engagement metrics reveal how often and for how long players are interacting with your game. Three of the most important engagement metrics are:
 
 - **Daily active users (DAU):** The daily active users metric tracks the number of players that are in your game for a given day. This is a great way to understand the overall health of your game over time. If you have 1,000,000 players one day, and a few days later you see a downtrend to 500,000, you can identify a problem and begin troubleshooting.
@@ -55,8 +53,6 @@ For out-of-the-box functionality to create engagement rewards, see the [Engageme
 ### Retention metrics
 
 <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/LpAU6TheAZ4?si=_1r_ZtlJ3WsrZMUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-
-<br />
 
 Retention metrics determine if players are returning to your game. Three of the most important retention metrics are:
 

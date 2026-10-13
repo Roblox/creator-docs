@@ -5,8 +5,6 @@ description: Onboarding
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/dXqZC4x2Vn8?si=CdkQvEY085pWO3iS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br />
-
 Onboarding techniques are strategies used to help direct players through the onboarding funnel as quickly and seamlessly as possible. Three popular onboarding techniques include:
 
 - Visual elements

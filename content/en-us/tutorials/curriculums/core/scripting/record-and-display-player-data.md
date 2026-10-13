@@ -7,8 +7,6 @@ prev: /tutorials/curriculums/core/scripting/script-game-behavior
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/bfWTFFFcLXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br/>
-
 Now that you can detect when a player has collected a coin, you need to count how many coins players have collected and make that amount visible on a leaderboard.
 
 ## Create a module script to record coin collection

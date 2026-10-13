@@ -30,7 +30,7 @@ Roblox assigns accounts to one of three tiers based on age. A self-declared age 
   <tr>
     <td>**Content ratings**</td>
     <td>Minimal or Mild</td>
-    <td>Minimal, Mild, or Moderate</td>
+    <td>Minimal, Mild, or Moderate (9+)</td>
     <td>All rated content, except Restricted (18+)</td>
   </tr>
   <tr>
@@ -117,6 +117,7 @@ To reach users who are under 16 years old, creators of individual-owned games or
 1. **Account status** - Have an account that is in good standing.
 1. **Account verification** - Verify your account through [facial age estimation](https://about.roblox.com/age-estimation) if you are under 18 years old, or through [government ID](./account-verification.md#verify-through-government-id) if you are 18 years old or older.
 1. **Two-factor authentication** - Enable [2FA](https://en.help.roblox.com/hc/en-us/articles/212459863-Add-2-Step-Verification-to-Your-Account) on your Roblox account.
+1. **Content maturity information** - Complete the [Maturity & Compliance Questionnaire](../promotion/content-maturity.md) and receive a Minimal, Mild, or Moderate (9+) content rating.
 1. **Publishing fee or subscription** - Meet **one** of the following requirements:
    - Maintain an active [Roblox Plus](../monetization/roblox-plus.md) or [Roblox Premium](https://www.roblox.com/premium/membership) subscription for 2 consecutive months.
    - Pay a one-time, refundable [fee](./publish-games-and-places.md#optional-fees).
@@ -128,7 +129,7 @@ To reach users who are under 16 years old, creators of individual-owned games or
 1. **Evaluation** - Your game must pass the following evaluation process:
 
    1. **Trial phase** - The game is first made available only to age-checked users 16 and older.
-   1. **Analysis of Highly Engaged users** - Engagement is analyzed through metrics like account age, play history, and spend on Roblox to verify it's from real users and not bots. Increasing engagement with age-checked 16+ users will help you progress towards becoming eligible faster.
+   1. **Analysis of highly engaged players** - Engagement is analyzed through metrics like account age, play history, and spend on Roblox to verify it's from real users and not bots. Increasing engagement with age-checked 16+ users will help you progress towards becoming eligible faster. This metric is evaluated hourly.
    1. **Safety review** - The game's real-time moderation reports and gameplay are reviewed for age-suitability.
    1. **Threshold** - Once the game reaches a benchmark of 250 unique plays by highly engaged age-checked users within a 60-day window, it completes evaluation and becomes eligible for Kids and Select audiences.
 
@@ -144,7 +145,14 @@ To reach users who are at least 16 years old, creators of individual-owned games
 
 1. **Account status** - Have an account that is in good standing and at least 2 days old.
 1. **Age verification** - Verify your age through [facial age estimation](https://about.roblox.com/age-estimation) or [government ID](./account-verification.md#verify-through-government-id).
-1. **Content maturity label and descriptors** - Complete the [Maturity & Compliance Questionnaire](../promotion/content-maturity.md).
+1. **Content maturity information** - Answer the age-restricted content question that displays first in the [Maturity & Compliance Questionnaire](../promotion/content-maturity.md):
+
+   - Answer **No** to receive a **Content May Vary** rating. The game releases only to age-checked Roblox users ages 16+.
+   - Answer **Yes**, then complete the questionnaire. The game receives a rating based on your answers and releases to age-checked Roblox users ages 16+ or [age-verified](./account-verification.md) Roblox users ages 18+, depending on the content within your game.
+
+   <Alert severity="info">
+   To reach Kids and Select audiences or receive a more precise rating, you must complete the entire questionnaire.
+   </Alert>
 
 ## Expedited review
 
@@ -240,14 +248,5 @@ We know many of you use uncopylocked games to share templates and learning resou
 </AccordionSummary>
 <AccordionDetails>
 Yes. The free Plus subscription rolled out one day later than planned, which caused a small number of eligible creators to pay the publishing fee unnecessarily. We're processing automatic refunds for everyone affected. No action needed on your end. The Robux will be back in your account within a few weeks.
-</AccordionDetails>
-</BaseAccordion>
-
-<BaseAccordion>
-<AccordionSummary>
-<Typography variant='buttonLarge'>How do these changes impact games available exclusively to playtesters?</Typography>
-</AccordionSummary>
-<AccordionDetails>
-"Private" games are now restricted solely to creators with Edit permissions. To share with anyone else, including those with Playtest permissions, you need to meet the new publishing eligibility requirements. Set your Audience to **Limited** > **Playtesters** to share your game with those with Playtest permissions. Playtesters who are Trusted Friends of age-checked game owners can access the game regardless of age, as long as the game's content maturity questionnaire has been completed. Games published to any of the Limited audiences will not be visible publicly in search or on the home page.
 </AccordionDetails>
 </BaseAccordion>

@@ -1,6 +1,6 @@
 ---
 title: Create and publish games and places
-description: Explains how to create and publish games.
+description: Explains how to create, publish, and release games.
 ---
 
 import PlaceSizeLimit from '../../includes/place-size-limit.md'
@@ -35,7 +35,7 @@ When you create a new game, it opens a start place that all players will load in
 To create a game:
 
 1. Open Studio.
-2. In the **Open a Template** section, select a template with the objects you want to start working with for your game, such as:
+1. In the **Open a Template** section, select a template with the objects you want to start working with for your game, such as:
 
    - **Baseplate** — Starts with a `Class.SpawnLocation` and a baseplate.
    - **Platformer** — Starts with customizable platforms, coin pickups, and double-jump, dashing, rolling, and long jump character mechanics!
@@ -47,22 +47,29 @@ When Studio opens up the template, you now have `Place1` that represents your ov
 
 When you publish a game, Roblox stores the data model of your start place as a `.rblx` file in the cloud. This is an important process because it connects the game to your account, allowing you to access and work on it from any computer.
 
-By default, new games are set to **private**, meaning that they are only accessible to you as the creator, to users with **Edit** or **Playtest** access, and to group members with the appropriate [roles and permissions](../../projects/groups.md#roles-and-permissions). When you are ready to go live to everyone, you can [release your game to the public](#make-game-public) and optionally mark it as a beta.
+By default, new games are only accessible to you as the creator, users with **Edit** access, and group members with the appropriate [roles and permissions](../../projects/groups.md#roles-and-permissions). When you are ready to go live to everyone, you can [release your game to the public](#release-games) and [specify your target audience](#target-audience).
 
 <Alert severity="info">
-When creating and collaborating on games as part of a [group](../../projects/groups.md), the ability for group members to playtest/edit/publish games is, by default, dependent on their role permissions. However, group owners or members with sufficient permissions can adjust access on a per‑game level. For more info, see [configure games](../../projects/configure-games.md).
+When creating and collaborating on games as part of a [group](../../projects/groups.md), the ability for group members to playtest/edit/publish games is, by default, dependent on their role permissions. However, group owners or members with sufficient permissions can adjust access on a per‑game level. For more information, see [Configure games](../../projects/configure-games.md).
 </Alert>
 
-To publish a game:
+To publish a game for the first time:
 
-1. In the top-left corner of your computer, click **File** ⟩ **Publish to Roblox**.
-2. In the **Publish Experience** window, fill in the following fields:
+1. In the top-left corner of your computer, navigate to **File** > **Publish**. The **Game details** window displays.
 
-   - **Name** / **Description** — The name of the game and a description that describes what a potential player should expect. See the metadata best practices dropdown at the bottom of this section for guidelines.
-   - **Creator** — The creator or [group](../../projects/groups.md) (<Chip label="RECOMMENDED" size="small" variant="outlined" color="success" />) you'd like to attribute as the creator of the game.
-   - **Devices** — Each applicable device type that you want to support. The default options are practical for most new creators.
+   <img src="../../assets/publishing/Games-Details.png" width="60%" />
 
-3. Click **Create**.
+1. In the window:
+
+   1. Upload an [icon](./experience-icons.md) and [thumbnail](./thumbnails.md) to display on your game's main details page.
+   1. In the **Name** field, input the name of your game.
+   1. Set **Genre** and the optional **Subgenre** dropdown menus to what type of gameplay players should expect. For more information, see [Genres](./experience-genres.md).
+   1. In the **Description** field, provide a summary of what players can expect from your game.
+   1. Click the **Save** button. Roblox publishes your game to the cloud with a unique `UniverseID`.
+
+   <img src="../../assets/publishing/Publish.png" width="60%" />
+
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> You can [invite early testers](#invite-early-testers) to preview your game.
 
 <BaseAccordion>
 <AccordionSummary>
@@ -134,11 +141,11 @@ Play our fun granny obby game. Obby obby obby obby obby obby obby adopt me bloxb
 After you have published your game, you can add additional places for different gameplay areas. To create a new place within an existing game:
 
 1. Open an existing place file or create a new place from any Studio template.
-2. Select **File** ⟩ **Publish to Roblox As…**.
-3. In the **Publish Experience** window, click the tile for the game you'd like to add the place to.
-4. Select **Add as a new place**, then click **Create**.
+1. Select **File** > **Publish As**.
+1. In the **Publish Experience** window, click the tile for the game you'd like to add the place to.
+1. Select **Add as a new place**, then click **Create**.
 
-Whether you choose to have a single, large place or many smaller places is mostly personal preference. For more information, see [design for performance](../../performance-optimization/design.md#streaming-and-teleportation).
+Whether you choose to have a single, large place or many smaller places is mostly personal preference. For more information, see [Design for performance - Streaming and teleportation](../../performance-optimization/design.md#streaming-and-teleportation).
 
 ### Change start place
 
@@ -147,100 +154,159 @@ The start place of a game cannot be instantly swapped with another place, but yo
 To change the start place:
 
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Save your **current** start place to a `.rbxl` file or to a new place within the game.
-2. Go to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and select the game with the start place that you want to change.
-3. Go to **Configure** ⟩ **Places**.
-4. Click **Edit in Studio** for the intended **new** start place. Studio opens and loads that specific place.
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and select the game with the start place that you want to change.
+1. In the left-hand navigation, navigate to **Configurations** > **Places**.
+1. Click **Edit in Studio** for the intended **new** start place. Studio opens and loads that specific place.
 
    <img src="../../assets/creator-dashboard/Experience-Change-Start-Place.png" width="550" />
 
-5. In the top-left corner of Studio, go to **File** ⟩ **Publish to Roblox As…**.
+1. In the top-left corner of Studio, go to **File** > **Publish As**.
 
    <Alert severity="error">
-   Do not select **Publish to Roblox** as this would publish the place over itself.
+   Do not select **Publish** as this would publish the place over itself.
    </Alert>
 
-6. Click the tile for the same game, then choose the **current** start place. Click **Overwrite**.
+1. Click the tile for the same game, then choose the **current** start place. Click **Overwrite**.
 
    <img src="../../assets/publishing/experiences-places-assets/Publish-Window-Select-Start-Place.png" width="720" />
 
-7. <Chip label="OPTIONAL" size="small" variant="outlined" /> If the game is live, it's recommended that you [restart its servers](../../projects/update-games.md#restart-servers).
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> If the game is live, it's recommended that you [restart its servers](../../projects/update-games.md#restart-servers).
 
-## Make game public
+### Invite early testers
 
-By default, new games are set to **private**, meaning they are only accessible to you and your [creator team](../../projects/groups.md) who have **Edit** permissions (see [manage collaborators](../../projects/collaboration.md#manage-collaborators)).
+You can invite up to 10 similar-aged friends to preview your game while you're building it. This allows you to get early feedback **before** you release your game publicly and receive a [content maturity label](../promotion/content-maturity.md). For a breakdown of what age ranges can preview your game according to your age, review the following table. If you want to invite someone to preview your game outside of that range, you need to become [trusted friends](https://en.help.roblox.com/hc/en-us/articles/37725513985812-Unlocking-trusted-friends).
 
-To make your game publicly available to anyone outside of the creator team, you have to meet the [publishing requirements](#publishing-requirements) below.
+<table>
+  <thead>
+    <tr>
+    <th><b>Your age</b></th>
+    <th><b>Friends you can add</b></th>
+    <th><b>Trusted friends you can add</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Under 9</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>9-12</td>
+      <td>9-15, plus under-9 friends with parent approval</td>
+      <td>Any age, but under 9 needs parent approval</td>
+    </tr>
+    <tr>
+      <td>13-15</td>
+      <td>9-17</td>
+      <td>Any age, but under 9 needs parent approval</td>
+    </tr>
+    <tr>
+      <td>16-17</td>
+      <td>13+</td>
+      <td>Any age, but under 9 needs parent approval</td>
+    </tr>
+    <tr>
+      <td>18+</td>
+      <td>16+</td>
+      <td>Any age, but under 9 needs parent approval</td>
+    </tr>
+  </tbody>
+</table>
 
-<Alert severity="info">
-You can make up to **5 private games that have never been public before** public per day. This limit resets daily. Making an existing public game private and then public again does **not** count toward this limit.
+When early testers preview a game, they see a watermark that tells them they're in a preview and that Community Standards still apply. In addition, the same in-game reporting and safety tools available in published games stay active, meaning any concerning content or behavior can still be flagged and reviewed even though the game hasn't completed a full content review.
+
+<Alert severity="warning">
+Early testers under 16 can't preview a game rated above the content maturity that their parent allows, and early testers under 18 can't preview a game that has a Restricted maturity label.
 </Alert>
 
-### Audience
+To invite early testers to preview your game:
 
-A game's target audience can be set through its **Audience** setting:
+1. In the top-left corner of your computer, navigate to **File** > **Invite early testers**. The **Invite early testers** window displays.
+1. Using the search bar in the window, select up to 10 similar-aged friends or trusted friends you want to invite to preview your game, then click the **Invite** button in the bottom-right corner of the window. Each early tester you selected receives an invite to preview your game.
+
+   <img src="../../assets/publishing/Early-testers.png" width="60%" />
+
+1. If you have not already completed an [age check](https://about.roblox.com/age-estimation) or [age verification](./account-verification.md), Roblox prompts you to complete an age check.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> You can manage your early testers by clicking the **Manage Collaborators** button at the top-right corner of Studio. A list of your current early testers displays with the date that you invited them to preview your game. From here, you can:
+
+   - Add additional early testers by using the search bar.
+   - Remove early testers by clicking the X button in their row.
+
+## Release games
+
+By default, the games that you publish are only accessible to you as the creator, users with **Edit** access, and group members with the appropriate [roles and permissions](../../projects/groups.md#roles-and-permissions). When you are ready to release your game to additional users, ensure you meet the release requirements below for your target audience, then:
+
+1. In the top-left corner of your computer, navigate to **File** > **Publish**. The **Publish** window displays.
+1. To invite early testers before you release your game, click the **Invite** button, otherwise click the **Continue** button. The window updates with the first question of the [Content Maturity](../promotion/content-maturity.md) questionnaire to see if your game contains [age-restricted content](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Restricted-Content-Policy).
+
+   1. If your game contains age-restricted content, answer **Yes**, then complete the entirety of the questionnaire. When you're done, click the **Publish** button. Your game receives an appropriate content maturity label and content descriptors, and it releases only to [age-checked](https://about.roblox.com/age-estimation) Roblox users ages 16+ or [age-verified](../../production/publishing/account-verification.md) Roblox users ages 18+, depending on the content within your game.
+   1. If your game does not contain age-restricted content, answer **No**, then click the **Publish** button. Your game receives a **Content May Vary** content maturity label, and it releases only to age-checked Roblox users ages 16+. You can later fill out the entirety of the questionnaire on the Creator Hub if you want to expand reach into Roblox Kids, Select, or specific regions requiring more precise maturity rating.
+
+   <img src="../../assets/publishing/Publish-Rating.png" width="60%" />
+
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Grow your audience by either [promoting your game with ads](../promotion/advertise-on-roblox.md) or completing [age verification](./account-verification.md) to start the process of reaching users under the age of 16 years old.
+
+   <img src="../../assets/publishing/Publish-Grow.png" width="60%" />
+
+<Alert severity="info">
+You can release up to 5 games per day that have never been released before. This limit resets daily. Revoking public access to a released game, then releasing it again does **not** count toward this limit.
+</Alert>
+
+### Target audience
+
+You can set a game's target audience on the Creator Hub:
 
 1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select your game.
-2. Navigate to **Configure** ⟩ **Settings**.
-3. Under **Audience**, choose from the options below:
+1. In the left-hand navigation, navigate to **Publish settings** > **Manage Audience**.
+1. In the top-right corner, click the **Manage access** button, then set your target audience using the following tabs and settings:
 
-        <table>
-        <thead>
-        	<tr>
-        		<th>Audience</th>
-        		<th>Description</th>
-        	</tr>
-        </thead>
-        <tbody>
-        	<tr>
-        		<td>**Private**</td>
-        		<td>Available only to users who have **Edit** permissions for the game.</td>
-        	</tr>
-        	<tr>
-        		<td>**Limited**</td>
-        <td>
-        Available only to those who are part of the selected category of users. Not discoverable to the general public on Roblox.
-        - **Playtesters** — Available to users who have **playtest** permissions for the game.
-        - **Friends** — Available to the game owner's friends. This option only appears for [user‑owned](../../projects/collaboration.md#user-owned-games) games.
-        - **Community Members** — Available only to group members. This option only appears for [group‑owned](../../projects/collaboration.md#group-owned-games) games.
-        </td>
-        	</tr>
-        	<tr>
-        		<td>**Public**</td>
-        		<td>Available and discoverable to the general public on Roblox.</td>
-        	</tr>
-        </tbody>
-        </table>
+   <table>
+     <thead>
+       <tr>
+       <th><b>Tab</b></th>
+       <th><b>Settings</b></th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+       <td>Playtest</td>
+       <td><ul><li>**Early testers** - Your game can only be played by users with **Edit** access and the early testers you invite. This setting is always enabled.</li><li>**Playtesters** - When enabled, your game is only playable to users with **Edit** or **Playtest** access and the early testers you invite.</li></ul></td>
+       </tr>
+       <tr>
+       <td>Public</td>
+       <td><ul><li>**Friends** - When enabled, your game can only be played by your friends and those specified in the Playtest tab. When disabled, your game can be played by anyone on Roblox, pending age and geographical restrictions.</li></ul></td>
+       </tr>
+     </tbody>
+   </table>
 
-4. <Chip label="OPTIONAL" size="small" variant="outlined" /> For **Public** games, you can choose **Exclude&nbsp;from&nbsp;Recommendations** to omit the game from the **Recommended&nbsp;For&nbsp;You** category on Roblox. The game is still public, but has more limited reach and exposure. To widen your audience while still excluded from recommendations, create an ad campaign as outlined in [Ads Manager](../../production/promotion/ads-manager.md). If you enable sponsored ads, the game's analytics charts might show some users from **Recommended&nbsp;For&nbsp;You**.
+1. Click **Save Changes**.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> For **Public** games, you can choose to omit your game from the **Recommended For You** category on Roblox for more limited reach and exposure.
 
-5. Click **Save Changes**.
+   1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select your game.
+   1. Navigate to **Audience** > **Advanced Settings**.
+   1. In the **Recommendations** section, toggle **Exclude from recommendations**.
 
-### Publishing requirements
+### Release requirements
 
-Publishing requirements depend on the target [audience](#audience) and apply to **all** publish actions:
+<Alert severity="info">
+Release requirements apply to **all** release actions:
 
-- Publishing a new game.
-- Updating an existing public game (publishing a new version of a place).
-- Publishing to a different game via **Publish to Roblox As**.
-- Setting your audience to **Limited** (any option under **Limited**) or changing it from **Public** to **Private**.
+- Releasing a game for the first time.
+- Updating a released game, such as releasing a new version of a place.
+- Releasing to a different game via **Publish As**.
+- Changing your target audience settings.
 
-#### Private games
+</Alert>
 
-A game published as **Private** is only available to the owner or users with **Edit** permissions.
-
-Those with **playtest** permissions can't play private games. To enable their access, make sure you meet the requirements for **Public** games and then set the [audience](#audience) to **Limited**&nbsp;⟩ **Playtesters**.
-
-#### Public/Limited games
-
-Publishing to a **Public** audience or **Limited** audience (playtesters, friends, or community members) has various requirements.
-
-To reach **16+** and **Trusted Friends**:
+To release a game to **ages 16+** and **Trusted Friends**:
 
 - Have an account that is in good standing and at least 2 days old.
 - Complete an age check through [facial age estimation](https://about.roblox.com/age-estimation) or [government ID](./account-verification.md#verify-through-government-id).
-- Complete the [content maturity & compliance](../promotion/content-maturity.md) questionnaire.
+- Answer the age-restricted content question that displays first in the [Maturity & Compliance Questionnaire](../promotion/content-maturity.md):
+  - Answer **No** to receive a **Content May Vary** label. The game releases only to age-checked Roblox users ages 16+.
+  - Answer **Yes**, then complete the questionnaire. The game receives a label based on your answers and releases to age-checked Roblox users ages 16+ or age-verified Roblox users ages 18+, depending on the content within your game.
 
-To reach **all ages** including [Roblox Kids and Select](./kids-and-select.md), you must meet all of the previous requirements **plus**:
+To release a game to **all ages**, including [Roblox Kids and Select](./kids-and-select.md), you must meet all of the previous requirements **plus**:
 
 - Verify your account through [facial age estimation](https://about.roblox.com/age-estimation) if you are under 18 years old, or through [government ID](./account-verification.md#verify-through-government-id) if you are 18 years old or older.
 - Enable [2FA](https://en.help.roblox.com/hc/en-us/articles/212459863-Add-2-Step-Verification-to-Your-Account) on your Roblox account.
@@ -248,14 +314,15 @@ To reach **all ages** including [Roblox Kids and Select](./kids-and-select.md), 
   - Maintain an active [Roblox Plus](../monetization/roblox-plus.md) or [Roblox Premium](https://www.roblox.com/premium/membership) subscription for 2 consecutive months.
   - Pay a one-time, refundable [fee](#optional-fees).
 - Game must pass the [evaluation process](../../production/publishing/kids-and-select.md#for-all-ages-including-kids-and-select-accounts) for **Kids** and **Select** accounts.
+- Complete the entire [Maturity & Compliance Questionnaire](../promotion/content-maturity.md) and receive a Minimal, Mild, or Moderate (9+) content rating.
 
 ### Optional fees
 
-If you do not have a Roblox Plus or Roblox Premium subscription for 2 consecutive months and you want to publish a game to users of all ages, you have the option to pay either a publishing or expedited review fee.
+If you do not have a Roblox Plus or Roblox Premium subscription for 2 consecutive months and you want to release a game to users of all ages, you have the option to pay either a publishing or expedited review fee.
 
 #### Publishing fee
 
-The **publishing fee** is a one-time, refundable fee of 1,000 Robux per game that allows you to publish and expand the reach of your game to users of all ages. This fee is intended to make it expensive and logistically difficult for bad actors to create large numbers of accounts and flood the platform with spam.
+The **publishing fee** is a one-time, refundable fee of 1,000 Robux per game that allows you to release and expand the reach of your game to users of all ages. This fee is intended to make it expensive and logistically difficult for bad actors to create large numbers of accounts and flood the platform with spam.
 
 If your game maintains 25 highly engaged players for 60 days without moderation, you will receive a refund of the publishing fee. However, if your game is permanently moderated or taken down for not meeting Roblox's [Community Standards](https://en.help.roblox.com/hc/articles/203313410) within the 60-day period, the fee will **not** be refunded.
 
@@ -268,7 +335,7 @@ To pay the publishing fee:
 
 #### Expedited review fee
 
-The **expedited review** fee is a one-time, refundable fee of 50,000 Robux per game that allows you to accelerate the safety and compliance reviews required to publish your game to users of all ages. This fee is intended to provide launch flexibility and financial accountability for qualified creators who haven't yet met the highly engaged age-checked player requirement for Kids and Select accounts.
+The **expedited review** fee is a one-time, refundable fee of 50,000 Robux per game that allows you to accelerate the safety and compliance reviews required to release your game to users of all ages. This fee is intended to provide launch flexibility and financial accountability for qualified creators who haven't yet met the highly engaged age-checked player requirement for Kids and Select accounts.
 
 <Alert severity="info">
 While the expedited review fee accelerates safety and compliance reviews for creators planning a timed launch or running an off-platform campaign and need to know exactly when their game will be ready for all ages, **all games must continue to meet the same standards as other Roblox Kids and Select games**.

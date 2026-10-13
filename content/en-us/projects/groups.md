@@ -90,7 +90,7 @@ Role configuration is only accessible if you're the group owner or you have perm
    <tbody>
      <tr>
       <td width="40%">**Playtest experiences**</td>
-      <td>Members with this role can play all games owned by the group, whether they're private or public. Optionally available as a [per‑game permission](./configure-games.md).</td>
+      <td>Members with this role can play all games owned by the group, even if they aren't released to a wider audience. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
        <td>**Edit experiences**</td>

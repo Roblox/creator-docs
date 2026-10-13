@@ -7,8 +7,6 @@ prev: /tutorials/curriculums/environmental-art/greybox-your-environment
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/JiXnyF0fbrU?si=PGiGEjHqosGplmYm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br/>
-
 **Developing polished assets** is the process of planning and creating high-quality assets to replace or convert the greybox environment and meet your game's aesthetic goals and design requirements. After you have the basis for how you want to lay out your assets in the 3D space from the greybox process, it's much easier to visualize what assets are necessary to bring your environment to life.
 
 Using the [Environment Art Asset Library](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library) as a reference, this section of the environmental art curriculum shows you how to prepare what you need to turn your basic greybox layout into a futuristic laser tag environment, including guidance on:

@@ -67,13 +67,13 @@ For more information about accessing Version History, saving place files with no
 
 ## Allow copying
 
-By default, all private and public games are locked so that you or your [group](./groups.md) are the only creators who have permission to edit its place files. However, if you want to allow other creators to be able to access an editable copy of your game for their own creation process, you can **uncopylock** the game. This is particularly helpful when you create templates or reference files for open use.
+By default, all games are locked so that you or your [group](./groups.md) are the only creators who have permission to edit its place files. However, if you want to allow other creators to be able to access an editable copy of your game for their own creation process, you can **uncopylock** the game. This is particularly helpful when you create templates or reference files for open use.
 
 To allow the community to access an editable copy of your game:
 
 1. Navigate to the [Creator Dashboard][creatordashboard].
 1. Click on the thumbnail of the game you want to allow players to copy. The game's **Overview** page displays.
-1. In the left-hand navigation, navigate to **Configure** ⟩ **Places**.
+1. In the left-hand navigation, navigate to **Configurations** ⟩ **Places**.
 1. Click the **start place** marked with a star icon. The place's **Basic Settings** page displays.
 
    <img src="../assets/creator-dashboard/Places-Start-Place-Icon.png" width="200" alt="Start place tile indicated in Places display on the Creator Dashboard" />

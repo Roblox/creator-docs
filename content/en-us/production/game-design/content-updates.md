@@ -5,8 +5,6 @@ description: Content updates
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kQIyqMdh7Os?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br />
-
 A **content cadence** is the regular release of new content updates that can include items, quests, playable maps, and other content in a game. It's a part of **live operations** (LiveOps), the ongoing support of a live game, which also includes game expansions, bug fixes, and quality of life updates.
 
 Content releases keep players engaged between larger updates and can be an essential element of a live game's monetization strategy. Maintaining a content cadence requires developers to:

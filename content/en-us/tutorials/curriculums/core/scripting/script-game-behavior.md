@@ -7,8 +7,6 @@ prev: /tutorials/curriculums/core/building/greybox-a-playable-area
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/pg6nWVARoDM?si=93UpoO1ll2dZDhzO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-<br/>
-
 Now that you have a 3D world, it's time to add your first script. In this section, you'll create a coin collection mechanic that lets players collect coins and temporarily disables coins after they've been collected.
 
 ## Create the coins

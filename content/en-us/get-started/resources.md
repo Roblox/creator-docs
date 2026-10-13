@@ -92,7 +92,7 @@ fullWidth: true
     </Card>
   </Grid>
   <Grid item xs={12} md={7}>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PVlCHE9pc50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br/><br/>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PVlCHE9pc50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <Typography variant='caption1'><a href="https://corp.roblox.com/newsroom/2025/09/roblox-rdc-2025" target="_blank">Read more about RDC 2025</a></Typography>
   </Grid>
 </Grid>

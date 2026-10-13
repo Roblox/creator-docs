@@ -243,7 +243,7 @@ To grant a game permission to use many restricted assets:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. Select one of your or your group's games. The game's overview page displays.
-1. In the game's left-hand navigation, navigate to the **Configure** section, then select **Permissions**. The game's **Permissions** page displays.
+1. In the game's left-hand navigation, navigate to **Configurations** > **Permissions**.
 1. In the **Enter asset IDs** input, type every asset ID you want the game to have access to separated by commas, then click the **Add** button. All restricted assets the game has access to display beneath the input with the asset's name, asset ID, owner, and asset type.
 1. At the bottom of the page, click the **Save Changes** button.
 
@@ -256,7 +256,7 @@ To view every restricted asset that your or your group's games have permission t
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. Select one of your or your group's games. The game's overview page displays.
-1. In the game's left-hand navigation, navigate to the **Configure** section, then select **Permissions**. The game's **Permissions** page displays.
+1. In the game's left-hand navigation, navigate to **Configurations** > **Permissions**.
 1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Click the download arrow button to export the data for offline processing.
 
 ## Revoke permissions

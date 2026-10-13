@@ -82,7 +82,7 @@ The following table outlines every parameter in the dash ability's `AbilityDefin
 <tbody>
 	<tr>
 		<td>`Name`</td>
-		<td>The ability name that other abilities can reference in conditions and conflicts. Multiple ability definitions can use the same name. The `Class.ModuleScript` name, not this field, determines the unique `Class.Configuration` key under the character.</td>
+		<td>The ability's unique identity; other abilities can reference it in conditions and conflicts. Registering two abilities with the same `Name` throws an error. For a few similar abilities, give each a different `Name` and share a common [label](./index.md#labels) in `Labels`. The `Class.ModuleScript` name, not this field, determines the unique `Class.Configuration` key under the character.</td>
 	</tr>
 	<tr>
 		<td>`Labels`</td>
@@ -100,7 +100,7 @@ One or more [conditions](./index.md#conditions) which are checked every frame wh
 	</tr>
 	<tr>
 		<td>`RunsWhile`</td>
-		<td>One or more [conditions](./index.md#conditions) which are checked every frame while the ability is **active**; the moment they stop being `true`, the ability stops. The sole condition <Typography noWrap>`RunsWhile = "DashWindow"`</Typography> means the ability keeps running while the `DashWindow` label exists. Defining `RunsWhile` replaces the generated input condition, so releasing the input doesn't cancel this dash. For a `Hold` or `Toggle` ability that must stop when its input becomes inactive, include the `Rule.Input` sentinel in the custom condition.</td>
+		<td>One or more [conditions](./index.md#conditions) which are checked every frame while the ability is **active**; the moment they stop being `true`, the ability stops. The sole condition <Typography noWrap>`RunsWhile = "DashWindow"`</Typography> means the ability keeps running while the `DashWindow` label exists. `RunsWhile` holds world conditions only and input never enters it, so this field exists purely to time out the dash window on its own. See [inputs](./index.md#inputs) for how `Input.Mode` (not `RunsWhile`) controls when a `Hold` or `Toggle` ability stops from its input.</td>
 	</tr>
 	<tr>
 <td>`Input`</td>
@@ -180,6 +180,6 @@ Although registration occurs on the server, ability callbacks run in both the pr
 
 As noted in [ability definition](#ability-definition), the `Input` definition specifies how the ability is activated. Its `ActionSlot` field defines an **action slot** which is associated with a list of `Class.InputAction|InputActions` and `Class.InputBinding|InputBindings`.
 
-The CCL always adds the generated input sensor to `StartsWhen`. If you omit `RunsWhile`, it also uses that sensor as the continuation condition. Defining `RunsWhile` replaces the default, so include the `Rule.Input` value directly when a `Hold` or `Toggle` ability must stop with its input. For an example, see [inputs](./index.md#inputs).
+The CCL always `AND`s the generated input trigger into `StartsWhen`, and `Input.Mode` (not `RunsWhile`) controls how a `Hold` or `Toggle` ability starts and stops from that input. `RunsWhile` holds world conditions only; putting the input itself into `RunsWhile` throws an error. To make a `Hold` or `Toggle` ability outlast its input under a world condition, use `Input.OutlivesInputWhile` instead. For details and an example, see [inputs](./index.md#inputs).
 
 <ActionSlots components={props.components} />

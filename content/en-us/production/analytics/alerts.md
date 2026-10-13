@@ -10,10 +10,10 @@ Alerts are available for any experience that meets the eligibility requirement f
 For example, the following workflow is a typical way of using alerts to catch performance regressions:
 
 1. **Create an alert** - Set up an alert for "Client crash rate is above 5%" with a 5-minute duration and critical severity.
-2. **Add a webhook** - Connect to your team's PagerDuty or Discord webhook.
-3. **Push your update** - Deploy your new version.
-4. **Receive the alert** - If crash rate spikes above 5% for 5 consecutive minutes, your team is immediately notified with the metric value and a link to the dashboard.
-5. **Investigate and fix** - Click the dashboard link in the webhook payload to view the performance charts and diagnose the issue.
+1. **Add a webhook** - Connect to your team's PagerDuty or Discord webhook.
+1. **Push your update** - Deploy your new version.
+1. **Receive the alert** - If crash rate spikes above 5% for 5 consecutive minutes, your team is immediately notified with the metric value and a link to the dashboard.
+1. **Investigate and fix** - Click the dashboard link in the webhook payload to view the performance charts and diagnose the issue.
 
 You can create up to 20 alerts per experience. Creating alerts requires the **Create and configure alerts** permission.
 
@@ -21,8 +21,8 @@ You can create up to 20 alerts per experience. Creating alerts requires the **Cr
 
 To access the alerts page, you must either be the experience owner or have **View all analytics** [permissions](#permissions).
 
-1. Select your experience on [Creator Hub](https://create.roblox.com/).
-2. Under **Configure**, select **Alerts**.
+1. Select a game on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+1. In the left-hand navigation, navigate to **Configurations** > **Alerts**.
 
 The **Configuration** tab lets you create and manage alert rules. Use the **Analytics** page to review alert history, active alerts, and events.
 
@@ -128,8 +128,8 @@ You can use webhooks to integrate with external tools like PagerDuty or Slack fo
 
 ### Set up a webhook
 
-1. Select your experience on [Creator Hub](https://create.roblox.com/).
-2. Under **Configure**, select **Webhooks** and click **Add Webhook**.
+1. Select a game on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+1. In the left-hand navigation, navigate to **Configurations** > **Webhooks**, then click the **Add Webhook** button.
 
    The webhook URL comes from your provider. For example, a Slack URL probably looks like this:
 
@@ -137,11 +137,11 @@ You can use webhooks to integrate with external tools like PagerDuty or Slack fo
    https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
    ```
 
-3. Enter your webhook URL and a name.
-4. <Chip label="OPTIONAL" size="small" variant="outlined" /> Include a secret, which can help ensure that the requests you receive came from Roblox.
-5. <Chip label="OPTIONAL" size="small" variant="outlined" /> Use the **Test Response** button to check if your service can receive a sample request.
-6. Click **Save Changes**.
-7. When creating or editing an alert, select your webhook under the **Delivery channel** field.
+1. Enter your webhook URL and a name.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Include a secret, which can help ensure that the requests you receive came from Roblox.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Use the **Test Response** button to check if your service can receive a sample request.
+1. Click **Save Changes**.
+1. When creating or editing an alert, select your webhook under the **Delivery channel** field.
 
 Creating experience-level webhooks requires the **List, create, update, and delete webhooks** [permission](#permissions).
 

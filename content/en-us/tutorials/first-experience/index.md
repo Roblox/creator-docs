@@ -299,8 +299,8 @@ What you learn on the Creator Dashboard can give you important insights into how
 To publish your game for the first time:
 
 1. Upload your game to the cloud.
-   1. In the menu bar, click **File**, then select **Publish to Roblox**.
-   1. In the **Publish Experience** window, fill out all applicable fields.
+   1. In the menu bar, click **File**, then select **Publish**.
+   1. In the **Game Details** window, fill out all applicable fields.
       1. In the **Name** field, provide a name for your game.
       1. In the **Description** field, provide a summary of what a player can expect from the game.
       1. From the **Genre** dropdown menu, select the genre that you want to represent your game.

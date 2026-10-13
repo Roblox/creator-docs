@@ -45,6 +45,5 @@ After uploading your accessory, the asset is added to the moderation queue and m
 After moderation is complete, your rigid accessory's publishing details become available to edit and enable for sale. See the following for an overview on the various sale options available:
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/swQW2VS9ZMA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-<br />
 
 After listing an asset to the Marketplace, you can return to this page to edit your item's sale details, or take the item offsale.
