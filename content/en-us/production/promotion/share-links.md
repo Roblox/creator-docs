@@ -12,7 +12,7 @@ For more information on the analytics for share links, see the [Acquisition](../
 ## Create a share link
 
 <Alert severity="warning">
-You can only create share links for games you own. For group-owned games, you must be a member of the group with the **Create and configure share links** permission, and the share link must be created from the group account.
+You can only create share links for games you own. For group-owned games, you must be a member of the group with the **<Translation keyName='Group.ShareLinksManager.Label' />** permission, and the share link must be created from the group account.
 </Alert>
 
 To create a share link:

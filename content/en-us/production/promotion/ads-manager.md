@@ -97,7 +97,7 @@ The payment method cannot be changed after a campaign is published.
 
 During campaign creation, you can enable **auto-reload** to automatically purchase ad credits when your account runs out. When auto-reload is triggered, Roblox reloads one day's worth of ad credits, and continues to reload daily as needed to keep your campaign running.
 
-Converting group earnings to ad credit and enabling auto-reload on group-funded campaigns require the "Configure and spend group revenue" permission. Group roles and permissions can be configured in [Creator Hub](https://create.roblox.com/dashboard/group/roles).
+Converting group earnings to ad credit and enabling auto-reload on group-funded campaigns require the **<Translation keyName='Group.GroupRevenueManager.Label' />** permission. Group roles and permissions can be configured in [Creator Hub](https://create.roblox.com/dashboard/group/roles).
 
 <h5 style={{marginTop: '36px'}}>Creatives</h5>
 
@@ -526,11 +526,11 @@ While a campaign's attribution window is still open and earnings are still accru
 
 Group roles and permissions are managed in [Creator Hub](https://create.roblox.com/dashboard/group/roles).
 
-To grant a user in your group access to Ads Manager, add the "Create Ad campaigns for the group" permission to a role, then add that role to the desired user.
+To grant a user in your group access to Ads Manager, add the **<Translation keyName='Group.AdManager.Label' />** permission to a role, then add that role to the desired user.
 
 ### Group ad credit
 
-The "Configure and spend group revenue" permission allows the user to convert group-earned Robux to group ad credit. Once group ad credit is available, it can be used to fund campaigns by any user with the "Create Ad campaigns for the group" permission. The only exception is enabling auto-reload on a group-funded campaign; enabling auto-reload also requires the "spend group revenue" permission.
+The **<Translation keyName='Group.GroupRevenueManager.Label' />** permission allows the user to convert group-earned Robux to group ad credit. Once group ad credit is available, it can be used to fund campaigns by any user with the **<Translation keyName='Group.AdManager.Label' />** permission. The only exception is enabling auto-reload on a group-funded campaign; enabling auto-reload also requires the **<Translation keyName='Group.GroupRevenueManager.Label' />** permission.
 
 <img src="../../assets/promotion/ads-manager/group-permissions.png" width="780" />
 

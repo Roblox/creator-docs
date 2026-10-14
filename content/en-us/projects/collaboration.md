@@ -118,11 +118,11 @@ For [group](../projects/groups.md) games, only the group owner or members with s
 
 <Tabs>
 <TabItem label="All group games">
-If you're the group owner or a member with sufficient permissions, you can configure collaboration across **all** group games, for example grant **Edit** permission to an "Audio&nbsp;Artist" group role so they can fine-tune audio playback across multiple group games.
+If you're the group owner or a member with sufficient permissions, you can configure collaboration across **all** group games, for example grant **Edit** permission to an "Audio Artist" group role so they can fine-tune audio playback across multiple group games.
 
 1. From the [Creator Dashboard](https://create.roblox.com/dashboard/creations), expand the account switcher in the upper‑left and select the group.
 1. Expand the account switcher again and select **Roles**.
-1. Enable [Edit experiences](../projects/groups.md#roles-and-permissions) for roles that should have editing permission. Remember to click **Save Changes** for each role that you change.
+1. Enable the <Translation keyName='Group.UniverseEditor.Label' /> [permission](../projects/groups.md#roles-and-permissions) for roles that should have editing permission. Remember to click **Save Changes** for each role that you change.
 
    In Studio's **Manage Collaborators** window for any group-owned game, eligible roles display **Edit** permission but are muted to indicate that you can't change the permission level from Studio.
 
@@ -132,7 +132,7 @@ If you're the group owner or a member with sufficient permissions, you can confi
 
 </TabItem>
 <TabItem label="Per-game">
-If you're the group's owner, you can grant permissions on a per-game basis to roles that do not have those permissions across all group games. For example, you can temporarily grant **Edit** permission to an "FX&nbsp;Artist" group role so they can fine-tune visual effects before a game's public release.
+If you're the group's owner, you can grant permissions on a per-game basis to roles that do not have those permissions across all group games. For example, you can temporarily grant **Edit** permission to an "FX Artist" group role so they can fine-tune visual effects before a game's public release.
 
 1. In Studio's **Manage Collaborators** window for any group-owned game, select **Edit** from the permissions dropdown for the desired roles. Remember that you can only modify roles that do **not** already have edit permission across all group games.
 

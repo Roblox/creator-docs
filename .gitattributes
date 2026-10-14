@@ -14,3 +14,8 @@ content/zh-tw/assets/** filter=lfs diff=lfs merge=lfs -text
 
 # But treat tarballs as binary (no line ending conversion)
 *.tgz binary
+
+# Restore binary handling for LFS-tracked assets; the catch-all `* text
+# eol=lf` above matches these paths too and would otherwise re-enable CRLF
+# normalization on binary content when LFS push is skipped (raw-blob commits).
+content/**/assets/** -text

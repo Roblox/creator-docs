@@ -241,7 +241,7 @@ To cancel a license request:
 
 1. Navigate to **Intellectual Property** ⟩ **Licenses**.
 2. Select the license request you want to cancel.
-3. In the top-right, select **Cancel** and complete the prompt.
+3. In the top-right, select the **Cancel request** button.
 
 ## License expiration & termination
 

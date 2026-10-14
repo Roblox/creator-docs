@@ -12,10 +12,11 @@ If you're the owner of a game or the group owner of a group-owned game, you alre
 
 To give members of your group access to the Data Stores Manager, you can [grant them one of the following permissions](../../projects/groups.md#roles-and-permissions):
 
-- **View Data Stores** lets them view the Data Stores Manager page in the Creator Hub.
-- **Edit Data Stores** lets them delete keys.
-- **Delete Data Stores** lets them delete data stores.
-- **Edit experiences** gives them full access to all of the functionality of the Data Stores Manager.
+- **<Translation keyName='Universe.DataStoresViewer.Label' />** lets them view the Data Stores Manager page in the Creator Hub.
+- **<Translation keyName='Universe.DataStoresEditor.Label' />** lets them delete keys.
+- **<Translation keyName='Universe.DataStoresDeleter.Label' />** lets them delete data stores.
+- **<Translation keyName='Group.UniverseEditor.Label' />** gives them full access to all of the functionality of the Data Stores Manager.
+
 </Alert>
 
 To access the Data Stores Manager:

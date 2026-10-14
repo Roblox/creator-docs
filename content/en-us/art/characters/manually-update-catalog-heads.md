@@ -139,7 +139,7 @@ Import your head back into Studio and verify that it passes validation. If valid
       2. Select **Avatar Item**.
       3. Set its **Asset Category** to Head.
       4. Wait for the Dynamic Head validation result (pass or fail).
-      5. **Cancel** the save operation so you don't incur publishing fees at this time.
+      5. Cancel the save operation so you don't incur publishing fees at this time.
    2. If your head doesn't pass validation then you need to go back to Blender or Maya and make the appropriate fixes to pass validation.
 1. If your head passes validation, publish your asset as a Development Item.
 

@@ -96,6 +96,12 @@ src: '/assets/ads/sports.png',
 alt: 'Characters watching a football game in a sports genre experience.',
 pdfHref: '/assets/ads/Sports_Playbook.pdf',
 },
+{
+title: 'Survival',
+src: '/assets/ads/survival.png',
+alt: 'Survival genre experience thumbnail.',
+pdfHref: '/assets/ads/Survival_Playbook.pdf',
+},
 ];
 
 return (<>

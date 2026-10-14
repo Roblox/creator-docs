@@ -33,9 +33,9 @@ Role configuration is only accessible if you're the group owner or you have perm
 
 1. From the [Creator Dashboard](https://create.roblox.com/dashboard/creations), expand the account switcher in the upper‑left and select the group.
 2. Expand the account switcher again and select **Roles**.
-3. For each role, carefully confirm the permissions under the **Permissions** tab.
+3. For each role, carefully confirm the permissions under the **<Translation keyName='Label.Permissions' />** tab.
 
-   Permissions are organized into **General**, **Creation**, and **Community** categories. The sections below describe the permissions available in each category.
+   Permissions are organized into **<Translation keyName='Group.Chip.General.Label' />**, **<Translation keyName='Group.Chip.Creation.Label' />**, and **<Translation keyName='Group.Chip.Community.Label' />** categories. The sections below describe the permissions available in each category.
 
    ### General
 
@@ -45,35 +45,35 @@ Role configuration is only accessible if you're the group owner or you have perm
    <table>
    <tbody>
      <tr>
-       <td width="40%">**Manage roles**</td>
+       <td width="40%">**<Translation keyName='Group.RoleManager.Label' />**</td>
        <td>Members with this permission can create, edit, delete, reorder, and assign or unassign roles below their highest role. They can only edit permissions they already hold.</td>
      </tr>
      <tr>
-       <td>**Assign or remove roles from members**</td>
+       <td>**<Translation keyName='Group.RoleAssigner.Label' />**</td>
        <td>Members with this permission can assign or unassign roles below their highest role to any member.</td>
      </tr>
      <tr>
-       <td>**Invite or approve members**</td>
+       <td>**<Translation keyName='Group.MemberInviter.Label' />**</td>
        <td>Members with this permission can invite people to the group and approve join requests.</td>
      </tr>
      <tr>
-       <td>**Kick members**</td>
+       <td>**<Translation keyName='Group.MemberKicker.Label' />**</td>
        <td>Members with this permission can remove members whose highest role is below their own.</td>
      </tr>
      <tr>
-       <td>**Ban members**</td>
+       <td>**<Translation keyName='Group.MemberBansManager.Label' />**</td>
        <td>Members with this permission can ban members whose highest role is below their own.</td>
      </tr>
      <tr>
-       <td>**Configure group profile**</td>
+       <td>**<Translation keyName='Organization.ConfigureOrganization.Label' />**</td>
        <td>Members with this permission can configure the group profile.</td>
      </tr>
      <tr>
-       <td>**View audit logs**</td>
+       <td>**<Translation keyName='Group.AuditLogViewer.Label' />**</td>
        <td>Members with this permission can view [group audit logs](#group-audit-logs).</td>
      </tr>
      <tr>
-       <td>**Manage allies and enemies**</td>
+       <td>**<Translation keyName='Group.RelationshipManager.Label' />**</td>
        <td>Members with this permission can manage the group's allies and enemies.</td>
      </tr>
    </tbody>
@@ -84,41 +84,41 @@ Role configuration is only accessible if you're the group owner or you have perm
    ### Creation
 
     <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Creations</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2"><Translation keyName='Universe.CreationsGroup.Label' /></Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-      <td width="40%">**Playtest experiences**</td>
+      <td width="40%">**<Translation keyName='Group.UniversePlayer.Label' />**</td>
       <td>Members with this role can play all games owned by the group, even if they aren't released to a wider audience. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**Edit experiences**</td>
+       <td>**<Translation keyName='Group.UniverseEditor.Label' />**</td>
        <td>Members with this role can edit all games and [assets](../projects/assets/index.md) owned by the group and use all features in the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Does not include editing a game outside of a [collaborative](../projects/collaboration.md) session or saving a place from one game into another game. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**Publish experiences**</td>
+       <td>**<Translation keyName='Group.UniversePublisher.Label' />**</td>
        <td>Members with this role can both edit games, as above, and also publish games to Roblox. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**Manage share links**</td>
+       <td>**<Translation keyName='Group.ShareLinksManager.Label' />**</td>
        <td>Members with this role can create/configure [share links](../production/promotion/share-links.md).</td>
      </tr>
      <tr>
-       <td>**Manage experience events**</td>
+       <td>**<Translation keyName='Group.UniverseEventsManager.Label' />**</td>
        <td>Members with this role can create/configure [experience events](../production/promotion/experience-events.md).</td>
      </tr>
      <tr>
-       <td>**Moderate experiences**</td>
+       <td>**<Translation keyName='Group.UniverseBansManager.Label' />**</td>
        <td>Members with this role can view all in-game chat messages (read-only; member must be 18+) and ban or manage banned users across all games owned by the group.</td>
      </tr>
      <tr>
-       <td>**Manage monetization for experiences**</td>
+       <td>**<Translation keyName='Group.UniverseMonetizationManager.Label' />**</td>
        <td>Members with this role can manage monetization products such as [passes](../production/monetization/passes.md), [developer products](../production/monetization/developer-products.md), [subscriptions](../production/monetization/subscriptions.md), and more. Optionally available as a [per-game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**Manage secrets for experiences**</td>
-       <td>Members with this role can see the list of [secrets](../cloud-services/secrets.md) and can create, update, and delete secrets for all games owned by the group. Members with this role require **Edit experiences** permission to view the Secrets page. Optionally available as a [per‑game permission](./configure-games.md).</td>
+       <td>**<Translation keyName='Group.UniverseSecretsManager.Label' />**</td>
+       <td>Members with this role can see the list of [secrets](../cloud-services/secrets.md) and can create, update, and delete secrets for all games owned by the group. Members with this role require <Translation keyName='Group.UniverseEditor.Label' /> permission to view the Secrets page. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
    </tbody>
    </table>
@@ -126,17 +126,17 @@ Role configuration is only accessible if you're the group owner or you have perm
    </BaseAccordion>
 
     <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Analytics</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2"><Translation keyName='Group.AnalyticsGroup.Label' /></Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-       <td width="40%">**View analytics for experiences**</td>
+       <td width="40%">**<Translation keyName='Group.UniverseAnalyticsViewer.Label' />**</td>
        <td>Members with this role can access the [analytics](../production/analytics/index.md) of all games owned by the group, even if they don't have edit access. Optionally available as a [per-game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**Manage alerts**</td>
-       <td>Members with this role can create and manage analytics alerts. Pair this permission with **View analytics for experiences** to see alert annotations directly on metrics graphs.</td>
+       <td>**<Translation keyName='Group.AlertsManager.Label' />**</td>
+       <td>Members with this role can create and manage analytics alerts. Pair this permission with **<Translation keyName='Group.UniverseAnalyticsViewer.Label' />** to see alert annotations directly on metrics graphs.</td>
      </tr>
    </tbody>
    </table>
@@ -144,20 +144,20 @@ Role configuration is only accessible if you're the group owner or you have perm
    </BaseAccordion>
 
     <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Monetization</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2"><Translation keyName='Group.MonetizationGroup.Label' /></Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-       <td width="40%">**View group revenue**</td>
+       <td width="40%">**<Translation keyName='Group.GroupRevenueViewer.Label' />**</td>
        <td>Members with this role can view the group Robux balance, any configured recurring split payouts, and revenue logging features.</td>
      </tr>
      <tr>
-      <td>**Manage and spend group revenue**</td>
+      <td>**<Translation keyName='Group.GroupRevenueManager.Label' />**</td>
       <td>Members with this role can view all group revenue, as above, and also directly manage it. This includes setting up [recurring payouts](#recurring-payouts) and sending [one‑time payouts](#one-time-payouts) to collaborators.</td>
      </tr>
      <tr>
-       <td>**Create ad campaigns for the group**</td>
+       <td>**<Translation keyName='Group.AdManager.Label' />**</td>
        <td>Members with this role can advertise the group.</td>
      </tr>
    </tbody>
@@ -166,16 +166,16 @@ Role configuration is only accessible if you're the group owner or you have perm
    </BaseAccordion>
 
    <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Avatar items</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2"><Translation keyName='Group.AvatarItemGroup.Label' /></Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-       <td width="40%">**Create avatar items**</td>
+       <td width="40%">**<Translation keyName='Group.AvatarItemCreator.Label' />**</td>
        <td>Members with this role can create avatar items such as clothing.</td>
      </tr>
      <tr>
-       <td>**Configure avatar items**</td>
+       <td>**<Translation keyName='Group.AvatarItemManager.Label' />**</td>
       <td>Members with this role can configure sales details, restocks, and sponsorships for existing group avatar items.</td>
      </tr>
    </tbody>
@@ -184,12 +184,12 @@ Role configuration is only accessible if you're the group owner or you have perm
    </BaseAccordion>
 
     <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">API</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2"><Translation keyName='Group.APIGroup.Label' /></Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-       <td width="40%">**Manage API keys**</td>
+       <td width="40%">**<Translation keyName='Group.ApiKeyManager.Label' />**</td>
        <td>Members with this role can manage [Open Cloud API keys](../cloud/auth/api-keys.md) for the group.</td>
      </tr>
    </tbody>
@@ -198,20 +198,20 @@ Role configuration is only accessible if you're the group owner or you have perm
    </BaseAccordion>
 
     <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Development items</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2"><Translation keyName='Group.DevelopmentItemGroup.Label' /></Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-      <td width="40%">**View development items**</td>
+      <td width="40%">**<Translation keyName='Group.DevelopmentItemViewer.Label' />**</td>
       <td>Members with this role can view development items owned by the group, for example **Audio**.</td>
      </tr>
      <tr>
-       <td>**Manage development items**</td>
+       <td>**<Translation keyName='Group.DevelopmentItemManager.Label' />**</td>
       <td>Members with this role can upload and configure asset development items such as **Decals**.</td>
      </tr>
      <tr>
-      <td>**Manage development item permissions**</td>
+      <td>**<Translation keyName='Group.DevelopmentItemPermissionsManager.Label' />**</td>
       <td>Members with this role can configure permissions of development items, for example audio sharing.</td>
      </tr>
    </tbody>
@@ -220,20 +220,20 @@ Role configuration is only accessible if you're the group owner or you have perm
    </BaseAccordion>
 
     <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Data Stores</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2"><Translation keyName='Group.DataStoresGroup.Label' /></Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-       <td width="40%">**View Data Stores for experiences**</td>
+       <td width="40%">**<Translation keyName='Group.DataStoresViewer.Label' />**</td>
       <td>Members with this role can view data stores for all group games through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md), but they cannot delete data. Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**Edit Data Stores for experiences**</td>
+       <td>**<Translation keyName='Group.DataStoresEditor.Label' />**</td>
       <td>Members with this role can delete specific keys within data stores for all group games through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
      <tr>
-       <td>**Delete Data Stores for experiences**</td>
+       <td>**<Translation keyName='Group.DataStoresDeleter.Label' />**</td>
       <td>Members with this role can delete entire data stores for all group games through the [Data Stores Manager](../cloud-services/data-stores/data-stores-manager.md). Optionally available as a [per‑game permission](./configure-games.md).</td>
      </tr>
    </tbody>
@@ -242,12 +242,12 @@ Role configuration is only accessible if you're the group owner or you have perm
    </BaseAccordion>
 
    <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Notifications</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2"><Translation keyName='Group.NotificationsGroup.Label' /></Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-       <td width="40%">**Manage webhooks for experiences**</td>
+       <td width="40%">**<Translation keyName='Group.WebhooksManager.Label' />**</td>
        <td>Members with this role can list, create, update, and delete webhooks for all group experiences.</td>
      </tr>
    </tbody>
@@ -256,12 +256,12 @@ Role configuration is only accessible if you're the group owner or you have perm
    </BaseAccordion>
 
    <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Communication</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2"><Translation keyName='Group.CommunicationGroup.Label' /></Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-       <td width="40%">**Manage support tickets for experiences**</td>
+       <td width="40%">**<Translation keyName='Group.UniverseTicketReviewer.Label' />**</td>
        <td>Members with this role can manage support tickets for all group experiences.</td>
      </tr>
    </tbody>
@@ -270,7 +270,7 @@ Role configuration is only accessible if you're the group owner or you have perm
    </BaseAccordion>
 
    <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Legacy</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2"><Translation keyName='Group.LegacyGroup.Label' /></Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
@@ -286,16 +286,16 @@ Role configuration is only accessible if you're the group owner or you have perm
    ### Community
 
    <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Posts</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2"><Translation keyName='Group.PostsGroup.Label' /></Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-       <td width="40%">**View community announcements**</td>
+       <td width="40%">**<Translation keyName='Group.AnnouncementViewer.Label' />**</td>
        <td>Members with this role can view community announcements.</td>
      </tr>
      <tr>
-       <td>**Create community announcements**</td>
+       <td>**<Translation keyName='Group.AnnouncementCreator.Label' />**</td>
        <td>Members with this role can create community announcements.</td>
      </tr>
    </tbody>
@@ -304,36 +304,36 @@ Role configuration is only accessible if you're the group owner or you have perm
    </BaseAccordion>
 
    <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Forums</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2"><Translation keyName='Group.ForumGroup.Label' /></Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-       <td width="40%">**Manage categories**</td>
+       <td width="40%">**<Translation keyName='Group.ForumCategoryManager.Label' />**</td>
        <td>Members with this role can manage forum categories.</td>
      </tr>
      <tr>
-       <td>**Create posts**</td>
+       <td>**<Translation keyName='Group.ForumPostCreator.Label' />**</td>
        <td>Members with this role can create forum posts.</td>
      </tr>
      <tr>
-       <td>**Remove posts**</td>
+       <td>**<Translation keyName='Group.ForumPostRemover.Label' />**</td>
        <td>Members with this role can remove forum posts.</td>
      </tr>
      <tr>
-       <td>**Lock posts**</td>
+       <td>**<Translation keyName='Group.ForumPostLocksManager.Label' />**</td>
        <td>Members with this role can lock forum posts.</td>
      </tr>
      <tr>
-       <td>**Pin posts**</td>
+       <td>**<Translation keyName='Group.ForumPostPinsManager.Label' />**</td>
        <td>Members with this role can pin forum posts.</td>
      </tr>
      <tr>
-       <td>**Create comments**</td>
+       <td>**<Translation keyName='Group.ForumCommentCreator.Label' />**</td>
        <td>Members with this role can create comments on forum posts.</td>
      </tr>
      <tr>
-       <td>**Remove comments**</td>
+       <td>**<Translation keyName='Group.ForumCommentRemover.Label' />**</td>
        <td>Members with this role can remove comments from forum posts.</td>
      </tr>
    </tbody>
@@ -342,16 +342,16 @@ Role configuration is only accessible if you're the group owner or you have perm
    </BaseAccordion>
 
    <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Content moderation</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2"><Translation keyName='Group.ContentModerationGroup.Label' /></Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-       <td width="40%">**View content moderation**</td>
+       <td width="40%">**<Translation keyName='Group.ContentModerationViewer.Label' />**</td>
        <td>Members with this role can view content moderation.</td>
      </tr>
      <tr>
-       <td>**Manage content moderation**</td>
+       <td>**<Translation keyName='Group.ContentModerationManager.Label' />**</td>
        <td>Members with this role can manage content moderation.</td>
      </tr>
    </tbody>
@@ -360,16 +360,16 @@ Role configuration is only accessible if you're the group owner or you have perm
    </BaseAccordion>
 
    <BaseAccordion>
-   <AccordionSummary><Typography variant="subtitle2">Miscellaneous</Typography></AccordionSummary>
+   <AccordionSummary><Typography variant="subtitle2"><Translation keyName='Group.MiscellaneousGroup.Label' /></Typography></AccordionSummary>
    <AccordionDetails>
    <table>
    <tbody>
      <tr>
-       <td width="40%">**Bypass slow mode**</td>
+       <td width="40%">**<Translation keyName='Group.SlowmodeBypasser.Label' />**</td>
        <td>Members with this role can bypass slow mode.</td>
      </tr>
      <tr>
-       <td>**View community analytics**</td>
+       <td>**<Translation keyName='Group.CommunityAnalyticsViewer.Label' />**</td>
        <td>Members with this role can view community analytics.</td>
      </tr>
    </tbody>
@@ -377,11 +377,11 @@ Role configuration is only accessible if you're the group owner or you have perm
    </AccordionDetails>
    </BaseAccordion><br />
 
-4. <Chip label="IMPORTANT" size="small" variant="outlined" color="warning" /> Click the **Save Changes** button to apply the permission settings.
-5. <Chip label="OPTIONAL" size="small" variant="outlined" /> Click the **Settings** tab and choose a color and visibility setting for the role, then click **Save Changes**.
+4. <Chip label="IMPORTANT" size="small" variant="outlined" color="warning" /> Click the **<Translation keyName='Action.Save' />** button to apply the permission settings.
+5. <Chip label="OPTIONAL" size="small" variant="outlined" /> Click the **<Translation keyName='Label.Settings' />** tab and choose a color and visibility setting for the role, then click the **<Translation keyName='Action.Save' />** button.
 
    <Alert severity="info">
-   A role's **Settings** section is also where group owners and members with sufficient permissions can remove a role entirely through the **Delete Role** button.
+   A role's **<Translation keyName='Label.Settings' />** section is also where group owners and members with sufficient permissions can remove a role entirely through the **Delete Role** button.
    </Alert>
 
 Roles are listed in hierarchy order: a role higher in the list has more
@@ -395,10 +395,7 @@ the private role. Visibility changes where a role appears; it doesn't change
 the permissions the role grants.
 
 <Alert severity="warning">
-To grant **Manage roles**, **Assign or remove roles from members**, **Manage
-access to this group's resources**, **Manage and spend group revenue**, or
-**Delete Data Stores for experiences**, you must have two-step
-verification enabled.
+To grant **<Translation keyName='Group.RoleManager.Label' />**, **<Translation keyName='Group.RoleAssigner.Label' />**, **<Translation keyName='Group.ManageGroupGames.Label' />**, **<Translation keyName='Group.GroupRevenueManager.Label' />**, or **<Translation keyName='Group.DataStoresDeleter.Label' />**, you must have two-step verification enabled.
 </Alert>
 
 ## Manage members
@@ -410,17 +407,17 @@ Member configuration is only accessible if you're the group owner or you have pe
 To manage members from the Creator Dashboard:
 
 1. Expand the account switcher in the upper-left and select the group.
-2. Expand the account switcher again and select **Members**.
+2. Expand the account switcher again and select **<Translation keyName='Label.Members' />**.
 3. Use the **Member** tab to search for existing members or filter them by role. Use the **Invited** tab to review pending invitations.
 
-To add a member, click **Invite** and search for their username. Roblox notifies invited creators according to their notification preferences. You can also copy the group link and share it directly.
+To add a member, click the **<Translation keyName='Action.Invite' />** button and search for their username. Roblox notifies invited creators according to their notification preferences. You can also copy the group link and share it directly.
 
 ### Manage roles
 
-You can manage role assignments from either the **Members** page or a specific role:
+You can manage role assignments from either the **<Translation keyName='Label.Members' />** page or a specific role:
 
-- On the **Members** page, click the **plus (+)** button next to a member to open the role menu. To assign a role, click the **plus (+)** button next to it under **Add roles**. To unassign a role, click the **minus (-)** button next to it under **Current roles**, or click the **&times;** button on an assigned role next to the member's name.
-- On the **Roles** page, select a role and open its **Members** tab. Click **Add members** to search for group members and assign them to the role. To unassign a member, click the **minus (-)** button at the end of their row.
+- On the **<Translation keyName='Label.Members' />** page, click the **plus (+)** button next to a member to open the role menu. To assign a role, click the **plus (+)** button next to it under **Add roles**. To unassign a role, click the **minus (-)** button next to it under **Current roles**, or click the **&times;** button on an assigned role next to the member's name.
+- On the **Roles** page, select a role and open its **<Translation keyName='Label.Members' />** tab. Click the **<Translation keyName='Label.AddMembers' />** button to search for group members and assign them to the role. To unassign a member, click the **minus (-)** button at the end of their row.
 
 ### Member removal
 
@@ -507,7 +504,7 @@ Note that revenue from [private server](../production/monetization/private-serve
 
 ## Group audit logs
 
-Group members with the **View audit logs** permission can review group changes using these group management surfaces:
+Group members with the **<Translation keyName='Group.AuditLogViewer.Label' />** permission can review group changes using these group management surfaces:
 
 - On the Creator Dashboard, select **Activity&nbsp;History** under **Collaboration**.
 - On Communities, open the community's configuration page and select **Audit Log**.

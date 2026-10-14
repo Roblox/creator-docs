@@ -36,7 +36,7 @@ Alerts require specific permissions for different actions:
 | View the alert analytics page | View all analytics |
 | Create experience-level webhooks | List, create, update, and delete webhooks |
 
-For group-owned experiences, anyone with **Edit experience** permissions is granted **Create and configure alerts** by default so that teams can start setting up alerts immediately. If you want to restrict who can create or manage alerts, revoke the permission for specific roles under the experience **Permissions** page. Users who have **Create and configure alerts** also receive the webhook management permission by default.
+For group-owned experiences, anyone with **<Translation keyName='Group.UniverseEditor.Label' />** permissions is granted **Create and configure alerts** by default so that teams can start setting up alerts immediately. If you want to restrict who can create or manage alerts, revoke the permission for specific roles under the experience **Permissions** page. Users who have **Create and configure alerts** also receive the webhook management permission by default.
 
 ## Create alerts
 
