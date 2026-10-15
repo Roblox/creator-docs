@@ -8,7 +8,7 @@ summary: |
   Used alongside `Class.UIGradient.Type` to set the shape of the gradient.
 description: |
   Used alongside `Class.UIGradient.Type` to set the shape of the gradient as
-  linear, radial, or conical.
+  linear, radial, elliptical, or conical.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -39,5 +39,15 @@ items:
       `Class.UIGradient.Rotation|Rotation` controls the starting angle of the
       sweep.
     value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Elliptical
+    summary: |
+      The color/transparency sequence radiates outward from the element's center
+      in an ellipse, optionally shifted by `Class.UIGradient.Offset|Offset`. The
+      ellipse's horizontal and vertical radii are half the element's width and
+      height, respectively, so the ellipse fits the element's bounds.
+      `Class.UIGradient.Rotation|Rotation` rotates the ellipse's axes.
+    value: 3
     tags: []
     deprecation_message: ''

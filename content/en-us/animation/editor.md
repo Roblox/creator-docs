@@ -104,6 +104,10 @@ You can only create animations using **rigs**.
 
    <img src="../assets/studio/general/Toolbar-Character.png" width="800" alt="Character button highlighted in Studio's toolbar." />
 
+   <Alert severity="info">
+    For a custom rig with `Class.Motor6D|Motor6D` joints, check that `Class.BasePart.AssemblyRootPart|AssemblyRootPart` is the part you intend to remain stationary when the joints animate. `Class.Model.PrimaryPart|PrimaryPart` does not set the assembly root. If another part is selected, see [assembly root part selection](../physics/assemblies.md#assembly-root-part).
+   </Alert>
+
 2. In the 3D viewport or the **Explorer** window, select the rig.
 
 From here, you can begin [creating poses](#create-poses) for your rig and modifying the animation settings, such as [looping the animation](#loop-an-animation) or [setting its priority](#set-a-priority).
@@ -129,7 +133,7 @@ To create a pose:
 
    <img src="../assets/animation/animation-editor/Scrubber-0-15.png" width="840" />
 
-	 <Alert severity="info" variant="standard">
+    <Alert severity="info" variant="standard">
    By default, the timeline displays a duration of 1 second (1:00). To add more time to the timeline, enter a new value in the right-side box of the position indicator.
    </Alert>
 
@@ -137,9 +141,9 @@ To create a pose:
 
    <video controls src="../assets/modeling/skinned-meshes/Transform-Demo-Skinned.mp4" width="100%"></video>
 
-	 Whenever you adjust a specific bone or mesh, a new track displays in the track list and a new **keyframe** displays on the timeline for that bone or mesh at that specific frame position.
+   Whenever you adjust a specific bone or mesh, a new track displays in the track list and a new **keyframe** displays on the timeline for that bone or mesh at that specific frame position.
 
-	 <img src="../assets/animation/animation-editor/Track-Keyframe-Added.png" width="840" />
+    <img src="../assets/animation/animation-editor/Track-Keyframe-Added.png" width="840" />
 
    <Alert severity="info" variant="standard">
    When creating poses, you can toggle between **Move** and **Rotate**
@@ -218,7 +222,6 @@ To change the easing style for one or more keyframes:
 1. Select one or more keyframes. Every selected keyframe is now surrounded by a blue border.
 2. Right-click on a keyframe with a border. A pop-up menu displays.
 3. Hover over **Easing Style** and choose from the following options:
-
    - **Linear** — Moves at a constant speed.
    - **Constant** — Removes interpolation between the selected keyframe and
      next keyframe. The animation will "snap" from keyframe to keyframe.
@@ -237,7 +240,6 @@ To change the easing direction for one or more keyframes:
 1. Select one or more keyframes. Every selected keyframe is now surrounded by a blue border.
 1. Right-click on a keyframe with a border. A pop-up menu displays.
 1. Hover over **Easing Direction** and choose from the following options:
-
    - **In** — The motion will be slower at the beginning and faster toward the
      end.
    - **Out** — The motion will be faster at the beginning and slower toward the
@@ -392,7 +394,6 @@ once, then you can reuse it as many times as you want.
 To export an animation:
 
 1. <Chip label="IMPORTANT" size="small" variant="outlined" color="warning" /> If the animation will be used to [replace a default character animation](../animation/using.md#replace-default-animations) like running or jumping, rename the final keyframe `End` as follows:
-
    1. Right-click the final keyframe symbol in the upper bar region and choose **Rename&nbsp;Key&nbsp;Keyframe** from the
    contextual menu.
 

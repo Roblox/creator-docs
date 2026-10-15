@@ -3197,6 +3197,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/WrapTextureTransfer.yaml
                 ignoreTranslation: true
+          - title: Logger
+            path: /reference/engine/classes/Logger
+            type: engineapi
+            source: /reference/engine/classes/Logger.yaml
+            ignoreTranslation: true
           - title: MLSession
             path: /reference/engine/classes/MLSession
             type: engineapi

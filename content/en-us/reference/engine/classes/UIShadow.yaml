@@ -6,18 +6,23 @@ name: UIShadow
 type: class
 memory_category: Instances
 summary: |
-  Renders a shadow below the parent UI instance.
+  Renders configurable shape or text shadows for the parent UI instance.
 description: |
-  `UIShadow` renders a drop shadow below its parent UI instance. Key features
-  include:
+  `UIShadow` renders a shadow for its parent UI instance. Key features include:
 
-  - Adjust the shadow's bluriness with `Class.UIShadow.BlurRadius|BlurRadius`.
+  - Adjust the shadow's blurriness with `Class.UIShadow.BlurRadius|BlurRadius`.
   - Adjust the shadow's color and transparency with `Class.UIShadow.Color|Color`
     and `Class.UIShadow.Transparency|Transparency`.
   - Adjust the shadow's position and size relative to the parent with
     `Class.UIShadow.Offset|Offset` and `Class.UIShadow.Spread|Spread`.
   - Add multiple shadows under the same parent and adjust their render order
     with `Class.UIShadow.ZIndex|ZIndex`.
+  - Add a shadow to the text in `Class.TextLabel`, `Class.TextButton`, or
+    `Class.TextBox` with `Class.UIShadow.Mode|Mode`.
+  - Add an inset shadow with `Class.UIShadow.Inset|Inset`.
+  - Hide the part of the shadow directly behind the parent with
+    `Class.UIShadow.ShowBehindParent|ShowBehindParent`.
+  - Apply a gradient to a shadow's color with a child `Class.UIGradient`.
   - If the parent is rotated with `Class.GuiObject.Rotation`, the shadow will
     also be rotated.
   - If the parent has round corners with `Class.UICorner`, the shadow will also
@@ -25,12 +30,8 @@ description: |
 
   #### Limitations
 
-  - `UIShadow` does not support text. If you add a `UIShadow` to a
-    `Class.TextLabel` or `Class.TextButton`, it renders a shadow of the object's
-    rectangular bounding area, not of the text.
-  - `UIShadow` does not support inset shadows.
   - `UIShadow` does not support `Class.Path2D`.
-  - You cannot apply textures or `Class.UIGradient|UIGradients` to a `UIShadow`.
+  - You cannot apply textures to a `UIShadow`.
 code_samples: []
 inherits:
   - UIComponent
@@ -101,6 +102,64 @@ properties:
       can_save: true
     capabilities:
       - UI
+  - name: UIShadow.Inset
+    summary: |
+      Determines whether the `UIShadow` is an inset shadow.
+    description: |
+      When `true`, the shadow appears on top of and inside the parent. When
+      `false`, the shadow appears behind the parent.
+
+      Defaults to `false`. This property has no effect when
+      `Class.UIShadow.Mode|Mode` is `Enum.ApplyShadowMode.Text`.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UIShadow.Mode
+    summary: |
+      Determines whether the `UIShadow` applies to the parent's shape or text.
+    description: |
+      Determines whether the shadow applies to the parent's shape or text.
+      Defaults to `Enum.ApplyShadowMode.Shape`, which renders a shadow for the
+      parent's rectangular area.
+
+      `Enum.ApplyShadowMode.Text` renders a shadow for text in a
+      `Class.TextLabel`, `Class.TextButton`, or `Class.TextBox`. On other
+      classes, text mode renders no shadow.
+
+      `Enum.ApplyShadowMode.Shape|Shape` mode and
+      `Enum.ApplyShadowMode.Text|Text` mode shadows can coexist under the same
+      parent.
+
+      The following properties have no effect in text mode:
+
+      - `Class.UIShadow.Spread|Spread`
+      - `Class.UIShadow.Inset|Inset`
+      - `Class.UIShadow.ShowBehindParent|ShowBehindParent`
+    code_samples: []
+    type: ApplyShadowMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
   - name: UIShadow.Offset
     summary: |
       Moves the shadow relative to the parent's position.
@@ -110,6 +169,32 @@ properties:
       relative to the parent's height.
     code_samples: []
     type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+  - name: UIShadow.ShowBehindParent
+    summary: |
+      Determines whether the shadow renders directly behind the parent.
+    description: |
+      When `true`, the entire shadow is rendered. When `false`, the parent's
+      shape masks the portion of the shadow directly behind it. Disabling this
+      property prevents a shadow from obscuring content behind a transparent
+      parent.
+
+      Defaults to `true`. This property has no effect when
+      `Class.UIShadow.Mode|Mode` is `Enum.ApplyShadowMode.Text` or
+      `Class.UIShadow.Inset|Inset` is `true`.
+    code_samples: []
+    type: boolean
     tags: []
     deprecation_message: ''
     security:
@@ -132,6 +217,12 @@ properties:
       the parent's size, such as the scale factors of
       `Class.UIShadow.BlurRadius|BlurRadius` and `Class.UIShadow.Offset|Offset`,
       are not affected by `Spread`.
+
+      This property has no effect when `Class.UIShadow.Mode|Mode` is
+      `Enum.ApplyShadowMode.Text`.
+
+      When `Class.UIShadow.Inset|Inset` is `true`, positive `Spread` values
+      expand the shadow toward the center of the parent instead of outward.
     code_samples: []
     type: UDim2
     tags: []

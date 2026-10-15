@@ -71,32 +71,42 @@ To adjust a gradient's transparency across its range:
 
 ### Type
 
-A gradient's `Class.UIGradient.Type|Type` property sets its type from among `Enum.GradientType.Linear|Linear`, `Enum.GradientType.Radial|Radial`, or `Enum.GradientType.Conical|Conical`.
+<BetaAlert betaName="Upgraded UIGradients" leadIn="This gradient feature is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+A gradient's `Class.UIGradient.Type|Type` property sets its type from among `Enum.GradientType.Linear|Linear`, `Enum.GradientType.Radial|Radial`, `Enum.GradientType.Elliptical|Elliptical`, or `Enum.GradientType.Conical|Conical`.
 
 - `Enum.GradientType.Linear|Linear` — The color/transparency sequence transitions in a straight line across the element. The direction is controlled by its [rotation](#offset-and-rotation) and the position by its [offset](#offset-and-rotation). This is the default.
 
 - `Enum.GradientType.Radial|Radial` — The color/transparency sequence radiates outward from the element's center, optionally shifted by `Class.UIGradient.Offset|Offset`. The radius is defined by the average of the element's width and height divided by two, effectively $\text{(width+height)/4}$. `Class.UIGradient.Rotation|Rotation` has no effect on a radial gradient.
 
+- `Enum.GradientType.Elliptical|Elliptical` — The color/transparency sequence radiates outward from the element's center in an ellipse, optionally shifted by `Class.UIGradient.Offset|Offset`. The ellipse's horizontal and vertical radii are half the element's width and height, so the ellipse fits the element's bounds. `Class.UIGradient.Rotation|Rotation` rotates the ellipse's axes.
+
 - `Enum.GradientType.Conical|Conical` — The color/transparency sequence sweeps clockwise around the center of the element, optionally shifted by `Class.UIGradient.Offset|Offset`. `Class.UIGradient.Rotation|Rotation` controls the starting and ending angle of the sweep. By default this sweeps from `0` to `360` degrees, but `Class.UIGradient.Scale|Scale` values less than `1` can reduce that angle.
 
 <Grid container spacing={3}>
-<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
-	<figure>
-    <img src="../assets/ui/ui-objects/UIGradient-Type-Linear.png" width="376" />
-    <figcaption>`Class.UIGradient.Type|Type` = `Enum.GradientType.Linear|Linear`</figcaption>
-  </figure>
+<Grid item container XSmall={12} Small={12} Medium={3} Large={3} XLarge={3}>
+<figure>
+<img src="../assets/ui/ui-objects/UIGradient-Type-Linear.png" width="272" />
+<figcaption>`Class.UIGradient.Type|Type` = `Enum.GradientType.Linear|Linear`</figcaption>
+</figure>
 </Grid>
-<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
-	<figure>
-    <img src="../assets/ui/ui-objects/UIGradient-Type-Radial.png" width="376" />
-    <figcaption>`Class.UIGradient.Type|Type` = `Enum.GradientType.Radial|Radial`</figcaption>
-  </figure>
+<Grid item container XSmall={12} Small={12} Medium={3} Large={3} XLarge={3}>
+<figure>
+<img src="../assets/ui/ui-objects/UIGradient-Type-Radial.png" width="272" />
+<figcaption>`Class.UIGradient.Type|Type` = `Enum.GradientType.Radial|Radial`</figcaption>
+</figure>
 </Grid>
-<Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
-	<figure>
-    <img src="../assets/ui/ui-objects/UIGradient-Type-Conical.png" width="376" />
-    <figcaption>`Class.UIGradient.Type|Type` = `Enum.GradientType.Conical|Conical`</figcaption>
-  </figure>
+<Grid item container XSmall={12} Small={12} Medium={3} Large={3} XLarge={3}>
+<figure>
+<img src="../assets/ui/ui-objects/UIGradient-Type-Elliptical.png" width="272" />
+<figcaption>`Class.UIGradient.Type|Type` = `Enum.GradientType.Elliptical|Elliptical`</figcaption>
+</figure>
+</Grid>
+<Grid item container XSmall={12} Small={12} Medium={3} Large={3} XLarge={3}>
+<figure>
+<img src="../assets/ui/ui-objects/UIGradient-Type-Conical.png" width="272" />
+<figcaption>`Class.UIGradient.Type|Type` = `Enum.GradientType.Conical|Conical`</figcaption>
+</figure>
 </Grid>
 </Grid>
 
@@ -150,11 +160,15 @@ Similarly, when you rotate the gradient, the control points also rotate:
 
 ### Scale
 
+<BetaAlert betaName="Upgraded UIGradients" leadIn="This gradient feature is currently in beta. Enable it through " leadOut="." components={props.components} />
+
 A gradient's `Class.UIGradient.Scale|Scale` multiplies the extent of the gradient, controlling how much of the color/transparency sequence is visible within the element.
 
 - When `Class.UIGradient.Scale|Scale` is less than `1`, the gradient spans less than the full extent. The remaining color/transparency is filled in according to the `Class.UIGradient.TileMode|TileMode` property.
 
 - When `Class.UIGradient.Scale|Scale` is greater than `1`, the gradient spans more than the full extent and only a part of the color/transparency is visible.
+
+- For `Enum.GradientType.Elliptical|Elliptical` gradients, `Class.UIGradient.Scale|Scale` affects both radii of the ellipse.
 
 <Grid container spacing={3}>
 <Grid item container XSmall={12} Small={12} Medium={4} Large={4} XLarge={4}>
@@ -178,6 +192,8 @@ A gradient's `Class.UIGradient.Scale|Scale` multiplies the extent of the gradien
 </Grid>
 
 ### Tile Mode
+
+<BetaAlert betaName="Upgraded UIGradients" leadIn="This gradient feature is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 The `Class.UIGradient.TileMode|TileMode` property sets how the gradient repeats when the full sequence does not fully cover the parent element.
 

@@ -178,6 +178,7 @@ methods:
       the associated editor.
     code_samples:
       - ScriptEditorService-OpenScriptDocumentAsync
+      - ScriptEditorService-OpenScriptDocumentAsync-InitialReadOnlyReasons
     parameters:
       - name: script
         type: LuaSourceContainer
@@ -195,6 +196,11 @@ methods:
           - `HighlightRange` &mdash; A nested dictionary containing a line and
             character range to highlight in the editor. Example:
             `HighlightRange = { Start = { Line = 10, Character = 1 }, End = { Line = 15, Character = 20 }}`.
+          - `InitialReadOnlyReasons` &mdash; An array of strings. Reasons to add
+            with `Class.ScriptDocument:AddReadOnlyReasonsAsync()` once the
+            editor opens, so the script is read-only as soon as the call
+            returns. Example:
+            `InitialReadOnlyReasons = { "MyPluginTemplateScript" }`.
     returns:
       - type: Tuple
         summary: |

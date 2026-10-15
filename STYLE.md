@@ -239,13 +239,24 @@ However, if a complex user interface has numerous tools, labels, and fields, a s
 We have the following guidelines for images:
 
 - Before creating a new image, check the `content/en-us/assets` folder to see if a suitable one already exists.
-- Most images should be JPGs or PNGs:
+- Most images should be JPG, PNG, or WEBP:
   - JPGs work well for photos and in-game content.
   - PNGs work well for images that require transparency or contain small text, such as screenshots and heavily annotated images.
-- For architecture diagrams and flow charts, use SVGs.
+  - WEBP is often better than both, frankly, but converting to it can be a chore.
+- For architecture diagrams and flow charts, use SVGs or [Mermaid.js](https://github.com/mermaid-js/mermaid).
+- The content portion of the website tops out around 900px, so keep images under 1000px and legible at that width.
 - Try to keep image size under 200 KB, either by reducing dimensions, quality, or both. Some exceptions are unavoidable, though.
-- Don't use animated GIFs. They are often huge on disk, and the endless looping can be distracting. We prefer MP4 videos, even if they're only a few seconds long.
-- Separate words in filenames with dashes (for example, `Some-New-Image.png`).
+- Separate words in filenames with dashes (for example, `Some-New-Image.webp`).
+
+## Videos
+
+Don't use animated GIFs. They are often huge on disk, and the endless looping can be distracting. We prefer MP4 videos, even if they're only a few seconds long.
+
+You can also embed YouTube videos into `<iframe>` tags using the `https://www.youtube-nocookie.com` domain, such as:
+
+```text
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/m6zSJpk6neU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+```
 
 ## Alerts
 

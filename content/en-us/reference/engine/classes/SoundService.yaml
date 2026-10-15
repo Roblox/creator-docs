@@ -448,27 +448,31 @@ methods:
       - Audio
   - name: SoundService:GetMixerTime
     summary: |
-      Returns the number of seconds since the audio engine began mixing.
+      Returns a number in seconds which increases as the audio engine mixes.
     description: |
-      Returns the number of seconds that have elapsed since the audio engine
-      began mixing. Because this clock is derived from the number of audio
-      samples the mixer has processed, it is stable, sample-accurate, and
-      monotonically increasing, which makes it suitable for scheduling audible
-      changes at precise moments.
+      Returns a number in seconds that increases as the audio engine produces
+      output. Because this clock is derived from the number of audio samples the
+      mixer has processed, it is stable, sample-accurate, and monotonically
+      increasing, which makes it suitable for scheduling audible changes at
+      precise moments.
 
       Use this value as the basis for the `atTime` argument of methods that
       support scheduling playback to begin or end at an exact point in the
       future, such as `Class.AudioPlayer:Play()|Play()` and
-      `Class.AudioPlayer:Stop()|Stop()`. For best results, those methods expect
-      times derived from `Class.SoundService:GetMixerTime()|GetMixerTime()`.
+      `Class.AudioPlayer:Stop()|Stop()`. Those methods expect times derived from
+      `Class.SoundService:GetMixerTime()|GetMixerTime()`.
+
+      Note, `Class.SoundService:GetMixerTime()|GetMixerTime()` starts at an
+      arbitrary value, and can differ between machines. It is not suitable for
+      synchronizing audio across sessions or networks.
     code_samples: []
     parameters: []
     returns:
       - type: double
         summary: |
-          The number of seconds since the audio engine began mixing. This value
-          is stable, sample-accurate, and monotonically-increasing. It's
-          intended to be used for scheduling audible changes at precise times.
+          A number in seconds. This value is stable, sample-accurate, and
+          monotonically-increasing. It's intended to be used for scheduling
+          audible changes at precise times.
     tags: []
     deprecation_message: ''
     security: None

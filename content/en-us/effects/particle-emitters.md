@@ -387,6 +387,8 @@ For spheres, `Class.ParticleEmitter.ShapePartial|ShapePartial` multiplies the **
 The `Class.ParticleEmitter.Squash|Squash` property allows for non-uniform scaling of particles, curve-controlled over their lifetime. Values greater than 0 cause particles to both shrink horizontally and grow vertically, while values less than 0 cause particles to both grow horizontally and shrink vertically. For details on how to set the squash amount to either a constant or to a `Datatype.NumberSequence`, follow the process in customizing [Size](#size) but use the emitter's **Squash** property field instead.
 <video src="../assets/lighting-and-effects/particle-emitter/Squash.mp4" controls width="800" alt="Video of particles being gradually squashed over their lifetime"></video>
 
+Squash is especially useful for rain. Stretching a particle makes its texture much less recognizable, so even the default sparkle texture can pass as a falling raindrop. For details, see [Simulate rain](#simulate-rain).
+
 ### Flipbooks
 
 Particle flipbook textures let you animate a particle's texture over its lifetime.
@@ -532,3 +534,35 @@ The following motion properties are in addition to [wind influence](#windaffects
 
 </TabItem>
 </Tabs>
+
+## Simulate rain
+
+Simulating every raindrop isn't practical, but particle emitters can create a convincing illusion of rain in a 3D world:
+
+1. Insert a `Class.Part` above the area where you want rain to fall. Anchor it, set its **Transparency** to `1`, and disable **CanCollide**.
+1. Insert a `Class.ParticleEmitter` into the part and set its `Class.ParticleEmitter.EmissionDirection|EmissionDirection` to **Bottom**.
+1. Set [Squash](#squash) to a positive value, such as `3`, to stretch each particle into a streak. Higher values make particles thinner, so you might need to increase [size](#size) as well.
+
+   <Alert severity="success">
+   If you set [Orientation](#orientation) to **VelocityParallel** so that streaks align with their direction of travel, use a negative squash value instead.
+   </Alert>
+
+1. Darken [Color](#color), increase **LightInfluence** so that the rain reacts to the lighting around it, increase [Speed](#speed), and decrease [Lifetime](#lifetime) so that particles disappear near the ground.
+1. To angle the rain, set a small **Rotation** or enable [WindAffectsDrag](#windaffectsdrag) so that particles follow [global wind](../environment/global-wind.md). Drag slows the fall in addition to applying the wind, so you might need to increase the downward **Acceleration** to keep the rain falling quickly.
+
+A single emitter can create a limited number of particles per second (see [Rate](#rate)), so heavier rain or a larger area requires many parts with emitters. Arrange them in a grid over the desired area.
+
+To show rain landing, place transparent parts on the ground with emitters whose **EmissionDirection** is **Top**. Splash particles aren't stretched like falling rain, so they usually need a custom [texture](#texture) and a [Transparency](#transparency) sequence that makes each splash appear to dissipate. Splashes only look right on surfaces where you've placed them carefully. If you can't place them by hand, low-lying mist is much more forgiving.
+
+### Manage particle limits
+
+Rain that covers a large area reaches particle limits quickly, and mobile devices have much lower limits than desktops. If particles flicker in the distance, reduce how many are on screen at once:
+
+- Place the emitter parts lower in the air and shorten **Lifetime** to match.
+- Decrease **Rate** to turn a downpour into a lighter shower.
+- Cover a smaller area with fewer emitter parts.
+
+### Rain examples
+
+- For a hand-built example, see [The Mystery of Duvall Drive](../resources/the-mystery-of-duvall-drive/index.md). It uses emitters for [rain, mist, splashes, and water dripping from awnings](../resources/the-mystery-of-duvall-drive/develop-a-moving-world.md#make-storm-debris).
+- For a scripted example, see the [weather-island](https://github.com/Roblox/resources/tree/main/experiences/weather-island) project. It schedules storms, transitions [clouds](../environment/clouds.md) and wind, spawns rain and mist emitters, and performs roof detection.

@@ -166,7 +166,7 @@ properties:
       - NotReplicated
     deprecation_message: ''
     security:
-      read: PluginSecurity
+      read: None
       write: PluginSecurity
     thread_safety: ReadSafe
     category: Data
@@ -175,6 +175,7 @@ properties:
       can_save: false
     capabilities:
       - Basic
+      - PluginOrOpenCloud
 methods:
   - name: RunService:BindToAnimation
     summary: |
@@ -475,10 +476,11 @@ methods:
           Whether the current environment is in "edit" mode.
     tags: []
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Safe
     capabilities:
       - Basic
+      - PluginOrOpenCloud
   - name: RunService:IsResimulating
     summary: |
       Returns whether the client is currently in a resimulation step after a

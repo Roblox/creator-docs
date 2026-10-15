@@ -9,6 +9,8 @@ summary: |
   A service that allows you to read outputted text.
 description: |
   `LogService` allows you to log structured log entries and read outputted text.
+  For logging scoped to a named, hierarchical path, use
+  `Class.LogService:GetLogger()` to obtain a `Class.Logger`.
 
   #### Template Syntax
 
@@ -162,6 +164,48 @@ methods:
           (`Enum.MessageType`), `timestamp` (number, in seconds), and optionally
           `context` (dictionary) for entries logged with structured context.
     tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Logging
+  - name: LogService:GetLogger
+    summary: |
+      Returns a top-level `Class.Logger` with the given name, creating it if it
+      does not already exist.
+    description: |
+      Returns the top-level logger with the given `name`, creating it if it does
+      not already exist. Calling this with the same name repeatedly returns the
+      same logger instance for as long as a reference to it is held. Use the
+      returned `Class.Logger` to emit structured log entries scoped to a
+      hierarchical path, and `Class.Logger:GetLogger()` to create nested child
+      loggers.
+
+      This method raises an error if the name is empty, contains a `.`, or
+      contains control characters, or if the maximum number of live loggers has
+      been exceeded.
+
+      ```lua
+      local LogService = game:GetService("LogService")
+
+      local combat = LogService:GetLogger("Combat")
+      combat:Info("Match started with {count} players", {count = 8})
+      ```
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          The name of the logger. Must be non-empty, must not contain a `.`
+          character, and must not contain control characters.
+    returns:
+      - type: Logger
+        summary: |
+          A `Class.Logger` whose `Class.Logger.Name` and `Class.Logger.FullPath`
+          both equal `name`.
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

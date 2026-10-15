@@ -19,6 +19,7 @@ descendants:
   - EditableImage
   - EditableMesh
   - Instance
+  - Logger
   - MLSession
   - VideoSampler
   - WebStreamClient

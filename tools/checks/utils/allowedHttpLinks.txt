@@ -822,3 +822,5 @@ https://www.youtube-nocookie.com/embed/Fg-Ksoa7b-s?si=SwXhzsIjkyMKSUkJ
 https://en.help.roblox.com/hc/en-us/articles/23607654421524-Reporting-Illegal-Content-in-the-European-Union
 https://www.blender.org/download/releases/5-2/
 https://github.com/Roblox/resources
+https://github.com/Roblox/resources/tree/main/experiences/weather-island
+https://github.com/mermaid-js/mermaid

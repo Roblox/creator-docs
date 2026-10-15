@@ -222,8 +222,8 @@ The dashboard displays the following metrics:
 - All creators begin earning Daily Engagement Rewards starting July 24, 2025 — no additional
   enrollment is required.
 - To qualify for Audience Expansion Rewards, creators must have an ID-verified account in good
-  standing and a valid DevEx account. You can check your eligibility in the [Creator Dashboard](https://create.roblox.com/settings/eligibility/creator-rewards).
-  - If the experience is owned by a community, then a community member with the permission to configure group revenue must have an ID-verified account in good standing and a valid DevEx account.
+  standing. You can check your eligibility in the [Creator Dashboard](https://create.roblox.com/settings/eligibility/creator-rewards).
+  - If the experience is owned by a community, then a community member with the permission to configure group revenue must have an ID-verified account in good standing.
 - Members of our Video Stars program can earn both Daily Engagement and Audience Expansion rewards.
 
 ### What terms apply to Creator Rewards?

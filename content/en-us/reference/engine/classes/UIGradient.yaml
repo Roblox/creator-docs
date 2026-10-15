@@ -190,6 +190,9 @@ properties:
       - `Enum.GradientType.Radial` — `Scale` affects the radius of the radial
         gradient.
 
+      - `Enum.GradientType.Elliptical` — `Scale` affects both radii of the
+        elliptical gradient.
+
       - `Enum.GradientType.Conical` — `Scale` affects the angular sweep, clamped
         so that the sweep does not exceed a full revolution.
 
@@ -266,7 +269,8 @@ properties:
       - UI
   - name: UIGradient.Type
     summary: |
-      Determines the shape of the gradient as linear, radial, or conical.
+      Determines the shape of the gradient as linear, radial, elliptical, or
+      conical.
     description: |
       This property determines how the gradient varies across the parent
       `Class.GuiObject`. See `Enum.GradientType` for possible values and their
