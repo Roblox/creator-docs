@@ -27,12 +27,14 @@ items:
       Players keep their own clothing selections. The experience does not
       override clothing assets. This is the default value.
     value: 0
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: CustomClothing
     summary: |
       The experience enforces creator-specified clothing assets from
       `AvatarClothingRules`, overriding each player's own equipped clothing.
     value: 1
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''

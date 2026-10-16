@@ -2483,8 +2483,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Lua Debugger
     serialization:

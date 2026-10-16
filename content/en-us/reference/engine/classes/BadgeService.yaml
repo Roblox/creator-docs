@@ -193,6 +193,21 @@ methods:
       			<td>boolean</td>
       			<td>Indicates whether the badge is available to be awarded.</td>
       		</tr>
+      		<tr>
+      			<td><code>AwardCount</code></td>
+      			<td>int64</td>
+      			<td>The total number of times the badge has been awarded.</td>
+      		</tr>
+      		<tr>
+      			<td><code>PastDayAwardCount</code></td>
+      			<td>int64</td>
+      			<td>The number of times the badge was awarded in the past day.</td>
+      		</tr>
+      		<tr>
+      			<td><code>Rarity</code></td>
+      			<td>number</td>
+      			<td>The rarity of the badge as a value from 0.0 (0%) to 1.0 (100%), representing the percentage of players who earned the badge in the past day.</td>
+      		</tr>
       	</tbody>
       </table>
 

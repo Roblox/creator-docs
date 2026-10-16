@@ -26,7 +26,8 @@ items:
       Players keep their own avatar body parts; the experience does not override
       any body-part assets.
     value: 0
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: CustomParts
     summary: |
@@ -34,12 +35,14 @@ items:
       legs) using per-part asset IDs and enablement settings on
       `AvatarBodyRules`.
     value: 1
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: CustomBody
     summary: |
       The experience replaces the avatar's entire body as a single unit, using
       `CustomBodyType` and `CustomBodyBundleId`.
     value: 2
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''

@@ -25,12 +25,14 @@ items:
       No custom accessory replacement is applied; the player's own accessory
       choices are displayed without modification.
     value: 0
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: CustomAccessories
     summary: |
       The experience replaces player accessories with custom accessories defined
       by the per-slot properties on `AvatarAccessoryRules`.
     value: 1
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''

@@ -133,6 +133,8 @@ navigation:
     section:
       - title: Overview
         path: /avatar/in-experience-creation
+      - title: Makeup
+        path: /avatar/in-experience-creation-makeup
       - title: Avatar creation tokens
         path: /production/monetization/avatar-creation-token
   - heading: Policies and Guidelines

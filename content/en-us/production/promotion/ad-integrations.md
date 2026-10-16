@@ -52,15 +52,15 @@ To register your ad integration campaign:
 2. Go to **Ad integrations**.
 3. Click **Register**.
 4. Under **Integration details**:
-    1. Select the games you want to add the integration to.
-    2. Enter the name of the advertiser. This is the name users see in ad disclosures within your games.
-    3. Select an advertiser category from the drop-down options. If your advertiser doesn't fit into any of the available categories, select **None of the above**. The moderation team will review your submission and may update the category if needed.
-    4. Select a start and end to the campaign.
-    5. Enter a name for the campaign.
+   1. Select the games you want to add the integration to.
+   2. Enter the name of the advertiser. This is the name users see in ad disclosures within your games.
+   3. Select an advertiser category from the drop-down options. If your advertiser doesn't fit into any of the available categories, select **None of the above**. The moderation team will review your submission and may update the category if needed.
+   4. Select a start and end to the campaign.
+   5. Enter a name for the campaign.
 5. Under **Assets**:
-    1. Click **Manage assets**.
-    2. Enter the IDs for all individual assets or models included in the ad campaign. If you haven't created them yet, you can register the campaign without assets and [add them later](#asset-submission-and-moderation).
-    3. Click **Save**.
+   1. Click **Manage assets**.
+   2. Enter the IDs for all individual assets or models included in the ad campaign. If you haven't created them yet, you can register the campaign without assets and [add them later](#asset-submission-and-moderation).
+   3. Click **Save**.
 6. Click **Register**.
 
 <img src="../../assets/promotion/ad-integrations/AdIntegrations-Registration.png" width="80%" />
@@ -111,6 +111,12 @@ Ad labels indicate which parts of your game are advertisements, and allow users 
 AdService:RegisterDisclosureButton(yourDisclosureButton, "your-placement-id")
 ```
 
+Generally, users should know when they're interacting with advertising content within your game:
+
+- Configure the **Ad** label so that it's legible to a user when they're within 500 studs of the advertising assets.
+- The **Ad** label should be clear and visible wherever players are likely to first encounter the advertising content.
+- If your campaign audience includes players aged 12 or under, use frequent and sufficiently large labels so younger players know they're engaging with advertising content.
+
 Choose the right label type based on how your ad content appears in your game and how users interact with it. Different label types work better for different contexts.
 
 <table>
@@ -139,6 +145,23 @@ Choose the right label type based on how your ad content appears in your game an
   </tr>
 </tbody>
 </table>
+
+#### Placement
+
+Where you place ad labels depends on how much of your game is advertising content.
+
+**If your whole game is an ad:**
+
+- At minimum, display a persistent HUD-style ad label in the bottom right corner of the game UI.
+- Include an **Ad** disclosure in the bottom left corner of the game's thumbnail image.
+
+**If a smaller but cohesive part of your game is an ad**, such as when a collection of assets forms a storefront or a mini-game within your game:
+
+- Add a prominent disclosure label at the point where users are likely to first encounter the advertising assets. You can use a floating label with **Always On Top** enabled, or a sticker-style label visible at the point of interaction.
+- If users can encounter the advertising assets from multiple angles, use an **Ad** disclosure at each point.
+- If users can enter the advertising assets, such as a storefront, so that most of the assets in their viewport are ads, use a HUD-style label in the bottom right corner.
+
+**If multiple independent advertising assets appear in different parts of your game**, such as several independent NPCs throughout the map, each asset requires its own floating-style disclosure label.
 
 When placing ad labels in your game, make sure to:
 

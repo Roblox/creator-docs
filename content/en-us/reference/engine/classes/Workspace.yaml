@@ -832,8 +832,7 @@ properties:
       to process player inputs.
     code_samples: []
     type: RolloutState
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: RobloxScriptSecurity

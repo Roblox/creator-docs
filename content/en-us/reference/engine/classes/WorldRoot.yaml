@@ -1252,13 +1252,13 @@ methods:
           cast is always excluded from the results.
       - name: cframeOverride
         type: CFrame?
-        default:
+        default: nil
         summary: |
           The `Datatype.CFrame` from which the shape begins the cast. If not
           provided, the part's own `Class.BasePart.CFrame|CFrame` is used.
       - name: sizeOverride
         type: Vector3?
-        default:
+        default: nil
         summary: |
           The size of the cast shape. If not provided, the part's own
           `Class.BasePart.Size|Size` is used. Every component must be finite and

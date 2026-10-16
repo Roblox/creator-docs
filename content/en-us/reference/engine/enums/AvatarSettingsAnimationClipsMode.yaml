@@ -21,7 +21,8 @@ items:
       The clips determined by the `AnimationPacksMode` are used, without
       experience-level overrides.
     value: 0
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: CustomClips
     summary: |
@@ -30,5 +31,6 @@ items:
       `CustomRunAnimationEnabled` and `CustomRunAnimationId`). Only clips whose
       enabled flag is true are replaced.
     value: 1
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''

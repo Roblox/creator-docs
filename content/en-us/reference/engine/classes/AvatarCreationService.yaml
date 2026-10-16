@@ -697,6 +697,113 @@ methods:
     capabilities:
       - AssetCreateUpdate
       - Monetization
+  - name: AvatarCreationService:PromptCreateMakeupAsync
+    summary: |
+      Prompts a `Class.Player` to create and publish a makeup look from multiple
+      makeup assets.
+    description: |
+      Prompts a `Class.Player` to create and publish a makeup look from two to
+      six makeup assets. For example, an in-experience creation tool can use
+      this method to let a player publish lip and face makeup together as a
+      single look. This method can only be called from the server and yields
+      until the operation completes.
+
+      Each asset requires a creation token for its asset type and the current
+      experience. See the
+      [token creation](../../../production/monetization/avatar-creation-token.md)
+      process. The input entries are checked before the prompt opens. Creation
+      token and user-generated content validation run while the prompt is
+      loading; the player can proceed with creation after validation succeeds.
+
+      For `FaceMakeup`, `LipMakeup`, and `EyeMakeup`, the asset instance must be
+      a `Class.Decal` whose `Class.Decal.TextureContent` references an
+      `Class.EditableImage`, with exactly one `Class.WrapTextureTransfer` child.
+
+      The overall `Enum.PromptCreateOutfitResult` describes creation of the
+      look:
+
+      - `Enum.PromptCreateOutfitResult.Success|Success` means all submitted
+        assets and the makeup look were created.
+      - `Enum.PromptCreateOutfitResult.PartialSuccess|PartialSuccess` means at
+        least one asset was created, but another asset or the makeup look
+        composition failed. If the look was created, the second return value is
+        its outfit ID; if composition failed, it is an error message instead.
+      - `Enum.PromptCreateOutfitResult.CreationFailure|CreationFailure` means no
+        assets were created, so no makeup look was created.
+
+      Inspect the per-asset results to determine which assets were created. Each
+      entry contains `Enum.PromptCreateAssetResult.Success|Success` and an asset
+      ID, or `Enum.PromptCreateAssetResult.UploadFailed|UploadFailed` without an
+      asset ID. If a failure occurs before asset uploads, the results array may
+      be empty.
+
+      For `Enum.PromptCreateOutfitResult.PermissionDenied|PermissionDenied`,
+      `Enum.PromptCreateOutfitResult.Timeout|Timeout`, and
+      `Enum.PromptCreateOutfitResult.NoUserInput|NoUserInput`, only the result
+      enum is returned; variables assigned to the other return values receive
+      `nil`.
+
+      This method can raise an error for invalid input, request throttling, or
+      unexpected failures. Validation failures may raise an error or return
+      `Enum.PromptCreateOutfitResult.UGCValidationFailed|UGCValidationFailed`
+      with an error message and an empty per-asset results array. Use `pcall()`
+      to handle errors as well as checking the returned result enum.
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` who receives the creation prompt and owns the
+          uploaded makeup look.
+      - name: makeupAssetEntries
+        type: Array
+        default:
+        summary: |
+          An array containing between two and six asset-entry dictionaries. Each
+          dictionary contains:
+
+          - `TokenId` (string) – The ID of a creation token valid for the
+            current experience and the entry's `AvatarAssetType`.
+          - `Instance` (`Class.Instance`) – The makeup asset instance to upload.
+          - `AvatarAssetType` (`Enum.AvatarAssetType`) – The asset type.
+            Supported types are `Enum.AvatarAssetType.FaceMakeup|FaceMakeup`,
+            `Enum.AvatarAssetType.LipMakeup|LipMakeup`,
+            `Enum.AvatarAssetType.EyeMakeup|EyeMakeup`,
+            `Enum.AvatarAssetType.EyebrowAccessory|EyebrowAccessory`, and
+            `Enum.AvatarAssetType.EyelashAccessory|EyelashAccessory`.
+          - `SortOrder` (number) – The asset's ordering within the makeup look.
+      - name: thumbnailHeadColor
+        type: Color3?
+        default: nil
+        summary: |
+          Optional `Datatype.Color3` for the head in the makeup look thumbnail.
+          If omitted, the default gray head color is used.
+    returns:
+      - type: Tuple
+        summary: |
+          A tuple containing, in order:
+
+          - An `Enum.PromptCreateOutfitResult` indicating the overall creation
+            outcome.
+
+          - A string containing the outfit ID when the makeup look is created,
+            or an error message otherwise. This value is not returned for
+            `PermissionDenied`, `Timeout`, or `NoUserInput`.
+
+          - An array of per-asset result dictionaries in the same order as the
+            input entries. Each dictionary contains `Result`
+            (`Enum.PromptCreateAssetResult`) and, for successfully created
+            assets, `AssetId` (string). This value is not returned for
+            `PermissionDenied`, `Timeout`, or `NoUserInput`.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AssetCreateUpdate
+      - Monetization
   - name: AvatarCreationService:PromptSelectAvatarGenerationImageAsync
     summary: |
       Prompt the `Class.Player` to take a selfie and return the FileId.

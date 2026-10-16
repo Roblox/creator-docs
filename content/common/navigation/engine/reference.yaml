@@ -3710,6 +3710,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AudioSimulationFidelity.yaml
         ignoreTranslation: true
+      - title: AudioSortType
+        path: /reference/engine/enums/AudioSortType
+        type: engineapi
+        source: /reference/engine/enums/AudioSortType.yaml
+        ignoreTranslation: true
       - title: AudioSubType
         path: /reference/engine/enums/AudioSubType
         type: engineapi
@@ -5144,6 +5149,11 @@ navigation:
         path: /reference/engine/enums/PromptCreateAvatarResult
         type: engineapi
         source: /reference/engine/enums/PromptCreateAvatarResult.yaml
+        ignoreTranslation: true
+      - title: PromptCreateOutfitResult
+        path: /reference/engine/enums/PromptCreateOutfitResult
+        type: engineapi
+        source: /reference/engine/enums/PromptCreateOutfitResult.yaml
         ignoreTranslation: true
       - title: PromptExperienceDetailsResult
         path: /reference/engine/enums/PromptExperienceDetailsResult

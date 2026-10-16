@@ -136,8 +136,7 @@ properties:
       in-experience content creation workflows.
     code_samples: []
     type: Content
-    tags:
-      - Hidden
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -279,8 +278,7 @@ properties:
       applied.
     code_samples: []
     type: Content
-    tags:
-      - Hidden
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -368,8 +366,7 @@ properties:
       applied.
     code_samples: []
     type: Content
-    tags:
-      - Hidden
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -452,8 +449,7 @@ properties:
       no roughness map is applied.
     code_samples: []
     type: Content
-    tags:
-      - Hidden
+    tags: []
     deprecation_message: ''
     security:
       read: None

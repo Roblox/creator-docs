@@ -3,7 +3,7 @@ title: Avatar creation token
 description: Enable users to create and purchase avatar items within your games.
 ---
 
-An **avatar creation token** enables developers to allow users to create, purchase, and save avatar items directly from a game to their platform-level inventory using [in-experience creation](../../avatar/in-experience-creation.md). Games that implement in-game creation APIs, such as `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync` and `Class.AvatarCreationService.PromptCreateAvatarAssetAsync|PromptCreateAvatarAssetAsync`, must include one or more avatar creation tokens. You can purchase and manage tokens in your game's [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+An **avatar creation token** enables developers to allow users to create, purchase, and save avatar items directly from a game to their platform-level inventory using [in-experience creation](../../avatar/in-experience-creation.md) or [in-experience makeup creation](../../avatar/in-experience-creation-makeup.md). Games that implement in-game creation APIs, such as `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync`, `Class.AvatarCreationService.PromptCreateAvatarAssetAsync|PromptCreateAvatarAssetAsync`, and `Class.AvatarCreationService.PromptCreateMakeupAsync|PromptCreateMakeupAsync`, must include one or more avatar creation tokens. You can purchase and manage tokens in your game's [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
 <Alert severity = 'info'>
 Owners of games that incorporate in-game avatar item creation also benefit from [Marketplace commissions](../../marketplace/marketplace-fees-and-commissions.md#commissions) as both **creator** and **game owner**.
@@ -32,7 +32,7 @@ To create a token:
    1. **Name** - The name of your token. This is not user-facing and can be changed after creation.
    2. **Description** - The description of your token. This is not user-facing and can be changed after creation.
    3. **Item Type** - The **Body** item type can be used in-game with `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync` whereas the rest of the item types are meant to be used with
-   `Class.AvatarCreationService.PromptCreateAvatarAssetAsync|PromptCreateAvatarAssetAsync`. You cannot change this setting after token creation.
+      `Class.AvatarCreationService.PromptCreateAvatarAssetAsync|PromptCreateAvatarAssetAsync`. Makeup item types can also be composited into a single purchasable outfit with `Class.AvatarCreationService.PromptCreateMakeupAsync|PromptCreateMakeupAsync`, which requires a separate token per layer whose type matches that layer's asset type. You cannot change this setting after token creation.
    4. **Amount Above Price Floor** - Set the price above the Marketplace Price Floor for created items. If you intend to have different price points for items of the same type in your game, the best way to achieve this is by purchasing multiple tokens. You can modify this field after creation.
    5. **Do not price below** <Chip label="OPTIONAL" size="small" variant="outlined" /> - Set the minimum price for users to purchase your item. You can modify this field after creation.
 

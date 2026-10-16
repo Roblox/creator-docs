@@ -24137,6 +24137,458 @@
         }
       }
     },
+    "/log-attribute-http-service/v1/universe-regexes": {
+      "get": {
+        "tags": ["Analytics"],
+        "operationId": "LogAttributeService_Find",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/RegexStatus"
+                }
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FindUniverseRegexesHttpResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#LogAttributeService_Find"
+        }
+      },
+      "post": {
+        "tags": ["Analytics"],
+        "operationId": "LogAttributeService_Create",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateUniverseRegexHttpRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateUniverseRegexHttpRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateUniverseRegexHttpRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UniverseRegexMutationHttpResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#LogAttributeService_Create"
+        }
+      }
+    },
+    "/log-attribute-http-service/v1/universe-regexes/{id}": {
+      "delete": {
+        "tags": ["Analytics"],
+        "operationId": "LogAttributeService_Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#LogAttributeService_Delete"
+        }
+      },
+      "put": {
+        "tags": ["Analytics"],
+        "operationId": "LogAttributeService_Update",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateUniverseRegexHttpRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateUniverseRegexHttpRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateUniverseRegexHttpRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UniverseRegexMutationHttpResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#LogAttributeService_Update"
+        }
+      }
+    },
+    "/log-attribute-http-service/v1/universe-regexes/{id}/ignore": {
+      "put": {
+        "tags": ["Analytics"],
+        "operationId": "LogAttributeService_Ignore",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#LogAttributeService_Ignore"
+        }
+      }
+    },
+    "/log-attribute-http-service/v1/universe-regexes/{id}/reorder": {
+      "put": {
+        "tags": ["Analytics"],
+        "operationId": "LogAttributeService_Reorder",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ReorderUniverseRegexHttpRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ReorderUniverseRegexHttpRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ReorderUniverseRegexHttpRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UniverseRegexMutationHttpResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#LogAttributeService_Reorder"
+        }
+      }
+    },
     "/matchmaking-api/v1/client-status": {
       "get": {
         "tags": ["Matchmaking"],
@@ -27641,6 +28093,2017 @@
         }
       }
     },
+    "/service-efficiency-api/v1/accounts/groups/{groupId}": {
+      "get": {
+        "summary": "Operation to Get an Account for a Group.",
+        "operationId": "ServiceEfficiencyApi_GetAccountForGroup",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "description": "Group id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAccountResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      },
+      "put": {
+        "summary": "Operation to Update an Account for a Group.",
+        "operationId": "ServiceEfficiencyApi_UpdateAccountForGroup",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "description": "Group id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Endpoint request.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateAccountRequest"
+                  }
+                ],
+                "description": "Request structure for UpdateAccount endpoints."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateAccountRequest"
+                  }
+                ],
+                "description": "Request structure for UpdateAccount endpoints."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateAccountRequest"
+                  }
+                ],
+                "description": "Request structure for UpdateAccount endpoints."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateAccountRequest"
+                  }
+                ],
+                "description": "Request structure for UpdateAccount endpoints."
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateAccountResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/service-efficiency-api/v1/accounts/users/{userId}": {
+      "get": {
+        "summary": "Operation to Get an Account for a User.",
+        "operationId": "ServiceEfficiencyApi_GetAccountForUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAccountResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      },
+      "put": {
+        "summary": "Operation to Update an Account for a User.",
+        "operationId": "ServiceEfficiencyApi_UpdateAccountForUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Endpoint request.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateAccountRequest"
+                  }
+                ],
+                "description": "Request structure for UpdateAccount endpoints."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateAccountRequest"
+                  }
+                ],
+                "description": "Request structure for UpdateAccount endpoints."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateAccountRequest"
+                  }
+                ],
+                "description": "Request structure for UpdateAccount endpoints."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateAccountRequest"
+                  }
+                ],
+                "description": "Request structure for UpdateAccount endpoints."
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateAccountResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/service-efficiency-api/v1/billing_activities/groups/{groupId}": {
+      "get": {
+        "summary": "Operation to Get Billing Activities",
+        "operationId": "ServiceEfficiencyApi_GetBillingActivitiesByGroup",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "startYear",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "startMonth",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "endYear",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "endMonth",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BillingActivitiesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/service-efficiency-api/v1/billing_activities/users/{userId}": {
+      "get": {
+        "summary": "Operation to Get Billing Activities",
+        "operationId": "ServiceEfficiencyApi_GetBillingActivitiesByUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "startYear",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "startMonth",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "endYear",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "endMonth",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BillingActivitiesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/service-efficiency-api/v1/bills/groups/{groupId}": {
+      "get": {
+        "summary": "Operation to Get Billing Statement for group owned account.",
+        "operationId": "ServiceEfficiencyApi_GetBillByGroup",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "description": "Group id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "billId",
+            "in": "query",
+            "description": "Bill id. Takes precedence over date fields.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "description": "Bill year. Ignored if bill id is provided.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "month",
+            "in": "query",
+            "description": "Bill month. Ignored if bill id is provided.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "description": "Bill date. Ignored if bill id is provided.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "latest",
+            "in": "query",
+            "description": "If true, we will return the most recent bill.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BillDetailsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/service-efficiency-api/v1/bills/users/{userId}": {
+      "get": {
+        "summary": "Operation to Get Billing Statement for user owned account.",
+        "operationId": "ServiceEfficiencyApi_GetBillByUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "billId",
+            "in": "query",
+            "description": "Bill id. Takes precedence over date fields.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "description": "Bill year. Ignored if bill id is provided.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "month",
+            "in": "query",
+            "description": "Bill month. Ignored if bill id is provided.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "description": "Bill date. Ignored if bill id is provided.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "latest",
+            "in": "query",
+            "description": "If true, we will return the most recent bill.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BillDetailsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/service-efficiency-api/v1/configurations/universes/{universeId}": {
+      "get": {
+        "summary": "Operation to Get ConsumerConfiguration for a universe.",
+        "operationId": "ServiceEfficiencyApi_GetConsumerConfigurationsByUniverse",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsumerConfigurationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      },
+      "patch": {
+        "summary": "Operation to Update ConsumerConfiguration for a universe.",
+        "operationId": "ServiceEfficiencyApi_UpdateConsumerConfigurationsByUniverse",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ConsumerConfigurationRequest"
+                  }
+                ],
+                "description": "Request for updating consumer configuration."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ConsumerConfigurationRequest"
+                  }
+                ],
+                "description": "Request for updating consumer configuration."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ConsumerConfigurationRequest"
+                  }
+                ],
+                "description": "Request for updating consumer configuration."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ConsumerConfigurationRequest"
+                  }
+                ],
+                "description": "Request for updating consumer configuration."
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConsumerConfigurationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:write",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/service-efficiency-api/v1/eligibility/groups/{groupId}": {
+      "get": {
+        "summary": "Operation to Check the Eligibility of a Group.",
+        "operationId": "ServiceEfficiencyApi_CheckEligibilityForGroup",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "description": "Group id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CheckEligibilityResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/service-efficiency-api/v1/eligibility/users/{userId}": {
+      "get": {
+        "summary": "Operation to Check the Eligibility of a User.",
+        "operationId": "ServiceEfficiencyApi_CheckEligibilityForUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CheckEligibilityResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/service-efficiency-api/v1/is_allowed": {
+      "get": {
+        "summary": "Endpoint to return whether the current user can access the features in this API, optionally with a universe\r\nID.",
+        "operationId": "ServiceEfficiencyApi_IsAllowed",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "query",
+            "description": "a universe the user may or may not be allowed to access",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/service-efficiency-api/v1/payment_profiles/groups/{groupId}/service_efficiency": {
+      "get": {
+        "summary": "Operation to Get the Service Efficiency Payment Method for a Group.",
+        "operationId": "ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForGroup",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "description": "Group id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetServiceEfficiencyPaymentMethodResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      },
+      "put": {
+        "summary": "Operation to Set the Service Efficiency Payment Method for a Group.",
+        "operationId": "ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForGroup",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "description": "Group id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "paymentProfileId",
+            "in": "query",
+            "description": "Payment profile id to set.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "paymentProfileOwnerType",
+            "in": "query",
+            "description": "Payment profile owner type. GROUP or USER.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetServiceEfficiencyPaymentMethodResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "412": {
+            "description": "Client Error"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/service-efficiency-api/v1/payment_profiles/users/{userId}": {
+      "delete": {
+        "summary": "Operation to Delete a Payment Profile for a User.",
+        "operationId": "ServiceEfficiencyApi_DeletePaymentProfileForUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "paymentProfileId",
+            "in": "query",
+            "description": "Payment profile id to delete.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletePaymentProfileResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      },
+      "get": {
+        "summary": "Operation to List Payment Profiles of a User.",
+        "operationId": "ServiceEfficiencyApi_ListPaymentProfilesByUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListPaymentProfilesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Operation to Create Payment Profile for a User.",
+        "operationId": "ServiceEfficiencyApi_CreatePaymentProfileForUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePaymentProfileResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/service-efficiency-api/v1/payment_profiles/users/{userId}/service_efficiency": {
+      "get": {
+        "summary": "Operation to Get the Service Efficiency Payment Method for a User.",
+        "operationId": "ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetServiceEfficiencyPaymentMethodResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      },
+      "put": {
+        "summary": "Operation to Set the Service Efficiency Payment Method for a User.",
+        "operationId": "ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "paymentProfileId",
+            "in": "query",
+            "description": "Payment profile id to set.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "paymentProfileOwnerType",
+            "in": "query",
+            "description": "Payment profile owner type. GROUP or USER.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetServiceEfficiencyPaymentMethodResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "412": {
+            "description": "Client Error"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/service-efficiency-api/v1/payments/groups/{groupId}": {
+      "post": {
+        "summary": "Operation to Submit a Manual Payment for a Group.",
+        "operationId": "ServiceEfficiencyApi_SubmitManualPaymentForGroup",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "description": "Group id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Endpoint request.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SubmitManualPaymentRequest"
+                  }
+                ],
+                "description": "Request object to be set as the body of submit manual payment endpoint requests."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SubmitManualPaymentRequest"
+                  }
+                ],
+                "description": "Request object to be set as the body of submit manual payment endpoint requests."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SubmitManualPaymentRequest"
+                  }
+                ],
+                "description": "Request object to be set as the body of submit manual payment endpoint requests."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SubmitManualPaymentRequest"
+                  }
+                ],
+                "description": "Request object to be set as the body of submit manual payment endpoint requests."
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubmitManualPaymentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/service-efficiency-api/v1/payments/users/{userId}": {
+      "post": {
+        "summary": "Operation to Submit a Manual Payment for a User.",
+        "operationId": "ServiceEfficiencyApi_SubmitManualPaymentForUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User id.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Endpoint request.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SubmitManualPaymentRequest"
+                  }
+                ],
+                "description": "Request object to be set as the body of submit manual payment endpoint requests."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SubmitManualPaymentRequest"
+                  }
+                ],
+                "description": "Request object to be set as the body of submit manual payment endpoint requests."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SubmitManualPaymentRequest"
+                  }
+                ],
+                "description": "Request object to be set as the body of submit manual payment endpoint requests."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SubmitManualPaymentRequest"
+                  }
+                ],
+                "description": "Request object to be set as the body of submit manual payment endpoint requests."
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubmitManualPaymentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "503": {
+            "description": "Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "extended-services:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
     "/thumbnail-personalization-api/v1/universes/{universeId}/personalization": {
       "get": {
         "tags": ["Thumbnail Personalization"],
@@ -29698,6 +32161,228 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/creator-store#Toolbox_SearchCreatorStoreAssets"
+        }
+      }
+    },
+    "/universe-performance-raqi/v1/events/logging/universe/{universeId}/log-details": {
+      "get": {
+        "tags": ["Analytics"],
+        "summary": "Get logs based on message hash ids, keywords, placeVersions, start/end time.",
+        "operationId": "ErrorLoggingDetail_GetLogs",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "messageHashIds",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "Optional keyword to help highlight matching keyword in the error message",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "startTime",
+            "in": "query",
+            "description": "Optional query window start; omitted values are defaulted server-side.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endTime",
+            "in": "query",
+            "description": "Optional query window end; omitted values are defaulted server-side.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "placeId",
+            "in": "query",
+            "description": "Optional place id filter.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "placeVersions",
+            "in": "query",
+            "description": "Optional place version filters.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          },
+          {
+            "name": "firstSeenPlaceVersion",
+            "in": "query",
+            "description": "Optional minimum first seen place version filter (inclusive).",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorLogDetailResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorLogDetailResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorLogDetailResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics:read",
+            "targetResourceSpecifier": "universe"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#ErrorLoggingDetail_GetLogs"
         }
       }
     },
@@ -35240,6 +37925,7 @@
             "url": "https://clientsettings.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -42547,7 +45233,7 @@
           {
             "in": "query",
             "name": "prioritizeExactMatch",
-            "description": "Whether or not to prioritize the exact match for the keyword (optional, defaults to false).",
+            "description": "Whether to move the exact-name group to first (optional, defaults to false). Ignored when the user's group search config sets its own position.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -42590,7 +45276,7 @@
             }
           },
           "400": {
-            "description": "2: Search term not appropriate for Roblox.\r\n3: Search term was left empty.\r\n4: Search terms can be 2 to 50 characters long."
+            "description": "2: Search term not appropriate for Roblox.\r\n3: Search term was left empty."
           }
         },
         "servers": [
@@ -46805,9 +49491,6 @@
           },
           "403": {
             "description": "0: Token Validation Failed\r\n9: You do not have permissions to perform this action."
-          },
-          "409": {
-            "description": "28: Migration in progress. Please try again in a moment."
           }
         },
         "servers": [
@@ -46878,9 +49561,6 @@
           },
           "403": {
             "description": "0: Token Validation Failed\r\n9: You do not have permissions to perform this action.\r\n16: There are users in this role."
-          },
-          "409": {
-            "description": "28: Migration in progress. Please try again in a moment."
           }
         },
         "servers": [
@@ -46965,9 +49645,6 @@
           },
           "403": {
             "description": "0: Token Validation Failed\r\n9: You do not have permissions to perform this action."
-          },
-          "409": {
-            "description": "28: Migration in progress. Please try again in a moment."
           }
         },
         "servers": [
@@ -48129,6 +50806,7 @@
             "url": "https://clientsettings.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -50497,6 +53175,7 @@
             "url": "https://clientsettings.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -68610,6 +71289,7 @@
             "url": "https://clientsettings.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -68785,6 +71465,7 @@
             "url": "https://clientsettings.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -68819,6 +71500,7 @@
             "url": "https://clientsettings.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -70650,7 +73332,7 @@
     "/v2/ota-version/{binaryType}": {
       "get": {
         "tags": ["Metadata"],
-        "summary": "Get OTA information for a specific binary type with a given version on some channel.\nReturns empty list if no updates are found or channel/application with the given version does not exist in CVS.",
+        "summary": "Get OTA information for a specific binary type with a given version on some channel.\nWhen a named channel has no OTA config for that version, the version is ignored and the channel's config is returned.\nReturns empty list if no updates are found or channel/application with the given version does not exist in CVS.",
         "parameters": [
           {
             "in": "path",
@@ -70672,7 +73354,7 @@
           {
             "in": "query",
             "name": "version",
-            "description": "Application version",
+            "description": "Application version. Optional when a named channel is set. Required for production.",
             "schema": {
               "type": "string"
             }
@@ -70731,6 +73413,7 @@
             "url": "https://clientsettings.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -74089,6 +76772,7 @@
             "url": "https://clientsettings.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -77416,9 +80100,91 @@
         "properties": {},
         "description": "A join request ID."
       },
+      "Account": {
+        "required": ["accountTaxType"],
+        "type": "object",
+        "properties": {
+          "accountTaxType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AccountTaxType"
+              }
+            ],
+            "description": "Gets or sets the tax treatment for this account."
+          },
+          "accountName": {
+            "type": "string",
+            "description": "Gets or sets the name for this account.",
+            "nullable": true
+          },
+          "taxId": {
+            "type": "string",
+            "description": "Gets or sets the tax id for this account.",
+            "nullable": true
+          },
+          "taxIdType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TaxIdType"
+              }
+            ],
+            "description": "Gets or sets the type of the tax id for this account.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Representation of an Account and its settings."
+      },
+      "AccountTaxType": {
+        "enum": ["Invalid", "Individual", "Business"],
+        "type": "string",
+        "description": "Account setting for tax treatment type."
+      },
       "ActionResult": {
         "type": "object",
         "additionalProperties": false
+      },
+      "Address": {
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string",
+            "description": "The country of this address.\r\nFormat: ISO 3166-1 alpha-2\r\nCurrently, only \"US\" supported",
+            "nullable": true
+          },
+          "postalCode": {
+            "type": "string",
+            "description": "The ZIP or postal code of this address.",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "description": "The state, county, province, or region of this address.",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "description": "The city, district, suburb, town, or village of this address.",
+            "nullable": true
+          },
+          "addressLine1": {
+            "type": "string",
+            "description": "The first address line of this address (e.g. street, PO Box, or company name)",
+            "nullable": true
+          },
+          "addressLine2": {
+            "type": "string",
+            "description": "The second address line of this address (e.g. apartment, suite, unit, or building)",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "The name associated with this address.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents an address."
       },
       "AgentResponse": {
         "type": "object",
@@ -78830,6 +81596,214 @@
         "additionalProperties": false,
         "description": "Response object to grant one permission to multiple assets."
       },
+      "BillDetailsResponse": {
+        "required": [
+          "billingAddress",
+          "billStatus",
+          "payments",
+          "robloxAddress",
+          "taxAmount",
+          "totalAmount",
+          "usageAmount",
+          "usages"
+        ],
+        "type": "object",
+        "properties": {
+          "accountState": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ResponseAccountState"
+              }
+            ],
+            "description": "Gets or sets the account state."
+          },
+          "billId": {
+            "type": "string",
+            "description": "Gets or sets the ID of the bill.",
+            "nullable": true
+          },
+          "billStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BillStatus"
+              }
+            ],
+            "description": "Gets or sets the status of the bill."
+          },
+          "usageAmount": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the pre-tax bill amount."
+          },
+          "taxAmount": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the tax amount of the bill."
+          },
+          "totalAmount": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the total, tax-inclusive amount of the bill.\r\nThis is Roblox.CloudPricing.ServiceEfficiencyApi.Models.BillDetailsResponse.UsageAmount + Roblox.CloudPricing.ServiceEfficiencyApi.Models.BillDetailsResponse.TaxAmount."
+          },
+          "usages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ConsumerUsage"
+            },
+            "description": "Gets or sets the list of consumer usages."
+          },
+          "billingAddress": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Address"
+              }
+            ],
+            "description": "Gets or sets the billing address of this bill."
+          },
+          "robloxAddress": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Address"
+              }
+            ],
+            "description": "Gets or sets the Roblox Company address associated with this bill."
+          },
+          "taxId": {
+            "type": "string",
+            "description": "Gets or sets the tax id used for this bill.",
+            "nullable": true
+          },
+          "taxIdType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TaxIdType"
+              }
+            ],
+            "description": "Gets or sets the type of the tax id used for this bill.",
+            "nullable": true
+          },
+          "payments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Payment"
+            },
+            "description": "Gets or sets the payments associated with this bill."
+          },
+          "conversionRate": {
+            "type": "number",
+            "description": "Gets or sets the USD-to-local-currency conversion rate at bill creation time, provided for reference only.\r\nNull if the payment method is in the US, the bill predates this feature, or for pending bills.\r\n-1 if the currency converter lookup failed.",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response object for a billing statement."
+      },
+      "BillStatus": {
+        "enum": ["Invalid", "Unpaid", "Paid", "Closed"],
+        "type": "string",
+        "description": "Bill Status Type"
+      },
+      "BillSummary": {
+        "required": ["billStatus", "timestamp", "totalAmount"],
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "integer",
+            "description": "Gets or sets the year of this bill.",
+            "format": "int64"
+          },
+          "billId": {
+            "type": "string",
+            "description": "Gets or sets string ID of the bill.",
+            "nullable": true
+          },
+          "billStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BillStatus"
+              }
+            ],
+            "description": "Gets or sets the status of the bill."
+          },
+          "totalAmount": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the total amount of this bill."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Summary of a bill."
+      },
+      "BillingActivitiesResponse": {
+        "required": [
+          "chargingThreshold",
+          "currentBalance",
+          "monthToDateBalance"
+        ],
+        "type": "object",
+        "properties": {
+          "accountState": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ResponseAccountState"
+              }
+            ],
+            "description": "Gets or sets the account state."
+          },
+          "billSummaries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BillSummary"
+            },
+            "description": "Gets or sets the list of account bill summaries.",
+            "nullable": true
+          },
+          "currentBalance": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the current account balance."
+          },
+          "monthToDateBalance": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the month to date balance"
+          },
+          "chargingThreshold": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the charging threshold."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response object for Billing Activities request."
+      },
+      "BudgetLevel": {
+        "enum": ["ResourceOnly", "ServiceOnly"],
+        "type": "string",
+        "description": "Indicates the allowed budget levels for a service."
+      },
       "BulkDeleteSavesRequest": {
         "required": ["targets"],
         "type": "object",
@@ -78969,6 +81943,21 @@
           }
         },
         "additionalProperties": false
+      },
+      "CheckEligibilityResponse": {
+        "type": "object",
+        "properties": {
+          "eligibilityRequirementResults": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EligibilityRequirementResult"
+            },
+            "description": "Gets or sets the eligibility requirement results for the provided creator.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response object for Roblox.CloudPricing.ServiceEfficiencyApi.Operations.CheckEligibilityOperation"
       },
       "ClientStatusGetRequest": {
         "type": "object",
@@ -79275,6 +82264,81 @@
         "type": "string",
         "description": "Discriminator for entries in CreatorConfigsPublicApi.Models.ConfigVariantDto variant lists (full config and revision snapshots).\n\nconditional",
         "x-enum-varnames": ["Conditional"]
+      },
+      "ConsumerConfigurationRequest": {
+        "required": ["serviceConfigurations"],
+        "type": "object",
+        "properties": {
+          "serviceConfigurations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceConfiguration"
+            },
+            "description": "Gets or sets the service configuration lists."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request for updating consumer configuration."
+      },
+      "ConsumerConfigurationResponse": {
+        "required": ["serviceConfigurations"],
+        "type": "object",
+        "properties": {
+          "accountState": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ResponseAccountState"
+              }
+            ],
+            "description": "Gets or sets the account state."
+          },
+          "accountInfoComplete": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether account information is complete."
+          },
+          "serviceConfigurations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceConfiguration"
+            },
+            "description": "Gets or sets the service configuration lists."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response object for consumer configuration."
+      },
+      "ConsumerUsage": {
+        "required": ["consumerId", "serviceUsages", "subtotalAmount"],
+        "type": "object",
+        "properties": {
+          "consumerId": {
+            "type": "integer",
+            "description": "Gets or sets the consumer Id.",
+            "format": "int64"
+          },
+          "consumerName": {
+            "type": "string",
+            "description": "Gets or sets consumer name.",
+            "nullable": true
+          },
+          "subtotalAmount": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the subtotal amount of this consumer."
+          },
+          "serviceUsages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceUsage"
+            },
+            "description": "Gets or sets the list of service usages."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Usages of a consumer, e.g. my cool universe."
       },
       "ContentMessage": {
         "type": "object",
@@ -79695,6 +82759,18 @@
         "additionalProperties": false,
         "description": "The response for creating a matchmaking server attribute definition."
       },
+      "CreatePaymentProfileResponse": {
+        "type": "object",
+        "properties": {
+          "clientSecret": {
+            "type": "string",
+            "description": "Gets or sets the client secret to complete payment profile creation.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response object for Roblox.CloudPricing.ServiceEfficiencyApi.Operations.CreatePaymentProfileOperation"
+      },
       "CreatePrivateServerRequest": {
         "type": "object",
         "properties": {
@@ -79778,6 +82854,31 @@
         },
         "additionalProperties": false,
         "description": "The request to create a thumbnail personalization configuration."
+      },
+      "CreateUniverseRegexHttpRequest": {
+        "type": "object",
+        "properties": {
+          "universeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "pattern": {
+            "type": "string",
+            "nullable": true
+          },
+          "output": {
+            "type": "string",
+            "nullable": true
+          },
+          "regexOperation": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/RegexOperation"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
       },
       "CreationContext": {
         "type": "object",
@@ -80330,6 +83431,11 @@
         "additionalProperties": false,
         "description": "The response for deleting a matchmaking server attribute definition."
       },
+      "DeletePaymentProfileResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "Response object for Roblox.CloudPricing.ServiceEfficiencyApi.Operations.DeletePaymentProfileOperation"
+      },
       "DeleteSaveRequest": {
         "required": ["targetId", "targetType"],
         "type": "object",
@@ -80546,6 +83652,39 @@
         "additionalProperties": false,
         "description": "Response model containing the draft hash."
       },
+      "EligibilityRequirement": {
+        "enum": [
+          "Invalid",
+          "Age",
+          "AccountCountry",
+          "IdVerified",
+          "EmailVerified",
+          "ModerationStatus",
+          "Premium",
+          "UserAgreement"
+        ],
+        "type": "string",
+        "description": "A type of eligibility requirement."
+      },
+      "EligibilityRequirementResult": {
+        "type": "object",
+        "properties": {
+          "eligibilityRequirement": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/EligibilityRequirement"
+              }
+            ],
+            "description": "Gets or sets the eligibility check type."
+          },
+          "eligible": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the account is eligible for this eligibility type."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The result of an Account's eligibility check for a specific eligibility type."
+      },
       "Entry": {
         "type": "object",
         "properties": {
@@ -80648,6 +83787,73 @@
         ],
         "type": "string",
         "description": "Code representing various error conditions."
+      },
+      "ErrorLogDetail": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The message hash id for this log detail.",
+            "nullable": true
+          },
+          "logSeverity": {
+            "type": "string",
+            "description": "The logSeverity of the log",
+            "nullable": true
+          },
+          "logSource": {
+            "type": "string",
+            "description": "The source of the log",
+            "nullable": true
+          },
+          "os": {
+            "type": "string",
+            "nullable": true
+          },
+          "platform": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "The message of the error log",
+            "nullable": true
+          },
+          "stacktrace": {
+            "type": "string",
+            "description": "The stack trace of the error log. This might be not available",
+            "nullable": true
+          },
+          "firstSeenUtc": {
+            "type": "string",
+            "description": "UTC timestamp when this error was first observed.\r\nNull when the source document predates this field being populated.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "firstSeenPlaceVersion": {
+            "type": "integer",
+            "description": "First seen place version for the error.\r\nNOTE: This value will only be returned when place id is filtered",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "error log detail"
+      },
+      "ErrorLogDetailResponse": {
+        "type": "object",
+        "properties": {
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorLogDetail"
+            },
+            "description": "The analytics data for display.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response for top error logs"
       },
       "ErrorResponse": {
         "type": "object",
@@ -81250,6 +84456,19 @@
         },
         "additionalProperties": false,
         "description": "A page of homepage thumbnails for a universe."
+      },
+      "FindUniverseRegexesHttpResponse": {
+        "type": "object",
+        "properties": {
+          "universeRegexes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UniverseRegexHttpResponse"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "FlushMemoryStoreMetadata": {
         "type": "object",
@@ -81910,6 +85129,22 @@
         },
         "additionalProperties": false
       },
+      "GetAccountResponse": {
+        "required": ["account"],
+        "type": "object",
+        "properties": {
+          "account": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Account"
+              }
+            ],
+            "description": "Gets or sets the account settings."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response structure for GetAccount endpoints."
+      },
       "GetExperimentOperationStatusResponse": {
         "type": "object",
         "properties": {
@@ -82124,6 +85359,22 @@
         "additionalProperties": false,
         "description": "Response model for getting saves",
         "nullable": true
+      },
+      "GetServiceEfficiencyPaymentMethodResponse": {
+        "type": "object",
+        "properties": {
+          "paymentProfile": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PaymentProfile"
+              }
+            ],
+            "description": "Gets or sets the payment profile set for Service Efficiency use for the provided creator.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response object for Roblox.CloudPricing.ServiceEfficiencyApi.Operations.GetServiceEfficiencyPaymentMethodOperation"
       },
       "GetStartPlaceOverrideResponse": {
         "type": "object",
@@ -84075,6 +87326,21 @@
         },
         "description": "A list of OrderedDataStoreEntries in the parent collection."
       },
+      "ListPaymentProfilesResponse": {
+        "type": "object",
+        "properties": {
+          "paymentProfiles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentProfile"
+            },
+            "description": "Gets or sets the payment profiles owned by the provided creator.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response object for Roblox.CloudPricing.ServiceEfficiencyApi.Operations.ListPaymentProfilesOperation."
+      },
       "ListPlaceMatchmakingScoringConfigurationsResponse": {
         "type": "object",
         "properties": {
@@ -85822,6 +89088,74 @@
         "additionalProperties": false,
         "description": "Paginated response for v3 LIST. Page tokens are null at the collection boundaries."
       },
+      "Payment": {
+        "required": ["amount", "status", "timestamp"],
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "integer",
+            "description": "Gets or sets the time of this payment, in unix milliseconds.",
+            "format": "int64"
+          },
+          "amount": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the total, tax-inclusive amount of the payment."
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.TransactionStatus"
+              }
+            ],
+            "description": "Gets or sets the status of the payment."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Service Efficiency API representation of a payment."
+      },
+      "PaymentProfile": {
+        "type": "object",
+        "properties": {
+          "paymentProfileId": {
+            "type": "string",
+            "description": "Gets or sets the payment profile id.",
+            "nullable": true
+          },
+          "paymentProfileOwnerType": {
+            "type": "string",
+            "description": "Gets or sets the payment profile owner type. GROUP or USER.",
+            "nullable": true
+          },
+          "cardNetwork": {
+            "type": "string",
+            "description": "Gets or sets the card network.",
+            "nullable": true
+          },
+          "last4Digits": {
+            "type": "string",
+            "description": "Gets or sets the last four digits of the card.",
+            "nullable": true
+          },
+          "expMonth": {
+            "type": "integer",
+            "description": "Gets or sets the expiry month of the card.",
+            "format": "int32",
+            "nullable": true
+          },
+          "expYear": {
+            "type": "integer",
+            "description": "Gets or sets the expiry year of the card.",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Service Efficiency representation of a Payment Profile."
+      },
       "PersonalizedConfigStatus": {
         "enum": ["Active", "Inactive"],
         "type": "string",
@@ -86422,6 +89756,27 @@
         "additionalProperties": false,
         "description": "Grouped preview asset ids for an item, separated by media type.",
         "nullable": true
+      },
+      "Price": {
+        "type": "object",
+        "properties": {
+          "cost": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Cost of the resource.",
+            "nullable": true
+          },
+          "unitAmount": {
+            "type": "integer",
+            "description": "The number of units of the resource to which the cost applies. For example, if `cost` is 0.0044 and `unit_amount` is\r\n1000000, the cost is $0.0044 per million of units. The split between `cost` and `unit_amount` should reflect how we\r\nrefer to the price in real life, e.g. the above example reflects how we talk about the price of UMS request units\r\n($0.0044 per million request units).",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Describes the price of a resource."
       },
       "PriceInformationStruct": {
         "required": ["defaultPriceInRobux", "enabledFeatures"],
@@ -87319,10 +90674,33 @@
         },
         "description": "Returns the specified number of items at the front of the queue."
       },
+      "RegexOperation": {
+        "enum": ["Invalid", "Ignore", "Group"],
+        "type": "string"
+      },
+      "RegexStatus": {
+        "enum": [
+          "Invalid",
+          "CreatorCreated",
+          "AutoGenerated",
+          "CreatorIgnored"
+        ],
+        "type": "string"
+      },
       "RemovePlaceMatchmakingScoringConfigurationResponse": {
         "type": "object",
         "additionalProperties": false,
         "description": "Response to remove scoring configuration for a place."
+      },
+      "ReorderUniverseRegexHttpRequest": {
+        "type": "object",
+        "properties": {
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
       },
       "Repository": {
         "enum": [
@@ -87347,6 +90725,100 @@
           "JourneysConfig",
           "AntiCheatConfig"
         ]
+      },
+      "ResourceConfiguration": {
+        "required": ["price", "resourceId", "unitCost", "unlocked"],
+        "type": "object",
+        "properties": {
+          "resourceId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the resource ID."
+          },
+          "unlocked": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the resource has unlocked additional usage."
+          },
+          "monthlyBudget": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the monthly budget.",
+            "nullable": true
+          },
+          "unitCost": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the unit cost of this resource."
+          },
+          "price": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Price"
+              }
+            ],
+            "description": "Gets or sets the price of this resource."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Configuration for a resource, like Memory Stores request unit."
+      },
+      "ResourceUsage": {
+        "required": ["price", "resourceId", "totalCost", "unitCost"],
+        "type": "object",
+        "properties": {
+          "resourceId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets resource ID."
+          },
+          "freeAmount": {
+            "type": "number",
+            "description": "Gets or sets free amount",
+            "format": "double"
+          },
+          "paidAmount": {
+            "type": "number",
+            "description": "Gets or sets paid amount",
+            "format": "double"
+          },
+          "unitCost": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the unit cost of this resource."
+          },
+          "price": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Price"
+              }
+            ],
+            "description": "Gets or sets the price of this resource."
+          },
+          "totalCost": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the total cost of this resource."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Usage of a resource e.g. Memory Stores Requests."
+      },
+      "ResponseAccountState": {
+        "enum": ["Invalid", "Normal", "Overdue", "Suspended"],
+        "type": "string",
+        "description": "Account State in the HTTP response."
       },
       "RestartState": {
         "enum": ["DELAYING", "RESTARTING", "SUCCEEDED"],
@@ -106705,6 +110177,98 @@
         "description": "Defines the different types of servers",
         "format": "int32"
       },
+      "ServiceConfiguration": {
+        "required": ["budgetLevel", "resourceConfigurations", "serviceId"],
+        "type": "object",
+        "properties": {
+          "serviceId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets the service ID."
+          },
+          "monthlyBudget": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the monthly budget.",
+            "nullable": true
+          },
+          "resourceConfigurations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceConfiguration"
+            },
+            "description": "Gets or sets the list of resource configurations."
+          },
+          "budgetLevel": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BudgetLevel"
+              }
+            ],
+            "description": "Gets or sets the allowed budget level for this service.\r\nThis value can only be set in the GetConsumerConfiguration endpoint, it will be ignored in the UpdateConsumerConfiguration endpoint."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Configuration of a service, including whether unlocked and budget."
+      },
+      "ServiceEfficiencyApi.Money": {
+        "type": "object",
+        "properties": {
+          "currencyCode": {
+            "type": "string",
+            "description": "The three-letter currency code defined in ISO 4217.",
+            "nullable": true
+          },
+          "units": {
+            "type": "integer",
+            "description": "The whole units of the amount.\r\nFor example if `currencyCode` is `\"USD\"`, then 1 unit is one US dollar.",
+            "format": "int64"
+          },
+          "nanos": {
+            "type": "integer",
+            "description": "Number of nano (10^-9) units of the amount.\r\nThe value must be between -999,999,999 and +999,999,999 inclusive.\r\nIf `units` is positive, `nanos` must be positive or zero.\r\nIf `units` is zero, `nanos` can be positive, zero, or negative.\r\nIf `units` is negative, `nanos` must be negative or zero.\r\nFor example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Temporary until https://roblox.atlassian.net/browse/ICSC-1360 is done.\r\nWill be replaced by google.type.Money"
+      },
+      "ServiceEfficiencyApi.TransactionStatus": {
+        "enum": ["Invalid", "Pending", "Successful", "Failed"],
+        "type": "string",
+        "description": "Transaction Status for HTTP responses."
+      },
+      "ServiceUsage": {
+        "required": ["resourceUsages", "serviceId", "subtotalAmount"],
+        "type": "object",
+        "properties": {
+          "serviceId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Gets or sets service ID."
+          },
+          "subtotalAmount": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the subtotal amount of this service."
+          },
+          "resourceUsages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceUsage"
+            },
+            "description": "Gets or sets the list of resource usages."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Usage of a service, e.g. Memory Stores"
+      },
       "SetMatchmakingScoringConfigurationResponse": {
         "type": "object",
         "properties": {
@@ -106731,6 +110295,11 @@
         },
         "additionalProperties": false,
         "description": "Request to set the matchmaking scoring configuration for a place."
+      },
+      "SetServiceEfficiencyPaymentMethodResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "Response object for Roblox.CloudPricing.ServiceEfficiencyApi.Operations.SetServiceEfficiencyPaymentMethodOperation"
       },
       "SetStartPlaceOverrideRequestBody": {
         "type": "object",
@@ -107154,6 +110723,32 @@
         "enum": ["Invalid", "User", "Group", "GroupRoleset", "All", "Universe"],
         "type": "string"
       },
+      "SubmitManualPaymentRequest": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
+              }
+            ],
+            "description": "Gets or sets the amount of money to charge in the manual payment.",
+            "nullable": true
+          },
+          "billId": {
+            "type": "string",
+            "description": "Gets or sets the id of the bill to make the manual payment on.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request object to be set as the body of submit manual payment endpoint requests."
+      },
+      "SubmitManualPaymentResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "Response object for Roblox.CloudPricing.ServiceEfficiencyApi.Operations.SubmitManualPaymentOperation"
+      },
       "Subscription": {
         "type": "object",
         "properties": {
@@ -107317,6 +110912,19 @@
         },
         "additionalProperties": false,
         "description": "Eligibility criteria scoping which users an experiment can apply to."
+      },
+      "TaxIdType": {
+        "enum": [
+          "Invalid",
+          "UnitedStatesEin",
+          "EuropeanVatNumber",
+          "UnitedKingdomVatNumber",
+          "CanadianBusinessNumber",
+          "CanadianGstHstNumber",
+          "MexicanRfcNumber"
+        ],
+        "type": "string",
+        "description": "Type of the tax id.\r\nMaps to and should be kept up to date with\r\nhttps://github.rbx.com/Roblox/service-contracts/blob/master/protos/roblox/payments/shared/v1/tax_id_type.proto."
       },
       "TestStartPlaceOverrideResponse": {
         "type": "object",
@@ -108324,6 +111932,73 @@
         "additionalProperties": false,
         "description": "Metric configuration for an experiment."
       },
+      "UniverseRegexHttpResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "universeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "regexStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/RegexStatus"
+              }
+            ]
+          },
+          "pattern": {
+            "type": "string",
+            "nullable": true
+          },
+          "output": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regexOperation": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/RegexOperation"
+              }
+            ]
+          },
+          "createdTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "matchedCount": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "sampleMessage": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UniverseRegexMutationHttpResponse": {
+        "type": "object",
+        "properties": {
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "Universe_SocialLink": {
         "type": "object",
         "properties": {
@@ -108337,6 +112012,38 @@
           }
         },
         "description": "A social link that may be associated with the universe.\n\nCan only be removed when using a field mask."
+      },
+      "UpdateAccountRequest": {
+        "required": ["account"],
+        "type": "object",
+        "properties": {
+          "account": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Account"
+              }
+            ],
+            "description": "Gets or sets the account settings to update."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request structure for UpdateAccount endpoints."
+      },
+      "UpdateAccountResponse": {
+        "required": ["account"],
+        "type": "object",
+        "properties": {
+          "account": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Account"
+              }
+            ],
+            "description": "Gets or sets the account settings."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response structure for UpdateAccount endpoints."
       },
       "UpdateCustomMatchmakingSignalRequest": {
         "type": "object",
@@ -108752,6 +112459,27 @@
         },
         "additionalProperties": false,
         "description": "The request to update a thumbnail personalization configuration."
+      },
+      "UpdateUniverseRegexHttpRequest": {
+        "type": "object",
+        "properties": {
+          "pattern": {
+            "type": "string",
+            "nullable": true
+          },
+          "output": {
+            "type": "string",
+            "nullable": true
+          },
+          "regexOperation": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/RegexOperation"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
       },
       "UploadStatus": {
         "enum": [1, 2],
@@ -110431,7 +114159,14 @@
           "post_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts",
           "patch_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_",
           "delete_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_",
-          "get_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts_incidents"
+          "get_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts_incidents",
+          "ErrorLoggingDetail_GetLogs",
+          "LogAttributeService_Find",
+          "LogAttributeService_Create",
+          "LogAttributeService_Update",
+          "LogAttributeService_Reorder",
+          "LogAttributeService_Ignore",
+          "LogAttributeService_Delete"
         ]
       }
     },

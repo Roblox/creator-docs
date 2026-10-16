@@ -414,8 +414,7 @@ properties:
       scripts will not be added to the place.
     code_samples: []
     type: boolean
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: RobloxScriptSecurity

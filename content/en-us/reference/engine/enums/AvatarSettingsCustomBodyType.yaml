@@ -26,12 +26,14 @@ items:
       The custom body is assembled from individual per-part asset references on
       `AvatarBodyRules`. This is the default value.
     value: 0
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: BundleId
     summary: |
       The custom body is sourced from a single avatar bundle, identified by the
       `CustomBodyBundleId` property.
     value: 1
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''

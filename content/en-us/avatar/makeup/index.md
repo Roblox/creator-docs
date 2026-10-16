@@ -7,6 +7,10 @@ description: Makeup is a cosmetic look made up of multiple facial textures and o
 
 Makeup is made up of multiple specialized texture layers baked into a `Class.Decal` object, and each texture layer contains a unique makeup component like the lips or eyes region. Players can purchase makeup as a set on the [Marketplace](https://www.roblox.com/catalog) and apply it as a complete cohesive look, or swap out individual makeup components for others that match their own avatar's style.
 
+<Alert severity = 'info'>
+This guide covers authoring makeup assets in Studio. To let players create and purchase makeup directly within your experience at runtime, see [In-experience creation for makeup](../in-experience-creation-makeup.md).
+</Alert>
+
 <center>
 <figure>
 <img src="../../assets/makeup/MakeupIntro-FullFace.png" width="24%" />

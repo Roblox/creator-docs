@@ -29,7 +29,8 @@ items:
       made massless; only the HumanoidRootPart retains mass so it remains the
       physics assembly root.
     value: 0
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: InnerBoxColliders
     summary: |
@@ -40,5 +41,6 @@ items:
       follow the avatar's proportions without adding extra parts. This is the
       default value of `LegacyCollisionMode`.
     value: 1
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
