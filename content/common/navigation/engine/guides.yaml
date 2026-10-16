@@ -376,8 +376,6 @@ navigation:
         path: /art/characters/facial-animation/moods
       - title: Pathfinding
         path: /characters/pathfinding
-      - title: R6 to R15 adapter
-        path: /characters/r6-to-r15-adapter
   - title: Input
     path: /input/
     section:

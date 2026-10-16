@@ -133,7 +133,7 @@ After you have created a license listing, you can go to **My licenses** ⟩ **[I
 </Alert>
 
 <Alert severity="warning">
-  Once your license has been used in any agreement, you **cannot** change the revenue share rate or eligibility requirements.
+  Once your license has been used in any agreement, you **cannot** change the revenue share rate or license requirements.
 </Alert>
 
 <Alert severity="info">
@@ -251,7 +251,7 @@ To review a license request from a creator:
 5. Choose one of the following:
    - To accept the license request and enter a license agreement with the creator, click **Accept**.
    - To conditionally approve a perpetual license request, send a conditional approval with free-form feedback that lists the content standard the game is violating and the specific changes you want. The creator then has **14 days** to make the changes and mark them as done. After they do, you must [review and approve the changes](#review-conditional-offer-changes) before the agreement becomes active.
-   - To reject the license request, click **Reject**. You can also provide them with a reason for the rejection. This feedback can help the creator make any necessary changes and successfully request again in the future.
+   - To reject the license request, click **Don't accept**. You can also provide them with a reason for the rejection. This feedback can help the creator make any necessary changes and successfully request again in the future.
 
 <Alert severity="info">
   We recommend that you review the creator's game or materials before accepting, conditionally approving, or rejecting their license request.
@@ -320,7 +320,7 @@ To review an offer dispute from a creator:
 2. Select the license agreement that the creator has disputed. The reason for the creator's dispute displays at the top of the page.
 3. Accept or reject the dispute.
    - To accept the dispute and archive the offer, click **Accept dispute**.
-   - To reject the dispute and send the license offer to the creator again, click **Reject dispute**. For a conditional offer, rejecting the dispute re-sends the conditional offer with your original feedback and starts a new 14-day window for the creator.
+   - To reject the dispute and send the license offer to the creator again, click **Don't accept dispute**. For a conditional offer, rejecting the dispute re-sends the conditional offer with your original feedback and starts a new 14-day window for the creator.
 
 If the creator disputes the offer a second time, the offer is automatically archived and the agreement does not take place.
 
