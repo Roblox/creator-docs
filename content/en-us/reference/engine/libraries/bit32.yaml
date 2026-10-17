@@ -364,7 +364,17 @@ functions:
       Returns the unsigned number formed by the bits `field` to
       `field + width - 1` from `n`. Bits are numbered from 0 (least significant)
       to 31 (most significant). All accessed bits must be in the range [0, 31].
-      The default for `width` is 1.
+      The default for `width` is 1. This operation is equivalent to
+      `bit32.band(bit32.rshift(n, field), 2^width-1)`. An error is thrown if the
+      range from `n` to `n + field` includes negative or greater than 32.
+
+      ```lua
+      local n = 0x12345678
+      assert(bit32.extract(n,  0, 8), 0x78)
+      assert(bit32.extract(n,  4, 8), 0x67)
+      assert(bit32.extract(n, 16, 8), 0x34)
+      assert(bit32.extract(n, 24, 8), 0x12)
+      ```
     parameters:
       - name: 'n'
         type: number
@@ -375,7 +385,7 @@ functions:
         type: number
         default:
         summary: |
-          The zero-based position of the least significant bit to extract.
+          The right-aligned zero-based position of the bit to extract.
       - name: width
         type: number
         default: 1
