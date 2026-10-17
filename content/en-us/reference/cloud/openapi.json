@@ -38202,6 +38202,7 @@
             "url": "https://itemconfiguration.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -38300,6 +38301,7 @@
             "url": "https://itemconfiguration.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -52617,6 +52619,7 @@
             "url": "https://privatemessages.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -52719,6 +52722,7 @@
             "url": "https://privatemessages.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -52863,6 +52867,7 @@
             "url": "https://privatemessages.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -55709,6 +55714,7 @@
             "url": "https://itemconfiguration.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -55758,6 +55764,7 @@
             "url": "https://itemconfiguration.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -55815,6 +55822,7 @@
             "url": "https://itemconfiguration.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -55872,6 +55880,7 @@
             "url": "https://itemconfiguration.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -74210,6 +74219,7 @@
             "url": "https://notifications.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -74387,6 +74397,7 @@
             "url": "https://notifications.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -74429,6 +74440,7 @@
             "url": "https://notifications.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -74492,6 +74504,7 @@
             "url": "https://notifications.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -76100,6 +76113,7 @@
             "url": "https://notifications.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -76173,6 +76187,7 @@
             "url": "https://notifications.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -76243,6 +76258,7 @@
             "url": "https://notifications.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -76285,6 +76301,7 @@
             "url": "https://notifications.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -76327,6 +76344,7 @@
             "url": "https://notifications.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -79130,7 +79148,7 @@
       "delete": {
         "tags": ["Game Events"],
         "summary": "Permanently delete an existing game event. Returns 204 No Content on success.\nPermission is enforced via an explicit pre-check: callers that can read but not edit\nreceive 403; callers that cannot read receive 404.",
-        "operationId": "GameEvent_Delete",
+        "operationId": "GameEvent_DeleteGameEvent",
         "parameters": [
           {
             "name": "eventId",
@@ -79217,13 +79235,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvent_Delete"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvent_DeleteGameEvent"
         }
       },
       "get": {
         "tags": ["Game Events"],
         "summary": "Get a single game event by ID.\nUse `?fields=` to request a subset of fields; unknown field names return 400.",
-        "operationId": "GameEvent_Get",
+        "operationId": "GameEvent_GetGameEvent",
         "parameters": [
           {
             "name": "eventId",
@@ -79305,13 +79323,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvent_Get"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvent_GetGameEvent"
         }
       },
       "patch": {
         "tags": ["Game Events"],
         "summary": "Partially update a game event. Only fields present in the request body are changed; omitted or null fields are left\nunchanged. Empty body is a no-op and returns the current game event resource.",
-        "operationId": "GameEvent_Update",
+        "operationId": "GameEvent_UpdateGameEvent",
         "parameters": [
           {
             "name": "eventId",
@@ -79450,7 +79468,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvent_Update"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvent_UpdateGameEvent"
         }
       }
     },
@@ -79458,7 +79476,7 @@
       "get": {
         "tags": ["Game Events"],
         "summary": "List game events under a universe.\nUse `?fields=` to trim the response payload.\nResponse is always 200 (empty list for unknown universe).",
-        "operationId": "GameEvents_List",
+        "operationId": "GameEvents_GetGameEvents",
         "parameters": [
           {
             "name": "universeId",
@@ -79604,13 +79622,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvents_List"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvents_GetGameEvents"
         }
       },
       "post": {
         "tags": ["Game Events"],
         "summary": "Create a new game event. Returns the full resource on success.",
-        "operationId": "GameEvents_Create",
+        "operationId": "GameEvents_CreateGameEvent",
         "parameters": [
           {
             "name": "universeId",
@@ -79739,7 +79757,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvents_Create"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvents_CreateGameEvent"
         }
       }
     }
@@ -89030,7 +89048,6 @@
           "TooManyUsers",
           "GroupFeatureFrozen",
           "GroupMigrated",
-          "RoleIdMigrationInProgress",
           "UnificationInProgress",
           "InvalidPageLimit",
           "InvalidSortOrder",
@@ -95609,7 +95626,7 @@
             "type": "string"
           },
           "application": {
-            "description": "Notification application\r\nExample : \"Roblox\"",
+            "description": "Notification application\nExample : \"Roblox\"",
             "type": "string"
           },
           "platform": {
@@ -95675,7 +95692,7 @@
             "type": "string"
           },
           "isProvisional": {
-            "description": "True when the client granted iOS provisional authorization (silent, quiet-only)\r\nrather than full authorization. Absent/null is treated as not provisional.",
+            "description": "True when the client granted iOS provisional authorization (silent, quiet-only)\nrather than full authorization. Absent/null is treated as not provisional.",
             "type": "boolean"
           }
         },
@@ -95786,7 +95803,7 @@
             "type": "integer"
           },
           "application": {
-            "description": "application for the corresponding notification\r\nExample : \"Roblox\"",
+            "description": "application for the corresponding notification\nExample : \"Roblox\"",
             "type": "string"
           },
           "platform": {
@@ -114587,11 +114604,11 @@
         "path": "virtual-events",
         "content": "HTTP APIs for creating and managing game events for a universe on Roblox.",
         "ordering": [
-          "GameEvents_List",
-          "GameEvents_Create",
-          "GameEvent_Get",
-          "GameEvent_Update",
-          "GameEvent_Delete"
+          "GameEvents_GetGameEvents",
+          "GameEvents_CreateGameEvent",
+          "GameEvent_GetGameEvent",
+          "GameEvent_UpdateGameEvent",
+          "GameEvent_DeleteGameEvent"
         ]
       }
     },

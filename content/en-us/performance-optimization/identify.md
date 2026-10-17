@@ -143,7 +143,15 @@ A significant portion of a game's memory consumption on the client are from asse
 
 ## Load times
 
-There are no built-in tools for checking load times, but because they don't require millisecond-level precision, a stopwatch is usually all you need to understand your current baseline and check whether you made a substantive improvement. You can use a client script in `Class.ReplicatedFirst` to get some sense of how your changes impact load times, but this script doesn't provide a complete, end-to-end measurement:
+Load time, also called join time, is the total time from when a player clicks **Play** to when the world renders and they can begin playing. After the client connects to a server, the join happens in the following order:
+
+1. `Class.ReplicatedFirst` replicates to the client, and any custom [loading screen](../players/loading-screens.md) inside it appears.
+1. The rest of the data model replicates, including everything in `Class.ReplicatedStorage` and `Class.Workspace`. If you enable [instance streaming](../workspace/streaming/index.md), only the area of the `Class.Workspace` near the player's spawn point replicates at this stage.
+1. The player's avatar loads. Load time ends when the loading screen disappears and the world begins rendering.
+
+Knowing which step is slow helps you choose the optimizations with the greatest impact. For common causes and fixes, see [Improve performance](./improve.md#load-times).
+
+There are no built-in tools for checking load times, but because they don't require millisecond-level precision, a stopwatch is usually all you need to understand your current baseline and check whether you made a substantive improvement. You can use a client script in `Class.ReplicatedFirst` to get some sense of how your changes impact load times, but this script doesn't provide a complete, end-to-end measurement. It starts timing after `Class.ReplicatedFirst` replicates and stops when initial replication finishes and `Class.DataModel.Loaded` fires, so it doesn't include the time to connect to a server or load the avatar:
 
 ```lua
 local startTime = os.clock()
@@ -157,6 +165,10 @@ end)
 ```
 
 For additional insight, enable **Print Join Size Breakdown** from the **Network** tab of [Studio Settings](../studio/setup.md#customization) to print the top 20 instances by size and a percentage breakdown by instance type when you start the game in Studio.
+
+If your load time is unexpectedly high relative to the apparent size of your game, inspect your place for unrecognized or obfuscated scripts. Some free models from the Creator Store contain scripts that generate thousands of extra instances, which dramatically increases the amount of data that must replicate when a player joins.
+
+Measure load time before and after each optimization or update so that you can confirm its impact and catch regressions. A sudden increase often means that content was recently added to `Class.ReplicatedStorage` or that an asset change increased download size.
 
 ## Ping
 

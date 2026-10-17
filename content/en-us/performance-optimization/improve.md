@@ -19,7 +19,6 @@ Expensive operations in Luau code take longer to process and can thus impact fra
   of `Class.RunService` without limiting the frequency means these operations
   are repeated every frame, which often results in an unnecessary increase in
   computation time. These events include:
-
   - `Class.RunService.PreAnimation`
   - `Class.RunService.PreRender`
   - `Class.RunService.PreSimulation`
@@ -115,7 +114,6 @@ To clean up all used values for preventing memory leaks:
 
 - **Disconnect all connections** - Go through your codebase and make sure each
   connection is cleaned up via one of the following paths:
-
   - Disconnecting manually using the `Datatype.RBXScriptConnection:Disconnect()|Disconnect()` function.
   - Destroying the instance the event belongs to with the `Class.Instance:Destroy()|Destroy()` function.
   - Destroying the script object that the connection traces back to.
@@ -170,7 +168,6 @@ per frame on both the server and the client.
   rate of physics calculations for physics mechanisms, allowing physics updates
   to be made less frequently in some cases.
 - **Reduce mechanism complexity**
-
   - Where possible, minimize the number of physics constraints or joints in an
     assembly.
   - Reduce the amount of self-collision within a mechanism, such as by applying
@@ -178,7 +175,6 @@ per frame on both the server and the client.
     colliding with each other.
 
 - **Reduce the usage of precise collision fidelity for meshes**
-
   - For small or non-interactable objects where users would rarely notice the
     difference, use box fidelity.
   - For small-medium size objects, use box or hull fidelities, depending on the
@@ -421,7 +417,6 @@ same `Class.MeshPart.MeshContent|MeshContent` are handled in a single draw call 
   light objects and parts to improve performance while shadows are enabled and
   increase the likelihood that shadows remain enabled. Some examples of
   optimizations you can make either at edit time or dynamically at runtime:
-
   - Use the `Class.BasePart.CastShadow` property to disable shadow casting on
     small parts where shadows are unlikely to be visible. This strategy is
     particularly effective when applied to parts that are far away from the
@@ -585,18 +580,36 @@ For more information on streaming options and their benefits, see [streaming pro
 
 ## Load times
 
-Many games implement custom loading screens and use the `Class.ContentProvider:PreloadAsync()` method to request assets so that images, sounds, and meshes are downloaded in the background.
+Before a player can start playing, the client must receive everything in `Class.ReplicatedFirst` and `Class.ReplicatedStorage`, the initial contents of `Class.Workspace`, and any assets that your scripts preload. The more content the client has to download and process during this time, the longer players wait. For a breakdown of each step in the join process, see [Identify performance issues](./identify.md#load-times).
 
-The advantage of this approach is that it lets you ensure important parts of your game are fully loaded without pop-in. However, a common mistake is overutilizing this method to preload more assets than are actually required.
+### Common problems
 
-An example of a bad practice is loading the entire `Class.Workspace`. While this might prevent texture pop-in, it significantly increases load times.
+- **Instance streaming disabled** - Without [instance streaming](../workspace/streaming/index.md), the entire `Class.Workspace` must replicate to the client before the player can enter, so games with many parts, models, and assets have proportionally longer load times.
+- **Excessive content in ReplicatedStorage** - Everything in `Class.ReplicatedStorage` replicates to every client before the player can see or interact with anything, whether or not the client needs it right away. Free models and inherited assets can silently add significant bulk.
+- **Heavy ReplicatedFirst content** - `Class.ReplicatedFirst` replicates before anything else and exists primarily to hold a custom loading screen. Every additional asset or script in it delays the start of the main replication phase.
+- **Overusing `Class.ContentProvider:PreloadAsync()|PreloadAsync()`** - Many games implement custom loading screens and use `Class.ContentProvider:PreloadAsync()` to request assets so that images, sounds, and meshes are downloaded in the background. This approach ensures important parts of your game are fully loaded without pop-in, but a common mistake is preloading more assets than are actually required.
 
-Another similar practice is utilising `Class.ContentProvider.RequestQueueSize` to ensure that all requested assets have finished loading. However, this presents the same issue of significantly increased load times, while also being an unreliable method due to its fluctuating nature.
+  An example of a bad practice is loading the entire `Class.Workspace`. While this might prevent texture pop-in, it significantly increases load times.
 
-Instead, only use `Class.ContentProvider:PreloadAsync()` in necessary situations, which include:
+  Another similar practice is utilizing `Class.ContentProvider.RequestQueueSize` to ensure that all requested assets have finished loading. However, this presents the same issue of significantly increased load times, while also being an unreliable method due to its fluctuating nature.
 
-- Images in the loading screen.
-- Important images in your game menu, such as button backgrounds and icons.
-- Important assets in the starting or spawning area.
+- **Expensive startup scripts** - Heavy script execution in `Class.LocalScript|LocalScripts` that run during the join process, such as synchronously loading large data structures, delays the transition from replication to a playable state.
 
-If you must load a large number of assets, we recommend you provide a **Skip Loading** button.
+### Mitigation
+
+- **Enable instance streaming** - Streaming sends only the portion of your world near the player's spawn point on initial join, then streams in the rest progressively as the player moves through your game. For games that don't already use it, streaming is one of the most effective ways to reduce load times. Streaming is enabled by default for new places. For setup steps, property reference, and migration guidance, see [Instance streaming](../workspace/streaming/index.md).
+
+  <Alert severity="warning">
+  Enabling streaming changes how your game replicates data to clients. After you enable it, thoroughly test any scripts that access `Class.Workspace` content when a player joins, because those instances might not be present on the client yet.
+  </Alert>
+
+- **Keep ReplicatedStorage lean** - Only store what clients need at the moment they join, such as shared `Class.ModuleScript|ModuleScripts` that `Class.LocalScript|LocalScripts` require. Move large models, audio, and other assets that aren't needed immediately to `Class.ServerStorage`, and move them to the client only when a player needs them. Audit `Class.ReplicatedStorage` regularly for content you no longer use.
+- **Keep ReplicatedFirst lean** - Limit `Class.ReplicatedFirst` to what your loading screen needs, such as basic UI elements rather than large textures or 3D models, and avoid heavy computation in scripts that run from it. For a walkthrough of building a custom loading screen, including when to call `Class.ReplicatedFirst:RemoveDefaultLoadingScreen()`, see [Loading screens](../players/loading-screens.md).
+- **Only preload necessary assets** - Use `Class.ContentProvider:PreloadAsync()` only in necessary situations, which include:
+  - Images in the loading screen.
+  - Important images in your game menu, such as button backgrounds and icons.
+  - Important assets in the starting or spawning area.
+
+  If you must load a large number of assets, we recommend you provide a **Skip Loading** button.
+
+- **Defer non-essential startup work** - Load content that a player hasn't reached yet, such as UI panels they haven't opened, only when it's first needed. For initialization work that must happen early, spread it across multiple frames rather than running it all at once. For techniques, see [Script computation](#script-computation).

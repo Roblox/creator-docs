@@ -36,7 +36,7 @@ To request a full game license:
 
 1. In the **Explore** dropdown in the Creator Hub, click **Licenses**.
 2. Select a **Full game** license from the available licenses.
-3. Click **Request license**.
+3. Click **Send request**.
 4. Select the game you want to use for this license request and click **Next**.
 5. Under **Pitch**, enter more details about your game. This can help the rights holder make a decision about your license request. For more information about writing a pitch, see [Pitch details](#pitch-details).
 6. (For perpetual licenses) Under **Experience readiness**, select one of the following:
@@ -58,7 +58,7 @@ To request an in-game sales license:
 
 1. In the **Explore** dropdown in the Creator Hub, click **Licenses**.
 2. Select an **In-game sales** license from the available licenses.
-3. Click **Request license**.
+3. Click **Send request**.
 4. Select the game you want to use for this license request and click **Next**.
 5. Under **Pitch**, enter more details about your game. This can help the rights holder make a decision about your license request. For more information about writing a pitch, see [Pitch details](#pitch-details).
 6. Under **Designate IP sales products**, add the relevant developer product and game pass IDs.
@@ -82,7 +82,7 @@ To request a Marketplace license:
 
 1. In the **Explore** dropdown in the Creator Hub, click **Licenses**.
 2. Select a **Marketplace** license from the available licenses.
-3. Click **Request license**.
+3. Click **Send request**.
 4. Select license owner for which group or user you want to use for this license request and click **Next**.
 5. Under **Pitch**, enter more details about how you intend to use the IP. This can help the rights holder make a decision about your license request. For more information about writing a pitch, see [Pitch details](#pitch-details).
 6. (For time-limited licenses) Under **Proposed date range**, use the calendar to set the proposed dates that your game will incorporate the IP. Start and end times for time-limited licenses are based on midnight UTC.
