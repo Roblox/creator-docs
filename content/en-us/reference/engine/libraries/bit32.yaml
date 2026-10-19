@@ -385,7 +385,7 @@ functions:
         type: number
         default:
         summary: |
-          The right-aligned zero-based position of the bit to extract.
+          The zero-based position of the least significant bit to extract.
       - name: width
         type: number
         default: 1
