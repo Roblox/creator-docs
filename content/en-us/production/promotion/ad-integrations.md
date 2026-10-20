@@ -46,13 +46,15 @@ This process helps make sure that your users receive clear and appropriate discl
 
 ### Campaign registration
 
+Before an ad integration campaign can run, the owner of its games must complete their invoicing information. The owner is the user or group that owns the games, and only the invoicing contact is required. To add it, go to the **Invoicing** tab of the owner's **Account information** page in Creator Hub.
+
 To register your ad integration campaign:
 
 1. Go to the [Ads Manager](https://ads.roblox.com) portal while signed into your Roblox account.
 2. Go to **Ad integrations**.
 3. Click **Register**.
 4. Under **Integration details**:
-   1. Select the games you want to add the integration to.
+   1. Select the games you want to add the integration to. All selected games must have the same owner.
    2. Enter the name of the advertiser. This is the name users see in ad disclosures within your games.
    3. Select an advertiser category from the drop-down options. If your advertiser doesn't fit into any of the available categories, select **None of the above**. The moderation team will review your submission and may update the category if needed.
    4. Select a start and end to the campaign.
@@ -66,6 +68,8 @@ To register your ad integration campaign:
 <img src="../../assets/promotion/ad-integrations/AdIntegrations-Registration.png" width="80%" />
 
 As you fill out the form, the **Your revenue share** box displays an estimated revenue share cost for each selected game and the campaign total. For more details, see [Revenue share](#revenue-share).
+
+If the owner's invoicing information is incomplete when you click **Register**, the **Complete your account information** dialog appears. Click **Update** to open the **Invoicing** tab, or click **Save** to register the campaign anyway. The campaign is saved with the **Pending** status and doesn't run until the invoicing information is complete and you turn it on from the **Ad integrations** page.
 
 Before the campaign begins, you can update its selected games. You can also update the start date, end date, campaign name, and advertiser name. Once the campaign starts, its game selection can't be changed and only the end date can be updated.
 
@@ -216,6 +220,10 @@ To check your campaign status, go to the **Ad integrations** page.
   <tr>
     <td>**Paused**</td>
     <td>The campaign has been manually stopped from serving ads.</td>
+  </tr>
+  <tr>
+    <td>**Pending**</td>
+    <td>The owner's invoicing information is incomplete. Complete it, then turn on the campaign from the **Ad integrations** page.</td>
   </tr>
   <tr>
     <td>**Rejected**</td>
@@ -647,6 +655,14 @@ No. You're charged the lower of:
 - Your locked-in maximum cost.
 
 <br />
+
+**Why is my campaign pending?**
+
+A campaign is **Pending** when the owner of its games hasn't completed their invoicing information, so it doesn't run. Until it's complete, the **Ad integrations** page shows a banner with an **Add account details** link, and the campaign can't be turned on. Add the information on the **Invoicing** tab of the owner's **Account information** page in Creator Hub, then turn on the campaign from the **Ad integrations** page.
+
+If the games belong to a group and you can't manage the group's account information, ask the group owner or someone who manages the group's account information to complete it.
+
+<br /><br />
 
 **What are the invoicing and payment terms?**
 

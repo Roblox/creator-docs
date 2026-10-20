@@ -87,6 +87,36 @@ If the asset contains multiple separate `Class.MeshPart` objects, each one gets 
 
 If you're unsatisfied with the final textured result, press **Ctrl**/**Cmd** + **Z** to undo. This can get more complicated if you're also working on other parts of your scene while texturing is in progress, so consider backing up your assets before using this tool.
 
+### Compare generation modes
+
+From far away, **Fast** and **Quality** results can look similar. Up close, though, **Quality** mode's 4K PBR textures show sharper material detail, clearer patterns, and more surface variation than **Fast** mode's 1K diffuse textures.
+
+Floral pattern close-up:
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../assets/studio/texture-generator/texture_closeup_flower_fast.jpg" alt="Close-up of a Fast mode floral guitar texture" />
+    <figcaption>**Fast**</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/studio/texture-generator/texture_closeup_flower_quality.jpg" alt="Close-up of a Quality mode floral guitar texture" />
+    <figcaption>**Quality**</figcaption>
+  </figure>
+</GridContainer>
+
+Rusty pattern close-up:
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../assets/studio/texture-generator/texture_closeup_rusted_fast.jpg" alt="Close-up of a Fast mode rusty guitar texture" />
+    <figcaption>**Fast**</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/studio/texture-generator/texture_closeup_rusted_quality.jpg" alt="Close-up of a Quality mode rusty guitar texture" />
+    <figcaption>**Quality**</figcaption>
+  </figure>
+</GridContainer>
+
 ## Prompting tips
 
 The following tips help the tool provide better and more consistent results.

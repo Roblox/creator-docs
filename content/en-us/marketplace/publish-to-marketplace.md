@@ -55,7 +55,7 @@ When uploading your asset, Studio checks your asset for technical issues, such a
 - For details on upfront payments and fees when publishing assets to the marketplace, see [Fees and commissions](../marketplace/marketplace-fees-and-commissions.md).
 
 <Alert severity = 'warning'>
-  You can't update or edit assets and thumbnails after uploading. You must test all of your assets thoroughly before uploading them to ensure they adhere to Roblox's [Marketplace policy](../marketplace/marketplace-policy.md).
+  Test all of your assets thoroughly before uploading them to ensure they adhere to Roblox's [Marketplace policy](../marketplace/marketplace-policy.md). If you need to fix a 3D accessory or layered clothing item after uploading, see [Update an existing item](#update-an-existing-item).
 </Alert>
 
 To upload your asset:
@@ -98,6 +98,31 @@ After uploading the asset, you can find it in the **Creations** tab of the [Crea
 
 <img src="../assets/publishing/marketplace/Creation-Page.png" alt="List of Hat assets on the Creator Hub with current status listed below each entry." width="80%" />
 
+### Organize avatar items
+
+In **Creations** ⟩ **Avatar Items**, you can organize and browse your avatar items in the following ways:
+
+- **Folders**: In the **All** tab, create a folder, then add items to it from each item's menu. Use folders to group items however you like, such as by collection, by drop, or by work in progress. Folders work for both user and group creations, hold avatar assets and bundles, and are single-level with no nesting. An item can be in more than one folder.
+- **Recents**: The **Recents** view under the **All** tab shows your 50 most recently uploaded avatar items and bundles.
+- **Marketplace categories**: By default, items are grouped by the same Marketplace categories that shoppers browse, rather than by asset type. Items are classified automatically, and one category can include several asset types; for example, layered clothing shirts and pants can both be classified as a **Bodysuit**. Newly uploaded items can take a short time to be classified, but appear in **Recents** in the meantime. To group items by asset type instead, turn off **Categorize by Taxonomy** in the top-right corner.
+
+### Update an existing item
+
+You can update a rigid or layered accessory that you've already uploaded, including items that are published on the Marketplace. The update keeps the item's asset ID, sales history, and existing owners, and owners receive the updated version automatically. An update must be the same asset type as the original item.
+
+To update an existing item:
+
+1. In Studio, open your item and make your fixes.
+2. In the **Explorer** window, right-click the object and select **Save to Roblox**.
+3. Turn on **Update an existing asset** and enter the asset ID of the item you're replacing.
+4. Click **Submit** to pay the upload fee and submit the update for moderation.
+
+Keep the following in mind when updating items:
+
+- You can change anything before an item is published. After an item is published, updates are intended for fixes, such as fit, cages, small mesh or texture issues, or the thumbnail. The updated item must still look like the item owners bought, so substantial design changes aren't allowed.
+- Each update costs the same upload fee as a new item of that type, and every update to a published item goes through [moderation](../marketplace/moderation.md) before it goes live.
+- If an update isn't approved, you receive a notification in your inbox. Your original item stays unchanged, so you can adjust your changes and submit again.
+
 ### Troubleshooting
 
 During the upload process, you might encounter issues that prevent an item from uploading. These might occur due to technical issues with the asset itself, or problems with the metadata of the asset, such as invalid ownership, or inappropriate text strings.
@@ -130,7 +155,7 @@ For other validation issues, keep in mind the following common uploading conflic
 You can access uploaded assets in your [Creator Dashboard](https://create.roblox.com/dashboard/creations). Each item has a **Manage Item** page where you can modify metadata, configure sale-related settings, and publish your asset to the Marketplace.
 
 <Alert severity = 'warning'>
-  You can't change or modify the asset or thumbnail after upload. If you discover that your item is broken or doesn't work as expected, you might need to remove the item and re-upload a corrected asset.
+  If you discover that your rigid or layered accessory is broken or doesn't work as expected, you can [update the existing item](#update-an-existing-item) with a fix. Other item types, such as bundles, can't be updated after upload.
 
 If a Roblox update breaks an existing asset, [submit a help ticket](https://www.roblox.com/support) with a link to the broken item and an `.rbxm` of the correct version.
 </Alert>

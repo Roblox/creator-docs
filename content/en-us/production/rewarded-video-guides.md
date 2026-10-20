@@ -102,6 +102,12 @@ src: '/assets/ads/survival.png',
 alt: 'Survival genre experience thumbnail.',
 pdfHref: '/assets/ads/Survival_Playbook.pdf',
 },
+{
+title: 'Shooter',
+src: '/assets/ads/shooter.png',
+alt: 'Shooter genre experience thumbnail.',
+pdfHref: '/assets/ads/Shooter_Playbook.pdf',
+},
 ];
 
 return (<>

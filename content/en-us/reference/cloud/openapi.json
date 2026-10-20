@@ -11564,7 +11564,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -11889,7 +11889,7 @@
       "get": {
         "tags": ["Avatars", "Thumbnails", "Users"],
         "summary": "Get User Thumbnail Generation Operation",
-        "description": "Gets the status and result of a\r\n[Generate User Thumbnail](https://create.roblox.com/docs/cloud/reference/features/users#Cloud_GenerateUserThumbnail)\r\nlong-running operation.\r\n            \r\nCall this with the operation `path` returned by Generate User Thumbnail,\r\npolling until `done` is `true`. Once complete, the operation contains\r\neither `response` or `error`:\r\n            \r\n- If `response` is set, `response.imageUri` contains the generated\r\n  thumbnail URL.\r\n- If `error` is set, the thumbnail couldn't be generated and `response` is\r\n  not set. `error.code` and `error.message` describe the reason.\r\n            \r\nAlways check for `error` before reading `response.imageUri`.",
+        "description": "Gets the status and result of a\n[Generate User Thumbnail](https://create.roblox.com/docs/cloud/reference/features/users#Cloud_GenerateUserThumbnail)\nlong-running operation.\n            \nCall this with the operation `path` returned by Generate User Thumbnail,\npolling until `done` is `true`. Once complete, the operation contains\neither `response` or `error`:\n            \n- If `response` is set, `response.imageUri` contains the generated\n  thumbnail URL.\n- If `error` is set, the thumbnail couldn't be generated and `response` is\n  not set. `error.code` and `error.message` describe the reason.\n            \nAlways check for `error` before reading `response.imageUri`.",
         "operationId": "Cloud_GetUserThumbnailGenerationOperation",
         "parameters": [
           {
@@ -11913,7 +11913,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -11954,7 +11954,7 @@
       "get": {
         "tags": ["Avatars", "Thumbnails", "Users"],
         "summary": "Generate User Thumbnail",
-        "description": "Generates and returns the URL for the user's avatar thumbnail.\r\n            \r\nThis is a long-running operation: the response is an `Operation` object.\r\nPoll the operation using its returned `path` until `done` is `true`. A\r\ncompleted operation contains either `response` or `error`:\r\n            \r\n- If `response` is set, `response.imageUri` contains the thumbnail URL.\r\n- If `error` is set, the thumbnail couldn't be generated and `response` is\r\n  not set. `error.code` and `error.message` describe the reason.\r\n            \r\nAlways check for `error` before reading `response.imageUri`. See\r\n[Get User Thumbnail Generation Operation](https://create.roblox.com/docs/cloud/reference/features/users#Cloud_GetUserThumbnailGenerationOperation).",
+        "description": "Generates and returns the URL for the user's avatar thumbnail.\n            \nThis is a long-running operation: the response is an `Operation` object.\nPoll the operation using its returned `path` until `done` is `true`. A\ncompleted operation contains either `response` or `error`:\n            \n- If `response` is set, `response.imageUri` contains the thumbnail URL.\n- If `error` is set, the thumbnail couldn't be generated and `response` is\n  not set. `error.code` and `error.message` describe the reason.\n            \nAlways check for `error` before reading `response.imageUri`. See\n[Get User Thumbnail Generation Operation](https://create.roblox.com/docs/cloud/reference/features/users#Cloud_GetUserThumbnailGenerationOperation).",
         "operationId": "Cloud_GenerateUserThumbnail",
         "parameters": [
           {
@@ -11969,7 +11969,7 @@
           {
             "name": "size",
             "in": "query",
-            "description": "Size of the generated thumbnail. The generated thumbnail will have `size *\r\nsize` dimension.\r\n            \r\nCurrently supported values:\r\n48, 50, 60, 75, 100, 110, 150, 180, 352, 420, 720\r\nDefault is 420.",
+            "description": "Size of the generated thumbnail. The generated thumbnail will have `size *\nsize` dimension.\n            \nCurrently supported values:\n48, 50, 60, 75, 100, 110, 150, 180, 352, 420, 720\nDefault is 420.",
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -11979,7 +11979,7 @@
           {
             "name": "format",
             "in": "query",
-            "description": "Specify the format of the generated thumbnail. Default is `PNG`.\r\n            \r\nPossible values:\r\n            \r\n  | Value | Description |\r\n  | --- | --- |\r\n  | FORMAT_UNSPECIFIED | Default UserThumbnail Format -- set to png |\r\n  | PNG | Generate thumbnail in `.png` format |\r\n  | JPEG | Generate thumbnail in `.jpg` format |",
+            "description": "Specify the format of the generated thumbnail. Default is `PNG`.\n            \nPossible values:\n            \n  | Value | Description |\n  | --- | --- |\n  | FORMAT_UNSPECIFIED | Default UserThumbnail Format -- set to png |\n  | PNG | Generate thumbnail in `.png` format |\n  | JPEG | Generate thumbnail in `.jpg` format |",
             "schema": {
               "enum": ["FORMAT_UNSPECIFIED", "PNG", "JPEG"],
               "type": "string",
@@ -11990,7 +11990,7 @@
           {
             "name": "shape",
             "in": "query",
-            "description": "Specify the shape of the thumbnail. Default is `ROUND` (circular).\r\n            \r\nPossible values:\r\n            \r\n  | Value | Description |\r\n  | --- | --- |\r\n  | SHAPE_UNSPECIFIED | Default UserThumbnail Shape -- set to round |\r\n  | ROUND | Generate thumbnail as a circle. |\r\n  | SQUARE | Generate thumbnail as a rectangle. |",
+            "description": "Specify the shape of the thumbnail. Default is `ROUND` (circular).\n            \nPossible values:\n            \n  | Value | Description |\n  | --- | --- |\n  | SHAPE_UNSPECIFIED | Default UserThumbnail Shape -- set to round |\n  | ROUND | Generate thumbnail as a circle. |\n  | SQUARE | Generate thumbnail as a rectangle. |",
             "schema": {
               "enum": ["SHAPE_UNSPECIFIED", "ROUND", "SQUARE"],
               "type": "string",
@@ -12001,7 +12001,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28095,6 +28095,7 @@
     },
     "/service-efficiency-api/v1/accounts/groups/{groupId}": {
       "get": {
+        "tags": ["Accounts", "Groups", "Service Efficiency"],
         "summary": "Operation to Get an Account for a Group.",
         "operationId": "ServiceEfficiencyApi_GetAccountForGroup",
         "parameters": [
@@ -28162,9 +28163,13 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_GetAccountForGroup"
+        }
       },
       "put": {
+        "tags": ["Accounts", "Groups", "Service Efficiency"],
         "summary": "Operation to Update an Account for a Group.",
         "operationId": "ServiceEfficiencyApi_UpdateAccountForGroup",
         "parameters": [
@@ -28278,11 +28283,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_UpdateAccountForGroup"
+        }
       }
     },
     "/service-efficiency-api/v1/accounts/users/{userId}": {
       "get": {
+        "tags": ["Accounts", "Service Efficiency", "Users"],
         "summary": "Operation to Get an Account for a User.",
         "operationId": "ServiceEfficiencyApi_GetAccountForUser",
         "parameters": [
@@ -28350,9 +28359,13 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_GetAccountForUser"
+        }
       },
       "put": {
+        "tags": ["Accounts", "Service Efficiency", "Users"],
         "summary": "Operation to Update an Account for a User.",
         "operationId": "ServiceEfficiencyApi_UpdateAccountForUser",
         "parameters": [
@@ -28466,11 +28479,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_UpdateAccountForUser"
+        }
       }
     },
     "/service-efficiency-api/v1/billing_activities/groups/{groupId}": {
       "get": {
+        "tags": ["Accounts", "Groups", "Service Efficiency"],
         "summary": "Operation to Get Billing Activities",
         "operationId": "ServiceEfficiencyApi_GetBillingActivitiesByGroup",
         "parameters": [
@@ -28578,11 +28595,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_GetBillingActivitiesByGroup"
+        }
       }
     },
     "/service-efficiency-api/v1/billing_activities/users/{userId}": {
       "get": {
+        "tags": ["Accounts", "Service Efficiency", "Users"],
         "summary": "Operation to Get Billing Activities",
         "operationId": "ServiceEfficiencyApi_GetBillingActivitiesByUser",
         "parameters": [
@@ -28690,11 +28711,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_GetBillingActivitiesByUser"
+        }
       }
     },
     "/service-efficiency-api/v1/bills/groups/{groupId}": {
       "get": {
+        "tags": ["Accounts", "Groups", "Service Efficiency"],
         "summary": "Operation to Get Billing Statement for group owned account.",
         "operationId": "ServiceEfficiencyApi_GetBillByGroup",
         "parameters": [
@@ -28806,11 +28831,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_GetBillByGroup"
+        }
       }
     },
     "/service-efficiency-api/v1/bills/users/{userId}": {
       "get": {
+        "tags": ["Accounts", "Service Efficiency", "Users"],
         "summary": "Operation to Get Billing Statement for user owned account.",
         "operationId": "ServiceEfficiencyApi_GetBillByUser",
         "parameters": [
@@ -28922,11 +28951,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_GetBillByUser"
+        }
       }
     },
     "/service-efficiency-api/v1/configurations/universes/{universeId}": {
       "get": {
+        "tags": ["Service Efficiency", "Universes"],
         "summary": "Operation to Get ConsumerConfiguration for a universe.",
         "operationId": "ServiceEfficiencyApi_GetConsumerConfigurationsByUniverse",
         "parameters": [
@@ -28994,9 +29027,13 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/service-efficiency#ServiceEfficiencyApi_GetConsumerConfigurationsByUniverse"
+        }
       },
       "patch": {
+        "tags": ["Service Efficiency", "Universes"],
         "summary": "Operation to Update ConsumerConfiguration for a universe.",
         "operationId": "ServiceEfficiencyApi_UpdateConsumerConfigurationsByUniverse",
         "parameters": [
@@ -29109,11 +29146,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/service-efficiency#ServiceEfficiencyApi_UpdateConsumerConfigurationsByUniverse"
+        }
       }
     },
     "/service-efficiency-api/v1/eligibility/groups/{groupId}": {
       "get": {
+        "tags": ["Accounts", "Groups", "Service Efficiency"],
         "summary": "Operation to Check the Eligibility of a Group.",
         "operationId": "ServiceEfficiencyApi_CheckEligibilityForGroup",
         "parameters": [
@@ -29181,11 +29222,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_CheckEligibilityForGroup"
+        }
       }
     },
     "/service-efficiency-api/v1/eligibility/users/{userId}": {
       "get": {
+        "tags": ["Accounts", "Service Efficiency", "Users"],
         "summary": "Operation to Check the Eligibility of a User.",
         "operationId": "ServiceEfficiencyApi_CheckEligibilityForUser",
         "parameters": [
@@ -29253,11 +29298,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_CheckEligibilityForUser"
+        }
       }
     },
     "/service-efficiency-api/v1/is_allowed": {
       "get": {
+        "tags": ["Accounts", "Service Efficiency", "Universes"],
         "summary": "Endpoint to return whether the current user can access the features in this API, optionally with a universe\r\nID.",
         "operationId": "ServiceEfficiencyApi_IsAllowed",
         "parameters": [
@@ -29318,11 +29367,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_IsAllowed"
+        }
       }
     },
     "/service-efficiency-api/v1/payment_profiles/groups/{groupId}/service_efficiency": {
       "get": {
+        "tags": ["Accounts", "Groups", "Service Efficiency"],
         "summary": "Operation to Get the Service Efficiency Payment Method for a Group.",
         "operationId": "ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForGroup",
         "parameters": [
@@ -29390,9 +29443,13 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForGroup"
+        }
       },
       "put": {
+        "tags": ["Accounts", "Groups", "Service Efficiency"],
         "summary": "Operation to Set the Service Efficiency Payment Method for a Group.",
         "operationId": "ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForGroup",
         "parameters": [
@@ -29481,11 +29538,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForGroup"
+        }
       }
     },
     "/service-efficiency-api/v1/payment_profiles/users/{userId}": {
       "delete": {
+        "tags": ["Accounts", "Service Efficiency", "Users"],
         "summary": "Operation to Delete a Payment Profile for a User.",
         "operationId": "ServiceEfficiencyApi_DeletePaymentProfileForUser",
         "parameters": [
@@ -29562,9 +29623,13 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_DeletePaymentProfileForUser"
+        }
       },
       "get": {
+        "tags": ["Accounts", "Service Efficiency", "Users"],
         "summary": "Operation to List Payment Profiles of a User.",
         "operationId": "ServiceEfficiencyApi_ListPaymentProfilesByUser",
         "parameters": [
@@ -29632,9 +29697,13 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_ListPaymentProfilesByUser"
+        }
       },
       "post": {
+        "tags": ["Accounts", "Service Efficiency", "Users"],
         "summary": "Operation to Create Payment Profile for a User.",
         "operationId": "ServiceEfficiencyApi_CreatePaymentProfileForUser",
         "parameters": [
@@ -29702,11 +29771,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_CreatePaymentProfileForUser"
+        }
       }
     },
     "/service-efficiency-api/v1/payment_profiles/users/{userId}/service_efficiency": {
       "get": {
+        "tags": ["Accounts", "Service Efficiency", "Users"],
         "summary": "Operation to Get the Service Efficiency Payment Method for a User.",
         "operationId": "ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForUser",
         "parameters": [
@@ -29774,9 +29847,13 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForUser"
+        }
       },
       "put": {
+        "tags": ["Accounts", "Service Efficiency", "Users"],
         "summary": "Operation to Set the Service Efficiency Payment Method for a User.",
         "operationId": "ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForUser",
         "parameters": [
@@ -29865,11 +29942,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForUser"
+        }
       }
     },
     "/service-efficiency-api/v1/payments/groups/{groupId}": {
       "post": {
+        "tags": ["Accounts", "Groups", "Service Efficiency"],
         "summary": "Operation to Submit a Manual Payment for a Group.",
         "operationId": "ServiceEfficiencyApi_SubmitManualPaymentForGroup",
         "parameters": [
@@ -29983,11 +30064,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_SubmitManualPaymentForGroup"
+        }
       }
     },
     "/service-efficiency-api/v1/payments/users/{userId}": {
       "post": {
+        "tags": ["Accounts", "Service Efficiency", "Users"],
         "summary": "Operation to Submit a Manual Payment for a User.",
         "operationId": "ServiceEfficiencyApi_SubmitManualPaymentForUser",
         "parameters": [
@@ -30101,7 +30186,10 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#ServiceEfficiencyApi_SubmitManualPaymentForUser"
+        }
       }
     },
     "/thumbnail-personalization-api/v1/universes/{universeId}/personalization": {
@@ -52619,7 +52707,6 @@
             "url": "https://privatemessages.roblox.com"
           }
         ],
-        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -52722,7 +52809,6 @@
             "url": "https://privatemessages.roblox.com"
           }
         ],
-        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -52867,7 +52953,6 @@
             "url": "https://privatemessages.roblox.com"
           }
         ],
-        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -85110,14 +85195,14 @@
       "GenerateUserThumbnailMetadata": {
         "type": "object",
         "additionalProperties": false,
-        "description": "Represents metadata about the long-running operation corresponding to a\r\nGenerateUserThumbnail request.\r\n            \r\nThis is the type of the `Operation.metadata` field in the response to\r\n`GetOperation` requests for GenerateUserThumbnail operations."
+        "description": "Represents metadata about the long-running operation corresponding to a\nGenerateUserThumbnail request.\n            \nThis is the type of the `Operation.metadata` field in the response to\n`GetOperation` requests for GenerateUserThumbnail operations."
       },
       "GenerateUserThumbnailResponse": {
         "type": "object",
         "properties": {
           "@type": {
             "type": "string",
-            "description": "The fully-qualified type of the packed operation response. Mirrors the\r\n`@type` field the legacy transcoder emitted via `Any.Pack`, kept so clients\r\nreading `response[\"@type\"]` continue to work. Declared first so it\r\nserializes before the payload fields.",
+            "description": "The fully-qualified type of the packed operation response. Mirrors the\n`@type` field the legacy transcoder emitted via `Any.Pack`, kept so clients\nreading `response[\"@type\"]` continue to work. Declared first so it\nserializes before the payload fields.",
             "nullable": true,
             "readOnly": true
           },
@@ -88727,7 +88812,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The server-assigned path, which is only unique within the same service that\r\noriginally returns it. If you use the default HTTP mapping, the\r\n`path` should be a resource path ending with `operations/{unique_id}`.",
+            "description": "The server-assigned path, which is only unique within the same service that\noriginally returns it. If you use the default HTTP mapping, the\n`path` should be a resource path ending with `operations/{unique_id}`.",
             "nullable": true
           },
           "metadata": {
@@ -88736,12 +88821,12 @@
                 "$ref": "#/components/schemas/GenerateUserThumbnailMetadata"
               }
             ],
-            "description": "Service-specific metadata associated with the operation.  It typically\r\ncontains progress information and common metadata such as create time.\r\nSome services might not provide such metadata.  Any method that returns a\r\nlong-running operation should document the metadata type, if any.",
+            "description": "Service-specific metadata associated with the operation.  It typically\ncontains progress information and common metadata such as create time.\nSome services might not provide such metadata.  Any method that returns a\nlong-running operation should document the metadata type, if any.",
             "nullable": true
           },
           "done": {
             "type": "boolean",
-            "description": "If the value is `false`, it means the operation is still in progress.\r\nIf `true`, the operation is completed, and either `error` or `response` is\r\navailable."
+            "description": "If the value is `false`, it means the operation is still in progress.\nIf `true`, the operation is completed, and either `error` or `response` is\navailable."
           },
           "error": {
             "allOf": [
@@ -88758,12 +88843,12 @@
                 "$ref": "#/components/schemas/GenerateUserThumbnailResponse"
               }
             ],
-            "description": "The normal response of the operation in case of success.  If the original\r\nmethod returns no data on success, such as `Delete`, the response is\r\n`google.protobuf.Empty`.  If the original method is standard\r\n`Get`/`Create`/`Update`, the response should be the resource.  For other\r\nmethods, the response should have the type `XxxResponse`, where `Xxx`\r\nis the original method name.  For example, if the original method name\r\nis `TakeSnapshot()`, the inferred response type is\r\n`TakeSnapshotResponse`.",
+            "description": "The normal response of the operation in case of success.  If the original\nmethod returns no data on success, such as `Delete`, the response is\n`google.protobuf.Empty`.  If the original method is standard\n`Get`/`Create`/`Update`, the response should be the resource.  For other\nmethods, the response should have the type `XxxResponse`, where `Xxx`\nis the original method name.  For example, if the original method name\nis `TakeSnapshot()`, the inferred response type is\n`TakeSnapshotResponse`.",
             "nullable": true
           }
         },
         "additionalProperties": false,
-        "description": "This resource represents a long-running operation that is the result of a\r\nnetwork API call."
+        "description": "This resource represents a long-running operation that is the result of a\nnetwork API call."
       },
       "OpenCloudUsers.Status": {
         "type": "object",
@@ -88793,7 +88878,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the user.\r\n            \r\nFormat: `users/{user_id}`",
+            "description": "The resource path of the user.\n            \nFormat: `users/{user_id}`",
             "nullable": true
           },
           "createTime": {
@@ -88836,7 +88921,7 @@
           },
           "idVerified": {
             "type": "boolean",
-            "description": "Specifies if the user is identity-verified. Verification includes, but\r\nisn't limited to, non-VoIP phone numbers or government IDs.\r\n            \r\nTo access this data, you need an API key / OAuth token with the following\r\nscope: user.advanced:read. The field is omitted from the response when the\r\ncaller is not authorized to read it.",
+            "description": "Specifies if the user is identity-verified. Verification includes, but\nisn't limited to, non-VoIP phone numbers or government IDs.\n            \nTo access this data, you need an API key / OAuth token with the following\nscope: user.advanced:read. The field is omitted from the response when the\ncaller is not authorized to read it.",
             "nullable": true,
             "readOnly": true
           },
@@ -88891,7 +88976,7 @@
               "EVERYONE"
             ],
             "type": "string",
-            "description": "Visibility of the social network profiles.\r\n            \r\nTo access this data, you need an API key / OAuth token with the following\r\nscope: user.social:read\r\n            \r\nPossible values:\r\n            \r\n  | Value | Description |\r\n  | --- | --- |\r\n  | SOCIAL_NETWORK_VISIBILITY_UNSPECIFIED | Default SocialNetworkVisibility. |\r\n  | NO_ONE | No one |\r\n  | FRIENDS | Friends only |\r\n  | FRIENDS_AND_FOLLOWING | Friends and other users the user follows |\r\n  | FRIENDS_FOLLOWING_AND_FOLLOWERS | Friends, other users the user follows, and other users who follow the user |\r\n  | EVERYONE | Everyone |"
+            "description": "Visibility of the social network profiles.\n            \nTo access this data, you need an API key / OAuth token with the following\nscope: user.social:read\n            \nPossible values:\n            \n  | Value | Description |\n  | --- | --- |\n  | SOCIAL_NETWORK_VISIBILITY_UNSPECIFIED | Default SocialNetworkVisibility. |\n  | NO_ONE | No one |\n  | FRIENDS | Friends only |\n  | FRIENDS_AND_FOLLOWING | Friends and other users the user follows |\n  | FRIENDS_FOLLOWING_AND_FOLLOWERS | Friends, other users the user follows, and other users who follow the user |\n  | EVERYONE | Everyone |"
           }
         },
         "additionalProperties": false,
@@ -113941,11 +114026,31 @@
   "tags": [
     {
       "name": "Accounts",
-      "description": "Access and manage Roblox account information.\n",
+      "description": "Access and manage Roblox account information, including Service Efficiency billing accounts. [Retrieve](#ServiceEfficiencyApi_GetAccountForUser) and [update](#ServiceEfficiencyApi_UpdateAccountForUser) user accounts, or [retrieve](#ServiceEfficiencyApi_GetAccountForGroup) and [update](#ServiceEfficiencyApi_UpdateAccountForGroup) group accounts.\n",
       "x-roblox-tag-info": {
         "path": "accounts",
         "content": "HTTP APIs for working with accounts on Roblox Cloud.",
         "ordering": [
+          "ServiceEfficiencyApi_GetAccountForUser",
+          "ServiceEfficiencyApi_UpdateAccountForUser",
+          "ServiceEfficiencyApi_GetAccountForGroup",
+          "ServiceEfficiencyApi_UpdateAccountForGroup",
+          "ServiceEfficiencyApi_GetBillingActivitiesByUser",
+          "ServiceEfficiencyApi_GetBillingActivitiesByGroup",
+          "ServiceEfficiencyApi_GetBillByUser",
+          "ServiceEfficiencyApi_GetBillByGroup",
+          "ServiceEfficiencyApi_CheckEligibilityForUser",
+          "ServiceEfficiencyApi_CheckEligibilityForGroup",
+          "ServiceEfficiencyApi_IsAllowed",
+          "ServiceEfficiencyApi_ListPaymentProfilesByUser",
+          "ServiceEfficiencyApi_CreatePaymentProfileForUser",
+          "ServiceEfficiencyApi_DeletePaymentProfileForUser",
+          "ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForUser",
+          "ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForUser",
+          "ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForGroup",
+          "ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForGroup",
+          "ServiceEfficiencyApi_SubmitManualPaymentForUser",
+          "ServiceEfficiencyApi_SubmitManualPaymentForGroup",
           "accountinformation_get_v1_birthdate",
           "accountinformation_get_v1_description",
           "accountinformation_post_v1_description",
@@ -114659,6 +114764,14 @@
         "path": "groups",
         "content": "HTTP APIs for working with groups on Roblox Cloud.",
         "ordering": [
+          "ServiceEfficiencyApi_GetAccountForGroup",
+          "ServiceEfficiencyApi_UpdateAccountForGroup",
+          "ServiceEfficiencyApi_GetBillingActivitiesByGroup",
+          "ServiceEfficiencyApi_GetBillByGroup",
+          "ServiceEfficiencyApi_CheckEligibilityForGroup",
+          "ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForGroup",
+          "ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForGroup",
+          "ServiceEfficiencyApi_SubmitManualPaymentForGroup",
           "groups_post_v1_groups__groupId__deactivate",
           "groups_patch_v1_universes__universeId__payouts",
           "Cloud_GetGroup",
@@ -115239,6 +115352,38 @@
       }
     },
     {
+      "name": "Service Efficiency",
+      "description": "Manage Service Efficiency accounts and billing for users and groups, and configure consumer settings for a universe.\n\nCommon use cases include:\n\n- Account management: [Retrieve](#ServiceEfficiencyApi_GetAccountForUser) or [update](#ServiceEfficiencyApi_UpdateAccountForUser) a user's account, or [retrieve](#ServiceEfficiencyApi_GetAccountForGroup) or [update](#ServiceEfficiencyApi_UpdateAccountForGroup) a group's account\n- Billing: [Review billing activity](#ServiceEfficiencyApi_GetBillingActivitiesByUser) and [retrieve bills](#ServiceEfficiencyApi_GetBillByUser) for a user, or [review billing activity](#ServiceEfficiencyApi_GetBillingActivitiesByGroup) and [retrieve bills](#ServiceEfficiencyApi_GetBillByGroup) for a group\n- Eligibility and access: [Check user](#ServiceEfficiencyApi_CheckEligibilityForUser) or [group](#ServiceEfficiencyApi_CheckEligibilityForGroup) eligibility, and [check access](#ServiceEfficiencyApi_IsAllowed) for the current user\n- Payment profiles: [List](#ServiceEfficiencyApi_ListPaymentProfilesByUser), [create](#ServiceEfficiencyApi_CreatePaymentProfileForUser), or [delete](#ServiceEfficiencyApi_DeletePaymentProfileForUser) a user's payment profile\n- Payment methods: [Retrieve](#ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForUser) or [set](#ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForUser) a user's payment method, or [retrieve](#ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForGroup) or [set](#ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForGroup) a group's payment method\n- Manual payments: [Submit a payment for a user](#ServiceEfficiencyApi_SubmitManualPaymentForUser) or [group](#ServiceEfficiencyApi_SubmitManualPaymentForGroup)\n- Universe configuration: [Retrieve](#ServiceEfficiencyApi_GetConsumerConfigurationsByUniverse) or [update](#ServiceEfficiencyApi_UpdateConsumerConfigurationsByUniverse) consumer configuration\n",
+      "x-roblox-tag-info": {
+        "path": "service-efficiency",
+        "content": "HTTP APIs for managing Service Efficiency accounts, billing, eligibility, payments, and consumer configuration on Roblox Cloud.",
+        "ordering": [
+          "ServiceEfficiencyApi_GetAccountForUser",
+          "ServiceEfficiencyApi_UpdateAccountForUser",
+          "ServiceEfficiencyApi_GetAccountForGroup",
+          "ServiceEfficiencyApi_UpdateAccountForGroup",
+          "ServiceEfficiencyApi_GetBillingActivitiesByUser",
+          "ServiceEfficiencyApi_GetBillingActivitiesByGroup",
+          "ServiceEfficiencyApi_GetBillByUser",
+          "ServiceEfficiencyApi_GetBillByGroup",
+          "ServiceEfficiencyApi_GetConsumerConfigurationsByUniverse",
+          "ServiceEfficiencyApi_UpdateConsumerConfigurationsByUniverse",
+          "ServiceEfficiencyApi_CheckEligibilityForUser",
+          "ServiceEfficiencyApi_CheckEligibilityForGroup",
+          "ServiceEfficiencyApi_IsAllowed",
+          "ServiceEfficiencyApi_ListPaymentProfilesByUser",
+          "ServiceEfficiencyApi_CreatePaymentProfileForUser",
+          "ServiceEfficiencyApi_DeletePaymentProfileForUser",
+          "ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForUser",
+          "ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForUser",
+          "ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForGroup",
+          "ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForGroup",
+          "ServiceEfficiencyApi_SubmitManualPaymentForUser",
+          "ServiceEfficiencyApi_SubmitManualPaymentForGroup"
+        ]
+      }
+    },
+    {
       "name": "Team Create",
       "description": "Manage Team Create collaborative sessions for your experiences, including session monitoring, membership management, and collaboration settings.\n",
       "x-roblox-tag-info": {
@@ -115354,11 +115499,14 @@
     },
     {
       "name": "Universes",
-      "description": "Manage experiences (universes), publish updates, and communicate with live servers. See the [Messaging Usage Guide](/cloud/guides/usage-messaging) and [Place Publishing Guide](/cloud/guides/usage-place-publishing).\n\nCommon use cases include:\n\n- **Cross-Server Messaging**: [Send announcements](#Cloud_PublishUniverseMessage), trigger events, or update all players across servers using the Messaging Service\n- User restrictions: [Ban or restrict users](#Cloud_UpdateUserRestriction__Using_Universes) from your experience at the universe or place level\n- Playtester access: [List](#develop_get_v1_universes__universeId__configuration_playtesters), [add](#develop_post_v1_universes__universeId__configuration_playtesters), or [remove](#develop_delete_v1_universes__universeId__configuration_playtesters) playtesters for a universe\n",
+      "description": "Manage experiences (universes), publish updates, and communicate with live servers. See the [Messaging Usage Guide](/cloud/guides/usage-messaging) and [Place Publishing Guide](/cloud/guides/usage-place-publishing).\n\nCommon use cases include:\n\n- **Cross-Server Messaging**: [Send announcements](#Cloud_PublishUniverseMessage), trigger events, or update all players across servers using the Messaging Service\n- User restrictions: [Ban or restrict users](#Cloud_UpdateUserRestriction__Using_Universes) from your experience at the universe or place level\n- Playtester access: [List](#develop_get_v1_universes__universeId__configuration_playtesters), [add](#develop_post_v1_universes__universeId__configuration_playtesters), or [remove](#develop_delete_v1_universes__universeId__configuration_playtesters) playtesters for a universe\n- Service configuration: [Retrieve](#ServiceEfficiencyApi_GetConsumerConfigurationsByUniverse) or [update](#ServiceEfficiencyApi_UpdateConsumerConfigurationsByUniverse) consumer configuration for a universe\n",
       "x-roblox-tag-info": {
         "path": "universes",
         "content": "HTTP APIs for working with universes on Roblox Cloud, including subscriptions, place and instance updates, user restrictions, and more.",
         "ordering": [
+          "ServiceEfficiencyApi_GetConsumerConfigurationsByUniverse",
+          "ServiceEfficiencyApi_UpdateConsumerConfigurationsByUniverse",
+          "ServiceEfficiencyApi_IsAllowed",
           "Cloud_GetUniverse",
           "Cloud_UpdateUniverse",
           "Cloud_PublishUniverseMessage",
@@ -115561,6 +115709,17 @@
         "path": "users",
         "content": "HTTP APIs for working with users on Roblox Cloud, including inventory items, restrictions, subscriptions, and more.",
         "ordering": [
+          "ServiceEfficiencyApi_GetAccountForUser",
+          "ServiceEfficiencyApi_UpdateAccountForUser",
+          "ServiceEfficiencyApi_GetBillingActivitiesByUser",
+          "ServiceEfficiencyApi_GetBillByUser",
+          "ServiceEfficiencyApi_CheckEligibilityForUser",
+          "ServiceEfficiencyApi_ListPaymentProfilesByUser",
+          "ServiceEfficiencyApi_CreatePaymentProfileForUser",
+          "ServiceEfficiencyApi_DeletePaymentProfileForUser",
+          "ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForUser",
+          "ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForUser",
+          "ServiceEfficiencyApi_SubmitManualPaymentForUser",
           "users_get_v1_users_search",
           "users_post_v1_usernames_users",
           "users_post_v1_users",

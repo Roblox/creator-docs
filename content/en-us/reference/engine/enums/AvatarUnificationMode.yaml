@@ -23,14 +23,18 @@ items:
       which currently behaves the same as `Disabled`.
     value: 0
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      `Class.Workspace.AvatarUnificationMode` no longer has an effect; R6
+      avatars always load as R6 rigs.
   - name: Disabled
     summary: |
       Disables the R6-to-R15 adapter; R6 avatars in an R6 experience load using
       the standard R6 rig with no adapter parts applied.
     value: 1
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      `Class.Workspace.AvatarUnificationMode` no longer has an effect; R6
+      avatars always load as R6 rigs.
   - name: Enabled
     summary: |
       Enables the R6-to-R15 adapter; R6 avatars joining an R6 experience receive
@@ -39,4 +43,6 @@ items:
       clothing and animatable heads.
     value: 2
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      `Class.Workspace.AvatarUnificationMode` no longer has an effect; R6
+      avatars always load as R6 rigs.

@@ -197,6 +197,7 @@ Your content must always adhere to Roblox's [Community Standards](https://en.hel
 - **Build trust** - You should not rely on promotional monetary rewards to drive engagement. Instead, your metadata should reflect what your game is about.
 - **Use unique metadata** - Focus on using original imagery and naming that you or your teammates created to help your game stand out. Avoid publishing content with repetitive titles and images that have been previously published. When using [thumbnail personalization](./production/publishing/thumbnails.md#thumbnail-personalization-for-the-home-page), make sure all thumbnails accurately reflect your game.
 - **Add your own spin to existing trends in the title, images, description, and in-game content** - When you follow trends, unique updates add value and differentiate your game from other games following the same trend.
+- **Use a custom thumbnail** - A custom thumbnail is required for your game to receive impressions from homepage recommendations. If your game only has a default thumbnail, it is not eligible.
 
 ### Issues that limit exposure
 

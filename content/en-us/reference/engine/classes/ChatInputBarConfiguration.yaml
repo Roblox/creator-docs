@@ -169,7 +169,8 @@ properties:
       Font used to render text in the default chat input bar.
     description: |
       Font used to render text in the default chat input bar. Default is
-      `Enum.Font.BuilderSansMedium`.
+      `Enum.Font.BuilderSansMedium`. Does not apply to `Class.TextChannelWindow`
+      instances.
     code_samples: []
     type: Datatype.Font
     tags: []

@@ -31,6 +31,8 @@ Group members can be assigned one or multiple **roles** within a group, and each
 Role configuration is only accessible if you're the group owner or you have permission to create, configure, and assign group roles.
 </Alert>
 
+To manage group role assignments programmatically from a game server, use `Class.HttpService` to call the supported Open Cloud Groups endpoints. For setup and sample code, see [Use with Open Cloud](../cloud-services/http-service.md#use-with-open-cloud).
+
 1. From the [Creator Dashboard](https://create.roblox.com/dashboard/creations), expand the account switcher in the upper‑left and select the group.
 2. Expand the account switcher again and select **Roles**.
 3. For each role, carefully confirm the permissions under the **<Translation keyName='Label.Permissions' />** tab.

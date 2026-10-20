@@ -208,6 +208,55 @@ functions:
     tags: []
     code_samples: []
     deprecation_message: ''
+  - name: coroutine.finally
+    summary: |
+      Registers a callback to invoke when a coroutine finishes, errors, or is
+      closed.
+    description: |
+      Registers `callback` on coroutine `co` that will be called when `co`
+      reaches a terminal state. The callback is called with a status string and
+      a set of values:
+
+      - `callback("finished", ...results)`. The coroutine function returned. All
+        result values are forwarded to the callback.
+      - `callback("error", err)`. The coroutine terminated with an error. The
+        error value is passed as the only additional argument.
+      - `callback("cancelled")`. `Library.coroutine.close()` or
+        `Library.task.cancel()` was called on the coroutine. The coroutine did
+        not complete its work. No extra values are provided.
+
+      Callbacks run at most once, in reverse registration order (LIFO).
+
+      When the coroutine reaches a terminal state during the invocation of
+      `Library.coroutine.resume()` or `Library.coroutine.close()`, those
+      functions will return only after callbacks complete their work. Callbacks
+      are invoked on the calling thread and may yield. If a callback errors,
+      remaining callbacks in the list are not invoked and `false` status with
+      the callback error is returned.
+
+      Attempting to register a callback on a dead coroutine raises an error.
+
+      If a coroutine reaches a terminal state in a resume through
+      `Library.coroutine.wrap()` closure and has callbacks registered, it raises
+      a "cannot run finalizers from a wrapped coroutine" error. A coroutine can
+      also reach the terminal state when it is being resumed by the engine or
+      closed with `Library.task.cancel()`; in this case, callbacks are executed
+      on a separate thread with errors reported as script errors.
+    parameters:
+      - name: co
+        type: thread
+        default:
+        summary: |
+          The coroutine thread to observe.
+      - name: callback
+        type: Variant
+        default:
+        summary: |
+          Function or a callable object to invoke.
+    returns: []
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: coroutine.isyieldable
     summary: |
       Returns `true` if the coroutine this function is called within can safely

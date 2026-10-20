@@ -824,3 +824,4 @@ https://www.blender.org/download/releases/5-2/
 https://github.com/Roblox/resources
 https://github.com/Roblox/resources/tree/main/experiences/weather-island
 https://github.com/mermaid-js/mermaid
+https://github.com/Roblox/libmp/blob/main/docs/ALL-SCOPES%2Emd

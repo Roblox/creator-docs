@@ -7,6 +7,8 @@ The following is a list of common tags in the [MicroProfiler](./index.md), group
 
 Understanding these tags can help you identify problematic code in your game. The tables contain tag label, descriptions, and advice for improving performance and optimizing your game.
 
+For a complete list of all MicroProfiler tags and their descriptions, see the <a href="https://github.com/Roblox/libmp/blob/main/docs/ALL-SCOPES%2Emd" target="_blank" rel="noopener noreferrer">LibMP documentation</a> on GitHub.
+
 ## Sleep
 
 When threads aren't actively performing tasks, they enter a sleep state, with tags to indicate how long the thread was sleeping. At any given time, it's extremely common for most worker threads to be in a sleep state.

@@ -48,7 +48,7 @@ fullWidth: true
     <Card style={{ marginBottom: 24 }}>
       <CardContent>
         <h4>Scale as you grow</h4>
-        <Typography variant='body1'>Weʼve significantly increased the limits on free data storage and now offer creators the option to <a href="https://create.roblox.com/docs/en-us/cloud-services/extended-services.md" target="_blank">purchase additional service usage</a> to support even larger games.</Typography>
+        <Typography variant='body1'>Weʼve significantly increased the limits on free data storage and now offer creators the option to <a href="../cloud-services/extended-services.md" target="_blank">purchase additional service usage</a> to support even larger games.</Typography>
       </CardContent>
     </Card>
   </Grid>

@@ -22,6 +22,9 @@ description: |
   - `Class.ChatInputBarConfiguration`
   - `Class.BubbleChatConfiguration`
   - `Class.ChannelTabsConfiguration`
+
+  To display content from a `Class.TextChannel` in a custom location, place a
+  `Class.TextChannelWindow` under a `Class.ScreenGui` or `Class.SurfaceGui`.
 code_samples: []
 inherits:
   - Instance

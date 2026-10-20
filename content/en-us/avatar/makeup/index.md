@@ -57,7 +57,7 @@ You can either use these templates as a pure reference to see how everything wor
 You can apply textures to three primary regions of the face: the eyes region, lips region, and face region. Each region has overlapping surfaces with other regions to allow for seamless, continuous looks between makeup components.
 
 <GridContainer numColumns="3">
-  <figure><img src="../../assets/makeup/Makeup-Eye-Region.png" /><figcaption>Eyes region</figcaption></figure>
+  <figure><img src="../../assets/makeup/Makeup-Eyes-Region.png" /><figcaption>Eyes region</figcaption></figure>
   <figure><img src="../../assets/makeup/Makeup-Lips-Region.png" /><figcaption>Lips region</figcaption></figure>
   <figure><img src="../../assets/makeup/Makeup-Face-Region.png" /><figcaption>Face region</figcaption></figure>
 </GridContainer>
