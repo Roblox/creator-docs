@@ -528,6 +528,8 @@ navigation:
             path: /chat/chat-window
           - title: Cross-server chat
             path: /chat/cross-server-chat
+          - title: Platform-integrated chat
+            path: /chat/platform-integrated-chat
           - title: Bubble chat
             path: /chat/bubble-chat
           - title: Examples

@@ -3,6 +3,10 @@ title: Custom text chat UI
 description: Example of how to create a simple frontend UI powered with TextChatService.
 ---
 
+<Alert severity="warning">
+When [platform-integrated chat](../platform-integrated-chat.md) is enabled, custom UIs can no longer render player message text themselves. Use `Class.TextChannelWindow` instead of reading `Class.TextChatMessage.Text|Text` or listening to `Class.TextChatService.MessageReceived|MessageReceived` for display.
+</Alert>
+
 This example shows how to use the `Class.TextChatService` class to design your own frontend. It reuses the default text channels from `Class.TextChatService.CreateDefaultTextChannels|CreateDefaultTextChannels` and is very simple compared to the default UI.
 
 1. Disable the default UI that comes with the `Class.TextChatService` by setting the `Class.ChatWindowConfiguration.Enabled` and `Class.ChatInputBarConfiguration.Enabled` properties to `false` in Studio's **Properties** window.
