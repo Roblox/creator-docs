@@ -5,6 +5,10 @@ description: TextChatService lets players communicate with each other using text
 
 Roblox offers text-based messaging between players in live sessions through `Class.TextChatService`, a singleton class responsible for managing the overall chat system, including chat message filtering, moderation, and user permissions. This service has its standard functionality and also provides a set of methods and events for extending and customizing chat, such as delivering messages based on [customized requirements](#conditionally-deliver-messages), adding special permissions or moderation to specific players, and creating [custom commands](./examples/custom-text-chat-commands.md) to execute specific actions.
 
+<Alert severity="warning">
+When [platform-integrated chat](./platform-integrated-chat.md) is enabled, custom chat must use Roblox's native systems, and message content isn't accessible in code.
+</Alert>
+
 ## UI configuration
 
 `Class.TextChatService` provides a default UI that can be customized to fit your game's needs. Disable any of these configurations to hide its associated UI element. If desired, you can also replace these UI elements with custom interfaces:

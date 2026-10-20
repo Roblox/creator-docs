@@ -3,6 +3,14 @@ title: Platform-integrated chat
 description: Opt in to platform-integrated TextChatService so Roblox delivers and renders chat messages with TextChannelWindow.
 ---
 
+<Alert severity="info">
+Starting in May 2027, platform-integrated chat will be required for all games. The unsupported APIs will be deprecated, and custom chat will have to use the new `Class.TextChatService` features.
+</Alert>
+
+<Alert severity="warning">
+When you enable platform-integrated chat, custom chat features must move to Roblox's native systems (`Class.TextChatCommand|TextChatCommands`, `Class.TextChannelWindow`, [Quick Words](./quick-words.md)). Message content is also no longer accessible in code.
+</Alert>
+
 **Platform-integrated chat** gives every player consistent access to safety tools such as reporting and muting, and lets chat features like [Quick Words](./quick-words.md) roll out reliably across all experiences. It also replaces the current prefix system, so roles associated with users render consistently and are safe for all ages.
 
 Nothing in your experience changes until you [enable platform-integrated chat](#enable-platform-integrated-chat) in Studio. After you enable it:

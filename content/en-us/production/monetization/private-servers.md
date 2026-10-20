@@ -35,6 +35,10 @@ To create a private server:
 
 1. Click the **Save Changes** button.
 
+<Alert severity="info">
+[Roblox Plus](../monetization/roblox-plus.md) subscribers get access to paid private servers at no cost. You still earn up to 100 Robux per subscriber each month based on the time they spend in your paid private servers. See [Earn from paid private server time](../monetization/roblox-plus.md#earn-from-paid-private-server-time) for details.
+</Alert>
+
 <Alert severity="warning">
 Changing the price of private servers **cancels all active subscriptions**. Players who had active subscriptions automatically receive a private message in their inbox about this change.
 </Alert>
