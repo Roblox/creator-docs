@@ -213,6 +213,10 @@ To play 3D text-to-speech audio:
 
 From here, you can trigger your TTS audio with scripts. For code sample references for TTS audio, including how to configure context-aware TTS that adapts in relation to the player, the state of their environment, or gameplay status, see the [Add text-to-speech](../tutorials/use-case-tutorials/audio/add-text-to-speech.md) tutorial.
 
+#### Creating text-to-speech assets
+
+In some cases, you might want to reuse the same speech multiple times. Instead of calling the API every time, you can generate a text-to-speech audio asset to use in your game using `Class.AssetService:CreateAssetAsync()`.
+
 #### List of artificial voices
 
 <table>
@@ -410,16 +414,16 @@ All of these audio objects work together to generate STT text in response to pla
 To implement speech-to-text in your experience:
 
 1. Enable the use of the latest API for voice.
-    1. In the **Explorer** window, select the **VoiceChatService**.
-    2. In the **Properties** window, set **UseAudioApi** to **Enabled**.
+   1. In the **Explorer** window, select the **VoiceChatService**.
+   2. In the **Properties** window, set **UseAudioApi** to **Enabled**.
 2. In the **Explorer** window, go to **SoundService** and insert the following:
-      1. An **AudioDeviceInput** to capture speech.
-      2. An **AudioSpeechToText** to convert the speech into text.
-      3. A **Wire** to carry the stream from the audio device input to the STT instance.
+   1. An **AudioDeviceInput** to capture speech.
+   2. An **AudioSpeechToText** to convert the speech into text.
+   3. A **Wire** to carry the stream from the audio device input to the STT instance.
 3. In the **Properties** window of the **AudioSpeechToText** object, set the **Enabled** state to on.
 4. In the **Properties** window of the **Wire** object:
-      1. Set **SourceInstance** to your new **AudioDeviceInput** to specify that you want the wire to carry audio from this specific audio instance.
-      2. Set **TargetInstance** to your new **AudioSpeechToText** to specify that you want the wire to carry audio to this specific audio instance.
+   1. Set **SourceInstance** to your new **AudioDeviceInput** to specify that you want the wire to carry audio from this specific audio instance.
+   2. Set **TargetInstance** to your new **AudioSpeechToText** to specify that you want the wire to carry audio to this specific audio instance.
 5. Set the **Player** property of the audio device input to the local player at runtime with `audioDeviceInput.Player = game.Players.LocalPlayer`. This tells Roblox which user's microphone to capture audio from.
 
 <Alert severity="info">
@@ -457,15 +461,15 @@ STT supports the following languages:
 When you implement STT in your experience, you might want to improve matching accuracy by filtering for words that sound similar to the words you actually want the player to say. To do this, you can compare the words recognized by `AudioSpeechToText` with known word lists:
 
 1. Sanitize and tokenize the `Text` output of `AudioSpeechToText` to create a table of lowercase strings that can be parsed and compared.
-      1. Remove punctuation characters.
-      2. Convert the entire string to lowercase.
-      3. Split the string by whitespace to produce a table of words.
+   1. Remove punctuation characters.
+   2. Convert the entire string to lowercase.
+   3. Split the string by whitespace to produce a table of words.
 2. Generate candidate tables to prepare your strings for comparison.
-      1. Sanitize and tokenize each reference string.
-      2. Store these processed words in a separate table.
+   1. Sanitize and tokenize each reference string.
+   2. Store these processed words in a separate table.
 3. Compare and match the words in both tables to recognize the speech inputs that are close to your target phrases, even if they include small variations.
-      - For simple checks, check if the strings are the exact same.
-      - For more flexible matching, you can write custom logic to accept substitutions (like "colour" instead of "color") or match a subset of words and calculate a similarity score.
+   - For simple checks, check if the strings are the exact same.
+   - For more flexible matching, you can write custom logic to accept substitutions (like "colour" instead of "color") or match a subset of words and calculate a similarity score.
 
 ## Customize audio
 
@@ -481,7 +485,7 @@ For instructions on how to configure audio effects, as well as side-by-side comp
 
 You can trigger audio contextually from a script by calling `Class.AudioPlayer.Play|Play()` on an `Class.AudioPlayer` object that's correctly wired up. For example, if you parent a script to an audio player, you can trigger the audio asset through something like this:
 
-``` lua
+```lua
 local audio = script.Parent
 local something = ...
 something.SomeEvent:Connect(function()

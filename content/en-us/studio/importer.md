@@ -93,6 +93,18 @@ Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets St
   </tbody>
 </table>
 
+### glTF import hierarchy
+
+`.gltf` and `.glb` files import with a different hierarchy than `.fbx` files. The following table compares what appears in the Explorer after you import the same mesh with cage meshes in each format.
+
+|             | `.fbx`                                                    | `.gltf` / `.glb`                                                                                                                                                    |
+| ----------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Top level   | A `Class.Model`.                                          | A `Class.Model`.                                                                                                                                                    |
+| Mesh        | A `Class.MeshPart` directly inside the top-level `Model`. | A `Class.Model` inside the top-level `Model`, containing one `Class.MeshPart` for each primitive in the glTF mesh.                                                  |
+| Cage meshes | A `Class.WrapLayer` inside the `MeshPart`.                | A `Class.WrapLayer` inside the `MeshPart`, plus an extra `Class.Model` for each original inner and outer cage node. You can delete these extra models after import. |
+
+In a glTF import, if a node and its mesh have the same name, such as `Cover`, the Importer adds a `_Node` suffix to one of them, such as `Cover_Node`.
+
 ## Import queue
 
 If you selected multiple files with the Importer, you can use the import queue to bulk manage your various imports.

@@ -677,7 +677,8 @@ properties:
     capabilities: []
   - name: BasePart.CenterOfMass
     summary: |
-      Describes the world position in which a part's center of mass is located.
+      Describes the local position of a part's center of mass, relative to its
+      `Class.BasePart.CFrame|CFrame`.
     description: |
       The `CenterOfMass` property describes the **local** position of a part's
       center of mass. If this is a single part assembly, this is the

@@ -1769,14 +1769,19 @@ items:
   - name: MouseWheel
     summary: |
       The scroll delta (change) of a mouse wheel. Primarily used in the
-      [Input Action System](../../../input/input-action-system.md).
+      [Input Action System](../../../input/input-action-system.md), returning a
+      velocity in scroll units per second (where one scroll unit is
+      approximately equivalent to a standard mouse wheel notch) under a
+      `Enum.InputActionType|Direction1D` action type.
     value: 1035
     tags: []
     deprecation_message: ''
   - name: TrackpadPan
     summary: |
       The pan delta (change) from a trackpad two-finger pan gesture. Primarily
-      used in the [Input Action System](../../../input/input-action-system.md).
+      used in the [Input Action System](../../../input/input-action-system.md),
+      returning a velocity in pixels per second under a
+      `Enum.InputActionType|Direction2D` action type.
     value: 1040
     tags: []
     deprecation_message: ''
@@ -1784,28 +1789,37 @@ items:
     summary: |
       The scale delta (change) from a trackpad two-finger pinch gesture.
       Primarily used in the
-      [Input Action System](../../../input/input-action-system.md).
+      [Input Action System](../../../input/input-action-system.md), returning a
+      velocity in scroll units per second (where one scroll unit is
+      approximately equivalent to a standard mouse wheel notch) under a
+      `Enum.InputActionType|Direction1D` action type.
     value: 1045
     tags: []
     deprecation_message: ''
   - name: MouseDelta
     summary: |
       The movement delta (change) of the mouse cursor. Primarily used in the
-      [Input Action System](../../../input/input-action-system.md).
+      [Input Action System](../../../input/input-action-system.md), returning a
+      velocity in pixels per second under a `Enum.InputActionType|Direction2D`
+      action type.
     value: 1048
     tags: []
     deprecation_message: ''
   - name: TouchDelta
     summary: |
       The movement delta (change) of a touch input. Primarily used in the
-      [Input Action System](../../../input/input-action-system.md).
+      [Input Action System](../../../input/input-action-system.md), returning a
+      velocity in pixels per second under a `Enum.InputActionType|Direction2D`
+      action type.
     value: 1049
     tags: []
     deprecation_message: ''
   - name: TouchPinch
     summary: |
-      The scale delta (change) of a two-finger touch pinch gesture. Primarily
-      used in the [Input Action System](../../../input/input-action-system.md).
+      The scale delta (change) from a touch two-finger pinch gesture. Primarily
+      used in the [Input Action System](../../../input/input-action-system.md),
+      returning a velocity in pixels per second under a
+      `Enum.InputActionType|Direction1D` action type.
     value: 1050
     tags: []
     deprecation_message: ''

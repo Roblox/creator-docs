@@ -1015,26 +1015,6 @@ properties:
       can_save: true
     capabilities:
       - Players
-  - name: Player.StepIdOffset
-    summary: |
-      Offset between client and server used by the Server Authority system.
-    description: |
-      Offset between client and server used by the Server Authority system. This
-      property is not accessible through scripts.
-    code_samples: []
-    type: int
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxEngineSecurity
-      write: RobloxEngineSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities:
-      - Players
   - name: Player.Team
     summary: |
       Determines the `Class.Team` with which the player is associated.
@@ -2090,6 +2070,12 @@ methods:
       method on a `Class.Player` along with a string as the first argument
       replaces the default message with the provided string.
 
+      When you call this method from the server, the custom message can be at
+      most 500 bytes long. If the message is longer, it's discarded and the user
+      sees the default notice message instead. The limit is measured in bytes,
+      not characters, so messages that contain multibyte characters such as
+      emoji or non-Latin text reach the limit sooner.
+
       When using this method from a `Class.LocalScript`, only the local user's
       client can be kicked.
     code_samples: []
@@ -2098,7 +2084,8 @@ methods:
         type: string
         default:
         summary: |
-          The message to show the user upon kicking.
+          The message to show the user upon kicking. When called from the
+          server, messages longer than 500 bytes are not shown.
     returns:
       - type: ()
         summary: ''

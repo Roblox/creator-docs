@@ -139,6 +139,8 @@ methods:
             `Class.EditableMesh` root.
           - `Enum.AssetType.Image` – with `object` as any valid
             `Class.EditableImage` root.
+          - `Enum.AssetType.Audio` – with `object` as any valid
+            `Class.AudioTextToSpeech` root.
       - name: requestParameters
         type: Dictionary
         default: nil
@@ -953,13 +955,13 @@ methods:
         type: Object
         default:
         summary: |
-          The asset to be created. Currently can't contain scripts or nest
-          non-public assets.
+          The source object for the asset to be created. Currently can only be
+          an `EditableImage`.
       - name: assetType
         type: AssetType
         default:
         summary: |
-          The asset type. Currently can only be `Enum.AssetType.Model`.
+          The asset type. Currently can only be `Enum.AssetType.Image`.
     returns:
       - type: Tuple
         summary: |

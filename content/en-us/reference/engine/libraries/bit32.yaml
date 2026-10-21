@@ -363,9 +363,12 @@ functions:
     description: |
       Returns the unsigned number formed by the bits `field` to
       `field + width - 1` from `n`. Bits are numbered from 0 (least significant)
-      to 31 (most significant). All accessed bits must be in the range [0, 31].
-      The default for `width` is 1. For any valid `field` and `width`,
-      this operation is equivalent to `bit32.band(bit32.rshift(n, field), 2^width - 1)`.
+      to 31 (most significant). The default for `width` is 1.
+
+      For any valid `field` and `width`, this operation is equivalent to
+      `bit32.band(bit32.rshift(n, field), 2^width - 1)`. `field` must be in the
+      range `[0, 31]`, and `width` must be in the range `[1, 32 - field]`.
+      Values outside those ranges raise an error.
 
       ```lua
       local n = 0x12345678

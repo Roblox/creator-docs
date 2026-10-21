@@ -1104,765 +1104,6 @@
         }
       }
     },
-    "/analytics-alert-control-plane/v1/resource/{resourceType}/id/{resourceId}/alerts": {
-      "get": {
-        "tags": ["Analytics"],
-        "summary": "Returns the alert configurations for a resource. Optionally filter by alert IDs, firing\r\nstatus, severity, or metric name.",
-        "parameters": [
-          {
-            "name": "resourceType",
-            "in": "path",
-            "description": "The type of resource to query. Currently only `Universe` is supported.\n\nUniverse",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/AlertStorage.ResourceType"
-            },
-            "x-enum-varnames": ["Universe"]
-          },
-          {
-            "name": "resourceId",
-            "in": "path",
-            "description": "The numeric ID of the resource (e.g. the universe ID).",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "ids",
-            "in": "query",
-            "description": "Optional list of alert IDs to restrict results to. Repeat the parameter for multiple\r\nvalues: `?ids=1&ids=2`. IDs are string-encoded 64-bit integers.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          {
-            "name": "firingStatus",
-            "in": "query",
-            "description": "Optional firing-status filter (`OK` or `Firing`).\n\nOK\n\nFiring",
-            "schema": {
-              "$ref": "#/components/schemas/AlertStorage.FiringStatus"
-            },
-            "x-enum-varnames": ["OK", "Firing"]
-          },
-          {
-            "name": "severities",
-            "in": "query",
-            "description": "Optional list of severity levels to filter by. Repeat the parameter for multiple\r\nvalues: `?severities=SEV_0&severities=SEV_1`.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/AlertStorage.Severity"
-              }
-            },
-            "x-enum-varnames": ["SEV_0", "SEV_1", "SEV_2"]
-          },
-          {
-            "name": "metrics",
-            "in": "query",
-            "description": "Optional list of metric names to filter by (exact match, case-sensitive). Repeat the\r\nparameter for multiple values: `?metrics=dau&metrics=mau`.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertDetailResponse"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "503": {
-            "description": "Service Unavailable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 120
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 120
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "universe.analytics.alert:read",
-            "targetResourceSpecifier": "id"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          },
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.analytics.alert:read"]
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#get_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts"
-        }
-      },
-      "post": {
-        "tags": ["Analytics"],
-        "summary": "Creates a new alert configuration for a resource.",
-        "description": "See the <a href=\"https://create.roblox.com/docs/cloud/guides/alerts/metrics\">alerts guide</a> for supported metrics and dimensions.",
-        "parameters": [
-          {
-            "name": "resourceType",
-            "in": "path",
-            "description": "The type of resource to create the alert on. Currently only `Universe` is supported.\n\nUniverse",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/AlertStorage.ResourceType"
-            },
-            "x-enum-varnames": ["Universe"]
-          },
-          {
-            "name": "resourceId",
-            "in": "path",
-            "description": "The numeric ID of the resource (e.g. the universe ID).",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "The alert configuration to create.",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.CreateAlertConfigRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.CreateAlertConfigRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.CreateAlertConfigRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertDetailResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict. Possible error codes:\r\n            \r\n- `ALERT_NAME_EXISTED`: An alert with this name already exists for the resource.\r\n  Alert names must be unique per resource.\r\n            \r\n- `MAX_ALERT_REACHED`: The resource has reached the maximum number of allowed alerts.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "503": {
-            "description": "Service Unavailable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "universe.analytics.alert:write",
-            "targetResourceSpecifier": "id"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          },
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.analytics.alert:write"]
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#post_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts"
-        }
-      }
-    },
-    "/analytics-alert-control-plane/v1/resource/{resourceType}/id/{resourceId}/alerts/incidents": {
-      "get": {
-        "tags": ["Analytics"],
-        "summary": "Returns alert incidents for a resource whose active window overlaps the specified time\r\nrange. An incident is included if it was open at any point between `startTime` and\r\n`endTime`.",
-        "parameters": [
-          {
-            "name": "resourceType",
-            "in": "path",
-            "description": "The type of resource to query. Currently only `Universe` is supported.\n\nUniverse",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/AlertStorage.ResourceType"
-            },
-            "x-enum-varnames": ["Universe"]
-          },
-          {
-            "name": "resourceId",
-            "in": "path",
-            "description": "The numeric ID of the resource (e.g. the universe ID).",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "startTime",
-            "in": "query",
-            "description": "Start of the time range to query (ISO 8601, UTC). Must be within the last 30 days\r\n(see AnalyticsAlertControlPlane.Operations.GetAlertIncidentsOperation.MaxQueryDays).",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "endTime",
-            "in": "query",
-            "description": "End of the time range to query (ISO 8601, UTC). Must be greater than or equal to\r\n`startTime`.",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "metric",
-            "in": "query",
-            "description": "Optional metric name to restrict results to incidents from alerts on that metric (exact\r\nmatch, case-sensitive).",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "alertIds",
-            "in": "query",
-            "description": "Optional list of alert IDs to restrict results to. Repeat the parameter for multiple\r\nvalues: `?alertIds=1&alertIds=2`. IDs are string-encoded 64-bit integers.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          {
-            "name": "severities",
-            "in": "query",
-            "description": "Optional list of severity levels to restrict results to. Repeat the parameter for\r\nmultiple values: `?severities=SEV_0&severities=SEV_1`.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/AlertStorage.Severity"
-              }
-            },
-            "x-enum-varnames": ["SEV_0", "SEV_1", "SEV_2"]
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.IncidentDetailResponse"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "503": {
-            "description": "Service Unavailable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 120
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 120
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "universe.analytics.alert:read",
-            "targetResourceSpecifier": "id"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          },
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.analytics.alert:read"]
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#get_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts_incidents"
-        }
-      }
-    },
-    "/analytics-alert-control-plane/v1/resource/{resourceType}/id/{resourceId}/alerts/{alertId}": {
-      "delete": {
-        "tags": ["Analytics"],
-        "summary": "Deletes an alert configuration. This action is irreversible.",
-        "parameters": [
-          {
-            "name": "resourceType",
-            "in": "path",
-            "description": "The type of resource the alert belongs to. Currently only `Universe` is supported.\n\nUniverse",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/AlertStorage.ResourceType"
-            },
-            "x-enum-varnames": ["Universe"]
-          },
-          {
-            "name": "resourceId",
-            "in": "path",
-            "description": "The numeric ID of the resource (e.g. the universe ID).",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "alertId",
-            "in": "path",
-            "description": "The ID of the alert to delete.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "503": {
-            "description": "Service Unavailable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "universe.analytics.alert:write",
-            "targetResourceSpecifier": "id"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          },
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.analytics.alert:write"]
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#delete_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_"
-        }
-      },
-      "patch": {
-        "tags": ["Analytics"],
-        "summary": "Updates an existing alert configuration. Only the fields included in the request body are\r\nchanged; omitted fields retain their current values.",
-        "description": "See the <a href=\"https://create.roblox.com/docs/cloud/guides/alerts/metrics\">alerts guide</a> for supported metrics and dimensions.",
-        "parameters": [
-          {
-            "name": "resourceType",
-            "in": "path",
-            "description": "The type of resource the alert belongs to. Currently only `Universe` is supported.\n\nUniverse",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/AlertStorage.ResourceType"
-            },
-            "x-enum-varnames": ["Universe"]
-          },
-          {
-            "name": "resourceId",
-            "in": "path",
-            "description": "The numeric ID of the resource (e.g. the universe ID).",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "alertId",
-            "in": "path",
-            "description": "The ID of the alert to update.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "The fields to update on the alert configuration.",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.UpdateAlertConfigRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.UpdateAlertConfigRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.UpdateAlertConfigRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertDetailResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict (`ALERT_NAME_EXISTED`): the new name collides with an existing alert on the\r\nsame resource. Alert names must be unique per resource.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          },
-          "503": {
-            "description": "Service Unavailable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 30
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "universe.analytics.alert:write",
-            "targetResourceSpecifier": "id"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {},
-          {
-            "roblox-legacy-cookie": []
-          },
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.analytics.alert:write"]
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#patch_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_"
-        }
-      }
-    },
     "/analytics-query-api/v1/universes/{universeId}/dimension-values": {
       "post": {
         "tags": ["Analytics"],
@@ -5870,6 +5111,10 @@
         },
         "x-roblox-scopes": [
           {
+            "name": "universe:write",
+            "targetResourceSpecifier": "universes"
+          },
+          {
             "name": "universe:write"
           }
         ],
@@ -5899,7 +5144,7 @@
             "roblox-api-key": []
           },
           {
-            "roblox-oauth2": []
+            "roblox-oauth2": ["universe:write"]
           }
         ],
         "externalDocs": {
@@ -9488,6 +8733,10 @@
         },
         "x-roblox-scopes": [
           {
+            "name": "universe.place:write",
+            "targetResourceSpecifier": "universes"
+          },
+          {
             "name": "universe.place:write"
           }
         ],
@@ -9517,7 +8766,7 @@
             "roblox-api-key": []
           },
           {
-            "roblox-oauth2": []
+            "roblox-oauth2": ["universe.place:write"]
           }
         ],
         "externalDocs": {
@@ -11429,6 +10678,10 @@
         },
         "x-roblox-scopes": [
           {
+            "name": "universe:write",
+            "targetResourceSpecifier": "universes"
+          },
+          {
             "name": "universe:write"
           }
         ],
@@ -11458,7 +10711,7 @@
             "roblox-api-key": []
           },
           {
-            "roblox-oauth2": []
+            "roblox-oauth2": ["universe:write"]
           }
         ],
         "externalDocs": {
@@ -28112,7 +27365,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28134,10 +27387,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -28232,7 +27485,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28254,10 +27507,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -28308,7 +27561,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28330,10 +27583,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -28428,7 +27681,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28450,10 +27703,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -28544,7 +27797,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28566,10 +27819,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -28660,7 +27913,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28682,10 +27935,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -28780,7 +28033,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28802,10 +28055,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -28900,7 +28153,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28922,10 +28175,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -28976,7 +28229,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28998,10 +28251,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -29095,7 +28348,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -29117,10 +28370,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -29171,7 +28424,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -29193,10 +28446,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -29247,7 +28500,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -29269,10 +28522,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -29307,7 +28560,7 @@
     "/service-efficiency-api/v1/is_allowed": {
       "get": {
         "tags": ["Accounts", "Service Efficiency", "Universes"],
-        "summary": "Endpoint to return whether the current user can access the features in this API, optionally with a universe\r\nID.",
+        "summary": "Endpoint to return whether the current user can access the features in this API, optionally with a universe\nID.",
         "operationId": "ServiceEfficiencyApi_IsAllowed",
         "parameters": [
           {
@@ -29322,7 +28575,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -29338,10 +28591,10 @@
             "description": "Unauthorized"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -29392,7 +28645,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -29414,10 +28667,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -29484,7 +28737,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -29506,13 +28759,13 @@
             "description": "Not Found"
           },
           "412": {
-            "description": "Client Error"
+            "description": "Precondition Failed"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -29572,7 +28825,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -29594,10 +28847,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -29646,7 +28899,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -29668,10 +28921,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -29720,7 +28973,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -29742,10 +28995,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -29796,7 +29049,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -29818,10 +29071,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -29888,7 +29141,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -29910,13 +29163,13 @@
             "description": "Not Found"
           },
           "412": {
-            "description": "Client Error"
+            "description": "Precondition Failed"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -30013,7 +29266,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -30035,10 +29288,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -30135,7 +29388,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -30157,10 +29410,10 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           },
           "503": {
-            "description": "Server Error"
+            "description": "Service Unavailable"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -44527,6 +43780,7 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -44572,6 +43826,7 @@
             "url": "https://games.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -58771,6 +58026,7 @@
             "url": "https://trades.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -58894,6 +58150,7 @@
             "url": "https://trades.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -59099,6 +58356,7 @@
             "url": "https://trades.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -59187,6 +58445,7 @@
             "url": "https://trades.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -59245,6 +58504,7 @@
             "url": "https://trades.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -64889,6 +64149,7 @@
             "url": "https://trades.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -76678,6 +75939,7 @@
             "url": "https://trades.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -77345,6 +76607,7 @@
             "url": "https://trades.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -77398,6 +76661,7 @@
             "url": "https://trades.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -78062,6 +77326,7 @@
             "url": "https://trades.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -80252,7 +79517,7 @@
         "properties": {
           "country": {
             "type": "string",
-            "description": "The country of this address.\r\nFormat: ISO 3166-1 alpha-2\r\nCurrently, only \"US\" supported",
+            "description": "The country of this address.\nFormat: ISO 3166-1 alpha-2\nCurrently, only \"US\" supported",
             "nullable": true
           },
           "postalCode": {
@@ -80313,609 +79578,6 @@
       "AgentType": {
         "enum": ["User", "Group"],
         "type": "string"
-      },
-      "AlertStorage.AlertCondition": {
-        "required": ["evaluationMode", "operator", "threshold"],
-        "type": "object",
-        "properties": {
-          "operator": {
-            "$ref": "#/components/schemas/AlertStorage.ConditionOperator"
-          },
-          "threshold": {
-            "type": "number",
-            "description": "Numeric threshold the metric value is compared against.",
-            "format": "double"
-          },
-          "evaluationMode": {
-            "$ref": "#/components/schemas/AlertStorage.EvaluationMode"
-          },
-          "periodOffsetMultiplier": {
-            "type": "integer",
-            "description": "How many intervals back the comparison period is placed for `PeriodOverPeriod`\r\nevaluation. A value of `1` compares against the immediately preceding interval;\r\na value of `7` with a `OneDay` interval compares against the same day last\r\nweek. `null` for `Absolute` conditions.",
-            "format": "int32",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "The threshold condition that determines when an alert fires."
-      },
-      "AlertStorage.AlertConfigState": {
-        "enum": ["Enabled", "Disabled", "PausedByRoblox", "Syncing", "Error"],
-        "type": "string",
-        "description": "The current lifecycle state of an alert configuration.\n\nEnabled\n\nDisabled\n\nPausedByRoblox\n\nSyncing\n\nError",
-        "x-enum-varnames": [
-          "Enabled",
-          "Disabled",
-          "PausedByRoblox",
-          "Syncing",
-          "Error"
-        ]
-      },
-      "AlertStorage.AlertInterval": {
-        "enum": ["OneMinute", "HalfHour", "OneHour", "OneDay"],
-        "type": "string",
-        "description": "How frequently an alert condition is evaluated.\n\nOneMinute\n\nHalfHour\n\nOneHour\n\nOneDay",
-        "x-enum-varnames": ["OneMinute", "HalfHour", "OneHour", "OneDay"]
-      },
-      "AlertStorage.ConditionOperator": {
-        "enum": ["Gt", "Gte", "Lt", "Lte"],
-        "type": "string",
-        "description": "Comparison operator used to evaluate whether a metric value breaches a threshold.\n\nGt\n\nGte\n\nLt\n\nLte",
-        "x-enum-varnames": ["Gt", "Gte", "Lt", "Lte"]
-      },
-      "AlertStorage.EvaluationMode": {
-        "enum": ["Absolute", "PeriodOverPeriod"],
-        "type": "string",
-        "description": "Determines how the metric value is derived before being compared against the threshold.\n\nAbsolute\n\nPeriodOverPeriod",
-        "x-enum-varnames": ["Absolute", "PeriodOverPeriod"]
-      },
-      "AlertStorage.FiringStatus": {
-        "enum": ["OK", "Firing"],
-        "type": "string",
-        "description": "Whether an alert is currently in a firing or resolved state.\n\nOK\n\nFiring",
-        "x-enum-varnames": ["OK", "Firing"]
-      },
-      "AlertStorage.ResourceType": {
-        "enum": ["Universe"],
-        "type": "string",
-        "description": "The type of resource an alert is attached to.\n\nUniverse",
-        "x-enum-varnames": ["Universe"]
-      },
-      "AlertStorage.Severity": {
-        "enum": ["SEV_0", "SEV_1", "SEV_2"],
-        "type": "string",
-        "description": "Severity level assigned to an alert configuration.\n\nSEV_0\n\nSEV_1\n\nSEV_2",
-        "x-enum-varnames": ["SEV_0", "SEV_1", "SEV_2"]
-      },
-      "AlertStorage.WebhookReceiver": {
-        "required": ["webhookConfigurationId"],
-        "type": "object",
-        "properties": {
-          "webhookConfigurationId": {
-            "minLength": 1,
-            "type": "string",
-            "description": "The ID of the webhook configuration in the Webhook Delivery System. Must be a valid\r\nUUID and unique within the list on this alert configuration."
-          }
-        },
-        "additionalProperties": false,
-        "description": "A single webhook notification destination linked to an alert configuration."
-      },
-      "AlertStorage.WebhookReceiverConfig": {
-        "type": "object",
-        "properties": {
-          "receivers": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AlertStorage.WebhookReceiver"
-            },
-            "description": "List of webhook destinations to notify when the alert fires or resolves. Each entry\r\nreferences a webhook configuration you have created in the Webhook Delivery System.\r\nThe list must contain unique entries with no duplicates.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "Webhook notification settings for an alert. When set, each webhook in the\r\n`receivers` list will be called whenever the alert fires or resolves.\r\nSet to `null` to disable webhook notifications for the alert."
-      },
-      "AnalyticsAlertControlPlane.Models.AlertConditionInput": {
-        "type": "object",
-        "properties": {
-          "operator": {
-            "$ref": "#/components/schemas/AlertStorage.ConditionOperator"
-          },
-          "threshold": {
-            "type": "number",
-            "description": "Numeric threshold the metric value is compared against.\r\nRequired on create; optional on update.",
-            "format": "double",
-            "nullable": true
-          },
-          "evaluationMode": {
-            "$ref": "#/components/schemas/AlertStorage.EvaluationMode"
-          },
-          "periodOffsetMultiplier": {
-            "type": "integer",
-            "description": "How many intervals back the comparison period is placed for\r\n`PeriodOverPeriod` evaluation. For example, a value of `1` (the default)\r\ncompares the current interval against the immediately preceding interval.\r\nA value of `7` with a `OneDay` interval compares today against the same\r\nday last week. Only valid when `evaluationMode` is `PeriodOverPeriod`;\r\nomit or leave `null` for `Absolute` conditions.",
-            "format": "int32",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "The threshold condition for an alert. Specifies the comparison operator, threshold value,\r\nand how the metric value is derived before comparison.\r\n            \r\nOn create, `operator`, `threshold`, and `evaluationMode` are all required.\r\nOn update (PATCH), the entire `condition` object is optional; when included, any\r\nsub-field can be omitted to keep its current value.\r\n            \r\n`periodOffsetMultiplier` only applies when `evaluationMode` is\r\n`PeriodOverPeriod`. It is ignored for `Absolute` conditions."
-      },
-      "AnalyticsAlertControlPlane.Models.AlertConfigSummary": {
-        "required": [
-          "condition",
-          "id",
-          "interval",
-          "metric",
-          "name",
-          "severity"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Unique identifier of the alert configuration (string-encoded 64-bit integer)."
-          },
-          "name": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Display name of the alert configuration."
-          },
-          "metric": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Name of the metric this alert evaluates."
-          },
-          "severity": {
-            "$ref": "#/components/schemas/AlertStorage.Severity"
-          },
-          "description": {
-            "type": "string",
-            "description": "Optional free-text description of the alert's purpose.",
-            "nullable": true
-          },
-          "interval": {
-            "$ref": "#/components/schemas/AlertStorage.AlertInterval"
-          },
-          "filter": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryFilter"
-            },
-            "description": "Dimension filters applied to the metric query, if any.",
-            "nullable": true
-          },
-          "breakdown": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryBreakdown"
-            },
-            "description": "Grouping dimensions for the metric query, if any.",
-            "nullable": true
-          },
-          "condition": {
-            "$ref": "#/components/schemas/AlertStorage.AlertCondition"
-          }
-        },
-        "additionalProperties": false,
-        "description": "Key fields of the alert configuration that triggered an incident."
-      },
-      "AnalyticsAlertControlPlane.Models.AlertDetailResponse": {
-        "required": [
-          "alertId",
-          "condition",
-          "configState",
-          "consecutiveOccurrences",
-          "createdAt",
-          "firingStatus",
-          "interval",
-          "lastModifiedAt",
-          "metric",
-          "name",
-          "resourceId",
-          "resourceType",
-          "severity"
-        ],
-        "type": "object",
-        "properties": {
-          "alertId": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Unique identifier of the alert configuration (string-encoded 64-bit integer)."
-          },
-          "resourceType": {
-            "$ref": "#/components/schemas/AlertStorage.ResourceType"
-          },
-          "resourceId": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Numeric ID of the resource this alert monitors (e.g. the universe ID)."
-          },
-          "name": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Display name of the alert. Must be unique within the resource."
-          },
-          "metric": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Name of the metric this alert evaluates."
-          },
-          "description": {
-            "type": "string",
-            "description": "Optional free-text description of the alert's purpose.",
-            "nullable": true
-          },
-          "severity": {
-            "$ref": "#/components/schemas/AlertStorage.Severity"
-          },
-          "interval": {
-            "$ref": "#/components/schemas/AlertStorage.AlertInterval"
-          },
-          "consecutiveOccurrences": {
-            "type": "integer",
-            "description": "Number of consecutive evaluation periods the condition must be met before the alert fires.\r\nMust be at least 1. For example, a value of 3 with a 1-minute interval means the condition\r\nmust hold for 3 consecutive minutes before an incident is opened.",
-            "format": "int32"
-          },
-          "filter": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryFilter"
-            },
-            "description": "Optional dimension filters applied to the metric query. Each entry restricts the metric\r\nto rows where the specified dimension matches one of the given values.",
-            "nullable": true
-          },
-          "breakdown": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryBreakdown"
-            },
-            "description": "Optional grouping dimensions for the metric query. When set, the alert evaluates\r\nthe metric independently for each combination of dimension values and fires if any\r\ngroup breaches the condition.",
-            "nullable": true
-          },
-          "condition": {
-            "$ref": "#/components/schemas/AlertStorage.AlertCondition"
-          },
-          "configState": {
-            "$ref": "#/components/schemas/AlertStorage.AlertConfigState"
-          },
-          "webhookReceiverConfig": {
-            "$ref": "#/components/schemas/AlertStorage.WebhookReceiverConfig"
-          },
-          "firingStatus": {
-            "$ref": "#/components/schemas/AlertStorage.FiringStatus"
-          },
-          "lastFiredAt": {
-            "type": "string",
-            "description": "Timestamp of the most recent firing event. `null` if the alert has never fired.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "createdAt": {
-            "type": "string",
-            "description": "Timestamp when this alert configuration was created (UTC).",
-            "format": "date-time"
-          },
-          "lastModifiedAt": {
-            "type": "string",
-            "description": "Timestamp of the most recent modification to this alert configuration (UTC).",
-            "format": "date-time"
-          },
-          "lastModifiedBy": {
-            "type": "string",
-            "description": "ID of the user who last modified this alert configuration.\r\n`null` if the last modification was made by the system.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "Full details of a saved alert configuration."
-      },
-      "AnalyticsAlertControlPlane.Models.AlertQueryBreakdown": {
-        "required": ["dimensions"],
-        "type": "object",
-        "properties": {
-          "dimensions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Names of the dimensions to group by (e.g. `[\"platform\", \"age_bracket\"]`)."
-          }
-        },
-        "additionalProperties": false,
-        "description": "A set of dimensions used to group the metric query. When a breakdown is specified, the\r\nalert evaluates each unique combination of dimension values independently and fires if any\r\ngroup breaches the condition."
-      },
-      "AnalyticsAlertControlPlane.Models.AlertQueryFilter": {
-        "required": ["dimension", "values"],
-        "type": "object",
-        "properties": {
-          "dimension": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Name of the dimension to filter on (e.g. `platform`)."
-          },
-          "values": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "The allowed values for this dimension. A metric data point is included only if its\r\ndimension value is in this list."
-          }
-        },
-        "additionalProperties": false,
-        "description": "A dimension filter applied to the metric query. Restricts the metric to rows where the\r\nspecified dimension matches one of the given values."
-      },
-      "AnalyticsAlertControlPlane.Models.CreateAlertConfigRequest": {
-        "required": [
-          "condition",
-          "consecutiveOccurrences",
-          "interval",
-          "metric",
-          "name",
-          "severity"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Display name of the alert. Must be unique within the resource. Maximum length is 128\r\ncharacters and the value is subject to Roblox text-moderation policies."
-          },
-          "metric": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Name of the metric this alert should evaluate."
-          },
-          "description": {
-            "type": "string",
-            "description": "Optional free-text description of the alert's purpose.",
-            "nullable": true
-          },
-          "severity": {
-            "$ref": "#/components/schemas/AlertStorage.Severity"
-          },
-          "interval": {
-            "$ref": "#/components/schemas/AlertStorage.AlertInterval"
-          },
-          "consecutiveOccurrences": {
-            "type": "integer",
-            "description": "Number of consecutive evaluation periods the condition must be met before the alert\r\nfires. Must be at least 1. For example, a value of 3 with a 1-minute interval means\r\nthe condition must hold for 3 consecutive minutes before an incident is opened.",
-            "format": "int32"
-          },
-          "breakdown": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryBreakdown"
-            },
-            "description": "Optional grouping dimensions for the metric query. When set, the alert evaluates\r\nthe metric independently for each combination of dimension values and fires if any\r\ngroup breaches the condition.",
-            "nullable": true
-          },
-          "filter": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryFilter"
-            },
-            "description": "Optional dimension filters applied to the metric query. Each entry restricts the metric\r\nto rows where the specified dimension matches one of the given values.",
-            "nullable": true
-          },
-          "condition": {
-            "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertConditionInput"
-          },
-          "webhookReceiverConfig": {
-            "$ref": "#/components/schemas/AlertStorage.WebhookReceiverConfig"
-          }
-        },
-        "additionalProperties": false,
-        "description": "Request body for creating a new alert configuration."
-      },
-      "AnalyticsAlertControlPlane.Models.ErrorResponse": {
-        "type": "object",
-        "properties": {
-          "errorCode": {
-            "type": "string",
-            "description": "Machine-readable error code (e.g. PERMISSION_DENIED).",
-            "nullable": true
-          },
-          "message": {
-            "type": "string",
-            "description": "Human-readable error description.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "Standard error response body for the Alerts API."
-      },
-      "AnalyticsAlertControlPlane.Models.FiringConditionResponse": {
-        "required": ["firingValue"],
-        "type": "object",
-        "properties": {
-          "firingValue": {
-            "type": "number",
-            "description": "The metric value that exceeded the threshold at the time of evaluation.",
-            "format": "double"
-          },
-          "firingDimension": {
-            "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.FiringDimensionResponse"
-          }
-        },
-        "additionalProperties": false,
-        "description": "A single metric value that breached the alert threshold, optionally scoped to a specific\r\ndimension value when the alert uses a breakdown."
-      },
-      "AnalyticsAlertControlPlane.Models.FiringDimensionResponse": {
-        "required": ["dimension", "value"],
-        "type": "object",
-        "properties": {
-          "dimension": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Name of the dimension (e.g. `platform`)."
-          },
-          "value": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Value of the dimension for the slice that was firing (e.g. `Mobile`)."
-          }
-        },
-        "additionalProperties": false,
-        "description": "A dimension name/value pair that identifies which slice of the metric was firing."
-      },
-      "AnalyticsAlertControlPlane.Models.FiringMetadataResponse": {
-        "required": ["condition", "firingCondition"],
-        "type": "object",
-        "properties": {
-          "filter": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryFilter"
-            },
-            "description": "Dimension filters that were active at this evaluation, if any.",
-            "nullable": true
-          },
-          "breakdown": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryBreakdown"
-            },
-            "description": "Grouping dimensions that were active at this evaluation, if any.",
-            "nullable": true
-          },
-          "condition": {
-            "$ref": "#/components/schemas/AlertStorage.AlertCondition"
-          },
-          "firingCondition": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.FiringConditionResponse"
-            },
-            "description": "The specific metric values and dimension combinations that caused the condition to fire."
-          }
-        },
-        "additionalProperties": false,
-        "description": "A snapshot of the alert condition at a specific evaluation, capturing the metric values\r\nthat were firing and any dimension breakdowns involved."
-      },
-      "AnalyticsAlertControlPlane.Models.IncidentDetailResponse": {
-        "required": [
-          "alertConfig",
-          "firstFiringMetadata",
-          "id",
-          "latestFiringMetadata",
-          "openedAt",
-          "openedWindowStartAt",
-          "resourceId",
-          "resourceType",
-          "status"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Unique identifier of this incident."
-          },
-          "resourceType": {
-            "$ref": "#/components/schemas/AlertStorage.ResourceType"
-          },
-          "resourceId": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Numeric ID of the resource this incident belongs to (e.g. the universe ID)."
-          },
-          "status": {
-            "$ref": "#/components/schemas/AlertStorage.FiringStatus"
-          },
-          "openedAt": {
-            "type": "string",
-            "description": "Timestamp when this incident was first opened (UTC).",
-            "format": "date-time"
-          },
-          "openedWindowStartAt": {
-            "type": "string",
-            "description": "Start of the evaluation window that first satisfied the alert condition and opened this\r\nincident (UTC).",
-            "format": "date-time"
-          },
-          "resolvedAt": {
-            "type": "string",
-            "description": "Timestamp when this incident was resolved (UTC). `null` if the incident is still\r\nactive.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "resolvedWindowStartAt": {
-            "type": "string",
-            "description": "Start of the evaluation window in which the alert condition was no longer satisfied,\r\ncausing the incident to be resolved (UTC). `null` if the incident is still active.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "firstFiringMetadata": {
-            "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.FiringMetadataResponse"
-          },
-          "latestFiringMetadata": {
-            "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.FiringMetadataResponse"
-          },
-          "alertConfig": {
-            "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertConfigSummary"
-          }
-        },
-        "additionalProperties": false,
-        "description": "Details of a single alert incident."
-      },
-      "AnalyticsAlertControlPlane.Models.UpdateAlertConfigRequest": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "New display name for the alert. Must be unique within the resource. Subject to\r\nRoblox text-moderation policies.",
-            "nullable": true
-          },
-          "metric": {
-            "type": "string",
-            "description": "New metric name this alert should evaluate.",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "description": "New free-text description of the alert's purpose.",
-            "nullable": true
-          },
-          "severity": {
-            "$ref": "#/components/schemas/AlertStorage.Severity"
-          },
-          "interval": {
-            "$ref": "#/components/schemas/AlertStorage.AlertInterval"
-          },
-          "consecutiveOccurrences": {
-            "type": "integer",
-            "description": "New consecutive-occurrences count. When set, the alert will require the condition to\r\nhold for this many consecutive evaluation periods before firing. Must be at least 1.",
-            "format": "int32",
-            "nullable": true
-          },
-          "breakdown": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryBreakdown"
-            },
-            "description": "New grouping dimensions for the metric query. Replaces the existing breakdown entirely\r\nwhen provided.",
-            "nullable": true
-          },
-          "filter": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryFilter"
-            },
-            "description": "New dimension filters for the metric query. Replaces the existing filter list entirely\r\nwhen provided.",
-            "nullable": true
-          },
-          "condition": {
-            "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertConditionInput"
-          },
-          "webhookReceiverConfig": {
-            "$ref": "#/components/schemas/AlertStorage.WebhookReceiverConfig"
-          },
-          "configState": {
-            "$ref": "#/components/schemas/AlertStorage.AlertConfigState"
-          }
-        },
-        "additionalProperties": false,
-        "description": "Request body for partially updating an alert configuration (PATCH semantics). All fields\r\nare optional; only the fields present in the request body are updated."
       },
       "AnalyticsQueryPublicApi.BreakdownValue": {
         "required": ["dimension", "value"],
@@ -81755,7 +80417,7 @@
                 "$ref": "#/components/schemas/ServiceEfficiencyApi.Money"
               }
             ],
-            "description": "Gets or sets the total, tax-inclusive amount of the bill.\r\nThis is Roblox.CloudPricing.ServiceEfficiencyApi.Models.BillDetailsResponse.UsageAmount + Roblox.CloudPricing.ServiceEfficiencyApi.Models.BillDetailsResponse.TaxAmount."
+            "description": "Gets or sets the total, tax-inclusive amount of the bill.\nThis is Roblox.CloudPricing.ServiceEfficiencyApi.Models.BillDetailsResponse.UsageAmount + Roblox.CloudPricing.ServiceEfficiencyApi.Models.BillDetailsResponse.TaxAmount."
           },
           "usages": {
             "type": "array",
@@ -81803,7 +80465,7 @@
           },
           "conversionRate": {
             "type": "number",
-            "description": "Gets or sets the USD-to-local-currency conversion rate at bill creation time, provided for reference only.\r\nNull if the payment method is in the US, the bill predates this feature, or for pending bills.\r\n-1 if the currency converter lookup failed.",
+            "description": "Gets or sets the USD-to-local-currency conversion rate at bill creation time, provided for reference only.\nNull if the payment method is in the US, the bill predates this feature, or for pending bills.\n-1 if the currency converter lookup failed.",
             "format": "double",
             "nullable": true
           }
@@ -89873,7 +88535,7 @@
           },
           "unitAmount": {
             "type": "integer",
-            "description": "The number of units of the resource to which the cost applies. For example, if `cost` is 0.0044 and `unit_amount` is\r\n1000000, the cost is $0.0044 per million of units. The split between `cost` and `unit_amount` should reflect how we\r\nrefer to the price in real life, e.g. the above example reflects how we talk about the price of UMS request units\r\n($0.0044 per million request units).",
+            "description": "The number of units of the resource to which the cost applies. For example, if `cost` is 0.0044 and `unit_amount` is\n1000000, the cost is $0.0044 per million of units. The split between `cost` and `unit_amount` should reflect how we\nrefer to the price in real life, e.g. the above example reflects how we talk about the price of UMS request units\n($0.0044 per million request units).",
             "format": "int64"
           }
         },
@@ -90597,6 +89259,27 @@
         "enum": [1, 2],
         "type": "integer",
         "format": "int32"
+      },
+      "PublicUniverseEligibility": {
+        "type": "object",
+        "properties": {
+          "eligible": {
+            "description": "Whether the experience can currently be advertised.",
+            "type": "boolean"
+          },
+          "reasons": {
+            "description": "The reasons the experience is not eligible. Omitted when eligible. Values can be\n`NO_PERMISSION` or `BLOCKED`.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["NO_PERMISSION", "BLOCKED"]
+            }
+          },
+          "universeId": {
+            "description": "The identifier of the experience that was checked.",
+            "type": "string"
+          }
+        }
       },
       "PublicUpdateUniverseRecurringPayoutsRequestModel": {
         "required": ["payouts"],
@@ -109976,11 +108659,13 @@
           "create_time": {
             "type": "string",
             "description": "Date and time when the secret was originally created.",
+            "format": "date-time",
             "nullable": true
           },
           "update_time": {
             "type": "string",
             "description": "Date and time when the secret was last updated",
+            "format": "date-time",
             "nullable": true
           }
         },
@@ -110024,7 +108709,8 @@
             "nullable": true
           },
           "status": {
-            "type": "string",
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "detail": {
@@ -110310,7 +108996,7 @@
                 "$ref": "#/components/schemas/BudgetLevel"
               }
             ],
-            "description": "Gets or sets the allowed budget level for this service.\r\nThis value can only be set in the GetConsumerConfiguration endpoint, it will be ignored in the UpdateConsumerConfiguration endpoint."
+            "description": "Gets or sets the allowed budget level for this service.\nThis value can only be set in the GetConsumerConfiguration endpoint, it will be ignored in the UpdateConsumerConfiguration endpoint."
           }
         },
         "additionalProperties": false,
@@ -110326,17 +109012,17 @@
           },
           "units": {
             "type": "integer",
-            "description": "The whole units of the amount.\r\nFor example if `currencyCode` is `\"USD\"`, then 1 unit is one US dollar.",
+            "description": "The whole units of the amount.\nFor example if `currencyCode` is `\"USD\"`, then 1 unit is one US dollar.",
             "format": "int64"
           },
           "nanos": {
             "type": "integer",
-            "description": "Number of nano (10^-9) units of the amount.\r\nThe value must be between -999,999,999 and +999,999,999 inclusive.\r\nIf `units` is positive, `nanos` must be positive or zero.\r\nIf `units` is zero, `nanos` can be positive, zero, or negative.\r\nIf `units` is negative, `nanos` must be negative or zero.\r\nFor example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.",
+            "description": "Number of nano (10^-9) units of the amount.\nThe value must be between -999,999,999 and +999,999,999 inclusive.\nIf `units` is positive, `nanos` must be positive or zero.\nIf `units` is zero, `nanos` can be positive, zero, or negative.\nIf `units` is negative, `nanos` must be negative or zero.\nFor example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.",
             "format": "int32"
           }
         },
         "additionalProperties": false,
-        "description": "Temporary until https://roblox.atlassian.net/browse/ICSC-1360 is done.\r\nWill be replaced by google.type.Money"
+        "description": "Temporary until https://roblox.atlassian.net/browse/ICSC-1360 is done.\nWill be replaced by google.type.Money"
       },
       "ServiceEfficiencyApi.TransactionStatus": {
         "enum": ["Invalid", "Pending", "Successful", "Failed"],
@@ -111026,7 +109712,7 @@
           "MexicanRfcNumber"
         ],
         "type": "string",
-        "description": "Type of the tax id.\r\nMaps to and should be kept up to date with\r\nhttps://github.rbx.com/Roblox/service-contracts/blob/master/protos/roblox/payments/shared/v1/tax_id_type.proto."
+        "description": "Type of the tax id.\nMaps to and should be kept up to date with\nhttps://github.rbx.com/Roblox/service-contracts/blob/master/protos/roblox/payments/shared/v1/tax_id_type.proto."
       },
       "TestStartPlaceOverrideResponse": {
         "type": "object",
@@ -111259,6 +109945,14 @@
             "type": "boolean"
           },
           "agent": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AgentResponse"
+              }
+            ],
+            "nullable": true
+          },
+          "recipient": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/AgentResponse"
@@ -111658,7 +110352,8 @@
           "PrivateServerEngagementPayout",
           "CurrencySubscriptionStipend",
           "SubscriptionReferralPayout",
-          "CreatorRewardsPayout"
+          "CreatorRewardsPayout",
+          "Gifts"
         ],
         "type": "string"
       },
@@ -111741,6 +110436,9 @@
             "type": "boolean"
           },
           "HasSubscriptionReferralPayout": {
+            "type": "boolean"
+          },
+          "HasGifts": {
             "type": "boolean"
           }
         },
@@ -113436,7 +112134,7 @@
             "description": "The eligibility result for the requested experience. Present only when\nuniverseId was supplied in the request.",
             "allOf": [
               {
-                "$ref": "#/components/schemas/internal_public_v1.PublicUniverseEligibility"
+                "$ref": "#/components/schemas/PublicUniverseEligibility"
               }
             ]
           },
@@ -113712,27 +112410,6 @@
           },
           "message": {
             "description": "A human-readable description of the error.",
-            "type": "string"
-          }
-        }
-      },
-      "internal_public_v1.PublicUniverseEligibility": {
-        "type": "object",
-        "properties": {
-          "eligible": {
-            "description": "Whether the experience can currently be advertised.",
-            "type": "boolean"
-          },
-          "reasons": {
-            "description": "The reasons the experience is not eligible. Omitted when eligible. Values can be\n`NO_PERMISSION` or `BLOCKED`.",
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": ["NO_PERMISSION", "BLOCKED"]
-            }
-          },
-          "universeId": {
-            "description": "The identifier of the experience that was checked.",
             "type": "string"
           }
         }
@@ -114277,11 +112954,6 @@
           "post_analytics_query_api_v1_universes__universe_id__dimension_values",
           "get_analytics_query_api_v1_universes__universe_id__operations_metrics__operation_id_",
           "get_analytics_query_api_v1_universes__universe_id__operations_dimension_values__operation_id_",
-          "get_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts",
-          "post_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts",
-          "patch_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_",
-          "delete_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_",
-          "get_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts_incidents",
           "ErrorLoggingDetail_GetLogs",
           "LogAttributeService_Find",
           "LogAttributeService_Create",

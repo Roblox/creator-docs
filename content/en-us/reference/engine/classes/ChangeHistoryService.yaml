@@ -79,7 +79,7 @@ methods:
         default:
         summary: |
           Optional table of values to pass to
-          `Class.ChangeHistoryService.OnFinishRecording|OnFinishRecording`.
+          `Class.ChangeHistoryService.OnRecordingFinished|OnRecordingFinished`.
     returns:
       - type: ()
         summary: ''
@@ -288,7 +288,7 @@ methods:
       errors.
 
       When the recording is completed, you call
-      `Class.ChangeHistoryService.FinishRecording()|FinishRecording()` with the
+      `Class.ChangeHistoryService:FinishRecording()|FinishRecording()` with the
       returned recording identifier to complete the recording and update the
       undo/redo stack.
 
@@ -297,7 +297,7 @@ methods:
       in a solo playtest.
 
       You may use
-      `Class.ChangeHistoryService.IsRecordingInProgress()|IsRecordingInProgress()`
+      `Class.ChangeHistoryService:IsRecordingInProgress()|IsRecordingInProgress()`
       to check the recording status of the plugin.
     code_samples:
       - ChangeHistoryService-TryBeginRecording1
@@ -392,7 +392,7 @@ events:
         default:
         summary: |
           Optional table from
-          `Class.ChangeHistoryService:FinishRecording()| FinishRecording()`.
+          `Class.ChangeHistoryService:FinishRecording()|FinishRecording()`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity

@@ -11,9 +11,9 @@ Starting in May 2027, platform-integrated chat will be required for all games. T
 When you enable platform-integrated chat, custom chat features must move to Roblox's native systems (`Class.TextChatCommand|TextChatCommands`, `Class.TextChannelWindow`, [Quick Words](./quick-words.md)). Message content is also no longer accessible in code.
 </Alert>
 
-**Platform-integrated chat** gives every player consistent access to safety tools such as reporting and muting, and lets chat features like [Quick Words](./quick-words.md) roll out reliably across all experiences. It also replaces the current prefix system, so roles associated with users render consistently and are safe for all ages.
+**Platform-integrated chat** gives every player consistent access to safety tools such as reporting and muting, and lets chat features like [Quick Words](./quick-words.md) roll out reliably across all games. It also replaces the current prefix system, so roles associated with users render consistently and are safe for all ages.
 
-Nothing in your experience changes until you [enable platform-integrated chat](#enable-platform-integrated-chat) in Studio. After you enable it:
+Nothing in your game changes until you [enable platform-integrated chat](#enable-platform-integrated-chat) in Studio. After you enable it:
 
 - Roblox delivers and renders chat in the default window or a `Class.TextChannelWindow` you place in your UI. Custom chat UIs can no longer render messages themselves.
 - Player message text isn't accessible to your code. You can't read, log, or export it. APIs that previously returned message text now return an empty string (`""`) instead of `nil`, so your scripts keep running but receive no content.
@@ -43,7 +43,7 @@ When platform-integrated chat is enabled, the following APIs return `""` (empty 
     <tr>
       <td>Chat prefixes</td>
       <td>`Class.TextChatMessage.PrefixText`</td>
-      <td>Not supported. If your experience requires prefixes, don't enable platform-integrated chat yet.</td>
+      <td>Not supported. If your game requires prefixes, don't enable platform-integrated chat yet.</td>
     </tr>
     <tr>
       <td>Presets / chat wheels</td>
@@ -172,7 +172,7 @@ For an example, see [Custom text chat commands](./examples/custom-text-chat-comm
 <Typography variant='buttonLarge'>Will anything change if I do nothing?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Nothing changes in your experience unless you set `Class.TextChatService.PlatformIntegratedChat|PlatformIntegratedChat` to **Enabled**.
+Nothing changes in your game unless you set `Class.TextChatService.PlatformIntegratedChat|PlatformIntegratedChat` to **Enabled**.
 </AccordionDetails>
 </BaseAccordion>
 
@@ -187,7 +187,7 @@ No. Policy for those surfaces is unchanged: they can't be used for two-way commu
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant='buttonLarge'>Does this affect comment systems, message boards, or mail in my experience?</Typography>
+<Typography variant='buttonLarge'>Does this affect comment systems, message boards, or mail in my game?</Typography>
 </AccordionSummary>
 <AccordionDetails>
 No. This update covers `Class.TextChatService` only.
@@ -199,7 +199,7 @@ No. This update covers `Class.TextChatService` only.
 <Typography variant='buttonLarge'>Can I still record and pull chat logs as a game admin?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-No. When `Class.TextChatService.PlatformIntegratedChat|PlatformIntegratedChat` is **Enabled**, no API returns player message content on the client or server. Moderators in your experience can still use read-only chat permissions to view chat. Players can also rely on Roblox's abuse reporting and on safety tools such as muting and blocking.
+No. When `Class.TextChatService.PlatformIntegratedChat|PlatformIntegratedChat` is **Enabled**, no API returns player message content on the client or server. Moderators in your game can still use read-only chat permissions to view chat. Players can also rely on Roblox's abuse reporting and on safety tools such as muting and blocking.
 </AccordionDetails>
 </BaseAccordion>
 
@@ -208,6 +208,6 @@ No. When `Class.TextChatService.PlatformIntegratedChat|PlatformIntegratedChat` i
 <Typography variant='buttonLarge'>Do I need to change anything if I use the default Roblox chat?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-No. If your experience uses the default Roblox chat with no customizations, you don't need to take action and shouldn't see a change.
+No. If your game uses the default Roblox chat with no customizations, you don't need to take action and shouldn't see a change.
 </AccordionDetails>
 </BaseAccordion>

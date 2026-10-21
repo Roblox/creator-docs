@@ -5055,6 +5055,16 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PlayerChatType.yaml
         ignoreTranslation: true
+      - title: PlayerDeviceTrustDecision
+        path: /reference/engine/enums/PlayerDeviceTrustDecision
+        type: engineapi
+        source: /reference/engine/enums/PlayerDeviceTrustDecision.yaml
+        ignoreTranslation: true
+      - title: PlayerDeviceTrustLevel
+        path: /reference/engine/enums/PlayerDeviceTrustLevel
+        type: engineapi
+        source: /reference/engine/enums/PlayerDeviceTrustLevel.yaml
+        ignoreTranslation: true
       - title: PlayerExitReason
         path: /reference/engine/enums/PlayerExitReason
         type: engineapi

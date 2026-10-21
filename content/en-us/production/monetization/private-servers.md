@@ -5,6 +5,10 @@ description: Private servers are a subscription-based feature that allows player
 
 A **private server** is a subscription-based feature that allows a player to decide who can play a game with them. While private servers can be free, you can also use private servers as a method of monetization by charging players who want to access private servers a **monthly Robux fee**.
 
+<Alert severity="info">
+[Roblox Plus](../monetization/roblox-plus.md) subscribers get access to paid private servers at no cost. You still earn up to 100 Robux per subscriber each month based on the time they spend in your paid private servers. See [Earn from paid private server time](../monetization/roblox-plus.md#earn-from-paid-private-server-time) for details.
+</Alert>
+
 Private servers offer players privacy in circumstances like:
 
 - Playing games with friends.
