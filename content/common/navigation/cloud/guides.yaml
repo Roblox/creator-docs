@@ -29,6 +29,8 @@ navigation:
         path: /cloud/guides/analytics/
       - title: Supported metrics and dimensions
         path: /cloud/guides/analytics/metrics
+      - title: Benchmarks
+        path: /cloud/guides/analytics/benchmarks
   - title: Analytics alerts
     path: /cloud/guides/alerts
     section:

@@ -76,8 +76,7 @@ properties:
       `Class.AudioPlayer.IsReady|IsReady` becomes `true`.
     code_samples: []
     type: Content
-    tags:
-      - Hidden
+    tags: []
     deprecation_message: ''
     security:
       read: None

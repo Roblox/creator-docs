@@ -101,7 +101,8 @@ methods:
     description: |
       Returns a new alpha value for interpolating using the given alpha value,
       `Enum.EasingStyle`, and `Enum.EasingDirection`. The provided `alpha` value
-      will be clamped between `0` and `1`.
+      will be clamped between `0` and `1`. This method raises an error if
+      `easingStyle` is `Enum.EasingStyle.Bezier` or `Enum.EasingStyle.Spring`.
     code_samples: []
     parameters:
       - name: alpha

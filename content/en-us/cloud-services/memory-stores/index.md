@@ -39,7 +39,7 @@ In general, if you need to access data based on a specific key, use a hash map. 
 
 To maintain the scalability and system performance, memory stores have data usage quotas for the memory size, API requests, and the data structure size.
 
-Memory stores have an eviction policy based on expiration time, also known as time to live (TTL). Items are evicted after they expire, and memory quota is freed up for new entries. When you hit the memory limit, all subsequent write requests fail until items expire or you manually delete them.
+Memory stores have an eviction policy based on expiration time, also known as time to live (TTL). Items are evicted after they expire, and memory quota is freed up for new entries. When you hit the memory limit, requests that increase memory usage fail until you free up memory or increase your quota. See [Recover from memory quota exhaustion](#recover-from-memory-quota-exhaustion) for options.
 
 ### Memory size quota
 
@@ -109,6 +109,34 @@ We strive to be as transparent as possible about rate limits, but additional, un
 If you hit an undocumented rate limit that blocks your use case (or you would like higher limits), leave feedback explaining your needs in the [Developer Forum](https://devforum.roblox.com/).
 </Alert>
 
+## Recover from memory quota exhaustion
+
+If your game receives `TotalMemoryOverLimit` errors, check the **Memory Usage** chart in the [observability dashboard](../../cloud-services/memory-stores/observability.md). To resume writes that increase memory usage, delete unneeded items, wait for items to expire, or use one of the following options.
+
+### Flush memory stores with Open Cloud
+
+If you no longer need the stored data, use the Open Cloud [Flush Memory Store](/cloud/reference/features/storage#Cloud_FlushMemoryStore) endpoint to asynchronously clear all memory store data structures in a universe for the selected scope.
+
+<Alert severity="warning">
+A flush clears all queues, sorted maps, and hash maps in the selected scope, not just an individual data structure. This includes data that live features such as matchmaking or trading might still need. Only flush when your game can operate without that data.
+</Alert>
+
+To flush memory stores:
+
+1. [Create an API key](../../cloud/auth/api-keys.md) with permissions to flush memory stores and get the flush operation status for the target universe.
+2. Send a `POST` request to `https://apis.roblox.com/cloud/v2/universes/{universe_id}/memory-store:flush` with the API key in the `x-api-key` header. Replace `{universe_id}` with your game's universe ID. Set the `scope` query parameter to `LIVE` for production data or `TEST` for Studio data. If you omit `scope`, the endpoint uses `LIVE`.
+3. Use [Get Memory Store Flush Operation](/cloud/reference/features/storage#Cloud_GetMemoryStoreFlushOperation) to poll the operation returned by the flush request until `done` is `true`, and check for an `error`. Use the same scope when polling. The returned `path` already includes `cloud/v2`, so poll at `https://apis.roblox.com/{path}` without adding another prefix.
+
+Studio and production memory stores are [isolated](#test-and-debug-in-studio). Flushing one scope doesn't clear the other. After clearing unneeded data, follow the [best practices](#best-practices), such as shorter expiration times and explicit deletion, to prevent memory usage from reaching the quota again.
+
+### Increase capacity with Extended Services
+
+If your game needs to retain the data and use more storage than the default quota allows, enable [Extended Services](../../cloud-services/extended-services.md) for memory stores. Extended Services lets you pay for memory store storage and requests beyond the default quotas.
+
+To get started, meet the [eligibility requirements](../../cloud-services/extended-services.md#eligibility-requirements), add account details and a payment method, then select your game in the [Creator Dashboard](https://create.roblox.com/dashboard/creations). Under **Extended Services**, enable memory stores and set monthly budgets for the resources you need. See [Enable a service](../../cloud-services/extended-services.md#enable-a-service) and [Service pricing](../../cloud-services/extended-services.md#service-pricing) for details.
+
+Extended Services throttles the service if usage exceeds your budget. Monitor usage and billing, and continue to [remove unneeded data](#best-practices).
+
 ## Best practices
 
 To keep your memory usage pattern optimal and avoid hitting the [limits](#limits-and-quotas), follow these best practices:
@@ -116,7 +144,6 @@ To keep your memory usage pattern optimal and avoid hitting the [limits](#limits
 - **Remove processed items.** Consistently cleaning up read items using `Class.MemoryStoreQueue:RemoveAsync()` method for queues and `Class.MemoryStoreSortedMap:RemoveAsync()` for sorted maps can free up memory and keep the data structure up-to-date.
 
 - **Set the expiration time to the smallest time frame possible when adding data.** Though the default expiration time is 45 days for both `Class.MemoryStoreQueue:AddAsync()` and `Class.MemoryStoreSortedMap:SetAsync()`, setting the shortest possible time can automatically clean up old data to prevent them from filling up your memory usage quota.
-
   - Don't store a large amount of data with a long expiration, as it risks exceeding your memory quota and potentially causing issues that can break your entire game.
   - Always either explicitly delete unneeded items or set a short item expiration.
   - Generally, you should use explicit deletion for releasing memory and item expiration as a safety mechanism to prevent unused items from occupying memory for an extended period of time.
@@ -139,9 +166,9 @@ To keep your memory usage pattern optimal and avoid hitting the [limits](#limits
 
   For example, consider using the [LZW](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) algorithm to reduce the stored value size.
 
-- Enroll in Extended Services.
+- **Enroll in Extended Services.**
 
-  You can increase your Storage and Request Limit quotas by onboarding onto [Extended Services](https://create.roblox.com/docs/cloud-services/extended-services)
+  For storage or request usage beyond the default quotas, [enable Extended Services for memory stores](#increase-capacity-with-extended-services).
 
 ## Observability
 
@@ -295,7 +322,7 @@ The following table lists and describes the recommended solution for each respon
     </tr>
     <tr>
       <td>DataStructureItemsOverLimit</td>
-      <td rowspan="3">
+      <td rowspan="2">
         <ul>
           <li>Apply [best practices](#best-practices) on reducing the memory size.</li>
         </ul>
@@ -306,6 +333,13 @@ The following table lists and describes the recommended solution for each respon
     </tr>
     <tr>
       <td>TotalMemoryOverLimit</td>
+      <td>
+        <ul>
+          <li>Delete unneeded items or wait for them to expire. See [best practices](#best-practices).</li>
+          <li>If your game can operate without the stored data, [flush memory stores with Open Cloud](#flush-memory-stores-with-open-cloud).</li>
+          <li>If your game needs more storage, [increase capacity with Extended Services](#increase-capacity-with-extended-services).</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <td>DataUpdateConflict</td>

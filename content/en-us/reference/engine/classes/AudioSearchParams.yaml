@@ -121,6 +121,27 @@ properties:
       can_save: true
     capabilities:
       - AssetRead
+  - name: AudioSearchParams.MaxPageSize
+    summary: |
+      The maximum number of results to return per page.
+    description: |
+      The maximum number of results returned per page, up to `100`; larger
+      values are treated as `100`. When left at the default of `0` the service
+      chooses the page size.
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - AssetRead
   - name: AudioSearchParams.MinDuration
     summary: |
       The minimum duration of the audio asset.
@@ -147,6 +168,26 @@ properties:
       Searches for audio relevant to this keyword.
     code_samples: []
     type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - AssetRead
+  - name: AudioSearchParams.SortType
+    summary: |
+      How results are ordered.
+    description: |
+      Controls how results are ordered, corresponding to the
+      `Enum.AudioSortType` enum. Defaults to `Enum.AudioSortType.Relevance`.
+    code_samples: []
+    type: AudioSortType
     tags: []
     deprecation_message: ''
     security:

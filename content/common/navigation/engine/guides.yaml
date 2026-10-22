@@ -503,8 +503,7 @@ navigation:
               - title: State machine
                 path: /animation/graph-editor-state-machine
               - title: Expression
-                path: /animation/graph-editor-expression
-                source: /animation/expressions.md
+                path: /animation/expressions
           - title: Inverse kinematics
             path: /animation/inverse-kinematics
       - title: Use animations

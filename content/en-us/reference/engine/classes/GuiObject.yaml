@@ -984,6 +984,8 @@ methods:
     description: |
       Smoothly moves a GUI to a new `Datatype.UDim2` position in the specified
       time using the specified `Enum.EasingDirection` and `Enum.EasingStyle`.
+      This method raises an error if `easingStyle` is `Enum.EasingStyle.Bezier`
+      or `Enum.EasingStyle.Spring`.
 
       This function will return whether the tween will play. It will not play if
       another tween is acting on the `Class.GuiObject` and the override
@@ -1052,7 +1054,8 @@ methods:
     description: |
       Smoothly resizes a `Class.GuiObject` to a new `Datatype.UDim2` in the
       specified time using the specified `Enum.EasingDirection` and
-      `Enum.EasingStyle`.
+      `Enum.EasingStyle`. This method raises an error if `easingStyle` is
+      `Enum.EasingStyle.Bezier` or `Enum.EasingStyle.Spring`.
 
       This function will return whether the tween will play. Normally this will
       always return `true`, but it will return `false` if another tween is
@@ -1121,7 +1124,8 @@ methods:
     description: |
       Smoothly resizes and moves a GUI to a new `Datatype.UDim2` size and
       position in the specified time using the specified `Enum.EasingDirection`
-      and `Enum.EasingStyle`.
+      and `Enum.EasingStyle`. This method raises an error if `easingStyle` is
+      `Enum.EasingStyle.Bezier` or `Enum.EasingStyle.Spring`.
 
       This function will return whether the tween will play. Normally this will
       always return `true`, but it will return `false` if another tween is

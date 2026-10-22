@@ -51,6 +51,7 @@ properties:
       can_save: true
     capabilities:
       - Players
+      - PluginOrOpenCloud
   - name: Players.BubbleChat
     summary: |
       Indicates whether or not bubble chat is enabled. It is set with the
@@ -351,6 +352,7 @@ properties:
       can_save: true
     capabilities:
       - Players
+      - PluginOrOpenCloud
 methods:
   - name: Players:BanAsync
     summary: |

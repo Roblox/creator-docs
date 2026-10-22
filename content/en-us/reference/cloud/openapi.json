@@ -1104,6 +1104,852 @@
         }
       }
     },
+    "/analytics-alert-control-plane/v1/resource/{resourceType}/id/{resourceId}/alerts": {
+      "get": {
+        "tags": ["Analytics"],
+        "summary": "Returns the alert configurations for a resource. Optionally filter by alert IDs, firing\nstatus, severity, or metric name.",
+        "parameters": [
+          {
+            "name": "resourceType",
+            "in": "path",
+            "description": "The type of resource to query. Currently only `Universe` is supported.\n\nUniverse",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/AlertStorage.ResourceType"
+            },
+            "x-enum-varnames": ["Universe"]
+          },
+          {
+            "name": "resourceId",
+            "in": "path",
+            "description": "The numeric ID of the resource (e.g. the universe ID).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ids",
+            "in": "query",
+            "description": "Optional list of alert IDs to restrict results to. Repeat the parameter for multiple\nvalues: `?ids=1&ids=2`. IDs are string-encoded 64-bit integers.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "firingStatus",
+            "in": "query",
+            "description": "Optional firing-status filter (`OK` or `Firing`).\n\nOK\n\nFiring",
+            "schema": {
+              "$ref": "#/components/schemas/AlertStorage.FiringStatus"
+            },
+            "x-enum-varnames": ["OK", "Firing"]
+          },
+          {
+            "name": "severities",
+            "in": "query",
+            "description": "Optional list of severity levels to filter by. Repeat the parameter for multiple\nvalues: `?severities=SEV_0&severities=SEV_1`.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AlertStorage.Severity"
+              }
+            },
+            "x-enum-varnames": ["SEV_0", "SEV_1", "SEV_2"]
+          },
+          {
+            "name": "metrics",
+            "in": "query",
+            "description": "Optional list of metric names to filter by (exact match, case-sensitive). Repeat the\nparameter for multiple values: `?metrics=dau&metrics=mau`.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertDetailResponse"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics.alert:read",
+            "targetResourceSpecifier": "id"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics.alert:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#get_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts"
+        }
+      },
+      "post": {
+        "tags": ["Analytics"],
+        "summary": "Creates a new alert configuration for a resource.",
+        "description": "See the <a href=\"https://create.roblox.com/docs/cloud/guides/alerts/metrics\">alerts guide</a> for supported metrics and dimensions.",
+        "parameters": [
+          {
+            "name": "resourceType",
+            "in": "path",
+            "description": "The type of resource to create the alert on. Currently only `Universe` is supported.\n\nUniverse",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/AlertStorage.ResourceType"
+            },
+            "x-enum-varnames": ["Universe"]
+          },
+          {
+            "name": "resourceId",
+            "in": "path",
+            "description": "The numeric ID of the resource (e.g. the universe ID).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The alert configuration to create.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.CreateAlertConfigRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.CreateAlertConfigRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.CreateAlertConfigRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertDetailResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict. Possible error codes:\n            \n- `ALERT_NAME_EXISTED`: An alert with this name already exists for the resource.\n  Alert names must be unique per resource.\n            \n- `MAX_ALERT_REACHED`: The resource has reached the maximum number of allowed alerts.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics.alert:write",
+            "targetResourceSpecifier": "id"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics.alert:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#post_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts"
+        }
+      }
+    },
+    "/analytics-alert-control-plane/v1/resource/{resourceType}/id/{resourceId}/alerts/incidents": {
+      "get": {
+        "tags": ["Analytics"],
+        "summary": "Returns alert incidents for a resource whose active window overlaps the specified time\nrange. An incident is included if it was open at any point between `startTime` and\n`endTime`.",
+        "parameters": [
+          {
+            "name": "resourceType",
+            "in": "path",
+            "description": "The type of resource to query. Currently only `Universe` is supported.\n\nUniverse",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/AlertStorage.ResourceType"
+            },
+            "x-enum-varnames": ["Universe"]
+          },
+          {
+            "name": "resourceId",
+            "in": "path",
+            "description": "The numeric ID of the resource (e.g. the universe ID).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "startTime",
+            "in": "query",
+            "description": "Start of the time range to query (ISO 8601, UTC). Must be within the last 30 days\n(see AnalyticsAlertControlPlane.Operations.GetAlertIncidentsOperation.MaxQueryDays).",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endTime",
+            "in": "query",
+            "description": "End of the time range to query (ISO 8601, UTC). Must be greater than or equal to\n`startTime`.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "metric",
+            "in": "query",
+            "description": "Optional metric name to restrict results to incidents from alerts on that metric (exact\nmatch, case-sensitive).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "alertIds",
+            "in": "query",
+            "description": "Optional list of alert IDs to restrict results to. Repeat the parameter for multiple\nvalues: `?alertIds=1&alertIds=2`. IDs are string-encoded 64-bit integers.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "severities",
+            "in": "query",
+            "description": "Optional list of severity levels to restrict results to. Repeat the parameter for\nmultiple values: `?severities=SEV_0&severities=SEV_1`.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AlertStorage.Severity"
+              }
+            },
+            "x-enum-varnames": ["SEV_0", "SEV_1", "SEV_2"]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.IncidentDetailResponse"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics.alert:read",
+            "targetResourceSpecifier": "id"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics.alert:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#get_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts_incidents"
+        }
+      }
+    },
+    "/analytics-alert-control-plane/v1/resource/{resourceType}/id/{resourceId}/alerts/{alertId}": {
+      "delete": {
+        "tags": ["Analytics"],
+        "summary": "Deletes an alert configuration. This action is irreversible.",
+        "parameters": [
+          {
+            "name": "resourceType",
+            "in": "path",
+            "description": "The type of resource the alert belongs to. Currently only `Universe` is supported.\n\nUniverse",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/AlertStorage.ResourceType"
+            },
+            "x-enum-varnames": ["Universe"]
+          },
+          {
+            "name": "resourceId",
+            "in": "path",
+            "description": "The numeric ID of the resource (e.g. the universe ID).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "alertId",
+            "in": "path",
+            "description": "The ID of the alert to delete.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics.alert:write",
+            "targetResourceSpecifier": "id"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics.alert:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#delete_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_"
+        }
+      },
+      "patch": {
+        "tags": ["Analytics"],
+        "summary": "Updates an existing alert configuration. Only the fields included in the request body are\nchanged; omitted fields retain their current values.",
+        "description": "See the <a href=\"https://create.roblox.com/docs/cloud/guides/alerts/metrics\">alerts guide</a> for supported metrics and dimensions.",
+        "parameters": [
+          {
+            "name": "resourceType",
+            "in": "path",
+            "description": "The type of resource the alert belongs to. Currently only `Universe` is supported.\n\nUniverse",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/AlertStorage.ResourceType"
+            },
+            "x-enum-varnames": ["Universe"]
+          },
+          {
+            "name": "resourceId",
+            "in": "path",
+            "description": "The numeric ID of the resource (e.g. the universe ID).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "alertId",
+            "in": "path",
+            "description": "The ID of the alert to update.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The fields to update on the alert configuration.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.UpdateAlertConfigRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.UpdateAlertConfigRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.UpdateAlertConfigRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertDetailResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict (`ALERT_NAME_EXISTED`): the new name collides with an existing alert on the\nsame resource. Alert names must be unique per resource.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics.alert:write",
+            "targetResourceSpecifier": "id"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics.alert:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#patch_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_"
+        }
+      }
+    },
+    "/analytics-benchmark/v1/universes/{universeId}/benchmarks": {
+      "post": {
+        "tags": ["Analytics"],
+        "summary": "Returns daily benchmark percentiles for a metric, comparing a universe against other experiences on Roblox.",
+        "description": "See [Analytics Guide](https://create.roblox.com/docs/cloud/guides/analytics) for more information.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The ID of the universe to compare against benchmarks.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The benchmark query.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/BenchmarkQuery"
+                  }
+                ],
+                "description": "The benchmark query."
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryUniverseBenchmarkResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsBenchmarkApi.Status"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 300
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 300
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#post_analytics_benchmark_v1_universes__universe_id__benchmarks"
+        }
+      }
+    },
     "/analytics-query-api/v1/universes/{universeId}/dimension-values": {
       "post": {
         "tags": ["Analytics"],
@@ -10724,7 +11570,10 @@
         "tags": ["Generative AI"],
         "summary": "Translate Text",
         "description": "Translates the provided text from one language to another.",
-        "operationId": "Cloud_TranslateText",
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/generative-ai#Cloud_TranslateText"
+        },
+        "operationId": "PolyglotApi.Cloud_TranslateText",
         "parameters": [
           {
             "name": "universe_id",
@@ -10758,9 +11607,6 @@
             }
           }
         },
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
         "x-roblox-rate-limits": {
           "description": "Text translation requests are subject to additional rate limits [documented here](https://create.roblox.com/docs/production/localization/auto-translate-dynamic-content#limits).",
           "perApiKeyOwner": {
@@ -10768,34 +11614,21 @@
             "maxInPeriod": 10000
           }
         },
+        "x-roblox-stability": "BETA",
         "x-roblox-scopes": [
           {
             "name": "universe:write",
             "targetResourceSpecifier": "universes"
-          },
-          {
-            "name": "universe:write"
           }
         ],
-        "x-roblox-docs": {
-          "category": "Universes and places",
-          "methodProperties": {
-            "scopes": ["universe:write"]
-          },
-          "resource": {
-            "$ref": "#/components/schemas/Universe",
-            "name": "Universe"
-          }
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
         },
-        "x-roblox-stability": "BETA",
         "security": [
           {
             "roblox-api-key": []
           }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/generative-ai#Cloud_TranslateText"
-        }
+        ]
       }
     },
     "/cloud/v2/users/{user_id}": {
@@ -10970,7 +11803,7 @@
       "get": {
         "tags": ["Inventories", "Users"],
         "summary": "List Inventory Items",
-        "description": "List the inventory items in a user's inventory.\r\n            \r\nThe inventory items returned depend on the target user’s choice under\r\n**Settings > Privacy > Who can see my inventory?**:\r\n* If the user granted inventory visibility to \"Everyone,\" then any API key\r\nor OAuth2 token can be used to view the target’s inventory, no matter what\r\nscopes it has or who created it.\r\n* If the user has not granted inventory visibility to \"Everyone\":\r\n  * Their inventory can still be viewed with an API key created by the\r\n  target user with **Inventory: Read** permission.\r\n  * Their inventory can still be viewed with an OAuth2 token if the target\r\n  user authorizes an app requesting permissions for the\r\n  `user.inventory-item:read` scope.",
+        "description": "List the inventory items in a user's inventory.\n            \nThe inventory items returned depend on the target user’s choice under\n**Settings > Privacy > Who can see my inventory?**:\n* If the user granted inventory visibility to \"Everyone,\" then any API key\nor OAuth2 token can be used to view the target’s inventory, no matter what\nscopes it has or who created it.\n* If the user has not granted inventory visibility to \"Everyone\":\n  * Their inventory can still be viewed with an API key created by the\n  target user with **Inventory: Read** permission.\n  * Their inventory can still be viewed with an OAuth2 token if the target\n  user authorizes an app requesting permissions for the\n  `user.inventory-item:read` scope.",
         "operationId": "Cloud_ListInventoryItems",
         "parameters": [
           {
@@ -10985,7 +11818,7 @@
           {
             "name": "maxPageSize",
             "in": "query",
-            "description": "The maximum number of inventory items to return. The service might return\r\n             fewer than this value. If unspecified, at most 10 inventory items are\r\n             returned. The maximum value is 100 and higher values are set to 100.",
+            "description": "The maximum number of inventory items to return. The service might return\n             fewer than this value. If unspecified, at most 10 inventory items are\n             returned. The maximum value is 100 and higher values are set to 100.",
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -10995,7 +11828,7 @@
           {
             "name": "pageToken",
             "in": "query",
-            "description": "A page token, received from a previous call, to retrieve a subsequent page.\r\n            \r\n             When paginating, all other parameters provided to the subsequent call must\r\n             match the call that provided the page token.",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n            \n             When paginating, all other parameters provided to the subsequent call must\n             match the call that provided the page token.",
             "schema": {
               "type": "string"
             }
@@ -11003,7 +11836,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "This field may be set in order to filter the resources returned.\r\n            \r\n             See the\r\n             [filtering](/cloud/reference/patterns#list-inventory-items)\r\n             documentation for more information.",
+            "description": "This field may be set in order to filter the resources returned.\n            \n             See the\n             [filtering](/cloud/reference/patterns#list-inventory-items)\n             documentation for more information.",
             "schema": {
               "type": "string"
             }
@@ -11011,7 +11844,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -60695,6 +61528,7 @@
             "url": "https://gameinternationalization.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -76064,13 +76898,13 @@
             }
           },
           "400": {
-            "description": "1: The universe does not exist.\r\n3: Invalid UniverseAvatarType.\r\n4: Invalid UniverseScaleType.\r\n5: Invalid UniverseAnimationType.\r\n6: Invalid UniverseCollisionType.\r\n7: New universe name or description has been rejected.\r\n8: New universe name is too long.\r\n10: Invalid UniverseBodyType.\r\n11: Invalid UniverseJointPositioningType.\r\n12: The universe has no root place.\r\n15: Price is required when isForSale is true.\r\n16: This game cannot be offered for sale because it is not public.\r\n17: This game cannot be offered for sale because it has private servers enabled.\r\n18: The game price is outside of the allowed range.\r\n19: Invalid genre.\r\n20: The request body is missing.\r\n21: Invalid device type.\r\n22: Invalid asset type.\r\n23: Invalid value, the min must be less than or equal to the max\r\n24: Invalid scale value\r\n26: Invalid private server price\r\n28: OptIn/Out Regions Not Supported.\r\n41: You cannot change the private server price again so soon after the previous change. Please try again later.\r\n44: The provided audience configuration is invalid. Ensure the audience list contains only supported audience values.\r\n52: Promotional text has been rejected."
+            "description": "1: The universe does not exist.\r\n3: Invalid UniverseAvatarType.\r\n4: Invalid UniverseScaleType.\r\n5: Invalid UniverseAnimationType.\r\n6: Invalid UniverseCollisionType.\r\n7: New universe name or description has been rejected.\r\n8: New universe name is too long.\r\n10: Invalid UniverseBodyType.\r\n11: Invalid UniverseJointPositioningType.\r\n12: The universe has no root place.\r\n15: Price is required when isForSale is true.\r\n16: This game cannot be offered for sale because it is not public.\r\n17: This game cannot be offered for sale because it has private servers enabled.\r\n18: The game price is outside of the allowed range.\r\n19: Invalid genre.\r\n20: The request body is missing.\r\n21: Invalid device type.\r\n22: Invalid asset type.\r\n23: Invalid value, the min must be less than or equal to the max\r\n24: Invalid scale value\r\n26: Invalid private server price\r\n28: OptIn/Out Regions Not Supported.\r\n41: You cannot change the private server price again so soon after the previous change. Please try again later.\r\n44: The provided audience configuration is invalid. Ensure the audience list contains only supported audience values.\r\n52: Promotional text has been rejected.\r\n54: An archived experience can't have a Friends or Public audience."
           },
           "401": {
             "description": "0: Authorization has been denied for this request."
           },
           "403": {
-            "description": "0: Token Validation Failed\r\n2: You are not authorized to configure this universe.\r\n14: You are not authorized to sell games.\r\n25: Not authorized to update private server settings\r\n29: Luobu app terms of service user agreement is missing.\r\n30: Unknown error while updating Opt in out region.\r\n45: The creator of this experience is not eligible to set this audience."
+            "description": "0: Token Validation Failed\r\n2: You are not authorized to configure this universe.\r\n14: You are not authorized to sell games.\r\n25: Not authorized to update private server settings\r\n29: Luobu app terms of service user agreement is missing.\r\n30: Unknown error while updating Opt in out region.\r\n45: The creator of this experience is not eligible to set this audience.\r\n55: Creator already has the maximum number of places active.\r\n56: The root place for this universe is under review and can not be activated."
           },
           "409": {
             "description": "9: Failed to shutdown all intances of game after changing AvatarType. The change has been reverted."
@@ -79579,6 +80413,638 @@
         "enum": ["User", "Group"],
         "type": "string"
       },
+      "AlertStorage.AlertCondition": {
+        "required": ["evaluationMode", "operator", "threshold"],
+        "type": "object",
+        "properties": {
+          "operator": {
+            "$ref": "#/components/schemas/AlertStorage.ConditionOperator"
+          },
+          "threshold": {
+            "type": "number",
+            "description": "Numeric threshold the metric value is compared against.",
+            "format": "double"
+          },
+          "evaluationMode": {
+            "$ref": "#/components/schemas/AlertStorage.EvaluationMode"
+          },
+          "periodOffsetMultiplier": {
+            "type": "integer",
+            "description": "How many intervals back the comparison period is placed for `PeriodOverPeriod`\nevaluation. A value of `1` compares against the immediately preceding interval;\na value of `7` with a `OneDay` interval compares against the same day last\nweek. `null` for `Absolute` conditions.",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The threshold condition that determines when an alert fires."
+      },
+      "AlertStorage.AlertConfigState": {
+        "enum": ["Enabled", "Disabled", "PausedByRoblox", "Syncing", "Error"],
+        "type": "string",
+        "description": "The current lifecycle state of an alert configuration.\n\nEnabled\n\nDisabled\n\nPausedByRoblox\n\nSyncing\n\nError",
+        "x-enum-varnames": [
+          "Enabled",
+          "Disabled",
+          "PausedByRoblox",
+          "Syncing",
+          "Error"
+        ]
+      },
+      "AlertStorage.AlertInterval": {
+        "enum": ["OneMinute", "HalfHour", "OneHour", "OneDay"],
+        "type": "string",
+        "description": "How frequently an alert condition is evaluated.\n\nOneMinute\n\nHalfHour\n\nOneHour\n\nOneDay",
+        "x-enum-varnames": ["OneMinute", "HalfHour", "OneHour", "OneDay"]
+      },
+      "AlertStorage.ConditionOperator": {
+        "enum": ["Gt", "Gte", "Lt", "Lte"],
+        "type": "string",
+        "description": "Comparison operator used to evaluate whether a metric value breaches a threshold.\n\nGt\n\nGte\n\nLt\n\nLte",
+        "x-enum-varnames": ["Gt", "Gte", "Lt", "Lte"]
+      },
+      "AlertStorage.EvaluationMode": {
+        "enum": ["Absolute", "PeriodOverPeriod"],
+        "type": "string",
+        "description": "Determines how the metric value is derived before being compared against the threshold.\n\nAbsolute\n\nPeriodOverPeriod",
+        "x-enum-varnames": ["Absolute", "PeriodOverPeriod"]
+      },
+      "AlertStorage.FiringStatus": {
+        "enum": ["OK", "Firing"],
+        "type": "string",
+        "description": "Whether an alert is currently in a firing or resolved state.\n\nOK\n\nFiring",
+        "x-enum-varnames": ["OK", "Firing"]
+      },
+      "AlertStorage.ResourceType": {
+        "enum": ["Universe"],
+        "type": "string",
+        "description": "The type of resource an alert is attached to.\n\nUniverse",
+        "x-enum-varnames": ["Universe"]
+      },
+      "AlertStorage.Severity": {
+        "enum": ["SEV_0", "SEV_1", "SEV_2"],
+        "type": "string",
+        "description": "Severity level assigned to an alert configuration.\n\nSEV_0\n\nSEV_1\n\nSEV_2",
+        "x-enum-varnames": ["SEV_0", "SEV_1", "SEV_2"]
+      },
+      "AlertStorage.WebhookReceiver": {
+        "required": ["webhookConfigurationId"],
+        "type": "object",
+        "properties": {
+          "webhookConfigurationId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The ID of the webhook configuration in the Webhook Delivery System. Must be a valid\nUUID and unique within the list on this alert configuration."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A single webhook notification destination linked to an alert configuration."
+      },
+      "AlertStorage.WebhookReceiverConfig": {
+        "type": "object",
+        "properties": {
+          "receivers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AlertStorage.WebhookReceiver"
+            },
+            "description": "List of webhook destinations to notify when the alert fires or resolves. Each entry\nreferences a webhook configuration you have created in the Webhook Delivery System.\nThe list must contain unique entries with no duplicates.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Webhook notification settings for an alert. When set, each webhook in the\n`receivers` list will be called whenever the alert fires or resolves.\nSet to `null` to disable webhook notifications for the alert."
+      },
+      "AnalyticsAlertControlPlane.Models.AlertConditionInput": {
+        "type": "object",
+        "properties": {
+          "operator": {
+            "$ref": "#/components/schemas/AlertStorage.ConditionOperator"
+          },
+          "threshold": {
+            "type": "number",
+            "description": "Numeric threshold the metric value is compared against.\nRequired on create; optional on update.",
+            "format": "double",
+            "nullable": true
+          },
+          "evaluationMode": {
+            "$ref": "#/components/schemas/AlertStorage.EvaluationMode"
+          },
+          "periodOffsetMultiplier": {
+            "type": "integer",
+            "description": "How many intervals back the comparison period is placed for\n`PeriodOverPeriod` evaluation. For example, a value of `1` (the default)\ncompares the current interval against the immediately preceding interval.\nA value of `7` with a `OneDay` interval compares today against the same\nday last week. Only valid when `evaluationMode` is `PeriodOverPeriod`;\nomit or leave `null` for `Absolute` conditions.",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The threshold condition for an alert. Specifies the comparison operator, threshold value,\nand how the metric value is derived before comparison.\n            \nOn create, `operator`, `threshold`, and `evaluationMode` are all required.\nOn update (PATCH), the entire `condition` object is optional; when included, any\nsub-field can be omitted to keep its current value.\n            \n`periodOffsetMultiplier` only applies when `evaluationMode` is\n`PeriodOverPeriod`. It is ignored for `Absolute` conditions."
+      },
+      "AnalyticsAlertControlPlane.Models.AlertConfigSummary": {
+        "required": [
+          "condition",
+          "id",
+          "interval",
+          "metric",
+          "name",
+          "severity"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Unique identifier of the alert configuration (string-encoded 64-bit integer)."
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Display name of the alert configuration."
+          },
+          "metric": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Name of the metric this alert evaluates."
+          },
+          "severity": {
+            "$ref": "#/components/schemas/AlertStorage.Severity"
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional free-text description of the alert's purpose.",
+            "nullable": true
+          },
+          "interval": {
+            "$ref": "#/components/schemas/AlertStorage.AlertInterval"
+          },
+          "filter": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryFilter"
+            },
+            "description": "Dimension filters applied to the metric query, if any.",
+            "nullable": true
+          },
+          "breakdown": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryBreakdown"
+            },
+            "description": "Grouping dimensions for the metric query, if any.",
+            "nullable": true
+          },
+          "condition": {
+            "$ref": "#/components/schemas/AlertStorage.AlertCondition"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Key fields of the alert configuration that triggered an incident."
+      },
+      "AnalyticsAlertControlPlane.Models.AlertDetailResponse": {
+        "required": [
+          "alertId",
+          "condition",
+          "configState",
+          "consecutiveOccurrences",
+          "createdAt",
+          "firingStatus",
+          "interval",
+          "lastModifiedAt",
+          "metric",
+          "name",
+          "resourceId",
+          "resourceType",
+          "severity"
+        ],
+        "type": "object",
+        "properties": {
+          "alertId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Unique identifier of the alert configuration (string-encoded 64-bit integer)."
+          },
+          "resourceType": {
+            "$ref": "#/components/schemas/AlertStorage.ResourceType"
+          },
+          "resourceId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Numeric ID of the resource this alert monitors (e.g. the universe ID)."
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Display name of the alert. Must be unique within the resource."
+          },
+          "metric": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Name of the metric this alert evaluates."
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional free-text description of the alert's purpose.",
+            "nullable": true
+          },
+          "severity": {
+            "$ref": "#/components/schemas/AlertStorage.Severity"
+          },
+          "interval": {
+            "$ref": "#/components/schemas/AlertStorage.AlertInterval"
+          },
+          "consecutiveOccurrences": {
+            "type": "integer",
+            "description": "Number of consecutive evaluation periods the condition must be met before the alert fires.\nMust be at least 1. For example, a value of 3 with a 1-minute interval means the condition\nmust hold for 3 consecutive minutes before an incident is opened.",
+            "format": "int32"
+          },
+          "filter": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryFilter"
+            },
+            "description": "Optional dimension filters applied to the metric query. Each entry restricts the metric\nto rows where the specified dimension matches one of the given values.",
+            "nullable": true
+          },
+          "breakdown": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryBreakdown"
+            },
+            "description": "Optional grouping dimensions for the metric query. When set, the alert evaluates\nthe metric independently for each combination of dimension values and fires if any\ngroup breaches the condition.",
+            "nullable": true
+          },
+          "condition": {
+            "$ref": "#/components/schemas/AlertStorage.AlertCondition"
+          },
+          "configState": {
+            "$ref": "#/components/schemas/AlertStorage.AlertConfigState"
+          },
+          "webhookReceiverConfig": {
+            "$ref": "#/components/schemas/AlertStorage.WebhookReceiverConfig"
+          },
+          "firingStatus": {
+            "$ref": "#/components/schemas/AlertStorage.FiringStatus"
+          },
+          "lastFiredAt": {
+            "type": "string",
+            "description": "Timestamp of the most recent firing event. `null` if the alert has never fired.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "Timestamp when this alert configuration was created (UTC).",
+            "format": "date-time"
+          },
+          "lastModifiedAt": {
+            "type": "string",
+            "description": "Timestamp of the most recent modification to this alert configuration (UTC).",
+            "format": "date-time"
+          },
+          "lastModifiedBy": {
+            "type": "string",
+            "description": "ID of the user who last modified this alert configuration.\n`null` if the last modification was made by the system.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Full details of a saved alert configuration."
+      },
+      "AnalyticsAlertControlPlane.Models.AlertQueryBreakdown": {
+        "required": ["dimensions"],
+        "type": "object",
+        "properties": {
+          "dimensions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Names of the dimensions to group by (e.g. `[\"platform\", \"age_bracket\"]`)."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A set of dimensions used to group the metric query. When a breakdown is specified, the\nalert evaluates each unique combination of dimension values independently and fires if any\ngroup breaches the condition."
+      },
+      "AnalyticsAlertControlPlane.Models.AlertQueryFilter": {
+        "required": ["dimension", "values"],
+        "type": "object",
+        "properties": {
+          "dimension": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Name of the dimension to filter on (e.g. `platform`)."
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The allowed values for this dimension. A metric data point is included only if its\ndimension value is in this list."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A dimension filter applied to the metric query. Restricts the metric to rows where the\nspecified dimension matches one of the given values."
+      },
+      "AnalyticsAlertControlPlane.Models.CreateAlertConfigRequest": {
+        "required": [
+          "condition",
+          "consecutiveOccurrences",
+          "interval",
+          "metric",
+          "name",
+          "severity"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Display name of the alert. Must be unique within the resource. Maximum length is 128\ncharacters and the value is subject to Roblox text-moderation policies."
+          },
+          "metric": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Name of the metric this alert should evaluate."
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional free-text description of the alert's purpose.",
+            "nullable": true
+          },
+          "severity": {
+            "$ref": "#/components/schemas/AlertStorage.Severity"
+          },
+          "interval": {
+            "$ref": "#/components/schemas/AlertStorage.AlertInterval"
+          },
+          "consecutiveOccurrences": {
+            "type": "integer",
+            "description": "Number of consecutive evaluation periods the condition must be met before the alert\nfires. Must be at least 1. For example, a value of 3 with a 1-minute interval means\nthe condition must hold for 3 consecutive minutes before an incident is opened.",
+            "format": "int32"
+          },
+          "breakdown": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryBreakdown"
+            },
+            "description": "Optional grouping dimensions for the metric query. When set, the alert evaluates\nthe metric independently for each combination of dimension values and fires if any\ngroup breaches the condition.",
+            "nullable": true
+          },
+          "filter": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryFilter"
+            },
+            "description": "Optional dimension filters applied to the metric query. Each entry restricts the metric\nto rows where the specified dimension matches one of the given values.",
+            "nullable": true
+          },
+          "condition": {
+            "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertConditionInput"
+          },
+          "webhookReceiverConfig": {
+            "$ref": "#/components/schemas/AlertStorage.WebhookReceiverConfig"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request body for creating a new alert configuration."
+      },
+      "AnalyticsAlertControlPlane.Models.ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "errorCode": {
+            "type": "string",
+            "description": "Machine-readable error code (e.g. PERMISSION_DENIED).",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "Human-readable error description.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standard error response body for the Alerts API."
+      },
+      "AnalyticsAlertControlPlane.Models.FiringConditionResponse": {
+        "required": ["firingValue"],
+        "type": "object",
+        "properties": {
+          "firingValue": {
+            "type": "number",
+            "description": "The metric value that exceeded the threshold at the time of evaluation.",
+            "format": "double"
+          },
+          "firingDimension": {
+            "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.FiringDimensionResponse"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A single metric value that breached the alert threshold, optionally scoped to a specific\ndimension value when the alert uses a breakdown."
+      },
+      "AnalyticsAlertControlPlane.Models.FiringDimensionResponse": {
+        "required": ["dimension", "value"],
+        "type": "object",
+        "properties": {
+          "dimension": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Name of the dimension (e.g. `platform`)."
+          },
+          "value": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Value of the dimension for the slice that was firing (e.g. `Mobile`)."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A dimension name/value pair that identifies which slice of the metric was firing."
+      },
+      "AnalyticsAlertControlPlane.Models.FiringMetadataResponse": {
+        "required": ["condition", "firingCondition"],
+        "type": "object",
+        "properties": {
+          "filter": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryFilter"
+            },
+            "description": "Dimension filters that were active at this evaluation, if any.",
+            "nullable": true
+          },
+          "breakdown": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryBreakdown"
+            },
+            "description": "Grouping dimensions that were active at this evaluation, if any.",
+            "nullable": true
+          },
+          "condition": {
+            "$ref": "#/components/schemas/AlertStorage.AlertCondition"
+          },
+          "firingCondition": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.FiringConditionResponse"
+            },
+            "description": "The specific metric values and dimension combinations that caused the condition to fire."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A snapshot of the alert condition at a specific evaluation, capturing the metric values\nthat were firing and any dimension breakdowns involved."
+      },
+      "AnalyticsAlertControlPlane.Models.IncidentDetailResponse": {
+        "required": [
+          "alertConfig",
+          "firstFiringMetadata",
+          "id",
+          "latestFiringMetadata",
+          "openedAt",
+          "openedWindowStartAt",
+          "resourceId",
+          "resourceType",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Unique identifier of this incident."
+          },
+          "resourceType": {
+            "$ref": "#/components/schemas/AlertStorage.ResourceType"
+          },
+          "resourceId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Numeric ID of the resource this incident belongs to (e.g. the universe ID)."
+          },
+          "status": {
+            "$ref": "#/components/schemas/AlertStorage.FiringStatus"
+          },
+          "openedAt": {
+            "type": "string",
+            "description": "Timestamp when this incident was first opened (UTC).",
+            "format": "date-time"
+          },
+          "openedWindowStartAt": {
+            "type": "string",
+            "description": "Start of the evaluation window that first satisfied the alert condition and opened this\nincident (UTC).",
+            "format": "date-time"
+          },
+          "resolvedAt": {
+            "type": "string",
+            "description": "Timestamp when this incident was resolved (UTC). `null` if the incident is still\nactive.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "resolvedWindowStartAt": {
+            "type": "string",
+            "description": "Start of the evaluation window in which the alert condition was no longer satisfied,\ncausing the incident to be resolved (UTC). `null` if the incident is still active.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "firstFiringMetadata": {
+            "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.FiringMetadataResponse"
+          },
+          "latestFiringMetadata": {
+            "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.FiringMetadataResponse"
+          },
+          "alertConfig": {
+            "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertConfigSummary"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Details of a single alert incident."
+      },
+      "AnalyticsAlertControlPlane.Models.UpdateAlertConfigRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "New display name for the alert. Must be unique within the resource. Subject to\nRoblox text-moderation policies.",
+            "nullable": true
+          },
+          "metric": {
+            "type": "string",
+            "description": "New metric name this alert should evaluate.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "New free-text description of the alert's purpose.",
+            "nullable": true
+          },
+          "severity": {
+            "$ref": "#/components/schemas/AlertStorage.Severity"
+          },
+          "interval": {
+            "$ref": "#/components/schemas/AlertStorage.AlertInterval"
+          },
+          "consecutiveOccurrences": {
+            "type": "integer",
+            "description": "New consecutive-occurrences count. When set, the alert will require the condition to\nhold for this many consecutive evaluation periods before firing. Must be at least 1.",
+            "format": "int32",
+            "nullable": true
+          },
+          "breakdown": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryBreakdown"
+            },
+            "description": "New grouping dimensions for the metric query. Replaces the existing breakdown entirely\nwhen provided.",
+            "nullable": true
+          },
+          "filter": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertQueryFilter"
+            },
+            "description": "New dimension filters for the metric query. Replaces the existing filter list entirely\nwhen provided.",
+            "nullable": true
+          },
+          "condition": {
+            "$ref": "#/components/schemas/AnalyticsAlertControlPlane.Models.AlertConditionInput"
+          },
+          "webhookReceiverConfig": {
+            "$ref": "#/components/schemas/AlertStorage.WebhookReceiverConfig"
+          },
+          "configState": {
+            "$ref": "#/components/schemas/AlertStorage.AlertConfigState"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request body for partially updating an alert configuration (PATCH semantics). All fields\nare optional; only the fields present in the request body are updated."
+      },
+      "AnalyticsBenchmarkApi.Any": {
+        "required": ["@type"],
+        "type": "object",
+        "properties": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": {}
+      },
+      "AnalyticsBenchmarkApi.Status": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AnalyticsBenchmarkApi.Any"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "AnalyticsQueryPublicApi.BreakdownValue": {
         "required": ["dimension", "value"],
         "type": "object",
@@ -80361,6 +81827,81 @@
         "additionalProperties": false,
         "description": "Response object to grant one permission to multiple assets."
       },
+      "BenchmarkObjective": {
+        "enum": [
+          "BENCHMARK_OBJECTIVE_INVALID",
+          "BENCHMARK_OBJECTIVE_MAXIMIZE",
+          "BENCHMARK_OBJECTIVE_MINIMIZE"
+        ],
+        "type": "string",
+        "description": "BenchmarkObjective describes which direction is favorable for a metric.",
+        "format": "string"
+      },
+      "BenchmarkQuery": {
+        "type": "object",
+        "properties": {
+          "metric": {
+            "type": "string",
+            "description": "The metric to benchmark, such as `ForwardD1Retention`, using the same metric names as the\nAnalytics Query API. Metrics without benchmark data return no data points."
+          },
+          "startTime": {
+            "type": "string",
+            "description": "The start of the date range, inclusive. Required. Each benchmark value has a midnight UTC date, so a\nstart time later in the day excludes that day."
+          },
+          "endTime": {
+            "type": "string",
+            "description": "The end of the date range, inclusive. Required. For `/v1/universes/{universe_id}/benchmarks`, it must\nnot be earlier than `start_time`, and must be at most 400 days after it."
+          },
+          "filter": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BreakdownFilter"
+            },
+            "description": "Dimension filters. Only applied to `BENCHMARK_TYPE_TOP_EXPERIENCES` benchmarks, and ignored\notherwise. Filter values without benchmark data return no data points."
+          },
+          "benchmarkType": {
+            "enum": [
+              "BENCHMARK_TYPE_INVALID",
+              "BENCHMARK_TYPE_GENRE",
+              "BENCHMARK_TYPE_SIMILARITY",
+              "BENCHMARK_TYPE_TOP_EXPERIENCES"
+            ],
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BenchmarkType"
+              }
+            ],
+            "description": "The benchmark type to return. When omitted, top-experience metrics return\n`BENCHMARK_TYPE_TOP_EXPERIENCES` benchmarks, and other metrics return genre benchmarks with\nsimilarity values replacing them on dates where both exist. If a metric has similarity benchmarks\nbut no genre benchmarks, request `BENCHMARK_TYPE_SIMILARITY` explicitly. When the requested type has\nno data, the result is empty and `available_types` lists the types that do.",
+            "format": "string"
+          },
+          "percentiles": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "description": "The percentiles to return, each between 0 and 100, with at most 10 values. Defaults to 50 and 90,\nor 10 and 50 when lower values are favorable. Percentiles without benchmark data return no data\npoints. Ignored for `BENCHMARK_TYPE_TOP_EXPERIENCES` benchmarks, which return a single percentile\nchosen from the universe's own average over the last 30 days, or a fixed percentile for some metrics."
+          },
+          "benchmarkVariantId": {
+            "type": "string",
+            "description": "The metric variant to benchmark. The only supported value is `l7_average`, which benchmarks the\n7-day rolling average of `metric`. Not every metric has this variant, and the API rejects requests\nfor metrics without it. Omit to benchmark `metric` itself."
+          }
+        },
+        "additionalProperties": false,
+        "description": "BenchmarkQuery is the request object for the benchmark query."
+      },
+      "BenchmarkType": {
+        "enum": [
+          "BENCHMARK_TYPE_INVALID",
+          "BENCHMARK_TYPE_GENRE",
+          "BENCHMARK_TYPE_SIMILARITY",
+          "BENCHMARK_TYPE_TOP_EXPERIENCES"
+        ],
+        "type": "string",
+        "description": "BenchmarkType is to store the type of benchmark.\n`BENCHMARK_TYPE_SIMILARITY` compares against experiences with similar players.\n`BENCHMARK_TYPE_GENRE` compares against experiences in the same genre, or against all experiences\nwhen the universe has no genre or its genre doesn't qualify for genre benchmarks.\n`BENCHMARK_TYPE_TOP_EXPERIENCES` compares against the top experiences on Roblox, and is the only type\nfor `DailyActiveUsers`, `DailyRevenue`, `MonthlyActiveUsers`, `PayingUsers`, `TotalPlayTimeHours`,\n`UniqueAbuseReportSubmittersPer1000PlaytimeHours`, and `Visits`.",
+        "format": "string"
+      },
       "BillDetailsResponse": {
         "required": [
           "billingAddress",
@@ -80563,6 +82104,40 @@
         },
         "additionalProperties": false,
         "description": "Response object for Billing Activities request."
+      },
+      "BreakdownFilter": {
+        "type": "object",
+        "properties": {
+          "dimension": {
+            "type": "string",
+            "description": "The name of the dimension."
+          },
+          "value": {
+            "type": "string",
+            "description": "The value of the dimension."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Filter to apply when searching for the benchmark value."
+      },
+      "BreakdownValue": {
+        "type": "object",
+        "properties": {
+          "dimension": {
+            "type": "string",
+            "description": "The name of the dimension."
+          },
+          "value": {
+            "type": "string",
+            "description": "The value of the dimension."
+          },
+          "displayValue": {
+            "type": "string",
+            "description": "A display name for `value`. Not set in benchmark results."
+          }
+        },
+        "additionalProperties": false,
+        "description": "BreakdownValue the breakdown in the query result."
       },
       "BudgetLevel": {
         "enum": ["ResourceOnly", "ServiceOnly"],
@@ -81975,6 +83550,57 @@
         ],
         "type": "string",
         "description": "The custom signal type."
+      },
+      "DataPoint": {
+        "type": "object",
+        "properties": {
+          "time": {
+            "type": "string",
+            "description": "The date of the benchmark value."
+          },
+          "value": {
+            "type": "number",
+            "description": "The benchmark value, in the metric's units.",
+            "format": "double"
+          },
+          "metadata": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DataPointMetadata"
+              }
+            ],
+            "description": "Where the benchmark value came from."
+          }
+        },
+        "additionalProperties": false,
+        "description": "DataPoint dataPoints in the resulting query."
+      },
+      "DataPointMetadata": {
+        "type": "object",
+        "properties": {
+          "benchmarkType": {
+            "enum": [
+              "BENCHMARK_TYPE_INVALID",
+              "BENCHMARK_TYPE_GENRE",
+              "BENCHMARK_TYPE_SIMILARITY",
+              "BENCHMARK_TYPE_TOP_EXPERIENCES"
+            ],
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BenchmarkType"
+              }
+            ],
+            "description": "The benchmark type this data point came from. Use this to tell genre and similarity values apart\nwhen `benchmark_type` is omitted.",
+            "format": "string"
+          },
+          "genre": {
+            "type": "string",
+            "description": "The genre compared against, set for `BENCHMARK_TYPE_GENRE` data points. `general` means all\nexperiences."
+          }
+        },
+        "additionalProperties": false,
+        "description": "DataPointMetadata metadata for a data point."
       },
       "DataStore": {
         "type": "object",
@@ -85339,7 +86965,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the inventory item.\r\n            \r\nFormat: `users/{user_id}/inventory-items/{inventory_item_id}`"
+            "description": "The resource path of the inventory item.\n            \nFormat: `users/{user_id}/inventory-items/{inventory_item_id}`"
           },
           "assetDetails": {
             "allOf": [
@@ -85375,7 +87001,7 @@
           },
           "addTime": {
             "type": "string",
-            "description": "The time when the item was added to the user's inventory. For example, the\r\ntime when the user purchased a private server or was awarded a badge.\r\n            \r\nThis field is currently not populated for passes.",
+            "description": "The time when the item was added to the user's inventory. For example, the\ntime when the user purchased a private server or was awarded a badge.\n            \nThis field is currently not populated for passes.",
             "format": "date-time",
             "nullable": true
           }
@@ -85451,7 +87077,7 @@
           },
           "instanceId": {
             "type": "string",
-            "description": "A unique ID that identifies an instance or \"copy\" of the asset that's\r\nowned by a user."
+            "description": "A unique ID that identifies an instance or \"copy\" of the asset that's\nowned by a user."
           },
           "collectibleDetails": {
             "allOf": [
@@ -85459,7 +87085,7 @@
                 "$ref": "#/components/schemas/InventoryItem_CollectibleDetails"
               }
             ],
-            "description": "Additional details if this asset is a collectible. Otherwise, this\r\nattribute will be omitted."
+            "description": "Additional details if this asset is a collectible. Otherwise, this\nattribute will be omitted."
           }
         },
         "additionalProperties": false,
@@ -85485,7 +87111,7 @@
           },
           "instanceId": {
             "type": "string",
-            "description": "A unique ID of an individual copy of a collectible with ownership tied\r\nto a group or user."
+            "description": "A unique ID of an individual copy of a collectible with ownership tied\nto a group or user."
           },
           "instanceState": {
             "enum": [
@@ -85494,12 +87120,12 @@
               "HOLD"
             ],
             "type": "string",
-            "description": "The instance state of this specific Collectible Item Instance which\r\naffects whether it can be resold or traded.",
+            "description": "The instance state of this specific Collectible Item Instance which\naffects whether it can be resold or traded.",
             "nullable": true
           },
           "serialNumber": {
             "type": "integer",
-            "description": "If the asset is a Limited, a user-visible number that shows this item is\r\nthe nth replica of the asset. Otherwise, this attribute will be omitted.",
+            "description": "If the asset is a Limited, a user-visible number that shows this item is\nthe nth replica of the asset. Otherwise, this attribute will be omitted.",
             "format": "int64",
             "nullable": true
           }
@@ -85989,7 +87615,7 @@
           },
           "nextPageToken": {
             "type": "string",
-            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\r\npage. If this field is omitted, there are no subsequent pages."
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\npage. If this field is omitted, there are no subsequent pages."
           }
         },
         "additionalProperties": false,
@@ -87036,6 +88662,27 @@
           }
         },
         "description": "Represents the reaction to a message."
+      },
+      "MetricValue": {
+        "type": "object",
+        "properties": {
+          "breakdownValue": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BreakdownValue"
+            },
+            "description": "The dimensions identifying the series. Always includes a `Percentile` dimension.\n`BENCHMARK_TYPE_TOP_EXPERIENCES` series also include the requested filters."
+          },
+          "dataPoints": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataPoint"
+            },
+            "description": "The data points for the breakdown."
+          }
+        },
+        "additionalProperties": false,
+        "description": "MetricValue content of a query result."
       },
       "MockServerSignalValues": {
         "type": "object",
@@ -89383,6 +91030,20 @@
         },
         "description": "Publish a message on the specified topic."
       },
+      "QueryBenchmarkResult": {
+        "type": "object",
+        "properties": {
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MetricValue"
+            },
+            "description": "The benchmark series, one per percentile."
+          }
+        },
+        "additionalProperties": false,
+        "description": "QueryBenchmarkResult is the response object for the benchmark query."
+      },
       "QueryCorrection": {
         "type": "object",
         "properties": {
@@ -89441,6 +91102,43 @@
         },
         "additionalProperties": false,
         "description": "A completed long-running query operation with results."
+      },
+      "QueryUniverseBenchmarkResponse": {
+        "type": "object",
+        "properties": {
+          "result": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QueryBenchmarkResult"
+              }
+            ],
+            "description": "The benchmark series, one per percentile."
+          },
+          "availableTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BenchmarkType"
+            },
+            "description": "The benchmark types available for this universe and metric. Request one with `benchmark_type`."
+          },
+          "objective": {
+            "enum": [
+              "BENCHMARK_OBJECTIVE_INVALID",
+              "BENCHMARK_OBJECTIVE_MAXIMIZE",
+              "BENCHMARK_OBJECTIVE_MINIMIZE"
+            ],
+            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BenchmarkObjective"
+              }
+            ],
+            "description": "Whether higher (`BENCHMARK_OBJECTIVE_MAXIMIZE`) or lower (`BENCHMARK_OBJECTIVE_MINIMIZE`) values of the metric are favorable.",
+            "format": "string"
+          }
+        },
+        "additionalProperties": false,
+        "description": "QueryUniverseBenchmarkResponse is the response message for QueryUniverseBenchmark."
       },
       "ReadMemoryStoreQueueItemsResponse": {
         "type": "object",
@@ -110449,22 +112147,22 @@
         "type": "object",
         "properties": {
           "text": {
-            "example": "Hello",
             "type": "string",
-            "description": "The text to be translated."
+            "description": "The text to be translated.",
+            "example": "Hello"
           },
           "sourceLanguageCode": {
-            "example": "en-us",
             "type": "string",
-            "description": "The IETF BCP-47 language code representing the language of the\ninput text.\n\nIf not provided, the system automatically detects the\nsource language.\n\nSupported language codes include:\n\n- English (en-us)\n- French (fr-fr)\n- Vietnamese (vi-vn)\n- Thai (th-th)\n- Turkish (tr-tr)\n- Russian (ru-ru)\n- Spanish (es-es)\n- Portuguese (pt-br)\n- Korean (ko-kr)\n- Japanese (ja-jp)\n- Chinese Simplified (zh-cn)\n- Chinese Traditional (zh-tw)\n- German (de-de)\n- Polish (pl-pl)\n- Italian (it-it)\n- Indonesian (id-id)"
+            "description": "The IETF BCP-47 language code representing the language of the\ninput text.\n\nIf not provided, the system automatically detects the\nsource language.\n\nSupported language codes include:\n\n- English (en-us)\n- French (fr-fr)\n- Vietnamese (vi-vn)\n- Thai (th-th)\n- Turkish (tr-tr)\n- Russian (ru-ru)\n- Spanish (es-es)\n- Portuguese (pt-br)\n- Korean (ko-kr)\n- Japanese (ja-jp)\n- Chinese Simplified (zh-cn)\n- Chinese Traditional (zh-tw)\n- German (de-de)\n- Polish (pl-pl)\n- Italian (it-it)\n- Indonesian (id-id)",
+            "example": "en-us"
           },
           "targetLanguageCodes": {
-            "example": "fr-fr, vi-vn, ja-jp",
             "type": "array",
             "items": {
               "type": "string"
             },
-            "description": "A list of target language codes in IETF BCP-47 format for translation.\n\nSupported language codes include:\n\n- English (en-us)\n- French (fr-fr)\n- Vietnamese (vi-vn)\n- Thai (th-th)\n- Turkish (tr-tr)\n- Russian (ru-ru)\n- Spanish (es-es)\n- Portuguese (pt-br)\n- Korean (ko-kr)\n- Japanese (ja-jp)\n- Chinese Simplified (zh-cn)\n- Chinese Traditional (zh-tw)\n- German (de-de)\n- Polish (pl-pl)\n- Italian (it-it)\n- Indonesian (id-id)"
+            "description": "A list of target language codes in IETF BCP-47 format for translation.\n\nSupported language codes include:\n\n- English (en-us)\n- French (fr-fr)\n- Vietnamese (vi-vn)\n- Thai (th-th)\n- Turkish (tr-tr)\n- Russian (ru-ru)\n- Spanish (es-es)\n- Portuguese (pt-br)\n- Korean (ko-kr)\n- Japanese (ja-jp)\n- Chinese Simplified (zh-cn)\n- Chinese Traditional (zh-tw)\n- German (de-de)\n- Polish (pl-pl)\n- Italian (it-it)\n- Indonesian (id-id)",
+            "example": "fr-fr, vi-vn, ja-jp"
           }
         },
         "description": "Contains the text to be translated, the source language (optional), and a\nlist of target languages for translation."
@@ -112945,7 +114643,7 @@
     },
     {
       "name": "Analytics",
-      "description": "Query analytics data, manage analytics alerts, and access error reports for your experiences programmatically. See the [Analytics guide](https://create.roblox.com/docs/cloud/guides/analytics), [Alerts guide](https://create.roblox.com/docs/cloud/guides/alerts), or [Error Reporting guide](https://create.roblox.com/docs/cloud/guides/error-reporting) for Open Cloud setup and usage.\n",
+      "description": "Query analytics data, compare your metrics against benchmarks, manage analytics alerts, and access error reports for your experiences programmatically. See the [Analytics guide](https://create.roblox.com/docs/cloud/guides/analytics), [Alerts guide](https://create.roblox.com/docs/cloud/guides/alerts), or [Error Reporting guide](https://create.roblox.com/docs/cloud/guides/error-reporting) for Open Cloud setup and usage.\n",
       "x-roblox-tag-info": {
         "path": "analytics",
         "content": "HTTP APIs for querying experience analytics, managing analytics alerts, and accessing error reports on Roblox Cloud",
@@ -112954,6 +114652,12 @@
           "post_analytics_query_api_v1_universes__universe_id__dimension_values",
           "get_analytics_query_api_v1_universes__universe_id__operations_metrics__operation_id_",
           "get_analytics_query_api_v1_universes__universe_id__operations_dimension_values__operation_id_",
+          "post_analytics_benchmark_v1_universes__universe_id__benchmarks",
+          "get_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts",
+          "post_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts",
+          "patch_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_",
+          "delete_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_",
+          "get_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts_incidents",
           "ErrorLoggingDetail_GetLogs",
           "LogAttributeService_Find",
           "LogAttributeService_Create",
@@ -113426,7 +115130,10 @@
       "x-roblox-tag-info": {
         "path": "generative-ai",
         "content": "HTTP APIs related to Generative AI and LLMs on Open Cloud.",
-        "ordering": ["Cloud_TranslateText", "Cloud_GenerateSpeechAsset"]
+        "ordering": [
+          "PolyglotApi.Cloud_TranslateText",
+          "Cloud_GenerateSpeechAsset"
+        ]
       }
     },
     {

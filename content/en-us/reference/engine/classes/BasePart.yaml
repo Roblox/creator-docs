@@ -2609,15 +2609,28 @@ methods:
     capabilities: []
   - name: BasePart:GetJoints
     summary: |
-      Return all Joints or Constraints that is connected to this Part.
+      Returns all Joints or Constraints connected to this part that are active
+      in the simulation.
     description: |
-      Return all Joints or Constraints that is connected to this Part.
+      Returns an array of all `Class.JointInstance|Joints` and
+      `Class.Constraint|Constraints` connected to this part that are active in
+      the simulation.
+
+      A joint or constraint only becomes active once both of the parts it
+      connects are inside the **same** simulated container, such as
+      `Class.Workspace` or a `Class.WorldModel`. If one of the connected parts
+      is outside that container — for example, parented to
+      `Class.ServerStorage`, or in a different `Class.WorldModel` — the joint is
+      not activated. **GetJoints()** does not include that joint on either part,
+      even though the joint instance still exists in the data model.
     code_samples: []
     parameters: []
     returns:
       - type: Instances
         summary: |
-          An array of all Joints or Constraints connected to the Part.
+          An array of all `Class.JointInstance|Joints` and
+          `Class.Constraint|Constraints` connected to the part that are active
+          in the simulation.
     tags: []
     deprecation_message: ''
     security: None

@@ -49,6 +49,45 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: ScriptDocument:AddReadOnlyReasonsAsync
+    summary: |
+      Adds reasons for the Script Editor UI to be read-only. Yields the current
+      thread until the editor acknowledges the change.
+    description: |
+      Adds reasons for the Script Editor UI to be read-only, which makes the
+      editor read-only. Yields the current thread until the editor acknowledges
+      the change. Adding a reason that is already active does nothing.
+
+      Read-only state is tracked as a set of named reasons so that multiple
+      plugins can make an editor read-only without interfering with each other.
+      The editor stays read-only until every reason is removed with
+      `Class.ScriptDocument:RemoveReadOnlyReasonsAsync()`.
+
+      Read-only mode only prevents changes from the editor UI and
+      `Class.ScriptDocument` edit functions. It doesn't prevent changes made by
+      other means, such as setting `Class.Script.Source` or calling
+      `Class.ScriptEditorService:UpdateSourceAsync()`.
+
+      Reasons starting with `RBX` are reserved for Roblox; this function throws
+      an error if `reasons` contains one. This function also throws an error for
+      the Command bar.
+    code_samples:
+      - ScriptDocument-AddReadOnlyReasonsAsync
+    parameters:
+      - name: reasons
+        type: Array
+        default:
+        summary: |
+          An array of non-empty strings naming the reasons to add.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
   - name: ScriptDocument:CloseAsync
     summary: |
       Requests that the editor associated with this document close. Yields the
@@ -233,6 +272,26 @@ methods:
       - type: int
         summary: |
           The total number of lines in the document.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+  - name: ScriptDocument:GetReadOnlyReasons
+    summary: |
+      Returns the reasons the Script Editor UI is currently read-only.
+    description: |
+      Returns the reasons the Script Editor UI is currently read-only, sorted
+      alphabetically. The array includes reasons added by any plugin as well as
+      reasons that start with `RBX`, which Roblox reserves for its own features.
+    code_samples:
+      - ScriptDocument-GetReadOnlyReasons
+    parameters: []
+    returns:
+      - type: List<string>
+        summary: |
+          A sorted array of strings. The array is empty if the editor isn't
+          read-only.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -452,6 +511,31 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
+  - name: ScriptDocument:IsReadOnly
+    summary: |
+      Returns true if the Script Editor UI is currently read-only.
+    description: |
+      Returns true if the Script Editor UI is currently read-only. This is
+      equivalent to checking whether `Class.ScriptDocument:GetReadOnlyReasons()`
+      returns a non-empty array.
+
+      A read-only editor prevents the user from changing the script through the
+      editor UI, and `Class.ScriptDocument` edit functions such as
+      `Class.ScriptDocument:EditTextAsync()` fail. It doesn't prevent changes
+      made by other means, such as setting `Class.Script.Source` or calling
+      `Class.ScriptEditorService:UpdateSourceAsync()`.
+    code_samples:
+      - ScriptDocument-IsReadOnly
+    parameters: []
+    returns:
+      - type: boolean
+        summary: |
+          `true` if the editor is read-only, `false` otherwise.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
   - name: ScriptDocument:MultiEditTextAsync
     summary: |
       Applies a batch of text edits to the document as a single atomic
@@ -500,6 +584,38 @@ methods:
           A tuple where the first element is `true` if all edits were applied
           successfully, or `false` followed by a string describing the failure
           reason.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+  - name: ScriptDocument:RemoveReadOnlyReasonsAsync
+    summary: |
+      Removes reasons for the Script Editor UI to be read-only. Yields the
+      current thread until the editor acknowledges the change.
+    description: |
+      Removes reasons for the Script Editor UI to be read-only, previously added
+      with `Class.ScriptDocument:AddReadOnlyReasonsAsync()` or the
+      `InitialReadOnlyReasons` option of
+      `Class.ScriptEditorService:OpenScriptDocumentAsync()`. Yields the current
+      thread until the editor acknowledges the change. Removing a reason that
+      isn't active does nothing.
+
+      The editor stays read-only while any other reason remains active. Reasons
+      starting with `RBX` are reserved for Roblox; plugins can't remove them,
+      and this function throws an error if `reasons` contains one.
+    code_samples:
+      - ScriptDocument-RemoveReadOnlyReasonsAsync
+    parameters:
+      - name: reasons
+        type: Array
+        default:
+        summary: |
+          An array of non-empty strings naming the reasons to remove.
+    returns:
+      - type: ()
+        summary: ''
     tags:
       - Yields
     deprecation_message: ''

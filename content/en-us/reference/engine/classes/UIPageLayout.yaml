@@ -122,7 +122,9 @@ properties:
       Determines the easing curve applied during animated page transitions.
       Combined with `Class.UIPageLayout.EasingDirection` to form the full tween
       curve. Only takes effect when `Class.UIPageLayout.Animated` is true.
-      Defaults to `Enum.EasingStyle.Back`.
+      Defaults to `Enum.EasingStyle.Back`. Assigning `Enum.EasingStyle.Bezier`
+      or `Enum.EasingStyle.Spring` emits a warning and leaves this property
+      unchanged.
     code_samples: []
     type: EasingStyle
     tags: []

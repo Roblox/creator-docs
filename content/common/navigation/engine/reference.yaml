@@ -3630,6 +3630,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AnimationPriority.yaml
         ignoreTranslation: true
+      - title: AnimationValueNodeType
+        path: /reference/engine/enums/AnimationValueNodeType
+        type: engineapi
+        source: /reference/engine/enums/AnimationValueNodeType.yaml
+        ignoreTranslation: true
       - title: AnimatorRetargetingMode
         path: /reference/engine/enums/AnimatorRetargetingMode
         type: engineapi

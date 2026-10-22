@@ -49,8 +49,9 @@ properties:
 
       This property only applies to non-PBR decals. If any PBR maps
       (`Class.Decal.NormalMapContent|NormalMapContent`,
-      `Class.Decal.RoughnessMapContent|RoughnessMapContent`, or
-      `Class.Decal.MetalnessMapContent|MetalnessMapContent`) are set, automatic
+      `Class.Decal.RoughnessMapContent|RoughnessMapContent`,
+      `Class.Decal.MetalnessMapContent|MetalnessMapContent`, or
+      `Class.Decal.EmissiveMaskContent|EmissiveMaskContent`) are set, automatic
       localization capture is suppressed to avoid inconsistent rendering.
     code_samples: []
     type: boolean
@@ -133,6 +134,92 @@ properties:
       can_save: false
     capabilities:
       - Basic
+  - name: Decal.EmissiveMaskContent
+    summary: |
+      `Datatype.Content` object that determines the emissivity across the
+      surface.
+    description: |
+      This property takes a `Datatype.Content` object that determines the
+      apparent emissivity across the surface. An emissive mask is a grayscale
+      image where black pixels correspond to no emissivity and white pixels
+      correspond to full emissivity. It defaults to an empty content, in which
+      case the decal doesn't glow.
+
+      The emissive contribution is added to the total lighting contribution
+      across the surface, and the sum is multiplied by the albedo texture from
+      `Class.Decal.ColorMapContent|ColorMapContent`, if provided. Use
+      `Class.Decal.EmissiveStrength|EmissiveStrength` and
+      `Class.Decal.EmissiveTint|EmissiveTint` to control how bright the glow is
+      and what color it has.
+
+      Assigning an emissive mask makes the `Class.Decal` a physically based
+      rendering (PBR) surface.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+  - name: Decal.EmissiveStrength
+    summary: |
+      Determines the strength of the emissive contribution.
+    description: |
+      This value is a multiplier that controls how strong the emissive
+      contribution from `Class.Decal.EmissiveMaskContent|EmissiveMaskContent` is
+      across the surface. Defaults to `1`. Negative values are treated as `0`,
+      and a value of `0` turns off the glow.
+
+      If the final emissive contribution goes beyond the supported dynamic
+      range, it's clamped, which can make the emissive areas appear fully white
+      at large strength values. Since this value is a multiplier, the maximum
+      value that avoids clamping depends on the other contributing values,
+      including `Class.Decal.EmissiveTint|EmissiveTint`,
+      `Class.Decal.ColorMapContent|ColorMapContent`, and the combined lighting
+      contribution.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+  - name: Decal.EmissiveTint
+    summary: |
+      Determines the tinting color for the emissive contribution.
+    description: |
+      This value is a `Datatype.Color3` that tints the emissive contribution
+      from `Class.Decal.EmissiveMaskContent|EmissiveMaskContent`. Defaults to
+      white, which leaves the emissive color unchanged. Each component is
+      clamped between `0` and `1`, and black turns off the glow.
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
   - name: Decal.LocalTransparencyModifier
     summary: |
       Acts as a multiplier for the decal's
@@ -174,9 +261,9 @@ properties:
       response to light. It defaults to an empty content, in which case no
       metalness map is applied.
 
-      Assigning a normal, roughness, or metalness map makes the `Class.Decal` a
-      physically based rendering (PBR) surface. To assign this map from a
-      `Datatype.Content` object, use
+      Assigning a normal, roughness, metalness, or emissive map makes the
+      `Class.Decal` a physically based rendering (PBR) surface. To assign this
+      map from a `Datatype.Content` object, use
       `Class.Decal.MetalnessMapContent|MetalnessMapContent`.
     code_samples: []
     type: ContentId
@@ -204,8 +291,8 @@ properties:
       (non-metal) and a metallic response to light. It defaults to an empty
       content, in which case no metalness map is applied.
 
-      Assigning a normal, roughness, or metalness map makes the `Class.Decal` a
-      physically based rendering (PBR) surface.
+      Assigning a normal, roughness, metalness, or emissive map makes the
+      `Class.Decal` a physically based rendering (PBR) surface.
     code_samples: []
     type: Content
     tags: []
@@ -230,9 +317,9 @@ properties:
       grooves without changing the underlying geometry. It defaults to an empty
       content, in which case no normal map is applied.
 
-      Assigning a normal, roughness, or metalness map makes the `Class.Decal` a
-      physically based rendering (PBR) surface. To assign this map from a
-      `Datatype.Content` object, use
+      Assigning a normal, roughness, metalness, or emissive map makes the
+      `Class.Decal` a physically based rendering (PBR) surface. To assign this
+      map from a `Datatype.Content` object, use
       `Class.Decal.NormalMapContent|NormalMapContent`.
     code_samples: []
     type: ContentId
@@ -259,8 +346,8 @@ properties:
       bumps and grooves without changing the underlying geometry. It defaults to
       an empty content, in which case no normal map is applied.
 
-      Assigning a normal, roughness, or metalness map makes the `Class.Decal` a
-      physically based rendering (PBR) surface.
+      Assigning a normal, roughness, metalness, or emissive map makes the
+      `Class.Decal` a physically based rendering (PBR) surface.
     code_samples: []
     type: Content
     tags: []
@@ -305,9 +392,9 @@ properties:
       reflections are. It defaults to an empty content, in which case no
       roughness map is applied.
 
-      Assigning a normal, roughness, or metalness map makes the `Class.Decal` a
-      physically based rendering (PBR) surface. To assign this map from a
-      `Datatype.Content` object, use
+      Assigning a normal, roughness, metalness, or emissive map makes the
+      `Class.Decal` a physically based rendering (PBR) surface. To assign this
+      map from a `Datatype.Content` object, use
       `Class.Decal.RoughnessMapContent|RoughnessMapContent`.
     code_samples: []
     type: ContentId
@@ -335,8 +422,8 @@ properties:
       sharp or blurry its reflections are. It defaults to an empty content, in
       which case no roughness map is applied.
 
-      Assigning a normal, roughness, or metalness map makes the `Class.Decal` a
-      physically based rendering (PBR) surface.
+      Assigning a normal, roughness, metalness, or emissive map makes the
+      `Class.Decal` a physically based rendering (PBR) surface.
     code_samples: []
     type: Content
     tags: []
@@ -451,9 +538,9 @@ properties:
       Managed by the engine and not accessible from scripts. A
       `Datatype.Content` that holds the decal's compressed runtime texture data.
       When the `Class.Decal` is a physically based rendering (PBR) surface, the
-      engine packs its color, normal, roughness, and metalness maps into a
-      single texture-pack asset and references it here. Defaults to an empty
-      content.
+      engine packs its color, normal, roughness, metalness, and emissive maps
+      into a single texture-pack asset and references it here. Defaults to an
+      empty content.
     code_samples: []
     type: Content
     tags: []

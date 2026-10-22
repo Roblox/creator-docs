@@ -242,6 +242,34 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
+  - name: CollectionService:GetCollections
+    summary: |
+      Gets an array of every `Datatype.Collection` the given instance is
+      currently a member of.
+    description: |
+      This method is the `Datatype.Collection` equivalent of
+      `Class.CollectionService.GetTags()`. It performs a reverse lookup on the
+      instance and returns the collections it's a member of. Collections are not
+      cached on `Class.Instance` like tags, so this call scans all active
+      collections looking for membership.
+    code_samples: []
+    parameters:
+      - name: instance
+        type: Instance
+        default:
+        summary: |
+          The instance to look up `Datatype.Collection` membership for.
+    returns:
+      - type: Array
+        summary: |
+          An array of the `Datatype.Collection` values the instance is currently
+          a member of. Empty if the instance matches no active query.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
   - name: CollectionService:GetInstanceAddedSignal
     summary: |
       Returns a signal that fires when a given tag is added to an instance.

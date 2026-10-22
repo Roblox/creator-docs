@@ -6,8 +6,8 @@ name: AnimationNodeDefinition
 type: class
 memory_category: Instances
 summary: |
-  A single node within an animation graph, connected to other nodes through
-  named input pins.
+  A single node within an animation graph that outputs an animation pose,
+  connected to other nodes through named input pins.
 description: |
   Represents one node in an animation graph, the node-based system that combines
   animation clips and poses at runtime. Its
@@ -16,7 +16,9 @@ description: |
   inputs, masking, or adjusting playback speed, while its
   `Class.AnimationNodeDefinition.NodeId|NodeId` uniquely identifies it within
   the graph. Nodes connect to one another through named input pins; changing a
-  node's type resets its input pins to the default set for that type.
+  node's type resets its input pins to the default set for that type. For a node
+  that outputs one or more values instead of a pose, see
+  `Class.AnimationValueNodeDefinition`.
 code_samples: []
 inherits:
   - Instance

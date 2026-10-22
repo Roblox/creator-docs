@@ -239,3 +239,14 @@ pathSampleValue.Changed:Connect(onSampleValueChanged)
 
 tween:Play()
 ```
+
+## Generation details
+
+A path is generated using a cubic Bézier spline. The mathematical function for the spline is given as follows, where $\textbf{P}_0$ and $\textbf{P}_3$ are the positional points, and $\textbf{P}_1$ and $\textbf{P}_2$ are the control points.
+
+$
+\textbf{B}(t) = \left(1-t\right)^{3}\textbf{P}_0+3\left(1-t\right)^{2}t
+\textbf{P}_1+3\left(1-t\right)t^{2}\textbf{P}_2+t^{3}\textbf{P}_3
+$
+
+For each section between two `Datatype.Path2DControlPoint|Path2DControlPoints`, $\textbf{P}_0$ represents the position of the first control point, $\textbf{P}_1$ represents the first control point's position plus its right tangent, $\textbf{P}_2$ represents the second control point's position plus its left tangent, and $\textbf{P}_3$ represents the position of the second control point.

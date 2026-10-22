@@ -590,7 +590,8 @@ properties:
       is non‑scriptable and only modifiable in Studio.
     code_samples: []
     type: Technology
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       This property has been superseded by
       `Class.Lighting.LightingStyle|LightingStyle` which determines the artistic

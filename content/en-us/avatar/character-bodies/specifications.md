@@ -34,7 +34,7 @@ Character body models for avatars are made up of 15 separate mesh objects and re
 
 ### Body scale
 
-Roblox supports 3 standards of character body scales: **Normal**, **Slender**, and **Classic**. These standards allow developers to create games and spaces with consistent body sizes for standardizing movement and interactions. You can select a body scale on import using [Rig Scale options](../../studio/importer.md#rig-general), or modify the [body scale manually](../rigid-accessories/specifications.md#avatarpartscaletype). Body scale persists when the asset is [uploaded to the Marketplace](../../marketplace/publish-to-marketplace.md#upload-an-asset).
+Roblox supports three standards of character body scales: **Normal**, **Slender**, and **Classic**. These standards allow developers to create games and spaces with consistent body sizes for standardizing movement and interactions. You can select a body scale on import using [Rig Scale options](../../studio/importer.md#rig-general), or modify the [body scale manually](../rigid-accessories/specifications.md#avatarpartscaletype). Body scale persists when the asset is [uploaded to the Marketplace](../../marketplace/publish-to-marketplace.md#upload-an-asset).
 
 <center>
 <figure>
@@ -46,23 +46,12 @@ A visualization of how Roblox combines the 15 body parts into 6 distinct assets.
 </center>
 
 <Alert severity='warning'>
-Since body assets partially overlap with each other, the total body dimensions do not represent the sum of the avatar's asset dimensions. The total body dimension is the most important factor of each body scale to ensure a standard avatar size and scale.
+Since body assets partially overlap with each other, the total body dimensions do not represent the sum of the avatar's asset dimensions. The total body dimension is the most important factor for ensuring a standard avatar size and scale.
 </Alert>
 
-#### Normal
+The same bounding box limits apply to Normal, Slender, and Classic body scales. During validation, Roblox rotates each limb to a standard orientation. The validator measures the length of the rotated part and calculates its width and depth from the part's cross section.
 
-<center>
-<figure>
-   <img src="../../assets/art/resources/Body-Scale-Rthro-Normal.png" width = "60%"/>
-<figcaption>
-A Rthro Normal body scale [downloadable mannequin](../../avatar/resources.md#references).
-</figcaption>
-</figure>
-</center>
-
-In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > **Rthro** to import your model as a Normal body scale.
-
-<br />
+#### Bounding box limits
 
 <GridContainer numColumns="2">
 <figure>
@@ -71,41 +60,41 @@ In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > *
 <thead>
   <tr>
     <th>Part</th>
-    <th>X (width)</th>
-    <th>Y (height)</th>
-    <th>Z (depth)</th>
+    <th>Width</th>
+    <th>Length</th>
+    <th>Depth</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>Head</td>
-    <td>.5</td>
-    <td>.5</td>
-    <td>.5</td>
+    <td>0.05</td>
+    <td>0.5</td>
+    <td>0.05</td>
   </tr>
   <tr>
     <td>Arm</td>
-    <td>.25</td>
-    <td>1.5</td>
-    <td>.25</td>
+    <td>0.05</td>
+    <td>0.5</td>
+    <td>0.05</td>
   </tr>
   <tr>
     <td>Torso</td>
-    <td>.85</td>
-    <td>1.7</td>
-    <td>.7</td>
+    <td>0.05</td>
+    <td>0.65</td>
+    <td>0.05</td>
   </tr>
   <tr>
     <td>Leg</td>
-    <td>.25</td>
-    <td>1.4</td>
-    <td>.5</td>
+    <td>0.05</td>
+    <td>0.5</td>
+    <td>0.05</td>
   </tr>
   <tr>
     <td>**Total**</td>
-    <td>**1.35**</td>
-    <td>**3.6**</td>
-    <td>**.7**</td>
+    <td>**1.0**</td>
+    <td>**4.0**</td>
+    <td>**0.5**</td>
   </tr>
 </tbody>
 </table>
@@ -116,260 +105,65 @@ In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > *
 <thead>
   <tr>
     <th>Part</th>
-    <th>X (width)</th>
-    <th>Y (height)</th>
-    <th>Z (depth)</th>
+    <th>Width</th>
+    <th>Length</th>
+    <th>Depth</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>Head</td>
-    <td>3</td>
-    <td>2</td>
-    <td>2</td>
+    <td>4.0</td>
+    <td>2.0</td>
+    <td>4.0</td>
   </tr>
   <tr>
     <td>Arm</td>
-    <td>2</td>
+    <td>4.0</td>
     <td>4.5</td>
-    <td>2</td>
+    <td>4.0</td>
   </tr>
   <tr>
     <td>Torso</td>
-    <td>4.6</td>
-    <td>3.5</td>
-    <td>2.25</td>
+    <td>4.0</td>
+    <td>4.0</td>
+    <td>4.0</td>
   </tr>
   <tr>
     <td>Leg</td>
-    <td>1.5</td>
-    <td>4</td>
-    <td>2</td>
+    <td>4.0</td>
+    <td>4.5</td>
+    <td>4.0</td>
   </tr>
   <tr>
     <td>**Total**</td>
-    <td>**8.6**</td>
-    <td>**9.5**</td>
-    <td>**2.25**</td>
+    <td>**8.0**</td>
+    <td>**10.0**</td>
+    <td>**4.0**</td>
   </tr>
 </tbody>
 </table>
 </figure>
 </GridContainer>
 
-#### Slender
-
-<center>
-<figure>
-   <img src="../../assets/art/resources/Body-Scale-Rthro-Slender.png" width = "60%"/>
+<GridContainer numColumns="3">
+<figure id="normal">
+<img src="../../assets/art/resources/Body-Scale-Rthro-Normal.png" />
 <figcaption>
-A Rthro Slender (Narrow) body scale [downloadable mannequin](../../avatar/resources.md#references).
+**Normal**<br /><br />An Rthro Normal body scale [downloadable mannequin](../../avatar/resources.md#references).<br /><br />In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > **Rthro** to import your model as a Normal body scale.
 </figcaption>
 </figure>
-</center>
-
-In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > **Rthro Narrow** to import your model as a Slender body scale.
-
-<br />
-
-<GridContainer numColumns="2">
-<figure>
-<figcaption><center>Minimum (in studs)</center></figcaption>
-<table>
-<thead>
-  <tr>
-    <th>Part</th>
-    <th>X (width)</th>
-    <th>Y (height)</th>
-    <th>Z (depth)</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Head</td>
-    <td>.5</td>
-    <td>.5</td>
-    <td>.5</td>
-  </tr>
-  <tr>
-    <td>Arm</td>
-    <td>.25</td>
-    <td>1.5</td>
-    <td>.25</td>
-  </tr>
-  <tr>
-    <td>Torso</td>
-    <td>.85</td>
-    <td>1.7</td>
-    <td>.7</td>
-  </tr>
-  <tr>
-    <td>Leg</td>
-    <td>.25</td>
-    <td>1.4</td>
-    <td>.5</td>
-  </tr>
-  <tr>
-    <td>**Total**</td>
-    <td>**1.35**</td>
-    <td>**3.6**</td>
-    <td>**.7**</td>
-  </tr>
-</tbody>
-</table>
-</figure>
-<figure>
-<figcaption><center>Maximum (in studs)</center></figcaption>
-<table>
-<thead>
-  <tr>
-    <th>Part</th>
-    <th>X (width)</th>
-    <th>Y (height)</th>
-    <th>Z (depth)</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Head</td>
-    <td>2</td>
-    <td>2</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>Arm</td>
-    <td>1.5</td>
-    <td>4</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>Torso</td>
-    <td>3</td>
-    <td>3.5</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>Leg</td>
-    <td>1.5</td>
-    <td>4</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>**Total**</td>
-    <td>**6**</td>
-    <td>**9.5**</td>
-    <td>**2**</td>
-  </tr>
-</tbody>
-</table>
-</figure>
-</GridContainer>
-
-#### Classic
-
-<center>
-<figure>
-   <img src="../../assets/art/resources/Body-Scale-Classic.png" width = "60%"/>
+<figure id="slender">
+<img src="../../assets/art/resources/Body-Scale-Rthro-Slender.png" />
 <figcaption>
-A Classic body scale [downloadable mannequin](../../avatar/resources.md#references).
+**Slender**<br /><br />An Rthro Slender (Narrow) body scale [downloadable mannequin](../../avatar/resources.md#references).<br /><br />In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > **Rthro Narrow** to import your model as a Slender body scale.
 </figcaption>
 </figure>
-</center>
-
-In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > **Default** to import your model as a Classic body scale.
-
-<br />
-
-<GridContainer numColumns="2">
-<figure>
-<figcaption><center>Minimum (in studs)</center></figcaption>
-<table>
-<thead>
-  <tr>
-    <th>Part</th>
-    <th>X (width)</th>
-    <th>Y (height)</th>
-    <th>Z (depth)</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Head</td>
-    <td>.5</td>
-    <td>.5</td>
-    <td>.5</td>
-  </tr>
-  <tr>
-    <td>Arm</td>
-    <td>.25</td>
-    <td>1.5</td>
-    <td>.25</td>
-  </tr>
-  <tr>
-    <td>Torso</td>
-    <td>.85</td>
-    <td>1.7</td>
-    <td>.7</td>
-  </tr>
-  <tr>
-    <td>Leg</td>
-    <td>.25</td>
-    <td>1.4</td>
-    <td>.5</td>
-  </tr>
-  <tr>
-    <td>**Total**</td>
-    <td>**1.35**</td>
-    <td>**3.6**</td>
-    <td>**.7**</td>
-  </tr>
-</tbody>
-</table>
-</figure>
-<figure>
-<figcaption><center>Maximum (in studs)</center></figcaption>
-<table>
-<thead>
-  <tr>
-    <th>Part</th>
-    <th>X (width)</th>
-    <th>Y (height)</th>
-    <th>Z (depth)</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Head</td>
-    <td>1.5</td>
-    <td>1.8</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>Arm</td>
-    <td>2</td>
-    <td>3</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>Torso</td>
-    <td>4</td>
-    <td>3.8</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>Leg</td>
-    <td>1.5</td>
-    <td>3.5</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>**Total**</td>
-    <td>**8**</td>
-    <td>**9.1**</td>
-    <td>**2**</td>
-  </tr>
-</tbody>
-</table>
+<figure id="classic">
+<img src="../../assets/art/resources/Body-Scale-Classic.png" />
+<figcaption>
+**Classic**<br /><br />A Classic body scale [downloadable mannequin](../../avatar/resources.md#references).<br /><br />In the [Importer](../../studio/importer.md#avatar-general), use **Rig Type** > **Default** to import your model as a Classic body scale.
+</figcaption>
 </figure>
 </GridContainer>
 
@@ -632,7 +426,6 @@ Unlike generic rigs, humanoid models require a specific hierarchy and naming con
 The following requirements are for **standard R15** rigs.
 
 - **Rig Hierarchy** - Humanoid rigs require a specific bone or joint hierarchy and naming convention:
-
   - Root
     - HumanoidRootNode
       - LowerTorso

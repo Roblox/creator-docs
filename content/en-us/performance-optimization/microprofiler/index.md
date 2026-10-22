@@ -50,12 +50,12 @@ To use the MicroProfiler, you must understand the relationship between **frame t
 
 Lower frame times mean higher frame rate. Divide 1,000 milliseconds (1 second) by frame time to get frame rate.
 
-Average frame time | Frames per second
-:--- | :---
-33.33 ms | 30 FPS
-16.67 ms | 60 FPS
-8.33 ms | 120 FPS
-4.17 ms | 240 FPS
+| Average frame time | Frames per second |
+| :----------------- | :---------------- |
+| 33.33 ms           | 30 FPS            |
+| 16.67 ms           | 60 FPS            |
+| 8.33 ms            | 120 FPS           |
+| 4.17 ms            | 240 FPS           |
 
 For smooth gameplay, however, it's not enough to have a high frame rate. You need **consistent frame times**. For example, if 59 frames arrive in 10 milliseconds and one frame in 410 milliseconds, players perceive a huge, jarring stutter, even though the game is running at 60 FPS. If all frames take roughly the same amount of time to render, your game will feel perceptibly smoother due to that consistency, especially at lower frame rates.
 
@@ -243,7 +243,6 @@ The MicroProfiler has two user interfaces: the web UI (mobile and dumps) and the
 - Use the **X-Ray** menu to enable or disable color coding for memory allocation.
 
   <img alt="The MicroProfiler web view with x-ray enabled." src="../../assets/optimization/microprofiler/micro-xray.png" width="600px" />
-
   - Lighter frames within the main bar graph indicate higher memory allocation.
   - Lighter portions of the preview bar and lighter labels on the timeline indicate portions of the frame with higher memory allocation.
   - In X-ray mode, press <kbd>C</kbd> to show the total size of the memory allocations rather than the number of allocations.
@@ -279,3 +278,21 @@ This graph is synchronized with the main profiler bars. The currently selected f
 <Alert severity="info">
 Use the **Options** menu to change the reference line on the graph to a different number of milliseconds.
 </Alert>
+
+### Search the detailed view
+
+On the desktop client, you can search for tasks by name in the **Detailed** view:
+
+1. Open the MicroProfiler with <kbd>Ctrl</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>F6</kbd>) and switch to **Detailed** mode.
+1. Press <kbd>Ctrl</kbd><kbd>F</kbd> (<kbd>⌘</kbd><kbd>F</kbd>) to open the search box.
+1. Type part of a task or label name. Matching is case-insensitive and finds the text anywhere in the name. Matching labels keep their color and all other labels are dimmed. Frames that contain a match are highlighted in the frame time graph.
+1. Move between matches:
+
+   | Action         | Shortcut                                                          |
+   | :------------- | :---------------------------------------------------------------- |
+   | Next match     | <kbd>F3</kbd> or <kbd>Enter</kbd>                                 |
+   | Previous match | <kbd>Shift</kbd><kbd>F3</kbd> or <kbd>Shift</kbd><kbd>Enter</kbd> |
+
+   You can also click the **&lt;** and **&gt;** buttons next to the search box. The current match is outlined and marked with a triangle above it, and a counter such as `12 / 340` shows its position among all matches. If the match is off screen, the timeline scrolls to it. If you've panned the timeline, navigation continues from the matches that are currently visible.
+
+1. Press <kbd>Esc</kbd>, or press <kbd>Ctrl</kbd><kbd>F</kbd> (<kbd>⌘</kbd><kbd>F</kbd>) again, to close the search. Closing the search doesn't close the MicroProfiler.

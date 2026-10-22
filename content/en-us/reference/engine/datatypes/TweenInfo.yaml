@@ -18,7 +18,9 @@ constructors:
     summary: |
       Creates a new `Datatype.TweenInfo` from the provided parameters.
     description: |
-      Creates a new `Datatype.TweenInfo` from the provided parameters.
+      Creates a new `Datatype.TweenInfo` from the provided parameters. This
+      constructor raises an error if `easingStyle` is `Enum.EasingStyle.Bezier`
+      or `Enum.EasingStyle.Spring`.
     parameters:
       - name: time
         type: number

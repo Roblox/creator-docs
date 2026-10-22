@@ -491,7 +491,7 @@ methods:
     code_samples: []
     parameters:
       - name: vertexIds
-        type: Array
+        type: Tuple
         default:
         summary: |
           Array of the new face's vertex IDs, in order around the face. Provide
