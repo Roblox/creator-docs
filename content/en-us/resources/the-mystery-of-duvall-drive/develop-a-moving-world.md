@@ -562,7 +562,7 @@ We used `Class.Texture` objects on top of `Class.SurfaceAppearance` objects to a
 
 Once we'd tested a few platforms and rotating walls, we made several variations and played with their placement to make sure the obstacle course was challenging, mind-bending, and also clear where the player needed to go! It took some tuning to both their values and positions to get them to run well. We had several points where the platforms and walls were hitting each other or the surroundings, but with some moving around and frequent testing, we were able to land on the settings we have in the demo!
 
-If you're not sure what your physical objects are hitting, you can toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+If you're not sure what your physical objects are hitting, you can toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../../studio/overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 
 <img src="../../assets/studio/general/Visualization-Options.png" width="780" alt="A close up view of the 3D viewport with the Visualization Options button indicated in the upper-right corner." />
 

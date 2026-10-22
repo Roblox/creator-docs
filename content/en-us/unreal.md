@@ -128,12 +128,12 @@ Similar to Unreal, Roblox Studio supports [plugins](studio/plugins.md), which ca
 | Blueprint Class | [Package](projects/assets/packages.md)                                               |                                                                                     |
 | Transform       | `Datatype.CFrame`                                                                    | `Datatype.CFrame` doesn't include scale information. See [Transforms](#transforms). |
 | Outliner        | [Explorer](studio/explorer.md)                                                       |                                                                                     |
-| Details panel   | [Properties](studio/properties.md)                                                   |
-| Level Viewport  | [3D viewport](studio/ui-overview.md#3d-viewport)                                     |                                                                                     |
+| Details panel   | [Properties](studio/properties.md)                                                   |                                                                                     |
+| Level Viewport  | [3D viewport](studio/overview.md#3d-viewport)                                        |                                                                                     |
 | Content Browser | [Asset Manager](projects/assets/manager.md) or [Toolbox](projects/assets/toolbox.md) |                                                                                     |
 | Landscape Mode  | [Terrain Editor](studio/terrain-editor.md)                                           |                                                                                     |
 | PlayerStart     | `Class.SpawnLocation`                                                                |                                                                                     |
 | Output Log      | [Output](studio/output.md)                                                           |                                                                                     |
 | Marketplace     | [Creator Store](production/creator-store.md)                                         |                                                                                     |
-| Menu bar        | [Toolbar](studio/ui-overview.md#toolbar-and-mezzanine)                               |                                                                                     |
+| Menu bar        | [Toolbar](studio/overview.md#toolbar-and-mezzanine)                                  |                                                                                     |
 | Plugin          | [Plugin](studio/plugins.md)                                                          |                                                                                     |

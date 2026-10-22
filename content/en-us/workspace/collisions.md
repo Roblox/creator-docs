@@ -416,7 +416,7 @@ The `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` property has th
 </Tabs>
 
 <Alert severity="success">
-To view collision fidelity in Studio, toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+To view collision fidelity in Studio, toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../studio/overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
 For more information on the performance impact of collision fidelity options and how to mitigate them, see [performance optimization](../performance-optimization/improve.md#physics-computation).

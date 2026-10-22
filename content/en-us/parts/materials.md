@@ -55,7 +55,7 @@ The [Material Manager](#material-manager) provides a user interface to interact 
 
 <img src="../assets/modeling/materials/Explorer-MaterialVariant-Instances.png" width="320" alt="Explorer window showing two MaterialVariant instances within MaterialService" />
 
-You can apply custom materials per-part or globally to both parts and terrain, and you can fine-tune how custom materials apply to faces of terrain with `Class.TerrainDetail` instances.
+You can apply custom materials per-part or globally to both parts and terrain, and you can fine-tune how custom materials apply to faces of terrain with `Class.TerrainDetail` instances. To paint many distinct materials onto terrain in one place, including multiple color variations, see [Custom terrain materials](../parts/custom-terrain-materials.md).
 
 <Alert severity="info">
 `Class.MaterialVariant` and `Class.SurfaceAppearance` instances both use [PBR](../art/modeling/surface-appearance.md) textures to customize the appearance of objects. The difference is that `Class.MaterialVariant` is for customizing the appearance of reusable tileable material, whereas `Class.SurfaceAppearance` is for customizing the visual appearance of a specific mesh with UV mapping. `Class.MaterialVariant` instances also have [physical properties](#physical-properties) that `Class.SurfaceAppearance` instances don't.
@@ -99,14 +99,14 @@ You can also apply the new material to a part by setting its **MaterialVariant**
 Note that if you rename a custom material **after** applying it to parts, those parts will not automatically use the custom material with the new name. This behavior allows for [Adaptive Materials](#adaptive-materials). If you want parts to continue using a custom material after you rename it, you'll need to re-apply the custom material.
 </Alert>
 
-<figcaption>&sup1; Unlike on parts, you cannot **directly** apply custom materials to [terrain](../parts/terrain.md), although you can set a custom material as a [material override](#material-overrides) to an existing base material for all terrain using that material.</figcaption>
+<figcaption>&sup1; On terrain, you can set a custom material as a [material override](#material-overrides) for an existing base material, or paint many distinct materials with [custom terrain materials](../parts/custom-terrain-materials.md) after you enable **Expanded Terrain**.</figcaption>
 
 ### Material overrides
 
 You can set a custom material as a **material override** to make its base material serve as a reference to the custom material. When you do so, Studio will use the custom material for both the textures and [physical properties](#physical-properties) of any part or [terrain](../parts/terrain.md) that uses the custom material.
 
 <Alert severity="info">
-Material overrides are the only way to apply custom materials to terrain. Note also that the materials for terrain are global per place, so you can't apply multiple variants of the same base material to the terrain in a single place.
+Material overrides apply one custom material to every instance of a base material in a place, including terrain that uses that base material. To paint multiple variants or colors of the same base material onto terrain in one place, use [custom terrain materials](../parts/custom-terrain-materials.md).
 </Alert>
 
 #### Set overrides

@@ -15,7 +15,7 @@ Using the editor tools, you can easily [generate](#generate-terrain) and edit te
 
 ## Terrain materials
 
-The following default materials are available for terrain, and you can also apply [custom materials](../parts/materials.md#custom-materials). Materials affect both the shape and appearance of terrain in the world; for example, [animated grass](#grass-animation) renders only on the `Enum.Material.Grass|Grass` material and the `Enum.Material.Water|Water` material [ripples and shimmers](#water-appearance) with a subtle motion.
+The following default materials are available for terrain. You can also paint [custom terrain materials](../parts/custom-terrain-materials.md) after you enable **Expanded Terrain**, or apply [custom materials](../parts/materials.md#custom-materials) as overrides. Materials affect both the shape and appearance of terrain in the world; for example, [animated grass](#grass-animation) renders only on the `Enum.Material.Grass|Grass` material and the `Enum.Material.Water|Water` material [ripples and shimmers](#water-appearance) with a subtle motion.
 
 <GridContainer numColumns="4">
   <figure>
@@ -560,7 +560,7 @@ To transform a region:
    <Alert severity="info">
    Holding <kbd>Shift</kbd> while dragging any **scale** handle scales the region proportionally across all other axes, and holding <kbd>Ctrl</kbd> or <kbd>⌘</kbd> while dragging scales the region equally in both the positive and negative direction along that axis.
 
-    Holding <kbd>Shift</kbd> while dragging any **rotate** ring toggles between rotation snapping or free‑form rotation.
+   Holding <kbd>Shift</kbd> while dragging any **rotate** ring toggles between rotation snapping or free‑form rotation.
    </Alert>
 
    <Alert severity="success">

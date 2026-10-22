@@ -7,7 +7,7 @@ prev: /tutorials/curriculums/studio/install-studio
 
 import StudioCameraControls from '../../../includes/studio/camera-controls.md'
 
-Welcome to your first session in Roblox Studio! Before you jump in and begin building games, let's take a moment to walk through Studio's essential UI. While this overview provides a solid foundation to get started, there are many additional windows and tools that you can discover and customize in the [Studio interface](../../../studio/ui-overview.md).
+Welcome to your first session in Roblox Studio! Before you jump in and begin building games, let's take a moment to walk through Studio's essential UI. While this overview provides a solid foundation to get started, there are many additional windows and tools that you can discover and customize in the [Studio interface](../../../studio/overview.md).
 
 <Alert severity="info">
 <AlertTitle style={{marginBottom: 8}}>Coming to Studio from another game engine?</AlertTitle>
@@ -43,7 +43,7 @@ The **toolbar** is the section right below the mezzanine that displays all tools
 
 - **Plugins** contains [plugins](../../../studio/plugins.md) created by the community or plugins you've created yourself to use across your games.
 
-When you are more comfortable with Studio, you can also create [custom tabs](../../../studio/ui-overview.md#custom-tabs) for your own development needs.
+When you are more comfortable with Studio, you can also create [custom tabs](../../../studio/overview.md#custom-tabs) for your own development needs.
 
 ## 3D viewport
 

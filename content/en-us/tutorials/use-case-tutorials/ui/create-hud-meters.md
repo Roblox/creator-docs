@@ -118,7 +118,7 @@ Similar to design applications like Figma and Photoshop, a `Class.Frame` in Robl
    <img src="../../../assets/tutorials/creating-hud-meters/Meter-Design-Parent-Frame.png" width="840" alt="New frame in viewport." />
 
    <Alert severity="warning">
-   If the new frame doesn't appear in the viewport, make sure you've toggled on **GUI&nbsp;overlay** from the [Visualization&nbsp;Options](../../../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+   If the new frame doesn't appear in the viewport, make sure you've toggled on **GUI&nbsp;overlay** from the [Visualization&nbsp;Options](../../../studio/overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
    </Alert>
 
 2. Rename the new frame instance to **MeterBar**.

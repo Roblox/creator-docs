@@ -103,7 +103,7 @@ Initial SLIM generation might take a few moments for complex models. The cloud s
 <BaseAccordion>
 <AccordionSummary><Typography variant="subtitle2">Converting from Streaming Mesh</Typography></AccordionSummary>
 <AccordionDetails>
-If your game uses the legacy `Enum.ModelLevelOfDetail.StreamingMesh|StreamingMesh` setting for `Class.Model.LevelOfDetail`, you can convert individual models by selecting them and changing the property in the [Properties](../../studio/properties.md) window, or you can batch-convert multiple models at once using a script like the following in the [Command&nbsp;Bar](../../studio/ui-overview.md#command-bar). Note that some models which worked with `Enum.ModelLevelOfDetail.StreamingMesh|StreamingMesh` might need adjustments for SLIM, particularly those with overlapping parts or complex `Class.PartOperation` hierarchies.
+If your game uses the legacy `Enum.ModelLevelOfDetail.StreamingMesh|StreamingMesh` setting for `Class.Model.LevelOfDetail`, you can convert individual models by selecting them and changing the property in the [Properties](../../studio/properties.md) window, or you can batch-convert multiple models at once using a script like the following in the [Command&nbsp;Bar](../../studio/overview.md#command-bar). Note that some models which worked with `Enum.ModelLevelOfDetail.StreamingMesh|StreamingMesh` might need adjustments for SLIM, particularly those with overlapping parts or complex `Class.PartOperation` hierarchies.
 
 ```lua title="Batch-Convert StreamingMesh to SLIM"
 for _, descendant in workspace:GetDescendants() do
@@ -267,7 +267,7 @@ There are multiple tint modes to select from. See `Enum.SlimTintMode` for the co
 </TabItem>
 </Tabs><br />
 
-You can also see SLIM debug visualizations in Studio by selecting a tint mode from the [Visualization&nbsp;Options](../../studio/ui-overview.md#visualization-options) menu:
+You can also see SLIM debug visualizations in Studio by selecting a tint mode from the [Visualization&nbsp;Options](../../studio/overview.md#visualization-options) menu:
 
 <img src="../../assets/studio/general/Visualization-Options.png" width="780" alt="A close up view of the 3D viewport with the Visualization Options button indicated in the upper-right corner." />
 

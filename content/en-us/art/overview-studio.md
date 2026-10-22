@@ -19,7 +19,7 @@ After [installing Studio](../studio/setup.md), familiarize yourself with Studio'
 
 <img src="../assets/studio/general/Studio-Layout.png" />
 
-- [Viewport](../studio/ui-overview.md#3d-viewport) — Represents the workspace of a place. The items here are rendered similarly to how a user may view the environment they were to play your game.
+- [Viewport](../studio/overview.md#3d-viewport) — Represents the workspace of a place. The items here are rendered similarly to how a user may view the environment they were to play your game.
 
 - [Explorer](../studio/explorer.md) — Shows a hierarchical list of all objects and services in a place. This includes visible objects, like parts and lights, and non-rendered objects like scripts, sounds, and folders.
 

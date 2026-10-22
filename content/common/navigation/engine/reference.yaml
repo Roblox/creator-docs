@@ -140,6 +140,16 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/AnimationTrack.yaml
                 ignoreTranslation: true
+              - title: AnimationValueNodeDefinition
+                path: /reference/engine/classes/AnimationValueNodeDefinition
+                type: engineapi
+                source: /reference/engine/classes/AnimationValueNodeDefinition.yaml
+                ignoreTranslation: true
+              - title: AnimationValueOutputDefinition
+                path: /reference/engine/classes/AnimationValueOutputDefinition
+                type: engineapi
+                source: /reference/engine/classes/AnimationValueOutputDefinition.yaml
+                ignoreTranslation: true
               - title: Animator
                 path: /reference/engine/classes/Animator
                 type: engineapi

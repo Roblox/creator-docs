@@ -59,21 +59,21 @@ You can customize the appearance of the toolbar by right-clicking in an empty ar
 
 - **Manage&nbsp;tabs** — Reveals a popup window with the following options:
 
-	<figure>
-	<Grid container spacing={3}>
-	<Grid item Medium={12} Large={5} XLarge={5}>
-	<img src="../assets/studio/general/Manage-Tabs-Popup.png" width="300" alt="The Manage Tabs popup in Studio." />
-	</Grid>
-	<Grid item Medium={12} Large={7} XLarge={7}>
-	<ol style={{listStyleType: 'upper-alpha'}}>
-	<li>Show or hide the tab.</li>
-	<li>With a tab selected, reorder it relative to the other tabs.</li>
-	<li>Delete a selected [custom tab](#custom-tabs).</li>
-	<li>Choose between tabs **Center** alignment or **Left** alignment (next to the [testing controls](../studio/testing-modes.md#playtest-options)).</li>
-	</ol>
-	</Grid>
-	</Grid>
-	</figure>
+  <figure>
+  <Grid container spacing={3}>
+  <Grid item Medium={12} Large={5} XLarge={5}>
+  <img src="../assets/studio/general/Manage-Tabs-Popup.png" width="300" alt="The Manage Tabs popup in Studio." />
+  </Grid>
+  <Grid item Medium={12} Large={7} XLarge={7}>
+  <ol style={{listStyleType: 'upper-alpha'}}>
+  <li>Show or hide the tab.</li>
+  <li>With a tab selected, reorder it relative to the other tabs.</li>
+  <li>Delete a selected [custom tab](#custom-tabs).</li>
+  <li>Choose between tabs **Center** alignment or **Left** alignment (next to the [testing controls](../studio/testing-modes.md#playtest-options)).</li>
+  </ol>
+  </Grid>
+  </Grid>
+  </figure>
 
 - **Collapse toolbar** — Maximizes space by hiding the toolbar while keeping the mezzanine visible. Hovering over a tab in the mezzanine temporarily reveals the toolbar.
 - **Compact toolbar** — Makes the toolbar considerably more compact through smaller icons and labels, ideal for laptops or smaller monitors.
@@ -123,177 +123,175 @@ Custom tab configurations are saved **locally** on each machine in `.json` forma
 
    - The `RibbonLayout.json` file controls the overall ordering and visibility of tabs.
 
-		```json title="RibbonLayout.json"
-		{
-			"TabLayout": [
-				{
-					"Identifier": {
-						"Type": "BuiltIn",
-						"Filename": "HomeTab"
-					},
-					"Visible": true
-				},
-		{
-		```
+     ```json title="RibbonLayout.json"
+     {
+     	"TabLayout": [
+     		{
+     			"Identifier": {
+     				"Type": "BuiltIn",
+     				"Filename": "HomeTab"
+     			},
+     			"Visible": true
+     		},
+     {
+     ```
 
    - Other `.json` files represent individual tabs and can be named whatever you prefer. Each file's `Name` represents the tab's name as it will appear in Studio.
 
-		```json title="CustomTab.json"
-		{
-			"Name": "Custom",
-			"Controls": [
-
-			]
-		}
-		```
+     ```json title="CustomTab.json"
+     {
+       "Name": "Custom",
+       "Controls": []
+     }
+     ```
 
 4. In the `Controls` array for a tab file, insert various buttons, submenus, and more. Each control's `Id` value must be **unique** within the file.
 
    The following examples illustrate common elements in a custom tab:
 
-	<Tabs>
-	<TabItem label="IconButton">
-	`IconButton` inserts a button with an optional text label.
+    <Tabs>
+    <TabItem label="IconButton">
+    `IconButton` inserts a button with an optional text label.
 
-	```json title="CustomTab.json"
-	{
-		"Name": "Custom",
-		"Controls": [
-			{
-				"Id": "Select",
-				"Type": "IconButton",
-				"Action": {
-					"Category": "Actions",
-					"DataModel": "Standalone",
-					"ItemId": "Select",
-					"PluginId": "BuilderTools"
-				}
-			},
-		]
-	}
-	```
+   ```json title="CustomTab.json"
+   {
+     "Name": "Custom",
+     "Controls": [
+       {
+         "Id": "Select",
+         "Type": "IconButton",
+         "Action": {
+           "Category": "Actions",
+           "DataModel": "Standalone",
+           "ItemId": "Select",
+           "PluginId": "BuilderTools"
+         }
+       }
+     ]
+   }
+   ```
 
-	</TabItem>
-	<TabItem label="Separator">
-	`Separator` inserts a non-interactable separation line. `Size` options are `Large`, `Medium`, or `Small`.
+    </TabItem>
+    <TabItem label="Separator">
+    `Separator` inserts a non-interactable separation line. `Size` options are `Large`, `Medium`, or `Small`.
 
-	```json title="CustomTab.json"
-	{
-		"Name": "Custom",
-		"Controls": [
-			{
-				"Type": "Separator",
-				"Size": "Large"
-			},
-		]
-	}
-	```
+   ```json title="CustomTab.json"
+   {
+     "Name": "Custom",
+     "Controls": [
+       {
+         "Type": "Separator",
+         "Size": "Large"
+       }
+     ]
+   }
+   ```
 
-	</TabItem>
-	<TabItem label="SplitButton">
-	`SplitButton` inserts a button which reveals a dropdown menu when the small triangle to the right of its icon is pressed.
+    </TabItem>
+    <TabItem label="SplitButton">
+    `SplitButton` inserts a button which reveals a dropdown menu when the small triangle to the right of its icon is pressed.
 
-	```json title="CustomTab.json"
-	{
-		"Name": "Custom",
-		"Controls": [
-			{
-				"Id": "SimpleSplit",
-				"Type": "SplitButton",
-				"Action": {
-					"Category": "Actions",
-					"DataModel": "Standalone",
-					"ItemId": "Select",
-					"PluginId": "BuilderTools"
-				},
-				"Children": [
-					{
-						"Type": "Column",
-						"Children": [
-							{
-								"Id": "Move",
-								"Type": "Option",
-								"Action": {
-									"Category": "Actions",
-									"DataModel": "Standalone",
-									"ItemId": "Move",
-									"PluginId": "BuilderTools"
-								}
-							},
-							{
-								"Id": "Scale",
-								"Type": "Option",
-								"Action": {
-									"Category": "Actions",
-									"DataModel": "Standalone",
-									"ItemId": "Scale",
-									"PluginId": "BuilderTools"
-								}
-							},
-							{
-								"Id": "Rotate",
-								"Type": "Option",
-								"Action": {
-									"Category": "Actions",
-									"DataModel": "Standalone",
-									"ItemId": "Rotate",
-									"PluginId": "BuilderTools"
-								}
-							},
-						]
-					}
-				]
-			}
-		]
-	}
-	```
+   ```json title="CustomTab.json"
+   {
+     "Name": "Custom",
+     "Controls": [
+       {
+         "Id": "SimpleSplit",
+         "Type": "SplitButton",
+         "Action": {
+           "Category": "Actions",
+           "DataModel": "Standalone",
+           "ItemId": "Select",
+           "PluginId": "BuilderTools"
+         },
+         "Children": [
+           {
+             "Type": "Column",
+             "Children": [
+               {
+                 "Id": "Move",
+                 "Type": "Option",
+                 "Action": {
+                   "Category": "Actions",
+                   "DataModel": "Standalone",
+                   "ItemId": "Move",
+                   "PluginId": "BuilderTools"
+                 }
+               },
+               {
+                 "Id": "Scale",
+                 "Type": "Option",
+                 "Action": {
+                   "Category": "Actions",
+                   "DataModel": "Standalone",
+                   "ItemId": "Scale",
+                   "PluginId": "BuilderTools"
+                 }
+               },
+               {
+                 "Id": "Rotate",
+                 "Type": "Option",
+                 "Action": {
+                   "Category": "Actions",
+                   "DataModel": "Standalone",
+                   "ItemId": "Rotate",
+                   "PluginId": "BuilderTools"
+                 }
+               }
+             ]
+           }
+         ]
+       }
+     ]
+   }
+   ```
 
-	</TabItem>
-	<TabItem label="IconButton (Plugin)">
-	`IconButton` can be used to insert a button which links to a [plugin](./plugins.md) through its ID, assuming the plugin, such as [Tailor Swiftly](https://create.roblox.com/store/asset/130172194397869/Tailor-Swiftly), is installed in your version of Studio.
+    </TabItem>
+    <TabItem label="IconButton (Plugin)">
+    `IconButton` can be used to insert a button which links to a [plugin](./plugins.md) through its ID, assuming the plugin, such as [Tailor Swiftly](https://create.roblox.com/store/asset/130172194397869/Tailor-Swiftly), is installed in your version of Studio.
 
-	```json title="CustomTab.json"
-	{
-		"Name": "Custom",
-		"Controls": [
-			{
-				"Id": "PrinceTybalt_Tailor Swiftly",
-				"Type": "IconButton",
-				"Action": {
-					"Category": "Actions",
-					"DataModel": "Edit",
-					"ItemId": "PrinceTybalt_Tailor Swiftly",
-					"PluginId": "130172194397869",
-					"PluginType": "Cloud"
-				}
-			}
-		]
-	}
-	```
+   ```json title="CustomTab.json"
+   {
+     "Name": "Custom",
+     "Controls": [
+       {
+         "Id": "PrinceTybalt_Tailor Swiftly",
+         "Type": "IconButton",
+         "Action": {
+           "Category": "Actions",
+           "DataModel": "Edit",
+           "ItemId": "PrinceTybalt_Tailor Swiftly",
+           "PluginId": "130172194397869",
+           "PluginType": "Cloud"
+         }
+       }
+     ]
+   }
+   ```
 
-	</TabItem>
-	<TabItem label="Text">
-	`Text` inserts a basic text label, useful to label groups of other controls in submenus.
+    </TabItem>
+    <TabItem label="Text">
+    `Text` inserts a basic text label, useful to label groups of other controls in submenus.
 
-	```json title="CustomTab.json"
-	{
-		"Name": "Custom",
-		"Controls": [
-			{
-				"Id": "CustomHeader",
-				"Type": "Text",
-				"Title": "Insert UI"
-			},
-		]
-	}
-	```
+   ```json title="CustomTab.json"
+   {
+     "Name": "Custom",
+     "Controls": [
+       {
+         "Id": "CustomHeader",
+         "Type": "Text",
+         "Title": "Insert UI"
+       }
+     ]
+   }
+   ```
 
-	</TabItem>
-	</Tabs>
+    </TabItem>
+    </Tabs>
 
-	<Alert severity="success">
-	Beyond the above examples, you can right-click any default tab and select **Duplicate&nbsp;tab**. This will create a new custom tab and corresponding `.json` file in your local `CustomRibbonTabs` directory which you can inspect to explore how various default tools and menus are constructed.
-	</Alert>
+    <Alert severity="success">
+    Beyond the above examples, you can right-click any default tab and select **Duplicate&nbsp;tab**. This will create a new custom tab and corresponding `.json` file in your local `CustomRibbonTabs` directory which you can inspect to explore how various default tools and menus are constructed.
+    </Alert>
 
 5. Save the `.json` file and then reload Studio's plugins:
 

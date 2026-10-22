@@ -306,7 +306,7 @@ Note that all collaborators will need to exit the session for the change to take
 
 #### Commit drafts
 
-Once you've edited a script, it appears in the **Drafts** window, a non‑default window which you must add to a [custom tab](../studio/ui-overview.md#custom-tabs) in Studio's toolbar.
+Once you've edited a script, it appears in the **Drafts** window, a non‑default window which you must add to a [custom tab](../studio/overview.md#custom-tabs) in Studio's toolbar.
 
 <img src="../assets/studio/collaboration/Drafts-Window.png" alt="The Drafts window with two drafted script instances." width="360" />
 

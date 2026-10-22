@@ -28,7 +28,7 @@ The joints that combine multiple parts into assemblies are only active in the `C
 </Alert>
 
 <Alert severity="success">
-To view colored outlines around parts in order to visualize single rigid body assemblies, toggle on **Assemblies** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+To view colored outlines around parts in order to visualize single rigid body assemblies, toggle on **Assemblies** from the [Visualization&nbsp;Options](../studio/overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
 ## Assembly properties

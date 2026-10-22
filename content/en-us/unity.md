@@ -124,13 +124,13 @@ Similar to Unity tools, Roblox Studio supports [plugins](studio/plugins.md), whi
 | Prefab            | [Package](projects/assets/packages.md)                                               |                                                                                     |
 | Transform         | `Datatype.CFrame`                                                                    | `Datatype.CFrame` doesn't include scale information. See [Transforms](#transforms). |
 | Hierarchy         | [Explorer](studio/explorer.md)                                                       |                                                                                     |
-| Inspector         | [Properties](studio/properties.md)                                                   |
-| Scene view        | [3D viewport](studio/ui-overview.md#3d-viewport)                                     |                                                                                     |
-| Game view         | [3D viewport](studio/ui-overview.md#3d-viewport)                                     | The viewport transitions into a gameplay view when you test your game.        |
+| Inspector         | [Properties](studio/properties.md)                                                   |                                                                                     |
+| Scene view        | [3D viewport](studio/overview.md#3d-viewport)                                        |                                                                                     |
+| Game view         | [3D viewport](studio/overview.md#3d-viewport)                                        | The viewport transitions into a gameplay view when you test your game.              |
 | Project window    | [Asset Manager](projects/assets/manager.md) or [Toolbox](projects/assets/toolbox.md) |                                                                                     |
 | Terrain Inspector | [Terrain Editor](studio/terrain-editor.md)                                           |                                                                                     |
 | Spawn point       | `Class.SpawnLocation`                                                                |                                                                                     |
 | Console           | [Output](studio/output.md)                                                           |                                                                                     |
 | Asset Store       | [Creator Store](production/creator-store.md)                                         |                                                                                     |
-| Overlays          | [Toolbar](studio/ui-overview.md#toolbar-and-mezzanine)                               |                                                                                     |
+| Overlays          | [Toolbar](studio/overview.md#toolbar-and-mezzanine)                                  |                                                                                     |
 | Tool              | [Plugin](studio/plugins.md)                                                          |                                                                                     |

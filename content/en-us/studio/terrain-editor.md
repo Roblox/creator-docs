@@ -8,7 +8,7 @@ The **Terrain Editor**, accessible from Studio's **Home** tab or **Window**&nbsp
 <img src="../assets/studio/general/Toolbar-Terrain-Editor.png" width="800" alt="Terrain Editor indicated in Studio's toolbar" />
 
 <Alert severity="success">
-For detailed instructions on working with terrain, see the [environmental terrain](../parts/terrain.md) guide.
+For detailed instructions on working with terrain, see the [environmental terrain](../parts/terrain.md) guide. To paint up to 62 custom materials onto terrain, see [Custom terrain materials](../parts/custom-terrain-materials.md).
 </Alert>
 
 ## Create tab

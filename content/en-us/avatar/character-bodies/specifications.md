@@ -68,27 +68,27 @@ The same bounding box limits apply to Normal, Slender, and Classic body scales. 
 <tbody>
   <tr>
     <td>Head</td>
-    <td>0.05</td>
+    <td>0.4</td>
     <td>0.5</td>
-    <td>0.05</td>
+    <td>0.4</td>
   </tr>
   <tr>
     <td>Arm</td>
-    <td>0.05</td>
+    <td>0.15</td>
     <td>0.5</td>
-    <td>0.05</td>
+    <td>0.15</td>
   </tr>
   <tr>
     <td>Torso</td>
-    <td>0.05</td>
+    <td>0.4</td>
     <td>0.65</td>
-    <td>0.05</td>
+    <td>0.4</td>
   </tr>
   <tr>
     <td>Leg</td>
-    <td>0.05</td>
+    <td>0.15</td>
     <td>0.5</td>
-    <td>0.05</td>
+    <td>0.15</td>
   </tr>
   <tr>
     <td>**Total**</td>
@@ -113,27 +113,27 @@ The same bounding box limits apply to Normal, Slender, and Classic body scales. 
 <tbody>
   <tr>
     <td>Head</td>
-    <td>4.0</td>
     <td>2.0</td>
-    <td>4.0</td>
+    <td>2.0</td>
+    <td>2.0</td>
   </tr>
   <tr>
     <td>Arm</td>
-    <td>4.0</td>
+    <td>2.0</td>
     <td>4.5</td>
-    <td>4.0</td>
+    <td>2.0</td>
   </tr>
   <tr>
     <td>Torso</td>
+    <td>2.5</td>
     <td>4.0</td>
-    <td>4.0</td>
-    <td>4.0</td>
+    <td>2.5</td>
   </tr>
   <tr>
     <td>Leg</td>
-    <td>4.0</td>
+    <td>2.0</td>
     <td>4.5</td>
-    <td>4.0</td>
+    <td>2.0</td>
   </tr>
   <tr>
     <td>**Total**</td>

@@ -6,7 +6,7 @@ navigation:
   - title: Setup
     path: /studio/setup
   - title: Interface
-    path: /studio/ui-overview
+    path: /studio/overview
   - title: Assistant
     path: /assistant/guide
     section:
@@ -18,6 +18,8 @@ navigation:
         path: /assistant/prompt-engineering
   - title: MCP server
     path: /studio/mcp
+  - title: Command-line interface
+    path: /studio/cli
   - heading: Building tools
   - title: Align
     path: /studio/align-tool
@@ -66,8 +68,6 @@ navigation:
     path: /studio/properties
   - title: Avatar Settings
     path: /studio/avatar-settings
-  - title: Command-line interface
-    path: /studio/command-line-interface
   - heading: Plugins
   - title: Overview
     path: /studio/plugins

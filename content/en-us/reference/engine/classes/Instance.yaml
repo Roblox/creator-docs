@@ -32,6 +32,8 @@ descendants:
   - AnimationNodeDefinition
   - AnimationRigData
   - AnimationTrack
+  - AnimationValueNodeDefinition
+  - AnimationValueOutputDefinition
   - Animator
   - AssetDeliveryProxy
   - AssetPatchSettings

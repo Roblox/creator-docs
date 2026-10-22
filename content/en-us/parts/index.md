@@ -86,7 +86,7 @@ The following are commonly utilized properties:
 - `Class.BasePart|Anchored` controls if physics affects the position of the part. When this property is set to true, the part never changes position due to gravity or any other force. You should anchor most parts in your game or gravity and physics will affect your parts as soon as the game runs.
 
   <Alert severity="success">
-  To view lighted outlines around the base of anchored parts in order to visualize which parts cannot move under gravity or physics, toggle on **Anchored&nbsp;parts** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+  To view lighted outlines around the base of anchored parts in order to visualize which parts cannot move under gravity or physics, toggle on **Anchored&nbsp;parts** from the [Visualization&nbsp;Options](../studio/overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
   </Alert>
 
 - `Class.BasePart|CanCollide` controls whether or not a part can collide with other parts. When this property is set to true, the part is impenetrable and the physics engine accounts for it within your game. Conversely, when this property is set to false, the part can pass through anything, and the physics engine does **not** account for it.
@@ -104,7 +104,7 @@ To insert a `Class.TrussPart` (not available on the insertion menu), use the [Ex
 
 ## Select parts
 
-As you hover over parts in the 3D viewport, they are outlined to indicate their potential selection. You can select an outlined part by clicking it, or you can select multiple parts by holding <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>⌘</kbd> as you hover over and click them. See [here](../studio/ui-overview.md#object-selection) for advanced methods of selecting parts in the viewport.
+As you hover over parts in the 3D viewport, they are outlined to indicate their potential selection. You can select an outlined part by clicking it, or you can select multiple parts by holding <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>⌘</kbd> as you hover over and click them. For advanced methods of selecting parts in the viewport, see [object selection](../studio/overview.md#object-selection).
 
 <img src="../assets/studio/general/Editor-Window-Object-Selection.jpg" width="800" alt="Multiple models selected in 3D viewport"/>
 

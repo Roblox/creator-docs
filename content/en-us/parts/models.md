@@ -56,7 +56,7 @@ As you hover over models in the viewport, they are outlined to indicate their po
 
 <img src="../assets/studio/general/Editor-Window-Object-Selection.jpg" width="800" alt="A warehouse view in the 3D viewport. Multiple models are selected and highlighted with a light blue outline."/>
 
-As models typically contain multiple child [parts](../parts/index.md) or [meshes](../parts/meshes.md), some children may be hidden from view. To select a specific child without moving the camera around or locating the child in the [Explorer](../studio/explorer.md) hierarchy, click while holding <kbd>Alt</kbd> on Windows or <kbd>⌥</kbd> on Mac to perform [selection cycling](../studio/ui-overview.md#selection-cycling).
+As models typically contain multiple child [parts](../parts/index.md) or [meshes](../parts/meshes.md), some children may be hidden from view. To select a specific child without moving the camera around or locating the child in the [Explorer](../studio/explorer.md) hierarchy, click while holding <kbd>Alt</kbd> on Windows or <kbd>⌥</kbd> on Mac to perform [selection cycling](../studio/overview.md#selection-cycling).
 
 <figure>
   <video src="../assets/studio/general/Selection-Cycling.mp4" controls width="80%" alt="Video showing selection cycling through a model"></video>

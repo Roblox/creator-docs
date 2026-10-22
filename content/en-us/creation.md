@@ -142,7 +142,7 @@ create characters and accessories.
 
 <h4 style={{marginBottom: 12}}>Studio overview</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Learn about Studio, the all-in-one IDE for Roblox.</Typography>
-<a href="./studio/ui-overview.md">
+<a href="./studio/overview.md">
   <Button variant="text">Learn more</Button>
 </a>
 </Grid>
@@ -150,7 +150,7 @@ create characters and accessories.
 
 <h4 style={{marginBottom: 12}}>UI overview</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Learn about the Studio UI and all the features and tools that are available.</Typography>
-<a href="./studio/ui-overview.md">
+<a href="./studio/overview.md">
   <Button variant="text">Learn more</Button>
 </a>
 </Grid>

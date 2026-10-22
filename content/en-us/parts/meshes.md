@@ -163,7 +163,7 @@ You can dynamically control a mesh's level of detail using its `Enum.RenderFidel
 </Tabs>
 
 <Alert severity="success">
-To view collision fidelity in Studio, toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+To view collision fidelity in Studio, toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../studio/overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
 For more information on the performance impact of collision fidelity options and how to mitigate them, see [Improve performance](../performance-optimization/improve.md#physics-computation). For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set physics and rendering parameters](../tutorials/curriculums/environmental-art/optimize-your-experience.md#review-physics-and-rendering-parameters).

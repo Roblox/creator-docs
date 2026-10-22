@@ -116,7 +116,7 @@ end)
 
 <Alert severity="warning">
 Note the following caveats with `Class.ChangeHistoryService` recordings:
-* If you're using the [Multi-line Command Bar](../studio/ui-overview.md#command-bar), don't run any code in the command bar that will always be running while you have a place open, since the command bar uses `Class.ChangeHistoryService` recordings to allow for undo/redo with commands that make changes to the `Class.DataModel`.
+* If you're using the [Multi-line Command Bar](../studio/overview.md#command-bar), don't run any code in the command bar that will always be running while you have a place open, since the command bar uses `Class.ChangeHistoryService` recordings to allow for undo/redo with commands that make changes to the `Class.DataModel`.
 * Reloading a plugin won't cancel its ongoing `Class.ChangeHistoryService` recordings, so make use of [attributes](../scripting/attributes.md#create-attributes) to store the last recording identifier so it can be canceled by the plugin when it reloads.
 </Alert>
 

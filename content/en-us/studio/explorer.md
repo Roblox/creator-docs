@@ -56,7 +56,7 @@ You can further customize insertion behavior by clicking the **&ctdot;** button 
 	</tr>
 	<tr>
 		<td>**Expand hierarchy when selecting**</td>
-		<td>When enabled, inserting/pasting an instance or selecting an object in the [3D&nbsp;viewport](../studio/ui-overview.md#3d-viewport) will expand the **Explorer** hierarchy to reveal that instance. When disabled, the top‑level parent within the hierarchy will be highlighted, but it won't expand to reveal the selected instance.</td>
+		<td>When enabled, inserting/pasting an instance or selecting an object in the [3D&nbsp;viewport](../studio/overview.md#3d-viewport) will expand the **Explorer** hierarchy to reveal that instance. When disabled, the top‑level parent within the hierarchy will be highlighted, but it won't expand to reveal the selected instance.</td>
 	</tr>
 	</tbody>
 </table>

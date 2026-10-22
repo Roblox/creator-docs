@@ -417,8 +417,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Controls
     serialization:
@@ -426,6 +426,7 @@ properties:
       can_save: true
     capabilities:
       - Players
+      - PluginOrOpenCloud
   - name: StarterPlayer.DevCameraOcclusionMode
     summary: |
       Sets how the default camera handles objects between the camera and the

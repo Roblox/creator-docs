@@ -31,8 +31,8 @@ description: |
   | -------------- | ------ | -------------------------------------------------------------------- |
   | **Expression** | String | The Luau expression source to evaluate. Defaults to an empty string. |
 
-  See [Graph Editor expressions](../../../animation/expressions.md)
-  for expression syntax and authoring.
+  See [Graph Editor expressions](../../../animation/expressions.md) for
+  expression syntax and authoring.
 
   #### InvalidNode
 
@@ -51,8 +51,8 @@ items:
   - name: Expression
     summary: |
       A value node that evaluates a
-      [Luau expression](../../../animation/expressions.md) and
-      publishes its result.
+      [Luau expression](../../../animation/expressions.md) and publishes its
+      result.
     value: 1
     tags: []
     deprecation_message: ''

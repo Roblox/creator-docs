@@ -11,7 +11,7 @@ hazardous materials or defined regions.
 
 ## Navigation visualization
 
-To assist with pathfinding layout and debugging, Studio can render a navigation mesh and [modifier](#pathfinding-modifiers) labels. To enable them, toggle on **Navigation&nbsp;mesh** and **Pathfinding&nbsp;modifiers** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+To assist with pathfinding layout and debugging, Studio can render a navigation mesh and [modifier](#pathfinding-modifiers) labels. To enable them, toggle on **Navigation&nbsp;mesh** and **Pathfinding&nbsp;modifiers** from the [Visualization&nbsp;Options](../studio/overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 
 <img src="../assets/studio/general/Visualization-Options.png" width="780" alt="A close up view of the 3D viewport with the Visualization Options button indicated in the upper-right corner." />
 
@@ -399,7 +399,7 @@ Using the example from above, you can make the agent use a boat.
 
 To create a `Class.PathfindingLink` using this example:
 
-1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Toggle on **Pathfinding&nbsp;links** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport. This helps with visualization and debugging when implementing pathfinding links.
+1. <Chip label="OPTIONAL" size="small" variant="outlined" /> Toggle on **Pathfinding&nbsp;links** from the [Visualization&nbsp;Options](../studio/overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport. This helps with visualization and debugging when implementing pathfinding links.
 2. Create two `Class.Attachment|Attachments`, one on the boat's seat and one near the boat's landing point.
 
    <img src="../assets/avatar/pathfinding/PathfindingLink-Attachments.jpg" width="750" alt="Attachments created for pathfinding link's start and end." />

@@ -8,5 +8,5 @@ To accurately visualize constraints in Studio, you can toggle the following from
 - **Show Constraint Details** (<kbd>Alt</kbd><kbd>D</kbd> or <kbd>⌥</kbd><kbd>D</kbd>) — Show complete visual details of non-weld constraints.
 
 <Alert severity="success">
-In addition to the above visualization, you can view colored outlines around mechanisms (groups of parts that share simulation step and [network ownership](../../physics/network-ownership.md)) by toggling on **Mechanisms** from the [Visualization&nbsp;Options](../../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+In addition to the above visualization, you can view colored outlines around mechanisms (groups of parts that share simulation step and [network ownership](../../physics/network-ownership.md)) by toggling on **Mechanisms** from the [Visualization&nbsp;Options](../../studio/overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>

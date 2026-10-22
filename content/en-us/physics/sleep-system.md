@@ -329,7 +329,7 @@ In addition to situations outlined in [sleep‑checking](#sleep-checking) and [s
 
 ## Debug visualization
 
-During playtesting, you can visualize assembly sleep states by toggling on **Awake&nbsp;parts** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+During playtesting, you can visualize assembly sleep states by toggling on **Awake&nbsp;parts** from the [Visualization&nbsp;Options](../studio/overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 
 <img src="../assets/studio/general/Visualization-Options.png" width="780" alt="A close up view of the 3D viewport with the Visualization Options button indicated in the upper-right corner." />
 
