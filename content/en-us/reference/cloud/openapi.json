@@ -12128,7 +12128,7 @@
       "get": {
         "tags": ["Configs"],
         "summary": "Gets published config values without metadata.",
-        "description": "Returns the latest published config values without metadata and decorators.\r\nThis response can be used as a direct copy-and-paste to the draft update endpoints.",
+        "description": "Returns the latest published config values without metadata and decorators.\nThis response can be used as a direct copy-and-paste to the draft update endpoints.",
         "operationId": "CreatorConfigsPublicApi_GetConfigRepositoryValues",
         "parameters": [
           {
@@ -12151,7 +12151,7 @@
                   "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
@@ -12280,7 +12280,7 @@
                   "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
@@ -12452,7 +12452,7 @@
                   "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
@@ -12556,7 +12556,7 @@
       "patch": {
         "tags": ["Configs"],
         "summary": "Partially updates the draft.",
-        "description": "Updates the draft treating the payload as a partial changeset.\r\nIf draftHash is provided, this call will fail if the hash doesn't match.\r\nA key not included will not be changed. To indicate deletion, set key to null.\r\nTo discard a change, set key to its currently published value.\r\nWhen `conditionalRules` is omitted or empty (`{}`), the CMS update omits the conditional-rules field so existing published rules remain at publish time;\r\nsend a non-empty `conditionalRules` object to merge rule changes.\r\nEntry count and per-value size limits are enforced here via CreatorConfigsPublicApi.Utils.DraftValidationHelper; further schema validation is performed by Config Management.",
+        "description": "Updates the draft treating the payload as a partial changeset.\nIf draftHash is provided, this call will fail if the hash doesn't match.\nA key not included will not be changed. To indicate deletion, set key to null.\nTo discard a change, set key to its currently published value.\nWhen `conditionalRules` is omitted or empty (`{}`), the CMS update omits the conditional-rules field so existing published rules remain at publish time;\nsend a non-empty `conditionalRules` object to merge rule changes.\nEntry count and per-value size limits are enforced here via CreatorConfigsPublicApi.Utils.DraftValidationHelper; further schema validation is performed by Config Management.",
         "operationId": "CreatorConfigsPublicApi_UpdateDraft",
         "parameters": [
           {
@@ -12579,7 +12579,7 @@
                   "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
@@ -12730,7 +12730,7 @@
       "put": {
         "tags": ["Configs"],
         "summary": "Overwrites the entire draft with the request payload.",
-        "description": "Full overwrite of current draft. The payload is the expected final state after publish (not a merge with the draft or published config from the client’s perspective).\r\nThe service aligns that intent with CMS validation by emitting explicit deletions for published keys and conditional branches omitted from the body.\r\nIf a key is not included, it is interpreted as removed.\r\nWhen `conditionalRules` is included, `conditionalRules.rules` is authoritative for rule definitions:\r\nany conditional rule that exists on the latest published configuration but is omitted from `rules` is removed (same as sending an empty RPN rule).\r\nWhen `conditionalRules` is omitted, all published conditional rules are removed; entries must not use conditional branches or `.RBX.conditional.*` keys unless you send `conditionalRules`.\r\nIf draftHash is provided, this call will fail if the hash doesn't match.\r\nEntry count and per-value size limits are enforced here via CreatorConfigsPublicApi.Utils.DraftValidationHelper; further schema validation is performed by Config Management.",
+        "description": "Full overwrite of current draft. The payload is the expected final state after publish (not a merge with the draft or published config from the client’s perspective).\nThe service aligns that intent with CMS validation by emitting explicit deletions for published keys and conditional branches omitted from the body.\nIf a key is not included, it is interpreted as removed.\nWhen `conditionalRules` is included, `conditionalRules.rules` is authoritative for rule definitions:\nany conditional rule that exists on the latest published configuration but is omitted from `rules` is removed (same as sending an empty RPN rule).\nWhen `conditionalRules` is omitted, all published conditional rules are removed; entries must not use conditional branches or `.RBX.conditional.*` keys unless you send `conditionalRules`.\nIf draftHash is provided, this call will fail if the hash doesn't match.\nEntry count and per-value size limits are enforced here via CreatorConfigsPublicApi.Utils.DraftValidationHelper; further schema validation is performed by Config Management.",
         "operationId": "CreatorConfigsPublicApi_OverwriteDraft",
         "parameters": [
           {
@@ -12753,7 +12753,7 @@
                   "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
@@ -12927,7 +12927,7 @@
                   "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
@@ -13056,7 +13056,7 @@
                   "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
@@ -13230,7 +13230,7 @@
                   "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
@@ -13258,7 +13258,8 @@
             "in": "query",
             "description": "Optional start time for filtering revisions.",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "date-time"
             }
           },
           {
@@ -13266,7 +13267,8 @@
             "in": "query",
             "description": "Optional end time for filtering revisions.",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "date-time"
             }
           },
           {
@@ -13274,7 +13276,8 @@
             "in": "query",
             "description": "Maximum page size.",
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int32"
             }
           },
           {
@@ -13282,7 +13285,8 @@
             "in": "query",
             "description": "Number of items to skip.",
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int32"
             }
           },
           {
@@ -13392,7 +13396,7 @@
       "post": {
         "tags": ["Configs"],
         "summary": "Stages a revert to a previous revision.",
-        "description": "Attempts to restore configs to the provided revision. This will clear the staging and stage a revert commit.\r\nYou must call publish for the revert to take effect.",
+        "description": "Attempts to restore configs to the provided revision. This will clear the staging and stage a revert commit.\nYou must call publish for the revert to take effect.",
         "operationId": "CreatorConfigsPublicApi_RestoreRevision",
         "parameters": [
           {
@@ -13415,7 +13419,7 @@
                   "$ref": "#/components/schemas/Repository"
                 }
               ],
-              "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.",
+              "description": "Public API repository identifier. Only values exposed by the public API are included;\ninternal repository types are not exposed to allow development and testing before enabling.",
               "x-enum-varnames": [
                 "InExperienceConfig",
                 "RecommendationServicesConfig",
@@ -13530,7 +13534,7 @@
       "get": {
         "tags": ["Experiments"],
         "summary": "Lists experiments for a universe.",
-        "description": "Pagination is offset-based (`maxPageSize` + `skip`). The response carries the page slice plus the unpaginated total\r\nmatching the filters. Request includes optional pagination, search, and filters.",
+        "description": "Pagination is offset-based (`maxPageSize` + `skip`). The response carries the page slice plus the unpaginated total\nmatching the filters. Request includes optional pagination, search, and filters.",
         "operationId": "PublicExperimentation_ListExperiments",
         "parameters": [
           {
@@ -13546,14 +13550,16 @@
             "name": "maxPageSize",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int32"
             }
           },
           {
             "name": "skip",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int32"
             }
           },
           {
@@ -13584,16 +13590,26 @@
           {
             "name": "sortOrder",
             "in": "query",
+            "description": "\n\nSORT_ORDER_ASCENDING\n\nSORT_ORDER_DESCENDING",
             "schema": {
-              "type": "string"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/CreatorConfigsPublicApi.SortOrder"
+                }
+              ]
             },
             "x-enum-varnames": ["Ascending", "Descending"]
           },
           {
             "name": "sortKey",
             "in": "query",
+            "description": "\n\nLIST_EXPERIMENT_SORT_KEY_NAME\n\nLIST_EXPERIMENT_SORT_KEY_LAST_MODIFIED_TIME\n\nLIST_EXPERIMENT_SORT_KEY_START_TIME\n\nLIST_EXPERIMENT_SORT_KEY_RELEVANCE",
             "schema": {
-              "type": "string"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ListExperimentSortKey"
+                }
+              ]
             },
             "x-enum-varnames": [
               "Name",
@@ -13605,8 +13621,13 @@
           {
             "name": "productTypeFilter",
             "in": "query",
+            "description": "\n\nEXPERIMENT_PRODUCT_TYPE_IN_GAME_CONFIGS\n\nEXPERIMENT_PRODUCT_TYPE_MATCHMAKING",
             "schema": {
-              "type": "string"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ExperimentProductType"
+                }
+              ]
             },
             "x-enum-varnames": ["InGameConfigs", "Matchmaking"]
           }
@@ -13713,7 +13734,7 @@
                     "$ref": "#/components/schemas/CreateExperimentData"
                   }
                 ],
-                "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\r\nPayload describing a new experiment."
+                "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\nPayload describing a new experiment."
               }
             },
             "application/json": {
@@ -13723,7 +13744,7 @@
                     "$ref": "#/components/schemas/CreateExperimentData"
                   }
                 ],
-                "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\r\nPayload describing a new experiment."
+                "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\nPayload describing a new experiment."
               }
             },
             "text/json": {
@@ -13733,7 +13754,7 @@
                     "$ref": "#/components/schemas/CreateExperimentData"
                   }
                 ],
-                "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\r\nPayload describing a new experiment."
+                "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\nPayload describing a new experiment."
               }
             },
             "application/*+json": {
@@ -13743,7 +13764,7 @@
                     "$ref": "#/components/schemas/CreateExperimentData"
                   }
                 ],
-                "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\r\nPayload describing a new experiment."
+                "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\nPayload describing a new experiment."
               }
             }
           },
@@ -14033,7 +14054,7 @@
       "patch": {
         "tags": ["Experiments"],
         "summary": "Updates an existing experiment.",
-        "description": "The payload is a full replacement of the mutable experiment fields. Returns an\r\nExperimentOperation describing the async update.",
+        "description": "The payload is a full replacement of the mutable experiment fields. Returns an\nExperimentOperation describing the async update.",
         "operationId": "PublicExperimentation_UpdateExperiment",
         "parameters": [
           {
@@ -14063,7 +14084,7 @@
                     "$ref": "#/components/schemas/UpdateExperimentData"
                   }
                 ],
-                "description": "Request body for\r\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\r\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
+                "description": "Request body for\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
               }
             },
             "application/json": {
@@ -14073,7 +14094,7 @@
                     "$ref": "#/components/schemas/UpdateExperimentData"
                   }
                 ],
-                "description": "Request body for\r\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\r\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
+                "description": "Request body for\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
               }
             },
             "text/json": {
@@ -14083,7 +14104,7 @@
                     "$ref": "#/components/schemas/UpdateExperimentData"
                   }
                 ],
-                "description": "Request body for\r\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\r\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
+                "description": "Request body for\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
               }
             },
             "application/*+json": {
@@ -14093,7 +14114,7 @@
                     "$ref": "#/components/schemas/UpdateExperimentData"
                   }
                 ],
-                "description": "Request body for\r\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\r\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
+                "description": "Request body for\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
               }
             }
           },
@@ -14312,7 +14333,7 @@
                     "$ref": "#/components/schemas/CompleteExperimentRequest"
                   }
                 ],
-                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
+                "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
               }
             },
             "application/json": {
@@ -14322,7 +14343,7 @@
                     "$ref": "#/components/schemas/CompleteExperimentRequest"
                   }
                 ],
-                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
+                "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
               }
             },
             "text/json": {
@@ -14332,7 +14353,7 @@
                     "$ref": "#/components/schemas/CompleteExperimentRequest"
                   }
                 ],
-                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
+                "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
               }
             },
             "application/*+json": {
@@ -14342,7 +14363,7 @@
                     "$ref": "#/components/schemas/CompleteExperimentRequest"
                   }
                 ],
-                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
+                "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
               }
             }
           },
@@ -14460,7 +14481,7 @@
                     "$ref": "#/components/schemas/ScheduleExperimentRequest"
                   }
                 ],
-                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
+                "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
               }
             },
             "application/json": {
@@ -14470,7 +14491,7 @@
                     "$ref": "#/components/schemas/ScheduleExperimentRequest"
                   }
                 ],
-                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
+                "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
               }
             },
             "text/json": {
@@ -14480,7 +14501,7 @@
                     "$ref": "#/components/schemas/ScheduleExperimentRequest"
                   }
                 ],
-                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
+                "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
               }
             },
             "application/*+json": {
@@ -14490,7 +14511,7 @@
                     "$ref": "#/components/schemas/ScheduleExperimentRequest"
                   }
                 ],
-                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
+                "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
               }
             }
           },
@@ -14703,7 +14724,7 @@
                     "$ref": "#/components/schemas/CalculateExperimentMdeData"
                   }
                 ],
-                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
+                "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
               }
             },
             "application/json": {
@@ -14713,7 +14734,7 @@
                     "$ref": "#/components/schemas/CalculateExperimentMdeData"
                   }
                 ],
-                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
+                "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
               }
             },
             "text/json": {
@@ -14723,7 +14744,7 @@
                     "$ref": "#/components/schemas/CalculateExperimentMdeData"
                   }
                 ],
-                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
+                "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
               }
             },
             "application/*+json": {
@@ -14733,7 +14754,7 @@
                     "$ref": "#/components/schemas/CalculateExperimentMdeData"
                   }
                 ],
-                "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
+                "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
               }
             }
           },
@@ -14821,7 +14842,7 @@
       "get": {
         "tags": ["Experiments"],
         "summary": "Gets the status of an experiment async operation.",
-        "description": "Polled by clients between mutations (Create / Update / Start / Schedule /\r\nComplete / Discard) to determine when the operation reaches `done = true`.",
+        "description": "Polled by clients between mutations (Create / Update / Start / Schedule /\nComplete / Discard) to determine when the operation reaches `done = true`.",
         "operationId": "PublicExperimentation_GetExperimentOperationStatus",
         "parameters": [
           {
@@ -24250,7 +24271,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -24331,7 +24352,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -24394,7 +24415,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -24479,7 +24500,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -24542,7 +24563,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -24629,7 +24650,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -56086,7 +56107,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -56131,6 +56152,7 @@
             "url": "https://presence.roblox.com"
           }
         ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -71441,6 +71463,76 @@
         }
       }
     },
+    "/v2/beta-program-channel-version": {
+      "get": {
+        "summary": "Get the channel and current version guid of a beta program the currently logged in user may use, whether or not they are opted in to it.\nOnly Studio binary types (MacStudio, WindowsStudio64) are supported for now.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "programId",
+            "description": "The beta program id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "binaryType",
+            "description": "e.g. MacStudio or WindowsStudio64",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.BetaProgramChannelVersionResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ClientSettings.Api.Models.Response.BetaProgramChannelVersionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "2: Invalid binaryType.\r\n7: Unsupported binaryType.\r\n10: Missing or invalid beta program id."
+          },
+          "401": {
+            "description": "5: Not authorized to perform this action."
+          },
+          "403": {
+            "description": "5: Not authorized to perform this action."
+          },
+          "404": {
+            "description": "1: Could not find version details for binaryType."
+          },
+          "500": {
+            "description": "3: Error while fetching version information."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://clientsettings.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ]
+      }
+    },
     "/v2/client-version/{binaryType}": {
       "get": {
         "tags": ["Metadata"],
@@ -82184,7 +82276,7 @@
           },
           "durationSeconds": {
             "type": "integer",
-            "description": "Planned duration of the experiment in whole seconds.\r\nValues must be an exact multiple of `86400`.",
+            "description": "Planned duration of the experiment in whole seconds.\nValues must be an exact multiple of `86400`.",
             "format": "int64"
           },
           "baselineWeight": {
@@ -82229,7 +82321,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
+        "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
       },
       "CalculateExperimentMdeResponse": {
         "type": "object",
@@ -82245,7 +82337,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Response body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
+        "description": "Response body for\n`POST /v1/experimentation/universes/{universeId}/experiments:calculateMde`."
       },
       "CanInviteUserResponse": {
         "type": "object",
@@ -82335,12 +82427,12 @@
         "properties": {
           "variantId": {
             "type": "string",
-            "description": "ID of the variant to roll out as the winning variant. If omitted, the experiment is\r\nstopped without rolling out a winner.",
+            "description": "ID of the variant to roll out as the winning variant. If omitted, the experiment is\nstopped without rolling out a winner.",
             "nullable": true
           }
         },
         "additionalProperties": false,
-        "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
+        "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
       },
       "CompleteExperimentResponse": {
         "type": "object",
@@ -82356,7 +82448,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Response body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
+        "description": "Response body for\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:complete`."
       },
       "ConditionalRuleDefinition": {
         "type": "object",
@@ -82372,6 +82464,36 @@
         },
         "additionalProperties": false,
         "description": "JSON shape of an RPN conditional rule in public API requests."
+      },
+      "ConditionalRuleOperator": {
+        "enum": [
+          "OPERATOR_AND",
+          "OPERATOR_OR",
+          "OPERATOR_NOT",
+          "OPERATOR_EQ",
+          "OPERATOR_NE",
+          "OPERATOR_GT",
+          "OPERATOR_LT",
+          "OPERATOR_GTE",
+          "OPERATOR_LTE",
+          "OPERATOR_IN",
+          "OPERATOR_NIN"
+        ],
+        "type": "string",
+        "description": "RPN token operator values for public HTTP JSON, aligned with\n`roblox.creatorexperienceconfig.conditionrules.v1.Operator` numeric values `1`–`11`.\nThe proto `OPERATOR_INVALID` (`0`) is not exposed here; unknown or invalid operators are rejected at deserialization.\nJSON uses proto symbolic names (`OPERATOR_AND`, …) via Google.Protobuf.Reflection.OriginalNameAttribute.\n\nOPERATOR_AND\n\nOPERATOR_OR\n\nOPERATOR_NOT\n\nOPERATOR_EQ\n\nOPERATOR_NE\n\nOPERATOR_GT\n\nOPERATOR_LT\n\nOPERATOR_GTE\n\nOPERATOR_LTE\n\nOPERATOR_IN\n\nOPERATOR_NIN",
+        "x-enum-varnames": [
+          "And",
+          "Or",
+          "Not",
+          "Eq",
+          "Ne",
+          "Gt",
+          "Lt",
+          "Gte",
+          "Lte",
+          "In",
+          "Nin"
+        ]
       },
       "ConditionalRulesChangesPayload": {
         "type": "object",
@@ -82403,7 +82525,7 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/ConditionalRuleDefinition"
             },
-            "description": "RPN rules keyed by condition id. On `draft:overwrite`, omitting a rule id that exists on published removes that rule; JSON `null` tombstones;\r\n`{ \"tokens\": [] }` is an explicit empty rule.",
+            "description": "RPN rules keyed by condition id. On `draft:overwrite`, omitting a rule id that exists on published removes that rule; JSON `null` tombstones;\n`{ \"tokens\": [] }` is an explicit empty rule.",
             "nullable": true
           },
           "rulesOrder": {
@@ -82539,7 +82661,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "A representation of a configuration repository with just the values (no metadata or decorators).\r\nThis response can be used as a direct copy-and-paste to the draft update endpoints."
+        "description": "A representation of a configuration repository with just the values (no metadata or decorators).\nThis response can be used as a direct copy-and-paste to the draft update endpoints."
       },
       "ConfigValueFull": {
         "type": "object",
@@ -82819,7 +82941,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\r\nPayload describing a new experiment."
+        "description": "Request body for `POST /v1/experimentation/universes/{universeId}/experiments`.\nPayload describing a new experiment."
       },
       "CreateExperimentResponse": {
         "type": "object",
@@ -83257,6 +83379,12 @@
           }
         },
         "description": "Represents a creator."
+      },
+      "CreatorConfigsPublicApi.SortOrder": {
+        "enum": ["SORT_ORDER_ASCENDING", "SORT_ORDER_DESCENDING"],
+        "type": "string",
+        "description": "Sort direction for list queries.\n\nSORT_ORDER_ASCENDING\n\nSORT_ORDER_DESCENDING",
+        "x-enum-varnames": ["Ascending", "Descending"]
       },
       "CreatorModelV2": {
         "required": ["creator"],
@@ -84474,7 +84602,7 @@
             "nullable": true
           },
           "entryValue": {
-            "description": "The value assigned to Key for this variant. Can be a string, number, bool, array, object,\r\nor null.",
+            "description": "The value assigned to Key for this variant. Can be a string, number, bool, array, object,\nor null.",
             "nullable": true
           },
           "description": {
@@ -84517,7 +84645,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Union of per-product experiment configurations. At most one of InGameConfigExperimentConfiguration or\r\nMatchmakingExperimentConfiguration may be set."
+        "description": "Union of per-product experiment configurations. At most one of InGameConfigExperimentConfiguration or\nMatchmakingExperimentConfiguration may be set."
       },
       "ExperimentOperation": {
         "type": "object",
@@ -84554,7 +84682,7 @@
           },
           "done": {
             "type": "boolean",
-            "description": "True once the operation terminates (success or failure). When false, neither\r\nError nor Experiment is populated."
+            "description": "True once the operation terminates (success or failure). When false, neither\nError nor Experiment is populated."
           },
           "error": {
             "allOf": [
@@ -84571,12 +84699,12 @@
                 "$ref": "#/components/schemas/ProductExperiment"
               }
             ],
-            "description": "Successful outcome. Populated iff Done is true and the operation\r\nsucceeded and returned an experiment resource.",
+            "description": "Successful outcome. Populated iff Done is true and the operation\nsucceeded and returned an experiment resource.",
             "nullable": true
           }
         },
         "additionalProperties": false,
-        "description": "Async operation result for an experiment Create / Update / Discard call. When\r\nDone is true, at most one of Error or Experiment is set; when false, neither is. A successful delete is the\r\none case where a done operation carries neither: the experiment no longer exists, so\r\nno Experiment body is returned."
+        "description": "Async operation result for an experiment Create / Update / Discard call. When\nDone is true, at most one of Error or Experiment is set; when false, neither is. A successful delete is the\none case where a done operation carries neither: the experiment no longer exists, so\nno Experiment body is returned."
       },
       "ExperimentProductType": {
         "enum": [
@@ -84629,6 +84757,7 @@
           "lastModifiedTime": {
             "type": "string",
             "description": "UTC time the operation was last modified.",
+            "format": "date-time",
             "nullable": true
           },
           "done": {
@@ -84655,7 +84784,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Async operation for fetching experiment stats. When Done is true exactly\r\none of Error or ExperimentStats is set; when false, neither is."
+        "description": "Async operation for fetching experiment stats. When Done is true exactly\none of Error or ExperimentStats is set; when false, neither is."
       },
       "ExperimentSummary": {
         "type": "object",
@@ -84683,16 +84812,19 @@
           "lastUpdatedTime": {
             "type": "string",
             "description": "UTC time the experiment was last updated.",
+            "format": "date-time",
             "nullable": true
           },
           "startedTime": {
             "type": "string",
             "description": "UTC time the experiment was started, if running.",
+            "format": "date-time",
             "nullable": true
           },
           "stoppedTime": {
             "type": "string",
             "description": "UTC time the experiment was stopped, if completed/cancelled.",
+            "format": "date-time",
             "nullable": true
           },
           "state": {
@@ -84718,12 +84850,13 @@
           },
           "experimentConfigKey": {
             "type": "string",
-            "description": "Convenience field exposing the first config key referenced by the first variant\r\n(in-game-configs experiments only). Empty for matchmaking.",
+            "description": "Convenience field exposing the first config key referenced by the first variant\n(in-game-configs experiments only). Empty for matchmaking.",
             "nullable": true
           },
           "scheduledTime": {
             "type": "string",
             "description": "UTC time the experiment is scheduled to start, if scheduled.",
+            "format": "date-time",
             "nullable": true
           },
           "durationSeconds": {
@@ -84742,7 +84875,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Summary view of an experiment returned by the list endpoint. Does not include the variant /\r\nconfiguration payload; clients should call Get for the full payload."
+        "description": "Summary view of an experiment returned by the list endpoint. Does not include the variant /\nconfiguration payload; clients should call Get for the full payload."
       },
       "FeaturingStatus": {
         "enum": ["enabled", "disabled"],
@@ -85550,7 +85683,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Response body for\r\n`GET /v1/experimentation/universes/{universeId}/operations/{operationId}`."
+        "description": "Response body for\n`GET /v1/experimentation/universes/{universeId}/operations/{operationId}`."
       },
       "GetExperimentResponse": {
         "type": "object",
@@ -85582,7 +85715,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Response body for\r\n`GET /v1/experimentation/universes/{universeId}/experiments/{experimentId}/stats`."
+        "description": "Response body for\n`GET /v1/experimentation/universes/{universeId}/experiments/{experimentId}/stats`."
       },
       "GetInstanceMetadata": {
         "type": "object",
@@ -87419,6 +87552,22 @@
         },
         "description": "A list of Entries in the parent collection."
       },
+      "ListExperimentSortKey": {
+        "enum": [
+          "LIST_EXPERIMENT_SORT_KEY_NAME",
+          "LIST_EXPERIMENT_SORT_KEY_LAST_MODIFIED_TIME",
+          "LIST_EXPERIMENT_SORT_KEY_START_TIME",
+          "LIST_EXPERIMENT_SORT_KEY_RELEVANCE"
+        ],
+        "type": "string",
+        "description": "Key to sort an experiment list by.\n\nLIST_EXPERIMENT_SORT_KEY_NAME\n\nLIST_EXPERIMENT_SORT_KEY_LAST_MODIFIED_TIME\n\nLIST_EXPERIMENT_SORT_KEY_START_TIME\n\nLIST_EXPERIMENT_SORT_KEY_RELEVANCE",
+        "x-enum-varnames": [
+          "Name",
+          "LastModifiedTime",
+          "StartTime",
+          "Relevance"
+        ]
+      },
       "ListExperimentsResponse": {
         "type": "object",
         "properties": {
@@ -87432,7 +87581,7 @@
           },
           "total": {
             "type": "integer",
-            "description": "Total number of experiments for the universe matching the filters\r\n            (independent of pagination).",
+            "description": "Total number of experiments for the universe matching the filters\n            (independent of pagination).",
             "format": "int32"
           }
         },
@@ -87815,15 +87964,17 @@
         "type": "object",
         "properties": {
           "booleanValue": {
-            "type": "string",
+            "type": "boolean",
             "nullable": true
           },
           "integerValue": {
-            "type": "string",
+            "type": "integer",
+            "format": "int64",
             "nullable": true
           },
           "doubleValue": {
-            "type": "string",
+            "type": "number",
+            "format": "double",
             "nullable": true
           },
           "stringValue": {
@@ -88443,6 +88594,7 @@
           "lastModifiedTime": {
             "type": "string",
             "description": "UTC time the operation was last modified.",
+            "format": "date-time",
             "nullable": true
           },
           "done": {
@@ -88469,7 +88621,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Async operation result for a `:calculateMde` call. When Done is true\r\nexactly one of Error or Mde is set; when false, neither is."
+        "description": "Async operation result for a `:calculateMde` call. When Done is true\nexactly one of Error or Mde is set; when false, neither is."
       },
       "MdeResult": {
         "type": "object",
@@ -88495,7 +88647,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "MDE calculation result. Returned in the `operation.result` field on a successful\r\n`POST .../experiments:calculateMde` call."
+        "description": "MDE calculation result. Returned in the `operation.result` field on a successful\n`POST .../experiments:calculateMde` call."
       },
       "MemoryStore": {
         "type": "object",
@@ -89801,7 +89953,7 @@
           },
           "usePlatformDefault": {
             "type": "boolean",
-            "description": "When true, this place uses the platform default matchmaking scoring config instead of\r\nMatchmakingScoringConfigId."
+            "description": "When true, this place uses the platform default matchmaking scoring config instead of\nMatchmakingScoringConfigId."
           }
         },
         "additionalProperties": false,
@@ -90600,16 +90752,19 @@
           "lastUpdatedTime": {
             "type": "string",
             "description": "UTC time the experiment was last updated.",
+            "format": "date-time",
             "nullable": true
           },
           "startedTime": {
             "type": "string",
             "description": "UTC time the experiment was started (running), if it has been.",
+            "format": "date-time",
             "nullable": true
           },
           "stoppedTime": {
             "type": "string",
             "description": "UTC time the experiment was stopped, if it has been.",
+            "format": "date-time",
             "nullable": true
           },
           "state": {
@@ -90679,6 +90834,7 @@
           "scheduledTime": {
             "type": "string",
             "description": "UTC time the experiment is scheduled to start, if scheduled.",
+            "format": "date-time",
             "nullable": true
           },
           "durationSeconds": {
@@ -90697,7 +90853,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Config-based experiment for a given product. Returned by the Get endpoint and embedded in\r\na successful experiment operation."
+        "description": "Config-based experiment for a given product. Returned by the Get endpoint and embedded in\na successful experiment operation."
       },
       "PublicAllGroupUniversePayoutsResponseModel": {
         "type": "object",
@@ -91197,7 +91353,7 @@
           "AntiCheatConfig"
         ],
         "type": "string",
-        "description": "Public API repository identifier. Only values exposed by the public API are included;\r\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
+        "description": "Public API repository identifier. Only values exposed by the public API are included;\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
         "x-enum-varnames": [
           "InExperienceConfig",
           "RecommendationServicesConfig",
@@ -99005,9 +99161,6 @@
             "enum": [0, 1, 2],
             "type": "integer"
           },
-          "licenseHolder": {
-            "type": "string"
-          },
           "licenseDisplayName": {
             "type": "string"
           }
@@ -99403,6 +99556,26 @@
           "supportsAndroidBinaries": {
             "description": "True if the channel supports android binaries. False otherwise.",
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.ClientSettings.Api.Models.Response.BetaProgramChannelVersionResponse": {
+        "description": "The channel of a beta program and its current version guid.",
+        "required": ["channelName", "clientVersionUpload", "isFlagOnly"],
+        "type": "object",
+        "properties": {
+          "channelName": {
+            "description": "Name of the channel.",
+            "type": "string"
+          },
+          "isFlagOnly": {
+            "description": "Whether the channel is flag-only, i.e. uses production binaries.",
+            "type": "boolean"
+          },
+          "clientVersionUpload": {
+            "description": "The channel's current client version upload. For flag-only channels, this is production's.",
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -109908,7 +110081,12 @@
         "type": "object",
         "properties": {
           "operator": {
-            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ConditionalRuleOperator"
+              }
+            ],
+            "description": "\n\nOPERATOR_AND\n\nOPERATOR_OR\n\nOPERATOR_NOT\n\nOPERATOR_EQ\n\nOPERATOR_NE\n\nOPERATOR_GT\n\nOPERATOR_LT\n\nOPERATOR_GTE\n\nOPERATOR_LTE\n\nOPERATOR_IN\n\nOPERATOR_NIN",
             "nullable": true
           },
           "operand": {
@@ -110036,11 +110214,12 @@
           "scheduledStartTime": {
             "type": "string",
             "description": "UTC time at which the experiment should be auto-started.",
+            "format": "date-time",
             "nullable": true
           }
         },
         "additionalProperties": false,
-        "description": "Request body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
+        "description": "Request body for\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
       },
       "ScheduleExperimentResponse": {
         "type": "object",
@@ -110056,7 +110235,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Response body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
+        "description": "Response body for\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:schedule`."
       },
       "SearchAudioTypeModel": {
         "enum": ["Music", "SoundEffect", "Unknown"],
@@ -111075,7 +111254,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Response body for\r\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:start`."
+        "description": "Response body for\n`POST /v1/experimentation/universes/{universeId}/experiments/{experimentId}:start`."
       },
       "StartPlaceOverrideTestResult": {
         "enum": [
@@ -111392,7 +111571,7 @@
                 "$ref": "#/components/schemas/ConditionalRuleDefinition"
               }
             ],
-            "description": "RPN rule that decides whether an evaluator (user, request, etc.) is eligible for the\r\nexperiment. `null` means no targeting (every otherwise-eligible user is in scope).",
+            "description": "RPN rule that decides whether an evaluator (user, request, etc.) is eligible for the\nexperiment. `null` means no targeting (every otherwise-eligible user is in scope).",
             "nullable": true
           }
         },
@@ -112581,7 +112760,7 @@
             "additionalProperties": {
               "nullable": true
             },
-            "description": "On PATCH, keys not included are unchanged; set a key to null to delete a branch or entry per merge rules.\r\nOn PUT `draft:overwrite`, this map is the authoritative final entry set: any key present on the latest published configuration but omitted here is removed, and any conditional branch omitted for a key that remains is removed.",
+            "description": "On PATCH, keys not included are unchanged; set a key to null to delete a branch or entry per merge rules.\nOn PUT `draft:overwrite`, this map is the authoritative final entry set: any key present on the latest published configuration but omitted here is removed, and any conditional branch omitted for a key that remains is removed.",
             "nullable": true
           },
           "conditionalRules": {
@@ -112590,7 +112769,7 @@
                 "$ref": "#/components/schemas/ConditionalRulesPayload"
               }
             ],
-            "description": "Optional conditional rules. On PATCH, merges with the current draft rules when this payload is non-empty (any rule id or `rulesOrder` entry).\r\nOmit the property or send an empty object `{}` to leave rules unchanged (draft rules, or latest published rules if the draft has none yet).\r\nOn PUT `draft:overwrite`, when this property is present,\r\nCreatorConfigsPublicApi.Models.ConditionalRulesPayload.Rules is the full intended rule set after publish: rules that exist on the latest published configuration but are omitted are removed.\r\nWhen omitted on overwrite, all published conditional rules are cleared (entries must not reference conditionals unless you provide this object).",
+            "description": "Optional conditional rules. On PATCH, merges with the current draft rules when this payload is non-empty (any rule id or `rulesOrder` entry).\nOmit the property or send an empty object `{}` to leave rules unchanged (draft rules, or latest published rules if the draft has none yet).\nOn PUT `draft:overwrite`, when this property is present,\nCreatorConfigsPublicApi.Models.ConditionalRulesPayload.Rules is the full intended rule set after publish: rules that exist on the latest published configuration but are omitted are removed.\nWhen omitted on overwrite, all published conditional rules are cleared (entries must not reference conditionals unless you provide this object).",
             "nullable": true
           }
         },
@@ -112669,7 +112848,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Request body for\r\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\r\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
+        "description": "Request body for\n`PATCH /v1/experimentation/universes/{universeId}/experiments/{experimentId}`.\nMirrors CreatorConfigsPublicApi.Models.Experimentation.CreateExperimentData; updating is modeled as a full replace of these fields."
       },
       "UpdateExperimentResponse": {
         "type": "object",
@@ -113463,12 +113642,12 @@
         "properties": {
           "variantId": {
             "type": "string",
-            "description": "Unique identifier for the variant. Only assigned once the experiment starts running;\r\nempty or null for draft variants.",
+            "description": "Unique identifier for the variant. Only assigned once the experiment starts running;\nempty or null for draft variants.",
             "nullable": true
           },
           "label": {
             "type": "string",
-            "description": "Human-readable label for the variant, e.g. `Control`, `Treatment A`. Non-empty,\r\nat most 50 characters; must start with a letter and contain only letters, digits, spaces,\r\nunderscores, or hyphens.",
+            "description": "Human-readable label for the variant, e.g. `Control`, `Treatment A`. Non-empty,\nat most 50 characters; must start with a letter and contain only letters, digits, spaces,\nunderscores, or hyphens.",
             "nullable": true
           },
           "isBaseline": {
@@ -113477,7 +113656,7 @@
           },
           "weight": {
             "type": "integer",
-            "description": "Relative traffic weight for this variant. The platform normalizes across all variants,\r\nso weights do not have to sum to 100.",
+            "description": "Relative traffic weight for this variant. The platform normalizes across all variants,\nso weights do not have to sum to 100.",
             "format": "int32"
           }
         },

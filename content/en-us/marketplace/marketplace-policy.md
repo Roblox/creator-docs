@@ -9,7 +9,7 @@ If you are ready to sell an item and the item meets the requirements below, see 
 
 ## Creator requirements
 
-To upload, publish, and keep existing content on-sale, Roblox requires users and groups to have [government ID verification](../production/publishing/account-verification.md#verify-through-government-id) or a linked [parental account](https://about.roblox.com/parental-controls). In addition, to publish and keep existing content on-sale, Roblox requires a [Roblox Plus](../production/monetization/roblox-plus.md) or [Premium 1000/2200](https://en.help.roblox.com/hc/en-us/articles/360024256251-Roblox-Premium-Membership) membership.
+To upload, publish, and keep existing content on-sale, Roblox requires users and groups to have [government ID verification](../production/publishing/account-verification.md#verify-through-government-id) or a linked [parental account](https://about.roblox.com/parental-controls) that has government ID verification. In addition, to publish and keep existing content on-sale, Roblox requires a [Roblox Plus](../production/monetization/roblox-plus.md) or [Premium 1000/2200](https://en.help.roblox.com/hc/en-us/articles/360024256251-Roblox-Premium-Membership) membership.
 
 See the following requirements for an individual creator or group:
 

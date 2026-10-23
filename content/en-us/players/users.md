@@ -1,13 +1,13 @@
 ---
-title: Users and domain-scoped user IDs
-description: Learn about domain-scoped user IDs and the User type for identifying players in your games.
+title: Users and scoped user IDs
+description: Learn how Roblox exposes one effective user ID per domain.
 ---
 
-<Alert severity = 'warning'>
-Refer to the [DevForum announcement](https://devforum.roblox.com/t/update-on-safety-privacy-introducing-scoped-user-identifiers/4677155/1) for latest information on domain-scoped user ID rollout and timelines.
+<Alert severity="warning">
+Scoped user IDs have not rolled out broadly yet. `Class.Player.User` and the `Datatype.User` data type are available now, and a user's effective user ID currently remains their global user ID.
 </Alert>
 
-Roblox assigns each user a unique **domain-scoped user ID** per game or app they interact with. This page explains how domain-scoped identification works and how to use the `Datatype.User` type in your game code.
+Roblox exposes one **effective user ID** for each user in each game, group, or app. Depending on the user's history with that domain, their effective user ID is either their global user ID or a **scoped user ID**. This page explains how effective user IDs work and how to use the `Datatype.User` type in your game code.
 
 The following concepts are central to user identification:
 
@@ -27,48 +27,75 @@ The following concepts are central to user identification:
   </tr>
   <tr>
     <td>`Datatype.User` data type</td>
-    <td>A data type that represents a user's identity within a specific domain. This is the standard identifier for referencing users in game code.</td>
+    <td>A data type that carries a user's effective user ID and its domain context. This is the standard identifier for referencing users in game code.</td>
   </tr>
   <tr>
-    <td>**Domain-scoped user ID**</td>
-    <td>A numeric identifier that uniquely identifies a user within a specific [domain](#domain-scoped-user-ids). This identifier is different in every game and app.</td>
+    <td>**Global user ID**</td>
+    <td>The platform-level user ID that Roblox assigns to each account. It's globally unique across Roblox.</td>
+  </tr>
+  <tr>
+    <td>**Scoped user ID**</td>
+    <td>A user ID assigned within a specific domain. A user's scoped user IDs are different in each game, group, or app.</td>
+  </tr>
+  <tr>
+    <td>**Effective user ID**</td>
+    <td>The single user ID that Roblox exposes for a user within a [domain](#effective-user-ids-and-domains).</td>
+  </tr>
+  <tr>
+    <td>**Pre-rollout user**</td>
+    <td>A user who first engaged with a domain before the scoped user ID rollout. In that domain, their effective user ID remains their global user ID.</td>
+  </tr>
+  <tr>
+    <td>**Post-rollout user**</td>
+    <td>A user who first engaged with a domain after the scoped user ID rollout. In that domain, their effective user ID is a scoped user ID.</td>
   </tr>
 </tbody>
 </table>
 
-## Domain-scoped user IDs
+## Effective user IDs and domains
 
-A **domain-scoped user ID** is a unique identifier assigned to a user within a specific **game** or **app**. Unlike a global user ID, a domain-scoped user ID is only meaningful within the domain that issued it, so the same user has a different domain-scoped user ID in each game or app they interact with. Players who joined your game before the scoped ID rollout keep their original global user ID in that game (see [Returning players](#returning-players)).
+Each user has one effective user ID within a specific **game**, **group**, or **app**. Roblox doesn't expose separate global and scoped user IDs for the same user in that domain:
 
-Domain types are represented by `Enum.DomainType`:
+- A **pre-rollout user** has their global user ID as their effective user ID.
+- A **post-rollout user** has a scoped user ID as their effective user ID. That ID is only meaningful within that domain.
+
+In game code, `Class.Player.UserId` and `Datatype.User.Id|Player.User.Id` both return this effective user ID and always have the same numeric value (`Class.Player.User|Player.User.Id` equals `Class.Player.UserId`), so your code doesn't need branching logic to choose between them.
+
+Roblox scopes user identity across three types of domains:
 
 <table><thead>
   <tr>
-    <th>Domain type</th>
+    <th>Domain</th>
     <th>Scoped to</th>
     <th>Example</th>
   </tr></thead>
 <tbody>
   <tr>
-    <td>`Enum.DomainType.EXPERIENCE`</td>
-    <td>A specific game (universe)</td>
-    <td>A player's ID in your game</td>
+    <td>**Experience** (`Enum.DomainType.EXPERIENCE`)</td>
+    <td>A specific experience</td>
+    <td>A player's ID in your experience</td>
   </tr>
   <tr>
-    <td>`Enum.DomainType.OAUTH`</td>
+    <td>**Group**</td>
+    <td>A specific Roblox group (community)</td>
+    <td>A member's ID in your group</td>
+  </tr>
+  <tr>
+    <td>**OAuth app** (`Enum.DomainType.OAUTH`)</td>
     <td>A specific OAuth application</td>
     <td>A user's ID in your external tool</td>
   </tr>
 </tbody>
 </table>
 
-### How domain-scoped IDs work
+### How effective user IDs work
 
-When a player joins your game, they receive a domain-scoped user ID that is unique to that game. The same player joining a different game receives a different domain-scoped user ID. This means:
+When a player joins your game, they have one effective user ID for that game. A post-rollout user's effective user ID is a scoped user ID unique to that game. They receive a different scoped user ID in any other game, group, or app where they are also a post-rollout user. This means:
 
-- Domain-scoped user IDs are integers, similar to existing global user IDs.
-- A domain-scoped user ID does not collide with any existing global user ID.
-- The same numeric value may appear in different domains for different users. The unique key is the combination of domain type, domain ID, and domain-scoped user ID.
+- Effective user IDs are integers, whether they are global or scoped.
+- Effective user IDs are stable across sessions within the same domain.
+- A scoped user ID does not collide with any existing global user ID.
+- The same numeric value can appear in different domains for different users. The unique key is the combination of the domain (domain type and domain ID) and the effective user ID.
 
 ### Example scenario
 
@@ -78,34 +105,41 @@ The following example demonstrates how different games reference the same user:
   <tr>
     <th>Scenario</th>
     <th>User context</th>
-    <th>User ID seen by game</th>
+    <th>Effective user ID seen by game</th>
   </tr></thead>
 <tbody>
   <tr>
     <td>User connects to **Game A**</td>
-    <td>Returning player (visited before scoped IDs)</td>
-    <td>`123` (global ID, unchanged)</td>
+    <td>Pre-rollout user</td>
+    <td>`123` (global user ID, unchanged)</td>
   </tr>
   <tr>
     <td>User connects to **Game B**</td>
-    <td>First visit after scoped ID rollout</td>
-    <td>`500789` (domain-scoped user ID for Game B)</td>
+    <td>Post-rollout user</td>
+    <td>`500789` (scoped user ID for Game B)</td>
   </tr>
   <tr>
     <td>User connects to **Game C**</td>
-    <td>First visit after scoped ID rollout</td>
-    <td>`302441` (domain-scoped user ID for Game C)</td>
+    <td>Post-rollout user</td>
+    <td>`302441` (scoped user ID for Game C)</td>
   </tr>
 </tbody>
 </table>
 
-### Returning players
+### Pre-rollout users
 
-If a player already joined your game before the scoped user ID rollout, they keep their original global user ID in that game. This ensures existing data store keys, leaderboards, and inventories continue to work without any changes.
+If a player is a pre-rollout user in your game, their effective user ID remains their global user ID in that game. Both `Class.Player.UserId` and `Datatype.User.Id|Player.User.Id` return that global user ID. Roblox doesn't expose a second user ID for the player in that game. This ensures existing data store keys, leaderboards, and inventories continue to work without any changes.
+
+### Group domain
+
+Each Roblox group is its own domain. A user has one effective user ID within a group, separate from their effective user ID in any game or OAuth application:
+
+- **In-game group checks don't change** — Engine methods on `Class.Player` such as `Class.Player:IsInGroupAsync()`, `Class.Player:GetRankInGroupAsync()`, and `Class.Player:GetRoleInGroupAsync()`, as well as `Class.GroupService:PromptJoinAsync()`, resolve identity internally without exposing a user ID.
+- **Open Cloud group APIs use the group's domain** — This applies to endpoints that list or manage group memberships and join requests.
 
 ## Working with the User Type
 
-`Datatype.User` is the standard way to identify users in game code. A `Datatype.User` value carries the domain-scoped user ID alongside the domain type and domain ID, so the identity context always travels with the identifier. For full API details, see the `Datatype.User` reference.
+`Datatype.User` is the standard way to identify users in game code. A `Datatype.User` value carries the effective user ID alongside the domain type and domain ID, so the identity context always travels with the identifier. For full API details, see the `Datatype.User` reference.
 
 ### Get a User from a Player
 
@@ -116,7 +150,7 @@ local Players = game:GetService("Players")
 
 Players.PlayerAdded:Connect(function(player)
     local user = player.User
-    print("Domain user ID:", user.Id)
+    print("Effective user ID:", user.Id) -- Always matches player.UserId
     print("Domain type:", user.DomainType)
     print("Domain ID:", user.DomainId)
 end)
@@ -124,7 +158,7 @@ end)
 
 ### Construct a User from an ID
 
-To create a `Datatype.User` from a known user ID within the current game, use `Datatype.User.fromId()`:
+To create a `Datatype.User` from a known effective user ID within the current game, use `Datatype.User.fromId()`:
 
 ```lua
 local user = User.fromId(knownUserId)
@@ -150,23 +184,25 @@ When a numeric user ID is passed to an engine API that accepts user IDs, it is a
 
 ### Engine APIs that return user IDs
 
-Engine APIs that return numeric user IDs continue to use the same field names and types. Each returned ID is either a global ID or a domain-scoped user ID depending on whether the user joined the game before or after the scoped ID rollout:
+Engine APIs that return numeric user IDs return the user's effective user ID:
 
-- **Returning players** (first joined before scoped ID launch) — the API returns the user's global user ID.
-- **New players** (first join after scoped ID launch) — the API returns the user's domain-scoped user ID.
+- **Pre-rollout users** — the API returns the user's global user ID.
+- **Post-rollout users** — the API returns the user's scoped user ID.
 
-Both global and domain-scoped user IDs are standard integers that do not collide, so existing code that reads these numeric fields continues to work.
+`Class.Player.UserId`, `Datatype.User.Id|Player.User.Id`, and other engine APIs all return this same effective user ID for a user in your game, so existing code that reads numeric user ID fields continues to work without branching logic.
+
+Open Cloud requests and responses use the same effective user ID for the target domain. They don't expose a second user ID for the same user in that domain.
 
 ## Storing user identity
 
-For data store keys within a single game, use `user.Id` directly:
+Use a numeric effective user ID only to identify a user within a single domain. A data store key in one game can use `user.Id` directly:
 
 ```lua
 local key = ("player_%d"):format(player.User.Id)
 PlayerDataStore:SetAsync(key, data)
 ```
 
-For values that may be read by other systems or need full domain context, serialize the `Datatype.User` with `Datatype.User:ToString()|ToString()`:
+When another domain reads the stored identity, such as an OAuth app that moderates users, store the string from `Datatype.User:ToString()|ToString()`. The string encodes the domain context together with the effective user ID. Using the integer alone can apply an action to the wrong user when the same number identifies a different user in another domain.
 
 ```lua
 local encoded = player.User:ToString()
@@ -181,8 +217,8 @@ For more details on serialization guarantees, see the `Datatype.User` reference.
 ## Best practices
 
 - Use `Class.Player.User` as the standard identifier in new code.
-- Use `Datatype.User:ToString()|ToString()` and `Datatype.User.fromString()|fromString()` when persisting or transmitting a `Datatype.User` value.
-- Do not use a numeric user ID from one domain to identify a user in another domain.
+- Use the numeric effective user ID only within a single domain, such as data store keys for one game.
+- Use `Datatype.User:ToString()|ToString()` and `Datatype.User.fromString()|fromString()` when another domain reads the stored identity.
 
 ### When to use User or Player
 

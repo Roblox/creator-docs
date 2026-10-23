@@ -6,10 +6,46 @@
 /.pr-metadata.json                                          @Roblox/documentation
 
 /content/common/                                            @Roblox/documentation
-/content/common/localization_manifest.json                  @Roblox/creator-knowledge
+/content/common/localization_manifest.json                  @Roblox/creator-knowledge @RobloxBuilderAI
 /content/en-us/                                             @Roblox/documentation
 /content/en-us/assets/education/                            @Roblox/documentation
 /content/en-us/education/                                   @Roblox/documentation
 /tools/checks/utils/allowedHttpLinks.txt                    @Roblox/creator-knowledge @Roblox/documentation
 /tools/checks/utils/do-not-machine-translate.txt            @Roblox/creator-knowledge @Roblox/documentation
 /STYLE.md                                                   @Roblox/documentation
+
+# Machine translations: BuilderAI can satisfy code-owner review only on these
+# locale paths and the generated manifest above. Keep human owners as fallback.
+/content/ar-001/                                            @Roblox/creator-knowledge @RobloxBuilderAI
+/content/bg-bg/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/cs-cz/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/da-dk/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/de-de/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/el-gr/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/es-es/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/et-ee/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/fi-fi/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/fr-fr/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/ga-ie/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/hr-hr/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/hu-hu/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/id-id/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/it-it/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/ja-jp/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/ko-kr/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/lt-lt/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/lv-lv/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/mt-mt/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/nl-nl/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/pl-pl/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/pt-br/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/pt-pt/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/ro-ro/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/sk-sk/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/sl-si/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/sv-se/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/th-th/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/tr-tr/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/vi-vn/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/zh-cn/                                             @Roblox/creator-knowledge @RobloxBuilderAI
+/content/zh-tw/                                             @Roblox/creator-knowledge @RobloxBuilderAI
