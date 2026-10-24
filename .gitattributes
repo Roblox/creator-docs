@@ -19,3 +19,39 @@ content/zh-tw/assets/** filter=lfs diff=lfs merge=lfs -text
 # eol=lf` above matches these paths too and would otherwise re-enable CRLF
 # normalization on binary content when LFS push is skipped (raw-blob commits).
 content/**/assets/** -text
+
+# Machine-generated translations: keep English source and the localization
+# manifest reviewable; BuilderAI excludes these locale directories.
+content/ar-001/** linguist-generated=true
+content/bg-bg/** linguist-generated=true
+content/cs-cz/** linguist-generated=true
+content/da-dk/** linguist-generated=true
+content/de-de/** linguist-generated=true
+content/el-gr/** linguist-generated=true
+content/es-es/** linguist-generated=true
+content/et-ee/** linguist-generated=true
+content/fi-fi/** linguist-generated=true
+content/fr-fr/** linguist-generated=true
+content/ga-ie/** linguist-generated=true
+content/hr-hr/** linguist-generated=true
+content/hu-hu/** linguist-generated=true
+content/id-id/** linguist-generated=true
+content/it-it/** linguist-generated=true
+content/ja-jp/** linguist-generated=true
+content/ko-kr/** linguist-generated=true
+content/lt-lt/** linguist-generated=true
+content/lv-lv/** linguist-generated=true
+content/mt-mt/** linguist-generated=true
+content/nl-nl/** linguist-generated=true
+content/pl-pl/** linguist-generated=true
+content/pt-br/** linguist-generated=true
+content/pt-pt/** linguist-generated=true
+content/ro-ro/** linguist-generated=true
+content/sk-sk/** linguist-generated=true
+content/sl-si/** linguist-generated=true
+content/sv-se/** linguist-generated=true
+content/th-th/** linguist-generated=true
+content/tr-tr/** linguist-generated=true
+content/vi-vn/** linguist-generated=true
+content/zh-cn/** linguist-generated=true
+content/zh-tw/** linguist-generated=true
