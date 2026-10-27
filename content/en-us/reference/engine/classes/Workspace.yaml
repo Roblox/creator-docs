@@ -160,14 +160,15 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Server Authority
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Workspace.AvatarUnificationMode
     summary: |
       Enables the R6 to R15 adapter, allowing R15 avatars to join R6

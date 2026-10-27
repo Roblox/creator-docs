@@ -25,8 +25,7 @@ code_samples: []
 inherits:
   - GuiObject
 descendants: []
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: TextChannelWindow.Target

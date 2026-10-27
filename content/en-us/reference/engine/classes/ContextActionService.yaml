@@ -8,6 +8,16 @@ memory_category: Instances
 summary: |
   A service used to bind user input to contextual actions.
 description: |
+  `Class.ContextActionService:BindAction()|BindAction` and the related binding
+  methods of this service aren't recommended for new work and are planned for
+  deprecation. Use the
+  [Input Action System](../../../input/input-action-system.md) instead, which is
+  built for cross-platform input. You create `Class.InputContext`,
+  `Class.InputAction` and `Class.InputBinding` instances rather than binding
+  actions from scripts. Each action holds bindings for keyboard, mouse, gamepad
+  and touch, so the same action works on every platform and responds to
+  whichever device the player is using, without separate code for each one.
+
   Allows an experience to bind user input to contextual actions, or actions that
   are only enabled under some condition or period of time. For example, allowing
   a player to open a door only while close by. In code, an action is simply a

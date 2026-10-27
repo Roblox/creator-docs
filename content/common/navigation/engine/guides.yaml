@@ -259,6 +259,8 @@ navigation:
             path: /scripting/security/third-party-vulnerabilities
           - title: Server-side detection and consequencing
             path: /scripting/security/server-side-detection
+          - title: Device trust
+            path: /scripting/security/device-trust
       - title: Luau reference
         path: /luau/
         section:

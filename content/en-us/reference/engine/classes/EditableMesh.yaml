@@ -190,7 +190,7 @@ description: |
   local function addSharpQuad(editableMesh, vid0, vid1, vid2, vid3)
   	local nid = editableMesh:AddNormal() -- This creates a normal ID which is automatically computed
 
-  	local fid = editableMesh:AddFace({vid0, vid1, vid2, vid3})
+  	local fid = editableMesh:AddFace(vid0, vid1, vid2, vid3)
   	editableMesh:SetFaceNormals(fid, {nid, nid, nid, nid})
   end
 
@@ -388,12 +388,10 @@ methods:
     summary: |
       Adds a new triangle or quad face to the mesh and returns a face ID.
     description: |
-      Adds a new face from an array of vertex IDs and returns a stable face ID.
-      A face is either a **triangle** (3 vertex IDs) or a **quad** (4 vertex
-      IDs); any other count throws an error. For adding triangles specifically,
-      it is preferable to use `Class.EditableMesh:AddTriangle()|AddTriangle()`,
-      which is equivalent but slightly more performant as it avoids constructing
-      an array for the vertices.
+      Adds a new face from the given vertex IDs and returns a stable face ID. A
+      face is either a **triangle** (3 vertex IDs) or a **quad** (4 vertex IDs);
+      any other count throws an error. For adding triangles specifically, this
+      method is equivalent to `Class.EditableMesh:AddTriangle()|AddTriangle()`.
 
       For rendering and collision, each quad is internally split into 2
       triangles, so a quad counts as 2 triangles toward the mesh's triangle
@@ -429,7 +427,7 @@ methods:
 
       ```lua
       -- Create a triangle
-      local faceId = editableMesh:AddFace({v0, v1, v2})
+      local faceId = editableMesh:AddFace(v0, v1, v2)
 
       -- Get the UV IDs that were automatically created
       local uvId0 = editableMesh:GetVertexFaceUV(v0, faceId)
@@ -453,7 +451,7 @@ methods:
 
       ```lua
       -- Create a triangle
-      local faceId = editableMesh:AddFace({v0, v1, v2})
+      local faceId = editableMesh:AddFace(v0, v1, v2)
 
       -- Create new UV IDs with custom coordinates
       local uv0 = editableMesh:AddUV(Vector2.new(0, 0))
@@ -475,8 +473,8 @@ methods:
 
       ```lua
       -- Two triangles sharing vertices v0 and v1, but with a sharp edge between them
-      local fid1 = editableMesh:AddFace({v0, v1, v2})
-      local fid2 = editableMesh:AddFace({v0, v3, v1})
+      local fid1 = editableMesh:AddFace(v0, v1, v2)
+      local fid2 = editableMesh:AddFace(v0, v3, v1)
 
       -- Create separate normals for each face to produce a hard edge
       local n1 = editableMesh:AddNormal() -- Auto-computed for fid1
@@ -494,13 +492,15 @@ methods:
         type: Tuple
         default:
         summary: |
-          Array of the new face's vertex IDs, in order around the face. Provide
-          3 IDs to create a triangle or 4 IDs to create a quad.
+          The new face's vertex IDs passed as separate arguments in order around
+          the face. Provide 3 IDs to create a triangle or 4 IDs to create a
+          quad.
     returns:
       - type: int64
         summary: |
           Face ID of the new face.
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -535,9 +535,8 @@ methods:
       Adds a new triangle to the mesh and returns a face ID.
     description: |
       Adds a new triangle to the mesh and returns a stable face ID. This is
-      equivalent to passing an array of 3 vertex IDs to
-      `Class.EditableMesh:AddFace()|AddFace()`, but is slightly more performant
-      as it avoids constructing an array for each call.
+      equivalent to calling `Class.EditableMesh:AddFace()|AddFace()` with 3
+      vertex IDs.
 
       See `Class.EditableMesh:AddFace()|AddFace()` for information on how all
       faces are added, including those added by

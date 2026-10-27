@@ -753,6 +753,31 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
+  - name: PhysicsSettings.DrawShapecast
+    summary: |
+      When set to true, draws the swept volume and hit result of shapecast
+      queries.
+    description: |
+      When set to true, draws the swept volume and hit result of every
+      `Class.WorldRoot:Shapecast()`, `Class.WorldRoot:Blockcast()`, and
+      `Class.WorldRoot:Spherecast()` query. Each cast is drawn with its shape at
+      the start of the cast and where it stopped, faint copies of the shape
+      along the path it traveled, the travel direction, and the contact point of
+      the hit. Casts that hit something are drawn in green and casts that miss
+      are drawn in red.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
   - name: PhysicsSettings.DrawTotalNetForce
     summary: |
       When set to true, draws the total net force on selected or hovered
