@@ -13,6 +13,8 @@ hideInPageNavigation: true
       --rvp-text-muted: var(--color-content-default);
       --rvp-stroke: var(--color-stroke-default);
       color: var(--rvp-text);
+      container-type: inline-size;
+      container-name: rvp;
     }
     .rvp p, .rvp h2, .rvp h3, .rvp li, .rvp td, .rvp th, .rvp span, .rvp div { color: inherit; }
     .rvp strong { color: var(--rvp-text) !important; font-weight: 700; }
@@ -24,7 +26,7 @@ hideInPageNavigation: true
       margin-bottom: 24px;
     }
     .rvp .rvp-title {
-      font-size: 44px !important;
+      font-size: clamp(28px, 6cqi, 44px) !important;
       font-weight: 600 !important;
       line-height: 1.15 !important;
       letter-spacing: -0.01em;
@@ -32,7 +34,8 @@ hideInPageNavigation: true
       color: var(--rvp-text) !important;
     }
     .rvp .rvp-hero-img {
-      width: 220px;
+      width: clamp(110px, 24cqi, 220px);
+      height: auto;
       flex-shrink: 0;
       margin-top: -8px;
       display: block;
@@ -64,6 +67,8 @@ hideInPageNavigation: true
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      container-type: inline-size;
+      container-name: rvp-card;
     }
     .rvp .rvp-card-body { padding: 20px 22px !important; flex: 1; }
     .rvp .rvp-card-title {
@@ -85,21 +90,25 @@ hideInPageNavigation: true
     .rvp .rvp-vp .rvp-icon { margin: 2px 0 0; flex-shrink: 0; }
     .rvp .rvp-metric {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 20px;
-      padding: 28px 24px !important;
+      justify-content: center;
+      text-align: center;
+      gap: 14px;
+      padding: 36px 28px !important;
     }
     .rvp .rvp-metric-num {
-      font-size: 46px !important;
+      font-size: clamp(40px, 13cqi, 60px) !important;
       font-weight: 700 !important;
       line-height: 1 !important;
       margin: 0 0 6px !important;
       color: var(--rvp-text) !important;
     }
-    .rvp .rvp-metric-label { font-size: 15px !important; margin: 0 !important; color: var(--rvp-text) !important; }
+    .rvp .rvp-metric-label { font-size: clamp(17px, 4.6cqi, 21px) !important; font-weight: 600 !important; margin: 0 !important; color: var(--rvp-text) !important; }
     .rvp .rvp-metric-desc {
-      font-size: 15px !important;
-      line-height: 1.4 !important;
+      max-width: 360px;
+      font-size: clamp(16px, 4cqi, 18px) !important;
+      line-height: 1.45 !important;
       text-align: center;
       margin: 0 !important;
       color: var(--rvp-text-muted) !important;
@@ -113,6 +122,16 @@ hideInPageNavigation: true
       margin-bottom: 18px;
     }
     .rvp .rvp-tile-media { width: 100%; height: auto; display: block; }
+    .rvp .rvp-tile-link {
+      display: flex;
+      width: 100%;
+      border-radius: 12px;
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+    .rvp .rvp-tile-link .rvp-card { border: 1px solid transparent !important; }
+    .rvp .rvp-tile-link:hover .rvp-card,
+    .rvp .rvp-tile-link:focus-visible .rvp-card { border-color: var(--rvp-blue) !important; }
     .rvp .rvp-subhead {
       font-size: 15px !important;
       font-weight: 700 !important;
@@ -154,6 +173,7 @@ hideInPageNavigation: true
     .rvp .rvp-step-text { font-size: 16px !important; line-height: 1.45 !important; margin: 0 0 16px !important; }
     .rvp .rvp-step-img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border-radius: 12px; display: block; }
     .rvp .rvp-step-caption { font-family: monospace; font-size: 12px; margin: 8px 0 0; }
+    .rvp .rvp-table-wrap { width: 100%; overflow-x: auto; }
     .rvp .rvp-table { width: 100%; border-collapse: collapse; margin: 0; height: 100%; }
     .rvp .rvp-table th, .rvp .rvp-table td {
       background: var(--rvp-card);
@@ -170,11 +190,22 @@ hideInPageNavigation: true
     .rvp .rvp-tips { list-style: none; padding: 0; margin: 0; }
     .rvp .rvp-tips li { position: relative; padding-left: 22px; font-size: 15px; line-height: 1.45; margin-bottom: 8px; }
     .rvp .rvp-tips li::before { content: '◆'; color: var(--rvp-blue); position: absolute; left: 0; font-size: 11px; top: 4px; }
-    @media (max-width: 768px) {
-      .rvp .rvp-hero-img { width: 120px; }
-      .rvp .rvp-title { font-size: 30px !important; margin-top: 24px !important; }
-      .rvp .rvp-steps { grid-template-columns: 1fr; }
+    @container rvp (max-width: 760px) {
+      .rvp .rvp-title { margin-top: 24px !important; }
+      .rvp .rvp-section { margin-top: 40px; }
+      .rvp .rvp-steps { grid-template-columns: 1fr; gap: 32px; }
       .rvp .rvp-step-num::after { display: none; }
+      .rvp .rvp-step-img { aspect-ratio: auto; }
+    }
+    @container rvp (max-width: 480px) {
+      .rvp .rvp-hero { flex-direction: column-reverse; gap: 8px; }
+      .rvp .rvp-title { margin-top: 0 !important; }
+      .rvp .rvp-hero-img { width: 140px; margin-top: 0; }
+      .rvp .rvp-table th, .rvp .rvp-table td { padding: 12px 8px; font-size: 14px; }
+    }
+    @container rvp-card (max-width: 260px) {
+      .rvp .rvp-vp { flex-direction: column; gap: 10px; }
+      .rvp .rvp-card-body { padding: 16px !important; }
     }
   `}</style>
 
@@ -354,6 +385,7 @@ return (<>
 <Typography component="h2" className="rvp-h2">Best-in-class examples</Typography>
 <Grid container spacing={1} style={{ alignItems: 'stretch' }}>
 <Grid item XSmall={12} Medium={6} style={{ display: 'flex' }}>
+<a className="rvp-tile-link" href="https://www.roblox.com/games/9872472334/Evade" target="_blank" rel="noopener noreferrer">
 <Card className="rvp-card">
 <CardMedia component="img" className="rvp-tile-media" src="/assets/monetization/rewarded-video-ads/playbooks/Survival-Evade.webp" alt="Respawn options on the elimination screen in Evade" loading="lazy" />
 <CardContent className="rvp-card-body">
@@ -361,8 +393,10 @@ return (<>
 <Typography component="p" className="rvp-card-text"><strong>Strategy:</strong> Second Chance + Streak Saver</Typography>
 </CardContent>
 </Card>
+</a>
 </Grid>
 <Grid item XSmall={12} Medium={6} style={{ display: 'flex' }}>
+<a className="rvp-tile-link" href="https://www.roblox.com/games/189707/Natural-Disaster-Survival" target="_blank" rel="noopener noreferrer">
 <Card className="rvp-card">
 <CardMedia component="img" className="rvp-tile-media" src="/assets/monetization/rewarded-video-ads/playbooks/Survival-Natural-Disaster-Survival.webp" alt="Pre-round prompt to watch a rewarded ad in Natural Disaster Survival" loading="lazy" />
 <CardContent className="rvp-card-body">
@@ -370,8 +404,10 @@ return (<>
 <Typography component="p" className="rvp-card-text"><strong>Strategy:</strong> Pre-Round Power-Up</Typography>
 </CardContent>
 </Card>
+</a>
 </Grid>
 <Grid item XSmall={12} Medium={12} style={{ display: 'flex' }}>
+<a className="rvp-tile-link" href="https://www.roblox.com/games/137826330724902/Scary-Shawarma-Kiosk-the-ANOMALY" target="_blank" rel="noopener noreferrer">
 <Card className="rvp-card">
 <CardMedia component="img" className="rvp-tile-media" src="/assets/monetization/rewarded-video-ads/playbooks/Survival-Scary-Shawarma-Kiosk.webp" alt="Prompt offering 2x cash for watching an ad in Scary Shawarma Kiosk" loading="lazy" />
 <CardContent className="rvp-card-body">
@@ -379,6 +415,7 @@ return (<>
 <Typography component="p" className="rvp-card-text"><strong>Strategy:</strong> Pre-Round Power-Up</Typography>
 </CardContent>
 </Card>
+</a>
 </Grid>
 </Grid>
 </section>
