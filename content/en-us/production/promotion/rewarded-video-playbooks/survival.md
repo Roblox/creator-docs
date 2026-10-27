@@ -129,6 +129,11 @@ hideInPageNavigation: true
       color: inherit !important;
       text-decoration: none !important;
     }
+    .rvp .rvp-tile-link span:has(.rvp-card) {
+      display: flex !important;
+      width: 100%;
+      min-width: 0;
+    }
     .rvp .rvp-tile-link .rvp-card { border: 1px solid transparent !important; }
     .rvp .rvp-tile-link:hover .rvp-card,
     .rvp .rvp-tile-link:focus-visible .rvp-card { border-color: var(--rvp-blue) !important; }
@@ -144,7 +149,7 @@ hideInPageNavigation: true
       align-items: center;
       margin-bottom: 18px;
     }
-    .rvp .rvp-step-num span {
+    .rvp .rvp-step-circle {
       width: 44px;
       height: 44px;
       border-radius: 50%;
@@ -156,14 +161,12 @@ hideInPageNavigation: true
       font-size: 17px;
       flex-shrink: 0;
     }
-    .rvp .rvp-step-num::after {
-      content: '';
+    .rvp .rvp-step-line {
       flex: 1;
       height: 2px;
       background: var(--rvp-stroke);
       margin-left: 6px;
     }
-    .rvp .rvp-steps > div:last-child .rvp-step-num::after { display: none; }
     .rvp .rvp-step-title {
       font-size: 20px !important;
       font-weight: 700 !important;
@@ -189,12 +192,12 @@ hideInPageNavigation: true
     .rvp .rvp-tips-title .rvp-info { font-size: 22px; line-height: 1; font-weight: 400; }
     .rvp .rvp-tips { list-style: none; padding: 0; margin: 0; }
     .rvp .rvp-tips li { position: relative; padding-left: 22px; font-size: 15px; line-height: 1.45; margin-bottom: 8px; }
-    .rvp .rvp-tips li::before { content: '◆'; color: var(--rvp-blue); position: absolute; left: 0; font-size: 11px; top: 4px; }
+    .rvp .rvp-diamond { color: var(--rvp-blue); position: absolute; left: 0; font-size: 11px; top: 4px; }
     @container rvp (max-width: 760px) {
       .rvp .rvp-title { margin-top: 24px !important; }
       .rvp .rvp-section { margin-top: 40px; }
       .rvp .rvp-steps { grid-template-columns: 1fr; gap: 32px; }
-      .rvp .rvp-step-num::after { display: none; }
+      .rvp .rvp-step-line { display: none; }
       .rvp .rvp-step-img { aspect-ratio: auto; }
     }
     @container rvp (max-width: 480px) {

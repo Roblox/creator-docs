@@ -129,6 +129,11 @@ hideInPageNavigation: true
       color: inherit !important;
       text-decoration: none !important;
     }
+    .rvp .rvp-tile-link span:has(.rvp-card) {
+      display: flex !important;
+      width: 100%;
+      min-width: 0;
+    }
     .rvp .rvp-tile-link .rvp-card { border: 1px solid transparent !important; }
     .rvp .rvp-tile-link:hover .rvp-card,
     .rvp .rvp-tile-link:focus-visible .rvp-card { border-color: var(--rvp-blue) !important; }
@@ -144,7 +149,7 @@ hideInPageNavigation: true
       align-items: center;
       margin-bottom: 18px;
     }
-    .rvp .rvp-step-num span {
+    .rvp .rvp-step-circle {
       width: 44px;
       height: 44px;
       border-radius: 50%;
@@ -156,14 +161,12 @@ hideInPageNavigation: true
       font-size: 17px;
       flex-shrink: 0;
     }
-    .rvp .rvp-step-num::after {
-      content: '';
+    .rvp .rvp-step-line {
       flex: 1;
       height: 2px;
       background: var(--rvp-stroke);
       margin-left: 6px;
     }
-    .rvp .rvp-steps > div:last-child .rvp-step-num::after { display: none; }
     .rvp .rvp-step-title {
       font-size: 20px !important;
       font-weight: 700 !important;
@@ -189,12 +192,12 @@ hideInPageNavigation: true
     .rvp .rvp-tips-title .rvp-info { font-size: 22px; line-height: 1; font-weight: 400; }
     .rvp .rvp-tips { list-style: none; padding: 0; margin: 0; }
     .rvp .rvp-tips li { position: relative; padding-left: 22px; font-size: 15px; line-height: 1.45; margin-bottom: 8px; }
-    .rvp .rvp-tips li::before { content: '◆'; color: var(--rvp-blue); position: absolute; left: 0; font-size: 11px; top: 4px; }
+    .rvp .rvp-diamond { color: var(--rvp-blue); position: absolute; left: 0; font-size: 11px; top: 4px; }
     @container rvp (max-width: 760px) {
       .rvp .rvp-title { margin-top: 24px !important; }
       .rvp .rvp-section { margin-top: 40px; }
       .rvp .rvp-steps { grid-template-columns: 1fr; gap: 32px; }
-      .rvp .rvp-step-num::after { display: none; }
+      .rvp .rvp-step-line { display: none; }
       .rvp .rvp-step-img { aspect-ratio: auto; }
     }
     @container rvp (max-width: 480px) {
@@ -268,21 +271,21 @@ return (<>
 <Typography component="p" className="rvp-lead">Placement is key to maximizing your earnings. As you consider the player journey, here are some ways you could best integrate Rewarded Video in your obby.</Typography>
 <div className="rvp-steps">
 <div>
-<div className="rvp-step-num"><span>01</span></div>
+<div className="rvp-step-num"><span className="rvp-step-circle">01</span><span className="rvp-step-line" aria-hidden="true"></span></div>
 <Typography component="h3" className="rvp-step-title">First view</Typography>
 <Typography component="p" className="rvp-step-text">When players first spawn in, offer rewards like timed buffs or additional daily login bonuses.</Typography>
 <img className="rvp-step-img" src="/assets/monetization/rewarded-video-ads/playbooks/Obby-First-View.webp" alt="Watch ad prompt offering bonus points in Free UGC Obby" loading="lazy" />
 <p className="rvp-step-caption">Free UGC Obby</p>
 </div>
 <div>
-<div className="rvp-step-num"><span>02</span></div>
+<div className="rvp-step-num"><span className="rvp-step-circle">02</span><span className="rvp-step-line" aria-hidden="true"></span></div>
 <Typography component="h3" className="rvp-step-title">Invest &amp; progress</Typography>
 <Typography component="p" className="rvp-step-text">Use Rewarded Video to offer free currency or trials to high-value items during the session.</Typography>
 <img className="rvp-step-img" src="/assets/monetization/rewarded-video-ads/playbooks/Obby-Invest-and-Progress.webp" alt="Free item prompt with a watch ad button in Escape Papa Pizzas Pizzeria" loading="lazy" />
 <p className="rvp-step-caption">Escape Papa Pizzas Pizzeria</p>
 </div>
 <div>
-<div className="rvp-step-num"><span>03</span></div>
+<div className="rvp-step-num"><span className="rvp-step-circle">03</span></div>
 <Typography component="h3" className="rvp-step-title">Post-failure second chance</Typography>
 <Typography component="p" className="rvp-step-text">Maximize conversion by appealing to players' desire to preserve their current progress.</Typography>
 <img className="rvp-step-img" src="/assets/monetization/rewarded-video-ads/playbooks/Obby-Second-Chance.webp" alt="Prompt asking the player to watch an ad to earn a free revive in Ninja Challenge" loading="lazy" />
@@ -313,9 +316,9 @@ return (<>
 <CardContent className="rvp-card-body">
 <div className="rvp-tips-title"><span className="rvp-info" aria-hidden="true">&#9432;</span>TIPS</div>
 <ul className="rvp-tips">
-<li>Make the prompt visible when the game starts or when a round ends.</li>
-<li>Ensure users know what they're getting. Don't just make a prompt that says "ad."</li>
-<li>Provide multiple points of engagement or stacked rewards to increase frequency per user.</li>
+<li><span className="rvp-diamond" aria-hidden="true">◆</span>Make the prompt visible when the game starts or when a round ends.</li>
+<li><span className="rvp-diamond" aria-hidden="true">◆</span>Ensure users know what they're getting. Don't just make a prompt that says "ad."</li>
+<li><span className="rvp-diamond" aria-hidden="true">◆</span>Provide multiple points of engagement or stacked rewards to increase frequency per user.</li>
 </ul>
 </CardContent>
 </Card>
