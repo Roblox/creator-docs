@@ -9,6 +9,10 @@ description: Enable Expanded Terrain to paint up to 62 custom materials onto ter
 
 Expanded Terrain is off by default and is enabled per place. Enabling it swaps the terrain backend, so the place must reopen for the change to take effect.
 
+In addition to custom materials, Expanded Terrain includes rendering, storage, and delivery improvements that significantly reduce terrain's contribution to place file size and improve terrain streaming and load times.
+
+If you edited a place with custom terrain materials during the Early Access program, you still need to set **Expanded Terrain** to **Enabled** on `Class.Workspace`. Otherwise, custom materials might appear as grass.
+
 To enable custom terrain materials in a place:
 
 1. In a place in Studio, go to the [Explorer](../studio/explorer.md) and select `Class.Workspace`.
@@ -51,4 +55,6 @@ When you change a material's settings, such as its color, the update applies imm
 
 - Custom physical properties on a `Class.MaterialVariant` aren't yet respected by custom terrain material slots.
 - Editing terrain in Team Create might introduce meshing or visual bugs.
+- In Team Create places, the restart prompt after changing **Expanded Terrain** isn't enough to apply the change. Exit the place and wait about 15 seconds before reopening it.
+- When [streaming](../workspace/streaming/) is enabled with a small streaming radius, thin terrain features (less than 16 voxels thick) might disappear on the client or in playtesting. To fix this, add thickness to the terrain. With Expanded Terrain, making terrain thinner than 16 voxels saves little or no memory, so thinning terrain isn't recommended as a memory optimization.
 - Heightmap and colormap import might produce different results than before. Import with a colormap is more sensitive to the colors of your materials.

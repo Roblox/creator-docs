@@ -9,7 +9,11 @@ import {
   readListFromFile,
   repositoryRoot,
 } from './files.js';
-import { Locale } from './localization.js';
+import {
+  Locale,
+  getLocaleVersionFilePath,
+  getLocaleFromFilePath,
+} from './localization.js';
 import { Emoji } from './utils.js';
 import { addToSummaryOfRequirements } from './console.js';
 import { createNewPullRequestComment, requiredCheckMessage } from './github.js';
@@ -366,10 +370,30 @@ export const checkContentLinks = ({
   filePath: string;
   config: IConfig;
 }) => {
+  const englishHttpLinks = new Set<string>();
+  const locale = getLocaleFromFilePath(filePath);
+  if (
+    config.checkHttpLinks &&
+    config.checkLocalizedContent &&
+    locale &&
+    locale !== Locale.EN_US
+  ) {
+    const englishPath = getLocaleVersionFilePath(filePath, Locale.EN_US);
+    if (fs.existsSync(englishPath)) {
+      const englishContent = fs.readFileSync(englishPath, 'utf8');
+      for (const link of getNonRobloxLinks(englishContent).httpLinks) {
+        englishHttpLinks.add(link.ref);
+      }
+    }
+  }
   const { httpLinks, relativeLinks } = getNonRobloxLinks(fileContent);
   if (config.checkHttpLinks) {
     httpLinks.forEach((link) => {
-      processHttpLink({ config, filePath, link });
+      // English source links are already reviewed. Compare the raw destination,
+      // including its query and fragment, before the allowlist normalizes URLs.
+      if (!englishHttpLinks.has(link.ref)) {
+        processHttpLink({ config, filePath, link });
+      }
     });
   }
   if (config.checkRelativeLinks) {
