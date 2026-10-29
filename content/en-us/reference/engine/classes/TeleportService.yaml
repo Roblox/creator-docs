@@ -346,7 +346,9 @@ methods:
     summary: |
       Returns an access code that can be used to teleport players to a reserved
       server, along with the `Class.DataModel.PrivateServerId` for it.
-    description: ''
+    description: |
+      This function is deprecated and no longer supported. It remains available
+      for backward compatibility but should not be used for new work.
     code_samples:
       - TeleportService-ReserveServer1
       - teleportservice-teleport-to-a-reserved-server-via-chat
@@ -367,8 +369,10 @@ methods:
       - Yields
       - Deprecated
     deprecation_message: |
-      Use `Class.TeleportService:ReserveServerAsync()|ReserveServerAsync()`
-      instead.
+      Use `Class.TeleportService:TeleportAsync()|TeleportAsync()` with
+      `Class.TeleportOptions.ReservedServerId` instead. Generate a GUID with
+      `Class.HttpService:GenerateGUID()` and pass it as
+      `Class.TeleportOptions.ReservedServerId`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -378,22 +382,13 @@ methods:
       Returns an access code that can be used to teleport players to a reserved
       server, along with the `Class.DataModel.PrivateServerId` for it.
     description: |
-      This function returns an access code that can be used to teleport players
-      to a reserved server, along with the server's
-      `Class.DataModel.PrivateServerId`. It can only be called on the server.
+      This function is deprecated and no longer supported. It remains available
+      for backward compatibility but should not be used for new work. It can
+      only be called on the server.
 
-      #### Reserved Servers
-
-      You can access reserved servers using:
-
-      - `Class.TeleportService:TeleportAsync()` with the
-        `Class.TeleportOptions.ReservedServerAccessCode` parameter.
-      - `Class.TeleportService:TeleportToPrivateServer()`, with the access code
-        `ReserveServerAsync` returns.
-        - A server is started when the access code is first used.
-        - Access codes remain valid indefinitely, meaning reserved servers can
-          still be joined if no game server is running (in this case a new
-          server will be started).
+      For new work, generate a GUID with `Class.HttpService:GenerateGUID()`, set
+      `Class.TeleportOptions.ReservedServerId`, and call
+      `Class.TeleportService:TeleportAsync()`.
 
       You can see if the current server is a reserved server by using the
       following code:
@@ -437,7 +432,11 @@ methods:
           `Class.DataModel.PrivateServerId` for the reserved server.
     tags:
       - Yields
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.TeleportService:TeleportAsync()|TeleportAsync()` with
+      `Class.TeleportOptions.ReservedServerId` instead. Generate a GUID with
+      `Class.HttpService:GenerateGUID()` and pass it as
+      `Class.TeleportOptions.ReservedServerId`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -739,10 +738,12 @@ methods:
                   <td>Incompatible Parameters</td>
                   <td>
                     Conflicting teleport options were used and TeleportService doesn't know where to send the player.<br><br>
-                    Conflicting TeleportOption parameters:<br>
-                     * ReservedServerAccessCode and ServerInstanceId<br>
-                     * ShouldReserveServer and ServerInstanceId<br>
-                     * ShouldReserveServer and ReservedServerAccessCode
+                    Only one of the following private-server routing fields may be set at a time:<br>
+                     * ReservedServerId<br>
+                     * VipServerId<br>
+                     * ReservedServerAccessCode<br>
+                     * ShouldReserveServer<br>
+                     * ServerInstanceId
                   </td>
               </tr>
           </tbody>
@@ -903,10 +904,10 @@ methods:
       Teleport a group of `Class.Player|Players` to a reserved server created
       using `Class.TeleportService:ReserveServerAsync()`.
     description: |
-      This method should not be used for new work; the numerous teleport
-      functions have been combined into a single method,
-      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
-      used instead.
+      This method is deprecated and no longer supported. It remains available
+      for backward compatibility but should not be used for new work. Use
+      `Class.TeleportService:TeleportAsync()|TeleportAsync()` with
+      `Class.TeleportOptions.ReservedServerId` instead.
     code_samples:
       - teleportservice-teleport-to-a-reserved-server-via-chat
       - TeleportService-ReserveServer1
@@ -951,9 +952,10 @@ methods:
     tags:
       - Deprecated
     deprecation_message: |
-      Use `Class.TeleportService:TeleportAsync()|TeleportAsync()` instead. For a
-      migration guide, see
-      [Teleport between places](../../../projects/teleport.md#migrate-to-secure-teleports).
+      Use `Class.TeleportService:TeleportAsync()|TeleportAsync()` with
+      `Class.TeleportOptions.ReservedServerId` instead. Generate a GUID with
+      `Class.HttpService:GenerateGUID()` and pass it as
+      `Class.TeleportOptions.ReservedServerId`.
     security: None
     thread_safety: Unsafe
     capabilities:
@@ -1115,10 +1117,12 @@ events:
           <thead>
               <tr>
                   <th>Original Teleport Type</th>
-      	          <th>Teleport Data</th>
-      	          <th>ReservedServerAccessCode</th>
-      	          <th>ServerInstanceId</th>
-      	          <th>ShouldReserveServer</th>
+                  <th>Teleport Data</th>
+                  <th>ReservedServerId</th>
+                  <th>VipServerId</th>
+                  <th>ReservedServerAccessCode</th>
+                  <th>ServerInstanceId</th>
+                  <th>ShouldReserveServer</th>
               </tr>
           </thead>
           <tbody>
@@ -1127,11 +1131,33 @@ events:
                   <td>Original value</td>
                   <td>None</td>
                   <td>None</td>
+                  <td>None</td>
+                  <td>None</td>
                   <td>false</td>
               </tr>
               <tr>
-                  <td>Player(s) to reserved server</td>
+                  <td>Player(s) to reserved server (ReservedServerId)</td>
                   <td>Original value</td>
+                  <td>Original value</td>
+                  <td>None</td>
+                  <td>None</td>
+                  <td>None</td>
+                  <td>false</td>
+              </tr>
+              <tr>
+                  <td>Player(s) to VIP server (VipServerId)</td>
+                  <td>Original value</td>
+                  <td>None</td>
+                  <td>Original value</td>
+                  <td>None</td>
+                  <td>None</td>
+                  <td>false</td>
+              </tr>
+              <tr>
+                  <td>Player(s) to reserved server (legacy access code)</td>
+                  <td>Original value</td>
+                  <td>None</td>
+                  <td>None</td>
                   <td>Original value, or the code generated if ShouldReserveServer was originally true</td>
                   <td>None</td>
                   <td>false</td>
@@ -1140,6 +1166,8 @@ events:
                   <td>Player(s) to specific server</td>
                   <td>Original value</td>
                   <td>None</td>
+                  <td>None</td>
+                  <td>None</td>
                   <td>Original value</td>
                   <td>false</td>
               </tr>
@@ -1147,11 +1175,19 @@ events:
                   <td>Players to place</td>
                   <td>Original value</td>
                   <td>None</td>
+                  <td>None</td>
+                  <td>None</td>
                   <td>Same destination ID as the other players in the original teleport</td>
                   <td>false</td>
               </tr>
           </tbody>
       </table>
+
+      When the engine routes a plain teleport to a VIP server, VIP-specific join
+      failures such as a full or flooded server fall back to a public join and
+      this event does not fire. Only teleports with an explicit
+      `Class.TeleportOptions.VipServerId` surface a VIP join failure through
+      this event.
 
       For more information on how to teleport players between servers, see
       [Teleport between places](../../../projects/teleport.md).

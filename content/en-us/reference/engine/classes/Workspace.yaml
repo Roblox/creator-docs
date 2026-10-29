@@ -884,7 +884,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - PluginOrOpenCloud
   - name: Workspace.PrimalPhysicsSolver
     summary: |
       Controls whether the experimental Primal Physics Solver is enabled.
@@ -1137,7 +1138,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - PluginOrOpenCloud
   - name: Workspace.StreamingMinRadius
     summary: |
       Minimum distance that content will be streamed to players with high
@@ -1170,7 +1172,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - PluginOrOpenCloud
   - name: Workspace.StreamingTargetRadius
     summary: |
       Maximum distance that content will be streamed to players.
@@ -1201,7 +1204,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - PluginOrOpenCloud
   - name: Workspace.StreamOutBehavior
     summary: |
       Configures how the engine decides when to stream content away from
@@ -1231,7 +1235,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - PluginOrOpenCloud
   - name: Workspace.Terrain
     summary: |
       A reference to the `Class.Terrain` object parented to the

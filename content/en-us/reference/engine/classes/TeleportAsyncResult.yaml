@@ -20,17 +20,23 @@ deprecation_message: ''
 properties:
   - name: TeleportAsyncResult.PrivateServerId
     summary: |
-      The private server ID of the reserved server that the players are being
+      The private server ID of the destination server that the players are being
       teleported to.
     description: |
-      The private server ID of the reserved server that the players are being
-      teleported to. This field is populated only if the teleport is to a
-      reserved server.
+      The private server ID of the destination server that the players are being
+      teleported to. This field is populated when the teleport targets a private
+      server, including:
 
-      This field is not the same as the private server ID of the server that
-      initiated the teleport, please see: `Class.DataModel.PrivateServerId`
+      - `Class.TeleportOptions.ReservedServerId` — The supplied reserved server
+        ID.
+      - `Class.TeleportOptions.VipServerId` — The supplied VIP server ID.
+      - `Class.TeleportOptions.ReservedServerAccessCode` (deprecated) — The
+        destination's private server ID.
+      - `Class.TeleportOptions.ShouldReserveServer` (deprecated) — The newly
+        allocated private server ID.
 
-      See also:
+      This value matches `Class.DataModel.PrivateServerId` on the destination
+      server.
 
       For more information on how to teleport players between servers, see
       [Teleporting Between Places](../../../projects/teleport.md).
@@ -53,12 +59,17 @@ properties:
   - name: TeleportAsyncResult.ReservedServerAccessCode
     summary: |
       The access code of the reserved server that the players are being
-      teleported to.
+      teleported to. Populated only for legacy access-code teleports.
     description: |
       The access code of the reserved server that the players are being
-      teleported to. This field is populated only if the teleport is to a
-      reserved server. This allows developers to perform subsequent teleports to
-      this same reserved server.
+      teleported to. This field is populated only when the teleport was
+      initiated using a legacy `Class.TeleportOptions.ReservedServerAccessCode`
+      or `Class.TeleportOptions.ShouldReserveServer`. It is not populated for
+      teleports that use `Class.TeleportOptions.ReservedServerId` or
+      `Class.TeleportOptions.VipServerId`.
+
+      This allows developers using legacy access codes to perform subsequent
+      teleports to the same reserved server.
 
       For more information on how to teleport players between servers, see
       [Teleporting Between Places](../../../projects/teleport.md).

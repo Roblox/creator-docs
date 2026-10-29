@@ -102,19 +102,40 @@ local teleportOptions = Instance.new("TeleportOptions")
 teleportOptions.ServerInstanceId = targetServerId
 ```
 
-To teleport users to a specific reserved server, set a valid `Class.TeleportOptions.ReservedServerAccessCode`, which is a unique code for entering a reserved server.
+To teleport users to a **reserved server**, generate a GUID with `Class.HttpService:GenerateGUID(false)` and set `Class.TeleportOptions.ReservedServerId`. The first teleport using a new ID creates the server; reusing the same ID routes subsequent teleports to that server.
+
+```lua
+local HttpService = game:GetService("HttpService")
+local TeleportService = game:GetService("TeleportService")
+
+local TARGET_PLACE_ID = 12345678901234
+local reservedServerId = HttpService:GenerateGUID(false)
+
+local teleportOptions = Instance.new("TeleportOptions")
+teleportOptions.ReservedServerId = reservedServerId
+
+TeleportService:TeleportAsync(TARGET_PLACE_ID, {player}, teleportOptions)
+```
+
+To teleport users to a **VIP (private) server**, set `Class.TeleportOptions.VipServerId` to the `Class.DataModel.PrivateServerId` of the target VIP server:
+
+```lua
+-- The PrivateServerId of the destination VIP server, for example carried
+-- in the player's teleport data or read from a data store
+local vipServerId = player:GetJoinData().TeleportData.vipServerId
+
+local teleportOptions = Instance.new("TeleportOptions")
+teleportOptions.VipServerId = vipServerId
+```
+
+When teleporting users to another place within the same experience, set `Class.TeleportOptions.VipServerId` to `game.PrivateServerId` if you want them to stay in that same VIP server:
 
 ```lua
 local teleportOptions = Instance.new("TeleportOptions")
-teleportOptions.ReservedServerAccessCode = reservedServerCode
+teleportOptions.VipServerId = game.PrivateServerId
 ```
 
-To teleport users to a new reserved server, set `Class.TeleportOptions.ShouldReserveServer` to true.
-
-```lua
-local teleportOptions = Instance.new("TeleportOptions")
-teleportOptions.ShouldReserveServer = true
-```
+For more information on reserved and VIP server teleport patterns, including reusing server IDs and migrating from legacy access codes, see [Teleport to private servers](teleport-private-servers.md).
 
 ### Send user data along with teleports
 

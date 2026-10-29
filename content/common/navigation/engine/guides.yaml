@@ -334,8 +334,10 @@ navigation:
         path: /players/
       - title: Users and domain-scoped user IDs
         path: /players/users
-      - title: Teleporting
+      - title: Teleport players
         path: /projects/teleport
+      - title: Teleport players to private servers
+        path: /projects/teleport-private-servers
       - title: Teams
         path: /players/teams
       - title: In-game tools

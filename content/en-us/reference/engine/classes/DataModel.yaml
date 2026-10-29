@@ -316,8 +316,9 @@ properties:
     capabilities: []
   - name: DataModel.PrivateServerId
     summary: |
-      Describes the private server ID of the server, if the server is a private
-      server or a `Class.TeleportService:ReserveServerAsync()|reserved server`.
+      Describes the private server ID of the server, if the server is a VIP
+      server or a reserved server. VIP servers and reserved servers are the two
+      types of private servers.
     description: |
       This property describes the private server ID of the server, if the server
       is a private server.
@@ -329,10 +330,11 @@ properties:
 
       Private servers refer to the following:
 
-      - [Private servers](../../../production/monetization/private-servers.md)
-        that users can purchase from the games page
+      - [VIP servers](../../../production/monetization/private-servers.md),
+        private servers that users can purchase from the games page.
       - Reserved servers, private servers created by the developer using
-        `Class.TeleportService:ReserveServerAsync()`
+        `Class.TeleportService:TeleportAsync()` with
+        `Class.TeleportOptions.ReservedServerId`.
 
       #### PrivateServerId vs JobId
 
@@ -352,8 +354,8 @@ properties:
 
       - `Class.DataModel.PrivateServerOwnerId`, a property describing the owner
         of a private server
-      - `Class.TeleportService:ReserveServerAsync()`, a function which creates a
-        reserved server
+      - `Class.TeleportService:TeleportAsync()`, a function which can create a
+        reserved server when used with `Class.TeleportOptions.ReservedServerId`
     code_samples:
       - detecting-private-servers
     type: string
@@ -373,12 +375,12 @@ properties:
   - name: DataModel.PrivateServerOwnerId
     summary: |
       Describes the `Class.Player.UserId|UserId` of the `Class.Player` that owns
-      the private server if the server is private.
+      the private server if the server is VIP.
     description: |
       This property describes the `Class.Player.UserId|UserId` of the
       `Class.Player` that owns the
-      [private server](../../../production/monetization/private-servers.md) if
-      the server is private.
+      [VIP server](../../../production/monetization/private-servers.md) if the
+      server is a VIP server.
 
       If the server is a standard or reserved server then this property will be
       set to `0`.
@@ -406,8 +408,7 @@ properties:
       See also:
 
       - `Class.DataModel.PrivateServerId`, a property describing the unique ID
-        of private and
-        `Class.TeleportService:ReserveServerAsync()|reserved servers`
+        of VIP and reserved servers
     code_samples:
       - detecting-private-servers
     type: int64

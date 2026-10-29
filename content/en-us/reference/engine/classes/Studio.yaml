@@ -3364,7 +3364,7 @@ properties:
       print("The current Studio theme is:", settings().Studio.Theme)
       ```
     code_samples: []
-    type: Instance
+    type: StudioTheme
     tags: []
     deprecation_message: ''
     security:
