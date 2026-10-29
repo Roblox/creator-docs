@@ -272,6 +272,39 @@ Configurations vary by operating system:
 }
 ```
 
+
+#### OpenCode
+
+OpenCode uses a different configuration format from clients that use the `mcpServers` object. To connect OpenCode to the Studio MCP server, add the following configuration to your `opencode.json` file:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "servers": {
+      "Roblox_Studio": {
+        "type": "local",
+        "command": [
+          "cmd.exe",
+          "/c",
+          "%LOCALAPPDATA%\\Roblox\\mcp.bat"
+        ]
+      }
+    }
+  }
+}
+```
+
+If your `opencode.json` file already contains other configuration options or MCP servers, add the `Roblox_Studio` entry to the existing `mcp.servers` object instead of replacing your configuration.
+
+To verify the connection, run the following command:
+
+```bash
+opencode mcp list
+```
+
+For more information, see the [OpenCode MCP documentation](https://opencode.ai/docs/mcp-servers/).
+
 ### CLI command
 
 Some MCP clients require a CLI command instead of a JSON configuration. Use the appropriate command for your operating system:
