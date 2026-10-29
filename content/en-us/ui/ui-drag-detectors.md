@@ -295,11 +295,14 @@ If you set a detector's `Class.UIDragDetector.DragStyle` to `Enum.UIDragDetector
 
 By default, the returned `Datatype.UDim2` and float will be the **final** desired position/rotation in the local space of the detector's parent. Existing translation/rotation limits will still apply, as will boundary limits imposed by a specified `Class.UIDragDetector.BoundingUI|BoundingUI` instance.
 
-The following example drags a UI element following a sine wave computed by the change in **X** coordinate input. Note that the detector's `Class.UIDragDetector.DragSpace|DragSpace` is set to `Enum.UIDragDetectorDragSpace.Relative`.
+The following example drags a UI element following a sine wave computed by the change in **X** coordinate input. Note that the detector's `Class.UIDragDetector.DragRelativity|DragRelativity` is set to `Enum.UIDragDetectorDragRelativity.Relative`.
 
 ```lua title="UIDragDetector - Drag Following Sine Wave"
 local frame = script.Parent  -- UI element to drag
 local uiDragDetector = frame:FindFirstChildWhichIsA("UIDragDetector")
+
+uiDragDetector.DragStyle = Enum.UIDragDetectorDragStyle.Scriptable
+uiDragDetector.DragRelativity = Enum.UIDragDetectorDragRelativity.Relative
 
 local initialXValue = 0
 local maxHeightChange = 200
