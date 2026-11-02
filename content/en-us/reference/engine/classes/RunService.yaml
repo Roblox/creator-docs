@@ -240,6 +240,58 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Basic
+  - name: RunService:BindToAnimationParallel
+    summary: |
+      Binds an `Class.Actor`-scoped function to run in parallel at a fixed
+      frequency after serial
+      `Class.RunService:BindToAnimation()|BindToAnimation()` callbacks.
+    description: |
+      `BindToAnimationParallel()` is the parallel counterpart to
+      `Class.RunService:BindToAnimation()|BindToAnimation()`. The calling script
+      must be a descendant of an `Class.Actor`. A `Class.ModuleScript` may also
+      register the callback when its current instantiation was required by a
+      script associated with an `Class.Actor`. Each fixed animation phase runs
+      its serial bindings first, then runs due parallel bindings concurrently
+      across `Class.Actor` VMs; `priority` orders callbacks within one VM but
+      does not define an order between different VMs.
+
+      The callback has the same simulation restrictions as
+      `Class.RunService:BindToAnimation()|BindToAnimation()`. Calling
+      `Library.task.synchronize()` resumes the callback in serial execution
+      within the same fixed-step phase. A later `Library.task.synchronize()`
+      returns it to parallel execution. The engine finishes these continuations
+      before advancing beyond the phase.
+    code_samples: []
+    parameters:
+      - name: function
+        type: Function
+        default:
+        summary: |
+          The function to call. This function receives a `deltaTime` parameter
+          containing the elapsed time since its previous invocation.
+      - name: frequency
+        type: StepFrequency
+        default: Hz30
+        summary: |
+          Optional `Enum.StepFrequency` value indicating how often to call the
+          bound function. Defaults to `Enum.StepFrequency.Hz30`.
+      - name: priority
+        type: int
+        default: 2000
+        summary: |
+          Optional binding priority. Lower numbers run first within the same
+          `Class.Actor` VM. Defaults to `2000`.
+    returns:
+      - type: RBXScriptConnection
+        summary: |
+          A `Datatype.RBXScriptConnection` that can be disconnected to
+          unregister the callback.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
   - name: RunService:BindToRenderStep
     summary: |
       Given a string name of a function and a priority, this method binds the
@@ -395,6 +447,58 @@ methods:
         summary: |
           An `Datatype.RBXScriptConnection` that can be disconnected to unbind
           the function from the simulation step.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Basic
+  - name: RunService:BindToSimulationParallel
+    summary: |
+      Binds an `Class.Actor`-scoped function to run in parallel at a fixed
+      frequency after serial
+      `Class.RunService:BindToSimulation()|BindToSimulation()` callbacks.
+    description: |
+      `BindToSimulationParallel()` is the parallel counterpart to
+      `Class.RunService:BindToSimulation()|BindToSimulation()`. The calling
+      script must be a descendant of an `Class.Actor`. A `Class.ModuleScript`
+      may also register the callback when its current instantiation was required
+      by a script associated with an `Class.Actor`. Each fixed simulation phase
+      runs its serial bindings first, then runs due parallel bindings
+      concurrently across `Class.Actor` VMs; `priority` orders callbacks within
+      one VM but does not define an order between different VMs.
+
+      The callback has the same restrictions on unsynchronized properties and
+      methods as `Class.RunService:BindToSimulation()|BindToSimulation()`.
+      Calling `Library.task.synchronize()` resumes the callback in serial
+      execution within the same fixed-step phase. A later
+      `Library.task.desynchronize()` returns it to parallel execution. The
+      engine finishes these continuations before advancing beyond the phase.
+    code_samples: []
+    parameters:
+      - name: function
+        type: Function
+        default:
+        summary: |
+          The function to call. This function receives a `deltaTime` parameter
+          containing the elapsed time since its previous invocation.
+      - name: frequency
+        type: StepFrequency
+        default: Hz30
+        summary: |
+          Optional `Enum.StepFrequency` value indicating how often to call the
+          bound function. Defaults to `Enum.StepFrequency.Hz30`.
+      - name: priority
+        type: int
+        default: 2000
+        summary: |
+          Optional binding priority. Lower numbers run first within the same
+          `Class.Actor` VM. Defaults to `2000`.
+    returns:
+      - type: RBXScriptConnection
+        summary: |
+          A `Datatype.RBXScriptConnection` that can be disconnected to
+          unregister the callback.
     tags: []
     deprecation_message: ''
     security: None

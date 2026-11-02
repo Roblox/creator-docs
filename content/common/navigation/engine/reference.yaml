@@ -1484,6 +1484,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/InstanceFileSyncService.yaml
                 ignoreTranslation: true
+              - title: IntegrityService
+                path: /reference/engine/classes/IntegrityService
+                type: engineapi
+                source: /reference/engine/classes/IntegrityService.yaml
+                ignoreTranslation: true
               - title: JointInstance
                 path: /reference/engine/classes/JointInstance
                 type: engineapi

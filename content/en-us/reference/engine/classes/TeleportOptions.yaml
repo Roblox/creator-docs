@@ -13,12 +13,14 @@ description: |
   `Class.TeleportService:TeleportAsync()` function that allows developers to
   provide arguments for the teleport call.
 
-  Certain arguments in this class are not compatible with each other and cause
-  an error when passed to `Class.TeleportService:TeleportAsync()`:
+  Only one of the following private server routing fields may be set at a time.
+  Setting more than one causes an error:
 
-  - ReservedServerAccessCode + ServerInstanceId
-  - ShouldReserveServer + ServerInstanceId
-  - ShouldReserveServer + ReservedServerAccessCode
+  - `Class.TeleportOptions.ReservedServerId`
+  - `Class.TeleportOptions.VipServerId`
+  - `Class.TeleportOptions.ReservedServerAccessCode`
+  - `Class.TeleportOptions.ShouldReserveServer`
+  - `Class.TeleportOptions.ServerInstanceId`
 
   For more information on how to teleport players between servers, see
   [Teleporting Between Places](../../../projects/teleport.md).
@@ -29,17 +31,19 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
-  - name: TeleportOptions.ReservedServerAccessCode
+  - name: TeleportOptions.ReservedServerId
     summary: |
-      The reserved server access code that indicates the reserved server that
-      the teleport should be to.
+      The reserved server ID that indicates the reserved server to teleport to.
     description: |
-      This property indicates the reserved server access code for the reserved
-      server that the user(s) should be teleported to.
+      This property specifies a developer-supplied identifier for a reserved
+      server. Set it to any random GUID to target a new, random reserved server.
+      A random GUID can be generated with
+      `Class.HttpService:GenerateGUID()|HttpService:GenerateGUID(false)`. Pass
+      the `Class.TeleportOptions` instance to
+      `Class.TeleportService:TeleportAsync()`.
 
-      The access code is obtained either from
-      `Class.TeleportService:ReserveServerAsync()` or from
-      `Class.TeleportAsyncResult.ReservedServerAccessCode`.
+      The first teleport using some new ID creates the reserved server. Reusing
+      the same ID routes subsequent teleports to that same reserved server.
 
       For more information on how to teleport players between servers, see
       [Teleporting Between Places](../../../projects/teleport.md).
@@ -47,6 +51,76 @@ properties:
     type: string
     tags: []
     deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Teleport
+  - name: TeleportOptions.VipServerId
+    summary: |
+      The VIP server ID that indicates the VIP server to teleport to.
+    description: |
+      This property specifies the identifier for a VIP server (known as private
+      servers to players). Set it to the `Class.DataModel.PrivateServerId` of
+      the target VIP server and pass the `Class.TeleportOptions` instance to
+      `Class.TeleportService:TeleportAsync()`.
+
+      This property is distinct from `Class.TeleportOptions.ReservedServerId`,
+      which targets reserved servers.
+
+      A VIP server ID is scoped to the experience that owns the VIP server. You
+      may use it with the place ID of any place in that experience, not just the
+      root place, but using it with a place ID from a different experience is
+      rejected.
+
+      When no private-server routing field is set, the engine chooses the
+      destination server: the join can be public, or a VIP server the player has
+      recent context for.
+
+      For more information on how to teleport players between servers, see
+      [Teleporting Between Places](../../../projects/teleport.md).
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Teleport
+  - name: TeleportOptions.ReservedServerAccessCode
+    summary: |
+      The reserved server access code that indicates the reserved server that
+      the teleport should be to.
+    description: |
+      This property is deprecated and no longer supported. It remains available
+      for backward compatibility but should not be used for new work.
+
+      It indicates the reserved server access code for the reserved server that
+      the user(s) should be teleported to. The access code is obtained either
+      from `Class.TeleportService:ReserveServerAsync()` or from
+      `Class.TeleportAsyncResult.ReservedServerAccessCode`.
+
+      For new work, use `Class.TeleportOptions.ReservedServerId` with a
+      developer-generated GUID instead. See
+      [Teleporting Between Places](../../../projects/teleport.md).
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: |
+      Use `Class.TeleportOptions.ReservedServerId` with a developer-generated
+      GUID and `Class.TeleportService:TeleportAsync()` instead. For VIP servers,
+      use `Class.TeleportOptions.VipServerId`.
     security:
       read: None
       write: None
@@ -85,22 +159,22 @@ properties:
       A flag to indicate if a reserved server should be allocated and the
       players should then be teleported to this allocation.
     description: |
-      This property indicates whether the teleport call should create a new
-      reserved server. When set to true, a reserved server will be created and
-      the player(s) will be teleported to the new server.
+      When set to `true`, a reserved server is created and the player(s) are
+      teleported to the new server.
 
-      If set to false, the player(s) will be teleported to the public server
-      with the specified `Class.TeleportOptions.ServerInstanceId` if provided.
-      When `Class.TeleportOptions.ServerInstanceId` is blank or no matching
-      server is found, a new public server will be created to teleport the
-      player(s) to.
+      This property is deprecated and no longer supported. For new work,
+      generate a GUID with `Class.HttpService:GenerateGUID(false)`, set
+      `Class.TeleportOptions.ReservedServerId`, and call
+      `Class.TeleportService:TeleportAsync()`.
 
       For more information on how to teleport players between servers, see
       [Teleporting Between Places](../../../projects/teleport.md).
     code_samples: []
     type: boolean
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      Use `Class.TeleportOptions.ReservedServerId` with a developer-generated
+      GUID and `Class.TeleportService:TeleportAsync()` instead.
     security:
       read: None
       write: None

@@ -59,7 +59,7 @@ Each ad campaign has a single goal that determines who Roblox shows the campaign
 
 - **Plays**
 
-  The **Plays** objective reaches players who are most likely to start a session in your game. Use it when you want broad distribution, are testing new ideas with a wide audience, or want initial traffic to help recommendation systems learn what's working and qualify your game for Recommended For You.
+  The **Plays** objective reaches players who are most likely to start a session in your game. Use it when you want broad distribution, are testing new ideas with a wide audience, or want initial traffic that can help your game get considered for Recommended For You.
 
 - **Earnings** (Limited)
 
@@ -110,7 +110,7 @@ All thumbnails are displayed on the Home page with a 16:9 aspect ratio. Images t
 ### Create an ad campaign
 
 <Alert severity="info">
-Your ad campaign is automatically shown in both the Home page and search results.
+Your ad campaign is automatically shown on both the Home page and in search results. On Home, your sponsored tile and your game's Recommended For You tile can both show to the same user, spaced apart on the page. Running ads does not affect how your game ranks in Recommended For You.
 </Alert>
 
 <Alert severity="warning">

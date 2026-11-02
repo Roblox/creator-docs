@@ -131,6 +131,13 @@ In the server authority model, you're able to keep the core gameplay objects ser
 
 By default, Roblox will automatically predict properties with [simulation access](#simulation-access) near the local player `Class.Player.Character|Character`, but if you want more fine‑grained control, you can explicitly force an instance's prediction on or off with `Class.RunService:SetPredictionMode()`.
 
+Automatic prediction applies to whole physics assemblies, not individual instances. When the client predicts a part, it also predicts every part that's physically connected to it through welds, joints, or constraints, along with the parent `Class.Model` of those parts and any `Class.Humanoid` inside that model. For example:
+
+- A sword model that's welded to a predicted character becomes part of the character's assembly, so it's predicted automatically.
+- A model that's parented to the character but **not** physically connected to it is a separate assembly. It's only predicted if it's within the client's [simulation radius](./techniques.md#simulation-radius) or if you force prediction on with `Class.RunService:SetPredictionMode()`.
+
+To check whether a specific instance is currently predicted, call `Class.RunService:GetPredictionStatus()` from the client.
+
 ### Simulation sync
 
 In the server authority model, the client and the server must both run the core simulation, and the client's simulation needs to be able to [roll back and resimulate](#rollback-and-resimulation) when a [misprediction](#client-misprediction) occurs. To enable this, write your core logic inside functions bound through `Class.RunService:BindToSimulation()` in a `Class.ModuleScript` that's initialized on both the client and server.
@@ -214,8 +221,28 @@ In order to be replicated, an attribute must meet all of the following criteria:
 
 Many properties and methods in the engine API reference include the **Simulation Access** label, for example `Class.BasePart.CFrame`. Properties with this label will be predicted by the server authority system. Additionally, only properties and methods with this label can be accessed inside functions bound with `Class.RunService:BindToSimulation()`.
 
+### Create and remove instances
+
+Inside functions bound through `Class.RunService:BindToSimulation()|BindToSimulation()`, you can create instances with `Datatype.Instance.new()`, `Class.Instance:Clone()`, or `Datatype.Instance.fromExisting()`. The client creates the instance immediately, and Roblox merges it with the server's authoritative copy when that copy arrives. For details, see [predictive instance creation](./techniques.md#predictive-instance-creation-instance-stitching).
+
+Removing instances works differently. `Class.Instance:Destroy()` doesn't have [simulation access](#simulation-access), and you can't change the `Class.Instance.Parent|Parent` of an instance that's already in the `Class.DataModel`, so calling either inside a bound function causes an error. Instead, record the intent to remove an instance in an [attribute](#state-sync-with-attributes) inside the simulation, then remove the instance outside the simulation, such as in a `Class.RunService.PostSimulation|PostSimulation` connection on the server.
+
+```lua title="Server Script - Remove an Instance Outside the Simulation"
+local RunService = game:GetService("RunService")
+
+local character = script.Parent
+
+RunService.PostSimulation:Connect(function()
+	-- "SwordEquipped" is written by the simulation when the player unequips the sword
+	local sword = character:FindFirstChild("Sword")
+	if sword and not character:GetAttribute("SwordEquipped") then
+		sword:Destroy()
+	end
+end)
+```
+
 <Alert severity="warning">
-Simulation restrictions apply based on when code runs, not which Luau thread runs it. Because `Library.task.spawn()` resumes code immediately, calling it from `Class.RunService:BindToSimulation()|BindToSimulation()` runs the new thread during simulation and keeps the simulation restrictions. Use `Library.task.defer()` to schedule code outside simulation and its restrictions.
+`Class.Tool|Tools` aren't fully supported in the server authority model yet. `Class.Humanoid:EquipTool()` and `Class.Humanoid:UnequipTools()` don't have [simulation access](#simulation-access), so they can't be called inside bound functions. To build an equippable item such as a sword, clone and weld a `Class.Model` to the character inside the simulation and track whether it's equipped with an attribute.
 </Alert>
 
 ### Input actions
@@ -258,11 +285,17 @@ Using this pattern, you can read `Class.InputAction|InputActions` for all player
 `Class.RemoteEvent|RemoteEvents` might not be consistently ordered with property and attribute updates over the network. For example, if you change a property before firing a remote event on a client, the server might receive the property change after the remote event. To learn more, see [replication order](../../scripting/attributes.md#replication-order).
 </Alert>
 
-### Animations, sounds, and effects
+### Animations
 
-Client-side effects like animations and sounds must be written knowing that the client simulation is merely a prediction of the authoritative server state. `Class.RunService:BindToSimulation()|BindToSimulation()` limits what properties and methods can be called from within bound functions to help guide you in writing only to the synchronized simulation state. Displaying the results of this simulation, triggering effects and sounds, etc. should be done in a separate function connected to `Class.RunService.RenderStepped|RenderStepped` that reads the results of the simulation and triggers the desired effects.
+Animations that affect gameplay, such as character movement or attack animations, should be controlled inside functions bound through `Class.RunService:BindToSimulation()|BindToSimulation()` in the same `Class.ModuleScript` that runs on both the client and server. Core `Class.Animator` and `Class.AnimationTrack` members such as `Class.Animator:LoadAnimation()|LoadAnimation()`, `Class.AnimationTrack:Play()|Play()`, `Class.AnimationTrack:Stop()|Stop()`, `Class.AnimationTrack:AdjustSpeed()|AdjustSpeed()`, and `Class.AnimationTrack.TimePosition|TimePosition` have [simulation access](#simulation-access).
 
-Further guidance around rendering a predicted simulation is covered in the [advanced techniques](./techniques.md) guide.
+Animation state is part of the predicted simulation. When a [rollback](#rollback-and-resimulation) occurs during an animation, the client rewinds the animation to the authoritative state and replays it along with the rest of the simulation, so client and server animations stay in sync. Because the client may replace animation tracks during a rollback, don't cache `Class.AnimationTrack` references across frames. Instead, look up the live track each frame with `Class.Animator:GetTrackByAnimationId()`. For a full example, see [writing animation code](./techniques.md#writing-animation-code).
+
+### Sounds and effects
+
+Client-side effects like sounds and particles must be written knowing that the client simulation is merely a prediction of the authoritative server state. `Class.RunService:BindToSimulation()|BindToSimulation()` limits what properties and methods can be called from within bound functions to help guide you in writing only to the synchronized simulation state. Displaying the results of this simulation, triggering effects and sounds, etc. should be done in a separate function connected to `Class.RunService.RenderStepped|RenderStepped` that reads the results of the simulation and triggers the desired effects.
+
+Because the client might predict an event that never happens on the server, your rendering code should be able to undo or hide mispredicted effects. Further guidance around rendering a predicted simulation is covered in [playing sounds and visual effects](./techniques.md#playing-sounds-and-visual-effects).
 
 ## Example projects
 

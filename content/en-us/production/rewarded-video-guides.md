@@ -37,16 +37,21 @@ Learn how to increase earnings with rewarded video and get inspiration from top 
     .guide-card-text {
       min-width: 0;
     }
-    .guide-pdf-btn {
-      background-color: var(--color-system-emphasis) !important;
-      color: var(--color-extended-white-100) !important;
-      padding: 14px 20px !important;
-      min-height: 42px;
+    .guide-card-link {
+      display: flex;
+      width: 100%;
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+    .guide-card-link:hover .guide-card,
+    .guide-card-link:focus-visible .guide-card {
+      border-color: var(--color-system-emphasis);
     }
   `}</style>
 
 {(() => {
-const GuideCard = ({ title, src, alt, pdfHref }) => (
+const GuideCard = ({ title, src, alt, href }) => (
+<a className="guide-card-link" href={href}>
 <Card className="guide-card" style={{ width: '100%' }}>
 <img src={src} alt={alt || title} loading="lazy" />
 <div className="guide-card-body">
@@ -58,11 +63,9 @@ const GuideCard = ({ title, src, alt, pdfHref }) => (
 2026 Guide
 </Typography>
 </div>
-<Button href={pdfHref} variant="contained" size="small" className="guide-pdf-btn">
-Open PDF
-</Button>
 </div>
 </Card>
+</a>
 );
 
 const guides = [
@@ -70,43 +73,43 @@ const guides = [
 title: 'Incremental Sim',
 src: '/assets/ads/sim.png',
 alt: 'Neon bar chart representing incremental simulator genre games.',
-pdfHref: '/assets/ads/IncrementalSim_Playbook.pdf',
+href: '/production/promotion/rewarded-video-playbooks/incremental-sim',
 },
 {
 title: 'Obbies',
 src: '/assets/ads/obby.png',
 alt: 'Obby platforms over water in a 3D puzzle platformer scene.',
-pdfHref: '/assets/ads/Obby_Playbook.pdf',
+href: '/production/promotion/rewarded-video-playbooks/obby',
 },
 {
-title: 'RPG Playbook',
+title: 'RPG',
 src: '/assets/ads/rpg.png',
 alt: 'Colorful RPG town with blocky characters and houses.',
-pdfHref: '/assets/ads/RPG_Playbook.pdf',
+href: '/production/promotion/rewarded-video-playbooks/rpg',
 },
 {
 title: 'Tycoon',
 src: '/assets/ads/tycoon.png',
 alt: 'Tycoon amusement park with rides and buildings.',
-pdfHref: '/assets/ads/Tycoon_Playbook.pdf',
+href: '/production/promotion/rewarded-video-playbooks/tycoon',
 },
 {
 title: 'Sports',
 src: '/assets/ads/sports.png',
 alt: 'Characters watching a football game in a sports genre experience.',
-pdfHref: '/assets/ads/Sports_Playbook.pdf',
+href: '/production/promotion/rewarded-video-playbooks/sports',
 },
 {
 title: 'Survival',
 src: '/assets/ads/survival.png',
 alt: 'Survival genre experience thumbnail.',
-pdfHref: '/assets/ads/Survival_Playbook.pdf',
+href: '/production/promotion/rewarded-video-playbooks/survival',
 },
 {
 title: 'Shooter',
 src: '/assets/ads/shooter.png',
 alt: 'Shooter genre experience thumbnail.',
-pdfHref: '/assets/ads/Shooter_Playbook.pdf',
+href: '/production/promotion/rewarded-video-playbooks/shooter',
 },
 ];
 

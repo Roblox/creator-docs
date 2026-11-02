@@ -1436,6 +1436,14 @@ methods:
       Prompts a user to purchase a
       [pass](../../../production/monetization/passes.md) with the given
       `gamePassId`.
+
+      You can only prompt purchases of passes that belong to the current game.
+      Purchases of passes from other games fail, even if you own both games.
+
+      In Studio, mocked purchases don't check that the pass belongs to the
+      current game, so prompting a pass purchase from another game might appear
+      to succeed. Before you publish, verify that the `gamePassId` belongs to
+      the current game.
     code_samples: []
     parameters:
       - name: player
@@ -1503,6 +1511,15 @@ methods:
       Prompts a user to purchase a
       [developer product](../../../production/monetization/developer-products.md)
       with the given `productId`.
+
+      You can only prompt purchases of developer products that belong to the
+      current game. Purchases of developer products from other games fail, even
+      if you own both games.
+
+      In Studio, mocked purchases don't check that the product belongs to the
+      current game, so prompting a product purchase from another game might
+      appear to succeed. Before you publish, verify that the `productId` belongs
+      to the current game.
     code_samples:
       - MarketplaceService-PromptProductPurchase1
     parameters:

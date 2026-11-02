@@ -219,11 +219,11 @@ Early signals kick in immediately. As more data accumulates, the algorithm gets 
 <Typography variant='buttonLarge'>Do ads hurt my RFY ranking?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-No. Today, your RFY ranking is separate from ads, and sponsored tiles are served through the ads system and not ranked as RFY candidates.
+No. Today, your RFY ranking is separate from ads. Sponsored tiles are served through the ads system and aren't ranked as RFY candidates.
 
 Engagement, retention, and monetization from users acquired through ads are excluded from RFY ranking signals. RFY depends on the organic engagement of users who discover your game through Home Recommendations.
 
-However, sponsored games can still compete for Home surface space. Sponsored games are blended throughout RFY and are clearly labeled.
+Sponsored tiles share space on Home with RFY and are clearly labeled. If your game wins a sponsored placement and also earns an RFY tile for the same user, Home can show both, spaced apart so the user can see your game in both spots.
 </AccordionDetails>
 </BaseAccordion>
 

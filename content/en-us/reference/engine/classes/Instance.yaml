@@ -152,6 +152,7 @@ descendants:
   - IncrementalPatchBuilder
   - InputObject
   - InsertService
+  - IntegrityService
   - KeyboardService
   - Keyframe
   - KeyframeMarker

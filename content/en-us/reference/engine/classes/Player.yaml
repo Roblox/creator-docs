@@ -534,6 +534,53 @@ properties:
       can_save: true
     capabilities:
       - Players
+  - name: Player.DeviceTrustLevel
+    summary: |
+      The trust level of the player's device.
+    description: |
+      This read-only property holds the `Enum.PlayerDeviceTrustLevel` of the
+      player's device, as outlined in
+      [device trust](../../../scripting/security/device-trust.md). Use it on the
+      server to restrict sensitive features, such as trading or ranked play, to
+      players on trusted devices.
+
+      Every player starts at `Enum.PlayerDeviceTrustLevel.Pending` and the
+      property changes once when the trust level becomes available. This happens
+      after `Class.Players.PlayerAdded` fires and before
+      `Class.IntegrityService.EvaluatePlayerDeviceTrust` is called. If Roblox
+      can't finish checking a device, the property might stay at
+      `Enum.PlayerDeviceTrustLevel.Pending|Pending` for the whole session.
+      Roblox doesn't check devices in Studio, so the property always stays at
+      `Enum.PlayerDeviceTrustLevel.Pending|Pending` during playtests, a level
+      which should never be trusted enough for sensitive features.
+
+      Only the server and the player's own client can read the player's trust
+      level. Every other client sees
+      `Enum.PlayerDeviceTrustLevel.Pending|Pending`, so make trust decisions on
+      the server.
+
+      The device trust level describes the player's device, not the player or
+      their account. **It doesn't tell you whether a player is cheating.** For
+      code samples, see
+      [device trust](../../../scripting/security/device-trust.md).
+    code_samples: []
+    type: PlayerDeviceTrustLevel
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Players
+      - Consequences
   - name: Player.DevTouchCameraMode
     summary: |
       Determines player's camera movement mode when using a touch-enabled

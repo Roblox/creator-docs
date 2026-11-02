@@ -196,6 +196,13 @@ methods:
           - `HighlightRange` &mdash; A nested dictionary containing a line and
             character range to highlight in the editor. Example:
             `HighlightRange = { Start = { Line = 10, Character = 1 }, End = { Line = 15, Character = 20 }}`.
+            Lines and characters are 1-based. Out-of-range positions are clamped
+            to the nearest valid position: a `Line` or `Character` below 1
+            becomes 1, a `Character` past the end of its line becomes the end of
+            that line, and a `Line` past the last line becomes the end of the
+            script. `Start` and `End` are clamped independently; if `End` is
+            before `Start` after clamping, they are swapped, so the same text is
+            highlighted with the cursor at the later position.
           - `InitialReadOnlyReasons` &mdash; An array of strings. Reasons to add
             with `Class.ScriptDocument:AddReadOnlyReasonsAsync()` once the
             editor opens, so the script is read-only as soon as the call
