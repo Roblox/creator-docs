@@ -8,7 +8,7 @@ Roblox offers several options for data storage. Each storage option has pros and
 | Service | Persistence | Scope | In-game access | Cloud comparison |
 | :--- | :--- | :--- | :--- | :--- |
 | **Data stores** | Permanent | Cross-server | Read-write | NoSQL database |
-| **Memory stores** | 45 day maximum | Cross-server | Read-write | In-memory cache |
+| **Memory stores** | configurable (45-day max) | Cross-server | Read-write | In-memory cache |
 | **Configs** | Permanent | Cross-server | Read-only | App configuration and feature flags |
 | **Secrets stores** | Permanent | Cross-server | Read-only | Secrets management |
 | **Luau in-memory** | Session duration | Single server | Read-write | Server RAM |
@@ -56,7 +56,7 @@ If you want to add granular permission control to your data stores and access th
 
 ## When to use memory stores
 
-`Class.MemoryStoreService` is a high throughput and low latency service that stores temporary data that needs to be updated or accessed frequently, such as global leaderboards or matchmaking queues. With memory stores, every server for every place within a game can access and change the same data quickly and frequently. Data in a memory store expires after a certain period of time, up to 45 days.
+`Class.MemoryStoreService` is a high-throughput, low-latency service that stores temporary data that needs to be updated or accessed frequently, such as global leaderboards or matchmaking queues. With memory stores, every server for every place within a game can access and change the same data quickly and frequently. When you write data to a memory store, you specify an expiration time in seconds. The maximum expiration is 45 days (3,888,000 seconds); if you don't specify one, it defaults to 45 days.
 
 If you need to quickly read (not write to) a small number of values across all servers, [configs](#when-to-use-configs) are the better choice. Memory stores are not as performant as configs when frequently accessing a single key or partition.
 
@@ -70,7 +70,7 @@ Although memory stores store temporary data, they also support permanent feature
 <tbody>
   <tr>
     <td>**Data type**</td>
-    <td>Numbers, strings, booleans, and tables that don't need to persist for over 45 days.</td>
+    <td>Numbers, strings, booleans, and tables with an expiration time you set (maximum 45 days).</td>
   </tr>
   <tr>
     <td rowspan="2">**Common use cases**</td>
@@ -87,7 +87,7 @@ Although memory stores store temporary data, they also support permanent feature
 [Configs](../production/configs.md) let you update in-game variables in real time without restarting servers. They are ideal for feature flags and any in-game values you hope to tune over time or [experiment](../production/experiments.md) with.
 
 - Configs are read-only from within a game—you modify them on Creator Hub or in Roblox Studio—so they don't serve the same use cases as data stores and memory stores.
-- Changes to configs deploy over the course of five minutes; changes to data and memory stores are more instantaneous.
+- Changes to configs deploy over the course of five minutes; changes to data and memory stores are effectively immediate.
 
 <table>
 <thead>
