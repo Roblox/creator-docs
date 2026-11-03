@@ -111,7 +111,8 @@ properties:
       large immediate rumble that dies down quickly. The
       `Enum.HapticEffectType.Custom` value lets you specify a haptic with custom
       waveform keys defined through
-      `Class.HapticEffect:SetWaveformKeys()|SetWaveformKeys()`.
+      `Class.HapticEffect:SetWaveformKeys()|SetWaveformKeys()` and read back
+      with `Class.HapticEffect:GetWaveformKeys()|GetWaveformKeys()`.
     code_samples: []
     type: HapticEffectType
     tags: []

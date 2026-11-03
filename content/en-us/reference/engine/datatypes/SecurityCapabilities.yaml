@@ -138,7 +138,8 @@ methods:
           original.
     returns:
       - type: SecurityCapabilities
-        summary: ''
+        summary: |
+          A new set with the items from the provided set removed.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -159,7 +160,9 @@ methods:
           in the set.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the set contains all of the specified capabilities; `false`
+          otherwise.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -180,7 +183,9 @@ methods:
           set.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the set contains all capabilities in the provided set;
+          `false` otherwise.
     code_samples: []
     tags: []
     deprecation_message: ''

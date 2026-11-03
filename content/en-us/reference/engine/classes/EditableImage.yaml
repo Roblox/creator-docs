@@ -175,7 +175,9 @@ methods:
         type: ImageAlphaType
         default:
         summary: |
-          Determines how this draw will blend alpha values.
+          Determines how this draw will blend alpha values. This parameter is
+          not yet available; values other than `Enum.ImageAlphaType.Default` are
+          not supported.
     returns:
       - type: ()
         summary: ''
@@ -216,7 +218,9 @@ methods:
         type: ImageAlphaType
         default:
         summary: |
-          Determines how this draw will blend alpha values.
+          Determines how this draw will blend alpha values. This parameter is
+          not yet available; values other than `Enum.ImageAlphaType.Default` are
+          not supported.
     returns:
       - type: ()
         summary: ''
@@ -418,7 +422,9 @@ methods:
             scaling and rotation. Default is the center of the source image
             (i.e. `Image.Size / 2`).
           - `AlphaBlendType`: Determines how this draw will blend alpha values.
-            Default is `Enum.ImageAlphaType.Default`.
+            Default is `Enum.ImageAlphaType.Default`. This option is not yet
+            available; values other than `Enum.ImageAlphaType.Default` are not
+            supported.
     returns:
       - type: ()
         summary: ''
@@ -473,7 +479,9 @@ methods:
         type: ImageAlphaType
         default:
         summary: |
-          Determines how this draw will blend alpha values.
+          Determines how this draw will blend alpha values. This parameter is
+          not yet available; values other than `Enum.ImageAlphaType.Default` are
+          not supported.
     returns:
       - type: ()
         summary: ''
@@ -523,7 +531,9 @@ methods:
         type: ImageAlphaType
         default:
         summary: |
-          Determines how this draw will blend alpha values.
+          Determines how this draw will blend alpha values. This parameter is
+          not yet available; values other than `Enum.ImageAlphaType.Default` are
+          not supported.
     returns:
       - type: ()
         summary: ''

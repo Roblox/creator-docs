@@ -6,7 +6,7 @@ description: Use Open Cloud to compare an experience's metrics against other exp
 The Benchmarks API compares an experience's metrics against other experiences on Roblox. For a metric and date range, the API returns daily benchmark values at one or more percentiles, which show how your results compare to other experiences. This API supports:
 
 - Comparing against experiences in the same genre, experiences with similar players, or the top experiences on Roblox.
-- Choosing which percentiles to return, such as the median (50th percentile) or the 90th percentile.
+- Returning the same benchmark percentiles that the Creator Dashboard shows.
 - Using the same metric names as the [Analytics Query API](index.md).
 
 <Alert severity="info">
@@ -87,7 +87,7 @@ The values in this response are examples. Real responses contain benchmark value
 | `startTime`          | string    | Yes      | Start of the date range, as an RFC&nbsp;3339 timestamp. Inclusive. Each benchmark value has a midnight UTC date, so a start time later in the day excludes that day.                                                                                                            |
 | `endTime`            | string    | Yes      | End of the date range, as an RFC&nbsp;3339 timestamp. Inclusive, unlike the Analytics Query API, where `endTime` is exclusive. For example, `"2026-01-31T00:00:00Z"` includes data for January 31. Must not be earlier than `startTime`, and must be at most 400 days after it. |
 | `benchmarkType`      | string    | No       | The comparison group. See [Benchmark types](#benchmark-types). If you omit this field, the API chooses a default for the metric.                                                                                                                                                |
-| `percentiles`        | integer[] | No       | The percentiles to return, each from 0 to 100, with at most 10 values. Defaults to 50 and 90, or to 10 and 50 for metrics where lower values are better. See [Choose percentiles](#choose-percentiles).                                                                         |
+| `percentiles`        | integer[] | No       | The percentiles to return. The only accepted values are `10`, `50`, and `90`. Defaults to `50` and `90`, or to `10` and `50` for metrics where lower values are better. See [Choose percentiles](#choose-percentiles).                                                          |
 | `filter`             | object[]  | No       | Dimension filters, where each entry has `dimension` and `value`. The API applies filters only to `BENCHMARK_TYPE_TOP_EXPERIENCES` benchmarks and ignores them otherwise. Filter values without benchmark data return no data points.                                            |
 | `benchmarkVariantId` | string    | No       | The metric variant to benchmark. The only supported value is `l7_average`, which benchmarks the 7-day rolling average of `metric`. Not every metric has this variant, and the API returns `400` for metrics that don't. Omit this field to benchmark `metric` itself.           |
 
@@ -117,9 +117,14 @@ Use `availableTypes` to retry the request with a supported type.
 
 ## Choose percentiles
 
-The `percentiles` field sets which percentiles of the comparison group the API returns. The response contains one series per percentile, and the `Percentile` dimension in `breakdownValue` identifies each series.
+The `percentiles` field sets which percentiles of the comparison group the API returns. The only accepted values are `10`, `50`, and `90`, which match the percentiles that the Creator Dashboard shows. Which of these percentiles have benchmark data depends on the metric:
 
-```bash title="Query the 25th, 50th, and 75th percentiles"
+- For metrics where higher values are better, the 50th and 90th percentiles.
+- For metrics where lower values are better, the 10th and 50th percentiles.
+
+The `objective` field of the response shows which direction applies to the metric. The response contains one series per percentile, and the `Percentile` dimension in `breakdownValue` identifies each series. To return a single percentile, such as the median, list just that percentile:
+
+```bash title="Query only the 50th percentile"
 curl --location 'https://apis.roblox.com/analytics-benchmark/v1/universes/${UniverseId}/benchmarks' \
 --header 'x-api-key: ${ApiKey}' \
 --header 'Content-Type: application/json' \
@@ -128,14 +133,13 @@ curl --location 'https://apis.roblox.com/analytics-benchmark/v1/universes/${Univ
     "startTime": "2026-01-01T00:00:00Z",
     "endTime": "2026-01-31T00:00:00Z",
     "benchmarkType": "BENCHMARK_TYPE_GENRE",
-    "percentiles": [25, 50, 75]
+    "percentiles": [50]
 }'
 ```
 
 Keep the following in mind:
 
-- Percentiles must be integers from 0 to 100, with at most 10 values per request.
-- Percentiles without benchmark data return no data points.
+- An accepted percentile without benchmark data for the metric, such as `10` for a metric where higher values are better, returns no data points.
 - `BENCHMARK_TYPE_TOP_EXPERIENCES` benchmarks ignore `percentiles` and return a single percentile. The API chooses that percentile from the average value of your experience over the last 30 days, or uses a fixed percentile for some metrics.
 
 ## Read the response
@@ -170,9 +174,9 @@ To compare your experience to a benchmark, query the same metric and date range 
 
 Errors use standard HTTP status codes.
 
-| Status | Cause                                                                                                                                                                                                                                                                                                             | Resolution                                                                                                                                                 |
-| :----- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 400    | The request is missing `startTime` or `endTime`, `endTime` is earlier than `startTime`, the date range is longer than 400 days, the request includes more than 10 percentiles or a percentile outside 0 to 100, `benchmarkVariantId` isn't supported for the metric, or the universe ID isn't a positive integer. | Check the [Request body fields](#request-body-fields) table and verify all values.                                                                         |
-| 403    | The `x-api-key` header is missing, invalid, or revoked, the key doesn't have the `universe.analytics:read` operation for this universe, or the creator of the key can't view analytics for the experience.                                                                                                        | Verify the key value and confirm that the API key has the correct permissions on the [Creator Dashboard](https://create.roblox.com/dashboard/credentials). |
-| 429    | Your requests exceed the rate limit.                                                                                                                                                                                                                                                                              | Wait, then retry at a lower request rate.                                                                                                                  |
-| 500    | An unexpected server error prevents the request from completing. The response message is `An internal error occurred.`                                                                                                                                                                                            | Retry the request. If the error persists, create a new DevForum post.                                                                                      |
+| Status | Cause                                                                                                                                                                                                                                                                                            | Resolution                                                                                                                                                 |
+| :----- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 400    | The request is missing `startTime` or `endTime`, `endTime` is earlier than `startTime`, the date range is longer than 400 days, `percentiles` contains a value other than `10`, `50`, or `90`, `benchmarkVariantId` isn't supported for the metric, or the universe ID isn't a positive integer. | Check the [Request body fields](#request-body-fields) table and verify all values.                                                                         |
+| 403    | The `x-api-key` header is missing, invalid, or revoked, the key doesn't have the `universe.analytics:read` operation for this universe, or the creator of the key can't view analytics for the experience.                                                                                       | Verify the key value and confirm that the API key has the correct permissions on the [Creator Dashboard](https://create.roblox.com/dashboard/credentials). |
+| 429    | Your requests exceed the rate limit.                                                                                                                                                                                                                                                             | Wait, then retry at a lower request rate.                                                                                                                  |
+| 500    | An unexpected server error prevents the request from completing. The response message is `An internal error occurred.`                                                                                                                                                                           | Retry the request. If the error persists, create a new DevForum post.                                                                                      |

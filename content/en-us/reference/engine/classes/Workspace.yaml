@@ -504,28 +504,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-  - name: Workspace.ImprovedAnimationConstraint
-    summary: |
-      Controls whether improved behavior is enabled for
-      `Class.AnimationConstraint|AnimationConstraints`.
-    description: |
-      When enabled, `Class.AnimationConstraint|AnimationConstraints` use
-      separate strength and damping settings for linear and angular motion.
-      `Enum.RolloutState|Default` follows the default for this feature.
-    code_samples: []
-    type: RolloutState
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: Workspace.ImprovedPhysicsReplication
     summary: |
       Controls whether the experience uses the improved physics replication path
@@ -886,27 +864,6 @@ properties:
       can_save: true
     capabilities:
       - PluginOrOpenCloud
-  - name: Workspace.PrimalPhysicsSolver
-    summary: |
-      Controls whether the experimental Primal Physics Solver is enabled.
-    description: |
-      The Primal Physics Solver is an experimental constraint solver that can
-      improve accuracy in complex setup. Setting this property to
-      `Enum.PrimalPhysicsSolver|Experimental` enables it.
-    code_samples: []
-    type: PrimalPhysicsSolver
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: Workspace.RejectCharacterDeletions
     summary: |
       Controls whether the server rejects attempts by clients to delete player

@@ -205,8 +205,11 @@ methods:
           1 returns the target color.
     returns:
       - type: Color3
-        summary: ''
-    code_samples: []
+        summary: |
+          A Color3 interpolated between this color and the target color at the
+          given alpha.
+    code_samples:
+      - datatype-Color3-Lerp
     tags: []
     deprecation_message: ''
   - name: Color3:ToHSV
@@ -230,12 +233,16 @@ methods:
     parameters: []
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The hue of the color, in the range of 0 to 1.
       - type: number
-        summary: ''
+        summary: |
+          The saturation of the color, in the range of 0 to 1.
       - type: number
-        summary: ''
-    code_samples: []
+        summary: |
+          The value (brightness) of the color, in the range of 0 to 1.
+    code_samples:
+      - datatype-Color3-ToHSV
     tags: []
     deprecation_message: ''
   - name: Color3:ToHex
@@ -261,8 +268,118 @@ methods:
     parameters: []
     returns:
       - type: string
-        summary: ''
-    code_samples: []
+        summary: |
+          A six-character hexadecimal string representing the color in RRGGBB
+          format, without a `#` prefix.
+    code_samples:
+      - datatype-Color3-ToHex
+    tags: []
+    deprecation_message: ''
+  - name: Color3:GetLuminance
+    summary: |
+      Returns the relative luminance of a `Datatype.Color3`.
+    description: |
+      Returns the
+      [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance)
+      of the color, following the WCAG 2.1 definition. The color's components
+      are treated as gamma-encoded sRGB and are clamped to the range of 0 to 1
+      before the calculation, so out-of-range (HDR) values behave like their
+      clamped equivalents.
+
+      ```lua
+      local red = Color3.fromRGB(255, 0, 0)
+      print(red:GetLuminance())  --> 0.2126
+
+      local white = Color3.new(1, 1, 1)
+      print(white:GetLuminance())  --> 1
+
+      local black = Color3.new(0, 0, 0)
+      print(black:GetLuminance())  --> 0
+      ```
+    parameters: []
+    returns:
+      - type: number
+        summary: |
+          The relative luminance of the color, in the range of 0 to 1.
+    code_samples:
+      - datatype-Color3-GetLuminance
+    tags: []
+    deprecation_message: ''
+  - name: Color3:GetContrastRatio
+    summary: |
+      Returns the WCAG contrast ratio between a `Datatype.Color3` and another
+      color.
+    description: |
+      Returns the
+      [WCAG contrast ratio](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio)
+      between this color and `other`, based on their
+      `Datatype.Color3:GetLuminance()` values. A ratio of `1` means the colors
+      are indistinguishable from each other, and a ratio of `21` is the maximum
+      possible contrast (pure black against pure white). This function is
+      symmetric: `colorA:GetContrastRatio(colorB)` always equals
+      `colorB:GetContrastRatio(colorA)`.
+
+      ```lua
+      local black = Color3.new(0, 0, 0)
+      local white = Color3.new(1, 1, 1)
+
+      print(black:GetContrastRatio(white))  --> 21
+      print(white:GetContrastRatio(black))  --> 21
+      ```
+    parameters:
+      - name: other
+        type: Color3
+        default:
+        summary: |
+          The color to compare against.
+    returns:
+      - type: number
+        summary: |
+          The contrast ratio between the two colors, in the range of 1 to 21.
+    code_samples:
+      - datatype-Color3-GetContrastRatio
+    tags: []
+    deprecation_message: ''
+  - name: Color3:GetContrastingColor
+    summary: |
+      Returns whichever candidate color has the highest contrast against a
+      `Datatype.Color3`.
+    description: |
+      Compares this color against each of the given candidate colors using
+      `Datatype.Color3:GetContrastRatio()` and returns whichever candidate has
+      the highest contrast. If two or more candidates tie, the earliest one is
+      returned.
+
+      Called with no arguments, this is equivalent to calling it with pure black
+      (`Color3.new(0, 0, 0)`) followed by pure white (`Color3.new(1, 1, 1)`), so
+      a tie between them resolves to black.
+
+      ```lua
+      local orange = Color3.fromRGB(255, 165, 0)
+      print(orange:GetContrastingColor())  --> 0, 0, 0
+
+      local darkBlue = Color3.fromRGB(0, 0, 139)
+      print(darkBlue:GetContrastingColor())  --> 1, 1, 1
+
+      -- Custom candidates can be supplied instead of the black/white default.
+      local offBlack = Color3.fromRGB(20, 20, 20)
+      local offWhite = Color3.fromRGB(240, 240, 240)
+      print(orange:GetContrastingColor(offBlack, offWhite))  --> 0.0784314, 0.0784314, 0.0784314
+      ```
+    parameters:
+      - name: ...
+        type: Color3
+        default:
+        summary: |
+          The candidate colors to compare against this color. Defaults to pure
+          black and pure white when no candidates are given.
+    returns:
+      - type: Color3
+        summary: |
+          The candidate with the highest `Datatype.Color3:GetContrastRatio()`
+          against this color.
+    code_samples:
+      - datatype-Color3-GetContrastingColor
     tags: []
     deprecation_message: ''
 functions:
@@ -281,11 +398,14 @@ functions:
           The Color3 to convert to HSV.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The hue of the color, in the range of 0 to 1.
       - type: number
-        summary: ''
+        summary: |
+          The saturation of the color, in the range of 0 to 1.
       - type: number
-        summary: ''
+        summary: |
+          The value (brightness) of the color, in the range of 0 to 1.
     code_samples: []
     tags: []
     deprecation_message: |

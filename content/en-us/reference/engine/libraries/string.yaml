@@ -69,7 +69,9 @@ functions:
           The ending index of the range of characters to convert.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The numerical byte values (`0`-`255`) of each character in the
+          specified range.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -110,7 +112,9 @@ functions:
           byte value.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A string whose length equals the number of arguments, with each byte
+          set to the corresponding integer value.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -430,7 +434,9 @@ functions:
           string.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The format string with each specifier replaced by the formatted
+          representation of the corresponding argument.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -484,7 +490,9 @@ functions:
           The pattern to match repeatedly against the string.
     returns:
       - type: function
-        summary: ''
+        summary: |
+          An iterator function that returns the next match (or captures) each
+          time it is called.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -550,9 +558,11 @@ functions:
           The maximum number of substitutions to make.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A copy of `s` with pattern occurrences replaced.
       - type: number
-        summary: ''
+        summary: |
+          The total number of substitutions made.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -585,7 +595,8 @@ functions:
           The string to measure.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The number of bytes in the string.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -617,7 +628,9 @@ functions:
           The string to convert to lowercase.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A copy of the string with all uppercase ASCII letters changed to
+          lowercase.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -670,7 +683,9 @@ functions:
           The byte position at which to start searching.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The captured substrings if the pattern contains captures, or the whole
+          match otherwise; `nil` if no match is found.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -696,7 +711,9 @@ functions:
           string.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A binary string containing the arguments packed according to the
+          format string.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -718,7 +735,9 @@ functions:
           variable-length options `s` or `z`).
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The total number of bytes that a string packed with the given format
+          would occupy.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -757,7 +776,9 @@ functions:
           The number of times to repeat the string.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A string formed by concatenating `n` copies of `s`, or an empty string
+          if `n` is zero or negative.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -793,7 +814,8 @@ functions:
           The string to reverse.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A new string with the bytes of `s` in reverse order.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -891,7 +913,9 @@ functions:
           The separator character(s) to be used for splitting the string.
     returns:
       - type: table
-        summary: ''
+        summary: |
+          A table of substrings produced by splitting `s` at each occurrence of
+          the separator.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -947,7 +971,9 @@ functions:
           count from the end).
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The substring from position `i` to `j` inclusive, or an empty string
+          if the range is empty.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -1012,7 +1038,9 @@ functions:
           The string to convert to uppercase.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A copy of the string with all lowercase ASCII letters changed to
+          uppercase.
     tags: []
     code_samples: []
     deprecation_message: ''

@@ -3,13 +3,15 @@ title: Native code generation
 description: Luau Native Code Generation allows Luau code to be translated directly to CPU machine code.
 ---
 
-With Luau support for native code generation, server-side scripts in your game can be compiled directly into the machine code instructions that CPUs execute, rather than regular bytecode that the Luau VM operates on. This feature can be used to improve execution speed for some scripts on the server, in particular those that have a lot of numerical computation without using too many heavy Luau library or Roblox API calls.
+With Luau support for native code generation, scripts&sup1; in your game can be compiled directly into the machine code instructions that CPUs execute, rather than regular bytecode that the Luau VM operates on. This feature can improve execution speed for some supported scripts, particularly those with a lot of numerical computation and few calls to heavy Luau libraries or Roblox APIs.
+
+<sup>1</sup> Native code generation is only supported for server-side scripts and client-side scripts on Android devices. In the future, more devices may be supported.
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/llR_pNlJDQw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 ## Enable native code generation
 
-To enable native code generation for a `Class.Script`, add the <Typography noWrap>`--!native`</Typography> comment at the top:&sup1;
+To enable native code generation for a `Class.Script`, add the <Typography noWrap>`--!native`</Typography> comment at the top:&sup2;
 
 ```lua highlight="1"
 --!native
@@ -28,7 +30,7 @@ local function f(x)
 end
 ```
 
-<figcaption><sup>1</sup> In the future, some scripts might automatically start running natively if it is determined to be profitable, but manually placed `--!native` comments are currently required.</figcaption>
+<figcaption><sup>2</sup> In the future, some scripts might automatically start running natively if it is determined to be profitable, but manually placed `--!native` comments are currently required.</figcaption>
 
 ## Best practices
 
@@ -41,7 +43,6 @@ The following tips will help you benefit most from native code generation:
 - It's recommended that you measure the time a script or a function takes with and without native compilation to judge when it's best to use it. The [Script Profiler](#script-profiler) tool can measure the performance of functions in order to make informed decisions.
 
 - It may be tempting to place the `--!native` comment in **every** script just in case some of them will execute faster, but native code generation has some drawbacks:
-
   - Code compilation time is required which can increase the startup time of servers.
   - Extra memory is occupied to store natively compiled code.
   - There's a limit on the total allowed amount of natively compiled code in a game.
@@ -125,31 +126,31 @@ Compiling code into instructions for a particular CPU requires additional storag
 
 <blockquote>
 _Function 'f' at line 20 exceeded single code block instruction limit_
+</blockquote>
 
 This error means that a single block of code inside a function used more than 64K instructions. This can be avoided by simplifying the function or by splitting it into individual smaller functions.
-</blockquote>
 
 <blockquote>
 _Function 'f' at line 20 exceeded function code block limit_
+</blockquote>
 
 This error means that a single function contains more than 32K internal blocks of code. Internal blocks of code do not exactly map to the control‑flow blocks in your script, but this error can be avoided by simplifying the control‑flow in the function or by splitting it into individual smaller functions.
-</blockquote>
 
 <blockquote>
 _Function 'f' at line 200 exceeded total module instruction limit_
+</blockquote>
 
 This error means that, in total, the function has reached a limit of 1 million instructions for the entire script. In some cases, the reported function itself may have a lot of instructions, or the limit may have been reached by functions earlier in the script. To avoid this issue, it's recommended to either move particularly large functions into a separate non‑native script or use `@native` on the other functions. You can also try marking that separate script with <Typography noWrap>`--!native`</Typography>, but 1 million instructions takes up a lot of memory and you may exceed the memory limit.
-</blockquote>
 
 <blockquote>
 _Function 'f' at line 20 encountered an internal lowering failure_ **(or)**<br />
 _Internal error: Native code generation failed (assembly lowering)_
+</blockquote>
 
 Sometimes a function contains complex bits of code that the native code compiler cannot currently handle. To avoid this error, inspect complex expressions in the code and split them up or simplify them, but also consider opening a bug report with an example of the code that failed for this reason.
-</blockquote>
 
 <blockquote>
 _Memory allocation limit reached for native code generation_
+</blockquote>
 
 This error means that the overall memory limit for native code data has been reached. To avoid this, try removing <Typography noWrap>`--!native`</Typography> from the more memory‑intensive scripts, allowing more smaller scripts to fit under the limit. Alternatively, move large or infrequently called functions to a separate non‑native module.
-</blockquote>

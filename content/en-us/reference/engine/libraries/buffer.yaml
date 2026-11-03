@@ -50,7 +50,8 @@ functions:
           Size of the buffer in bytes. Must be a positive integer.
     returns:
       - type: buffer
-        summary: ''
+        summary: |
+          A new buffer of the requested size with all bytes initialized to zero.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -68,7 +69,8 @@ functions:
           The string whose bytes initialize the new buffer.
     returns:
       - type: buffer
-        summary: ''
+        summary: |
+          A new buffer containing a copy of the string's bytes.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -85,7 +87,8 @@ functions:
           The buffer to convert.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A string containing all bytes from the buffer.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -102,7 +105,8 @@ functions:
           The buffer to get the size of.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The size of the buffer in bytes.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -146,7 +150,8 @@ functions:
           range of `0` to `32`, inclusive.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The unsigned integer value read from the specified bits.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -169,7 +174,8 @@ functions:
           Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The value of the 8-bit signed integer at the given offset.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -192,7 +198,8 @@ functions:
           Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The value of the 8-bit unsigned integer at the given offset.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -215,7 +222,8 @@ functions:
           Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The value of the 16-bit signed integer at the given offset.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -238,7 +246,8 @@ functions:
           Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The value of the 16-bit unsigned integer at the given offset.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -261,7 +270,8 @@ functions:
           Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The value of the 32-bit signed integer at the given offset.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -284,7 +294,8 @@ functions:
           Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The value of the 32-bit unsigned integer at the given offset.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -310,7 +321,8 @@ functions:
           Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The value of the 32-bit floating-point number at the given offset.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -336,7 +348,8 @@ functions:
           Offset from the beginning of the buffer memory, starting from `0`.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The value of the 64-bit floating-point number at the given offset.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -631,7 +644,9 @@ functions:
           Length to read.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          A string of length `count` read from the buffer at the specified
+          offset.
     tags: []
     code_samples: []
     deprecation_message: ''

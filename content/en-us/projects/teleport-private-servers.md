@@ -131,6 +131,12 @@ A common use case for this pattern is returning a player from a reserved server 
 
 Set the same `Class.TeleportOptions.VipServerId` on every teleport to keep players in the same VIP server across places throughout gameplay.
 
+### VIP server access checks
+
+A player can join a VIP server if the server's **Friends Allowed** setting, its allowlist, or a link code grants them access at the moment of the teleport. VIP server owners can change these settings at any time, so a player who had access earlier might lose it.
+
+If a player isn't allowed to join, `Class.TeleportService.TeleportInitFailed` fires and the player sees an error saying the server is restricted. To teleport a group to a VIP server, pass multiple players with the same `Class.TeleportOptions.VipServerId`. The engine checks each player independently at connect time, so players without access fail individually while the rest teleport normally. Always handle `Class.TeleportService.TeleportInitFailed` for VIP teleports, since players might also have closed the VIP server or switched to a different one.
+
 ## Store and share server IDs
 
 The `Class.TeleportAsyncResult` object returned by `Class.TeleportService:TeleportAsync()` contains information about the destination:

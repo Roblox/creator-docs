@@ -3860,6 +3860,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AvatarSettingsScaleMode.yaml
         ignoreTranslation: true
+      - title: AvatarSettingsTouchAndQueryDetectionMode
+        path: /reference/engine/enums/AvatarSettingsTouchAndQueryDetectionMode
+        type: engineapi
+        source: /reference/engine/enums/AvatarSettingsTouchAndQueryDetectionMode.yaml
+        ignoreTranslation: true
       - title: AvatarUnificationMode
         path: /reference/engine/enums/AvatarUnificationMode
         type: engineapi
@@ -4950,6 +4955,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/OrientationAlignmentMode.yaml
         ignoreTranslation: true
+      - title: OrthographicMode
+        path: /reference/engine/enums/OrthographicMode
+        type: engineapi
+        source: /reference/engine/enums/OrthographicMode.yaml
+        ignoreTranslation: true
       - title: OutfitSource
         path: /reference/engine/enums/OutfitSource
         type: engineapi
@@ -5145,11 +5155,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PreferredTextSize.yaml
         ignoreTranslation: true
-      - title: PrimalPhysicsSolver
-        path: /reference/engine/enums/PrimalPhysicsSolver
-        type: engineapi
-        source: /reference/engine/enums/PrimalPhysicsSolver.yaml
-        ignoreTranslation: true
       - title: PrimitiveType
         path: /reference/engine/enums/PrimitiveType
         type: engineapi
@@ -5169,6 +5174,11 @@ navigation:
         path: /reference/engine/enums/ProductPurchaseDecision
         type: engineapi
         source: /reference/engine/enums/ProductPurchaseDecision.yaml
+        ignoreTranslation: true
+      - title: ProjectionType
+        path: /reference/engine/enums/ProjectionType
+        type: engineapi
+        source: /reference/engine/enums/ProjectionType.yaml
         ignoreTranslation: true
       - title: PromptCreateAssetResult
         path: /reference/engine/enums/PromptCreateAssetResult

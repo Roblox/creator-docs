@@ -26,9 +26,20 @@ Experiments come in two types:
 1. If you don't already have a [config](configs.md), create one for your game.
 1. On the [Creator Hub](https://create.roblox.com/dashboard/creations) **Experiments** page for your game, click **Create experiment**.
 1. For **Type**, choose **In-experience**.
-1. Specify a name, goal metric, and planned duration for the experiment. Experiments run for between 14-60 days.
+1. Specify a name for the experiment.
+1. For **Metric set**, choose the set of metrics that you want the experiment to track:
 
-   Regardless of what you choose as your goal metric, experiments track all [metrics](#metrics) in the list.
+   | Metric set              | What it tracks                                                                                                                                                                                                                  |
+   | :---------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   | Default                 | Standard performance and engagement [metrics](#metrics) like ARPU, session time, and new user retention.                                                                                                                        |
+   | Rewarded Video Earnings | [Metrics for rewarded video ads](#rewarded-video-metrics): opt-in rate, frequency, impressions, ad earnings, and total earnings per user, plus default engagement, retention, and monetization metrics.                         |
+   | Custom                  | The default metrics plus up to three [custom metrics](#custom-metrics) that you define from your [custom](analytics/custom-events.md), [economy](analytics/economy-events.md), and [funnel](analytics/funnel-events.md) events. |
+
+   <img src="../assets/analytics/configs/experiment-metric-set.png" alt="The Metric set dropdown with the Default, Rewarded Video Earnings, and Custom options" width="700" />
+
+1. Specify a goal metric and planned duration for the experiment. Experiments run for between 14 and 60 days.
+
+   Regardless of what you choose as your goal metric, experiments track all metrics in the metric set. If you choose the **Rewarded Video Earnings** metric set, Roblox sets the goal metrics for you, so you only need to specify the duration.
 
 1. Choose a percent rollout. This number is the percentage of players that you want to include in the experiment.
 
@@ -43,7 +54,6 @@ Experiments come in two types:
    Variants are alternative values for your config. For a numeric config key `bossHealth` with a control value of 500, you might specify a variant of 300. You can have up to **two variants** and one control in an experiment.
 
    Percentages dictate how to assign variants **within the experiment rollout**. Consider the following example:
-
    - You choose an overall rollout of 40%.
    - You specify two variants and a 50/50 split between them and the control.
 
@@ -67,7 +77,7 @@ Experiments come in two types:
 1. If you don't already have a [custom matchmaking configuration](../matchmaking/customize-matchmaking.md), create one for your game.
 1. On the [Creator Hub](https://create.roblox.com/dashboard/creations) **Experiments** page for your game, click **Create experiment**.
 1. For **Type**, choose **Matchmaking**.
-1. Specify a name, goal metric, and planned duration for the experiment. Experiments run for between 14-60 days.
+1. Specify a name, goal metric, and planned duration for the experiment. Experiments run for between 14 and 60 days.
 
    Regardless of what you choose as your goal metric, experiments track all [metrics](#metrics) in the list.
 
@@ -99,15 +109,15 @@ Experiments come in two types:
 
 Experiments track all of the following metrics over the experiment duration. These metrics are updated every 24 hours while the experiment is running. However, during the first 24 hours of your experiment, Playtime, Payer conversion rate, and ARPU also update every 5 minutes so you can catch critical regressions ([early harm](#early-harm-metrics)) quickly.
 
-| Metric                | Description                                                                                                                                                 | Early harm?   |
-| :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------ |
-| D1 retention          | Percentage of new players who returned to your game after one day.                                                                                          | No            |
-| D7 retention          | Percentage of new players who returned to your game after one week.                                                                                         | No            |
-| Playtime              | Average amount of time players spent within your game. Cumulative for the duration of the experiment.                                                       | Yes           |
-| ARPU                  | Average revenue per user. Revenue divided by the number of players. Cumulative for the duration of the experiment.                                          | Yes           |
-| ARPPU                 | Average revenue per paying user. Revenue divided by the number of players who purchased a game-related item. Cumulative for the duration of the experiment. | No            |
-| Payer conversion rate | Percentage of players who purchased a game-related item. Cumulative for the duration of the experiment.                                                     | Yes           |
-| Session time          | Playtime divided by number of sessions. Cumulative for the duration of the experiment.                                                                      | No            |
+| Metric                | Description                                                                                                                                                 | Early harm? |
+| :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
+| D1 retention          | Percentage of new players who returned to your game after one day.                                                                                          | No          |
+| D7 retention          | Percentage of new players who returned to your game after one week.                                                                                         | No          |
+| Playtime              | Average amount of time players spent within your game. Cumulative for the duration of the experiment.                                                       | Yes         |
+| ARPU                  | Average revenue per user. Revenue divided by the number of players. Cumulative for the duration of the experiment.                                          | Yes         |
+| ARPPU                 | Average revenue per paying user. Revenue divided by the number of players who purchased a game-related item. Cumulative for the duration of the experiment. | No          |
+| Payer conversion rate | Percentage of players who purchased a game-related item. Cumulative for the duration of the experiment.                                                     | Yes         |
+| Session time          | Playtime divided by number of sessions. Cumulative for the duration of the experiment.                                                                      | No          |
 
 ### Experiment status
 
@@ -120,6 +130,157 @@ The **Experiments** page shows the following statuses for experiments.
 | Running         | The experiment is running but has yet to reach its decision date.                                                                                                                                                                                    |
 | Scheduled       | The experiment is scheduled to start at a future date.                                                                                                                                                                                               |
 | Draft           | The experiment hasn't been started or scheduled. You can finish setting it up.                                                                                                                                                                       |
+
+## Custom metrics
+
+By default, experiments track topline metrics like playtime, ARPU, and D1 retention. These metrics tell you whether a change had an overall impact, but you might also want to know the specifics of what changed in your game, such as whether players were more or less likely to use an ability, beat a boss, or complete the onboarding flow.
+
+**Custom metrics** let you add your own operational metrics to an in-game experiment, built from the [custom events](analytics/custom-events.md), [economy events](analytics/economy-events.md), and [funnel events](analytics/funnel-events.md) that you already log with `Class.AnalyticsService`. Use them to:
+
+- **Explain a flat result.** D1 retention is unchanged, but onboarding funnel completion dropped 8%. You might not want to roll out the change, or you might want to test a different value.
+- **Justify a rollout anyway.** ARPU is flat, but the coin balances of payers are draining faster, which should improve monetization over time.
+- **Test a hypothesis about your core loop.** If you believe that more time spent recording videos leads to more sharing and better retention, you can measure both in the same experiment.
+
+### Before you start
+
+- **Log your events first.** You build custom metrics from events that your game sends, so you can only choose from event names, currencies, and funnels that already have data. To set them up, see [custom events](analytics/custom-events.md), [economy events](analytics/economy-events.md), and [funnel events](analytics/funnel-events.md).
+- **New events take time to process.** If you just added an event, it can take up to 24 hours to appear in the dashboard.
+
+### Add custom metrics to an experiment
+
+1. On the [Creator Hub](https://create.roblox.com/dashboard/creations) **Experiments** page for your game, click **Create experiment** and fill in the type and name as usual.
+1. For **Metric set**, choose **Custom**.
+1. In the **Custom metrics** section, click **Add**. To reuse a metric that you created for a previous experiment, click **Add from past experiment** instead.
+
+   <img src="../assets/analytics/configs/experiment-custom-metrics.png" alt="The Custom metrics section with the Add and Add from past experiment buttons" width="700" />
+
+1. Choose a **Source**: **Custom**, **Economy**, or **Funnel**.
+1. Choose what the metric measures: the custom event type, the currency, or the funnel and its completion step.
+1. Choose a **Calculation**. For more information, see [Choose a calculation](#choose-a-calculation).
+1. (Optional) Add **Filters** to narrow which events count toward the metric.
+1. Verify the **Metric name**. Roblox generates a name from your selections, but you can edit it to something your team recognizes, or reset it at any time.
+
+   <img src="../assets/analytics/configs/experiment-add-custom-metric.png" alt="The Add custom metric panel with a funnel source, the Onboarding funnel, a completion step, and the per-user conversion calculation" width="700" />
+
+1. Click **Save**. You can add up to three custom metrics.
+1. For **Goal metric**, choose the metric that decides the experiment. Your custom metrics appear in this list alongside playtime and average revenue per user. The experiment still tracks any custom metric that you don't set as the goal metric as a learning metric.
+1. Finish setting up the experiment as usual: duration, rollout percentage, variants, targeting, and scheduling.
+
+<Alert severity="warning">
+After an experiment starts, you can't change its metrics. Define them before you start or schedule the experiment, and don't change how your game code sends analytics events while the experiment runs.
+</Alert>
+
+### Choose a calculation
+
+Every calculation only counts players enrolled in the experiment and only events logged during the experiment. Most calculations use one of two player-based denominators:
+
+- **Per all users** divides by everyone enrolled in the experiment group, including players who never triggered the event. Use this denominator when you want the metric to reflect both how often the behavior happens and how many players do it at all.
+- **Per participant** divides only by enrolled players who logged the event at least once. Use this denominator when you want to measure intensity among the players who engage, regardless of how many players engage.
+
+The exception is [per-instance funnel conversion](#funnel-metrics), which divides by funnel instances rather than players.
+
+#### Custom event metrics
+
+Select a custom event type, then one of the following calculations:
+
+| Calculation                         | What it measures                                                                                 |
+| :---------------------------------- | :----------------------------------------------------------------------------------------------- |
+| Average custom value                | Total value of the event, divided by the number of enrolled players who logged it at least once. |
+| Average custom value over all users | Total value of the event, divided by all enrolled players.                                       |
+| Participation %                     | Share of enrolled players who logged the event at least once.                                    |
+
+For example, suppose that you're testing a new herb-gathering loop. Add **Average custom value over all users** on a `HerbsGathered` event to see whether the variant increases gathering across the whole group, and **Participation %** on the same event to see whether it attracts players who would otherwise ignore it.
+
+#### Economy metrics
+
+Select a currency, then one of the following calculations:
+
+| Calculation                   | What it measures                                                                                                         |
+| :---------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
+| Average net currency delta    | Total source minus total sink, divided by the number of enrolled players who logged at least one source or sink event.   |
+| Average currency source delta | Total amount from source events, divided by the number of enrolled players who logged at least one source or sink event. |
+| Average currency sink delta   | Total amount from sink events, divided by the number of enrolled players who logged at least one source or sink event.   |
+
+To measure spending on specific parts of your economy, filter on specific transaction types or item SKUs.
+
+For example, suppose that you're testing a new season pass that gives coins as progress rewards. You've tuned it so that reaching the final exclusive prize in time requires players to spend coins on gameplay boosts. On your coin currency:
+
+- **Average currency sink delta** tells you whether players are spending more.
+- **Average currency source delta** tells you whether players are earning more.
+- **Average net currency delta** tells you whether the extra spending is enough to stop balances from inflating.
+
+#### Funnel metrics
+
+Select a funnel, then a completion step, then one of the following calculations:
+
+| Calculation                      | What it measures                                                                                                                |
+| :------------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
+| Per-user funnel conversion %     | Unique players who reached the completion step, divided by unique players who logged any step.                                  |
+| Per-instance funnel conversion % | Unique `funnelSessionId` values that reached the completion step, divided by all `funnelSessionId` values that logged any step. |
+
+Keep the following in mind for funnel metrics:
+
+- **You must choose a completion step.** You can't change this step after the experiment starts, so choose a step that's critical to your metric.
+- **One-time funnels return the same result for both calculations.** For [one-time funnels](analytics/funnel-events.md#track-one-time-funnels), including the onboarding funnel, per-user and per-instance conversion are equal because each player has only one instance. The calculations only differ for [recurring funnels](analytics/funnel-events.md#track-recurring-funnels) that use `funnelSessionId`.
+- **Recurring funnels answer different questions.** Per-user conversion answers "how many players complete this at least once," while per-instance conversion answers "how often does an attempt succeed." These metrics can move in opposite directions.
+- **Skipped steps count as completed.** If a player logs step 3 without logging steps 1 and 2, the funnel treats steps 1 and 2 as complete. Repeated steps only count once. For more information, see [Skipped steps](analytics/funnel-events.md#skipped-steps) and [Repeated steps](analytics/funnel-events.md#repeated-steps).
+
+For example, suppose that you reworked your tutorial. Add **Per-user funnel conversion %** on the onboarding funnel with the final step as the completion step, and make it your goal metric. Then check D1 retention to see whether better completion actually leads to players returning.
+
+### Custom metric examples
+
+| What you change                                  | What you want to know                    | Metric to add                                                                  |
+| :----------------------------------------------- | :--------------------------------------- | :----------------------------------------------------------------------------- |
+| Shorten your tutorial from eight steps to five   | Do more new players finish the tutorial? | **Funnel**: onboarding, per-user conversion % with the last step as completion |
+| Add a daily quests button to the main menu       | Do more players try daily quests?        | **Custom**: participation % on `QuestStarted`                                  |
+| Lower the speed boost price from 100 to 50 coins | Do players spend more coins in the shop? | **Economy**: coins, average sink delta, filtered to the speed boost item SKU   |
+| Double the coins from daily login rewards        | Are players saving too many coins?       | **Economy**: coins, average net delta (coins earned minus coins spent)         |
+
+### Read custom metric results
+
+Experiment metrics are cumulative, but [analytics](analytics/index.md) dashboards are daily. An experiment metric adds up the whole experiment window and, where the denominator is players, counts each player once. Analytics pages default to a daily view, so the same underlying event produces different numbers in the two places. Use analytics to explore your events and validate that they're firing correctly, and use the experiment results to compare variants against the control.
+
+When you interpret custom metrics, keep the following in mind:
+
+- **A custom metric that moves without a topline metric is information, not noise.** It usually means that the change worked mechanically but hasn't yet had a statistically significant impact on retention or revenue, or never will.
+- **Direction isn't always good news.** A drop in win rates might be exactly what you wanted if you added more challenges for established players. Before the experiment starts, decide which direction counts as a win.
+- **Statistical significance still applies.** Custom metrics are subject to the same sample size constraints as any other metric. If a change isn't statistically significant, don't act on it.
+- **Don't overemphasize one metric.** If your goal metric is up but a learning metric is significantly down, you have a trade-off to weigh, not a clear win.
+
+## Rewarded video metrics
+
+[Rewarded video ads](promotion/rewarded-video-ads.md) can help you earn more from your game, including from players who don't spend Robux. However, you need to tune the placement of rewarded video ads to fit your game and its economy. Where you place the ad and which items you reward players with both affect ad earnings and engagement.
+
+The **Rewarded Video Earnings** metric set tracks ad performance alongside a selection of default engagement, retention, and monetization metrics, so you can make sure that running ads doesn't hurt the rest of your game. Use it to:
+
+- **Tune a rewarded ad.** Test a larger reward or a different placement, and check whether opt-in rate and frequency go up.
+- **Check the trade-off.** If ad earnings go up, check whether playtime, retention, or payer conversion went down. Total earnings per user shows the combined effect of ads and microtransactions.
+- **Reach players who don't pay.** Test whether an ad option brings in earnings from players who haven't made a purchase, without lowering what your payers spend.
+
+### Set up a rewarded video earnings experiment
+
+Rewarded video experiments are in-game experiments, so they work like any other in-game experiment. You control the ad feature, such as the reward size or ad frequency, with a [config](configs.md). Each variant has a different config value, and your code reads the value with `Class.ConfigService:GetConfigForPlayerAsync()`. For more information, see [Add experiments to your code](#add-experiments-to-your-code).
+
+1. If you don't already have a config for the rewarded video ad that you want to test, create one. For example, create a numeric config key `adCooldownSeconds` with your current cooldown time as the control value.
+1. On the [Creator Hub](https://create.roblox.com/dashboard/creations) **Experiments** page for your game, click **Create experiment**.
+1. For **Type**, choose **In-experience**.
+1. For **Metric set**, choose **Rewarded Video Earnings**. Roblox sets impressions per user and total earnings per user as the goal metrics, so you don't need to choose one.
+
+   <img src="../assets/analytics/configs/experiment-rewarded-video.png" alt="An in-experience experiment with the Rewarded Video Earnings metric set selected" width="700" />
+
+1. Finish setting up the experiment as usual: duration, rollout percentage, variants, targeting, and scheduling.
+
+### Rewarded video earnings metrics
+
+The **Rewarded Video Earnings** metric set tracks the following ad metrics, plus a selection of the default [metrics](#metrics) so that you can check that ads don't hurt engagement, retention, or monetization.
+
+| Metric                  | Description                                                                                                                                                                      |
+| :---------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Total earnings per user | Earnings per player from rewarded video ads and microtransactions (developer products, passes, private servers, and paid access). Cumulative for the duration of the experiment. |
+| Impressions per user    | Ad impressions per player. Cumulative for the duration of the experiment.                                                                                                        |
+| Opt-in rate             | Percentage of eligible players who watched at least one ad.                                                                                                                      |
+| Frequency               | Ad impressions divided by unique viewers.                                                                                                                                        |
+| Ad earnings per user    | Earnings per player from rewarded video ads. Cumulative for the duration of the experiment.                                                                                      |
 
 ## Target experiments to specific audiences
 
@@ -253,11 +414,11 @@ Use these results only to guide early stopping decisions in the first 24 hours. 
 
 Each metric has its own early harm threshold. If a variant's lift falls below this threshold, it will be classified as critically harmful to that metric. However, for metric variant comparisons with fewer than 10,000 players enrolled across the variant and the control, variant lifts are shown but decisions on harm will not be made until the sample size provides enough data to reliably detect harm.
 
-| Metric                  | Early harm threshold  |
-| :---------------------- | :-------------------- |
-| Playtime                | -10%                  |
-| ARPU                    | -20%                  |
-| Payer conversion rate   | -20%                  |
+| Metric                | Early harm threshold |
+| :-------------------- | :------------------- |
+| Playtime              | -10%                 |
+| ARPU                  | -20%                 |
+| Payer conversion rate | -20%                 |
 
 ### Early harm notifications
 
@@ -296,7 +457,6 @@ Your decision determines the config changes that Roblox proposes:
 - **Control**: Roblox makes no changes to your existing configs.
 - **Untargeted variant**: The variant value becomes the config's new default value. Roblox removes all other conditions on that config key, though they remain in your global conditions list.
 - **Targeted variant**: Roblox integrates the winning rule back into your permanent config using the first applicable option in this priority order:
-
   1. **Overwrite**: If an identical condition already sits at the top of the config, Roblox overwrites its value with the winning variant's value.
   1. **Add existing**: If a matching global condition exists and would naturally sit at the top, Roblox adds it to the config with the variant's value.
   1. **Promote**: If a matching global condition can be safely promoted to the lowest rank needed to make it the top rule in this config (without altering other configs), Roblox adds it to the config and reorders it globally.

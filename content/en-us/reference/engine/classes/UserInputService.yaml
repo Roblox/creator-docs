@@ -631,7 +631,16 @@ methods:
       Always check that the returned value is not `nil` before calling any
       methods on it.
     code_samples: []
-    parameters: []
+    parameters:
+      - name: target
+        type: Instance
+        default:
+        summary: |
+          Optional. This parameter is in development and is not available yet;
+          passing a non-`nil` `target` currently throws an error. The window to
+          send input to instead of the main viewport, such as a
+          `Class.DockWidgetPluginGui`. Must be a `Class.LayerCollector` in the
+          same `Class.DataModel`. If `nil`, input goes to the main viewport.
     returns:
       - type: Object
         summary: |
