@@ -4555,6 +4555,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/GroupMembershipStatus.yaml
         ignoreTranslation: true
+      - title: GuiNavigationDirection
+        path: /reference/engine/enums/GuiNavigationDirection
+        type: engineapi
+        source: /reference/engine/enums/GuiNavigationDirection.yaml
+        ignoreTranslation: true
       - title: GuiState
         path: /reference/engine/enums/GuiState
         type: engineapi
