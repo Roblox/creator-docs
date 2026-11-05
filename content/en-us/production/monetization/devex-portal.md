@@ -3,7 +3,7 @@ title: DevEx Portal
 description: 
 ---
 
-When you submit a DevEx request and Roblox approves it, you can create an account, select a payment method, and submit your tax forms on the DevEx Portal. The DevEx Portal is run by Tipalti, a third-party payment processor that Roblox partners with to process DevEx payments.
+When you submit a DevEx request and Roblox approves it, you can create an account and select a payment method on the DevEx Portal. The DevEx Portal is run by Tipalti, a third-party payment processor that Roblox partners with to process DevEx payments. Your tax information is managed separately, on the **Taxes** page in Creator Hub.
 
 The following information on payment methods and tax forms is for informational purposes only. It is not intended as tax advice nor as a substitute for obtaining accounting, tax, or financial advice from a professional tax planner or financial planner, and may not be used to support tax positions.
 
@@ -13,9 +13,9 @@ Your decision to participate in the DevEx program may or may not have tax implic
 
 ## Create an account
 
-When you submit a DevEx request for the first time and Roblox approves your request, you will receive an email from `no-reply@roblox.com` inviting you to create a Tipalti account on the DevEx Portal. You must select your [payment method](#select-payment-method) and [tax form](#submit-a-tax-form) within one week of receiving the registration link.
+When you submit a DevEx request for the first time and Roblox approves your request, you will receive an email from `no-reply@roblox.com` inviting you to create a Tipalti account on the DevEx Portal. You must select your [payment method](#select-payment-method) within one week of receiving the registration link. You also need to [submit your tax information](#submit-your-tax-information) on the **Taxes** page in Creator Hub.
 
-It's important that you enter your payment method, tax form, and all of your personal information accurately when you create your account on the DevEx Portal, and that you keep that information up to date at all times. This information helps Roblox process your payment, and any inaccuracies in your information can impact your payments.
+It's important that you enter your payment method and all of your personal information accurately when you create your account on the DevEx Portal, that your tax information in Creator Hub is accurate, and that you keep this information up to date at all times. This information helps Roblox process your payment, and any inaccuracies in your information can impact your payments.
 
 <Alert severity="info">
 If you are planning on using a bank account for your payment method, ensure the name in the DevEx portal matches the name on your bank account.
@@ -66,38 +66,38 @@ To select a payment method and view related transaction fees:
 1. Select a new payment method and currency.
 1. Save your changes.
 
-## Submit a tax form
+## Submit your tax information
 
 <Alert severity="error">
-**Review and update your tax information before November 1, 2026.** DevEx payments will be classified as royalties beginning November 1, which may affect the U.S. tax withholding applied to your payments. See [DevEx tax information](./tax-information.md) for details.
+**Keep your tax information up to date in Creator Hub.** DevEx payments are classified as royalties, which might affect the U.S. tax withholding applied to your payments. See [DevEx tax information](./tax-information.md) for details.
 </Alert>
 
-Tax reporting requirements vary according to whether you are a U.S. person or non-U.S. person. According to the Internal Revenue Service (IRS), for U.S. federal tax purposes, a U.S. person includes, but is not limited to:
+Tax information is managed on the **Taxes** page in Creator Hub, not on the DevEx Portal. The **Taxes** page is the system of record for your W-9 or W-8 forms, including any tax treaty claims. Based on the information you provide, Roblox generates the appropriate tax documentation for you.
+
+To submit or update your tax information, go to **Finances** > **Taxes** in [Creator Hub](https://create.roblox.com) and follow the prompts. For step-by-step instructions and the information to gather before you begin, see [Submit your tax information](./tax-information.md#submit-your-tax-information).
+
+The information you submit depends on whether you are a U.S. person or a non-U.S. person. According to the Internal Revenue Service (IRS), for U.S. federal tax purposes, a U.S. person includes, but is not limited to:
 
 - An individual who is a U.S. citizen or U.S. resident alien.
 - A partnership, corporation, company, or association created or organized in the U.S. or under the laws of the U.S.
 - Any estate (other than a foreign estate).
 - A domestic trust (as defined in Treasury Regulations Section 301.7701-7).
 
-For more information on the process to submit a tax form for a U.S. or non-U.S. person, see the following subsections.
-
 ### For a U.S. person
 
-All U.S. persons who participate in the DevEx program are required to provide all tax information required to complete an [IRS W-9 tax form](https://www.irs.gov/forms-pubs/about-form-w-9) when they create their account on the DevEx Portal. Roblox will submit your tax information to the IRS to validate your tax ID information. If U.S. tax information does not exactly match IRS records, a Roblox DevEx agent will contact you from `support-en@roblox.com` to get further information through email.
+If you are a U.S. person, you must provide information through the **Taxes** page in Creator Hub to generate a [Form W-9](https://www.irs.gov/pub/irs-pdf/fw9.pdf). Roblox uses the information you provide to validate your taxpayer identification number (TIN) with the IRS. If your TIN cannot be validated, your Form W-9 will be considered invalid, and 24% U.S. backup withholding will be applied to your DevEx payments.
 
-<Alert severity="warning">
-To avoid phishing and scam emails, it's important to verify this information comes from `support-en@roblox.com`.
-</Alert>
-
-If your cash earnings for the prior tax year are greater than $2,000, Roblox will report your cash earnings to the IRS on [IRS Form 1099-NEC](https://www.irs.gov/forms-pubs/about-form-1099-nec). Roblox generally issues these forms on or before January 31 of each year.
-
-All of the aforementioned tax forms are emailed to the email account on the DevEx Portal, and mailed to the address provided on your W-9 tax form. In addition, you will receive an email from `noreply@efilemagic.com` with instructions on how to acquire a digital copy of your tax forms. The link provided in the email expires after one year.
+Roblox issues a year-end **Form 1099-MISC** to U.S. creators. You can download it from the **Taxes** page in Creator Hub.
 
 ### For a non-U.S. person
 
-All non-U.S. persons who participate in the DevEx program are required to provide all tax information required to complete an [IRS W-8 tax form](https://www.irs.gov/forms-pubs/about-form-w-8) when they create an account on the DevEx Portal. By signing the IRS W-8 tax form, you are certifying that you are not a U.S. person.
+If you are a non-U.S. person, you must provide your tax information through the **Taxes** page in Creator Hub to generate a [Form W-8BEN](https://www.irs.gov/pub/irs-pdf/fw8ben.pdf) (for individuals) or a [Form W-8BEN-E](https://www.irs.gov/pub/irs-pdf/fw8bene.pdf) (for business entities). By electronically signing the generated Form W-8, you certify that you are not a U.S. person. These forms might also allow you to claim a reduced U.S. withholding tax rate under an applicable [tax treaty](./tax-information.md#tax-treaty-claims).
 
-Non-U.S. persons generally will **not** receive an annual tax form from Roblox.
+Roblox issues a year-end **Form 1042-S** to international creators. You can download it from the **Taxes** page in Creator Hub.
+
+<Alert severity="warning">
+Submit all tax information through Creator Hub. Do not send tax forms or other sensitive personal information by email. Official Roblox emails about tax information come from `no-reply@roblox.com` or `support-en@roblox.com`. If you are unsure whether a message is legitimate, go directly to Creator Hub or contact Roblox Support.
+</Alert>
 
 ## Frequently asked questions
 
@@ -106,15 +106,15 @@ Non-U.S. persons generally will **not** receive an annual tax form from Roblox.
 <Typography variant='buttonLarge'>Is DevEx available for individuals and companies?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Yes. If you are submitting a DevEx request as an individual, it's important that your payment method and tax form match your personal information on the DevEx Portal. Similarly, if you are submitting a DevEx request as a company, it's important that the payment method and tax form match the company's information.
+Yes. If you are submitting a DevEx request as an individual, it's important that your payment method on the DevEx Portal and your tax information on the **Taxes** page match your personal information. Similarly, if you are submitting a DevEx request as a company, it's important that the payment method and tax information match the company's information.
 </AccordionDetails>
 </BaseAccordion>
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant='buttonLarge'>Which tax forms are available to download on the DevEx Portal?</Typography>
+<Typography variant='buttonLarge'>Where can I download my tax forms?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-IRS W-8 and W-9 tax forms are available to download on the DevEx Portal. For instructions and more information regarding the tax forms, reference the [IRS website](https://www.irs.gov/).
+You can download Form 1099-MISC (for royalty payments), Form 1099-NEC (for non-royalty payments), and Form 1042-S directly from the **Taxes** page in Creator Hub. To request historical tax forms, contact support through the **Taxes** page. For previous W-8 or W-9 forms, contact Roblox Support.
 </AccordionDetails>
 </BaseAccordion>

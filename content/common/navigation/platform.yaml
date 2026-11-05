@@ -45,6 +45,8 @@ navigation:
             path: /production/promotion/rewarded-video-playbooks/survival
           - title: Shooter
             path: /production/promotion/rewarded-video-playbooks/shooter
+      - title: Rewarded video optimization
+        path: /production/promotion/rewarded-video-optimization
   - title: Guidelines and policies
     section:
       - title: Safety on Roblox

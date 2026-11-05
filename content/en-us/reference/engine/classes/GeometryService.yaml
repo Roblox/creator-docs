@@ -443,6 +443,66 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - CSG
+  - name: GeometryService:SplitApartAsync
+    summary: |
+      Splits each `Class.PartOperation` or `Class.MeshPart` into one part per
+      disconnected solid region.
+    description: |
+      Splits each input into disconnected solid regions. `Class.MeshPart` inputs
+      produce `Class.MeshPart` pieces; `Class.PartOperation` inputs produce
+      `Class.PartOperation` pieces. When history is preserved in Studio, pieces
+      split from a `Class.UnionOperation` or `Class.IntersectOperation` are
+      `Class.UnionOperation|UnionOperations` that keep the input as their
+      history, so Separate restores it. Like
+      `Class.GeometryService:UnionAsync()|UnionAsync()` with `SplitApart`,
+      normalization may drop degenerate slivers.
+
+      The inputs are unchanged, and returned parts have no set
+      `Class.Instance.Parent|Parent`.
+
+      For more information and detailed examples, see
+      https://create.roblox.com/docs/parts/solid-modeling#in-experience-solid-modeling.
+    code_samples:
+      - GeometryService-SplitApartAsync
+    parameters:
+      - name: parts
+        type: Array
+        default:
+        summary: |
+          Array of `Class.PartOperation` and `Class.MeshPart` instances to split
+          independently. `Class.NegateOperation` is not supported.
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: |
+          Options table containing all the controls for the method:
+
+          - `CollisionFidelity` — The value of
+            `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` in the
+            resulting parts.
+          - `RenderFidelity` — The value of
+            `Class.PartOperation.RenderFidelity|RenderFidelity` or
+            `Class.MeshPart.RenderFidelity|RenderFidelity` in the resulting
+            parts.
+          - `FluidFidelity` — The value of
+            `Class.TriangleMeshPart.FluidFidelity|FluidFidelity` in the
+            resulting parts.
+          - `UseOffCenterCoordinates` — Boolean, default `true`. Keeps each
+            input's `Class.BasePart.CFrame|CFrame` for its pieces; `false`
+            centers each piece's frame on its geometry.
+    returns:
+      - type: Array
+        summary: |
+          Array of dictionaries `{ “Instance”: instance, “Index”: index }`,
+          where `Index` is the 1-based position of the source input in `parts`.
+          Inputs with a single connected solid produce no entries.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - CSG
   - name: GeometryService:SweepPartAsync
     summary: |
       Creates a `Class.MeshPart` which has the shape of the input part

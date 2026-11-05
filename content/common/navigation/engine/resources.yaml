@@ -94,6 +94,20 @@ navigation:
       - title: User interface
         path: /resources/beyond-the-dark/user-interface
 
+  - title: Boneheads
+    path: /resources/boneheads/
+    section:
+      - title: Overview
+        path: /resources/boneheads/
+      - title: Friend co-op mechanics
+        path: /resources/boneheads/friend-mechanics
+      - title: Server authority core
+        path: /resources/boneheads/server-authority
+      - title: Character controls
+        path: /resources/boneheads/character-controller
+      - title: Puzzle mechanics
+        path: /resources/boneheads/puzzle-mechanics
+
   - title: Battle Royale
     path: /resources/battle-royale/
     section:

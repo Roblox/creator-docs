@@ -79,6 +79,10 @@ Assistant includes a set of built-in skills maintained by Roblox. These appear i
   </thead>
   <tbody>
   <tr>
+    <td><code>rbx-configs-experimentation</code></td>
+    <td>Guides setting up, integrating, and debugging Experience Configs and A/B experiments using ConfigService. <br/><br/> Use it to tune prices, rewards, and difficulty without restarting servers, toggle features, or measure how changes affect retention, engagement, and monetization.</td>
+  </tr>
+  <tr>
     <td><code>rbx-create-skill</code></td>
     <td>Walks you through authoring a new skill: gathers the intent, chooses a valid name, writes a clear description of what the skill does and when to apply it, and produces the markdown body. Also handles editing and renaming existing skills. <br/><br/> Use it to author or update a skill without writing the frontmatter yourself.</td>
   </tr>
@@ -93,6 +97,10 @@ Assistant includes a set of built-in skills maintained by Roblox. These appear i
   <tr>
     <td><code>rbx-docs-search</code></td>
     <td>Retrieves authoritative Roblox documentation, including the Engine API reference, Creator documentation, and Cloud API docs. <br/><br/> Use it when you need accurate API signatures, property or enum details, or how-to guidance.</td>
+  </tr>
+  <tr>
+    <td><code>rbx-instrument-analytics</code></td>
+    <td>Supports two modes: audit, which reviews your experience and proposes economy, funnel, and custom events without changing scripts, and instrument, which adds the tracking through AnalyticsService after you approve the plan. <br/><br/> Use it to identify what to measure or track currency flows, player progression, and gameplay actions.</td>
   </tr>
   <tr>
     <td><code>rbx-perf-profiling</code></td>

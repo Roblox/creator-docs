@@ -336,7 +336,7 @@ To access your rewarded video ad metrics:
 
 ## De-risk your implementation with experiments
 
-If you're unsure how your community will react to a new rewarded video ad placement, you can use [experiments](../experiments.md) to roll the placement out to a percentage of your users first. This lets you measure real-time changes in engagement and retention before rolling the placement out to your entire audience.
+If you're unsure how your community will react to a new rewarded video ad placement, you can use [experiments](../experiments.md) to roll the placement out to a percentage of your users first. This lets you measure real-time changes in engagement and retention before rolling the placement out to your entire audience. To track ad impressions, opt-in rate, and ad earnings alongside your other metrics, choose the [Rewarded Video Earnings metric set](../experiments.md#rewarded-video-metrics) when you create the experiment.
 
 ## Eligibility requirements
 

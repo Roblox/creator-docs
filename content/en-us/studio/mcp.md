@@ -7,6 +7,8 @@ The Roblox Studio MCP server is built into Roblox Studio. It implements the [Mod
 
 This guide shows you how to connect the Studio MCP server to popular AI clients. While the setup varies by client, the core idea is the same: you configure your client to connect to the MCP server and then send commands from the client to your active Studio session.
 
+To call Open Cloud APIs from your MCP client without an API key, see [Use Open Cloud with the Studio MCP server](./mcp-open-cloud.md).
+
 ## Prerequisites
 
 Before you can connect to the server, make sure you have the **latest version of Roblox Studio** and your **preferred MCP client** installed on your computer.

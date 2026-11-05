@@ -125,15 +125,16 @@ Custom tab configurations are saved **locally** on each machine in `.json` forma
 
      ```json title="RibbonLayout.json"
      {
-     	"TabLayout": [
-     		{
-     			"Identifier": {
-     				"Type": "BuiltIn",
-     				"Filename": "HomeTab"
-     			},
-     			"Visible": true
-     		},
-     {
+       "TabLayout": [
+         {
+           "Identifier": {
+             "Type": "BuiltIn",
+             "Filename": "HomeTab"
+           },
+           "Visible": true
+         }
+       ]
+     }
      ```
 
    - Other `.json` files represent individual tabs and can be named whatever you prefer. Each file's `Name` represents the tab's name as it will appear in Studio.
@@ -149,9 +150,9 @@ Custom tab configurations are saved **locally** on each machine in `.json` forma
 
    The following examples illustrate common elements in a custom tab:
 
-    <Tabs>
-    <TabItem label="IconButton">
-    `IconButton` inserts a button with an optional text label.
+   <Tabs>
+   <TabItem label="IconButton">
+   `IconButton` inserts a button with an optional text label.
 
    ```json title="CustomTab.json"
    {
@@ -171,9 +172,9 @@ Custom tab configurations are saved **locally** on each machine in `.json` forma
    }
    ```
 
-    </TabItem>
-    <TabItem label="Separator">
-    `Separator` inserts a non-interactable separation line. `Size` options are `Large`, `Medium`, or `Small`.
+   </TabItem>
+   <TabItem label="Separator">
+   `Separator` inserts a non-interactable separation line. `Size` options are `Large`, `Medium`, or `Small`.
 
    ```json title="CustomTab.json"
    {
@@ -187,9 +188,9 @@ Custom tab configurations are saved **locally** on each machine in `.json` forma
    }
    ```
 
-    </TabItem>
-    <TabItem label="SplitButton">
-    `SplitButton` inserts a button which reveals a dropdown menu when the small triangle to the right of its icon is pressed.
+   </TabItem>
+   <TabItem label="SplitButton">
+   `SplitButton` inserts a button which reveals a dropdown menu when the small triangle to the right of its icon is pressed.
 
    ```json title="CustomTab.json"
    {
@@ -246,9 +247,9 @@ Custom tab configurations are saved **locally** on each machine in `.json` forma
    }
    ```
 
-    </TabItem>
-    <TabItem label="IconButton (Plugin)">
-    `IconButton` can be used to insert a button which links to a [plugin](./plugins.md) through its ID, assuming the plugin, such as [Tailor Swiftly](https://create.roblox.com/store/asset/130172194397869/Tailor-Swiftly), is installed in your version of Studio.
+   </TabItem>
+   <TabItem label="IconButton (Plugin)">
+   `IconButton` can be used to insert a button which links to a [plugin](./plugins.md) through its ID, assuming the plugin, such as [Tailor Swiftly](https://create.roblox.com/store/asset/130172194397869/Tailor-Swiftly), is installed in your version of Studio.
 
    ```json title="CustomTab.json"
    {
@@ -269,9 +270,9 @@ Custom tab configurations are saved **locally** on each machine in `.json` forma
    }
    ```
 
-    </TabItem>
-    <TabItem label="Text">
-    `Text` inserts a basic text label, useful to label groups of other controls in submenus.
+   </TabItem>
+   <TabItem label="Text">
+   `Text` inserts a basic text label, useful to label groups of other controls in submenus.
 
    ```json title="CustomTab.json"
    {
@@ -286,15 +287,14 @@ Custom tab configurations are saved **locally** on each machine in `.json` forma
    }
    ```
 
-    </TabItem>
-    </Tabs>
+   </TabItem>
+   </Tabs>
 
-    <Alert severity="success">
-    Beyond the above examples, you can right-click any default tab and select **Duplicate&nbsp;tab**. This will create a new custom tab and corresponding `.json` file in your local `CustomRibbonTabs` directory which you can inspect to explore how various default tools and menus are constructed.
-    </Alert>
+   <Alert severity="success">
+   Beyond the above examples, you can right-click any default tab and select **Duplicate&nbsp;tab**. This will create a new custom tab and corresponding `.json` file in your local `CustomRibbonTabs` directory which you can inspect to explore how various default tools and menus are constructed.
+   </Alert>
 
 5. Save the `.json` file and then reload Studio's plugins:
-
    1. Right-click anywhere in the toolbar or mezzanine and select **Manage&nbsp;tabs**.
    2. Access the options menu from the popup's upper‑right corner and select **Reload&nbsp;custom&nbsp;tabs**.
 
@@ -308,10 +308,8 @@ Custom tab configurations are saved **locally** on each machine in `.json` forma
 The 3D viewport represents the `Class.Workspace` of a place. From here, you can move the camera around the virtual world, manipulate objects with the mouse, and playtest a game without leaving Studio.
 
 <figure>
-	<img
-		src="../assets/studio/general/Editor-Window.jpg"
-		width="100%" alt="An example viewport display of a desert environment with multiple stone pillars. One of the pillars displays movement visual aids from the Move tool." />
-	<figcaption>3D viewport in Roblox Studio</figcaption>
+  <img src="../assets/studio/general/Editor-Window.jpg" width="100%" alt="An example viewport display of a desert environment with multiple stone pillars. One of the pillars displays movement visual aids from the Move tool." />
+  <figcaption>3D viewport in Roblox Studio</figcaption>
 </figure>
 
 ### Camera controls
@@ -412,12 +410,12 @@ You can reposition any window by click-dragging its **header bar**. As you begin
 If you drag the mouse pointer into a **populated** region such as the 3D viewport, a floating position selector appears with multiple options for the window's destination. For example, dragging the pointer over the "left" icon will position the window on the region's left side.
 
 <Tabs>
-  <TabItem label="Viewport left">
-	<img src="../assets/studio/general/Docking-Position-Selector-Left.png" width="880" height="520" alt="Mouse pointer hovering over the 'left half' icon of the position selector in a populated region, showing the left side of the region as the dragged window's destination." />
-  </TabItem>
-  <TabItem label="Viewport right">
-    <img src="../assets/studio/general/Docking-Position-Selector-Right.png" width="880" height="520" alt="Mouse pointer hovering over the 'right half' icon of the position selector in a populated region, showing the right side of the region as the dragged window's destination." />
-  </TabItem>
+<TabItem label="Viewport left">
+<img src="../assets/studio/general/Docking-Position-Selector-Left.png" width="880" height="520" alt="Mouse pointer hovering over the 'left half' icon of the position selector in a populated region, showing the left side of the region as the dragged window's destination." />
+</TabItem>
+<TabItem label="Viewport right">
+<img src="../assets/studio/general/Docking-Position-Selector-Right.png" width="880" height="520" alt="Mouse pointer hovering over the 'right half' icon of the position selector in a populated region, showing the right side of the region as the dragged window's destination." />
+</TabItem>
 </Tabs>
 
 ### Group windows
@@ -445,3 +443,10 @@ To pin a window or an entire [group](#group-windows) of windows, click the "coll
 ### Float windows
 
 To float a window freely of other windows, simply drag‑and‑drop it without selecting any icon from the floating [position selector](#reposition-windows).
+
+## Window screenshots
+
+You can capture an image of an individual Studio window, such as the [Output](../studio/output.md) window, a plugin's window, or the viewport, without capturing the rest of Studio. This is useful for sharing the full Output window with your team or reporting an issue to a plugin's creator.
+
+1. Press <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>2</kbd>, or run the **Screenshot&nbsp;Plugin** action from Studio's quick actions.
+2. Select the window you want to capture. The captured image is copied to your clipboard. Dialogs can't be captured.

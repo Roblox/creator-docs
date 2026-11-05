@@ -63,6 +63,7 @@ To publish a game for the first time:
 
    1. Upload an [icon](./experience-icons.md) and [thumbnail](./thumbnails.md) to display on your game's main details page.
    1. In the **Name** field, input the name of your game.
+   1. In the **Promotional Text** field, set optional text to display brief secondary information. This is a [beta feature](https://devforum.roblox.com/t/beta-promotional-text/4973915). During the beta, promotional text placements in the product may change.
    1. Set **Genre** and the optional **Subgenre** dropdown menus to what type of gameplay players should expect. For more information, see [Genres](./experience-genres.md).
    1. In the **Description** field, provide a summary of what players can expect from your game.
    1. Click the **Save** button. Roblox publishes your game to the cloud with a unique `UniverseID`.

@@ -325,7 +325,7 @@ return (<>
 <Grid item XSmall={12} Medium={6} style={{ display: 'flex' }}>
 <Card className="rvp-card">
 <CardContent className="rvp-card-body">
-<CardMedia component="img" className="rvp-strategy-media" src="/assets/monetization/rewarded-video-ads/playbooks/Shooter-Weapon-Trial.webp" alt="Free weapon trial prompt that plays an ad" loading="lazy" />
+<CardMedia component="img" className="rvp-strategy-media" style={{ objectPosition: '25% center' }} src="/assets/monetization/rewarded-video-ads/playbooks/Shooter-Weapon-Trial.webp" alt="Free weapon trial prompt that plays an ad" loading="lazy" />
 <Typography component="h3" className="rvp-card-title">Weapon Trial</Typography>
 <Typography component="p" className="rvp-card-text">Let players use a premium weapon or skin for one match by watching an ad. "Try before you buy." Lets them learn the item's value, and the trial expires before it can replace a purchase.</Typography>
 </CardContent>

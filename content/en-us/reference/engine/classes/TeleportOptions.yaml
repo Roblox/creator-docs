@@ -116,7 +116,8 @@ properties:
       [Teleporting Between Places](../../../projects/teleport.md).
     code_samples: []
     type: string
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       Use `Class.TeleportOptions.ReservedServerId` with a developer-generated
       GUID and `Class.TeleportService:TeleportAsync()` instead. For VIP servers,
@@ -171,7 +172,8 @@ properties:
       [Teleporting Between Places](../../../projects/teleport.md).
     code_samples: []
     type: boolean
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       Use `Class.TeleportOptions.ReservedServerId` with a developer-generated
       GUID and `Class.TeleportService:TeleportAsync()` instead.

@@ -18,6 +18,8 @@ navigation:
     path: /cloud/guides/usage-assets
   - title: Configs
     path: /cloud/guides/configs
+  - title: Journeys
+    path: /cloud/guides/journeys
   - title: Experiments
     path: /cloud/guides/experiments
   - title: Secrets stores

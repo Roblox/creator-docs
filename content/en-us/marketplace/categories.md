@@ -54,11 +54,11 @@ See [Rigid accessories](../avatar/rigid-accessories/index.md).
       <td>Accessories worn around the avatar's waist or hips, such as belts, holsters, bags.</td>
     </tr>
     <tr>
-      <td>Body suits <br /><Typography noWrap>*(auto-detected)*</Typography></td>
+      <td>Bodysuits <br /><Typography noWrap>*(auto-detected)*</Typography></td>
       <td>A full-body asset that covers both the upper and lower body in a single piece.</td>
     </tr>
     <tr>
-      <td>Full masks <br /><Typography noWrap>*(auto-detected)*</Typography></td>
+      <td>Full Masks <br /><Typography noWrap>*(auto-detected)*</Typography></td>
       <td>An accessory or clothing designed to fully enclose or replace the character's head and face.</td>
     </tr>
   </tbody>
@@ -105,11 +105,11 @@ See [Layered accessories](../avatar/layered-accessories/index.md).
       <td>Footwear items that fully enclose the toes and front of the foot, typically designed with structured soles and upper coverage.</td>
     </tr>
     <tr>
-      <td>Body suits <br /><Typography noWrap>*(auto-detected)*</Typography></td>
+      <td>Bodysuits <br /><Typography noWrap>*(auto-detected)*</Typography></td>
       <td>A full-body layered asset that covers both the upper and lower body in a single piece.</td>
     </tr>
     <tr>
-      <td>Full masks <br /><Typography noWrap>*(auto-detected)*</Typography></td>
+      <td>Full Masks <br /><Typography noWrap>*(auto-detected)*</Typography></td>
       <td>An accessory or clothing designed to fully enclose or replace the character's head and face.</td>
     </tr>
   </tbody>

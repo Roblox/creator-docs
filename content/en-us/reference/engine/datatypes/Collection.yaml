@@ -8,74 +8,146 @@ summary: |
   A live, query-based group of instances returned by
   `Class.CollectionService:CreateCollection()`.
 description: |
-  A `Collection` is a live, query-based group of instances created by
-  `Class.CollectionService:CreateCollection()` using a selector string and an
-  optional root instance. From then on, membership is **automatic** such that an
-  instance is added the moment it matches the query and removed the moment it
-  stops matching. You never add or remove instances manually.
+  A `Collection` is a group of instances you can attach code to, created with
+  `Class.CollectionService:CreateCollection()|CreateCollection(query, root)`.
+  The collection tracks every descendant of `root` (default `Class.Workspace`)
+  that matches `query`, adding instances as they start matching and removing
+  them when they stop.
 
-  You can interact with a `Collection` by assigning **callbacks** to it. Rather
-  than connecting a signal for each instance and remembering to disconnect it,
-  you declare behavior once on the collection and it is applied to every
-  matching instance for you. The collection owns those connections and tears
-  them down automatically when an instance leaves the set. See the accompanying
-  code sample for a collection that uses each kind of callback together.
-
-  A collection's lifetime is tied to the root instance passed to
-  `Class.CollectionService:CreateCollection()|CreateCollection()` (defaulting to
-  `Class.Workspace`). When that root is destroyed or when you call
-  `Datatype.Collection:Destroy()|Destroy()`, the collection is torn down.
-
-  #### Callback Assignment Syntax
-
-  Callbacks are assigned as fields on the collection using function-statement
-  syntax, which reads like the contents of a `Class.ModuleScript`. Both of the
-  following forms are equivalent and assign through the collection's overloaded
-  `__newindex`:
+  You attach code by assigning functions as named callbacks. Callbacks exist for
+  instance events, property and attribute changes, several `Class.RunService`
+  events, and two collection-specific callbacks: `OnAdded` and `OnRemoved`. When
+  an instance joins, each callback is connected to that instance. When it
+  leaves, those connections are removed. You write the code once, and the
+  collection handles per-instance setup and teardown. A collection keeps running
+  after its variable goes out of scope.
 
   ```lua
   local CollectionService = game:GetService("CollectionService")
 
+  -- Matches every Part under Workspace
   local collection = CollectionService:CreateCollection("Part")
 
-  function collection.OnAdded(instance)
+  -- Fires when a part joins the collection
+  function collection.OnAdded(part)
+  	print("Part added to the collection", part)
+  end
 
+  -- Fires when a part in the collection is touched
+  function collection.OnTouched(part, otherPart)
+  	print(part, "was touched by", otherPart)
   end
   ```
+
+  #### Query Syntax
+
+  The query is a CSS-like selector, the same syntax used by
+  `Class.Instance:QueryDescendants()|QueryDescendants()` and `Class.StyleRule`.
+  See `Class.Instance:QueryDescendants()|QueryDescendants()` for the full
+  grammar. Comma-separated selectors form a union. The rightmost selector in a
+  chain is the matched instance, so `Folder > Part` matches the parts, not the
+  folders.
+
+  ##### Filters
+
+  Multiple filters on one selector must all match.
+
+  - `ClassName` — Instances of that class, using `Class.Object:IsA()|IsA()`.
+  - `#Name` — Instances with that `Class.Instance.Name|Name`.
+  - `.Tag` — Instances with that `Class.CollectionService` tag.
+  - `[Property = value]` — Instances whose property equals the value.
+  - `[$Attribute]` or `[$Attribute = value]` — Instances that have the
+    attribute, optionally with that value.
+
+  Numeric properties and attributes also support `>`, `<`, `>=`, and `<=`.
+
+  ```lua
+  -- All Parts
+  local parts = "Part"
+  -- Instances named Dog with the tag Scruffy
+  local mutts = "#Dog.Scruffy"
+  -- BaseParts named DodgeBall with CanCollide true and attribute Thrown true
+  local dodgeballs = "BasePart#DodgeBall[CanCollide = true][$Thrown = true]"
+  ```
+
+  ##### Combinators
+
+  - `A > B` — `B` is a child of `A`.
+  - `A >> B` — `B` is a descendant of `A`.
+
+  ```lua
+  -- Parts named Brick whose parent is a Model named Wall
+  local wallBricks = "Model#Wall > Part#Brick"
+  -- Parts tagged Leaf anywhere inside a Model named Tree
+  local leaves = "Model#Tree >> Part.Leaf"
+  ```
+
+  ##### Pseudo-classes
+
+  - `:has(selector)` — Instances with a child or descendant matching `selector`.
+  - `:not(selector)` — Instances that do not match `selector`.
+  - `:in-radius(studs, selector)` — `Class.BasePart|BaseParts` within `studs` of
+    an instance matching `selector`.
+
+  ```lua
+  -- Instances without an OnFire attribute
+  local notBurning = ":not([$OnFire])"
+  -- MeshParts with a child tagged SwordPart
+  local sheaths = "MeshPart:has(> .SwordPart)"
+  -- Parts tagged FireBall within 10 studs of a character
+  local nearbyFireballs = "BasePart.FireBall:in-radius(10, Model:has(> Part#HumanoidRootPart))"
+  ```
+
+  #### Callbacks
+
+  Assign a callback with function-statement syntax:
 
   ```lua
   local CollectionService = game:GetService("CollectionService")
-
   local collection = CollectionService:CreateCollection("Part")
 
-  collection.OnAdded = function(instance)
-
+  function collection.OnAdded(part)
+  	-- Fires when a part joins the collection
   end
   ```
 
-  Each callback can be **assigned only once**; reassigning the same callback
-  raises an error. This keeps a collection's behavior declarative at its
-  definition so that it cannot be silently replaced elsewhere.
+  Each callback can be assigned **only once**. Reassigning it raises an error,
+  so a collection's behavior can't be silently replaced elsewhere.
 
-  #### Core Members and Aliases
+  ##### OnAdded and OnRemoved
 
-  `OnAdded`, `OnRemoved`, and `Datatype.Collection:ForEach()|ForEach()` are the
-  collection's primitive members:
+  - `OnAdded(instance)` — Fires when an instance starts matching the query. When
+    you first assign `OnAdded`, it also fires once for every instance already in
+    the collection.
+  - `OnRemoved(instance)` — Fires when an instance stops matching. For example,
+    its tag is removed, it leaves the root, it is destroyed, the collection is
+    destroyed, or `Datatype.Collection.Enabled|Enabled` is set to `false`.
 
-  - `OnAdded(instance: Instance)` — Fires when an instance begins matching the
-    query. When you first assign `OnAdded`, it **immediately fires once for
-    every instance already in the collection**, so a single callback handles
-    both current and future members.
-  - `OnRemoved(instance: Instance)` — Fires when an instance that was in the
-    collection stops matching, for example its tag is removed, it is reparented
-    out of the collection's root, it is destroyed, or the collection's
-    `Datatype.Collection.Enabled|Enabled` property is set to `false`.
-  - `Datatype.Collection:ForEach()|ForEach()` — Imperatively iterates the
-    instances currently in the collection, operating on a snapshot taken at call
-    time.
+  ##### Membership Guarantees
 
-  A collection can also bind a callback to non-deprecated `Class.RunService`
-  steps through **aliases** which exist for performance as well as convenience:
+  Collections guarantee that:
+
+  1. An instance is visible as a member only after its `OnAdded` has run.
+  2. Callbacks fire only on instances that currently match the query.
+  3. `OnRemoved` always fires when an instance stops matching.
+
+  Together, these let `OnAdded` and `OnRemoved` act as a constructor and
+  destructor. Per-instance data created in `OnAdded` exists for every other
+  callback, and can always be cleaned up in `OnRemoved`.
+
+  Because of guarantee #2, a callback can rely on the query. For example, with
+  `Part:has(> Part#Handle)`, `instance.Handle` always exists inside a callback.
+  This also means a pending callback is skipped if its instance stops matching
+  first. For example, if a property changes and the instance stops matching
+  before the `OnPropertyChanged` callback runs, that callback is skipped.
+
+  Guarantee #3 can be broken only by a crash or abrupt shutdown before
+  `OnRemoved` runs.
+
+  ##### RunService Callbacks
+
+  These callbacks fire once per step **for each member**. Each receives the
+  instance and the step's `deltaTime`.
 
   <table>
   <thead>
@@ -87,116 +159,123 @@ description: |
   <tbody>
     <tr>
       <td><code>OnHeartbeat</code></td>
-  	<td><code>Class.RunService.Heartbeat</code></td>
+      <td><code>Class.RunService.Heartbeat</code></td>
     </tr>
     <tr>
       <td><code>OnPreRender</code></td>
-  	<td><code>Class.RunService.PreRender</code></td>
+      <td><code>Class.RunService.PreRender</code></td>
     </tr>
     <tr>
       <td><code>OnPreAnimation</code></td>
-  	<td><code>Class.RunService.PreAnimation</code></td>
+      <td><code>Class.RunService.PreAnimation</code></td>
     </tr>
     <tr>
       <td><code>OnPreSimulation</code></td>
-  	<td><code>Class.RunService.PreSimulation</code></td>
+      <td><code>Class.RunService.PreSimulation</code></td>
     </tr>
     <tr>
       <td><code>OnPostSimulation</code></td>
-  	<td><code>Class.RunService.PostSimulation</code></td>
-    </tr>
-    <tr>
-      <td><code>OnSimulate</code></td>
-  	<td><code>Class.RunService:BindToSimulation()</code></td>
+      <td><code>Class.RunService.PostSimulation</code></td>
     </tr>
   </tbody>
   </table>
 
-  The collection subscribes to each `Class.RunService` event **once** and
-  dispatches to its members internally, rather than every instance holding its
-  own connection. The callback fires once per step **for each instance** in the
-  collection and receives the instance followed by the step's `deltaTime`:
+  The collection connects to each `Class.RunService` event once and calls the
+  callback for every member, instead of holding one connection per instance.
+  This runs at about the speed of a loop over a Luau table.
+
+  `Class.RunService` callbacks and `Datatype.Collection:ForEach()|ForEach()`
+  **cannot yield**. Unlike most non-yielding APIs, they still support debugger
+  breakpoints.
+
+  There are no callbacks for
+  `Class.RunService:BindToSimulation()|BindToSimulation()` or
+  `Class.RunService:BindToAnimation()|BindToAnimation()`. Instead, call
+  `Datatype.Collection:ForEach()|ForEach()` inside the binding. This also lets
+  you set the binding's frequency and priority:
 
   ```lua
   local CollectionService = game:GetService("CollectionService")
+  local RunService = game:GetService("RunService")
 
   local collection = CollectionService:CreateCollection("Part")
 
-  function collection.OnHeartbeat(instance, deltaTime)
+  RunService:BindToSimulation(function(deltaTime)
+  	collection:ForEach(function(part)
+  		-- Simulation code
+  	end)
+  end, Enum.StepFrequency.Hz60)
+  ```
 
+  ##### Event, Property, and Attribute Callbacks
+
+  A collection can connect a callback to any event, property change, or
+  attribute change on its members. Here, `X` is the name of the event, property,
+  or attribute.
+
+  - `OnX(instance, ...)` — Connects to event `X` on each member. The callback
+    receives the instance, then the event's arguments. For example, `OnTouched`
+    connects to `Class.BasePart.Touched`.
+  - `OnPropertyChanged.X(instance)` — Fires when property `X` changes, like
+    `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal()`.
+  - `OnAttributeChanged.X(instance)` — Fires when attribute `X` changes, like
+    `Class.Instance:GetAttributeChangedSignal()|GetAttributeChangedSignal()`.
+
+  ```lua
+  local CollectionService = game:GetService("CollectionService")
+  local collection = CollectionService:CreateCollection("Part.MyTag")
+
+  function collection.OnTouched(part, otherPart)
+  	-- otherPart is the argument from BasePart.Touched
+  end
+
+  function collection.OnPropertyChanged.Color(part)
+  	-- Fires when the part's Color changes
+  end
+
+  function collection.OnAttributeChanged.MyAttribute(part)
+  	-- Fires when the part's MyAttribute attribute changes
   end
   ```
 
-  #### Event, Property, and Attribute Wrappers
+  A collection can match instances of different classes, so a callback may not
+  apply to every member:
 
-  Beyond the `Class.RunService` aliases, a collection can wrap any signal on its
-  member instances. In these callbacks, `X` stands for the name of an **event**,
-  **property**, or **attribute**.
+  - Members without the named event or property are skipped. For example, a
+    collection of `Class.Part|Parts` and `Class.Folder|Folders` can define
+    `OnTouched`, but only the parts respond.
+  - An event or property name that doesn't exist on any class, such as a
+    misspelled `OnTuched`, raises an error when assigned.
 
-  - `function collection.OnX(instance, ...)` wraps the `X` event on each member
-    and the callback receives the instance followed by that event's arguments.
-    For example, `OnTouched` wraps `Class.BasePart.Touched`.
+  #### Lifetime
 
-    ```lua
-    local CollectionService = game:GetService("CollectionService")
+  A collection is not destroyed when its variable goes out of scope. Call
+  `Datatype.Collection:Destroy()|Destroy()` to stop it. If the collection's root
+  is destroyed, the collection stops tracking instances and is eventually
+  garbage collected.
 
-    local collection = CollectionService:CreateCollection("Part")
+  ```lua
+  local CollectionService = game:GetService("CollectionService")
+  local root = Instance.new("Folder", workspace)
 
-    function collection.OnTouched(part, otherPart)
-    	print(part, otherPart)
-    end
-    ```
+  do
+  	local collection = CollectionService:CreateCollection("Part.MyTag", root)
+  end
+  -- The variable is out of scope, but the collection is still running
 
-  - `function collection.OnPropertyChanged.X(instance)` fires when property `X`
-    changes on a member, equivalent to connecting
-    `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()` on
-    each instance.
-
-    ```lua
-    local CollectionService = game:GetService("CollectionService")
-
-    local collection = CollectionService:CreateCollection("Part")
-
-    function collection.OnPropertyChanged.Color(instance)
-    	print(instance)
-    end
-    ```
-
-  - `function collection.OnAttributeChanged.X(instance)` fires when attribute
-    `X` changes on a member, equivalent to
-    `Class.Instance:GetAttributeChangedSignal()|GetAttributeChangedSignal()`.
-
-    ```lua
-    local CollectionService = game:GetService("CollectionService")
-
-    local collection = CollectionService:CreateCollection("Humanoid")
-
-    function collection.OnAttributeChanged.CharacterHealth(instance)
-    	print(instance)
-    end
-    ```
-
-  Note that a single collection can match instances of different classes, so a
-  wrapped signal may not apply to every member:
-
-  - If a member does **not** have the signal or property named by the callback,
-    that member **silently ignores** the assignment. For example, a collection
-    matching both `Class.Part` and `Class.Folder` can safely define `OnTouched`,
-    but only the `Class.Part|Parts` respond.
-  - If a callback names an event or property that exists **nowhere** in the API
-    (for example a misspelled `OnToched`), an error is raised at assignment
-    time.
+  root:Destroy()
+  -- The collection stops tracking instances and can be garbage collected
+  ```
 
   #### Typing and Autocomplete
 
-  When the query constrains the class of its matches, the collection is typed
-  accordingly and callbacks are typed to match. For example,
-  `Class.CollectionService:CreateCollection()|CreateCollection("Part.TagName")`
-  yields a collection whose callbacks receive a `Class.Part`, and autocomplete
-  only suggests callbacks relevant to that class (so
-  `collection.OnTouched(part: Part, other: BasePart)` is suggested, but not for
-  a query that cannot match a `Class.BasePart`). When no type can be inferred
-  from the query, the first argument defaults to `Class.Instance`.
+  When the query names a class, callbacks receive that type. For example,
+  `CreateCollection("Part.TagName")` passes a `Class.Part` to its callbacks.
+
+  Autocomplete only suggests callbacks that the class supports. `OnTouched` is
+  suggested for `"Part.TagName"`, but not for a query that can't match a
+  `Class.BasePart`. If the query names no class, the first argument is typed as
+  `Class.Instance`.
 code_samples:
   - Collection-Overview
 tags: []
@@ -207,52 +286,83 @@ properties:
   - name: Collection.Enabled
     type: bool
     summary: |
-      Controls whether the collection is actively tracking instances and firing
+      Controls whether the collection is tracking instances and firing
       callbacks.
     description: |
-      Defaults to `true`. Setting this to `false` fires `OnRemoved` for every
-      instance currently in the collection and stops all of its callbacks.
-      Setting it back to `true` re-evaluates the query and fires `OnAdded` again
-      for every matching instance. Assigning a non-boolean value raises an
-      error.
+      Defaults to `true`. Setting it to `false` fires `OnRemoved` for every
+      member and stops all callbacks. Setting it back to `true` re-evaluates the
+      query, reconnects all callbacks, and fires `OnAdded` for every matching
+      instance. Assigning a non-boolean value raises an error.
+    default:
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Collection.Query
+    type: string
+    summary: |
+      The query that defines the collection.
+    description: |
+      Read-only. The query passed to
+      `Class.CollectionService:CreateCollection()|CreateCollection()`.
+    default:
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Collection.Root
+    type: Instance
+    summary: |
+      The instance whose descendants the collection tracks.
+    description: |
+      Read-only. The root passed to
+      `Class.CollectionService:CreateCollection()|CreateCollection()`, which
+      defaults to `Class.Workspace`. The collection only tracks descendants of
+      the root.
     default:
     code_samples: []
     tags: []
     deprecation_message: ''
 methods:
+  - name: Collection:Destroy
+    summary: |
+      Destroys the collection, stopping all tracking and callbacks.
+    description: |
+      Fires `OnRemoved` for every member and disconnects all callbacks. After a
+      collection is destroyed, calling `Datatype.Collection:ForEach()|ForEach()`
+      raises an error.
+    parameters: []
+    returns: []
+    code_samples: []
+    tags: []
+    deprecation_message: ''
   - name: Collection:ForEach
     summary: |
-      Invokes a function once for each instance currently in the collection.
+      Calls a function once for each instance in the collection.
     description: |
-      Iterates over the instances currently in the collection, calling
-      `callback` with each one. `ForEach()` operates on a snapshot taken at call
-      time, so it is safe to add, remove, or destroy instances from within the
-      callback; instances that begin matching during iteration are not visited.
-      Calling `ForEach()` after the collection has been destroyed raises an
-      error.
+      Calls `callback` with each member. `ForEach()` iterates a snapshot taken
+      at call time, so the callback can safely add, remove, or destroy
+      instances. Instances that start matching during iteration are not visited.
+      The callback cannot yield. Calling `ForEach()` after the collection is
+      destroyed raises an error.
     parameters:
       - name: callback
         type: function
         default:
         summary: |
-          A function called with each instance currently in the collection.
+          A function called with each instance in the collection.
     returns: []
     code_samples: []
     tags: []
     deprecation_message: ''
-  - name: Collection:Destroy
+  - name: Collection:GetCount
     summary: |
-      Destroys the collection, stopping all tracking and callbacks.
+      Returns the number of instances in the collection.
     description: |
-      Stops firing the collection's callbacks, releases the connections it
-      manages on its members, and empties its set of instances. After a
-      collection is destroyed, calling `Datatype.Collection:ForEach()|ForEach()`
-      raises an error. A collection is also destroyed automatically when the
-      root passed to
-      `Class.CollectionService:CreateCollection()|CreateCollection()` is
-      destroyed.
+      Returns the number of instances currently in the collection.
     parameters: []
-    returns: []
+    returns:
+      - type: number
+        summary: |
+          The number of instances in the collection.
     code_samples: []
     tags: []
     deprecation_message: ''
