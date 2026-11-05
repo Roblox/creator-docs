@@ -46,7 +46,9 @@ functions:
     parameters: []
     returns:
       - type: double
-        summary: ''
+        summary: |
+          The elapsed time in seconds since an arbitrary point, with
+          sub-microsecond precision.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -270,7 +272,9 @@ functions:
           The time value to format.
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A dictionary containing date and time components when the format
+          string is `"*t"` or `"!*t"`.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -294,7 +298,8 @@ functions:
           The earlier time value, as returned by `Library.os.time()`.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The number of seconds from `t1` to `t2` (computed as `t2 - t1`).
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -330,7 +335,9 @@ functions:
           time.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          The number of seconds since the Unix epoch (1 January 1970, 00:00:00
+          UTC).
     tags: []
     code_samples: []
     deprecation_message: ''

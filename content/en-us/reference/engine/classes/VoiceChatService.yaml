@@ -39,8 +39,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Behavior
     serialization:
@@ -49,6 +49,7 @@ properties:
     capabilities:
       - Audio
       - Chat
+      - PluginOrOpenCloud
   - name: VoiceChatService.EnableDefaultVoice
     summary: |
       Controls whether each voice-eligible player can be heard as though they
@@ -69,8 +70,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Behavior
     serialization:
@@ -79,6 +80,7 @@ properties:
     capabilities:
       - Audio
       - Chat
+      - PluginOrOpenCloud
   - name: VoiceChatService.EnableVoiceVolumeControls
     summary: |
       Controls whether Roblox's built-in voice chat volume controls are
@@ -142,8 +144,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Behavior
     serialization:
@@ -152,6 +154,7 @@ properties:
     capabilities:
       - Audio
       - Chat
+      - PluginOrOpenCloud
 methods:
   - name: VoiceChatService:GetChatGroupsAsync
     summary: |

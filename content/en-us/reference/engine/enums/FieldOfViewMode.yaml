@@ -14,6 +14,10 @@ description: |
   the chosen axis constant. Used by
   `Class.Camera.FieldOfViewMode|FieldOfViewMode`, which defaults to
   `Enum.FieldOfViewMode.Vertical`.
+
+  This also controls which axis `Class.Camera.ViewStretch|ViewStretch` will
+  stretch for perspective cameras (which is currently always the horizontal
+  axis).
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -21,21 +25,24 @@ items:
   - name: Vertical
     summary: |
       The camera holds its vertical field of view constant when the viewport is
-      resized.
+      resized. The `Class.Camera.ViewStretch|ViewStretch` will apply to the
+      horizontal axis.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Diagonal
     summary: |
       The camera holds its diagonal field of view constant when the viewport is
-      resized.
+      resized. The `Class.Camera.ViewStretch|ViewStretch` will apply to the
+      horizontal axis.
     value: 1
     tags: []
     deprecation_message: ''
   - name: MaxAxis
     summary: |
       The camera holds the field of view along the longer viewport axis constant
-      when the viewport is resized.
+      when the viewport is resized. The `Class.Camera.ViewStretch|ViewStretch`
+      will apply to the horizontal axis.
     value: 2
     tags: []
     deprecation_message: ''

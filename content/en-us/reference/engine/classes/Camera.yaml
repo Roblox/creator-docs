@@ -32,7 +32,7 @@ description: |
     detailed and will update more frequently depending on how close they are to
     the focus point.
 
-  See [Customizing the Camera](../../../workspace/camera.md) for more
+  See [Customizing the Camera](../../../workspace/camera/index.md) for more
   information on how to adjust and customize the camera's behavior.
 
   #### Storing Multiple Cameras
@@ -532,6 +532,84 @@ properties:
       can_save: true
     capabilities:
       - Basic
+  - name: Camera.OrthographicMode
+    summary: |
+      Sets which screen axis `Class.Camera.OrthographicSize|OrthographicSize` is
+      applied to.
+    description: |
+      Specifies which aspect of `Class.Camera.ViewportSize|ViewportSize` is
+      controlled by `Class.Camera.OrthographicSize|OrthographicSize`.
+
+      For example, when this property is set to
+      `Enum.OrthographicMode.Vertical`, the orthographic projection is scaled
+      such that the vertical dimension spans exactly
+      `Class.Camera.OrthographicSize|OrthographicSize` studs, and the horizontal
+      dimension spans however many studs are needed to match.
+    code_samples: []
+    type: OrthographicMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+  - name: Camera.OrthographicSize
+    summary: |
+      Sets the extent in studs of the dimension chosen by
+      `Class.Camera.OrthographicMode|OrthographicMode`.
+    description: |
+      `Class.Camera.OrthographicMode|OrthographicMode` chooses the dimension of
+      the viewport you want to control.
+      `Class.Camera.OrthographicSize|OrthographicSize` sets the extent in studs
+      spanned by that viewport dimension.
+
+      For example, if `Class.Camera.OrthographicMode|OrthographicMode` is set to
+      `Enum.OrthographicMode.MaxAxis`, then the larger dimension of the viewport
+      will span `Class.Camera.OrthographicSize|OrthographicSize` studs.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+  - name: Camera.ProjectionType
+    summary: |
+      Chooses between perspective and orthographic cameras.
+    description: |
+      Set to `Enum.ProjectionType.Perspective` (default) to use a perspective
+      camera, where parallel lines in 3D converge on the screen and objects get
+      smaller in the distance. Set to `Enum.ProjectionType.Orthographic` to use
+      an orthographic camera, where parallel lines stay parallel and objects are
+      the same size at any distance. This is useful for things like 2D games,
+      isometric games, and minimaps.
+    code_samples: []
+    type: ProjectionType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
   - name: Camera.ViewportSize
     summary: |
       The dimensions of the device safe area on a Roblox client.
@@ -578,6 +656,34 @@ properties:
     category: Data
     serialization:
       can_load: false
+      can_save: true
+    capabilities:
+      - Basic
+  - name: Camera.ViewStretch
+    summary: |
+      Stretches the axis of the view not pinned by the current
+      `Class.Camera.FieldOfViewMode|FieldOfViewMode` or
+      `Class.Camera.OrthographicMode|OrthographicMode`.
+    description: |
+      The field of view and the orthographic size are specified for one axis of
+      the viewport, either horizontal or vertical. Normally, the other axis
+      automatically adjusts itself to keep pixels square. This lets you stretch
+      the other axis so that pixels are not square, by a ratio of up to 2:1.
+      This can be animated to make the view feel not quite right, such as when
+      stunned.
+
+      This works for both orthographic and perspective cameras.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
       can_save: true
     capabilities:
       - Basic

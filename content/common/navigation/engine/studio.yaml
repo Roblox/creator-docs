@@ -18,6 +18,11 @@ navigation:
         path: /assistant/prompt-engineering
   - title: MCP server
     path: /studio/mcp
+    section:
+      - title: Connect to the MCP server
+        path: /studio/mcp
+      - title: Use Open Cloud
+        path: /studio/mcp-open-cloud
   - title: Command-line interface
     path: /studio/cli
   - heading: Building tools

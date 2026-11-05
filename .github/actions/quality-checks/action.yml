@@ -41,6 +41,8 @@ runs:
 
         if [ "${{ inputs.EVENT_NAME }}" = "pull_request" ] || [ "${{ inputs.EVENT_NAME }}" = "pull_request_target" ]; then
           npm run check -- --files='changed' --postPullRequestComments=${{ inputs.POST_PULL_REQUEST_COMMENTS }}
+        elif [ "${{ inputs.EVENT_NAME }}" = "merge_group" ]; then
+          npm run check -- --files='changed' --postPullRequestComments=false
         elif [ "${{ inputs.EVENT_NAME }}" = "push" ]; then
           npm run check -- --files='last-commit' --postPullRequestComments=false
         elif [ "${{ inputs.EVENT_NAME }}" = "workflow_dispatch" ]; then

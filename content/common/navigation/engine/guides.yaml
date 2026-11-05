@@ -259,6 +259,8 @@ navigation:
             path: /scripting/security/third-party-vulnerabilities
           - title: Server-side detection and consequencing
             path: /scripting/security/server-side-detection
+          - title: Device trust
+            path: /scripting/security/device-trust
       - title: Luau reference
         path: /luau/
         section:
@@ -332,8 +334,10 @@ navigation:
         path: /players/
       - title: Users and domain-scoped user IDs
         path: /players/users
-      - title: Teleporting
+      - title: Teleport players
         path: /projects/teleport
+      - title: Teleport players to private servers
+        path: /projects/teleport-private-servers
       - title: Teams
         path: /players/teams
       - title: In-game tools

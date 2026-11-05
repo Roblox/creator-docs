@@ -1,201 +1,30 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$comment": "Schema for libraries.",
   "type": "object",
   "properties": {
     "name": {
-      "$comment": "The name of the library.",
-      "description": "The name of the library. Determines the name of the page. Used for automatic cross-linking. String. Automated.",
-      "type": "string"
+      "$ref": "#/definitions/__schema0"
     },
     "type": {
-      "description": "the type of the API (class, datatype, enum, global, library). Automated.",
-      "type": "string",
-      "enum": ["library"]
+      "$ref": "#/definitions/__schema2"
     },
     "summary": {
-      "$comment": "Summary of the library to appear in Script Editor Autocomplete.",
-      "description": "A single sentence overview of this library. Used in hover menus and suggestions. String.",
-      "type": "string"
+      "$ref": "#/definitions/__schema4"
     },
     "description": {
-      "$comment": "Full description of the library to appear on the website.",
-      "description": "A long description of how the library operates. Markdown.",
-      "type": "string"
+      "$ref": "#/definitions/__schema5"
     },
     "code_samples": {
-      "description": "A list of code samples for the library. String list.",
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "$ref": "#/definitions/__schema6"
     },
     "properties": {
-      "description": "A list of properties. Each entry has the same keys. Table list. Automated.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "description": "The name of the property. String. Automated.",
-            "type": "string"
-          },
-          "type": {
-            "description": "The data type of the property. string. Automated.",
-            "type": "string"
-          },
-          "summary": {
-            "description": "A single sentence overview of the property. String.",
-            "type": "string"
-          },
-          "description": {
-            "description": "A long description of the property. String.",
-            "type": "string"
-          },
-          "code_samples": {
-            "description": "A list of code samples for the property. String list.",
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "tags": {
-            "allOf": [
-              {
-                "$ref": "#/definitions/__schema0"
-              }
-            ]
-          },
-          "deprecation_message": {
-            "description": "Description of why the property is deprecated and what to use instead. String.",
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "summary",
-          "description",
-          "code_samples",
-          "deprecation_message"
-        ],
-        "additionalProperties": false
-      }
+      "$ref": "#/definitions/__schema8"
     },
     "functions": {
-      "description": "A list of functions. Each entry has the same keys. Table list. Automated.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "description": "The name of the function. String.",
-            "type": "string"
-          },
-          "summary": {
-            "description": "A single sentence overview of the function. String.",
-            "type": "string"
-          },
-          "description": {
-            "description": "A long description of the function. String.",
-            "type": "string"
-          },
-          "parameters": {
-            "$id": "parameters",
-            "description": "Parameters of this item. Each entry has the same keys. Table list. Automated.",
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "description": "Name of the parameter. String. Automated.",
-                  "type": "string"
-                },
-                "type": {
-                  "description": "The datatype of the parameter. String. Automated.",
-                  "type": "string"
-                },
-                "default": {
-                  "description": "The default value of the parameter. String, boolean, or number. Automated.",
-                  "anyOf": [
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "boolean"
-                    },
-                    {
-                      "type": "number"
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ]
-                },
-                "summary": {
-                  "description": "A single sentence definition of the parameter. String.",
-                  "type": "string"
-                }
-              },
-              "required": ["name", "type", "summary"],
-              "additionalProperties": false
-            }
-          },
-          "returns": {
-            "$id": "returns",
-            "description": "Returns of this item. Each entry has the same keys. Table list. Automated.",
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "description": "The datatype of the return. String. Automated.",
-                  "type": "string"
-                },
-                "summary": {
-                  "description": "A single sentence definition of the return. String.",
-                  "type": "string"
-                }
-              },
-              "required": ["type", "summary"],
-              "additionalProperties": false
-            }
-          },
-          "code_samples": {
-            "description": "A list of code samples for the function. String list.",
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "tags": {
-            "allOf": [
-              {
-                "$ref": "#/definitions/__schema0"
-              }
-            ]
-          },
-          "deprecation_message": {
-            "description": "Description of why the function is deprecated. String.",
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "summary",
-          "description",
-          "parameters",
-          "returns",
-          "code_samples"
-        ],
-        "additionalProperties": false
-      }
+      "$ref": "#/definitions/__schema13"
     },
     "tags": {
-      "description": "A list of tags. String list.",
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "$ref": "#/definitions/__schema20"
     }
   },
   "required": [
@@ -206,30 +35,281 @@
     "functions"
   ],
   "additionalProperties": false,
+  "$comment": "Schema for libraries.",
   "definitions": {
     "__schema0": {
-      "$id": "tags",
-      "description": "Tags for this item, such as Deprecated. String list. Automated.",
+      "$comment": "The name of the library.",
+      "description": "The name of the library. Determines the name of the page. Used for automatic cross-linking. String. Automated.",
+      "allOf": [
+        {
+          "$ref": "#/definitions/__schema1"
+        }
+      ]
+    },
+    "__schema1": {
+      "type": "string"
+    },
+    "__schema2": {
+      "description": "the type of the API (class, datatype, enum, global, library). Automated.",
+      "allOf": [
+        {
+          "$ref": "#/definitions/__schema3"
+        }
+      ]
+    },
+    "__schema3": {
+      "type": "string",
+      "enum": ["library"]
+    },
+    "__schema4": {
+      "type": "string",
+      "$comment": "Summary of the library to appear in Script Editor Autocomplete.",
+      "description": "A single sentence overview of this library. Used in hover menus and suggestions. String."
+    },
+    "__schema5": {
+      "type": "string",
+      "$comment": "Full description of the library to appear on the website.",
+      "description": "A long description of how the library operates. Markdown."
+    },
+    "__schema6": {
       "type": "array",
       "items": {
-        "type": "string",
-        "enum": [
-          "NotCreatable",
-          "NotBrowsable",
-          "ReadOnly",
-          "NotReplicated",
-          "Hidden",
-          "Deprecated",
-          "CustomLuaState",
-          "CanYield",
-          "Service",
-          "Yields",
-          "PlayerReplicated",
-          "NotScriptable",
-          "Settings",
-          "NoYield",
-          "UserSettings"
-        ]
+        "$ref": "#/definitions/__schema7"
+      },
+      "description": "A list of code samples for the library. String list."
+    },
+    "__schema7": {
+      "type": "string"
+    },
+    "__schema8": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/__schema9"
+      },
+      "description": "A list of properties. Each entry has the same keys. Table list. Automated."
+    },
+    "__schema9": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the property. String. Automated."
+        },
+        "type": {
+          "description": "The data type of the property. string. Automated.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/__schema10"
+            }
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "description": "A single sentence overview of the property. String."
+        },
+        "description": {
+          "type": "string",
+          "description": "A long description of the property. String."
+        },
+        "code_samples": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/__schema11"
+          },
+          "description": "A list of code samples for the property. String list."
+        },
+        "tags": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/tags"
+            }
+          ]
+        },
+        "deprecation_message": {
+          "type": "string",
+          "description": "Description of why the property is deprecated and what to use instead. String."
+        }
+      },
+      "required": [
+        "name",
+        "summary",
+        "description",
+        "code_samples",
+        "deprecation_message"
+      ],
+      "additionalProperties": false
+    },
+    "__schema10": {
+      "type": "string"
+    },
+    "__schema11": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/__schema12"
+      },
+      "description": "Tags for this item, such as Deprecated. String list. Automated."
+    },
+    "__schema12": {
+      "type": "string",
+      "enum": [
+        "NotCreatable",
+        "NotBrowsable",
+        "ReadOnly",
+        "NotReplicated",
+        "Hidden",
+        "Deprecated",
+        "CustomLuaState",
+        "CanYield",
+        "Service",
+        "Yields",
+        "PlayerReplicated",
+        "NotScriptable",
+        "Settings",
+        "NoYield",
+        "UserSettings"
+      ]
+    },
+    "__schema13": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/__schema14"
+      },
+      "description": "A list of functions. Each entry has the same keys. Table list. Automated."
+    },
+    "__schema14": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the function. String."
+        },
+        "summary": {
+          "type": "string",
+          "description": "A single sentence overview of the function. String."
+        },
+        "description": {
+          "type": "string",
+          "description": "A long description of the function. String."
+        },
+        "parameters": {
+          "$ref": "#/definitions/parameters"
+        },
+        "returns": {
+          "$ref": "#/definitions/returns"
+        },
+        "code_samples": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/__schema18"
+          },
+          "description": "A list of code samples for the function. String list."
+        },
+        "tags": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/tags"
+            }
+          ]
+        },
+        "deprecation_message": {
+          "description": "Description of why the function is deprecated. String.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/__schema19"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "summary",
+        "description",
+        "parameters",
+        "returns",
+        "code_samples"
+      ],
+      "additionalProperties": false
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/__schema15"
+      },
+      "description": "Parameters of this item. Each entry has the same keys. Table list. Automated."
+    },
+    "__schema15": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the parameter. String. Automated."
+        },
+        "type": {
+          "type": "string",
+          "description": "The datatype of the parameter. String. Automated."
+        },
+        "default": {
+          "description": "The default value of the parameter. String, boolean, or number. Automated.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/__schema16"
+            }
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "description": "A single sentence definition of the parameter. String."
+        }
+      },
+      "required": ["name", "type", "summary"],
+      "additionalProperties": false
+    },
+    "__schema16": {
+      "type": ["string", "boolean", "number", "null"]
+    },
+    "returns": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/__schema17"
+      },
+      "description": "Returns of this item. Each entry has the same keys. Table list. Automated."
+    },
+    "__schema17": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The datatype of the return. String. Automated."
+        },
+        "summary": {
+          "type": "string",
+          "description": "A single sentence definition of the return. String."
+        }
+      },
+      "required": ["type", "summary"],
+      "additionalProperties": false
+    },
+    "__schema18": {
+      "type": "string"
+    },
+    "__schema19": {
+      "type": "string"
+    },
+    "__schema20": {
+      "description": "A list of tags. String list.",
+      "allOf": [
+        {
+          "$ref": "#/definitions/__schema21"
+        }
+      ]
+    },
+    "__schema21": {
+      "type": "array",
+      "items": {
+        "type": "string"
       }
     }
   }

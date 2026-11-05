@@ -111,7 +111,8 @@ properties:
       large immediate rumble that dies down quickly. The
       `Enum.HapticEffectType.Custom` value lets you specify a haptic with custom
       waveform keys defined through
-      `Class.HapticEffect:SetWaveformKeys()|SetWaveformKeys()`.
+      `Class.HapticEffect:SetWaveformKeys()|SetWaveformKeys()` and read back
+      with `Class.HapticEffect:GetWaveformKeys()|GetWaveformKeys()`.
     code_samples: []
     type: HapticEffectType
     tags: []
@@ -138,6 +139,39 @@ methods:
     returns:
       - type: ()
         summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Input
+  - name: HapticEffect:GetWaveformKeys
+    summary: |
+      Returns the custom waveform as an array of `Datatype.FloatCurveKey`
+      objects.
+    description: |
+      Returns the waveform
+      `Class.HapticEffect:SetWaveformKeys()|SetWaveformKeys()` stored on this
+      effect. Keys are `Datatype.FloatCurveKey` objects sorted by time. Each
+      key's time is in milliseconds and its value ranges from `0` (no haptic) to
+      `1` (full intensity).
+
+      This method only works when `Class.HapticEffect.Type|Type` is
+      `Enum.HapticEffectType.Custom`. Any other type throws
+      `HapticEffect.Type is not Custom`. A custom effect with no keys set
+      returns an empty array.
+
+      Each call returns a new array. Editing that array does not change the
+      effect; pass it back to `SetWaveformKeys()` to apply a change.
+    code_samples:
+      - HapticEffect-GetWaveformKeys
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          Array of `Datatype.FloatCurveKey` objects sorted by time, or an empty
+          array if none have been set. Each key's time is in milliseconds and
+          its value is from `0` to `1`.
     tags: []
     deprecation_message: ''
     security: None

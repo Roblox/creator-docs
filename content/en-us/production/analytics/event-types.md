@@ -7,13 +7,13 @@ description: Overview of using event types to track user sources, sinks and mile
 
 Event types help you identify opportunities to grow and monetize your game. They allow you to integrate event tracking into your game and visualize your in-game economy and player usage patterns on the Analytics dashboard
 
-After you begin tracking these events from your game using `Class.AnalyticsService`, you unlock new [economy](./economy-events.md), [funnel](./funnel-events.md), and [custom](./custom-events.md) dashboards under Analytics on the Creator Dashboard. You can use these dashboards to identify growth opportunities and segment users by age, gender, platform, OS and custom fields. All of these features are **free to use**.
+After you begin tracking these events from your game using `Class.AnalyticsService`, you unlock new [economy](./economy-events.md), [funnel](./funnel-events.md), [journey](./journey-events.md), and [custom](./custom-events.md) dashboards under Analytics on the Creator Dashboard. You can use these dashboards to identify growth opportunities and segment users by age, gender, platform, OS and custom fields. All of these features are **free to use**.
 
 <img src="../../assets/analytics/event-types/Overview-Economy-Funnels.png" alt="Economy and Funnels dashboard pages populated with data."/>
 
 ## Event types
 
-Roblox provides three sets of analytic dashboards you can use to track different aspects of your game:
+Roblox provides four sets of analytic dashboards you can use to track different aspects of your game:
 
 1. **Economy events** let you track your in-game economy, such as:
 
@@ -27,13 +27,19 @@ Roblox provides three sets of analytic dashboards you can use to track different
    - **Progression** — Where do users stop advancing through your game?
    - **Shop** — Where do users abandon purchases?
 
-3. **Custom events**  let you track metrics specific to your game, such as:
+3. **Journey events** let you track your user's progress through a series of stages that can branch and reconnect, such as:
+
+   - **Onboarding** — Where do users branch off into different first-time experiences?
+   - **Open-world progression** — Which routes do users take through non-linear content?
+   - **Shop paths** — Do users reach checkout through multiple different flows?
+
+4. **Custom events** let you track metrics specific to your game, such as:
 
    - **Adoption** — How many users click on a specific UI component?
    - **User behavior** — What is the most frequently used ability on each map?
    - **Core loop** — How do kill/death ratios compare across different weapons?
 
-For more information on setting up these dashboards, see [Economy events](./economy-events.md), [Funnel events](./funnel-events.md) and [Custom events](./custom-events.md).
+For more information on setting up these dashboards, see [Economy events](./economy-events.md), [Funnel events](./funnel-events.md), [Journey events](./journey-events.md), and [Custom events](./custom-events.md).
 
 ## Validate your event tracking
 
@@ -125,3 +131,7 @@ For example, instead of tracking `WarriorXP`, `MageXP`, `PaladinXP` as separate 
   </tr>
 </tbody>
 </table>
+
+## Instrument events with Studio MCP
+
+You can use the `/rbx-instrument-analytics` skill with [Studio MCP](../../studio/mcp.md) or [Assistant](../../assistant/guide.md) to add analytics events to your game.

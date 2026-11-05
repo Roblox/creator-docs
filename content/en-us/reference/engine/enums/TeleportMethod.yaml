@@ -32,8 +32,8 @@ items:
   - name: TeleportToPrivateServer
     summary: |
       Teleport was initiated by
-      `Class.TeleportService:TeleportToPrivateServer()`, which sends players to
-      a reserved server using an access code.
+      `Class.TeleportService:TeleportToPrivateServer()`, a deprecated method
+      that sends players to a reserved server using a legacy access code.
     value: 2
     tags: []
     deprecation_message: ''

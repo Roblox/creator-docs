@@ -171,6 +171,13 @@ methods:
           Determines whether anti-aliasing is applied to the circle. When set to
           `Enum.AntiAliasing.Enabled`, circle edges are soft. When set to
           `Enum.AntiAliasing.Disabled`, circle edges are hard.
+      - name: alphaBlendType
+        type: ImageAlphaType
+        default: Default
+        summary: |
+          Determines how this draw will blend alpha values. This parameter is
+          not yet available; values other than `Enum.ImageAlphaType.Default` are
+          not supported.
     returns:
       - type: ()
         summary: ''
@@ -207,6 +214,13 @@ methods:
         summary: |
           How the pixels of the source image are combined with the existing
           pixels of this image (destination).
+      - name: alphaBlendType
+        type: ImageAlphaType
+        default: Default
+        summary: |
+          Determines how this draw will blend alpha values. This parameter is
+          not yet available; values other than `Enum.ImageAlphaType.Default` are
+          not supported.
     returns:
       - type: ()
         summary: ''
@@ -407,6 +421,10 @@ methods:
           - `PivotPoint`: Specifies the pivot point within the source image for
             scaling and rotation. Default is the center of the source image
             (i.e. `Image.Size / 2`).
+          - `AlphaBlendType`: Determines how this draw will blend alpha values.
+            Default is `Enum.ImageAlphaType.Default`. This option is not yet
+            available; values other than `Enum.ImageAlphaType.Default` are not
+            supported.
     returns:
       - type: ()
         summary: ''
@@ -457,6 +475,13 @@ methods:
           Determines whether anti-aliasing is applied to the line. When set to
           `Enum.AntiAliasing.Enabled`, line edges are soft. When set to
           `Enum.AntiAliasing.Disabled`, line edges are hard.
+      - name: alphaBlendType
+        type: ImageAlphaType
+        default: Default
+        summary: |
+          Determines how this draw will blend alpha values. This parameter is
+          not yet available; values other than `Enum.ImageAlphaType.Default` are
+          not supported.
     returns:
       - type: ()
         summary: ''
@@ -502,6 +527,13 @@ methods:
         summary: |
           How the drawn pixels (source) are combined with the existing pixels of
           this image (destination).
+      - name: alphaBlendType
+        type: ImageAlphaType
+        default: Default
+        summary: |
+          Determines how this draw will blend alpha values. This parameter is
+          not yet available; values other than `Enum.ImageAlphaType.Default` are
+          not supported.
     returns:
       - type: ()
         summary: ''

@@ -1602,7 +1602,14 @@ events:
       the value of this property.
     code_samples:
       - GuiObject-SelectionGained1
-    parameters: []
+    parameters:
+      - name: inputDirection
+        type: GuiNavigationDirection
+        default:
+        summary: |
+          The navigation direction that moved selection to this object, or
+          `Enum.GuiNavigationDirection.None` if selection did not change through
+          navigation input.
     tags: []
     deprecation_message: ''
     security: None
@@ -1625,7 +1632,14 @@ events:
       this property.
     code_samples:
       - GuiObject-SelectionLost1
-    parameters: []
+    parameters:
+      - name: inputDirection
+        type: GuiNavigationDirection
+        default:
+        summary: |
+          The navigation direction that moved selection away from this object,
+          or `Enum.GuiNavigationDirection.None` if selection did not change
+          through navigation input.
     tags: []
     deprecation_message: ''
     security: None

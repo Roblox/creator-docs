@@ -5,7 +5,8 @@
 name: TextChannelWindow
 type: class
 memory_category: Gui
-summary: ''
+summary: |
+  A GuiObject that displays chat messages from an associated TextChannel.
 description: |
   `Class.TextChannelWindow` is a `Class.GuiObject` that renders in-experience
   text chat messages from a linked `Class.TextChannel`. Place it under a
@@ -25,12 +26,12 @@ code_samples: []
 inherits:
   - GuiObject
 descendants: []
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: TextChannelWindow.Target
-    summary: ''
+    summary: |
+      The TextChannel whose messages this window displays.
     description: |
       A reference to the `Class.TextChannel` whose messages this window renders.
       When set, the window shows messages from the specified channel. Setting

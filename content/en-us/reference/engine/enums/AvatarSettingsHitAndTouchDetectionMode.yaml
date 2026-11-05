@@ -6,13 +6,14 @@ name: AvatarSettingsHitAndTouchDetectionMode
 type: enum
 summary: |
   Determines whether hit detection and spatial queries use the individual body
-  parts or the single collider when `AvatarCollisionRules.CollisionMode` is
+  parts, the single collider, or a separate hitbox when
+  `AvatarCollisionRules.CollisionMode` is
   `Enum.AvatarSettingsCollisionMode.SingleCollider`.
 description: |
   Determines whether `Class.BasePart.CanTouch` (hit detection) and
   `Class.BasePart.CanQuery` (spatial queries) are routed to the individual
-  avatar body parts or to the single collider part. Only takes effect when
-  `AvatarCollisionRules.CollisionMode` is
+  avatar body parts, to the single collider part, or to a separate hitbox part.
+  Only takes effect when `AvatarCollisionRules.CollisionMode` is
   `Enum.AvatarSettingsCollisionMode.SingleCollider`; in other collision modes it
   is ignored.
 code_samples: []
@@ -34,5 +35,18 @@ items:
       (`CanTouch` and `CanQuery` enabled on the collider) while all individual
       body parts have `CanTouch` and `CanQuery` disabled.
     value: 1
+    tags: []
+    deprecation_message: ''
+  - name: UseHitbox
+    summary: |
+      A separate, noncolliding, massless hitbox part sized by
+      `AvatarCollisionRules.HitboxSize` handles `Touched` events and spatial
+      queries (`CanTouch` and `CanQuery` enabled on the hitbox) while the single
+      collider and all individual body parts have `CanTouch` and `CanQuery`
+      disabled. Like the collider, the hitbox hangs from the top of the body and
+      rests on the floor when it is taller than the body, so it can reach the
+      floor without changing what the character stands on or steps over. The
+      hitbox is removed when the character dies.
+    value: 2
     tags: []
     deprecation_message: ''

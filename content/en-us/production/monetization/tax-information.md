@@ -7,47 +7,10 @@ description: DevEx tax information for U.S. and international creators.
 **Roblox does not provide tax advice.** You should consult with your own tax advisor regarding the tax implications of any payments you receive from Roblox.
 </Alert>
 
-Roblox is required by the U.S. Internal Revenue Service (IRS) to collect tax information from creators and, in certain cases, withhold U.S. taxes from creator payments. Beginning **November 1, 2026**, DevEx payments will be classified as royalties under the updated [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
+Roblox is required by the U.S. Internal Revenue Service (IRS) to collect tax information from creators and, in certain cases, withhold U.S. taxes from creator payments. DevEx payments are classified as royalties.
 
-<Alert severity="warning">
-**Review and update your tax information in Creator Hub before November 1, 2026.** Roblox uses the information you provide to determine your tax status, generate the appropriate tax documentation, and apply the correct U.S. withholding tax rate to your DevEx payments.
-</Alert>
-
-## Key dates
-
-<table>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>What happens</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>July 15, 2026</strong></td>
-        <td>The **Taxes** page becomes available in Creator Hub. You can review, submit, and update your tax information in advance. DevEx payments continue to process through Tipalti with no change.</td>
-      </tr>
-      <tr>
-        <td><strong>October 15, 2026</strong></td>
-        <td>Recommended deadline to request a DevEx payout before the Terms of Use update.</td>
-      </tr>
-      <tr>
-        <td><strong>October 31, 2026</strong></td>
-        <td>Final day under the current Terms of Use. Tax information submitted in Creator Hub on or before this date determines the U.S. tax withholding rate applied to your first royalty payouts on November 1.</td>
-      </tr>
-      <tr>
-        <td><strong>November 1, 2026</strong></td>
-        <td>Terms of Use update takes effect. DevEx payments are classified as royalties. U.S. withholding taxes may apply to your DevEx payments based on your tax information on file.</td>
-      </tr>
-    </tbody>
-</table>
-
-## What's changing
-
-Today, Tipalti manages both tax documentation and DevEx payments. Beginning November 1, 2026:
-
-- **Tax information** moves to the **Taxes** page in Creator Hub. The **Taxes** page becomes the system of record for your W-9 or W-8 forms, including any tax treaty claims.
-- **Payouts** continue to be processed through Tipalti. You do **not** need a new Tipalti account or login. Continue requesting payouts as you do today, and keep your payment information up to date in Tipalti to avoid payout interruptions.
+- **Tax information** is managed on the **Taxes** page in Creator Hub. The **Taxes** page is the system of record for your W-9 or W-8 forms, including any tax treaty claims.
+- **Payouts** are processed through Tipalti. Keep your payment information up to date in Tipalti to avoid payout interruptions.
 - **U.S. tax withholding** is calculated by Roblox before each payout. Tipalti receives the net payout amount for disbursement and does not display tax or withholding information.
 
 ## Determine your tax status
@@ -59,9 +22,6 @@ The information you submit depends on whether you are a U.S. person or a non-U.S
 If you identify yourself as a U.S. citizen, U.S. resident, or U.S. business entity, you must provide information through the **Taxes** page in Creator Hub to generate a [Form W-9](https://www.irs.gov/pub/irs-pdf/fw9.pdf).
 
 Roblox uses the information you provide to validate your taxpayer identification number (TIN) with the IRS. If your TIN cannot be validated, your Form W-9 will be considered invalid. As a result, 24% U.S. backup withholding will be applied to your DevEx payments.
-
-- If your existing W-9 in Tipalti is valid, Roblox automatically migrates the information to the **Taxes** page. The **Taxes** page displays a **Validated** status and no further action is required.
-- If your W-9 is missing or invalid, the **Taxes** page prompts you to submit your tax information so that a new W-9 form can be generated for you. You may also be asked to provide additional documentation if your TIN cannot be verified.
 
 #### U.S. tax withholding for U.S. creators
 
@@ -87,8 +47,8 @@ To claim a reduced U.S. withholding tax rate under a tax treaty that your countr
 
 #### U.S. tax withholding for non-U.S. creators
 
-- **24% U.S. backup withholding** may apply to your full payout if you do not provide valid tax information by October 31, 2026.
-- If you provide valid tax information by October 31, 2026, **0% to 30% U.S. tax withholding** will apply on your DevEx payments related to sales to U.S. players, depending on your country of residence and whether you successfully claim a tax treaty. For more information about treaty withholding rates by country, see the [IRS guidance on tax treaties](https://www.irs.gov/businesses/international-businesses/united-states-income-tax-treaties-a-to-z).
+- **24% U.S. backup withholding** might apply to your full payout if you do not provide valid tax information.
+- If you provide valid tax information, **0% to 30% U.S. tax withholding** applies on your DevEx payments related to sales to U.S. players, depending on your country of residence and whether you successfully claim a tax treaty. For more information about treaty withholding rates by country, see the [IRS guidance on tax treaties](https://www.irs.gov/businesses/international-businesses/united-states-income-tax-treaties-a-to-z).
 
 ## Information you need
 
@@ -190,14 +150,14 @@ Official Roblox emails about tax information come from `no-reply@roblox.com` or 
 
 ## Year-end tax forms
 
-Starting with the 2026 tax year, Roblox issues year-end tax forms through Creator Hub.
+Roblox issues year-end tax forms through Creator Hub.
 
-- **U.S. creators:** Form 1099-NEC (for payments before November 1, 2026) and Form 1099-MISC (for payments after November 1, 2026). You may receive both forms for the tax year 2026.
+- **U.S. creators:** Form 1099-MISC.
 - **International creators:** Form 1042-S.
 
-You can download tax forms for tax year 2026 and later from the **Taxes** page in Creator Hub.
+You can download tax forms from the **Taxes** page in Creator Hub.
 
-To request a historical Form 1099-NEC or Form 1042-S from a prior tax year (2025 and earlier, up to seven years), contact support through the **Taxes** page.
+To request a historical Form 1099-MISC (for royalty payments), Form 1099-NEC (for non-royalty payments), or Form 1042-S from a prior tax year (2025 and earlier, up to seven years), contact support through the **Taxes** page.
 
 ## Key terms
 
@@ -235,7 +195,7 @@ To request a historical Form 1099-NEC or Form 1042-S from a prior tax year (2025
       </tr>
       <tr>
         <td><strong>Royalty income</strong></td>
-        <td>Payments classified as compensation for the use of intellectual property. As of November 1, 2026, DevEx payments are treated as royalties for U.S. federal income tax purposes.</td>
+        <td>Payments classified as compensation for the use of intellectual property. DevEx payments are treated as royalties for U.S. federal income tax purposes.</td>
       </tr>
       <tr>
         <td><strong>Tax treaty</strong></td>
@@ -247,7 +207,7 @@ To request a historical Form 1099-NEC or Form 1042-S from a prior tax year (2025
       </tr>
       <tr>
         <td><strong>Tipalti</strong></td>
-        <td>Roblox's third-party payout processor. Tipalti continues to process DevEx payments after November 1, 2026, but tax documentation is managed through the **Taxes** page in Creator Hub.</td>
+        <td>Roblox's third-party payout processor. Tipalti processes DevEx payments, and tax documentation is managed through the **Taxes** page in Creator Hub.</td>
       </tr>
       <tr>
         <td><strong>U.S. backup withholding</strong></td>
@@ -274,13 +234,9 @@ To request a historical Form 1099-NEC or Form 1042-S from a prior tax year (2025
 
 <h5 style={{marginTop: '24px'}}>Why is tax being withheld from my DevEx payments?</h5>
 
-Roblox is required by the U.S. Internal Revenue Service (IRS) to collect tax information from creators and, in certain cases, withhold U.S. taxes from creator payments. Beginning November 1, 2026, DevEx payments will be classified as **royalties** under the updated Terms of Use.
+Roblox is required by the U.S. Internal Revenue Service (IRS) to collect tax information from creators and, in certain cases, withhold U.S. taxes from creator payments. DevEx payments are classified as **royalties**.
 
-<h5 style={{marginTop: '24px'}}>Do these changes apply to DevEx requests submitted before November 1, 2026?</h5>
-
-The applicable U.S. tax withholding rates apply based on the payout date, not the submission date. Any DevEx request processed on or after November 1, 2026, may be subject to U.S. withholding taxes as a royalty, even if the request was submitted before that date.
-
-<h5 style={{marginTop: '24px'}}>How will DevEx payments be impacted?</h5>
+<h5 style={{marginTop: '24px'}}>How are DevEx payments impacted?</h5>
 
 If you are a U.S. creator and provide valid tax information, no U.S. taxes will be withheld from your DevEx payments.
 
@@ -288,27 +244,17 @@ If you are an international creator and provide valid tax information, U.S. with
 
 **Withholding taxes are not fees.** They are income taxes deducted from your payout and remitted to the IRS on your behalf. How they affect your overall taxes depends on your individual circumstances.
 
-<h5 style={{marginTop: '24px'}}>Will my DevEx payments be paused?</h5>
-
-No. DevEx payments continue to be processed normally. If you have not provided valid tax information by October 31, 2026, your payouts on and after November 1 may be subject to the maximum applicable U.S. tax withholding rate. Submit your tax information before November 1, 2026 to ensure withholding is applied at the correct rate.
-
-<h5 style={{marginTop: '24px'}}>What about Tipalti? Do I need a new Tipalti account?</h5>
-
-Prior to November 1, 2026, Tipalti will continue to handle both payout processing and tax-form collection for DevEx creators. After November 1, 2026, Tipalti will only handle payout processing. Tax forms and tax-document management will move to the **Taxes** page in Creator Hub.
-
-You don't need a new Tipalti account.
-
 <h5 style={{marginTop: '24px'}}>Where can I see how much was withheld from a payout?</h5>
 
-U.S. tax withholding details for tax year 2026 and later are available on the **Taxes** page. Year-end totals are also reported on your Form 1099-MISC (for payments after November 1, 2026) and Form 1099-NEC (for payments before November 1, 2026), or Form 1042-S.
+U.S. tax withholding details are available on the **Taxes** page. Year-end totals are also reported on your Form 1099-MISC or Form 1042-S.
 
 <h5 style={{marginTop: '24px'}}>Can I download my previously submitted W-8 or W-9?</h5>
 
-The **Taxes** page shows your current tax status and allows you to submit updated tax information. To download a copy of a tax form previously submitted through Tipalti, sign in to the Tipalti Supplier Hub.
+The **Taxes** page shows your current tax status and allows you to submit updated tax information. For previous W-8 or W-9 forms, contact Roblox Support.
 
-<h5 style={{marginTop: '24px'}}>What happens to my past 1099-MISC, 1099-NEC, and 1042-S forms?</h5>
+<h5 style={{marginTop: '24px'}}>Where are my 1099-MISC, 1099-NEC, and 1042-S forms?</h5>
 
-You can download Form 1099-MISC (for payments after November 1, 2026), Form 1099-NEC (for payments before November 1, 2026), and Form 1042-S directly from the **Taxes** page in Creator Hub.
+You can download new Form 1099-MISC (for royalty payments), Form 1099-NEC (for non-royalty payments), and Form 1042-S directly from the **Taxes** page in Creator Hub.
 
 To request historical tax forms, contact support through the **Taxes** page.
 
@@ -320,7 +266,7 @@ Roblox does not provide tax advice. The **Taxes** page guides you to the correct
 
 Yes. Protecting your personal and tax information is a top priority, and Roblox securely handles personal data based on industry-standard safeguards. We only collect the information needed for tax purposes.
 
-Always submit tax information through the **Taxes** page in Creator Hub. Never send tax information as an email reply. If you are unsure whether a request is legitimate, go directly to Creator Hub or contact Roblox Support.
+Always submit tax information through the **Taxes** page in Creator Hub. Never send tax information as an email reply. If you are unsure whether a message is legitimate, go directly to Creator Hub or contact Roblox Support.
 
 </AccordionDetails>
 </BaseAccordion>

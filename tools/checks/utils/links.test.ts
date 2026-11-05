@@ -1,4 +1,10 @@
+import * as fs from 'node:fs';
+import * as path from 'node:path';
+import * as os from 'node:os';
+import { IConfig } from './config.js';
+import { summaryOfRequirements } from './console.js';
 import {
+  checkContentLinks,
   ASSET_LINK_REGEX,
   PAGE_LINK_REGEX,
   LinkInfo,
@@ -160,4 +166,84 @@ Hope you have fun!
       expect(result).toEqual(expectedResult);
     }
   );
+});
+
+describe('localized HTTP link validation', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'localized-links-'));
+  const englishPath = path.join(root, 'content/en-us/page.md');
+  const translatedPath = path.join(root, 'content/nl-nl/page.md');
+  const config = {
+    checkHttpLinks: true,
+    checkLocalizedContent: true,
+    checkRelativeLinks: false,
+    postPullRequestComments: false,
+  } as IConfig;
+
+  beforeAll(() => {
+    fs.mkdirSync(path.dirname(englishPath), { recursive: true });
+    fs.mkdirSync(path.dirname(translatedPath), { recursive: true });
+  });
+  afterAll(() => fs.rmSync(root, { recursive: true, force: true }));
+
+  const check = (english: string, translated: string, options = config) => {
+    fs.writeFileSync(englishPath, english);
+    fs.writeFileSync(translatedPath, translated);
+    const before = summaryOfRequirements;
+    checkContentLinks({
+      fileContent: translated,
+      filePath: translatedPath,
+      config: options,
+    });
+    expect(fs.readFileSync(translatedPath, 'utf8')).toBe(translated);
+    return summaryOfRequirements.slice(before.length);
+  };
+
+  test('accepts exact English destinations even when not allowlisted, independent of label or order', () => {
+    expect(
+      check(
+        '[One](https://unlisted.example/one?q=1#section) <a href="https://unlisted.example/two">Two</a> ![Image](https://unlisted.example/image.png)\n[ref]: http://open-notify.org\n',
+        '![Afbeelding](https://unlisted.example/image.png) <a href="https://unlisted.example/two">Twee</a> [Een](https://unlisted.example/one?q=1#section)\n[ref]: http://open-notify.org\n'
+      )
+    ).toBe('');
+  });
+
+  test.each([
+    'https://unlisted.example/nl/one?q=1#section',
+    'https://unlisted.example/one?q=2#section',
+    'https://unlisted.example/one?q=1#other',
+    'https://unlisted.example/one/?q=1#section',
+  ])('still rejects a changed unapproved destination: %s', (url) => {
+    expect(
+      check('[One](https://unlisted.example/one?q=1#section)', `[Een](${url})`)
+    ).toContain("isn't in the list of allowed HTTP links");
+  });
+
+  test('still accepts independently allowlisted links', () => {
+    expect(
+      check('No source links', '[Lua](https://www.lua.org/pil/2.4.html)')
+    ).toBe('');
+  });
+
+  test('does not grant the exception outside localization checks', () => {
+    expect(
+      check(
+        '[One](https://unlisted.example/one)',
+        '[Een](https://unlisted.example/one)',
+        { ...config, checkLocalizedContent: false }
+      )
+    ).toContain("isn't in the list of allowed HTTP links");
+  });
+
+  test('missing English file falls back to the allowlist', () => {
+    fs.rmSync(englishPath);
+    const before = summaryOfRequirements;
+    checkContentLinks({
+      fileContent: '[Een](https://unlisted.example/one)',
+      filePath: translatedPath,
+      config,
+    });
+    expect(summaryOfRequirements.slice(before.length)).toContain(
+      "isn't in the list of allowed HTTP links"
+    );
+  });
 });

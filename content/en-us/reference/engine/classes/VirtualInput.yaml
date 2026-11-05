@@ -18,6 +18,16 @@ description: |
   with Roblox's built-in UI (`Class.CoreGui`), such as the top bar, chat window,
   or escape menu. This prevents automation tests from accidentally interfering
   with system UI that players depend on.
+
+  Targeting a specific window is in development and is not available yet. By
+  default, a `Class.VirtualInput` sends input to the main viewport. To send
+  input to a specific window instead, such as a plugin's
+  `Class.DockWidgetPluginGui`, pass that window as the `target` of
+  `Class.UserInputService:CreateVirtualInput()`. Positions are then measured
+  from the window's top-left corner, so a `Class.GuiObject.AbsolutePosition`
+  inside that window can be passed directly. Input sent to a plugin window never
+  reaches `Class.CoreGui`, so the `Class.CoreGui` checks mentioned above are
+  skipped for it.
 code_samples: []
 inherits:
   - Object
@@ -40,7 +50,8 @@ methods:
       `Class.CoreGui` element selected for keyboard or gamepad navigation, or
       the in-game escape menu being open. It also throws if the requested key is
       permanently bound to a Roblox core action (for example, the
-      <kbd>Escape</kbd> key).
+      <kbd>Escape</kbd> key). Neither check applies when this
+      `Class.VirtualInput` targets a plugin window.
 
       #### isRepeatedKey
 
@@ -108,7 +119,8 @@ methods:
       interactive `Class.CoreGui` element such as a button or an active overlay
       in the top bar, chat window, or escape menu. It also throws if the
       specified button is already in the requested state, for example pressing a
-      button that is already pressed.
+      button that is already pressed. Neither check applies when this
+      `Class.VirtualInput` targets a plugin window.
     code_samples: []
     parameters:
       - name: position
@@ -153,8 +165,10 @@ methods:
       use while the player's cursor is locked, such as in first-person camera
       mode.
 
-      This method throws a runtime error when the cursor is not locked. To move
-      the cursor to an absolute screen position instead, use
+      This method throws a runtime error when the cursor is not locked. It also
+      throws when this `Class.VirtualInput` targets a plugin window, because the
+      cursor can only be locked in the main viewport. To move the cursor to an
+      absolute screen position instead, use
       `Class.VirtualInput:SendMousePosition()|SendMousePosition()`.
     code_samples: []
     parameters:
@@ -181,7 +195,8 @@ methods:
 
       This method throws a runtime error when the specified position overlaps an
       interactive Roblox UI element (such as a button or active overlay in the
-      top bar, chat window, or escape menu).
+      top bar, chat window, or escape menu). This check doesn't apply when this
+      `Class.VirtualInput` targets a plugin window.
 
       To inject relative mouse movement while the cursor is locked, use
       `Class.VirtualInput:SendMouseDelta()|SendMouseDelta()` instead.
@@ -216,8 +231,9 @@ methods:
 
       This method throws a runtime error if the specified position overlaps an
       interactive Roblox UI element (such as a button or active overlay in the
-      top bar, chat window, or escape menu). If all values in `pointerAction`
-      are zero, the call returns without injecting any event.
+      top bar, chat window, or escape menu). This check doesn't apply when this
+      `Class.VirtualInput` targets a plugin window. If all values in
+      `pointerAction` are zero, the call returns without injecting any event.
     code_samples: []
     parameters:
       - name: position
@@ -253,7 +269,8 @@ methods:
       This method throws a runtime error if `Class.CoreGui` has keyboard focus,
       which includes a `Class.TextBox` inside `Class.CoreGui` being focused, a
       `Class.CoreGui` element selected for keyboard or gamepad navigation, or
-      the in-game escape menu being open.
+      the in-game escape menu being open. This check doesn't apply when this
+      `Class.VirtualInput` targets a plugin window.
     code_samples: []
     parameters:
       - name: text

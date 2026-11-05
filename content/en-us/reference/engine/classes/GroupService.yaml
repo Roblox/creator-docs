@@ -237,6 +237,10 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Groups
+    open_cloud_equivalents:
+      - path: GET /cloud/v2/groups/{group_id}
+        relationship: equivalent_partial
+        note: GroupService:GetGroupInfoAsync and GET /cloud/v2/groups/{group_id} both retrieve the specified group, but the engine response includes the emblem URL and roles while Open Cloud returns different group metadata and an owner resource path.
   - name: GroupService:GetGroupsAsync
     summary: |
       Returns a list of tables containing information on all of the groups a
@@ -383,6 +387,10 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Groups
+    open_cloud_equivalents:
+      - path: GET /cloud/v2/groups/{group_id}/memberships
+        relationship: equivalent_partial
+        note: GroupService:GetRolesInGroupAsync and GET /cloud/v2/groups/{group_id}/memberships both retrieve a user's assigned group roles, but Open Cloud returns role resource paths in a filterable membership list rather than the engine API's IsMember value and role ID, name, and rank objects.
   - name: GroupService:PromptJoinAsync
     summary: |
       Prompts the local `Class.Player` to join a specified Roblox group via a

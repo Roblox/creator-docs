@@ -160,7 +160,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: PluginSecurity
+      write: None
     thread_safety: ReadSafe
     category: Appearance
     serialization:
@@ -271,8 +271,8 @@ properties:
       - Hidden
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Appearance
     serialization:
@@ -280,6 +280,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+      - PluginOrOpenCloud
   - name: Decal.MetalnessMapContent
     summary: |
       `Datatype.Content` object that determines the metalness map of the
@@ -299,7 +300,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: PluginSecurity
+      write: None
     thread_safety: ReadSafe
     category: Appearance
     serialization:
@@ -327,8 +328,8 @@ properties:
       - Hidden
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Appearance
     serialization:
@@ -336,6 +337,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+      - PluginOrOpenCloud
   - name: Decal.NormalMapContent
     summary: |
       `Datatype.Content` object that determines the normal map of the surface.
@@ -354,7 +356,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: PluginSecurity
+      write: None
     thread_safety: ReadSafe
     category: Appearance
     serialization:
@@ -402,8 +404,8 @@ properties:
       - Hidden
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Appearance
     serialization:
@@ -411,6 +413,7 @@ properties:
       can_save: true
     capabilities:
       - Basic
+      - PluginOrOpenCloud
   - name: Decal.RoughnessMapContent
     summary: |
       `Datatype.Content` object that determines the roughness map of the
@@ -430,7 +433,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: PluginSecurity
+      write: None
     thread_safety: ReadSafe
     category: Appearance
     serialization:
