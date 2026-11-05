@@ -504,28 +504,6 @@ properties:
       can_load: true
       can_save: true
     capabilities: []
-  - name: Workspace.ImprovedAnimationConstraint
-    summary: |
-      Controls whether improved behavior is enabled for
-      `Class.AnimationConstraint|AnimationConstraints`.
-    description: |
-      When enabled, `Class.AnimationConstraint|AnimationConstraints` use
-      separate strength and damping settings for linear and angular motion.
-      `Enum.RolloutState|Default` follows the default for this feature.
-    code_samples: []
-    type: RolloutState
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: Workspace.ImprovedPhysicsReplication
     summary: |
       Controls whether the experience uses the improved physics replication path
@@ -873,8 +851,7 @@ properties:
       `Enum.PredictiveStreamingMode|Disabled`.
     code_samples: []
     type: PredictiveStreamingMode
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -886,17 +863,18 @@ properties:
       can_save: true
     capabilities:
       - PluginOrOpenCloud
-  - name: Workspace.PrimalPhysicsSolver
+  - name: Workspace.NextGenerationPhysicsSolver
     summary: |
-      Controls whether the experimental Primal Physics Solver is enabled.
+      Controls whether the experimental next generation physics solver is
+      enabled.
     description: |
-      The Primal Physics Solver is an experimental constraint solver that can
-      improve accuracy in complex setup. Setting this property to
-      `Enum.PrimalPhysicsSolver|Experimental` enables it.
+      The next generation physics solver can provide improved accuracy and
+      robustness in complex setups. Set this property to
+      `Enum.RolloutState|Enabled` to enable it, `Enum.RolloutState|Disabled` to
+      disable it, or `Enum.RolloutState|Default` to follow the rollout default.
     code_samples: []
-    type: PrimalPhysicsSolver
-    tags:
-      - NotScriptable
+    type: RolloutState
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -906,7 +884,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - PluginOrOpenCloud
   - name: Workspace.RejectCharacterDeletions
     summary: |
       Controls whether the server rejects attempts by clients to delete player
@@ -1127,8 +1106,7 @@ properties:
       problematic situations.
     code_samples: []
     type: StreamingIntegrityMode
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -1161,8 +1139,7 @@ properties:
       - `Class.Workspace.StreamingIntegrityMode`
     code_samples: []
     type: int
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -1193,8 +1170,7 @@ properties:
       - `Class.Workspace.StreamingIntegrityMode`
     code_samples: []
     type: int
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -1224,8 +1200,7 @@ properties:
       - `Class.Workspace.StreamingIntegrityMode`
     code_samples: []
     type: StreamOutBehavior
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None

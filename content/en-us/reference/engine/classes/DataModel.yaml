@@ -1003,6 +1003,26 @@ events:
     deprecation_message: ''
     security: None
     capabilities: []
+  - name: DataModel.ServerLowMemoryWarning
+    summary: |
+      Fires on the server when Roblox detects that the server is under memory
+      pressure.
+    description: |
+      Fires on the server when Roblox detects that the server is under memory
+      pressure. Use this event as a best-effort opportunity to reduce
+      nonessential memory use.
+
+      This event can fire more than once while the server remains under memory
+      pressure. Make handlers idempotent and avoid memory-intensive work. The
+      event does not guarantee that the server will shut down or that it can
+      avoid shutting down.
+    code_samples:
+      - DataModel-ServerLowMemoryWarning1
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    capabilities: []
   - name: DataModel.ServerRestartScheduled
     summary: |
       Fires on the server when the server has been scheduled to restart.

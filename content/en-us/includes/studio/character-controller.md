@@ -4,7 +4,6 @@ title: include
 
 The CCL is **opt-in** through Studio's [Avatar Settings](../../studio/avatar-settings.md) window. To enable it:
 
-1. Enable the CCL beta through **File** ⟩ **Beta Features** ⟩ **AvatarAbilities Character Controller Library**.
 1. From the **Avatar** tab, open [Avatar Settings](../../studio/avatar-settings.md).
 
    <img src="../../assets/studio/general/Toolbar-Avatar-Settings.png" width="800" alt="Avatar Settings indicated in Studio's toolbar" />

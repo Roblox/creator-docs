@@ -164,7 +164,10 @@ functions:
     parameters: []
     returns:
       - type: ()
-        summary: ''
+        summary: |
+          This function does not return a value. It yields the thread if
+          currently in a serial phase, or returns immediately if already in
+          parallel.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -189,7 +192,10 @@ functions:
     parameters: []
     returns:
       - type: ()
-        summary: ''
+        summary: |
+          This function does not return a value. It yields the thread if
+          currently in a parallel phase, or returns immediately if already in
+          serial.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -225,7 +231,9 @@ functions:
           thread is resumed.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The actual elapsed time (in seconds) from when `Library.task.wait()`
+          was called to when the thread was resumed.
     tags: []
     code_samples: []
     deprecation_message: ''
@@ -262,7 +270,8 @@ functions:
           The thread that will be cancelled.
     returns:
       - type: ()
-        summary: ''
+        summary: |
+          This function does not return a value.
     tags: []
     code_samples: []
     deprecation_message: ''

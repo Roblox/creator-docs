@@ -200,8 +200,7 @@ properties:
       gradient repeats when `Scale` causes it to not fill the entire element.
     code_samples: []
     type: float
-    tags:
-      - NotBrowsable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -227,8 +226,7 @@ properties:
       color/transparency sequence is visible.
     code_samples: []
     type: GradientTileMode
-    tags:
-      - NotBrowsable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -281,8 +279,7 @@ properties:
       `Class.UIGradient.TileMode|TileMode` which determines repetition behavior.
     code_samples: []
     type: GradientType
-    tags:
-      - NotBrowsable
+    tags: []
     deprecation_message: ''
     security:
       read: None

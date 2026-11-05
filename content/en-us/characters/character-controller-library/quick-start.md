@@ -3,9 +3,12 @@ title: CCL quick start
 description: Traditional character abilities (run, climb, jump, swim, etc.) are easily configurable through scripting.
 ---
 
+import BetaAlert from '../../includes/beta-features/beta-alert.md'
 import Enable from '../../includes/studio/character-controller.md'
 
 In the [Character Controller Library](./index.md) (CCL), traditional character abilities (run, climb, jump, swim, etc.) are easily configurable through scripting. For custom character mechanics such as dashing, aiming, wall‑jumping, and more, see [custom abilities](./custom-abilities.md).
+
+<BetaAlert betaName="AvatarAbilities Character Controller Library" leadIn="The CCL is currently in beta. Enable it through " leadOut=" and then enable it as described in the following section." components={props.components} />
 
 ## Enable CCL
 

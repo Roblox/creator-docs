@@ -333,7 +333,7 @@ return (<>
 <Grid item XSmall={12} Medium={6} style={{ display: 'flex' }}>
 <a className="rvp-tile-link" href="https://www.roblox.com/games/6153766069/Escape-The-Carnival-of-Terror-Obby" target="_blank" rel="noopener noreferrer">
 <Card className="rvp-card">
-<CardMedia component="img" className="rvp-tile-media" src="/assets/monetization/rewarded-video-ads/playbooks/Obby-Escape-the-Carnival-of-Terror.webp" alt="Free item prompt with a watch ad button in Escape the Carnival of Terror Obby" loading="lazy" />
+<CardMedia component="img" className="rvp-tile-media" src="/assets/monetization/rewarded-video-ads/playbooks/Obby-Escape-the-Carnival-of-Terror.png" alt="Free item prompt with a watch ad button in Escape the Carnival of Terror Obby" loading="lazy" />
 <CardContent className="rvp-card-body">
 <Typography component="h3" className="rvp-card-title">Escape the Carnival of Terror Obby</Typography>
 <Typography component="p" className="rvp-card-text">Opt-in Rate: 27%<br />Frequency: 3.9</Typography>
