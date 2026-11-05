@@ -261,11 +261,12 @@ A successful request returns `204 No Content`.
 
 Create and update requests are rejected with `400` if the pattern:
 
-- Is empty or longer than 1,000 characters.
+- Is empty, contains only whitespace, or exceeds 1,000 characters.
 - Isn't a valid .NET regular expression.
 - Starts with an unanchored wildcard, such as `.*`, `.+`, `(.*)`, or `(.+)`. Start with literal text or `^` instead.
-- Nests repeating quantifiers, such as `(a+)*` or `(\w+)+`.
-- For `Ignore` rules only: has a top-level alternative that doesn't start with at least 3 literal characters, optionally after `^`. For example, `^AdService:` is allowed, but `^\w+` and `abc|.*` are not.
+- Nests unbounded repeating quantifiers, such as `(a+)*` or `(\w+)+`.
+- Matches empty text or is detected as a catch-all for unrelated messages, such as `^.*$`.
+- Takes too long to validate.
 
 ## Rule limits
 

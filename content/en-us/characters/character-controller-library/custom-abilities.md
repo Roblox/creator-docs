@@ -3,10 +3,13 @@ title: Custom abilities
 description: Custom abilities in the Character Controller Library (CCL) evaluate what a character can do, as well as enable flexible behavior composition such as a character being able to move while also aiming and crouching.
 ---
 
+import BetaAlert from '../../includes/beta-features/beta-alert.md'
 import Enable from '../../includes/studio/character-controller.md'
 import ActionSlots from '../../includes/action-slots.md'
 
-This guide outlines how to add a custom **dash** ability for all player characters, where activating the ability speeds the character forward in the direction it's facing, followed by a short cooldown before players can dash again.
+This guide outlines how to add a custom **dash** ability for all player characters via the [Character Controller Library](./index.md), where activating the ability speeds the character forward in the direction it's facing, followed by a short cooldown before players can dash again.
+
+<BetaAlert betaName="AvatarAbilities Character Controller Library" leadIn="The CCL is currently in beta. Enable it through " leadOut=" and then enable it as described in the following section." components={props.components} />
 
 ## Enable CCL
 

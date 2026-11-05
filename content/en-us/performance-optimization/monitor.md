@@ -16,4 +16,6 @@ For example, imagine you've just added a new place to your game:
 1. You check the script, which adds some user data to a large table, but never cleans the data up—it's growing infinitely.
 1. You fix the problem, publish the updated game, and client crash rate returns to its previous value.
 
+In addition to the Performance Dashboard, you can connect to the `Class.DataModel.ServerLowMemoryWarning` signal from a server script to get an early warning when a live server's memory usage grows too high, giving your code a chance to free up memory before a crash occurs.
+
 Comparing the Performance Dashboard to other dashboards can help you correlate performance improvements (or regressions) to business metrics for a more complete idea of how a performant game impacts your bottom line. For more information, see [Analytics](../production/analytics/index.md).

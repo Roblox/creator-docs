@@ -370,7 +370,9 @@ methods:
     parameters: []
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` whose components are the absolute values of the
+          original's components.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -383,7 +385,9 @@ methods:
     parameters: []
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` whose components are the ceiling (rounded up) of
+          the original's components.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -396,7 +400,9 @@ methods:
     parameters: []
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` whose components are the floor (rounded down) of
+          the original's components.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -411,7 +417,9 @@ methods:
     parameters: []
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` whose components are the sign (-1, 0, or 1) of
+          the original's components.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -443,7 +451,9 @@ methods:
           The other `Datatype.Vector3` to compute the cross product with.
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` perpendicular to both input vectors with
+          magnitude equal to the area of the parallelogram they span.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -483,7 +493,9 @@ methods:
           via the right-hand rule.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The angle in radians between the two vectors; unsigned `[0, pi]`
+          without an axis, or signed `[-pi, pi]` when an axis is provided.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -517,7 +529,8 @@ methods:
           The `Datatype.Vector3` to compute the dot product with.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The scalar dot product of the two vectors.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -553,7 +566,9 @@ methods:
           component magnitudes.
     returns:
       - type: bool
-        summary: ''
+        summary: |
+          `true` if the two vectors are approximately equal within the given
+          tolerance, `false` otherwise.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -579,7 +594,9 @@ methods:
           (returns goal), but not clamped.
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` at the interpolated position between self and
+          goal.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -605,7 +622,9 @@ methods:
           The `Datatype.Vector3` to compare component-wise against.
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` where each component is the larger of the two
+          input vectors' corresponding components.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -631,7 +650,9 @@ methods:
           The `Datatype.Vector3` to compare component-wise against.
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          A `Datatype.Vector3` where each component is the smaller of the two
+          input vectors' corresponding components.
     code_samples: []
     tags: []
     deprecation_message: ''

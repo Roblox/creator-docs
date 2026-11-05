@@ -33,8 +33,7 @@ properties:
       modifications of this property may control additional decorative features.
     code_samples: []
     type: boolean
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -55,8 +54,7 @@ properties:
       enabled. Valid values are between `0.1` and `1`.
     code_samples: []
     type: float
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None

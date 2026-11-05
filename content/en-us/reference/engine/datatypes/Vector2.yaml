@@ -337,7 +337,9 @@ methods:
           the absolute value.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The angle in radians between the two vectors, in the range [0, pi] for
+          unsigned or [-pi, pi] for signed.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -366,7 +368,9 @@ methods:
           The vector to compute the dot product with.
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The scalar dot product of the two vectors, equal to
+          `self.X * v.X + self.Y * v.Y`.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -401,7 +405,9 @@ methods:
           `v`.
     returns:
       - type: Vector2
-        summary: ''
+        summary: |
+          A vector linearly interpolated between this vector and `v` by the
+          fraction `alpha`.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -427,7 +433,9 @@ methods:
           One or more `Datatype.Vector2` objects to compare against.
     returns:
       - type: Vector2
-        summary: ''
+        summary: |
+          A vector whose each component is the highest value found among this
+          vector and all provided vectors.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -453,7 +461,9 @@ methods:
           One or more `Datatype.Vector2` objects to compare against.
     returns:
       - type: Vector2
-        summary: ''
+        summary: |
+          A vector whose each component is the lowest value found among this
+          vector and all provided vectors.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -490,7 +500,9 @@ methods:
           considered equal.
     returns:
       - type: bool
-        summary: ''
+        summary: |
+          `true` if every component of this vector is within `epsilon` of the
+          corresponding component of `other`.
     code_samples: []
     tags: []
     deprecation_message: ''

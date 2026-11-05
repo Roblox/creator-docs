@@ -642,7 +642,9 @@ methods:
     parameters: []
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A table containing Year, Month, Day, Hour, Minute, Second, and
+          Millisecond keys representing the date and time in UTC.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -659,7 +661,9 @@ methods:
     parameters: []
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          A table containing Year, Month, Day, Hour, Minute, Second, and
+          Millisecond keys representing the date and time in the local timezone.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -677,7 +681,9 @@ methods:
     parameters: []
     returns:
       - type: string
-        summary: ''
+        summary: |
+          An ISO 8601 date-time string in UTC format, such as
+          `"2020-01-02T10:30:45Z"`.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -712,7 +718,9 @@ methods:
           language and formatting conventions.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The formatted date-time string with tokens replaced by their
+          corresponding values.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -748,7 +756,9 @@ methods:
           language and formatting conventions.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          The formatted date-time string with tokens replaced by their
+          corresponding values.
     code_samples: []
     tags: []
     deprecation_message: ''

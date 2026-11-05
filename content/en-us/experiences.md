@@ -31,7 +31,7 @@ start creating Roblox experiences.
     <img src="/assets/landing/core-experience.png" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
     </div>
     <Typography variant='h4'>Create your first experience</Typography>
-    <Typography variant='body1'>Create a simple 3D platformer while learning important Roblox building and scripting concepts.</Typography>
+    <Typography variant='body1'>Create a simple 3D platformer while learning core Roblox building and scripting concepts.</Typography>
     <div style={{marginTop:16}}>
       <a underline="none" href="./tutorials/curriculums/core/">
       <Button variant="contained" color="secondary" size='large'
@@ -149,7 +149,7 @@ that teaches you the skills you need to create and monetize your experiences.
   <iframe src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
   </div>
     <Typography variant='h4'>Gameplay scripting</Typography>
-    <Typography variant='body1' >Gameplay Scripting teaches you how to organize and implement the scripting logic for large, complex project.</Typography>
+    <Typography variant='body1' >Gameplay Scripting teaches you how to organize and implement the scripting logic for large, complex projects.</Typography>
       <div style={{marginTop:16}}>
         <a underline="none" href="./tutorials/curriculums/gameplay-scripting/">
         <Button variant="contained" color="secondary" size='large'
@@ -202,7 +202,7 @@ Learn, share, and interact with the Roblox community in the following places.
     <img src="/assets/landing/get-started/video-interviews.jpg" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}/>
   </div>
   <Typography variant='h4'>On social video channels</Typography>
-  <a href="https://www.youtube.com/@RobloxLearn"><Typography variant='buttonLarge' style={{marginBottom: 12}}> YouTube channel</Typography></a>
+  <a href="https://www.youtube.com/@RobloxCreators"><Typography variant='buttonLarge' style={{marginBottom: 12}}> YouTube channel</Typography></a>
   <a href="https://events.roblox.com"><Typography variant='buttonLarge' style={{marginBottom: 12}}>Content and events platform</Typography></a>
 </Grid>
 </Grid>

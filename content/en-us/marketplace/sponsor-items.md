@@ -49,6 +49,10 @@ For example, if there are three sponsored items in the bidding system, advertisi
 
 Once you have at least **10 Robux** to bid on advertising space per day, you can create a new sponsored item for a specific audience, including gender, age, and platform.
 
+<Alert severity="info">
+**Limited** items aren't eligible for sponsorship.
+</Alert>
+
 To create a new sponsored item:
 
 1. Navigate to the [Sponsored Items page](https://www.roblox.com/sponsorships/list).

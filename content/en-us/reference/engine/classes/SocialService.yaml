@@ -249,7 +249,7 @@ methods:
         <tr>
           <th><code>ReservedServerAccessCode</code></th>
           <td>string</td>
-          <td>If applicable, the access code for the reserved server that the user currently resides in. Useful for teleporting party members to each other using <code>Class.TeleportService:TeleportAsync()</code>.</td>
+          <td>If applicable, the legacy access code for the reserved server that the user currently resides in. For new work, use <code>Class.TeleportOptions.ReservedServerId</code> with <code>Class.TeleportService:TeleportAsync()</code> instead.</td>
         </tr>
       </tbody>
       </table>

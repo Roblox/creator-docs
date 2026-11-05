@@ -51,7 +51,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: RobloxScriptSecurity
+      write: None
     thread_safety: ReadSafe
     category: Data
     serialization:
@@ -183,7 +183,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: PluginSecurity
+      write: None
     thread_safety: ReadSafe
     category: Data
     serialization:
@@ -247,7 +247,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: PluginSecurity
+      write: None
     thread_safety: ReadSafe
     category: Data
     serialization:

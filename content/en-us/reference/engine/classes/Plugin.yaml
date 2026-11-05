@@ -168,7 +168,8 @@ methods:
           size, etc).
     returns:
       - type: DockWidgetPluginGui
-        summary: ''
+        summary: |
+          The created `Class.DockWidgetPluginGui` instance.
     tags:
       - Yields
       - Deprecated
@@ -204,7 +205,8 @@ methods:
           size, etc).
     returns:
       - type: DockWidgetPluginGui
-        summary: ''
+        summary: |
+          The created `Class.DockWidgetPluginGui` instance.
     tags:
       - Yields
     deprecation_message: ''
@@ -254,7 +256,8 @@ methods:
           shortcuts view. Useful for contextual actions. Defaults to true.
     returns:
       - type: PluginAction
-        summary: ''
+        summary: |
+          The created `Class.PluginAction` instance.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -287,7 +290,8 @@ methods:
           The icon to be displayed when used as a submenu.
     returns:
       - type: PluginMenu
-        summary: ''
+        summary: |
+          The created `Class.PluginMenu` instance.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -310,7 +314,8 @@ methods:
           contained within.
     returns:
       - type: PluginToolbar
-        summary: ''
+        summary: |
+          The created `Class.PluginToolbar` instance.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -351,7 +356,9 @@ methods:
     parameters: []
     returns:
       - type: JointCreationMode
-        summary: ''
+        summary: |
+          The current `Enum.JointCreationMode` value based on the user's joint
+          creation setting.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -368,7 +375,8 @@ methods:
     parameters: []
     returns:
       - type: PluginMouse
-        summary: ''
+        summary: |
+          A `Class.PluginMouse` that can be used while the plugin is active.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -384,7 +392,8 @@ methods:
     parameters: []
     returns:
       - type: RibbonTool
-        summary: ''
+        summary: |
+          The currently selected `Enum.RibbonTool`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -419,7 +428,9 @@ methods:
           `Class.Plugin:SetSetting()|SetSetting()`.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The value previously stored under the given key, or `nil` if the key
+          does not exist.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -436,7 +447,9 @@ methods:
     parameters: []
     returns:
       - type: int64
-        summary: ''
+        summary: |
+          The logged-in Studio user's userId, or `0` if the user is not logged
+          in.
     tags:
       - Deprecated
     deprecation_message: ''
@@ -473,7 +486,9 @@ methods:
           Defaults to `true`.
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          The imported `Class.KeyframeSequence` instance inserted into the
+          `Class.Workspace`.
     tags:
       - Yields
       - Deprecated
@@ -505,7 +520,9 @@ methods:
           Defaults to `true`.
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          The imported `Class.KeyframeSequence` instance inserted into the
+          `Class.Workspace`.
     tags:
       - Yields
     deprecation_message: ''
@@ -532,7 +549,9 @@ methods:
           Whether the rig file should be interpreted as R15. Defaults to `true`.
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          The generated character rig `Class.Model` loaded into the
+          `Class.Workspace`.
     tags:
       - Yields
       - Deprecated
@@ -560,7 +579,9 @@ methods:
           Whether the rig file should be interpreted as R15. Defaults to `true`.
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          The generated character rig `Class.Model` loaded into the
+          `Class.Workspace`.
     tags:
       - Yields
     deprecation_message: ''
@@ -583,7 +604,9 @@ methods:
           The array of `Class.BasePart|BaseParts` to intersect.
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          The resulting `Class.IntersectOperation` from the intersection of the
+          given parts.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -652,7 +675,9 @@ methods:
           The array of `Class.BasePart|BaseParts` to negate.
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          An array of `Class.NegateOperation|NegateOperations` resulting from
+          the negation.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -737,7 +762,9 @@ methods:
           The asset type to browse. Only `Animation` is supported.
     returns:
       - type: int64
-        summary: ''
+        summary: |
+          The selected asset ID, or `-1` if the user closes the dialog without
+          selecting an asset.
     tags:
       - Yields
     deprecation_message: ''
@@ -766,7 +793,9 @@ methods:
           The asset type to browse. Only `Animation` is supported.
     returns:
       - type: int64
-        summary: ''
+        summary: |
+          The selected asset ID, or `-1` if the user closes the dialog without
+          selecting an asset.
     tags:
       - Yields
     deprecation_message: ''
@@ -792,7 +821,8 @@ methods:
           string.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the user completed the save, `false` otherwise.
     tags:
       - Yields
       - Deprecated
@@ -819,7 +849,8 @@ methods:
           string.
     returns:
       - type: boolean
-        summary: ''
+        summary: |
+          `true` if the user completed the save, `false` otherwise.
     tags:
       - Yields
     deprecation_message: ''
@@ -888,7 +919,9 @@ methods:
           The array of `Class.UnionOperation|UnionOperations` to separate.
     returns:
       - type: Instances
-        summary: ''
+        summary: |
+          An array of the individual `Class.BasePart|BaseParts` produced by
+          separating the unions.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -1041,7 +1074,9 @@ methods:
           The array of `Class.BasePart|BaseParts` to union together.
     returns:
       - type: Instance
-        summary: ''
+        summary: |
+          The resulting `Class.UnionOperation` from the union of the given
+          parts.
     tags: []
     deprecation_message: ''
     security: PluginSecurity

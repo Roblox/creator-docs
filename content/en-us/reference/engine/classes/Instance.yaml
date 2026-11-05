@@ -152,6 +152,7 @@ descendants:
   - IncrementalPatchBuilder
   - InputObject
   - InsertService
+  - IntegrityService
   - KeyboardService
   - Keyframe
   - KeyframeMarker
@@ -1931,6 +1932,10 @@ methods:
         which instances they contain inside. The selector list is evaluated
         relative to each instance.
 
+      - `:in-radius(studs, complex-selector-list)` Selects instances within the
+        specified number of studs. The selector list is evaluated against all
+        instances matching the query. It's effectively evaluating a join.
+
       ```lua
       local Workspace = game:GetService("Workspace")
 
@@ -1950,6 +1955,9 @@ methods:
 
       -- Get MeshPart descendants with direct children NOT of SurfaceAppearance or Texture class
       print(Workspace:QueryDescendants("MeshPart:has(> :not(SurfaceAppearance, Texture))"))
+
+      -- Get Fireball Models within 10 studs of a HumanoidRootPart (Players or NPC's)
+      print(Workspace:QueryDescendants("Model.FireBall:in-radius(10, Model:has(> Part#HumanoidRootPart))"))
       ```
     code_samples: []
     parameters:

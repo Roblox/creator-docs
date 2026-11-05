@@ -38,8 +38,7 @@ properties:
       must be set in Studio through the Players properties window.
     code_samples: []
     type: boolean
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -339,8 +338,7 @@ properties:
       in Studio through the `Class.Players` properties window.
     code_samples: []
     type: boolean
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None

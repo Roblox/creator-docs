@@ -99,6 +99,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://www.mrbrendonross.com/" title="Brendon Ross">Brendon Ross</a><br/>
 <a href="https://www.caprikon.education/" title="Caprikon Education">Caprikon Education</a><br/>
 <a href="https://coddyschool.com/courses/sozdanie_igr_v_roblox_studio/" title="CODDY">CODDY</a><br/>
+<a href="https://coddy.tech/landing/roblox-game-development" title="Coddy.Tech">Coddy.Tech</a><br/>
 <a href="https://codersports.com" title="Coder Sports">Coder Sports</a><br/>
 <a href="https://codakid.com/roblox-coding/" title="CodaKid">CodaKid</a><br/>
 <a href="https://code4kidz.com.br/" title="Code 4 Kidz Escola de Programação">Code 4 Kidz Escola de Programação</a><br/>

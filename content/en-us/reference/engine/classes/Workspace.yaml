@@ -160,14 +160,15 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Server Authority
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - Basic
   - name: Workspace.AvatarUnificationMode
     summary: |
       Enables the R6 to R15 adapter, allowing R15 avatars to join R6
@@ -491,28 +492,6 @@ properties:
       `Class.IKControl` for additional details.
     code_samples: []
     type: IKControlConstraintSupport
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: Workspace.ImprovedAnimationConstraint
-    summary: |
-      Controls whether improved behavior is enabled for
-      `Class.AnimationConstraint|AnimationConstraints`.
-    description: |
-      When enabled, `Class.AnimationConstraint|AnimationConstraints` use
-      separate strength and damping settings for linear and angular motion.
-      `Enum.RolloutState|Default` follows the default for this feature.
-    code_samples: []
-    type: RolloutState
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -872,8 +851,7 @@ properties:
       `Enum.PredictiveStreamingMode|Disabled`.
     code_samples: []
     type: PredictiveStreamingMode
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -883,18 +861,20 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
-  - name: Workspace.PrimalPhysicsSolver
+    capabilities:
+      - PluginOrOpenCloud
+  - name: Workspace.NextGenerationPhysicsSolver
     summary: |
-      Controls whether the experimental Primal Physics Solver is enabled.
+      Controls whether the experimental next generation physics solver is
+      enabled.
     description: |
-      The Primal Physics Solver is an experimental constraint solver that can
-      improve accuracy in complex setup. Setting this property to
-      `Enum.PrimalPhysicsSolver|Experimental` enables it.
+      The next generation physics solver can provide improved accuracy and
+      robustness in complex setups. Set this property to
+      `Enum.RolloutState|Enabled` to enable it, `Enum.RolloutState|Disabled` to
+      disable it, or `Enum.RolloutState|Default` to follow the rollout default.
     code_samples: []
-    type: PrimalPhysicsSolver
-    tags:
-      - NotScriptable
+    type: RolloutState
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -904,7 +884,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - PluginOrOpenCloud
   - name: Workspace.RejectCharacterDeletions
     summary: |
       Controls whether the server rejects attempts by clients to delete player
@@ -1125,8 +1106,7 @@ properties:
       problematic situations.
     code_samples: []
     type: StreamingIntegrityMode
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -1136,7 +1116,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - PluginOrOpenCloud
   - name: Workspace.StreamingMinRadius
     summary: |
       Minimum distance that content will be streamed to players with high
@@ -1158,8 +1139,7 @@ properties:
       - `Class.Workspace.StreamingIntegrityMode`
     code_samples: []
     type: int
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -1169,7 +1149,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - PluginOrOpenCloud
   - name: Workspace.StreamingTargetRadius
     summary: |
       Maximum distance that content will be streamed to players.
@@ -1189,8 +1170,7 @@ properties:
       - `Class.Workspace.StreamingIntegrityMode`
     code_samples: []
     type: int
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -1200,7 +1180,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - PluginOrOpenCloud
   - name: Workspace.StreamOutBehavior
     summary: |
       Configures how the engine decides when to stream content away from
@@ -1219,8 +1200,7 @@ properties:
       - `Class.Workspace.StreamingIntegrityMode`
     code_samples: []
     type: StreamOutBehavior
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -1230,7 +1210,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - PluginOrOpenCloud
   - name: Workspace.Terrain
     summary: |
       A reference to the `Class.Terrain` object parented to the

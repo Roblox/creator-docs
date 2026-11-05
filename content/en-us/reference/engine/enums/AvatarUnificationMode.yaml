@@ -22,7 +22,8 @@ items:
       Resolves to the engine's current built-in default for avatar unification,
       which currently behaves the same as `Disabled`.
     value: 0
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       `Class.Workspace.AvatarUnificationMode` no longer has an effect; R6
       avatars always load as R6 rigs.
@@ -31,7 +32,8 @@ items:
       Disables the R6-to-R15 adapter; R6 avatars in an R6 experience load using
       the standard R6 rig with no adapter parts applied.
     value: 1
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       `Class.Workspace.AvatarUnificationMode` no longer has an effect; R6
       avatars always load as R6 rigs.
@@ -42,7 +44,8 @@ items:
       joints, preserving R6 scale while enabling R15 features such as layered
       clothing and animatable heads.
     value: 2
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       `Class.Workspace.AvatarUnificationMode` no longer has an effect; R6
       avatars always load as R6 rigs.
