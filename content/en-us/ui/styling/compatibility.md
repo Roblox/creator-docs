@@ -1138,11 +1138,15 @@ The following tables outline all of the classes and associated properties which 
   <td>`Datatype.Vector2`</td>
  </tr>
  <tr>
-  <td>`Class.StyleQuery.PreferredInputType`</td>
+  <td>`Class.StyleQuery.PreferredInput`</td>
   <td>`Enum.PreferredInput`</td>
  </tr>
  <tr>
-  <td>`Class.StyleQuery.ReduceMotionEnabled`</td>
+  <td>`Class.StyleQuery.PreferredTextSize`</td>
+  <td>`Enum.PreferredTextSize`</td>
+ </tr>
+ <tr>
+  <td>`Class.StyleQuery.ReducedMotionEnabled`</td>
   <td>boolean</td>
  </tr>
  <tr>
