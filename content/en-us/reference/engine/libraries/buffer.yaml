@@ -326,6 +326,56 @@ functions:
     tags: []
     code_samples: []
     deprecation_message: ''
+  - name: buffer.readvectorf32x2
+    summary: |
+      Reads two 32-bit floating-point values from the buffer into a vector.
+    description: |
+      Reads two contiguous 32-bit floating-point values from the buffer and
+      returns them as the `X` and `Y` components of a vector. The `Z` component
+      is set to `0`.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: |
+          The buffer to read from.
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from `0`.
+    returns:
+      - type: vector
+        summary: |
+          A vector containing the two values read from the buffer. The third
+          component is zero.
+    tags: []
+    code_samples: []
+    deprecation_message: ''
+  - name: buffer.readvectorf32x3
+    summary: |
+      Reads three 32-bit floating-point values from the buffer into a vector.
+    description: |
+      Reads three contiguous 32-bit floating-point values from the buffer and
+      returns them as the `X`, `Y`, and `Z` components of a vector.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: |
+          The buffer to read from.
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from `0`.
+    returns:
+      - type: vector
+        summary: |
+          A vector containing the three values read from the buffer.
+    tags: []
+    code_samples: []
+    deprecation_message: ''
   - name: buffer.readf64
     summary: |
       Reads a 64-bit floating-point value from the buffer.
@@ -586,6 +636,65 @@ functions:
         default:
         summary: |
           A single-precision floating-point number.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    code_samples: []
+    deprecation_message: ''
+  - name: buffer.writevectorf32x2
+    summary: |
+      Writes two vector components as 32-bit floating-point values to the
+      buffer.
+    description: |
+      Writes the `X` and `Y` components of a vector as two contiguous 32-bit
+      floating-point values to the buffer. The `Z` component is not written.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: |
+          The buffer to write to.
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from `0`.
+      - name: value
+        type: vector
+        default:
+        summary: |
+          The vector whose `X` and `Y` components are written to the buffer.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    code_samples: []
+    deprecation_message: ''
+  - name: buffer.writevectorf32x3
+    summary: |
+      Writes three vector components as 32-bit floating-point values to the
+      buffer.
+    description: |
+      Writes the `X`, `Y`, and `Z` components of a vector as three contiguous
+      32-bit floating-point values to the buffer.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: |
+          The buffer to write to.
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from `0`.
+      - name: value
+        type: vector
+        default:
+        summary: |
+          The vector whose `X`, `Y`, and `Z` components are written to the
+          buffer.
     returns:
       - type: ()
         summary: ''

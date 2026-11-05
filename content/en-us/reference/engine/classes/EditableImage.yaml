@@ -173,7 +173,7 @@ methods:
           `Enum.AntiAliasing.Disabled`, circle edges are hard.
       - name: alphaBlendType
         type: ImageAlphaType
-        default:
+        default: Default
         summary: |
           Determines how this draw will blend alpha values. This parameter is
           not yet available; values other than `Enum.ImageAlphaType.Default` are
@@ -216,7 +216,7 @@ methods:
           pixels of this image (destination).
       - name: alphaBlendType
         type: ImageAlphaType
-        default:
+        default: Default
         summary: |
           Determines how this draw will blend alpha values. This parameter is
           not yet available; values other than `Enum.ImageAlphaType.Default` are
@@ -477,7 +477,7 @@ methods:
           `Enum.AntiAliasing.Disabled`, line edges are hard.
       - name: alphaBlendType
         type: ImageAlphaType
-        default:
+        default: Default
         summary: |
           Determines how this draw will blend alpha values. This parameter is
           not yet available; values other than `Enum.ImageAlphaType.Default` are
@@ -529,7 +529,7 @@ methods:
           this image (destination).
       - name: alphaBlendType
         type: ImageAlphaType
-        default:
+        default: Default
         summary: |
           Determines how this draw will blend alpha values. This parameter is
           not yet available; values other than `Enum.ImageAlphaType.Default` are

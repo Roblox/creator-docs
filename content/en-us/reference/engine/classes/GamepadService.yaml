@@ -134,7 +134,7 @@ methods:
     parameters:
       - name: guiObject
         type: GuiObject?
-        default:
+        default: nil
         summary: |
           A `Class.GuiObject` to center the virtual cursor on when enabled, or
           `nil` to use the default cursor position.

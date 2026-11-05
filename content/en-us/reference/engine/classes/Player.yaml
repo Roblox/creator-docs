@@ -566,7 +566,6 @@ properties:
     code_samples: []
     type: PlayerDeviceTrustLevel
     tags:
-      - Hidden
       - ReadOnly
       - NotReplicated
     deprecation_message: ''

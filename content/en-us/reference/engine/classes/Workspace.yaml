@@ -851,14 +851,36 @@ properties:
       `Enum.PredictiveStreamingMode|Disabled`.
     code_samples: []
     type: PredictiveStreamingMode
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
       write: None
     thread_safety: ReadSafe
     category: Streaming
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - PluginOrOpenCloud
+  - name: Workspace.NextGenerationPhysicsSolver
+    summary: |
+      Controls whether the experimental next generation physics solver is
+      enabled.
+    description: |
+      The next generation physics solver can provide improved accuracy and
+      robustness in complex setups. Set this property to
+      `Enum.RolloutState|Enabled` to enable it, `Enum.RolloutState|Disabled` to
+      disable it, or `Enum.RolloutState|Default` to follow the rollout default.
+    code_samples: []
+    type: RolloutState
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
     serialization:
       can_load: true
       can_save: true
@@ -1084,8 +1106,7 @@ properties:
       problematic situations.
     code_samples: []
     type: StreamingIntegrityMode
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -1118,8 +1139,7 @@ properties:
       - `Class.Workspace.StreamingIntegrityMode`
     code_samples: []
     type: int
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -1150,8 +1170,7 @@ properties:
       - `Class.Workspace.StreamingIntegrityMode`
     code_samples: []
     type: int
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -1181,8 +1200,7 @@ properties:
       - `Class.Workspace.StreamingIntegrityMode`
     code_samples: []
     type: StreamOutBehavior
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
       read: None

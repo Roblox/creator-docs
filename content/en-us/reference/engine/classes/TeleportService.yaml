@@ -432,6 +432,7 @@ methods:
           `Class.DataModel.PrivateServerId` for the reserved server.
     tags:
       - Yields
+      - Deprecated
     deprecation_message: |
       Use `Class.TeleportService:TeleportAsync()|TeleportAsync()` with
       `Class.TeleportOptions.ReservedServerId` instead. Generate a GUID with

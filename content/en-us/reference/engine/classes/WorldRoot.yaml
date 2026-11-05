@@ -104,7 +104,7 @@ methods:
           studs.
       - name: params
         type: RaycastParams
-        default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        default: RaycastParams{IgnoreWater=false, Margin=0, SizeGradient=0, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
         summary: |
           An object used to specify hit eligibility in the shapecast operation.
           If not provided, default values are used where all parts are
@@ -1112,7 +1112,7 @@ methods:
           tested.
       - name: raycastParams
         type: RaycastParams
-        default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        default: RaycastParams{IgnoreWater=false, Margin=0, SizeGradient=0, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
         summary: |
           An object used to specify hit eligibility in the raycast operation. If
           not provided, default values are used where all parts are considered
@@ -1244,7 +1244,7 @@ methods:
           studs.
       - name: params
         type: RaycastParams
-        default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        default: RaycastParams{IgnoreWater=false, Margin=0, SizeGradient=0, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
         summary: |
           An object used to specify hit eligibility in the shapecast operation.
           If not provided, default values are used where all other parts are
@@ -1320,7 +1320,7 @@ methods:
           studs.
       - name: params
         type: RaycastParams
-        default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        default: RaycastParams{IgnoreWater=false, Margin=0, SizeGradient=0, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
         summary: |
           An object used to specify hit eligibility in the shapecast operation.
           If not provided, default values are used where all parts are
