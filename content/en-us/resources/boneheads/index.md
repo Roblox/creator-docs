@@ -8,7 +8,7 @@ description: Learn how Boneheads combines Server Authority, Character Controller
 <UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="84442400172515" universeId="10774682086" />
 
 <figure>
-<iframe width="800" height="450" src="https://www.youtube.com/embed/2XP882xARSQ?si=xcevgpWD-_hmPoUH" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/2XP882xARSQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
 **Boneheads** combines several core systems to craft an entertaining game:

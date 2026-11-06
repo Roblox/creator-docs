@@ -11,10 +11,13 @@ This content is for creators who intend to create dynamic heads designated for t
 
 Roblox runs a rigorous validation to ensure each asset that you upload to the Marketplace is compatible with all other assets on the Marketplace. For dynamic heads, validation primarily ensures that the head asset includes:
 
+- **Visibly discernible facial features**, such as eyes and a mouth.
 - A correctly **configured outer cage** to wear clothing and accessories.
 - Correctly configured **facial animation poses** to perform basic universal expressions, such as blinking and smiling.
 
-The primary validation check for dynamic heads [uses the cage to detect facial animation](#facial-animation-detection). See below for a reference of how validation processes, as well as [common issues](#common-issues).
+Validation for dynamic heads happens in three steps: [facial feature detection](#step-1-facial-feature-detection), [landmark projection](#step-2-landmark-projection), and [meaningful animation assessment](#step-3-meaningful-animation-assessment). See below for a reference of how validation processes, as well as [common issues](#common-issues).
+
+<img src="../../assets/avatar/dynamic-heads/Dynamic-Head-Validation-Steps.png" alt="Diagram of the three dynamic head validation steps: facial feature detection, landmark projection, and meaningful animation assessment." />
 
 <Alert severity = 'warning'>
 Validation also checks for other issues, such as poor caging or missing required FACS poses. For more information, see [common issues](#common-issues).
@@ -26,17 +29,17 @@ Validation also checks for other issues, such as poor caging or missing required
 For issues or feedback regarding Avatar Setup, submit a [bug report](https://devforum.roblox.com/c/bug-reports/10).
 </Alert>
 
-## Facial animation detection
+## Step 1: Facial feature detection
 
-One of the primary dynamic head validation checks verifies if your head asset has **visually discernible** animations. To achieve this, the validation tool uses the head cage to "project" [facial landmarks](#landmark-projection) onto your base mesh.
+Before checking facial animation, validation checks that the head has readable eyes and a mouth. It renders the head from multiple angles to assess the features: validation checks the eyes in the neutral expression, and checks the mouth in the mouth-open expression so that a mouth that isn't clearly visible at rest can still be detected.
 
-After these landmarks are created, validation [tests various face animation poses](#test-face-animations) to ensure that these landmarks move and deform appropriately. Validation succeeds when it detects appropriate movement of the landmarks for eyes closed, mouth open, and basic happy/sad expressions.
+If the eyes or mouth are missing, the head doesn't pass this check and validation stops before the animation checks. This prevents a head from passing based only on movement in its cage or mesh when the head doesn't have the required facial features.
 
-Failure to either assign landmarks onto the base mesh, or failure to deform landmarks appropriately can occur for several reasons. For more information, see [common issues](#common-issues).
-
-### Landmark projection
+## Step 2: Landmark projection
 
 Validation uses the head cage to project landmarks onto the head mesh. This helps Roblox establish where the eyes and mouth are and helps guide the facial animation test.
+
+In the UGC Validation Visualization tool, red landmarks indicate the left eye caged region on the mesh and respond to the avatar's right eye FACS. Blue landmarks indicate the right eye caged region on the mesh and respond to the avatar's left eye FACS. Green landmarks indicate the avatar's discernible mouth, mouth FACS, and mouth caged region on the mesh.
 
 <GridContainer numColumns="2">
 
@@ -64,12 +67,52 @@ Validation uses the head cage to project landmarks onto the head mesh. This help
 Once validation verifies that projection is successful and all landmarks established onto the head mesh, it can move onto testing facial animations.
 </Alert>
 
-### Test face animations
+## Step 3: Meaningful animation assessment
+
+After the earlier validation checks pass, validation renders a short sequence of expressions, including blinks, mouth movement, a smile, and a frown, from multiple angles. Validation evaluates whether the face performs the expressions, rather than simply detecting that pixels or geometry changed.
+
+The head must show the required expressions clearly. Rigid movement, geometry swaps, random stretching, or other changes that don't read as facial expressions might not be sufficient to pass.
+
+<GridContainer numColumns="3">
+
+<figure>
+<img src="../../assets/avatar/dynamic-heads/Meaningful-Animation-Neutral.png"/>
+<figcaption>Neutral: both eyes open, mouth closed<br /><br />All FACS poses = `0`</figcaption>
+</figure>
+
+<figure>
+<img src="../../assets/avatar/dynamic-heads/Meaningful-Animation-Right-Eye-Closed.png"/>
+<figcaption>Right eye blink<br /><br />`RightEyeClosed` = `1`<br />`EyesLookDown` = `1`.</figcaption>
+</figure>
+
+<figure>
+<img src="../../assets/avatar/dynamic-heads/Meaningful-Animation-Left-Eye-Closed.png"/>
+<figcaption>Left eye blink<br /><br />`LeftEyeClosed` = `1`<br />`EyesLookDown` = `1`.</figcaption>
+</figure>
+
+<figure>
+<img src="../../assets/avatar/dynamic-heads/Meaningful-Animation-Mouth-Open.png"/>
+<figcaption>Mouth open<br /><br />`JawDrop` = `1`</figcaption>
+</figure>
+
+<figure>
+<img src="../../assets/avatar/dynamic-heads/Meaningful-Animation-Happy.png"/>
+<figcaption>Happiness: mouth corners curve upward into a smile<br /><br />`Pucker` = `1`<br />`LeftLipCornerPuller` = `1`.<br />`RightLipCornerPuller` = `1`</figcaption>
+</figure>
+
+<figure>
+<img src="../../assets/avatar/dynamic-heads/Meaningful-Animation-Sad.png"/>
+<figcaption>Sadness: mouth corners curve downward into a frown<br /><br />`ChinRaiser` = `1`<br />`ChinRaiserUpperLip` = `1`<br />`LeftCheekRaiser` = `0.85`<br />`RightCheekRaiser` = `0.85`<br />`LeftInnerBrowRaiser` = `1`<br />`RightInnerBrowRaiser` = `1`<br />`LeftLipCornerDown` = `1`<br />`RightLipCornerDown` = `1`<br />`LeftLowerLipDepressor` = `1`<br />`RightLowerLipDepressor` = `1`</figcaption>
+</figure>
+
+</GridContainer>
+
+## Test face animations
 
 Now that the validation system knows where to check for the eyes and mouth, the validation checks for facial animations to ensure that the following basic actions are possible:
 
 - Left and right eyes can close
-- Mouth can open
+- Mouth can open and close
 - Basic happy and sad expressions
 
 <Alert severity = "info">
@@ -106,6 +149,10 @@ Validation checks for several aspects of your head asset. If you are receiving a
   </tr></thead>
 <tbody>
   <tr>
+    <td>The validation tool is **unable to recognize facial features**.<br /><br />See [Facial feature detection](#step-1-facial-feature-detection) and the related [validation errors](../../marketplace/validation-system.md#validation-checks).</td>
+    <td>- Verify that the **eyes are visible** in the default mood and from multiple angles, and that the **mouth is visible** during the mouth-open animation and from multiple angles.<br /><br />- Verify that there is **high contrast between the facial features and the rest of the head**.</td>
+  </tr>
+  <tr>
     <td>The validation tool is **unable to successfully apply landmarks**.<br /><br />See [Unable to project landmarks](#unable-to-project-landmarks).</td>
     <td>- Verify that the **cage landmark vertices are positioned directly over the corresponding areas of the face**.<br /><br />- Verify that the **cage is not intersecting with the head mesh**. Landmark projection expects the cage to be over the head mesh.<br /><br />- **Check for any gaps, holes, or difficult surfaces** of the face where landmarks can fail to project.</td>
   </tr>
@@ -115,7 +162,11 @@ Validation checks for several aspects of your head asset. If you are receiving a
   </tr>
   <tr>
     <td>The validation tool doesn't detect [FACS animations](#animation-data-missing).</td>
-    <td>- Your head doesn't include FACS animation. Verify that your head includes FACS poses and mapping. </td>
+    <td>- Your head doesn't include FACS animation. Verify that your head includes FACS poses and mapping.</td>
+  </tr>
+  <tr>
+    <td>The validation tool is **unable to recognize one or more expressions**.<br /><br />See [Meaningful animation assessment](#step-3-meaningful-animation-assessment) and the related [validation errors](../../marketplace/validation-system.md#validation-checks).</td>
+    <td>- Verify that the **animation for each expression matches the motion of its FACS poses** from multiple angles.<br /><br />- For the **left and right blink** animations, make sure the correct eye flattens vertically.<br /><br />- For the **mouth open and close** animations, make sure the mouth region of the mesh opens noticeably in the vertical direction, and that the close animation does the reverse.<br /><br />- For the **happy and sad** expressions, curl the mouth corners up into a smile and down into a frown.</td>
   </tr>
 </tbody></table>
 

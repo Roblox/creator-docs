@@ -266,8 +266,9 @@ methods:
         summary: |
           A tuple containing an `Enum.CreateContentResult` indicating the
           success or failure of the request, and the resulting
-          `Class.DataModel`-scoped `Enum.ContentSourceType|Opaque`
-          `Datatype.Content`.
+          `Class.DataModel`-scoped `Datatype.Content` with a
+          `Datatype.Content.SourceType|SourceType` of
+          `Enum.ContentSourceType.Opaque`.
     tags:
       - Yields
     deprecation_message: ''

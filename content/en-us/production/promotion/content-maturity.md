@@ -514,7 +514,16 @@ Roblox relies on the information you provide in the Maturity & Compliance Questi
   - If your game otherwise has inaccurate content maturity information according to its content, Roblox may replace the maturity label or remove the maturity label (or only some or all descriptors if the maturity label is Restricted) from your game. If a game does not have content maturity information, Roblox restricts the playability of the game on the platform for all players.
   - If you repeatedly include inaccurate content maturity information, **your game and/or account is subject to moderation consequences**.
 
-If your game receives a moderation action and you believe Roblox made a mistake, you can appeal the decision:
+If your game receives a moderation action and you believe Roblox made a mistake, you can appeal the decision from the game's **Issues & appeals** page on the Creator Hub. Game owners, group owners, and collaborators with edit permissions for the game can use this page to view violations and file appeals:
+
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and click on the thumbnail of the game.
+1. In the left-hand navigation, navigate to **Safety** > **Issues & appeals**. A list of the game's active violations displays.
+1. Click on a specific violation to read its details.
+1. If you believe the violation is incorrect, submit an appeal.
+
+Submitting an appeal doesn't guarantee that Roblox will overturn the moderation decision.
+
+Alternatively, you can appeal the decision from the **Violations & Appeals** page:
 
 1. If you are the owner of a user-owned game or the group owner of a group-owned game, navigate to [roblox.com/report-appeals](https://www.roblox.com/report-appeals#/).
 1. Select the violation you want to appeal.

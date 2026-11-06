@@ -16,6 +16,8 @@ navigation:
         path: /cloud/guides/data-stores/throttling
   - title: Assets
     path: /cloud/guides/usage-assets
+  - title: Experience icons and thumbnails
+    path: /cloud/guides/experience-icons-and-thumbnails
   - title: Configs
     path: /cloud/guides/configs
   - title: Journeys

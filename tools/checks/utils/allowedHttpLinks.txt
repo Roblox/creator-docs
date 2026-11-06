@@ -827,4 +827,5 @@ https://github.com/Roblox/resources/tree/main/experiences/weather-island
 https://github.com/mermaid-js/mermaid
 https://github.com/Roblox/libmp/blob/main/docs/ALL-SCOPES%2Emd
 https://www.w3.org/TR/WCAG21/
-https://www.youtube.com/embed/2XP882xARSQ?si=xcevgpWD-_hmPoUH
+https://www.youtube-nocookie.com/embed/2XP882xARSQ
+https://coddy.tech/landing/roblox-game-development

@@ -40,7 +40,7 @@ You can feature up to 10 images or videos for each of your games' detail pages. 
 
 ## Manage thumbnails
 
-Uploaded thumbnails appear in the **Experience Detail Page** tab where they can be reordered, deleted, or given "alt" text for improved [accessibility](../../production/publishing/accessibility.md).
+Uploaded thumbnails appear in the **Experience Detail Page** tab where they can be reordered, deleted, or given "alt" text for improved [accessibility](../../production/publishing/accessibility.md). To update that list with Open Cloud, see [Manage experience icons and thumbnails](../../cloud/guides/experience-icons-and-thumbnails.md#update-experience-detail-page-thumbnails).
 
 <img src="../../assets/creator-dashboard/Manage-Thumbnails.png" width="840" alt="Thumbnails and related actions on the Creator Dashboard" />
 
@@ -122,7 +122,7 @@ For the full list of controls, the config menu, and custom freecam post-processi
 
 ## Home page personalization
 
-**Thumbnail personalization** helps you attract more users to your game by showing the most relevant thumbnail to each user on their [Home](https://www.roblox.com/home) page. The goal of thumbnail personalization is to improve your qualified play through rate, which is the percentage of users that actively engage with your game for a significant amount of time.
+**Thumbnail personalization** helps you attract more users to your game by showing the most relevant thumbnail to each user on their [Home](https://www.roblox.com/home) page. To choose the active homepage thumbnails with Open Cloud, see [Manage experience icons and thumbnails](../../cloud/guides/experience-icons-and-thumbnails.md#update-homepage-thumbnails). The goal of thumbnail personalization is to improve your qualified play through rate, which is the percentage of users that actively engage with your game for a significant amount of time.
 
 <Alert severity="success">
 During testing, games using thumbnail personalization had an average increase of +8.5% in their qualified play through rate. Some games had an increase of +50%.

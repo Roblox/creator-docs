@@ -53,7 +53,7 @@ Even for non-humanoid faces that don't include visual eyes or mouths, it's impor
 </GridContainer>
 
 <Alert severity = 'error'>
-The mouth landmark vertices are on the **second loop** of vertices from the mouth opening. This precision can help prevent issues with [landmark validation](./validate.md#landmark-projection).
+The mouth landmark vertices are on the **second loop** of vertices from the mouth opening. This precision can help prevent issues with [landmark validation](./validate.md#step-2-landmark-projection).
 
 <img src="../../assets/art/avatar/Mouth-Vertices-Warning.png"/>
 </Alert>

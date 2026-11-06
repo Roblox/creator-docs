@@ -7,7 +7,7 @@ The [Assets API](../../reference/cloud/assets/v1.json) of Open Cloud allows you 
 
 - Uploading new assets.
 - Updating existing assets with version control.
-- Updating asset metadata, including descriptions, display names, icons, and previews.
+- Updating asset metadata, including descriptions, display names, icons, and previews. For place icons and experience detail page thumbnails, see [Manage experience icons and thumbnails](experience-icons-and-thumbnails.md).
 - Managing asset versions, such as rolling back to a specified previous version.
 - Checking existing information of an asset, including metadata, versions, and any in-process updating operations.
 
@@ -320,6 +320,8 @@ curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/{asset
 
 </TabItem>
 </Tabs>
+
+To update a place icon or experience detail page thumbnails, see [Manage experience icons and thumbnails](experience-icons-and-thumbnails.md).
 
 ## Retrieve asset operation status
 

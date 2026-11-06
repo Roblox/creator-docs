@@ -22,7 +22,7 @@ A high-quality **icon**, in addition to a showcase [thumbnail](thumbnails.md), i
 
 When you [publish a game](../../production/publishing/publish-games-and-places.md) for the first time, an icon is automatically generated from a collection of default images. While you can only display one icon per [locale](../../production/localization/index.md), you can also include supplementary [image and video thumbnails](thumbnails.md) that further promote the game.
 
-For more information on maximizing the impact of your game's icon, see [best practices](#best-practices).
+For more information on maximizing the impact of your game's icon, see [best practices](#best-practices). To update the icon with Open Cloud, see [Manage experience icons and thumbnails](../../cloud/guides/experience-icons-and-thumbnails.md#update-the-place-icon).
 
 ## Upload icons
 

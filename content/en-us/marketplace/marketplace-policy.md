@@ -99,20 +99,33 @@ Each body can only include the following parts, and cannot have additional appen
   - 1 left leg, comprising of an upper leg, a lower leg, and a foot.
 - Heads
   - Head model
-    - All heads must be [caged](../avatar/dynamic-heads/specifications.md#outer-cage)
-      - The cage mesh must envelope the head model
-    - All heads must have one mouth region
-      - The mouth region on the head is determined by the projection of the cage mouth region onto the head model
-      - The cage mouth region is defined by the cage vertices forming the edge of the mouth
-      - The mouth region does not need to have lips, teeth or tongue; it must deform in response to mouth open and close animations
-    - All heads must have one or two eye regions
-      - The left eye region on the head is determined by the projection of the cage left eye region onto the head model. Same applies for the right eye region
-      - A one-eyed head has both the left and right eye regions on the cage projected onto the same region on the head model
-      - The cage eye region is defined by the cage vertices forming the outline of the cage eyes
-      - The head eye region does not need to have an eyeball or eyelid; it must deform in response to eye blink animations
-    - All heads must include the [17 minimum FACS controls](../avatar/dynamic-heads/specifications.md#facs-poses)
-      - Specifically we require the head to deform in response to happiness and sadness expressions
-      - It's recommended to include more poses to increase facial animation quality and fidelity
+    - All heads must be [caged](../avatar/dynamic-heads/specifications.md#outer-cage) with the required facial features of eye(s) and a mouth. The cage mesh must envelope the head model.
+    - The eye and mouth regions must be visually distinct from the rest of the head, either with differing color or shading. Faces that blend in with the head by default, or with differing skin tones, might be subject to removal.
+    - If a head asset uses a small head mesh, its attachment points must fit the smaller head. Otherwise, Roblox might treat the asset as a headless exploit and remove it from the Marketplace.
+    - The facial features don't need to resemble traditional human eyes and a mouth, but they must be visually discernible as eyes and a mouth based on the following requirements.
+    - **Eye requirements**: an eye is a distinct element, such as a human eyeball, lines, dots, LED strips, buttons, or painted patterns, that a reasonable observer would discern as the focal point for sight.
+      - An eye must be visible on the head at all times, in both static and dynamic poses, including the neutral pose and during animation.
+      - All heads must have one or two eye regions.
+        - The geometric eye region is determined by the projection of the cage's left and right eye regions onto the respective eyes of the head model.
+        - The eye regions must align accurately with the actual eyes visible on the head.
+        - For a one-eyed head, both the left and right cage eye regions must project onto the single eye of the head.
+        - For a multi-eyed head, the cage left and right eye regions must project onto at least two of the eyes on the head.
+      - The head eye region doesn't need an eyeball or eyelid, but Roblox recommends including one. The eye region must deform in response to eye blink animations.
+      - For more information, see [Caging best practices](../avatar/dynamic-heads/caging-best-practices.md).
+    - **Mouth requirements**: a mouth is a distinct element, such as a human mouth with lips, lines, a V shape, an array of dots, LED strips, buttons, or painted patterns, that a reasonable observer would discern as the focal point for speech.
+      - The mouth doesn't need to be visible in the neutral pose, as long as it appears during animation. Roblox recommends keeping the mouth visible in both static and dynamic poses.
+      - All heads must have one mouth region.
+        - The geometric mouth region is determined by the projection of the cage mouth region onto the head.
+        - The cage mouth region must project accurately onto the actual mouth visible on the head.
+        - The mouth region doesn't need lips, teeth, or a tongue, but it must deform in response to mouth open and close animations.
+    - **Facial animation (FACS)**: all heads must be [dynamic heads](../avatar/dynamic-heads/index.md) and include the [17 minimum FACS controls](../avatar/dynamic-heads/specifications.md#facs-poses). These controls let the head perform five required facial actions: left eye blink, right eye blink, mouth open and close, happiness, and sadness.
+      - Roblox recommends including more poses to increase the quality and fidelity of facial animations.
+      - FACS controls must produce facial actions that a human can meaningfully understand, rather than generic animation that doesn't represent the intended action.
+      - **Meaningful blinking**: the eye shape must flatten vertically, becoming shorter in height relative to the neutral pose.
+      - **Meaningful mouth open**: the mouth shape must gain vertical height, becoming thicker relative to the neutral pose.
+      - Roblox recommends showing **meaningful happiness** by stretching an open or closed mouth horizontally and curving the corners upward into a smile.
+      - Roblox recommends showing **meaningful sadness** by stretching an open or closed mouth horizontally and curving the corners downward into a frown.
+      - Small or arbitrary changes to facial features don't count as meaningful expressions and might make the head subject to removal.
   - Eyebrows (optional)
   - Eyelashes (optional)
 
@@ -554,4 +567,4 @@ Your avatar head cannot include any additional color, shading, or outlining not 
 
 ### Customizable skin tones
 
-Roblox recommends including customizable skin tones, or skin tone mutability, for avatars that resemble humans. Skin tone mutability is optional. Similarly, for avatars created through formal brand partnerships, skin tone mutability is optional. For more information on creating customizable skin tone textures, see [Custom Skin Tone](../avatar/character-bodies/specifications.md#custom-skin-tone).
+Roblox recommends including customizable skin tones, or skin tone mutability, for avatars that resemble humans. Skin tone mutability is optional. Similarly, for avatars created through formal brand partnerships, skin tone mutability is optional. Faces that blend in with the head by default, or with differing skin tones, might be subject to removal. For more information on creating customizable skin tone textures, see [Custom Skin Tone](../avatar/character-bodies/specifications.md#custom-skin-tone).

@@ -20,6 +20,11 @@ content/zh-tw/assets/** filter=lfs diff=lfs merge=lfs -text
 # normalization on binary content when LFS push is skipped (raw-blob commits).
 content/**/assets/** -text
 
+# Generated from service OpenAPI descriptions and open-cloud-contracts feature
+# files by the web-api-workflows unify-openapi-descriptions pipeline. Edit the
+# sources instead; the next Open Cloud documentation sync overwrites this file.
+content/en-us/reference/cloud/openapi.json linguist-generated=true
+
 # Machine-generated translations: keep English source and the localization
 # manifest reviewable; BuilderAI excludes these locale directories.
 content/ar-001/** linguist-generated=true
