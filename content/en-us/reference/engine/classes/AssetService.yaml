@@ -623,17 +623,25 @@ methods:
       Creates a new `Class.SurfaceAppearance` object using the provided content
       maps.
 
-      Currently, content only supports `Class.EditableImage` and only content
-      maps can be specified, but functionality will expand to include asset IDs
-      as input. If you need to achieve this today, you can create an
-      `Class.EditableImage` from an asset ID using the following:
+      Default values are used for all other `Class.SurfaceAppearance`
+      properties. The content assigned to each map cannot be reassigned or
+      swapped after the `Class.SurfaceAppearance` is created.
 
-      `Class.AssetService:CreateEditableImageAsync(Content.fromUri(uri))`
+      #### Technical Considerations
 
-      Default values will be used for all other `Class.SurfaceAppearance`
-      properties. Note that the `Class.EditableImage` assigned to each map
-      cannot be reassigned or swapped after the `Class.SurfaceAppearance` is
-      created.
+      `Class.EditableImage|EditableImages` don't currently replicate from server
+      to client. If you assign an `Class.EditableImage` to a
+      `Class.SurfaceAppearance` map on the server, clients see only a
+      checkerboard.
+
+      `Class.SurfaceAppearance|SurfaceAppearances` without an
+      `Class.EditableImage` use less memory, at the cost of latency and visual
+      quality. This is recommended for most cases.
+
+      `Class.EditableImage`-based `Class.SurfaceAppearance|SurfaceAppearances`
+      use more memory but look slightly better, appear immediately, and update
+      whenever the underlying `Class.EditableImage` changes. Use them only where
+      necessary, such as when the image will be edited.
     code_samples:
       - AssetService-CreateSurfaceAppearanceAsync
     parameters:

@@ -41,9 +41,9 @@ Experiences are associated with various icon/thumbnail media. The [place icon](.
 
 [Create an API key](../auth/api-keys.md) and send it in the `x-api-key` header.
 
-- For the place icon and experience detail page thumbnails, add **assets** to **Access Permissions** and grant **Read** and **Write** on the game. These calls use the `asset:read` and `asset:write` scopes.
-- Homepage thumbnail calls require the `universe.thumbnail:read` and `universe.thumbnail:write` scopes on that game.
-- Translated icon calls require the `legacy-universe:manage` scope.
+- For the place icon and experience detail page thumbnails, add **assets** to **Access Permissions** and grant **Read** and **Write** on the game. These calls use the [`asset:read`](../reference/scopes.md#asset:read) and [`asset:write`](../reference/scopes.md#asset:write) scopes.
+- Homepage thumbnail calls require the [`universe.thumbnail:read`](../reference/scopes.md#universe.thumbnail:read) and [`universe.thumbnail:write`](../reference/scopes.md#universe.thumbnail:write) scopes on that game.
+- Translated icon calls require the [`legacy-universe:manage`](../reference/scopes.md#legacy-universe:manage) scope.
 
 The icon and detail-page calls take the **Place ID**. Homepage calls take the **Universe ID**. Copy both from the [Creator Dashboard](https://create.roblox.com/dashboard/creations):
 
@@ -179,7 +179,7 @@ curl --location 'https://apis.roblox.com/thumbnail-personalization-api/v1/univer
 
 ### Choose the active homepage thumbnails
 
-[Create a configuration](/cloud/reference/features/thumbnail-personalization#ThumbnailPersonalizationApi.HomepageThumbnail_CreateThumbnailPersonalization) when you want a new active set. This deactivates the previous configuration and starts new statistics. The list can contain up to five homepage thumbnail IDs. This example leaves a single thumbnail active:
+[Create a configuration](/cloud/reference/features/thumbnail-personalization#HomepageThumbnail_CreateThumbnailPersonalization) when you want a new active set. This deactivates the previous configuration and starts new statistics. The list can contain up to five homepage thumbnail IDs. This example leaves a single thumbnail active:
 
 ```bash title="Example request for a new homepage configuration"
 curl --location --request POST 'https://apis.roblox.com/thumbnail-personalization-api/v1/universes/${UniverseId}/personalization/create' \
@@ -190,7 +190,7 @@ curl --location --request POST 'https://apis.roblox.com/thumbnail-personalizatio
 }'
 ```
 
-[Update the active configuration](/cloud/reference/features/thumbnail-personalization#ThumbnailPersonalizationApi.HomepageThumbnail_UpdateThumbnailPersonalization) to change the active set without resetting its statistics. Read the active configuration first and send its `id` back:
+[Update the active configuration](/cloud/reference/features/thumbnail-personalization#HomepageThumbnail_UpdateThumbnailPersonalization) to change the active set without resetting its statistics. Read the active configuration first and send its `id` back:
 
 ```bash title="Example request for reading the active configuration"
 curl --location 'https://apis.roblox.com/thumbnail-personalization-api/v1/universes/${UniverseId}/personalization?status=Active' \

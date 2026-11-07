@@ -36,7 +36,8 @@ items:
     deprecation_message: ''
   - name: Opaque
     summary: |
-      A non-`nil` `Opaque` reference contained in `Datatype.Content.Opaque`.
+      Opaque content whose underlying data isn't accessible from scripts. Both
+      `Datatype.Content.Uri` and `Datatype.Content.Object` are `nil`.
     value: 3
     tags: []
     deprecation_message: ''

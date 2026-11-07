@@ -9,20 +9,32 @@ summary: |
 description: |
   The **DomainType** enum describes the kind of domain in which a domain user ID
   is unique. It is used by the `Datatype.User` data type to identify whether the
-  user's ID belongs to an experience or an OAuth application.
+  user's ID belongs to an experience, a group, or an OAuth application.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: EXPERIENCE
+  - name: Experience
     summary: |
-      The user ID is scoped to a specific experience (universe).
+      Indicates that the associated `Datatype.User` ID is scoped to a specific
+      experience. The domain ID corresponds to the universe ID of that
+      experience.
     value: 1
     tags: []
     deprecation_message: ''
-  - name: OAUTH
+  - name: Group
     summary: |
-      The user ID is scoped to a specific OAuth application.
+      Indicates that the associated `Datatype.User` ID is scoped to a specific
+      group (community). The domain ID corresponds to the group ID. This item is
+      not yet supported: `Datatype.User` values with this domain type can't be
+      created.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: OAuth
+    summary: |
+      The user ID is scoped to a specific OAuth application. The domain ID is
+      the application ID.
     value: 3
     tags: []
     deprecation_message: ''

@@ -102,8 +102,8 @@ properties:
       The type of domain that this domain user ID belongs to.
     description: |
       The `Enum.DomainType` that identifies the kind of domain this domain user
-      ID belongs to. Currently supported values are `Enum.DomainType.EXPERIENCE`
-      and `Enum.DomainType.OAUTH`.
+      ID belongs to. Currently supported values are `Enum.DomainType.Experience`
+      and `Enum.DomainType.OAuth`.
     default:
     code_samples: []
     tags: []
@@ -114,8 +114,9 @@ properties:
       The identifier of the specific domain instance.
     description: |
       The identifier of the specific domain instance that this user ID is scoped
-      to. For `Enum.DomainType.EXPERIENCE`, this is the universe ID. For
-      `Enum.DomainType.OAUTH`, this is the application ID.
+      to. For `Enum.DomainType.Experience`, this is the universe ID. For
+      `Enum.DomainType.Group`, this is the group ID. For
+      `Enum.DomainType.OAuth`, this is the application ID.
     default:
     code_samples: []
     tags: []

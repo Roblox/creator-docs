@@ -71,12 +71,6 @@ methods:
       If you wish to preserve the _customLoadingScreen_ and perform your own
       transitions, you will need to parent it to the local player's
       `Class.PlayerGui`. For an example of this, see the code sample below.
-
-      #### Studio Limitation
-
-      Note that this service does not work during playtesting in Roblox Studio;
-      to test aspects of your experience using it, you must publish the
-      experience and play it in the Roblox application.
     code_samples:
       - handling-a-teleport-loading-gui
     parameters: []
@@ -190,9 +184,9 @@ methods:
 
       #### Studio Limitation
 
-      Note that this service does not work during playtesting in Roblox Studio;
-      to test aspects of your experience using it, you must publish the
-      experience and play it in the Roblox application.
+      Note that this function does not work during playtesting in Roblox Studio;
+      to use it, you must publish the experience and play it in the Roblox
+      application.
     code_samples:
       - following-a-player-in-a-universe
     parameters:
@@ -269,9 +263,9 @@ methods:
 
       #### Studio Limitation
 
-      Note that this service does not work during playtesting in Roblox Studio;
-      to test aspects of your experience using it, you must publish the
-      experience and play it in the Roblox application.
+      See
+      [Testing Teleports](https://devforum.roblox.com/t/test-teleports-in-studio/4977640)
+      for information on using this function in Studio testing.
     code_samples: []
     parameters:
       - name: setting
@@ -403,9 +397,9 @@ methods:
 
       #### Studio Limitation
 
-      Note that this service does not work during playtesting in Roblox Studio;
-      to test aspects of your experience using it, you must publish the
-      experience and play it in the Roblox application.
+      See
+      [Testing Teleports](https://devforum.roblox.com/t/test-teleports-in-studio/4977640)
+      for information on using this function in Studio testing.
 
       #### Cross-Platform Play
 
@@ -492,9 +486,9 @@ methods:
 
       #### Studio Limitation
 
-      Note that this service does not work during playtesting in Roblox Studio;
-      to test aspects of your experience using it, you must publish the
-      experience and play it in the Roblox application.
+      See
+      [Testing Teleports](https://devforum.roblox.com/t/test-teleports-in-studio/4977640)
+      for information on using this function in Studio testing.
     code_samples:
       - teleporting-the-local-player
     parameters:
@@ -597,9 +591,9 @@ methods:
 
       #### Studio Limitation
 
-      Note that this service does not work during playtesting in Roblox Studio;
-      to test aspects of your experience using it, you must publish the
-      experience and play it in the Roblox application.
+      See
+      [Testing Teleports](https://devforum.roblox.com/t/test-teleports-in-studio/4977640)
+      for information on using this function in Studio testing.
     code_samples: []
     parameters:
       - name: setting
@@ -701,6 +695,12 @@ methods:
       - Groups of players can only be teleported within a single experience.
       - No more than 50 players can be teleported with a single
         `Class.TeleportService:TeleportAsync()` call.
+
+      #### Studio Limitation
+
+      See
+      [Testing Teleports](https://devforum.roblox.com/t/test-teleports-in-studio/4977640)
+      for information on using this function in Studio testing.
 
       #### Potential Errors
 
@@ -1072,9 +1072,9 @@ events:
 
       #### Studio Limitation
 
-      Note that this service does not work during playtesting in Roblox Studio;
-      to test aspects of your experience using it, you must publish the
-      experience and play it in the Roblox application.
+      See
+      [Testing Teleports](https://devforum.roblox.com/t/test-teleports-in-studio/4977640)
+      for information on using this function in Studio testing.
     code_samples: []
     parameters:
       - name: loadingGui

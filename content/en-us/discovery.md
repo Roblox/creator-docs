@@ -221,7 +221,7 @@ Roblox continually reclassifies content quality with every update, giving all ga
 
 To check if your game is affected by quality issues, go to the **Creator Dashboard**. Games with reduced exposure display a banner that updates daily and provides the latest status about quality and visibility.
 
-If you come across any issues, go to [Support](https://www.roblox.com/support), select **Bug Report**, and provide the Universe ID of your game along with a description of your issue.
+If you come across any issues, go to [Support](https://www.roblox.com/support), select **Discovery Content Quality > Quality Reduced Exposure**, and provide the Universe ID of your game along with your creator ID. If your game is owned by a group, enter the creator ID for the group owner.
 
 ## Discovery for other surfaces
 

@@ -6,7 +6,7 @@ description: Explains how to use TeleportService to teleport users between diffe
 Many games are subdivided into multiple [places](../production/publishing/publish-games-and-places.md#create-additional-places), such as a fantasy world with towns, castles, dungeons, and a vast forest. Use `Class.TeleportService` to teleport users between places, to different servers, or even to other games.
 
 <Alert severity="warning">
-`Class.TeleportService` doesn't support playtesting in Roblox Studio. You must publish the game and test in the Roblox client.
+See [Testing Teleports](https://devforum.roblox.com/t/test-teleports-in-studio/4977640) for information on using `Class.TeleportService` in Studio testing.
 </Alert>
 
 ## Teleport players
