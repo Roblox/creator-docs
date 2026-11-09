@@ -119,4 +119,110 @@ export const sections = [
       </Grid>
     ))}
   </Grid>
-))}
+))}STEAL BRAINROTS FROM MONSTERS
+-- Version 1.0
+
+local Players = game:GetService("Players")
+
+-- CREATE LEADERSTATS
+
+Players.PlayerAdded:Connect(function(player)
+
+    local leaderstats = Instance.new("Folder")
+    leaderstats.Name = "leaderstats"
+    leaderstats.Parent = player
+
+    local strength = Instance.new("IntValue")
+    strength.Name = "Strength"
+    strength.Value = 0
+    strength.Parent = leaderstats
+
+    local coins = Instance.new("IntValue")
+    coins.Name = "Coins"
+    coins.Value = 0
+    coins.Parent = leaderstats
+
+    local brainrots = Instance.new("IntValue")
+    brainrots.Name = "Brainrots"
+    brainrots.Value = 0
+    brainrots.Parent = leaderstats
+
+end)
+
+-- CREATE TRAINING GYM
+
+local gym = Instance.new("Part")
+gym.Name = "TrainingGym"
+gym.Size = Vector3.new(12, 2, 12)
+gym.Position = Vector3.new(0, 1, 0)
+gym.Anchored = true
+gym.BrickColor = BrickColor.new("Bright blue")
+gym.Parent = workspace
+
+local trainPrompt = Instance.new("ProximityPrompt")
+trainPrompt.ActionText = "TRAIN"
+trainPrompt.ObjectText = "Strength Gym"
+trainPrompt.HoldDuration = 1
+trainPrompt.Parent = gym
+
+trainPrompt.Triggered:Connect(function(player)
+
+    local stats = player:FindFirstChild("leaderstats")
+
+    if stats then
+        stats.Strength.Value += 5
+    end
+
+end)
+
+-- CREATE MONSTER
+
+local monster = Instance.new("Part")
+monster.Name = "BrainrotMonster"
+monster.Size = Vector3.new(8, 12, 8)
+monster.Position = Vector3.new(40, 7, 0)
+monster.Anchored = true
+monster.BrickColor = BrickColor.new("Really red")
+monster.Parent = workspace
+
+local monsterPrompt = Instance.new("ProximityPrompt")
+monsterPrompt.ActionText = "STEAL BRAINROT"
+monsterPrompt.ObjectText = "Monster Guardian"
+monsterPrompt.HoldDuration = 3
+monsterPrompt.MaxActivationDistance = 12
+monsterPrompt.Parent = monster
+
+-- STEAL BRAINROT
+
+local cooldown = {}
+
+monsterPrompt.Triggered:Connect(function(player)
+
+    if cooldown[player] then return end
+
+    local stats = player:FindFirstChild("leaderstats")
+
+    if not stats then return end
+
+    if stats.Strength.Value < 25 then
+        print("You need 25 strength!")
+        return
+    end
+
+    cooldown[player] = true
+
+    stats.Brainrots.Value += 1
+    stats.Coins.Value += 100
+
+    print(player.Name .. " stole a Brainrot!")
+
+    task.wait(10)
+    cooldown[player] = nil
+
+end)
+
+Players.PlayerRemoving:Connect(function(player)
+    cooldown[player] = nil
+end)
+
+print("STEAL BRAINROTS FROM MONSTERS LOADED!")
