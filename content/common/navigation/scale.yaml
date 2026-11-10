@@ -42,6 +42,8 @@ navigation:
             path: /production/localization/automatic-translations
           - title: Translate dynamic content
             path: /production/localization/auto-translate-dynamic-content
+          - title: Image translations
+            path: /production/localization/image-translations
       - title: Manual translations
         section:
           - title: Overview

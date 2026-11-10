@@ -23,6 +23,14 @@ Lower-end devices, particularly mobile devices, have severe memory limitations a
 Roblox does not have access to all of a device's memory. Some amount is required for the operating system and other applications.
 </Alert>
 
+### Graphics quality levels
+
+Roblox automatically scales rendering quality to each device's capabilities. At lower quality levels, the engine reduces features such as draw distance, but even at the lowest quality level, the draw distance is at least 500 studs. Terrain water stays transparent and beams keep their segment count at all quality levels. Roblox continually tunes these values, so avoid designing around exact draw distances.
+
+- To preview your game at different quality levels in Studio, open [Studio Settings](../studio/setup.md#customization), select **Rendering**, and change **Editor Quality Level**. Test your visuals at both the lowest and highest levels.
+- If raising the quality level doesn't reveal more of your scene, the objects might not have streamed in. Check your [streaming](../workspace/streaming/index.md) `Class.Workspace.StreamingTargetRadius|StreamingTargetRadius` setting.
+- Avoid changing visual effects in scripts based on `Class.UserGameSettings.SavedQualityLevel`. Doing so makes it harder for the engine's automatic scaling to work.
+
 More generally, [testing on a variety of devices](./test-on-hardware.md) can help you check that the game matches your visual and performance expectations at different graphics quality levels. For a much more detailed example of how you might think about optimizing your game for low-end mobile devices, see [Real World Building and Scripting Optimization](https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146).
 
 ## Streaming and teleportation

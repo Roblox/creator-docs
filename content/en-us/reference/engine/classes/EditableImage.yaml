@@ -75,6 +75,14 @@ description: |
   memory. Linking one `Class.EditableImage` to multiple image-related
   `Datatype.Content` data types (multi-referencing) can help with memory
   optimization.
+
+  If an `EditableImage` no longer changes, you can save a significant amount of
+  memory budget by converting it to `Enum.ContentSourceType|Opaque` content with
+  `Class.AssetService:CreateDataModelContentAsync()`. Use the returned
+  `Datatype.Content` in place of the `EditableImage`, then call
+  `Class.EditableImage:Destroy()|Destroy()` to release the editable copy. To
+  edit the image again, pass the opaque content to
+  `Class.AssetService:CreateEditableImageAsync()`.
 code_samples: []
 inherits:
   - Object

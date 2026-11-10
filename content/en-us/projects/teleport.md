@@ -5,10 +5,6 @@ description: Explains how to use TeleportService to teleport users between diffe
 
 Many games are subdivided into multiple [places](../production/publishing/publish-games-and-places.md#create-additional-places), such as a fantasy world with towns, castles, dungeons, and a vast forest. Use `Class.TeleportService` to teleport users between places, to different servers, or even to other games.
 
-<Alert severity="warning">
-See [Testing Teleports](https://devforum.roblox.com/t/test-teleports-in-studio/4977640) for information on using `Class.TeleportService` in Studio testing.
-</Alert>
-
 ## Teleport players
 
 To teleport players, use `Class.TeleportService:TeleportAsync()`. This method accepts three parameters:
@@ -171,6 +167,24 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
 To retrieve only the teleport data on the client, you can use `Class.TeleportService:GetLocalPlayerTeleportData()`.
+
+## Test teleports in Studio
+
+You can test `Class.TeleportService:TeleportAsync()|TeleportAsync()` teleports in Studio's **Test** and **Team Test** modes without publishing your experience. When a teleport runs during a test, the destination place opens as a new test server, so you can debug both the origin and destination places in Studio. You can also test teleports in [Build](../ai/build.md).
+
+<Alert severity="warning">
+Testing teleports only supports `Class.TeleportService:TeleportAsync()|TeleportAsync()`. Deprecated methods like `Class.TeleportService:Teleport()|Teleport()`, `Class.TeleportService:TeleportPartyAsync()|TeleportPartyAsync()`, and `TeleportToPlaceAsync()` aren't supported in testing. If your game still uses these methods, see [Migrate to secure teleports](#migrate-to-secure-teleports).
+</Alert>
+
+### Known limitations
+
+A few behaviors differ between testing and production:
+
+- **`Class.DataModel.PrivateServerId|PrivateServerId` and `Class.DataModel.JobId|JobId`**: In **Test** mode, both are always empty, even for private servers. In **Team Test**, every server is private, so `PrivateServerId` is never empty, even for teleports to public servers. Code that checks whether `PrivateServerId` is empty behaves differently in Team Test than in production.
+- **`Class.TeleportOptions.ReservedServerId|ReservedServerId` vs. `PrivateServerId`**: These values can differ in Team Test, though they match in production. To send more players to the same reserved server, reuse the original `ReservedServerId`, not the destination server's `PrivateServerId`.
+- **VIP teleports**: Teleports that use `Class.TeleportOptions.VipServerId|VipServerId` fail in testing because Team Test servers have no owner.
+- **Same experience only**: You can only teleport between places that share the starting place's `Class.DataModel.GameId|GameId`.
+- **Unsupported methods**: `Class.TeleportService:GetPlayerPlaceInstanceAsync()|GetPlayerPlaceInstanceAsync()` doesn't work in testing.
 
 ## Handle failed teleports
 

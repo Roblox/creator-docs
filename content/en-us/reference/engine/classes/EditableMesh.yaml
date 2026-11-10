@@ -53,6 +53,14 @@ description: |
   multiple `Class.MeshPart|MeshParts` (multi-referencing) can help with memory
   optimization.
 
+  If an `EditableMesh` no longer changes, you can save a significant amount of
+  memory budget by converting it to `Enum.ContentSourceType|Opaque` content with
+  `Class.AssetService:CreateDataModelContentAsync()`. Use the returned
+  `Datatype.Content` in place of the `EditableMesh`, then call
+  `Class.EditableMesh:Destroy()|Destroy()` to release the editable copy. To edit
+  the mesh again, pass the opaque content to
+  `Class.AssetService:CreateEditableMeshAsync()`.
+
   #### Creation and display
 
   An `EditableMesh` can be created from an existing `Datatype.Content` of a
