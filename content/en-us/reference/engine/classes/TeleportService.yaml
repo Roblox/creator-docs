@@ -264,7 +264,7 @@ methods:
       #### Studio Limitation
 
       See
-      [Testing Teleports](https://devforum.roblox.com/t/test-teleports-in-studio/4977640)
+      [Test teleports](https://create.roblox.com/docs/projects/teleport#test-teleports-in-studio)
       for information on using this function in Studio testing.
     code_samples: []
     parameters:
@@ -398,7 +398,7 @@ methods:
       #### Studio Limitation
 
       See
-      [Testing Teleports](https://devforum.roblox.com/t/test-teleports-in-studio/4977640)
+      [Test teleports](https://create.roblox.com/docs/projects/teleport#test-teleports-in-studio)
       for information on using this function in Studio testing.
 
       #### Cross-Platform Play
@@ -487,7 +487,7 @@ methods:
       #### Studio Limitation
 
       See
-      [Testing Teleports](https://devforum.roblox.com/t/test-teleports-in-studio/4977640)
+      [Test teleports](https://create.roblox.com/docs/projects/teleport#test-teleports-in-studio)
       for information on using this function in Studio testing.
     code_samples:
       - teleporting-the-local-player
@@ -592,7 +592,7 @@ methods:
       #### Studio Limitation
 
       See
-      [Testing Teleports](https://devforum.roblox.com/t/test-teleports-in-studio/4977640)
+      [Test teleports](https://create.roblox.com/docs/projects/teleport#test-teleports-in-studio)
       for information on using this function in Studio testing.
     code_samples: []
     parameters:
@@ -699,7 +699,7 @@ methods:
       #### Studio Limitation
 
       See
-      [Testing Teleports](https://devforum.roblox.com/t/test-teleports-in-studio/4977640)
+      [Test teleports](https://create.roblox.com/docs/projects/teleport#test-teleports-in-studio)
       for information on using this function in Studio testing.
 
       #### Potential Errors
@@ -1073,7 +1073,7 @@ events:
       #### Studio Limitation
 
       See
-      [Testing Teleports](https://devforum.roblox.com/t/test-teleports-in-studio/4977640)
+      [Test teleports](https://create.roblox.com/docs/projects/teleport#test-teleports-in-studio)
       for information on using this function in Studio testing.
     code_samples: []
     parameters:

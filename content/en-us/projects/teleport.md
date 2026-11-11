@@ -170,7 +170,7 @@ To retrieve only the teleport data on the client, you can use `Class.TeleportSer
 
 ## Test teleports in Studio
 
-You can test `Class.TeleportService:TeleportAsync()|TeleportAsync()` teleports in Studio's **Test** and **Team Test** modes without publishing your experience. When a teleport runs during a test, the destination place opens as a new test server, so you can debug both the origin and destination places in Studio. You can also test teleports in [Build](../ai/build.md).
+You can test `Class.TeleportService:TeleportAsync()|TeleportAsync()` teleports in Studio's **Test** and **Team Test** modes without publishing your experience. When a teleport runs during a test, the destination place opens as a new test server, so you can debug both the origin and destination places in Studio. Studio tools such as server inspection, the debugger (including breakpoints), and the device simulator carry over to the destination place. You can also test teleports in [Build](../ai/build.md) and through playtest automation in the [Studio MCP server](../studio/mcp.md).
 
 <Alert severity="warning">
 Testing teleports only supports `Class.TeleportService:TeleportAsync()|TeleportAsync()`. Deprecated methods like `Class.TeleportService:Teleport()|Teleport()`, `Class.TeleportService:TeleportPartyAsync()|TeleportPartyAsync()`, and `TeleportToPlaceAsync()` aren't supported in testing. If your game still uses these methods, see [Migrate to secure teleports](#migrate-to-secure-teleports).

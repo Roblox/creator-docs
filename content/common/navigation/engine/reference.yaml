@@ -301,6 +301,16 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/AudioSpeechToText.yaml
                 ignoreTranslation: true
+              - title: AudioStreamReader
+                path: /reference/engine/classes/AudioStreamReader
+                type: engineapi
+                source: /reference/engine/classes/AudioStreamReader.yaml
+                ignoreTranslation: true
+              - title: AudioStreamWriter
+                path: /reference/engine/classes/AudioStreamWriter
+                type: engineapi
+                source: /reference/engine/classes/AudioStreamWriter.yaml
+                ignoreTranslation: true
               - title: AudioTextToSpeech
                 path: /reference/engine/classes/AudioTextToSpeech
                 type: engineapi
@@ -1942,6 +1952,12 @@ navigation:
                     type: engineapi
                     source: /reference/engine/classes/Camera.yaml
                     ignoreTranslation: true
+                    section:
+                      - title: ViewportCamera
+                        path: /reference/engine/classes/ViewportCamera
+                        type: engineapi
+                        source: /reference/engine/classes/ViewportCamera.yaml
+                        ignoreTranslation: true
                   - title: Model
                     path: /reference/engine/classes/Model
                     type: engineapi

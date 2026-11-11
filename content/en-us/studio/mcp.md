@@ -178,6 +178,18 @@ The server provides the following tools:
 </tbody>
 <thead>
   <tr>
+    <th>**Place management**</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`save_place`</td>
+    <td>Saves the open place the same way as **File** &rang; **Save**: as a new place version for places opened from Roblox, or back to the file for local `.rbx` and `.rbxlx` places. Doesn't open any dialogs.</td>
+  </tr>
+</tbody>
+<thead>
+  <tr>
     <th>**Session management**</th>
     <th></th>
   </tr>
@@ -188,11 +200,25 @@ The server provides the following tools:
     <td>Lists all connected Studio instances, including their name, Studio instance ID, and place ID. Local places that don't have a place ID are listed by name only. Useful when multiple Studio windows are open; if two open Studio instances share the same name, the place ID lets you tell apart.</td>
   </tr>
 </tbody>
+<thead>
+  <tr>
+    <th>**Feedback**</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`submit_feedback`</td>
+    <td>Sends feedback to Roblox when a tool fails, a capability is missing, or a workflow in Studio takes more steps than it should, so the team can improve Studio and its MCP tools.</td>
+  </tr>
+</tbody>
 </table>
 
 <Alert severity="info">
 Every tool call takes a `studio_id` parameter that names the Studio instance it targets, so agents address Studio instances explicitly instead of relying on session state. Use `list_roblox_studios` to look up the ID of the instance you want.
 </Alert>
+
+Playtest automation works across teleports. During a playtest, an agent can teleport a player to another place in the same experience, read the destination server's output, and fix the issues it finds, all without publishing. For supported teleport methods and testing limitations, see [Test teleports in Studio](../projects/teleport.md#test-teleports-in-studio).
 
 ## Enable the MCP server in Studio
 
@@ -255,10 +281,7 @@ Configurations vary by operating system:
   "mcpServers": {
     "Roblox_Studio": {
       "command": "cmd.exe",
-      "args": [
-        "/c",
-        "%LOCALAPPDATA%\\Roblox\\mcp.bat"
-      ]
+      "args": ["/c", "%LOCALAPPDATA%\\Roblox\\mcp.bat"]
     }
   }
 }

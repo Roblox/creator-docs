@@ -62,6 +62,8 @@ descendants:
   - AudioReverb
   - AudioSearchParams
   - AudioSpeechToText
+  - AudioStreamReader
+  - AudioStreamWriter
   - AudioTextToSpeech
   - AudioTremolo
   - AvatarCreationService

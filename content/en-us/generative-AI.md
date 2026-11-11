@@ -20,24 +20,24 @@ To maintain a safe environment, all content, including content created by or usi
 - Outputs adhere to Roblox's Community Standards.
 - Inputs and outputs do not circumvent Roblox-mandated safety measures. For example, text inputs and outputs must go through `Class.TextChatService`.
 
-## Content maturity
+## Content maturity ratings
 
-If your game allows players to interact with a generative AI model in any way that triggers a response from the model, such as interactions that include text chat, voice chat, images, 3D generations, and avatar movement, you must disclose it within the [Content Maturity](./production/promotion/content-maturity.md) questionnaire.
+If your game allows players to interact with a generative AI model in any way that triggers a response from the model, such as interactions that include text chat, voice chat, images, 3D generations, and avatar movement, you must disclose it within the [Content Ratings Questionnaire](./production/promotion/content-ratings.md).
 
-While merely including an AI component in your game does not impact the content maturity of your game, games with extended AI interactions must include the appropriate **Restricted** content maturity label so that they are only available to the appropriate audience.
+While merely including an AI component in your game does not impact your game's content ratings, games with extended AI interactions must include the appropriate **Restricted** content maturity rating so that they are only available to the appropriate audience.
 
 ### Limited interactions
 
-For games without the **Restricted** content maturity label, model outputs must adhere to the underlying Content Maturity classification of the game.
+For games without the **Restricted** content maturity rating, model outputs must adhere to the underlying content maturity classification of the game.
 
 **When using Roblox-served AI tools, such as `Class.GenerationService` and `Class.TextGenerator`**:
 
-- For all games, we instruct our model to align with an All Ages content maturity rating and avoid outputs that would require a descriptor, such as Horror elements.
-- For games with a Content Maturity label of mild violence or higher, models can generate otherwise compliant weapons.
+- For all games, we instruct our model to align with an All Ages content rating and avoid outputs that would require a descriptor, such as Horror elements.
+- For games with mild violence or higher content descriptors, models can generate otherwise compliant weapons.
 
 **When using third-party tools**:
 
-- You must ensure outputs align with the Content Maturity rating of your game.
+- You must ensure outputs align with the content maturity rating of your game.
 
 ### Extended interactions
 
@@ -51,10 +51,10 @@ Games with **extended interactions** are those that are intended to, or can be u
 
   - For example, a game primarily focused on gameplay that has one AI-driven NPC which users can only interact with for several minutes. However, when reloading the game and interacting with the NPC again, the model can refer back to previous conversations with the user.
 
-If your game includes extended interactions, you must answer "Yes" to the Extended AI question of the Content Maturity questionnaire. Because these games may not be suitable for younger users, they need a Restricted content maturity label so that they are inaccessible to users under the age of 18.
+If your game includes extended interactions, you must answer "Yes" to the Extended AI question of the Content Ratings Questionnaire. Because these games may not be suitable for younger users, they need a Restricted content maturity rating so that they are inaccessible to users under the age of 18.
 
 <Alert severity ='info'>
-For more information on Content Maturity rules and guidelines, see the [Content Maturity](./production/promotion/content-maturity.md) guide.
+For more information on content rating rules and guidelines, see [Content ratings](./production/promotion/content-ratings.md).
 </Alert>
 
 ## Disclosures

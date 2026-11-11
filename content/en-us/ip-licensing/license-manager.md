@@ -101,7 +101,7 @@ To add a license to your listing:
 6. Under **Experience eligibility** or **Creator eligibility**:
    - For **Full game** licenses, select the criteria you want games to meet in order to request to use the license. Creators whose games don't meet these requirements aren't eligible to request to use your IP. To allow all creators to request, leave the default values.
      - For **Minimum average last 7 daily active users (DAU)**, choose between no requirement, greater than 1,000 DAU, or greater than 25,000 DAU.
-     - For **Maximum maturity rating**, choose between minimal, mild, moderate, and restricted. See [Maturity labels](../production/promotion/content-maturity.md#questionnaire-categories) for more information about different maturity ratings.
+     - For **Maximum maturity rating**, choose between Minimal, Mild, Moderate, and Restricted. For information about the different Roblox-specific content maturity ratings, see [Content ratings](../production/promotion/content-ratings.md#content-maturity-ratings).
    - For **Collab** licenses, select the criteria you want creators to meet in order to request to use the license. Creators who don't meet these requirements aren't eligible to request to use your IP. To allow all creators to request, leave the default values.
      - For **Minimum last 90 day Marketplace earnings**, choose between no requirement, greater than 1,000 Robux, greater than 10,000 Robux, or greater than 100,000 Robux.
 7. Under **Guidelines and restrictions**:

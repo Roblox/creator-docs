@@ -6,7 +6,7 @@ description: Explains design requirements to follow for publishing an experience
 With 200M+ Xbox and PlayStation players, consoles present a major opportunity for you to attract more players. Compared to regular devices, designing for controllers and the 10-foot UI experience of consoles has some special guidelines that you can follow to help your game succeed on consoles.
 
 <Alert severity="info">
-Games designed for consoles always need to provide [content maturity information](../../production/promotion/content-maturity.md) to ensure smooth releases and minimize the risk of being removed from consoles.
+Games designed for consoles always need to provide [content ratings](../promotion/content-ratings.md) to ensure smooth releases and minimize the risk of being removed from consoles.
 </Alert>
 
 ## Build for the 10ft experience

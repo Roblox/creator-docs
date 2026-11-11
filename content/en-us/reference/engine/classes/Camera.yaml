@@ -47,7 +47,8 @@ description: |
 code_samples: []
 inherits:
   - PVInstance
-descendants: []
+descendants:
+  - ViewportCamera
 tags:
   - NotReplicated
 deprecation_message: ''

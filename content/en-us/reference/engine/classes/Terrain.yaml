@@ -731,7 +731,7 @@ methods:
         type: int
         default:
         summary: |
-          The index of the material slot to query. Valid range is `2` through
+          The index of the material slot to query. Valid range is `0` through
           `63`.
     returns:
       - type: Tuple

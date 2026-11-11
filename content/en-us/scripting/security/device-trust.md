@@ -15,13 +15,13 @@ Device trust complements the tactics in [security and cheat mitigation tactics](
 
 The device trust level of a player is one of the following `Enum.PlayerDeviceTrustLevel` values:
 
-| Level      | Meaning                                                                                                                                                                      |
-| :--------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Pending`  | Roblox is still checking the device. Every player starts at this level.                                                                                                      |
-| `Unknown`  | The player is on an unsupported platform, or an error occurred on the Roblox side. Roblox can't tell whether the device is trusted, so it might or might not be trustworthy. |
-| `None`     | The device failed the check, or the player is on a platform that can't be verified and is often used for cheating.                                                           |
-| `Standard` | The device passed some of the checks, but not all of them.                                                                                                                   |
-| `Full`     | The device passed every check.                                                                                                                                               |
+| Level      | Meaning                                                                                                                                                                                                                                                |
+| :--------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Pending`  | Roblox is still checking the device. Every player starts at this level.                                                                                                                                                                                |
+| `Unknown`  | The player is on an unsupported platform, or an error occurred on the Roblox side. Roblox can't tell whether the device is trusted, so it might or might not be trustworthy.                                                                           |
+| `None`     | The device failed the check, or the player is on a platform that can't be verified and is often used for cheating. Players at this level usually have to switch to another device to reach a higher level, although some can fix their current device. |
+| `Standard` | The device passed some of the checks, but not all of them. The device is mostly secure, and the player can usually reach `Full` by updating or fixing their device. Some devices can't go above `Standard`.                                            |
+| `Full`     | The device passed every check and is fully secure.                                                                                                                                                                                                     |
 
 <Alert severity="warning">
 **`Unknown` doesn't mean untrusted.** It means that Roblox can't tell whether the device is trustworthy. It's up to you to decide what `Unknown` means for your game, and you can treat it differently in different parts of your game. For recommendations, see [recommended policies by genre](#recommended-policies-by-genre).
@@ -322,7 +322,7 @@ So that a mistake in your code never locks players out, Roblox accepts the playe
 
 #### Respond to individual measures
 
-The second argument of the callback, `measures`, is a table of booleans that explains the trust level of the player. A value of `false` means that the device failed that measure.
+The second argument of the callback, `measures`, is a table of booleans that explains the trust level of the player. A value of `false` means that the device failed that measure. On a device that doesn't support a measure, its value defaults to `true`, so a value of `true` doesn't prove that the device passed. When you gate players or features on a measure, only check whether it's `false`.
 
 | Measure                   | Passes when                                                                           |
 | :------------------------ | :------------------------------------------------------------------------------------ |
@@ -356,7 +356,7 @@ Avoid the following patterns when you use the Device Trust API:
 - **Rejecting players from `Class.Players.PlayerAdded`.** When `PlayerAdded` fires, the trust level of the player usually isn't available yet, so a check at that point can reject players whose devices are trusted. Instead, return `Reject` from the `Class.IntegrityService.EvaluatePlayerDeviceTrust` callback, which Roblox calls as soon as the trust level is available. If you need the trust level in `PlayerAdded` for other reasons, such as matchmaking, see [wait for the trust level](#wait-for-the-trust-level).
 - **Running slow operations in the callback.** The callback can yield, but it times out after about 10 seconds, and Roblox then accepts the player. Several data store reads or HTTP requests can take long enough to reach this limit, so keep yielding operations in the callback to a minimum.
 - **Reading the trust level on the client.** A player's own client can read their trust level, so you might decide in a `Class.LocalScript` whether to show a feature or fire a remote event. Exploiters control their client and can bypass these checks. Instead, read the trust level on the server and tell the client which features to enable. Base client-side changes, such as hiding a trade button, on what the server tells the client, and always check the trust level again on the server before the action happens.
-- **Using the measures instead of the trust level.** A measure is also `true` when it isn't available on a device, so a device can pass every measure without being fully trusted. Don't treat a device that passes every measure as `Full`. Check the trust level first, and only use the measures to look for checks that failed.
+- **Using the measures instead of the trust level.** A measure is `true` when it isn't available on a device, so a device can pass every measure without being fully trusted. Don't treat a device that passes every measure as `Full`. Check the trust level first, and only use the measures to look for checks that failed.
 
 ### Test your logic
 

@@ -51,8 +51,8 @@ navigation:
     section:
       - title: Safety on Roblox
         path: /safety
-      - title: Content maturity
-        path: /production/promotion/content-maturity
+      - title: Content ratings
+        path: /production/promotion/content-ratings
       - title: Roblox Kids and Select
         path: /production/publishing/kids-and-select
       - title: Regional content availability

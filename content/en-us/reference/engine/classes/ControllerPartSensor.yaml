@@ -173,7 +173,7 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Data
+    category: Output
     serialization:
       can_load: true
       can_save: true
