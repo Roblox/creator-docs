@@ -88,14 +88,14 @@ For your game to be eligible to serve ads, your account and game must meet the f
 - Your account must be [ID-verified](../publishing/account-verification.md) and have **2-factor authentication (2FA)** enabled.
   - For group-owned games, this requirement applies to the owner of the group.
   - This requirement is persistent. If you disable identity verification or 2FA, your game loses eligibility.
-- You must complete the **Maturity and Compliance Questionnaire** for your game.
-  - The questionnaire must be reviewed and approved by Roblox before the game is eligible to serve ads. If the review status is **Pending**, you can request a re-review from the game's advertising eligibility page under **Monetization** ⟩ **Ads** ⟩ **Eligiblity**. You'll receive a response within 24 hours.
+- You must complete the **Maturity and Compliance Questionnaire** or the **Content Rating Questionnaire** for your game.
+  - The questionnaire must be reviewed and approved by Roblox before the game is eligible to serve ads. If the review status is **Pending**, you can request a re-review from the game's advertising eligibility page under **Monetization** ⟩ **Ads** ⟩ **Eligibility**. You'll receive a response within 24 hours.
 - Your game must maintain **2,000 unique visitors per month**.
   - This is calculated and updated monthly, based on visitor data. Bots are not included in visitor counts.
 - You must comply with the [Roblox terms of use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [publisher integrity requirements](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).
 
 <Alert severity="info">
-  Resubmitting your **Maturity and Compliance Questionnaire** will temporarily remove your ads eligibility while the questionnaire is under review. To avoid repeated interruptions, only resubmit the questionnaire when you publish a game update that changes your previous responses.
+  Resubmitting your **Content Rating Questionnaire** will temporarily remove your ads eligibility while the questionnaire is under review. To avoid repeated interruptions, only resubmit the questionnaire when you publish a game update that changes your previous responses.
 </Alert>
 
 <Alert severity="warning">

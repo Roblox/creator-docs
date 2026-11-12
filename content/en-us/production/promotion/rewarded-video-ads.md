@@ -346,7 +346,7 @@ To prevent abuse of the rewarded ad system and to provide the best user experien
 <tbody>
   <tr>
     <th>**Games**</th>
-    <td>Games must:<br/><br/><ul><li>Be public and unrestricted.</li><li>Offer no free-form user creation.</li><li>Have a complete **Maturity and Compliance Questionnaire** that has been reviewed and approved by Roblox. If the review status is **Pending**, you can request a re-review from the game's advertising eligibility page under **Monetization** ⟩ **Ads** ⟩ **Eligiblity**. You'll receive a response within 24 hours.</li><li>Have an average of at least **2,000 unique visitors per month**.</li><li>Comply with the [Roblox terms of use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [publisher integrity requirements](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).</li></ul></td>
+    <td>Games must:<br/><br/><ul><li>Be public and unrestricted.</li><li>Offer no free-form user creation, strong language, romance, or social hangouts with private spaces.</li><li>Have a complete **Maturity and Compliance Questionnaire** or **Content Rating Questionnaire** that has been reviewed and approved by Roblox. If the review status is **Pending**, you can request a re-review from the game's advertising eligibility page under **Monetization** ⟩ **Ads** ⟩ **Eligibility**. You'll receive a response within 24 hours.</li><li>Have an average of at least **2,000 unique visitors per month**.</li><li>Comply with the [Roblox terms of use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [publisher integrity requirements](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).</li></ul></td>
   </tr>
   <tr>
     <th>**Publishers**</th>
@@ -360,7 +360,7 @@ To prevent abuse of the rewarded ad system and to provide the best user experien
 </table>
 
 <Alert severity="info">
-  Resubmitting your **Maturity and Compliance Questionnaire** will temporarily remove your ads eligibility while the questionnaire is under review. To avoid repeated interruptions, only resubmit the questionnaire when you publish a game update that changes your previous responses.
+  Resubmitting your **Content Rating Questionnaire** will temporarily remove your ads eligibility while the questionnaire is under review. To avoid repeated interruptions, only resubmit the questionnaire when you publish a game update that changes your previous responses.
 </Alert>
 
 <Alert severity="warning">
