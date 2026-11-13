@@ -87,7 +87,7 @@ To demonstrate, if you examine **ServerScriptService** ⟩ **Gameplay** ⟩ **Ro
 - Sets their `Class.Player.Neutral` property to true to automatically reset their `Class.Player.Team` to `nil`, allowing the player to respawn in the lobby when a round isn't active, as the spawn location's `Class.SpawnLocation.Neutral|Neutral` property is also set to **true**.
 - Changes their `PlayerState` to `InLobby` to remove the player's blaster and first-person UI visuals.
 
-For more information on the neutral spawn zone and its functionality for each round, see [Adding Rounds](adding-rounds.md) in the next section of the tutorial.
+For more information on the neutral spawn zone and its functionality for each round, see [Adding Rounds](add-rounds.md) in the next section of the tutorial.
 
 ```lua title="spawnPlayersInLobby"
 local function spawnPlayersInLobby(players: { Player })
