@@ -89,13 +89,13 @@ curl --location 'https://apis.roblox.com/cloud/v2/users/${UserId}/notifications'
 	},
 	"payload": {
 		"message_id": "${AssetID}",
-		"type": "MOMENT"
-	},
-	"join_experience": {
-		"launch_data": "Test_Launch_Data"
-	},
-	"analytics_data": {
-		"category": "Test_Analytics_Category"
+		"type": "MOMENT",
+		"join_experience": {
+			"launch_data": "Test_Launch_Data"
+		},
+		"analytics_data": {
+			"category": "Test_Analytics_Category"
+		}
 	}
 }'
 ```
