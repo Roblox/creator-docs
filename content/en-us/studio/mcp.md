@@ -52,6 +52,10 @@ The server provides the following tools:
 </thead>
 <tbody>
   <tr>
+    <td>`generate_animation`</td>
+    <td>Generates an R15 animation from a text prompt, or converts an existing R6 animation to R15 from its asset ID. Supports targeting a specific rig and setting a duration of up to 10 seconds.</td>
+  </tr>
+  <tr>
     <td>`generate_mesh`</td>
     <td>Generates a textured 3D mesh from a text prompt using AI.</td>
   </tr>

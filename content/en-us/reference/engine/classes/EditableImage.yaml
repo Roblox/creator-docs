@@ -139,9 +139,7 @@ methods:
     summary: |
       Draws a circle at the specified point.
     description: |
-      Draws a circle at the specified point on the `EditableImage`. If the
-      circle is semi-transparent, it will be blended with the pixels behind it
-      using source over blending.
+      Draws a circle at the specified point on the `EditableImage`.
     code_samples: []
     parameters:
       - name: center
@@ -165,13 +163,14 @@ methods:
         default:
         summary: |
           Transparency of the circle with 0 being fully opaque and 1 being fully
-          transparent.
+          transparent. Default is `0`.
       - name: combineType
         type: ImageCombineType
         default:
         summary: |
           How the drawn pixels (source) are combined with the existing pixels of
-          this image (destination).
+          this image (destination). Default is
+          `Enum.ImageCombineType.Overwrite`.
       - name: antiAliasing
         type: AntiAliasing
         default: Enabled
@@ -221,7 +220,8 @@ methods:
         default:
         summary: |
           How the pixels of the source image are combined with the existing
-          pixels of this image (destination).
+          pixels of this image (destination). Default is
+          `Enum.ImageCombineType.AlphaBlend`.
       - name: alphaBlendType
         type: ImageAlphaType
         default: Default
@@ -469,13 +469,14 @@ methods:
         type: float
         default:
         summary: |
-          Transparency of the line.
+          Transparency of the line. Default is `0`.
       - name: combineType
         type: ImageCombineType
         default:
         summary: |
           How the drawn pixels (source) are combined with the existing pixels of
-          this image (destination).
+          this image (destination). Default is
+          `Enum.ImageCombineType.Overwrite`.
       - name: antiAliasing
         type: AntiAliasing
         default: Enabled
@@ -528,13 +529,14 @@ methods:
         type: float
         default:
         summary: |
-          Transparency of the rectangle.
+          Transparency of the rectangle. Default is `0`.
       - name: combineType
         type: ImageCombineType
         default:
         summary: |
           How the drawn pixels (source) are combined with the existing pixels of
-          this image (destination).
+          this image (destination). Default is
+          `Enum.ImageCombineType.Overwrite`.
       - name: alphaBlendType
         type: ImageAlphaType
         default: Default

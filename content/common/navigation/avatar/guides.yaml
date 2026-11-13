@@ -91,6 +91,12 @@ navigation:
             path: /avatar/dynamic-heads/test
           - title: FACS poses reference
             path: /avatar/dynamic-heads/facs-poses-reference
+  - title: Backgrounds
+    section:
+      - title: Overview
+        path: /avatar/backgrounds/
+      - title: Specifications
+        path: /avatar/backgrounds/specifications
   - heading: Accelerate
   - title: Avatar Setup
     section:

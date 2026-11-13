@@ -16,13 +16,7 @@ Rewarded video ads let you:
 - Increase your ad revenue per user and bring in demand from hundreds of brands.
 - Improve user playtime and deliver greater engagement from your game.
 
-Before implementing rewarded video ads, consider where inside your game you want to place the ads, and which items you want to reward users with. Keep the following in mind:
-
-- **Take advantage of high-traffic areas**: Your earnings from rewarded videos depend on the number of users in your game who engage with ads. Place rewarded videos in lobbies or menus as a way to drive high traffic, as these are areas where users are most likely to engage when starting their gameplay.
-- **Use natural gameplay breaks**: To avoid gameplay disruption, implement rewarded videos at natural gameplay breaks, like when users completes a level, before they start a challenge, or when they run out of lives or resources.
-- **Boost discovery with prompts**: To make sure that users can find the rewarded video ad in your game, use easy access reward prompts that are easily discoverable and that only require 1-2 clicks. Have a clear call-to-action (for example, "Watch this ad for 2x the coins!") to make the action obvious to users.
-- **Offer meaningful rewards**: We recommend rewards that are equivalent to 3 to 10 Robux. Use items like boosters, in-game currency, extra lives, and temporary privileges.
-- **Ensure compliance**: Clearly disclose to users that they are engaging with an ad, and explain what users have to do to receive the reward and what the reward is. Rewards for video ads **cannot** be randomized items.
+This page covers setup, implementation, analytics, and eligibility. For placement, reward strategy, and performance tips, see the [Rewarded video playbook](./rewarded-video-playbook.md).
 
 ## Implement rewarded video ads
 
@@ -346,7 +340,7 @@ To prevent abuse of the rewarded ad system and to provide the best user experien
 <tbody>
   <tr>
     <th>**Games**</th>
-    <td>Games must:<br/><br/><ul><li>Be public and unrestricted.</li><li>Offer no free-form user creation.</li><li>Have a complete **Maturity and Compliance Questionnaire** that has been reviewed and approved by Roblox. If the review status is **Pending**, you can request a re-review from the game's advertising eligibility page under **Monetization** ⟩ **Ads** ⟩ **Eligiblity**. You'll receive a response within 24 hours.</li><li>Have an average of at least **2,000 unique visitors per month**.</li><li>Comply with the [Roblox terms of use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [publisher integrity requirements](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).</li></ul></td>
+    <td>Games must:<br/><br/><ul><li>Be public and unrestricted.</li><li>Offer no free-form user creation, strong language, romance, or social hangouts with private spaces.</li><li>Have a complete **Maturity and Compliance Questionnaire** or **Content Rating Questionnaire** that has been reviewed and approved by Roblox. If the review status is **Pending**, you can request a re-review from the game's advertising eligibility page under **Monetization** ⟩ **Ads** ⟩ **Eligibility**. You'll receive a response within 24 hours.</li><li>Have an average of at least **2,000 unique visitors per month**.</li><li>Comply with the [Roblox terms of use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [publisher integrity requirements](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).</li></ul></td>
   </tr>
   <tr>
     <th>**Publishers**</th>
@@ -354,13 +348,13 @@ To prevent abuse of the rewarded ad system and to provide the best user experien
   </tr>
   <tr>
     <th>**Rewards**</th>
-    <td>The reward for watching a video ad should:<br/><br/><ul><li>Be granted upon completion of a video ad view.</li><li>Be a developer product which would normally be available to purchase with Robux inside an in-game shop.</li><li>Not inflate currency or unbalance the game's economy.</li></ul>The right reward strategy is critical. See [Best practices](#best-practices) for more guidance on choosing the right reward for your video ad.</td>
+    <td>The reward for watching a video ad should:<br/><br/><ul><li>Be granted upon completion of a video ad view.</li><li>Be a developer product which would normally be available to purchase with Robux inside an in-game shop.</li><li>Not inflate currency or unbalance the game's economy.</li><li>Not be a randomized item.</li></ul>For guidance on choosing rewards, see [Choose rewards](./rewarded-video-playbook.md#choose-rewards) in the rewarded video playbook.</td>
   </tr>
 </tbody>
 </table>
 
 <Alert severity="info">
-  Resubmitting your **Maturity and Compliance Questionnaire** will temporarily remove your ads eligibility while the questionnaire is under review. To avoid repeated interruptions, only resubmit the questionnaire when you publish a game update that changes your previous responses.
+  Resubmitting your **Content Rating Questionnaire** will temporarily remove your ads eligibility while the questionnaire is under review. To avoid repeated interruptions, only resubmit the questionnaire when you publish a game update that changes your previous responses.
 </Alert>
 
 <Alert severity="warning">
@@ -369,19 +363,10 @@ To prevent abuse of the rewarded ad system and to provide the best user experien
 
 ## Best practices
 
-To get the most out of your rewarded video ad, make sure to:
+For placement, reward strategy, and a self-audit checklist, see the [Rewarded video playbook](./rewarded-video-playbook.md).
 
-- Call `Class.AdService.GetAdAvailabilityNowAsync|GetAdAvailabilityNowAsync` as close as possible to the moment you plan to show the ad. For example, if you have a "Watch video ad to get a reward" button in a shop menu, you should only call `GetAdAvailabilityNowAsync` when the user opens the shop menu. This approach improves performance by preventing ads from unnecessarily being held in memory, and benefits CPM (cost-per-thousand impressions) and earnings by optimizing the ad fill rate.
-- After an ad finishes, only call `Class.AdService:GetAdAvailabilityNowAsync()|GetAdAvailabilityNowAsync()` if you offer the user another opportunity to watch an ad. This helps avoid filled requests that do not lead to impressions.
-- Use analytics to identify the best placement for video ads to encourage user engagement without disrupting gameplay.
-- Use ad opportunities to track when you offer a user a chance to watch a video ad for a reward. Keep an eye on the ratio between filled requests, ad opportunities, and ad impressions to figure out if you should make your ads easier to find or if your rewards need to be more compelling.
+For implementation, follow these technical practices:
 
-For the best reward strategy, we recommend that your rewards:
-
-- Have prominent reward prompts to ensure all eligible users engage with the video.
-- Be relevant to the gameplay and align with core game mechanics. For example, extra lives in a battle game or new customization options in a roleplaying game.
-- Be scaled so that they remain valuable to users as they advance through the game.
-- Motivate the user by offering in-game progression, collection, customization, or competition.
-- Be offered at strategic moments, like after the user loses a life or after they complete a difficult level.
-- Be offered at appropriate intervals to avoid making the reward so powerful that it trivializes in-game progression.
-- Be a limited-time or rare reward to increase engagement.
+- Call `Class.AdService.GetAdAvailabilityNowAsync|GetAdAvailabilityNowAsync` as close as possible to the moment you plan to show the ad. For example, if you have a "Watch video ad to get a reward" button in a shop menu, only call `GetAdAvailabilityNowAsync` when the user opens the shop menu. This approach improves performance by preventing ads from unnecessarily being held in memory, and benefits CPM (cost-per-thousand impressions) and earnings by optimizing the ad fill rate.
+- After an ad finishes, only call `Class.AdService:GetAdAvailabilityNowAsync()|GetAdAvailabilityNowAsync()` if you offer the user another opportunity to watch an ad. This helps avoid filled requests that don't lead to impressions.
+- Use [ad opportunities](#ad-opportunities) to track when you offer a user a chance to watch a video ad for a reward. Watch the ratio between filled requests, ad opportunities, and ad impressions to see whether ads are hard to find or rewards aren't compelling enough.

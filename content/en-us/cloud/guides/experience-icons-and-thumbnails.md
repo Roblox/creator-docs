@@ -69,13 +69,16 @@ curl --location 'https://apis.roblox.com/assets/v1/assets' \
   \"creationContext\": {
     \"creator\": {
       \"userId\": \"${UserId}\"
-    }
+    },
+    \"assetPrivacy\": \"OpenUse\"
   }
 }";type=application/json' \
 --form 'fileContent=@"/filepath/image.png";type=image/png'
 ```
 
 Prepare the file before uploading. A place icon must be square, and a non-square file is rejected. For the recommended sizes and other image requirements, see [Icons](../../production/publishing/experience-icons.md#best-practices) and [Thumbnails](../../production/publishing/thumbnails.md#best-practices).
+
+The image must be set to **Open Use**. Images are Open Use by default if [Asset Privacy](../../projects/assets/privacy.md) isn't enabled. To make sure a new image is Open Use, set `creationContext.assetPrivacy` to `OpenUse`, as in the example request. To change an existing image, see [Open permissions](../../projects/assets/privacy.md#open-permissions).
 
 Players see the image after moderation approves it. The operation response includes `moderationResult.moderationState`.
 

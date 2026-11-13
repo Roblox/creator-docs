@@ -680,6 +680,13 @@ methods:
       - Teleport players to a specific server.
       - Teleport players to a reserved server.
 
+      For a single-player teleport with no server routing option, the engine can
+      infer that the player should return to a VIP server if the player
+      originally joined in a VIP server. If that inferred VIP join fails for an
+      eligible reason, the engine can fall back to a public server. Set
+      `Class.TeleportOptions.ForcePublicServer` to skip this inference for the
+      current teleport.
+
       #### Server-Only
 
       This method can only be called from the server. If you need to initiate a
@@ -775,7 +782,8 @@ methods:
     returns:
       - type: Instance
         summary: |
-          If a `Class.TeleportOptions` parameter is passed, this will be a
+          If a `Class.TeleportOptions` parameter is passed with a VIP or
+          reserved server destination, this will be a
           `Class.TeleportAsyncResult` object that provides information about the
           final teleport destination.
     tags:
@@ -1112,7 +1120,13 @@ events:
       to the one passed to the original `Class.TeleportService:TeleportAsync()`
       call. It is a new object populated with the necessary parameters to retry
       the teleport and send the player to the exact same destination. This is
-      especially important for facilitating group teleports when they fail.
+      especially important for facilitating group teleports when they fail. If
+      `Class.TeleportOptions.ForcePublicServer` was set for a single-player
+      teleport, it remains set in the retry options. For a group teleport, once
+      a server has been chosen, the retry options use
+      `Class.TeleportOptions.ServerInstanceId` to send the player to that same
+      server instead. In this case, `Class.TeleportOptions.ForcePublicServer` is
+      not set, because the two options cannot be used together.
 
       <table>
           <thead>

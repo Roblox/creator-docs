@@ -1,5 +1,5 @@
 ---
-title: Create and publish animation packs
+title: Animation packs
 description: Explains how to prepare, upload, validate, and publish an animation pack on the Marketplace.
 ---
 

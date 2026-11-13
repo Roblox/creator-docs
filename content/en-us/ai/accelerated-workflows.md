@@ -363,7 +363,7 @@ Open **File → Beta Features** and turn on the features you want. Features that
               num: '4',
               title: 'Customize your setup',
               subtitle: 'Build with community and professional tools.',
-              detail: 'With [Rojo and Git](../projects/external-tools.md), you can build and version control your Roblox projects via the file system. Use [tools](../art/overview-dcc.md) like Blender and other DCC apps to round out your creation workflow.'
+              detail: 'With [Rojo and Git](../projects/rojo/index.md), you can build and version control your Roblox projects via the file system. Use [tools](../art/overview-dcc.md) like Blender and other DCC apps to round out your creation workflow.'
             }
           ]
         },
