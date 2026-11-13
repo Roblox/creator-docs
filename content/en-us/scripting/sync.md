@@ -15,7 +15,7 @@ Script Sync works by synchronizing the scripts in your [data model](../projects/
 
   Script Sync works well with existing Roblox projects, as it's an extra feature rather than a total shift in how you manage the project.
 
-- If you want to check your entire project (not just code) into version control or use your file system as the source of truth for your project, [third-party tools](../projects/external-tools.md) like Rojo are a better choice.
+- If you want to check your entire project (not just code) into version control or use your file system as the source of truth for your project, [third-party tools](../projects/external-tools.md) like Rojo are a better choice. To compare setups for teams, see [Compare file-based workflows](../projects/file-based-workflows.md).
 
 <Alert severity="info">
 It is currently not possible to control Roblox Studio's debugger from an external development environment.
@@ -24,7 +24,7 @@ It is currently not possible to control Roblox Studio's debugger from an externa
 ## Set up Script Sync
 
 1. In the **Explorer**, select one or more folders that you want to sync.
-1. Right-click and select **Sync to…**.
+1. Right-click and select **Script Sync** ⟩ **Sync with Directory…**.
 
    <img src="../assets/studio/explorer/Script-Sync.png" alt="The Explorer window with the Script Sync menu expanded." width="400" />
 
@@ -59,6 +59,48 @@ When you delete a synced script or folder in Studio or on disk, Script Sync remo
 Script Sync works with [Team Create](../projects/collaboration.md). The **Explorer** displays an icon on instances that a collaborator is currently syncing. To prevent duplicate names, Script Sync automatically appends a numeric suffix to the name of any new instance added under a tree that you or a collaborator is syncing.
 
 Avoid workflows where multiple people sync the same script and edit the files at the same time. Script Sync will continue to function, but collaborators can overwrite each other's changes.
+
+## Use Script Sync with a team
+
+In a Studio-native workflow, the team works directly in a shared place with Team Create, and each programmer uses Script Sync to keep code in a Git repository. Nothing about how the place is stored changes, so you can adopt this workflow in an existing game at any time. To compare this with other workflows, see [Compare file-based workflows](../projects/file-based-workflows.md).
+
+<img src="../assets/studio/collaboration/Collaborative-Session.jpg" alt="Three collaborators editing the same place in a Team Create session, each with a colored selection outline." />
+
+1. Turn on [Team Create](../projects/collaboration.md) for your game and add your collaborators.
+1. [Set up Script Sync](#set-up-script-sync) for the folders that contain your scripts, and choose a directory inside your local Git repository.
+1. Open the directory in your preferred editor and [set up a language server](#set-up-a-language-server).
+1. Commit and review code changes in Git as you normally would.
+
+For organizing synced code, see [Script types and locations](./locations.md#recommendations).
+
+### Tradeoffs
+
+<table>
+  <thead>
+    <tr>
+      <th>Pros</th>
+      <th>Cons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <ul>
+          <li>No tools to install beyond an editor.</li>
+          <li>Works with Team Create, including collaborators syncing different folders at once.</li>
+          <li>No conversion step for existing games.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Only scripts and folders sync, so models, parts, attributes, and tags aren't in Git.</li>
+          <li>Two people editing the same synced script at once can overwrite each other's changes.</li>
+          <li>Merging a branch in Git doesn't update the place for the rest of the team.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Key tips
 
@@ -98,24 +140,24 @@ When syncing an instance with children with a directory on disk, Studio will aut
 
 On disk, Script Sync uses the following rules to disambiguate the different types of scripts from each other.
 
-| Naming convention on disk | Instance type in Studio |
-| :---- | :---- |
-| `name.luau` | `Class.ModuleScript` |
-| `name.server.luau` | Script with `Server` `Class.Script.RunContext` |
-| `name.client.luau` | Script with `Client` `Class.Script.RunContext` |
-| `name.local.luau` | `Class.LocalScript` |
-| `name.legacy.luau` | Script with `Legacy` `Class.Script.RunContext` |
-| `name.plugin.luau` | Script with `Plugin` `Class.Script.RunContext` |
-| `name/` (directory) | `Class.Folder` |
-| `name/init.*.luau` | Script instance with children. Type (`*`) is determined by the above rules. |
+| Naming convention on disk | Instance type in Studio                                                     |
+| :------------------------ | :-------------------------------------------------------------------------- |
+| `name.luau`               | `Class.ModuleScript`                                                        |
+| `name.server.luau`        | Script with `Server` `Class.Script.RunContext`                              |
+| `name.client.luau`        | Script with `Client` `Class.Script.RunContext`                              |
+| `name.local.luau`         | `Class.LocalScript`                                                         |
+| `name.legacy.luau`        | Script with `Legacy` `Class.Script.RunContext`                              |
+| `name.plugin.luau`        | Script with `Plugin` `Class.Script.RunContext`                              |
+| `name/` (directory)       | `Class.Folder`                                                              |
+| `name/init.*.luau`        | Script instance with children. Type (`*`) is determined by the above rules. |
 
 ## Settings
 
 Script Sync has several settings in the [Studio Settings](../studio/setup.md#customization) window (<kbd>Alt</kbd><kbd>S</kbd> or <kbd></kbd>⌥<kbd>S</kbd>). The default options are a good fit for most use cases.
 
-| Setting | Description |
-| :---- | :---- |
-| Auto resume sync on place open | Whether Studio should resume syncing when you open a place. Disabling this setting dramatically reduces the utility of Script Sync. |
-| Resume conflicted sync on place open | How Studio should handle conflicts when you open a place. The default option, **Do not resume**, forces you to resolve conflicts manually to avoid data loss. You can also choose to prefer the version on disk or the version in Studio. |
-| Keep local files/directories after sync | How to handle files on disk after you select **Script Sync** > **Stop Sync** in Studio. |
-| File extension | The file extension to use for scripts on disk. |
+| Setting                                 | Description                                                                                                                                                                                                                               |
+| :-------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Auto resume sync on place open          | Whether Studio should resume syncing when you open a place. Disabling this setting dramatically reduces the utility of Script Sync.                                                                                                       |
+| Resume conflicted sync on place open    | How Studio should handle conflicts when you open a place. The default option, **Do not resume**, forces you to resolve conflicts manually to avoid data loss. You can also choose to prefer the version on disk or the version in Studio. |
+| Keep local files/directories after sync | How to handle files on disk after you select **Script Sync** > **Stop Sync** in Studio.                                                                                                                                                   |
+| File extension                          | The file extension to use for scripts on disk.                                                                                                                                                                                            |

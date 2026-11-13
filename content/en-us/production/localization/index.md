@@ -95,6 +95,12 @@ Apply various customizations to your translations to improve and expand your gam
 
 For more information on custom translation use-cases, see [Translate in-game content](../../production/localization/manual-translations.md).
 
+## Image translations
+
+Roblox's image translation tool is currently in beta and allows you to automatically translate images containing text while matching the original text's style. We don't yet support all languages for image translation; only French, German, Indonesian, Italian, Korean, Portuguese, and Spanish are currently supported.
+
+For more information on enabling image translations in your game, see [Image translations](../../production/localization/image-translations.md).
+
 ## Work with translators
 
 Add Roblox users as translators for your game to help you review and polish automatic translations or provide and edit manual translations.

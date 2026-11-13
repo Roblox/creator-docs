@@ -175,7 +175,7 @@ To change the start place:
 
 ### Invite early testers
 
-You can invite up to 10 similar-aged friends to preview your game while you're building it. This allows you to get early feedback **before** you release your game publicly and receive a [content maturity label](../promotion/content-maturity.md). For a breakdown of what age ranges can preview your game according to your age, review the following table. If you want to invite someone to preview your game outside of that range, you need to become [trusted friends](https://en.help.roblox.com/hc/en-us/articles/37725513985812-Unlocking-trusted-friends).
+You can invite up to 10 similar-aged friends to preview your game while you're building it. This allows you to get early feedback **before** you release your game publicly and receive [content ratings](../promotion/content-ratings.md). For a breakdown of what age ranges can preview your game according to your age, review the following table. If you want to invite someone to preview your game outside of that range, you need to become [trusted friends](https://en.help.roblox.com/hc/en-us/articles/37725513985812-Unlocking-trusted-friends).
 
 <table>
   <thead>
@@ -217,7 +217,7 @@ You can invite up to 10 similar-aged friends to preview your game while you're b
 When early testers preview a game, they see a watermark that tells them they're in a preview and that Community Standards still apply. In addition, the same in-game reporting and safety tools available in published games stay active, meaning any concerning content or behavior can still be flagged and reviewed even though the game hasn't completed a full content review.
 
 <Alert severity="warning">
-Early testers under 16 can't preview a game rated above the content maturity that their parent allows, and early testers under 18 can't preview a game that has a Restricted maturity label.
+Early testers under 16 can't preview a game rated above the content maturity rating that their parent allows, and early testers under 18 can't preview a game that has a Restricted content maturity rating.
 </Alert>
 
 To invite early testers to preview your game:
@@ -238,10 +238,10 @@ To invite early testers to preview your game:
 By default, the games that you publish are only accessible to you as the creator, users with **Edit** access, and group members with the appropriate [roles and permissions](../../projects/groups.md#roles-and-permissions). When you are ready to release your game to additional users, ensure you meet the release requirements below for your target audience, then:
 
 1. In the top-left corner of your computer, navigate to **File** > **Publish**. The **Publish** window displays.
-1. To invite early testers before you release your game, click the **Invite** button, otherwise click the **Continue** button. The window updates with the first question of the [Content Maturity](../promotion/content-maturity.md) questionnaire to see if your game contains [age-restricted content](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Restricted-Content-Policy).
+1. To invite early testers before you release your game, click the **Invite** button, otherwise click the **Continue** button. The window updates with the first question of the [Content Ratings Questionnaire](../promotion/content-ratings.md) to see if your game contains [age-restricted content](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Restricted-Content-Policy).
 
-   1. If your game contains age-restricted content, answer **Yes**, then complete the entirety of the questionnaire. When you're done, click the **Publish** button. Your game receives an appropriate content maturity label and content descriptors, and it releases only to [age-checked](https://about.roblox.com/age-estimation) Roblox users ages 16+ or [age-verified](../../production/publishing/account-verification.md) Roblox users ages 18+, depending on the content within your game.
-   1. If your game does not contain age-restricted content, answer **No**, then click the **Publish** button. Your game receives a **Content May Vary** content maturity label, and it releases only to age-checked Roblox users ages 16+. You can later fill out the entirety of the questionnaire on the Creator Hub if you want to expand reach into Roblox Kids, Select, or specific regions requiring more precise maturity rating.
+   1. If your game does not contain age-restricted content, answer **No**, then click the **Publish** button. Your game receives a **Content May Vary** content maturity rating, and it releases only to age-checked Roblox users ages 16+. You can later fill out the entirety of the questionnaire on the Creator Hub if you want to expand reach into Roblox Kids, Select, or specific regions requiring more precise content ratings.
+   1. If your game contains age-restricted content, answer **Yes**, then complete the entirety of the questionnaire. When you're done, click the **Publish** button. Your game receives appropriate content ratings, and it releases only to [age-checked](https://about.roblox.com/age-estimation) Roblox users ages 16+ or [age-verified](../../production/publishing/account-verification.md) Roblox users ages 18+, depending on the content within your game.
 
    <img src="../../assets/publishing/Publish-Rating.png" width="60%" />
 
@@ -303,9 +303,9 @@ To release a game to **ages 16+** and **Trusted Friends**:
 
 - Have an account that is in good standing and at least 2 days old.
 - Complete an age check through [facial age estimation](https://about.roblox.com/age-estimation) or [government ID](./account-verification.md#verify-through-government-id).
-- Answer the age-restricted content question that displays first in the [Maturity & Compliance Questionnaire](../promotion/content-maturity.md):
-  - Answer **No** to receive a **Content May Vary** label. The game releases only to age-checked Roblox users ages 16+.
-  - Answer **Yes**, then complete the questionnaire. The game receives a label based on your answers and releases to age-checked Roblox users ages 16+ or age-verified Roblox users ages 18+, depending on the content within your game.
+- Answer the age-restricted content question that displays first in the [Content Ratings Questionnaire](../promotion/content-ratings.md):
+  - Answer **No** to receive a **Content May Vary** content maturity rating. The game releases only to age-checked Roblox users ages 16+.
+  - Answer **Yes**, then complete the questionnaire. The game receives content ratings based on your answers and releases to age-checked Roblox users ages 16+ or age-verified Roblox users ages 18+, depending on the content within your game.
 
 To release a game to **all ages**, including [Roblox Kids and Select](./kids-and-select.md), you must meet all of the previous requirements **plus**:
 
@@ -315,7 +315,7 @@ To release a game to **all ages**, including [Roblox Kids and Select](./kids-and
   - Maintain an active [Roblox Plus](../monetization/roblox-plus.md) or [Roblox Premium](https://www.roblox.com/premium/membership) subscription for 2 consecutive months.
   - Pay a one-time, refundable [fee](#optional-fees).
 - Game must pass the [evaluation process](../../production/publishing/kids-and-select.md#for-all-ages-including-kids-and-select-accounts) for **Kids** and **Select** accounts.
-- Complete the entire [Maturity & Compliance Questionnaire](../promotion/content-maturity.md) and receive a Minimal, Mild, or Moderate (9+) content rating.
+- Complete the entire [Content Ratings Questionnaire](../promotion/content-ratings.md) and receive a Minimal, Mild, or Moderate (9+) content maturity rating.
 
 ### Optional fees
 

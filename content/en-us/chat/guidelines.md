@@ -75,7 +75,7 @@ If several users can use developer-set text, or admins use it to chat with each 
 
 ## Respect privacy settings
 
-Users can have different levels of access to communication features based on their [privacy and content maturity settings](https://www.roblox.com/my/account#!/privacy/Communication/ExperienceChat) or parental controls. Users might also have restrictions based on the app store they installed Roblox from or local law. `Class.TextChatService` applies all of these automatically.
+Users can have different levels of access to communication features based on their [privacy and content rating settings](https://www.roblox.com/my/account#!/privacy/Communication/ExperienceChat) or parental controls. Users might also have restrictions based on the app store they installed Roblox from or local law. `Class.TextChatService` applies all of these automatically.
 
 To comply:
 

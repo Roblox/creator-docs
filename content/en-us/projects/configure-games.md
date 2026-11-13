@@ -7,13 +7,13 @@ You can configure most game and place-level settings from the [Creator Dashboard
 
 ## Generate content descriptors
 
-The **Maturity & Compliance Questionnaire** contains a set of questions about the type of content players can possibly encounter within your game, as well as how frequently it occurs. Your answers give Roblox an understanding of the content in your game and ensure that the game is available to the appropriate audience on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages according to each player's age group and regional content policies.
+The **Content Ratings Questionnaire** contains a set of questions about the type of content players can possibly encounter within your game, as well as how frequently it occurs. Your answers give Roblox an understanding of the content in your game and ensure that the game is available to the appropriate audience on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages according to each player's age group and regional content policies.
 
-For step-by-step instructions on how to fill out the questionnaire, see [content maturity & compliance](../production/promotion/content-maturity.md).
+For step-by-step instructions on how to fill out the questionnaire, see [Content ratings](../production/promotion/content-ratings.md).
 
 ## Set age and geography restrictions
 
-You can set restrictions so that only players over a certain age or from specific regions can play and discover your games. This is particularly helpful when you want to age up your audience without including mature content to age gate through content maturity labels.
+You can set restrictions so that only players over a certain age or from specific regions can play and discover your games. This is particularly helpful when you want to age up your audience without including mature content to age gate through content ratings.
 
 To set age and geography restrictions:
 
@@ -90,10 +90,10 @@ You can enable strong language and relax the text chat filter in your games for 
 
 <img src="../assets/publishing/experiences-places-assets/Maturity-Label-Strong-Language.jpg" width="780" alt="Label indicating the game contains strong language" />
 
-Regardless of whether or not you activate the toggle, players do not face moderation consequences just for using strong language in chat or voice in games with Restricted content maturity labels, but they cannot violate [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410#safety) and [Terms of Use](https://www.roblox.com/info/terms). For example, players can type an expletive if they are scared by a monster, but they cannot abuse another player using strong language or otherwise.
+Regardless of whether or not you activate the toggle, players do not face moderation consequences just for using strong language in chat or voice in games with a Restricted content maturity rating, but they cannot violate [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410#safety) and [Terms of Use](https://www.roblox.com/info/terms). For example, players can type an expletive if they are scared by a monster, but they cannot abuse another player using strong language or otherwise.
 
 <Alert severity="warning">
-In-game assets and game metadata cannot contain strong language, even if the toggle is on and your game has a Restricted content maturity label. If you include strong language in your assets or game page, your game will be moderated.
+In-game assets and game metadata cannot contain strong language, even if the toggle is on and your game has a Restricted content maturity rating. If you include strong language in your assets or game page, your game will be moderated.
 </Alert>
 
 To allow strong language between players in text chat within your game:

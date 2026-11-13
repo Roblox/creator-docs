@@ -38,7 +38,7 @@ Eligible creators can add commerce products to their game. To be eligible, creat
 Creators must ensure that games that host commerce features meet the following requirements:
 
 - Game must be public.
-- Game has received [content maturity labels](../promotion/content-maturity.md) after completing the Content Maturity questionnaire.
+- Game has received [content ratings](../promotion/content-ratings.md) after completing the Content Ratings Questionnaire.
 - Game complies with Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards#advertising), and [Commerce Standards](https://en.help.roblox.com/hc/articles/36495190721172) on an on-going basis.
 
 ### User

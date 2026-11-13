@@ -161,6 +161,25 @@ See [Animation packs](../avatar/animation-packs.md) and [Emotes](../avatar/emote
   </tbody>
 </table>
 
+## Backgrounds
+
+See [Avatar backgrounds](../avatar/backgrounds/index.md).
+
+<table>
+  <thead>
+    <tr>
+      <th>Asset</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Background</td>
+      <td>A 2D image displayed behind an avatar on their profile page and in the 3D avatar viewer.</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Classic clothing
 
 See [Classic clothing](../avatar/classic-clothing.md).

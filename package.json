@@ -19,6 +19,8 @@
     "forum-doc-eval:restore-questions": "npx tsx tools/forum-doc-eval/restoreQuestions.ts",
     "forum-doc-eval:search-ab": "npx tsx tools/forum-doc-eval/searchAb.ts",
     "forum-doc-eval:skill-ab": "npx tsx tools/forum-doc-eval/skillAb.ts",
+    "forum-doc-eval:site-ab": "npx tsx tools/forum-doc-eval/siteAb.ts",
+    "forum-doc-eval:split-index": "npx tsx tools/forum-doc-eval/splitIndex.ts",
     "forum-doc-eval:webprobe": "npx tsx tools/forum-doc-eval/webProbe.ts",
     "checks": "npx tsx tools/checks/main.ts",
     "redirects": "npx tsx tools/redirects/main.ts",

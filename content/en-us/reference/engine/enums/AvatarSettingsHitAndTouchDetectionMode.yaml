@@ -27,7 +27,8 @@ items:
       collider part has `CanTouch` and `CanQuery` disabled. This is the default
       value for `AvatarCollisionRules.HitAndTouchDetectionMode`.
     value: 0
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: UseCollider
     summary: |
@@ -35,7 +36,8 @@ items:
       (`CanTouch` and `CanQuery` enabled on the collider) while all individual
       body parts have `CanTouch` and `CanQuery` disabled.
     value: 1
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: UseHitbox
     summary: |
@@ -48,5 +50,6 @@ items:
       floor without changing what the character stands on or steps over. The
       hitbox is removed when the character dies.
     value: 2
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''

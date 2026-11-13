@@ -706,6 +706,48 @@ methods:
     thread_safety: Safe
     capabilities:
       - Environment
+  - name: Terrain:GetMaterialSlot
+    summary: |
+      Returns the base material, `Class.MaterialVariant`, and color configured
+      for a material slot.
+    description: |
+      Returns the configuration of material slot `slotIndex`, as set by
+      `Class.Terrain:SetMaterialSlot()|SetMaterialSlot()`: the slot's base
+      `Enum.Material`, the name of the `Class.MaterialVariant|MaterialVariant`
+      applied to it (an empty string if the slot only applies a color tint to
+      the base material), and the slot's `Datatype.Color3` tint.
+
+      Returns `nil` if the slot has never been set or was most recently cleared
+      with `Class.Terrain:ResetMaterialSlot()|ResetMaterialSlot()`. Throws an
+      error if `slotIndex` is outside the valid range of `0` to `63`. Slot
+      indices `2` through `63` are the writable slots. Voxels can reference a
+      slot's index through the `SolidMaterialIndex` channel of
+      `Class.Terrain:ReadVoxelChannels()|ReadVoxelChannels()` and
+      `Class.Terrain:WriteVoxelChannels()|WriteVoxelChannels()`.
+    code_samples:
+      - terrain-material-slots-example
+    parameters:
+      - name: slotIndex
+        type: int
+        default:
+        summary: |
+          The index of the material slot to query. Valid range is `0` through
+          `63`.
+    returns:
+      - type: Tuple
+        summary: |
+          A tuple of an `Enum.Material`, a string, and a `Datatype.Color3`
+          representing the slot's base material,
+          `Class.MaterialVariant|MaterialVariant` name (an empty string if none
+          is set), and color. Returns `nil` if the slot has not been configured,
+          or has been cleared with
+          `Class.Terrain:ResetMaterialSlot()|ResetMaterialSlot()`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Environment
   - name: Terrain:GetWaterCell
     summary: |
       Returns `true` if the cell is a water cell.
@@ -785,10 +827,14 @@ methods:
     description: |
       Returns voxel data from a region of terrain, separated by channel. Unlike
       `Class.Terrain:ReadVoxels()|ReadVoxels()`, this method lets you specify
-      exactly which channels to read (`SolidMaterial`, `SolidOccupancy`, and/or
-      `LiquidOccupancy`), and returns a dictionary keyed by channel ID. The
-      `region` must be aligned to the voxel grid, `resolution` must be `4`, and
-      the region cannot exceed 4,194,304 voxels.
+      exactly which channels to read (`SolidMaterial` or `SolidMaterialIndex`,
+      `SolidOccupancy`, and/or `LiquidOccupancy`), and returns a dictionary
+      keyed by channel ID. The `region` must be aligned to the voxel grid,
+      `resolution` must be `4`, and the region cannot exceed 4,194,304 voxels.
+
+      Use `SolidMaterialIndex` instead of `SolidMaterial` to read voxels by
+      material slot index rather than by `Enum.Material`. See
+      `Class.Terrain:SetMaterialSlot()|SetMaterialSlot()`.
     code_samples:
       - terrain-readvoxelchannels-code-example
     parameters:
@@ -811,7 +857,7 @@ methods:
           Array of channel IDs (strings) that need to be accessed from the voxel
           data. Each channel ID represents a type of data that's stored in
           voxel. Current supported IDs are
-          `{"SolidMaterial", "SolidOccupancy", "LiquidOccupancy"}`.
+          `{"SolidMaterial", "SolidMaterialIndex", "SolidOccupancy", "LiquidOccupancy"}`.
     returns:
       - type: Dictionary
         summary: |
@@ -822,9 +868,12 @@ methods:
           - `SolidMaterial` — The `Enum.Material` material of the voxel. Note
             that `Enum.Material|Water` is not supported anymore; instead, a
             voxel that contains water will have a value of `LiquidOccupancy`.
+          - `SolidMaterialIndex` — The material slot index (`0`-`63`) of the
+            voxel, as configured with
+            `Class.Terrain:SetMaterialSlot()|SetMaterialSlot()`.
           - `SolidOccupancy` — The occupancy of the voxel's material as
-            specified in the `SolidMaterial` channel. This is a value between 0
-            (empty) and 1 (full).
+            specified in the `SolidMaterial` or `SolidMaterialIndex` channel.
+            This is a value between `0` (empty) and `1` (full).
           - `LiquidOccupancy` — Specifies the occupancy of the
             `Enum.Material|Water` material in a voxel as a value between 0 (no
             water) and 1 (full of water). If the `SolidOccupancy` is 1 and the
@@ -918,6 +967,39 @@ methods:
         default:
         summary: |
           The new material.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Environment
+  - name: Terrain:ResetMaterialSlot
+    summary: |
+      Clears a material slot.
+    description: |
+      Clears the base material, `Class.MaterialVariant|MaterialVariant`, and
+      color previously assigned to material slot `slotIndex` with
+      `Class.Terrain:SetMaterialSlot()|SetMaterialSlot()`. After this call,
+      `Class.Terrain:GetMaterialSlot()|GetMaterialSlot()` returns `nil` for the
+      slot.
+
+      Any voxel whose `SolidMaterialIndex` channel still references the cleared
+      slot renders using an invalid-material indicator until it is repainted
+      with a valid slot index. Throws an error if `slotIndex` is `0` or `1` (the
+      reserved `Enum.Material.Air|Air` and `Enum.Material.Water|Water` slots) or
+      is outside the valid range of `2` to `63`.
+    code_samples:
+      - terrain-material-slots-example
+    parameters:
+      - name: slotIndex
+        type: int
+        default:
+        summary: |
+          The index of the material slot to clear. Valid range is `2` through
+          `63`.
     returns:
       - type: ()
         summary: ''
@@ -1040,6 +1122,69 @@ methods:
         default:
         summary: |
           The `Datatype.Color3` to apply as the new color tint for the material.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Environment
+  - name: Terrain:SetMaterialSlot
+    summary: |
+      Configures a material slot with a base material, an optional
+      `Class.MaterialVariant`, and a color.
+    description: |
+      Configures material slot `slotIndex` to use `baseMaterial` for physical
+      terrain behavior, an optional `Class.MaterialVariant|MaterialVariant`
+      named by `materialVariant` for its appearance, and `color` as a tint. Pass
+      an empty string for `materialVariant` to use the `baseMaterial` default
+      appearance tinted by `color`, without a `MaterialVariant`.
+
+      Voxels reference a configured slot through the `SolidMaterialIndex`
+      channel of `Class.Terrain:ReadVoxelChannels()|ReadVoxelChannels()` and
+      `Class.Terrain:WriteVoxelChannels()|WriteVoxelChannels()`. Call
+      `Class.Terrain:GetMaterialSlot()|GetMaterialSlot()` to read a slot's
+      current configuration, and
+      `Class.Terrain:ResetMaterialSlot()|ResetMaterialSlot()` to clear it.
+
+      This method throws an error if:
+
+      - `slotIndex` is `0` or `1` (the reserved `Enum.Material.Air|Air` and
+        `Enum.Material.Water|Water` slots) or is outside the valid range of `2`
+        to `63`.
+      - `baseMaterial` is not a terrain material, or is `Enum.Material.Air|Air`
+        or `Enum.Material.Water|Water`.
+      - `materialVariant` is not empty and no
+        `Class.MaterialVariant|MaterialVariant` with that name exists for
+        `baseMaterial` in `Class.MaterialService`.
+    code_samples:
+      - terrain-material-slots-example
+    parameters:
+      - name: slotIndex
+        type: int
+        default:
+        summary: |
+          The index of the material slot to configure. Valid range is `2`
+          through `63`.
+      - name: baseMaterial
+        type: Material
+        default:
+        summary: |
+          The `Enum.Material` that determines the slot's physical terrain
+          behavior.
+      - name: materialVariant
+        type: string
+        default:
+        summary: |
+          The name of an existing `Class.MaterialVariant` for `baseMaterial`, or
+          an empty string to use `baseMaterial` directly.
+      - name: color
+        type: Color3
+        default:
+        summary: |
+          The `Datatype.Color3` tint applied to the slot.
     returns:
       - type: ()
         summary: ''
@@ -1176,11 +1321,16 @@ methods:
     description: |
       Sets a region of terrain using a dictionary of per-channel voxel data, the
       inverse of `Class.Terrain:ReadVoxelChannels()|ReadVoxelChannels()`. The
-      `channels` dictionary maps channel ID strings (`SolidMaterial`,
-      `SolidOccupancy`, and/or `LiquidOccupancy`) to their respective 3D data
-      arrays. You may write one or more channels in a single call. The `region`
-      must be aligned to the voxel grid, `resolution` must be `4`, and the
-      region cannot exceed 4,194,304 voxels.
+      `channels` dictionary maps channel ID strings (`SolidMaterial` or
+      `SolidMaterialIndex`, `SolidOccupancy`, and/or `LiquidOccupancy`) to their
+      respective 3D data arrays. You may write one or more channels in a single
+      call. The `region` must be aligned to the voxel grid, `resolution` must be
+      `4`, and the region cannot exceed 4,194,304 voxels.
+
+      Use `SolidMaterialIndex` instead of `SolidMaterial` to write voxels by
+      material slot index rather than by `Enum.Material`. See
+      `Class.Terrain:SetMaterialSlot()|SetMaterialSlot()`. Specifying both
+      `SolidMaterial` and `SolidMaterialIndex` in the same call throws an error.
     code_samples:
       - terrain-writevoxelchannels-example
     parameters:
@@ -1210,9 +1360,15 @@ methods:
             voxel that contains only water should be entered as
             `SolidMaterial = Enum.Material.Air, LiquidOccupancy = x`, where `x`
             is a number between `0` (exclusive) and `1` (inclusive).
+          - `SolidMaterialIndex` — The material slot index (`0`-`63`) to assign
+            the voxel, matching a slot previously configured with
+            `Class.Terrain:SetMaterialSlot()|SetMaterialSlot()`. Each value must
+            be an integer and reference a slot that is currently set. Writing an
+            out-of-range or unset slot index throws an error. Cannot be
+            specified together with `SolidMaterial` in the same call.
           - `SolidOccupancy` — The occupancy of the voxel's material as
-            specified in the `SolidMaterial` channel. This should be a value
-            between `0` (empty) and `1` (full).
+            specified in the `SolidMaterial` or `SolidMaterialIndex` channel.
+            This should be a value between `0` (empty) and `1` (full).
           - `LiquidOccupancy` — Specifies the occupancy of the
             `Enum.Material|Water` material in a voxel as a value between `0` (no
             water) and `1` (full of water). If the `SolidOccupancy` is 1 and the

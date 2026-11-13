@@ -28,7 +28,7 @@ Roblox assigns accounts to one of three tiers based on age. A self-declared age 
     <td>Age-checked age 16 or older</td>
   </tr>
   <tr>
-    <td>**Content ratings**</td>
+    <td>**Content maturity ratings**</td>
     <td>Minimal or Mild</td>
     <td>Minimal, Mild, or Moderate (9+)</td>
     <td>All rated content, except Restricted (18+)</td>
@@ -48,7 +48,7 @@ Roblox assigns accounts to one of three tiers based on age. A self-declared age 
 </tbody>
 </table>
 
-For information on how content maturity labels determine which account types can access your game, see [Content maturity and compliance](../promotion/content-maturity.md).
+For information on how content maturity ratings determine which account types can access your game, see [Content ratings](../promotion/content-ratings.md#content-maturity-ratings).
 
 ## Publishing requirements
 
@@ -94,7 +94,7 @@ Publishing requirements depend on the target audience. The following table summa
     <td>Not required</td>
   </tr>
   <tr>
-    <td>**Content maturity**</td>
+    <td>**Content maturity ratings**</td>
     <td>Minimal, Mild</td>
     <td>Minimal, Mild, Moderate</td>
     <td>All rated content, except Restricted<sup>3</sup></td>
@@ -117,7 +117,7 @@ To reach users who are under 16 years old, creators of individual-owned games or
 1. **Account status** - Have an account that is in good standing.
 1. **Account verification** - Verify your account through [facial age estimation](https://about.roblox.com/age-estimation) if you are under 18 years old, or through [government ID](./account-verification.md#verify-through-government-id) if you are 18 years old or older.
 1. **Two-factor authentication** - Enable [2FA](https://en.help.roblox.com/hc/en-us/articles/212459863-Add-2-Step-Verification-to-Your-Account) on your Roblox account.
-1. **Content maturity information** - Complete the [Maturity & Compliance Questionnaire](../promotion/content-maturity.md) and receive a Minimal, Mild, or Moderate (9+) content rating.
+1. **Content maturity rating** - Complete the [Content Ratings Questionnaire](../promotion/content-ratings.md) and receive a Minimal, Mild, or Moderate (9+) content maturity rating.
 1. **Publishing fee or subscription** - Meet **one** of the following requirements:
    - Maintain an active [Roblox Plus](../monetization/roblox-plus.md) or [Roblox Premium](https://www.roblox.com/premium/membership) subscription for 2 consecutive months.
    - Pay a one-time, refundable [fee](./publish-games-and-places.md#optional-fees).
@@ -145,13 +145,13 @@ To reach users who are at least 16 years old, creators of individual-owned games
 
 1. **Account status** - Have an account that is in good standing and at least 2 days old.
 1. **Age verification** - Verify your age through [facial age estimation](https://about.roblox.com/age-estimation) or [government ID](./account-verification.md#verify-through-government-id).
-1. **Content maturity information** - Answer the age-restricted content question that displays first in the [Maturity & Compliance Questionnaire](../promotion/content-maturity.md):
+1. **Content maturity rating** - Answer the age-restricted content question that displays first in the [Content Ratings Questionnaire](../promotion/content-ratings.md):
 
-   - Answer **No** to receive a **Content May Vary** rating. The game releases only to age-checked Roblox users ages 16+.
-   - Answer **Yes**, then complete the questionnaire. The game receives a rating based on your answers and releases to age-checked Roblox users ages 16+ or [age-verified](./account-verification.md) Roblox users ages 18+, depending on the content within your game.
+   - Answer **No** to receive a **Content May Vary** content maturity rating. The game releases only to age-checked Roblox users ages 16+.
+   - Answer **Yes**, then complete the questionnaire. The game receives content ratings based on your answers and releases to age-checked Roblox users ages 16+ or [age-verified](./account-verification.md) Roblox users ages 18+, depending on the content within your game.
 
    <Alert severity="info">
-   To reach Kids and Select audiences or receive a more precise rating, you must complete the entire questionnaire.
+   To reach Kids and Select audiences or receive more precise content ratings, you must complete the entire questionnaire.
    </Alert>
 
 ## Expedited review

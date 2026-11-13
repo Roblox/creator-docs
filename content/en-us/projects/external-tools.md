@@ -7,6 +7,7 @@ For professional development studios, setting up third-party tools and investing
 
 - If you just want to use an external text editor or keep code in version control, [Script Sync](../scripting/sync.md) is a great choice.
 - If you want to manage your entire project as a set of local files, this page covers some tools and strategies.
+- To compare full team workflows and their tradeoffs, see [Compare file-based workflows](./file-based-workflows.md).
 
 <Alert severity="info">
 Although this page covers several popular tools, it shouldn't be taken as a strict recommendation of them. Every team has different needs, so this page is intended to help you examine ways to improve your workflow rather than tell you to download anything in particular.
@@ -26,58 +27,13 @@ For the whole solution to feel seamless and automatic, you need to a) listen for
 
 Rather than Roblox's cloud-first approach, [Rojo](https://rojo.space/) allows for a "file system-first" approach. It runs a server on your machine that communicates with a [Studio plugin](../studio/plugins.md) to synchronize your files and the Studio data model.
 
-## Install Rojo with Rokit
+## Rojo
 
-You can manually download and run a Rojo binary, but that approach runs the risk of different developers on your team using different Rojo versions. A better solution is to use a toolchain manager like [Rokit](https://github.com/rojo-rbx/rokit), which uses a configuration file—a list of repositories and versions—to make the installation and upgrade process consistent across machines.
+Rojo is the most common tool for syncing files with Studio. To install and run it, and to choose between partially and fully managed projects, see [Rojo](./rojo/index.md).
 
-Because it manages your baseline development environment rather than the packages within your project, Rokit is more akin to [nvm](https://github.com/nvm-sh/nvm) than [npm](https://www.npmjs.com/), but the comparison isn't perfect. A simple `rokit.toml` file looks like this:
+## Rokit
 
-```toml
-[tools]
-rojo = "rojo-rbx/rojo@7.6.1"
-wally = "upliftgames/wally@0.3.2"
-lune = "lune-org/lune@0.10.4"
-```
-
-Then you install these tools with `rokit install`. In addition to a global `rokit.toml` file, Rokit supports per-project files, so you can easily use different versions of Rojo, Wally, or any other tool for different projects and keep your entire team on those same versions.
-
-When a tool releases a new version, you then explicitly bump the version number in your `.toml` file, use Rokit to perform the upgrade, test the new version, and downgrade if it causes any problems. For commands and installation instructions, see [Rokit](https://github.com/rojo-rbx/rokit#-rokit).
-
-## Run Rojo
-
-After you install Rojo with Rokit, what you've really installed is the Rojo server. The next step is to install the Rojo plugin for Roblox Studio.
-
-You can install it from the [Creator Store](https://create.roblox.com/store/asset/13916111004/Rojo) or install it locally with this command:
-
-```bash
-rojo plugin install
-```
-
-Then generate the project structure for your new game and build it:
-
-```bash
-rojo init my-new-experience
-cd my-new-experience
-rojo build -o my-new-experience.rbxl
-```
-
-Alternatively, you can [port an existing game](https://rojo.space/docs/v7/getting-started/existing-game/). Either way, after you have a project, start the Rojo server:
-
-```bash
-rojo serve
-```
-
-In Roblox Studio, open the `.rbxl` file you just built, open the Rojo plugin, and connect to your now-running server, at which point you can start making changes in your preferred text editor and watch those changes automatically sync back to Studio.
-
-![Visual Studio Code with a Rojo project open.](../assets/scripting/external-tools/external-tools-vscode.png)
-
-![The Rojo plugin and Studio Explorer side-by-side.](../assets/scripting/external-tools/external-tools-rojo-plugin.png)
-
-Rojo projects have certain naming requirements for files, numerous configuration options, and some limitations, all of which are covered in the [Rojo documentation](https://rojo.space/docs/v7/).
-
-<Alert severity="info">
-For guidance around organizing your code, see [Script types and locations](../scripting/locations.md#recommendations) and the projects in [Roblox/resources](https://github.com/Roblox/resources).
-</Alert>
+Different team members using different versions of the same tool causes hard-to-diagnose problems. A toolchain manager like [Rokit](https://github.com/rojo-rbx/rokit) solves this with a `rokit.toml` file that lists each tool and its version, so that `rokit install` sets up the same versions on every machine. Because it manages your baseline development environment rather than the packages within your project, Rokit is more akin to [nvm](https://github.com/nvm-sh/nvm) than [npm](https://www.npmjs.com/). For an example `rokit.toml`, see [Install Rojo](./rojo/index.md#install-rojo).
 
 ## Package managers
 
@@ -164,6 +120,12 @@ You might also consider adding:
 - A code formatter like [StyLua](https://github.com/JohnnyMorganz/StyLua)
 - A language server like [Luau Language Server](https://github.com/JohnnyMorganz/luau-lsp) for autocompletion, type checking, and more
 - [Open Cloud](../cloud/guides/index.md) scripts (not synced to Studio) to [update a published game](/cloud/reference/Universe#Cloud_UpdateUniverse) or [restart servers](/cloud/reference/Universe#Cloud_RestartUniverseServers)
+
+## Build, asset, and merge tools
+
+- [Lune](https://github.com/lune-org/lune) is a standalone Luau runtime that many teams use for build, deploy, and automation scripts.
+- [Tarmac](https://github.com/Roblox/tarmac) uploads images from disk to Roblox and generates a module that maps file paths to asset IDs.
+- [rbx-merge](https://github.com/kennethloeffler/rbx-merge) lets Git show readable diffs of Roblox place and model files and merge changes that don't conflict. For setup, see [Fully managed Rojo](./rojo/fully-managed.md#setup-once-per-project).
 
 ## Undo everything
 

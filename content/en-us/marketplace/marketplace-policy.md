@@ -23,7 +23,7 @@ See the following requirements for an individual creator or group:
 <tbody>
   <tr>
     <td>Upload content from Studio or Creator Dashboard</td>
-    <td><ul><li>ID verification or linked parental account</li><li>80 Robux upload fee</li></ul></td>
+    <td><ul><li>ID verification or linked parental account</li><li>80-500 Robux upload fee</li></ul></td>
   </tr>
   <tr>
     <td>Publish content to the Marketplace</td>

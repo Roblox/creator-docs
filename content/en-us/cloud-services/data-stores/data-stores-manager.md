@@ -54,7 +54,7 @@ To further drill down into each specific data store, you can:
 ## Delete data stores and keys
 
 <Alert severity="info">
-When you schedule a data store for permanent deletion, that data store immediately becomes inaccessible. Any attempts to read or write to its entries will fail.
+When you schedule a data store for permanent deletion, attempts to read or write to its entries fail after backend caches expire. Due to caching in the backend service, attempts to read entries from deleted data stores can continue to succeed for up to 24 hours after deletion, and attempts to write entries can continue to succeed for several minutes.
 </Alert>
 
 To schedule a data store or key for permanent deletion:

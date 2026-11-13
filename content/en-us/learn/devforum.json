@@ -1,0 +1,482 @@
+{
+  "source": "https://devforum.roblox.com/c/resources/roblox-staff/278",
+  "articles": {
+    "devforum-4974220": {
+      "audience": "staff",
+      "title": "Turn screenshots into teleporting paintings",
+      "description": "Create teleporting paintings from screenshots using CaptureService and EditableImage! This resource walks through taking a screenshot in-experience, adding it to the world as a “pa…",
+      "author": "Bitwise",
+      "date": "2026-11-03",
+      "href": "https://devforum.roblox.com/t/turn-screenshots-into-teleporting-paintings/4974220",
+      "hue": 340
+    },
+    "devforum-4809143": {
+      "audience": "staff",
+      "title": "Collections: How to group instances with query patterns",
+      "description": "A Collection is like a set of tagged instances except that the tag is a query that defines the set. Collections We think of collect…",
+      "author": "HamiltonZlox",
+      "date": "2026-08-13",
+      "href": "https://devforum.roblox.com/t/collections-how-to-group-instances-with-query-patterns/4809143",
+      "hue": 24
+    },
+    "devforum-4624565": {
+      "audience": "staff",
+      "title": "Server Authority - Tech Deep Dive + Engineering Insights",
+      "description": "So now that Server Authority Client Beta is “live”, I wanted to take some time to provide a follow-up to the last Server Authority Post. Think of this as a fun deep dive into the t…",
+      "author": "Khanovich",
+      "date": "2026-05-08",
+      "href": "https://devforum.roblox.com/t/server-authority-tech-deep-dive-engineering-insights/4624565",
+      "hue": 124
+    },
+    "devforum-4618365": {
+      "audience": "staff",
+      "title": "Heads Up: Upcoming Rollout of Improved Physics Replication!",
+      "description": "Heads Up - Update to Physics Replication will soon be rolling out! EDIT: (06/09/2026) Heads up, we’re going to be doing another rollout in about a week. You can opt in your games e…",
+      "author": "Khanovich",
+      "date": "2026-05-04",
+      "href": "https://devforum.roblox.com/t/heads-up-upcoming-rollout-of-improved-physics-replication/4618365",
+      "hue": 284
+    },
+    "devforum-4563685": {
+      "audience": "staff",
+      "title": "Instance streaming best practices and techniques",
+      "description": "We just published a new guide covering some of the best practices and techniques for instance streaming, so you can more effectively use it in your experiences. Check out the Insta…",
+      "author": "dear_gee",
+      "date": "2026-04-07",
+      "href": "https://devforum.roblox.com/t/instance-streaming-best-practices-and-techniques/4563685",
+      "hue": 204
+    },
+    "devforum-4554927": {
+      "audience": "staff",
+      "title": "Creator Monthly March 2026",
+      "description": "In our first Creator Monthly webinar, we shared updates on Assistant/MCP, new solid modeling APIs, updates on experiments and configs, and new segmentation capabilities. Here is a…",
+      "author": "Photoguy82",
+      "date": "2026-04-02",
+      "href": "https://devforum.roblox.com/t/creator-monthly-march-2026/4554927",
+      "hue": 208
+    },
+    "devforum-4549276": {
+      "audience": "staff",
+      "title": "Running Successful Experiments: Insights from Top Creators",
+      "description": "Proven Results: Creators are seeing massive gains by running Experiments—such as a 50% increase in payer conversion or 12.5% higher playtime by changing variables like gameplay dif…",
+      "author": "OrogeneIstari",
+      "date": "2026-03-31",
+      "href": "https://devforum.roblox.com/t/running-successful-experiments-insights-from-top-creators/4549276",
+      "hue": 196
+    },
+    "devforum-4164379": {
+      "audience": "staff",
+      "title": "Optimizing Your Experience for Age-based Chat: A Guide to Custom Matchmaking",
+      "description": "Age Check Requirement: Starting early January, users must complete an age check to use chat. This requirement is already in place in Australia, New Zealand, and the Netherlands, bu…",
+      "author": "ElPsyCongroo_Y",
+      "date": "2025-12-19",
+      "href": "https://devforum.roblox.com/t/optimizing-your-experience-for-age-based-chat-a-guide-to-custom-matchmaking/4164379",
+      "hue": 140
+    },
+    "devforum-4139321": {
+      "audience": "staff",
+      "title": "Server Authority Studio Beta - Insights from Engineers!",
+      "description": "This post will evolve a bit over time This is a minimum set of initial APIs that will be expanded upon. Even smaller than Early Access We will expand the APIs during the lifetime o…",
+      "author": "Khanovich",
+      "date": "2025-12-09",
+      "href": "https://devforum.roblox.com/t/server-authority-studio-beta-insights-from-engineers/4139321",
+      "hue": 160
+    },
+    "devforum-3577035": {
+      "audience": "staff",
+      "title": "Tailor Swiftly - Dynamic cloth in Roblox",
+      "description": "Check out the video! Tailor Swiftly is a hackweek project I created that allows you to create dynamic cloth using common sewing paradigms. This tailoring can occur in Studio or dur…",
+      "author": "PrinceTybalt",
+      "date": "2025-03-27",
+      "href": "https://devforum.roblox.com/t/tailor-swiftly-dynamic-cloth-in-roblox/3577035",
+      "hue": 76
+    },
+    "devforum-3266163": {
+      "audience": "staff",
+      "title": "Integrating External Applications into your UI Design",
+      "description": "Introduction Hi everyone! I’m peachcoolish, a UX Designer at Roblox! In this article, I’ll be going over points to consider when deciding what tools to use when designing interface…",
+      "author": "peachcoolish",
+      "date": "2024-11-19",
+      "href": "https://devforum.roblox.com/t/integrating-external-applications-into-your-ui-design/3266163",
+      "hue": 243
+    },
+    "devforum-3226801": {
+      "audience": "staff",
+      "title": "MicroProfiler memory profiling, flame graphs, diffs, and much more",
+      "description": "We’ve recently made a ton of improvements to the MicroProfiler, so this article shows off some new features that you might not be familiar with. F…",
+      "author": "ZenMa1n",
+      "date": "2024-10-24",
+      "href": "https://devforum.roblox.com/t/microprofiler-memory-profiling-flame-graphs-diffs-and-much-more/3226801",
+      "hue": 1
+    },
+    "devforum-3215844": {
+      "audience": "staff",
+      "title": "Check out the generative AI stream and let us know your best prompts!",
+      "description": "We recently had a great staff stream with Slim_Fandango and beastoftheeast0 in Making a Halloween Scene using AI, where we showed you how to use the Texture and Material Generator…",
+      "author": "Slim_Fandango",
+      "date": "2024-10-15",
+      "href": "https://devforum.roblox.com/t/check-out-the-generative-ai-stream-and-let-us-know-your-best-prompts/3215844",
+      "hue": 324
+    },
+    "devforum-3182086": {
+      "audience": "staff",
+      "title": "YOU Should use Packages. Yes, YOU!",
+      "description": "What are packages Creating Packages Nest a Package Version Control Conclusion What are packages A package is an asset that has been converted into a reusable instance. An instance…",
+      "author": "SCHLEEMPH",
+      "date": "2024-10-04",
+      "href": "https://devforum.roblox.com/t/you-should-use-packages-yes-you/3182086",
+      "hue": 286
+    },
+    "devforum-3171224": {
+      "audience": "staff",
+      "title": "Texture Atlases - Creating Foliage Texture and Meshes",
+      "description": "Introduction Good day creators and readers - today we are going to learn about creating foliage for games! Foliage and vegetation are a great way to increase the detail fidelity, i…",
+      "author": "SCHLEEMPH",
+      "date": "2024-09-24",
+      "href": "https://devforum.roblox.com/t/texture-atlases-creating-foliage-texture-and-meshes/3171224",
+      "hue": 104
+    },
+    "devforum-3171223": {
+      "audience": "staff",
+      "title": "Trim Textures - 3D Modeling and Unwrapping Trim Sheets",
+      "description": "This article covers the topic of modeling and unwrapping meshes for use with trim textures (or trim sheets). Trim textures are a special type of texture design that you can reuse a…",
+      "author": "SCHLEEMPH",
+      "date": "2024-09-24",
+      "href": "https://devforum.roblox.com/t/trim-textures-3d-modeling-and-unwrapping-trim-sheets/3171223",
+      "hue": 223
+    },
+    "devforum-3145609": {
+      "audience": "staff",
+      "title": "Roblox Chat builds an obby, and you can too!",
+      "description": "Last Friday, we had a staff stream with Sr. Software Engineer Minty, where she implemented chat’s obby ideas live in Roblox Chat builds an Obby! Today, we’re sharing the place file…",
+      "author": "DucksAreYeIIow",
+      "date": "2024-09-03",
+      "href": "https://devforum.roblox.com/t/roblox-chat-builds-an-obby-and-you-can-too/3145609",
+      "hue": 169
+    },
+    "devforum-3127146": {
+      "audience": "staff",
+      "title": "Real world building and scripting optimization for Roblox",
+      "description": "This is a guest article from a community expert. We hope you enjoy it! Introduction Hi, I’m Peter “@MrChickenRocket” McNeill. I’ve been a game developer for over 25 years now, and…",
+      "author": "MrChickenRocket",
+      "date": "2024-08-20",
+      "href": "https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146",
+      "hue": 186
+    },
+    "devforum-3074034": {
+      "audience": "staff",
+      "title": "Designing UI - Tips and Best Practices",
+      "description": "I’m uiuxartist, a Designer on the Engine UI team. Creating a UI that works and scales across different screen sizes and platforms can be pretty challenging at first, so this post i…",
+      "author": "uiuxartist",
+      "date": "2024-07-17",
+      "href": "https://devforum.roblox.com/t/designing-ui-tips-and-best-practices/3074034",
+      "hue": 354
+    },
+    "devforum-3064458": {
+      "audience": "staff",
+      "title": "Improving Onboarding through Funnel Events",
+      "description": "An Onboarding Funnel tracks the progress of new players through their first few minutes of gameplay in an experience. During those early moments, players are expected to take actio…",
+      "author": "BreakfastCandy",
+      "date": "2024-07-12",
+      "href": "https://devforum.roblox.com/t/improving-onboarding-through-funnel-events/3064458",
+      "hue": 138
+    },
+    "devforum-3062089": {
+      "audience": "staff",
+      "title": "Enhancing AI Responsibly: Our Approach to Creator Data Sharing",
+      "description": "Introduction At Roblox, we’re harnessing the power of generative AI to support you in your creative process. We’re building AI tools designed to help you be more productive, so you…",
+      "author": "AndroidYouth",
+      "date": "2024-07-10",
+      "href": "https://devforum.roblox.com/t/enhancing-ai-responsibly-our-approach-to-creator-data-sharing/3062089",
+      "hue": 169
+    },
+    "devforum-3051605": {
+      "audience": "staff",
+      "title": "Linguistic Resources for Translators",
+      "description": "The following style guides and glossary offer linguistic guidance for producing accurate and fun translations for Roblox experiences. They…",
+      "author": "froggie1o1",
+      "date": "2024-07-03",
+      "href": "https://devforum.roblox.com/t/linguistic-resources-for-translators/3051605",
+      "hue": 5
+    },
+    "devforum-3050119": {
+      "audience": "staff",
+      "title": "Vertex Colored Meshes using Blender and Studio",
+      "description": "Vertex Colored Meshes offer…",
+      "author": "SCHLEEMPH",
+      "date": "2024-07-02",
+      "href": "https://devforum.roblox.com/t/vertex-colored-meshes-using-blender-and-studio/3050119",
+      "hue": 79
+    },
+    "devforum-3033436": {
+      "audience": "staff",
+      "title": "Roblox Creator Interviews: Getting Started with UGC (feat. PolarCub)",
+      "description": "Earlier this year we had the chance to interview @polarcub (also known as Dani). Dani is a UGC designer and content creator who specializes in vector, 3D, and digital art. With ove…",
+      "author": "DucksAreYeIIow",
+      "date": "2024-06-21",
+      "href": "https://devforum.roblox.com/t/roblox-creator-interviews-getting-started-with-ugc-feat-polarcub/3033436",
+      "hue": 316
+    },
+    "devforum-3021370": {
+      "audience": "staff",
+      "title": "How to Create Tileable Texture Maps (Photoshop and Sampler)",
+      "description": "Why do we need to create tileable texture maps? As we all know, textures are important to 3D game engines to ensure that material characteristics, like “brick wall” or “metal sheet…",
+      "author": "SCHLEEMPH",
+      "date": "2024-06-13",
+      "href": "https://devforum.roblox.com/t/how-to-create-tileable-texture-maps-photoshop-and-sampler/3021370",
+      "hue": 130
+    },
+    "devforum-2979238": {
+      "audience": "staff",
+      "title": "Learn how to build immersive 3D worlds!",
+      "description": "In case you missed it, we did our first Roblox Staff Stream last Monday: Intro to World Building. This was a live event where our principal artist SCHLEEMPH (aka ADAMW3D) showed ev…",
+      "author": "linksgoat",
+      "date": "2024-05-22",
+      "href": "https://devforum.roblox.com/t/learn-how-to-build-immersive-3d-worlds/2979238",
+      "hue": 118
+    },
+    "devforum-2964543": {
+      "audience": "staff",
+      "title": "How To: React + Roblox",
+      "description": "What is React? React-lua is a Roblox-compatible Lua port of the well known React UI library that is widely used in web and mobile. React-lua is maintained by Roblox. Currently most…",
+      "author": "minimapletinytools",
+      "date": "2024-05-10",
+      "href": "https://devforum.roblox.com/t/how-to-react-roblox/2964543",
+      "hue": 303
+    },
+    "devforum-2963814": {
+      "audience": "staff",
+      "title": "Modeling 101 in Blender (Box Modeling)",
+      "description": "This article covers an introductory overview of the popular 3d Modeling application Blender. Blender is very popular with modelers and builders on Roblox and in the wider games in…",
+      "author": "SCHLEEMPH",
+      "date": "2024-05-09",
+      "href": "https://devforum.roblox.com/t/modeling-101-in-blender-box-modeling/2963814",
+      "hue": 294
+    },
+    "devforum-2944612": {
+      "audience": "staff",
+      "title": "How To Create Transparency Maps using Substance Sampler",
+      "description": "Transparency maps are important for textures, especially PBR textures. By default Substance Sampler can’t export transparency information directly, so this guide will show you how…",
+      "author": "SCHLEEMPH",
+      "date": "2024-04-24",
+      "href": "https://devforum.roblox.com/t/how-to-create-transparency-maps-using-substance-sampler/2944612",
+      "hue": 52
+    },
+    "devforum-2944610": {
+      "audience": "staff",
+      "title": "How To Create Transparency Maps using Photoshop",
+      "description": "When working with texture maps, especially PBR textures, it can be difficult to get the texture edges just right and sometimes textures can have white or black edges due to an impe…",
+      "author": "SCHLEEMPH",
+      "date": "2024-04-24",
+      "href": "https://devforum.roblox.com/t/how-to-create-transparency-maps-using-photoshop/2944610",
+      "hue": 290
+    },
+    "devforum-2925165": {
+      "audience": "staff",
+      "title": "How to use Radial Symmetry using Zbrush",
+      "description": "This guide will guide you through utilizing Radial Symmetry in Zbrush for creating objects with repeating features around a central axis. ZBrush’s Radial Symmetry allows you to mir…",
+      "author": "blutzer",
+      "date": "2024-04-11",
+      "href": "https://devforum.roblox.com/t/how-to-use-radial-symmetry-using-zbrush/2925165",
+      "hue": 165
+    },
+    "devforum-2910923": {
+      "audience": "staff",
+      "title": "How To Create Neon Signs using an Image or Text Label",
+      "description": "In Roblox Studio and in any creative development, there are many different ways to accomplish any one task. In our creator documentation, there is a walkthrough on How to Create a…",
+      "author": "blutzer",
+      "date": "2024-04-03",
+      "href": "https://devforum.roblox.com/t/how-to-create-neon-signs-using-an-image-or-text-label/2910923",
+      "hue": 83
+    },
+    "devforum-2884182": {
+      "audience": "staff",
+      "title": "Substance Designer - Overview, Setup, and General PBR Creation",
+      "description": "Unleash Your Creativity with Substance Designer In this mini-tutorial, we’re diving into the process of creating custom PBR (Physically Based Rendering) textures using Substance De…",
+      "author": "blutzer",
+      "date": "2024-03-21",
+      "href": "https://devforum.roblox.com/t/substance-designer-overview-setup-and-general-pbr-creation/2884182",
+      "hue": 222
+    },
+    "devforum-2884179": {
+      "audience": "staff",
+      "title": "Substance Sampler - Overview, Setup, and General PBR Creation",
+      "description": "We’re diving into the world of PBR textures using Substance Sampler. Substance Sampler is an industry standard tool for generating models and textures from real-world samples and i…",
+      "author": "blutzer",
+      "date": "2024-03-21",
+      "href": "https://devforum.roblox.com/t/substance-sampler-overview-setup-and-general-pbr-creation/2884179",
+      "hue": 219
+    },
+    "devforum-2884177": {
+      "audience": "staff",
+      "title": "Substance Painter - Overview, Setup, and General PBR Creation",
+      "description": "Today, we’re going to learn how to make textures that make our creations look super awesome using Substance Painter. Substance Painter is an industry standard tool for painting dir…",
+      "author": "blutzer",
+      "date": "2024-03-21",
+      "href": "https://devforum.roblox.com/t/substance-painter-overview-setup-and-general-pbr-creation/2884177",
+      "hue": 97
+    },
+    "devforum-2883381": {
+      "audience": "staff",
+      "title": "Using Alpha Masks in Color Maps to Customize/Tint Base Colors",
+      "description": "In this guide, we’re exploring the art of using alpha masks to tint colors – a useful feature that can enhance your art, color palettes, and improve the breadth and efficiency of m…",
+      "author": "blutzer",
+      "date": "2024-03-20",
+      "href": "https://devforum.roblox.com/t/using-alpha-masks-in-color-maps-to-customizetint-base-colors/2883381",
+      "hue": 141
+    },
+    "devforum-2876495": {
+      "audience": "staff",
+      "title": "Touch Events and Network Delay",
+      "description": "This article outlines some internal functionality of Touched and TouchEnded event replication in the distributed physics engine, with the goal of helping you understand how to appr…",
+      "author": "熊熊熊",
+      "date": "2024-03-14",
+      "href": "https://devforum.roblox.com/t/touch-events-and-network-delay/2876495",
+      "hue": 215
+    },
+    "devforum-2873098": {
+      "audience": "staff",
+      "title": "Optimizing Unit Targeting in Roblox with a Swarm Module",
+      "description": "Real-Time Strategy (RTS) games on the Roblox platform often face challenges when it comes to unit targeting, especially when there are a large number of units involved. Imagine a s…",
+      "author": "imagineerrx",
+      "date": "2024-03-11",
+      "href": "https://devforum.roblox.com/t/optimizing-unit-targeting-in-roblox-with-a-swarm-module/2873098",
+      "hue": 178
+    },
+    "devforum-2861569": {
+      "audience": "staff",
+      "title": "Subscriptions within experiences: Welcome to Bloxburg and Slap Battles",
+      "description": "I’m back to talk about two of the most successful subscriptions on Roblox: Welcome to Bloxburg and Slap Battles, both of which are monetizing at a consistently high level. Before w…",
+      "author": "WizardCow47",
+      "date": "2024-03-02",
+      "href": "https://devforum.roblox.com/t/subscriptions-within-experiences-welcome-to-bloxburg-and-slap-battles/2861569",
+      "hue": 169
+    },
+    "devforum-2860031": {
+      "audience": "staff",
+      "title": "Resources from the Roblox Creator Game Jam 2024",
+      "description": "At the beginning of the year, the Roblox Creator organization (the people that focus on building things for all of you creators!) got together for our second annual Game Jam. Every…",
+      "author": "Sleepyhead",
+      "date": "2024-02-29",
+      "href": "https://devforum.roblox.com/t/resources-from-the-roblox-creator-game-jam-2024/2860031",
+      "hue": 311
+    },
+    "devforum-2839937": {
+      "audience": "staff",
+      "title": "Introducing DragDetectors",
+      "description": "I’m PrinceTybalt, and I’m going to fill you in on DragDetectors. DragDetectors are a new Instance type (aka Roblox building block) that shipped in September of last year. This is m…",
+      "author": "PrinceTybalt",
+      "date": "2024-02-27",
+      "href": "https://devforum.roblox.com/t/introducing-dragdetectors/2839937",
+      "hue": 17
+    },
+    "devforum-2849003": {
+      "audience": "staff",
+      "title": "Custom Skyboxes 101",
+      "description": "Introduction The following video and article are a collection of helpful tips, tools and resources for creating, editing, and processing “skybox” images for use in Roblox Studio. A…",
+      "author": "CaptnBloxer",
+      "date": "2024-02-27",
+      "href": "https://devforum.roblox.com/t/custom-skyboxes-101/2849003",
+      "hue": 83
+    },
+    "devforum-2840180": {
+      "audience": "staff",
+      "title": "Creating Buttes in Roblox Studio using MaterialVariant and TerrainDetails",
+      "description": "I wanted to do a quick write up showing how we made the rocky buttes in the Racing Template using some custom textures, the MaterialVariant system, and the Terrain Details feature.…",
+      "author": "SCHLEEMPH",
+      "date": "2024-02-27",
+      "href": "https://devforum.roblox.com/t/creating-buttes-in-roblox-studio-using-materialvariant-and-terraindetails/2840180",
+      "hue": 260
+    },
+    "devforum-2849057": {
+      "audience": "staff",
+      "title": "Creating Perfect Audio Loops",
+      "description": "I’m a sound designer at Roblox, and I wanted to show you how to loop sounds, so they play indefinitely and seamlessly to the point where the listener can’t tell they’re looping. Th…",
+      "author": "YPT300",
+      "date": "2024-02-26",
+      "href": "https://devforum.roblox.com/t/creating-perfect-audio-loops/2849057",
+      "hue": 137
+    },
+    "devforum-2839941": {
+      "audience": "staff",
+      "title": "Implementing Player Data and Purchasing Systems",
+      "description": "Implementing Player Data and Purchasing Systems Background Roblox provides a set of APIs to interface with data stores via DataStoreService. The most common use case for these APIs…",
+      "author": "DevelopmentDeadline",
+      "date": "2024-02-25",
+      "href": "https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941",
+      "hue": 261
+    },
+    "devforum-2723999": {
+      "audience": "staff",
+      "title": "How to Setup PBR Materials in DCC Apps for Automatic Upload into Studio",
+      "description": "Physically Based Rendering (PBR) textures are advanced realistic textures that use multiple image maps to ensure a surface reacts realistically to various lighting and environment…",
+      "author": "blutzer",
+      "date": "2024-02-20",
+      "href": "https://devforum.roblox.com/t/how-to-setup-pbr-materials-in-dcc-apps-for-automatic-upload-into-studio/2723999",
+      "hue": 359
+    },
+    "devforum-2723897": {
+      "audience": "staff",
+      "title": "Tips for Capturing High Quality Screenshots and Videos in Studio",
+      "description": "If you’re looking to create screenshots or videos for promotional material, experience thumbnails, or to document your experience in any way, these tips will help you capture your…",
+      "author": "blutzer",
+      "date": "2024-02-13",
+      "href": "https://devforum.roblox.com/t/tips-for-capturing-high-quality-screenshots-and-videos-in-studio/2723897",
+      "hue": 257
+    },
+    "devforum-2807532": {
+      "audience": "staff",
+      "title": "Human Translation vs Machine Translation",
+      "description": "This is part 3 of 4 on localization best practices, primarily targeted to developers or studios that are using or are considering using translators for their localization. Planning…",
+      "author": "froggie1o1",
+      "date": "2024-01-25",
+      "href": "https://devforum.roblox.com/t/human-translation-vs-machine-translation/2807532",
+      "hue": 252
+    },
+    "devforum-2807526": {
+      "audience": "staff",
+      "title": "Tips and Tricks for Translators",
+      "description": "This is part 4 of 4 on localization best practices, this particular article is primarily targeted to translators who are contributing to localization for an experience Planning for…",
+      "author": "froggie1o1",
+      "date": "2024-01-25",
+      "href": "https://devforum.roblox.com/t/tips-and-tricks-for-translators/2807526",
+      "hue": 246
+    },
+    "devforum-2807522": {
+      "audience": "staff",
+      "title": "Getting the Best out of the Roblox Localization Tools",
+      "description": "This is part 2 of 4 on localization best practices, primarily targeted to developers or studios that are using or are considering using translators for their localization. Planning…",
+      "author": "froggie1o1",
+      "date": "2024-01-25",
+      "href": "https://devforum.roblox.com/t/getting-the-best-out-of-the-roblox-localization-tools/2807522",
+      "hue": 2
+    },
+    "devforum-2807518": {
+      "audience": "staff",
+      "title": "Planning for Localization",
+      "description": "Welcome to our best practices for localizing your Roblox experiences! In this series, we’ll delve into the essential aspects of making your games and creations accessible to a glob…",
+      "author": "froggie1o1",
+      "date": "2024-01-25",
+      "href": "https://devforum.roblox.com/t/planning-for-localization/2807518",
+      "hue": 118
+    },
+    "devforum-2710072": {
+      "audience": "staff",
+      "title": "Subscriptions within experiences: Livetopia Implementation",
+      "description": "I wanted to give you a reference of how a popular experience on Roblox, Livetopia, successfully integrated subscriptions into their monetization strategy. We hope that sharing how…",
+      "author": "WizardCow47",
+      "date": "2023-11-20",
+      "href": "https://devforum.roblox.com/t/subscriptions-within-experiences-livetopia-implementation/2710072",
+      "hue": 232
+    },
+    "devforum-2418615": {
+      "audience": "staff",
+      "title": "Units on Roblox",
+      "description": "I’m here to discuss Units on Roblox! We published this doc earlier tod…",
+      "author": "mobsterlobster",
+      "date": "2023-06-09",
+      "href": "https://devforum.roblox.com/t/units-on-roblox/2418615",
+      "hue": 135
+    }
+  }
+}

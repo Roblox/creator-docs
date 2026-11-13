@@ -448,6 +448,31 @@ properties:
       can_load: false
       can_save: false
     capabilities: []
+  - name: DataModel.ServerRegion
+    summary: |
+      The region code of the datacenter hosting the current game server.
+    description: |
+      This read-only property is a three-letter IATA airport code (such as
+      `IAD`, `LAX`, `LHR`, `NRT`, or `SYD`) identifying the datacenter region
+      hosting the current game server.
+
+      Defaults to an empty string in Studio and client contexts, or when the
+      server's region is unknown.
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: JobInfo
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
   - name: DataModel.VIPServerId
     summary: |
       A string that could identify the current server as a private server.

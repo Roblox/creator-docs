@@ -5,7 +5,7 @@ description: Get started with IP tools as a rights holder.
 
 **License Manager** and **Rights Manager** are tools that let you manage your intellectual property (IP) on Roblox.
 
-With [License Manager](./license-manager.md), you can collaborate with creators to bring your IP to new audiences. By creating a license, you set the terms and conditions that determine how a creator can use your IP to build a game. You can specify content standards, revenue share requirements, and set eligibility criteria for the game, like maturity level and minimum number of daily active users.
+With [License Manager](./license-manager.md), you can collaborate with creators to bring your IP to new audiences. By creating a license, you set the terms and conditions that determine how a creator can use your IP to build a game. You can specify content standards, revenue share requirements, and set eligibility criteria for the game, like content maturity level and minimum number of daily active users.
 
 Work with creators by finding existing games that already use your IP and offering those games a license, or by publishing your license to the Licenses catalog, where creators can directly request to use your IP.
 

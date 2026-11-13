@@ -18,9 +18,9 @@ Proactive design choices are the most effective way to significantly enhance the
 
 Roblox provides tools to help you maintain a safe environment in your game. Integrating these can help you maintain a safe environment in your game.
 
-### Complete the Content Maturity & Compliance Questionnaire
+### Complete the Content Ratings Questionnaire
 
-All public games are required to have an accurately completed [Maturity & Compliance Questionnaire](https://create.roblox.com/docs/production/promotion/content-maturity). You should answer all questions truthfully to ensure your game is rated appropriately. If you add new content that changes your answers, you should update the questionnaire immediately. Your game and account could be moderated if you repeatedly answer the Maturity & Compliance Questionnaire incorrectly.
+All public games are required to have an accurately completed [Content Ratings Questionnaire](./production/promotion/content-ratings.md). You should answer all questions truthfully to ensure your game is rated appropriately. If you add new content that changes your answers, you should update the questionnaire immediately. Your game and account could be moderated if you repeatedly answer the Content Ratings Questionnaire incorrectly.
 
 ### Manage player behavior with bans, kicks, and verifications
 

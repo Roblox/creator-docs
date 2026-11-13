@@ -34,7 +34,7 @@ Ideally, notifications should also alert users of something they can take **imme
 <Typography variant="subtitle2">Respect community standards</Typography>
 </AccordionSummary>
 <AccordionDetails>
-All notification content and behaviors are subject to Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and platform‑wide [text filtering](../../ui/text-filtering.md), regardless of your game's [age guidelines](../../production/promotion/experience-guidelines.md). This means that if your game is a 17+ game, your notifications are still subject to the platform‑wide standards, **not** the [17+&nbsp;Policy Standards](https://en.help.roblox.com/hc/en-us/articles/15869919570708).
+All notification content and behaviors are subject to Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and platform‑wide [text filtering](../../ui/text-filtering.md), regardless of your game's [content ratings](../../production/promotion/content-ratings.md). This means that if your game is an 18+ game, your notifications are still subject to the platform‑wide standards, **not** the [Age-Restricted Content Policy](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Restricted-Content-Policy).
 </AccordionDetails>
 </BaseAccordion>
 

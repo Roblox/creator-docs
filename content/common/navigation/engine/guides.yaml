@@ -72,10 +72,21 @@ navigation:
           - title: Version History
             path: /projects/version-history
       - title: File-based workflows
-        path: /scripting/sync
+        path: /projects/file-based-workflows
         section:
+          - title: Overview
+            path: /projects/file-based-workflows
           - title: Script Sync
             path: /scripting/sync
+          - title: Rojo
+            path: /projects/rojo/
+            section:
+              - title: Overview
+                path: /projects/rojo/
+              - title: Partially managed
+                path: /projects/rojo/partially-managed
+              - title: Fully managed
+                path: /projects/rojo/fully-managed
           - title: Third-party tools
             path: /projects/external-tools
   - title: 3D workspace
@@ -651,10 +662,6 @@ navigation:
         path: /cloud-services/video-service
       - title: Cross-server communication
         path: /cloud-services/cross-server-messaging
-  - title: Roblox for Unity developers
-    path: /unity
-  - title: Roblox for Unreal developers
-    path: /unreal
 
   - include: /scale.yaml
   - include: /monetize.yaml
