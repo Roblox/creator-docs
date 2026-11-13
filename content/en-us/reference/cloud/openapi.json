@@ -4777,9 +4777,6 @@
     "/assets/v1/assets": {
       "post": {
         "tags": ["Assets"],
-        "x-roblox-cloud-api-operation": true,
-        "x-roblox-cloud-api-operation-name": "Create Asset",
-        "x-roblox-stability": "BETA",
         "summary": "Creates an asset with provided content and metadata.",
         "description": "Creates an asset with provided content and metadata.\n\nYou can't add `SocialLink` objects when you create an asset. Instead, use [Update Asset](#Assets_UpdateAsset).\n\nProvide the `Asset`, binary asset file path, and [content type](/cloud/guides/usage-assets.md#supported-asset-types-and-limits) in the form data.",
         "operationId": "Assets_CreateAsset",
@@ -4787,19 +4784,42 @@
           "content": {
             "multipart/form-data": {
               "schema": {
+                "required": ["fileContent", "request"],
                 "type": "object",
                 "properties": {
-                  "request": {
-                    "$ref": "#/components/schemas/Asset",
-                    "description": "Asset attributes to create."
-                  },
                   "fileContent": {
                     "type": "string",
-                    "format": "binary",
-                    "description": "The binary asset file path and the content type. See [Asset types and limits](/cloud/guides/usage-assets.md#supported-asset-types-and-limits)."
+                    "description": "The binary asset file path and the content type. See [Asset types and limits](/cloud/guides/usage-assets.md#supported-asset-types-and-limits).",
+                    "format": "binary"
+                  },
+                  "additionalParameters": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "string"
+                    },
+                    "description": "Optional: Additional parameters to be sent with the request can be included here.",
+                    "nullable": true
+                  },
+                  "request": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/AssetsUploadApi.Asset"
+                      }
+                    ],
+                    "description": "Asset attributes to create."
                   }
+                }
+              },
+              "encoding": {
+                "fileContent": {
+                  "style": "form"
                 },
-                "required": ["request", "fileContent"]
+                "additionalParameters": {
+                  "style": "form"
+                },
+                "request": {
+                  "contentType": "application/json"
+                }
               }
             }
           }
@@ -4810,7 +4830,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OCV1.Assets.Operation"
+                  "$ref": "#/components/schemas/AssetsUploadApi.Operation"
                 }
               }
             }
@@ -4820,40 +4840,57 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OCV1.Assets.Status"
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
                 }
               }
             }
           },
           "401": {
-            "description": "The API key is not valid for this operation / You don't have the authorization."
+            "description": "The API key is not valid for this operation / You don't have the authorization.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Doesn't have the required permission.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           },
           "500": {
-            "description": "Server internal error / Unknown error."
+            "description": "Server internal error / Unknown error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           }
         },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
         "x-roblox-scopes": [
           {
-            "name": "asset:read"
-          },
-          {
-            "name": "asset:write"
+            "name": "asset:write",
+            "description": "Required for the asset's creator (user or group)."
           }
         ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-cloud-api-operation-name": "Create Asset",
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Create Asset",
             "script": "curl --location --request POST 'https://apis.roblox.com/assets/v1/assets' \\\n--header 'x-api-key: {apiKey}' \\\n--form 'request=\"{ \n  \\\"assetType\\\": \\\"Model\\\",  \n  \\\"displayName\\\": \\\"Name\\\", \n  \\\"description\\\": \\\"This is a description\\\", \n  \\\"creationContext\\\": { \n    \\\"creator\\\": { \n      \\\"userId\\\": \\\"${userId}\\\" \n    } \n  } \n}\"' \\\n--form 'fileContent=@\"/filepath/model.fbx\";type=model/fbx' \n"
           }
         ],
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -4867,6 +4904,14 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_CreateAsset"
         }
@@ -4875,9 +4920,6 @@
     "/assets/v1/assets/{assetId}": {
       "get": {
         "tags": ["Assets"],
-        "x-roblox-cloud-api-operation": true,
-        "x-roblox-cloud-api-operation-name": "Get Asset",
-        "x-roblox-stability": "BETA",
         "summary": "Retrieve specific asset metadata. Include the `readMask` parameter for additional asset metadata.",
         "description": "Retrieve specific asset metadata.",
         "operationId": "Assets_GetAsset",
@@ -4888,15 +4930,21 @@
             "description": "The unique identifier of the asset.",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int64"
             }
           },
           {
             "name": "readMask",
             "in": "query",
             "description": "Asset metadata fields to retrieve, including the description, display name, icon, social links, and previews. Examples: `description%2CdisplayName`, `previews%2CtwitchSocialLink`.",
+            "style": "form",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           }
         ],
@@ -4906,40 +4954,70 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Asset"
+                  "$ref": "#/components/schemas/AssetsUploadApi.Asset"
                 }
               }
             }
           },
           "400": {
-            "description": "Malformed request, likely due to an invalid read mask."
+            "description": "Malformed request, likely due to an invalid read mask.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           },
           "401": {
-            "description": "The API key is not valid for this operation / You don't have the authorization."
+            "description": "The API key is not valid for this operation / You don't have the authorization.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           },
           "403": {
-            "description": "Doesn't have the required permission."
+            "description": "Doesn't have the required permission.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           },
           "404": {
-            "description": "Asset doesn't exist."
+            "description": "Asset doesn't exist.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           },
           "500": {
-            "description": "Server internal error / Unknown error."
+            "description": "Server internal error / Unknown error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           }
         },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
         "x-roblox-scopes": [
           {
-            "name": "asset:read"
+            "name": "asset:read",
+            "description": "Required."
           }
         ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-cloud-api-operation-name": "Get Asset",
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Asset without readMask",
@@ -4950,6 +5028,7 @@
             "script": "curl --location --request GET 'https://apis.roblox.com/assets/v1/assets/{assetId}?readMask={read_mask}' \\\n--header 'x-api-key: {apiKey}'"
           }
         ],
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -4963,15 +5042,20 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": true
         },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_GetAsset"
         }
       },
       "patch": {
         "tags": ["Assets"],
-        "x-roblox-cloud-api-operation": true,
-        "x-roblox-cloud-api-operation-name": "Update Asset",
-        "x-roblox-stability": "BETA",
         "summary": "Updates an asset with provided content and metadata.",
         "description": "Updates an asset's content, metadata, or both. Metadata includes the description, display name, icon, social links, and previews. Updating content creates a new asset version and is supported for **Models** and **Places**. For Places, set `published` to `true` to publish the new version. Icons and previews must be **Image** assets, and icons must have square dimensions.\n\nProvide the `Asset`, binary asset file path, and [content type](/cloud/guides/usage-assets.md#supported-asset-types-and-limits) in the form data.",
         "operationId": "Assets_UpdateAsset",
@@ -4982,16 +5066,21 @@
             "description": "The unique identifier of the asset.",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int64"
             }
           },
           {
             "name": "updateMask",
             "in": "query",
-            "required": false,
             "description": "Asset metadata fields to update, including the description, display name, icon, and previews. Examples: `description%2CdisplayName`, `previews%2CtwitchSocialLink`.",
+            "style": "form",
+            "explode": false,
             "schema": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           }
         ],
@@ -4999,19 +5088,43 @@
           "content": {
             "multipart/form-data": {
               "schema": {
+                "required": ["request"],
                 "type": "object",
                 "properties": {
-                  "request": {
-                    "$ref": "#/components/schemas/Asset",
-                    "description": "Asset attributes to update."
-                  },
                   "fileContent": {
                     "type": "string",
+                    "description": "The binary asset file path and the content type. See [Asset types and limits](/cloud/guides/usage-assets.md#supported-asset-types-and-limits).",
                     "format": "binary",
-                    "description": "The binary asset file path and the content type. See [Asset types and limits](/cloud/guides/usage-assets.md#supported-asset-types-and-limits)."
+                    "nullable": true
+                  },
+                  "additionalParameters": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "string"
+                    },
+                    "description": "Optional: Additional parameters to be sent with the request can be included here.",
+                    "nullable": true
+                  },
+                  "request": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/AssetsUploadApi.Asset"
+                      }
+                    ],
+                    "description": "Asset attributes to update."
                   }
+                }
+              },
+              "encoding": {
+                "fileContent": {
+                  "style": "form"
                 },
-                "required": ["request", "fileContent"]
+                "additionalParameters": {
+                  "style": "form"
+                },
+                "request": {
+                  "contentType": "application/json"
+                }
               }
             }
           }
@@ -5022,8 +5135,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OCV1.Assets.Operation",
-                  "example": "{\"previews\": [\n  {\"asset\": \"assets/123\", \"altText\": \"preview 1\"},\n  {\"asset\": \"assets/456\", \"altText\": \"preview 2\"}\n]}"
+                  "$ref": "#/components/schemas/AssetsUploadApi.Operation"
                 }
               }
             }
@@ -5033,34 +5145,50 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OCV1.Assets.Status"
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
                 }
               }
             }
           },
           "401": {
-            "description": "The API key is not valid for this operation / You don't have the authorization."
+            "description": "The API key is not valid for this operation / You don't have the authorization.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Doesn't have the required permission.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           },
           "500": {
-            "description": "Server internal error / Unknown error."
+            "description": "Server internal error / Unknown error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           }
         },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
         "x-roblox-scopes": [
           {
-            "name": "asset:read"
-          },
-          {
-            "name": "asset:write"
+            "name": "asset:write",
+            "description": "Required for the asset's creator (user or group)."
           }
         ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-cloud-api-operation-name": "Update Asset",
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Update Content Only and Create a New Version",
@@ -5079,6 +5207,7 @@
             "script": "curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/{assetId}?updateMask=twitchSocialLink%2CgithubSocialLink' \\\n--header 'x-api-key: {apiKey}' \\\n--form 'request=\"{\\\"assetId\\\": \\\"{assetId}\\\", \\\"twitchSocialLink\\\": {\\\"title\\\": \\\"Optional title\\\", \\\"uri\\\": \\\"https://twitch.tv/your-channel\\\"}, \\\"githubSocialLink\\\": {\\\"title\\\": \\\"Optional title\\\", \\\"uri\\\": \\\"https://github.com/your-repo\\\"}}\"'"
           }
         ],
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -5091,99 +5220,6 @@
         },
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": true
-        },
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_UpdateAsset"
-        }
-      }
-    },
-    "/assets/v1/assets/{assetId}/versions": {
-      "get": {
-        "tags": ["Assets"],
-        "x-roblox-cloud-api-operation": true,
-        "x-roblox-cloud-api-operation-name": "List Asset Versions",
-        "x-roblox-stability": "BETA",
-        "summary": "List Asset Versions of an Asset",
-        "description": "List all versions of a specific asset, with optional pagination.",
-        "operationId": "listAssetVersions",
-        "parameters": [
-          {
-            "name": "assetId",
-            "in": "path",
-            "description": "The unique identifier of the asset.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "maxPageSize",
-            "in": "query",
-            "description": "Specifies the number of asset versions to include in the response. Valid values range from 1 to 50 (inclusive). Defaults to 8 when not provided.",
-            "schema": {
-              "type": "integer"
-            }
-          },
-          {
-            "name": "pageToken",
-            "in": "query",
-            "description": "A token for pagination. The value is obtained from a previous request and allows for retrieving the next page of asset versions.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Asset versions listed successfully.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "assetVersions": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/AssetVersion"
-                      },
-                      "description": "The asset versions on this page. May be omitted when empty."
-                    },
-                    "nextPageToken": {
-                      "type": "string",
-                      "description": "Pass this token as `pageToken` to retrieve the next page. If omitted, there are no subsequent pages."
-                    }
-                  }
-                },
-                "example": {
-                  "assetVersions": [
-                    {
-                      "path": "assets/2205400862/versions/1",
-                      "createTime": "2026-11-05T02:59:34.029Z",
-                      "creationContext": {
-                        "creator": {
-                          "userId": "507608357"
-                        }
-                      },
-                      "moderationResult": {
-                        "moderationState": "Approved"
-                      },
-                      "published": true
-                    }
-                  ],
-                  "nextPageToken": "example-page-token"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad request - invalid parameters."
-          },
-          "403": {
-            "description": "Forbidden - API key without Read scope or user doesn't have access."
-          },
-          "404": {
-            "description": "Asset not found."
-          }
         },
         "security": [
           {
@@ -5193,17 +5229,112 @@
             "roblox-oauth2": []
           }
         ],
-        "x-roblox-scopes": [
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_UpdateAsset"
+        }
+      }
+    },
+    "/assets/v1/assets/{assetId}/versions": {
+      "get": {
+        "tags": ["Assets"],
+        "summary": "List Asset Versions of an Asset",
+        "description": "List all versions of a specific asset, with optional pagination.",
+        "operationId": "Assets_ListAssetVersions",
+        "parameters": [
           {
-            "name": "asset:read"
+            "name": "assetId",
+            "in": "path",
+            "description": "The unique identifier of the asset.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "Specifies the number of asset versions to include in the response. Valid values range from 1 to 50 (inclusive). Defaults to 8 when not provided.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 8
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A token for pagination. The value is obtained from a previous request and allows for retrieving the next page of asset versions.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "Asset versions listed successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListAssetVersionsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - invalid parameters.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden - API key without Read scope or user doesn't have access.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Asset not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "asset:read",
+            "description": "Required."
+          }
+        ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-cloud-api-operation-name": "List Asset Versions",
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "List Asset Versions",
             "script": "curl --location 'https://apis.roblox.com/assets/v1/assets/{assetid}/versions?pageToken=&maxPageSize=' \\\n--header 'x-api-key: {apiKey}'"
           }
         ],
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -5217,17 +5348,22 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": true
         },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#listAssetVersions"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_ListAssetVersions"
         }
       }
     },
     "/assets/v1/assets/{assetId}/versions/{versionNumber}": {
       "get": {
         "tags": ["Assets"],
-        "x-roblox-cloud-api-operation": true,
-        "x-roblox-cloud-api-operation-name": "Get Asset Version",
-        "x-roblox-stability": "BETA",
         "summary": "Get Asset Version",
         "description": "Retrieve a specific asset version by the asset ID and the version number.",
         "operationId": "Assets_GetAssetVersion",
@@ -5238,7 +5374,8 @@
             "description": "The unique identifier of the asset.",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int64"
             }
           },
           {
@@ -5247,7 +5384,8 @@
             "description": "The version number.",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -5263,31 +5401,41 @@
             }
           },
           "403": {
-            "description": "Forbidden - API key without Read scope or user doesn't have access."
+            "description": "Forbidden - API key without Read scope or user doesn't have access.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           },
           "404": {
-            "description": "Asset or Asset Version not found."
+            "description": "Asset or Asset Version not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           }
         },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
         "x-roblox-scopes": [
           {
-            "name": "asset:read"
+            "name": "asset:read",
+            "description": "Required."
           }
         ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-cloud-api-operation-name": "Get Asset Version",
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Asset Version",
             "script": "curl --location 'https://apis.roblox.com/assets/v1/assets/{assetId}/versions/{versionNumber}' \\\n--header 'x-api-key: {apiKey}'"
           }
         ],
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -5301,6 +5449,14 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": true
         },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_GetAssetVersion"
         }
@@ -5309,11 +5465,8 @@
     "/assets/v1/assets/{assetId}/versions:rollback": {
       "post": {
         "tags": ["Assets"],
-        "x-roblox-cloud-api-operation": true,
-        "x-roblox-cloud-api-operation-name": "Rollback Asset Version",
-        "x-roblox-stability": "BETA",
         "summary": "Rollback an asset to a previous version.",
-        "description": "Rollback an asset to a specific previous version.\n\n Provide the asset version path in the form data.",
+        "description": "Rollback an asset to a specific previous version.\n\nProvide the asset version path in the request body.",
         "operationId": "Assets_RollbackAssetVersion",
         "parameters": [
           {
@@ -5322,25 +5475,20 @@
             "description": "The unique identifier of the asset.",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int64"
             }
           }
         ],
         "requestBody": {
           "content": {
-            "multipart/form-data": {
+            "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "assetVersion": {
-                    "type": "string",
-                    "description": "The asset version path in the format of `assets/{assetId}/versions/{versionNumber}`."
-                  }
-                },
-                "required": ["assetVersion"]
+                "$ref": "#/components/schemas/RollbackAssetVersionRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -5354,37 +5502,51 @@
             }
           },
           "400": {
-            "description": "Bad request - invalid request body."
+            "description": "Bad request - invalid request body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           },
           "403": {
-            "description": "Forbidden - API key without Write scope or user doesn't have access."
+            "description": "Forbidden - API key without Write scope or user doesn't have access.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           },
           "404": {
-            "description": "Asset or Asset Version not found."
+            "description": "Asset or Asset Version not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           }
         },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
         "x-roblox-scopes": [
           {
-            "name": "asset:read"
-          },
-          {
-            "name": "asset:write"
+            "name": "asset:write",
+            "description": "Required for the asset's creator (user or group)."
           }
         ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-cloud-api-operation-name": "Rollback Asset Version",
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Rollback Asset Versions",
             "script": "curl --location 'https://apis.roblox.com/assets/v1/assets/{assetid}/versions:rollback' \\\n--header 'x-api-key: {apiKey}' \\\n--header 'Content-Type: application/json' \\\n--data '{\\\"assetVersion\\\":\\\"assets/{assetId}/versions/{versionNumber}\\\"}'"
           }
         ],
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -5398,6 +5560,14 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_RollbackAssetVersion"
         }
@@ -5406,9 +5576,6 @@
     "/assets/v1/assets/{assetId}:archive": {
       "post": {
         "tags": ["Assets"],
-        "x-roblox-cloud-api-operation": true,
-        "x-roblox-cloud-api-operation-name": "Archive Asset",
-        "x-roblox-stability": "BETA",
         "summary": "Archives the asset.",
         "description": "Archives the asset. Archived assets disappear from the website and are no longer usable or visible in Roblox experiences, but you can [restore](#Assets_RestoreAsset) them.",
         "operationId": "Assets_ArchiveAsset",
@@ -5419,53 +5586,78 @@
             "description": "The unique identifier of the asset.",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int64"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Asset archived succesfully successfully.",
+            "description": "Asset archived successfully.",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Asset"
+                  "$ref": "#/components/schemas/AssetsUploadApi.Asset"
                 }
               }
             }
           },
           "400": {
-            "description": "Bad request - invalid request."
+            "description": "Bad request - invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The API key is not valid for this operation / You don't have the authorization.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           },
           "403": {
-            "description": "Forbidden - API key without Write scope or user doesn't have access."
+            "description": "Forbidden - API key without Write scope or user doesn't have access.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           },
           "404": {
-            "description": "Asset not found."
+            "description": "Asset not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           }
         },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
         "x-roblox-scopes": [
           {
-            "name": "asset:read"
-          },
-          {
-            "name": "asset:write"
+            "name": "asset:write",
+            "description": "Required for the asset's creator (user or group)."
           }
         ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-cloud-api-operation-name": "Archive Asset",
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Archive Asset",
             "script": "curl --location 'https://apis.roblox.com/assets/v1/assets/{assetid}:archive' \\\n--header 'x-api-key: {apiKey}' \\\n--header 'Content-Type: application/json'"
           }
         ],
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -5479,17 +5671,122 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_ArchiveAsset"
+        }
+      }
+    },
+    "/assets/v1/assets/{assetId}:multipartUpload": {
+      "patch": {
+        "tags": ["Assets"],
+        "summary": "Starts a multipart upload operation to update assets.",
+        "operationId": "Assets_UpdateAssetWithMultipartUpload",
+        "parameters": [
+          {
+            "name": "assetId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MultipartUploadStartRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MultipartUploadStartResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "asset:write",
+            "description": "Required for the asset's creator (user or group)."
+          }
+        ],
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_UpdateAssetWithMultipartUpload"
         }
       }
     },
     "/assets/v1/assets/{assetId}:restore": {
       "post": {
         "tags": ["Assets"],
-        "x-roblox-cloud-api-operation": true,
-        "x-roblox-cloud-api-operation-name": "Restore Asset",
-        "x-roblox-stability": "BETA",
         "summary": "Restores an archived asset.",
         "description": "Restores an archived asset.",
         "operationId": "Assets_RestoreAsset",
@@ -5500,7 +5797,8 @@
             "description": "The unique identifier of the asset.",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int64"
             }
           }
         ],
@@ -5510,43 +5808,67 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Asset"
+                  "$ref": "#/components/schemas/AssetsUploadApi.Asset"
                 }
               }
             }
           },
           "400": {
-            "description": "Bad request - invalid request."
+            "description": "Bad request - invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The API key is not valid for this operation / You don't have the authorization.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           },
           "403": {
-            "description": "Forbidden - API key without Write scope or user doesn't have access."
+            "description": "Forbidden - API key without Write scope or user doesn't have access.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           },
           "404": {
-            "description": "Asset not found."
+            "description": "Asset not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           }
         },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
         "x-roblox-scopes": [
           {
-            "name": "asset:read"
-          },
-          {
-            "name": "asset:write"
+            "name": "asset:write",
+            "description": "Required for the asset's creator (user or group)."
           }
         ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-cloud-api-operation-name": "Restore Asset",
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Restore Asset",
             "script": "curl --location 'https://apis.roblox.com/assets/v1/assets/{assetid}:restore' \\\n--header 'x-api-key: {apiKey}' \\\n--header 'Content-Type: application/json'"
           }
         ],
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -5560,19 +5882,113 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_RestoreAsset"
+        }
+      }
+    },
+    "/assets/v1/assets:multipartUpload": {
+      "post": {
+        "tags": ["Assets"],
+        "summary": "Starts a multipart upload operation to create assets.",
+        "operationId": "Assets_CreateAssetWithMultipartUpload",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MultipartUploadStartRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MultipartUploadStartResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "asset:write",
+            "description": "Required for the asset's creator (user or group)."
+          }
+        ],
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_CreateAssetWithMultipartUpload"
         }
       }
     },
     "/assets/v1/operations/{operationId}": {
       "get": {
         "tags": ["Assets"],
-        "x-roblox-cloud-api-operation": true,
-        "x-roblox-cloud-api-operation-name": "Get Operation",
-        "x-roblox-stability": "BETA",
         "summary": "Get the result of an asset creation or update.",
-        "description": "Get the result of an asset creation or update using the returned Operation ID. Requires **Read** for the API key permission and **asset:read** for OAuth 2.0 apps.",
+        "description": "Get the result of an asset creation or update using the returned Operation ID.",
         "operationId": "Assets_GetOperation",
         "parameters": [
           {
@@ -5591,7 +6007,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OCV1.Assets.Operation"
+                  "$ref": "#/components/schemas/AssetsUploadApi.Operation"
                 }
               }
             }
@@ -5601,37 +6017,57 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OCV1.Assets.Status"
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
                 }
               }
             }
           },
           "401": {
-            "description": "The API key is not valid for this operation / You don't have the authorization."
+            "description": "The API key is not valid for this operation / You don't have the authorization.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Doesn't have the required permission.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           },
           "500": {
-            "description": "Server internal error / Unknown error."
+            "description": "Server internal error / Unknown error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           }
         },
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": []
-          }
-        ],
         "x-roblox-scopes": [
           {
-            "name": "asset:read"
+            "name": "asset:write",
+            "description": "Required."
           }
         ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-cloud-api-operation-name": "Get Operation",
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "Get Operation",
             "script": "curl --location 'https://apis.roblox.com/assets/v1/operations/{operationId}' \\\n--header 'x-api-key: {apiKey}'\n"
           }
         ],
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -5645,8 +6081,381 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_GetOperation"
+        }
+      }
+    },
+    "/assets/v1/operations/{operationId}:multipartUpload": {
+      "delete": {
+        "tags": ["Assets"],
+        "summary": "Abort a multipart asset upload.",
+        "operationId": "Assets_MultipartUploadAbort",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "asset:write",
+            "description": "Required."
+          }
+        ],
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_MultipartUploadAbort"
+        }
+      }
+    },
+    "/assets/v1/operations/{operationId}:multipartUploadChunkComplete": {
+      "post": {
+        "tags": ["Assets"],
+        "summary": "Records a chunk upload complete.",
+        "operationId": "Assets_MultipartUploadChunkComplete",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MultipartUploadChunkCompleteRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "asset:write",
+            "description": "Required."
+          }
+        ],
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_MultipartUploadChunkComplete"
+        }
+      }
+    },
+    "/assets/v1/operations/{operationId}:multipartUploadComplete": {
+      "post": {
+        "tags": ["Assets"],
+        "summary": "Records a multipart upload complete and returns a URL to poll the status.",
+        "operationId": "Assets_MultipartUploadComplete",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Operation"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Operation"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Operation"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "asset:write",
+            "description": "Required."
+          }
+        ],
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#Assets_MultipartUploadComplete"
         }
       }
     },
@@ -13453,7 +14262,8 @@
             "description": "The user ID.",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int64"
             }
           },
           {
@@ -13462,7 +14272,8 @@
             "description": "The maximum number of asset quotas to return. The service might return\nfewer than this value. If unspecified, at most 10 asset quotas are\nreturned. The maximum value is 100 and higher values are set to 100.",
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int32",
+              "default": 10
             },
             "examples": {
               "maxPageSize": {
@@ -13476,7 +14287,8 @@
             "in": "query",
             "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\nWhen paginating, all other parameters provided to the subsequent call must\nmatch the call that provided the page token.",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           },
           {
@@ -13484,7 +14296,8 @@
             "in": "query",
             "description": "This field may be set in order to filter the resources returned.\n\nSupports the following subset of CEL:\n* Only the `quotaType` and `assetType` fields are supported.\n* Only the `==` and `&&` operator are supported.\n\nFor example:\n  `quotaType == RateLimitUpload && assetType == Audio`",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             }
           }
         ],
@@ -13498,26 +14311,44 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetsUploadApi.Status"
+                }
+              }
+            }
           }
-        },
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
         },
         "x-roblox-scopes": [
           {
-            "name": "asset:read"
+            "name": "asset:read",
+            "description": "Required for the user in the path."
           }
         ],
-        "x-roblox-docs": {
-          "category": "Users and groups",
-          "methodProperties": {
-            "scopes": ["asset:read"]
-          },
-          "resource": {
-            "$ref": "#/components/schemas/AssetQuota",
-            "name": "AssetQuota"
-          }
-        },
         "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
@@ -13528,6 +14359,9 @@
             "period": "MINUTE",
             "maxInPeriod": 60
           }
+        },
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
         },
         "security": [
           {
@@ -34332,6 +35166,228 @@
         }
       }
     },
+    "/universe-performance-raqi/v1/events/logging/universe/{universeId}/log-details": {
+      "get": {
+        "tags": ["Analytics"],
+        "summary": "Get logs based on message hash ids, keywords, placeVersions, start/end time.",
+        "operationId": "ErrorLoggingDetail_GetLogs",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "messageHashIds",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "Optional keyword to help highlight matching keyword in the error message",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "startTime",
+            "in": "query",
+            "description": "Optional query window start; omitted values are defaulted server-side.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endTime",
+            "in": "query",
+            "description": "Optional query window end; omitted values are defaulted server-side.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "placeId",
+            "in": "query",
+            "description": "Optional place id filter.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "placeVersions",
+            "in": "query",
+            "description": "Optional place version filters.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          },
+          {
+            "name": "firstSeenPlaceVersion",
+            "in": "query",
+            "description": "Optional minimum first seen place version filter (inclusive).",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorLogDetailResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorLogDetailResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorLogDetailResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics:read",
+            "targetResourceSpecifier": "universe"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#ErrorLoggingDetail_GetLogs"
+        }
+      }
+    },
     "/universes/v1/{universeId}/places/{placeId}/versions": {
       "post": {
         "tags": ["Places", "Universes"],
@@ -35857,12 +36913,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -37985,12 +39056,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:write",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -39805,12 +40891,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 1
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:publish",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -39879,12 +40980,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 1
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:publish",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -39991,12 +41107,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -40057,12 +41188,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -40607,16 +41753,98 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 1
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:publish",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_post_v1_collectibles"
+        }
+      }
+    },
+    "/v1/collectibles/bulk-update": {
+      "patch": {
+        "tags": ["Assets", "Avatars"],
+        "summary": "Updates some items in bulk.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Request.Collectibles.BulkUpdateRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Request.Collectibles.BulkUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          },
+          "404": {
+            "description": "3: Service Unavailable"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://itemconfiguration.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:write",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_patch_v1_collectibles_bulk_update"
         }
       }
     },
@@ -40685,12 +41913,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -40774,12 +42017,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -40851,12 +42109,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -40900,12 +42173,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -40943,12 +42231,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -41032,12 +42335,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -41159,16 +42477,159 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_get_v1_collectibles_publishing_fees"
+        }
+      }
+    },
+    "/v1/collectibles/publishing-fees/preview": {
+      "get": {
+        "tags": ["Assets", "Avatars"],
+        "summary": "Previews the publishing fee for an item type before the item exists, so the fee can be shown at\nupload time. Takes the item's type directly instead of a target id.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "AssetType",
+            "description": "Asset type of the item being uploaded. Mutually exclusive with BundleType; exactly one is required.\nSame generated types the existing upload-fee endpoint takes, so the two fee endpoints agree.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "enum": [
+                0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19,
+                21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38,
+                39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
+                55, 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
+                73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88,
+                89, 90, 91, 92, 93, 94, 95, 96, 97
+              ]
+            }
+          },
+          {
+            "in": "query",
+            "name": "BundleType",
+            "description": "Bundle type of the item being uploaded. Mutually exclusive with AssetType; exactly one is required.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "enum": [0, 1, 2, 3, 4]
+            }
+          },
+          {
+            "in": "query",
+            "name": "Quantity",
+            "description": "Quantity. Must be 0 for non-limited publishing.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "in": "query",
+            "name": "PublishingType",
+            "description": "Publishing type.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "enum": [0, 1, 2]
+            }
+          },
+          {
+            "in": "query",
+            "name": "IsFree",
+            "description": "Whether the item will be free.",
+            "required": true,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.PublishingFeePreviewResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.PublishingFeePreviewResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: Invalid target type\r\n4: Invalid Argument\r\n35: Quantity is invalid\r\n58: Invalid publishing type.\r\n64: Cannot be free."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request.\r\n66: Missing Authenticated User."
+          },
+          "404": {
+            "description": "5: Not Found"
+          },
+          "500": {
+            "description": "2: Failed to fetch publishing fee"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://itemconfiguration.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_get_v1_collectibles_publishing_fees_preview"
         }
       }
     },
@@ -41268,12 +42729,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -41314,12 +42790,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -41429,12 +42920,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -41557,12 +43063,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -41627,12 +43148,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:write",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -41701,12 +43237,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 1
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:write",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -41784,12 +43335,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 1
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:publish",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -41849,12 +43415,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -41921,12 +43502,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -41986,12 +43582,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:write",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -42139,6 +43750,200 @@
         }
       }
     },
+    "/v1/content-metadata/appeal": {
+      "post": {
+        "tags": ["Assets", "Avatars"],
+        "summary": "Creates a content metadata appeal for an asset.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Request.CreateContentMetadataAppealRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Request.CreateContentMetadataAppealRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Response.CreateContentMetadataAppealResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Response.CreateContentMetadataAppealResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "4: Invalid request parameters"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "0: Token Validation Failed\r\n3: Invalid user - user does not have permission"
+          },
+          "404": {
+            "description": "5: Target not found"
+          },
+          "500": {
+            "description": "2: Failed to create content metadata appeal"
+          },
+          "503": {
+            "description": "6: Service unavailable"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://itemconfiguration.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item-appeal:write",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_post_v1_content_metadata_appeal"
+        }
+      }
+    },
+    "/v1/content-metadata/appeal-status": {
+      "get": {
+        "tags": ["Assets", "Avatars"],
+        "summary": "Checks the appeal status for an asset.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "TargetType",
+            "description": "The type of the target item.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "enum": [0, 1, 2, 3]
+            }
+          },
+          {
+            "in": "query",
+            "name": "TargetId",
+            "description": "The id of the target item.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "AppealType",
+            "description": "The type of the appeal.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "enum": [0, 1]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.GetAppealStatusResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.GetAppealStatusResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "4: Invalid request parameters"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "3: Invalid user - user does not have permission"
+          },
+          "404": {
+            "description": "5: Target not found\r\n6: Service unavailable"
+          },
+          "500": {
+            "description": "1: Failed to get appeal status"
+          },
+          "503": {
+            "description": "6: Service unavailable"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://itemconfiguration.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item-appeal:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_get_v1_content_metadata_appeal_status"
+        }
+      }
+    },
     "/v1/country-regions": {
       "get": {
         "tags": ["Localization"],
@@ -42262,12 +44067,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -42361,12 +44181,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -42436,12 +44271,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 1
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:write",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -45123,12 +46973,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -45189,12 +47054,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 1
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:write",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -45255,12 +47135,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 1
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:write",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -45319,12 +47214,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -45399,12 +47309,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 1
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:write",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -45481,12 +47406,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 1
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:write",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -45563,12 +47503,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -45643,12 +47598,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 1
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:write",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -50365,12 +52335,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -50484,12 +52469,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -50571,12 +52571,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -50636,12 +52651,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -50760,12 +52790,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -50849,12 +52894,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item-upload-fee:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -54989,12 +57049,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -55048,12 +57123,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -55122,12 +57212,27 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "marketplace.item:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -80416,19 +82521,6 @@
         "additionalProperties": false,
         "description": "Represents an address."
       },
-      "AdsManagementApi.Creator": {
-        "type": "object",
-        "properties": {
-          "groupId": {
-            "description": "The creator group's ID.",
-            "type": "string"
-          },
-          "userId": {
-            "description": "The creator user's ID.",
-            "type": "string"
-          }
-        }
-      },
       "AdvertisableUniverse": {
         "type": "object",
         "required": ["universeId"],
@@ -81174,79 +83266,76 @@
       "Asset": {
         "type": "object",
         "properties": {
-          "assetType": {
-            "type": "string",
-            "description": "The asset type. Required for [Create Asset](#Assets_CreateAsset).",
-            "format": "enum"
-          },
-          "assetId": {
+          "id": {
             "type": "integer",
-            "description": "The unique identifier of the asset. Required for [Update Asset](#Assets_UpdateAsset).",
+            "description": "The unique identifier of the asset.",
             "format": "int64"
           },
-          "creationContext": {
-            "$ref": "#/components/schemas/CreationContext"
+          "name": {
+            "type": "string",
+            "description": "The name of the asset.",
+            "nullable": true
           },
           "description": {
             "type": "string",
-            "description": "The description of the asset. Limit to 1000 characters. Required for [Create Asset](#Assets_CreateAsset)."
+            "description": "The description of the asset.",
+            "nullable": true
           },
-          "displayName": {
-            "type": "string",
-            "description": "Display name of the asset. Required for [Create Asset](#Assets_CreateAsset)."
+          "assetTypeId": {
+            "type": "integer",
+            "description": "The type that the asset belongs to.",
+            "format": "int32",
+            "nullable": true
           },
-          "path": {
+          "socialLinks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SocialLinkModel"
+            },
+            "description": "The social links associated with the asset.",
+            "nullable": true
+          },
+          "previewAssets": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PreviewAssetsModel"
+              }
+            ],
+            "description": "The asset's preview asset ids grouped by asset type.",
+            "nullable": true
+          },
+          "createTime": {
             "type": "string",
-            "description": "The returned resource path of the asset. Format: `assets/{assetId}`. Example: `assets/2205400862`."
+            "description": "The time the asset was created.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updateTime": {
+            "type": "string",
+            "description": "The time the asset was last updated.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "creatingUniverseId": {
+            "type": "integer",
+            "description": "Universe ID if the asset was created within a specific universe.",
+            "format": "int64",
+            "nullable": true
+          },
+          "categoryPath": {
+            "type": "string",
+            "description": "Category Path of the asset, if it exists.\ne.g. \"3d__characters\"",
+            "nullable": true
           },
           "revisionId": {
             "type": "string",
-            "description": "Revision ID of the asset. Equivalent to `versionNumber`. Every change of the asset automatically commits a new version. The format is an integer string. Example: `1`.",
-            "readOnly": true
-          },
-          "revisionCreateTime": {
-            "type": "string",
-            "description": "The creation timestamp of the current revision.",
-            "format": "date-time",
-            "readOnly": true
-          },
-          "moderationResult": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ModerationResult"
-              }
-            ],
-            "readOnly": true
-          },
-          "published": {
-            "type": "boolean",
-            "description": "Whether to publish the asset version created by the request. To check whether the current revision is published, see `isPublished`.",
-            "writeOnly": true
-          },
-          "isPublished": {
-            "type": "boolean",
-            "description": "Whether the current revision of the asset is published.",
-            "readOnly": true
-          },
-          "icon": {
-            "type": "string",
-            "description": "The resource path for the icon."
-          },
-          "previews": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Preview"
-            },
-            "description": "A list of previews, each with an asset path and alt text. Previews must be **Image** assets."
-          },
-          "state": {
-            "$ref": "#/components/schemas/State"
-          },
-          "socialLink": {
-            "$ref": "#/components/schemas/SocialLink"
+            "description": "The latest revision ID of the asset. The format is an integer string.\nA new revision is committed whenever the asset is changed in any way.\nOmitted when unknown.",
+            "nullable": true
           }
         },
-        "description": "Represents an asset."
+        "additionalProperties": false,
+        "description": "Representation of an asset.",
+        "nullable": true
       },
       "AssetAction": {
         "enum": [
@@ -81332,102 +83421,34 @@
         "description": "The error object for responses."
       },
       "AssetPrivacy": {
+        "enum": ["Unspecified", "Default", "OpenUse", "Restricted"],
         "type": "string",
-        "description": "The privacy setting of the asset. Requested asset privacy is only applicable to asset types that allow privacy override. For more details see [Asset Privacy](/projects/assets/privacy.md).",
-        "enum": ["default", "restricted", "openUse"]
+        "description": "The privacy setting of the asset. Requested asset privacy is only applicable to asset types that allow privacy override. For more details see [Asset Privacy](/projects/assets/privacy.md)."
       },
       "AssetQuota": {
         "type": "object",
         "properties": {
           "path": {
-            "example": "users/123/asset-quotas/some-asset-quota",
             "type": "string",
-            "description": "The resource path of the asset quota.\n\nFormat: `users/{user_id}/asset-quotas/{asset_quota_id}`"
+            "description": "The resource path of the asset quota.\n\nFormat: `users/{user_id}/asset-quotas/{asset_quota_id}`",
+            "nullable": true,
+            "example": "users/123/asset-quotas/some-asset-quota"
           },
           "quotaType": {
-            "example": "QUOTA_TYPE_UNSPECIFIED",
-            "enum": [
-              "QUOTA_TYPE_UNSPECIFIED",
-              "RATE_LIMIT_UPLOAD",
-              "RATE_LIMIT_CREATOR_STORE_DISTRIBUTE"
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QuotaType"
+              }
             ],
-            "type": "string",
-            "description": "Type of quota.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | QUOTA_TYPE_UNSPECIFIED | The default quota type. |\n  | RATE_LIMIT_UPLOAD | Rate limit on how often one can upload an asset. |\n  | RATE_LIMIT_CREATOR_STORE_DISTRIBUTE | Rate limit on how often one can distribute an asset on the Creator Store. |",
-            "format": "enum"
+            "description": "Type of quota.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | UNSPECIFIED | The default quota type. |\n  | RATE_LIMIT_UPLOAD | Rate limit on how often one can upload an asset. |\n  | RATE_LIMIT_CREATOR_STORE_DISTRIBUTE | Rate limit on how often one can distribute an asset on the Creator Store. |"
           },
           "assetType": {
-            "example": "ASSET_TYPE_UNSPECIFIED",
-            "enum": [
-              "ASSET_TYPE_UNSPECIFIED",
-              "IMAGE",
-              "TSHIRT",
-              "AUDIO",
-              "MESH",
-              "LUA",
-              "HAT",
-              "PLACE",
-              "MODEL",
-              "SHIRT",
-              "PANTS",
-              "DECAL",
-              "HEAD",
-              "FACE",
-              "GEAR",
-              "ANIMATION",
-              "TORSO",
-              "RIGHT_ARM",
-              "LEFT_ARM",
-              "LEFT_LEG",
-              "RIGHT_LEG",
-              "YOUTUBE_VIDEO",
-              "APP",
-              "CODE",
-              "PLUGIN",
-              "SOLID_MODEL",
-              "MESH_PART",
-              "HAIR_ACCESSORY",
-              "FACE_ACCESSORY",
-              "NECK_ACCESSORY",
-              "SHOULDER_ACCESSORY",
-              "FRONT_ACCESSORY",
-              "BACK_ACCESSORY",
-              "WAIST_ACCESSORY",
-              "CLIMB_ANIMATION",
-              "DEATH_ANIMATION",
-              "FALL_ANIMATION",
-              "IDLE_ANIMATION",
-              "JUMP_ANIMATION",
-              "RUN_ANIMATION",
-              "SWIM_ANIMATION",
-              "WALK_ANIMATION",
-              "POSE_ANIMATION",
-              "LOCALIZATION_TABLE_MANIFEST",
-              "LOCALIZATION_TABLE_TRANSLATION",
-              "EMOTE_ANIMATION",
-              "VIDEO",
-              "TEXTURE_PACK",
-              "TSHIRT_ACCESSORY",
-              "SHIRT_ACCESSORY",
-              "PANTS_ACCESSORY",
-              "JACKET_ACCESSORY",
-              "SWEATER_ACCESSORY",
-              "SHORTS_ACCESSORY",
-              "LEFT_SHOE_ACCESSORY",
-              "RIGHT_SHOE_ACCESSORY",
-              "DRESS_SKIRT_ACCESSORY",
-              "FONT_FAMILY",
-              "FONT_FACE",
-              "MESH_HIDDEN_SURFACE_REMOVAL",
-              "EYEBROW_ACCESSORY",
-              "EYELASH_ACCESSORY",
-              "MOOD_ANIMATION",
-              "DYNAMIC_HEAD",
-              "CODE_SNIPPET",
-              "ADS_VIDEO"
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Roblox.OpenCloud.Cloud.V2.AssetType"
+              }
             ],
-            "type": "string",
-            "description": "The asset type the quota is for.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | ASSET_TYPE_UNSPECIFIED | The default asset type. |\n  | IMAGE | Image |\n  | TSHIRT | Tshirt |\n  | AUDIO | Audio |\n  | MESH | Mesh |\n  | LUA | Lua |\n  | HAT | Hat |\n  | PLACE | Place |\n  | MODEL | Model |\n  | SHIRT | Classic Shirt |\n  | PANTS | Classic Pants |\n  | DECAL | Decal |\n  | HEAD | Head |\n  | FACE | Face |\n  | GEAR | Gear |\n  | ANIMATION | Animation |\n  | TORSO | Torso |\n  | RIGHT_ARM | Right Arm |\n  | LEFT_ARM | Left Arm |\n  | LEFT_LEG | Left Leg |\n  | RIGHT_LEG | Right Leg |\n  | YOUTUBE_VIDEO | YouTube Video |\n  | APP | App |\n  | CODE | Code |\n  | PLUGIN | Plugin |\n  | SOLID_MODEL | Solid Model |\n  | MESH_PART | Mesh Part |\n  | HAIR_ACCESSORY | Hair Accessory |\n  | FACE_ACCESSORY | Face Accessory |\n  | NECK_ACCESSORY | Neck Accessory |\n  | SHOULDER_ACCESSORY | Shoulder Accessory |\n  | FRONT_ACCESSORY | Front Accessory |\n  | BACK_ACCESSORY | Back Accessory |\n  | WAIST_ACCESSORY | Waist Accessory |\n  | CLIMB_ANIMATION | Climb Animation |\n  | DEATH_ANIMATION | Death Animation |\n  | FALL_ANIMATION | Fall Animation |\n  | IDLE_ANIMATION | Idle Animation |\n  | JUMP_ANIMATION | Jump Animation |\n  | RUN_ANIMATION | Run Animation |\n  | SWIM_ANIMATION | Swim Animation |\n  | WALK_ANIMATION | Walk Animation |\n  | POSE_ANIMATION | Pose Animation |\n  | LOCALIZATION_TABLE_MANIFEST | Localization Table Manifest |\n  | LOCALIZATION_TABLE_TRANSLATION | Localization Table Translation |\n  | EMOTE_ANIMATION | Emote Animation |\n  | VIDEO | Video |\n  | TEXTURE_PACK | Texture Pack |\n  | TSHIRT_ACCESSORY | Tshirt Accessory |\n  | SHIRT_ACCESSORY | Shirt Accessory |\n  | PANTS_ACCESSORY | Pants Accessory |\n  | JACKET_ACCESSORY | Jacket Accessory |\n  | SWEATER_ACCESSORY | Sweater Accessory |\n  | SHORTS_ACCESSORY | Shorts Accessory |\n  | LEFT_SHOE_ACCESSORY | Left Shoe Accessory |\n  | RIGHT_SHOE_ACCESSORY | Right Shoe Accessory |\n  | DRESS_SKIRT_ACCESSORY | Dress Skirt Accessory |\n  | FONT_FAMILY | Font Family |\n  | FONT_FACE | Font Face |\n  | MESH_HIDDEN_SURFACE_REMOVAL | Mesh Hidden Surface Removal |\n  | EYEBROW_ACCESSORY | Eyebrow Accessory |\n  | EYELASH_ACCESSORY | Eyelash Accessory |\n  | MOOD_ANIMATION | Mood Animation |\n  | DYNAMIC_HEAD | Dynamic Head |\n  | CODE_SNIPPET | Code Snippet |\n  | ADS_VIDEO | Ads Video |",
-            "format": "enum"
+            "description": "The asset type the quota is for.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | UNSPECIFIED | The default asset type. |\n  | IMAGE | Image |\n  | TSHIRT | Tshirt |\n  | AUDIO | Audio |\n  | MESH | Mesh |\n  | LUA | Lua |\n  | HAT | Hat |\n  | PLACE | Place |\n  | MODEL | Model |\n  | SHIRT | Classic Shirt |\n  | PANTS | Classic Pants |\n  | DECAL | Decal |\n  | HEAD | Head |\n  | FACE | Face |\n  | GEAR | Gear |\n  | ANIMATION | Animation |\n  | TORSO | Torso |\n  | RIGHT_ARM | Right Arm |\n  | LEFT_ARM | Left Arm |\n  | LEFT_LEG | Left Leg |\n  | RIGHT_LEG | Right Leg |\n  | YOUTUBE_VIDEO | YouTube Video |\n  | APP | App |\n  | CODE | Code |\n  | PLUGIN | Plugin |\n  | SOLID_MODEL | Solid Model |\n  | MESH_PART | Mesh Part |\n  | HAIR_ACCESSORY | Hair Accessory |\n  | FACE_ACCESSORY | Face Accessory |\n  | NECK_ACCESSORY | Neck Accessory |\n  | SHOULDER_ACCESSORY | Shoulder Accessory |\n  | FRONT_ACCESSORY | Front Accessory |\n  | BACK_ACCESSORY | Back Accessory |\n  | WAIST_ACCESSORY | Waist Accessory |\n  | CLIMB_ANIMATION | Climb Animation |\n  | DEATH_ANIMATION | Death Animation |\n  | FALL_ANIMATION | Fall Animation |\n  | IDLE_ANIMATION | Idle Animation |\n  | JUMP_ANIMATION | Jump Animation |\n  | RUN_ANIMATION | Run Animation |\n  | SWIM_ANIMATION | Swim Animation |\n  | WALK_ANIMATION | Walk Animation |\n  | POSE_ANIMATION | Pose Animation |\n  | LOCALIZATION_TABLE_MANIFEST | Localization Table Manifest |\n  | LOCALIZATION_TABLE_TRANSLATION | Localization Table Translation |\n  | EMOTE_ANIMATION | Emote Animation |\n  | VIDEO | Video |\n  | TEXTURE_PACK | Texture Pack |\n  | TSHIRT_ACCESSORY | Tshirt Accessory |\n  | SHIRT_ACCESSORY | Shirt Accessory |\n  | PANTS_ACCESSORY | Pants Accessory |\n  | JACKET_ACCESSORY | Jacket Accessory |\n  | SWEATER_ACCESSORY | Sweater Accessory |\n  | SHORTS_ACCESSORY | Shorts Accessory |\n  | LEFT_SHOE_ACCESSORY | Left Shoe Accessory |\n  | RIGHT_SHOE_ACCESSORY | Right Shoe Accessory |\n  | DRESS_SKIRT_ACCESSORY | Dress Skirt Accessory |\n  | FONT_FAMILY | Font Family |\n  | FONT_FACE | Font Face |\n  | MESH_HIDDEN_SURFACE_REMOVAL | Mesh Hidden Surface Removal |\n  | EYEBROW_ACCESSORY | Eyebrow Accessory |\n  | EYELASH_ACCESSORY | Eyelash Accessory |\n  | MOOD_ANIMATION | Mood Animation |\n  | DYNAMIC_HEAD | Dynamic Head |\n  | CODE_SNIPPET | Code Snippet |\n  | ADS_VIDEO | Ads Video |"
           },
           "usage": {
             "type": "integer",
@@ -81440,47 +83461,143 @@
             "format": "int64"
           },
           "period": {
-            "example": "PERIOD_UNSPECIFIED",
-            "enum": ["PERIOD_UNSPECIFIED", "MONTH", "DAY"],
-            "type": "string",
-            "description": "The period of time the quota is for.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | PERIOD_UNSPECIFIED | The default period, which is invalid. Specify another value. |\n  | MONTH | Month |\n  | DAY | Day |",
-            "format": "enum"
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Period"
+              }
+            ],
+            "description": "The period of time the quota is for.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | UNSPECIFIED | The default period, which is invalid. Specify another value. |\n  | MONTH | Month |\n  | DAY | Day |"
           },
           "usageResetTime": {
-            "example": "2023-07-05T12:34:56Z",
             "type": "string",
             "description": "The time the usage will reset for this quota.",
-            "format": "date-time"
+            "format": "date-time",
+            "nullable": true,
+            "example": "2023-07-05T12:34:56Z"
           }
         },
-        "description": "Represents a quota for an asset-related action.\n\nFor example, a user might be able to upload 100 audio files per month and\nhave uploaded 15 already. In this example:\n- `quotaType` is `RATE_LIMIT_UPLOAD`\n- `assetType` is `AUDIO`\n- `usage` is `15`\n- `capacity` is `100`\n- `period` is `MONTH`\n`usageResetTime` indicates when a new period begins and usage resets to 0.\nThis value **doesn't** necessarily correlate with the first day of a\ncalendar month or midnight on a given day. For more information on the\nupload process, see the\n[usage\nguide](https://create.roblox.com/docs/en-us/cloud/open-cloud/usage-assets).",
-        "x-aep-resource": {
-          "patterns": ["users/{user_id}/asset-quotas/{asset_quota_id}"],
-          "plural": "asset-quotas",
-          "singular": "asset-quota"
-        },
-        "x-resource": true
+        "additionalProperties": false,
+        "description": "Represents a quota for an asset-related action.\n\nFor example, a user might be able to upload 100 audio files per month and\nhave uploaded 15 already. In this example:\n- `quotaType` is `RATE_LIMIT_UPLOAD`\n- `assetType` is `AUDIO`\n- `usage` is `15`\n- `capacity` is `100`\n- `period` is `MONTH`\n`usageResetTime` indicates when a new period begins and usage resets to 0.\nThis value **doesn't** necessarily correlate with the first day of a\ncalendar month or midnight on a given day. For more information on the\nupload process, see the\n[usage\nguide](https://create.roblox.com/docs/en-us/cloud/open-cloud/usage-assets)."
+      },
+      "AssetType": {
+        "enum": [
+          "Unspecified",
+          "Image",
+          "Tshirt",
+          "Audio",
+          "Mesh",
+          "Lua",
+          "Html",
+          "Text",
+          "Hat",
+          "Place",
+          "Model",
+          "Shirt",
+          "Pants",
+          "Decal",
+          "Avatar",
+          "Head",
+          "Face",
+          "Gear",
+          "Badge",
+          "GroupEmblem",
+          "Animation",
+          "Arms",
+          "Legs",
+          "Torso",
+          "RightArm",
+          "LeftArm",
+          "LeftLeg",
+          "RightLeg",
+          "Package",
+          "YoutubeVideo",
+          "GamePass",
+          "App",
+          "Code",
+          "Plugin",
+          "SolidModel",
+          "MeshPart",
+          "HairAccessory",
+          "FaceAccessory",
+          "NeckAccessory",
+          "ShoulderAccessory",
+          "FrontAccessory",
+          "BackAccessory",
+          "WaistAccessory",
+          "ClimbAnimation",
+          "DeathAnimation",
+          "FallAnimation",
+          "IdleAnimation",
+          "JumpAnimation",
+          "RunAnimation",
+          "SwimAnimation",
+          "WalkAnimation",
+          "PoseAnimation",
+          "LocalizationTableManifest",
+          "LocalizationTableTranslation",
+          "EmoteAnimation",
+          "Video",
+          "TexturePack",
+          "TshirtAccessory",
+          "ShirtAccessory",
+          "PantsAccessory",
+          "JacketAccessory",
+          "SweaterAccessory",
+          "ShortsAccessory",
+          "LeftShoeAccessory",
+          "RightShoeAccessory",
+          "DressSkirtAccessory",
+          "FontFamily",
+          "FontFace",
+          "MeshHiddenSurfaceRemoval",
+          "EyebrowAccessory",
+          "EyelashAccessory",
+          "MoodAnimation",
+          "DynamicHead",
+          "CodeSnippet",
+          "AdsVideo",
+          "OtaUpdate",
+          "Screenshot",
+          "RuntimePropertySet",
+          "StorePreviewVideo",
+          "GamePreviewVideo",
+          "CreatorExperienceConfig",
+          "FaceMakeup",
+          "LipMakeup",
+          "EyeMakeup",
+          "VoxelFragment",
+          "AvatarBackground",
+          "TextDocument",
+          "Post",
+          "AnimatedImage",
+          "ComputeFunction",
+          "Voice"
+        ],
+        "type": "string",
+        "description": "Type of the Asset."
       },
       "AssetVersion": {
         "type": "object",
         "properties": {
+          "path": {
+            "type": "string",
+            "description": "The returned resource path of the asset version. Format: `assets/{assetId}/versions/{version}`.",
+            "nullable": true,
+            "example": "assets/123/versions/123"
+          },
+          "createTime": {
+            "type": "string",
+            "description": "The timestamp when the asset version was created.",
+            "format": "date-time",
+            "nullable": true,
+            "readOnly": true
+          },
           "creationContext": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/CreationContext"
               }
             ],
-            "readOnly": true
-          },
-          "path": {
-            "type": "string",
-            "description": "The returned resource path of the asset version. Format: `assets/{assetId}/versions/{version}`.",
-            "example": "assets/2205400862/versions/1"
-          },
-          "createTime": {
-            "type": "string",
-            "description": "The timestamp when the asset version was created.",
-            "format": "date-time",
             "readOnly": true
           },
           "moderationResult": {
@@ -81496,7 +83613,201 @@
             "description": "Indicates whether the asset version is published. If omitted, the version is not published."
           }
         },
+        "additionalProperties": false,
         "description": "An asset version."
+      },
+      "AssetsUploadApi.Asset": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The returned resource path of the asset. Format: `assets/{assetId}`. Example: `assets/2205400862`.",
+            "nullable": true,
+            "example": "assets/123"
+          },
+          "revisionId": {
+            "type": "string",
+            "description": "Revision ID of the asset. Equivalent to `versionNumber`. Every change of the asset automatically commits a new version. The format is an integer string. Example: `1`.",
+            "nullable": true,
+            "readOnly": true,
+            "x-immutable": true
+          },
+          "revisionCreateTime": {
+            "type": "string",
+            "description": "The creation timestamp of the current revision.",
+            "format": "date-time",
+            "nullable": true,
+            "readOnly": true
+          },
+          "assetId": {
+            "type": "integer",
+            "description": "The unique identifier of the asset. Required for [Update Asset](#Assets_UpdateAsset).",
+            "format": "int64"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name of the asset. Required for [Create Asset](#Assets_CreateAsset).",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the asset. Limit to 1000 characters. Required for [Create Asset](#Assets_CreateAsset).",
+            "nullable": true
+          },
+          "assetType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AssetType"
+              }
+            ],
+            "description": "The asset type. Required for [Create Asset](#Assets_CreateAsset)."
+          },
+          "creationContext": {
+            "$ref": "#/components/schemas/CreationContext"
+          },
+          "moderationResult": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ModerationResult"
+              }
+            ],
+            "readOnly": true
+          },
+          "published": {
+            "type": "boolean",
+            "description": "Whether to publish the asset version created by the request. To check whether the current revision is published, see `isPublished`.",
+            "writeOnly": true
+          },
+          "hasPublished": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "icon": {
+            "type": "string",
+            "description": "The resource path for the icon.",
+            "nullable": true
+          },
+          "previews": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Preview"
+            },
+            "description": "A list of previews, each with an asset path and alt text. Previews must be **Image** assets.",
+            "nullable": true
+          },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "facebookSocialLink": {
+            "$ref": "#/components/schemas/SocialLink"
+          },
+          "twitterSocialLink": {
+            "$ref": "#/components/schemas/SocialLink"
+          },
+          "youtubeSocialLink": {
+            "$ref": "#/components/schemas/SocialLink"
+          },
+          "twitchSocialLink": {
+            "$ref": "#/components/schemas/SocialLink"
+          },
+          "discordSocialLink": {
+            "$ref": "#/components/schemas/SocialLink"
+          },
+          "githubSocialLink": {
+            "$ref": "#/components/schemas/SocialLink"
+          },
+          "robloxSocialLink": {
+            "$ref": "#/components/schemas/SocialLink"
+          },
+          "guildedSocialLink": {
+            "$ref": "#/components/schemas/SocialLink"
+          },
+          "devForumSocialLink": {
+            "$ref": "#/components/schemas/SocialLink"
+          },
+          "tryAssetSocialLink": {
+            "$ref": "#/components/schemas/SocialLink"
+          },
+          "isPublished": {
+            "type": "boolean",
+            "description": "Whether the current revision of the asset is published.",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents an asset."
+      },
+      "AssetsUploadApi.Creator": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "description": "The user ID as a decimal string. Set when the asset is owned by a user.",
+            "nullable": true
+          },
+          "groupId": {
+            "type": "string",
+            "description": "The group ID as a decimal string. Set when the asset is owned by a group.",
+            "nullable": true
+          },
+          "experienceId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a creator. Only one creator ID is set, according to the creator type."
+      },
+      "AssetsUploadApi.Operation": {
+        "required": ["operationId"],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The server-assigned resource path. The default format is `operations/{operation_id}`.",
+            "nullable": true,
+            "example": "operations/some-operation"
+          },
+          "operationId": {
+            "type": "string"
+          },
+          "done": {
+            "type": "boolean",
+            "description": "If `false`, the operation is still in progress. If `true`, the operation is completed."
+          },
+          "error": {
+            "$ref": "#/components/schemas/AssetsUploadApi.Status"
+          },
+          "response": {
+            "$ref": "#/components/schemas/AssetsUploadApi.Asset"
+          }
+        },
+        "additionalProperties": false,
+        "description": "This resource represents a long-running operation that is the result of a network API call."
+      },
+      "AssetsUploadApi.Status": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "The error code.",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "The error message.",
+            "nullable": true
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorInfo"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "description": "The logical error model explaining the error status."
       },
       "AssignRoleGroupMembershipRequest": {
         "required": ["role"],
@@ -81519,7 +83830,7 @@
         "type": "object",
         "allOf": [
           {
-            "$ref": "#/components/schemas/ToolboxService.Asset"
+            "$ref": "#/components/schemas/Asset"
           }
         ],
         "properties": {
@@ -81945,7 +84256,7 @@
             "description": "The user or group that created the account.",
             "allOf": [
               {
-                "$ref": "#/components/schemas/AdsManagementApi.Creator"
+                "$ref": "#/components/schemas/Creator"
               }
             ]
           },
@@ -82055,7 +84366,7 @@
             "description": "The user or group that created the account.",
             "allOf": [
               {
-                "$ref": "#/components/schemas/AdsManagementApi.Creator"
+                "$ref": "#/components/schemas/Creator"
               }
             ]
           },
@@ -82365,7 +84676,7 @@
             "description": "The user who created the campaign (read-only).",
             "allOf": [
               {
-                "$ref": "#/components/schemas/AdsManagementApi.Creator"
+                "$ref": "#/components/schemas/Creator"
               }
             ],
             "readOnly": true
@@ -84029,23 +86340,32 @@
       "CreationContext": {
         "type": "object",
         "properties": {
-          "assetPrivacy": {
-            "$ref": "#/components/schemas/AssetPrivacy",
-            "description": "Desired privacy setting for the asset on creation. Only applies to asset types that support privacy override.",
-            "required": false,
-            "writeOnly": true
-          },
           "creator": {
-            "$ref": "#/components/schemas/Creator",
-            "required": true
+            "$ref": "#/components/schemas/AssetsUploadApi.Creator"
           },
           "expectedPrice": {
             "type": "integer",
             "description": "Expected asset upload fee in Robux. When the actual price is more than expected, the operation fails with a 400 error.",
             "format": "int64",
             "writeOnly": true
+          },
+          "creatingUniverseId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true,
+            "readOnly": true
+          },
+          "assetPrivacy": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AssetPrivacy"
+              }
+            ],
+            "description": "Desired privacy setting for the asset on creation. Only applies to asset types that support privacy override.",
+            "writeOnly": true
           }
         },
+        "additionalProperties": false,
         "description": "The context of creation that is not part of the asset content, such as metadata and creator information. Required for [Create Asset](#Assets_CreateAsset)."
       },
       "Creative": {
@@ -84137,16 +86457,15 @@
       "Creator": {
         "type": "object",
         "properties": {
-          "userId": {
-            "type": "string",
-            "description": "The user ID as a decimal string. Set when the asset is owned by a user."
-          },
           "groupId": {
-            "type": "string",
-            "description": "The group ID as a decimal string. Set when the asset is owned by a group."
+            "description": "The creator group's ID.",
+            "type": "string"
+          },
+          "userId": {
+            "description": "The creator user's ID.",
+            "type": "string"
           }
-        },
-        "description": "Represents a creator. Only one creator ID is set, according to the creator type."
+        }
       },
       "CreatorConfigsPublicApi.SortOrder": {
         "enum": ["SORT_ORDER_ASCENDING", "SORT_ORDER_DESCENDING"],
@@ -84236,7 +86555,7 @@
           "asset": {
             "oneOf": [
               {
-                "$ref": "#/components/schemas/ToolboxService.Asset"
+                "$ref": "#/components/schemas/Asset"
               },
               {
                 "$ref": "#/components/schemas/Audio"
@@ -86894,7 +89213,7 @@
         "type": "object",
         "allOf": [
           {
-            "$ref": "#/components/schemas/ToolboxService.Asset"
+            "$ref": "#/components/schemas/Asset"
           }
         ],
         "properties": {
@@ -86902,6 +89221,11 @@
             "type": "integer",
             "description": "The texture id of the decal.",
             "format": "int64"
+          },
+          "textureRevisionId": {
+            "type": "string",
+            "description": "The Version Number of the texture that this decal version references, as a string to match the Open Cloud Assets API.\nOmitted when unknown.",
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -87450,6 +89774,96 @@
           }
         }
       },
+      "ErrorInfo": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "nullable": true
+          },
+          "domain": {
+            "type": "string",
+            "nullable": true
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ErrorLogDetail": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The message hash id for this log detail.",
+            "nullable": true
+          },
+          "logSeverity": {
+            "type": "string",
+            "description": "The logSeverity of the log",
+            "nullable": true
+          },
+          "logSource": {
+            "type": "string",
+            "description": "The source of the log",
+            "nullable": true
+          },
+          "os": {
+            "type": "string",
+            "nullable": true
+          },
+          "platform": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "The message of the error log",
+            "nullable": true
+          },
+          "stacktrace": {
+            "type": "string",
+            "description": "The stack trace of the error log. This might be not available",
+            "nullable": true
+          },
+          "firstSeenUtc": {
+            "type": "string",
+            "description": "UTC timestamp when this error was first observed.\r\nNull when the source document predates this field being populated.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "firstSeenPlaceVersion": {
+            "type": "integer",
+            "description": "First seen place version for the error.\r\nNOTE: This value will only be returned when place id is filtered",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "error log detail"
+      },
+      "ErrorLogDetailResponse": {
+        "type": "object",
+        "properties": {
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorLogDetail"
+            },
+            "description": "The analytics data for display.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response for top error logs"
+      },
       "ErrorResponse": {
         "type": "object",
         "properties": {
@@ -87962,6 +90376,37 @@
         "enum": ["Failure", "Success"],
         "type": "string",
         "description": "Describes whether a fetch operation failed or succeeded."
+      },
+      "File": {
+        "type": "object",
+        "properties": {
+          "contentType": {
+            "type": "string",
+            "description": "MIME type of the file content.",
+            "nullable": true
+          },
+          "filesize": {
+            "type": "integer",
+            "description": "Size of the file.",
+            "format": "int64"
+          },
+          "md5Checksum": {
+            "type": "string",
+            "description": "MD5 checksum of the file.",
+            "nullable": true
+          },
+          "chunkPlan": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "A list of chunk lengths.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A file to be uploaded"
       },
       "FilterField": {
         "enum": ["EngineVersion", "PlaceVersion", "ALL", "ServerRegion"],
@@ -89969,32 +92414,6 @@
         },
         "description": "Represents the permissions on a role."
       },
-      "GroupsApi.Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "format": "int64",
-            "type": "integer"
-          },
-          "type": {
-            "format": "int32",
-            "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96, 'AvatarEffect' = 97]",
-            "enum": [
-              1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
-              24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
-              41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
-              59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
-              91, 92, 93, 94, 95, 96, 97
-            ],
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
       "HomepageThumbnail": {
         "required": [
           "assetId",
@@ -90676,14 +93095,39 @@
             "items": {
               "$ref": "#/components/schemas/AssetQuota"
             },
-            "description": "The AssetQuotas from the specified User."
+            "description": "The AssetQuotas from the specified User.",
+            "nullable": true,
+            "readOnly": true
           },
           "nextPageToken": {
             "type": "string",
-            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\npage. If this field is omitted, there are no subsequent pages."
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\npage. If this field is omitted, there are no subsequent pages.",
+            "nullable": true
           }
         },
+        "additionalProperties": false,
         "description": "A list of AssetQuotas in the parent collection."
+      },
+      "ListAssetVersionsResponse": {
+        "type": "object",
+        "properties": {
+          "assetVersions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssetVersion"
+            },
+            "description": "The asset versions on this page. May be omitted when empty.",
+            "nullable": true,
+            "readOnly": true
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "Pass this token as `pageToken` to retrieve the next page. If omitted, there are no subsequent pages.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A list of AssetVersions in the parent collection."
       },
       "ListBillingAccountsResponse": {
         "type": "object",
@@ -92305,7 +94749,7 @@
         "type": "object",
         "allOf": [
           {
-            "$ref": "#/components/schemas/ToolboxService.Asset"
+            "$ref": "#/components/schemas/Asset"
           }
         ],
         "properties": {
@@ -92318,6 +94762,16 @@
             "type": "integer",
             "description": "The texture id of the meshpart.",
             "format": "int64"
+          },
+          "meshRevisionId": {
+            "type": "string",
+            "description": "The Version Number of the mesh that this meshpart version references, as a string to match the Open Cloud Assets API.\nOmitted when unknown.",
+            "nullable": true
+          },
+          "textureRevisionId": {
+            "type": "string",
+            "description": "The Version Number of the texture that this meshpart version references, as a string to match the Open Cloud Assets API.\nOmitted when unknown.",
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -92446,7 +94900,7 @@
         "type": "object",
         "allOf": [
           {
-            "$ref": "#/components/schemas/ToolboxService.Asset"
+            "$ref": "#/components/schemas/Asset"
           }
         ],
         "properties": {
@@ -92563,11 +95017,21 @@
         "type": "object",
         "properties": {
           "moderationState": {
-            "type": "string",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ModerationState"
+              }
+            ],
             "description": "The moderation state of the asset. Can be `Reviewing`, `Rejected`, or `Approved`."
           }
         },
-        "description": "The moderation result of the asset. "
+        "additionalProperties": false,
+        "description": "The moderation result of the asset."
+      },
+      "ModerationState": {
+        "enum": ["Unspecified", "Reviewing", "Rejected", "Approved"],
+        "type": "string",
+        "description": "The moderation state of the asset."
       },
       "ModerationStatus": {
         "enum": ["Reviewing", "Rejected", "Approved", "Unspecified"],
@@ -92592,6 +95056,64 @@
         },
         "additionalProperties": false,
         "nullable": true
+      },
+      "MultipartUploadChunkCompleteRequest": {
+        "type": "object",
+        "properties": {
+          "chunkNum": {
+            "type": "integer",
+            "description": "The number of this Chunk.",
+            "format": "int32"
+          },
+          "eTag": {
+            "type": "string",
+            "description": "ETag of this chunk.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request of Roblox.AssetsManagement.AssetsUploadApi.MultipartUploadChunkCompleteOperation"
+      },
+      "MultipartUploadStartRequest": {
+        "type": "object",
+        "properties": {
+          "asset": {
+            "$ref": "#/components/schemas/AssetsUploadApi.Asset"
+          },
+          "file": {
+            "$ref": "#/components/schemas/File"
+          },
+          "additionalParameters": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "Optional: Additional parameters to be sent with the request can be included here.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request of Roblox.AssetsManagement.AssetsUploadApi.MultipartUploadStartOperation"
+      },
+      "MultipartUploadStartResponse": {
+        "type": "object",
+        "properties": {
+          "operationPath": {
+            "type": "string",
+            "description": "ID of the operation.",
+            "nullable": true
+          },
+          "uploadUrls": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PreSignedUploadUrl"
+            },
+            "description": "A list of upload urls to upload chunks.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response of Roblox.AssetsManagement.AssetsUploadApi.MultipartUploadStartOperation"
       },
       "Music": {
         "type": "object",
@@ -92711,41 +95233,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "OCV1.Assets.Operation": {
-        "type": "object",
-        "properties": {
-          "path": {
-            "type": "string",
-            "description": "The server-assigned resource path. The default format is `operations/{operation_id}`."
-          },
-          "done": {
-            "type": "boolean",
-            "description": "If `false`, the operation is still in progress. If `true`, the operation is completed."
-          },
-          "error": {
-            "$ref": "#/components/schemas/OCV1.Assets.Status"
-          },
-          "response": {
-            "$ref": "#/components/schemas/Asset"
-          }
-        },
-        "description": "This resource represents a long-running operation that is the result of a network API call."
-      },
-      "OCV1.Assets.Status": {
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "integer",
-            "description": "The HTTP status code.",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string",
-            "description": "The error message."
-          }
-        },
-        "description": "The logical error model explaining the error status."
       },
       "OCV1.DataStores.DataStore": {
         "type": "object",
@@ -93583,6 +96070,11 @@
         "additionalProperties": false,
         "description": "Service Efficiency representation of a Payment Profile."
       },
+      "Period": {
+        "enum": ["UNSPECIFIED", "MONTH", "DAY"],
+        "type": "string",
+        "description": "Period of time the quota is for."
+      },
       "PersonalizedConfigStatus": {
         "enum": ["Active", "Inactive"],
         "type": "string",
@@ -94100,7 +96592,7 @@
         "type": "object",
         "allOf": [
           {
-            "$ref": "#/components/schemas/ToolboxService.Asset"
+            "$ref": "#/components/schemas/Asset"
           }
         ],
         "properties": {
@@ -94117,6 +96609,43 @@
         "additionalProperties": false,
         "description": "Representation of a plugin asset.",
         "nullable": true
+      },
+      "PreSignedUploadUrl": {
+        "type": "object",
+        "properties": {
+          "httpVerb": {
+            "type": "string",
+            "description": "HTTP Verb to use with the given url.",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "description": "Pre signed url used to upload.",
+            "nullable": true
+          },
+          "expirationTimeMs": {
+            "type": "integer",
+            "description": "Expiration of pre signed url.",
+            "format": "int64"
+          },
+          "chunkNum": {
+            "type": "integer",
+            "description": "Num of file chunk to upload corresponding to the ChunkPlan in the start request.",
+            "format": "int32"
+          },
+          "contentStart": {
+            "type": "integer",
+            "description": "Start position of this chunk.",
+            "format": "int64"
+          },
+          "contentLength": {
+            "type": "integer",
+            "description": "Length of this chunk.",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A pre-signed upload URL which allows anyone with this URL to upload a file with limited HTTP method and file size.\n            \nExample curl command to upload with a pre-signed PUT url:\ncurl -v {pre-signed url} -T {filepath}"
       },
       "PresenceApi.ErrorResponse": {
         "type": "object",
@@ -94141,13 +96670,16 @@
         "properties": {
           "asset": {
             "type": "string",
-            "description": "The preview asset path."
+            "description": "The preview asset path.",
+            "nullable": true
           },
           "altText": {
             "type": "string",
-            "description": "Alt text for the preview asset."
+            "description": "Alt text for the preview asset.",
+            "nullable": true
           }
         },
+        "additionalProperties": false,
         "description": "An asset preview."
       },
       "PreviewAssetsModel": {
@@ -95225,6 +97757,15 @@
         },
         "additionalProperties": false,
         "description": "QueryUniverseBenchmarkResponse is the response message for QueryUniverseBenchmark."
+      },
+      "QuotaType": {
+        "enum": [
+          "UNSPECIFIED",
+          "RATE_LIMIT_UPLOAD",
+          "RATE_LIMIT_CREATOR_STORE_DISTRIBUTE"
+        ],
+        "type": "string",
+        "description": "Quota type."
       },
       "ReadMemoryStoreQueueItemsResponse": {
         "type": "object",
@@ -107057,7 +109598,7 @@
             "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Core.CreatorType_"
           },
           "rootPlace": {
-            "$ref": "#/components/schemas/GroupsApi.Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_"
+            "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_"
           },
           "created": {
             "format": "date-time",
@@ -108045,6 +110586,19 @@
         },
         "additionalProperties": false
       },
+      "Roblox.ItemConfiguration.Api.GetAppealStatusResponse": {
+        "description": "Defines the response model for the GET v1/content-metadata/appeal-status.",
+        "type": "object",
+        "properties": {
+          "appealStatus": {
+            "format": "int32",
+            "description": "The current status of the appeal\nCan return the following states\nNot submitted, Under review, Reviewed. ['Unknown' = 0, 'NotAppealed' = 1, 'InReview' = 2, 'Reviewed' = 3, 'AlreadyOverwritten' = 4]",
+            "enum": [0, 1, 2, 3, 4],
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.ItemConfiguration.Api.GetCommissionRatesResponse": {
         "description": "Defines the response model for the v1/collectibles/commission-rates.",
         "type": "object",
@@ -108650,6 +111204,70 @@
         },
         "additionalProperties": false
       },
+      "Roblox.ItemConfiguration.Api.Models.Request.Collectibles.BulkUpdatePayload": {
+        "description": "Payload model for bulk updating items.",
+        "type": "object",
+        "properties": {
+          "rentalOptIn": {
+            "description": "The Rental Opt in status to be applied to the items.",
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.ItemConfiguration.Api.Models.Request.Collectibles.BulkUpdateRequest": {
+        "description": "Request model for bulk updating items.",
+        "type": "object",
+        "properties": {
+          "idempotencyKey": {
+            "description": "Idempotency key for the bulk update request.",
+            "type": "string"
+          },
+          "groupId": {
+            "format": "int64",
+            "description": "The group id, if the update is for a group.",
+            "type": "integer"
+          },
+          "updateTargets": {
+            "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Request.Collectibles.BulkUpdateTargets"
+          },
+          "updatePayload": {
+            "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Request.Collectibles.BulkUpdatePayload"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.ItemConfiguration.Api.Models.Request.Collectibles.BulkUpdateTargets": {
+        "description": "Targets model for bulk update.",
+        "type": "object",
+        "properties": {
+          "assetType": {
+            "description": "The asset type for which we should update all items.",
+            "type": "array",
+            "items": {
+              "format": "int32",
+              "description": " ['Invalid' = 0, 'Image' = 1, 'Tshirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'Html' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YoutubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TshirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96, 'AvatarSpawnEffect' = 97]",
+              "enum": [
+                0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19,
+                21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38,
+                39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
+                55, 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
+                73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88,
+                89, 90, 91, 92, 93, 94, 95, 96, 97
+              ],
+              "type": "integer"
+            }
+          },
+          "target": {
+            "description": "A specific target to update.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.TargetModel"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.ItemConfiguration.Api.Models.Request.Collectibles.RestockCollectibleItemRequest": {
         "description": "Request model for restocking a collectible item.",
         "type": "object",
@@ -108694,6 +111312,29 @@
               "format": "int64",
               "type": "integer"
             }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.ItemConfiguration.Api.Models.Request.CreateContentMetadataAppealRequest": {
+        "description": "Request model to create content metadata appeal for an asset.",
+        "type": "object",
+        "properties": {
+          "targetType": {
+            "format": "int32",
+            "description": "The type of the target item. ['Asset' = 0, 'Bundle' = 1, 'IecToken' = 2, 'Look' = 3]",
+            "enum": [0, 1, 2, 3],
+            "type": "integer"
+          },
+          "targetId": {
+            "description": "The id of the target item.",
+            "type": "string"
+          },
+          "appealType": {
+            "format": "int32",
+            "description": "The type of the appeal. ['Unknown' = 0, 'BodysuitAppeal' = 1]",
+            "enum": [0, 1],
+            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -109350,6 +111991,17 @@
         },
         "additionalProperties": false
       },
+      "Roblox.ItemConfiguration.Api.Models.Response.CreateContentMetadataAppealResponse": {
+        "description": "Defines the response model for creating content metadata appeal.",
+        "type": "object",
+        "properties": {
+          "success": {
+            "description": "Indicates whether the appeal was created successfully.",
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.ItemConfiguration.Api.Models.Response.Folder.CreateFolderResponse": {
         "description": "Response model for creating a folder.",
         "type": "object",
@@ -109579,6 +112231,24 @@
         },
         "additionalProperties": false
       },
+      "Roblox.ItemConfiguration.Api.PublishingFeePreviewResponse": {
+        "description": "Response Model for a previewed Collectibles publishing fee.",
+        "type": "object",
+        "properties": {
+          "publishingFeeInRobux": {
+            "format": "int64",
+            "description": "Publishing fee in Robux for a Collectible.",
+            "type": "integer"
+          },
+          "publishingFeeType": {
+            "format": "int32",
+            "description": "The type of the publishing fee. ['Invalid' = 0, 'PayPerInstance' = 1, 'PayInTotal' = 2]",
+            "enum": [0, 1, 2],
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.ItemConfiguration.Api.PublishingFeeResponse": {
         "description": "Response Model for Collectibles Publishing Fee request.",
         "type": "object",
@@ -109702,6 +112372,23 @@
           "scheduledPublishMinDurationTimeSpan": {
             "format": "date-span",
             "description": "The minimum time in between scheduled publishes.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.ItemConfiguration.Api.TargetModel": {
+        "description": "An item target model.",
+        "type": "object",
+        "properties": {
+          "targetType": {
+            "format": "int32",
+            "description": "The asset type of the target. ['Asset' = 0, 'Bundle' = 1, 'IecToken' = 2, 'Look' = 3]",
+            "enum": [0, 1, 2, 3],
+            "type": "integer"
+          },
+          "targetId": {
+            "description": "The id of the target.",
             "type": "string"
           }
         },
@@ -110941,6 +113628,78 @@
           }
         },
         "additionalProperties": false
+      },
+      "Roblox.OpenCloud.Cloud.V2.AssetType": {
+        "enum": [
+          "UNSPECIFIED",
+          "IMAGE",
+          "TSHIRT",
+          "AUDIO",
+          "MESH",
+          "LUA",
+          "HAT",
+          "PLACE",
+          "MODEL",
+          "SHIRT",
+          "PANTS",
+          "DECAL",
+          "HEAD",
+          "FACE",
+          "GEAR",
+          "ANIMATION",
+          "TORSO",
+          "RIGHT_ARM",
+          "LEFT_ARM",
+          "LEFT_LEG",
+          "RIGHT_LEG",
+          "YOUTUBE_VIDEO",
+          "APP",
+          "CODE",
+          "PLUGIN",
+          "SOLID_MODEL",
+          "MESH_PART",
+          "HAIR_ACCESSORY",
+          "FACE_ACCESSORY",
+          "NECK_ACCESSORY",
+          "SHOULDER_ACCESSORY",
+          "FRONT_ACCESSORY",
+          "BACK_ACCESSORY",
+          "WAIST_ACCESSORY",
+          "CLIMB_ANIMATION",
+          "DEATH_ANIMATION",
+          "FALL_ANIMATION",
+          "IDLE_ANIMATION",
+          "JUMP_ANIMATION",
+          "RUN_ANIMATION",
+          "SWIM_ANIMATION",
+          "WALK_ANIMATION",
+          "POSE_ANIMATION",
+          "LOCALIZATION_TABLE_MANIFEST",
+          "LOCALIZATION_TABLE_TRANSLATION",
+          "EMOTE_ANIMATION",
+          "VIDEO",
+          "TEXTURE_PACK",
+          "TSHIRT_ACCESSORY",
+          "SHIRT_ACCESSORY",
+          "PANTS_ACCESSORY",
+          "JACKET_ACCESSORY",
+          "SWEATER_ACCESSORY",
+          "SHORTS_ACCESSORY",
+          "LEFT_SHOE_ACCESSORY",
+          "RIGHT_SHOE_ACCESSORY",
+          "DRESS_SKIRT_ACCESSORY",
+          "FONT_FAMILY",
+          "FONT_FACE",
+          "MESH_HIDDEN_SURFACE_REMOVAL",
+          "EYEBROW_ACCESSORY",
+          "EYELASH_ACCESSORY",
+          "MOOD_ANIMATION",
+          "DYNAMIC_HEAD",
+          "CODE_SNIPPET",
+          "ADS_VIDEO"
+        ],
+        "type": "string",
+        "description": "Type of the Asset."
       },
       "Roblox.Paging.CursoredPagedResult_Roblox.Friends.Api.Models.Response.FriendResponse_": {
         "type": "object",
@@ -114677,6 +117436,18 @@
         },
         "additionalProperties": false
       },
+      "RollbackAssetVersionRequest": {
+        "required": ["assetVersion"],
+        "type": "object",
+        "properties": {
+          "assetVersion": {
+            "type": "string",
+            "description": "The asset version path in the format of `assets/{assetId}/versions/{versionNumber}`."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request to roll back an asset to a previous version."
+      },
       "RpnOperandDto": {
         "type": "object",
         "properties": {
@@ -115570,14 +118341,17 @@
         "properties": {
           "title": {
             "type": "string",
-            "description": "An optional title for the social media link. Not used on the Creator Hub."
+            "description": "An optional title for the social media link. Not used on the Creator Hub.",
+            "nullable": true
           },
           "uri": {
             "type": "string",
-            "description": "The URI for the social media link. Must match the expected format for the type of link. For example, the title for a `twitchSocialLink` object must be of the format `https://twitch.tv/your-channel`."
+            "description": "The URI for the social media link. Must match the expected format for the type of link. For example, the URI for a `twitchSocialLink` object must be of the format `https://twitch.tv/your-channel`.",
+            "nullable": true
           }
         },
-        "description": "A social media link for the asset. Maximum of three per asset. Object name can be any of: <ul><li>`facebookSocialLink`</li><li>`twitterSocialLink`</li><li>`youtubeSocialLink`</li><li>`twitchSocialLink`</li><li>`discordSocialLink`</li><li>`githubSocialLink`</li><li>`robloxSocialLink`</li><li>`guildedSocialLink`</li><li>`devForumSocialLink`</li><li>`tryAssetSocialLink`</li></ul>For syntax, see the sample request under [Update Asset](#Assets_UpdateAsset)."
+        "additionalProperties": false,
+        "description": "A social media link for the asset. Maximum of three per asset. Object name can be any of: <ul><li>`facebookSocialLink`</li><li>`twitterSocialLink`</li><li>`youtubeSocialLink`</li><li>`twitchSocialLink`</li><li>`discordSocialLink`</li><li>`githubSocialLink`</li><li>`robloxSocialLink`</li><li>`guildedSocialLink`</li><li>`devForumSocialLink`</li></ul>For syntax, see the sample request under [Update Asset](#Assets_UpdateAsset)."
       },
       "SocialLinkModel": {
         "type": "object",
@@ -115730,9 +118504,9 @@
         "description": "Whether a user's saved start place passed every check, and if not, why."
       },
       "State": {
+        "enum": ["Unspecified", "Active", "Archived"],
         "type": "string",
-        "description": "Whether the asset is active or archived. Unspecified isn't used.",
-        "enum": ["Unspecified", "Active", "Archived"]
+        "description": "Whether the asset is active or archived. Unspecified isn't used."
       },
       "Status": {
         "type": "object",
@@ -116419,80 +119193,6 @@
       "Timestamp": {
         "type": "string",
         "format": "date-time"
-      },
-      "ToolboxService.Asset": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The unique identifier of the asset.",
-            "format": "int64"
-          },
-          "name": {
-            "type": "string",
-            "description": "The name of the asset.",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "description": "The description of the asset.",
-            "nullable": true
-          },
-          "assetTypeId": {
-            "type": "integer",
-            "description": "The type that the asset belongs to.",
-            "format": "int32",
-            "nullable": true
-          },
-          "socialLinks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SocialLinkModel"
-            },
-            "description": "The social links associated with the asset.",
-            "nullable": true
-          },
-          "previewAssets": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/PreviewAssetsModel"
-              }
-            ],
-            "description": "The asset's preview asset ids grouped by asset type.",
-            "nullable": true
-          },
-          "createTime": {
-            "type": "string",
-            "description": "The time the asset was created.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updateTime": {
-            "type": "string",
-            "description": "The time the asset was last updated.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "creatingUniverseId": {
-            "type": "integer",
-            "description": "Universe ID if the asset was created within a specific universe.",
-            "format": "int64",
-            "nullable": true
-          },
-          "categoryPath": {
-            "type": "string",
-            "description": "Category Path of the asset, if it exists.\ne.g. \"3d__characters\"",
-            "nullable": true
-          },
-          "revisionId": {
-            "type": "string",
-            "description": "The latest revision ID of the asset. The format is an integer string.\nA new revision is committed whenever the asset is changed in any way.\nOmitted when unknown.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "Representation of an asset.",
-        "nullable": true
       },
       "TransactionDetailsResponse": {
         "type": "object",
@@ -119075,6 +121775,7 @@
           "patch_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_",
           "delete_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_",
           "get_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts_incidents",
+          "ErrorLoggingDetail_GetLogs",
           "LogAttributeService_Find",
           "LogAttributeService_Create",
           "LogAttributeService_Update",
@@ -119086,21 +121787,26 @@
     },
     {
       "name": "Assets",
-      "description": "Upload, update, and manage assets programmatically. Supported asset types include Audio, Decals, Images, Models, Meshes, and Videos. For detailed implementation, see the [Assets Usage Guide](/cloud/guides/usage-assets). To update a place icon or experience detail page thumbnails, see [Manage experience icons and thumbnails](/cloud/guides/experience-icons-and-thumbnails).\n\nCommon use cases include:\n\n- Asset creation: [Create an asset](#Assets_CreateAsset), then [poll the operation endpoint](#Assets_GetOperation) for completion\n- Asset retrieval: [Retrieve asset content](#get_asset_delivery_api_v1_assetId__assetId_) or [a specific version of it](#get_asset_delivery_api_v1_assetId__assetId__version__versionNumber_) for external tools\n- Versioning: [Manage asset versions](#listAssetVersions) with [rollback](#Assets_RollbackAssetVersion) support\n",
+      "description": "Upload, update, and manage assets programmatically. Supported asset types include Audio, Decals, Images, Models, Meshes, and Videos. For detailed implementation, see the [Assets Usage Guide](/cloud/guides/usage-assets). To update a place icon or experience detail page thumbnails, see [Manage experience icons and thumbnails](/cloud/guides/experience-icons-and-thumbnails).\n\nCommon use cases include:\n\n- Asset creation: [Create an asset](#Assets_CreateAsset), then [poll the operation endpoint](#Assets_GetOperation) for completion\n- Asset retrieval: [Retrieve asset content](#get_asset_delivery_api_v1_assetId__assetId_) or [a specific version of it](#get_asset_delivery_api_v1_assetId__assetId__version__versionNumber_) for external tools\n- Versioning: [Manage asset versions](#Assets_ListAssetVersions) with [rollback](#Assets_RollbackAssetVersion) support\n",
       "x-roblox-tag-info": {
         "path": "assets",
         "content": "HTTP APIs for working with assets on Roblox Cloud.",
         "ordering": [
           "catalog_post_v1_catalog_items_details_complete",
           "Assets_CreateAsset",
+          "Assets_CreateAssetWithMultipartUpload",
           "Assets_GetAsset",
           "Assets_UpdateAsset",
+          "Assets_UpdateAssetWithMultipartUpload",
           "Assets_ArchiveAsset",
           "Assets_RestoreAsset",
-          "listAssetVersions",
+          "Assets_ListAssetVersions",
           "Assets_RollbackAssetVersion",
           "Assets_GetAssetVersion",
           "Assets_GetOperation",
+          "Assets_MultipartUploadAbort",
+          "Assets_MultipartUploadChunkComplete",
+          "Assets_MultipartUploadComplete",
           "Cloud_GenerateSpeechAsset",
           "Cloud_ListAssetQuotas",
           "get_legacy_localization_tables_v1_localization_table_tables__assetId_",
@@ -119171,6 +121877,7 @@
           "itemconfiguration_get_v1_bundles_metadata",
           "itemconfiguration_get_v1_bundles_status__creationStatusId_",
           "itemconfiguration_post_v1_collectibles",
+          "itemconfiguration_patch_v1_collectibles_bulk_update",
           "itemconfiguration_patch_v1_collectibles__collectibleItemId_",
           "itemconfiguration_post_v1_collectibles__collectibleItemId__restock",
           "itemconfiguration_get_v1_collectibles__collectibleItemId__restock_eligibility",
@@ -119183,11 +121890,14 @@
           "itemconfiguration_get_v1_collectibles_metadata",
           "itemconfiguration_get_v1_collectibles_price_floor",
           "itemconfiguration_get_v1_collectibles_publishing_fees",
+          "itemconfiguration_get_v1_collectibles_publishing_fees_preview",
           "itemconfiguration_get_v1_collectibles_regional_pricing_preview",
           "itemconfiguration_get_v1_collectibles_regional_pricing_representative_countries",
           "itemconfiguration_get_v1_collectibles_rental_pricing_preview",
           "itemconfiguration_get_v1_collectibles_revenue_split",
           "itemconfiguration_patch_v1_collectibles_update_item_display_information",
+          "itemconfiguration_post_v1_content_metadata_appeal",
+          "itemconfiguration_get_v1_content_metadata_appeal_status",
           "itemconfiguration_post_v1_creations_get_asset_details",
           "itemconfiguration_get_v1_creations_get_assets",
           "itemconfiguration_post_v1_delist_item",
@@ -119291,6 +122001,7 @@
           "itemconfiguration_get_v1_bundles_metadata",
           "itemconfiguration_get_v1_bundles_status__creationStatusId_",
           "itemconfiguration_post_v1_collectibles",
+          "itemconfiguration_patch_v1_collectibles_bulk_update",
           "itemconfiguration_patch_v1_collectibles__collectibleItemId_",
           "itemconfiguration_post_v1_collectibles__collectibleItemId__restock",
           "itemconfiguration_get_v1_collectibles__collectibleItemId__restock_eligibility",
@@ -119303,11 +122014,14 @@
           "itemconfiguration_get_v1_collectibles_metadata",
           "itemconfiguration_get_v1_collectibles_price_floor",
           "itemconfiguration_get_v1_collectibles_publishing_fees",
+          "itemconfiguration_get_v1_collectibles_publishing_fees_preview",
           "itemconfiguration_get_v1_collectibles_regional_pricing_preview",
           "itemconfiguration_get_v1_collectibles_regional_pricing_representative_countries",
           "itemconfiguration_get_v1_collectibles_rental_pricing_preview",
           "itemconfiguration_get_v1_collectibles_revenue_split",
           "itemconfiguration_patch_v1_collectibles_update_item_display_information",
+          "itemconfiguration_post_v1_content_metadata_appeal",
+          "itemconfiguration_get_v1_content_metadata_appeal_status",
           "itemconfiguration_get_v1_items_by_token",
           "itemconfiguration_get_v1_permissions_action_allowed_for_item_type",
           "itemconfiguration_get_v1_permissions_groups",

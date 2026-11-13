@@ -20,13 +20,12 @@ description: |
   through `Class.Workspace.CurrentCamera`. Use a `ViewportCamera` for any other
   camera that you author and want saved with the place.
 
-  #### Autoupgrade Behavior
+  #### Autoupgrade behavior
 
   When you paste copied content containing a `Class.Camera` in Studio, any
-  `Class.Camera` is automatically converted into a `ViewportCamera` with the
-  same properties. This is to facilitate the common workflow of setting up a
-  camera by positioning the main workspace camera and then copy-pasting that
-  camera.
+  Cameras are automatically converted into `ViewportCamera`s with the same
+  properties. This is to facilitate the common workflow of setting up a camera
+  by positioning the main workspace camera, and then copy-pasting that camera.
 code_samples: []
 inherits:
   - Camera

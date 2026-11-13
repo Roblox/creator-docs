@@ -4,7 +4,7 @@ description: Explains upload fees and commission from selling accessories and cl
 comments: Updates to this page require careful internal review. We generally don't accept pull requests on it.
 ---
 
-You can create and sell bodies, heads, clothing, accessories, emotes, and makeup on the [Marketplace](https://www.roblox.com/catalog). After you pay any applicable upload fees, you can upload your new asset for marketplace approval. Once the moderation team reviews and approves your asset, you can set your item for sell on the Marketplace.
+You can create and sell bodies, heads, clothing, accessories, emotes, makeup, animation packs, and backgrounds on the [Marketplace](https://www.roblox.com/catalog). After you pay any applicable upload fees, you can upload your new asset for marketplace approval. Once the moderation team reviews and approves your asset, you can set your item for sell on the Marketplace.
 
 You receive a commission every time users purchase your item. If users purchase your item within a game using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md), [Avatar Editor Service](../players/avatar-editor.md), or `Class.MarketplaceService`, the game owner also receives a commission. For information on viewing your sales data, see [Sales Data analytics](../production/analytics/analytics-dashboard.md#sales-data).
 
@@ -13,7 +13,10 @@ You receive a commission every time users purchase your item. If users purchase 
 To upload an avatar asset to the Marketplace, you must:
 
 1. Verify your account through your own [government ID](../production/publishing/account-verification.md#verify-through-government-id) or a linked [parental account](https://about.roblox.com/parental-controls) with government ID verification.
-2. Pay an upload fee of **80 Robux** per submission. Items that use an [emissive mask](../art/modeling/surface-appearance.md#emissive-mask) require an upload fee of **500 Robux** instead.
+2. Pay a standard upload fee of **80 Robux** per submission.
+
+   - Items that use an [emissive mask](../art/modeling/surface-appearance.md#emissive-mask) require an upload fee of **500 Robux**.
+   - [Backgrounds](../avatar/backgrounds/index.md) require an upload fee of **200 Robux**.
 
 In general, upload fees are not refunded if an item is rejected through moderation. If your asset clears the uploading process, your asset is ready to publish to the Marketplace.
 
@@ -146,6 +149,11 @@ This publishing advance is dependent on the type of Marketplace item being sold:
     <td>Makeup</td>
     <td>1000</td>
     <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Backgrounds</td>
+    <td>2000</td>
+    <td>15000</td>
   </tr>
 </tbody>
 </table>

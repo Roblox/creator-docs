@@ -703,6 +703,9 @@ methods:
       `Class.AvatarEditorService:GetItemDetailsAsync()` if you need to get the
       item details for multiple items.
 
+      You can request up to 100 item IDs per call. If `itemIds` contains more
+      than 100 IDs, this method raises an error.
+
       Returns an array of items (see Item Details Response above in summary).
       Each item includes the `TimedOptions` field when the asset supports timed
       ownership.

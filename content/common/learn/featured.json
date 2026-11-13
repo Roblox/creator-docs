@@ -1,0 +1,1282 @@
+{
+  "generatedAt": "2026-11-10",
+  "source": "https://apis.roblox.com/doc-site/v2/feeds?surfaceType=CreatorDocumentation",
+  "feedItems": [
+    {
+      "id": "animating2",
+      "feedType": "YouTubeVideo",
+      "title": "Animating guide: part 2",
+      "titleKey": "Heading.Animating2",
+      "description": "Learn about useful plugins and tools for Roblox animations in Blender.",
+      "descriptionKey": "Description.Animating2",
+      "authorName": "RobloxLearn",
+      "duration": "9:30",
+      "url": "https://www.youtube.com/watch?v=kM1bDKESdvM",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/animating2.webp"
+        }
+      }
+    },
+    {
+      "id": "4974220",
+      "feedType": "ExpertArticle",
+      "title": "Turn screenshots into teleporting paintings",
+      "authorName": "BitwiseAndrea",
+      "url": "https://devforum.roblox.com/t/4974220",
+      "thumbnails": {
+        "default": {
+          "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/a/4/6/1/a461a2952e9fc19385a04a0ce695cbb09908c4de.jpeg"
+        }
+      },
+      "likeCount": 69,
+      "commentCount": 7
+    },
+    {
+      "id": "friendslop",
+      "feedType": "YouTubeVideo",
+      "title": "Friendslop template",
+      "titleKey": "Heading.Friendslop",
+      "description": "Take a tour of Boneheads, a co-op game template made by Roblox.",
+      "descriptionKey": "Description.Friendslop",
+      "authorName": "RobloxLearn",
+      "duration": "15:02",
+      "url": "https://www.youtube.com/watch?v=2XP882xARSQ",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/friendslop.webp"
+        }
+      }
+    },
+    {
+      "id": "animating",
+      "feedType": "YouTubeVideo",
+      "title": "Beginner's animating guide",
+      "titleKey": "Heading.Animating",
+      "description": "Learn how to get started from the animator of Illegal Soccer.",
+      "descriptionKey": "Description.Animating",
+      "authorName": "RobloxLearn",
+      "duration": "5:15",
+      "url": "https://www.youtube.com/watch?v=4BDNkXHGBG0",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/animating.webp"
+        }
+      }
+    },
+    {
+      "id": "rain",
+      "feedType": "YouTubeVideo",
+      "title": "Add rain to your game",
+      "titleKey": "Heading.Rain",
+      "description": "Learn the pros and cons of three different ways of dealing with rain.",
+      "descriptionKey": "Description.Rain",
+      "authorName": "RobloxLearn",
+      "duration": "8:44",
+      "url": "https://www.youtube.com/watch?v=awH9TlwM6d4",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/make_it_rain.webp"
+        }
+      }
+    },
+    {
+      "id": "drifters",
+      "feedType": "YouTubeVideo",
+      "title": "AAActually on Roblox: From Bungie co-founder to fired and back again",
+      "titleKey": "Heading.Drifters",
+      "description": "Learn how Alex Seropian ended up on Roblox and get insights on how he builds.",
+      "descriptionKey": "Description.Drifters",
+      "authorName": "RobloxLearn",
+      "duration": "30:44",
+      "url": "https://www.youtube.com/watch?v=Zn9u4sTNTag",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/drifters.webp"
+        }
+      }
+    },
+    {
+      "id": "proc_models",
+      "feedType": "YouTubeVideo",
+      "title": "Procedural models",
+      "titleKey": "Heading.ProcModels",
+      "description": "Advanced tips and tricks for working with procedural models on Roblox.",
+      "descriptionKey": "Description.ProcModels",
+      "authorName": "RobloxLearn",
+      "duration": "15:12",
+      "url": "https://www.youtube.com/watch?v=gu1iPJmyMgA",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/proc_models.webp"
+        }
+      }
+    },
+    {
+      "id": "start_sa",
+      "feedType": "YouTubeVideo",
+      "title": "Start using Server Authority",
+      "titleKey": "Heading.StartSA",
+      "description": "Jason shows how to build a jet pack game with secure movement.",
+      "descriptionKey": "Description.StartSA",
+      "authorName": "RobloxLearn",
+      "duration": "7:34",
+      "url": "https://www.youtube.com/watch?v=-DJy_CfK2Vk",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/start_sa.webp"
+        }
+      }
+    },
+    {
+      "id": "top_down",
+      "feedType": "YouTubeVideo",
+      "title": "Don't call it isometric!",
+      "titleKey": "Heading.TopDown",
+      "description": "Build a top-down camera with Marcus, perfect for a new RTS, MOBA, or ARPG.",
+      "descriptionKey": "Description.TopDown",
+      "authorName": "RobloxLearn",
+      "duration": "10:02",
+      "url": "https://www.youtube.com/watch?v=qx7T7EDPqPA",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/top_down.webp"
+        }
+      }
+    },
+    {
+      "id": "inspire_2026",
+      "feedType": "Article",
+      "title": "Inspire 2026",
+      "titleKey": "Heading.Inspire2026",
+      "description": "Join creators worldwide for workshops, a game jam, and much, much more.",
+      "descriptionKey": "Description.Inspire2026",
+      "url": "https://www.youtube.com/playlist?list=PLLrOb-lR43UI",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/inspire_2026.webp"
+        }
+      }
+    },
+    {
+      "id": "dialog_system",
+      "feedType": "YouTubeVideo",
+      "title": "Build a simple dialog system",
+      "titleKey": "Heading.DialogSystem",
+      "description": "Add expressive NPC dialog to your game without full voice acting.",
+      "descriptionKey": "Description.DialogSystem",
+      "authorName": "RobloxLearn",
+      "duration": "5:53",
+      "url": "https://www.youtube.com/watch?v=oemMqSgj7pw",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/dialog_system.webp"
+        }
+      }
+    },
+    {
+      "id": "server_authority",
+      "feedType": "YouTubeVideo",
+      "title": "Server authority",
+      "titleKey": "Heading.ServerAuthority",
+      "description": "Learn how competitive multiplayer works in this developer interview.",
+      "descriptionKey": "Description.ServerAuthority",
+      "authorName": "RobloxLearn",
+      "duration": "14:20",
+      "url": "https://www.youtube.com/watch?v=hb14MxhZiOU",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/server_authority.webp"
+        }
+      }
+    },
+    {
+      "id": "reimport",
+      "feedType": "YouTubeVideo",
+      "title": "Reimport 3D models",
+      "titleKey": "Heading.Reimport",
+      "description": "Iterate on your models so much more easily with the new reimport feature.",
+      "descriptionKey": "Description.Reimport",
+      "authorName": "RobloxLearn",
+      "duration": "4:37",
+      "url": "https://www.youtube.com/watch?v=uElRpN1ZQ-4",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/reimport.webp"
+        }
+      }
+    },
+    {
+      "id": "hardware",
+      "feedType": "YouTubeVideo",
+      "title": "Hardware testing guide",
+      "titleKey": "Heading.Hardware",
+      "description": "Learn how testing on hardware is critical to your development process.",
+      "descriptionKey": "Description.Hardware",
+      "authorName": "RobloxLearn",
+      "duration": "13:19",
+      "url": "https://www.youtube.com/watch?v=m6zSJpk6neU",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/hardware.webp"
+        }
+      }
+    },
+    {
+      "id": "ai_coding_guide",
+      "feedType": "YouTubeVideo",
+      "title": "Build a game with AI",
+      "titleKey": "Heading.AIGuide",
+      "description": "An engineering manager shares how to think about game development with AI.",
+      "descriptionKey": "Description.AIGuide",
+      "authorName": "RobloxLearn",
+      "duration": "11:17",
+      "url": "https://www.youtube.com/watch?v=XsY8xhluuZM",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/ai_coding_guide.webp"
+        }
+      }
+    },
+    {
+      "id": "ai_coding_setup",
+      "feedType": "YouTubeVideo",
+      "title": "AI coding setup",
+      "titleKey": "Heading.AISetup",
+      "description": "Get the Studio MCP server connected to your favorite AI coding tools.",
+      "descriptionKey": "Description.AISetup",
+      "authorName": "RobloxLearn",
+      "duration": "3:55",
+      "url": "https://www.youtube.com/watch?v=v8r1d80DxOY",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/ai_coding_setup.webp"
+        }
+      }
+    },
+    {
+      "id": "input_action_system",
+      "feedType": "YouTubeVideo",
+      "title": "Input Action System",
+      "titleKey": "Heading.InputActionSystem",
+      "description": "Dive into case studies for building easy-to-extend control schemes.",
+      "descriptionKey": "Description.InputActionSystem",
+      "authorName": "RobloxLearn",
+      "duration": "8:42",
+      "url": "https://www.youtube.com/watch?v=Fg-Ksoa7b-s",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/input_action_system.webp"
+        }
+      }
+    },
+    {
+      "id": "ui_shadow_corner",
+      "feedType": "Article",
+      "title": "UI shadows and per-corner modification",
+      "titleKey": "Heading.UIShadowCorner",
+      "description": "Explore shadows and per-corner rounding for GUI objects.",
+      "descriptionKey": "Description.UIShadowCorner",
+      "url": "https://create.roblox.com/docs/ui/appearance-modifiers",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/UIShadow_UICorner.webp"
+        }
+      }
+    },
+    {
+      "id": "server_auth_deep",
+      "feedType": "Article",
+      "title": "Server authority deep dive",
+      "titleKey": "Heading.ServerAuthDD",
+      "description": "Learn how optimism and time travel power the server authority beta.",
+      "descriptionKey": "Description.ServerAuthDD",
+      "url": "https://devforum.roblox.com/t/server-authority-tech-deep-dive-engineering-insights/4624565",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/server_auth_deep.webp"
+        }
+      }
+    },
+    {
+      "id": "april_2026",
+      "feedType": "YouTubeVideo",
+      "title": "Next-gen workflows on Roblox",
+      "titleKey": "Heading.April2026",
+      "description": "This April 2026 update introduces new tools to accelerate development.",
+      "descriptionKey": "Description.April2026",
+      "authorName": "RobloxLearn",
+      "duration": "17:01",
+      "url": "https://www.youtube.com/watch?v=ZlXA6QwJrHM",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/april_2026.webp"
+        }
+      }
+    },
+    {
+      "id": "state_machine",
+      "feedType": "YouTubeVideo",
+      "title": "How to create NPC guards",
+      "titleKey": "Heading.StateMachine",
+      "description": "Learn all about programming NPC AI with a finite state machine.",
+      "descriptionKey": "Description.StateMachine",
+      "authorName": "RobloxLearn",
+      "duration": "8:24",
+      "url": "https://www.youtube.com/watch?v=nlVpAZEkxgo",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/state_machine.webp"
+        }
+      }
+    },
+    {
+      "id": "client_server",
+      "feedType": "YouTubeVideo",
+      "title": "Client-server architecture and twin stick shooters",
+      "titleKey": "Heading.ClientServer",
+      "description": "If you've used other engines, get comfortable developing on Roblox.",
+      "descriptionKey": "Description.ClientServer",
+      "authorName": "RobloxLearn",
+      "duration": "8:43",
+      "url": "https://www.youtube.com/watch?v=ougjxNrDvQo",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/client_server.webp"
+        }
+      }
+    },
+    {
+      "id": "recommendations",
+      "feedType": "Article",
+      "title": "Recommendation systems",
+      "titleKey": "Heading.Recommendations",
+      "description": "Use the recommendation service to surface personalized content.",
+      "descriptionKey": "Description.Recommendations",
+      "url": "https://create.roblox.com/docs/production/recommendation",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/recommendation.webp"
+        }
+      }
+    },
+    {
+      "id": "validation",
+      "feedType": "YouTubeVideo",
+      "title": "How head validation works",
+      "titleKey": "Heading.Validation",
+      "description": "Learn how Roblox verifies avatar UGC heads and other helpful tips.",
+      "descriptionKey": "Description.Validation",
+      "authorName": "RobloxLearn",
+      "duration": "5:42",
+      "url": "https://www.youtube.com/watch?v=OwhkWzSBnf0",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/validation.webp"
+        }
+      }
+    },
+    {
+      "id": "ads_manager",
+      "feedType": "YouTubeVideo",
+      "title": "Run an ad campaign",
+      "titleKey": "Heading.AdsManager",
+      "description": "Choose audiences, control spend, and measure impact with Ads Manager.",
+      "descriptionKey": "Description.AdsManager",
+      "authorName": "RobloxLearn",
+      "duration": "3:24",
+      "url": "https://www.youtube.com/watch?v=5HcH-9E7USc",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/ads_manager.webp"
+        }
+      }
+    },
+    {
+      "id": "ugc_boots",
+      "feedType": "YouTubeVideo",
+      "title": "How to create boots with auto setup",
+      "titleKey": "Heading.AutoSetupBoots",
+      "description": "Create stylish boots using Roblox's autosetup tool!",
+      "descriptionKey": "Description.AutoSetupBoots",
+      "authorName": "RobloxLearn",
+      "duration": "15:11",
+      "url": "https://www.youtube.com/watch?v=xy3xQB7V5Vk",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/boots.webp"
+        }
+      }
+    },
+    {
+      "id": "age_chat",
+      "feedType": "Article",
+      "title": "Optimize for age-based chat",
+      "titleKey": "Heading.AgeChat",
+      "description": "Keep your experience social with text chat signal and custom matchmaking.",
+      "descriptionKey": "Description.AgeChat",
+      "url": "https://devforum.roblox.com/t/optimizing-your-experience-for-age-based-chat-a-guide-to-custom-matchmaking/4164379",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/age_chat.webp"
+        }
+      }
+    },
+    {
+      "id": "lod",
+      "feedType": "YouTubeVideo",
+      "title": "Manage level of detail",
+      "titleKey": "Heading.Lod",
+      "description": "Roblox's LOD settings can help your experience look better and run better.",
+      "descriptionKey": "Description.Lod",
+      "authorName": "RobloxLearn",
+      "duration": "6:02",
+      "url": "https://www.youtube.com/watch?v=Wwj8EkMWFhI",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/lod.webp"
+        }
+      }
+    },
+    {
+      "id": "fps_design",
+      "feedType": "YouTubeVideo",
+      "title": "FPS design",
+      "titleKey": "Heading.FPSDesign",
+      "description": "Start your next first-person shooter with a three-lane design.",
+      "descriptionKey": "Description.FPSDesign",
+      "authorName": "RobloxLearn",
+      "duration": "11:52",
+      "url": "https://www.youtube.com/watch?v=fGaiAvh7Q-4",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/fps_design.webp"
+        }
+      }
+    },
+    {
+      "id": "video_previews",
+      "feedType": "YouTubeVideo",
+      "title": "Video previews on Roblox",
+      "titleKey": "Heading.VideoPreview",
+      "description": "Add gameplay preview videos to your experience pages!",
+      "descriptionKey": "Description.VideoPreview",
+      "authorName": "RobloxLearn",
+      "duration": "3:01",
+      "url": "https://www.youtube.com/watch?v=ag569uHM96E",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/video_previews.webp"
+        }
+      }
+    },
+    {
+      "id": "ugc_bag",
+      "feedType": "YouTubeVideo",
+      "title": "How to make a bag on Roblox",
+      "titleKey": "Heading.Bag",
+      "description": "Create a fashionable bag and charm from scratch!",
+      "descriptionKey": "Description.Bag",
+      "authorName": "RobloxLearn",
+      "duration": "15:57",
+      "url": "https://www.youtube.com/watch?v=3DwmBNtf7rY",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/making-a-bag.webp"
+        }
+      }
+    },
+    {
+      "id": "asset_repo",
+      "feedType": "YouTubeVideo",
+      "title": "Build an asset repo",
+      "titleKey": "Heading.AssetRepo",
+      "description": "Learn how to put together an asset repo for an FPS with Hal_Apenyo.",
+      "descriptionKey": "Description.AssetRepo",
+      "authorName": "RobloxLearn",
+      "duration": "4:07",
+      "url": "https://www.youtube.com/watch?v=T8XuL1CPEQI",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/asset_repo.webp"
+        }
+      }
+    },
+    {
+      "id": "camera_manip",
+      "feedType": "YouTubeVideo",
+      "title": "Camera manipulation",
+      "titleKey": "Heading.CameraManip",
+      "description": "Learn about cutscenes, camera shake, and even custom camera systems.",
+      "descriptionKey": "Description.CameraManip",
+      "authorName": "RobloxLearn",
+      "duration": "15:24",
+      "url": "https://www.youtube.com/watch?v=Iht0ddcLWFU",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/camera_manip.webp"
+        }
+      }
+    },
+    {
+      "id": "make_hair",
+      "feedType": "YouTubeVideo",
+      "title": "How to make hair",
+      "titleKey": "Heading.Hair",
+      "description": "Catch up with voguebrunette and create a hairstyle. With a headband!",
+      "descriptionKey": "Description.Hair",
+      "authorName": "RobloxLearn",
+      "duration": "10:46",
+      "url": "https://www.youtube.com/watch?v=TTfPdC6IkNY",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/make_hair.webp"
+        }
+      }
+    },
+    {
+      "id": "client_mem",
+      "feedType": "YouTubeVideo",
+      "title": "Minimize client memory usage",
+      "titleKey": "Heading.ClientMemory",
+      "description": "Learn best practices around client memory usage on low-end devices.",
+      "descriptionKey": "Description.ClientMemory",
+      "authorName": "RobloxLearn",
+      "duration": "10:49",
+      "url": "https://www.youtube.com/watch?v=OCUZKJJR-TE",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/client_mem.webp"
+        }
+      }
+    },
+    {
+      "id": "code_org",
+      "feedType": "YouTubeVideo",
+      "title": "Code organization",
+      "titleKey": "Heading.CodeOrg",
+      "description": "Learn where to put code and how to organize by type or by feature.",
+      "descriptionKey": "Description.CodeOrg",
+      "authorName": "RobloxLearn",
+      "duration": "6:19",
+      "url": "https://www.youtube.com/watch?v=jLNgutvbALY",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/code_org.webp"
+        }
+      }
+    },
+    {
+      "id": "studio_comments",
+      "feedType": "YouTubeVideo",
+      "title": "Studio comments",
+      "titleKey": "Heading.StudioComments",
+      "description": "Collaborate with your team or just jot down your thoughts with comments.",
+      "descriptionKey": "Description.StudioComments",
+      "authorName": "RobloxLearn",
+      "duration": "2:07",
+      "url": "https://www.youtube.com/watch?v=OMoqgASUcwo",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/studio_comments.webp"
+        }
+      }
+    },
+    {
+      "id": "single_multi_script",
+      "feedType": "YouTubeVideo",
+      "title": "Single vs. multi-script architecture",
+      "titleKey": "Heading.SingleMultiScript",
+      "description": "What are the pros and cons of the two approaches?",
+      "descriptionKey": "Description.SingleMultiScript",
+      "authorName": "RobloxLearn",
+      "duration": "10:49",
+      "url": "https://www.youtube.com/watch?v=Yxh8IsUIsZk",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/single_multi_script.webp"
+        }
+      }
+    },
+    {
+      "id": "autosetup",
+      "feedType": "YouTubeVideo",
+      "title": "How to turn ANY model into an avatar",
+      "titleKey": "Heading.AutoSetup",
+      "description": "Learn how to convert a model into an avatar in less than 5 minutes.",
+      "descriptionKey": "Description.Autosetup",
+      "authorName": "RobloxLearn",
+      "duration": "7:57",
+      "url": "https://www.youtube.com/watch?v=Hp9pr2FpZa8",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/autosetup.webp"
+        }
+      }
+    },
+    {
+      "id": "version_control",
+      "feedType": "YouTubeVideo",
+      "title": "Version control on Roblox",
+      "titleKey": "Heading.VersionControl",
+      "description": "Learn all about place versions, packages, and script history.",
+      "descriptionKey": "Description.VersionControl",
+      "authorName": "RobloxLearn",
+      "duration": "4:48",
+      "url": "https://www.youtube.com/watch?v=sU9nTX0JFyY",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/version_control.webp"
+        }
+      }
+    },
+    {
+      "id": "rush_ugc",
+      "feedType": "YouTubeVideo",
+      "title": "UGC as a business (feat. Rush)",
+      "titleKey": "Heading.RushUGC",
+      "description": "DucksAreYellow and Rush Bogin talk best practices and gotchas for UGC.",
+      "descriptionKey": "Description.RushUGC",
+      "authorName": "RobloxLearn",
+      "duration": "22:48",
+      "url": "https://www.youtube.com/watch?v=KSez8Ecq50A",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/rush_ugc.webp"
+        }
+      }
+    },
+    {
+      "id": "polish_environment",
+      "feedType": "YouTubeVideo",
+      "title": "Polish your environment",
+      "titleKey": "Heading.PolishEnvironment",
+      "description": "Finalize your assets, spruce up your terrain, add effects, and oh my.",
+      "descriptionKey": "Description.PolishEnvironment",
+      "authorName": "RobloxLearn",
+      "duration": "14:54",
+      "url": "https://www.youtube.com/watch?v=4kasDMSDvcQ",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/polish_environment.webp"
+        }
+      }
+    },
+    {
+      "id": "memory_leak",
+      "feedType": "YouTubeVideo",
+      "title": "Find and fix memory leaks",
+      "titleKey": "Heading.MemoryLeak",
+      "description": "Learn how to use the LuauHeap tool to keep an eye on memory usage.",
+      "descriptionKey": "Description.MemoryLeak",
+      "authorName": "RobloxLearn",
+      "duration": "8:00",
+      "url": "https://www.youtube.com/watch?v=x1JgsC8c8VQ",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/memory_leaks.webp"
+        }
+      }
+    },
+    {
+      "id": "smooth_damp",
+      "feedType": "YouTubeVideo",
+      "title": "Using the SmoothDamp method",
+      "titleKey": "Heading.SmoothDamp",
+      "description": "Keep your transitions smooth even when the target value changes.",
+      "descriptionKey": "Description.SmoothDamp",
+      "authorName": "RobloxLearn",
+      "duration": "7:50",
+      "url": "https://www.youtube.com/watch?v=RYzj4TjiMyE",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/smooth_damp.webp"
+        }
+      }
+    },
+    {
+      "id": "lighting_terrain",
+      "feedType": "YouTubeVideo",
+      "title": "Lighting and terrain",
+      "titleKey": "Heading.LightingTerrain",
+      "description": "Take a deep dive into lighting your environment and adding terrain.",
+      "descriptionKey": "Description.LightingTerrain",
+      "authorName": "RobloxLearn",
+      "duration": "15:03",
+      "url": "https://www.youtube.com/watch?v=XgkmKxyRuWE",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/lighting_terrain.webp"
+        }
+      }
+    },
+    {
+      "id": "rewarded_ads",
+      "feedType": "YouTubeVideo",
+      "title": "Rewarded video ads",
+      "titleKey": "Heading.RewardedAds",
+      "description": "Learn how to implement rewarded video ads in your experiences.",
+      "descriptionKey": "Description.RewardedAds",
+      "authorName": "RobloxLearn",
+      "duration": "2:42",
+      "url": "https://www.youtube.com/watch?v=Jpj0VnA-jmI",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/rewarded_ads.webp"
+        }
+      }
+    },
+    {
+      "id": "stephen_remotes",
+      "feedType": "YouTubeVideo",
+      "title": "Work with remote events",
+      "titleKey": "Heading.StephenTime",
+      "description": "When should you consider using an UnreliableRemoteEvent?",
+      "descriptionKey": "Description.StephenTime",
+      "authorName": "RobloxLearn",
+      "duration": "9:15",
+      "url": "https://www.youtube.com/watch?v=n5uOVlCIUjI",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/stephen_remotes.webp"
+        }
+      }
+    },
+    {
+      "id": "bans_dash",
+      "feedType": "Article",
+      "title": "Bans dashboard",
+      "titleKey": "Heading.BansDash",
+      "description": "Manage your permanent and temporary bans from Creator Hub.",
+      "descriptionKey": "Description.BansDash",
+      "url": "https://create.roblox.com/docs/production/bans",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/bans_dash.webp"
+        }
+      }
+    },
+    {
+      "id": "luau_time",
+      "feedType": "YouTubeVideo",
+      "title": "It's about time()",
+      "titleKey": "Heading.Time",
+      "description": "Learn about all the best methods for telling time in Roblox experiences.",
+      "descriptionKey": "Description.Time",
+      "authorName": "RobloxLearn",
+      "duration": "10:08",
+      "url": "https://www.youtube.com/watch?v=VE56HDVNibI",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/luau_time.webp"
+        }
+      }
+    },
+    {
+      "id": "grayboxing_environments",
+      "feedType": "YouTubeVideo",
+      "title": "Grayboxing environments",
+      "titleKey": "Heading.Graybox",
+      "description": "Learn best practices for blocking out your environments.",
+      "descriptionKey": "Description.Graybox",
+      "authorName": "RobloxLearn",
+      "duration": "12:19",
+      "url": "https://www.youtube.com/watch?v=T--CNfkfBBQ",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/graybox.webp"
+        }
+      }
+    },
+    {
+      "id": "studio_debugger",
+      "feedType": "YouTubeVideo",
+      "title": "Using the Studio debugger",
+      "titleKey": "Heading.StudioDebugger",
+      "description": "An in-depth look at how to debug your code in Roblox Studio.",
+      "descriptionKey": "Description.StudioDebugger",
+      "authorName": "RobloxLearn",
+      "duration": "11:08",
+      "url": "https://www.youtube.com/watch?v=yOmPc2g8tbY",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/debugger.webp"
+        }
+      }
+    },
+    {
+      "id": "luau_oop",
+      "feedType": "YouTubeVideo",
+      "title": "Luau and OOP",
+      "titleKey": "Heading.LuauOOP",
+      "description": "Object-oriented programming in Luau. When does it make sense?",
+      "descriptionKey": "Description.LuauOOP",
+      "authorName": "RobloxLearn",
+      "duration": "11:24",
+      "url": "https://www.youtube.com/watch?v=fByFKZarNiI",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/luau_oop.webp"
+        }
+      }
+    },
+    {
+      "id": "ui_style",
+      "feedType": "YouTubeVideo",
+      "title": "Simplify development with UI styles",
+      "titleKey": "Heading.UIStyle",
+      "description": "Use the new Style Manager to create, manage, and apply UI styles.",
+      "descriptionKey": "Description.UIStyle",
+      "authorName": "RobloxLearn",
+      "duration": "8:34",
+      "url": "https://www.youtube.com/watch?v=_k1ea0OIKaU",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/ui_style.webp"
+        }
+      }
+    },
+    {
+      "id": "module_sleit",
+      "feedType": "YouTubeVideo",
+      "title": "ModuleScript basics",
+      "titleKey": "Heading.ModuleSleit",
+      "description": "Learn how module scripts work and when to use them.",
+      "descriptionKey": "Description.ModuleSleit",
+      "authorName": "RobloxLearn",
+      "duration": "5:41",
+      "url": "https://www.youtube.com/watch?v=foKFpXZYXPk",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/modulescripts_sleit.webp"
+        }
+      }
+    },
+    {
+      "id": "datastores_mmo",
+      "feedType": "YouTubeVideo",
+      "title": "Build an MMO with data stores",
+      "titleKey": "Heading.DatastoresMMO",
+      "description": "Use data stores to save player progress and handle player position.",
+      "descriptionKey": "Description.DatastoresMMO",
+      "authorName": "RobloxLearn",
+      "duration": "6:23",
+      "url": "https://www.youtube.com/watch?v=PeIZN7tPutg",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/datastores_mmo.webp"
+        }
+      }
+    },
+    {
+      "id": "shoes",
+      "feedType": "YouTubeVideo",
+      "title": "How to make shoes for Roblox",
+      "titleKey": "Heading.Shoes",
+      "description": "Make and sell your first pair of shoes on Roblox.",
+      "descriptionKey": "Description.Shoes",
+      "authorName": "RobloxLearn",
+      "duration": "14:10",
+      "url": "https://www.youtube.com/watch?v=NHgYM78afqc",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/shoes.webp"
+        }
+      }
+    },
+    {
+      "id": "perf_optimization",
+      "feedType": "YouTubeVideo",
+      "title": "Performance optimization basics",
+      "titleKey": "Heading.PerfOptimization",
+      "description": "Learn how to deal with the most common performance problems.",
+      "descriptionKey": "Description.PerfOptimization",
+      "authorName": "RobloxLearn",
+      "duration": "9:58",
+      "url": "https://www.youtube.com/watch?v=VDO_amtWfDw",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/performance_basics.webp"
+        }
+      }
+    },
+    {
+      "id": "rp_interview",
+      "feedType": "YouTubeVideo",
+      "title": "UGC insights ft. Reverse_Polarity and Madison_Hatter2",
+      "titleKey": "Heading.RPInterview",
+      "description": "Learn how to sell and promote avatar items with insights from the experts.",
+      "descriptionKey": "Description.RPInterview",
+      "authorName": "RobloxLearn",
+      "duration": "9:37",
+      "url": "https://www.youtube.com/watch?v=Zb1BJow0NV4",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/rp_interview.webp"
+        }
+      }
+    },
+    {
+      "id": "rp_modeling",
+      "feedType": "YouTubeVideo",
+      "title": "Intro to modeling for UGC ft. Reverse_Polarity",
+      "titleKey": "Heading.RPModeling",
+      "description": "Learn efficient workflows for making avatar items in Blender.",
+      "descriptionKey": "Description.RPModeling",
+      "authorName": "RobloxLearn",
+      "duration": "55:46",
+      "url": "https://www.youtube.com/watch?v=b0ugFLxrPIU",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/rp_modeling.webp"
+        }
+      }
+    },
+    {
+      "id": "rp_texturing",
+      "feedType": "YouTubeVideo",
+      "title": "Intro to texturing for UGC ft. Madison_Hatter2",
+      "titleKey": "Heading.RPTexturing",
+      "description": "Madison_Hatter2 shows how to texture and publish a simple avatar item.",
+      "descriptionKey": "Description.RPTexturing",
+      "authorName": "RobloxLearn",
+      "duration": "36:47",
+      "url": "https://www.youtube.com/watch?v=MlyJD_ix9CE",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/rp_texturing.webp"
+        }
+      }
+    },
+    {
+      "id": "scriptlocations",
+      "feedType": "YouTubeVideo",
+      "title": "How to get your code to run on Roblox",
+      "titleKey": "Heading.ScriptLocations",
+      "description": "Andrew shows you where to place your scripts, so they run properly.",
+      "descriptionKey": "Description.ScriptLocations",
+      "authorName": "RobloxLearn",
+      "duration": "7:33",
+      "url": "https://www.youtube.com/watch?v=Mdgk49Evink",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/script_locations.webp"
+        }
+      }
+    },
+    {
+      "id": "3577035",
+      "feedType": "ExpertArticle",
+      "title": "Tailor Swiftly - Dynamic cloth in Roblox",
+      "authorName": "PrinceTybalt",
+      "url": "https://devforum.roblox.com/t/3577035",
+      "thumbnails": {
+        "default": {
+          "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/2/8/c/2/28c2852ed50ee56875c7856f781c25b27595323c.jpeg"
+        }
+      },
+      "likeCount": 191,
+      "commentCount": 20
+    },
+    {
+      "id": "enyucsg",
+      "feedType": "YouTubeVideo",
+      "title": "Enyu opens Studio for the first time",
+      "titleKey": "Heading.EnyuCsg",
+      "description": "Minty teaches Enyu about constructive solid geometry.",
+      "descriptionKey": "Description.EnyuCsg",
+      "authorName": "RobloxLearn",
+      "duration": "22:08",
+      "url": "https://www.youtube.com/watch?v=lAKBYXLkNGU",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/enyu.webp"
+        }
+      }
+    },
+    {
+      "id": "QwZaA9Gc-WQ",
+      "feedType": "YouTubeVideo",
+      "title": "How to cage Roblox 3D clothing",
+      "titleKey": "Heading.Caging",
+      "description": "Learn how to cage your avatar items from Roblox's own 3D artist",
+      "descriptionKey": "Description.Caging",
+      "authorName": "RobloxLearn",
+      "duration": "1:02:27",
+      "url": "https://www.youtube.com/watch?v=QwZaA9Gc-WQ",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/caging.webp"
+        }
+      }
+    },
+    {
+      "id": "0k4o_fGNOYQ",
+      "feedType": "YouTubeVideo",
+      "title": "PolarCub's UGC Homestore",
+      "titleKey": "Heading.PolarCubStore",
+      "description": "Let's tour PolarCub's UGC Homestore! Also, Temprist shows up.",
+      "descriptionKey": "Description.PolarCubStore",
+      "authorName": "RobloxLearn",
+      "duration": "6:42",
+      "url": "https://www.youtube.com/watch?v=0k4o_fGNOYQ",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/polarcub_store.webp"
+        }
+      }
+    },
+    {
+      "id": "eWf-6Sh-9Os",
+      "feedType": "YouTubeVideo",
+      "title": "Advanced MicroProfiler Usage",
+      "titleKey": "Heading.MicroprofilerAdvanced",
+      "description": "Dive deep into frame colors, flame graphs, and more",
+      "descriptionKey": "Description.MicroprofilerAdvanced",
+      "authorName": "RobloxLearn",
+      "duration": "6:03",
+      "url": "https://www.youtube.com/watch?v=eWf-6Sh-9Os",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/microprofiler_advanced.webp"
+        }
+      }
+    },
+    {
+      "id": "VCqopgaVthA",
+      "feedType": "YouTubeVideo",
+      "title": "Halloween Game Jam",
+      "titleKey": "Heading.HalloweenGameJam",
+      "description": "Join our incredible cast of creators for a Halloween game jam",
+      "descriptionKey": "Description.HalloweenGameJam",
+      "authorName": "RobloxLearn",
+      "duration": "2:34:56",
+      "url": "https://www.youtube.com/watch?v=VCqopgaVthA",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/halloween_game_jam.webp"
+        }
+      }
+    },
+    {
+      "id": "XLCZfGEm9tU",
+      "feedType": "YouTubeVideo",
+      "title": "How to use the MicroProfiler",
+      "titleKey": "Heading.MicroProfilerHowTo",
+      "description": "Get started with the performance optimization and troubleshooting tool",
+      "descriptionKey": "Description.MicroProfilerHowTo",
+      "authorName": "RobloxLearn",
+      "duration": "4:27",
+      "url": "https://www.youtube.com/watch?v=XLCZfGEm9tU",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/microprofiler_how_to.webp"
+        }
+      }
+    },
+    {
+      "id": "3226801",
+      "feedType": "ExpertArticle",
+      "title": "MicroProfiler memory profiling, flame graphs, diffs, and much more",
+      "authorName": "ZenMa1n",
+      "url": "https://devforum.roblox.com/t/3226801",
+      "thumbnails": {
+        "default": {
+          "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/5/4/b/8/54b86fe8712e8e3505f10b375dc80a8f06f2104e.png"
+        }
+      },
+      "likeCount": 276,
+      "commentCount": 9
+    },
+    {
+      "id": "3127146",
+      "feedType": "ExpertArticle",
+      "title": "Real world building and scripting optimization for Roblox",
+      "authorName": "MrChickenRocket",
+      "url": "https://devforum.roblox.com/t/3127146",
+      "thumbnails": {
+        "default": {
+          "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/5/1/5/a/515aaead4f596258e9d054c35a19ef40f2d181d1.jpeg"
+        }
+      },
+      "likeCount": 1601,
+      "commentCount": 75
+    },
+    {
+      "id": "C-DwGRBHvmE",
+      "feedType": "YouTubeVideo",
+      "title": "Create Layered Clothing",
+      "titleKey": "Heading.Clothing",
+      "description": "Make and sell your first basic clothing item on Roblox",
+      "descriptionKey": "Description.Clothing",
+      "authorName": "RobloxLearn",
+      "duration": "15:00",
+      "url": "https://www.youtube.com/watch?v=C-DwGRBHvmE",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/clothing.webp"
+        }
+      }
+    },
+    {
+      "id": "Eed29gV0hLA",
+      "feedType": "YouTubeVideo",
+      "title": "Create an Accessory in Minutes",
+      "titleKey": "Heading.RigidAccessory",
+      "description": "Make and sell your first basic rigid accessory on Roblox",
+      "descriptionKey": "Description.RigidAccessory",
+      "authorName": "RobloxLearn",
+      "duration": "12:22",
+      "url": "https://www.youtube.com/watch?v=Eed29gV0hLA",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/rigid_accessory.webp"
+        }
+      }
+    },
+    {
+      "id": "SgPU84AqpkY&t=286s",
+      "feedType": "YouTubeVideo",
+      "title": "Intro to World Building",
+      "titleKey": "Heading.WorldBuilding",
+      "description": "Staff stream covering parts, meshes, terrain, and lighting",
+      "descriptionKey": "Description.WorldBuilding",
+      "authorName": "RobloxLearn",
+      "duration": "1:55:43",
+      "url": "https://www.youtube.com/watch?v=SgPU84AqpkY&t=286s",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/world_building.webp"
+        }
+      }
+    },
+    {
+      "id": "fFHlrTAGwxw",
+      "feedType": "YouTubeVideo",
+      "title": "Intro to Modeling in Blender",
+      "titleKey": "Heading.BlenderStream",
+      "description": "Join us for a beginner's guide to Blender",
+      "descriptionKey": "Description.BlenderStream",
+      "authorName": "RobloxLearn",
+      "duration": "1:00:12",
+      "url": "https://www.youtube.com/live/fFHlrTAGwxw",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/blender_stream.webp"
+        }
+      }
+    },
+    {
+      "id": "3266163",
+      "feedType": "ExpertArticle",
+      "title": "Integrating External Applications into your UI Design",
+      "authorName": "peachcoolish",
+      "url": "https://devforum.roblox.com/t/3266163",
+      "thumbnails": {
+        "default": {
+          "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/2/0/6/8/2068c6bf2a23beddcfefcb6054ea5789ae81aa27.png"
+        }
+      },
+      "likeCount": 472,
+      "commentCount": 14
+    },
+    {
+      "id": "3215844",
+      "feedType": "ExpertArticle",
+      "title": "Check out the generative AI stream and let us know your best prompts!",
+      "authorName": "Slim_Fandango",
+      "url": "https://devforum.roblox.com/t/3215844",
+      "thumbnails": {
+        "default": {
+          "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/4/2/6/f/426fae3a91991d9cf850dac11235bda0bfe4ef2a.png"
+        }
+      },
+      "likeCount": 230,
+      "commentCount": 13
+    },
+    {
+      "id": "3182086",
+      "feedType": "ExpertArticle",
+      "title": "YOU Should use Packages. Yes, YOU!",
+      "authorName": "SCHLEEMPH",
+      "url": "https://devforum.roblox.com/t/3182086",
+      "thumbnails": {
+        "default": {
+          "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/b/1/6/0/b1603a24115de611616f21e25b085264808ebe76.jpeg"
+        }
+      },
+      "likeCount": 566,
+      "commentCount": 35
+    },
+    {
+      "id": "3171224",
+      "feedType": "ExpertArticle",
+      "title": "Texture Atlases - Creating Foliage Texture and Meshes",
+      "authorName": "SCHLEEMPH",
+      "url": "https://devforum.roblox.com/t/3171224",
+      "thumbnails": {
+        "default": {
+          "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/7/3/7/b/737b057d737d1dc78e0cf471a4ea5257e6c4916a.png"
+        }
+      },
+      "likeCount": 172,
+      "commentCount": 7
+    },
+    {
+      "id": "3171223",
+      "feedType": "ExpertArticle",
+      "title": "Trim Textures - 3D Modeling and Unwrapping Trim Sheets",
+      "authorName": "SCHLEEMPH",
+      "url": "https://devforum.roblox.com/t/3171223",
+      "thumbnails": {
+        "default": {
+          "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/7/e/3/4/7e34ad70045fac5863e90a3a884c50399aadcbfb.png"
+        }
+      },
+      "likeCount": 88,
+      "commentCount": 6
+    },
+    {
+      "id": "3145609",
+      "feedType": "ExpertArticle",
+      "title": "Roblox Chat builds an obby, and you can too!",
+      "authorName": "DucksAreYeIIow",
+      "url": "https://devforum.roblox.com/t/3145609",
+      "thumbnails": {
+        "default": {
+          "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/b/d/6/d/bd6dee29fa4601bb6c7976957f6e82b137757ed2.jpeg"
+        }
+      },
+      "likeCount": 145,
+      "commentCount": 7
+    },
+    {
+      "id": "3074034",
+      "feedType": "ExpertArticle",
+      "title": "Designing UI - Tips and Best Practices",
+      "authorName": "uiuxartist",
+      "url": "https://devforum.roblox.com/t/3074034",
+      "thumbnails": {
+        "default": {
+          "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/0/d/3/7/0d37a2cd5fb28681ea6395a38ef9e63df7e2056f.png"
+        }
+      },
+      "likeCount": 343,
+      "commentCount": 7
+    },
+    {
+      "id": "3064458",
+      "feedType": "ExpertArticle",
+      "title": "Improving Onboarding through Funnel Events",
+      "authorName": "BreakfastCandy",
+      "url": "https://devforum.roblox.com/t/3064458",
+      "thumbnails": {
+        "default": {
+          "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/4/c/7/3/4c73a4cae587e92226215b1d7e506f0b38977b6d.png"
+        }
+      },
+      "likeCount": 180,
+      "commentCount": 7
+    }
+  ]
+}

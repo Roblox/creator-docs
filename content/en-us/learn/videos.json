@@ -1,0 +1,4093 @@
+{
+  "playlists": {
+    "PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV": {
+      "audience": "staff",
+      "title": "Learn with Roblox",
+      "href": "https://www.youtube.com/playlist?list=PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"
+    },
+    "PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3": {
+      "audience": "staff",
+      "title": "How to Roblox",
+      "href": "https://www.youtube.com/playlist?list=PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"
+    },
+    "PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB": {
+      "audience": "community",
+      "title": "Learn with the Community",
+      "href": "https://www.youtube.com/playlist?list=PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"
+    }
+  },
+  "videos": {
+    "kM1bDKESdvM": {
+      "title": "Useful Plugins and Tools for Roblox Animations in Blender",
+      "description": "DOWNLOAD LINKS DOWN BELOW",
+      "date": "2026-11-06",
+      "duration": "9:30",
+      "image": "https://img.youtube.com/vi_webp/kM1bDKESdvM/maxresdefault.webp",
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "2XP882xARSQ": {
+      "title": "Roblox made a friendslop template",
+      "description": "Chapters: What is it · What's in it · What's CCL? · CCL Demo · Module puzzle design",
+      "date": "2026-10-30",
+      "duration": "15:02",
+      "image": "https://img.youtube.com/vi/2XP882xARSQ/maxresdefault.jpg",
+      "links": {
+        "/characters/character-controller-library/custom-abilities": {
+          "kind": "docs",
+          "title": "Custom abilities"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "gy_fAtIkqfo": {
+      "title": "RIVALS launched with 20 players and zero marketing… then this happened | Made on Roblox #2",
+      "description": "What does it take to build a Roblox hit with a tiny team and no marketing budget? Nosniy (@Nosniy), Boom (@GreatGuyBoom), and SenseiWarrior (@SenseiWarrior) of Nosniy Games join JP…",
+      "date": "2026-10-30",
+      "duration": "44:52",
+      "image": "https://img.youtube.com/vi/gy_fAtIkqfo/maxresdefault.jpg",
+      "channel": true
+    },
+    "4BDNkXHGBG0": {
+      "title": "How to Start Making Roblox Animations in Blender",
+      "description": "Animation is super interesting and fun to do! You get to play around with characters and make them do basically whatever you want... but... Blender's hard. Therefor, I made this se…",
+      "date": "2026-10-21",
+      "duration": "5:15",
+      "image": "https://img.youtube.com/vi/4BDNkXHGBG0/maxresdefault.jpg",
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "A1qHOmWczQ8": {
+      "title": "Making a Dreamcore Extraction Shooter on Roblox",
+      "description": "Jay, CTO of Look North World, walks us through the making of Drifters, a new dreamcore-inspired extraction shooter coming to Roblox",
+      "date": "2026-10-20",
+      "duration": "4:17",
+      "image": "https://img.youtube.com/vi/A1qHOmWczQ8/maxresdefault.jpg",
+      "channel": true
+    },
+    "awH9TlwM6d4": {
+      "title": "How to add rain to Roblox games",
+      "description": "Chapters: Rain is complicated · A 2D overlay · Handcrafted 3D art · A dynamic weather system · Emitter limits · Roof detection and some light trigonometry · You can have it all! ·…",
+      "date": "2026-10-13",
+      "duration": "8:44",
+      "image": "https://img.youtube.com/vi_webp/awH9TlwM6d4/maxresdefault.webp",
+      "links": {
+        "https://github.com/Roblox/resources/tree/main/experiences/weather-island": {
+          "kind": "code",
+          "title": "Weather island"
+        },
+        "/effects/particle-emitters": {
+          "kind": "docs",
+          "title": "Particle emitters"
+        },
+        "/ui/on-screen-containers": {
+          "kind": "docs",
+          "title": "On-screen UI containers"
+        },
+        "/resources/the-mystery-of-duvall-drive": {
+          "kind": "docs",
+          "title": "The Mystery of Duvall Drive"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "hohwBQGQO7c": {
+      "title": "They built 99 Nights in 3 months… it blew up overnight | Made on Roblox #1",
+      "description": "What happens when you ship your game, get on a plane, and wake up to a million concurrent players? That’s what happened to Grandma’s Favourite Games, the New Zealand studio behind…",
+      "date": "2026-09-30",
+      "duration": "51:31",
+      "image": "https://img.youtube.com/vi/hohwBQGQO7c/maxresdefault.jpg",
+      "channel": true
+    },
+    "4684aQ1sOKY": {
+      "title": "Series Intro | Made on Roblox #0",
+      "description": "Meet the creators behind some of the biggest games on Roblox. Made on Roblox is our new show where developers from across the gaming world share the stories behind their games and…",
+      "date": "2026-09-30",
+      "duration": "0:55",
+      "image": "https://img.youtube.com/vi_webp/4684aQ1sOKY/maxresdefault.webp",
+      "channel": true
+    },
+    "Zn9u4sTNTag": {
+      "title": "Get a sneak peek at Bungie co-founder's new Roblox game",
+      "description": "Sign up to playtest Drifters here!",
+      "date": "2026-09-29",
+      "duration": "30:45",
+      "image": "https://img.youtube.com/vi/Zn9u4sTNTag/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "PVD8TBkQiEE": {
+      "title": "Making a Animation Pack on Roblox",
+      "description": "This video teachs you how to create a Animation Pack for Roblox marketplace from scratch!",
+      "date": "2026-09-28",
+      "duration": "5:17",
+      "image": "https://img.youtube.com/vi_webp/PVD8TBkQiEE/maxresdefault.webp",
+      "links": {
+        "/tutorials/use-case-tutorials/animation/create-an-animation": {
+          "kind": "docs",
+          "title": "Create character animations"
+        },
+        "/avatar/resources": { "kind": "docs", "title": "Resources" }
+      },
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "fNMgTXiMxBs": {
+      "title": "Emissive UGC on Roblox",
+      "description": "This video explains all you need to know about emissive UGC and how to create and upload one yourself.",
+      "date": "2026-09-06",
+      "duration": "3:46",
+      "image": "https://img.youtube.com/vi_webp/fNMgTXiMxBs/maxresdefault.webp",
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "gu1iPJmyMgA": {
+      "title": "How Procedural Models work on Roblox",
+      "description": "Chapters: What is it · How it works · Puzzle pieces · Sneaky techniques · Advanced puzzle pieces · Sneaky techniques pt 2 · One more thing",
+      "date": "2026-09-03",
+      "duration": "15:13",
+      "image": "https://img.youtube.com/vi/gu1iPJmyMgA/maxresdefault.jpg",
+      "links": {
+        "https://github.com/Roblox/resources/tree/main/experiences/procedural-models": {
+          "kind": "code",
+          "title": "Procedural models"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "nmJtH4a5xPQ": {
+      "title": "Set up joints for the new advanced Avatars on Roblox",
+      "description": "This video covers the steps needed to convert your R15 avatar to the new Advanced Rig with the new Finger joints that Roblox now allows creators to make and sell as a UGC Avatar.",
+      "date": "2026-08-28",
+      "duration": "14:31",
+      "image": "https://img.youtube.com/vi_webp/nmJtH4a5xPQ/maxresdefault.webp",
+      "links": {
+        "/avatar/resources": { "kind": "docs", "title": "Resources" }
+      },
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "-DJy_CfK2Vk": {
+      "title": "How to start using Server Authority on Roblox",
+      "description": "Chapters: Enabling Server Authority · Scripting the jetpack · Scripting the coin",
+      "date": "2026-08-11",
+      "duration": "7:34",
+      "image": "https://img.youtube.com/vi/-DJy_CfK2Vk/maxresdefault.jpg",
+      "links": {
+        "/resources/templates": { "kind": "docs", "title": "Templates" },
+        "/reference/engine/classes/RunService": {
+          "kind": "docs",
+          "title": "RunService"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "qx7T7EDPqPA": {
+      "title": "How to make a top down camera system (MOBAs, RTS) on Roblox",
+      "description": "Chapters: Camera control logic · Camera rotation, click to move · RTS camera system",
+      "date": "2026-08-04",
+      "duration": "10:02",
+      "image": "https://img.youtube.com/vi/qx7T7EDPqPA/maxresdefault.jpg",
+      "links": {
+        "https://github.com/Roblox/creator-docs/blob/main/content/en-us/assets/solutions/topDownCameraPlace.rbxl": {
+          "kind": "code",
+          "title": "topDownCameraPlace.rbxl"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "yv3GO5AHwJk": {
+      "title": "(Italian) How to Build a Community for Roblox Games (ft. Stef2317) | Inspire 2026",
+      "date": "2026-07-29",
+      "duration": "36:29",
+      "image": "https://img.youtube.com/vi/yv3GO5AHwJk/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "meyqIqVTzEs": {
+      "title": "Designing Social & Multiplayer Mechanics (feat. RatIsMyUsername) | Inspire 2026",
+      "date": "2026-07-26",
+      "duration": "55:56",
+      "image": "https://img.youtube.com/vi/meyqIqVTzEs/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "b4UX8up7kUo": {
+      "title": "Designing Unique Games & Fun Core Loops (feat. Gavineo) | Inspire 2026",
+      "date": "2026-07-26",
+      "duration": "54:14",
+      "image": "https://img.youtube.com/vi/b4UX8up7kUo/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "2fUDLH3KZ2g": {
+      "title": "Level Design & Environmental Art: A Unique Combination (feat. ByJovian & RoxN_Roll) | Inspire 2026",
+      "date": "2026-07-26",
+      "duration": "59:34",
+      "image": "https://img.youtube.com/vi/2fUDLH3KZ2g/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "ZYmpTQ2GssQ": {
+      "title": "(Korean) Game Planning and Avatar Design (feat. pond_official & may_pond) | Inspire 2026",
+      "date": "2026-07-25",
+      "duration": "57:18",
+      "image": "https://img.youtube.com/vi/ZYmpTQ2GssQ/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "ElBF3cKs8BE": {
+      "title": "How to Strive for Success Before and After the Inspire Challenge (feat. Goober_ish) | Inspire 2026",
+      "date": "2026-07-25",
+      "duration": "39:38",
+      "image": "https://img.youtube.com/vi/ElBF3cKs8BE/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "nvvFJsuCA-M": {
+      "title": "(Spanish) Dynamic Heads 101: from Blender to Roblox (feat. WawaFluff) | Inspire 2026",
+      "date": "2026-07-25",
+      "duration": "55:01",
+      "image": "https://img.youtube.com/vi/nvvFJsuCA-M/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "qfN8vUk0Yi8": {
+      "title": "Introduction to AI-powered Programming (feat. GlibDuke) | Inspire 2026",
+      "date": "2026-07-25",
+      "duration": "56:54",
+      "image": "https://img.youtube.com/vi/qfN8vUk0Yi8/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "RgF3_YbWtvk": {
+      "title": "(Polish) Building responsive UI with React & Roblox-TS (feat. Dervex ) | Inspire 2026",
+      "date": "2026-07-24",
+      "duration": "53:23",
+      "image": "https://img.youtube.com/vi/RgF3_YbWtvk/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "WB8AsgUvO5w": {
+      "title": "(Thai) Intro to Scripting: Making Your Game Interactive (feat. Femtrs) | Inspire 2026",
+      "date": "2026-07-24",
+      "duration": "56:33",
+      "image": "https://img.youtube.com/vi/WB8AsgUvO5w/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "4mEE-ifDdcw": {
+      "title": "(Portuguese) From Player to Leading a Creative Team on Roblox (feat. yevertonnw) | Inspire 2026",
+      "date": "2026-07-24",
+      "duration": "40:31",
+      "image": "https://img.youtube.com/vi/4mEE-ifDdcw/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "wQ-0qeoPbyI": {
+      "title": "AI in Roblox Studio: Best Practices with LLMs & MCP (feat. DrakeRose) | Inspire 2026",
+      "date": "2026-07-24",
+      "duration": "57:01",
+      "image": "https://img.youtube.com/vi/wQ-0qeoPbyI/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "v_yyUwr0p2Q": {
+      "title": "Server Authority: Powering Competitive Gameplay (feat. ev1) | Inspire 2026",
+      "date": "2026-07-23",
+      "duration": "43:01",
+      "image": "https://img.youtube.com/vi/v_yyUwr0p2Q/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "x7-x4Oy645M": {
+      "title": "Intro to 3D Modeling and Building Your First Map (feat. harht & Krissy3D) | Inspire 2026",
+      "date": "2026-07-23",
+      "duration": "1:21:36",
+      "image": "https://img.youtube.com/vi/x7-x4Oy645M/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "lqjpXOP5wjk": {
+      "title": "Your First Hour on Roblox Studio (feat. achutti1991 & Morniratu) | Inspire 2026",
+      "date": "2026-07-23",
+      "duration": "56:47",
+      "image": "https://img.youtube.com/vi/lqjpXOP5wjk/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "Qy9NAivcaXw": {
+      "title": "The Importance of Thumbnails in QPTR (feat. StaredSystemized & yakiniky) | Inspire 2026",
+      "date": "2026-07-23",
+      "duration": "52:46",
+      "image": "https://img.youtube.com/vi/Qy9NAivcaXw/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "KHd0RT4uIMQ": {
+      "title": "Inspire 2026 Opening Ceremony (feat. JParty & MangoBytz) | Inspire 2026",
+      "date": "2026-07-22",
+      "duration": "15:37",
+      "image": "https://img.youtube.com/vi/KHd0RT4uIMQ/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "oemMqSgj7pw": {
+      "title": "How to build a simple dialog system on Roblox",
+      "description": "The version of mder shown in the video contains a fairly obvious bug around underlined text. I've fixed it in code.",
+      "date": "2026-07-20",
+      "duration": "5:54",
+      "image": "https://img.youtube.com/vi_webp/oemMqSgj7pw/maxresdefault.webp",
+      "links": {
+        "https://github.com/Roblox/creator-docs/raw/refs/heads/main/content/en-us/assets/solutions/DialogSystem.rbxlx?download=": {
+          "kind": "code",
+          "title": "DialogSystem.rbxlx"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "KnFJl6z5UN0": {
+      "title": "Input Action System Q&A",
+      "description": "In this webinar, we’ll explain what the Input Action System is, why it matters for cross-device game development, how to set it up as a first time user, and how to convert an exist…",
+      "date": "2026-07-13",
+      "duration": "45:50",
+      "image": "https://img.youtube.com/vi/KnFJl6z5UN0/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "hb14MxhZiOU": {
+      "title": "How Server Authority works on Roblox",
+      "description": "Chapters: What is it · Before Server Authority · After Server Authority · How prediction works · Smoothing",
+      "date": "2026-07-08",
+      "duration": "14:21",
+      "image": "https://img.youtube.com/vi/hb14MxhZiOU/maxresdefault.jpg",
+      "links": {
+        "https://github.com/Roblox/creator-docs/raw/refs/heads/main/content/en-us/assets/solutions/brooklyn_soccer.rbxl": {
+          "kind": "code",
+          "title": "brooklyn_soccer.rbxl"
+        },
+        "/projects/server-authority": {
+          "kind": "docs",
+          "title": "Server authority model"
+        },
+        "/projects/server-authority/techniques": {
+          "kind": "docs",
+          "title": "Server authority techniques"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "B3R1ybI3yzs": {
+      "title": "Recommended for you algorithm Q&A",
+      "description": "We’ve updated the Recommended For You algorithm signals from 7 days to 28 days to better recognize games that keep players coming back over time. We’ve shared the signals and their…",
+      "date": "2026-06-18",
+      "duration": "40:43",
+      "image": "https://img.youtube.com/vi_webp/B3R1ybI3yzs/maxresdefault.webp",
+      "links": { "/discovery": { "kind": "docs", "title": "Discovery" } },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "uElRpN1ZQ-4": {
+      "title": "How to not hate editing your 3D models on Roblox",
+      "description": "Learn how to save time when reimporting 3D models in your Roblox development workflow by using the reimport tool.",
+      "date": "2026-06-17",
+      "duration": "4:37",
+      "image": "https://img.youtube.com/vi/uElRpN1ZQ-4/maxresdefault.jpg",
+      "links": {
+        "/art/modeling/reimport": { "kind": "docs", "title": "Reimport" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "m6zSJpk6neU": {
+      "title": "Hardware Testing Guide",
+      "description": "Chapters: Why test on hardware? · Popular devices and real world examples · Performance testing · The MicroProfiler! · Compare MP logs · Display size vs Draw size · Thermals · User…",
+      "date": "2026-06-16",
+      "duration": "13:19",
+      "image": "https://img.youtube.com/vi_webp/m6zSJpk6neU/maxresdefault.webp",
+      "links": {
+        "/performance-optimization/test-on-hardware": {
+          "kind": "docs",
+          "title": "Test on hardware"
+        },
+        "/performance-optimization": {
+          "kind": "docs",
+          "title": "Performance optimization"
+        },
+        "/performance-optimization/microprofiler": {
+          "kind": "docs",
+          "title": "MicroProfiler"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "K7jsk3bzmvE": {
+      "title": "How the “Recommended for You” algorithm works on Roblox",
+      "description": "With millions of games on Roblox, ever wonder how we decide what shows up on your homepage? In this video, we’ll explore the two stages of our “Recommended for You” algorithm and o…",
+      "date": "2026-06-15",
+      "duration": "1:37",
+      "image": "https://img.youtube.com/vi/K7jsk3bzmvE/maxresdefault.jpg",
+      "links": { "/discovery": { "kind": "docs", "title": "Discovery" } },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "XsY8xhluuZM": {
+      "title": "How to make a game using AI on Roblox",
+      "description": "Chapters: What is it? · What do you care? · How do you do it? · Demo · Prompting best practices",
+      "date": "2026-06-11",
+      "duration": "11:18",
+      "image": "https://img.youtube.com/vi/XsY8xhluuZM/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "v8r1d80DxOY": {
+      "title": "How to start coding with AI on Roblox (MCP)",
+      "description": "Testing Prompt:  Use the Roblox MCP connection to verify Script Sync is working properly. Make some changes to Test.server.luau, add new scripts in the other two folders, and verif…",
+      "date": "2026-06-11",
+      "duration": "3:55",
+      "image": "https://img.youtube.com/vi_webp/v8r1d80DxOY/maxresdefault.webp",
+      "links": {
+        "https://github.com/Roblox/creator-docs/blob/main/content/en-us/assets/solutions/WaveSurvival.zip": {
+          "kind": "code",
+          "title": "WaveSurvival.zip"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "Fg-Ksoa7b-s": {
+      "title": "How the Input Action System works on Roblox",
+      "description": "Chapters: Philosophy shift · Build your first system · Refactor framework · Case study: old system · Case study: new system",
+      "date": "2026-06-11",
+      "duration": "8:42",
+      "image": "https://img.youtube.com/vi/Fg-Ksoa7b-s/maxresdefault.jpg",
+      "links": {
+        "/input/input-action-system": {
+          "kind": "docs",
+          "title": "Input Action System"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "R6HbXwyuHzY": {
+      "title": "How to do video ads the right way on Roblox",
+      "description": "Chapters: What are they? · Why should you care? · How do you do it? · Reporting · Forecasting",
+      "date": "2026-05-20",
+      "duration": "9:30",
+      "image": "https://img.youtube.com/vi/R6HbXwyuHzY/maxresdefault.jpg",
+      "links": {
+        "/production/promotion/rewarded-video-ads": {
+          "kind": "docs",
+          "title": "Rewarded video ads"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "nY9tDhsaH8o": {
+      "title": "Next-gen workflows on Roblox: Q&A",
+      "date": "2026-04-30",
+      "duration": "27:42",
+      "image": "https://img.youtube.com/vi/nY9tDhsaH8o/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "ZlXA6QwJrHM": {
+      "title": "Next-gen workflows on Roblox",
+      "description": "Chapters: Procedural Models · Planning Mode · Scene Analysis",
+      "date": "2026-04-30",
+      "duration": "16:30",
+      "image": "https://img.youtube.com/vi/ZlXA6QwJrHM/maxresdefault.jpg",
+      "links": {
+        "/parts/procedural-models": {
+          "kind": "docs",
+          "title": "Procedural models"
+        },
+        "/performance-optimization/scene-analysis": {
+          "kind": "docs",
+          "title": "Scene Analysis"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "nlVpAZEkxgo": {
+      "title": "How to make guard NPCs using a state machine",
+      "description": "This video shows how to add NPC AI with a finite state machine (It's like AI without the LLM!)",
+      "date": "2026-04-24",
+      "duration": "8:25",
+      "image": "https://img.youtube.com/vi/nlVpAZEkxgo/maxresdefault.jpg",
+      "links": {
+        "https://github.com/Roblox/creator-docs/raw/refs/heads/main/content/en-us/assets/solutions/StateMachineDemo.rbxl": {
+          "kind": "code",
+          "title": "StateMachineDemo.rbxl"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "qNocmxFyfxs": {
+      "title": "How to sell assets on the Creator Store",
+      "description": "Chapters: Importing assets · Making an asset pack · Publishing assets · Managing assets",
+      "date": "2026-04-17",
+      "duration": "6:31",
+      "image": "https://img.youtube.com/vi/qNocmxFyfxs/maxresdefault.jpg",
+      "links": {
+        "/projects/assets/privacy": {
+          "kind": "docs",
+          "title": "Asset privacy"
+        },
+        "/projects/assets": { "kind": "docs", "title": "Assets" },
+        "/production/creator-store": {
+          "kind": "docs",
+          "title": "Creator Store"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "NAwQr9sTy74": {
+      "title": "What's the Creator Store?",
+      "description": "Chapters: Store Feature · Account Set-Up · Creator Store Payouts",
+      "date": "2026-04-10",
+      "duration": "3:39",
+      "image": "https://img.youtube.com/vi/NAwQr9sTy74/maxresdefault.jpg",
+      "links": {
+        "/production/creator-store#payouts": {
+          "kind": "docs",
+          "title": "Creator Store"
+        }
+      },
+      "channel": true
+    },
+    "4jd-Yo-hFow": {
+      "title": "Assistant, MCP server, and more: Roblox staff Q&A",
+      "description": "Join us for the Roblox Creator Monthly, a new webinar series designed to keep you up to date on the latest platform updates. Each month, we’ll recap the biggest product announcemen…",
+      "date": "2026-03-31",
+      "duration": "43:40",
+      "image": "https://img.youtube.com/vi/4jd-Yo-hFow/hqdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "ougjxNrDvQo": {
+      "title": "How client-server architecture works on Roblox",
+      "description": "If you've used other game engines, learn a bit about getting comfortable with Roblox. For more detailed information, check out the resources below.",
+      "date": "2026-03-26",
+      "duration": "8:43",
+      "image": "https://img.youtube.com/vi/ougjxNrDvQo/maxresdefault.jpg",
+      "links": {
+        "/projects/client-server": {
+          "kind": "docs",
+          "title": "Client-server runtime"
+        },
+        "/workspace/streaming": {
+          "kind": "docs",
+          "title": "Instance streaming"
+        },
+        "/projects/server-authority": {
+          "kind": "docs",
+          "title": "Server authority model"
+        },
+        "/scripting/sync": { "kind": "docs", "title": "Script Sync" },
+        "/studio/mcp": {
+          "kind": "docs",
+          "title": "Connect to the Roblox Studio MCP server"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "OwhkWzSBnf0": {
+      "title": "How avatar head validation works on Roblox",
+      "description": "This video covers how Roblox's validation works with avatar heads, and common issues creators may encounter when uploading their own heads.",
+      "date": "2026-02-23",
+      "duration": "5:41",
+      "image": "https://img.youtube.com/vi_webp/OwhkWzSBnf0/maxresdefault.webp",
+      "links": {
+        "/avatar/dynamic-heads/validate": {
+          "kind": "docs",
+          "title": "Dynamic head validation"
+        },
+        "/avatar/dynamic-heads/specifications": {
+          "kind": "docs",
+          "title": "Dynamic head specifications"
+        },
+        "/marketplace/validation-system": {
+          "kind": "docs",
+          "title": "UGC validation system"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "-Q9mg1hyqMY": {
+      "title": "How to polish a 3-lane FPS map on Roblox",
+      "description": "Chapters: Detailing Environment · Replacing materials · Color coding the map · Adding wall trim · Adding windows & doors · Adjusting Lighting · Adding light sources · Detailing Pro…",
+      "date": "2026-02-23",
+      "duration": "11:28",
+      "image": "https://img.youtube.com/vi_webp/-Q9mg1hyqMY/maxresdefault.webp",
+      "links": {
+        "/resources/templates#laser-tag": {
+          "kind": "docs",
+          "title": "Templates"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "5HcH-9E7USc": {
+      "title": "How to make an ad campaign with Roblox Ads Manager",
+      "description": "Chapters: Picking goals · Choosing audiences · Determining budget · Getting creative · Advanced targeting · Reporting",
+      "date": "2026-02-04",
+      "duration": "3:24",
+      "image": "https://img.youtube.com/vi/5HcH-9E7USc/maxresdefault.jpg",
+      "links": {
+        "/production/promotion/ads-manager#set-up-an-ad-account": {
+          "kind": "docs",
+          "title": "Ads Manager"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "xy3xQB7V5Vk": {
+      "title": "How to create shoes for Roblox (using auto setup!)",
+      "description": "Chapters: Autosetup overview · Required software · Modeling · Texturing · PBR Textures (Normals) · Exporting from Blender · Importing to Studio · Organize and rename · Autosetup ·…",
+      "date": "2026-01-13",
+      "duration": "15:11",
+      "image": "https://img.youtube.com/vi_webp/xy3xQB7V5Vk/maxresdefault.webp",
+      "links": {
+        "/avatar-setup": { "kind": "docs", "title": "Avatar Setup" },
+        "/avatar/resources#mannequin-models": {
+          "kind": "docs",
+          "title": "Resources"
+        },
+        "/art/accessories/creating/exporting": {
+          "kind": "docs",
+          "title": "Export"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "Wwj8EkMWFhI": {
+      "title": "Manage level of detail settings on Roblox",
+      "description": "Model level of detail:  -level-of-detail",
+      "date": "2025-12-11",
+      "duration": "6:03",
+      "image": "https://img.youtube.com/vi_webp/Wwj8EkMWFhI/maxresdefault.webp",
+      "links": {
+        "/workspace/streaming": {
+          "kind": "docs",
+          "title": "Instance streaming"
+        },
+        "/parts/meshes#level-of-detail": { "kind": "docs", "title": "Meshes" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "-CdXP025MvU": {
+      "title": "How to use Configs and Experimentation to grow your game faster",
+      "description": "Chapters: In Game Shop Tutorial · Reading Experiment Results · Best Practices · Q&A",
+      "date": "2025-12-01",
+      "duration": "22:13",
+      "image": "https://img.youtube.com/vi/-CdXP025MvU/maxresdefault.jpg",
+      "links": {
+        "/production/configs": {
+          "kind": "docs",
+          "title": "Experience configs"
+        },
+        "/production/experiments": { "kind": "docs", "title": "Experiments" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "fGaiAvh7Q-4": {
+      "title": "How to design a 3-lane FPS map on Roblox",
+      "description": "Chapters: What is 3-lane design? · How to whiteboard · Whiteboarding: Templates · Whiteboarding: Spawn points · Whiteboarding: Sightlines · Whiteboarding: Verticality · Whiteboardi…",
+      "date": "2025-11-19",
+      "duration": "11:52",
+      "image": "https://img.youtube.com/vi_webp/fGaiAvh7Q-4/maxresdefault.webp",
+      "links": {
+        "/resources/templates#laser-tag": {
+          "kind": "docs",
+          "title": "Templates"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "ag569uHM96E": {
+      "title": "Learn more about Video Previews on Roblox",
+      "description": "Join Chris as he demos the new Video Previews feature.",
+      "date": "2025-11-13",
+      "duration": "3:01",
+      "image": "https://img.youtube.com/vi/ag569uHM96E/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "tUz_OekIIiU": {
+      "title": "How Home Recommendations & Ads Actually Work",
+      "description": "Want to better understand how you can get your game to more users?",
+      "date": "2025-10-30",
+      "duration": "35:28",
+      "image": "https://img.youtube.com/vi/tUz_OekIIiU/maxresdefault.jpg",
+      "links": {
+        "/production/promotion/ads-manager": {
+          "kind": "docs",
+          "title": "Ads Manager"
+        },
+        "/discovery": { "kind": "docs", "title": "Discovery" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "3DwmBNtf7rY": {
+      "title": "How to make a bag on Roblox",
+      "description": "Chapters: What you'll need · THE CUP: Intro · THE CUP: Reference Image · THE CUP: Modeling the base + lid · THE COZY · THE CHAIN + PSL · THE CHAIN + PSL: Modeling the chain · THE C…",
+      "date": "2025-10-29",
+      "duration": "15:56",
+      "image": "https://img.youtube.com/vi_webp/3DwmBNtf7rY/maxresdefault.webp",
+      "links": {
+        "/avatar/resources": { "kind": "docs", "title": "Resources" },
+        "/marketplace": { "kind": "docs", "title": "Marketplace overview" },
+        "/marketplace/marketplace-fees-and-commissions": {
+          "kind": "docs",
+          "title": "Marketplace fees and commissions"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "T8XuL1CPEQI": {
+      "title": "How to make an Asset Repository on Roblox",
+      "description": "Chapters: Making an Asset List · Creating the Repository · Organizing the Repository · Why does it help? · Outro",
+      "date": "2025-10-07",
+      "duration": "4:08",
+      "image": "https://img.youtube.com/vi/T8XuL1CPEQI/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "Iht0ddcLWFU": {
+      "title": "How to manipulate the camera on Roblox",
+      "description": "Chapters: Diving in · Why care? · When to use it? · Cutscenes · Camera Shake · Custom Camera · Gotchas · Outro",
+      "date": "2025-10-03",
+      "duration": "15:24",
+      "image": "https://img.youtube.com/vi/Iht0ddcLWFU/maxresdefault.jpg",
+      "links": {
+        "/reference/engine/classes/Camera#CameraType": {
+          "kind": "docs",
+          "title": "Camera"
+        },
+        "/reference/engine/enums/CameraType": {
+          "kind": "docs",
+          "title": "CameraType"
+        },
+        "/reference/engine/enums/RenderPriority": {
+          "kind": "docs",
+          "title": "RenderPriority"
+        },
+        "/reference/engine/classes/RunService#BindToRenderStep": {
+          "kind": "docs",
+          "title": "RunService"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "TTfPdC6IkNY": {
+      "title": "How to make hair on Roblox",
+      "description": "Chapters: Modeling: The headband · Modeling: Creating the hair strand · Modeling: Duplicating and repositioning · Modeling: Optimizing and merging everything · Modeling: Edge loop…",
+      "date": "2025-09-29",
+      "duration": "10:47",
+      "image": "https://img.youtube.com/vi/TTfPdC6IkNY/maxresdefault.jpg",
+      "links": {
+        "/avatar/resources": { "kind": "docs", "title": "Resources" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "OCUZKJJR-TE": {
+      "title": "Minimize client memory usage on Roblox",
+      "description": "Learn best practices for checking and minimizing client memory usage with Andrew from Roblox.",
+      "date": "2025-09-25",
+      "duration": "10:49",
+      "image": "https://img.youtube.com/vi_webp/OCUZKJJR-TE/maxresdefault.webp",
+      "links": {
+        "/performance-optimization": {
+          "kind": "docs",
+          "title": "Performance optimization"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "jLNgutvbALY": {
+      "title": "Code organization on Roblox",
+      "description": "Chapters: What is code organization? · Where do I organize code? · Folders by type · Folders by feature",
+      "date": "2025-09-19",
+      "duration": "6:19",
+      "image": "https://img.youtube.com/vi/jLNgutvbALY/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "OMoqgASUcwo": {
+      "title": "How to use Comments on Roblox",
+      "description": "Hop in with Hal_Apenyo to learn about comments!",
+      "date": "2025-09-12",
+      "duration": "2:07",
+      "image": "https://img.youtube.com/vi_webp/OMoqgASUcwo/maxresdefault.webp",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "Yxh8IsUIsZk": {
+      "title": "Single vs Multi script architecture on Roblox",
+      "description": "Chapters: What is it? · Which do I use? · Examples · Final thoughts",
+      "date": "2025-09-03",
+      "duration": "10:50",
+      "image": "https://img.youtube.com/vi/Yxh8IsUIsZk/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "Hp9pr2FpZa8": {
+      "title": "How to turn ANY model into a Roblox avatar in minutes (Avatar auto setup)",
+      "description": "Use Roblox's auto setup tool to turn any character model into a fully rigged and accessory-enabled Roblox avatar.",
+      "date": "2025-09-02",
+      "duration": "7:57",
+      "image": "https://img.youtube.com/vi_webp/Hp9pr2FpZa8/maxresdefault.webp",
+      "links": {
+        "/avatar-setup#auto-setup": { "kind": "docs", "title": "Avatar Setup" },
+        "/avatar-setup/auto-setup-requirements": {
+          "kind": "docs",
+          "title": "Avatar Setup specifications"
+        },
+        "/avatar/resources": { "kind": "docs", "title": "Resources" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "7AtvvUxvCaU": {
+      "title": "Learn more about rewarded video ads",
+      "description": "In this session, the Roblox product team walks you through how creators can use Rewarded Video to increase earnings and engagement.",
+      "date": "2025-08-29",
+      "duration": "50:36",
+      "image": "https://img.youtube.com/vi/7AtvvUxvCaU/maxresdefault.jpg",
+      "links": {
+        "/production/promotion/rewarded-video-ads": {
+          "kind": "docs",
+          "title": "Rewarded video ads"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "sU9nTX0JFyY": {
+      "title": "How to version control on Roblox",
+      "description": "Chapters: Place History · Packages · Script History · Outro",
+      "date": "2025-08-28",
+      "duration": "4:49",
+      "image": "https://img.youtube.com/vi/sU9nTX0JFyY/maxresdefault.jpg",
+      "links": {
+        "/production/publishing/publish-games-and-places": {
+          "kind": "docs",
+          "title": "Create and publish games and places"
+        },
+        "/projects/assets/packages": { "kind": "docs", "title": "Packages" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "PqB6DC_kxHM": {
+      "title": "What's Assistant?",
+      "description": "Learn what Assistant is on Roblox.",
+      "date": "2025-08-21",
+      "duration": "2:20",
+      "image": "https://img.youtube.com/vi_webp/PqB6DC_kxHM/maxresdefault.webp",
+      "links": {
+        "/assistant/guide": { "kind": "docs", "title": "Assistant for Studio" },
+        "/assistant/prompt-engineering": {
+          "kind": "docs",
+          "title": "Assistant prompt guide and examples"
+        }
+      },
+      "channel": true
+    },
+    "KSez8Ecq50A": {
+      "title": "So you wanna do UGC as a business? (feat. Rush Bogin)",
+      "description": "In this video DucksAreYellow interviews Rush Bogin (Rush_X) on how to create UGC as a business on Roblox, including best practices and common gotchas.",
+      "date": "2025-08-15",
+      "duration": "22:48",
+      "image": "https://img.youtube.com/vi/KSez8Ecq50A/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "4kasDMSDvcQ": {
+      "title": "How to polish your environment on Roblox",
+      "description": "To see the finished result, check out The Roblox Learn Experience!",
+      "date": "2025-08-12",
+      "duration": "14:55",
+      "image": "https://img.youtube.com/vi_webp/4kasDMSDvcQ/maxresdefault.webp",
+      "links": {
+        "/studio/importer": { "kind": "docs", "title": "Importer" },
+        "/effects/particle-emitters": {
+          "kind": "docs",
+          "title": "Particle emitters"
+        },
+        "/environment/global-wind": { "kind": "docs", "title": "Global wind" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "xU3ikvnA5OM": {
+      "title": "UGC Expert Feedback 3: feat. Reverse_Polarity and Madison_Hatter2",
+      "description": "Follow voguebrunette on her journey to create her very own UGC catalogue from scratch with the help of Reverse_Polarity and Madison_Hatter2. This UGC Expert Feedback episode is the…",
+      "date": "2025-08-12",
+      "duration": "46:12",
+      "image": "https://img.youtube.com/vi/xU3ikvnA5OM/maxresdefault.jpg",
+      "links": {
+        "/avatar": { "kind": "docs", "title": "Avatar, a system of expression" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "0c6czWEP1UY": {
+      "title": "Making a UGC catalogue: making layered clothing",
+      "description": "voguebrunette continues on her journey of learning how to make a UGC catalogue. This week: layered clothing. With the help of Reverse_Polarity and Madison_Hatter2 of course!",
+      "date": "2025-08-12",
+      "duration": "4:59",
+      "image": "https://img.youtube.com/vi/0c6czWEP1UY/maxresdefault.jpg",
+      "links": {
+        "/avatar": { "kind": "docs", "title": "Avatar, a system of expression" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "x1JgsC8c8VQ": {
+      "title": "How to find and fix memory leaks on Roblox",
+      "description": "Learn how to find and fix memory leaks with Andrew from Roblox here on the Roblox Learn channel.",
+      "date": "2025-08-11",
+      "duration": "8:00",
+      "image": "https://img.youtube.com/vi/x1JgsC8c8VQ/maxresdefault.jpg",
+      "links": {
+        "/studio/optimization/memory-usage": {
+          "kind": "docs",
+          "title": "Memory usage"
+        },
+        "/performance-optimization/identify#server-memory": {
+          "kind": "docs",
+          "title": "Identify performance issues"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "yY_lzjHBToE": {
+      "title": "(Korean) Fast & Focused Roblox Development (feat. Adonis_Scripter, 98beans) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-09",
+      "duration": "54:00",
+      "image": "https://img.youtube.com/vi/yY_lzjHBToE/maxresdefault.jpg",
+      "channel": true
+    },
+    "pjchZdJ2xSI": {
+      "title": "(Korean) Concise Scripting on Roblox (feat. ProgramArtist) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-09",
+      "duration": "48:04",
+      "image": "https://img.youtube.com/vi/pjchZdJ2xSI/maxresdefault.jpg",
+      "channel": true
+    },
+    "Q-Z48f9BTnE": {
+      "title": "Theming a Soundtrack & Building for Rapid Prototyping (feat. Skarletbun, Zomebody) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-09",
+      "duration": "1:00:16",
+      "image": "https://img.youtube.com/vi/Q-Z48f9BTnE/maxresdefault.jpg",
+      "channel": true
+    },
+    "Q7P_49pNwUE": {
+      "title": "(German) UGC Illusions: Vector & Normal Art (feat. ASUS_ROG) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-09",
+      "duration": "55:02",
+      "image": "https://img.youtube.com/vi/Q7P_49pNwUE/maxresdefault.jpg",
+      "channel": true
+    },
+    "7DxgcVy8eF4": {
+      "title": "(Italian) Developing on Roblox: From Variables to Teamwork (feat. Sonostrano20) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-08",
+      "duration": "44:58",
+      "image": "https://img.youtube.com/vi/7DxgcVy8eF4/maxresdefault.jpg",
+      "channel": true
+    },
+    "0YfPQjZRZvg": {
+      "title": "(Portuguese) Clean Code in Luau (feat. RodDev15) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-08",
+      "duration": "1:00:40",
+      "image": "https://img.youtube.com/vi/0YfPQjZRZvg/maxresdefault.jpg",
+      "channel": true
+    },
+    "6AvEU-3FKRk": {
+      "title": "(Polish) Increasing Replayability on Roblox Games (feat. RostekTV) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-07",
+      "duration": "54:35",
+      "image": "https://img.youtube.com/vi/6AvEU-3FKRk/maxresdefault.jpg",
+      "channel": true
+    },
+    "nHHGH5-MSLI": {
+      "title": "(Spanish) Boosting your Roblox Experience with Social Media (feat. Xjacupp) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-07",
+      "duration": "47:44",
+      "image": "https://img.youtube.com/vi/nHHGH5-MSLI/maxresdefault.jpg",
+      "channel": true
+    },
+    "uVCNWrw7G8k": {
+      "title": "(Korean) Mastering Blender's Modifiers & Curves (feat. Gold_Octopus) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-07",
+      "duration": "59:54",
+      "image": "https://img.youtube.com/vi/uVCNWrw7G8k/maxresdefault.jpg",
+      "channel": true
+    },
+    "dpLa1G6w8Bk": {
+      "title": "Engaging Communities with Live Events (feat. Astra_X2) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-07",
+      "duration": "54:36",
+      "image": "https://img.youtube.com/vi/dpLa1G6w8Bk/maxresdefault.jpg",
+      "channel": true
+    },
+    "cO593cRbQEM": {
+      "title": "(Portuguese) UI Design & the Player's Mind (feat. EnderWinn) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-07",
+      "duration": "1:05:37",
+      "image": "https://img.youtube.com/vi/cO593cRbQEM/maxresdefault.jpg",
+      "channel": true
+    },
+    "R5Gp1kOBY0c": {
+      "title": "(Italian) Automating Workflow with Plugins (Feat. mattqdev) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-06",
+      "duration": "41:13",
+      "image": "https://img.youtube.com/vi/R5Gp1kOBY0c/maxresdefault.jpg",
+      "channel": true
+    },
+    "4SwNj9OmP6U": {
+      "title": "(Japanese) Supervising IP Projects on Roblox (feat. yoko_ch0, wappaboyboy, tbutcoffee) Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-06",
+      "duration": "56:06",
+      "image": "https://img.youtube.com/vi/4SwNj9OmP6U/maxresdefault.jpg",
+      "channel": true
+    },
+    "1w-P4Q-OiNE": {
+      "title": "Getting Started Scripting with LuaU on Roblox (feat. GlibDuke) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-06",
+      "duration": "59:53",
+      "image": "https://img.youtube.com/vi/1w-P4Q-OiNE/maxresdefault.jpg",
+      "channel": true
+    },
+    "nh-wfkm3W_U": {
+      "title": "Map Design: Lighting and Environment (feat. Nikii13) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-06",
+      "duration": "56:23",
+      "image": "https://img.youtube.com/vi/nh-wfkm3W_U/maxresdefault.jpg",
+      "channel": true
+    },
+    "iw0KegOiLNw": {
+      "title": "(Polish) Creating Unique Roblox Experiences (feat. T34P07D3V) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-05",
+      "duration": "53:00",
+      "image": "https://img.youtube.com/vi/iw0KegOiLNw/maxresdefault.jpg",
+      "channel": true
+    },
+    "7FGF8F0bREY": {
+      "title": "(Spanish) Building a Community and Player Support (feat. GM_TacoBot) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-05",
+      "duration": "41:32",
+      "image": "https://img.youtube.com/vi/7FGF8F0bREY/maxresdefault.jpg",
+      "channel": true
+    },
+    "tBUZG5udBcc": {
+      "title": "Creating Immersive Environmental Audio on Roblox (feat. AmbientSorcery) | Inspire 2025",
+      "description": "Speaker provided resources -",
+      "date": "2025-08-05",
+      "duration": "42:24",
+      "image": "https://img.youtube.com/vi/tBUZG5udBcc/maxresdefault.jpg",
+      "channel": true
+    },
+    "3F2ejv9CbiU": {
+      "title": "(Portuguese) Building Branded Experiences on Roblox (feat. IsadoraOhata1) | Inspire 2025",
+      "description": "Presentations at Inspire 2025 are for informational purposes only. All information is provided “as is,” and Roblox does not make any warranties about the completeness, reliability…",
+      "date": "2025-08-04",
+      "duration": "48:40",
+      "image": "https://img.youtube.com/vi/3F2ejv9CbiU/maxresdefault.jpg",
+      "channel": true
+    },
+    "RYzj4TjiMyE": {
+      "title": "How to use SmoothDamp for smooth UX on Roblox",
+      "description": "Chapters: What is it? · Cloud Example · Engine Example · Impulse · Why do I care? · When should I use it?",
+      "date": "2025-08-01",
+      "duration": "7:50",
+      "image": "https://img.youtube.com/vi/RYzj4TjiMyE/maxresdefault.jpg",
+      "links": {
+        "/reference/engine/classes/TweenService": {
+          "kind": "docs",
+          "title": "TweenService"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "XgkmKxyRuWE": {
+      "title": "How to customize lighting and edit terrain on Roblox",
+      "description": "To see the finished result, check out The Roblox Learn Experience!",
+      "date": "2025-08-01",
+      "duration": "15:04",
+      "image": "https://img.youtube.com/vi/XgkmKxyRuWE/maxresdefault.jpg",
+      "links": {
+        "/studio/terrain-editor": { "kind": "docs", "title": "Terrain Editor" },
+        "/reference/engine/classes/Lighting": {
+          "kind": "docs",
+          "title": "Lighting"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "D64IOXAb6SM": {
+      "title": "UGC Expert Feedback 2: feat. Reverse_Polarity and Madison_Hatter2",
+      "description": "Follow voguebrunette on her journey to create her very own UGC catalogue from scratch with the help of Reverse_Polarity and Madison_Hatter2. This UGC Expert Feedback episode is the…",
+      "date": "2025-08-01",
+      "duration": "1:09:46",
+      "image": "https://img.youtube.com/vi/D64IOXAb6SM/maxresdefault.jpg",
+      "links": {
+        "/avatar/resources": { "kind": "docs", "title": "Resources" },
+        "/avatar": { "kind": "docs", "title": "Avatar, a system of expression" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "LRV85HyN2Z4": {
+      "title": "Making a UGC catalogue: making a necklace",
+      "description": "voguebrunette continues on her journey of learning how to make a UGC catalogue. This week: a pearl necklace. With the help of Reverse_Polarity and Madison_Hatter2 of course!",
+      "date": "2025-08-01",
+      "duration": "6:46",
+      "image": "https://img.youtube.com/vi/LRV85HyN2Z4/maxresdefault.jpg",
+      "links": {
+        "/avatar": { "kind": "docs", "title": "Avatar, a system of expression" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "n5uOVlCIUjI": {
+      "title": "Reliable vs Unreliable RemoteEvents on Roblox",
+      "description": "Chapters: What is it · Networking 101 · Back to Roblox · Why care? · Which one? · Example 1 · Example 2",
+      "date": "2025-07-25",
+      "duration": "9:15",
+      "image": "https://img.youtube.com/vi/n5uOVlCIUjI/maxresdefault.jpg",
+      "links": {
+        "/reference/engine/classes/RemoteEvent": {
+          "kind": "docs",
+          "title": "RemoteEvent"
+        },
+        "/reference/engine/classes/UnreliableRemoteEvent": {
+          "kind": "docs",
+          "title": "UnreliableRemoteEvent"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "dlMWNO5iiGU": {
+      "title": "UGC Expert Feedback 1: feat. Reverse_Polarity and Madison_Hatter2",
+      "description": "Follow voguebrunette on her journey to create her very own UGC catalogue from scratch with the help of Reverse_Polarity and Madison_Hatter2. This UGC Expert Feedback episode is the…",
+      "date": "2025-07-09",
+      "duration": "51:25",
+      "image": "https://img.youtube.com/vi_webp/dlMWNO5iiGU/maxresdefault.webp",
+      "links": {
+        "/avatar": { "kind": "docs", "title": "Avatar, a system of expression" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "VE56HDVNibI": {
+      "title": "How to work with time in Roblox development",
+      "description": "In this video, Stephen shows you how to think about time in the context of Roblox development.",
+      "date": "2025-06-30",
+      "duration": "10:08",
+      "image": "https://img.youtube.com/vi/VE56HDVNibI/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "hLh5BfrhNgg": {
+      "title": "Making a UGC catalogue: making a flower crown",
+      "description": "Follow voguebrunette on her journey to create her very own UGC catalogue from scratch with the help of Reverse_Polarity and Madison_Hatter2",
+      "date": "2025-06-30",
+      "duration": "8:00",
+      "image": "https://img.youtube.com/vi/hLh5BfrhNgg/maxresdefault.jpg",
+      "links": {
+        "/avatar": { "kind": "docs", "title": "Avatar, a system of expression" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "T--CNfkfBBQ": {
+      "title": "How to graybox on Roblox",
+      "description": "Hal_Apenyo teaches the the core concepts and techniques required for grayboxing on Roblox.",
+      "date": "2025-06-30",
+      "duration": "12:19",
+      "image": "https://img.youtube.com/vi_webp/T--CNfkfBBQ/maxresdefault.webp",
+      "links": {
+        "/tutorials/curriculums/core/building/greybox-a-playable-area": {
+          "kind": "docs",
+          "title": "Greybox a playable area"
+        },
+        "/tutorials/curriculums/environmental-art/greybox-your-environment": {
+          "kind": "docs",
+          "title": "Greybox your environment"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "yOmPc2g8tbY": {
+      "title": "How to use Roblox Studio's debugger",
+      "description": "Learn how to use Studio's built in debugger to help fix your code.",
+      "date": "2025-06-13",
+      "duration": "11:08",
+      "image": "https://img.youtube.com/vi/yOmPc2g8tbY/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "D_YmdVZxIZw": {
+      "title": "How to grow your experience with Roblox Ads Manager",
+      "description": "Learn about the new Ads Manager on Roblox.",
+      "date": "2025-06-09",
+      "duration": "1:00:26",
+      "image": "https://img.youtube.com/vi/D_YmdVZxIZw/maxresdefault.jpg",
+      "links": {
+        "/production/promotion/ads-manager": {
+          "kind": "docs",
+          "title": "Ads Manager"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "fByFKZarNiI": {
+      "title": "How to use OOP with Luau on Roblox",
+      "description": "Dive into the OOP paradigm and how it works within Luau.",
+      "date": "2025-06-04",
+      "duration": "11:24",
+      "image": "https://img.youtube.com/vi_webp/fByFKZarNiI/maxresdefault.webp",
+      "links": {
+        "/luau/metatables": { "kind": "docs", "title": "Metatables" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "foKFpXZYXPk": {
+      "title": "How to use module scripts on Roblox",
+      "description": "Learn how module scripts work and when to use them.",
+      "date": "2025-05-27",
+      "duration": "5:42",
+      "image": "https://img.youtube.com/vi/foKFpXZYXPk/maxresdefault.jpg",
+      "links": {
+        "/reference/engine/classes/ModuleScript": {
+          "kind": "docs",
+          "title": "ModuleScript"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "PeIZN7tPutg": {
+      "title": "How to make an MMO on Roblox in 6 minutes",
+      "description": "Use data stores to save player progress and handle player position.",
+      "date": "2025-05-22",
+      "duration": "6:23",
+      "image": "https://img.youtube.com/vi/PeIZN7tPutg/maxresdefault.jpg",
+      "links": {
+        "/cloud-services/data-stores": {
+          "kind": "docs",
+          "title": "Data stores"
+        },
+        "/cloud-services/data-stores/player-data-purchasing": {
+          "kind": "docs",
+          "title": "Implement player data and purchasing systems"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "_k1ea0OIKaU": {
+      "title": "How to style your UI on Roblox",
+      "description": "use the new Style Manager to create, manage, and apply UI styles.",
+      "date": "2025-05-22",
+      "duration": "8:35",
+      "image": "https://img.youtube.com/vi_webp/_k1ea0OIKaU/maxresdefault.webp",
+      "links": {
+        "/ui/styling": { "kind": "docs", "title": "UI styling" },
+        "/ui/styling/editor": { "kind": "docs", "title": "Style Editor" },
+        "/ui/styling/compatibility": {
+          "kind": "docs",
+          "title": "UI styling compatibility"
+        },
+        "/ui/styling/css-comparisons": {
+          "kind": "docs",
+          "title": "CSS Comparisons"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "NHgYM78afqc": {
+      "title": "How to make shoes for Roblox",
+      "description": "Make and sell your first pair of shoes on Roblox.",
+      "date": "2025-05-15",
+      "duration": "14:11",
+      "image": "https://img.youtube.com/vi/NHgYM78afqc/maxresdefault.jpg",
+      "links": {
+        "/avatar": {
+          "kind": "docs",
+          "title": "Avatar, a system of expression"
+        },
+        "/marketplace/marketplace-policy": {
+          "kind": "docs",
+          "title": "Marketplace policy"
+        },
+        "/marketplace/marketplace-fees-and-commissions": {
+          "kind": "docs",
+          "title": "Marketplace fees and commissions"
+        },
+        "/avatar/resources#mannequin-models": {
+          "kind": "docs",
+          "title": "Resources"
+        },
+        "/art/modeling/texture-specifications": {
+          "kind": "docs",
+          "title": "Texture specifications"
+        },
+        "/art/accessories/creating/unwrapping": {
+          "kind": "docs",
+          "title": "Create seams and unwrap"
+        },
+        "/art/accessories/rig-and-cage-existing-models": {
+          "kind": "docs",
+          "title": "Rigging and caging models (Blender)"
+        },
+        "/avatar/layered-accessories/specifications#rigging-and-skinning": {
+          "kind": "docs",
+          "title": "Layered accessory specifications"
+        },
+        "/avatar/layered-accessories/caging-best-practices": {
+          "kind": "docs",
+          "title": "Layered accessory caging best practices"
+        },
+        "/avatar/layered-accessories/export": {
+          "kind": "docs",
+          "title": "Export layered accessories"
+        },
+        "/avatar/layered-accessories/import": {
+          "kind": "docs",
+          "title": "Import layered accessories"
+        },
+        "/avatar-setup": { "kind": "docs", "title": "Avatar Setup" },
+        "/marketplace/publish-to-marketplace": {
+          "kind": "docs",
+          "title": "Publish to Marketplace"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "_vByVrhQX6w": {
+      "title": "How to use post processing effects on Roblox",
+      "description": "Learn how post processing works on Roblox.",
+      "date": "2025-05-12",
+      "duration": "2:35",
+      "image": "https://img.youtube.com/vi_webp/_vByVrhQX6w/maxresdefault.webp",
+      "links": {
+        "/environment/post-processing-effects": {
+          "kind": "docs",
+          "title": "Post-processing effects"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "IlM7wCiTOIo": {
+      "title": "How to use global wind on Roblox",
+      "description": "Learn how to use global wind on Roblox.",
+      "date": "2025-05-09",
+      "duration": "2:42",
+      "image": "https://img.youtube.com/vi_webp/IlM7wCiTOIo/maxresdefault.webp",
+      "links": {
+        "/environment/global-wind": { "kind": "docs", "title": "Global wind" }
+      },
+      "channel": true
+    },
+    "GbO89Hz3PjE": {
+      "title": "How to use dynamic clouds on Roblox",
+      "description": "Learn how to use dynamic clouds on Roblox.",
+      "date": "2025-05-07",
+      "duration": "1:37",
+      "image": "https://img.youtube.com/vi_webp/GbO89Hz3PjE/maxresdefault.webp",
+      "links": {
+        "/environment/clouds": { "kind": "docs", "title": "Dynamic clouds" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "UPMWq2viV5I": {
+      "title": "How to use lighting and effects on Roblox",
+      "description": "Learn how to use lighting and effects on Roblox.",
+      "date": "2025-05-05",
+      "duration": "2:19",
+      "image": "https://img.youtube.com/vi_webp/UPMWq2viV5I/maxresdefault.webp",
+      "links": {
+        "/environment/lighting": { "kind": "docs", "title": "Global lighting" },
+        "/environment/atmosphere": {
+          "kind": "docs",
+          "title": "Atmospheric effects"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "FzmFAm00A8g": {
+      "title": "What are objects?",
+      "description": "Learn what objects are on Roblox.",
+      "date": "2025-04-28",
+      "duration": "5:37",
+      "image": "https://img.youtube.com/vi/FzmFAm00A8g/maxresdefault.jpg",
+      "links": {
+        "/parts": { "kind": "docs", "title": "Parts" },
+        "/scripting": { "kind": "docs", "title": "Scripting" },
+        "/scripting/services": { "kind": "docs", "title": "Services" },
+        "/projects/assets": { "kind": "docs", "title": "Assets" },
+        "/projects/assets/privacy": { "kind": "docs", "title": "Asset privacy" }
+      },
+      "channel": true
+    },
+    "_RxK6l2y7Ac": {
+      "title": "What are experiences?",
+      "description": "Learn what experiences are on Roblox.",
+      "date": "2025-04-28",
+      "duration": "3:51",
+      "image": "https://img.youtube.com/vi/_RxK6l2y7Ac/maxresdefault.jpg",
+      "links": {
+        "/studio/setup": { "kind": "docs", "title": "Roblox Studio setup" },
+        "/projects/data-model": { "kind": "docs", "title": "Data model" },
+        "/projects/collaboration": { "kind": "docs", "title": "Collaboration" },
+        "/studio/testing-modes": {
+          "kind": "docs",
+          "title": "Studio testing modes"
+        },
+        "/production/publishing/publish-games-and-places#publish-experiences": {
+          "kind": "docs",
+          "title": "Create and publish games and places"
+        }
+      },
+      "channel": true
+    },
+    "3Q0R1-Xkw9U": {
+      "title": "What are data models?",
+      "description": "Learn about the Roblox data model.",
+      "date": "2025-04-28",
+      "duration": "5:40",
+      "image": "https://img.youtube.com/vi/3Q0R1-Xkw9U/maxresdefault.jpg",
+      "links": {
+        "/projects/data-model": { "kind": "docs", "title": "Data model" },
+        "/parts": { "kind": "docs", "title": "Parts" },
+        "/scripting": { "kind": "docs", "title": "Scripting" },
+        "/scripting/services": { "kind": "docs", "title": "Services" },
+        "/projects/client-server": {
+          "kind": "docs",
+          "title": "Client-server runtime"
+        }
+      },
+      "channel": true
+    },
+    "vATGE-2xhcw": {
+      "title": "How to turn Body Cages into Clothing Cages (and back again!)",
+      "description": "Learn how to convert a body cage to clothing cages and back again.",
+      "date": "2025-04-25",
+      "duration": "5:25",
+      "image": "https://img.youtube.com/vi/vATGE-2xhcw/maxresdefault.jpg",
+      "links": {
+        "/avatar": {
+          "kind": "docs",
+          "title": "Avatar, a system of expression"
+        },
+        "/avatar/resources#references": { "kind": "docs", "title": "Resources" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "VDO_amtWfDw": {
+      "title": "How to optimize performance on Roblox",
+      "description": "Learn how to deal with the most common performance problems.",
+      "date": "2025-04-24",
+      "duration": "9:57",
+      "image": "https://img.youtube.com/vi_webp/VDO_amtWfDw/maxresdefault.webp",
+      "links": {
+        "/performance-optimization": {
+          "kind": "docs",
+          "title": "Performance optimization"
+        },
+        "/workspace/streaming": {
+          "kind": "docs",
+          "title": "Instance streaming"
+        },
+        "/performance-optimization/microprofiler#custom-profiles": {
+          "kind": "docs",
+          "title": "MicroProfiler"
+        },
+        "/physics/adaptive-timestepping": {
+          "kind": "docs",
+          "title": "Adaptive timestepping"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "rVFmc8gxu4s": {
+      "title": "Learn how to create a custom experience banner",
+      "description": "Learn how to crete and publish a custom experience banner for Friend Invite Reward System.",
+      "date": "2025-04-22",
+      "duration": "2:07",
+      "image": "https://img.youtube.com/vi/rVFmc8gxu4s/maxresdefault.jpg",
+      "links": {
+        "/production/promotion/referral-system": {
+          "kind": "docs",
+          "title": "Friend referral system"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "MlyJD_ix9CE": {
+      "title": "Intro to texturing for UGC (feat. Madison_Hatter2)",
+      "description": "Madison_Hatter2 shows how to texture and publish a simple avatar item.",
+      "date": "2025-04-17",
+      "duration": "36:46",
+      "image": "https://img.youtube.com/vi/MlyJD_ix9CE/maxresdefault.jpg",
+      "links": {
+        "/marketplace/marketplace-fees-and-commissions": {
+          "kind": "docs",
+          "title": "Marketplace fees and commissions"
+        },
+        "/art/blender#modeling-tools": { "kind": "docs", "title": "Blender" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "b0ugFLxrPIU": {
+      "title": "Intro to modeling for UGC (feat. Reverse_Polarity)",
+      "description": "Learn efficient workflows for making avatar items in Blender.",
+      "date": "2025-04-17",
+      "duration": "55:46",
+      "image": "https://img.youtube.com/vi/b0ugFLxrPIU/maxresdefault.jpg",
+      "links": {
+        "/marketplace/marketplace-fees-and-commissions": {
+          "kind": "docs",
+          "title": "Marketplace fees and commissions"
+        },
+        "/art/blender#modeling-tools": { "kind": "docs", "title": "Blender" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "Zb1BJow0NV4": {
+      "title": "UGC Insights (feat. Reverse_Polarity and Madison_Hatter2)",
+      "description": "Learn how to sell and promote avatar items with insights from the experts.",
+      "date": "2025-04-17",
+      "duration": "9:36",
+      "image": "https://img.youtube.com/vi/Zb1BJow0NV4/maxresdefault.jpg",
+      "links": {
+        "/marketplace/marketplace-fees-and-commissions#publishing-advance": {
+          "kind": "docs",
+          "title": "Marketplace fees and commissions"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "fUMlnldI53A": {
+      "title": "Learn how matchmaking works on Roblox",
+      "description": "Learn how matchmaking works on Roblox.",
+      "date": "2025-04-08",
+      "duration": "6:41",
+      "image": "https://img.youtube.com/vi_webp/fUMlnldI53A/maxresdefault.webp",
+      "links": {
+        "/matchmaking": { "kind": "docs", "title": "Matchmaking" },
+        "/matchmaking/customize-matchmaking": {
+          "kind": "docs",
+          "title": "Customize your matchmaking configuration"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "ARlkfuisU1w": {
+      "title": "How to use light sources on Roblox",
+      "description": "Learn how to use light sources on Roblox.",
+      "date": "2025-03-28",
+      "duration": "6:18",
+      "image": "https://img.youtube.com/vi_webp/ARlkfuisU1w/maxresdefault.webp",
+      "links": {
+        "/effects/light-sources": { "kind": "docs", "title": "Light sources" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "pc9KZbkYv4E": {
+      "title": "Tailor Swiftly - Dynamic Cloth in Roblox",
+      "description": "Join PrinceTybalt as he walks us through his recent hackweek project to create dynamic cloth in realtime using common sewing paradigms.",
+      "date": "2025-03-27",
+      "duration": "11:03",
+      "image": "https://img.youtube.com/vi_webp/pc9KZbkYv4E/maxresdefault.webp",
+      "links": {
+        "/reference/engine/classes/EditableMesh": {
+          "kind": "docs",
+          "title": "EditableMesh"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "Mdgk49Evink": {
+      "title": "How to get your code to run on Roblox",
+      "description": "Andrew shows you where to place your scripts, so they run properly.",
+      "date": "2025-03-19",
+      "duration": "7:34",
+      "image": "https://img.youtube.com/vi/Mdgk49Evink/maxresdefault.jpg",
+      "links": {
+        "/scripting/locations": {
+          "kind": "docs",
+          "title": "Script types and locations"
+        },
+        "/scripting/module": { "kind": "docs", "title": "Reuse code" },
+        "/scripting/events": { "kind": "docs", "title": "Events" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "lAKBYXLkNGU": {
+      "title": "Enyu opens Studio for the first time (feat. Enyu)",
+      "description": "Minty teaches Enyu about constructive solid geometry.",
+      "date": "2025-03-17",
+      "duration": "22:08",
+      "image": "https://img.youtube.com/vi/lAKBYXLkNGU/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "QwZaA9Gc-WQ": {
+      "title": "How to cage Roblox 3D clothing",
+      "description": "Learn how to cage your avatar items from Roblox's own 3D artist.",
+      "date": "2025-02-18",
+      "duration": "1:02:27",
+      "image": "https://img.youtube.com/vi_webp/QwZaA9Gc-WQ/maxresdefault.webp",
+      "links": {
+        "/avatar/layered-accessories/caging-best-practices": {
+          "kind": "docs",
+          "title": "Layered accessory caging best practices"
+        },
+        "/avatar/layered-accessories": {
+          "kind": "docs",
+          "title": "Layered accessories"
+        },
+        "/avatar/resources#references": {
+          "kind": "docs",
+          "title": "Resources"
+        },
+        "/art/accessories/creating": {
+          "kind": "docs",
+          "title": "Create your first layered accessory"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "r_unfGZT5Ps": {
+      "title": "How to create and sell your first classic clothing item on Roblox",
+      "description": "Learn how to create and sell your first classic clothing item on Roblox.",
+      "date": "2024-12-20",
+      "duration": "5:03",
+      "image": "https://img.youtube.com/vi/r_unfGZT5Ps/maxresdefault.jpg",
+      "links": {
+        "/avatar/classic-clothing": {
+          "kind": "docs",
+          "title": "Classic clothing"
+        },
+        "/marketplace": { "kind": "docs", "title": "Marketplace overview" },
+        "/marketplace/marketplace-policy": {
+          "kind": "docs",
+          "title": "Marketplace policy"
+        },
+        "/marketplace/marketplace-fees-and-commissions": {
+          "kind": "docs",
+          "title": "Marketplace fees and commissions"
+        },
+        "/marketplace/publish-to-marketplace": {
+          "kind": "docs",
+          "title": "Publish to Marketplace"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "eWf-6Sh-9Os": {
+      "title": "How to use the Roblox MicroProfiler on mobile",
+      "description": "Dive deep into frame colors, flame graphs, and more.",
+      "date": "2024-11-14",
+      "duration": "6:03",
+      "image": "https://img.youtube.com/vi_webp/eWf-6Sh-9Os/maxresdefault.webp",
+      "links": {
+        "/performance-optimization/microprofiler": {
+          "kind": "docs",
+          "title": "MicroProfiler"
+        },
+        "/performance-optimization/microprofiler/tag-table": {
+          "kind": "docs",
+          "title": "Tag reference"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "qfWKYgO63OI": {
+      "title": "What's Roblox's Referral System?",
+      "description": "Learn how to implement a friend invite reward system.",
+      "date": "2024-11-13",
+      "duration": "2:49",
+      "image": "https://img.youtube.com/vi/qfWKYgO63OI/maxresdefault.jpg",
+      "links": {
+        "/production/promotion/referral-system": {
+          "kind": "docs",
+          "title": "Friend referral system"
+        }
+      },
+      "channel": true
+    },
+    "0k4o_fGNOYQ": {
+      "title": "Touring PolarCub's Homestore (feat. Temprist)",
+      "description": "Let's tour PolarCub's UGC Homestore! Also, Temprist shows up.",
+      "date": "2024-11-13",
+      "duration": "6:42",
+      "image": "https://img.youtube.com/vi/0k4o_fGNOYQ/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "I65eJ_uUsY8": {
+      "title": "Thumbnail Personalization on Roblox",
+      "description": "Learn how to personalize your thumbnails.",
+      "date": "2024-11-13",
+      "duration": "9:28",
+      "image": "https://img.youtube.com/vi/I65eJ_uUsY8/maxresdefault.jpg",
+      "links": {
+        "/production/publishing/thumbnails#thumbnail-personalization-for-the-home-page": {
+          "kind": "docs",
+          "title": "Thumbnails"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "VCqopgaVthA": {
+      "title": "A Random Halloween Game Jam (feat. MrChickenRocket)",
+      "description": "Join our incredible cast of creators for a Halloween game jam.",
+      "date": "2024-11-01",
+      "duration": "2:34:56",
+      "image": "https://img.youtube.com/vi/VCqopgaVthA/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "6MPWLQmIKLk": {
+      "title": "Touring the Roblox UGC Homestore Template with Minty and SCHLEEMPH",
+      "description": "Learn about the UGC Homestore template from its creators.",
+      "date": "2024-10-21",
+      "duration": "5:56",
+      "image": "https://img.youtube.com/vi/6MPWLQmIKLk/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "C-DwGRBHvmE": {
+      "title": "How to create and sell your first layered clothing item on Roblox",
+      "description": "Make and sell your first basic clothing accessory on Roblox - even if you aren't a 3D artist! Even though the video is 15 minutes long, it took me many tries and several days to ge…",
+      "date": "2024-10-10",
+      "duration": "15:00",
+      "image": "https://img.youtube.com/vi/C-DwGRBHvmE/maxresdefault.jpg",
+      "links": {
+        "/art/accessories/creating": {
+          "kind": "docs",
+          "title": "Create your first layered accessory"
+        },
+        "/avatar/resources#project-files": {
+          "kind": "docs",
+          "title": "Resources"
+        },
+        "/get-started": { "kind": "docs", "title": "Get Started" },
+        "/avatar": {
+          "kind": "docs",
+          "title": "Avatar, a system of expression"
+        },
+        "/avatar/layered-accessories": {
+          "kind": "docs",
+          "title": "Layered accessories"
+        },
+        "/avatar/layered-accessories/specifications": {
+          "kind": "docs",
+          "title": "Layered accessory specifications"
+        },
+        "/art/modeling/texture-specifications": {
+          "kind": "docs",
+          "title": "Texture specifications"
+        },
+        "/art/accessories/creating/unwrapping": {
+          "kind": "docs",
+          "title": "Create seams and unwrap"
+        },
+        "/avatar/layered-accessories/export": {
+          "kind": "docs",
+          "title": "Export layered accessories"
+        },
+        "/avatar/layered-accessories/import": {
+          "kind": "docs",
+          "title": "Import layered accessories"
+        },
+        "/marketplace": { "kind": "docs", "title": "Marketplace overview" },
+        "/marketplace/marketplace-policy": {
+          "kind": "docs",
+          "title": "Marketplace policy"
+        },
+        "/marketplace/marketplace-fees-and-commissions": {
+          "kind": "docs",
+          "title": "Marketplace fees and commissions"
+        },
+        "/marketplace/publish-to-marketplace": {
+          "kind": "docs",
+          "title": "Publish to Marketplace"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "vMaOGgeuR4Y": {
+      "title": "Making a Halloween Scene Using AI in Roblox",
+      "description": "Remember when Nick and Tian showed off AI on stage at RDC to turn a normal scene into a Halloween one? These two will be recreating that demo for you live! If you’ve ever wanted to…",
+      "date": "2024-10-05",
+      "duration": "1:01:58",
+      "image": "https://img.youtube.com/vi/vMaOGgeuR4Y/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "XLCZfGEm9tU": {
+      "title": "How to use the MicroProfiler on Roblox",
+      "description": "Get started with the performance optimization and troubleshooting tool.",
+      "date": "2024-09-25",
+      "duration": "4:26",
+      "image": "https://img.youtube.com/vi/XLCZfGEm9tU/maxresdefault.jpg",
+      "links": {
+        "/performance-optimization/microprofiler": {
+          "kind": "docs",
+          "title": "MicroProfiler"
+        },
+        "/performance-optimization/microprofiler/tag-table": {
+          "kind": "docs",
+          "title": "Tag reference"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "Eed29gV0hLA": {
+      "title": "How to create and sell a Rigid Accessory on Roblox in 12 minutes",
+      "description": "Make and sell your first basic rigid accessory on Roblox - even if you aren't a 3D artist! Even though the video is 12 minutes long, it took me many tries and several hours to get…",
+      "date": "2024-09-04",
+      "duration": "12:22",
+      "image": "https://img.youtube.com/vi_webp/Eed29gV0hLA/maxresdefault.webp",
+      "links": {
+        "/get-started": { "kind": "docs", "title": "Get Started" },
+        "/avatar": {
+          "kind": "docs",
+          "title": "Avatar, a system of expression"
+        },
+        "/avatar/rigid-accessories": {
+          "kind": "docs",
+          "title": "Rigid accessories"
+        },
+        "/avatar/rigid-accessories/specifications": {
+          "kind": "docs",
+          "title": "Rigid accessory specifications"
+        },
+        "/art/modeling/texture-specifications": {
+          "kind": "docs",
+          "title": "Texture specifications"
+        },
+        "/art/accessories/creating/unwrapping": {
+          "kind": "docs",
+          "title": "Create seams and unwrap"
+        },
+        "/avatar/rigid-accessories/export": {
+          "kind": "docs",
+          "title": "Export rigid accessories"
+        },
+        "/avatar/rigid-accessories/import": {
+          "kind": "docs",
+          "title": "Import rigid accessories"
+        },
+        "/marketplace": { "kind": "docs", "title": "Marketplace overview" },
+        "/marketplace/marketplace-policy": {
+          "kind": "docs",
+          "title": "Marketplace policy"
+        },
+        "/marketplace/marketplace-fees-and-commissions": {
+          "kind": "docs",
+          "title": "Marketplace fees and commissions"
+        },
+        "/marketplace/publish-to-marketplace": {
+          "kind": "docs",
+          "title": "Publish to Marketplace"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "TfOzyA8e-Qw": {
+      "title": "Roblox Chat builds an Obby",
+      "description": "Minty creates an obby live from scratch using suggestions from chat.",
+      "date": "2024-08-31",
+      "duration": "56:27",
+      "image": "https://img.youtube.com/vi/TfOzyA8e-Qw/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "_q0Isx5zU2A": {
+      "title": "Constraints and Physics in Roblox",
+      "description": "We have a new Roblox Staff stream coming up on Monday August 19 at 4pm PST: Constraints and Physics in Roblox! Engineering Manager @kleptonaut will be talking about constraints and…",
+      "date": "2024-08-20",
+      "duration": "1:06:13",
+      "image": "https://img.youtube.com/vi/_q0Isx5zU2A/maxresdefault.jpg",
+      "links": {
+        "/tutorials/use-case-tutorials/physics/create-moving-objects": {
+          "kind": "docs",
+          "title": "Create moving objects"
+        },
+        "/tutorials/use-case-tutorials/physics/create-spinning-objects": {
+          "kind": "docs",
+          "title": "Create spinning objects"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "pN4mjoMevog": {
+      "title": "(Tagalog) Connecting with Creators & Discovering Talents by clarkonp | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-10",
+      "duration": "50:42",
+      "image": "https://img.youtube.com/vi/pN4mjoMevog/maxresdefault.jpg",
+      "channel": true
+    },
+    "duECoYGUw94": {
+      "title": "(Spanish) Master Remote Events: Beginner's Guide by xmaanzach | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-10",
+      "duration": "1:14:09",
+      "image": "https://img.youtube.com/vi/duECoYGUw94/maxresdefault.jpg",
+      "channel": true
+    },
+    "q2MNOqHPQ_Q": {
+      "title": "(English) Game Feel: The Basics of Engaging Input by Plutonem | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-10",
+      "duration": "59:17",
+      "image": "https://img.youtube.com/vi/q2MNOqHPQ_Q/maxresdefault.jpg",
+      "channel": true
+    },
+    "K4GdZJXhNDI": {
+      "title": "(French) Efficiently Running Large Numbers of NPC AI by Florianne10 | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-10",
+      "duration": "1:01:46",
+      "image": "https://img.youtube.com/vi/K4GdZJXhNDI/maxresdefault.jpg",
+      "channel": true
+    },
+    "yNmBjt-o67c": {
+      "title": "(English) Enhancing Gameplay Through Storytelling by MiniToon | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-09",
+      "duration": "47:40",
+      "image": "https://img.youtube.com/vi/yNmBjt-o67c/maxresdefault.jpg",
+      "channel": true
+    },
+    "QmlfCxP4iYE": {
+      "title": "(Korean) Crafting Compelling Designs: An Effective Approach by tlllik | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-09",
+      "duration": "51:41",
+      "image": "https://img.youtube.com/vi/QmlfCxP4iYE/maxresdefault.jpg",
+      "channel": true
+    },
+    "wu-U45YZ8FI": {
+      "title": "(Spanish) Create Your Own Stylized Materials by Nikii13 | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-09",
+      "duration": "1:25:03",
+      "image": "https://img.youtube.com/vi/wu-U45YZ8FI/maxresdefault.jpg",
+      "channel": true
+    },
+    "T7uIoouDMao": {
+      "title": "(Portuguese) Layered Clothing: Start Creating Yours Today! by GreenBiak | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-09",
+      "duration": "41:38",
+      "image": "https://img.youtube.com/vi/T7uIoouDMao/maxresdefault.jpg",
+      "channel": true
+    },
+    "p_kbHqhvfyw": {
+      "title": "(Portuguese) Behind the Scenes of the Roblox Cup by Luisigabriel & Morniratu | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-08",
+      "duration": "43:46",
+      "image": "https://img.youtube.com/vi/p_kbHqhvfyw/maxresdefault.jpg",
+      "channel": true
+    },
+    "xtprMYALfOk": {
+      "title": "(Japanese) Understanding and Applying Obby Scripting on Roblox by GODPOTATO_Official | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-08",
+      "duration": "1:04:56",
+      "image": "https://img.youtube.com/vi/xtprMYALfOk/maxresdefault.jpg",
+      "channel": true
+    },
+    "BzLNDUGj3ZI": {
+      "title": "(English) UGC 101: Digital Fashion on Roblox by Mimi_Dev | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-08",
+      "duration": "1:01:32",
+      "image": "https://img.youtube.com/vi/BzLNDUGj3ZI/maxresdefault.jpg",
+      "channel": true
+    },
+    "oVOxwADTa_Y": {
+      "title": "(Turkish) Connecting with a Global Community: Game Localization by Q3sh | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-07",
+      "duration": "28:01",
+      "image": "https://img.youtube.com/vi/oVOxwADTa_Y/maxresdefault.jpg",
+      "channel": true
+    },
+    "Bc1Zh0xMc1M": {
+      "title": "(German) Create Game Objects with Blender & Texture in Substance Painter by kevini44 | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-07",
+      "duration": "39:45",
+      "image": "https://img.youtube.com/vi/Bc1Zh0xMc1M/maxresdefault.jpg",
+      "channel": true
+    },
+    "1ScJwhELKd0": {
+      "title": "(Korean) Sol's RNG History by 2word7, 54_xyz, hschu_hschu, and xcvbwer123 | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-07",
+      "duration": "43:47",
+      "image": "https://img.youtube.com/vi/1ScJwhELKd0/maxresdefault.jpg",
+      "channel": true
+    },
+    "fFHlrTAGwxw": {
+      "title": "Intro to Modeling in Blender for Roblox",
+      "description": "In this Roblox Staff Stream, Intro to Modeling in Blender, Principal Environment Artist @SCHLEEMPH shows you the ropes on how to get started modeling in Blender. Ever wondered how…",
+      "date": "2024-08-07",
+      "duration": "1:00:12",
+      "image": "https://img.youtube.com/vi/fFHlrTAGwxw/maxresdefault.jpg",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "D8A5eja5AqA": {
+      "title": "(Polish) Creating and Animating Graphical User Interfaces by Gromaniak85 | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-07",
+      "duration": "1:05:17",
+      "image": "https://img.youtube.com/vi/D8A5eja5AqA/maxresdefault.jpg",
+      "channel": true
+    },
+    "2t_zhxyLOJ8": {
+      "title": "(English) What We Wish We Knew When Developing Rift Hunters by Brave Turtles | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-06",
+      "duration": "58:04",
+      "image": "https://img.youtube.com/vi/2t_zhxyLOJ8/maxresdefault.jpg",
+      "channel": true
+    },
+    "4W4agyvMFZY": {
+      "title": "(Polish) How to Promote Your Roblox Experience with Influencers by mendire | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-06",
+      "duration": "54:53",
+      "image": "https://img.youtube.com/vi/4W4agyvMFZY/maxresdefault.jpg",
+      "channel": true
+    },
+    "rMZzSXRjB2k": {
+      "title": "(Italian) Programming on Roblox: Boolean Algebra by ADeveloperZ | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-06",
+      "duration": "1:29:00",
+      "image": "https://img.youtube.com/vi/rMZzSXRjB2k/maxresdefault.jpg",
+      "channel": true
+    },
+    "ii-x8p1y_PE": {
+      "title": "(English) Accelerated Game Creation with Nevermore and NPM by Quenty | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-06",
+      "duration": "1:10:28",
+      "image": "https://img.youtube.com/vi/ii-x8p1y_PE/maxresdefault.jpg",
+      "channel": true
+    },
+    "3GPJR5IKqUc": {
+      "title": "(English) Introduction to Programming for Roblox by WooleyWool | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-06",
+      "duration": "43:12",
+      "image": "https://img.youtube.com/vi/3GPJR5IKqUc/maxresdefault.jpg",
+      "channel": true
+    },
+    "AaOLltVQcMI": {
+      "title": "(English) Opening Ceremony & Introduction to Development on Roblox | Inspire 2024",
+      "description": "Inspire 2024 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2024-08-06",
+      "duration": "1:00:54",
+      "image": "https://img.youtube.com/vi/AaOLltVQcMI/maxresdefault.jpg",
+      "channel": true
+    },
+    "NFLP-FVv834": {
+      "title": "Tracking funnel and economy events on Roblox",
+      "description": "Grow your experience faster by tracking your funnel and economy events.",
+      "date": "2024-07-24",
+      "duration": "20:51",
+      "image": "https://img.youtube.com/vi/NFLP-FVv834/maxresdefault.jpg",
+      "links": {
+        "/production/analytics/event-types": {
+          "kind": "docs",
+          "title": "Event types"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "B2hJlre1sOk": {
+      "title": "Advanced Roblox Packages Techniques on Roblox",
+      "description": "Learn how to get the most out of your packages with package attributes and scripts",
+      "date": "2024-07-15",
+      "duration": "7:01",
+      "image": "https://img.youtube.com/vi/B2hJlre1sOk/maxresdefault.jpg",
+      "links": {
+        "/projects/assets/packages": { "kind": "docs", "title": "Packages" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "oDQQ5IYZ5Y0": {
+      "title": "Understanding the Roblox Packages Workflow on Roblox",
+      "description": "Learn how to create packages using different asset types, the right click menu options, and more.",
+      "date": "2024-07-15",
+      "duration": "27:45",
+      "image": "https://img.youtube.com/vi/oDQQ5IYZ5Y0/maxresdefault.jpg",
+      "links": {
+        "/projects/assets/packages": { "kind": "docs", "title": "Packages" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "AzKZy2BqIh8": {
+      "title": "How to use Roblox Packages for Beginners on Roblox",
+      "description": "Learn what packages are, when to use them, and how to create an update them.",
+      "date": "2024-07-15",
+      "duration": "14:57",
+      "image": "https://img.youtube.com/vi/AzKZy2BqIh8/maxresdefault.jpg",
+      "links": {
+        "/projects/assets/packages": { "kind": "docs", "title": "Packages" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "llR_pNlJDQw": {
+      "title": "Increasing Performance with Native Code Generation on Roblox",
+      "description": "Learn how to improve the performance of computationally intensive Luau scripts using native code generation.",
+      "date": "2024-07-08",
+      "duration": "10:15",
+      "image": "https://img.youtube.com/vi/llR_pNlJDQw/maxresdefault.jpg",
+      "links": {
+        "/luau/native-code-gen": {
+          "kind": "docs",
+          "title": "Native code generation"
+        },
+        "/studio/optimization/scriptprofiler": {
+          "kind": "docs",
+          "title": "Script Profiler"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "QAJ2Qg5RmiU": {
+      "title": "Getting Started with UGC (feat. PolarCub)",
+      "description": "PolarCub shares all the tips and tricks to make UGC items.",
+      "date": "2024-06-21",
+      "duration": "6:40",
+      "image": "https://img.youtube.com/vi/QAJ2Qg5RmiU/maxresdefault.jpg",
+      "links": {
+        "/avatar/rigid-accessories": {
+          "kind": "docs",
+          "title": "Rigid accessories"
+        },
+        "/avatar/layered-accessories": {
+          "kind": "docs",
+          "title": "Layered accessories"
+        },
+        "/avatar/character-bodies": {
+          "kind": "docs",
+          "title": "Character bodies"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB"]
+    },
+    "vIiVbFiDbBE": {
+      "title": "How to get started creating on Roblox",
+      "description": "Ever wondered how to get started creating on Roblox? This video's for you!",
+      "date": "2024-06-14",
+      "duration": "3:00",
+      "image": "https://img.youtube.com/vi/vIiVbFiDbBE/maxresdefault.jpg",
+      "links": {
+        "/tutorials": {
+          "kind": "docs",
+          "title": "Start learning with tutorials"
+        },
+        "/get-started": { "kind": "docs", "title": "Get Started" }
+      },
+      "channel": true
+    },
+    "9mXvhYSv7fc": {
+      "title": "How Physics work on Roblox",
+      "description": "Staff stream about gravity, material properties, and constraints.",
+      "date": "2024-06-12",
+      "duration": "1:45:25",
+      "image": "https://img.youtube.com/vi/9mXvhYSv7fc/maxresdefault.jpg",
+      "links": {
+        "/tutorials/use-case-tutorials/physics/create-spinning-objects": {
+          "kind": "docs",
+          "title": "Create spinning objects"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "SgPU84AqpkY": {
+      "title": "Intro to World Building on Roblox",
+      "description": "Principal Environment Artist SCHLEEMPH shows you step by step how to use parts, meshes, materials, terrain and lighting to bring your experience’s environment to life.",
+      "date": "2024-05-20",
+      "duration": "1:51:03",
+      "image": "https://img.youtube.com/vi_webp/SgPU84AqpkY/maxresdefault.webp",
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "FR1RiVpoMeM": {
+      "title": "Finalizing and Importing Custom R15 Characters on Roblox",
+      "description": "Learn how to finalize and optimize your custom character in order to import them into Studio.",
+      "date": "2024-04-26",
+      "duration": "1:06:45",
+      "image": "https://img.youtube.com/vi/FR1RiVpoMeM/maxresdefault.jpg",
+      "links": {
+        "/avatar/character-bodies": {
+          "kind": "docs",
+          "title": "Character bodies"
+        },
+        "/avatar/character-bodies/specifications": {
+          "kind": "docs",
+          "title": "Character body specifications"
+        },
+        "/marketplace/marketplace-policy": {
+          "kind": "docs",
+          "title": "Marketplace policy"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "2My8jE47clI": {
+      "title": "What are custom characters on Roblox?",
+      "description": "A great primer to understanding what Custom Characters are and the steps involved in making your own.",
+      "date": "2024-04-15",
+      "duration": "3:22",
+      "image": "https://img.youtube.com/vi/2My8jE47clI/maxresdefault.jpg",
+      "links": {
+        "/avatar/rigid-accessories": {
+          "kind": "docs",
+          "title": "Rigid accessories"
+        },
+        "/avatar/layered-accessories": {
+          "kind": "docs",
+          "title": "Layered accessories"
+        },
+        "/avatar/character-bodies": {
+          "kind": "docs",
+          "title": "Character bodies"
+        }
+      },
+      "channel": true
+    },
+    "gXXukd6yOSs": {
+      "title": "What's layered clothing on Roblox?",
+      "description": "A great primer to understanding what layered clothing is and the steps involved in making your own.",
+      "date": "2024-04-15",
+      "duration": "3:22",
+      "image": "https://img.youtube.com/vi/gXXukd6yOSs/maxresdefault.jpg",
+      "links": {
+        "/avatar/rigid-accessories": {
+          "kind": "docs",
+          "title": "Rigid accessories"
+        },
+        "/avatar/layered-accessories": {
+          "kind": "docs",
+          "title": "Layered accessories"
+        },
+        "/avatar/character-bodies": {
+          "kind": "docs",
+          "title": "Character bodies"
+        }
+      },
+      "channel": true
+    },
+    "tzPn6QvU8Bo": {
+      "title": "What are accessories on Roblox?",
+      "description": "A great primer to understanding what accessories are and the steps involved in making your own.",
+      "date": "2024-04-15",
+      "duration": "2:40",
+      "image": "https://img.youtube.com/vi/tzPn6QvU8Bo/maxresdefault.jpg",
+      "links": {
+        "/avatar/rigid-accessories": {
+          "kind": "docs",
+          "title": "Rigid accessories"
+        },
+        "/avatar/layered-accessories": {
+          "kind": "docs",
+          "title": "Layered accessories"
+        },
+        "/avatar/character-bodies": {
+          "kind": "docs",
+          "title": "Character bodies"
+        }
+      },
+      "channel": true
+    },
+    "EUDSIUmLjxA": {
+      "title": "What are Avatar Items on Roblox?",
+      "description": "Learn about what you can make and sell on the marketplace.",
+      "date": "2024-04-15",
+      "duration": "2:27",
+      "image": "https://img.youtube.com/vi/EUDSIUmLjxA/maxresdefault.jpg",
+      "links": {
+        "/marketplace/marketplace-policy": {
+          "kind": "docs",
+          "title": "Marketplace policy"
+        },
+        "/marketplace/intellectual-property": {
+          "kind": "docs",
+          "title": "Intellectual property for avatar items"
+        },
+        "/marketplace/publish-to-marketplace": {
+          "kind": "docs",
+          "title": "Publish to Marketplace"
+        },
+        "/avatar/rigid-accessories": {
+          "kind": "docs",
+          "title": "Rigid accessories"
+        },
+        "/avatar/layered-accessories": {
+          "kind": "docs",
+          "title": "Layered accessories"
+        },
+        "/avatar/character-bodies": {
+          "kind": "docs",
+          "title": "Character bodies"
+        }
+      },
+      "channel": true
+    },
+    "ds9FjZUc2tg": {
+      "title": "Creating Custom Skyboxes on Roblox",
+      "description": "Learn how to create custom skyboxes on Roblox.",
+      "date": "2024-03-22",
+      "duration": "7:21",
+      "image": "https://img.youtube.com/vi_webp/ds9FjZUc2tg/maxresdefault.webp",
+      "links": {
+        "/environment/skybox": { "kind": "docs", "title": "Skyboxes" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "CS7bxH4FOzw": {
+      "title": "How to use AI to generate textures on Roblox",
+      "description": "Easily create custom textures using our AI tools.",
+      "date": "2024-03-18",
+      "duration": "2:47",
+      "image": "https://img.youtube.com/vi/CS7bxH4FOzw/maxresdefault.jpg",
+      "links": {
+        "/studio/texture-generator": {
+          "kind": "docs",
+          "title": "Texture Generator"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "WmipiUI1Hlc": {
+      "title": "How to make a laser beam that damages players on Roblox",
+      "description": "Ever wanted to make a laser beam that damages players? This video is for you!",
+      "date": "2024-03-07",
+      "duration": "5:11",
+      "image": "https://img.youtube.com/vi_webp/WmipiUI1Hlc/maxresdefault.webp",
+      "links": {
+        "/tutorials/use-case-tutorials/vfx/laser-traps-with-beams#script-damage-behavior": {
+          "kind": "docs",
+          "title": "Create laser beams with VFX"
+        },
+        "/effects/beams": { "kind": "docs", "title": "Beams" }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "qRew48qU7K0": {
+      "title": "How to make a sliding door without code on Roblox",
+      "description": "Learn how to create a sliding door without writing any code.",
+      "date": "2024-02-29",
+      "duration": "3:16",
+      "image": "https://img.youtube.com/vi/qRew48qU7K0/maxresdefault.jpg",
+      "links": {
+        "/reference/engine/classes/DragDetector": {
+          "kind": "docs",
+          "title": "DragDetector"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZbZU-uwTgeK2yKXzu2jkct3"]
+    },
+    "D7AnUcXqDwo": {
+      "title": "Building with Drag Detectors on Roblox",
+      "description": "Learn what Drag Detectors are and where and how to use them.",
+      "date": "2024-02-29",
+      "duration": "3:53",
+      "image": "https://img.youtube.com/vi/D7AnUcXqDwo/maxresdefault.jpg",
+      "links": {
+        "/reference/engine/classes/DragDetector": {
+          "kind": "docs",
+          "title": "DragDetector"
+        }
+      },
+      "channel": true,
+      "playlists": ["PLMneGxZNs3ZZYRfJEgncKk-ULiWMfhumV"]
+    },
+    "_BezG_qf0og": {
+      "title": "Introduction to 3D Modeling on Roblox by EvilArtist | Developer Challenge 2024",
+      "date": "2024-01-24",
+      "duration": "34:00",
+      "image": "https://img.youtube.com/vi/_BezG_qf0og/maxresdefault.jpg",
+      "channel": true
+    },
+    "cvUSE2Q0hcw": {
+      "title": "Introduction to Programming on Roblox by WooleyWool | Developer Challenge 2024",
+      "date": "2024-01-24",
+      "duration": "31:57",
+      "image": "https://img.youtube.com/vi/cvUSE2Q0hcw/maxresdefault.jpg",
+      "channel": true
+    },
+    "wHifocuLZKE": {
+      "title": "Introduction to Development on Roblox by Myzta | Developer Challenge 2024",
+      "date": "2024-01-24",
+      "duration": "22:54",
+      "image": "https://img.youtube.com/vi/wHifocuLZKE/maxresdefault.jpg",
+      "channel": true
+    },
+    "dXqZC4x2Vn8": {
+      "title": "What are onboarding techniques on Roblox?",
+      "description": "Learn strategies  to help direct players through your onboarding funnel as quickly and seamlessly as possible.",
+      "date": "2023-12-06",
+      "duration": "2:49",
+      "image": "https://img.youtube.com/vi_webp/dXqZC4x2Vn8/maxresdefault.webp",
+      "links": {
+        "/production/game-design/onboarding-techniques": {
+          "kind": "docs",
+          "title": "Onboarding techniques"
+        }
+      },
+      "channel": true
+    },
+    "LpAU6TheAZ4": {
+      "title": "What are retention metrics on Roblox?",
+      "description": "Learn how to understand your players and how to keep them coming back to your experience.",
+      "date": "2023-09-07",
+      "duration": "2:53",
+      "image": "https://img.youtube.com/vi/LpAU6TheAZ4/maxresdefault.jpg",
+      "links": {
+        "/production/analytics/retention": {
+          "kind": "docs",
+          "title": "Retention"
+        }
+      },
+      "channel": true
+    },
+    "N2l0BDgSNtQ": {
+      "title": "What are engagement metrics on Roblox?",
+      "description": "Learn how to understand your experience's health and how you can design content most effectively.",
+      "date": "2023-09-06",
+      "duration": "2:11",
+      "image": "https://img.youtube.com/vi/N2l0BDgSNtQ/maxresdefault.jpg",
+      "links": {
+        "/production/analytics/engagement": {
+          "kind": "docs",
+          "title": "Engagement"
+        }
+      },
+      "channel": true
+    },
+    "EvikDSBtaCc": {
+      "title": "What's good game design on Roblox?",
+      "description": "Understand the basics of how to create a game.",
+      "date": "2023-09-06",
+      "duration": "1:13",
+      "image": "https://img.youtube.com/vi/EvikDSBtaCc/maxresdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "lOOvOIJoMi4": {
+      "title": "UI/UX Essentials",
+      "description": "In this introductory video, Roblox senior game designer Erin (BreakfastCandy) explains the distinction between User Interface (UI) and User Experience (UX) design and provides goal…",
+      "date": "2023-08-24",
+      "duration": "16:44",
+      "image": "https://img.youtube.com/vi_webp/lOOvOIJoMi4/maxresdefault.webp",
+      "links": {
+        "/production/game-design/ui-ux-design": {
+          "kind": "docs",
+          "title": "UI and UX design"
+        },
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "kNE757v3Bwg": {
+      "title": "LiveOps Essentials",
+      "description": "LiveOps are the ongoing support of a live game after launch. In this introductory video, Roblox lead game designer Dan (Dspav) outlines the various types of LiveOps releases, their…",
+      "date": "2023-08-18",
+      "duration": "18:04",
+      "image": "https://img.youtube.com/vi/kNE757v3Bwg/maxresdefault.jpg",
+      "links": {
+        "/production/game-design/liveops-essentials": {
+          "kind": "docs",
+          "title": "LiveOps essentials"
+        },
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "IJSih2t_jso": {
+      "title": "What's paper prototyping for Roblox?",
+      "description": "Learn about the benefits and limitations of paper prototyping for your experience on Roblox.",
+      "date": "2023-08-11",
+      "duration": "1:08",
+      "image": "https://img.youtube.com/vi_webp/IJSih2t_jso/maxresdefault.webp",
+      "links": {
+        "/production/game-design/prototyping#paper-prototyping": {
+          "kind": "docs",
+          "title": "Prototyping"
+        }
+      },
+      "channel": true
+    },
+    "Q4Cec876KLU": {
+      "title": "What's studio prototyping on Roblox?",
+      "description": "Learn the details and benefits of prototyping your experience in Studio.",
+      "date": "2023-08-11",
+      "duration": "1:03",
+      "image": "https://img.youtube.com/vi_webp/Q4Cec876KLU/maxresdefault.webp",
+      "links": {
+        "/production/game-design/prototyping#studio-prototyping": {
+          "kind": "docs",
+          "title": "Prototyping"
+        }
+      },
+      "channel": true
+    },
+    "wN4-AERPU9g": {
+      "title": "What's prototyping on Roblox?",
+      "description": "Learn the process of experimenting with game ideas in quick and low-cost ways.",
+      "date": "2023-08-11",
+      "duration": "1:08",
+      "image": "https://img.youtube.com/vi/wN4-AERPU9g/maxresdefault.jpg",
+      "links": {
+        "/production/game-design/prototyping": {
+          "kind": "docs",
+          "title": "Prototyping"
+        }
+      },
+      "channel": true
+    },
+    "gkFKF9A-snY": {
+      "title": "What's a core loop on Roblox?",
+      "description": "Learn about Core Loops: the essential, repeated actions that drive player engagement and progress in a game.",
+      "date": "2023-08-07",
+      "duration": "1:37",
+      "image": "https://img.youtube.com/vi_webp/gkFKF9A-snY/maxresdefault.webp",
+      "links": {
+        "/production/game-design/core-loops": {
+          "kind": "docs",
+          "title": "Core loops"
+        }
+      },
+      "channel": true
+    },
+    "XfxbdKtSbOI": {
+      "title": "Onboarding Essentials",
+      "description": "The first-time user experience (FTUE) comprises the first, crucial minutes of gameplay that determine whether or not a new player will return to play a game again.",
+      "date": "2023-08-02",
+      "duration": "12:11",
+      "image": "https://img.youtube.com/vi/XfxbdKtSbOI/maxresdefault.jpg",
+      "links": {
+        "/production/game-design/onboarding": {
+          "kind": "docs",
+          "title": "Onboarding"
+        },
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "_xjIMBY9Qug": {
+      "title": "(ENGLISH) Marketplace Fundamentals: UGC by WhoseTrade | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-22",
+      "duration": "37:23",
+      "image": "https://img.youtube.com/vi/_xjIMBY9Qug/maxresdefault.jpg",
+      "channel": true
+    },
+    "7CpuhFWhoFs": {
+      "title": "(SPANISH) Connecting Languages in Experiences by x_Bearly | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-22",
+      "duration": "42:39",
+      "image": "https://img.youtube.com/vi/7CpuhFWhoFs/maxresdefault.jpg",
+      "channel": true
+    },
+    "9jU3u5S2mF0": {
+      "title": "(PORTUGUESE) What Do My Players Like? A Practical Guide to Game Stats by khain3005 | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-22",
+      "duration": "1:18:03",
+      "image": "https://img.youtube.com/vi/9jU3u5S2mF0/maxresdefault.jpg",
+      "channel": true
+    },
+    "UTv7BcAQSQs": {
+      "title": "(KOREAN) Art Education with Technology by JONGWON SEO | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-21",
+      "duration": "39:25",
+      "image": "https://img.youtube.com/vi/UTv7BcAQSQs/maxresdefault.jpg",
+      "channel": true
+    },
+    "XpbPv61cK_s": {
+      "title": "(PORTUGUESE) UGC Marketing: How to Succeed with Your Items by CaioAlbarnBr | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-21",
+      "duration": "20:49",
+      "image": "https://img.youtube.com/vi/XpbPv61cK_s/maxresdefault.jpg",
+      "channel": true
+    },
+    "zjonVkLRKBA": {
+      "title": "(PORTUGUESE) Next Level as Developer and Music Composer by LordKitar_u | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-21",
+      "duration": "1:11:42",
+      "image": "https://img.youtube.com/vi/zjonVkLRKBA/maxresdefault.jpg",
+      "channel": true
+    },
+    "KwrCsslkDNQ": {
+      "title": "(FILIPINO) Environment Design and Optimization by Rald_s | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-20",
+      "duration": "47:58",
+      "image": "https://img.youtube.com/vi/KwrCsslkDNQ/maxresdefault.jpg",
+      "channel": true
+    },
+    "bcfURFjdAxM": {
+      "title": "(ENGLISH) Game Fund Next-Gen Tech by Doonkahn | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-20",
+      "duration": "31:09",
+      "image": "https://img.youtube.com/vi/bcfURFjdAxM/maxresdefault.jpg",
+      "channel": true
+    },
+    "u-A3w-Tnllk": {
+      "title": "(ENGLISH) Accessibility in Games by WooleyWool | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-20",
+      "duration": "40:34",
+      "image": "https://img.youtube.com/vi/u-A3w-Tnllk/maxresdefault.jpg",
+      "channel": true
+    },
+    "OaL-rFkYyyo": {
+      "title": "(FRENCH) From Chaos to Creation: Organizing Game Development by Florianne10 & Vlncain | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-19",
+      "duration": "45:14",
+      "image": "https://img.youtube.com/vi/OaL-rFkYyyo/maxresdefault.jpg",
+      "channel": true
+    },
+    "XqU4HZY9P1A": {
+      "title": "(ENGLISH) But What Is a CFrame? by AstroCode | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-19",
+      "duration": "1:00:03",
+      "image": "https://img.youtube.com/vi/XqU4HZY9P1A/maxresdefault.jpg",
+      "channel": true
+    },
+    "a-yejdiJUYc": {
+      "title": "(ENGLISH) Moderation: UGC and IP by flipnic13 & Newcurlorder | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-18",
+      "duration": "16:08",
+      "image": "https://img.youtube.com/vi/a-yejdiJUYc/maxresdefault.jpg",
+      "channel": true
+    },
+    "YOtyU0h0k9o": {
+      "title": "(POLISH) The World of Roblox: A Practical Introduction for Creators by PrzemekV5 | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-18",
+      "duration": "40:34",
+      "image": "https://img.youtube.com/vi/YOtyU0h0k9o/maxresdefault.jpg",
+      "channel": true
+    },
+    "H7uaCKe-TSY": {
+      "title": "(PORTUGUESE) Graphic Design and Its Importance in Game Design by H3ichou | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-18",
+      "duration": "47:01",
+      "image": "https://img.youtube.com/vi/H7uaCKe-TSY/maxresdefault.jpg",
+      "channel": true
+    },
+    "-RUyElZi-u0": {
+      "title": "(PORTUGUESE) Layered Clothing: What They Are and How to Create Yours by GreenBlak | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-18",
+      "duration": "39:01",
+      "image": "https://img.youtube.com/vi/-RUyElZi-u0/maxresdefault.jpg",
+      "channel": true
+    },
+    "hzB6jzrsqzw": {
+      "title": "(SPANISH) Create a Professional Development Plan as a Roblox Developer by Salinas23 | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-17",
+      "duration": "35:25",
+      "image": "https://img.youtube.com/vi/hzB6jzrsqzw/maxresdefault.jpg",
+      "channel": true
+    },
+    "gOgYhwS22tU": {
+      "title": "(PORTUGUESE) Code Optimization and Game Performance by RaFaeL_LRFL | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-15",
+      "duration": "53:01",
+      "image": "https://img.youtube.com/vi/gOgYhwS22tU/maxresdefault.jpg",
+      "channel": true
+    },
+    "tbcXxPwCqIE": {
+      "title": "(ENGLISH) Introduction to Level Design by ebur1n | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-15",
+      "duration": "48:41",
+      "image": "https://img.youtube.com/vi/tbcXxPwCqIE/maxresdefault.jpg",
+      "channel": true
+    },
+    "BMm30Oo76sI": {
+      "title": "(SPANISH) Optimization in Video Game Programming by VirtualEscritory | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-15",
+      "duration": "1:00:13",
+      "image": "https://img.youtube.com/vi/BMm30Oo76sI/maxresdefault.jpg",
+      "channel": true
+    },
+    "VirmLPx8J5o": {
+      "title": "(ENGLISH) Best Practices with Brands by Anareloux | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-14",
+      "duration": "54:00",
+      "image": "https://img.youtube.com/vi/VirmLPx8J5o/maxresdefault.jpg",
+      "channel": true
+    },
+    "q9-aVetw95o": {
+      "title": "(JAPANESE) Introduction to Roblox by M3LR2019 | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-14",
+      "duration": "21:31",
+      "image": "https://img.youtube.com/vi/q9-aVetw95o/maxresdefault.jpg",
+      "channel": true
+    },
+    "GSTIscpZMbs": {
+      "title": "(SPANISH) Introduction to Creating Music for Experiences by rodeldev | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-13",
+      "duration": "51:39",
+      "image": "https://img.youtube.com/vi/GSTIscpZMbs/maxresdefault.jpg",
+      "channel": true
+    },
+    "qAJMbsmBgEw": {
+      "title": "(ENGLISH) Cinematic Experiences by ChiefWildin & DesignCheeeese | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-13",
+      "duration": "35:28",
+      "image": "https://img.youtube.com/vi/qAJMbsmBgEw/maxresdefault.jpg",
+      "channel": true
+    },
+    "ccRydE3HN4Q": {
+      "title": "(ENGLISH) UI Programming Architecture Best Practices with Blend by Quenty | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-13",
+      "duration": "1:27:50",
+      "image": "https://img.youtube.com/vi/ccRydE3HN4Q/maxresdefault.jpg",
+      "channel": true
+    },
+    "gapG2tH-etI": {
+      "title": "(ENGLISH) The Automative Potential of Open-Cloud Workflows by CJ_Oyer | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-13",
+      "duration": "1:07:17",
+      "image": "https://img.youtube.com/vi/gapG2tH-etI/maxresdefault.jpg",
+      "channel": true
+    },
+    "qP7yc0qtdK4": {
+      "title": "(ITALIAN) Introduction to Roblox Scripting: Unleash Your Creativity! by ADeveloperZ | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-12",
+      "duration": "57:25",
+      "image": "https://img.youtube.com/vi/qP7yc0qtdK4/maxresdefault.jpg",
+      "channel": true
+    },
+    "iB95Z65dpxc": {
+      "title": "(SPANISH) Creating Magic: Skills and Effects in Game Programming by Fabiox99 | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-12",
+      "duration": "54:48",
+      "image": "https://img.youtube.com/vi/iB95Z65dpxc/maxresdefault.jpg",
+      "channel": true
+    },
+    "oaaAf3_5S7g": {
+      "title": "(ENGLISH) 25 Ways Switching to Rojo will Improve your Experience by CJ_Oyer | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-12",
+      "duration": "1:00:00",
+      "image": "https://img.youtube.com/vi/oaaAf3_5S7g/maxresdefault.jpg",
+      "channel": true
+    },
+    "VwNouPMosow": {
+      "title": "(ENGLISH) What is Roblox? by ArchAnemone | Connect 2023",
+      "description": "Connect 2023 is a fully virtual event of workshops, challenges and networking for everyone!",
+      "date": "2023-07-11",
+      "duration": "46:24",
+      "image": "https://img.youtube.com/vi/VwNouPMosow/maxresdefault.jpg",
+      "channel": true
+    },
+    "MW-QvpIxO4I": {
+      "title": "Clip! Empowering Community Creativity with Bluay",
+      "description": "In this clip from the Designing for Older Players roundtable, ROLVe developer Bluay (Arsenal) shares how involving players in the creative process can strengthen the community, enh…",
+      "date": "2023-06-15",
+      "duration": "2:10",
+      "image": "https://img.youtube.com/vi/MW-QvpIxO4I/maxresdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "pWF06iX9_Gg": {
+      "title": "Clip! Analytics for Educational Games with Boatbomber",
+      "description": "In this clip from the Designing Educational Experiences roundtable, Roblox developer Boatbomber (Lua Learning) explains how analytics can be used to track player behavior and infor…",
+      "date": "2023-06-08",
+      "duration": "3:05",
+      "image": "https://img.youtube.com/vi/pWF06iX9_Gg/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "yn4V-fBdUm8": {
+      "title": "Clip! Addressing Monetization Mistakes with Shawnyg",
+      "description": "In this clip from the Monetizing a Roblox Experience roundtable, senior developer Shawnyg (Police Roleplay Community) shares his thoughts on compensating players when monetization…",
+      "date": "2023-06-01",
+      "duration": "1:16",
+      "image": "https://img.youtube.com/vi_webp/yn4V-fBdUm8/maxresdefault.webp",
+      "channel": true
+    },
+    "5Ex0tW-n9_w": {
+      "title": "Designing for Accessibility Q&A with WooleyWool, ControlCoreAngel, & BitwiseAndrea",
+      "description": "In part two of the Designing for Accessibility roundtable, developer panelists WooleyWool (Progammer), ControlCoreAngel (Artist/Owner), and Roblox's very own BitwiseAndrea (Senior…",
+      "date": "2023-05-25",
+      "duration": "24:03",
+      "image": "https://img.youtube.com/vi/5Ex0tW-n9_w/maxresdefault.jpg",
+      "channel": true
+    },
+    "K1pEI6LVJJA": {
+      "title": "Designing for Accessibility with BitwiseAndrea, WooleyWool, and ControlCoreAngel",
+      "description": "In part one of the Designing for Accessibility roundtable, developer panelists WooleyWool (Programmer) and ControlCoreAngel (Owner/Artist) and Roblox's very own BitwiseAndrea (Seni…",
+      "date": "2023-05-18",
+      "duration": "1:03:57",
+      "image": "https://img.youtube.com/vi_webp/K1pEI6LVJJA/maxresdefault.webp",
+      "channel": true
+    },
+    "3Y4_B5-EHjY": {
+      "title": "Clip! Reaching out to Brands with Eybuddys & Bodybreakerabs",
+      "description": "In this clip from the Brand Partnerships roundtable, developers Eybuddys (The Metaverse Team), and Bodybreakerabs (The Gang) discuss strategies for game developers to network with…",
+      "date": "2023-05-11",
+      "duration": "2:35",
+      "image": "https://img.youtube.com/vi/3Y4_B5-EHjY/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "QayAH3whpyc": {
+      "title": "Clip! Mobile-First UI Design with Cindering & UndoneBuilder",
+      "description": "In this clip from the Mobile UI/UX roundtable, developers Cindering and UndoneBuilder discuss the advantages of prioritizing mobile design, including performance considerations and…",
+      "date": "2023-05-04",
+      "duration": "3:18",
+      "image": "https://img.youtube.com/vi_webp/QayAH3whpyc/maxresdefault.webp",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "vNKPlYeXj0Q": {
+      "title": "Clip! Marketing New Games on Roblox with KreekCraft & WonderWorksZach",
+      "description": "In this clip from the Designing for YouTube Engagement roundtable, KreekCraft and Wonder Works talk about their favorite pre-release marketing strategies that create buzz.",
+      "date": "2023-04-27",
+      "duration": "3:36",
+      "image": "https://img.youtube.com/vi/vNKPlYeXj0Q/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "y0-zjymOhu8": {
+      "title": "Clip! Motor Accessibility with BitwiseAndrea, WooleyWool, Dspav & ControlCoreAngel",
+      "description": "In this clip from the Designing for Accessibility roundtable, Roblox senior software engineer Bitwise Andrea and developers WooleyWool and ControlCoreAngel discuss the challenges f…",
+      "date": "2023-04-20",
+      "duration": "7:14",
+      "image": "https://img.youtube.com/vi/y0-zjymOhu8/maxresdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "syQcaeRqqc4": {
+      "title": "Clip! Color Contrast Best Practices with BitwiseAndrea, ControlCoreAngel, Dspav & WooleyWool",
+      "description": "In this clip from the Designing for Accessibility roundtable, Roblox senior software engineer Bitwise Andrea, Roblox lead game designer Dspav, and developers WooleyWool and Control…",
+      "date": "2023-04-13",
+      "duration": "5:51",
+      "image": "https://img.youtube.com/vi/syQcaeRqqc4/maxresdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "uumqDp020jk": {
+      "title": "Clip! Accessibility Starter Pack with WooleyWool & ControlCoreAngel",
+      "description": "In this clip from the Designing for Accessibility roundtable, WooleyWool and ControlCoreAngel suggest starting points for developers who want to make their experiences more accessi…",
+      "date": "2023-04-06",
+      "duration": "2:33",
+      "image": "https://img.youtube.com/vi/uumqDp020jk/maxresdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "uphF_Gah9jw": {
+      "title": "Clip! The Goal of Accessibility with BitwiseAndrea",
+      "description": "In this clip from the Designing for Accessibility roundtable, Roblox senior software engineer BitwiseAndrea explains how accessible experiences are a win for all players and creato…",
+      "date": "2023-03-30",
+      "duration": "1:12",
+      "image": "https://img.youtube.com/vi/uphF_Gah9jw/maxresdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "M6qQtpjQkXs": {
+      "title": "Clip! The Importance of Social Media with Ruddev_Ethan and x_o",
+      "description": "In this clip from the Level Up LiveOps roundtable, developers Ruddev_ethan and x_o of Ruddev Media discuss the value of promoting updates on social media to keep your player commun…",
+      "date": "2023-03-23",
+      "duration": "2:38",
+      "image": "https://img.youtube.com/vi/M6qQtpjQkXs/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "CmXyiJw5N_Y": {
+      "title": "Clip! Level Design Mistakes on Roblox with Erythia, MiniToon, Skeledonut & Tohb",
+      "description": "In this roundtable clip, developers Erythia, MiniToon, Skeledonut and Tohb discuss common level design mistakes regarding spawn points, social interaction, gameplay and lighting.",
+      "date": "2023-03-16",
+      "duration": "2:05",
+      "image": "https://img.youtube.com/vi/CmXyiJw5N_Y/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "Cli3ogW-azk": {
+      "title": "Clip! Increasing Conversion Rates with Erythia",
+      "description": "In this clip from the Monetizing a Roblox Experience roundtable, Erythia (Twin Atlas - Creatures of Sonaria, Dragon Adventures) provides tips on converting free players into paying…",
+      "date": "2023-03-09",
+      "duration": "1:17",
+      "image": "https://img.youtube.com/vi/Cli3ogW-azk/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "PjwJb_nSePY": {
+      "title": "Mobile UI/UX for Roblox Q&A with Cindering and UndoneBuilder",
+      "description": "In part two of the Mobile UI/UX for Roblox Experiences roundtable, developer panelists Cindering (Lead Developer, Cinder Studios) and Undone Builder (CEO, Simple Games) answer audi…",
+      "date": "2023-03-02",
+      "duration": "16:08",
+      "image": "https://img.youtube.com/vi/PjwJb_nSePY/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "BsyU-SJ9L-c": {
+      "title": "Mobile UI/UX for Roblox with Cindering and UndoneBuilder",
+      "description": "In part one of the Mobile UI/UX for Roblox Experiences roundtable, developer panelists Cindering (Lead Developer, Cinder Studios) and Undone Builder (CEO, Simple Games) share best…",
+      "date": "2023-02-23",
+      "duration": "45:23",
+      "image": "https://img.youtube.com/vi/BsyU-SJ9L-c/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "NJybvfCYEb4": {
+      "title": "Clip! Implementing Scalable UI with Cindering",
+      "description": "In this clip from the Mobile UI/UX on Roblox roundtable, Cindering (Lead Developer, Cinder Studio) shares simple tricks for implementing a UI that scales to accommodate any screen.",
+      "date": "2023-02-16",
+      "duration": "5:21",
+      "image": "https://img.youtube.com/vi/NJybvfCYEb4/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "zDU4QNJTFJ0": {
+      "title": "Clip! Universal UI with UndoneBuilder",
+      "description": "In this clip from the Mobile UI/UX on Roblox roundtable, UndoneBuilder (CEO, Simple Games) offers tips for designing a single UI that works for both mobile and PC.",
+      "date": "2023-02-09",
+      "duration": "2:07",
+      "image": "https://img.youtube.com/vi/zDU4QNJTFJ0/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "91UcqDk115s": {
+      "title": "Clip! Building an Audience on Roblox with Jandel & Foryxe",
+      "description": "In this clip from the Finding the Fun roundtable, Wacky Wizards developers Jandel and Foryxe explain their Roblox ads strategy and the importance of session length in driving concu…",
+      "date": "2023-02-02",
+      "duration": "1:15",
+      "image": "https://img.youtube.com/vi/91UcqDk115s/hqdefault.jpg",
+      "channel": true
+    },
+    "vQNJztcS2AI": {
+      "title": "Monetizing a Roblox Experience Q&A with MrFergie, Shawnyg and Erythia",
+      "description": "In part two of the Monetizing a Roblox Experience roundtable, MrFergie, Shawnyg and Erythia answer audience questions about currencies and products, sales, and increasing player co…",
+      "date": "2023-01-26",
+      "duration": "23:08",
+      "image": "https://img.youtube.com/vi/vQNJztcS2AI/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "YdplC2WVkWc": {
+      "title": "Monetizing a Roblox Experience with Erythia, MrFergie & Shawnyg",
+      "description": "In part one of this roundtable, MrFergie, Shawnyg and Erythia discuss monetization goals and considerations, the ethics of monetization practices, and effective monetization strate…",
+      "date": "2023-01-19",
+      "duration": "1:06:23",
+      "image": "https://img.youtube.com/vi/YdplC2WVkWc/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "okAygI1sxsA": {
+      "title": "Clip! In-Game Currencies with Mrfergie, Shawnyg, Erythia & Dspav",
+      "description": "In this clip from the Monetizing a Roblox Experience roundtable, Twin Atlas' Erythia (Dragon Adventures, Creatures of Sonaria), Police Roleplay Community's MrFergie and Shawnyg (Em…",
+      "date": "2023-01-12",
+      "duration": "7:07",
+      "image": "https://img.youtube.com/vi/okAygI1sxsA/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "bEEd75mnBIg": {
+      "title": "Clip! Content LiveOps on Roblox with Ruddev_Ethan and x_o",
+      "description": "In this clip from the LiveOps on Roblox roundtable, developers Ruddev_Ethan and x_o of Ruddev Media discuss balancing new content and the value of both content cadence and major up…",
+      "date": "2022-12-15",
+      "duration": "3:25",
+      "image": "https://img.youtube.com/vi/bEEd75mnBIg/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "oMyAQ67is0U": {
+      "title": "Clip! Making Streamer Friendly Games",
+      "description": "In this clip from the Designing for YouTube Engagement roundtable, KreekCraft describes the tools that developers can add to their games to make them more accessible to streamers.",
+      "date": "2022-12-08",
+      "duration": "1:07",
+      "image": "https://img.youtube.com/vi/oMyAQ67is0U/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "0PEBFsguCdw": {
+      "title": "Designing for Older Players Q&A with Bluay, MidnightKrystal, Looty_Haga, cbmaximillian & 101airsoft",
+      "description": "In part two of this roundtable event, developers Bluay and MidnightKrystal (ROLVe - Arsenal), Looty_Haga (Looty Games - Ruin), and cbmaximillian, & 101airsoft (Maximillian Studios…",
+      "date": "2022-12-01",
+      "duration": "31:23",
+      "image": "https://img.youtube.com/vi/0PEBFsguCdw/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "xXIc-p9hatU": {
+      "title": "Designing for Older Players with Bluay, MidnightKrystal, Looty_Haga, cbmaximillian, & 101airsoft",
+      "description": "In part one of this roundtable, Bluay and MidnightKrystal (ROLVe - Arsenal), Looty_Haga (Looty Games - Ruin), and cbmaximillian, & 101airsoft (Maximillian Studios - Frontlines) sha…",
+      "date": "2022-11-22",
+      "duration": "1:03:17",
+      "image": "https://img.youtube.com/vi/xXIc-p9hatU/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "2kUFhwfuZ-w": {
+      "title": "Clip! Avoiding \"Pay to Win\" with Bluay and MidnightKrystal",
+      "description": "In this clip from the Designing for Older Players roundtable, ROLVe's Bluay and MidnightKrystal discuss the mechanics that Arsenal employs to level the playing field and avoid pay-…",
+      "date": "2022-11-17",
+      "duration": "3:49",
+      "image": "https://img.youtube.com/vi_webp/2kUFhwfuZ-w/maxresdefault.webp",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "foQjWE0MN3M": {
+      "title": "Clip! Thinking Like an Older Player with Looty_Haga",
+      "description": "In this roundtable clip, Looty Games' Looty_Haga explores the cognitive differences between younger and older players, and offers advice for designing games that appeal to the olde…",
+      "date": "2022-11-10",
+      "duration": "5:53",
+      "image": "https://img.youtube.com/vi_webp/foQjWE0MN3M/maxresdefault.webp",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "KD3YTfRH6fQ": {
+      "title": "Clip! Player Goals in Dragon Blade ft. FriendlyStoneGolem",
+      "description": "In this roundtable clip, FriendlyStoneGolem describes the short, mid and long-term goals that make up the player's journey of progression in Dragon Blade.",
+      "date": "2022-09-01",
+      "duration": "8:02",
+      "image": "https://img.youtube.com/vi/KD3YTfRH6fQ/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "VKsbd4hadpk": {
+      "title": "Clip! Player Goals in Phantom Forces ft. litozinnamon",
+      "description": "In this roundtable clip, StyLiS Studios' litozinnamon discusses keeping players engaged with short, mid, and long-term goals in Phantom Forces.",
+      "date": "2022-08-25",
+      "duration": "5:40",
+      "image": "https://img.youtube.com/vi/VKsbd4hadpk/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "lJAEKxoIUAs": {
+      "title": "Clip! Progression in Sonic Speed Simulator with Dademaiolo",
+      "description": "In this roundtable clip, GameFam's Dademaiolo runs through Sonic Speed Simulator's core loop and progression mechanics.",
+      "date": "2022-08-18",
+      "duration": "3:07",
+      "image": "https://img.youtube.com/vi/lJAEKxoIUAs/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "97MahOa0tns": {
+      "title": "Designing Educational Experiences Q&A with Boatbomber, CollyPark, & Sigm_nd",
+      "description": "In part two of this roundtable, Boatbomber (Lua Learning), Sigmund (Untamed Planet) and CollyPark (Filament Games) answer audience questions about Roblox educational game design, m…",
+      "date": "2022-06-23",
+      "duration": "44:37",
+      "image": "https://img.youtube.com/vi/97MahOa0tns/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "CyXUi2ZnYM0": {
+      "title": "(ENGLISH) Production: Working at the Heart of the Team by Roblox Accelerator Program | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-19",
+      "duration": "33:55",
+      "image": "https://img.youtube.com/vi/CyXUi2ZnYM0/maxresdefault.jpg",
+      "channel": true
+    },
+    "-XRIIeflU4Y": {
+      "title": "(ENGLISH) Talent Hub: Make Your Dream Team a Reality by Roblox Creator Resources | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-18",
+      "duration": "38:49",
+      "image": "https://img.youtube.com/vi/-XRIIeflU4Y/maxresdefault.jpg",
+      "channel": true
+    },
+    "eJ0cMSXE82A": {
+      "title": "(ENGLISH) Roblox VR Fundamentals by Quenty | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-18",
+      "duration": "55:27",
+      "image": "https://img.youtube.com/vi/eJ0cMSXE82A/maxresdefault.jpg",
+      "channel": true
+    },
+    "whI5P8znz1E": {
+      "title": "(SPANISH) Game Creation for Phones and Consoles by Ckolmos | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-18",
+      "duration": "1:06:04",
+      "image": "https://img.youtube.com/vi/whI5P8znz1E/maxresdefault.jpg",
+      "channel": true
+    },
+    "LqEfwIkP3ps": {
+      "title": "(FRENCH) Live Events in Experiences by chichine | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-17",
+      "duration": "19:27",
+      "image": "https://img.youtube.com/vi/LqEfwIkP3ps/maxresdefault.jpg",
+      "channel": true
+    },
+    "hCT9zCJ1M5c": {
+      "title": "Designing Educational Experiences with Boatbomber, CollyPark, & Sigm_nd",
+      "description": "In part one of this roundtable, Boatbomber (Lua Learning), Sigmund (Untamed Planet) and CollyPark (Filament Games) share their experiences and best practices for engaging players,…",
+      "date": "2022-06-16",
+      "duration": "1:03:54",
+      "image": "https://img.youtube.com/vi/hCT9zCJ1M5c/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "JP8gkvnjrEs": {
+      "title": "(ENGLISH) SurfaceAppearance: Optimization and Workflows by Aotrou | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-16",
+      "duration": "42:40",
+      "image": "https://img.youtube.com/vi/JP8gkvnjrEs/maxresdefault.jpg",
+      "channel": true
+    },
+    "-CXBUi6vZDE": {
+      "title": "(ENGLISH) Experience Analytics by CJ_Oyer | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-15",
+      "duration": "1:08:45",
+      "image": "https://img.youtube.com/vi/-CXBUi6vZDE/maxresdefault.jpg",
+      "channel": true
+    },
+    "J14Jbazi4e8": {
+      "title": "(ENGLISH) Education in Experiences by Roblox Education | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-15",
+      "duration": "56:43",
+      "image": "https://img.youtube.com/vi/J14Jbazi4e8/maxresdefault.jpg",
+      "channel": true
+    },
+    "F0fsBYJNOrg": {
+      "title": "(PORTUGUESE) 3D Modeling Tips for UGC by Morniratu and CaioAlbarnBR | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-14",
+      "duration": "1:17:29",
+      "image": "https://img.youtube.com/vi/F0fsBYJNOrg/maxresdefault.jpg",
+      "channel": true
+    },
+    "NuRVvLe_FLw": {
+      "title": "(ENGLISH) Layered Clothing by CoffeeNerdz | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-12",
+      "duration": "35:09",
+      "image": "https://img.youtube.com/vi/NuRVvLe_FLw/maxresdefault.jpg",
+      "channel": true
+    },
+    "wjlDoDrNCrE": {
+      "title": "(ENGLISH) Localization in the Metaverse by ItsKoiske | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-11",
+      "duration": "40:43",
+      "image": "https://img.youtube.com/vi/wjlDoDrNCrE/maxresdefault.jpg",
+      "channel": true
+    },
+    "KPywPQ_ruTU": {
+      "title": "(ENGLISH) Building Performant VFX in Roblox by Looty Games | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-11",
+      "duration": "18:02",
+      "image": "https://img.youtube.com/vi/KPywPQ_ruTU/maxresdefault.jpg",
+      "channel": true
+    },
+    "Mep4_w8qxeE": {
+      "title": "(ENGLISH) Core Loops and Prototyping by Roblox Level Up | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-11",
+      "duration": "56:46",
+      "image": "https://img.youtube.com/vi/Mep4_w8qxeE/maxresdefault.jpg",
+      "channel": true
+    },
+    "WroUPnDp4tc": {
+      "title": "(PORTUGUESE) User-generated Libraries I Often Use by RicoFox | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-10",
+      "duration": "39:33",
+      "image": "https://img.youtube.com/vi/WroUPnDp4tc/maxresdefault.jpg",
+      "channel": true
+    },
+    "KSCN__Nd17Y": {
+      "title": "(ENGLISH) Writing Maintainable Codebases by MrAsync | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-08",
+      "duration": "52:46",
+      "image": "https://img.youtube.com/vi/KSCN__Nd17Y/maxresdefault.jpg",
+      "channel": true
+    },
+    "3LG8w4AwWVA": {
+      "title": "(PORTUGUESE) Community Management: Strategy and Best Practices by CM School | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-08",
+      "duration": "53:39",
+      "image": "https://img.youtube.com/vi/3LG8w4AwWVA/maxresdefault.jpg",
+      "channel": true
+    },
+    "kLY-x126w3w": {
+      "title": "(ENGLISH) Creating Immersive Environments by ebur1n | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-07",
+      "duration": "47:00",
+      "image": "https://img.youtube.com/vi/kLY-x126w3w/maxresdefault.jpg",
+      "channel": true
+    },
+    "3HSExKEYfXA": {
+      "title": "(SPANISH) Introduction to Lua by RodelDev | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-07",
+      "duration": "53:00",
+      "image": "https://img.youtube.com/vi/3HSExKEYfXA/maxresdefault.jpg",
+      "channel": true
+    },
+    "i3rR-k2kZSE": {
+      "title": "(KOREAN) Creating your First Roblox Experience by 와글와글팩토리 | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-07",
+      "duration": "33:47",
+      "image": "https://img.youtube.com/vi/i3rR-k2kZSE/maxresdefault.jpg",
+      "channel": true
+    },
+    "TqnXrbKfciQ": {
+      "title": "(ENGLISH) What is Roblox and Kickstarting by Adam Capps | Connect 2022",
+      "description": "Connect 2022 is a fully virtual event of workshops, challenges and networking for everyone! Learn more and join us starting June 3rd on Guilded.",
+      "date": "2022-06-07",
+      "duration": "57:43",
+      "image": "https://img.youtube.com/vi/TqnXrbKfciQ/maxresdefault.jpg",
+      "channel": true
+    },
+    "G08BEZWLj90": {
+      "title": "Clip! The Value of Roblox Events with ruddev_ethan and x_o",
+      "description": "In this roundtable clip, developers Ruddev_ethan and x_o of Ruddev Media discuss events in Bad Business, and the impact that such updates can have on a game's engagement metrics.",
+      "date": "2022-06-02",
+      "duration": "2:26",
+      "image": "https://img.youtube.com/vi/G08BEZWLj90/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "AkJP8tR0w9Q": {
+      "title": "Clip! How to Plan LiveOps Updates with AbstractAlex, Usering & ImprobableAI",
+      "description": "In this roundtable clip, developers AbstractAlex, Usering, and ImprobableAI of RedManta discuss update frequency and striking a balance between regular content cadence and major re…",
+      "date": "2022-06-02",
+      "duration": "1:06",
+      "image": "https://img.youtube.com/vi/AkJP8tR0w9Q/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "e9II73see-8": {
+      "title": "Clip! Community Engagement with BlockfaceSteve and BlockfaceBob",
+      "description": "In this roundtable clip, developers BlockfaceSteve and BlockfaceBob of Block Evolution discuss social media and the value of posting updates and gathering feedback from players.",
+      "date": "2022-05-19",
+      "duration": "1:33",
+      "image": "https://img.youtube.com/vi/e9II73see-8/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "HxqWoF_wfMQ": {
+      "title": "Clip! Social Media Marketing with KreekCraft, WonderWorksZach & JoshWWS1",
+      "description": "In this roundtable clip, KreekCraft and Wonder Works devs WonderWorksZack and JoshWWS discuss strategies for marketing an unreleased game on social media.",
+      "date": "2022-05-19",
+      "duration": "3:49",
+      "image": "https://img.youtube.com/vi_webp/HxqWoF_wfMQ/maxresdefault.webp",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "14RMDByrG1U": {
+      "title": "Brand Partnerships and IP Games Roundtable",
+      "description": "In this roundtable video, members of Toya (Miraculous RP), The Metaverse Team (Nerf Strike) and The Gang Stockholm (Vans) share their insights about developing games with brand par…",
+      "date": "2022-05-12",
+      "duration": "1:12:24",
+      "image": "https://img.youtube.com/vi/14RMDByrG1U/maxresdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "xBlHz30PMKo": {
+      "title": "Designing For Youtube Engagement with KreekCraft, WonderWorksZach & JoshWWS1",
+      "description": "In this Level Up Roundtable, YouTube star KreekCraft and Wonder Works Studio developers WonderWorksZach and JoshWWS1 (TIMMEH, Overlook Bay) discuss designing a game for YouTube eng…",
+      "date": "2022-05-05",
+      "duration": "1:24:43",
+      "image": "https://img.youtube.com/vi/xBlHz30PMKo/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "QYOaK1hXN1Y": {
+      "title": "Clip! Key Performance Indicators with ruddev_ethan and x_o",
+      "description": "In this roundtable clip, developers Ruddev_ethan and x_o of Ruddev Media discuss analytics and the key performance indicators that measure a game's health during LiveOps.",
+      "date": "2022-04-28",
+      "duration": "1:49",
+      "image": "https://img.youtube.com/vi/QYOaK1hXN1Y/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "5N84f1ZuwRc": {
+      "title": "Clip! Smart Iteration with A/B Testing with BlockfaceSteve and BlockfaceBob",
+      "description": "In this roundtable clip, developers BlockfaceSteve and BlockfaceBob of Block Evolution discuss the use of A/B testing as a way to evaluate different versions of new features in Clu…",
+      "date": "2022-04-28",
+      "duration": "1:33",
+      "image": "https://img.youtube.com/vi/5N84f1ZuwRc/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "czVxazdl0kg": {
+      "title": "Level Design ft. MiniToon, Erythia, Cullen & Tohb",
+      "description": "In this Level Up Roundtable, Erythia (Dragon Adventures, Creatures of Sonaria), MiniToon (Piggy, Piggy: Intercity) and Cullen & Tohb (Riotfall) discuss the processes and techniques…",
+      "date": "2022-03-17",
+      "duration": "1:28:39",
+      "image": "https://img.youtube.com/vi/czVxazdl0kg/maxresdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "RfpMZZFy8Zw": {
+      "title": "Analytics Essentials",
+      "description": "In this short video, Roblox Game Insights team designer Dspav describes the key performance indicators that measure a game’s health across engagement, retention and monetization.",
+      "date": "2022-02-24",
+      "duration": "11:56",
+      "image": "https://img.youtube.com/vi/RfpMZZFy8Zw/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "BkQL2_DY9Mc": {
+      "title": "Social Features ft. Block Evolution",
+      "description": "Join Block Evolution, creators of Club Roblox, in this roundtable discussion about creating engaging social experiences. We'll discuss the value of social engagement on Roblox and…",
+      "date": "2022-02-17",
+      "duration": "1:01:40",
+      "image": "https://img.youtube.com/vi/BkQL2_DY9Mc/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "iI2t7Yd7Byc": {
+      "title": "Prototyping Essentials",
+      "description": "In this short presentation, Roblox Game Insights game designer Dspav explains how testing your mechanics and UI early can help you identify problems, fine-tune your design, and fin…",
+      "date": "2022-02-03",
+      "duration": "12:09",
+      "image": "https://img.youtube.com/vi/iI2t7Yd7Byc/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "bROouMt1b3g": {
+      "title": "Core Loop Essentials",
+      "description": "In this short presentation, Roblox Game Insights game designer Dspav explains the concept and function of the core loop: the essential, repeated tasks that players perform in order…",
+      "date": "2022-01-27",
+      "duration": "7:15",
+      "image": "https://img.youtube.com/vi/bROouMt1b3g/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "oV8DKuAjQQs": {
+      "title": "LiveOps on Roblox with Ruddev_Ethan and x_o",
+      "description": "In this Level Up roundtable video, Ruddev Media discuss the LiveOps phase of game development and how they keep Bad Business on target! Join us to learn about their LiveOps strateg…",
+      "date": "2022-01-13",
+      "duration": "1:02:19",
+      "image": "https://img.youtube.com/vi/oV8DKuAjQQs/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "XTZxQvh1qkc": {
+      "title": "Designing Player Progression",
+      "description": "In Part Two of this workshop, Kael dives into progression and the systems that allow players to make progress toward goals by interacting with a game's core loop. He explores examp…",
+      "date": "2021-12-09",
+      "duration": "36:53",
+      "image": "https://img.youtube.com/vi/XTZxQvh1qkc/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "hD2Ive5RqtE": {
+      "title": "Designing Player Goals",
+      "description": "In Part One of this workshop, Roblox's own Sr. Game designer Kael discusses the role that short, mid and long term goals play in keeping players of all types engaged in your game.…",
+      "date": "2021-12-03",
+      "duration": "44:58",
+      "image": "https://img.youtube.com/vi/hD2Ive5RqtE/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "cY1B5_x4RoU": {
+      "title": "The Fundamentals Of User Experience | RDC 2021",
+      "description": "In this talk, Tyler (unroot) and Bella (theloudscream) will go over various UI and UX topics that will help you design accessible, usable, and scalable UI for your experiences. The…",
+      "date": "2021-12-01",
+      "duration": "13:38",
+      "image": "https://img.youtube.com/vi_webp/cY1B5_x4RoU/maxresdefault.webp",
+      "channel": true
+    },
+    "uiha3tzL-oc": {
+      "title": "The Future of Avatars | RDC 2021",
+      "description": "This tailor-made talk is all about Roblox’s 3D clothing technology! Learn how to use our clothing technology through a combination of Physically Based Rendering, Surface Appearance…",
+      "date": "2021-12-01",
+      "duration": "25:55",
+      "image": "https://img.youtube.com/vi_webp/uiha3tzL-oc/maxresdefault.webp",
+      "channel": true
+    },
+    "fmVKt8d_ivw": {
+      "title": "Creating Stunning Visual Effects with Simple Tools | RDC 2021",
+      "description": "A deep dive into Roblox's current toolset for visual effects. Learn what objects are useful and how you can use them to level up your game's polish.",
+      "date": "2021-12-01",
+      "duration": "18:33",
+      "image": "https://img.youtube.com/vi_webp/fmVKt8d_ivw/maxresdefault.webp",
+      "channel": true
+    },
+    "NusvNCLjbgg": {
+      "title": "Visual Fidelity & Immersion in Roblox | RDC 2021",
+      "description": "The team behind Tank Warfare discussed Visual Fidelity in Roblox game development. In addition to this, they will be covering Immersion & Realism as an Art Style and discussing Opt…",
+      "date": "2021-12-01",
+      "duration": "36:49",
+      "image": "https://img.youtube.com/vi/NusvNCLjbgg/maxresdefault.jpg",
+      "channel": true
+    },
+    "wrf6DRlfoO8": {
+      "title": "How to Manage Your Community | RDC 2021",
+      "description": "From creating a safe and positive environment to keeping people engaged, there is a lot to keep in mind to ensure that your ideal community becomes your real one. MiniToon will be…",
+      "date": "2021-12-01",
+      "duration": "25:28",
+      "image": "https://img.youtube.com/vi_webp/wrf6DRlfoO8/maxresdefault.webp",
+      "channel": true
+    },
+    "vVVQ0D94Bo4": {
+      "title": "Builderman Q&A | RDC 2021",
+      "description": "We're excited to announce the second annual Q&A with Builderman himself! Watch as the man, the myth, the legend himself answers all your burning questions.",
+      "date": "2021-12-01",
+      "duration": "55:54",
+      "image": "https://img.youtube.com/vi_webp/vVVQ0D94Bo4/maxresdefault.webp",
+      "channel": true
+    },
+    "TLRakuu4vd0": {
+      "title": "Tips For Scaling Up A Company on Roblox | RDC 2021",
+      "description": "What does a rubber slappy hand have to do with business partnerships? Only one way to find out. Nathan Clemens aka UndoneBuilder will be sharing tips on what they’ve learned while…",
+      "date": "2021-12-01",
+      "duration": "15:58",
+      "image": "https://img.youtube.com/vi_webp/TLRakuu4vd0/maxresdefault.webp",
+      "channel": true
+    },
+    "LCDJPaMylV0": {
+      "title": "Roblox Panel | RDC 2021",
+      "description": "Join us for a thought-provoking, live Q&A discussion with 6 Roblox staff members as we will be taking live questions alongside pre submitted ones.",
+      "date": "2021-12-01",
+      "duration": "35:50",
+      "image": "https://img.youtube.com/vi_webp/LCDJPaMylV0/maxresdefault.webp",
+      "channel": true
+    },
+    "JtU0eYYwMOc": {
+      "title": "Game Jam Presentations and Awards Ceremony | RDC 2021",
+      "description": "The Game Jam is always one of our favorite events of RDC! Join us as each team of developers presents what they were able to make in just 24 hours. Our judges will be on the lookou…",
+      "date": "2021-12-01",
+      "duration": "1:00:56",
+      "image": "https://img.youtube.com/vi/JtU0eYYwMOc/maxresdefault.jpg",
+      "channel": true
+    },
+    "D8scEdjtqf0": {
+      "title": "Developer Panel | RDC 2021",
+      "description": "Join us for a panel where 6 top developers answer your questions about development on the Roblox platform.",
+      "date": "2021-12-01",
+      "duration": "32:39",
+      "image": "https://img.youtube.com/vi_webp/D8scEdjtqf0/maxresdefault.webp",
+      "channel": true
+    },
+    "-LsnvpHLNhw": {
+      "title": "Creating Opportunities to Connect | RDC 2021",
+      "description": "How can you build experiences on Roblox that connect people in meaningful ways? In this talk, Roblox Staff will discuss topics such as: building a community with Roblox Groups, int…",
+      "date": "2021-12-01",
+      "duration": "12:17",
+      "image": "https://img.youtube.com/vi_webp/-LsnvpHLNhw/maxresdefault.webp",
+      "channel": true
+    },
+    "bKvOPfp3oX0": {
+      "title": "Live Ops with the Notorious Creators of Jailbreak | RDC 2021",
+      "description": "Get insider information from Asimo3089 and badcc, the developers behind Jailbreak.  They will be talking about how they manage shipping live updates for Jailbreak on a massive scal…",
+      "date": "2021-12-01",
+      "duration": "20:47",
+      "image": "https://img.youtube.com/vi_webp/bKvOPfp3oX0/maxresdefault.webp",
+      "channel": true
+    },
+    "a63iradAeJE": {
+      "title": "RDC 2021 Sizzle",
+      "description": "Check out this year's RDC 2021! Thank you to our global community for attending whether it was in person or online.",
+      "date": "2021-12-01",
+      "duration": "2:58",
+      "image": "https://img.youtube.com/vi_webp/a63iradAeJE/maxresdefault.webp",
+      "channel": true
+    },
+    "ZhtTkuaSyVs": {
+      "title": "Tailoring Dynamic Content: Localization and Suitability | RDC 2021",
+      "description": "Come learn about how Roblox is helping creators reach the largest audience possible through our translation and suitability products! Roblox Staff will be diving deep into our curr…",
+      "date": "2021-12-01",
+      "duration": "23:54",
+      "image": "https://img.youtube.com/vi_webp/ZhtTkuaSyVs/maxresdefault.webp",
+      "channel": true
+    },
+    "Qkgxw6HoJ4M": {
+      "title": "Unlock Your Productivity with Roblox's Open Cloud | RDC 2021",
+      "description": "Roblox’s Open Cloud is the next big advancement empowering the Roblox creator community to control the Roblox platform. With Open Cloud you can seamlessly integrate Roblox into ext…",
+      "date": "2021-12-01",
+      "duration": "22:05",
+      "image": "https://img.youtube.com/vi_webp/Qkgxw6HoJ4M/maxresdefault.webp",
+      "channel": true
+    },
+    "DHvfEB8myyU": {
+      "title": "Driving Discovery on Roblox | RDC 2021",
+      "description": "Roblox Staff will be sharing insights on user engagement and uncovering the future of content discovery on Roblox. Join this talk and learn how to take control and improve your met…",
+      "date": "2021-12-01",
+      "duration": "30:16",
+      "image": "https://img.youtube.com/vi_webp/DHvfEB8myyU/maxresdefault.webp",
+      "channel": true
+    },
+    "0HlqqX29sRE": {
+      "title": "Tools & Resources for Collaboration | RDC 2021",
+      "description": "Get a glimpse of Roblox's vision for the future of Creator resources—from the Creator Dashboard to documentation to new ways to manage your communities. Roblox Staff will also talk…",
+      "date": "2021-12-01",
+      "duration": "23:42",
+      "image": "https://img.youtube.com/vi_webp/0HlqqX29sRE/maxresdefault.webp",
+      "channel": true
+    },
+    "rVr0IyfYkPg": {
+      "title": "Finding the Fun with Jandel and Foryxe",
+      "description": "Find out how Jandel and Foryxe find the fun in Wacky Wizards through brainstorming, prototyping, feedback and iteration!",
+      "date": "2021-11-18",
+      "duration": "1:08:20",
+      "image": "https://img.youtube.com/vi/rVr0IyfYkPg/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "iWSZJSE2NEc": {
+      "title": "Writing Quests, Achievements & Dailies with BreakfastCandy",
+      "description": "The third and final part of this workshop focuses on writing quest text that is clear and engaging. Erin sets out goals for your text and offers tips on being concise, consistent,…",
+      "date": "2021-11-11",
+      "duration": "38:59",
+      "image": "https://img.youtube.com/vi/iWSZJSE2NEc/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "1stxDQeHhr8": {
+      "title": "Designing Quests, Achievements & Dailies with BreakfastCandy",
+      "description": "In part two of this Level Up workshop, Erin dives into the design of quests, achievements, and dailies.She discusses the importance of drawing on all of your game's systems and con…",
+      "date": "2021-10-28",
+      "duration": "23:36",
+      "image": "https://img.youtube.com/vi/1stxDQeHhr8/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "d4g30UupgKw": {
+      "title": "Introduction to Quests, Achievements & Dailies with BreakfastCandy",
+      "description": "In this Level Up workshop, Erin introduces the topic of quests, achievements, and dailies. Learn about the functions that quests can serve in a game, including retention and engage…",
+      "date": "2021-10-21",
+      "duration": "36:35",
+      "image": "https://img.youtube.com/vi/d4g30UupgKw/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "UlKAoiFLgUo": {
+      "title": "Roleplay Design and Worldbuilding with Myzta",
+      "description": "Join Myzta, developer of Mermaid Life, and Roblox's own Game Insights game designer Erin Jennings in a roundtable discussion about worldbuilding. Learn how gameplay, environment ar…",
+      "date": "2021-09-30",
+      "duration": "1:27:37",
+      "image": "https://img.youtube.com/vi/UlKAoiFLgUo/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "k2gbQI-ggB4": {
+      "title": "Designing Season Passes with Dspav and BreakfastCandy",
+      "description": "Join Game Insights team game designer Dan as he explores the season pass feature: what it is, its benefits, and how it works mechanically. Starting with a blank sheet, he'll take y…",
+      "date": "2021-09-16",
+      "duration": "2:02:47",
+      "image": "https://img.youtube.com/vi/k2gbQI-ggB4/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "AG-3o_GdqKI": {
+      "title": "UI/UX Design with GodzGalaxy, theloudscream & Repotted",
+      "description": "Join the Outlaster team and Roblox's own Game Insights team game designer, Dan Spaventa, in this roundtable discussion about user interface (UI) and user experience (UX) design. Le…",
+      "date": "2021-09-09",
+      "duration": "1:31:49",
+      "image": "https://img.youtube.com/vi/AG-3o_GdqKI/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "kQIyqMdh7Os": {
+      "title": "Content Updates for Live Games",
+      "description": "In this Level Up workshop, Roblox's Game Insights team game designer Erin is here to help developers stuck on the content treadmill! Follow along as she walks through the design an…",
+      "date": "2021-09-02",
+      "duration": "58:45",
+      "image": "https://img.youtube.com/vi/kQIyqMdh7Os/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "dBlP8NdJQM0": {
+      "title": "Narrative and Game Design with MiniToon",
+      "description": "Join MiniToon, developer of Piggy, and Roblox's own Sr. Game designer Dan Spaventa for a two-hour roundtable discussion focused on narrative design, level design, community and inf…",
+      "date": "2021-08-26",
+      "duration": "1:23:37",
+      "image": "https://img.youtube.com/vi/dBlP8NdJQM0/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "4-vZkSrGAxI": {
+      "title": "Supporting Game Expansions with Dspav",
+      "description": "The fourth and final Game Expansions Workshop focuses on supporting an expansion feature once it is live in your game. Dan provides techniques for gathering and prioritizing feedba…",
+      "date": "2021-08-12",
+      "duration": "44:22",
+      "image": "https://img.youtube.com/vi/4-vZkSrGAxI/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "pSjFYDEgRxs": {
+      "title": "Balancing Game Expansions with Dspav",
+      "description": "In Part Three of the Game Expansions Workshop, Dan discusses the importance of balancing your expansion features to ensure that you and your players get the most out of them. Topic…",
+      "date": "2021-08-05",
+      "duration": "37:03",
+      "image": "https://img.youtube.com/vi/pSjFYDEgRxs/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "HKLRLhHHHVc": {
+      "title": "Producing Game Expansions with Dspav",
+      "description": "In the Game Expansions Workshop Part Two, Dan walks step by step through the expansion development process, from brainstorming ideas to supporting a live feature.",
+      "date": "2021-07-29",
+      "duration": "30:38",
+      "image": "https://img.youtube.com/vi/HKLRLhHHHVc/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "UL4QaSbfyC4": {
+      "title": "What are Game Expansions? with Dspav",
+      "description": "In this Level Up Workshop, Roblox Game Insights game designer Dan Spaventa introduces the topic of game expansions, the addition of new systems that enhance gameplay and reinvigora…",
+      "date": "2021-07-22",
+      "duration": "42:12",
+      "image": "https://img.youtube.com/vi/UL4QaSbfyC4/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    },
+    "Gv5OVVyWM10": {
+      "title": "Designing Game Expansions with AbstractAlex, Usering & ImprobableAI",
+      "description": "Join RedManta and Roblox's own Sr. Game designer Dan Spaventa as they discuss the fundamentals, challenges, and benefits of releasing Game Expansions during LiveOps.",
+      "date": "2021-07-16",
+      "duration": "1:23:05",
+      "image": "https://img.youtube.com/vi/Gv5OVVyWM10/hqdefault.jpg",
+      "links": {
+        "/production/game-design": {
+          "kind": "docs",
+          "title": "Design games on Roblox"
+        }
+      },
+      "channel": true
+    }
+  }
+}
