@@ -40,7 +40,7 @@ In terms of their behavior, it can be helpful when designing to think of Roblox 
 - **Tourists:** Tourists typically hop from one game to another, prioritizing variety over depth.
 - **Locals:** Locals are more likely to focus on a particular game or smaller set of games. They engage more deeply and typically form almost all a game's engaged user base.
 
-Bear in mind that many locals start out as tourists and convert, so don't neglect tourists in your designs and monetization strategies. For more about monetizing your game, see [Earn on Roblox](../../monetize-experiences.md).
+Bear in mind that many locals start out as tourists and convert, so don't neglect tourists in your designs and monetization strategies. For more about monetizing your game, see [Earn on Roblox](../../production/monetization/index.md).
 
 ## Design for the audience
 

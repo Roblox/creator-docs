@@ -20,7 +20,7 @@ Each mesh type must meet specifications according to how you are going to use th
 In addition, if you meet certain account requirements, you can publish and sell collections of meshes that are parented to a single `Class.Model` object. For example, you can publish avatar-ready models on the Marketplace and earn a commission for each sale, or you can sell models on the Creator Store and earn 100% of net proceeds on each transaction.
 
 <Alert severity = 'info'>
-For more information on monetizing meshes, see [Monetize avatar items](../../monetize-avatar.md) and [Creator Store - Distribute and sell assets](../../production/creator-store.md#distribute-and-sell-assets).
+For more information on monetizing meshes, see [Monetize avatar items](../../production/monetization/avatar-items.md) and [Creator Store - Distribute and sell assets](../../production/creator-store.md#distribute-and-sell-assets).
 </Alert>
 
 <GridContainer numColumns="3">
