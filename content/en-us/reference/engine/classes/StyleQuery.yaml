@@ -124,10 +124,10 @@ methods:
       - UI
   - name: StyleQuery:GetConditions
     summary: |
-      Returns a dictionary of key-value pairs describing the conditoins set on
+      Returns a dictionary of key-value pairs describing the conditions set on
       the `StyleQuery`.
     description: |
-      Returns a dictionary of key-value pairs describing the conditoins set on
+      Returns a dictionary of key-value pairs describing the conditions set on
       the `StyleQuery`.
     code_samples: []
     parameters: []
