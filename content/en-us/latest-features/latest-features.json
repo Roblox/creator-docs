@@ -1,0 +1,1060 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-13",
+  "features": [
+    {
+      "id": "team-test-remote-logs",
+      "name": "Team Test client logs and GetLogHistoryAsync",
+      "status": "stable",
+      "area": "studio",
+      "releasedAt": "2026-11-13",
+      "summary": "During a Team Test, LogService:GetLogHistoryAsync reads the recent logs of a collaborator's client or of the Team Test server. Collaborators' output also appears in the Output window, labeled with their name.",
+      "apis": ["LogService:GetLogHistoryAsync", "Player.User", "User.fromId"],
+      "replaces": [
+        "Asking collaborators to copy errors or send screenshots of their output",
+        "Reproducing a collaborator's bug yourself to see its output"
+      ],
+      "guidance": "During a Team Test the user starts, use execute_luau with datamodel_type Client to call LogService:GetLogHistoryAsync. Pass a collaborator's Player.User, or User.fromId(0) for the server, and wrap the call in pcall because it yields and can error. It returns message, messageType, and timestamp tables like GetLogHistory, and doesn't work in solo play or live games.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/LogService.md",
+      "announcementUrl": "https://devforum.roblox.com/t/team-test-output-and-remote-logs/4989734"
+    },
+    {
+      "id": "editablemesh-quads",
+      "name": "EditableMesh quad faces",
+      "status": "stable",
+      "area": "mesh",
+      "releasedAt": "2026-11-11",
+      "summary": "EditableMesh:AddFace(v1, v2, v3, v4) adds a quad (four-sided) face in one call, so you no longer build each quad from two triangles. Quads and triangles can be mixed on the same mesh. It works in Studio and in published experiences.",
+      "apis": [
+        "EditableMesh:AddFace",
+        "EditableMesh:Triangulate",
+        "EditableMesh:SetFaceVertices"
+      ],
+      "replaces": [
+        "Two EditableMesh:AddTriangle calls per quad",
+        "EditableMesh:AddFace({v1, v2, v3, v4}) array signature"
+      ],
+      "guidance": "Build quads with EditableMesh:AddFace(v1, v2, v3, v4), passing the vertex IDs as separate arguments rather than an array, then set face data such as SetFaceNormals with four IDs. Pass three IDs to AddFace or use AddTriangle for triangles. Call EditableMesh:Triangulate if you need every quad split into two triangles. Each quad counts as two triangles toward the 20,000-triangle limit.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/EditableMesh.md",
+      "announcementUrl": "https://devforum.roblox.com/t/studio-beta-quad-support-for-editablemesh-apis/4890142",
+      "detect": [":AddFace%s*%(%s*{"]
+    },
+    {
+      "id": "wedge-collision-fix",
+      "name": "Wedge part collision geometry fix",
+      "status": "stable",
+      "area": "physics",
+      "releasedAt": "2026-11-09",
+      "summary": "A fix for wrong wedge collision geometry began rolling out on 2026-11-09. Wedge flat edges no longer sink into box edges, and WorldRoot:GetPartsInPart no longer misses parts that overlap a wedge.",
+      "apis": ["WedgePart", "WorldRoot:GetPartsInPart"],
+      "replaces": [
+        "Workarounds for WorldRoot:GetPartsInPart missing parts that overlap wedges"
+      ],
+      "guidance": "Treat WorldRoot:GetPartsInPart results with wedges as accurate. Don't write workarounds for missed overlaps. Wedge glides and wedge flings no longer happen by themselves, so don't design obbies or movement code that depend on them. Emote corner clips and uplodges still work.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/WorldRoot.md",
+      "announcementUrl": "https://devforum.roblox.com/t/upcoming-fixes-for-wedge-part-collisions/4984595"
+    },
+    {
+      "id": "device-simulator-network-simulator",
+      "name": "Device Simulator Network and Performance Simulators",
+      "status": "stable",
+      "area": "studio",
+      "releasedAt": "2026-11-06",
+      "summary": "Studio's Device Simulator has a Network Simulator for latency, jitter, and packet loss, and a Performance Simulator that applies a device's typical graphics quality and RAM, so the user can test lower-end hardware during a playtest.",
+      "apis": [],
+      "replaces": [
+        "Stopping a playtest to switch the simulated device and then restarting it",
+        "Testing poor network conditions with a second device or a throttled router",
+        "Testing draw distance and streaming on physical lower-end devices"
+      ],
+      "guidance": "No MCP tool or API controls these simulators. When the user wants to test lag, packet loss, or low-end devices, ask them to open Test > Device Simulator and use the Network or Performance button. Memory simulation is off until they set Mode to Selected device or Manual, and only affects the client in Play, in places with Workspace.StreamingEnabled. Neither affects published experiences.",
+      "docsUrl": "https://create.roblox.com/docs/studio/device-simulator.md",
+      "announcementUrl": "https://devforum.roblox.com/t/test-graphics-and-memory-on-lower-end-devices-with-the-performance-simulator/4979313"
+    },
+    {
+      "id": "auto-quality-draw-distance-500",
+      "name": "500-stud minimum draw distance at low quality levels",
+      "status": "stable",
+      "area": "performance",
+      "releasedAt": "2026-11-05",
+      "summary": "At the lowest graphics quality level, draw distance is now 500 studs instead of 200 on all platforms, and it rises faster at the next few levels. At low quality levels, terrain water stays transparent and Beam.Segments is no longer cut back as much.",
+      "apis": ["Beam.Segments"],
+      "replaces": [
+        "Reading UserGameSettings.SavedQualityLevel to scale visual effects by hand"
+      ],
+      "guidance": "This applies to every game automatically, with nothing to turn on. Don't scale visual effects by reading UserGameSettings.SavedQualityLevel. Roblox plans to deprecate it, and it gets in the way of automatic scaling. Don't design around exact draw distances, and ask the user to check visuals at each level with Studio Settings > Rendering > Editor Quality Level.",
+      "announcementUrl": "https://devforum.roblox.com/t/increasing-the-minimum-draw-distance-to-500-studs-and-other-auto-quality-level-improvements/4977292",
+      "detect": ["%f[%w_]SavedQualityLevel%f[^%w_]"]
+    },
+    {
+      "id": "studio-teleport-testing",
+      "name": "Test teleports in Studio",
+      "status": "stable",
+      "area": "teleport",
+      "releasedAt": "2026-11-05",
+      "summary": "TeleportService:TeleportAsync now runs in Studio's Test and Team Test modes. The destination place opens as a new test server, so you can debug cross-place teleports without publishing.",
+      "apis": ["TeleportService:TeleportAsync"],
+      "replaces": [
+        "Publishing every place and joining a live server to test teleports",
+        "Adding print statements and republishing to debug teleport flows"
+      ],
+      "guidance": "To test teleports, playtest in Studio's Test or Team Test mode, not Server & Clients. Studio MCP playtests work too. Only TeleportService:TeleportAsync works there, not Teleport, TeleportPartyAsync, or the other teleport methods. Save the destination place first, with save_place or by asking the user: a teleport loads its last saved version.",
+      "docsUrl": "https://create.roblox.com/docs/projects/teleport.md",
+      "announcementUrl": "https://devforum.roblox.com/t/test-teleports-in-studio/4977640",
+      "detect": [
+        "TeleportService[\"'%)]*:Teleport%s*%(",
+        ":TeleportPartyAsync%s*%("
+      ]
+    },
+    {
+      "id": "prompt-to-animation",
+      "name": "Prompt to Animation and Motion Rebuilder",
+      "status": "beta",
+      "area": "characters",
+      "releasedAt": "2026-11-05",
+      "summary": "A Studio beta that makes R15 animation clips from a text prompt (Prompt to Animation) and converts R6 clips to R15 (Motion Rebuilder). Agents call the generate_animation MCP tool, and Assistant has /generate_animation.",
+      "apis": [],
+      "replaces": [
+        "Animating R15 clips by hand in the Animation Editor",
+        "Re-animating R6 clips by hand to move a game to R15"
+      ],
+      "guidance": "Ask the user to turn on Animation Generation in Assistant under File > Beta Features. Then call generate_animation with a prompt, and optionally a rig such as Workspace.Rig1, a length up to 10 seconds, or an R6 animation's asset ID to convert to R15. Converting a list of animations works, but it's rate limited.",
+      "announcementUrl": "https://devforum.roblox.com/t/studio-beta-generate-r15-animations-from-a-prompt-plus-optional-r6-motion-rebuilder/4977709"
+    },
+    {
+      "id": "createsurfaceappearance-mixed-content",
+      "name": "CreateSurfaceAppearanceAsync with Asset IDs and Content",
+      "status": "beta",
+      "area": "assets",
+      "releasedAt": "2026-11-05",
+      "summary": "AssetService:CreateSurfaceAppearanceAsync now accepts Asset IDs and DataModel Content as well as EditableImages, in any mix. Use it to build a SurfaceAppearance at runtime without first loading images into EditableImages.",
+      "apis": [
+        "AssetService:CreateSurfaceAppearanceAsync",
+        "AssetService:CreateDataModelContentAsync",
+        "Content.fromObject",
+        "Content.fromUri",
+        "Enum.CreateContentResult.Success"
+      ],
+      "replaces": [
+        "Loading Asset ID images into EditableImages so they can be passed to CreateSurfaceAppearanceAsync"
+      ],
+      "guidance": "Ask the user to turn on \"Mixed Content for CreateSurfaceAppearanceAsync\" in File > Beta Features. It doesn't work in live experiences yet. Pass CreateSurfaceAppearanceAsync a table of maps such as ColorMap and MetalnessMap, using Content.fromUri(\"rbxassetid://...\") for assets, and turn finished EditableImages into DataModel Content with CreateDataModelContentAsync(Content.fromObject(img)).",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/AssetService.md",
+      "announcementUrl": "https://devforum.roblox.com/t/studio-beta-createsurfaceappearance-now-with-asset-ids-and-datamodel-content/4977713"
+    },
+    {
+      "id": "uishadow-upgrades",
+      "name": "Upgraded UIShadow",
+      "status": "stable",
+      "area": "ui",
+      "releasedAt": "2026-11-05",
+      "summary": "UIShadow supports text shadows, knockout and inset shadows, and gradient fills (Mode, Inset, Spread, BlurRadius, ShowBehindParent).",
+      "apis": [
+        "UIShadow",
+        "UIShadow.Mode",
+        "UIShadow.BlurRadius",
+        "UIShadow.Spread",
+        "UIShadow.Inset",
+        "UIShadow.ShowBehindParent"
+      ],
+      "replaces": [
+        "Duplicating a TextLabel offset behind the original to fake a shadow"
+      ],
+      "guidance": "Add a UIShadow to the TextLabel or Frame instead of duplicating labels. Set Mode to Text for a shadow that follows the characters.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/UIShadow.md",
+      "announcementUrl": "https://devforum.roblox.com/t/4934553"
+    },
+    {
+      "id": "content-asset-properties",
+      "name": "Content properties for asset references",
+      "status": "stable",
+      "area": "assets",
+      "releasedAt": "2026-11-04",
+      "summary": "New *Content properties such as Sound.AudioContent and Animation.AnimationContent take a Content value and replace legacy string asset ID properties across many classes. Starting 2026-11-11, Studio saves asset references in the Content format.",
+      "apis": [
+        "Content",
+        "Content.fromUri",
+        "Enum.ContentSourceType",
+        "Sound.AudioContent",
+        "AudioPlayer.AudioContent",
+        "Animation.AnimationContent",
+        "ParticleEmitter.TextureContent",
+        "Beam.TextureContent",
+        "Trail.TextureContent",
+        "FileMesh.MeshContent",
+        "FileMesh.TextureContent",
+        "SurfaceAppearance.ColorMapContent",
+        "MaterialVariant.ColorMapContent",
+        "Sky.SkyboxBackContent",
+        "UserInputService.MouseIconContent",
+        "Mouse.IconContent",
+        "Shirt.ShirtTemplateContent",
+        "Pants.PantsTemplateContent",
+        "VideoFrame.VideoContent",
+        "ImageButton.HoverImageContent",
+        "BackpackItem.TextureContent"
+      ],
+      "replaces": [
+        "Sound.SoundId",
+        "Animation.AnimationId",
+        "ParticleEmitter.Texture",
+        "FileMesh.MeshId",
+        "Sky.SkyboxBk",
+        "Legacy string-based asset ID properties (*Id or bare-name properties like Texture, Image, MouseIcon)"
+      ],
+      "guidance": "In new code, set asset properties through the *Content version (usually the legacy name with Content added, e.g. MeshId -> MeshContent, MouseIcon -> MouseIconContent) using a Content value, e.g. sound.AudioContent = Content.fromUri(\"rbxassetid://123\"). Legacy names still work for reading and writing. Rojo users must update to v7.7.1 or later before 2026-11-11.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/datatypes/Content.md",
+      "announcementUrl": "https://devforum.roblox.com/t/upcoming-changes-to-asset-properties-content-property-serialization-switch/4975546",
+      "detect": [
+        "%.SoundId%s*=%s*[\"']",
+        "%.AnimationId%s*=%s*[\"']",
+        "%.ShirtTemplate%s*=%s*[\"']",
+        "%.PantsTemplate%s*=%s*[\"']"
+      ]
+    },
+    {
+      "id": "player-character-destroy-behavior",
+      "name": "PlayerCharacterDestroyBehavior on by default",
+      "status": "stable",
+      "area": "characters",
+      "releasedAt": "2026-11-04",
+      "summary": "From November 11, 2026, Workspace.PlayerCharacterDestroyBehavior set to Default acts like Enabled. The server destroys a Player 5 seconds after PlayerRemoving handlers run, and destroys an old Character right after CharacterRemoving handlers run, to prevent memory leaks.",
+      "apis": [
+        "Workspace.PlayerCharacterDestroyBehavior",
+        "Enum.PlayerCharacterDestroyBehavior",
+        "Enum.PlayerCharacterDestroyBehavior.Default",
+        "Enum.PlayerCharacterDestroyBehavior.Enabled",
+        "Enum.PlayerCharacterDestroyBehavior.Disabled",
+        "Players.PlayerRemoving",
+        "Player.CharacterRemoving"
+      ],
+      "replaces": [
+        "Reading a Player's or Character's children after yielding in PlayerRemoving or CharacterRemoving",
+        "Re-parenting a removed Player or Character",
+        "Destroying removed Player and Character instances by hand to avoid memory leaks"
+      ],
+      "guidance": "From November 11, 2026, in PlayerRemoving and CharacterRemoving handlers, copy every value you need (UserId, leaderstats values, Character children) before any yield, then save the copies. Never re-parent a removed Player or Character. Disabled only works as a temporary opt-out until Phase 3 at the end of February, so write code that works with Enabled.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/enums/PlayerCharacterDestroyBehavior.md",
+      "announcementUrl": "https://devforum.roblox.com/t/playercharacterdestroybehavior-will-be-default-on-november-11/4975616",
+      "detect": ["PlayerCharacterDestroyBehavior%.Disabled%f[^%w_]"]
+    },
+    {
+      "id": "studio-mcp-open-cloud",
+      "name": "Open Cloud access from Studio MCP",
+      "status": "stable",
+      "area": "studio",
+      "releasedAt": "2026-11-04",
+      "summary": "External MCP clients can call Open Cloud APIs through the Studio MCP server's open_cloud_invoke tool to manage developer products, game passes, settings, publishing, analytics, and asset uploads, within each game's MCP permissions. New Skills cover Open Cloud and asset import.",
+      "apis": [],
+      "replaces": [
+        "Setting up developer products and game passes, changing game settings, and reading analytics by hand in Creator Hub",
+        "Exporting, uploading, and fixing models from Blender or other 3D tools by hand"
+      ],
+      "guidance": "From an external MCP client, call Open Cloud with the open_cloud_invoke tool. No API key is needed. It only works for scopes the user turned on in Studio's MCP Permissions tab (Assistant > ... > Settings, or click MCP in Studio's bottom-right corner). Agents can't turn permissions on, so ask the user for any that are missing, and confirm before uploading because uploads are permanent.",
+      "docsUrl": "https://create.roblox.com/docs/studio/mcp-open-cloud.md",
+      "announcementUrl": "https://devforum.roblox.com/t/studio-mcp-server-updates-open-cloud-access-in-your-mcp-client-and-asset-import-workflows/4975849"
+    },
+    {
+      "id": "analytics-journeys",
+      "name": "Analytics Journeys (branching funnels)",
+      "status": "stable",
+      "area": "analytics",
+      "releasedAt": "2026-11-03",
+      "summary": "Journeys in Creator Analytics track players through stages that can branch and rejoin, shown as a Sankey chart with drop-off. Server scripts log progress with AnalyticsService:LogJourneyEvent(player, journeyName, nodeName).",
+      "apis": ["AnalyticsService:LogJourneyEvent"],
+      "replaces": [
+        "Approximating branching player paths with several linear funnels"
+      ],
+      "guidance": "When players can take different paths, first publish a journey config through open_cloud_invoke, or ask the user to create it in Creator Hub under Analytics > Journeys. Then call AnalyticsService:LogJourneyEvent(player, journeyName, nodeName) from server code, after checking the player action is valid. Don't pass a stage number: Roblox works it out from the config.",
+      "docsUrl": "https://create.roblox.com/docs/production/analytics/journey-events.md",
+      "announcementUrl": "https://devforum.roblox.com/t/analytics-understand-complex-player-funnels-with-journeys/4973876"
+    },
+    {
+      "id": "color3-contrast-luminance",
+      "name": "Color3 contrast & luminance methods",
+      "status": "stable",
+      "area": "ui",
+      "releasedAt": "2026-11-03",
+      "summary": "Color3 gains GetContrastingColor, GetContrastRatio, and GetLuminance for picking readable foreground colors on any background.",
+      "apis": [
+        "Color3:GetContrastingColor",
+        "Color3:GetContrastRatio",
+        "Color3:GetLuminance"
+      ],
+      "replaces": ["Hand-written WCAG contrast/luminance math"],
+      "guidance": "Use Color3:GetContrastingColor to choose readable text over dynamic backgrounds and GetContrastRatio to validate against WCAG thresholds instead of writing your own formulas.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/datatypes/Color3.md",
+      "announcementUrl": "https://devforum.roblox.com/t/build-accessible-ui-faster-new-color3-contrast-luminance-methods/4974212",
+      "detect": ["0%.2126", "0%.7152", "0%.0722"]
+    },
+    {
+      "id": "server-low-memory-warning",
+      "name": "DataModel.ServerLowMemoryWarning",
+      "status": "stable",
+      "area": "performance",
+      "releasedAt": "2026-11-02",
+      "summary": "Server-side signal that fires when a live server moves into high memory usage, so scripts can free memory before an out-of-memory crash.",
+      "apis": ["DataModel.ServerLowMemoryWarning"],
+      "replaces": [],
+      "guidance": "In server scripts, connect to game.ServerLowMemoryWarning to destroy debris/effects, unload unused map regions, and pause spawning until memory recovers.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/DataModel.md",
+      "announcementUrl": "https://devforum.roblox.com/t/clean-up-server-memory-before-crashes-with-servermemorywarning/4972486",
+      "detect": ["GetTotalMemoryUsageMb%s*%(%s*%)%s*[<>]"]
+    },
+    {
+      "id": "scene-generation",
+      "name": "Scene Generation",
+      "status": "beta",
+      "area": "studio",
+      "releasedAt": "2026-10-30",
+      "summary": "Scene Generation is a Studio beta that turns a text prompt, reference images, or both into an editable scene of models, textures, and terrain for fast environment prototyping. Agents call the generate_scene MCP tool.",
+      "apis": [],
+      "replaces": [
+        "Pulling in and positioning hundreds of primitives by hand to block out a scene",
+        "Building many procedural models one at a time to fill an environment"
+      ],
+      "guidance": "To block out an environment, call generate_scene with a textPrompt, reference images, or both, and optionally a bounding box position and size. Say what to create and what not to, such as \"don't generate any terrain\". Generated procedural models have attributes, so change those instead of rebuilding the models.",
+      "announcementUrl": "https://devforum.roblox.com/t/introducing-scene-generation-prototype-scenes-faster/4966611"
+    },
+    {
+      "id": "team-test-server-inspection",
+      "name": "Team Test Server Inspection",
+      "status": "beta",
+      "area": "studio",
+      "releasedAt": "2026-10-30",
+      "summary": "Server Inspection is a Studio beta that adds a read-only Server view during Team Test. It shows the live server's DataModel, properties, and 3D world, including ServerScriptService and ServerStorage, and supports breakpoints in server scripts.",
+      "apis": [],
+      "replaces": [],
+      "guidance": "Only the user can turn it on and use it. When server state needs checking during Team Test, ask them to enable File > Beta Features > Server Inspection, open a Team Create place, start Team Test from the ribbon, and switch to the Server view. Edits in the Server view never reach the server, so changes still go in Edit.",
+      "announcementUrl": "https://devforum.roblox.com/t/studio-beta-inspect-your-live-server-during-team-test/4966700"
+    },
+    {
+      "id": "orthographic-camera",
+      "name": "Orthographic Camera",
+      "status": "beta",
+      "area": "camera",
+      "releasedAt": "2026-10-30",
+      "summary": "Camera.ProjectionType can be set to Orthographic so objects keep the same size at any distance, for 2D, isometric, and top-down games.",
+      "apis": [
+        "Camera.ProjectionType",
+        "Camera.OrthographicSize",
+        "Camera.OrthographicMode",
+        "Enum.ProjectionType.Orthographic",
+        "Camera.ViewStretch"
+      ],
+      "replaces": [
+        "Shrinking Camera.FieldOfView to ~1 degree and moving the camera far away to fake orthographic projection"
+      ],
+      "guidance": "Studio beta: ask the user to turn it on in File > Beta Features. It works only in Studio, and published games can't use them yet. Set Camera.ProjectionType to Orthographic rather than faking it with a tiny FieldOfView, and zoom with OrthographicSize instead of moving the camera.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/Camera.md",
+      "announcementUrl": "https://devforum.roblox.com/t/studio-beta-build-2d-isometric-and-top-down-games-with-orthographic-camera/4966772",
+      "detect": ["FieldOfView%s*=%s*%d%f[^%d]"]
+    },
+    {
+      "id": "web-play",
+      "name": "Web Play (play Roblox games in a browser)",
+      "status": "beta",
+      "area": "platform",
+      "releasedAt": "2026-10-29",
+      "summary": "Web Play beta lets creators test their own games in Chrome on macOS, Windows, and Android before it opens to all players. Games run on WebGL with extra browser memory and performance overhead, and games should enable Workspace.ImprovedPhysicsReplication.",
+      "apis": [],
+      "replaces": [],
+      "guidance": "Creator beta: only the owner, or a group game's editors and testers, can play it in Chrome from Creator Hub, so ask the user to test there. Turn on Workspace.ImprovedPhysicsReplication, keep memory and performance in check for the browser, and don't count on high-quality shaders, advanced lighting, voice chat, or video playback on the web.",
+      "docsUrl": "https://create.roblox.com/docs/performance-optimization/scene-analysis.md",
+      "announcementUrl": "https://devforum.roblox.com/t/creators-can-test-games-on-the-web/4964592"
+    },
+    {
+      "id": "prompt-to-avatar",
+      "name": "Prompt-to-Avatar game character generation",
+      "status": "beta",
+      "area": "characters",
+      "releasedAt": "2026-10-29",
+      "summary": "Prompt-to-Avatar turns a text prompt into a 2D concept and then an R15 or Advanced R15 game character model, with static or dynamic heads. Agents call the generate_avatar MCP tool, and it's also in Avatar Setup and Assistant.",
+      "apis": [],
+      "replaces": ["Building each game character model from scratch by hand"],
+      "guidance": "Ask the user to turn on Prompt-to-Avatar in File > Beta Features, then call generate_avatar. It's for game characters: bodies with built-in clothing can't be published as avatar bodies, so use the modesty pipeline for those. Write prompts as: style anchor, full body, proportions, character, outfit top to bottom, 2-3 colors plus an accent.",
+      "announcementUrl": "https://devforum.roblox.com/t/studio-beta-generate-game-characters-with-prompt-to-avatar/4964945"
+    },
+    {
+      "id": "input-action-system",
+      "name": "Input Action System + Input Action Manager",
+      "status": "stable",
+      "area": "input",
+      "releasedAt": "2026-10-29",
+      "summary": "Modular cross-platform input framework (InputContext/InputAction/InputBinding); the visual Input Action Manager editor is now fully released under Windows > Input > Actions.",
+      "apis": ["InputContext", "InputAction", "InputBinding"],
+      "replaces": [
+        "ContextActionService:BindAction",
+        "UserInputService.InputBegan for gameplay actions"
+      ],
+      "guidance": "Build new gameplay controls with InputContext/InputAction/InputBinding so bindings adapt across hardware, instead of ContextActionService or raw UserInputService handlers.",
+      "docsUrl": "https://create.roblox.com/docs/input/input-action-system.md",
+      "announcementUrl": "https://devforum.roblox.com/t/full-release-input-action-manager/4965021",
+      "detect": [
+        "ContextActionService",
+        "UserInputService%s*%.%s*InputBegan",
+        "%f[%w_]UIS%s*%.%s*InputBegan"
+      ]
+    },
+    {
+      "id": "uigradient-types",
+      "name": "Radial, conic, and elliptical UIGradients",
+      "status": "stable",
+      "area": "ui",
+      "releasedAt": "2026-10-29",
+      "summary": "UIGradient gains Type (Enum.GradientType.Linear, Radial, Conical, or Elliptical), TileMode, and Scale.",
+      "apis": [
+        "UIGradient.Type",
+        "Enum.GradientType.Radial",
+        "Enum.GradientType.Conical",
+        "Enum.GradientType.Elliptical",
+        "UIGradient.TileMode",
+        "UIGradient.Scale"
+      ],
+      "replaces": [
+        "Radial-gradient images or stacked UIGradients to fake radial/conic fills"
+      ],
+      "guidance": "For radial, conic, or elliptical fills, set UIGradient.Type to Enum.GradientType.Radial, Conical, or Elliptical instead of using images.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/UIGradient.md",
+      "announcementUrl": "https://devforum.roblox.com/t/4846594"
+    },
+    {
+      "id": "shapecast-upgrades",
+      "name": "Shapecast margins, size gradients, and overrides",
+      "status": "stable",
+      "area": "physics",
+      "releasedAt": "2026-10-28",
+      "summary": "Blockcast, Spherecast, and Shapecast run on a faster, more accurate implementation and gain margins, size gradients, and CFrame/size overrides.",
+      "apis": [
+        "RaycastParams.Margin",
+        "RaycastParams.SizeGradient",
+        "WorldRoot:Shapecast",
+        "WorldRoot:Blockcast",
+        "WorldRoot:Spherecast"
+      ],
+      "replaces": [
+        "Moving or resizing a part just to shapecast it from another position or size"
+      ],
+      "guidance": "Use RaycastParams.Margin to round/inflate cast shapes and the cframe/size overrides on WorldRoot:Shapecast instead of temporarily moving parts.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/datatypes/RaycastParams.md",
+      "announcementUrl": "https://devforum.roblox.com/t/upgrading-shapecasts-margins-size-gradients-optimizations-and-more/4963119"
+    },
+    {
+      "id": "teleport-server-id-targeting",
+      "name": "TeleportOptions server ID targeting",
+      "status": "stable",
+      "area": "teleport",
+      "releasedAt": "2026-10-28",
+      "summary": "TeleportOptions gains ReservedServerId and VipServerId (GUID strings) so TeleportAsync can explicitly target reserved and VIP servers.",
+      "apis": [
+        "TeleportOptions.ReservedServerId",
+        "TeleportOptions.VipServerId",
+        "TeleportService:TeleportAsync"
+      ],
+      "replaces": [
+        "Relying on inferred VIP-server destination behavior during teleports"
+      ],
+      "guidance": "To keep players in a private server across teleports, set TeleportOptions.ReservedServerId or VipServerId to the target server's game.PrivateServerId.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/TeleportOptions.md",
+      "announcementUrl": "https://devforum.roblox.com/t/teleports-to-private-vip-servers-are-now-allowed/4963250",
+      "detect": ["TeleportToPrivateServer", "ReserveServer"]
+    },
+    {
+      "id": "plugin-window-screenshot",
+      "name": "Plugin window screenshots in Studio",
+      "status": "stable",
+      "area": "studio",
+      "releasedAt": "2026-10-27",
+      "summary": "Studio can copy a single window, such as Output, a viewport, or a third-party plugin, to the clipboard with Ctrl+Shift+2 or the Screenshot Plugin action, without the rest of Studio.",
+      "apis": [],
+      "replaces": [
+        "Full-screen or OS screenshots cropped by hand to show one Studio window"
+      ],
+      "guidance": "No MCP tool triggers it. Read Output with get_console_output and see the viewport with screen_capture. For any other window, such as a plugin's, ask the user to press Ctrl+Shift+2 (rebindable in Configure Shortcuts) or run Screenshot Plugin from quick actions, select the window, and paste the image into the conversation.",
+      "announcementUrl": "https://devforum.roblox.com/t/plugin-screenshot-support-in-studio/4960927"
+    },
+    {
+      "id": "device-trust-api",
+      "name": "Device Trust API",
+      "status": "stable",
+      "area": "security",
+      "releasedAt": "2026-10-27",
+      "summary": "Check whether a player's device reports OS or Roblox app modifications, to gate features or block bots and modified clients. Only Android is supported so far; unsupported platforms report Unknown.",
+      "apis": [
+        "IntegrityService.EvaluatePlayerDeviceTrust",
+        "Player.DeviceTrustLevel"
+      ],
+      "replaces": [],
+      "guidance": "Read device trust on the server, through the IntegrityService.EvaluatePlayerDeviceTrust callback or Player.DeviceTrustLevel, never on the client, which can spoof it. Use it to gate trading, chat, or competitive matchmaking, and handle Unknown for unsupported platforms.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/IntegrityService.md",
+      "announcementUrl": "https://devforum.roblox.com/t/improve-your-game-security-with-the-device-trust-api/4961129"
+    },
+    {
+      "id": "animated-images",
+      "name": "AnimatedImages (2D flipbook animation)",
+      "status": "beta",
+      "area": "ui",
+      "releasedAt": "2026-10-27",
+      "summary": "Early Access: import Aseprite (.ase) files and play flipbook animation tracks on ImageLabels at runtime via AnimatedImageService and AnimationPlayer.",
+      "apis": ["AnimatedImageService", "AnimatedImage", "AnimationPlayer"],
+      "replaces": [
+        "Manually stepping ImageLabel.ImageRectOffset/ImageRectSize for sprite-sheet animation"
+      ],
+      "guidance": "Early Access and Studio-only, so published places can't use it yet. Only use it if the user is enrolled; otherwise fall back to sprite sheets. Read and set the clip and frame with AnimationPlayer:GetParameter() and SetParameter(), which replaced the Track and CurrentFrame properties.",
+      "announcementUrl": "https://devforum.roblox.com/t/early-access-program-build-2d-games-with-animatedimages/4960734",
+      "detect": ["ImageRectOffset%s*=%s*Vector2%.new%([^)]*[%*%%]"]
+    },
+    {
+      "id": "ugc-validation-visualization",
+      "name": "UGC Validation Visualization",
+      "status": "stable",
+      "area": "assets",
+      "releasedAt": "2026-10-22",
+      "summary": "UGC Validation Visualization, on Studio's Avatar tab, runs Marketplace validation on bodies, heads, layered clothing, and rigid accessories, marks errors and warnings on the asset, and reports Asset Quality before publishing.",
+      "apis": [],
+      "replaces": [
+        "Uploading to the Marketplace to find out which UGC validation checks fail"
+      ],
+      "guidance": "No MCP tool or Engine API runs it. Before the user publishes a UGC body, head, layered clothing item, or rigid accessory, ask them to open Avatar > UGC Validation Visualization, select the asset in Explorer, and click Run Validation. Errors show in red and warnings, such as Asset Quality, in yellow; ask them to share the messages so you can help fix them.",
+      "docsUrl": "https://create.roblox.com/docs/marketplace/validation-system.md",
+      "announcementUrl": "https://devforum.roblox.com/t/improving-validation-checks-for-ugc-avatar-bodies-visualization-tool-and-asset-quality/4950522"
+    },
+    {
+      "id": "custom-terrain-materials",
+      "name": "Custom Terrain Materials (Expanded Terrain)",
+      "status": "stable",
+      "area": "terrain",
+      "releasedAt": "2026-10-22",
+      "summary": "The Expanded Terrain setting on Workspace enables up to 62 custom terrain materials, plus terrain storage and streaming improvements that make place files smaller and load faster. Games that use them can be published and played by everyone.",
+      "apis": [],
+      "replaces": [],
+      "guidance": "To use custom terrain materials, ask the user to set Workspace's Expanded Terrain property to Enabled in the Properties panel, then save, close, and reopen the place. Places edited during Early Access need the same steps, or custom materials might show as grass. Custom materials work in published games, but the performance improvements apply only in Studio for now.",
+      "docsUrl": "https://create.roblox.com/docs/parts/custom-terrain-materials.md",
+      "announcementUrl": "https://devforum.roblox.com/t/full-launch-publish-games-with-custom-terrain-materials-and-performance-improvements/4950620"
+    },
+    {
+      "id": "text-to-speech-asset-creation",
+      "name": "Text-to-speech asset creation",
+      "status": "beta",
+      "area": "audio",
+      "releasedAt": "2026-10-22",
+      "summary": "AssetService:CreateAssetAsync accepts AudioTextToSpeech objects with Enum.AssetType.Audio to bake speech assets in Studio.",
+      "apis": [
+        "AssetService:CreateAssetAsync",
+        "AudioTextToSpeech",
+        "Enum.AssetType.Audio"
+      ],
+      "replaces": ["Running text-to-speech at play time for fixed voice lines"],
+      "guidance": "Studio Beta. For static voice lines, generate assets in Studio with CreateAssetAsync instead of synthesizing at play time to avoid rate limits and latency.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/AssetService.md",
+      "announcementUrl": "https://devforum.roblox.com/t/studio-beta-text-to-speech-asset-creation-support-in-lua/4950480"
+    },
+    {
+      "id": "textchatservice-platform-integrated-chat",
+      "name": "TextChatService platform-integrated chat",
+      "status": "beta",
+      "area": "chat",
+      "releasedAt": "2026-10-21",
+      "summary": "Chat is moving to native systems (TextChatCommands, TextChannelWindow, Quick Words); message content will no longer be accessible in code. Migration required by May 2027.",
+      "apis": [
+        "TextChatService.PlatformIntegratedChat",
+        "TextChatCommand",
+        "TextChannelWindow"
+      ],
+      "replaces": [
+        "Custom chat UIs/features that read message content in code"
+      ],
+      "guidance": "Don't build new features that read chat message text; use TextChatCommand and native chat UI. To test, ask the user to set TextChatService.PlatformIntegratedChat to Enabled in the Properties window, because scripts can't set it.",
+      "docsUrl": "https://create.roblox.com/docs/chat/in-experience-text-chat.md",
+      "announcementUrl": "https://devforum.roblox.com/t/important-textchatservice-updates-how-to-test-and-what%E2%80%99s-next/4948433",
+      "detect": [
+        "%.Chatted%f[^%w_]",
+        "%f[%w_]ChatService",
+        "GetService%(\"Chat\"%)"
+      ]
+    },
+    {
+      "id": "prompt-create-platform-content",
+      "name": "In-game EditableImage publishing",
+      "status": "stable",
+      "area": "assets",
+      "releasedAt": "2026-10-19",
+      "summary": "AssetService:PromptCreateAssetAsync is renamed to PromptCreatePlatformContentAsync, takes an Object, and can publish EditableImages to the player's inventory.",
+      "apis": [
+        "AssetService:PromptCreatePlatformContentAsync",
+        "EditableImage"
+      ],
+      "replaces": ["AssetService:PromptCreateAssetAsync"],
+      "guidance": "Use AssetService:PromptCreatePlatformContentAsync (not PromptCreateAssetAsync) for in-game creation prompts, including EditableImage uploads. Call it from a server script. In Studio it only works in a published place, and the game needs Allow Mesh / Image APIs turned on.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/AssetService.md",
+      "announcementUrl": "https://devforum.roblox.com/t/in-game-editable-image-publishing/4944421",
+      "detect": ["PromptCreateAssetAsync"]
+    },
+    {
+      "id": "in-experience-makeup-creation",
+      "name": "In-Experience Creation for Makeup",
+      "status": "stable",
+      "area": "characters",
+      "releasedAt": "2026-10-15",
+      "summary": "Players can create, buy, and save their own makeup, eyelashes, and eyebrows to their inventory from inside a game. AvatarCreationService:PromptCreateMakeupAsync combines several makeup layers into one creation.",
+      "apis": [
+        "AvatarCreationService:PromptCreateMakeupAsync",
+        "AvatarCreationService:PromptCreateAvatarAssetAsync",
+        "WrapTextureTransfer:PrepareProjectionMeshDataAsync",
+        "WrapTarget:CreateTextureInTargetSpaceAsync",
+        "WrapTarget:CreateTextureInCageSpaceAsync",
+        "AssetService:CreateDecalAsync",
+        "AvatarCreationService.AvatarAssetModerationCompleted",
+        "AvatarCreationService.AvatarOutfitModerationCompleted"
+      ],
+      "replaces": [],
+      "guidance": "Cache head projection data with WrapTextureTransfer:PrepareProjectionMeshDataAsync. Turn painted EditableImages into decals with AssetService:CreateDecalAsync, then parent the WrapTextureTransfer to the decal. Prompt with PromptCreateAvatarAssetAsync for one asset or PromptCreateMakeupAsync for layered makeup, then wait for AvatarAssetModerationCompleted/AvatarOutfitModerationCompleted before using the result.",
+      "docsUrl": "https://create.roblox.com/docs/avatar/in-experience-creation-makeup.md",
+      "announcementUrl": "https://devforum.roblox.com/t/makeup-now-available-for-in-experience-creation/4936543"
+    },
+    {
+      "id": "package-overrides",
+      "name": "Package Overrides",
+      "status": "beta",
+      "area": "assets",
+      "releasedAt": "2026-10-15",
+      "summary": "Package Overrides lets you edit a package copy in your place and still get updates from the source package. Studio records each edit as an override and reapplies it after every update.",
+      "apis": [],
+      "replaces": [
+        "Breaking a package's link to customize one copy",
+        "Leaving an edited package on an old version to keep local changes"
+      ],
+      "guidance": "Studio beta: ask the user to update to Studio 743 or later, turn on Package Overrides in File > Beta Features, and restart Studio. To customize one copy of a package, edit it in place and keep the link: don't break the link or pin an old version. Edits win over source changes to the same property, and Auto-Update can stay on.",
+      "announcementUrl": "https://devforum.roblox.com/t/studio-beta-package-overrides-and-usability-improvements/4936628"
+    },
+    {
+      "id": "early-testers-guided-publishing",
+      "name": "Early testers and guided publishing flow",
+      "status": "stable",
+      "area": "studio",
+      "releasedAt": "2026-10-12",
+      "summary": "Creators can invite up to 10 friends or Group members as early testers from Studio's Collaborate dialog. A guided publishing flow, synced between Studio and Creator Hub, lets games with no age-restricted content reach players 16 and older by answering one question.",
+      "apis": [],
+      "replaces": [
+        "Private and Limited audience settings (now the Playtest publish option)",
+        "Completing the full Maturity and Compliance Questionnaire to publish to 16+ audiences",
+        "Meeting full Kids and Select publishing requirements to gather early feedback"
+      ],
+      "guidance": "Adding early testers is up to the user. When they want friends to preview an unpublished game, tell them to click Collaborate in Studio, open the Early testers tab, and add up to 10 friends (or Group members for Group-owned games), or use Creator Hub > Configure > Permissions. When publishing, they choose Playtest or Public; Playtest replaces Private and Limited.",
+      "docsUrl": "https://create.roblox.com/docs/production/publishing/publish-games-and-places.md",
+      "announcementUrl": "https://devforum.roblox.com/t/a-simpler-path-to-publish-plus-invite-early-testers/4930524"
+    },
+    {
+      "id": "slim-debug-tints",
+      "name": "SLIM debug tints",
+      "status": "beta",
+      "area": "streaming",
+      "releasedAt": "2026-10-09",
+      "summary": "SLIM debug tints color models by streaming state, level of detail, or transcoding status, to check that SLIM is active and models are optimized before publishing.",
+      "apis": [],
+      "replaces": [],
+      "guidance": "Only the user can turn these on. When checking SLIM, ask them to enable File > Beta Features > SLIM Debug Tints and pick a SLIM Tint Mode from the viewport's Visualization Modes menu, or in Roblox Player pick SlimTintMode in the Developer Console's DebugVisualizations menu (needs Edit permission). Transcoding status is Studio only; data model state and LoD also work in Play mode and Player.",
+      "docsUrl": "https://create.roblox.com/docs/workspace/streaming/slim.md",
+      "announcementUrl": "https://devforum.roblox.com/t/slim-debug-tints-in-studio-and-roblox-player/4924019"
+    },
+    {
+      "id": "animation-graph-state-machines-expressions",
+      "name": "Animation Graph State Machines and Expressions",
+      "status": "beta",
+      "area": "characters",
+      "releasedAt": "2026-10-08",
+      "summary": "The Animation Graph Editor adds State Machine nodes, which hold states and the transitions between them, and Luau Expression nodes for parameter math. Animation transitions and blend math can now live in the graph instead of in a script.",
+      "apis": [],
+      "replaces": [
+        "Tracking animation state in a Luau script and passing it to a Select node",
+        "Computing blend weights and other derived graph values in a script before passing them in with AnimationTrack:SetParameter"
+      ],
+      "guidance": "Studio beta: ask the user to turn on Animation Graphs State Machines in File > Beta Features. It works only in Studio, so published experiences can't use it yet. Put state transitions in a State Machine node and parameter math in Expression nodes, and keep scripts for setting gameplay values with AnimationTrack:SetParameter.",
+      "docsUrl": "https://create.roblox.com/docs/animation/graph-editor-state-machine.md",
+      "announcementUrl": "https://devforum.roblox.com/t/studio-beta-introducing-state-machines-and-luau-expressions-for-animation-graphs/4921939"
+    },
+    {
+      "id": "tts-auto-localize",
+      "name": "Text-to-speech automatic translation",
+      "status": "stable",
+      "area": "audio",
+      "releasedAt": "2026-10-08",
+      "summary": "AudioTextToSpeech.AutoLocalize (default true) speaks generated speech in each player's language, for 11 languages.",
+      "apis": ["AudioTextToSpeech", "AudioTextToSpeech.AutoLocalize"],
+      "replaces": ["Translating TTS text manually per locale"],
+      "guidance": "Use AudioTextToSpeech with AutoLocalize enabled instead of translating TTS strings yourself.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/AudioTextToSpeech.md",
+      "announcementUrl": "https://devforum.roblox.com/t/4922029"
+    },
+    {
+      "id": "if-local",
+      "name": "if local and while local bindings",
+      "status": "beta",
+      "area": "luau",
+      "releasedAt": "2026-10-06",
+      "summary": "Luau beta syntax that declares a variable in an if, elseif, or while condition: `if local humanoid = character:FindFirstChildWhichIsA(\"Humanoid\") then`, or `while local job = table.remove(jobs) do`.",
+      "apis": ["if local", "if const", "while local", "while const"],
+      "replaces": [
+        "Declaring a local and then checking it on the next line",
+        "while true loops that break when a fetched value is nil"
+      ],
+      "guidance": "Studio beta: ask the user to turn on If Local/Const Bindings in File > Beta Features. Where it's on, prefer `if local x = expr then` for find-and-check code and `while local x = expr do` for loops that run until a value is nil. Each binding takes one name and one value.",
+      "announcementUrl": "https://devforum.roblox.com/t/4918297"
+    },
+    {
+      "id": "collision-summaries",
+      "name": "Collision summaries API",
+      "status": "stable",
+      "area": "physics",
+      "releasedAt": "2026-10-06",
+      "summary": "BasePart:BindToCollisionSummaries subscribes to precise collision data: contact points, normals, and relative velocities.",
+      "apis": ["BasePart:BindToCollisionSummaries"],
+      "replaces": [
+        "Touched plus AssemblyLinearVelocity guesses for impact strength"
+      ],
+      "guidance": "Use BindToCollisionSummaries when you need impact strength, contact points or normals, not Touched.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/BasePart.md",
+      "announcementUrl": "https://devforum.roblox.com/t/4918568",
+      "detect": [
+        "%.Touched%s*:%s*Connect.-%.AssemblyLinearVelocity",
+        "%.AssemblyLinearVelocity.-%.Touched%s*:%s*Connect",
+        "%.Touched%s*:%s*Connect.-%.Velocity%f[^%w_]",
+        "%.Velocity%f[^%w_].-%.Touched%s*:%s*Connect"
+      ]
+    },
+    {
+      "id": "frustum-streaming",
+      "name": "Frustum streaming",
+      "status": "stable",
+      "area": "streaming",
+      "releasedAt": "2026-09-29",
+      "summary": "Player.FrustumStreaming streams in distant instances inside the player's camera view, such as scoped targets or the road ahead.",
+      "apis": ["Player.FrustumStreaming"],
+      "replaces": [
+        "Player:RequestStreamAroundAsync to fake view-based streaming"
+      ],
+      "guidance": "Enable Player.FrustumStreaming for view-dependent streaming instead of repeatedly calling RequestStreamAroundAsync at a look point.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/Player.md",
+      "announcementUrl": "https://devforum.roblox.com/t/4904553"
+    },
+    {
+      "id": "assistant-texture-segment-image-preview",
+      "name": "Texture generation Quality mode and mesh segmentation",
+      "status": "stable",
+      "area": "studio",
+      "releasedAt": "2026-09-23",
+      "summary": "Texture generation retextures a mesh from a prompt in Fast mode (1K color) or a beta Quality mode (4K PBR color, roughness, and metalness maps), and imported meshes can be split into named parts. Agents call the generate_texture and segment_mesh MCP tools.",
+      "apis": [],
+      "replaces": [
+        "Segmenting only generated meshes (imported meshes can now be segmented too)",
+        "Color-only 1K generated textures when roughness and metalness maps are needed"
+      ],
+      "guidance": "Call generate_texture with a textPrompt and the mesh's instance_path. Use model Fast (about 30 seconds) while iterating on a prompt, then Quality (beta, about 2 minutes) for 4K color, roughness, and metalness maps. Call segment_mesh with up to five part names to split an imported mesh, and run it again on a part for more.",
+      "docsUrl": "https://create.roblox.com/docs/studio/texture-generator.md",
+      "announcementUrl": "https://devforum.roblox.com/t/introducing-new-texture-generation-tools-segment-any-mesh-and-image-previews/4890084"
+    },
+    {
+      "id": "player-support",
+      "name": "Player Support in-game reporting",
+      "status": "beta",
+      "area": "social",
+      "releasedAt": "2026-09-17",
+      "summary": "SocialService:PromptFeedbackSubmissionAsync with FeedbackType PlayerSupport opens a Roblox-designed modal so players can report issues mid-session. Reports go to your game's Player Support queue in Creator Hub.",
+      "apis": [
+        "SocialService:PromptFeedbackSubmissionAsync",
+        "Enum.FeedbackType.PlayerSupport"
+      ],
+      "replaces": [
+        "Custom in-game bug report forms",
+        "Collecting bug reports through community posts, DMs, or off-platform servers"
+      ],
+      "guidance": "Early access: the user has to sign up through the Roblox survey, and a Creator Hub and Studio notification says when they have it. Instead of building a custom report UI, call SocialService:PromptFeedbackSubmissionAsync({ FeedbackType = Enum.FeedbackType.PlayerSupport }) inside task.spawn, since it yields. Reports arrive in Creator Hub under Audience > Player Support.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/SocialService.md",
+      "announcementUrl": "https://devforum.roblox.com/t/early-access-player-support/4878091"
+    },
+    {
+      "id": "collision-fidelity-tunable",
+      "name": "Tunable collision fidelity",
+      "status": "stable",
+      "area": "physics",
+      "releasedAt": "2026-09-17",
+      "summary": "MeshPart.CollisionFidelity gains Tunable, with MeshPart.CollisionPrecision to trade performance for precision per mesh.",
+      "apis": ["Enum.CollisionFidelity.Tunable", "MeshPart.CollisionPrecision"],
+      "replaces": [
+        "Choosing only between Box/Hull/Default/PreciseConvexDecomposition"
+      ],
+      "guidance": "Set CollisionFidelity to Tunable and adjust CollisionPrecision when Default is too coarse but PreciseConvexDecomposition is too expensive.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/MeshPart.md",
+      "announcementUrl": "https://devforum.roblox.com/t/4878198"
+    },
+    {
+      "id": "platform-persistent-leaderboards",
+      "name": "Roblox-native Friends and Global Leaderboards",
+      "status": "stable",
+      "area": "social",
+      "releasedAt": "2026-09-16",
+      "summary": "Roblox can show persistent Friends and Global leaderboard tabs in its in-game leaderboard UI. It reads them from an OrderedDataStore you register in Creator Hub, so you don't need your own backend or UI for these views.",
+      "apis": [],
+      "replaces": [
+        "Custom-built friends and global leaderboard backends for the in-game leaderboard UI"
+      ],
+      "guidance": "To get persistent Friends and Global tabs, keep scores in an OrderedDataStore keyed by user ID with numeric values. Register it in Creator Hub and turn on 'Active leaderboard'. Your scripts still write scores for every player, not just the top 100, and should give each player a default score when they join. Custom leaderboards built with OrderedDataStore:GetSortedAsync can still be used alongside it.",
+      "docsUrl": "https://create.roblox.com/docs/players/leaderboards.md",
+      "announcementUrl": "https://devforum.roblox.com/t/full-release-add-persistent-friends-and-global-leaderboards-easily/4832224"
+    },
+    {
+      "id": "editablemesh-batching",
+      "name": "EditableMesh batching APIs",
+      "status": "stable",
+      "area": "mesh",
+      "releasedAt": "2026-09-15",
+      "summary": "EditableMesh gains Batch* methods (BatchSetValues, BatchAdd, BatchGetVertexAttributes, ...) and parallel queries, making bulk mesh edits much faster.",
+      "apis": [
+        "EditableMesh:BatchSetValues",
+        "EditableMesh:BatchAdd",
+        "EditableMesh:BatchGetVertexAttributes",
+        "EditableMesh:BatchSetFaceAttributes",
+        "EditableMesh:BatchRemove"
+      ],
+      "replaces": [
+        "Per-vertex loops of SetPosition/SetColor/AddVertex for bulk edits"
+      ],
+      "guidance": "For bulk edits to an EditableMesh, use the Batch* methods instead of calling per-element setters in a loop.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/EditableMesh.md",
+      "announcementUrl": "https://devforum.roblox.com/t/4779401",
+      "detect": [
+        "EditableMesh.-:SetPosition%s*%(",
+        "EditableMesh.-:SetColor%s*%(",
+        "EditableMesh.-:SetUV%s*%(",
+        "EditableMesh.-:SetNormal%s*%("
+      ]
+    },
+    {
+      "id": "ccl-custom-abilities",
+      "name": "Character Controller Library Custom Abilities",
+      "status": "beta",
+      "area": "characters",
+      "releasedAt": "2026-09-10",
+      "summary": "The Character Controller Library (AvatarAbilities) adds Sprint and Crouch as default abilities. Its Custom Abilities API lets you define abilities as modules and add them at runtime with getAbilityManager(character) and AbilityManager:AddAbility, or build on the default ones with extendAbility.",
+      "apis": [],
+      "replaces": [
+        "AvatarAbilities.addAbilityForCharacter",
+        "AvatarAbilities.removeAbilityForCharacter",
+        "Direct ability helper methods on CharacterController",
+        "ExtendAbility, PolledSensor, ReactiveSensor, ThrottledSensor (renamed to camelCase)",
+        "Hand-written sprint and crouch scripts"
+      ],
+      "guidance": "Studio Beta: build abilities as modules with OnSetup/OnStart/OnStop/OnUpdate/OnTeardown and add them via AvatarAbilities.getAbilityManager(character) or waitForAbilityManager(character):AddAbility(...). Use camelCase static functions (extendAbility, polledSensor), put button behavior in Input.Mode rather than RunsWhile, and use Server Authority with Workspace.SignalBehavior set to Deferred.",
+      "docsUrl": "https://create.roblox.com/docs/characters/character-controller-library/custom-abilities.md",
+      "announcementUrl": "https://devforum.roblox.com/t/studio-beta-expanding-the-character-controller-library-new-default-abilities-custom-abilities-api/4863739",
+      "detect": [
+        "%f[%w_]addAbilityForCharacter%f[^%w_]",
+        "%f[%w_]removeAbilityForCharacter%f[^%w_]",
+        "%.ExtendAbility%s*%(",
+        "%.PolledSensor%s*%(",
+        "%.ReactiveSensor%s*%(",
+        "%.ThrottledSensor%s*%("
+      ]
+    },
+    {
+      "id": "auto-reimport",
+      "name": "Auto-Reimport",
+      "status": "beta",
+      "area": "assets",
+      "releasedAt": "2026-09-08",
+      "summary": "Studio's Auto-Reimport watches the source file behind a Model, SurfaceAppearance, or Decal and reimports the instance whenever that file changes on disk, so you don't have to reimport by hand.",
+      "apis": [],
+      "replaces": [
+        "Manually running Reimport in Studio after every change to an external source file"
+      ],
+      "guidance": "Studio beta that the user sets up: they turn on Auto-Reimport in File > Beta Features, then right-click an instance with saved Reimport settings in the Explorer and select Reimport > Auto-Reimport. After that, changes to its source file on disk reimport on their own. The setting lasts only for the session, so it has to be turned on again after Studio restarts.",
+      "announcementUrl": "https://devforum.roblox.com/t/studio-beta-auto-reimport-automatically-reimport-external-files-on-changes/4859863"
+    },
+    {
+      "id": "enhanced-freecam",
+      "name": "Enhanced Freecam (roll, FOV, player lock, effects)",
+      "status": "stable",
+      "area": "camera",
+      "releasedAt": "2026-09-03",
+      "summary": "Freecam, now on the Input Action System through Workspace.PlayerScriptsUseInputActionSystem, adds camera roll, speed and stiffness tuning, player lock, UI hiding, and custom post-processing for cinematic shots in Studio and live experiences.",
+      "apis": ["Workspace.PlayerScriptsUseInputActionSystem"],
+      "replaces": [
+        "Hand-written free-fly camera scripts for capturing trailers, cinematics, and screenshots"
+      ],
+      "guidance": "To get the enhanced Freecam controls, enable Workspace.PlayerScriptsUseInputActionSystem. Toggle Freecam with LeftShift + P in Studio Play/Test and in live clients. Open the config menu with the Up arrow or D-pad Up. In live experiences, only the place owner, users with edit permissions, or users the experience's code grants camera permissions can use it.",
+      "docsUrl": "https://create.roblox.com/docs/workspace/camera/free-camera.md",
+      "announcementUrl": "https://devforum.roblox.com/t/full-release-enhanced-freecam-capabilities/4848482"
+    },
+    {
+      "id": "worldroot-collision-groups",
+      "name": "Collision groups on WorldRoot (PhysicsService deprecated)",
+      "status": "stable",
+      "area": "physics",
+      "releasedAt": "2026-09-03",
+      "summary": "Collision group management moved from PhysicsService to WorldRoot (Workspace and WorldModels). The PhysicsService collision group methods are deprecated.",
+      "apis": [
+        "WorldRoot:RegisterCollisionGroup",
+        "WorldRoot:CollisionGroupSetCollidable",
+        "WorldRoot:CollisionGroupsAreCollidable",
+        "WorldModel.UseWorkspaceCollisionGroups"
+      ],
+      "replaces": [
+        "PhysicsService:RegisterCollisionGroup",
+        "PhysicsService:CollisionGroupSetCollidable",
+        "PhysicsService:CollisionGroupsAreCollidable"
+      ],
+      "guidance": "Call RegisterCollisionGroup / CollisionGroupSetCollidable on workspace (a WorldRoot), not PhysicsService.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/WorldRoot.md",
+      "announcementUrl": "https://devforum.roblox.com/t/4848541",
+      "detect": [
+        "PhysicsService%s*[:.]%s*RegisterCollisionGroup",
+        "PhysicsService%s*[:.]%s*CollisionGroupSetCollidable",
+        "PhysicsService%s*[:.]%s*CollisionGroupsAreCollidable"
+      ]
+    },
+    {
+      "id": "auto-generated-publish-notes",
+      "name": "Publish with Notes (auto-generated publish notes)",
+      "status": "stable",
+      "area": "studio",
+      "releasedAt": "2026-09-01",
+      "summary": "Studio's Version History can draft publish notes by summarizing the version notes saved since the last publish, so teams get a record of what went live without writing it up by hand.",
+      "apis": [],
+      "replaces": [
+        "Writing a summary of each publish by hand from the team's version notes"
+      ],
+      "guidance": "The user drafts and approves these in Studio. When they publish, suggest File > Publish with Notes, or Window > Version History > Edit Notes for a version already published. The draft only uses version notes saved since the last publish, so suggest short version notes along the way. Nothing is saved until the user approves the draft.",
+      "announcementUrl": "https://devforum.roblox.com/t/auto-generate-publish-notes-for-easier-version-control/4844461"
+    },
+    {
+      "id": "revamped-asset-manager",
+      "name": "Asset Manager folders, search, and bulk actions",
+      "status": "stable",
+      "area": "assets",
+      "releasedAt": "2026-09-01",
+      "summary": "The revamped Studio Asset Manager is fully released. It sorts assets into folders, searches user, group, and Project inventories with a query language, selects and shares many assets at once, and imports new ones with the Universal Importer.",
+      "apis": [],
+      "replaces": [
+        "Legacy Asset Manager workflows that organize assets only by type"
+      ],
+      "guidance": "To find or add assets yourself, use the search_asset MCP tool, which also searches the user or group inventory, and insert_asset. Organizing assets is up to the user: point them to Home > Assets or Window > Asset Manager for folders, the search bar (asset IDs and date ranges work in queries), filters, and right-click Share, Find in Explorer, or Copy ID.",
+      "docsUrl": "https://create.roblox.com/docs/projects/assets/manager.md",
+      "announcementUrl": "https://devforum.roblox.com/t/full-release-asset-manager-with-folders-search-and-more/4844672"
+    },
+    {
+      "id": "studio-avatar-look-assembly",
+      "name": "Assemble and publish avatar looks in Studio",
+      "status": "stable",
+      "area": "studio",
+      "releasedAt": "2026-08-27",
+      "summary": "Studio's Avatar > Setup tool assembles avatar looks and publishes them for management in the Creator Dashboard. It replaces the Universal App avatar publishing flow, which is deprecated on October 21, 2026.",
+      "apis": [],
+      "replaces": ["Universal App avatar publishing flow"],
+      "guidance": "Assembling and publishing a look is up to the user. Tell them to open Avatar > Setup in Studio, add items with Add AssetID, and save with Create Avatar Look. The look needs at least one 3D item uploaded by the user, or by the group it publishes for, or it can't be published. Point them here instead of the Universal App flow, deprecated on October 21, 2026.",
+      "announcementUrl": "https://devforum.roblox.com/t/assemble-avatar-looks-in-studio/4833850"
+    },
+    {
+      "id": "studio-mcp-studio-id-routing",
+      "name": "Studio MCP studio_id routing",
+      "status": "stable",
+      "area": "studio",
+      "releasedAt": "2026-08-19",
+      "summary": "Every Studio MCP Server tool call now takes a studio_id that names the target Studio, which makes multi-Studio, multi-agent workflows reliable. set_active_studio is removed. list_roblox_studios now also returns each Studio's Place ID.",
+      "apis": [],
+      "replaces": [
+        "set_active_studio MCP tool",
+        "Relying on session state to pick which Studio an MCP tool call targets"
+      ],
+      "guidance": "Call list_roblox_studios first, then pass that Studio's studio_id on every Studio MCP tool call. Never call set_active_studio, which has been removed. If two open Studios share a name, use the Place ID from list_roblox_studios to pick the right one. Local places have no Place ID and are listed by name only.",
+      "docsUrl": "https://create.roblox.com/docs/studio/mcp.md",
+      "announcementUrl": "https://devforum.roblox.com/t/studio-mcp-multi-agent-improvements-and-connected-ai-clients/4820583"
+    },
+    {
+      "id": "isverified-levels",
+      "name": "IsVerified verification levels",
+      "status": "stable",
+      "area": "security",
+      "releasedAt": "2026-08-19",
+      "summary": "Player:IsVerified now takes an optional Enum.VerifiedLevel (Low or High) so you can require a stronger verification threshold.",
+      "apis": [
+        "Player:IsVerified",
+        "Enum.VerifiedLevel.Low",
+        "Enum.VerifiedLevel.High"
+      ],
+      "replaces": [],
+      "guidance": "Player:IsVerified() defaults to Enum.VerifiedLevel.Low, which suits features like trading. Pass Enum.VerifiedLevel.High for high-stakes features such as ranked matchmaking.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/Player.md",
+      "announcementUrl": "https://devforum.roblox.com/t/4820514",
+      "detect": ["IsVerified%s*%(%s*%)"]
+    },
+    {
+      "id": "collections",
+      "name": "Collections (CollectionService:CreateCollection)",
+      "status": "stable",
+      "area": "scripting",
+      "releasedAt": "2026-08-13",
+      "summary": "CollectionService:CreateCollection(query, root) returns a Collection, a group of instances defined by a live query. Instances join and leave as they match, and callbacks like OnAdded, OnRemoved and On{Event} connect and disconnect for you.",
+      "apis": [
+        "CollectionService:CreateCollection",
+        "CollectionService:GetCollections",
+        "Collection",
+        "Collection:ForEach",
+        "Collection:Destroy",
+        "Collection:GetCount",
+        "Collection.Root",
+        "Collection.Query",
+        "Collection.Enabled"
+      ],
+      "replaces": [
+        "CollectionService:GetInstanceAddedSignal and CollectionService:GetInstanceRemovedSignal with manual per-instance connection tracking",
+        "CollectionService:GetTagged loops that connect events to each tagged instance",
+        "Watching property or attribute changes by hand to decide when an instance enters or leaves a group"
+      ],
+      "guidance": "Use CollectionService:CreateCollection(\"Selector\") and assign callbacks such as function c.OnAdded(inst), c.OnRemoved, c.OnTouched or c.OnHeartbeat(inst, dt), instead of wiring tag signals and tracking connections yourself. Queries use QueryDescendants selector syntax, and [$Attr = value] matches attributes. ForEach and RunService callbacks can't yield.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/datatypes/Collection.md",
+      "announcementUrl": "https://devforum.roblox.com/t/full-release-collections/4809228",
+      "detect": [":GetInstanceAddedSignal%s*%("]
+    },
+    {
+      "id": "input-action-label",
+      "name": "InputActionLabel",
+      "status": "beta",
+      "area": "input",
+      "releasedAt": "2026-08-06",
+      "summary": "InputActionLabel is a UI instance that automatically displays an InputAction's current binding (key or gamepad button) using the new InputAction.PreferredBinding property.",
+      "apis": ["InputActionLabel", "InputAction.PreferredBinding"],
+      "replaces": [
+        "Hand-written UserInputService.LastInputTypeChanged logic to swap keyboard/gamepad hint images"
+      ],
+      "guidance": "Studio Beta. To show on-screen hotkey hints for an InputAction, use InputActionLabel instead of manually swapping images per input type.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/InputActionLabel.md",
+      "announcementUrl": "https://devforum.roblox.com/t/4779420"
+    },
+    {
+      "id": "legacy-body-movers",
+      "name": "Legacy BodyMovers",
+      "status": "deprecated",
+      "area": "physics",
+      "summary": "BodyVelocity, BodyPosition, BodyGyro, BodyForce, BodyAngularVelocity, and BodyThrust are deprecated in favor of mover constraints.",
+      "apis": [
+        "BodyVelocity",
+        "BodyPosition",
+        "BodyGyro",
+        "BodyForce",
+        "BodyAngularVelocity",
+        "BodyThrust"
+      ],
+      "replaces": [],
+      "guidance": "Do not use BodyMovers. Use LinearVelocity, AlignPosition, AlignOrientation, VectorForce, or AngularVelocity instead.",
+      "docsUrl": "https://create.roblox.com/docs/physics/mover-constraints.md",
+      "detect": [
+        "%f[%w_]BodyVelocity%f[^%w_]",
+        "%f[%w_]BodyPosition%f[^%w_]",
+        "%f[%w_]BodyGyro%f[^%w_]",
+        "%f[%w_]BodyForce%f[^%w_]",
+        "%f[%w_]BodyAngularVelocity%f[^%w_]",
+        "%f[%w_]BodyThrust%f[^%w_]"
+      ]
+    }
+  ]
+}

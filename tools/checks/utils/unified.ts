@@ -30,7 +30,9 @@ import {
   RETEXT_EQUALITY_ALLOW_LIST,
   RETEXT_PASSIVE_ALLOW_LIST,
   RETEXT_PROFANITIES_IGNORE_LIST,
+  VIDEO_TRANSCRIPT_ALLOWED_PROFANE_WORDS,
   canIgnoreWordInSpellCheck,
+  isVideoTranscriptPath,
 } from './words.js';
 import { areArraysEqual } from './array.js';
 import remarkStringify from 'remark-stringify/lib/index.js';
@@ -450,10 +452,12 @@ export const areEqualComponentDetails = (
  * plugins listed first.
  *
  * @param text - The input text to be analyzed.
+ * @param filePath - The file the text came from, for rules that depend on
+ * where a page lives, such as words allowed only in video transcripts.
  * @returns A `unified` processor file object containing the results of the
  * analysis, including detected issues, messages, and positions.
  */
-export const getReTextAnalysis = async (text: string) => {
+export const getReTextAnalysis = async (text: string, filePath?: string) => {
   const file = await unified()
     .use(remarkParse)
     .use(remarkFrontMatter)
@@ -491,5 +495,23 @@ export const getReTextAnalysis = async (text: string) => {
     .filter(filterRetextSpell)
     .filter(filterRepeatedWords)
     .filter(filterRetextContractions);
+  if (filePath && isVideoTranscriptPath(filePath)) {
+    const allowed = new Set(
+      VIDEO_TRANSCRIPT_ALLOWED_PROFANE_WORDS.map((word) => word.toLowerCase())
+    );
+    const speechSources = new Set([
+      RETEXT_INAPPROPRIATE,
+      RETEXT_PROFANITIES,
+      'retext-equality',
+    ]);
+    file.messages = file.messages.filter((message) => {
+      if (!message.source || !speechSources.has(message.source)) return true;
+      // Equality names a category (`wacko`) rather than the spoken word, so
+      // match the word quoted in the message.
+      const quoted = String(message.reason).match(/`([^`]+)`/);
+      const word = (quoted?.[1] ?? String(message.ruleId)).toLowerCase();
+      return !allowed.has(word);
+    });
+  }
   return file;
 };

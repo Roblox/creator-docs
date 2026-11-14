@@ -58,6 +58,8 @@ navigation:
             path: /production/promotion/rewarded-video-playbooks/survival
           - title: Shooter
             path: /production/promotion/rewarded-video-playbooks/shooter
+      - title: Rewarded video playbook
+        path: /production/promotion/rewarded-video-playbook
       - title: Rewarded video optimization
         path: /production/promotion/rewarded-video-optimization
   - title: Guidelines and policies

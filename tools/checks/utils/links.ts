@@ -19,6 +19,7 @@ import { addToSummaryOfRequirements } from './console.js';
 import { createNewPullRequestComment, requiredCheckMessage } from './github.js';
 import { IConfig } from './config.js';
 import { getFileImports } from './imports.js';
+import { isVideoTranscriptPath } from './words.js';
 // Double escape the regular expressions to combine them
 
 /** Page Links */
@@ -190,9 +191,84 @@ const removeUrlHash = (url: string): string => {
   }
 };
 
-export const isAllowedHttpLink = (link: string) => {
+/**
+ * A link to a single YouTube video, optionally at a timestamp, or its
+ * privacy-enhanced embed. Captures the video id.
+ */
+const YOUTUBE_VIDEO_REGEX =
+  /^https:\/\/(?:www\.youtube\.com\/watch\?v=([\w-]{11})(?:&t=\d+s)?|www\.youtube-nocookie\.com\/embed\/([\w-]{11}))$/;
+
+export const getYouTubeVideoId = (url: string): string | undefined => {
+  const match = url.replace(/&amp;/g, '&').match(YOUTUBE_VIDEO_REGEX);
+  return match?.[1] ?? match?.[2];
+};
+
+export const isYouTubeVideoLink = (url: string): boolean =>
+  getYouTubeVideoId(url) !== undefined;
+
+const VIDEO_STATE_FILE = path.join(
+  repositoryRoot,
+  'tools/video-transcripts/videos.json'
+);
+
+let ingestedVideoIds: Set<string> | undefined;
+
+/** Ids of the videos the transcript tool has made pages for. */
+const getIngestedVideoIds = (): Set<string> => {
+  if (!ingestedVideoIds) {
+    try {
+      const state = JSON.parse(fs.readFileSync(VIDEO_STATE_FILE, 'utf8'));
+      ingestedVideoIds = new Set(Object.keys(state.videos ?? {}));
+    } catch {
+      ingestedVideoIds = new Set();
+    }
+  }
+  return ingestedVideoIds;
+};
+
+/**
+ * Video transcript pages link to YouTube from every section. Those links are
+ * allowed without an allowlist entry only on a page under `videos/`, and only
+ * for a video the transcript tool ingested. Every other page needs an entry in
+ * the allowed links list.
+ */
+export const isIngestedVideoLink = (
+  url: string,
+  filePath: string,
+  knownVideoIds: Set<string> = getIngestedVideoIds()
+): boolean => {
+  const id = getYouTubeVideoId(url);
+  return (
+    id !== undefined && isVideoTranscriptPath(filePath) && knownVideoIds.has(id)
+  );
+};
+
+/** GitHub links the transcript tool copies out of a video description. */
+export const isTranscriptGitHubLink = (
+  url: string,
+  filePath: string
+): boolean => {
+  if (!isVideoTranscriptPath(filePath)) return false;
+  try {
+    const host = new URL(url).hostname.toLowerCase();
+    return (
+      host === 'github.com' ||
+      host === 'www.github.com' ||
+      host === 'gist.github.com'
+    );
+  } catch {
+    return false;
+  }
+};
+
+export const isAllowedHttpLink = (link: string, filePath?: string) => {
   const sanitizedUrl = removeUrlHash(link);
-  if (isAllowedWebsite(sanitizedUrl)) {
+  if (
+    isAllowedWebsite(sanitizedUrl) ||
+    (filePath !== undefined &&
+      (isIngestedVideoLink(sanitizedUrl, filePath) ||
+        isTranscriptGitHubLink(sanitizedUrl, filePath)))
+  ) {
     return true;
   } else {
     let isAllowedHttpLink = allowedHttpLinksSet.has(sanitizedUrl);
@@ -251,7 +327,7 @@ const processHttpLink = ({
     allNonRobloxHttpLinks.push(urlNoHash);
   }
   // Don't need do anything else if the link is allowed
-  if (isAllowedHttpLink(urlNoHash)) {
+  if (isAllowedHttpLink(urlNoHash, filePath)) {
     return;
   }
 
@@ -268,8 +344,9 @@ const processHttpLink = ({
 
   // Post messages
   if (config.postPullRequestComments) {
-    const body = `The page ${urlNoHash} isn't in the list of allowed HTTP links. Please explain why you are using it and add it to [${allowedListFilePath}](https://github.com/Roblox/${config.repository
-      }/blob/${config.baseBranch.replace('origin/', '')}/${allowedListFilePath}).
+    const body = `The page ${urlNoHash} isn't in the list of allowed HTTP links. Please explain why you are using it and add it to [${allowedListFilePath}](https://github.com/Roblox/${
+      config.repository
+    }/blob/${config.baseBranch.replace('origin/', '')}/${allowedListFilePath}).
     
 ${requiredCheckMessage}`;
     createNewPullRequestComment({
@@ -415,9 +492,10 @@ export const checkContentLinks = ({
  * Captures the sub-path after "assets/" so all formats normalize
  * to the same filesystem location.
  */
-const ASSET_REF_REGEX = /(?:\.\.\/)*(?:\.\/)?(?:\/)?assets\/([\w/.\-@()+ ]+\.\w+)/g;
+const ASSET_REF_REGEX =
+  /(?:\.\.\/)*(?:\.\/)?(?:\/)?assets\/([\w/.\-@()+ ]+\.\w+)/g;
 
-export const checkUnusedAssets = ({ config }: { config: IConfig; }) => {
+export const checkUnusedAssets = ({ config }: { config: IConfig }) => {
   console.log(`::group::${Emoji.Mag} Checking for unused assets...`);
   const allFiles = [
     ...getAllContentFileNamesWithExtension({

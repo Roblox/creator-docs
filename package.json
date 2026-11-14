@@ -23,7 +23,9 @@
     "forum-doc-eval:split-index": "npx tsx tools/forum-doc-eval/splitIndex.ts",
     "forum-doc-eval:webprobe": "npx tsx tools/forum-doc-eval/webProbe.ts",
     "checks": "npx tsx tools/checks/main.ts",
+    "latest-features": "npx tsx tools/latest-features/main.ts",
     "redirects": "npx tsx tools/redirects/main.ts",
+    "video-transcripts": "npx tsx tools/video-transcripts/main.ts",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "format:en-us": "prettier --write content/en-us",
@@ -125,6 +127,7 @@
     "vfile": "^6.0.1",
     "vfile-message": "^4.0.2",
     "vfile-reporter": "^8.0.0",
+    "wasmoon": "1.16.0",
     "yaml": "^2.3.1",
     "yargs": "^17.7.2"
   },

@@ -72,6 +72,11 @@ The server provides the following tools:
     <td>Waits for a procedural model generation job to finish and returns the final status.</td>
   </tr>
   <tr>
+    <td>`generate_avatar`</td>
+    <td>Generate a new rigged, animatable R15 avatar (body, head, and clothing) from a text prompt.</td>
+  </tr>
+  
+  <tr>
     <td>`search_asset`</td>
     <td>Searches for assets across the Creator Store (public marketplace) and Creator Inventory (user, group, or universe). Supports filtering by asset type, price, tags, and scope.</td>
   </tr>

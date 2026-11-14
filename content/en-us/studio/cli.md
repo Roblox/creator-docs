@@ -30,6 +30,31 @@ When launched from the command line, Studio pipes verbose logs to `stdout` that 
 Any arguments not documented here are for internal use only and are subject to change without notice.
 </Alert>
 
+## Launch in the background
+
+Use `--background` to prevent Studio from stealing focus when it launches. This argument is only available on Mac.
+
+<table>
+<thead>
+	<tr>
+		<th>Argument</th>
+		<th>Required</th>
+		<th>Description</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>`--background`</td>
+		<td>No</td>
+		<td>Launches Studio without bringing its window to the foreground. Mac only.</td>
+	</tr>
+</tbody>
+</table>
+
+```shell
+RobloxStudio --background
+```
+
 ## Open a place
 
 To open a published place, specify the place ID, universe ID, and a task.

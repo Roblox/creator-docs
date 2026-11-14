@@ -2,7 +2,7 @@ columns:
   - - title: Learn
       path: /
       items:
-        - title: Learning hub
+        - title: Learn
           navigation: /learn.yaml
           path: /learn
         - title: Experiences

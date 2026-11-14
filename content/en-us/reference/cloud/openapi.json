@@ -587,13 +587,13 @@
         }
       },
       "post": {
-        "description": "Creates an ad campaign in the billing account. Before creating, call GetCampaignOptions with universeId to confirm the experience is eligible and to choose values it accepts. The creatives you reference must already exist as Open Cloud image assets that you have permission to use; they are validated and saved to your account's reusable creatives when the campaign is created. On success the campaign is returned with deliveryStatus IN_REVIEW, meaning it is queued for ad-policy review and not yet serving — poll the campaign (or campaigns:batchGetStatus) until this changes. budget.amountMicros is the budget in micro-USD as a decimal string (e.g. \"5000000\" = $5.00). It must be at least the minimum campaign budget; an amount below the minimum returns 400 with the required minimum stated in the error message. schedule.durationInDays must not exceed 3650 (~10 years). The x-idempotency-key header is required and must be a UUID: retrying the same key within 24 hours returns the original campaign (200) without creating another one, even if the body differs, so use a new key for a different campaign. A retry while the first request is still in progress returns 429. A body field that the request does not define returns 400 with reason UNKNOWN_FIELD and the field path in field.",
+        "description": "Creates an ad campaign in the billing account. Before creating, call GetCampaignOptions with universeId to confirm the experience is eligible and to choose values it accepts. The creatives you reference must already exist as Open Cloud image assets that you have permission to use; they are validated and saved to your account's reusable creatives when the campaign is created. On success the campaign is returned with deliveryStatus IN_REVIEW, meaning it is queued for ad-policy review and not yet serving, or NOT_SERVING with reason SCHEDULED when startTime is in the future — poll the campaign (or campaigns:batchGetStatus) until this changes. budget.amountMicros is the budget in micro-USD as a decimal string (e.g. \"5000000\" = $5.00). It must be at least the minimum campaign budget; an amount below the minimum returns 400 with the required minimum stated in the error message. schedule.durationInDays must not exceed 3650 (~10 years). The x-idempotency-key header is required and must be a UUID. Generate a new key for each new campaign and whenever you change the request body, including the name. Reuse a key only to retry the same body. Within 24 hours, a completed request's key returns the original campaign (200). If the body differs, the API ignores the changes; 200 does not mean they were applied, and this case does not return 409. A retry while the first request is still in progress returns 429. Use PATCH /campaigns/{id} to edit an existing campaign. A body field that the request does not define returns 400 with reason UNKNOWN_FIELD and the field path in field.",
         "tags": ["Advertising"],
         "summary": "Create a campaign",
         "operationId": "CreateCampaign",
         "parameters": [
           {
-            "description": "Idempotency key (UUID); 24h dedupe window. A replay returns the original campaign (200), even with a different body; a replay while the first request is in progress returns 429.",
+            "description": "Idempotency key (UUID); 24h dedupe window. Generate a new key for each new campaign or changed request body. Reuse a key only to retry the same body. A completed replay returns the original campaign (200) and ignores body changes, without returning 409; an in-progress replay returns 429.",
             "name": "x-idempotency-key",
             "in": "header",
             "required": true,
@@ -819,7 +819,7 @@
         }
       },
       "patch": {
-        "description": "Updates the mutable fields of a campaign. You can change: name, budget.amountMicros, schedule.startTime and schedule.durationInDays (schedule changes are only allowed before the campaign starts), status, and creativeAssetIds. New creative asset IDs are appended; IDs already attached to the campaign are ignored, and an empty list is a successful no-op. Set status to ACTIVE to run or resume the campaign, PAUSED to pause it, or CANCELLED to cancel it permanently. Setting CANCELLED on a campaign that is already cancelled returns the campaign unchanged, so a retried cancel succeeds; any other edit to a cancelled or ended campaign returns 400 FAILED_PRECONDITION. budget.type cannot be changed — only the amount. A budget increase takes effect immediately, but a budget decrease on a running campaign is scheduled for the next midnight in the account's time zone; while a decrease is pending, the response reports it in budget.scheduledAmountMicros and budget.scheduledEffectiveTime. The fields objective, paymentType, targeting, and bid are fixed after creation and return 400 if included. The updated campaign is returned with its recomputed deliveryStatus. You can also change video (every ad is updated before the response returns) and autoReloadAdCreditEnabled. Video availability follows the campaign's billing account, as on create, and a request with video returns 400 when the account doesn't allow it; billingAccountId and targetUniverseId are fixed after creation, and immutable-field errors carry field and reason IMMUTABLE_FIELD. A body field that the request does not define returns 400 with reason UNKNOWN_FIELD. A campaign owned by a group can be updated by any member with advertising permission on the campaign's experience, without groupId; raising the spend of another user's campaign is limited to its owner.",
+        "description": "Updates the mutable fields of a campaign. You can change: name, budget.amountMicros, schedule.startTime and schedule.durationInDays (schedule changes are only allowed before the campaign starts), status, and creativeAssetIds. New creative asset IDs are appended; IDs already attached to the campaign are ignored, and an empty list is a successful no-op. Set status to ACTIVE to run or resume the campaign, PAUSED to pause it, or CANCELLED to cancel it permanently. Setting CANCELLED on a campaign that is already cancelled returns the campaign unchanged, so a retried cancel succeeds; any other edit to a cancelled or ended campaign returns 400 FAILED_PRECONDITION. budget.type cannot be changed — only the amount. A budget increase takes effect immediately, but a budget decrease on a running campaign is scheduled for the next midnight in the account's time zone; while a decrease is pending, the response reports it in budget.scheduledAmountMicros and budget.scheduledEffectiveTime. The fields objective, paymentType, targeting, and bid are fixed after creation and return 400 if included. The updated campaign is returned with its recomputed deliveryStatus. You can also change video (every ad is updated before the response returns) and autoReloadAdCreditEnabled. Video availability follows the campaign's billing account, as on create, and a request with video returns 400 when the account doesn't allow it; billingAccountId and targetUniverseId are fixed after creation, and immutable-field errors carry field and reason IMMUTABLE_FIELD. A body field that the request does not define returns 400 with reason UNKNOWN_FIELD. A campaign owned by a group can be updated by any member with advertising permission on the campaign's experience, without groupId; raising the spend of another user's campaign, including setting status to ACTIVE, is limited to its owner.",
         "tags": ["Advertising"],
         "summary": "Update a campaign",
         "operationId": "UpdateCampaign",
@@ -14707,7 +14707,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig\n\nDataCaptureConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -14724,7 +14724,8 @@
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
                 "JourneysConfig",
-                "AntiCheatConfig"
+                "AntiCheatConfig",
+                "DataCaptureConfig"
               ]
             },
             "x-enum-varnames": [
@@ -14735,7 +14736,8 @@
               "LeaderboardsConfig",
               "ExperienceUserConfig",
               "JourneysConfig",
-              "AntiCheatConfig"
+              "AntiCheatConfig",
+              "DataCaptureConfig"
             ]
           }
         ],
@@ -14836,7 +14838,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig\n\nDataCaptureConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -14853,7 +14855,8 @@
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
                 "JourneysConfig",
-                "AntiCheatConfig"
+                "AntiCheatConfig",
+                "DataCaptureConfig"
               ]
             },
             "x-enum-varnames": [
@@ -14864,7 +14867,8 @@
               "LeaderboardsConfig",
               "ExperienceUserConfig",
               "JourneysConfig",
-              "AntiCheatConfig"
+              "AntiCheatConfig",
+              "DataCaptureConfig"
             ]
           }
         ],
@@ -15008,7 +15012,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig\n\nDataCaptureConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -15025,7 +15029,8 @@
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
                 "JourneysConfig",
-                "AntiCheatConfig"
+                "AntiCheatConfig",
+                "DataCaptureConfig"
               ]
             },
             "x-enum-varnames": [
@@ -15036,7 +15041,8 @@
               "LeaderboardsConfig",
               "ExperienceUserConfig",
               "JourneysConfig",
-              "AntiCheatConfig"
+              "AntiCheatConfig",
+              "DataCaptureConfig"
             ]
           }
         ],
@@ -15135,7 +15141,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig\n\nDataCaptureConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -15152,7 +15158,8 @@
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
                 "JourneysConfig",
-                "AntiCheatConfig"
+                "AntiCheatConfig",
+                "DataCaptureConfig"
               ]
             },
             "x-enum-varnames": [
@@ -15163,7 +15170,8 @@
               "LeaderboardsConfig",
               "ExperienceUserConfig",
               "JourneysConfig",
-              "AntiCheatConfig"
+              "AntiCheatConfig",
+              "DataCaptureConfig"
             ]
           }
         ],
@@ -15309,7 +15317,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig\n\nDataCaptureConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -15326,7 +15334,8 @@
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
                 "JourneysConfig",
-                "AntiCheatConfig"
+                "AntiCheatConfig",
+                "DataCaptureConfig"
               ]
             },
             "x-enum-varnames": [
@@ -15337,7 +15346,8 @@
               "LeaderboardsConfig",
               "ExperienceUserConfig",
               "JourneysConfig",
-              "AntiCheatConfig"
+              "AntiCheatConfig",
+              "DataCaptureConfig"
             ]
           }
         ],
@@ -15483,7 +15493,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig\n\nDataCaptureConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -15500,7 +15510,8 @@
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
                 "JourneysConfig",
-                "AntiCheatConfig"
+                "AntiCheatConfig",
+                "DataCaptureConfig"
               ]
             },
             "x-enum-varnames": [
@@ -15511,7 +15522,8 @@
               "LeaderboardsConfig",
               "ExperienceUserConfig",
               "JourneysConfig",
-              "AntiCheatConfig"
+              "AntiCheatConfig",
+              "DataCaptureConfig"
             ]
           }
         ],
@@ -15612,7 +15624,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig\n\nDataCaptureConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -15629,7 +15641,8 @@
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
                 "JourneysConfig",
-                "AntiCheatConfig"
+                "AntiCheatConfig",
+                "DataCaptureConfig"
               ]
             },
             "x-enum-varnames": [
@@ -15640,7 +15653,8 @@
               "LeaderboardsConfig",
               "ExperienceUserConfig",
               "JourneysConfig",
-              "AntiCheatConfig"
+              "AntiCheatConfig",
+              "DataCaptureConfig"
             ]
           }
         ],
@@ -15786,7 +15800,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig\n\nDataCaptureConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -15803,7 +15817,8 @@
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
                 "JourneysConfig",
-                "AntiCheatConfig"
+                "AntiCheatConfig",
+                "DataCaptureConfig"
               ]
             },
             "x-enum-varnames": [
@@ -15814,7 +15829,8 @@
               "LeaderboardsConfig",
               "ExperienceUserConfig",
               "JourneysConfig",
-              "AntiCheatConfig"
+              "AntiCheatConfig",
+              "DataCaptureConfig"
             ]
           },
           {
@@ -15975,7 +15991,7 @@
           {
             "name": "repository",
             "in": "path",
-            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
+            "description": "\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig\n\nDataCaptureConfig",
             "required": true,
             "schema": {
               "allOf": [
@@ -15992,7 +16008,8 @@
                 "LeaderboardsConfig",
                 "ExperienceUserConfig",
                 "JourneysConfig",
-                "AntiCheatConfig"
+                "AntiCheatConfig",
+                "DataCaptureConfig"
               ]
             },
             "x-enum-varnames": [
@@ -16003,7 +16020,8 @@
               "LeaderboardsConfig",
               "ExperienceUserConfig",
               "JourneysConfig",
-              "AntiCheatConfig"
+              "AntiCheatConfig",
+              "DataCaptureConfig"
             ]
           },
           {
@@ -29011,6 +29029,677 @@
         }
       }
     },
+    "/notifications/v1/developer-analytics/get-notifs-analytics": {
+      "get": {
+        "tags": ["Analytics", "Notifications"],
+        "operationId": "NotificationsAggregatedAnalytics_ExperienceNotification",
+        "parameters": [
+          {
+            "name": "UniverseId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "AggregationStartDateTime",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "AggregationEndDateTime",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetNotificationsAnalyticsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.analytics:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.analytics:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#NotificationsAggregatedAnalytics_ExperienceNotification"
+        }
+      }
+    },
+    "/notifications/v1/developer-configuration/archive-notification": {
+      "post": {
+        "tags": ["Notifications"],
+        "operationId": "NotificationsDeveloperConfiguration_ArchiveNotificationString",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ArchiveNotificationStringRequest"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ArchiveNotificationStringRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ArchiveNotificationStringRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ArchiveNotificationStringRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.notification-string:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.notification-string:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/notifications#NotificationsDeveloperConfiguration_ArchiveNotificationString"
+        }
+      }
+    },
+    "/notifications/v1/developer-configuration/create-notification": {
+      "post": {
+        "tags": ["Notifications"],
+        "operationId": "NotificationsDeveloperConfiguration_CreateNotificationString",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateNotificationStringRequest"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateNotificationStringRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateNotificationStringRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateNotificationStringRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateNotificationStringResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.notification-string:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.notification-string:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/notifications#NotificationsDeveloperConfiguration_CreateNotificationString"
+        }
+      }
+    },
+    "/notifications/v1/developer-configuration/experience-notification": {
+      "get": {
+        "tags": ["Notifications"],
+        "operationId": "NotificationsDeveloperConfiguration_ExperienceNotification",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfigureExperienceNotificationResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1200
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1200
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.notification-string:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.notification-string:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/notifications#NotificationsDeveloperConfiguration_ExperienceNotification"
+        }
+      }
+    },
+    "/notifications/v1/developer-configuration/experience-notifications-list": {
+      "get": {
+        "tags": ["Notifications"],
+        "operationId": "NotificationsDeveloperConfiguration_ExperienceNotificationsList",
+        "parameters": [
+          {
+            "name": "UniverseId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Count",
+            "in": "query",
+            "schema": {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Previous",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "ReverseOrder",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfigureExperienceNotificationsListResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 200
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 200
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.notification-string:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.notification-string:read"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/notifications#NotificationsDeveloperConfiguration_ExperienceNotificationsList"
+        }
+      }
+    },
+    "/notifications/v1/developer-configuration/update-notification": {
+      "post": {
+        "tags": ["Notifications"],
+        "operationId": "NotificationsDeveloperConfiguration_UpdateNotificationString",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateNotificationStringRequest"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateNotificationStringRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateNotificationStringRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateNotificationStringRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.notification-string:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.notification-string:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/notifications#NotificationsDeveloperConfiguration_UpdateNotificationString"
+        }
+      }
+    },
+    "/notifications/v1/experience-notifications/unfollow": {
+      "post": {
+        "tags": ["Interactions", "Notifications"],
+        "operationId": "NotificationsApi_UnfollowExperienceNotification",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UnfollowExperienceNotificationRequest"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UnfollowExperienceNotificationRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UnfollowExperienceNotificationRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UnfollowExperienceNotificationRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 5
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 5
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.following:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.following:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/interactions#NotificationsApi_UnfollowExperienceNotification"
+        }
+      }
+    },
+    "/notifications/v1/report-notification": {
+      "post": {
+        "tags": ["Notifications"],
+        "operationId": "NotificationsApi_ReportNotification",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ReportNotificationRequest"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ReportNotificationRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ReportNotificationRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ReportNotificationRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "notification-report:write"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["notification-report:write"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/notifications#NotificationsApi_ReportNotification"
+        }
+      }
+    },
     "/ordered-data-stores/v1/universes/{universeId}/orderedDataStores/{orderedDataStore}/scopes/{scope}/entries": {
       "get": {
         "tags": ["Data and memory stores"],
@@ -35252,7 +35941,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "text/plain": {
                 "schema": {
@@ -35332,7 +36021,7 @@
             }
           },
           "500": {
-            "description": "Server Error",
+            "description": "Internal Server Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -44184,7 +44873,7 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "SECOND",
-            "maxInPeriod": 10
+            "maxInPeriod": 1
           }
         },
         "x-roblox-scopes": [
@@ -55604,6 +56293,74 @@
         }
       }
     },
+    "/v1/my/trusted-friends/candidates": {
+      "get": {
+        "tags": ["Connections"],
+        "summary": "Get a page of friends that the authenticated user can add as trusted friends. Friends with a pending trusted\nfriend request from the user come after the other friends. A page can be short or empty and still have a\ncursor, so request pages until nextPageCursor is null.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "description": "The maximum number of candidates in the page, from 1 to 50.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 20
+            }
+          },
+          {
+            "in": "query",
+            "name": "cursor",
+            "description": "The cursor from the previous page. Null for the first page.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Paging.CursoredPagedResult_Roblox.Friends.Api.Models.Response.TrustedFriendCandidateResponse_"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Paging.CursoredPagedResult_Roblox.Friends.Api.Models.Response.TrustedFriendCandidateResponse_"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "34: Invalid pagination cursor.\r\n44: Invalid count, Allowed values: 10, 18, 25, 50, 100"
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "500": {
+            "description": "39: There was an internal error processing Trusted Friends."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://friends.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/friends#friends_get_v1_my_trusted_friends_candidates"
+        }
+      }
+    },
     "/v1/my/trusted-friends/requests": {
       "get": {
         "tags": ["Connections"],
@@ -66376,7 +67133,7 @@
                 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
                 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73,
                 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
-                90, 91, 92, 93, 94, 95, 96
+                90, 91, 92, 93, 94, 95, 96, 97
               ]
             }
           },
@@ -79823,14 +80580,14 @@
             "schema": {
               "type": "array",
               "items": {
-                "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96]",
+                "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96, 'AvatarSpawnEffect' = 97]",
                 "enum": [
                   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21,
                   22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38,
                   39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53,
                   54, 55, 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
                   71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85,
-                  86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96
+                  86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97
                 ]
               }
             }
@@ -82466,7 +83223,7 @@
         "type": "object",
         "properties": {
           "format": {
-            "description": "The ad format name.",
+            "description": "The creative asset type, for example `IMAGE`.",
             "type": "string"
           },
           "height": {
@@ -83261,6 +84018,16 @@
       },
       "ApiEmptyResponseModel": {
         "type": "object",
+        "additionalProperties": false
+      },
+      "ArchiveNotificationStringRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          }
+        },
         "additionalProperties": false
       },
       "Asset": {
@@ -84784,7 +85551,7 @@
         "type": "object",
         "properties": {
           "adFormats": {
-            "description": "The supported creative formats and their pixel dimensions.",
+            "description": "The accepted creative image sizes, in pixels. Upload creatives in one of these\nsizes.",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/AdFormat"
@@ -84835,7 +85602,7 @@
             }
           },
           "objectives": {
-            "description": "The campaign objectives you can create. Values can be `PLAYS` or `ENGAGEMENT`.",
+            "description": "The campaign objectives you can create. Values can be `PLAYS`, `ENGAGEMENT`, or\n`ROBUX_SPEND`. objectiveOptions tells you whether each one is available for the\nexperience.",
             "type": "array",
             "items": {
               "type": "string",
@@ -85608,6 +86375,45 @@
         "description": "Discriminator for entries in CreatorConfigsPublicApi.Models.ConfigVariantDto variant lists (full config and revision snapshots).\n\nconditional",
         "x-enum-varnames": ["Conditional"]
       },
+      "ConfigureExperienceNotificationResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "content": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConfigureExperienceNotificationsListResponse": {
+        "type": "object",
+        "properties": {
+          "notificationStringConfigs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ConfigureExperienceNotificationResponse"
+            },
+            "nullable": true
+          },
+          "previousPageCursor": {
+            "type": "string",
+            "nullable": true
+          },
+          "nextPageCursor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ConsumerConfigurationRequest": {
         "required": ["serviceConfigurations"],
         "type": "object",
@@ -86215,6 +87021,35 @@
         },
         "additionalProperties": false,
         "description": "Represents an item within a queue structure."
+      },
+      "CreateNotificationStringRequest": {
+        "required": ["content", "name", "universeId"],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "content": {
+            "type": "string",
+            "nullable": true
+          },
+          "universeId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateNotificationStringResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "CreatePaymentProfileResponse": {
         "type": "object",
@@ -89798,6 +90633,7 @@
         "additionalProperties": false
       },
       "ErrorLogDetail": {
+        "required": ["id", "message"],
         "type": "object",
         "properties": {
           "id": {
@@ -89835,13 +90671,13 @@
           },
           "firstSeenUtc": {
             "type": "string",
-            "description": "UTC timestamp when this error was first observed.\r\nNull when the source document predates this field being populated.",
+            "description": "UTC timestamp when this error was first observed.\nNull when the source document predates this field being populated.",
             "format": "date-time",
             "nullable": true
           },
           "firstSeenPlaceVersion": {
             "type": "integer",
-            "description": "First seen place version for the error.\r\nNOTE: This value will only be returned when place id is filtered",
+            "description": "First seen place version for the error.\nNOTE: This value will only be returned when place id is filtered",
             "format": "int64",
             "nullable": true
           }
@@ -91563,6 +92399,28 @@
         },
         "additionalProperties": false,
         "description": "Response containing the weights of the current default matchmaking scoring weights"
+      },
+      "GetNotificationsAnalyticsResponse": {
+        "required": ["campaigns", "overview"],
+        "type": "object",
+        "properties": {
+          "overview": {
+            "type": "object",
+            "additionalProperties": {
+              "nullable": true
+            },
+            "nullable": true
+          },
+          "campaigns": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": {}
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "GetPlaceContributorsResponse": {
         "type": "object",
@@ -97429,7 +98287,7 @@
             "type": "boolean"
           },
           "reasons": {
-            "description": "The reasons the experience is not eligible. Omitted when eligible. Values can be\n`NO_PERMISSION` or `BLOCKED`.",
+            "description": "The reasons the experience is not eligible. Omitted when eligible. Values can be\n`NO_PERMISSION`, `BLOCKED`, or `OBJECTIVE_NOT_SUPPORTED`. `OBJECTIVE_NOT_SUPPORTED`\nappears only with the objective query parameter, when the experience can't use\nthat objective.",
             "type": "array",
             "items": {
               "type": "string",
@@ -97837,6 +98695,16 @@
         },
         "additionalProperties": false
       },
+      "ReportNotificationRequest": {
+        "type": "object",
+        "properties": {
+          "notificationId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Repository": {
         "enum": [
           "InExperienceConfig",
@@ -97846,10 +98714,11 @@
           "LeaderboardsConfig",
           "ExperienceUserConfig",
           "JourneysConfig",
-          "AntiCheatConfig"
+          "AntiCheatConfig",
+          "DataCaptureConfig"
         ],
         "type": "string",
-        "description": "Public API repository identifier. Only values exposed by the public API are included;\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig",
+        "description": "Public API repository identifier. Only values exposed by the public API are included;\ninternal repository types are not exposed to allow development and testing before enabling.\n\nInExperienceConfig\n\nRecommendationServicesConfig\n\nDataStoresConfig\n\nExtendedServicesConfig\n\nLeaderboardsConfig\n\nExperienceUserConfig\n\nJourneysConfig\n\nAntiCheatConfig\n\nDataCaptureConfig",
         "x-enum-varnames": [
           "InExperienceConfig",
           "RecommendationServicesConfig",
@@ -97858,7 +98727,8 @@
           "LeaderboardsConfig",
           "ExperienceUserConfig",
           "JourneysConfig",
-          "AntiCheatConfig"
+          "AntiCheatConfig",
+          "DataCaptureConfig"
         ]
       },
       "ResourceConfiguration": {
@@ -107159,6 +108029,22 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Friends.Api.Models.Response.TrustedFriendCandidateResponse": {
+        "description": "A friend that the authenticated user can add as a trusted friend.",
+        "type": "object",
+        "properties": {
+          "userId": {
+            "format": "int64",
+            "description": "The friend's user Id.",
+            "type": "integer"
+          },
+          "state": {
+            "description": "The trusted friend request state between the authenticated user and this friend: None, RequestSent, or\nRequestReceived.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Friends.Api.Models.Response.TrustedFriendRequestResponse": {
         "description": "A response model representing a friend request.",
         "type": "object",
@@ -110182,14 +111068,14 @@
           },
           "assetType": {
             "format": "int32",
-            "description": "The asset type id of asset with id Roblox.Inventory.Api.V2.UserAssetItemModelV2.AssetId. ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96]",
+            "description": "The asset type id of asset with id Roblox.Inventory.Api.V2.UserAssetItemModelV2.AssetId. ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96, 'AvatarSpawnEffect' = 97]",
             "enum": [
               1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
               24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
               75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
-              91, 92, 93, 94, 95, 96
+              91, 92, 93, 94, 95, 96, 97
             ],
             "type": "integer"
           },
@@ -113711,6 +114597,27 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Roblox.Friends.Api.Models.Response.FriendResponse"
+            }
+          },
+          "NextCursor": {
+            "type": "string"
+          },
+          "HasMore": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Paging.CursoredPagedResult_Roblox.Friends.Api.Models.Response.TrustedFriendCandidateResponse_": {
+        "type": "object",
+        "properties": {
+          "PreviousCursor": {
+            "type": "string"
+          },
+          "PageItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Friends.Api.Models.Response.TrustedFriendCandidateResponse"
             }
           },
           "NextCursor": {
@@ -117571,7 +118478,7 @@
         "required": ["durationInDays", "startTime"],
         "properties": {
           "durationInDays": {
-            "description": "How long the campaign runs from startTime, in days. Must not exceed 3650 (about\n10 years).",
+            "description": "How long the campaign runs from startTime, in days. Must not exceed 3650 (about\n10 years). Zero means the campaign has no end date and runs until you pause or\ncancel it; endTime is then omitted. A LIFETIME budget needs an end date, so it\nneeds a positive value.",
             "type": "integer",
             "maximum": 3650,
             "minimum": 0
@@ -118905,7 +119812,7 @@
             "enum": ["ALL_PLAYERS", "NEW_USERS", "RETENTION", "REACTIVATION"]
           },
           "countries": {
-            "description": "The ISO 3166-1 alpha-2 country codes to deliver to (for example, `US`). Empty\nmeans all countries.",
+            "description": "The ISO 3166-1 alpha-2 country codes to deliver to (for example, `US`). Empty\nmeans all countries. Use this field to target single countries. Can't be\ncombined with the region `ALL`, or with the region that contains the country.",
             "type": "array",
             "items": {
               "type": "string"
@@ -118920,20 +119827,12 @@
             }
           },
           "regions": {
-            "description": "The geographic regions to deliver to. Empty means all regions. Values include\ncountry-level and aggregate region codes, plus `ALL`.",
+            "description": "The aggregate geographic regions to deliver to, or `ALL`. Empty means all\nregions. Use only the values in campaign-options `targetingDimensions.regions`.\n`ALL` can't be combined with other regions or with countries.",
             "type": "array",
             "items": {
               "type": "string",
               "enum": [
                 "ALL",
-                "US",
-                "CA",
-                "GB",
-                "DE",
-                "FR",
-                "KR",
-                "JP",
-                "BR",
                 "WESTERN_EUROPE",
                 "EASTERN_EUROPE",
                 "EAST_ASIA",
@@ -118992,20 +119891,12 @@
             }
           },
           "regions": {
-            "description": "The selectable geographic regions, including country-level and aggregate region codes.",
+            "description": "The selectable geographic regions: `ALL` and the aggregate region codes. To\ntarget a single country, use countries.",
             "type": "array",
             "items": {
               "type": "string",
               "enum": [
                 "ALL",
-                "US",
-                "CA",
-                "GB",
-                "DE",
-                "FR",
-                "KR",
-                "JP",
-                "BR",
                 "WESTERN_EUROPE",
                 "EASTERN_EUROPE",
                 "EAST_ASIA",
@@ -119697,6 +120588,16 @@
         "type": "object",
         "properties": {},
         "description": "Restore the data store"
+      },
+      "UnfollowExperienceNotificationRequest": {
+        "type": "object",
+        "properties": {
+          "universeId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
       },
       "Universe": {
         "required": ["templateRootPlace"],
@@ -120498,6 +121399,25 @@
         },
         "additionalProperties": false,
         "description": "The response for updating a matchmaking server attribute definition."
+      },
+      "UpdateNotificationStringRequest": {
+        "required": ["id"],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "content": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "UpdatePlaceVersionNotesRequest": {
         "type": "object",
@@ -121760,6 +122680,7 @@
           "post_analytics_query_api_v1_universes__universe_id__dimension_values",
           "get_analytics_query_api_v1_universes__universe_id__operations_metrics__operation_id_",
           "get_analytics_query_api_v1_universes__universe_id__operations_dimension_values__operation_id_",
+          "NotificationsAggregatedAnalytics_ExperienceNotification",
           "CustomDashboards_ListDashboards",
           "CustomDashboards_CreateDashboard",
           "CustomDashboards_GetDashboard",
@@ -122125,6 +123046,7 @@
           "friends_get_v1_my_friends_requests",
           "friends_get_v1_my_new_friend_requests_count",
           "friends_get_v1_my_trusted_friends_requests",
+          "friends_get_v1_my_trusted_friends_candidates",
           "friends_post_v1_user__userId__multiget_are_friends",
           "friends_get_v1_user_trusted_friend_requests_count",
           "friends_get_v1_user_friend_requests_count",
@@ -122401,6 +123323,7 @@
         "path": "interactions",
         "content": "HTTP APIs for working with favorites, experience notifications, and other player interactions on Roblox Cloud.",
         "ordering": [
+          "NotificationsApi_UnfollowExperienceNotification",
           "get_legacy_followings_v1_users__userId__universes",
           "followings_get_v1_users__userId__universes",
           "delete_legacy_followings_v1_users__userId__universes__universeId_",
@@ -122745,12 +123668,20 @@
     },
     {
       "name": "Notifications",
-      "description": "Send personalized notifications to re-engage players and keep them informed about your experience. Each user can receive one notification per day from a given experience. See the [Experience Notifications Guide](/cloud/guides/experience-notifications).\n\nCommon use cases include:\n\n- Experience notifications: [Send targeted notifications](#Cloud_CreateUserNotification) to users about in-game events, rewards, or updates\n- Personalized messages: Customize notifications with dynamic parameters like usernames and scores\n- **Launch Data Integration**: Include launch data to route users to specific locations when they join\n",
+      "description": "Send personalized notifications to re-engage players and keep them informed about your experience. Each user can receive one notification per day from a given experience. See the [Experience Notifications Guide](/cloud/guides/experience-notifications).\n\nCommon use cases include:\n\n- Experience notifications: [Send targeted notifications](#Cloud_CreateUserNotification) to users about in-game events, rewards, or updates\n- Notification configuration: [Create](#NotificationsDeveloperConfiguration_CreateNotificationString), [list](#NotificationsDeveloperConfiguration_ExperienceNotificationsList), [retrieve](#NotificationsDeveloperConfiguration_ExperienceNotification), [update](#NotificationsDeveloperConfiguration_UpdateNotificationString), and [archive](#NotificationsDeveloperConfiguration_ArchiveNotificationString) message templates\n- Notification analytics: [Review aggregated experience notification analytics](#NotificationsAggregatedAnalytics_ExperienceNotification) to measure notification performance\n- Personalized messages: Customize notifications with dynamic parameters like usernames and scores\n- **Launch Data Integration**: Include launch data to route users to specific locations when they join\n",
       "x-roblox-tag-info": {
         "path": "notifications",
         "content": "HTTP APIs for working with notifications on Roblox Cloud.",
         "ordering": [
           "Cloud_CreateUserNotification",
+          "NotificationsAggregatedAnalytics_ExperienceNotification",
+          "NotificationsDeveloperConfiguration_ArchiveNotificationString",
+          "NotificationsDeveloperConfiguration_CreateNotificationString",
+          "NotificationsDeveloperConfiguration_ExperienceNotification",
+          "NotificationsDeveloperConfiguration_ExperienceNotificationsList",
+          "NotificationsDeveloperConfiguration_UpdateNotificationString",
+          "NotificationsApi_UnfollowExperienceNotification",
+          "NotificationsApi_ReportNotification",
           "notifications_get_v2_push_notifications_chrome_manifest",
           "notifications_post_v2_push_notifications_deregister_all_devices",
           "notifications_post_v2_push_notifications_deregister_current_device",

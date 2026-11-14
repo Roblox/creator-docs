@@ -16,6 +16,7 @@ import {
   RETEXT_EQUALITY_ALLOW_LIST,
   RETEXT_PASSIVE_ALLOW_LIST,
   ALLOWED_PROFANE_WORDS_LIST,
+  VIDEO_TRANSCRIPT_ALLOWED_PROFANE_WORDS,
   RETEXT_SIMPLIFY_ALLOW_LIST,
 } from './words.js';
 import { VFile } from 'vfile';
@@ -188,6 +189,25 @@ describe('getReTextAnalysis', () => {
       const text = `This test is ${word}`;
       const result = await getReTextAnalysis(text);
       expect(result.messages.length).toBe(0);
+    }
+  );
+
+  test.each(VIDEO_TRANSCRIPT_ALLOWED_PROFANE_WORDS)(
+    'allows %s only in video transcript pages',
+    async (word) => {
+      const text = `This test is ${word}`;
+      const transcript = await getReTextAnalysis(
+        text,
+        'content/en-us/videos/some-video.md'
+      );
+      expect(transcript.messages.length).toBe(0);
+      const elsewhere = await getReTextAnalysis(
+        text,
+        'content/en-us/scripting/index.md'
+      );
+      expect(elsewhere.messages.length).toBeGreaterThan(0);
+      const noPath = await getReTextAnalysis(text);
+      expect(noPath.messages.length).toBeGreaterThan(0);
     }
   );
 

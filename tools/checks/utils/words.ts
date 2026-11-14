@@ -81,6 +81,22 @@ export const ALLOWED_PROFANE_WORDS_LIST = [
 ];
 const ALLOWED_PROFANE_WORDS_SET = new Set(ALLOWED_PROFANE_WORDS_LIST);
 
+/**
+ * Words allowed only in video transcript pages under `content/<locale>/videos/`,
+ * where they are quotes of what a speaker said, such as the "essence sucker"
+ * item in a game demo. "chunky" is the same list's flag for a coarse mesh.
+ * They stay blocked on every other page.
+ */
+export const VIDEO_TRANSCRIPT_ALLOWED_PROFANE_WORDS = [
+  'chunky',
+  'idiot',
+  'stupid',
+  'sucker',
+];
+
+export const isVideoTranscriptPath = (filePath: string): boolean =>
+  /(?:^|\/)content\/[^/]+\/videos\//.test(filePath.replace(/\\/g, '/'));
+
 // `retext-profanities` matches its `ignore` option against normalized `cuss`
 // keys, which are lowercased with punctuation stripped (e.g. `three-way` is
 // keyed as `threeway`). Normalize the allow list to that form so hyphenated or

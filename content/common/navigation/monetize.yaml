@@ -76,5 +76,3 @@ navigation:
         path: /production/monetization/immersive-ads
       - title: Rewarded video ads
         path: /production/promotion/rewarded-video-ads
-      - title: Rewarded video playbook
-        path: /production/promotion/rewarded-video-playbook

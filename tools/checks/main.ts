@@ -295,7 +295,8 @@ try {
 
     if (config.checkRetextAnalysis) {
       const retextVFile = (await getReTextAnalysis(
-        fileContent
+        fileContent,
+        filePathFromRepoRoot
       )) as unknown as VFile;
       if (config.debug) {
         console.log(retextVFile);

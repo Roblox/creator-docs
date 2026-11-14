@@ -11,6 +11,10 @@ import {
   LinkType,
   getLinksOfTypeFromContentString,
   isAllowedWebsite,
+  getYouTubeVideoId,
+  isAllowedHttpLink,
+  isIngestedVideoLink,
+  isYouTubeVideoLink,
   trimStartRelativeAssetPath,
 } from './links.js';
 import {
@@ -89,6 +93,78 @@ describe('isRobloxUrl', () => {
     ['', false], // Empty string
   ])('should return %p for URL %p', (url, expected) => {
     expect(isAllowedWebsite(url)).toBe(expected);
+  });
+});
+
+describe('isYouTubeVideoLink', () => {
+  test.each([
+    ['https://www.youtube.com/watch?v=dQw4w9WgXcQ', true],
+    ['https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=754s', true],
+    ['https://www.youtube.com/watch?v=dQw4w9WgXcQ&amp;t=754s', true],
+    ['https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ', true],
+    ['https://www.youtube.com/watch?v=short', false],
+    ['https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PL123', false],
+    ['https://www.youtube.com/embed/dQw4w9WgXcQ', false],
+    ['https://www.youtube.com/@SomeChannel', false],
+    ['http://www.youtube.com/watch?v=dQw4w9WgXcQ', false],
+  ])('%p should return %p', (url, expected) => {
+    expect(isYouTubeVideoLink(url)).toBe(expected);
+  });
+});
+
+describe('isIngestedVideoLink', () => {
+  const known = new Set(['dQw4w9WgXcQ']);
+  const page = 'content/en-us/videos/some-video.md';
+  const watch = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=754s';
+
+  test('reads the video id from watch and embed links', () => {
+    expect(getYouTubeVideoId(watch)).toBe('dQw4w9WgXcQ');
+    expect(
+      getYouTubeVideoId('https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ')
+    ).toBe('dQw4w9WgXcQ');
+    expect(getYouTubeVideoId('https://www.youtube.com/@SomeChannel')).toBe(
+      undefined
+    );
+  });
+
+  test('allows an ingested video on a transcript page in any locale', () => {
+    expect(isIngestedVideoLink(watch, page, known)).toBe(true);
+    expect(
+      isIngestedVideoLink(watch, 'content/de-de/videos/some-video.md', known)
+    ).toBe(true);
+  });
+
+  test('rejects the same link on any other page', () => {
+    expect(
+      isIngestedVideoLink(watch, 'content/en-us/scripting/index.md', known)
+    ).toBe(false);
+    expect(
+      isIngestedVideoLink(watch, 'content/en-us/avatar/videos-guide.md', known)
+    ).toBe(false);
+  });
+
+  test('allows a GitHub link from a transcript page only', () => {
+    const url = 'https://github.com/Roblox/transcript-place-12345';
+    expect(isAllowedHttpLink(url, 'content/en-us/videos/some-video.md')).toBe(
+      true
+    );
+    expect(isAllowedHttpLink(url, 'content/de-de/videos/some-video.md')).toBe(
+      true
+    );
+    expect(isAllowedHttpLink(url, 'content/en-us/scripting/index.md')).toBe(
+      false
+    );
+  });
+
+  test('rejects a video the tool did not ingest, even on a transcript page', () => {
+    expect(
+      isIngestedVideoLink(
+        'https://www.youtube.com/watch?v=aaaaaaaaaaa',
+        page,
+        known
+      )
+    ).toBe(false);
+    expect(isIngestedVideoLink(watch, page, new Set())).toBe(false);
   });
 });
 
