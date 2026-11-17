@@ -7,9 +7,9 @@ type: enum
 summary: |
   Controls how `Instance:Destroy()` calls are replicated from server to clients.
 description: |
-  Determines the replication behavior the server uses when `Instance:Destroy()`
-  is called. This enum is used by
-  `Class.Workspace.ReplicateInstanceDestroySetting`.
+  This enum has no effect. The `Workspace` property that used it has been
+  removed, and `Instance:Destroy()` calls on the server are always replicated to
+  clients.
 code_samples: []
 tags: []
 deprecation_message: ''

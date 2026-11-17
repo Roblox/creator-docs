@@ -21,6 +21,12 @@ descendants:
   - Instance
   - Logger
   - MLSession
+  - TestCase
+  - TestExecutionContext
+  - TestFailure
+  - TestResult
+  - TestRunResult
+  - TestSuite
   - VideoSampler
   - WebStreamClient
   - VirtualInput

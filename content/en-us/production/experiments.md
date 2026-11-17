@@ -284,7 +284,9 @@ The **Rewarded Video Earnings** metric set tracks the following ad metrics, plus
 
 ## Target experiments to specific audiences
 
-By default, an in-game experiment can enroll any player in your rollout percentage. **Targeting** lets you run the experiment on a specific audience instead, such as players in certain countries, specific tenure windows, or active spender tiers. Targeting uses the same attributes as [config targeting](configs.md#target-configs-to-specific-players).
+By default, an in-game experiment can enroll any player in your rollout percentage. **Targeting** lets you run the experiment on a specific audience instead, such as players in certain countries, specific tenure windows, or active spender tiers. These attributes decide who can enter the experiment. Targeting uses the same attributes as [config targeting](configs.md#target-configs-to-specific-players).
+
+In newer experiments, if a targeted attribute changes after a player enrolls, Roblox doesn't remove them from the experiment. To see which experiments this applies to, see [Per-session evaluation](#per-session-evaluation).
 
 <Alert severity="info">
 Targeting only applies to in-game experiments.
@@ -300,23 +302,27 @@ Because narrowing your audience reduces your sample size, Roblox updates the [mi
 
 ### How Roblox resolves targeted values
 
-Roblox evaluates experiments **first**, before any rules from standard conditional configs. When a config key has an active experiment, Roblox resolves the value in this order:
+Roblox evaluates experiments **first**, before any rules from standard conditional configs. When a config key has an active experiment, Roblox resolves the value in this order. This resolution applies to experiments that start after November 17, 2026; for earlier experiments, see [Per-session evaluation](#per-session-evaluation).
 
-1. The active experiment value, if the player is targeted and enrolled.
+1. If the player is already enrolled in the experiment, they receive their assigned experiment value (control or variant), even if they no longer match the targeting criteria.
+1. If the player isn't enrolled, Roblox checks them against the targeting criteria. If they match and fall inside the rollout, Roblox enrolls them and assigns an experiment value.
 1. The first matching config condition.
 1. Any subsequent matching config conditions.
 1. The default value.
 
 Players in the control group receive the value that your existing config rules produce. You can't run more than one active experiment on the same config key at a time.
 
+For example, say you're testing a new tutorial and target only new users. A player visits your experience for the first time on Monday, is enrolled, and gets the new tutorial. On Wednesday they come back. They're now a returning user, but they're still in the experiment and still see the new tutorial.
+
 ### Per-session evaluation
 
-Roblox evaluates targeting attributes **per session**, so an individual player's eligibility can change over time:
+For experiments that start after November 17, 2026, targeting is an **entry check**: it decides whether a player can be enrolled, not whether they stay enrolled.
 
-- If a player matches your targeting criteria during a session, they can be enrolled and receive an experiment variant.
-- If they no longer match in a later session, they stop receiving the experiment value and immediately fall back to your standard config rules. If your experiment needs continuity beyond eligibility—for example, a multi-session onboarding flow targeted at new players—persist the value yourself, such as in a [data store](../cloud-services/data-stores/index.md).
+Once a player enrolls in one of these experiments, they keep their assignment (control or variant) across sessions for the rest of the experiment, even if they later stop matching your targeting criteria.
 
-A player's data stays attributed to the variant (or control) they were enrolled in, even if they later stop matching the criteria. For example, D7 retention still counts a player who enrolled on day 0 and whether they returned on day 7, even if they no longer qualify by day 4.
+For experiments that started on or before that date, Roblox evaluates targeting attributes **per session**, so an individual player's eligibility can change over time. If a player matches your targeting criteria during a session, they can be enrolled and receive an experiment variant. If they no longer match in a later session, they stop receiving the experiment value and immediately fall back to your standard config rules. If your experiment needs continuity beyond eligibility—for example, a multi-session onboarding flow targeted at new players—persist the value yourself, such as in a [data store](../cloud-services/data-stores/index.md).
+
+A player's data stays attributed to the variant (or control) they were enrolled in, even if they later stop matching the criteria. For example, D7 retention still counts a player who enrolled on day 0 and whether they returned on day 7, even if they no longer qualify by day 4. For experiments that start after that date, the player also keeps seeing the assignment that these metrics measure.
 
 ### Config changes while an experiment runs
 
@@ -350,7 +356,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
 - You must call `Class.ConfigService:GetConfigForPlayerAsync()|GetConfigForPlayerAsync()` separately for each player; `Class.ConfigService:GetConfigAsync()|GetConfigAsync()` does not apply experiments.
-- After you call `Class.ConfigSnapshot:GetValue()|GetValue()` on a player-specific snapshot, the player associated with the snapshot is enrolled in the experiment for that key and that key only. All subsequent calls to the method return the same control or variant for the duration of the experiment. Only the first call is random.
+- After you call `Class.ConfigSnapshot:GetValue()|GetValue()` on a player-specific snapshot, the player associated with the snapshot is enrolled in the experiment for that key and that key only. All subsequent calls to the method return the same control or variant for the duration of the experiment. For experiments that start after November 17, 2026, this holds across sessions, even after a targeted attribute changes. For earlier targeted experiments, see [Per-session evaluation](#per-session-evaluation). The first call is still the only random call, and it's still what enrolls the player.
 
   <Alert severity="success">
   Wait to call `Class.ConfigSnapshot:GetValue()|GetValue()` until you need it. Calling `Class.ConfigSnapshot:GetValue()|GetValue()` too early can cause you to enroll players who never interact with the part of the game you're experimenting on.
@@ -388,7 +394,7 @@ local function getControlScheme(player, racesWon)
 end
 ```
 
-If you want the control scheme to persist on subsequent sessions, you likely need to add a value to the player's entry in a data store.
+A custom in-game gate like `racesWon` is different from [experiment targeting](#target-experiments-to-specific-audiences). Sticky enrollment only takes effect once you call `Class.ConfigSnapshot:GetValue()|GetValue()`. Because this script only calls `Class.ConfigSnapshot:GetValue()|GetValue()` while the in-game condition holds, a player who doesn't meet the condition is never enrolled, so sticky enrollment never applies to them. For experiments that start after November 17, 2026, once a player is enrolled, the experiment value won't disappear on its own. If you have a one-time surface that should only run while the player still matches the condition, such as a popup that should only appear while a player is new, keep your own check around that surface instead of relying on the experiment value to turn off.
 
 ## View and interpret results
 

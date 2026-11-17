@@ -169,6 +169,65 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - Logging
+  - name: LogService:GetLogHistoryAsync
+    summary: |
+      Returns the log history of another participant's client, or of the server,
+      during a Team Test session.
+    description: |
+      Returns the log history of a Team Test participant's client, or of the
+      Team Test server. Each inner table contains the following keys:
+
+      - `message`: The rendered message text.
+      - `messageType` (`Enum.MessageType`): The log level
+        (`Enum.MessageType|MessageOutput`, `Enum.MessageType|MessageInfo`,
+        `Enum.MessageType|MessageWarning`, or `Enum.MessageType|MessageError`).
+      - `timestamp`: The time the message was emitted on the participant's
+        client or the server, in seconds.
+
+      The history contains a maximum of the 512 most recent entries.
+
+      This method is only available from a participant's client during a Team
+      Test.
+
+      ```lua
+      local LogService = game:GetService("LogService")
+      local Players = game:GetService("Players")
+
+      for _, player in Players:GetPlayers() do
+      	local ok, history = pcall(LogService.GetLogHistoryAsync, LogService, player.User)
+      	if not ok then
+      		warn(`Couldn't read {player.Name}'s logs: {history}`)
+      		continue
+      	end
+      	for _, entry in history do
+      		if entry.messageType == Enum.MessageType.MessageError then
+      			print(`[{player.Name}] {entry.message}`)
+      		end
+      	end
+      end
+      ```
+    code_samples: []
+    parameters:
+      - name: user
+        type: User
+        default:
+        summary: |
+          The `Class.Player.User` of the Team Test participant whose log history
+          to read. Pass `Datatype.User.fromId(0)` to read the Team Test server's
+          log history.
+    returns:
+      - type: Array
+        summary: |
+          An array of tables, each containing `message` (string), `messageType`
+          (`Enum.MessageType`), and `timestamp` (number, in seconds), in the
+          same format as `Class.LogService:GetLogHistory()`.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Logging
   - name: LogService:GetLogger
     summary: |
       Returns a top-level `Class.Logger` with the given name, creating it if it

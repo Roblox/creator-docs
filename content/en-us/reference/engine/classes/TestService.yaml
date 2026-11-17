@@ -6,208 +6,111 @@ name: TestService
 type: class
 memory_category: Instances
 summary: |
-  A service used by Roblox to run controlled tests of the engine. It is
-  available for developers to use, to a limited degree.
+  Registers and runs automated tests written in Luau while playtesting your
+  experience.
 description: |
-  `TestService` is a service used by Roblox internally to run analytical tests
-  on the engine.
+  `TestService` lets you write automated tests for your experience in Luau and
+  run them inside a live playtest, against the same scripts, physics, and
+  replication your players get. Register each test with a callback, run them
+  with `Class.TestService:RunTestsAsync()|RunTestsAsync()`, and read the
+  returned `Class.TestRunResult` to see what passed and what failed.
 
-  Scripts that are executed inside of `TestService` (via
-  `Class.TestService:RunAsync()`) have access to special macros that directly
-  invoke functions under the service. Macros are essentially substitutions for
-  large blocks of code that shouldn't need to be rewritten each time you want to
-  call them.
+  #### Where tests can run
 
-  #### RBX_CHECK
+  The test APIs only work while `TestService.Enabled` is `true`. That's the case
+  while playtesting in Studio (**Play**, **Play Here**, or **Run**) and on a
+  Team Test server. `Class.TestService.Enabled|Enabled` is `false` in Edit mode
+  (including the command bar while you're editing) and in live servers, and
+  there every method below throws an error. Tests can't run in a published
+  experience.
 
-  This macro does tests with calls to the `Class.TestService:Check()` function.
+  #### Writing a test
 
-  <table size="small">
-    <thead>
-  	<tr>
-  		<th>Macro</th>
-  		<th>Test Condition</th>
-  	</tr>
-    </thead>
-    <tbody>
-  	<tr>
-  		<td><code>RBX_CHECK(cond)</code></td>
-  		<td><code>cond == true</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_CHECK_MESSAGE(cond, failMsg)</code></td>
-  		<td><code>cond == true</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_CHECK_THROW(CODE)</code></td>
-  		<td><code>pcall(function() CODE end) == false</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_CHECK_NO_THROW(CODE)</code></td>
-  		<td><code>pcall(function() CODE end) == true</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_CHECK_EQUAL(a, b)</code></td>
-  		<td><code>a == b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_CHECK_NE(a, b)</code></td>
-  		<td><code>a ~= b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_CHECK_GE(a, b)</code></td>
-  		<td><code>a &gt;= b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_CHECK_LE(a, b)</code></td>
-  		<td><code>a &lt;= b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_CHECK_GT(a, b)</code></td>
-  		<td><code>a &gt; b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_CHECK_LT(a, b)</code></td>
-  		<td><code>a &lt; b</code></td>
-  	</tr>
-    </tbody>
-  </table>
+  A test is a callback registered with
+  `Class.TestService:RegisterTest()|RegisterTest()`. The callback receives the
+  test's `Class.TestCase` and a `Class.TestExecutionContext`. Inside the
+  callback:
 
-  #### RBX_REQUIRE
+  - `Class.TestCase:Check()` compares a value to the one you expect. A mismatch
+    is recorded as a failure, and the test keeps running.
+  - `Class.TestCase:Require()` does the same comparison, but a mismatch also
+    stops the test right away. Use it when the rest of the test can't continue,
+    such as when a part it needs doesn't exist.
+  - `Class.TestExecutionContext:Skip()` stops the test and records it as
+    skipped, for example when it doesn't apply on the current device. If a check
+    fails in the test, or the callback catches the skip and then throws a
+    different error, the test fails instead.
 
-  This macro does tests with calls to the `Class.TestService:Require()`
-  function.
+  A test passes if its callback returns with no failed checks. It fails if any
+  check failed or if the callback throws an error. A test can yield (for
+  example, with `task.wait()` or by waiting on an event), and it times out if it
+  runs longer than its `Class.TestCase.TimeoutSec`.
 
-  <table size="small">
-    <thead>
-  	<tr>
-  		<th>Macro</th>
-  		<th>Test Condition</th>
-  	</tr>
-    </thead>
-    <tbody>
-  	<tr>
-  		<td><code>RBX_REQUIRE(cond)</code></td>
-  		<td><code>cond == true</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_REQUIRE_MESSAGE(cond, failMsg)</code></td>
-  		<td><code>cond == true</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_REQUIRE_THROW(CODE)</code></td>
-  		<td><code>pcall(function() CODE end) == false</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_REQUIRE_NO_THROW(CODE)</code></td>
-  		<td><code>pcall(function() CODE end) == true</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_REQUIRE_EQUAL(a, b)</code></td>
-  		<td><code>a == b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_REQUIRE_NE(a, b)</code></td>
-  		<td><code>a ~= b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_REQUIRE_GE(a, b)</code></td>
-  		<td><code>a &gt;= b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_REQUIRE_LE(a, b)</code></td>
-  		<td><code>a &lt;= b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_REQUIRE_GT(a, b)</code></td>
-  		<td><code>a &gt; b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_REQUIRE_LT(a, b)</code></td>
-  		<td><code>a &lt; b</code></td>
-  	</tr>
-    </tbody>
-  </table>
+  Group related tests with `Class.TestService:RegisterSuite()|RegisterSuite()`.
+  Tests in a suite inherit the suite's tags and timeout.
 
-  #### RBX_WARN
+  ```lua
+  -- Script in ServerScriptService
+  local TestService = game:GetService("TestService")
+  local Workspace = game:GetService("Workspace")
 
-  This macro does tests with calls to the `Class.TestService:Warn()` function.
+  if not TestService.Enabled then
+  	return -- Not playtesting
+  end
 
-  <table size="small">
-    <thead>
-  	<tr>
-  		<th>Macro</th>
-  		<th>Test Condition</th>
-  	</tr>
-    </thead>
-    <tbody>
-  	<tr>
-  		<td><code>RBX_WARN(cond)</code></td>
-  		<td><code>cond == true</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_WARN_MESSAGE(cond, failMsg)</code></td>
-  		<td><code>cond == true</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_WARN_THROW(CODE)</code></td>
-  		<td><code>pcall(function() CODE end) == false</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_WARN_NO_THROW(CODE)</code></td>
-  		<td><code>pcall(function() CODE end) == true</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_WARN_EQUAL(a, b)</code></td>
-  		<td><code>a == b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_WARN_NE(a, b)</code></td>
-  		<td><code>a ~= b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_WARN_GE(a, b)</code></td>
-  		<td><code>a &gt;= b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_WARN_LE(a, b)</code></td>
-  		<td><code>a &lt;= b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_WARN_GT(a, b)</code></td>
-  		<td><code>a &gt; b</code></td>
-  	</tr>
-  	<tr>
-  		<td><code>RBX_WARN_LT(a, b)</code></td>
-  		<td><code>a &lt; b</code></td>
-  	</tr>
-    </tbody>
-  </table>
+  local doorSuite = TestService:RegisterSuite("Door", { Tags = { "gameplay" } })
 
-  #### Additional Macros
+  doorSuite:RegisterTest("starts closed", function(test)
+  	local door = Workspace:FindFirstChild("Door")
+  	test:Require(door ~= nil, true, "Workspace.Door should exist")
+  	test:Check(door:GetAttribute("Open"), false)
+  end)
 
-  <table size="small">
-  <thead>
-  <tr>
-  <th>Macro</th>
-  <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-  <td><code>RBX_ERROR(msg)</code></td>
-  <td>Directly calls the <code>Class.TestService:Error()</code> function.</td>
-  </tr>
-  <tr>
-  <td><code>RBX_FAIL(msg)</code></td>
-  <td>Directly calls the <code>Class.TestService:Fail()</code> function.</td>
-  </tr>
-  <tr>
-  <td><code>RBX_MESSAGE(msg)</code></td>
-  <td>Directly calls the <code>Class.TestService:Message()</code> function.</td>
-  </tr>
-  </tbody>
-  </table>
+  doorSuite:RegisterTest("opens when triggered", function(test)
+  	local door = Workspace.Door
+  	door:SetAttribute("Open", true)
+  	task.wait(0.5) -- Let the door animate
+  	test:Check(door.CanCollide, false, "an open door shouldn't block players")
+  end, { TimeoutSec = 5 })
+
+  local result = TestService:RunTestsAsync()
+  print(result.Summary) -- 2 passed, 0 failed, 0 skipped (2 total) in 512ms
+  ```
+
+  #### Reading results
+
+  `Class.TestService:RunTestsAsync()|RunTestsAsync()` yields until every test it
+  selects has finished and returns a `Class.TestRunResult`. Check its
+  `Class.TestRunResult.Status` against `Enum.TestRunStatus.Pass` to decide if
+  the run passed, and call `Class.TestRunResult:GetTests()` for a
+  `Class.TestResult` per test. Each failed check is a `Class.TestFailure` with
+  the expected and actual values and the line it came from.
+
+  ```lua
+  local result = TestService:RunTestsAsync({ Suite = "Door" })
+  if result.Status ~= Enum.TestRunStatus.Pass then
+  	for _, test in result:GetTests() do
+  		if test.Status == Enum.TestCaseStatus.Fail or test.Status == Enum.TestCaseStatus.TimedOut then
+  			warn(test.TestId, test.UncaughtError)
+  			for _, failure in test:GetFailures() do
+  				warn(`  line {failure.Line}: {failure.Message}`)
+  			end
+  		end
+  	end
+  end
+  ```
+
+  `Class.TestService:RunTestsAsync()|RunTestsAsync()` also prints a summary of
+  the run to the **Output** window, followed by the `Class.TestResult.TestId` of
+  each test that failed or timed out and why: its timeout, its uncaught error,
+  or its first failed check.
+
+  #### Test IDs
+
+  Each test has a `Class.TestCase.TestId` that identifies it in results and
+  filters. It's built from the suite and test names, but treat it as an opaque
+  string: read it from `Class.TestCase.TestId` or `Class.TestResult.TestId`
+  rather than building it yourself.
 code_samples: []
 inherits:
   - Instance
@@ -216,353 +119,194 @@ tags:
   - Service
 deprecation_message: ''
 properties:
-  - name: TestService.AutoRuns
+  - name: TestService.Enabled
     summary: |
-      If set to `true`, the game will start running when the service's
-      `Class.TestService:RunAsync()` method is called.
+      Whether tests can be registered and run in the current session.
     description: |
-      If set to `true`, the game will start running when the service's
-      `Class.TestService:RunAsync()` method is called.
+      Whether tests can be registered and run in the current session. This is
+      `true` while playtesting in Studio and on a Team Test server. It's `false`
+      in Edit mode (including the command bar while you're editing) and in live
+      servers.
+
+      While `Class.TestService.Enabled|Enabled` is `false`,
+      `Class.TestService:RegisterTest()|RegisterTest()`,
+      `Class.TestService:RegisterSuite()|RegisterSuite()`,
+      `Class.TestService:RunTestsAsync()|RunTestsAsync()`,
+      `Class.TestService:ListTests()|ListTests()`, and
+      `Class.TestService:ResetTestRegistry()|ResetTestRegistry()` throw an
+      error, so check it before registering tests from a script that also runs
+      in live servers.
     code_samples: []
     type: boolean
-    tags: []
+    tags:
+      - ReadOnly
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
       write: None
-    thread_safety: ReadSafe
-    category: Physics
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: TestService.Description
-    summary: |
-      A description of the test being executed.
-    description: |
-      A description of the test being executed.
-    code_samples: []
-    type: string
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
+    thread_safety: Unsafe
     category: Data
     serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: TestService.ErrorCount
-    summary: |
-      Measures how many errors have been recorded in the test session.
-    description: |
-      Measures how many errors have been recorded in the test session.
-    code_samples: []
-    type: int
-    tags:
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Results
-    serialization:
       can_load: false
-      can_save: true
-    capabilities: []
-  - name: TestService.ExecuteWithStudioRun
-    summary: |
-      When set to `true`, `TestService` will be executed when using the **Run**
-      action in Roblox Studio.
-    description: |
-      When set to `true`, `TestService` will be executed when using the **Run**
-      action in Roblox Studio.
-
-      Note that if the `Class.TestService.NumberOfPlayers|NumberOfPlayers`
-      property is set to a value above `0`, running the game will open
-      `NumberOfPlayers + 1` Studio windows where one window is a server and the
-      rest are players connected to that server. Try to keep this value within a
-      rational range (1 to 8 players) or else your computer's CPU will get
-      overloaded.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Settings
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: TestService.Is30FpsThrottleEnabled
-    summary: |
-      Sets whether or not the physics engine should be throttled to 30 FPS while
-      the test is being ran.
-    description: |
-      Sets whether or not the physics engine should be throttled to 30 FPS while
-      the test is being ran.
-    code_samples: []
-    type: boolean
-    tags:
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This has been deprecated and directly renamed to
-      `Class.TestService.ThrottlePhysicsToRealtime|ThrottlePhysicsToRealtime` to
-      better reflect its practical use.
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Physics
-    serialization:
-      can_load: true
       can_save: false
     capabilities: []
-  - name: TestService.IsPhysicsEnvironmentalThrottled
-    summary: |
-      Sets whether or not the physics environment should be throttled while
-      running this test.
-    description: |
-      Sets whether or not the physics environment should be throttled while
-      running this test.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Physics
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: TestService.IsSleepAllowed
-    summary: |
-      Sets whether or not physics objects will be allowed to fall asleep while
-      the test simulation is running.
-    description: |
-      Sets whether or not physics objects will be allowed to fall asleep while
-      the test simulation is running.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Physics
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: TestService.NumberOfPlayers
-    summary: |
-      The number of players expected in this test, if any.
-    description: |
-      The number of players expected in this test, if any.
-    code_samples: []
-    type: int
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Settings
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: TestService.SimulateSecondsLag
-    summary: |
-      Sets a specific amount of additional latency experienced by players during
-      the test session.
-    description: |
-      Sets a specific amount of additional latency experienced by players during
-      the test session.
-    code_samples: []
-    type: double
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Settings
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: TestService.TestCount
-    summary: |
-      Measures how many test calls have been recorded in the test session.
-    description: |
-      Measures how many test calls have been recorded in the test session.
-    code_samples: []
-    type: int
-    tags:
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Results
-    serialization:
-      can_load: false
-      can_save: true
-    capabilities: []
-  - name: TestService.ThrottlePhysicsToRealtime
-    summary: |
-      Sets whether the test should be throttled to simulate time according to
-      real world time or as fast as possible.
-    description: |
-      Sets whether the test should be throttled to simulate time according to
-      real world time or as fast as possible.
-    code_samples: []
-    type: boolean
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Physics
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: TestService.Timeout
-    summary: |
-      The maximum amount of time that tests are allowed to run for.
-    description: |
-      The maximum amount of time that tests are allowed to run for.
-    code_samples: []
-    type: double
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Settings
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-  - name: TestService.WarnCount
-    summary: |
-      Measures how many warning calls have been recorded in the test session.
-    description: |
-      Measures how many warning calls have been recorded in the test session.
-    code_samples: []
-    type: int
-    tags:
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Results
-    serialization:
-      can_load: false
-      can_save: true
-    capabilities: []
 methods:
-  - name: TestService:Check
+  - name: TestService:ListTests
     summary: |
-      Prints result of a condition to the output.
+      Returns every registered test.
     description: |
-      If `condition` is `true`, prints `Check passed:` followed by `description`
-      to the output in blue text. Otherwise, prints `Check failed:` followed by
-      `description` in red text.
-    code_samples:
-      - TestService-Check1
-    parameters:
-      - name: condition
-        type: boolean
-        default:
-        summary: |
-          The boolean expression to evaluate as the test assertion.
-      - name: description
-        type: string
-        default:
-        summary: |
-          A label that identifies this check in the test output.
-      - name: source
-        type: Instance
-        default: nil
-        summary: |
-          The script instance that invoked the check, used for output
-          attribution. Defaults to `nil`.
-      - name: line
-        type: int
-        default: 0
-        summary: |
-          The line number in the source script where the check was called.
-          Defaults to `0`.
+      Returns every registered test as a `Class.TestCase`, in the order the
+      tests were registered, including tests registered with
+      `Class.TestSuite:RegisterTest()`. Use it to see what
+      `Class.TestService:RunTestsAsync()|RunTestsAsync()` can run, or to build a
+      test picker.
+
+      Throws an error if `Class.TestService.Enabled|Enabled` is `false`.
+    code_samples: []
+    parameters: []
     returns:
-      - type: ()
-        summary: ''
+      - type: Array
+        summary: |
+          An array of `Class.TestCase` objects in the order they were
+          registered.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: TestService:Checkpoint
+  - name: TestService:RegisterSuite
     summary: |
-      Prints `Test checkpoint:` followed by a string to the output in blue text.
+      Creates a named group of tests that share tags and a timeout.
     description: |
-      Prints `Test checkpoint:` followed by `text` to the output in blue text.
-    code_samples:
-      - TestService-Checkpoint1
+      Creates a suite: a named group of tests. Register tests in it with
+      `Class.TestSuite:RegisterTest()`. Every test in the suite gets the suite's
+      tags and timeout, and you can select the whole suite with the `Suite`
+      filter of `Class.TestService:RunTestsAsync()|RunTestsAsync()`.
+
+      The `options` table accepts:
+
+      - `Tags`: an array of strings. Tests in the suite get these tags in
+        addition to their own.
+      - `TimeoutSec`: the default timeout for tests in the suite, from `0` to
+        `86400` seconds. Defaults to `30`. A test can override it with its own
+        `TimeoutSec`.
+
+      Calling `Class.TestService:RegisterSuite()|RegisterSuite()` again with the
+      same name and no `options` (or an empty table) returns the existing suite,
+      so several scripts can add tests to one suite. If the second call passes
+      `options`, they must match the original (tags in any order), with any
+      field you leave out counting as its default, or the call throws an error.
+
+      Throws an error if `Class.TestService.Enabled|Enabled` is `false`, if
+      `suiteName` is empty, if `Tags` isn't an array of strings, or if
+      `TimeoutSec` isn't a number from `0` to `86400`.
+    code_samples: []
     parameters:
-      - name: text
+      - name: suiteName
         type: string
         default:
         summary: |
-          The message to print alongside the checkpoint label.
-      - name: source
-        type: Instance
+          The name of the suite. Must not be empty.
+      - name: options
+        type: Dictionary
         default: nil
         summary: |
-          The script instance that invoked the checkpoint, used for output
-          attribution. Defaults to `nil`.
-      - name: line
-        type: int
-        default: 0
-        summary: |
-          The line number in the source script where the checkpoint was called.
-          Defaults to `0`.
+          Optional settings for the suite: `Tags` (an array of strings) and
+          `TimeoutSec` (a number of seconds).
     returns:
-      - type: ()
-        summary: ''
+      - type: TestSuite
+        summary: |
+          The `Class.TestSuite`, which you use to register tests in it.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: TestService:Done
+  - name: TestService:RegisterTest
     summary: |
-      Prints `Testing Done` to the output in blue text.
+      Registers a test so `Class.TestService:RunTestsAsync()|RunTestsAsync()`
+      can run it.
     description: |
-      Prints `Testing Done` to the output in blue text.
-    code_samples:
-      - TestService-Done1
+      Registers a test. The test doesn't run until you call
+      `Class.TestService:RunTestsAsync()|RunTestsAsync()`. Tests registered with
+      this method belong to the `Default` suite; to put a test in your own
+      suite, use `Class.TestSuite:RegisterTest()`.
+
+      When the test runs, `callback` is called with two arguments: the test's
+      `Class.TestCase`, which you use to check values, and a
+      `Class.TestExecutionContext`, which you use to skip the test. The callback
+      can yield.
+
+      The `options` table accepts:
+
+      - `Tags`: an array of strings that you can select tests by with the
+        `IncludeTags` filter of
+        `Class.TestService:RunTestsAsync()|RunTestsAsync()`.
+      - `TimeoutSec`: how long the test can run, from `0` to `86400` seconds.
+        Defaults to `30`. A test that runs longer is reported as
+        `Enum.TestCaseStatus.TimedOut`. If the test is yielding when its time
+        runs out, it's stopped there, though threads it spawned keep running. If
+        it's running without yielding, it's reported as timed out when it
+        finishes. Set `TimeoutSec` to `0` for no per-test timeout. Either way,
+        the place's script timeout still stops a test that runs too long without
+        yielding, and that test is reported as timed out too.
+
+      Each test in a suite must have a unique name. Throws an error if
+      `Class.TestService.Enabled|Enabled` is `false`, if `testName` is empty or
+      is already registered in the suite, if `Tags` isn't an array of strings,
+      or if `TimeoutSec` isn't a number from `0` to `86400`.
+
+      ```lua
+      local TestService = game:GetService("TestService")
+
+      TestService:RegisterTest("spawn location exists", function(test)
+      	local spawnLocation = workspace:FindFirstChildWhichIsA("SpawnLocation")
+      	test:Check(spawnLocation ~= nil, true, "the place needs a SpawnLocation")
+      end, { Tags = { "smoke" } })
+      ```
+    code_samples: []
+    parameters:
+      - name: testName
+        type: string
+        default:
+        summary: |
+          The name of the test. Must not be empty.
+      - name: callback
+        type: Function
+        default:
+        summary: |
+          The function that runs the test. It receives the test's
+          `Class.TestCase` and a `Class.TestExecutionContext`.
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: |
+          Optional settings for the test: `Tags` (an array of strings) and
+          `TimeoutSec` (a number of seconds).
+    returns:
+      - type: TestCase
+        summary: |
+          The `TestCase` for the registered test.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+  - name: TestService:ResetTestRegistry
+    summary: |
+      Removes every registered test and suite.
+    description: |
+      Removes every registered test and suite, so you can register a fresh set.
+      `Class.TestCase` objects you already hold stay readable but no longer run.
+      A `Class.TestSuite` from before the reset still registers tests with its
+      old settings, but it's no longer the registered suite of that name. Call
+      `Class.TestService:RegisterSuite()|RegisterSuite()` again to get the
+      current one.
+
+      Throws an error if `Class.TestService.Enabled|Enabled` is `false` or if a
+      test run is in progress.
+    code_samples: []
     parameters: []
     returns:
       - type: ()
@@ -572,318 +316,80 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
-  - name: TestService:Error
+  - name: TestService:RunTestsAsync
     summary: |
-      Prints a red error message to the output, prefixed by `TestService: `.
+      Runs the registered tests one at a time and yields until they finish.
     description: |
-      Prints a red error message (`description`) to the output, prefixed by
-      `TestService: `.
-    code_samples:
-      - TestService-Error1
-    parameters:
-      - name: description
-        type: string
-        default:
-        summary: |
-          The error message text to display.
-      - name: source
-        type: Instance
-        default: nil
-        summary: |
-          The script instance that raised the error, used for output
-          attribution. Defaults to `nil`.
-      - name: line
-        type: int
-        default: 0
-        summary: |
-          The line number in the source script where the error was raised.
-          Defaults to `0`.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: TestService:Fail
-    summary: |
-      Indicates a fatal error in a `TestService` run.
-    description: |
-      Indicates a fatal error in a `TestService` run. If this is called inside
-      of a script running inside the service, it will initiate a breakpoint on
-      the line that invoked the error.
+      Runs the registered tests one at a time, in the order they were
+      registered, and yields until the last one finishes. It returns a
+      `Class.TestRunResult` and prints a summary of the run to the **Output**
+      window.
+
+      The optional `filter` table selects which tests run. A test runs only if
+      it matches every field you set:
+
+      - `TestId`: a string. Matches the test with exactly this
+        `Class.TestCase.TestId`.
+      - `Suite`: a string. Matches tests in the suite with this name.
+      - `NamePattern`: a string. Matches tests whose name contains this text.
+        The match is case-sensitive and is plain text, not a string pattern.
+      - `IncludeTags`: an array of strings. Matches tests that have at least one
+        of these tags.
+
+      ```lua
+      -- Run the "gameplay" tests in the Door suite
+      local result = TestService:RunTestsAsync({ Suite = "Door", IncludeTags = { "gameplay" } })
+      ```
+
+      The run uses the tests that were registered when it started; tests
+      registered during the run wait for the next one. Only one run can be in
+      progress at a time.
+
+      Throws an error if `Class.TestService.Enabled|Enabled` is `false`, if
+      another run is in progress, if `filter` has a field not listed above, if a
+      field has the wrong type, or if `TestId`, `Suite`, or `IncludeTags` is
+      empty.
     code_samples: []
     parameters:
-      - name: description
-        type: string
-        default:
-        summary: |
-          The failure message text to display.
-      - name: source
-        type: Instance
+      - name: filter
+        type: Dictionary
         default: nil
         summary: |
-          The script instance where the failure occurred, used for output
-          attribution. Defaults to `nil`.
-      - name: line
-        type: int
-        default: 0
-        summary: |
-          The line number in the source script where the failure was triggered.
-          Defaults to `0`.
+          Optional fields that select which tests run: `TestId`, `Suite`,
+          `NamePattern`, and `IncludeTags`. Omit it to run every registered
+          test.
     returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: TestService:isFeatureEnabled
-    summary: |
-      Returns whether the named feature identified by `name` is currently
-      enabled.
-    description: |
-      Returns `true` if the feature identified by `name` is set to `true`, and
-      `false` if it is set to any other value. Raises an error if `name` doesn't
-      correspond to a defined feature.
-    code_samples: []
-    parameters:
-      - name: name
-        type: string
-        default:
+      - type: TestRunResult
         summary: |
-          The name of the feature to query.
-    returns:
-      - type: boolean
-        summary: |
-          `true` if the named feature resolves to `true`, `false` otherwise.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: TestService:Message
-    summary: |
-      Prints `TestService:` followed by a string to the output in blue text.
-    description: |
-      Prints `TestService:` followed by `text` to the output in blue text.
-    code_samples:
-      - TestService-Message1
-    parameters:
-      - name: text
-        type: string
-        default:
-        summary: |
-          The message to print to the output.
-      - name: source
-        type: Instance
-        default: nil
-        summary: |
-          The script instance that sent the message, used for output
-          attribution. Defaults to `nil`.
-      - name: line
-        type: int
-        default: 0
-        summary: |
-          The line number in the source script where the message was sent.
-          Defaults to `0`.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: TestService:Require
-    summary: |
-      Prints whether a condition is true along with a description string.
-    description: |
-      If `condition` is `true`, prints `Require passed:` followed by
-      `description` to the output in blue text. Otherwise prints
-      `Require failed. Test ended:` followed by `description` in red text.
-    code_samples:
-      - TestService-Require1
-    parameters:
-      - name: condition
-        type: boolean
-        default:
-        summary: |
-          The boolean expression to evaluate as a required assertion.
-      - name: description
-        type: string
-        default:
-        summary: |
-          A label that identifies this requirement in the test output.
-      - name: source
-        type: Instance
-        default: nil
-        summary: |
-          The script instance that invoked the requirement, used for output
-          attribution. Defaults to `nil`.
-      - name: line
-        type: int
-        default: 0
-        summary: |
-          The line number in the source script where the requirement was called.
-          Defaults to `0`.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: TestService:Run
-    summary: |
-      Runs scripts which are parented to `TestService`.
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
+          A `Class.TestRunResult` with the outcome of the run and of each test.
     tags:
       - Yields
-      - Deprecated
-    deprecation_message: |
-      Use `Class.TestService:RunAsync()|RunAsync()` instead.
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
-  - name: TestService:RunAsync
-    summary: |
-      Runs scripts which are parented to `TestService`.
-    description: |
-      Runs scripts which are parented to `TestService`.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: ()
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
-  - name: TestService:ScopeTime
-    summary: |
-      Returns a dictionary of per-scope physics simulation timings for
-      performance testing.
-    description: |
-      Returns a dictionary mapping physics simulation scopes to their measured
-      step times, used for per-scope physics performance testing. Raises an
-      error if the caller lacks permission.
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Dictionary
-        summary: |
-          A dictionary mapping physics simulation scopes to their measured step
-          times.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-  - name: TestService:Warn
-    summary: |
-      Prints if a condition is `true`, otherwise prints a warning.
-    description: |
-      If `condition` is `true`, prints `Warning passed:` followed by
-      `description` to the output in blue text. Otherwise prints `Warning:`
-      followed by `description` to the output in yellow text.
-    code_samples:
-      - TestService-Warn1
-    parameters:
-      - name: condition
-        type: boolean
-        default:
-        summary: |
-          The boolean expression to evaluate as the warning assertion.
-      - name: description
-        type: string
-        default:
-        summary: |
-          A label that identifies this warning check in the test output.
-      - name: source
-        type: Instance
-        default: nil
-        summary: |
-          The script instance that invoked the warning, used for output
-          attribution. Defaults to `nil`.
-      - name: line
-        type: int
-        default: 0
-        summary: |
-          The line number in the source script where the warning was called.
-          Defaults to `0`.
-    returns:
-      - type: ()
-        summary: ''
-    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
 events:
-  - name: TestService.ServerCollectConditionalResult
+  - name: TestService.TestRegistryChanged
     summary: |
-      Fires when the server should collect a conditional test result.
+      Fires after tests or suites are registered or the registry is reset.
     description: |
-      Fires when the server should collect a conditional test result.
+      Fires after tests or suites are registered or after
+      `Class.TestService:ResetTestRegistry()|ResetTestRegistry()` is called. It
+      fires at most once per `Class.RunService.Heartbeat`, so a script that
+      registers many tests at once doesn't flood listeners. Call
+      `Class.TestService:ListTests()|ListTests()` to see the current tests.
+
+      ```lua
+      local TestService = game:GetService("TestService")
+
+      TestService.TestRegistryChanged:Connect(function()
+      	for _, test in TestService:ListTests() do
+      		print(test.TestId, table.concat(test:GetTestTags(), ", "))
+      	end
+      end)
+      ```
     code_samples: []
-    parameters:
-      - name: condition
-        type: boolean
-        default:
-        summary: |
-          Whether the conditional test assertion passed or failed.
-      - name: text
-        type: string
-        default:
-        summary: |
-          The description label associated with the test assertion.
-      - name: script
-        type: Instance
-        default:
-        summary: |
-          The script instance that produced the result.
-      - name: line
-        type: int
-        default:
-        summary: |
-          The line number in the script where the assertion was made.
-    tags: []
-    deprecation_message: ''
-    security: None
-    capabilities: []
-  - name: TestService.ServerCollectResult
-    summary: |
-      Fires when the server should collect a test result.
-    description: |
-      Fires when the server should collect a test result.
-    code_samples: []
-    parameters:
-      - name: text
-        type: string
-        default:
-        summary: |
-          The result message text sent from the client.
-      - name: script
-        type: Instance
-        default:
-        summary: |
-          The script instance that produced the result.
-      - name: line
-        type: int
-        default:
-        summary: |
-          The line number in the script where the result was generated.
+    parameters: []
     tags: []
     deprecation_message: ''
     security: None

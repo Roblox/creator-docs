@@ -3243,6 +3243,36 @@ navigation:
             type: engineapi
             source: /reference/engine/classes/PluginConnection.yaml
             ignoreTranslation: true
+          - title: TestCase
+            path: /reference/engine/classes/TestCase
+            type: engineapi
+            source: /reference/engine/classes/TestCase.yaml
+            ignoreTranslation: true
+          - title: TestExecutionContext
+            path: /reference/engine/classes/TestExecutionContext
+            type: engineapi
+            source: /reference/engine/classes/TestExecutionContext.yaml
+            ignoreTranslation: true
+          - title: TestFailure
+            path: /reference/engine/classes/TestFailure
+            type: engineapi
+            source: /reference/engine/classes/TestFailure.yaml
+            ignoreTranslation: true
+          - title: TestResult
+            path: /reference/engine/classes/TestResult
+            type: engineapi
+            source: /reference/engine/classes/TestResult.yaml
+            ignoreTranslation: true
+          - title: TestRunResult
+            path: /reference/engine/classes/TestRunResult
+            type: engineapi
+            source: /reference/engine/classes/TestRunResult.yaml
+            ignoreTranslation: true
+          - title: TestSuite
+            path: /reference/engine/classes/TestSuite
+            type: engineapi
+            source: /reference/engine/classes/TestSuite.yaml
+            ignoreTranslation: true
           - title: VideoSampler
             path: /reference/engine/classes/VideoSampler
             type: engineapi
@@ -5725,6 +5755,21 @@ navigation:
         path: /reference/engine/enums/TerrainFace
         type: engineapi
         source: /reference/engine/enums/TerrainFace.yaml
+        ignoreTranslation: true
+      - title: TestCaseStatus
+        path: /reference/engine/enums/TestCaseStatus
+        type: engineapi
+        source: /reference/engine/enums/TestCaseStatus.yaml
+        ignoreTranslation: true
+      - title: TestRunStatus
+        path: /reference/engine/enums/TestRunStatus
+        type: engineapi
+        source: /reference/engine/enums/TestRunStatus.yaml
+        ignoreTranslation: true
+      - title: TextChatCommandMatchMode
+        path: /reference/engine/enums/TextChatCommandMatchMode
+        type: engineapi
+        source: /reference/engine/enums/TextChatCommandMatchMode.yaml
         ignoreTranslation: true
       - title: TextChatMessageStatus
         path: /reference/engine/enums/TextChatMessageStatus

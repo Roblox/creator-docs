@@ -65,17 +65,17 @@ Each ad campaign has a single goal that determines who Roblox shows the campaign
 
   The Earnings objective reaches players who are most likely to spend Robux in your game. Use it to increase earnings by acquiring new high-value players, especially if your game has a well-developed in-game economy.
 
-- **Engagement**
+- **Qualify for Kids and Select**
 
-  The Engagement objective reaches age-checked highly engaged players whose sessions count toward your highly engaged player threshold for [Roblox Kids and Select](../publishing/kids-and-select.md). Use it if you want a more direct path toward meeting the threshold.
+  The **Qualify for Kids and Select** objective reaches age-checked Highly Engaged Players whose sessions count toward your Highly Engaged Player threshold for [Roblox Kids and Select](../publishing/kids-and-select.md). Use it if you want a more direct path toward meeting the threshold.
 
-  Many games reach the threshold organically over time, so using the Engagement objective is optional.
+  Many games reach the threshold organically over time, so using the Qualify for Kids and Select objective is optional.
 
-  When using the Engagement objective, keep the following in mind:
+  When using the Qualify for Kids and Select objective, keep the following in mind:
 
-  - **Expect a higher cost per play (CPP).** The highly engaged player audience is smaller than the Plays audience, which typically results in a higher CPP.
-  - **Use a dedicated budget.** Consider Engagement as a separate investment if your goal is to make progress toward the Roblox Kids and Select threshold, instead of shifting spend from Plays campaigns.
-  - **Track your progress.** Engagement campaigns do not automatically pause when you reach your Highly Engaged Player threshold. Track your progress and pause the campaign when you reach your goal.
+  - **Expect a higher cost per play (CPP).** The Highly Engaged Player audience is smaller than the Plays audience, which typically results in a higher CPP.
+  - **Use a dedicated budget.** Consider Qualify for Kids and Select as a separate investment if your goal is to make progress toward the Roblox Kids and Select threshold, instead of shifting spend from Plays campaigns.
+  - **Track your progress.** Use the Audience Reach dashboard in Creator Hub to see how close your game is to the threshold. The campaign stops automatically once it reaches your goal. To keep reaching players after that, create a new campaign with a different objective.
   - **Allow time for results.** Most campaigns require several days to produce meaningful results. If you don't see progress after 3–5 days, consider improving your game's onboarding and first-time user experience before continuing.
 
 <h5 style={{marginTop: '36px'}}>Automated bidding</h5>
@@ -139,8 +139,8 @@ To create an ad campaign:
       <td>Reach the players most likely to spend money inside your game.</td>
    </tr>
    <tr>
-      <td>**Engagement**</td>
-      <td>Grow the number of highly engaged players in your game.</td>
+      <td>**Qualify for Kids and Select**</td>
+      <td>Grow the number of Highly Engaged Players in your game. Stops once your game meets the threshold.</td>
    </tr>
    </tbody>
    </table>
@@ -169,6 +169,10 @@ To create an ad campaign:
       </tr>
       </tbody>
       </table>
+
+      <Alert severity="info">
+      To comply with Roblox policies, the **New Players**, **Recent Players**, and **Lapsed Players** audiences, as well as genre and gender targeting, only reach players who are eligible for personalized ads. For more information, see [Ads Preferences](https://en.help.roblox.com/hc/en-us/articles/28943243301780-Ads-Preferences).
+      </Alert>
 
    2. <Chip label="OPTIONAL" size="small" variant="outlined" /> Under **Advanced Targeting**, narrow down your audience by customizing settings like location, age, gender, genre, and device type.
 
