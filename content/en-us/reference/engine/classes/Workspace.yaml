@@ -932,28 +932,6 @@ properties:
       can_save: true
     capabilities:
       - Physics
-  - name: Workspace.ReplicateInstanceDestroySetting
-    summary: |
-      Controls how `Instance:Destroy()` calls are replicated from the server to
-      clients.
-    description: |
-      Determines the replication behavior when `Instance:Destroy()` is called on
-      the server. When `Enum.ReplicateInstanceDestroySetting|Enabled`, the
-      engine uses improved replication semantics for instance destruction.
-    code_samples: []
-    type: ReplicateInstanceDestroySetting
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
   - name: Workspace.Retargeting
     summary: |
       Controls whether animation retargeting is enabled for character

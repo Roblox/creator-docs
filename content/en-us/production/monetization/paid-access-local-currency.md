@@ -121,11 +121,11 @@ To view your transaction history for local currency paid access purchases:
 
 ## Demo mode
 
-**Demo mode** lets users try your paid access experience before purchasing it. When demo mode is enabled, any user can join your experience even if they haven't paid for access. You can then use scripting to detect whether a user owns the experience and tailor their gameplay accordingly, for example by limiting access to certain areas or features until they purchase.
+**Demo mode** lets users try your paid access game before purchasing it. When demo mode is enabled, any user can join your game even if they haven't paid for access. You can then use scripting to detect whether a user owns the game and tailor their gameplay accordingly, for example by limiting access to certain areas or features until they purchase.
 
 ### Enable demo mode
 
-On the **Access Settings** page for your experience, toggle **Enable Demo Mode** on under the local currency payment section.
+On the **Access Settings** page for your game, toggle **Enable Demo Mode** on under the local currency payment section.
 
 <Alert severity="warning">
 After toggling demo mode on or off, there is a cooldown period before you can change the setting again. Plan accordingly before enabling or disabling the feature.
@@ -133,7 +133,9 @@ After toggling demo mode on or off, there is a cooldown period before you can ch
 
 ### Control the demo experience in scripts
 
-Use `Class.MarketplaceService:PlayerOwnsAssetAsync()` to check whether a user has purchased access to your experience. Users who haven't purchased access are in demo mode, and you can limit what content they can see or interact with.
+Use `Class.MarketplaceService:PlayerOwnsAssetAsync()` to check whether a user has purchased access to your game. Users who haven't purchased access are in demo mode, and you can limit what content they can see or interact with.
+
+Place your access checks in a `Class.Script` under `Class.ServerScriptService`. Verify access on the server before allowing restricted actions, rather than only hiding client UI.
 
 The following code sample shows how to gate content behind a purchase check:
 
@@ -143,25 +145,33 @@ local Players = game:GetService("Players")
 
 local PLACE_ID = game.PlaceId
 
-local function onPlayerAdded(player: Player)
+local function setAccess(player: Player)
   local success, ownsAccess = pcall(function()
     return MarketplaceService:PlayerOwnsAssetAsync(player, PLACE_ID)
   end)
 
-  if success then
-    if ownsAccess then
-      -- Grant full access to the experience
-    else
-      -- Player is in demo mode: show limited content or
-      -- prompt them to purchase
-    end
-  else
+  if not success then
     warn("Failed to check ownership for", player.Name)
+    ownsAccess = false
+  end
+
+  if ownsAccess then
+    -- Grant full access to the game
+  else
+    -- Player is in demo mode: grant only demo access
   end
 end
 
-Players.PlayerAdded:Connect(onPlayerAdded)
+Players.PlayerAdded:Connect(function(player)
+  task.spawn(setAccess, player)
+end)
+
+for _, player in Players:GetPlayers() do
+  task.spawn(setAccess, player)
+end
 ```
+
+If a demo player purchases access during the same session, run the ownership check again on the server before granting full access.
 
 ## Policies
 

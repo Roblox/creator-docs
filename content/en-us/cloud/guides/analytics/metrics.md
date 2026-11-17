@@ -284,3 +284,13 @@ See [Rewarded Video Ads](../../../production/promotion/rewarded-video-ads.md#ana
 | Rewarded video earnings per mille (EPM) | <code>AdsPublisherReportingVideo2DEpmNoUnvalidatedPc</code><br/><br/>**Granularities:** OneDay, OneHour, None<br/>**Data retention:** 1468 days | <ul><li><code>AdFormat</code></li><li><code>AdInstanceName</code></li><li><code>AdPlacementId</code></li><li><code>AdRewardId</code></li><li><code>AdsPublisherReportingDataVersion</code></li><li><code>Country</code></li><li><code>Gender</code></li><li><code>OperatingSystem</code></li><li><code>PlacementType</code></li><li><code>Platform</code></li></ul> |
 | Rewarded video impressions | <code>AdsPublisherReportingVideo2DImpressions</code><br/><br/>**Granularities:** OneDay, OneHour, None<br/>**Data retention:** 1468 days | <ul><li><code>AdFormat</code></li><li><code>AdInstanceName</code></li><li><code>AdPlacementId</code></li><li><code>AdRewardId</code></li><li><code>AdsPublisherReportingDataVersion</code></li><li><code>Country</code></li><li><code>Gender</code></li><li><code>OperatingSystem</code></li><li><code>PlacementType</code></li><li><code>Platform</code></li></ul> |
 | Rewarded video earnings | <code>AdsPublisherReportingVideo2DRevenueRobux</code><br/><br/>**Granularities:** OneDay, OneHour, None<br/>**Data retention:** 1468 days | <ul><li><code>AdFormat</code></li><li><code>AdInstanceName</code></li><li><code>AdPlacementId</code></li><li><code>AdRewardId</code></li><li><code>AdsPublisherReportingDataVersion</code></li><li><code>Country</code></li><li><code>Gender</code></li><li><code>OperatingSystem</code></li><li><code>PlacementType</code></li><li><code>Platform</code></li></ul> |
+
+### Sponsored Ads
+
+See [Ads Manager guide](../../../production/promotion/ads-manager.md#reporting).
+
+| Name | Metric | Supported dimensions |
+| --- | --- | --- |
+| Sponsored Ads clicks | <code>SponsoredAdsClicks</code><br/><br/>**Granularities:** OneDay, OneHour, None<br/>**Data retention:** 1468 days | <ul><li><code>AgeGroup</code></li><li><code>Gender</code></li><li><code>OperatingSystem</code></li><li><code>Platform</code></li></ul> |
+| Sponsored Ads impressions | <code>SponsoredAdsImpressions</code><br/><br/>**Granularities:** OneDay, OneHour, None<br/>**Data retention:** 1468 days | <ul><li><code>AgeGroup</code></li><li><code>Gender</code></li><li><code>OperatingSystem</code></li><li><code>Platform</code></li></ul> |
+| Sponsored Ads spend (USD) | <code>SponsoredAdsSpendUsd</code><br/><br/>**Granularities:** OneDay, OneHour, None<br/>**Data retention:** 1468 days<br/>Spend values are in USD. | <ul><li><code>AgeGroup</code></li><li><code>Gender</code></li><li><code>OperatingSystem</code></li><li><code>Platform</code></li></ul> |

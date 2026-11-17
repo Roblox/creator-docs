@@ -24,16 +24,12 @@ properties:
       that same context level, which makes it a simple way to share state
       between scripts.
 
-      ```lua
-      -- Script A (sets a value)
-      _G.mySharedValue = "hello from Script A"
-
       Note that relying on `_G` for cross-script communication introduces
       ordering dependencies and makes code harder to reason about. Prefer
       `Class.ModuleScript` for shared state when possible.
-      ```
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-_G
     deprecation_message: ''
   - name: _VERSION
     type: string
@@ -44,7 +40,8 @@ properties:
       A global variable (not a function) that holds a string containing the
       current interpreter version.
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-_VERSION
     deprecation_message: ''
 functions:
   - name: assert
@@ -95,7 +92,8 @@ functions:
           returns the total memory in use in kilobytes.
     tags:
       - Deprecated
-    code_samples: []
+    code_samples:
+      - LuaGlobals-collectgarbage
     deprecation_message: ''
   - name: error
     summary: |
@@ -127,7 +125,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-error
     deprecation_message: ''
   - name: gcinfo
     summary: |
@@ -142,7 +141,8 @@ functions:
         summary: |
           The total memory heap size in kilobytes.
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-gcinfo
     deprecation_message: ''
   - name: getfenv
     summary: |
@@ -178,7 +178,8 @@ functions:
           The environment table of the specified function or stack level.
     tags:
       - Deprecated
-    code_samples: []
+    code_samples:
+      - LuaGlobals-getfenv
     deprecation_message: |
       This function allows uncontrolled change of the global/function
       environment and disables script optimizations. Changes to the environment
@@ -281,7 +282,8 @@ functions:
           The compiled function on success, or `nil` followed by an error
           message string on failure.
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-loadstring
     deprecation_message: ''
   - name: newproxy
     summary: |
@@ -298,19 +300,6 @@ functions:
       userdata always reports `"userdata"` from both `Global.LuaGlobals.type()`
       and `typeof()`; setting a `__type` metamethod on it does not change the
       `typeof()` result.
-
-      ```lua
-      -- Create a proxy with a metatable to implement custom tostring
-      local proxy = newproxy(true)
-      local mt = getmetatable(proxy)
-
-      mt.__tostring = function()
-      	return "MyProxy"
-      end
-
-      print(tostring(proxy)) --> MyProxy
-      print(type(proxy)) --> userdata
-      ```
     parameters:
       - name: addMetatable
         type: bool
@@ -323,7 +312,8 @@ functions:
           A new blank userdata, with an empty metatable attached if
           `addMetatable` is `true`.
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-newproxy
     deprecation_message: ''
   - name: next
     summary: |
@@ -357,7 +347,8 @@ functions:
         summary: |
           The value associated with the returned key.
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-next
     deprecation_message: ''
   - name: pairs
     summary: |
@@ -441,7 +432,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-print
     deprecation_message: ''
   - name: rawequal
     summary: |
@@ -457,14 +449,6 @@ functions:
       This is useful when you need to compare two tables or userdata objects
       that have an `__eq` metamethod and you want to test whether they are
       literally the same object rather than semantically equal.
-
-      ```lua
-      local a = setmetatable({}, {__eq = function() return true end})
-      local b = setmetatable({}, {__eq = function() return true end})
-      print(a == b) --> true (metamethod fires)
-      print(rawequal(a, b)) --> false (different objects)
-      print(rawequal(a, a)) --> true (same object)
-      ```
     parameters:
       - name: v1
         type: Variant
@@ -482,7 +466,8 @@ functions:
           `true` if `v1` and `v2` are primitively equal without metamethod
           invocation, `false` otherwise.
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-rawequal
     deprecation_message: ''
   - name: rawget
     summary: |
@@ -495,15 +480,6 @@ functions:
 
       This is useful for inspecting a table's own stored fields when a
       metatable-based lookup chain would otherwise intercept the access.
-
-      ```lua
-      local fallback = {x = 10}
-      local t = setmetatable({}, {__index = fallback})
-      print(t.x) --> 10 (found via __index)
-      print(rawget(t, "x")) --> nil (not in t itself)
-      t.y = 20
-      print(rawget(t, "y")) --> 20 (stored directly in t)
-      ```
     parameters:
       - name: t
         type: table
@@ -521,7 +497,8 @@ functions:
           The value stored at `t[index]`, or `nil` if the key does not exist in
           the table itself.
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-rawget
     deprecation_message: ''
   - name: rawlen
     summary: |
@@ -533,13 +510,6 @@ functions:
       `#` operator would return before any metamethod fires; the length of the
       array portion as determined by the boundary search. For strings, it
       returns the byte count.
-
-      ```lua
-      local t = setmetatable({1, 2, 3}, {__len = function() return 999 end})
-      print(#t) --> 999 (metamethod fires)
-      print(rawlen(t)) --> 3 (actual array length)
-      print(rawlen("hello")) --> 5
-      ```
     parameters:
       - name: t
         type: table
@@ -551,7 +521,8 @@ functions:
         summary: |
           The raw length of the table or string without metamethod invocation.
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-rawlen
     deprecation_message: ''
   - name: rawset
     summary: |
@@ -566,20 +537,6 @@ functions:
       This is the complement of `Global.LuaGlobals.rawget()` for write
       operations; use it when you need to bypass a proxy table's write
       interception.
-
-      ```lua
-      local log = {}
-      local proxy = setmetatable({}, {
-          __newindex = function(_, k, v)
-              table.insert(log, k)
-              rawset(proxy, k, v) -- actually store the value
-          end
-      })
-      rawset(proxy, "x", 42) -- bypasses __newindex; no log entry
-      proxy.y = 7 -- triggers __newindex; log entry created
-      print(proxy.x, proxy.y) --> 42  7
-      print(#log) --> 1 (only "y" was logged)
-      ```
     parameters:
       - name: t
         type: table
@@ -602,7 +559,8 @@ functions:
         summary: |
           The table `t` that was passed in, allowing chained calls.
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-rawset
     deprecation_message: ''
   - name: require
     summary: |
@@ -743,7 +701,8 @@ functions:
           The function whose environment was set, or no value if `f` is `0`.
     tags:
       - Deprecated
-    code_samples: []
+    code_samples:
+      - LuaGlobals-setfenv
     deprecation_message: |
       This function allows uncontrolled change of the global/function
       environment and disables script optimizations. Changes to the environment
@@ -859,7 +818,8 @@ functions:
           The basic type name of `v` as a string (e.g. `"number"`, `"string"`,
           `"table"`).
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-type
     deprecation_message: ''
   - name: unpack
     summary: |
@@ -870,16 +830,6 @@ functions:
       and `j` is the length of `list` (as defined by the `#` operator). If the
       range is empty (`i > j`), no values are returned. An error is raised if
       the requested range is too large to fit on the stack.
-
-      ```lua
-      local t = {10, 20, 30, 40, 50}
-      print(unpack(t)) --> 10  20  30  40  50
-      print(unpack(t, 2, 4)) --> 20  30  40
-
-      -- Common pattern: forwarding a stored argument list
-      local args = {1, "hello", true}
-      someFunction(unpack(args))
-      ```
     parameters:
       - name: list
         type: table
@@ -901,7 +851,8 @@ functions:
         summary: |
           The elements `list[i]` through `list[j]` as separate return values.
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-unpack
     deprecation_message: ''
   - name: xpcall
     summary: |
@@ -948,5 +899,6 @@ functions:
           All return values of `f` on success, or the result of
           `err(errorObject)` on failure.
     tags: []
-    code_samples: []
+    code_samples:
+      - LuaGlobals-xpcall
     deprecation_message: ''

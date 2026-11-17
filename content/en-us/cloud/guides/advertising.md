@@ -76,7 +76,7 @@ Read these fields:
 | `billingAccounts`                                          | The accounts that can pay for this experience's campaign, each with its `paymentTypes`. Pass one as `billingAccountId` when you create the campaign.                           |
 | `paymentTypes`                                             | The payment types that at least one of `billingAccounts` can use. An empty list means that no account can pay for a campaign yet.                                              |
 | `budgetConstraints`                                        | The minimum budget for each budget type, and the longest schedule. For `LIFETIME`, the minimum is per day of the schedule.                                                     |
-| `creativeRequirements`, `adFormats`, `targetingDimensions` | The creative count and asset types, the image sizes in pixels, and the values that you can use in `targeting`.                                                                 |
+| `creativeRequirements`, `adFormats`, `targetingDimensions` | The creative count and asset types, the recommended image sizes in pixels, and the values that you can use in `targeting`.                                                     |
 | `video`                                                    | The accepted `video.source` values, and `previewVideo` for the experience. This field is absent when sponsored video isn't available. See [Add a video](#add-a-video).         |
 | `mutableFields`                                            | The campaign fields that you can change later with `PATCH`.                                                                                                                    |
 
@@ -114,6 +114,13 @@ Budget limits for each payment type:
 - `ADS_CREDIT` is listed when ad credit is activated and the balance is at least the minimum daily budget. Create and `campaigns:validate` also check that the balance, after unbilled spend, covers the daily budget. For a `LIFETIME` budget, the daily budget is the amount divided by the number of campaign days.
 - For `CREDIT_CARD`, the daily budget can't be more than `billingAccounts[].maximumDailyBudgetMicros` from `campaign-options`. `CREDIT_CARD` is listed only when that limit is at least the minimum daily budget. A verified card with a lower limit still returns the limit, but adding a card doesn't help. Use ad credit instead.
 
+The `limits` on a billing account apply only to `CREDIT_CARD`:
+
+- `limits.maximumDailyBudgetMicros` is the daily budget cap for card campaigns, the same value as `maximumDailyBudgetMicros` in `campaign-options`.
+- `limits.billingThresholdMicros` is how often the card is billed: when unbilled card spend, in `outstandingBalanceMicros`, reaches this amount, Roblox charges the card. The account can return it before a card is on file.
+
+Neither limit applies to `ADS_CREDIT` campaigns. An ad credit campaign spends from the balance, and its limit is the balance.
+
 #### Payment errors
 
 Create and `campaigns:validate` return these payment errors. `campaigns:validate` returns them in `errors[]` with `valid: false`.
@@ -146,7 +153,7 @@ The browser doesn't tell the agent when setup is complete. Don't retry payment s
 
 Cards are available only for personal accounts, and only for users who are 18 or older. Group ad credit links include `groupId`.
 
-To see how much ad credit an amount of Robux buys, use `ad-credit-conversions:preview`. Send `robuxAmount` or `adCreditAmountMicros`, and the preview calculates the other amount. The preview doesn't convert anything. If the account can't afford the amount, the response is `200` with `valid: false` and a `reason`, and it still shows both amounts. Use them to tell the user how much they need.
+To see how much ad credit an amount of Robux buys, send `POST /billing-accounts/{id}/ad-credit-conversions:preview` for the billing account. Use an `id` from `GET /billing-accounts`, not a campaign or group ID. A `404` `NOT_FOUND` means the path is wrong, or the billing account doesn't exist or belongs to another user. Send `robuxAmount` or `adCreditAmountMicros`, and the preview calculates the other amount. The preview doesn't convert anything. If the account can't afford the amount, the response is `200` with `valid: false` and a `reason`, and it still shows both amounts. Use them to tell the user how much they need.
 
 ### Estimate results (optional)
 
@@ -169,6 +176,8 @@ pass them in `creativeAssetIds` when you create the campaign. Creating a campaig
 registers its assets in the billing account's library, so you don't need to upload
 the images again or call `POST /creatives` first.
 
+An image asset doesn't have to be in a library before you use it. `GET /creatives` lists only the images that are already registered in that account. If an uploaded image asset isn't in that list, you can still pass its asset ID in `creativeAssetIds`. A local image file isn't an asset yet. Upload it first, as in [Upload a new image](#upload-a-new-image).
+
 Call `POST /creatives` only when the user asks to add an image to the library without
 creating a campaign. Add `groupId` for a group's account. Registration does not upload an image.
 
@@ -186,7 +195,7 @@ To check moderation, get the creative with `GET /creatives/{id}` and read
 
 If the user needs a new image asset:
 
-1. Upload the image through the [Assets API](usage-assets.md) with `assetType` `Image`. Use a size from `adFormats` in `campaign-options`.
+1. Upload the image through the [Assets API](usage-assets.md) with `assetType` `Image`. For the best fit in the tile, use a recommended size from `adFormats` in `campaign-options`. `adFormats` is a recommendation, not a requirement.
 1. Poll the upload operation until it is done, and record the `assetId`.
 1. Pass the asset ID in `creativeAssetIds` when you create the campaign.
 
@@ -370,6 +379,11 @@ List endpoints use cursor pagination with `maxPageSize` and `pageToken`.
 Query Sponsored Ads performance for an experience through the [Analytics Query API](./analytics/index.md). Use `SponsoredAdsClicks`, `SponsoredAdsImpressions`, and `SponsoredAdsSpendUsd` with `OneHour`, `OneDay`, or `None` granularity. `SponsoredAdsSpendUsd` returns spend in dollars.
 
 The ad `id` from `GET /campaigns/{campaignId}/ads` matches the `AdId` dimension in analytics results. See [Supported metrics and dimensions](./analytics/metrics.md) for more Analytics Query API metrics.
+
+When you compare campaigns:
+
+- Judge each objective by the result that it optimizes for. The Sponsored Ads metrics report clicks, impressions, and spend, not plays or later actions, so cost per click is only a proxy. `ENGAGEMENT` and `ROBUX_SPEND` campaigns optimize for actions after the click, so they usually cost more per click. Don't choose between objectives on cost per click alone.
+- Don't judge a campaign while `deliveryStatusReasons` contains `LEARNING`. Delivery and cost change while it ramps up. Compare campaigns over the same dates, after all of them have left learning.
 
 ## Handle errors
 

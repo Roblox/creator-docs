@@ -168,6 +168,47 @@ If you're working on a game with others in [collaboration](../projects/collabora
    Only one team test session can run at any given time. To close a session and kick out all testers, click the **End&nbsp;Session** button.
    </Alert>
 
+### Collaborator logs
+
+During a Team Test, each collaborator's client output is shared with the session so that your team can debug together. Only client output is shared, and only while a collaborator is in the Team Test; leaving the Team Test stops sharing.
+
+1. Click the context filter dropdown at the top of the **Output** window. A **Sources** section lists everyone in the session.
+1. Check a name to show that collaborator's output, or check **All** to show everyone, including people who join later. Their messages appear prefixed with their name, such as `[builderman] Loaded 12 enemies`.
+
+Note the following behaviors:
+
+- Nobody is shown when a Team Test starts. Your own output is never affected by who you select in **Sources**; it keeps following your usual context and message-type filters.
+- The **Remote Client** option in the context filter shows or hides everyone else's output at once, separately from your own **Client** output.
+- Message-type filters (**Output**, **Info**, **Warning**, **Error**) and the text filter apply to collaborators' messages as well.
+- When the Team Test ends, Studio restores the output you had before the session started.
+- The **Sources** section only shows collaborators' client output, not the Team Test server's output.
+
+Scripts, plugins, and command bar code can also read a collaborator's recent log history with `Class.LogService:GetLogHistoryAsync()`, passing the collaborator's `Class.Player.User`. To read the Team Test server's log history, pass `User.fromId(0)`. This method only works during a Team Test (it's disabled in solo playtesting and live games), returns up to the 512 most recent messages in the same format as `Class.LogService:GetLogHistory()`, and yields. It fetches logs over the network and can error, so wrap calls in `pcall`.
+
+```lua
+local LogService = game:GetService("LogService")
+local Players = game:GetService("Players")
+
+for _, player in Players:GetPlayers() do
+	local ok, history = pcall(LogService.GetLogHistoryAsync, LogService, player.User)
+	if not ok then
+		warn(`Couldn't read {player.Name}'s logs: {history}`)
+		continue
+	end
+	for _, entry in history do
+		if entry.messageType == Enum.MessageType.MessageError then
+			print(`[{player.Name}] {entry.message}`)
+		end
+	end
+end
+
+-- The Team Test server's log history
+local ok, serverHistory = pcall(LogService.GetLogHistoryAsync, LogService, User.fromId(0))
+if ok then
+	print(`The server has {#serverHistory} log entries`)
+end
+```
+
 ## Device simulation
 
 Use [Device Simulator](./device-simulator.md) to preview how your experience looks and behaves on a device you don't have in front of you, including its screen dimensions, pixel density, on-screen keyboard, and touch input. Device Simulator pairs with [Controller Emulator](./controller-emulator.md) to emulate the gamepads, VR controllers, handhelds, and TV remotes players use to control your experience.

@@ -84,17 +84,16 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 600
+            "maxInPeriod": 120
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 600
+            "maxInPeriod": 120
           }
         },
         "x-roblox-scopes": [
           {
-            "name": "ad.campaign:read",
-            "targetResourceSpecifier": ""
+            "name": "ad.campaign:read"
           }
         ],
         "x-roblox-engine-usability": {
@@ -114,6 +113,106 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#ListAdvertisableUniverses"
         }
+      }
+    },
+    "/ads-management/v1/audience-estimates": {
+      "post": {
+        "description": "Returns a non-binding range of users reachable with the proposed targeting. campaignContext has the same shape as performance estimates, but accepts every creatable objective (PLAYS, ENGAGEMENT, ROBUX_SPEND). targeting accepts the same values and combinations as CreateCampaign, including regions.",
+        "summary": "Estimate the addressable audience",
+        "operationId": "CreateAudienceEstimate",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AudienceEstimateRequest"
+              }
+            }
+          },
+          "description": "Audience estimate request",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AudienceEstimateResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:read"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:read"]
+          }
+        ]
       }
     },
     "/ads-management/v1/billing-accounts": {
@@ -206,13 +305,12 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 600
+            "maxInPeriod": 120
           }
         },
         "x-roblox-scopes": [
           {
             "name": "ad.billing:read",
-            "targetResourceSpecifier": "",
             "firstPartyOAuthOnly": true
           }
         ],
@@ -305,13 +403,12 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 600
+            "maxInPeriod": 120
           }
         },
         "x-roblox-scopes": [
           {
             "name": "ad.billing:read",
-            "targetResourceSpecifier": "",
             "firstPartyOAuthOnly": true
           }
         ],
@@ -331,9 +428,283 @@
         }
       }
     },
+    "/ads-management/v1/billing-accounts/{id}/ad-credit-conversions:preview": {
+      "post": {
+        "description": "Calculates the other side of a conversion from either a Robux amount or an ad credit amount, using the account's current Robux balances and rates. An amount the account cannot afford or outside the allowed range returns 200 with valid=false and a reason.",
+        "summary": "Preview a Robux-to-ad-credit conversion",
+        "operationId": "PreviewAdCreditConversion",
+        "parameters": [
+          {
+            "description": "Billing account ID",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PreviewAdCreditConversionRequest"
+              }
+            }
+          },
+          "description": "Conversion preview request",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdCreditConversionPreview"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Billing account not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.billing:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/ads-management/v1/billing-accounts/{id}/payment-activities": {
+      "get": {
+        "description": "Lists one ledger, newest first. AD_CREDIT includes the source transaction type and initiator when available. CARD charge rows include the latest associated card settlement time when available. CARD requires type=CHARGE or type=REFUND. CHARGE and AD_CREDIT use cursor pagination; filtered pages can be short or empty and still have a nextPageToken. REFUND requires startTime (inclusive) and endTime (exclusive), returns complete results without pagination, and rejects ranges containing more than 100 refund requests, including non-card requests. Requests without payment details are retained; known non-card payments are excluded.",
+        "summary": "List scoped payment activity",
+        "operationId": "ListPaymentActivities",
+        "parameters": [
+          {
+            "description": "Billing account ID",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Payment activity ledger (CARD or AD_CREDIT)",
+            "name": "ledger",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["CARD", "AD_CREDIT"]
+            }
+          },
+          {
+            "description": "Required for CARD: CHARGE or REFUND. Unsupported for AD_CREDIT.",
+            "name": "type",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": ["CHARGE", "REFUND"]
+            }
+          },
+          {
+            "description": "Required for REFUND: inclusive RFC 3339 request time. Unsupported for other scopes.",
+            "name": "startTime",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "description": "Required for REFUND: exclusive RFC 3339 request time, after startTime. Unsupported for other scopes.",
+            "name": "endTime",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "description": "CHARGE and AD_CREDIT only: maximum records per page (1-100, default 50)",
+            "name": "maxPageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            }
+          },
+          {
+            "description": "CHARGE and AD_CREDIT only: opaque cursor from a prior nextPageToken",
+            "name": "pageToken",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListPaymentActivitiesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid scope, pagination, or time range; REFUND_WINDOW_TOO_LARGE requires a narrower range",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Billing account not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.billing:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
     "/ads-management/v1/campaign-options": {
       "get": {
-        "description": "Returns the values accepted when creating a campaign: supported objectives, payment types, ad formats, and targeting dimensions. Call this before CreateCampaign. When universeId is supplied, the response also includes an eligibility block indicating whether that experience can currently be advertised, along with the reasons when it cannot. universeId is optional; without it, account-level options are returned without eligibility or billing-account resolution. A caller without permission to advertise the supplied experience gets 403 with reason UNIVERSE_NOT_ADVERTISABLE. It works without a billing account and lists in billingAccounts the accounts you can create a campaign for the experience in, each with the payment types it can use: CREDIT_CARD only for your own account with a card set up, and only ADS_CREDIT for a group's account. paymentTypes is then the payment types at least one of those accounts can use, and is empty when there are none. paymentTypes says which payment types a campaign may choose, not whether an account is funded; read paymentStatus from GET /billing-accounts for that. Sponsored video tiles follow the billing account's owner: video is present when the request's account or at least one listed billing account allows video, and mutableFields lists video only when a campaign's video can be changed.",
+        "description": "Returns the values accepted when creating a campaign: supported objectives, payment types, ad formats, and targeting dimensions. Call this before CreateCampaign. When universeId is supplied, the response also includes an eligibility block indicating whether that experience can currently be advertised, along with the reasons when it cannot. universeId is optional; without it, account-level options are returned without eligibility or billing-account resolution, and paymentTypes is a static menu that does not check payment setup. A caller without permission to advertise the supplied experience gets 403 with reason UNIVERSE_NOT_ADVERTISABLE. It works without a billing account and lists in billingAccounts the accounts you can create a campaign for the experience in, each with the payment types it can use now: CREDIT_CARD only for your own account with a verified card, ADS_CREDIT only with activated ad credit of at least the minimum daily budget, and only ADS_CREDIT for a group's account. paymentTypes is then the payment types at least one of those accounts can use, and is empty when there are none. Each account also has paymentStatus, paymentStatusReason, and paymentSetupUrl. Create also checks that the ad credit balance covers the daily budget. Sponsored video tiles follow the billing account's owner: video is present when the request's account or at least one listed billing account allows video, and mutableFields lists video only when a campaign's video can be changed.",
         "tags": ["Advertising"],
         "summary": "Get campaign options",
         "operationId": "GetCampaignOptions",
@@ -412,17 +783,16 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 600
+            "maxInPeriod": 120
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 600
+            "maxInPeriod": 120
           }
         },
         "x-roblox-scopes": [
           {
-            "name": "ad.campaign:read",
-            "targetResourceSpecifier": ""
+            "name": "ad.campaign:read"
           }
         ],
         "x-roblox-engine-usability": {
@@ -442,6 +812,106 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#GetCampaignOptions"
         }
+      }
+    },
+    "/ads-management/v1/campaign-recommendations": {
+      "post": {
+        "description": "Returns non-binding daily budget and duration suggestions for the proposed campaign. campaignContext accepts every creatable objective (PLAYS, ENGAGEMENT, ROBUX_SPEND). targetUniverseId and targeting.audienceType influence the result; RETENTION and REACTIVATION get budget recommendations for that audience. targeting accepts only audienceType: ageGroups, countries, regions, and devices return 400 with reason UNSUPPORTED_VALUE.",
+        "summary": "Recommend budget and duration",
+        "operationId": "CreateCampaignRecommendation",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CampaignRecommendationRequest"
+              }
+            }
+          },
+          "description": "Campaign recommendation request",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CampaignRecommendationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:read"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:read"]
+          }
+        ]
       }
     },
     "/ads-management/v1/campaigns": {
@@ -564,8 +1034,7 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "ad.campaign:read",
-            "targetResourceSpecifier": ""
+            "name": "ad.campaign:read"
           }
         ],
         "x-roblox-engine-usability": {
@@ -681,8 +1150,7 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "ad.campaign:write",
-            "targetResourceSpecifier": ""
+            "name": "ad.campaign:write"
           }
         ],
         "x-roblox-engine-usability": {
@@ -702,6 +1170,391 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#CreateCampaign"
         }
+      }
+    },
+    "/ads-management/v1/campaigns/{campaignId}/ads": {
+      "get": {
+        "description": "Lists every ad the campaign has had, one per creative, including PAUSED and REMOVED ads, in creation order (oldest first). id matches the ad ID reported by analytics-query-api.",
+        "summary": "List a campaign's ads",
+        "operationId": "ListCampaignAds",
+        "parameters": [
+          {
+            "description": "Campaign ID",
+            "name": "campaignId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Maximum results per page (1-100, default 50)",
+            "name": "maxPageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            }
+          },
+          {
+            "description": "Opaque cursor from a prior nextPageToken",
+            "name": "pageToken",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListCampaignAdsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid maxPageSize or pageToken",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Campaign not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:read"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:read"]
+          }
+        ]
+      }
+    },
+    "/ads-management/v1/campaigns/{campaignId}/ads/{adId}": {
+      "get": {
+        "description": "Returns one ad in a campaign. Returns 404 if the campaign or ad does not exist, the caller cannot manage the campaign, or adId does not belong to campaignId.",
+        "summary": "Get one ad",
+        "operationId": "GetCampaignAd",
+        "parameters": [
+          {
+            "description": "Campaign ID",
+            "name": "campaignId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Ad ID",
+            "name": "adId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CampaignAd"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Campaign or ad not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:read"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:read"]
+          }
+        ]
+      },
+      "patch": {
+        "description": "Sets one ad's status to ACTIVE or PAUSED while leaving the campaign's creative set, targeting, and other ads unchanged. Returns 400 FAILED_PRECONDITION for REMOVED ads and for campaigns that have ended or been cancelled.",
+        "summary": "Toggle one ad on or off",
+        "operationId": "UpdateCampaignAd",
+        "parameters": [
+          {
+            "description": "Campaign ID",
+            "name": "campaignId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Ad ID",
+            "name": "adId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCampaignAdRequest"
+              }
+            }
+          },
+          "description": "Update campaign ad request",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CampaignAd"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error or failed precondition",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Campaign or ad not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Concurrent modification conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:write"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:write"]
+          }
+        ]
       }
     },
     "/ads-management/v1/campaigns/{id}": {
@@ -796,8 +1649,7 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "ad.campaign:read",
-            "targetResourceSpecifier": ""
+            "name": "ad.campaign:read"
           }
         ],
         "x-roblox-engine-usability": {
@@ -930,8 +1782,7 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "ad.campaign:write",
-            "targetResourceSpecifier": ""
+            "name": "ad.campaign:write"
           }
         ],
         "x-roblox-engine-usability": {
@@ -1026,17 +1877,16 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 120
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 1000
+            "maxInPeriod": 120
           }
         },
         "x-roblox-scopes": [
           {
-            "name": "ad.campaign:read",
-            "targetResourceSpecifier": ""
+            "name": "ad.campaign:read"
           }
         ],
         "x-roblox-engine-usability": {
@@ -1058,9 +1908,101 @@
         }
       }
     },
+    "/ads-management/v1/campaigns:validate": {
+      "post": {
+        "description": "Runs the same validation, permission, eligibility, and billing-account resolution as CreateCampaign, without creating anything. HTTP 200 means validation ran; read valid and errors, which match the errors CreateCampaign would return for the same body. resolvedBillingAccountId is the account the campaign would be created in. Malformed JSON, account-resolution failures, and dependency failures return the usual error envelope. Takes no x-idempotency-key.",
+        "summary": "Validate a campaign without creating it",
+        "operationId": "ValidateCampaign",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/CreateCampaignRequest"
+        },
+        "responses": {
+          "200": {
+            "description": "Validation ran",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidateCampaignResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed request body",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Cannot resolve a billing account for this context",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:write"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:write"]
+          }
+        ]
+      }
+    },
     "/ads-management/v1/creatives": {
       "get": {
-        "description": "Lists the reusable creatives saved to the caller's billing account. Each creative includes its assetId, name, moderation status, dimensions, and source. Use isArchived to filter by archive state. Results are paginated with a cursor (pageToken). A filtered page can be short or empty while more results remain; continue until nextPageToken is absent.",
+        "description": "Lists the reusable creatives saved to the caller's billing account. Each creative includes its assetId, name, moderation status, dimensions, and source. Use each creative's assetId (a decimal string) in GET /creatives/{id} and PATCH /creatives/{id}. The separate id field is a library registration UUID and cannot be used in those paths; it returns 404. Use isArchived to filter by archive state. Results are paginated with a cursor (pageToken). A filtered page can be short or empty while more results remain; continue until nextPageToken is absent.",
         "tags": ["Advertising"],
         "summary": "List creatives",
         "operationId": "ListCreatives",
@@ -1173,17 +2115,16 @@
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
-            "maxInPeriod": 600
+            "maxInPeriod": 120
           },
           "perOauth2Authorization": {
             "period": "MINUTE",
-            "maxInPeriod": 600
+            "maxInPeriod": 120
           }
         },
         "x-roblox-scopes": [
           {
-            "name": "ad.campaign:read",
-            "targetResourceSpecifier": ""
+            "name": "ad.campaign:read"
           }
         ],
         "x-roblox-engine-usability": {
@@ -1203,6 +2144,469 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#ListCreatives"
         }
+      },
+      "post": {
+        "description": "Saves an existing Open Cloud image asset to the creative library ahead of campaign creation. Dimensions and moderation state are derived by the service. Registering an asset that is already active in the selected billing account's library returns 409 ALREADY_EXISTS, regardless of the supplied universeId. You cannot change an active entry's universeId by re-registering the asset. Archived entries are unarchived and updated with the supplied fields.",
+        "summary": "Add an asset to the creative library",
+        "operationId": "CreateCreative",
+        "parameters": [
+          {
+            "description": "Select the group ads account; absent groupId selects the personal ads account. Requires group advertising permission",
+            "name": "groupId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCreativeRequest"
+              }
+            }
+          },
+          "description": "Create creative request",
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Creative created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Creative"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request or asset not usable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Asset already registered in the selected billing account's library",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:write"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:write"]
+          }
+        ]
+      }
+    },
+    "/ads-management/v1/creatives/{id}": {
+      "get": {
+        "description": "Returns the Roblox asset registered in the selected ads account. The path id is Creative.assetId, a decimal Roblox asset ID, not Creative.id (the library registration UUID). For example, assetId \"1234567890\" uses /creatives/1234567890. A registration UUID returns 404. groupId selects the group ads account; absent groupId selects the personal ads account. The caller needs group advertising permission. Unknown and inaccessible creatives return the same 404.",
+        "summary": "Get a creative",
+        "operationId": "GetCreative",
+        "parameters": [
+          {
+            "description": "Roblox asset ID (Creative.assetId) in the group ads account selected by groupId, or the personal ads account when absent",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Select the group ads account; absent groupId selects the personal ads account. Requires group advertising permission",
+            "name": "groupId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Creative"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Creative not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 600
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:read"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:read"]
+          }
+        ]
+      },
+      "patch": {
+        "description": "Archives or unarchives a creative, or changes its associated experience. isArchived=true must be the only field in the request; combining it with another field returns 400 without writing. Archiving returns 409 if an enabled ad uses the asset; pause or archive that ad first. Set universeId to null to clear the association; omitted fields remain unchanged. An empty object returns the current creative without writing. The asset is resolved only in the group ads account selected by groupId, or the caller's personal account when omitted. Unknown assets and inaccessible accounts return the same 404. The caller must have advertising permission for a new experience association.",
+        "summary": "Update a creative",
+        "operationId": "UpdateCreative",
+        "parameters": [
+          {
+            "description": "Roblox asset ID in the group ads account selected by groupId, or the caller's personal account when omitted",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Roblox group ID as a decimal string. Selects that group's ads account; requires group advertising permission. Omit for the caller's personal account.",
+            "name": "groupId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCreativeRequest"
+              }
+            }
+          },
+          "description": "Fields to update",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Creative"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied for the new experience",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Creative not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Creative is used by an enabled ad, or conflicting concurrent change",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:write"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:write"]
+          }
+        ]
+      }
+    },
+    "/ads-management/v1/performance-estimates": {
+      "post": {
+        "description": "Estimates an objective from a budget, or the budget required for a target outcome, for an experience the caller can advertise. Results are not cached.",
+        "summary": "Create a performance estimate",
+        "operationId": "CreatePerformanceEstimate",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PerformanceEstimateRequest"
+              }
+            }
+          },
+          "description": "Performance estimate request",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PerformanceEstimateResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Permission denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not available",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Timed out",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ad.campaign:read"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["ad.campaign:read"]
+          }
+        ]
       }
     },
     "/analytics-alert-control-plane/v1/resource/{resourceType}/id/{resourceId}/alerts": {
@@ -29169,16 +30573,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.notification-string:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29190,9 +30591,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.notification-string:write"]
           }
         ],
         "externalDocs": {
@@ -29261,16 +30659,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.notification-string:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29282,9 +30677,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.notification-string:write"]
           }
         ],
         "externalDocs": {
@@ -29322,16 +30714,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 1200
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 1200
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.notification-string:read",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29343,9 +30732,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.notification-string:read"]
           }
         ],
         "externalDocs": {
@@ -29415,16 +30801,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 200
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 200
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.notification-string:read",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29436,9 +30819,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.notification-string:read"]
           }
         ],
         "externalDocs": {
@@ -29500,16 +30880,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.notification-string:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29521,9 +30898,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.notification-string:write"]
           }
         ],
         "externalDocs": {
@@ -29585,16 +30959,13 @@
           "perApiKeyOwner": {
             "period": "SECOND",
             "maxInPeriod": 5
-          },
-          "perOauth2Authorization": {
-            "period": "SECOND",
-            "maxInPeriod": 5
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.following:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29606,9 +30977,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.following:write"]
           }
         ],
         "externalDocs": {
@@ -29670,15 +31038,12 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
-            "name": "notification-report:write"
+            "name": "notification-report:write",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29690,9 +31055,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["notification-report:write"]
           }
         ],
         "externalDocs": {
@@ -44436,200 +45798,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/inventories#inventory_post_v1_collections_items__itemType___itemTargetId_"
-        }
-      }
-    },
-    "/v1/content-metadata/appeal": {
-      "post": {
-        "tags": ["Assets", "Avatars"],
-        "summary": "Creates a content metadata appeal for an asset.",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Request.CreateContentMetadataAppealRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Request.CreateContentMetadataAppealRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Response.CreateContentMetadataAppealResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Response.CreateContentMetadataAppealResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "4: Invalid request parameters"
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "0: Token Validation Failed\r\n3: Invalid user - user does not have permission"
-          },
-          "404": {
-            "description": "5: Target not found"
-          },
-          "500": {
-            "description": "2: Failed to create content metadata appeal"
-          },
-          "503": {
-            "description": "6: Service unavailable"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://itemconfiguration.roblox.com"
-          }
-        ],
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 10
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "marketplace.item-appeal:write",
-            "firstPartyOAuthOnly": true
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          },
-          {
-            "roblox-api-key": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_post_v1_content_metadata_appeal"
-        }
-      }
-    },
-    "/v1/content-metadata/appeal-status": {
-      "get": {
-        "tags": ["Assets", "Avatars"],
-        "summary": "Checks the appeal status for an asset.",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "TargetType",
-            "description": "The type of the target item.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "enum": [0, 1, 2, 3]
-            }
-          },
-          {
-            "in": "query",
-            "name": "TargetId",
-            "description": "The id of the target item.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "in": "query",
-            "name": "AppealType",
-            "description": "The type of the appeal.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "enum": [0, 1]
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.GetAppealStatusResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.GetAppealStatusResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "4: Invalid request parameters"
-          },
-          "401": {
-            "description": "0: Authorization has been denied for this request."
-          },
-          "403": {
-            "description": "3: Invalid user - user does not have permission"
-          },
-          "404": {
-            "description": "5: Target not found\r\n6: Service unavailable"
-          },
-          "500": {
-            "description": "1: Failed to get appeal status"
-          },
-          "503": {
-            "description": "6: Service unavailable"
-          }
-        },
-        "servers": [
-          {
-            "url": "https://itemconfiguration.roblox.com"
-          }
-        ],
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "SECOND",
-            "maxInPeriod": 10
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "marketplace.item-appeal:read",
-            "firstPartyOAuthOnly": true
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          },
-          {
-            "roblox-api-key": []
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/assets#itemconfiguration_get_v1_content_metadata_appeal_status"
         }
       }
     },
@@ -83219,6 +84387,76 @@
         "type": "object",
         "additionalProperties": false
       },
+      "AdCreditConversionPreview": {
+        "type": "object",
+        "required": ["adCreditAmountMicros", "robuxAmount", "valid"],
+        "properties": {
+          "adCreditAmountMicros": {
+            "description": "Ad credit that would be granted, in micro-USD.",
+            "type": "string"
+          },
+          "effectiveO18Robux": {
+            "description": "Portion of robuxAmount drawn from 18+ eligible Robux, which converts at the higher rate first.",
+            "type": "string"
+          },
+          "effectiveStandardRobux": {
+            "description": "Portion of robuxAmount drawn from standard Robux.",
+            "type": "string"
+          },
+          "reason": {
+            "description": "Why valid is false. Omitted when valid.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Reason"
+              }
+            ]
+          },
+          "robuxAmount": {
+            "description": "Robux that would be charged.",
+            "type": "string"
+          },
+          "tierBreakdown": {
+            "description": "One entry per rate tier used, in the order Robux are drawn.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdCreditConversionTierBreakdown"
+            }
+          },
+          "valid": {
+            "description": "False when the account can't afford the amount or it's outside the allowed range.",
+            "type": "boolean"
+          }
+        }
+      },
+      "AdCreditConversionTierBreakdown": {
+        "type": "object",
+        "required": [
+          "adCreditAmountMicros",
+          "adCreditPerRobux",
+          "robuxAmount",
+          "tier"
+        ],
+        "properties": {
+          "adCreditAmountMicros": {
+            "description": "Ad credit granted from this tier, in micro-USD.",
+            "type": "string"
+          },
+          "adCreditPerRobux": {
+            "description": "USD of ad credit per Robux in this tier.",
+            "type": "number",
+            "format": "double"
+          },
+          "robuxAmount": {
+            "description": "Robux converted in this tier.",
+            "type": "string"
+          },
+          "tier": {
+            "description": "Rate tier (`O18_ELIGIBLE_ROBUX` or `STANDARD_ROBUX`).",
+            "type": "string",
+            "enum": ["O18_ELIGIBLE_ROBUX", "STANDARD_ROBUX"]
+          }
+        }
+      },
       "AdFormat": {
         "type": "object",
         "properties": {
@@ -84593,6 +85831,38 @@
         "type": "string",
         "description": "Matchmaking attribute aggregation function type."
       },
+      "AudienceEstimateRequest": {
+        "type": "object",
+        "required": ["campaignContext"],
+        "properties": {
+          "campaignContext": {
+            "description": "The proposed campaign to estimate the reachable audience for.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PlanningCampaignContext"
+              }
+            ]
+          }
+        }
+      },
+      "AudienceEstimateResponse": {
+        "type": "object",
+        "required": ["lowerBound", "upperBound"],
+        "properties": {
+          "lowerBound": {
+            "description": "Estimated lower bound of reachable users.",
+            "type": "integer",
+            "format": "int32",
+            "minimum": 0
+          },
+          "upperBound": {
+            "description": "Estimated upper bound of reachable users.",
+            "type": "integer",
+            "format": "int32",
+            "minimum": 0
+          }
+        }
+      },
       "Audio": {
         "type": "object",
         "allOf": [
@@ -85062,15 +86332,21 @@
               "$ref": "#/components/schemas/PaymentMethod"
             }
           },
+          "paymentSetupUrl": {
+            "description": "Ads Manager page to add a payment method, buy ad credit, or resolve a failed payment. On a READY account\nit is informational: offer it, but do not stop for it. When paymentStatus is ACTION_REQUIRED or PAST_DUE,\nshow it to the user and check again after they say they are done. Omitted when no setup applies and for\ndisabled accounts. Never collect payment details through the API or in chat.",
+            "type": "string",
+            "format": "uri"
+          },
           "paymentStatus": {
-            "description": "The payment readiness of the account. Can be `READY`, `ACTION_REQUIRED`, `PAST_DUE`, or `DISABLED`.",
+            "description": "Whether the account can fund a new campaign. Can be `READY`, `ACTION_REQUIRED`, `PAST_DUE`, or `DISABLED`.\nREADY means at least one payment type in supportedPaymentTypes can fund a campaign. ACTION_REQUIRED\nmeans no payment type can. PAST_DUE means a card payment failed or a failed charge is unpaid; create\nsucceeds only with a payment type listed in supportedPaymentTypes, which can be empty. DISABLED accounts\nlist no payment types.",
             "type": "string",
             "enum": ["READY", "ACTION_REQUIRED", "PAST_DUE", "DISABLED"]
           },
           "paymentStatusReason": {
-            "description": "Machine-readable reason for a paymentStatus other than READY.",
+            "description": "Machine-readable reason for a paymentStatus other than READY. NO_PAYMENT_METHOD means that no payment type\ncan fund a campaign: no usable card and no usable ad credit. PROFILE_NOT_VERIFIED means the same, but a\ncard exists and needs verification.",
             "type": "string",
             "enum": [
+              "NO_PAYMENT_METHOD",
               "PROFILE_NOT_VERIFIED",
               "TRANSACTION_FAILURE",
               "ACCOUNT_DISABLED"
@@ -85082,7 +86358,7 @@
             "enum": ["ACTIVE", "DISABLED", "ARCHIVED"]
           },
           "supportedPaymentTypes": {
-            "description": "Campaign payment types usable right now. Group accounts support only ADS_CREDIT.",
+            "description": "Campaign payment types that can fund a new campaign now. CREDIT_CARD needs a verified card and a daily\nspend limit (limits.maximumDailyBudgetMicros) of at least the minimum daily budget. ADS_CREDIT\nneeds activated ad credit with a balance of at least the minimum daily budget. Create also checks that\nthe ad credit balance covers the campaign's daily budget. Group accounts can use only ADS_CREDIT.",
             "type": "array",
             "items": {
               "type": "string",
@@ -85113,7 +86389,7 @@
             "type": "string"
           },
           "maximumDailyBudgetMicros": {
-            "description": "The maximum daily budget for CREDIT_CARD campaigns in this account, in micro-USD.\nA non-positive value means no positive CREDIT_CARD budget is allowed.\nFor LIFETIME, multiply by the schedule's number of days.\nOmitted when the account does not offer CREDIT_CARD; does not limit ADS_CREDIT\nor INVOICE campaigns.",
+            "description": "The maximum daily budget for CREDIT_CARD campaigns in this account, in micro-USD.\nA non-positive value means no positive CREDIT_CARD budget is allowed.\nFor LIFETIME, multiply by the schedule's number of days.\nOmitted when no verified card bills the account. Returned even when it is too low\nfor CREDIT_CARD to be usable. Does not limit ADS_CREDIT or INVOICE campaigns.",
             "type": "string"
           }
         }
@@ -85146,11 +86422,31 @@
             "type": "string"
           },
           "maximumDailyBudgetMicros": {
-            "description": "The maximum daily budget for CREDIT_CARD campaigns in this account, in micro-USD.\nA non-positive value means no positive CREDIT_CARD budget is allowed.\nFor LIFETIME, multiply by the schedule's number of days.\nOmitted when the account does not offer CREDIT_CARD; does not limit ADS_CREDIT\nor INVOICE campaigns.",
+            "description": "The maximum daily budget for CREDIT_CARD campaigns in this account, in micro-USD.\nA non-positive value means no positive CREDIT_CARD budget is allowed.\nFor LIFETIME, multiply by the schedule's number of days.\nOmitted when no verified card bills the account. Returned even when it is too low\nfor CREDIT_CARD to be usable. Does not limit ADS_CREDIT or INVOICE campaigns.",
             "type": "string"
           },
+          "paymentSetupUrl": {
+            "description": "Ads Manager page to add a payment method, buy ad credit, or resolve a failed payment. Informational on a READY account.\nSame as on GET /billing-accounts/{id}. Never collect payment details in chat.",
+            "type": "string",
+            "format": "uri"
+          },
+          "paymentStatus": {
+            "description": "Whether the account can fund a new campaign: READY, ACTION_REQUIRED, PAST_DUE, or DISABLED. Same as on GET /billing-accounts/{id}.",
+            "type": "string",
+            "enum": ["READY", "ACTION_REQUIRED", "PAST_DUE", "DISABLED"]
+          },
+          "paymentStatusReason": {
+            "description": "Reason for a paymentStatus other than READY. Same as on GET /billing-accounts/{id}.",
+            "type": "string",
+            "enum": [
+              "NO_PAYMENT_METHOD",
+              "PROFILE_NOT_VERIFIED",
+              "TRANSACTION_FAILURE",
+              "ACCOUNT_DISABLED"
+            ]
+          },
           "paymentTypes": {
-            "description": "The payment types a campaign in this account can use: only `ADS_CREDIT` for a\ngroup's account; otherwise `INVOICE` for a managed account, or `ADS_CREDIT`\nplus `CREDIT_CARD` once a card is set up for a self-serve account.",
+            "description": "The payment types that can fund a new campaign in this account now. This\nmatches supportedPaymentTypes on GET /billing-accounts/{id}: CREDIT_CARD needs a\nverified card and a daily spend limit of at least the minimum daily budget, ADS_CREDIT needs activated ad credit with at least the minimum daily\nbudget, and a group's account can use only ADS_CREDIT. `INVOICE` is for a managed account.",
             "type": "array",
             "items": {
               "type": "string",
@@ -85533,6 +86829,56 @@
           }
         }
       },
+      "CampaignAd": {
+        "type": "object",
+        "required": [
+          "creativeAssetId",
+          "deliveryStatus",
+          "id",
+          "reviewStatus",
+          "status"
+        ],
+        "properties": {
+          "creativeAssetId": {
+            "description": "The Roblox image asset ID this ad serves, as a decimal string.\nThis is the same value as Creative.assetId.",
+            "type": "string",
+            "readOnly": true
+          },
+          "deliveryStatus": {
+            "description": "Per-ad serving state (`SERVING`, `IN_REVIEW`, `NOT_SERVING`, or `REJECTED`).",
+            "type": "string",
+            "enum": ["SERVING", "IN_REVIEW", "NOT_SERVING", "REJECTED"]
+          },
+          "id": {
+            "description": "Stable ad ID; matches the ad ID in analytics-query-api.",
+            "type": "string",
+            "readOnly": true
+          },
+          "removeTime": {
+            "description": "Set when status is `REMOVED`, as an RFC 3339 UTC timestamp.",
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "reviewIssues": {
+            "description": "Structured review issues, when applicable.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Reason"
+            }
+          },
+          "reviewStatus": {
+            "description": "Combined result of the creative's review and the experience's review (`IN_REVIEW`, `APPROVED`, or `REJECTED`).",
+            "type": "string",
+            "enum": ["IN_REVIEW", "APPROVED", "REJECTED"]
+          },
+          "status": {
+            "description": "Lifecycle intent for this ad (`ACTIVE`, `PAUSED`, or `REMOVED`).",
+            "type": "string",
+            "enum": ["ACTIVE", "PAUSED", "REMOVED"]
+          }
+        }
+      },
       "CampaignIDFailure": {
         "type": "object",
         "properties": {
@@ -85610,7 +86956,7 @@
             }
           },
           "paymentTypes": {
-            "description": "The payment types a campaign may choose. Values can be `CREDIT_CARD`,\n`ADS_CREDIT`, or `INVOICE`. With universeId, the payment types at least one of\nbillingAccounts can use; empty when there are none. Without it, the payment\ntypes of the caller's personal billing account. This is not whether an\naccount is funded; read paymentStatus from GET /billing-accounts for that.",
+            "description": "The payment types a campaign may choose. Values can be `CREDIT_CARD`,\n`ADS_CREDIT`, or `INVOICE`. With universeId, the payment types at least one of\nbillingAccounts can use now; empty when there are none. Without universeId, this\nis a static menu based on the caller's account type. It does not check card\nsetup, ad credit activation, or balance; supply universeId for that.",
             "type": "array",
             "items": {
               "type": "string",
@@ -85627,6 +86973,54 @@
                 "$ref": "#/components/schemas/VideoOptions"
               }
             ]
+          }
+        }
+      },
+      "CampaignRecommendationRequest": {
+        "type": "object",
+        "required": ["campaignContext"],
+        "properties": {
+          "campaignContext": {
+            "description": "The experience and targeting.audienceType influence the result. Other targeting\nfields are not accepted.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PlanningCampaignContext"
+              }
+            ]
+          }
+        }
+      },
+      "CampaignRecommendationResponse": {
+        "type": "object",
+        "required": [
+          "budgetOptionsMicros",
+          "budgetType",
+          "durationOptionsInDays",
+          "recommendedBudgetMicros"
+        ],
+        "properties": {
+          "budgetOptionsMicros": {
+            "description": "A lower, the recommended, and a higher daily budget in micro-USD, as decimal\nstrings in ascending order.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "budgetType": {
+            "description": "Recommendations are always daily budgets.",
+            "type": "string",
+            "enum": ["DAILY"]
+          },
+          "durationOptionsInDays": {
+            "description": "Suggested campaign lengths for a duration picker, in ascending order.",
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "recommendedBudgetMicros": {
+            "description": "The suggested daily budget in micro-USD, as a decimal string. Always one of\nbudgetOptionsMicros.",
+            "type": "string"
           }
         }
       },
@@ -86602,6 +87996,20 @@
           }
         }
       },
+      "CreateCreativeRequest": {
+        "type": "object",
+        "required": ["assetId"],
+        "properties": {
+          "assetId": {
+            "description": "The Roblox image asset ID to save to the selected ads account, as a decimal string.\ngroupId selects the group ads account; absent groupId selects the personal ads account.",
+            "type": "string"
+          },
+          "universeId": {
+            "description": "Optional experience to associate the creative with, as a decimal string.",
+            "type": "string"
+          }
+        }
+      },
       "CreateCustomMatchmakingSignalRequest": {
         "type": "object",
         "properties": {
@@ -87207,7 +88615,7 @@
         "type": "object",
         "properties": {
           "assetId": {
-            "description": "The Roblox asset ID identifying this creative, as a decimal string.\ngroupId selects the group ads account; absent groupId selects the personal ads account.",
+            "description": "The Roblox asset ID identifying this creative, as a decimal string. Use this assetId in GET and PATCH /creatives/{id}, not the registration UUID in id.\ngroupId selects the group ads account; absent groupId selects the personal ads account.",
             "type": "string"
           },
           "assetName": {
@@ -94003,6 +95411,23 @@
           }
         }
       },
+      "ListCampaignAdsResponse": {
+        "type": "object",
+        "required": ["ads"],
+        "properties": {
+          "ads": {
+            "description": "The page of campaign ads.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CampaignAd"
+            }
+          },
+          "nextPageToken": {
+            "description": "The cursor for the next page. Pass it as pageToken to fetch the next page.\nAbsent on the last page.",
+            "type": "string"
+          }
+        }
+      },
       "ListCampaignsResponse": {
         "type": "object",
         "properties": {
@@ -94532,6 +95957,23 @@
           }
         },
         "description": "A list of OrderedDataStoreEntries in the parent collection."
+      },
+      "ListPaymentActivitiesResponse": {
+        "type": "object",
+        "required": ["activities"],
+        "properties": {
+          "activities": {
+            "description": "Payment activities for the selected scope; REFUND returns the complete time range.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentActivity"
+            }
+          },
+          "nextPageToken": {
+            "description": "Opaque cursor for the next page of CHARGE or AD_CREDIT. Absent on the last page and for REFUND.",
+            "type": "string"
+          }
+        }
       },
       "ListPaymentProfilesResponse": {
         "type": "object",
@@ -96807,6 +98249,94 @@
         "additionalProperties": false,
         "description": "Service Efficiency API representation of a payment."
       },
+      "PaymentActivity": {
+        "type": "object",
+        "required": ["amountMicros", "createTime", "state", "type"],
+        "properties": {
+          "actorUserId": {
+            "description": "Roblox user who initiated the AD_CREDIT transaction, when available, for user and group accounts.",
+            "type": "string"
+          },
+          "adCreditTransactionType": {
+            "description": "Source transaction type for AD_CREDIT rows. The broader type remains available.",
+            "type": "string",
+            "enum": [
+              "DEPOSIT",
+              "AUTO_DEPOSIT",
+              "DEBIT",
+              "REFUND",
+              "ADJUSTMENT",
+              "PROMOTION"
+            ]
+          },
+          "amountMicros": {
+            "description": "Amount actually charged, refunded, granted, or spent, in micro-USD.",
+            "type": "string"
+          },
+          "campaignId": {
+            "description": "Associated campaign ID, when applicable.",
+            "type": "string"
+          },
+          "campaignName": {
+            "description": "Associated campaign name, present when campaignId is set.",
+            "type": "string"
+          },
+          "cardLastFourDigits": {
+            "description": "Last four digits of the card used (`CHARGE` and `REFUND` only).",
+            "type": "string"
+          },
+          "chargeTime": {
+            "description": "Latest associated card charge settlement timestamp as an RFC 3339 UTC string, when available (`CHARGE` only).",
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTime": {
+            "description": "Creation timestamp as an RFC 3339 UTC string.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "currencyCode": {
+            "description": "ISO 4217 currency of the card charge (`CHARGE` and `REFUND` only).",
+            "type": "string"
+          },
+          "description": {
+            "description": "Optional human-readable description.",
+            "type": "string"
+          },
+          "id": {
+            "description": "Stable payment identifier, when available. Absent for requests without a payment identifier.",
+            "type": "string"
+          },
+          "o18RobuxAmount": {
+            "description": "Portion of robuxAmount debited from 18+ eligible Robux (`ROBUX_CONVERSION` only).",
+            "type": "string"
+          },
+          "requestAmountMicros": {
+            "description": "Amount originally requested, in micro-USD (`CHARGE` and `REFUND` only).",
+            "type": "string"
+          },
+          "robuxAmount": {
+            "description": "Total Robux debited (`ROBUX_CONVERSION` only).",
+            "type": "string"
+          },
+          "state": {
+            "description": "The settlement state (`PENDING`, `SUCCEEDED`, `FAILED`, or `REVERSED`).",
+            "type": "string",
+            "enum": ["PENDING", "SUCCEEDED", "FAILED", "REVERSED"]
+          },
+          "type": {
+            "description": "The activity type (`CHARGE`, `REFUND`, `AD_CREDIT_GRANT`, `AD_CREDIT_SPEND`, or `ROBUX_CONVERSION`).",
+            "type": "string",
+            "enum": [
+              "CHARGE",
+              "REFUND",
+              "AD_CREDIT_GRANT",
+              "AD_CREDIT_SPEND",
+              "ROBUX_CONVERSION"
+            ]
+          }
+        }
+      },
       "PaymentMethod": {
         "type": "object",
         "required": ["displayLabel", "id", "status", "type"],
@@ -96927,6 +98457,220 @@
         },
         "additionalProperties": false,
         "description": "Service Efficiency representation of a Payment Profile."
+      },
+      "PerformanceEstimateBudget": {
+        "type": "object",
+        "properties": {
+          "dailyAmountMicroUsd": {
+            "description": "Daily budget in micro-USD, as a decimal string.",
+            "type": "string"
+          },
+          "dailyAmountMicroUsdRange": {
+            "description": "Optional range around the daily budget.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PerformanceEstimateMoneyRange"
+              }
+            ]
+          },
+          "lifetimeAmountMicroUsd": {
+            "description": "Lifetime budget in micro-USD, as a decimal string. Omitted for a daily budget.",
+            "type": "string"
+          },
+          "lifetimeAmountMicroUsdRange": {
+            "description": "Optional range around the lifetime budget. Omitted for a daily budget.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PerformanceEstimateMoneyRange"
+              }
+            ]
+          }
+        }
+      },
+      "PerformanceEstimateBudgetInput": {
+        "type": "object",
+        "properties": {
+          "amountMicroUsd": {
+            "description": "Daily or lifetime total, matching forecastScope.budgetType, in micro-USD as a decimal string.",
+            "type": "string"
+          }
+        }
+      },
+      "PerformanceEstimateCampaignContext": {
+        "type": "object",
+        "required": ["objective", "targetUniverseId"],
+        "properties": {
+          "objective": {
+            "description": "The advertising goal. Only PLAYS is supported.",
+            "type": "string",
+            "enum": ["PLAYS"]
+          },
+          "targetUniverseId": {
+            "description": "The experience to estimate, as a decimal string.",
+            "type": "string"
+          }
+        }
+      },
+      "PerformanceEstimateDerivedMetrics": {
+        "type": "object",
+        "properties": {
+          "costPerOutcomeMicroUsd": {
+            "description": "Cost per outcome in micro-USD, as a decimal string.",
+            "type": "string"
+          },
+          "costPerOutcomeMicroUsdRange": {
+            "description": "Optional range around the cost per outcome.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PerformanceEstimateMoneyRange"
+              }
+            ]
+          }
+        }
+      },
+      "PerformanceEstimateForecastInput": {
+        "type": "object",
+        "properties": {
+          "budget": {
+            "description": "Set to estimate the outcome this budget delivers.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PerformanceEstimateBudgetInput"
+              }
+            ]
+          },
+          "targetOutcome": {
+            "description": "Set to estimate the budget needed to reach this outcome.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PerformanceEstimateTargetOutcome"
+              }
+            ]
+          }
+        }
+      },
+      "PerformanceEstimateMoneyRange": {
+        "type": "object",
+        "properties": {
+          "lowerBound": {
+            "description": "Inclusive lower bound in micro-USD, as a decimal string.",
+            "type": "string"
+          },
+          "upperBound": {
+            "description": "Inclusive upper bound in micro-USD, as a decimal string.",
+            "type": "string"
+          }
+        }
+      },
+      "PerformanceEstimateOutcome": {
+        "type": "object",
+        "properties": {
+          "dailyValue": {
+            "description": "Daily outcome.",
+            "type": "integer"
+          },
+          "dailyValueRange": {
+            "description": "Optional range around the daily outcome.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PerformanceEstimateValueRange"
+              }
+            ]
+          },
+          "lifetimeValue": {
+            "description": "Lifetime outcome. Omitted for a daily budget.",
+            "type": "integer"
+          },
+          "lifetimeValueRange": {
+            "description": "Optional range around the lifetime outcome. Omitted for a daily budget.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PerformanceEstimateValueRange"
+              }
+            ]
+          },
+          "outcomeType": {
+            "description": "The outcome measured. Always PLAYS.",
+            "type": "string",
+            "enum": ["PLAYS"]
+          }
+        }
+      },
+      "PerformanceEstimateRequest": {
+        "type": "object",
+        "required": ["campaignContext", "forecastInput", "forecastScope"],
+        "properties": {
+          "campaignContext": {
+            "$ref": "#/components/schemas/PerformanceEstimateCampaignContext"
+          },
+          "forecastInput": {
+            "$ref": "#/components/schemas/PerformanceEstimateForecastInput"
+          },
+          "forecastScope": {
+            "$ref": "#/components/schemas/PerformanceEstimateScope"
+          }
+        }
+      },
+      "PerformanceEstimateResponse": {
+        "type": "object",
+        "properties": {
+          "budget": {
+            "$ref": "#/components/schemas/PerformanceEstimateBudget"
+          },
+          "derivedMetrics": {
+            "$ref": "#/components/schemas/PerformanceEstimateDerivedMetrics"
+          },
+          "outcome": {
+            "$ref": "#/components/schemas/PerformanceEstimateOutcome"
+          },
+          "predicted": {
+            "description": "Which side was calculated: OUTCOME from a budget, or BUDGET from a target outcome.",
+            "type": "string",
+            "enum": ["OUTCOME", "BUDGET"]
+          }
+        }
+      },
+      "PerformanceEstimateScope": {
+        "type": "object",
+        "required": ["budgetType"],
+        "properties": {
+          "budgetType": {
+            "description": "DAILY or LIFETIME.",
+            "type": "string",
+            "enum": ["DAILY", "LIFETIME"]
+          },
+          "durationInDays": {
+            "description": "Required and positive for LIFETIME. Must be 0 for DAILY.",
+            "type": "integer"
+          }
+        }
+      },
+      "PerformanceEstimateTargetOutcome": {
+        "type": "object",
+        "properties": {
+          "outcomeType": {
+            "description": "The outcome to reach. Only PLAYS is supported.",
+            "type": "string",
+            "enum": ["PLAYS"]
+          },
+          "value": {
+            "description": "Daily or lifetime total, matching forecastScope.budgetType.",
+            "type": "integer"
+          }
+        }
+      },
+      "PerformanceEstimateValueRange": {
+        "type": "object",
+        "properties": {
+          "lowerBound": {
+            "description": "Inclusive lower bound.",
+            "type": "integer"
+          },
+          "upperBound": {
+            "description": "Inclusive upper bound.",
+            "type": "integer"
+          }
+        }
       },
       "Period": {
         "enum": ["UNSPECIFIED", "MONTH", "DAY"],
@@ -97405,6 +99149,29 @@
         },
         "additionalProperties": false
       },
+      "PlanningCampaignContext": {
+        "type": "object",
+        "required": ["objective", "targetUniverseId"],
+        "properties": {
+          "objective": {
+            "description": "The advertising goal. Can be `PLAYS`, `ENGAGEMENT`, or `ROBUX_SPEND`.",
+            "type": "string",
+            "enum": ["PLAYS", "ENGAGEMENT", "ROBUX_SPEND"]
+          },
+          "targetUniverseId": {
+            "description": "The experience to plan for, as a decimal string.",
+            "type": "string"
+          },
+          "targeting": {
+            "description": "Optional proposed targeting. audience-estimates accepts the same targeting as\ncampaign creation. campaign-recommendations accepts only audienceType.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Targeting"
+              }
+            ]
+          }
+        }
+      },
       "PlayerCategoricalSignalConfiguration": {
         "type": "object",
         "properties": {
@@ -97539,6 +99306,19 @@
         },
         "additionalProperties": false,
         "description": "An asset preview."
+      },
+      "PreviewAdCreditConversionRequest": {
+        "type": "object",
+        "properties": {
+          "adCreditAmountMicros": {
+            "description": "Ad credit wanted, at most cent precision; the preview returns the Robux it costs.",
+            "type": "string"
+          },
+          "robuxAmount": {
+            "description": "Robux to spend; the preview returns the ad credit it buys.",
+            "type": "string"
+          }
+        }
       },
       "PreviewAssetsModel": {
         "type": "object",
@@ -98084,6 +99864,11 @@
         "type": "object",
         "required": ["code", "message"],
         "properties": {
+          "actionUrl": {
+            "description": "Ads Manager page that a human opens to fix this error. Show this URL to the user and check again after they say they are done.\nNever collect payment details through the API or in chat.",
+            "type": "string",
+            "format": "uri"
+          },
           "code": {
             "description": "A stable, machine-readable error code (for example, `INVALID_ARGUMENT`,\n`NOT_FOUND`, `PERMISSION_DENIED`, or `RATE_LIMITED`).",
             "type": "string"
@@ -111437,7 +113222,7 @@
             }
           },
           "isContentMetadataAppealEnabled": {
-            "description": "Whether content metadata appeal endpoint is enabled.",
+            "description": "Whether content metadata appeals are enabled. Always false; the appeal endpoints have been removed.",
             "type": "boolean"
           },
           "bodysuitEligibleAssetTypes": {
@@ -111468,19 +113253,6 @@
           "isMarketplaceAffiliateLinkUiEnabled": {
             "description": "Whether the marketplace affiliate link UI is enabled for the authenticated user.",
             "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.ItemConfiguration.Api.GetAppealStatusResponse": {
-        "description": "Defines the response model for the GET v1/content-metadata/appeal-status.",
-        "type": "object",
-        "properties": {
-          "appealStatus": {
-            "format": "int32",
-            "description": "The current status of the appeal\nCan return the following states\nNot submitted, Under review, Reviewed. ['Unknown' = 0, 'NotAppealed' = 1, 'InReview' = 2, 'Reviewed' = 3, 'AlreadyOverwritten' = 4]",
-            "enum": [0, 1, 2, 3, 4],
-            "type": "integer"
           }
         },
         "additionalProperties": false
@@ -112202,29 +113974,6 @@
         },
         "additionalProperties": false
       },
-      "Roblox.ItemConfiguration.Api.Models.Request.CreateContentMetadataAppealRequest": {
-        "description": "Request model to create content metadata appeal for an asset.",
-        "type": "object",
-        "properties": {
-          "targetType": {
-            "format": "int32",
-            "description": "The type of the target item. ['Asset' = 0, 'Bundle' = 1, 'IecToken' = 2, 'Look' = 3]",
-            "enum": [0, 1, 2, 3],
-            "type": "integer"
-          },
-          "targetId": {
-            "description": "The id of the target item.",
-            "type": "string"
-          },
-          "appealType": {
-            "format": "int32",
-            "description": "The type of the appeal. ['Unknown' = 0, 'BodysuitAppeal' = 1]",
-            "enum": [0, 1],
-            "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
       "Roblox.ItemConfiguration.Api.Models.Request.Folder.AddItemsRequest": {
         "description": "Request model for adding one or more items to a folder.",
         "type": "object",
@@ -112873,17 +114622,6 @@
             "format": "int64",
             "description": "The per-unit restocking fee in Robux.",
             "type": "integer"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Roblox.ItemConfiguration.Api.Models.Response.CreateContentMetadataAppealResponse": {
-        "description": "Defines the response model for creating content metadata appeal.",
-        "type": "object",
-        "properties": {
-          "success": {
-            "description": "Indicates whether the appeal was created successfully.",
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -118490,7 +120228,7 @@
             "readOnly": true
           },
           "startTime": {
-            "description": "The time the campaign starts serving, as an RFC 3339 UTC timestamp. On a create\nrequest it must not be in the past.",
+            "description": "The time the campaign starts serving, as an RFC 3339 timestamp. UTC (`Z`) is\nrecommended. On a create request it must not be in the past.",
             "type": "string",
             "format": "date-time"
           }
@@ -120953,6 +122691,17 @@
           }
         }
       },
+      "UpdateCampaignAdRequest": {
+        "type": "object",
+        "required": ["status"],
+        "properties": {
+          "status": {
+            "description": "Target lifecycle status (`ACTIVE` or `PAUSED`).",
+            "type": "string",
+            "enum": ["ACTIVE", "PAUSED"]
+          }
+        }
+      },
       "UpdateCampaignRequest": {
         "type": "object",
         "properties": {
@@ -121008,6 +122757,20 @@
                 "$ref": "#/components/schemas/CampaignVideo"
               }
             ]
+          }
+        }
+      },
+      "UpdateCreativeRequest": {
+        "type": "object",
+        "properties": {
+          "isArchived": {
+            "description": "Archive or unarchive the creative. Archiving must be the only field and requires no enabled ad to use the asset.",
+            "type": "boolean"
+          },
+          "universeId": {
+            "description": "Set the associated experience, or use null to clear it. Omit to keep it unchanged.",
+            "type": "string",
+            "nullable": true
           }
         }
       },
@@ -121463,7 +123226,7 @@
             "readOnly": true
           },
           "startTime": {
-            "description": "The new campaign start time, as an RFC 3339 UTC timestamp.",
+            "description": "The new campaign start time, as an RFC 3339 timestamp. UTC (`Z`) is recommended.",
             "type": "string",
             "format": "date-time"
           }
@@ -122113,6 +123876,34 @@
         },
         "additionalProperties": false,
         "description": "Social network profiles of a user."
+      },
+      "ValidateCampaignResponse": {
+        "type": "object",
+        "required": ["errors", "valid", "warnings"],
+        "properties": {
+          "errors": {
+            "description": "The errors CreateCampaign would return for this request, in the same order.\nEmpty when valid.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicError"
+            }
+          },
+          "resolvedBillingAccountId": {
+            "description": "The billing account the campaign would be created in.",
+            "type": "string"
+          },
+          "valid": {
+            "description": "Whether CreateCampaign would accept this request.",
+            "type": "boolean"
+          },
+          "warnings": {
+            "description": "Non-blocking notes about the request.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Reason"
+            }
+          }
+        }
       },
       "ValidateDashboardDocumentResponse": {
         "type": "object",
@@ -122817,8 +124608,6 @@
           "itemconfiguration_get_v1_collectibles_rental_pricing_preview",
           "itemconfiguration_get_v1_collectibles_revenue_split",
           "itemconfiguration_patch_v1_collectibles_update_item_display_information",
-          "itemconfiguration_post_v1_content_metadata_appeal",
-          "itemconfiguration_get_v1_content_metadata_appeal_status",
           "itemconfiguration_post_v1_creations_get_asset_details",
           "itemconfiguration_get_v1_creations_get_assets",
           "itemconfiguration_post_v1_delist_item",
@@ -122941,8 +124730,6 @@
           "itemconfiguration_get_v1_collectibles_rental_pricing_preview",
           "itemconfiguration_get_v1_collectibles_revenue_split",
           "itemconfiguration_patch_v1_collectibles_update_item_display_information",
-          "itemconfiguration_post_v1_content_metadata_appeal",
-          "itemconfiguration_get_v1_content_metadata_appeal_status",
           "itemconfiguration_get_v1_items_by_token",
           "itemconfiguration_get_v1_permissions_action_allowed_for_item_type",
           "itemconfiguration_get_v1_permissions_groups",

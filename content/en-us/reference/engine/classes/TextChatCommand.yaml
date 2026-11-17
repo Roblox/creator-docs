@@ -9,13 +9,16 @@ summary: |
   Represents a text chat command.
 description: |
   Represents a text chat command. Can be used to create custom text chat
-  commands when parented to `Class.TextChatService`.
+  commands when a descendant of `Class.TextChatService`.
 
   Custom commands can have up to two aliases, and the Triggered event fires when
   a user's message matches the value of either the
   `Class.TextChatCommand.PrimaryAlias|PrimaryAlias` or
-  `Class.TextChatCommand.SecondaryAlias|SecondaryAlias`. For an example of
-  custom commands, see
+  `Class.TextChatCommand.SecondaryAlias|SecondaryAlias`. Matching is
+  case-insensitive and controlled by
+  `Class.TextChatCommand.MatchMode|MatchMode`. When
+  `Class.TextChatCommand.DeliverMessage|DeliverMessage` is `false`, a match
+  sinks the message. For an example of custom commands, see
   [Custom text chat commands](../../../chat/examples/custom-text-chat-commands.md).
 
   To learn more about using `Class.TextChatService`, see
@@ -90,8 +93,10 @@ properties:
       A primary alias used to trigger the `Class.TextChatCommand`.
 
       If a user sends a message with `Class.TextChannel:SendAsync()` that
-      matches the `Class.TextChatCommand.PrimaryAlias|PrimaryAlias`, the message
-      is not sent and instead `Class.TextChatCommand.Triggered` is fired.
+      matches the `Class.TextChatCommand.PrimaryAlias|PrimaryAlias`,
+      `Class.TextChatCommand.Triggered` fires. Whether the message is also
+      delivered depends on
+      `Class.TextChatCommand.DeliverMessage|DeliverMessage`.
     code_samples: []
     type: string
     tags: []
@@ -114,13 +119,14 @@ properties:
       to its `Class.TextChatCommand.PrimaryAlias|PrimaryAlias`.
 
       If a user sends a message with `Class.TextChannel:SendAsync()` that
-      matches the `Class.TextChatCommand.SecondaryAlias|SecondaryAlias`, the
-      message is not sent and instead `Class.TextChatCommand.Triggered` is
-      fired, exactly as it is for the
-      `Class.TextChatCommand.PrimaryAlias|PrimaryAlias`. Matching is
-      case-insensitive, and the alias must be followed by the end of the message
-      or a space, so a `Class.TextChatCommand.SecondaryAlias|SecondaryAlias` of
-      `"/e"` matches `"/e"` and `"/e dance"` but not `"/emote"`.
+      matches the `Class.TextChatCommand.SecondaryAlias|SecondaryAlias`,
+      `Class.TextChatCommand.Triggered` fires, exactly as it is for the
+      `Class.TextChatCommand.PrimaryAlias|PrimaryAlias`. The primary alias wins
+      when both match. Matching is case-insensitive. With the default
+      `Enum.TextChatCommandMatchMode.StartsWith`, the alias must be followed by
+      the end of the message or a space, so a
+      `Class.TextChatCommand.SecondaryAlias|SecondaryAlias` of `"/e"` matches
+      `"/e"` and `"/e dance"` but not `"/emote"`.
 
       Defaults to an empty string, in which case only the
       `Class.TextChatCommand.PrimaryAlias|PrimaryAlias` triggers the command.
@@ -147,11 +153,10 @@ events:
       An event that developers can bind to execute commands.
 
       When a user sends a message to the server via
-      `Class.TextChannel:SendAsync()`, the message is intercepted by the
-      `Class.TextChatCommand` and not replicated to other users if the content
-      of the message matches the
-      `Class.TextChatCommand.PrimaryAlias|PrimaryAlias` or
-      `Class.TextChatCommand.SecondaryAlias|SecondaryAlias`.
+      `Class.TextChannel:SendAsync()`, a matching `Class.TextChatCommand` fires
+      `Triggered` on the sending client and the server. Other clients do not
+      fire `Triggered`. The message is not replicated to other users when
+      `Class.TextChatCommand.DeliverMessage|DeliverMessage` is `false`.
 
       For example, for a `Class.TextChatCommand` with
       `Class.TextChatCommand.PrimaryAlias` as "mute", if a user sends "/mute
@@ -170,8 +175,10 @@ events:
         type: string
         default:
         summary: |
-          The full, unfiltered text used to trigger the command that can be used
-          to dissect parameters from the command message.
+          The text passed to the command. When
+          `Class.TextChatCommand.DeliverMessage|DeliverMessage` is `false`, this
+          is the full unfiltered message. When it is `true`, this is the matched
+          alias as authored.
     tags: []
     deprecation_message: ''
     security: None

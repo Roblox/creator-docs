@@ -18,7 +18,7 @@ Plugins can interact with the **Output** window through `Class.LogService` which
 <Grid container spacing={2}>
 	<Grid item item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
 	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
-	Filters output by context, such as **Client**, **Server**, or **User Plugin**.
+	Filters output by context, such as **Client**, **Server**, or **User Plugin**. During a [Team Test](./testing-modes.md#collaborator-logs), this dropdown also includes a **Remote Client** option and a **Sources** section for showing collaborators' client output.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
