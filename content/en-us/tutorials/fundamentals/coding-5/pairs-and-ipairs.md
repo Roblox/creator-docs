@@ -15,6 +15,8 @@ This article will cover using them, and have a practical script example where yo
 
 `pairs()` is used with **dictionaries**. An example is seen below.
 
+<LuauPlayground title="Loop through a dictionary">
+
 ```lua
 local myDictionary = {
 	["Blue Player"] = "Ana",
@@ -27,7 +29,11 @@ for key, value in pairs(myDictionary) do
 end
 ```
 
+</LuauPlayground>
+
 `pairs()` can be used to work with a dictionary element's key, value, or both. In the for loop below, the first variable is the key. The second variable is the value. The dictionary that you want to work with is passed in to `pairs()`.
+
+<LuauPlayground title="Print an inventory">
 
 ```lua
 local inventory = {
@@ -43,7 +49,9 @@ for itemName, itemValue in pairs(inventory) do
 end
 ```
 
-When executed, the code will print the following:
+</LuauPlayground>
+
+When executed, the code will print the following. `pairs()` does not guarantee an order, so these lines might print differently.
 
 ```lua
 You have:
@@ -56,6 +64,8 @@ You have:
 
 `ipairs()` is used with **arrays**. The "i" in `ipairs()` stands for "index." Use ipairs() and arrays in combination with a for loop to work with ordered values like leaderboards. An example is below.
 
+<LuauPlayground title="Loop through an array">
+
 ```lua
 local players = {"Ali", "Ben", "Cammy"}
 
@@ -63,6 +73,8 @@ for playerRank, playerName in ipairs(players) do
 	print("Winner #" .. playerRank .. " is " .. playerName)
 end
 ```
+
+</LuauPlayground>
 
 When executed, the code will print the following:
 
@@ -111,7 +123,6 @@ Use `pairs()` to see what was picked, and then `ipairs()` to print the list of i
    ```
 
 4. Repeat the order back to the customer. In the script, code the following below.
-
    - Check if there is a menu item in `selectedIngredients`. If so, print `"You ordered soup with: "`.
    - Use `ipairs()` to go through the `selectedIngredients` array and print each ingredient.
    - Test by changing at least one menu item to true.
@@ -128,7 +139,24 @@ Use `pairs()` to see what was picked, and then `ipairs()` to print the list of i
 
 5. In the if statement that checks if there is a menu item, add an else condition which tells customers if no ingredients were selected.
 
+   <LuauPlayground title="Print the soup order">
+
    ```lua
+   local menu = {
+   	cabbage = true,
+   	beef = false,
+   	tomato = false,
+   	noodles = false,
+   }
+
+   local selectedIngredients = {}
+
+   for menuChoice, value in pairs(menu) do
+   	if value then
+   		table.insert(selectedIngredients, menuChoice)
+   	end
+   end
+
    if #selectedIngredients > 0 then
    	print("You ordered soup with: ")
    	for index, soupIngredient in ipairs(selectedIngredients) do
@@ -138,6 +166,8 @@ Use `pairs()` to see what was picked, and then `ipairs()` to print the list of i
    	print("Nothing was selected. Are you not hungry?")
    end
    ```
+
+   </LuauPlayground>
 
    <Alert severity="info">
    The above step is an example of error checking in computer science. It's always a good practice to code what happens if there's a missing value possible in your code. If not, it's possible there might be an error during run time.

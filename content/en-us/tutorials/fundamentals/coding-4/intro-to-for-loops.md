@@ -75,27 +75,29 @@ To see how a for loop works, use these steps to code a for loop that starts at 1
    end
    ```
 
-6. Inside the loop, create a countdown by printing the value of the control variable, `count`, and then delay the script with a wait function.
+6. Inside the loop, print the value of the control variable, `count`.
+
+   <LuauPlayground title="Countdown">
 
    ```lua
    for count = 10, 0, -1 do
    	-- Prints the current number the for loop is on
    	print(count)
-   	-- Wait 1 second
-   	task.wait(1)
    end
    ```
 
+   </LuauPlayground>
+
 7. Run the project and watch the Output window to see the for loop.
 
-   Notice that the loop will print out the current value of count each time it goes through an **iteration**. An iteration is the complete process of checking the control value, running code, and updating the increment value. Because the control variable starts at 0 and has to go pass 10, the loop will go through 11 iterations before stopping.
+   Notice that the loop will print out the current value of count each time it goes through an **iteration**. An iteration is the complete process of checking the control value, running code, and updating the increment value. The control variable starts at 10 and counts down to 0, so the loop goes through 11 iterations before stopping.
 
 ### Troubleshooting tips
 
 At this point, if the loop doesn't work as intended, try one of the following below.
 
 - Check that you have **two commas** separating the numbers in your for loop. Having extra or missing commas will make the loop not start.
-- If the for loop prints all at once, make sure that there is a wait function that uses at least 1 second.
+- The playground prints every number as soon as you run it. In Studio, add `task.wait(1)` inside the loop to pause for one second between numbers.
 
 ## Different for loop examples
 
@@ -103,32 +105,41 @@ Changing the three values of a for loop will change how the loop functions. Belo
 
 ### Count up by one
 
+<LuauPlayground title="Count up by one">
+
 ```lua
 for count = 0, 5, 1 do
 	print(count)
-	task.wait(1)
 end
 ```
 
+</LuauPlayground>
+
 ### Count up in even numbers
+
+<LuauPlayground title="Count up in even numbers">
 
 ```lua
 for count = 0, 10, 2 do
 	print(count)
-	task.wait(1)
 end
 ```
+
+</LuauPlayground>
 
 ### If for loops don't run at all
 
 If the control variable starts out **beyond** the end value, like in the example below, the for loop won't run at all.
 
+<LuauPlayground title="A for loop that does not run">
+
 ```lua
 for count = 10, 0, 1 do
 	print(count)
-	task.wait(1)
 end
 ```
+
+</LuauPlayground>
 
 In this case, the for loop is counting up and checking if count is greater than 0. When the for loop does it's first check, it sees that 10 is greater than 0, and so it'll stop the loop without printing anything.
 
@@ -136,10 +147,14 @@ In this case, the for loop is counting up and checking if count is greater than 
 
 A for loop is a common type of loop that's used when a set of instructions should repeat a specific amount of times. To create a for loop, use three variables with the syntax below:
 
+<LuauPlayground title="For loop syntax">
+
 ```lua
 for count = 0, 10, 1 do
 	print(count)
 end
 ```
+
+</LuauPlayground>
 
 In the example above, the loop will start at 0. For each loop, it will print the count variable, add 1 to count, and finally finish looping when count is equal to 10.

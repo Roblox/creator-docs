@@ -7,6 +7,8 @@ prev: /tutorials/fundamentals/coding-3/traps-with-if-statements
 
 If statements can have multiple requirements that need to be true before running code. The keyword `and` allows you to combine statements. The following code evaluates first if two plus two equals six and then if four does not equal six. If both statements are true, the code will run.
 
+<LuauPlayground title="Combine conditions with and">
+
 ```lua
 -- will not run
 if 2 + 2 == 6 and 4 ~= 6 then
@@ -18,6 +20,8 @@ if 4 + 2 == 6 and 4 ~= 6 then
 	print("Both statements are true")
 end
 ```
+
+</LuauPlayground>
 
 ## Create a powerup
 
@@ -52,12 +56,12 @@ Use this code with a simple part or a model, such as a crystal, coin, or glowing
 
    ```lua title="Looks for Humanoid parts"
    local function onTouch(otherPart)
-     local character = otherPart.Parent
-     local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
-     if humanoid then
-       print("A Humanoid was found")
-     end
+   	if humanoid then
+   		print("A Humanoid was found")
+   	end
    end
 
    ```
@@ -70,12 +74,12 @@ The speed boost will make avatars walk faster every time the speed boost is touc
 
    ```lua title="Increases current WalkSpeed"
    local function onTouch(otherPart)
-      local character = otherPart.Parent
-      local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
-      if humanoid then
-   	   humanoid.WalkSpeed += 10
-      end
+   	if humanoid then
+   		humanoid.WalkSpeed += 10
+   	end
    end
 
    speedBoost.Touched:Connect(onTouch)
@@ -85,7 +89,7 @@ The speed boost will make avatars walk faster every time the speed boost is touc
 
    ```lua title="Checks if current WalkSpeed is 50 or less"
    if humanoid and humanoid.WalkSpeed <= 50 then
-    humanoid.WalkSpeed += 10
+   	humanoid.WalkSpeed += 10
    end
 
    ```
@@ -100,13 +104,13 @@ OnTouch is called every time the speed boost is touched. Every step or slightest
    local speedBoost = script.Parent
 
    local function onTouch(otherPart)
-     local character = otherPart.Parent
-     local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
-     if humanoid and humanoid.WalkSpeed <= 50 then
-       humanoid.WalkSpeed += 10
-       speedBoost.CanTouch = false
-     end
+   	if humanoid and humanoid.WalkSpeed <= 50 then
+   		humanoid.WalkSpeed += 10
+   		speedBoost.CanTouch = false
+   	end
    end
 
    speedBoost.Touched:Connect(onTouch)
@@ -119,15 +123,15 @@ OnTouch is called every time the speed boost is touched. Every step or slightest
    local speedBoost = script.Parent
 
    local function onTouch(otherPart)
-     local character = otherPart.Parent
-     local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
-     if humanoid and humanoid.WalkSpeed <= 50 then
-       humanoid.WalkSpeed += 10
-       speedBoost.CanTouch = false
-       task.wait(1)
-       speedBoost.CanTouch = true
-      end
+   	if humanoid and humanoid.WalkSpeed <= 50 then
+   		humanoid.WalkSpeed += 10
+   		speedBoost.CanTouch = false
+   		task.wait(1)
+   		speedBoost.CanTouch = true
+   	end
    end
 
    speedBoost.Touched:Connect(onTouch)

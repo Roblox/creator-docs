@@ -63,13 +63,20 @@ Before creating the while loop for the color changing part, it's worthwhile to e
 
 In loops, conditions can be a variety of logical statements. Some examples might be if two numbers are the same. A loop will run if its condition is true.
 
-Notice in the sample below, the condition is true, meaning this loop will run forever. In later lessons, you'll code specific conditions that stop.
+A condition of `true` makes a loop run forever. The sample below counts how many times it has run and stops after three. In later lessons, you'll code conditions that stop when something in the experience changes.
+
+<LuauPlayground title="A while loop that stops">
 
 ```lua
-while true do
+local timesRun = 0
+
+while timesRun < 3 do
 	print("This loop is running")
+	timesRun += 1
 end
 ```
+
+</LuauPlayground>
 
 ## Code a while loop
 

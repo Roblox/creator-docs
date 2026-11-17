@@ -28,9 +28,13 @@ Scripts are commonly created in **ServerScriptService**, a special folder made j
 
 New scripts include a print function at the top of the script editor. **Print functions** display text on the screen. It's one of the first functions many people learn, and you'll use it often. This code will make "Hello world!" appear on the screen.
 
-```lua title = 'Default code'
+<LuauPlayground title="Default code">
+
+```lua
 print("Hello world!")
 ```
+
+</LuauPlayground>
 
 To find the script next time you open up Roblox Studio, click on the name of the script above the 3D viewport, or double-click the script's name in Explorer.
 
@@ -51,9 +55,13 @@ Coding languages classify different kinds of values into **data types**. For exa
 
 Another data type is a **string**. Strings can hold numbers, letters, and characters. Take another look at the default code in the new script; the words and quotations within the parenthesis is an example of a **string** data type.
 
-```lua title = 'Default code'
+<LuauPlayground title="Default code">
+
+```lua
 print("Hello world!")
 ```
+
+</LuauPlayground>
 
 Strings like `"Hello World"` always sit inside quotation marks, `"like this"`. More examples of strings are below. Notice how they hold a mix of letters and numbers.
 
@@ -138,10 +146,14 @@ Print functions display text on the screen, as you saw earlier. It's one of the 
 
 2. Type the name of your variable within the parenthesis.
 
-   ```lua title = 'Outputs "Porcupines"'
+   <LuauPlayground title='Outputs "Porcupines"'>
+
+   ```lua
    local myAnimal = "Porcupines"
    print(myAnimal)
    ```
+
+   </LuauPlayground>
 
    <Alert severity="info">
    If you see a red error in the output editor, it's like there's an error in the code. Each error has a unique way of describing itself. Try and use the information from the error to fix your code.
@@ -153,13 +165,16 @@ Print functions display text on the screen, as you saw earlier. It's one of the 
 
 You can display any string in the Output using `print()`; you can even print multiple strings stored within variables or typed directly within the function. **Concatenation** is combining strings. To concatenate the string assigned to your variable and a second string, use two dots `..` The following example concatenates two variables and two typed strings.
 
-```lua title = 'Uses variables and strings together'
+<LuauPlayground title="Uses variables and strings together">
 
+```lua
 local firstAnimal = "porcupines"
 local secondAnimal = "dolphins"
 
 print("I like " .. firstAnimal .. " and " .. secondAnimal)
 ```
+
+</LuauPlayground>
 
 Play around with printing different combinations of strings.
 

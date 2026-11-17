@@ -20,14 +20,19 @@ The steps to make dinner might look like this:
 
 While the code version might look like something like this:
 
+<LuauPlayground title="Make dinner">
+
 ```lua
 local function makeDinner()
 	-- List of instructions
+	print("Dinner is served!")
 end
 
 -- Tell the code to run
 makeDinner()
 ```
+
+</LuauPlayground>
 
 ## Create a function
 
@@ -86,6 +91,8 @@ There's one more thing we need to do before the function will work, and that's t
 
 1. Under `end`, type `printFood()`.
 
+   <LuauPlayground title="Call printFood">
+
    ```lua
    local function printFood()
    	print("Curry!")
@@ -93,6 +100,8 @@ There's one more thing we need to do before the function will work, and that's t
 
    printFood()
    ```
+
+   </LuauPlayground>
 
 2. Test the code. Your favorite food should appear in the [Output](../../../studio/output.md) window.
 

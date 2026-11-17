@@ -9,18 +9,27 @@ Dictionaries are tables that associate names or **keys** with a value instead of
 
 Example:
 
-```lua title="Luau dictionary syntax"
+<LuauPlayground title="Luau dictionary syntax">
+
+```lua
 local pet = {
-   Name = "Bobbie",
-   Type = "Dog",
+	Name = "Bobbie",
+	Type = "Dog",
 }
+
+print(pet.Name)
+print(pet.Type)
 ```
+
+</LuauPlayground>
 
 Use dictionaries when you need to label values, not just list them in order as an array does. Practice using dictionaries in this tutorial by manipulating values associated with a player.
 
 ## Dictionary syntax
 
 Like arrays, dictionaries are assigned to a variable with curly brackets `{}`. **Key-value pairs** are stored on separate lines followed by a comma. Keys and values can be any data type, including strings, numbers, and variable names.
+
+<LuauPlayground title="Read a dictionary value">
 
 ```lua
 local playerNames = {
@@ -29,6 +38,8 @@ local playerNames = {
 }
 print(playerNames["player1"])
 ```
+
+</LuauPlayground>
 
 To reference parts or other instanced objects as keys, use brackets.
 
@@ -91,6 +102,8 @@ There are two ways to access dictionary values:
 - `tableName["keyName"]` (importantly, note the quotations)
 - `tableName.keyName`
 
+<LuauPlayground title="Two ways to read a value">
+
 ```lua
 local enemy = {
 	Name = "Spike",
@@ -101,6 +114,8 @@ print("The villain " .. enemy["Name"] .. " approaches!")
 print("The villain " .. enemy.Name .. " approaches!")
 ```
 
+</LuauPlayground>
+
 Which style to use usually depends on the purpose of the table. For tables holding a collection of values like a list of players in a server, coders will usually use `tableName["keyName"]`. For a dictionary used to describe an object, coders are more likely to use `tableName.keyName`.
 
 ## Change a dictionary value
@@ -108,6 +123,8 @@ Which style to use usually depends on the purpose of the table. For tables holdi
 Changing a key's value is the same as any other variable; use the equal `=` operator.
 
 1. Beneath the `enemy` table, set the enemy's name to something else.
+
+   <LuauPlayground title="Change a dictionary value">
 
    ```lua
    local enemy = {
@@ -119,6 +136,8 @@ Changing a key's value is the same as any other variable; use the equal `=` oper
 
    print("The enemy's name is " .. enemy.Name)
    ```
+
+   </LuauPlayground>
 
 2. Playtest and check the Output window.
 
@@ -194,10 +213,10 @@ local playerPoints = {
 }
 
 local function setPoints(newPlayer)
-   local name = newPlayer.Name
-   print("hello " .. name)
-   playerPoints[name] = 0
-   print(name .. " has " .. playerPoints[name] .. " points.")
+	local name = newPlayer.Name
+	print("hello " .. name)
+	playerPoints[name] = 0
+	print(name .. " has " .. playerPoints[name] .. " points.")
 end
 
 Players.PlayerAdded:Connect(setPoints)
@@ -215,6 +234,8 @@ Below are some challenges that apply to using dictionaries in different ways. Se
 
 `pairs()` is a function that's often used to iterate through **dictionaries**. An example is seen below.
 
+<LuauPlayground title="Loop through a dictionary">
+
 ```lua
 local myDictionary = {
 	["Blue Player"] = "Ana",
@@ -227,7 +248,11 @@ for key, value in pairs(myDictionary) do
 end
 ```
 
+</LuauPlayground>
+
 `pairs()` can be used to work with a dictionary element's key, value, or both. In the for loop below, the first variable is the key. The second variable is the value. The dictionary that you want to work with is passed in to `pairs()`.
+
+<LuauPlayground title="Print an inventory">
 
 ```lua
 local inventory = {
@@ -243,7 +268,9 @@ for itemName, itemValue in pairs(inventory) do
 end
 ```
 
-When executed, the code will print the following:
+</LuauPlayground>
+
+When executed, the code will print the following. `pairs()` does not guarantee an order, so these lines might print differently.
 
 ```lua
 You have:

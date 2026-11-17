@@ -13,11 +13,17 @@ In games, there are often many cause-and-effect relationships. For example:
 
 Scripts use conditional statements to handle these types of situations. **Conditional statements** are lines of code that only run if certain conditions are true. One type of conditional statement is an **if/then statement**. In Luau, the syntax pattern for if statements looks like this:
 
-```lua title="if then syntax"
-   if "something happens" then
-      -- Make something else happen
+<LuauPlayground title="if then syntax">
+
+```lua
+local somethingHappens = true
+
+if somethingHappens then
+	print("Make something else happen")
 end
 ```
+
+</LuauPlayground>
 
 Code chunks using conditionals are **control structures.** Control structures are like flow diagrams in code form and can have several conditional statements.
 
@@ -43,8 +49,8 @@ One particular operator to be aware of is `==`; it stands for "is equal to." So 
 1. Set up the empty conditional. In the script, type `if then`, and press <kbd>Enter</kbd> to autocomplete the conditional. The keyword `then` will be underlined because the code is incomplete.
 
    ```lua
-     if then
-     -- empty code
+   if then
+   	-- empty code
    end
 
    ```

@@ -22,22 +22,28 @@ To practice, you'll create a script that stores player items in a table, then ad
 1. Create an empty array named `playerItems`.
 
    ```lua
-   playerItems = {}
+   local playerItems = {}
    ```
 
 2. Add inventory items to the array by typing `Library.table.insert()`. In the parenthesis, type `playerItems`, the table to add to, followed by a string for each item. Insert at least three values.
 
+   <LuauPlayground title="Add items to an array">
+
    ```lua
-   playerItems = {}
+   local playerItems = {}
 
    table.insert(playerItems, "Potion")
    table.insert(playerItems, "Bread")
    table.insert(playerItems, "Sleeping Bag")
 
-   print(playerItems)
+   for index, item in playerItems do
+   	print(index, item)
+   end
    ```
 
-3. Run the project. In Output, expand the three dots `...` to see the printed table.
+   </LuauPlayground>
+
+3. Run the script. Each item prints with its index.
 
 ## Remove values from arrays
 
@@ -49,8 +55,10 @@ Sometimes a script needs to remove a specific item. For instance, removing the f
 
 1. Use the array of items from the previous example. Then, to remove the last value from the table, in this case `"Sleeping Bag"`, type `Library.table.remove(playerItems)`
 
+   <LuauPlayground title="Remove the last item">
+
    ```lua
-   playerItems = {}
+   local playerItems = {}
 
    table.insert(playerItems, "Potion")
    table.insert(playerItems, "Bread")
@@ -58,8 +66,12 @@ Sometimes a script needs to remove a specific item. For instance, removing the f
 
    table.remove(playerItems)
 
-   print(playerItems)
+   for index, item in playerItems do
+   	print(index, item)
+   end
    ```
+
+   </LuauPlayground>
 
 2. Run the project. In the Output window, the last value, `"Sleeping Bag"`, shouldn't print.
 
@@ -69,15 +81,23 @@ To remove a value at a specific point in the array, input in the second paramete
 
 1. Using the same table, type `Library.table.remove()`. In the parameters, input the name of the table and `1`, the value to remove.
 
+   <LuauPlayground title="Remove an item by index">
+
    ```lua
-   playerItems = {}
+   local playerItems = {}
 
    table.insert(playerItems, "Potion")
    table.insert(playerItems, "Bread")
    table.insert(playerItems, "Sleeping bag")
 
    table.remove(playerItems, 1)
+
+   for index, item in playerItems do
+   	print(index, item)
+   end
    ```
+
+   </LuauPlayground>
 
    <Alert severity="warning">
    The second parameter for `Library.table.remove()` only accepts a numerical index. Typing something like `"Potion"` will create an error.
@@ -111,7 +131,6 @@ Once it finds the value, the function will use the `return` keyword to return th
    ```
 
 2. Code a new function named findValue() with two parameters:
-
    - `whichArray` - the array to search through.
    - `itemName` - the specific string to check for.
 
@@ -135,11 +154,20 @@ Once it finds the value, the function will use the `return` keyword to return th
 
 4. Test the search function by creating a variable named `valueFound` and calling `findValue()`. Pass in the array to search, and what value it should search for. **Run** the code to confirm that the expected output is index 2.
 
+   <LuauPlayground title="Find Bread">
+
    ```lua
+   local playerItems = {
+   	"Potion",
+   	"Bread",
+   	"Bread",
+   	"Sleeping Bag",
+   }
+
    local function findValue(whichArray, itemName)
    	for currentIndex = 1, #whichArray do
    		if whichArray[currentIndex] == itemName then
-   			--Sends the value of currentIndex back
+   			-- Sends the value of currentIndex back
    			return currentIndex
    		end
    	end
@@ -149,6 +177,8 @@ Once it finds the value, the function will use the `return` keyword to return th
 
    print("The value is at index " .. valueFound)
    ```
+
+   </LuauPlayground>
 
 ### Remove a value
 
@@ -231,7 +261,7 @@ The keyword `return` can be used to stop a loop, and send information back where
 
 A finished version of the script can be referenced below.
 
-The following project includes all scripts in this tutorial. Download [here](../../../assets/education/coding-5/Making_Changes_to_Arrays_-_Final_Project.rbxl).
+The following project includes all scripts in this tutorial. Download the [finished project](../../../assets/education/coding-5/Making_Changes_to_Arrays_-_Final_Project.rbxl).
 
 Note all scripts are in **ServerScriptService** and **disabled**. To use a script, in its properties, uncheck the Disabled field and run Studio.
 

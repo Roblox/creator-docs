@@ -9,6 +9,8 @@ A common need in many data structures is to return values. This article will cov
 
 The example uses an array listing ships waiting to be repaired. `ipairs()` is used to return a ship's place in line.
 
+<LuauPlayground title="Find a ship's place in line">
+
 ```lua
 local shipToFind = "Void Racer"
 
@@ -28,6 +30,8 @@ end
 local placeInLine = getPlaceInLine(shipToFind)
 print("Your place in line is " .. placeInLine)
 ```
+
+</LuauPlayground>
 
 ## Dictionary search example
 
@@ -57,7 +61,16 @@ Have you ever searched for a lost pet in house going room by room? On your own c
 
 4. As the for loop iterates through the dictionary, use `return` to pass back the room where the pet was found.
 
+   <LuauPlayground title="Find the puppy">
+
    ```lua
+   local house = {
+   	kitchen = "pile of Junk",
+   	livingRoom = "kitten",
+   	bedroom1 = "nobody there",
+   	bedroom2 = "puppy",
+   }
+
    local function findPet(whereToSearch, searchFor)
    	for place, value in pairs(whereToSearch) do
    		if value == searchFor then
@@ -65,4 +78,8 @@ Have you ever searched for a lost pet in house going room by room? On your own c
    		end
    	end
    end
+
+   print(findPet(house, "puppy"))
    ```
+
+   </LuauPlayground>

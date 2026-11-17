@@ -1,12 +1,11 @@
 ---
-title: Advertising
-description: Use Open Cloud to create and manage advertising on Roblox, including experience campaigns through the Ads API and item campaigns through marketplace sponsorship.
+title: Advertising with the Ads API
+description: Use the Ads API in Open Cloud to build your audience on Roblox. The API supports campaign planning and management, audience targeting, and performance analytics.
 ---
 
 The Advertising API lets you programmatically create and manage advertising on Roblox. It covers two kinds of advertising:
 
 - **Experience advertising** — sponsored campaigns that bring players to your experiences, through the Ads API.
-- **Item advertising** — sponsorships that make Marketplace items easier to discover.
 
 This guide shows the common Ads API flows from start to finish, and the details that are easy to miss. For every field, parameter, and response code, see the [Advertising API reference](/cloud/reference/features/advertising).
 
@@ -29,10 +28,6 @@ Grant the key the scopes for the flows you use:
 The `campaigns:validate` dry run needs `ad.campaign:write`, but it doesn't change anything.
 
 Onboarding, payment methods, and ad credit purchases are available only in Ads Manager. The API reads the result of that setup, but it can't do the setup.
-
-## Trace an agent run
-
-Send the optional `X-Agent-Session-Id` header with one value, 1–128 characters from `A-Z`, `a-z`, `0-9`, `.`, `_`, `:`, and `-`, on every request in an agent run, and give that value to support when you report a problem. Invalid or repeated values are ignored and don't change authentication, permissions, or idempotency.
 
 ## Key concepts
 
@@ -239,7 +234,7 @@ A `200` response means only that validation ran. Read `valid`, `errors`, `warnin
 
 ### Send the create request
 
-1. Make a new UUID and send it in the `x-idempotency-key` header.
+1. For retry deduplication, make a new UUID and set `idempotencyKey` in the request body.
 1. Set the objective and payment type from `campaign-options`.
 1. Set `targetUniverseId`, `creativeAssetIds`, `budget`, and `schedule`.
 1. For a group's account, set `billingAccountId`. See [Advertise a group's experience](#advertise-a-groups-experience).
@@ -248,9 +243,9 @@ A `200` response means only that validation ran. Read `valid`, `errors`, `warnin
 ```bash title="Create a campaign"
 curl --location 'https://apis.roblox.com/ads-management/v1/campaigns' \
 --header 'x-api-key: ${ApiKey}' \
---header 'x-idempotency-key: ${UUID}' \
 --header 'Content-Type: application/json' \
 --data '{
+    "idempotencyKey": "${UUID}",
     "name": "Summer promo",
     "objective": "PLAYS",
     "paymentType": "ADS_CREDIT",
@@ -280,7 +275,11 @@ Remember these rules for the request:
 
 ### Use a new idempotency key for each new request body
 
-`POST /campaigns` requires an `x-idempotency-key` header that contains a UUID. Make a new UUID for each new campaign, and each time that you change the request body, also for a change to the name. Use the same key only to retry the same body, for example after a timeout.
+`POST /campaigns` accepts an optional `idempotencyKey` body field. If you supply a non-empty value, it must contain a UUID.
+
+If you omit `idempotencyKey` or send an empty string, the API creates without deduplication. A retry can create another campaign.
+
+For retry deduplication, make a new UUID for each new campaign or changed request body, including changes to the name. Use the same key only to retry the same body, for example after a timeout.
 
 For 24 hours, the key of a completed request returns the original campaign with `200`. If you change the body and use the same key again, the API returns the original campaign and doesn't apply your changes. The API doesn't return `409` for this case, so a `200` response doesn't confirm your changes. If the first request is still in progress, a retry returns `429`. To change a campaign that exists, use `PATCH /campaigns/{id}`.
 
@@ -427,7 +426,3 @@ The API gateway checks the API key and scopes before the request gets to the Ads
 ```
 
 A request without credentials returns `403` with the message `Invalid authentication data provided`.
-
-## Item advertising
-
-Sponsor Marketplace items like avatar items, bundles, and passes to make them easier to discover across Roblox. You can create and manage item sponsorships in the [Sponsored Items Manager](https://www.roblox.com/sponsorships/list), or through the sponsored campaigns endpoints on `adconfiguration.roblox.com`, listed under **Advertising** in the API reference. For more information, see [Sponsored items](../../marketplace/sponsor-items.md).

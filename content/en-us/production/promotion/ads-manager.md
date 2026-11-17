@@ -575,3 +575,91 @@ Ad credits can have the following states:
 Roblox uses advanced detection methods for bots and other fraudulent activities to make sure that you don't pay for fraudulent traffic, and regularly adjusts billing and reporting to safeguard their interests. After 14 days from the campaign end date, campaigns are analyzed for fraudulent traffic, and transaction amounts are refunded accordingly. If invalid traffic is detected, refunds are applied 16 days after the campaign end date. This proactive approach helps maintain the integrity of your campaigns and ensures fair spending.
 
 Accounts responsible for ad fraud have their accounts suspended to prevent ongoing abuse. In addition, Roblox might suspend ad campaigns or advertiser accounts for non-payment of services properly rendered. Roblox expects you to act with integrity and follow the [advertising standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards).
+
+## API and MCP
+
+You can also create and manage ad campaigns from code or from an AI client, in addition to the Ads Manager portal. Campaigns that you create through the API or MCP appear in Ads Manager, and they use the same billing account, ad credits, and reporting.
+
+Some setup tasks are available only in Ads Manager. Before you use the API or MCP, use Ads Manager to [create an ad account](#getting-started) and to add a payment method or buy ad credits. Group ad accounts and users under 18 can pay only with ad credits, so they must buy ad credits in Ads Manager first.
+
+### Ads API
+
+The Ads API is part of [Open Cloud](../../cloud/index.md). Use it to create campaigns, add creatives, update budgets, and read campaign status and billing information from your own scripts and tools. Requests use an [API key](../../cloud/auth/api-keys.md) or an OAuth token that acts as your user.
+
+For the required scopes, step-by-step flows, and examples, see the [Advertising API guide](../../cloud/guides/advertising.md). For each endpoint and field, see the [Advertising API reference](/cloud/reference/features/advertising).
+
+### MCP
+
+The [Studio MCP server](../../studio/mcp.md) lets an MCP client, such as Claude or Cursor, manage your ad campaigns for you. You don't need an API key. Studio calls the Ads API on your behalf, and your client can use only the permissions that you enable for the game.
+
+Before you start, [connect your MCP client to Studio](../../studio/mcp.md), and open a place in the published game that you want to advertise.
+
+To give your client access to Ads Manager:
+
+1. In Studio, click **MCP** in the bottom-right corner.
+2. Select the **MCP Permissions** tab.
+3. Expand **Money & monetization**, then enable the ad scopes for your task.
+4. Expand **Look at your game**, then enable `universe:read`.
+5. If your client must upload new ad images, expand **Publish & manage assets**, then enable `asset:read` and `asset:write`.
+6. If your client must upload new ad images, [approve the folder](../../studio/mcp-open-cloud.md#upload-folders) that contains the images. Your client can upload files only from approved folders.
+
+The following table shows the permissions that ad tasks use. Enable only the permissions that your task requires.
+
+<table>
+<thead>
+  <tr>
+    <th>Section</th>
+    <th>Permission</th>
+    <th>What it lets your client do</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>**Money & monetization**</td>
+    <td>`ad.campaign:read`</td>
+    <td>Read campaigns, ads, creatives, campaign options, and performance estimates.</td>
+  </tr>
+  <tr>
+    <td>**Money & monetization**</td>
+    <td>`ad.campaign:write`</td>
+    <td>Create, edit, pause, and cancel campaigns, and add creatives.</td>
+  </tr>
+  <tr>
+    <td>**Money & monetization**</td>
+    <td>`ad.billing:read`</td>
+    <td>Read billing accounts, payment activity, and previews of Robux-to-ad-credit conversions.</td>
+  </tr>
+  <tr>
+    <td>**Look at your game**</td>
+    <td>`universe:read`</td>
+    <td>Read the name and owner of the experience that you advertise.</td>
+  </tr>
+  <tr>
+    <td>**Look at your game**</td>
+    <td>`universe.analytics:read`</td>
+    <td>Optional. Read experience analytics to help your client plan campaigns.</td>
+  </tr>
+  <tr>
+    <td>**Publish & manage assets**</td>
+    <td>`asset:read`</td>
+    <td>Optional. Check the status of image uploads. Your client doesn't need this permission to use images that are already assets.</td>
+  </tr>
+  <tr>
+    <td>**Publish & manage assets**</td>
+    <td>`asset:write`</td>
+    <td>Optional. Upload new images from an approved folder to use as creatives.</td>
+  </tr>
+</tbody>
+</table>
+
+<Alert severity="warning">
+`ad.campaign:write` lets your client create and fund campaigns that spend your ad credits or charge your payment method. Review each campaign before your client submits it, and disable the permission when you finish.
+</Alert>
+
+To manage campaigns for a group-owned experience, your group role must have the **<Translation keyName='Group.AdManager.Label' />** permission. If your client doesn't select the group's billing account, the campaign uses your personal billing account, even for a group-owned experience. To make the group pay, tell your client to use the group's ad account. To buy group ad credit or turn on auto-reload for a campaign that the group pays for, your role must also have the **<Translation keyName='Group.GroupRevenueManager.Label' />** permission. For more information, see [Group permissions](#group-permissions).
+
+After you enable the permissions, prompt your client. For example:
+
+> Create a seven-day plays campaign for this game with a \$10 USD daily budget, help me choose creatives, and show me the campaign before you submit it.
+
+For more information about MCP permissions, upload folders, and troubleshooting, see [Use Open Cloud with the Studio MCP server](../../studio/mcp-open-cloud.md).

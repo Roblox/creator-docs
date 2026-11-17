@@ -287,10 +287,10 @@ See [Rewarded Video Ads](../../../production/promotion/rewarded-video-ads.md#ana
 
 ### Sponsored Ads
 
-See [Ads Manager guide](../../../production/promotion/ads-manager.md#reporting).
+See [Advertising guide](../advertising.md#report-on-performance).
 
 | Name | Metric | Supported dimensions |
 | --- | --- | --- |
-| Sponsored Ads clicks | <code>SponsoredAdsClicks</code><br/><br/>**Granularities:** OneDay, OneHour, None<br/>**Data retention:** 1468 days | <ul><li><code>AgeGroup</code></li><li><code>Gender</code></li><li><code>OperatingSystem</code></li><li><code>Platform</code></li></ul> |
-| Sponsored Ads impressions | <code>SponsoredAdsImpressions</code><br/><br/>**Granularities:** OneDay, OneHour, None<br/>**Data retention:** 1468 days | <ul><li><code>AgeGroup</code></li><li><code>Gender</code></li><li><code>OperatingSystem</code></li><li><code>Platform</code></li></ul> |
-| Sponsored Ads spend (USD) | <code>SponsoredAdsSpendUsd</code><br/><br/>**Granularities:** OneDay, OneHour, None<br/>**Data retention:** 1468 days<br/>Spend values are in USD. | <ul><li><code>AgeGroup</code></li><li><code>Gender</code></li><li><code>OperatingSystem</code></li><li><code>Platform</code></li></ul> |
+| Sponsored Ads clicks | <code>SponsoredAdsClicks</code><br/><br/>**Granularities:** OneDay, OneHour, None<br/>**Data retention:** 1468 days | <ul><li><code>AdId</code></li><li><code>AgeGroup</code></li><li><code>CampaignId</code></li><li><code>Gender</code></li><li><code>OperatingSystem</code></li><li><code>Platform</code></li></ul> |
+| Sponsored Ads impressions | <code>SponsoredAdsImpressions</code><br/><br/>**Granularities:** OneDay, OneHour, None<br/>**Data retention:** 1468 days | <ul><li><code>AdId</code></li><li><code>AgeGroup</code></li><li><code>CampaignId</code></li><li><code>Gender</code></li><li><code>OperatingSystem</code></li><li><code>Platform</code></li></ul> |
+| Sponsored Ads spend (USD) | <code>SponsoredAdsSpendUsd</code><br/><br/>**Granularities:** OneDay, OneHour, None<br/>**Data retention:** 1468 days<br/>Spend values are in USD. | <ul><li><code>AdId</code></li><li><code>AgeGroup</code></li><li><code>CampaignId</code></li><li><code>Gender</code></li><li><code>OperatingSystem</code></li><li><code>Platform</code></li></ul> |
