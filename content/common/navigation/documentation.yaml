@@ -17,6 +17,9 @@ columns:
         - title: Samples and projects
           navigation: /engine/resources.yaml
           path: /samples
+        - title: More
+          navigation: /more.yaml
+          path: /learn/more/rounded-corners
         - title: Engine API
           path: /reference/engine
           navigation: /engine/reference.yaml

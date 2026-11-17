@@ -323,3 +323,21 @@ describe('localized HTTP link validation', () => {
     );
   });
 });
+
+describe('getLinksOfTypeFromContentString with image titles', () => {
+  test('returns only the path when an image has a single- or double-quoted title', () => {
+    const text = `Intro.
+
+![A flag stand](../../assets/flag.png "Flag stands from June 2007, with \\"no scripting required.\\"")
+
+![A door](../../assets/door.png)
+
+![A seal](../../assets/hina.png 'Hina, the Luau mascot.')
+`;
+    expect(getLinksOfTypeFromContentString(text, LinkType.Asset)).toEqual([
+      { ref: '../../assets/flag.png', lineNumber: 3 },
+      { ref: '../../assets/door.png', lineNumber: 5 },
+      { ref: '../../assets/hina.png', lineNumber: 7 },
+    ]);
+  });
+});

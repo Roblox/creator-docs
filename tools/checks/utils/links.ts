@@ -43,9 +43,10 @@ const PAGE_LINKS_ESCAPED_REGEX = `${HREF_ESCAPED_REGEX}|${URL_SHORTCUT_ESCAPED_R
 // src="path/to/file.png"
 // src\s*=\s*["'](.*?)["']
 const SRC_ESCAPED_REGEX = `src\\s*=\\s*["'](.*?)["']`;
-// ![alt](path/to/file.png)
-// !\[.*?\]\((.*?)\)
-const ASSET_SHORTCUT_ESCAPED_REGEX = `!\\[.*?\\]\\((.*?)\\)`;
+// ![alt](path/to/file.png) or ![alt](path/to/file.png "Caption") or 'Caption', where the optional title
+// becomes the figure caption on editorial pages
+// !\[.*?\]\((\S*?)(?:\s+(?:"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'))?\)
+const ASSET_SHORTCUT_ESCAPED_REGEX = `!\\[.*?\\]\\((\\S*?)(?:\\s+(?:"(?:[^"\\\\]|\\\\.)*"|'(?:[^'\\\\]|\\\\.)*'))?\\)`;
 
 // https://regex101.com/r/WoJi2v
 // src\s*=\s*["'](.*?)["']|!\[.*?\]\((.*?)\)|(?<!\S)\[(?:[A-Za-z0-9-_]*)\]:\s*(.*?)\n
