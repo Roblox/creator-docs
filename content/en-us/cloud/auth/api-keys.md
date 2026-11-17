@@ -1,5 +1,5 @@
 ---
-title: Manage API keys
+title: rlife
 description: Explains how to create API keys and add permissions to use Open Cloud web APIs for your gamee.
 ---
 
