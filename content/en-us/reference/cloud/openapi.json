@@ -12180,7 +12180,13 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "universe.place.luau-execution-session:write"
+            "name": "universe.place.luau-execution-session:write",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          },
+          {
+            "name": "universe.place.luau-execution-session:write",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-docs": {
@@ -13774,7 +13780,13 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "universe.place.instance:read"
+            "name": "universe.place.instance:read",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          },
+          {
+            "name": "universe.place.instance:read",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-docs": {
@@ -13881,7 +13893,13 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "universe.place.instance:write"
+            "name": "universe.place.instance:write",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          },
+          {
+            "name": "universe.place.instance:write",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-docs": {
@@ -14070,7 +14088,13 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "universe.place.instance:read"
+            "name": "universe.place.instance:read",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          },
+          {
+            "name": "universe.place.instance:read",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-docs": {
@@ -14153,7 +14177,13 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "universe.place.luau-execution-session:write"
+            "name": "universe.place.luau-execution-session:write",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          },
+          {
+            "name": "universe.place.luau-execution-session:write",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-docs": {
@@ -14576,7 +14606,13 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "universe.place.luau-execution-session:write"
+            "name": "universe.place.luau-execution-session:write",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          },
+          {
+            "name": "universe.place.luau-execution-session:write",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-docs": {
@@ -14687,10 +14723,22 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "universe.place.luau-execution-session:read"
+            "name": "universe.place.luau-execution-session:read",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
           },
           {
-            "name": "universe.place.luau-execution-session:write"
+            "name": "universe.place.luau-execution-session:write",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          },
+          {
+            "name": "universe.place.luau-execution-session:read",
+            "firstPartyOAuthOnly": true
+          },
+          {
+            "name": "universe.place.luau-execution-session:write",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-docs": {
@@ -14827,10 +14875,22 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "universe.place.luau-execution-session:read"
+            "name": "universe.place.luau-execution-session:read",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
           },
           {
-            "name": "universe.place.luau-execution-session:write"
+            "name": "universe.place.luau-execution-session:write",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          },
+          {
+            "name": "universe.place.luau-execution-session:read",
+            "firstPartyOAuthOnly": true
+          },
+          {
+            "name": "universe.place.luau-execution-session:write",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-docs": {
@@ -20838,6 +20898,11 @@
                     "type": "boolean",
                     "description": "Whether managed pricing should be enabled for the game pass.",
                     "nullable": true
+                  },
+                  "isTrialEnabled": {
+                    "type": "boolean",
+                    "description": "Whether trials should be enabled for the game pass. Note for trials to be available, the game pass must also be on sale.",
+                    "nullable": true
                   }
                 }
               },
@@ -20861,6 +20926,9 @@
                   "style": "form"
                 },
                 "isManagedPricingEnabled": {
+                  "style": "form"
+                },
+                "isTrialEnabled": {
                   "style": "form"
                 }
               }
@@ -21154,6 +21222,11 @@
                     "type": "boolean",
                     "description": "Whether managed pricing should be enabled for the game pass.",
                     "nullable": true
+                  },
+                  "isTrialEnabled": {
+                    "type": "boolean",
+                    "description": "Whether trials should be enabled for the game pass. Note for trials to be available, the game pass must also be on sale.",
+                    "nullable": true
                   }
                 }
               },
@@ -21180,6 +21253,9 @@
                   "style": "form"
                 },
                 "isManagedPricingEnabled": {
+                  "style": "form"
+                },
+                "isTrialEnabled": {
                   "style": "form"
                 }
               }
@@ -45349,7 +45425,7 @@
                 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
                 55, 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
                 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88,
-                89, 90, 91, 92, 93, 94, 95, 96, 97
+                89, 90, 91, 92, 93, 94, 95, 96, 97, 98
               ]
             }
           },
@@ -55030,7 +55106,7 @@
                 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
                 55, 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
                 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88,
-                89, 90, 91, 92, 93, 94, 95, 96, 97
+                89, 90, 91, 92, 93, 94, 95, 96, 97, 98
               ]
             }
           },
@@ -55373,7 +55449,7 @@
                 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
                 55, 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
                 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88,
-                89, 90, 91, 92, 93, 94, 95, 96, 97
+                89, 90, 91, 92, 93, 94, 95, 96, 97, 98
               ]
             }
           },
@@ -55417,7 +55493,7 @@
             "description": "0: Authorization has been denied for this request."
           },
           "404": {
-            "description": "1: Service Unavailable\r\n14: Failed to get the price floor"
+            "description": "1: Service Unavailable\r\n14: Failed to get the price floor\r\n21: Failed to get the publishing fees"
           },
           "500": {
             "description": "0: Unknown issues with configuration"
@@ -55483,7 +55559,7 @@
                 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
                 55, 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
                 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88,
-                89, 90, 91, 92, 93, 94, 95, 96, 97
+                89, 90, 91, 92, 93, 94, 95, 96, 97, 98
               ]
             }
           },
@@ -59695,7 +59771,7 @@
                 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
                 55, 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
                 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88,
-                89, 90, 91, 92, 93, 94, 95, 96, 97
+                89, 90, 91, 92, 93, 94, 95, 96, 97, 98
               ]
             }
           },
@@ -76192,7 +76268,7 @@
     "/v2/beta-program-channel-version": {
       "get": {
         "tags": ["Metadata"],
-        "summary": "Get the channel and current version guid of a beta program the currently logged in user may use, whether or not they are opted in to it.\nOnly Studio binary types (MacStudio, WindowsStudio64) are supported for now.",
+        "summary": "Get the channel and current version guid of a beta program the currently logged in user may use, whether or not they are opted in to it.\nOnly desktop Studio and Player binary types (MacStudio, WindowsStudio64, MacPlayer, WindowsPlayer) are supported for now.",
         "parameters": [
           {
             "in": "query",
@@ -76206,7 +76282,7 @@
           {
             "in": "query",
             "name": "binaryType",
-            "description": "e.g. MacStudio or WindowsStudio64",
+            "description": "e.g. MacStudio, WindowsStudio64, MacPlayer or WindowsPlayer",
             "required": true,
             "schema": {
               "type": "string"
@@ -86256,14 +86332,12 @@
             "description": "The asset type the quota is for.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | UNSPECIFIED | The default asset type. |\n  | IMAGE | Image |\n  | TSHIRT | Tshirt |\n  | AUDIO | Audio |\n  | MESH | Mesh |\n  | LUA | Lua |\n  | HAT | Hat |\n  | PLACE | Place |\n  | MODEL | Model |\n  | SHIRT | Classic Shirt |\n  | PANTS | Classic Pants |\n  | DECAL | Decal |\n  | HEAD | Head |\n  | FACE | Face |\n  | GEAR | Gear |\n  | ANIMATION | Animation |\n  | TORSO | Torso |\n  | RIGHT_ARM | Right Arm |\n  | LEFT_ARM | Left Arm |\n  | LEFT_LEG | Left Leg |\n  | RIGHT_LEG | Right Leg |\n  | YOUTUBE_VIDEO | YouTube Video |\n  | APP | App |\n  | CODE | Code |\n  | PLUGIN | Plugin |\n  | SOLID_MODEL | Solid Model |\n  | MESH_PART | Mesh Part |\n  | HAIR_ACCESSORY | Hair Accessory |\n  | FACE_ACCESSORY | Face Accessory |\n  | NECK_ACCESSORY | Neck Accessory |\n  | SHOULDER_ACCESSORY | Shoulder Accessory |\n  | FRONT_ACCESSORY | Front Accessory |\n  | BACK_ACCESSORY | Back Accessory |\n  | WAIST_ACCESSORY | Waist Accessory |\n  | CLIMB_ANIMATION | Climb Animation |\n  | DEATH_ANIMATION | Death Animation |\n  | FALL_ANIMATION | Fall Animation |\n  | IDLE_ANIMATION | Idle Animation |\n  | JUMP_ANIMATION | Jump Animation |\n  | RUN_ANIMATION | Run Animation |\n  | SWIM_ANIMATION | Swim Animation |\n  | WALK_ANIMATION | Walk Animation |\n  | POSE_ANIMATION | Pose Animation |\n  | LOCALIZATION_TABLE_MANIFEST | Localization Table Manifest |\n  | LOCALIZATION_TABLE_TRANSLATION | Localization Table Translation |\n  | EMOTE_ANIMATION | Emote Animation |\n  | VIDEO | Video |\n  | TEXTURE_PACK | Texture Pack |\n  | TSHIRT_ACCESSORY | Tshirt Accessory |\n  | SHIRT_ACCESSORY | Shirt Accessory |\n  | PANTS_ACCESSORY | Pants Accessory |\n  | JACKET_ACCESSORY | Jacket Accessory |\n  | SWEATER_ACCESSORY | Sweater Accessory |\n  | SHORTS_ACCESSORY | Shorts Accessory |\n  | LEFT_SHOE_ACCESSORY | Left Shoe Accessory |\n  | RIGHT_SHOE_ACCESSORY | Right Shoe Accessory |\n  | DRESS_SKIRT_ACCESSORY | Dress Skirt Accessory |\n  | FONT_FAMILY | Font Family |\n  | FONT_FACE | Font Face |\n  | MESH_HIDDEN_SURFACE_REMOVAL | Mesh Hidden Surface Removal |\n  | EYEBROW_ACCESSORY | Eyebrow Accessory |\n  | EYELASH_ACCESSORY | Eyelash Accessory |\n  | MOOD_ANIMATION | Mood Animation |\n  | DYNAMIC_HEAD | Dynamic Head |\n  | CODE_SNIPPET | Code Snippet |\n  | ADS_VIDEO | Ads Video |"
           },
           "usage": {
-            "type": "integer",
-            "description": "The current usage of the quota.",
-            "format": "int64"
+            "type": "string",
+            "description": "The current usage of the quota."
           },
           "capacity": {
-            "type": "integer",
-            "description": "The capacity of the quota.",
-            "format": "int64"
+            "type": "string",
+            "description": "The capacity of the quota."
           },
           "period": {
             "allOf": [
@@ -86445,9 +86519,8 @@
             "readOnly": true
           },
           "assetId": {
-            "type": "integer",
-            "description": "The unique identifier of the asset. Required for [Update Asset](#Assets_UpdateAsset).",
-            "format": "int64"
+            "type": "string",
+            "description": "The unique identifier of the asset. Required for [Update Asset](#Assets_UpdateAsset)."
           },
           "displayName": {
             "type": "string",
@@ -86483,13 +86556,9 @@
             "description": "Whether to publish the asset version created by the request. To check whether the current revision is published, see `isPublished`.",
             "writeOnly": true
           },
-          "hasPublished": {
-            "type": "boolean",
-            "readOnly": true
-          },
           "icon": {
             "type": "string",
-            "description": "The resource path for the icon.",
+            "description": "The resource path for the icon. The icon must be an image set to [Open Use](https://create.roblox.com/docs/projects/assets/privacy). To create an Open Use image, set `creationContext.assetPrivacy` to `OpenUse` in [Create Asset](#Assets_CreateAsset).",
             "nullable": true
           },
           "previews": {
@@ -86497,7 +86566,7 @@
             "items": {
               "$ref": "#/components/schemas/Preview"
             },
-            "description": "A list of previews, each with an asset path and alt text. Previews must be **Image** assets.",
+            "description": "A list of previews, each with an asset path and alt text. Previews must be **Image** assets, except for Place assets, which can have one **GamePreviewVideo**, and for Model, MeshPart, and Plugin assets, which can have one **StorePreviewVideo**. Image previews must be set to [Open Use](https://create.roblox.com/docs/projects/assets/privacy). To create an Open Use image, set `creationContext.assetPrivacy` to `OpenUse` in [Create Asset](#Assets_CreateAsset).",
             "nullable": true
           },
           "state": {
@@ -86556,8 +86625,7 @@
             "nullable": true
           },
           "experienceId": {
-            "type": "integer",
-            "format": "int64",
+            "type": "string",
             "nullable": true
           }
         },
@@ -93883,6 +93951,10 @@
           "isManagedPricingEnabled": {
             "type": "boolean",
             "description": "Whether managed pricing is enabled for the game pass."
+          },
+          "isTrialEnabled": {
+            "type": "boolean",
+            "description": "Whether trials are enabled for the game pass."
           }
         },
         "additionalProperties": false,
@@ -100147,24 +100219,20 @@
             "nullable": true
           },
           "expirationTimeMs": {
-            "type": "integer",
-            "description": "Expiration of pre signed url.",
-            "format": "int64"
+            "type": "string",
+            "description": "Expiration of pre signed url."
           },
           "chunkNum": {
-            "type": "integer",
-            "description": "Num of file chunk to upload corresponding to the ChunkPlan in the start request.",
-            "format": "int32"
+            "type": "string",
+            "description": "Num of file chunk to upload corresponding to the ChunkPlan in the start request."
           },
           "contentStart": {
-            "type": "integer",
-            "description": "Start position of this chunk.",
-            "format": "int64"
+            "type": "string",
+            "description": "Start position of this chunk."
           },
           "contentLength": {
-            "type": "integer",
-            "description": "Length of this chunk.",
-            "format": "int64"
+            "type": "string",
+            "description": "Length of this chunk."
           }
         },
         "additionalProperties": false,
@@ -108766,7 +108834,7 @@
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
               75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
-              91, 92, 93, 94, 95, 96, 97
+              91, 92, 93, 94, 95, 96, 97, 98
             ],
             "type": "integer"
           },
@@ -108939,7 +109007,7 @@
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
               75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
-              91, 92, 93, 94, 95, 96, 97
+              91, 92, 93, 94, 95, 96, 97, 98
             ],
             "type": "integer"
           },
@@ -109137,7 +109205,7 @@
               41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
               59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
               75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
-              91, 92, 93, 94, 95, 96, 97
+              91, 92, 93, 94, 95, 96, 97, 98
             ],
             "type": "integer"
           },
@@ -113902,14 +113970,14 @@
         "properties": {
           "assetType": {
             "format": "int32",
-            "description": "The asset type. ['Invalid' = 0, 'Image' = 1, 'Tshirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'Html' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YoutubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TshirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96, 'AvatarSpawnEffect' = 97]",
+            "description": "The asset type. ['Invalid' = 0, 'Image' = 1, 'Tshirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'Html' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YoutubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TshirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96, 'AvatarSpawnEffect' = 97, 'Voice' = 98]",
             "enum": [
               0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21,
               22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39,
               40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
               56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73,
               74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
-              90, 91, 92, 93, 94, 95, 96, 97
+              90, 91, 92, 93, 94, 95, 96, 97, 98
             ],
             "type": "integer"
           }
@@ -114654,14 +114722,14 @@
           },
           "assetType": {
             "format": "int32",
-            "description": "The asset type of the item being updated. Must match the original item's asset type: an\nupdate swaps content on the same item, it cannot change the item's type. ['Invalid' = 0, 'Image' = 1, 'Tshirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'Html' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YoutubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TshirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96, 'AvatarSpawnEffect' = 97]",
+            "description": "The asset type of the item being updated. Must match the original item's asset type: an\nupdate swaps content on the same item, it cannot change the item's type. ['Invalid' = 0, 'Image' = 1, 'Tshirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'Html' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YoutubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TshirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96, 'AvatarSpawnEffect' = 97, 'Voice' = 98]",
             "enum": [
               0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21,
               22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39,
               40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
               56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73,
               74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
-              90, 91, 92, 93, 94, 95, 96, 97
+              90, 91, 92, 93, 94, 95, 96, 97, 98
             ],
             "type": "integer"
           }
@@ -114802,14 +114870,14 @@
             "type": "array",
             "items": {
               "format": "int32",
-              "description": " ['Invalid' = 0, 'Image' = 1, 'Tshirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'Html' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YoutubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TshirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96, 'AvatarSpawnEffect' = 97]",
+              "description": " ['Invalid' = 0, 'Image' = 1, 'Tshirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'Html' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YoutubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TshirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96, 'AvatarSpawnEffect' = 97, 'Voice' = 98]",
               "enum": [
                 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19,
                 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38,
                 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
                 55, 56, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
                 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88,
-                89, 90, 91, 92, 93, 94, 95, 96, 97
+                89, 90, 91, 92, 93, 94, 95, 96, 97, 98
               ],
               "type": "integer"
             }
@@ -115617,6 +115685,12 @@
             "format": "int64",
             "description": "The price floor.",
             "type": "integer"
+          },
+          "paidItemPublishingFee": {
+            "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Response.PublishingFeeInfo"
+          },
+          "freeItemPublishingFee": {
+            "$ref": "#/components/schemas/Roblox.ItemConfiguration.Api.Models.Response.PublishingFeeInfo"
           }
         },
         "additionalProperties": false
@@ -115672,6 +115746,28 @@
             "additionalProperties": {
               "type": "boolean"
             }
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.ItemConfiguration.Api.Models.Response.PublishingFeeInfo": {
+        "description": "A publishing fee returned with the price floor.",
+        "type": "object",
+        "properties": {
+          "publishingFeeInRobux": {
+            "format": "int64",
+            "description": "The publishing fee in Robux. For Roblox.ItemConfiguration.Api.PublishingFeeType.PayPerInstance, this is the fee for each unit.",
+            "type": "integer"
+          },
+          "publishingFeeType": {
+            "format": "int32",
+            "description": "Whether the fee is charged once or for each unit. ['Invalid' = 0, 'PayPerInstance' = 1, 'PayInTotal' = 2]",
+            "enum": [0, 1, 2],
+            "type": "integer"
+          },
+          "displayName": {
+            "description": "The user-facing name of the publishing fee.",
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -122143,7 +122239,16 @@
         "description": "Part of the ServerManagementService.V2.Models.GameServerLog and ServerManagementService.V2.Models.ClientLog response objects.\nRepresenting the metadata for a single frame in a structured stack trace."
       },
       "SubjectType": {
-        "enum": ["Invalid", "User", "Group", "GroupRoleset", "All", "Universe"],
+        "enum": [
+          "Invalid",
+          "User",
+          "Group",
+          "GroupRoleset",
+          "All",
+          "Universe",
+          "CommunicationPlatformMessage",
+          "IpPlatform"
+        ],
         "type": "string"
       },
       "SubmitManualPaymentRequest": {

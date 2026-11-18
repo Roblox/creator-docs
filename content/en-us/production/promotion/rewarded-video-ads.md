@@ -185,6 +185,68 @@ MarketplaceService.ProcessReceipt = function(receiptInfo)
 end
 ```
 
+## Join with Reward
+
+<Alert severity="info">
+  Join with Reward is in closed beta. If you're interested in trying it, contact [adproductops@roblox.com](mailto:adproductops@roblox.com).
+</Alert>
+
+Join with Reward is a rewarded video placement that shows on your game's Experience Details Page, before a user joins. A user can choose to watch an ad there and get a reward when they join. This is a separate placement from the in-experience rewarded video flow described above. You don't need to call `Class.AdService` to show the ad, because you set up the placement in Creator Hub.
+
+Each reward is a [developer product](../monetization/developer-products.md). When a user earns a reward, Roblox creates a receipt for that developer product, and your game's `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callback grants it when the user joins. If your game's `ProcessReceipt` callback doesn't already grant a developer product you want to use as a reward, you need to add code for it before you publish the reward.
+
+### Set up a Join with Reward placement
+
+1. In the Creator Dashboard, go to **Creations** and select a game.
+2. Go to **Monetization** ⟩ **Ads** ⟩ **Placements**.
+3. Click **Create placement** and select **Join with Reward**.
+4. On the **Placement setup** step, name the placement and add one or more reward items. Each reward item is a developer product with an image. You can't add the same developer product to a placement more than once.
+5. Click **Continue**. The next step shows a `ProcessReceipt` code snippet with the IDs of your reward items' developer products. If your game doesn't already grant these products, copy the snippet into your server-side `ProcessReceipt` code, then replace the placeholder comment with the code that gives the user each reward.
+6. Click **Create**.
+
+### Test rewards
+
+New rewards start in test mode, so you can check that each one is granted correctly before every user can see it.
+
+<Alert severity="info">
+  Join with Reward is only supported on mobile devices. To test a reward, open the game's Experience Details Page on a mobile device.
+</Alert>
+
+- **Who can see a reward in test mode:** only users with edit access to the game. They see the Join with Reward option on the game's Experience Details Page. Other users don't see rewards that are in test mode.
+- **One reward at a time:** only one reward on a placement can be in test mode. When you create a placement, the first reward item starts in test mode, and the other reward items stay in draft until it's their turn.
+
+To test a reward and move it out of test mode:
+
+1. On a mobile device, sign in with an account that has edit access to the game, and open the game's Experience Details Page.
+2. Watch the ad and join the game. Check that you get the reward.
+3. In Creator Hub, open the placement's reward items and click **Publish** on the reward. The reward becomes active, and all eligible users can now get it.
+
+After you publish a reward, the next draft reward on the placement moves into test mode automatically. Repeat these steps for each reward. You can't publish a reward while its image is still under review.
+
+### Manage reward items
+
+Each reward item has a status, such as draft, test mode, active, or inactive. Use the reward items drawer on the placement to:
+
+- Turn a reward on or off. Turning on an inactive reward makes it active for all users.
+- Click **Test** on a draft reward to move it into test mode. If another reward is already in test mode, that reward moves back to draft.
+- Select **Enable test mode** from a reward's menu to move an active or inactive reward back into test mode.
+
+When a placement has more than one active reward, Roblox picks one of them at random each time it serves the ad. Rewards in test mode are only shown to users with edit access to the game.
+
+### View Join with Reward performance
+
+Join with Reward has its own reporting, separate from your in-experience rewarded video ads. To view it:
+
+1. In the Creator Dashboard, go to **Creations** and select a game.
+2. Go to **Monetization** ⟩ **Ads** ⟩ **Analytics**.
+3. Filter by **Rewarded Video**, then select **Join with Reward** as the rewarded video type.
+
+This view only includes your Join with Reward placements, and it's only available after your game has at least one Join with Reward placement. It shows:
+
+- Summary totals for **Earnings**, **Impressions**, and **EPM**.
+- Earnings and impressions charts over time.
+- A **CTR** (click-through rate) chart, with a shaded band that shows the expected CTR range.
+
 ## Placements
 
 Use placements to track the performance of individual rewarded video ads inside your game.
