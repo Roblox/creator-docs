@@ -3,6 +3,7 @@ title: How to sell assets on the Creator Store
 description: 'Spoken captions; API names can be wrong. Covers: what you are allowed to upload, importing in Studio, a folder layout other creators can follow, Save to Roblox, finishing the listing in the Creator Dashboard.'
 date: '2026-04-17'
 transcript: true
+hideBreadcrumbs: true
 related:
   - production/creator-store.md
 ---

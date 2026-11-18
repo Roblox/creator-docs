@@ -92,7 +92,7 @@ To create a background for avatars:
 
 ## Upload backgrounds
 
-To upload backgrounds, you must have a [Roblox Plus](https://www.roblox.com/plus) account, verify your account through your own [government ID](../../production/publishing/account-verification.md#verify-through-government-id) or a linked [parental account](https://about.roblox.com/parental-controls) with government ID verification, and have 200 Robux for the upload fee. There is an upload limit of 1 background per day.
+To upload backgrounds, you must verify your account through your own [government ID](../../production/publishing/account-verification.md#verify-through-government-id) or a linked [parental account](https://about.roblox.com/parental-controls) with government ID verification, and have 200 Robux for the upload fee. There is an upload limit of 1 background per day.
 
 To upload a background for avatars:
 
@@ -106,7 +106,11 @@ To upload a background for avatars:
 
 ## Publish backgrounds
 
-Similarly, to publish backgrounds, you must have a [Roblox Plus](https://www.roblox.com/plus) account, verify your account through your own [government ID](../../production/publishing/account-verification.md#verify-through-government-id) or a linked [parental account](https://about.roblox.com/parental-controls) with government ID verification, and have at least 2000 Robux for the publishing advance fee.
+To publish backgrounds, you must have a [Roblox Plus](https://www.roblox.com/plus) account, verify your account through your own [government ID](../../production/publishing/account-verification.md#verify-through-government-id) or a linked [parental account](https://about.roblox.com/parental-controls) with government ID verification, and have Robux for the publishing advance fee:
+
+- 100 a unit for free Limited backgrounds
+- 2000 for paid non-Limited backgrounds
+- 15000 for paid Limited backgrounds
 
 For commissions and the standard publishing flow, see [Marketplace fees and commissions](../../marketplace/marketplace-fees-and-commissions.md) and [Publish to Marketplace - Publish an asset](../../marketplace/publish-to-marketplace.md#publish-an-asset).
 

@@ -3,6 +3,7 @@ title: Manage level of detail settings on Roblox
 description: 'Spoken captions; API names can be wrong. Covers: simpler meshes as they get farther away, RenderFidelity, streaming level of detail, impostor meshes, slim meshes, persistent models a client script depends on, spending the saved performance on nearby detail.'
 date: '2025-12-11'
 transcript: true
+hideBreadcrumbs: true
 related:
   - workspace/streaming/index.md
   - parts/meshes.md

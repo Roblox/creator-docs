@@ -3,6 +3,7 @@ title: How to polish a 3-lane FPS map on Roblox
 description: 'Spoken captions; API names can be wrong. Covers: custom floor and wall materials, team color coding, wall trim, windows and doors, a golden-hour skybox and interior lights, prop packages, repairs that explain a prop, a city and fog outside the windows.'
 date: '2026-02-23'
 transcript: true
+hideBreadcrumbs: true
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/-Q9mg1hyqMY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

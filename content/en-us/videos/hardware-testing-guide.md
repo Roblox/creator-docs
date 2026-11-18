@@ -3,6 +3,7 @@ title: Hardware Testing Guide
 description: 'Spoken captions; API names can be wrong. Covers: the emulator misses performance and memory, 2 to 4 GB phones, the performance overlay, MicroProfiler frame time, comparing MicroProfiler dumps, display size versus draw size, thermal throttling, notches and the 60 FPS cap.'
 date: '2026-06-16'
 transcript: true
+hideBreadcrumbs: true
 related:
   - performance-optimization/test-on-hardware.md
   - performance-optimization/microprofiler/index.md

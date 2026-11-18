@@ -3,6 +3,7 @@ title: How Procedural Models work on Roblox
 description: 'Spoken captions; API names can be wrong. Covers: geometry generated from code, nine-slice blocks, a building generated from one block, a plugin that shares neighboring models, polygonal shapes that are not boxes.'
 date: '2026-09-03'
 transcript: true
+hideBreadcrumbs: true
 related:
   - parts/procedural-models.md
 ---

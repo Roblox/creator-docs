@@ -3,6 +3,7 @@ title: How the Input Action System works on Roblox
 description: 'Spoken captions; API names can be wrong. Covers: an action such as jump instead of a hardware key, an input context in ReplicatedStorage, boolean actions, bindings for keyboard, mouse, gamepad, and touch, player scripts moved off ContextActionService.'
 date: '2026-06-11'
 transcript: true
+hideBreadcrumbs: true
 related:
   - input/input-action-system.md
 ---

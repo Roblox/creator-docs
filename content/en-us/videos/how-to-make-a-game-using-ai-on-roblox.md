@@ -3,6 +3,7 @@ title: How to make a game using AI on Roblox
 description: 'Spoken captions; API names can be wrong. Covers: prototyping with an LLM inside Studio, the MCP server driving the place, a wave shooter built from prompts, prompts that explain the mental model.'
 date: '2026-06-11'
 transcript: true
+hideBreadcrumbs: true
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/XsY8xhluuZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

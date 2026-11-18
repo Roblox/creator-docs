@@ -3,6 +3,7 @@ title: How Server Authority works on Roblox
 description: 'Spoken captions; API names can be wrong. Covers: client-side prediction, lag when the server owns every action, speed hacks, a server-only kick that arrives late, smoothing over that late update.'
 date: '2026-07-08'
 transcript: true
+hideBreadcrumbs: true
 related:
   - projects/server-authority/index.md
   - projects/server-authority/techniques.md

@@ -1,6 +1,7 @@
 ---
 title: Videos
 description: Spoken captions of videos from the Roblox Creators YouTube channel. API names in the captions can be wrong.
+hideBreadcrumbs: true
 ---
 
 These pages are spoken captions of videos from the [Roblox Creators YouTube channel](https://www.youtube.com/@RobloxCreators). Each section names the video and links to the moment it starts. API names in the captions can be wrong, so prefer the written documentation when a page links to it.

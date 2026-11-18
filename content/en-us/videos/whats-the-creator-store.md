@@ -3,6 +3,7 @@ title: What's the Creator Store?
 description: 'Spoken captions; API names can be wrong. Covers: models, plugins, and scripts from other creators, browsing in Creator Hub and in Studio, whether an asset equips as a tool, ID verification and payouts.'
 date: '2026-04-10'
 transcript: true
+hideBreadcrumbs: true
 related:
   - production/creator-store.md
 ---

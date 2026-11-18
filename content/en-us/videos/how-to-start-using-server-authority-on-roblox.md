@@ -3,6 +3,7 @@ title: How to start using Server Authority on Roblox
 description: 'Spoken captions; API names can be wrong. Covers: Workspace.AuthorityMode set to Server, a jetpack simulated on the client and the server, a coin that refills fuel.'
 date: '2026-08-11'
 transcript: true
+hideBreadcrumbs: true
 related:
   - projects/server-authority/index.md
 ---

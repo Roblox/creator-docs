@@ -3,6 +3,7 @@ title: How to start coding with AI on Roblox (MCP)
 description: 'Spoken captions; API names can be wrong. Covers: Cursor or Visual Studio Code, the Wave Survival starter repository, Script Sync, enabling the Studio MCP server.'
 date: '2026-06-11'
 transcript: true
+hideBreadcrumbs: true
 related:
   - studio/mcp.md
 ---

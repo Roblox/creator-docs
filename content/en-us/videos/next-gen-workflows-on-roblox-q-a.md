@@ -3,6 +3,7 @@ title: 'Next-gen workflows on Roblox: Q&A'
 description: 'Spoken captions; API names can be wrong. Covers: the procedural model Lua template, moderation of image input, how AI features are tested, generation limits, physics visualizers, whether planning mode reads the place structure, Assistant skills, paying for more AI use.'
 date: '2026-04-30'
 transcript: true
+hideBreadcrumbs: true
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/nY9tDhsaH8o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

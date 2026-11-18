@@ -3,6 +3,7 @@ title: How client-server architecture works on Roblox
 description: "Spoken captions; API names can be wrong. If you've used other game engines, learn a bit about getting comfortable with Roblox. Covers: the server owns the place, script sync, remote events for breakable objects, player data saves, atomic models for streaming, server-built rooms and gates."
 date: '2026-03-26'
 transcript: true
+hideBreadcrumbs: true
 related:
   - projects/client-server.md
 ---

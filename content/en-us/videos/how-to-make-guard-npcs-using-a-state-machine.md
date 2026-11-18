@@ -3,6 +3,7 @@ title: How to make guard NPCs using a state machine
 description: "Spoken captions; API names can be wrong. This video shows how to add NPC AI with a finite state machine (It's like AI without the LLM!) Covers: onEnter, onStay, and onExit, waypoint flags, a patrol built by reusing walk states, an attack on the last player seen."
 date: '2026-04-24'
 transcript: true
+hideBreadcrumbs: true
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/nlVpAZEkxgo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

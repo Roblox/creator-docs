@@ -3,6 +3,7 @@ title: How Home Recommendations & Ads Actually Work
 description: 'Spoken captions; API names can be wrong. Want to better understand how you can get your game to more users? Covers: signals behind Recommended for You, where sponsored ads are shown, a slow first week does not quarantine a game.'
 date: '2025-10-30'
 transcript: true
+hideBreadcrumbs: true
 related:
   - production/promotion/ads-manager.md
   - discovery.md

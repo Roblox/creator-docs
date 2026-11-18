@@ -3,6 +3,7 @@ title: How to make a top down camera system (MOBAs, RTS) on Roblox
 description: 'Spoken captions; API names can be wrong. Covers: a perspective camera script, input bindings for keyboard, mouse, gamepad, and touch, camera rotation and click to move, an RTS camera that pans on a 2D direction.'
 date: '2026-08-04'
 transcript: true
+hideBreadcrumbs: true
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/qx7T7EDPqPA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

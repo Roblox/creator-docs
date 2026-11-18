@@ -3,6 +3,7 @@ title: How to not hate editing your 3D models on Roblox
 description: 'Spoken captions; API names can be wrong. Learn how to save time when reimporting 3D models in your Roblox development workflow by using the reimport tool. Covers: scaling, coloring, and welding after import, changing the door in Blender, re-import in place from the new file.'
 date: '2026-06-17'
 transcript: true
+hideBreadcrumbs: true
 related:
   - art/modeling/reimport.md
 ---

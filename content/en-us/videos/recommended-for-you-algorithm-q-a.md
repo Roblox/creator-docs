@@ -3,6 +3,7 @@ title: Recommended for you algorithm Q&A
 description: "Spoken captions; API names can be wrong. We've updated the Recommended For You algorithm signals from 7 days to 28 days to better recognize games that keep players coming back over time. Covers: play-through rate, first-play bounce, play time and play days, analytics charts."
 date: '2026-06-18'
 transcript: true
+hideBreadcrumbs: true
 related:
   - discovery.md
 ---

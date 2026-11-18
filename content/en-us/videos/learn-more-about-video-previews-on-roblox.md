@@ -3,6 +3,7 @@ title: Learn more about Video Previews on Roblox
 description: 'Spoken captions; API names can be wrong. Join Chris as he demos the new Video Previews feature. Covers: gameplay footage without CGI, UI, or text overlays, review in Creator Hub within 24 hours, playback on the desktop and mobile apps.'
 date: '2025-11-13'
 transcript: true
+hideBreadcrumbs: true
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/ag569uHM96E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

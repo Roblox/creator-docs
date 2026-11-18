@@ -3,6 +3,7 @@ title: How to create shoes for Roblox (using auto setup!)
 description: 'Spoken captions; API names can be wrong. Covers: avatar auto setup for rigging and caging, modeling and texturing in Blender, normal maps, the names left shoe accessory and right shoe accessory, a glTF round trip back into Studio.'
 date: '2026-01-13'
 transcript: true
+hideBreadcrumbs: true
 related:
   - avatar-setup/index.md
   - avatar/resources.md

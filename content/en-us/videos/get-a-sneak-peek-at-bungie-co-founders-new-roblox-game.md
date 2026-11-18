@@ -3,6 +3,7 @@ title: Get a sneak peek at Bungie co-founder's new Roblox game
 description: 'Spoken captions; API names can be wrong. Join us for a conversation with Bungie co-founder Alex Seropian! Covers: building on Roblox instead of a AAA process, AI for cleanup and feature code, fast play-testing and MCP, Git instead of Perforce, the Drifters first session.'
 date: '2026-09-30'
 transcript: true
+hideBreadcrumbs: true
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/Zn9u4sTNTag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

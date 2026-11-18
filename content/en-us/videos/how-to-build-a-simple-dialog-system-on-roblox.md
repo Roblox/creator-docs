@@ -3,6 +3,7 @@ title: How to build a simple dialog system on Roblox
 description: 'Spoken captions; API names can be wrong. The version of mder shown in the video contains a fairly obvious bug around underlined text. Covers: plain-text lines, not a branching graph, proximity prompts on tagged NPCs, server-replicated animations, typewriter text, markdown in a text label.'
 date: '2026-07-20'
 transcript: true
+hideBreadcrumbs: true
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/oemMqSgj7pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

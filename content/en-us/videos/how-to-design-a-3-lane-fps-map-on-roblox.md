@@ -3,6 +3,7 @@ title: How to design a 3-lane FPS map on Roblox
 description: 'Spoken captions; API names can be wrong. Covers: three paths between the spawns, whiteboarding the floor plan in Studio, symmetrical travel time from each spawn, sightlines, verticality, angles that are not 90 degrees, loops around cover, gray-box props that change gameplay.'
 date: '2025-11-19'
 transcript: true
+hideBreadcrumbs: true
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/fGaiAvh7Q-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

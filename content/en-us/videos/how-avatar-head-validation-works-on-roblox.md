@@ -3,6 +3,7 @@ title: How avatar head validation works on Roblox
 description: "Spoken captions; API names can be wrong. This video covers how Roblox's validation works with avatar heads, and common issues creators may encounter when uploading their own heads. Covers: cage landmarks, 17 FACS poses, a cage off the mesh, landmarks that stay still."
 date: '2026-02-23'
 transcript: true
+hideBreadcrumbs: true
 related:
   - avatar/dynamic-heads/validate.md
   - avatar/dynamic-heads/specifications.md

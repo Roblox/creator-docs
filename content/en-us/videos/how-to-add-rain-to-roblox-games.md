@@ -3,6 +3,7 @@ title: How to add rain to Roblox games
 description: 'Spoken captions; API names can be wrong. Covers: a screen overlay that ignores the camera, particle emitters for handcrafted rain, a storm clock that counts in-game hours, emitter lifetime, rate, and coverage, roof detection, because particles do not collide.'
 date: '2026-10-13'
 transcript: true
+hideBreadcrumbs: true
 related:
   - effects/particle-emitters.md
   - ui/on-screen-containers.md

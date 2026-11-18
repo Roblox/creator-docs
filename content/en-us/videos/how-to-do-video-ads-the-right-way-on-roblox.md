@@ -3,6 +3,7 @@ title: How to do video ads the right way on Roblox
 description: 'Spoken captions; API names can be wrong. Covers: a reward in exchange for a full-screen video, opt-in rate, how many people finish the ad, reward value and how often the ad plays.'
 date: '2026-05-20'
 transcript: true
+hideBreadcrumbs: true
 related:
   - production/promotion/rewarded-video-ads.md
 ---

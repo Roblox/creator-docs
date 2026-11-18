@@ -3,6 +3,7 @@ title: 'Assistant, MCP server, and more: Roblox staff Q&A'
 description: 'Spoken captions; API names can be wrong. Join us for the Roblox Creator Monthly, a new webinar series designed to keep you up to date on the latest platform updates. Covers: Assistant and MCP, solid modeling on meshes, CreateDataModelContentAsync, live experience configs, analytics breakdowns.'
 date: '2026-03-31'
 transcript: true
+hideBreadcrumbs: true
 related:
   - studio/mcp.md
   - assistant/mcp.md

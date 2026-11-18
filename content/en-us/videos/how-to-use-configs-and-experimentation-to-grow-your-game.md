@@ -3,6 +3,7 @@ title: How to use Configs and Experimentation to grow your game faster
 description: "Spoken captions; API names can be wrong. Covers: shop prices that change without republishing, a real creator's experiment results, staging a config in Studio before publishing, listening for config updates, the config character limit."
 date: '2025-12-01'
 transcript: true
+hideBreadcrumbs: true
 related:
   - production/configs.md
   - production/experiments.md

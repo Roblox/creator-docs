@@ -3,6 +3,7 @@ title: How to make an ad campaign with Roblox Ads Manager
 description: 'Spoken captions; API names can be wrong. Covers: picking a campaign goal, new users and returning users, budget versus how narrow the audience is, thumbnails for the ad, stacking targeting filters, the learning period before you read metrics.'
 date: '2026-02-04'
 transcript: true
+hideBreadcrumbs: true
 related:
   - production/promotion/ads-manager.md
 ---

@@ -3,6 +3,7 @@ title: Next-gen workflows on Roblox
 description: 'Spoken captions; API names can be wrong. Covers: the procedural model primitive, planning mode, memory use for audio, animation, scripts, and unparented instances.'
 date: '2026-04-30'
 transcript: true
+hideBreadcrumbs: true
 related:
   - parts/procedural-models.md
   - performance-optimization/scene-analysis.md

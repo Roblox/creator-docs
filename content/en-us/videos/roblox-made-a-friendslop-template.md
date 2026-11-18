@@ -3,6 +3,7 @@ title: Roblox made a friendslop template
 description: 'Spoken captions; API names can be wrong. Covers: the Boneheads co-op sample, the Character Controller Library, custom abilities, including throwing your head, a mechanism system for puzzles, server authority and the new audio APIs.'
 date: '2026-10-30'
 transcript: true
+hideBreadcrumbs: true
 related:
   - characters/character-controller-library/custom-abilities.md
 ---
