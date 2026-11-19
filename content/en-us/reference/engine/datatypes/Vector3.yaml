@@ -20,13 +20,7 @@ description: |
 
   Some example usages of `Datatype.Vector3` are the
   `Class.BasePart.Position|Position`, `Class.BasePart.Rotation|Rotation`, and
-  `Class.BasePart.Size|Size` of parts, for example:
-
-  ```lua
-  local part = Instance.new("Part")
-  part.Position = part.Position + Vector3.new(5, 2, 10) -- Move part by (5, 2, 10)
-  print(part.Position) --> 5, 2, 10
-  ```
+  `Class.BasePart.Size|Size` of parts.
 
   `Datatype.Vector3` is also commonly used when constructing more complex 3D
   data types such as `Datatype.CFrame`. Many of these data types' methods will
@@ -59,7 +53,8 @@ constructors:
         default: 0
         summary: |
           The z-axis component of the vector.
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-new
     tags: []
     deprecation_message: ''
   - name: Vector3.FromNormalId
@@ -69,11 +64,6 @@ constructors:
       Returns a unit `Datatype.Vector3` pointing in the direction of the given
       `Enum.NormalId`. For example, `Enum.NormalId.Top` returns `(0, 1, 0)` and
       `Enum.NormalId.Front` returns `(0, 0, -1)`.
-
-      ```lua
-      print(Vector3.FromNormalId(Enum.NormalId.Right)) --> 1, 0, 0
-      print(Vector3.FromNormalId(Enum.NormalId.Left))  --> -1, 0, 0
-      ```
     parameters:
       - name: normal
         type: NormalId
@@ -81,7 +71,8 @@ constructors:
         summary: |
           The `Enum.NormalId` specifying the face direction to convert into a
           unit vector.
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-FromNormalId
     tags: []
     deprecation_message: ''
   - name: Vector3.FromAxis
@@ -91,11 +82,6 @@ constructors:
       Returns a unit `Datatype.Vector3` for the given `Enum.Axis`. The mapping
       is `Enum.Axis.X` to `(1, 0, 0)`, `Enum.Axis.Y` to `(0, 1, 0)`, and
       `Enum.Axis.Z` to `(0, 0, 1)`.
-
-      ```lua
-      print(Vector3.FromAxis(Enum.Axis.X)) --> 1, 0, 0
-      print(Vector3.FromAxis(Enum.Axis.Z)) --> 0, 0, 1
-      ```
     parameters:
       - name: axis
         type: Axis
@@ -103,7 +89,8 @@ constructors:
         summary: |
           The `Enum.Axis` specifying which coordinate axis to convert into a
           unit vector.
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-FromAxis
     tags: []
     deprecation_message: ''
 constants:
@@ -117,11 +104,8 @@ constants:
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
       object.
-
-      ```lua
-      print(Vector3.zero)  --> 0, 0, 0
-      ```
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-zero
     tags: []
     deprecation_message: ''
   - name: Vector3.one
@@ -134,11 +118,8 @@ constants:
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
       object.
-
-      ```lua
-      print(Vector3.one)  --> 1, 1, 1
-      ```
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-one
     tags: []
     deprecation_message: ''
   - name: Vector3.xAxis
@@ -151,11 +132,8 @@ constants:
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
       object.
-
-      ```lua
-      print(Vector3.xAxis)  --> 1, 0, 0
-      ```
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-xAxis
     tags: []
     deprecation_message: ''
   - name: Vector3.yAxis
@@ -168,11 +146,8 @@ constants:
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
       object.
-
-      ```lua
-      print(Vector3.yAxis)  --> 0, 1, 0
-      ```
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-yAxis
     tags: []
     deprecation_message: ''
   - name: Vector3.zAxis
@@ -185,11 +160,8 @@ constants:
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
       object.
-
-      ```lua
-      print(Vector3.zAxis)  --> 0, 0, 1
-      ```
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-zAxis
     tags: []
     deprecation_message: ''
 properties:
@@ -203,12 +175,9 @@ properties:
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
       object.
-
-      ```lua
-      print(Vector3.zero) --> 0, 0, 0
-      ```
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-zero
     tags: []
     deprecation_message: ''
   - name: Vector3.one
@@ -221,12 +190,9 @@ properties:
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
       object.
-
-      ```lua
-      print(Vector3.one)  --> 1, 1, 1
-      ```
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-one
     tags: []
     deprecation_message: ''
   - name: Vector3.xAxis
@@ -239,30 +205,24 @@ properties:
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
       object.
-
-      ```lua
-      print(Vector3.xAxis)  --> 1, 0, 0
-      ```
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-xAxis
     tags: []
     deprecation_message: ''
   - name: Vector3.yAxis
     type: Vector3
     summary: |
-      A `Datatype.Vector3` with a value of `1 `on the **Y** axis.
+      A `Datatype.Vector3` with a value of `1` on the **Y** axis.
     description: |
       A `Datatype.Vector3` with a value of `1` on the **Y** axis.
 
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
       object.
-
-      ```lua
-      print(Vector3.yAxis)  --> 0, 1, 0
-      ```
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-yAxis
     tags: []
     deprecation_message: ''
   - name: Vector3.zAxis
@@ -275,12 +235,9 @@ properties:
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
       object.
-
-      ```lua
-      print(Vector3.zAxis)  --> 0, 0, 1
-      ```
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-zAxis
     tags: []
     deprecation_message: ''
   - name: Vector3.X
@@ -291,7 +248,8 @@ properties:
       The **X** coordinate of the `Datatype.Vector3`. In world space, this axis
       corresponds to the left-right (east-west) direction.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-X
     tags: []
     deprecation_message: ''
   - name: Vector3.Y
@@ -302,7 +260,8 @@ properties:
       The **Y** coordinate of the `Datatype.Vector3`. In world space, this axis
       corresponds to the up-down (vertical) direction.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Y
     tags: []
     deprecation_message: ''
   - name: Vector3.Z
@@ -313,7 +272,8 @@ properties:
       The **Z** coordinate of the `Datatype.Vector3`. In world space, this axis
       corresponds to the north-south (forward-back) direction.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Z
     tags: []
     deprecation_message: ''
   - name: Vector3.Magnitude
@@ -324,13 +284,9 @@ properties:
       The length (magnitude) of the `Datatype.Vector3`, computed as
       `math.sqrt(X^2 + Y^2 + Z^2)`. This is useful for comparing distances or
       determining how far a point is from the origin.
-
-      ```lua
-      local v = Vector3.new(3, 4, 0)
-      print(v.Magnitude) --> 5
-      ```
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Magnitude
     tags: []
     deprecation_message: ''
   - name: Vector3.Unit
@@ -348,14 +304,9 @@ properties:
       resulting `Unit` vector will have `NaN` components. Check
       `Datatype.Vector3.Magnitude|Magnitude` before using `Unit` when the vector
       may be zero-length.
-
-      ```lua
-      local v = Vector3.new(3, 4, 0)
-      print(v.Unit)      --> 0.6, 0.8, 0
-      print(v.Unit.Magnitude) --> 1
-      ```
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Unit
     tags: []
     deprecation_message: ''
 methods:
@@ -373,7 +324,8 @@ methods:
         summary: |
           A `Datatype.Vector3` whose components are the absolute values of the
           original's components.
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Abs
     tags: []
     deprecation_message: ''
   - name: Vector3:Ceil
@@ -388,7 +340,8 @@ methods:
         summary: |
           A `Datatype.Vector3` whose components are the ceiling (rounded up) of
           the original's components.
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Ceil
     tags: []
     deprecation_message: ''
   - name: Vector3:Floor
@@ -403,7 +356,8 @@ methods:
         summary: |
           A `Datatype.Vector3` whose components are the floor (rounded down) of
           the original's components.
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Floor
     tags: []
     deprecation_message: ''
   - name: Vector3:Sign
@@ -420,7 +374,8 @@ methods:
         summary: |
           A `Datatype.Vector3` whose components are the sign (-1, 0, or 1) of
           the original's components.
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Sign
     tags: []
     deprecation_message: ''
   - name: Vector3:Cross
@@ -436,13 +391,6 @@ methods:
       The cross product is commonly used to find normals to surfaces, determine
       the axis of rotation between two directions, and test whether two vectors
       are parallel (cross product of parallel vectors is the zero vector).
-
-      ```lua
-      local a = Vector3.new(1, 0, 0)
-      local b = Vector3.new(0, 1, 0)
-      print(a:Cross(b)) --> 0, 0, 1
-      print(b:Cross(a)) --> 0, 0, -1
-      ```
     parameters:
       - name: other
         type: Vector3
@@ -454,7 +402,8 @@ methods:
         summary: |
           A `Datatype.Vector3` perpendicular to both input vectors with
           magnitude equal to the area of the parallelogram they span.
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Cross
     tags: []
     deprecation_message: ''
   - name: Vector3:Angle
@@ -471,14 +420,6 @@ methods:
       rule around `axis`, and negative otherwise. The signed result is in the
       range `[-math.pi, math.pi]`. The `axis` is used only to determine the
       sign; the plane of rotation is still defined by `self` and `other`.
-
-      ```lua
-      local a = Vector3.new(1, 0, 0)
-      local b = Vector3.new(0, 1, 0)
-      print(a:Angle(b))                         --> 1.5707963... (pi/2)
-      print(a:Angle(b, Vector3.new(0, 0, 1)))   --> 1.5707963... (positive, CCW about +Z)
-      print(b:Angle(a, Vector3.new(0, 0, 1)))   --> -1.5707963... (negative, CW about +Z)
-      ```
     parameters:
       - name: other
         type: Vector3
@@ -496,7 +437,8 @@ methods:
         summary: |
           The angle in radians between the two vectors; unsigned `[0, pi]`
           without an axis, or signed `[-pi, pi]` when an axis is provided.
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Angle
     tags: []
     deprecation_message: ''
   - name: Vector3:Dot
@@ -511,16 +453,6 @@ methods:
       cosine of the angle between them. For unit vectors, a result of `1` means
       they point in the same direction, `0` means they are perpendicular, and
       `-1` means they point in opposite directions.
-
-      ```lua
-      local a = Vector3.new(1, 0, 0)
-      local b = Vector3.new(0, 1, 0)
-      print(a:Dot(b)) --> 0
-
-      local c = Vector3.new(1, 2, 3)
-      local d = Vector3.new(4, 5, 6)
-      print(c:Dot(d)) --> 32
-      ```
     parameters:
       - name: other
         type: Vector3
@@ -531,7 +463,8 @@ methods:
       - type: number
         summary: |
           The scalar dot product of the two vectors.
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Dot
     tags: []
     deprecation_message: ''
   - name: Vector3:FuzzyEq
@@ -545,13 +478,6 @@ methods:
       using a hybrid epsilon that scales relative to the magnitude of each
       component, making it suitable for both small and large values. The default
       `epsilon` of `0.00001` (1e-5) works well for most cases.
-
-      ```lua
-      local a = Vector3.new(1, 2, 3)
-      local b = Vector3.new(1.000001, 2, 3)
-      print(a:FuzzyEq(b))        --> true  (within default epsilon)
-      print(a:FuzzyEq(b, 1e-8))  --> false (tighter tolerance)
-      ```
     parameters:
       - name: other
         type: Vector3
@@ -569,7 +495,8 @@ methods:
         summary: |
           `true` if the two vectors are approximately equal within the given
           tolerance, `false` otherwise.
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-FuzzyEq
     tags: []
     deprecation_message: ''
   - name: Vector3:Lerp
@@ -597,7 +524,8 @@ methods:
         summary: |
           A `Datatype.Vector3` at the interpolated position between self and
           goal.
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Lerp
     tags: []
     deprecation_message: ''
   - name: Vector3:Max
@@ -607,13 +535,6 @@ methods:
     description: |
       Returns a `Datatype.Vector3` with each component as the highest among the
       respective components of both provided `Datatype.Vector3` objects.
-
-      ```lua
-      local a = Vector3.new(1, 2, 1)
-      local b = Vector3.new(2, 1, 2)
-
-      print(a:Max(b))  --> Vector3.new(2, 2, 2)
-      ```
     parameters:
       - name: vector
         type: Vector3
@@ -625,7 +546,8 @@ methods:
         summary: |
           A `Datatype.Vector3` where each component is the larger of the two
           input vectors' corresponding components.
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Max
     tags: []
     deprecation_message: ''
   - name: Vector3:Min
@@ -635,13 +557,6 @@ methods:
     description: |
       Returns a `Datatype.Vector3` with each component as the lowest among the
       respective components of both provided `Datatype.Vector3` objects.
-
-      ```lua
-      local a = Vector3.new(1, 2, 1)
-      local b = Vector3.new(2, 1, 2)
-
-      print(a:Min(b))  --> Vector3.new(1, 1, 1)
-      ```
     parameters:
       - name: vector
         type: Vector3
@@ -653,7 +568,8 @@ methods:
         summary: |
           A `Datatype.Vector3` where each component is the smaller of the two
           input vectors' corresponding components.
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Min
     tags: []
     deprecation_message: ''
 functions: []
@@ -669,7 +585,8 @@ math_operations:
     type_a: Vector3
     type_b: Vector3
     return_type: Vector3
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Add
     tags: []
     deprecation_message: ''
   - name: '-'
@@ -683,7 +600,8 @@ math_operations:
     type_a: Vector3
     type_b: Vector3
     return_type: Vector3
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Subtract
     tags: []
     deprecation_message: ''
   - name: '*'
@@ -697,7 +615,8 @@ math_operations:
     type_a: Vector3
     type_b: Vector3
     return_type: Vector3
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Multiply
     tags: []
     deprecation_message: ''
   - name: /
@@ -711,7 +630,8 @@ math_operations:
     type_a: Vector3
     type_b: Vector3
     return_type: Vector3
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-Divide
     tags: []
     deprecation_message: ''
   - name: //
@@ -725,7 +645,8 @@ math_operations:
     type_a: Vector3
     type_b: Vector3
     return_type: Vector3
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-FloorDivide
     tags: []
     deprecation_message: ''
   - name: '*'
@@ -739,7 +660,8 @@ math_operations:
     type_a: Vector3
     type_b: number
     return_type: Vector3
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-MultiplyNumber
     tags: []
     deprecation_message: ''
   - name: /
@@ -753,7 +675,8 @@ math_operations:
     type_a: Vector3
     type_b: number
     return_type: Vector3
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-DivideNumber
     tags: []
     deprecation_message: ''
   - name: //
@@ -767,6 +690,7 @@ math_operations:
     type_a: Vector3
     type_b: number
     return_type: Vector3
-    code_samples: []
+    code_samples:
+      - datatype-Vector3-FloorDivideNumber
     tags: []
     deprecation_message: ''

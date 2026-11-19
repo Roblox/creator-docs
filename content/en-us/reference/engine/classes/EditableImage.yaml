@@ -160,13 +160,13 @@ methods:
           Color of the circle.
       - name: transparency
         type: float
-        default:
+        default: 0
         summary: |
           Transparency of the circle with 0 being fully opaque and 1 being fully
           transparent. Default is `0`.
       - name: combineType
         type: ImageCombineType
-        default:
+        default: Overwrite
         summary: |
           How the drawn pixels (source) are combined with the existing pixels of
           this image (destination). Default is
@@ -182,9 +182,7 @@ methods:
         type: ImageAlphaType
         default: Default
         summary: |
-          Determines how this draw will blend alpha values. This parameter is
-          not yet available; values other than `Enum.ImageAlphaType.Default` are
-          not supported.
+          Determines how this draw will blend alpha values.
     returns:
       - type: ()
         summary: ''
@@ -217,7 +215,7 @@ methods:
           The source `EditableImage` to draw into this `EditableImage`.
       - name: combineType
         type: ImageCombineType
-        default:
+        default: AlphaBlend
         summary: |
           How the pixels of the source image are combined with the existing
           pixels of this image (destination). Default is
@@ -226,9 +224,7 @@ methods:
         type: ImageAlphaType
         default: Default
         summary: |
-          Determines how this draw will blend alpha values. This parameter is
-          not yet available; values other than `Enum.ImageAlphaType.Default` are
-          not supported.
+          Determines how this draw will blend alpha values.
     returns:
       - type: ()
         summary: ''
@@ -430,9 +426,7 @@ methods:
             scaling and rotation. Default is the center of the source image
             (i.e. `Image.Size / 2`).
           - `AlphaBlendType`: Determines how this draw will blend alpha values.
-            Default is `Enum.ImageAlphaType.Default`. This option is not yet
-            available; values other than `Enum.ImageAlphaType.Default` are not
-            supported.
+            Default is `Enum.ImageAlphaType.Default`.
     returns:
       - type: ()
         summary: ''
@@ -467,12 +461,12 @@ methods:
           Color of the line.
       - name: transparency
         type: float
-        default:
+        default: 0
         summary: |
           Transparency of the line. Default is `0`.
       - name: combineType
         type: ImageCombineType
-        default:
+        default: Overwrite
         summary: |
           How the drawn pixels (source) are combined with the existing pixels of
           this image (destination). Default is
@@ -488,9 +482,7 @@ methods:
         type: ImageAlphaType
         default: Default
         summary: |
-          Determines how this draw will blend alpha values. This parameter is
-          not yet available; values other than `Enum.ImageAlphaType.Default` are
-          not supported.
+          Determines how this draw will blend alpha values.
     returns:
       - type: ()
         summary: ''
@@ -527,12 +519,12 @@ methods:
           Color of the rectangle.
       - name: transparency
         type: float
-        default:
+        default: 0
         summary: |
           Transparency of the rectangle. Default is `0`.
       - name: combineType
         type: ImageCombineType
-        default:
+        default: Overwrite
         summary: |
           How the drawn pixels (source) are combined with the existing pixels of
           this image (destination). Default is
@@ -541,9 +533,7 @@ methods:
         type: ImageAlphaType
         default: Default
         summary: |
-          Determines how this draw will blend alpha values. This parameter is
-          not yet available; values other than `Enum.ImageAlphaType.Default` are
-          not supported.
+          Determines how this draw will blend alpha values.
     returns:
       - type: ()
         summary: ''

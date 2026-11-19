@@ -929,6 +929,11 @@ A failed write call, such as `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`
     <td>The exclusive start key (cursor) provided to a list operation such as `Class.DataStore:ListKeysAsync()|ListKeysAsync()` is not valid.</td>
   </tr>
   <tr>
+    <td>`InvalidJson`</td>
+    <td>The provided value exceeds the maximum allowed JSON nesting depth of 400.</td>
+    <td>The nested JSON document is too deep, reduce the nesting in the JSON document and try again.</td>
+  </tr>
+  <tr>
     <td>`InvalidPlace`</td>
     <td>The provided place is invalid.</td>
     <td>No matching Universe ID for the place. Try again later.</td>

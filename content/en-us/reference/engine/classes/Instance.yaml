@@ -50,6 +50,7 @@ descendants:
   - AudioEcho
   - AudioEmitter
   - AudioEqualizer
+  - AudioFDNReverb
   - AudioFader
   - AudioFilter
   - AudioFlanger
@@ -192,10 +193,12 @@ descendants:
   - PackageService
   - Pages
   - ParticleEmitter
+  - ParticleEmitter2D
   - Path
   - PathfindingLink
   - PathfindingModifier
   - PathfindingService
+  - PlaceSettings
   - Player
   - PlayerScripts
   - PlayerViewService
@@ -239,6 +242,7 @@ descendants:
   - SharedTableRegistry
   - Sky
   - Smoke
+  - SmoothVoxelsUpgraderService
   - SocialService
   - Sound
   - SoundEffect
@@ -303,6 +307,8 @@ descendants:
   - RenderSettings
   - StopWatchReporter
   - VirtualInputManager
+  - FileSystemService
+  - ProcessService
   - CreatorStoreService
   - InputAction
   - InputBinding

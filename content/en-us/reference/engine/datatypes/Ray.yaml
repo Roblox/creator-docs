@@ -31,7 +31,8 @@ constructors:
         default:
         summary: |
           The direction vector of the ray. Does not need to be a unit vector.
-    code_samples: []
+    code_samples:
+      - datatype-Ray-new
     tags: []
     deprecation_message: ''
 constants: []
@@ -45,7 +46,8 @@ properties:
       The `Datatype.Ray` with a normalized direction (the direction has a
       magnitude of `1`).
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Ray-Unit
     tags: []
     deprecation_message: ''
   - name: Ray.Origin
@@ -55,7 +57,8 @@ properties:
     description: |
       The position of the origin.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Ray-Origin
     tags: []
     deprecation_message: ''
   - name: Ray.Direction
@@ -65,7 +68,8 @@ properties:
     description: |
       The direction vector of the `Datatype.Ray`.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Ray-Direction
     tags: []
     deprecation_message: ''
 methods:
@@ -90,7 +94,8 @@ methods:
         summary: |
           The point on the ray closest to the given point, or the ray origin if
           the projection falls behind it.
-    code_samples: []
+    code_samples:
+      - datatype-Ray-ClosestPoint
     tags: []
     deprecation_message: ''
   - name: Ray:Distance
@@ -111,7 +116,8 @@ methods:
         summary: |
           The shortest distance between the given point and the closest point on
           the ray.
-    code_samples: []
+    code_samples:
+      - datatype-Ray-Distance
     tags: []
     deprecation_message: ''
 functions: []

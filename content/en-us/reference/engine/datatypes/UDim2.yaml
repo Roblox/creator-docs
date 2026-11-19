@@ -14,13 +14,6 @@ description: |
   **X** and **Y** dimensions. The most common usages for `Datatype.UDim2` are
   setting the `Class.GuiObject.Size|Size` and
   `Class.GuiObject.Position|Position` of `Class.GuiObject|GuiObjects`.
-
-  ```lua
-  local guiObject = Instance.new("Frame")
-  guiObject.Size = UDim2.new(0, 300, 1, 0)  -- 300 logical pixels wide; full height of parent
-  guiObject.Position = UDim2.new(0, 50, 0, 0)  -- 50 logical pixels from the left
-  print(guiObject.Size) --> {0, 300}, {1, 0}
-  ```
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -34,7 +27,8 @@ constructors:
       equivalent to `UDim2.new(0, 0, 0, 0)`. All four components (X scale, X
       offset, Y scale, Y offset) default to `0`.
     parameters: []
-    code_samples: []
+    code_samples:
+      - datatype-UDim2-new-Empty
     tags: []
     deprecation_message: ''
   - name: UDim2.new
@@ -48,11 +42,6 @@ constructors:
       (**Y**) axis. Scale is a relative fraction of the parent container's size
       (typically between `0` and `1`), while offset is an absolute logical pixel
       value added after scaling. All parameters default to `0`.
-
-      ```lua
-      -- 50% width + 20 logical pixels padding, full height
-      local size = UDim2.new(0.5, 20, 1, 0)
-      ```
     parameters:
       - name: xScale
         type: number
@@ -74,7 +63,8 @@ constructors:
         default: 0
         summary: |
           The **Y** dimension offset.
-    code_samples: []
+    code_samples:
+      - datatype-UDim2-new-Numbers
     tags: []
     deprecation_message: ''
   - name: UDim2.new
@@ -86,12 +76,6 @@ constructors:
       directly. The first argument becomes the horizontal dimension (accessible
       via `.X` or `.Width`) and the second becomes the vertical dimension
       (accessible via `.Y` or `.Height`).
-
-      ```lua
-      local x = UDim.new(0.5, 10)
-      local y = UDim.new(1, 0)
-      local size = UDim2.new(x, y)  -- equivalent to UDim2.new(0.5, 10, 1, 0)
-      ```
     parameters:
       - name: x
         type: UDim
@@ -103,7 +87,8 @@ constructors:
         default:
         summary: |
           The `Datatype.UDim` for the vertical (**Y**) axis.
-    code_samples: []
+    code_samples:
+      - datatype-UDim2-new-UDims
     tags: []
     deprecation_message: ''
   - name: UDim2.fromScale
@@ -112,12 +97,7 @@ constructors:
       offsets.
     description: |
       Returns a new `Datatype.UDim2` with the given scalar coordinates and no
-      offsets. Equivalent to:
-
-      ```lua
-      local xScale, yScale = 0.5, 0.25
-      print(UDim2.fromScale(xScale, yScale) == UDim2.new(xScale, 0, yScale, 0)) --> true
-      ```
+      offsets. Equivalent to `UDim2.new(xScale, 0, yScale, 0)`.
     parameters:
       - name: xScale
         type: number
@@ -129,7 +109,8 @@ constructors:
         default: 0
         summary: |
           The relative scale for the vertical (**Y**) axis.
-    code_samples: []
+    code_samples:
+      - datatype-UDim2-fromScale
     tags: []
     deprecation_message: ''
   - name: UDim2.fromOffset
@@ -138,12 +119,7 @@ constructors:
       scaling.
     description: |
       Returns a new `Datatype.UDim2` with the given offset coordinates and no
-      scaling. Equivalent to:
-
-      ```lua
-      local xOffset, yOffset = 100, 50
-      print(UDim2.fromOffset(xOffset, yOffset) == UDim2.new(0, xOffset, 0, yOffset)) --> true
-      ```
+      scaling. Equivalent to `UDim2.new(0, xOffset, 0, yOffset)`.
     parameters:
       - name: xOffset
         type: number
@@ -155,7 +131,8 @@ constructors:
         default: 0
         summary: |
           The absolute logical pixel offset for the vertical (**Y**) axis.
-    code_samples: []
+    code_samples:
+      - datatype-UDim2-fromOffset
     tags: []
     deprecation_message: ''
 constants: []
@@ -168,14 +145,9 @@ properties:
       The `Datatype.UDim` component for the horizontal axis. The returned
       `Datatype.UDim` has a `.Scale` (relative fraction) and `.Offset` (absolute
       logical pixels). This property is equivalent to `Datatype.UDim2.Width`.
-
-      ```lua
-      local pos = UDim2.new(0.5, 10, 1, 0)
-      print(pos.X.Scale)   -- 0.5
-      print(pos.X.Offset)  -- 10
-      ```
     default:
-    code_samples: []
+    code_samples:
+      - datatype-UDim2-X
     tags: []
     deprecation_message: ''
   - name: UDim2.Y
@@ -186,14 +158,9 @@ properties:
       The `Datatype.UDim` component for the vertical axis. The returned
       `Datatype.UDim` has a `.Scale` (relative fraction) and `.Offset` (absolute
       logical pixels). This property is equivalent to `Datatype.UDim2.Height`.
-
-      ```lua
-      local pos = UDim2.new(0.5, 10, 1, 0)
-      print(pos.Y.Scale)   -- 1
-      print(pos.Y.Offset)  -- 0
-      ```
     default:
-    code_samples: []
+    code_samples:
+      - datatype-UDim2-Y
     tags: []
     deprecation_message: ''
   - name: UDim2.Width
@@ -204,7 +171,8 @@ properties:
       A synonym for `Datatype.UDim2.X`. Returns the `Datatype.UDim` component
       for the horizontal axis, containing both `.Scale` and `.Offset`.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-UDim2-Width
     tags: []
     deprecation_message: ''
   - name: UDim2.Height
@@ -215,7 +183,8 @@ properties:
       A synonym for `Datatype.UDim2.Y`. Returns the `Datatype.UDim` component
       for the vertical axis, containing both `.Scale` and `.Offset`.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-UDim2-Height
     tags: []
     deprecation_message: ''
 methods:
@@ -244,7 +213,8 @@ methods:
         summary: |
           A `Datatype.UDim2` where each axis is independently interpolated
           between this value and `goal` by the fraction `alpha`.
-    code_samples: []
+    code_samples:
+      - datatype-UDim2-Lerp
     tags: []
     deprecation_message: ''
 functions: []
@@ -258,16 +228,11 @@ math_operations:
       Adds both the scale and offset of each axis independently: the result's X
       scale is the sum of both X scales, the result's X offset is the sum of
       both X offsets, and likewise for Y.
-
-      ```lua
-      local a = UDim2.new(0.5, 10, 0, 20)
-      local b = UDim2.new(0.25, 5, 1, 0)
-      local c = a + b  -- UDim2.new(0.75, 15, 1, 20)
-      ```
     type_a: UDim2
     type_b: UDim2
     return_type: UDim2
-    code_samples: []
+    code_samples:
+      - datatype-UDim2-Add
     tags: []
     deprecation_message: ''
   - name: '-'
@@ -279,15 +244,10 @@ math_operations:
       Subtracts both the scale and offset of each axis independently: the
       result's X scale is the first X scale minus the second, the result's X
       offset is the first X offset minus the second, and likewise for Y.
-
-      ```lua
-      local a = UDim2.new(1, 100, 1, 50)
-      local b = UDim2.new(0.5, 30, 0, 10)
-      local c = a - b  -- UDim2.new(0.5, 70, 1, 40)
-      ```
     type_a: UDim2
     type_b: UDim2
     return_type: UDim2
-    code_samples: []
+    code_samples:
+      - datatype-UDim2-Subtract
     tags: []
     deprecation_message: ''

@@ -30,6 +30,35 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
+  - name: TextChatCommand.MatchMode
+    summary: |
+      How a message is compared to this command's aliases.
+    description: |
+      How a message is compared to
+      `Class.TextChatCommand.PrimaryAlias|PrimaryAlias` and
+      `Class.TextChatCommand.SecondaryAlias|SecondaryAlias`. Defaults to
+      `Enum.TextChatCommandMatchMode.StartsWith`.
+
+      The primary alias is tested before the secondary alias. For
+      `Enum.TextChatCommandMatchMode.Exact` and
+      `Enum.TextChatCommandMatchMode.WholeWord`, aliases shorter than the
+      minimum length never match.
+
+      See `Enum.TextChatCommandMatchMode` for available options.
+    code_samples: []
+    type: TextChatCommandMatchMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Chat
   - name: TextChatCommand.AutocompleteVisible
     summary: |
       Determines whether the `Class.TextChatCommand` is shown as a suggestion in
@@ -46,6 +75,36 @@ properties:
 
       Autocomplete itself is controlled by
       `Class.ChatInputBarConfiguration.AutocompleteEnabled`.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Chat
+  - name: TextChatCommand.DeliverMessage
+    summary: |
+      Whether a match is also sent as a chat message.
+    description: |
+      Whether a match is also sent as a chat message. Defaults to `false`.
+
+      When `false`, `Class.TextChatCommand.Triggered` receives the full message
+      text, `Class.TextChatService.SendingMessage` does not fire, and other
+      users do not receive the message. When `true`,
+      `Class.TextChatCommand.Triggered|Triggered` receives the matched alias as
+      it was authored, and the message continues through the normal send and
+      delivery path, including `Class.TextChatService.SendingMessage`.
+
+      `Class.TextChatCommand.Triggered|Triggered` still runs only on the sending
+      client and the server. If any matching command has `DeliverMessage` set to
+      `false`, only those commands fire and the message is sunk.
     code_samples: []
     type: boolean
     tags: []

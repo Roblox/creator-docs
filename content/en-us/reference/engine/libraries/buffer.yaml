@@ -40,20 +40,23 @@ functions:
       Creates a buffer.
     description: |
       Creates a buffer of the requested size with all bytes initialized to `0`.
-      Size limit is 1 GiB, or 1,073,741,824 bytes. Keep in mind that larger
-      buffers might fail to allocate if device is running low on memory.
+      A size of `0` creates an empty buffer, where every read or write is out of
+      bounds. A negative size raises an error. Size limit is 1 GiB, or
+      1,073,741,824 bytes. Keep in mind that larger buffers might fail to
+      allocate if device is running low on memory.
     parameters:
       - name: size
         type: number
         default:
         summary: |
-          Size of the buffer in bytes. Must be a positive integer.
+          Size of the buffer in bytes. Must be a non-negative integer.
     returns:
       - type: buffer
         summary: |
           A new buffer of the requested size with all bytes initialized to zero.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-create
     deprecation_message: ''
   - name: buffer.fromstring
     summary: |
@@ -72,7 +75,8 @@ functions:
         summary: |
           A new buffer containing a copy of the string's bytes.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-fromstring
     deprecation_message: ''
   - name: buffer.tostring
     summary: |
@@ -90,7 +94,8 @@ functions:
         summary: |
           A string containing all bytes from the buffer.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-tostring
     deprecation_message: ''
   - name: buffer.len
     summary: |
@@ -108,7 +113,8 @@ functions:
         summary: |
           The size of the buffer in bytes.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-len
     deprecation_message: ''
   - name: buffer.readbits
     summary: |
@@ -153,7 +159,8 @@ functions:
         summary: |
           The unsigned integer value read from the specified bits.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-readbits
     deprecation_message: ''
   - name: buffer.readi8
     summary: |
@@ -177,7 +184,8 @@ functions:
         summary: |
           The value of the 8-bit signed integer at the given offset.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-readi8
     deprecation_message: ''
   - name: buffer.readu8
     summary: |
@@ -201,7 +209,8 @@ functions:
         summary: |
           The value of the 8-bit unsigned integer at the given offset.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-readu8
     deprecation_message: ''
   - name: buffer.readi16
     summary: |
@@ -225,7 +234,8 @@ functions:
         summary: |
           The value of the 16-bit signed integer at the given offset.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-readi16
     deprecation_message: ''
   - name: buffer.readu16
     summary: |
@@ -249,7 +259,8 @@ functions:
         summary: |
           The value of the 16-bit unsigned integer at the given offset.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-readu16
     deprecation_message: ''
   - name: buffer.readi32
     summary: |
@@ -273,7 +284,8 @@ functions:
         summary: |
           The value of the 32-bit signed integer at the given offset.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-readi32
     deprecation_message: ''
   - name: buffer.readu32
     summary: |
@@ -297,7 +309,8 @@ functions:
         summary: |
           The value of the 32-bit unsigned integer at the given offset.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-readu32
     deprecation_message: ''
   - name: buffer.readf32
     summary: |
@@ -324,7 +337,8 @@ functions:
         summary: |
           The value of the 32-bit floating-point number at the given offset.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-readf32
     deprecation_message: ''
   - name: buffer.readvectorf32x2
     summary: |
@@ -350,7 +364,8 @@ functions:
           A vector containing the two values read from the buffer. The third
           component is zero.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-readvectorf32x2
     deprecation_message: ''
   - name: buffer.readvectorf32x3
     summary: |
@@ -374,7 +389,8 @@ functions:
         summary: |
           A vector containing the three values read from the buffer.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-readvectorf32x3
     deprecation_message: ''
   - name: buffer.readf64
     summary: |
@@ -401,7 +417,8 @@ functions:
         summary: |
           The value of the 64-bit floating-point number at the given offset.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-readf64
     deprecation_message: ''
   - name: buffer.writebits
     summary: |
@@ -444,7 +461,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-writebits
     deprecation_message: ''
   - name: buffer.writei8
     summary: |
@@ -472,7 +490,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-writei8
     deprecation_message: ''
   - name: buffer.writeu8
     summary: |
@@ -500,7 +519,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-writeu8
     deprecation_message: ''
   - name: buffer.writei16
     summary: |
@@ -528,7 +548,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-writei16
     deprecation_message: ''
   - name: buffer.writeu16
     summary: |
@@ -556,7 +577,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-writeu16
     deprecation_message: ''
   - name: buffer.writei32
     summary: |
@@ -584,7 +606,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-writei32
     deprecation_message: ''
   - name: buffer.writeu32
     summary: |
@@ -612,7 +635,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-writeu32
     deprecation_message: ''
   - name: buffer.writef32
     summary: |
@@ -640,7 +664,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-writef32
     deprecation_message: ''
   - name: buffer.writevectorf32x2
     summary: |
@@ -669,7 +694,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-writevectorf32x2
     deprecation_message: ''
   - name: buffer.writevectorf32x3
     summary: |
@@ -699,7 +725,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-writevectorf32x3
     deprecation_message: ''
   - name: buffer.writef64
     summary: |
@@ -727,7 +754,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-writef64
     deprecation_message: ''
   - name: buffer.readstring
     summary: |
@@ -757,7 +785,8 @@ functions:
           A string of length `count` read from the buffer at the specified
           offset.
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-readstring
     deprecation_message: ''
   - name: buffer.writestring
     summary: |
@@ -792,7 +821,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-writestring
     deprecation_message: ''
   - name: buffer.copy
     summary: |
@@ -836,7 +866,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-copy
     deprecation_message: ''
   - name: buffer.fill
     summary: |
@@ -870,5 +901,6 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - buffer-fill
     deprecation_message: ''

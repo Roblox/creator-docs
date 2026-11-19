@@ -13,26 +13,6 @@ description: |
   `Datatype.BrickColor.new()` to declare the `Datatype.BrickColor` property of a
   `Class.Part`.
 
-  ```lua
-  local part = Instance.new("Part")
-
-  -- By color name
-  part.BrickColor = BrickColor.new("Pastel Blue")
-  print(part.BrickColor) --> Pastel Blue
-
-  -- By numerical index
-  part.BrickColor = BrickColor.new(11)
-  print(part.BrickColor) --> Pastel Blue
-
-  -- By RGB decimal values in range of 0-1
-  part.BrickColor = BrickColor.new(0.502, 0.734, 0.859)
-  print(part.BrickColor) --> Pastel Blue
-
-  -- By palette index
-  part.BrickColor = BrickColor.palette(70)
-  print(part.BrickColor) --> Gold
-  ```
-
   The following table is the list of available brick colors.
 
   <table>
@@ -1731,7 +1711,8 @@ constructors:
         default:
         summary: |
           The unique numerical index that identifies a brick color.
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-new-Number
     tags: []
     deprecation_message: ''
   - name: BrickColor.new
@@ -1760,7 +1741,8 @@ constructors:
         default:
         summary: |
           The blue component of the desired color, between `0` and `1`.
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-new-RGB
     tags: []
     deprecation_message: ''
   - name: BrickColor.new
@@ -1777,7 +1759,8 @@ constructors:
         default:
         summary: |
           The exact name of the brick color as listed in the color table.
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-new-Name
     tags: []
     deprecation_message: ''
   - name: BrickColor.new
@@ -1796,7 +1779,8 @@ constructors:
         default:
         summary: |
           The `Datatype.Color3` to match against all known brick colors.
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-new-Color3
     tags: []
     deprecation_message: ''
   - name: BrickColor.palette
@@ -1813,7 +1797,8 @@ constructors:
         default:
         summary: |
           A zero-based index into the 128-color palette (`0` through `127`).
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-palette
     tags: []
     deprecation_message: ''
   - name: BrickColor.random
@@ -1823,7 +1808,8 @@ constructors:
       Returns a random `Datatype.BrickColor` selected from the 128-color
       palette. Each call may return a different color.
     parameters: []
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-random
     tags: []
     deprecation_message: ''
   - name: BrickColor.White
@@ -1832,7 +1818,8 @@ constructors:
     description: |
       Returns the "White" `Datatype.BrickColor`.
     parameters: []
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-White
     tags: []
     deprecation_message: ''
   - name: BrickColor.Gray
@@ -1842,7 +1829,8 @@ constructors:
       Returns the "Medium stone grey" `Datatype.BrickColor`. This is the same
       color used as the default when a `Datatype.BrickColor` cannot be resolved.
     parameters: []
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-Gray
     tags: []
     deprecation_message: ''
   - name: BrickColor.DarkGray
@@ -1851,7 +1839,8 @@ constructors:
     description: |
       Returns the "Dark stone grey" `Datatype.BrickColor`.
     parameters: []
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-DarkGray
     tags: []
     deprecation_message: ''
   - name: BrickColor.Black
@@ -1860,7 +1849,8 @@ constructors:
     description: |
       Returns the "Black" `Datatype.BrickColor`.
     parameters: []
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-Black
     tags: []
     deprecation_message: ''
   - name: BrickColor.Red
@@ -1869,7 +1859,8 @@ constructors:
     description: |
       Returns the "Bright red" `Datatype.BrickColor`.
     parameters: []
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-Red
     tags: []
     deprecation_message: ''
   - name: BrickColor.Yellow
@@ -1878,7 +1869,8 @@ constructors:
     description: |
       Returns the "Bright yellow" `Datatype.BrickColor`.
     parameters: []
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-Yellow
     tags: []
     deprecation_message: ''
   - name: BrickColor.Green
@@ -1887,7 +1879,8 @@ constructors:
     description: |
       Returns the "Dark green" `Datatype.BrickColor`.
     parameters: []
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-Green
     tags: []
     deprecation_message: ''
   - name: BrickColor.Blue
@@ -1896,7 +1889,8 @@ constructors:
     description: |
       Returns the "Bright blue" `Datatype.BrickColor`.
     parameters: []
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-Blue
     tags: []
     deprecation_message: ''
 constants: []
@@ -1911,7 +1905,8 @@ properties:
       and corresponds to the **Number** column in the color table above.
       Read-only.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-Number
     tags: []
     deprecation_message: ''
   - name: BrickColor.r
@@ -1922,7 +1917,8 @@ properties:
       The red component of the `Datatype.BrickColor` (between `0` and `1`). This
       is equivalent to `BrickColor.Color.R`. Read-only.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-r
     tags: []
     deprecation_message: ''
   - name: BrickColor.g
@@ -1933,7 +1929,8 @@ properties:
       The green component of the `Datatype.BrickColor` (between `0` and `1`).
       This is equivalent to `BrickColor.Color.G`. Read-only.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-g
     tags: []
     deprecation_message: ''
   - name: BrickColor.b
@@ -1944,7 +1941,8 @@ properties:
       The blue component of the `Datatype.BrickColor` (between `0` and `1`).
       This is equivalent to `BrickColor.Color.B`. Read-only.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-b
     tags: []
     deprecation_message: ''
   - name: BrickColor.Name
@@ -1956,7 +1954,8 @@ properties:
       `"Pastel Blue"`. This is the same string accepted by
       `Datatype.BrickColor.new()`. Read-only.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-Name
     tags: []
     deprecation_message: ''
   - name: BrickColor.Color
@@ -1968,7 +1967,8 @@ properties:
       individual components of this value are the same as `BrickColor.r`,
       `BrickColor.g`, and `BrickColor.b`. Read-only.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-BrickColor-Color
     tags: []
     deprecation_message: ''
 methods: []

@@ -29,20 +29,6 @@ functions:
       `Datatype.DateTime.now()`, adjustments to the system clock (such as by the
       user or [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol)) do not
       cause time to jump forwards or backwards.
-
-      ```lua
-      -- Record the initial time:
-      local startTime = os.clock()
-      -- Do something you want to measure the performance of:
-      local a, b = 0, 1
-      for _ = 1, 5000000 do
-          a, b = b, a
-      end
-      -- Measure amount of time this took:
-      local deltaTime = os.clock() - startTime
-      print("Elapsed time: " .. deltaTime)
-      -->  Elapsed time: 0.044425600033719 (actual number may vary)
-      ```
     parameters: []
     returns:
       - type: double
@@ -50,7 +36,8 @@ functions:
           The elapsed time in seconds since an arbitrary point, with
           sub-microsecond precision.
     tags: []
-    code_samples: []
+    code_samples:
+      - os-clock
     deprecation_message: ''
   - name: os.date
     summary: |
@@ -240,7 +227,7 @@ functions:
         <tr>
           <td>hour</td>
           <td>int</td>
-          <td>An integer between 1 and 24 describing the current hour of the day.</td>
+          <td>An integer between 0 and 23 describing the current hour of the day.</td>
         </tr>
         <tr>
           <td>min</td>
@@ -250,7 +237,7 @@ functions:
         <tr>
           <td>sec</td>
           <td>int</td>
-          <td>An integer between 0 and 60 describing the current second of the hour.<br />(60 because the function is described to indicate leap seconds, but in practice it probably doesn't).</td>
+          <td>An integer between 0 and 60 describing the current second of the minute.<br />(60 because the function is described to indicate leap seconds, but in practice it probably doesn't).</td>
         </tr>
         <tr>
           <td>isdst</td>
@@ -264,19 +251,21 @@ functions:
         type: string
         default:
         summary: |
-          Must be either `"*t"` or `"!*t"`.
+          A format string using the specifiers below, or `"*t"` or `"!*t"` to
+          get a dictionary of date and time components.
       - name: time
         type: int
         default:
         summary: |
-          The time value to format.
+          The time value to format. Defaults to the current time.
     returns:
       - type: Dictionary
         summary: |
           A dictionary containing date and time components when the format
           string is `"*t"` or `"!*t"`.
     tags: []
-    code_samples: []
+    code_samples:
+      - os-date
     deprecation_message: ''
   - name: os.difftime
     summary: |
@@ -301,7 +290,8 @@ functions:
         summary: |
           The number of seconds from `t1` to `t2` (computed as `t2 - t1`).
     tags: []
-    code_samples: []
+    code_samples:
+      - os-difftime
     deprecation_message: ''
   - name: os.time
     summary: |
@@ -339,5 +329,6 @@ functions:
           The number of seconds since the Unix epoch (1 January 1970, 00:00:00
           UTC).
     tags: []
-    code_samples: []
+    code_samples:
+      - os-time
     deprecation_message: ''

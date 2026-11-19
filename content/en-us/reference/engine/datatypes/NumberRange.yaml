@@ -29,7 +29,8 @@ constructors:
         default:
         summary: |
           The number that both the minimum and maximum of the range are set to.
-    code_samples: []
+    code_samples:
+      - datatype-NumberRange-new-Single
     tags: []
     deprecation_message: ''
   - name: NumberRange.new
@@ -50,7 +51,8 @@ constructors:
         default:
         summary: |
           The upper bound of the range.
-    code_samples: []
+    code_samples:
+      - datatype-NumberRange-new-MinMax
     tags: []
     deprecation_message: ''
 constants: []
@@ -63,7 +65,8 @@ properties:
       The minimum value of the `Datatype.NumberRange`, always less than or equal
       to the maximum.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-NumberRange-Min
     tags: []
     deprecation_message: ''
   - name: NumberRange.Max
@@ -74,7 +77,8 @@ properties:
       The maximum value of the `Datatype.NumberRange`, always greater than or
       equal to the minimum.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-NumberRange-Max
     tags: []
     deprecation_message: ''
 methods: []

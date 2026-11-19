@@ -21,6 +21,9 @@ description: |
   to upload images, see
   [asset management](../../../projects/assets/index.md#asset-management).
 
+  Use the inherited `Class.Decal.ResampleMode|ResampleMode` property to choose
+  between smooth and pixelated filtering for the repeating texture maps.
+
   For more information, review
   [textures and decals](../../../parts/textures-decals.md). See also:
 

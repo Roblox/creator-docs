@@ -50,7 +50,8 @@ functions:
         summary: |
           The result of arithmetically shifting `x` by `disp` bits to the right.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-arshift
     deprecation_message: ''
   - name: bit32.band
     summary: |
@@ -104,7 +105,8 @@ functions:
         summary: |
           The bitwise AND of all provided numbers.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-band
     deprecation_message: ''
   - name: bit32.bnot
     summary: |
@@ -114,12 +116,7 @@ functions:
 
       <img src="../../../assets/engine-api/libraries/bit32/NOT.png" width="500" alt="Negation of a provided number" />
 
-      For any integer `x`, the following identity holds:
-
-      ```lua
-      local x = 0xF0
-      assert(bit32.bnot(x) == (-1 - x) % 2^32)
-      ```
+      For any integer `x`, `bit32.bnot(x) == (-1 - x) % 2^32`.
     parameters:
       - name: x
         type: number
@@ -131,7 +128,8 @@ functions:
         summary: |
           The bitwise negation of `x`.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-bnot
     deprecation_message: ''
   - name: bit32.bor
     summary: |
@@ -185,7 +183,8 @@ functions:
         summary: |
           The bitwise OR of all provided numbers.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-bor
     deprecation_message: ''
   - name: bit32.btest
     summary: |
@@ -198,22 +197,9 @@ functions:
       intermediate number.
 
       This function is useful for testing whether one or more specific bits are
-      set in a value. For example, you can check whether a particular flag is
-      active in a bitmask:
-
-      ```lua
-      local flags = 0x5 -- bits 0 and 2 are set
-      print(bit32.btest(flags, 1)) --> true (bit 0 is set)
-      print(bit32.btest(flags, 2)) --> false (bit 1 is not set)
-      print(bit32.btest(flags, 4)) --> true (bit 2 is set)
-      ```
-
-      When called with more than two arguments, all values are ANDed together
-      before the zero-test:
-
-      ```lua
-      print(bit32.btest(0xFF, 0x0F, 0x03)) --> true (0xFF & 0x0F & 0x03 == 0x03)
-      ```
+      set in a value. You can check whether a particular flag is active in a
+      bitmask. When called with more than two arguments, all values are ANDed
+      together before the zero-test.
     parameters:
       - name: numbers
         type: Tuple
@@ -225,7 +211,8 @@ functions:
         summary: |
           True if the bitwise AND of all operands is non-zero, false otherwise.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-btest
     deprecation_message: ''
   - name: bit32.bxor
     summary: |
@@ -279,7 +266,8 @@ functions:
         summary: |
           The bitwise XOR of all provided numbers.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-bxor
     deprecation_message: ''
   - name: bit32.byteswap
     summary: |
@@ -289,11 +277,6 @@ functions:
       `x`. The four bytes are rearranged so that the most-significant byte
       becomes the least-significant byte and vice versa, converting between
       big-endian and little-endian representations.
-
-      ```lua
-      print(bit32.byteswap(0xAABBCCDD)) --> 0xDDCCBBAA
-      print(bit32.byteswap(0x00000001)) --> 0x01000000
-      ```
 
       This is useful when reading or writing binary data that uses a different
       byte order (endianness) than expected, such as network protocols or file
@@ -309,7 +292,8 @@ functions:
         summary: |
           The number with its byte order reversed.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-byteswap
     deprecation_message: ''
   - name: bit32.countlz
     summary: |
@@ -331,7 +315,8 @@ functions:
           The count of consecutive zero bits from the most significant bit, or
           32 if `n` is zero.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-countlz
     deprecation_message: ''
   - name: bit32.countrz
     summary: |
@@ -354,7 +339,8 @@ functions:
           The count of consecutive zero bits from the least significant bit, or
           32 if `n` is zero.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-countrz
     deprecation_message: ''
   - name: bit32.extract
     summary: |
@@ -369,14 +355,6 @@ functions:
       `bit32.band(bit32.rshift(n, field), 2^width - 1)`. `field` must be in the
       range `[0, 31]`, and `width` must be in the range `[1, 32 - field]`.
       Values outside those ranges raise an error.
-
-      ```lua
-      local n = 0x12345678
-      assert(bit32.extract(n, 0, 8) == 0x78) -- bits 0 through 7
-      assert(bit32.extract(n, 4, 8) == 0x67) -- bits 4 through 11
-      assert(bit32.extract(n, 16, 8) == 0x34) -- bits 16 through 23
-      assert(bit32.extract(n, 24, 8) == 0x12) -- bits 24 through 31
-      ```
     parameters:
       - name: 'n'
         type: number
@@ -398,7 +376,8 @@ functions:
         summary: |
           The unsigned number formed by the extracted bit range.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-extract
     deprecation_message: ''
   - name: bit32.replace
     summary: |
@@ -433,7 +412,8 @@ functions:
         summary: |
           A copy of `n` with the specified bit range replaced by `v`.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-replace
     deprecation_message: ''
   - name: bit32.lrotate
     summary: |
@@ -443,11 +423,7 @@ functions:
       Returns the number `x` rotated `disp` bits to the left. The number `disp`
       may be any representable integer. For any valid displacement, the
       following identity holds:
-
-      ```lua
-      local x, disp = 0xF0, 35
-      assert(bit32.lrotate(x, disp) == bit32.lrotate(x, disp % 32))
-      ```
+      `bit32.lrotate(x, disp) == bit32.lrotate(x, disp % 32)`.
 
       In particular, negative displacements rotate to the right.
     parameters:
@@ -466,7 +442,8 @@ functions:
         summary: |
           The result of rotating `x` left by `disp` bits.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-lrotate
     deprecation_message: ''
   - name: bit32.lshift
     summary: |
@@ -482,11 +459,7 @@ functions:
       <img src="../../../assets/engine-api/libraries/bit32/LSHIFT.png" width="500" alt="Number shifted 3 to the left" />
 
       For positive displacements, the following equality holds:
-
-      ```lua
-      local b, disp = 0xF0, 3
-      assert(bit32.lshift(b, disp) == (b * 2^disp) % 2^32)
-      ```
+      `bit32.lshift(b, disp) == (b * 2^disp) % 2^32`.
     parameters:
       - name: x
         type: number
@@ -503,7 +476,8 @@ functions:
         summary: |
           The result of logically shifting `x` left by `disp` bits.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-lshift
     deprecation_message: ''
   - name: bit32.rrotate
     summary: |
@@ -514,11 +488,7 @@ functions:
       may be any representable integer.
 
       For any valid displacement, the following identity holds:
-
-      ```lua
-      local x, disp = 0xF0, 35
-      assert(bit32.rrotate(x, disp) == bit32.rrotate(x , disp % 32))
-      ```
+      `bit32.rrotate(x, disp) == bit32.rrotate(x, disp % 32)`.
 
       In particular, negative displacements rotate to the left.
     parameters:
@@ -537,7 +507,8 @@ functions:
         summary: |
           The result of rotating `x` right by `disp` bits.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-rrotate
     deprecation_message: ''
   - name: bit32.rshift
     summary: |
@@ -553,11 +524,7 @@ functions:
       <img src="../../../assets/engine-api/libraries/bit32/RSHIFT.png" width="500" alt="Number shifted 3 to the right" />
 
       For positive displacements, the following equality holds:
-
-      ```lua
-      local b, disp = 0xF00, 3
-      assert(bit32.rshift(b, disp) == (b % 2^32 / 2^disp) // 1)
-      ```
+      `bit32.rshift(b, disp) == (b % 2^32 / 2^disp) // 1`.
 
       This shift operation is what is called logical shift.
     parameters:
@@ -576,5 +543,6 @@ functions:
         summary: |
           The result of logically shifting `x` right by `disp` bits.
     tags: []
-    code_samples: []
+    code_samples:
+      - bit32-rshift
     deprecation_message: ''

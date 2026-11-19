@@ -8,12 +8,7 @@ summary: |
   A value that represents a two-dimensional rectangle.
 description: |
   **Rect** describes a rectangle on a 2D plane. It is constructed using two
-  corners, either two `Datatype.Vector2` positions or four numbers:
-
-  ```lua
-  local rect1 = Rect.new(Vector2.new(10, 10), Vector2.new(80, 80))
-  local rect2 = Rect.new(10, 10, 80, 80)
-  ```
+  corners, either two `Datatype.Vector2` positions or four numbers.
 
   This data type is used in the `Class.ImageLabel.SliceCenter` property which
   determines the center area of a scaled image.
@@ -27,7 +22,8 @@ constructors:
     description: |
       Constructs a new **Rect** with two zero `Datatype.Vector2` positions.
     parameters: []
-    code_samples: []
+    code_samples:
+      - datatype-Rect-new-Empty
     tags: []
     deprecation_message: ''
   - name: Rect.new
@@ -51,7 +47,8 @@ constructors:
           The other corner of the rectangle as a `Datatype.Vector2`. The
           constructor computes the component-wise maximum of `min` and `max` to
           determine the bottom-right corner.
-    code_samples: []
+    code_samples:
+      - datatype-Rect-new-Corners
     tags: []
     deprecation_message: ''
   - name: Rect.new
@@ -83,7 +80,8 @@ constructors:
         default:
         summary: |
           The Y coordinate of the bottom-right corner of the rectangle.
-    code_samples: []
+    code_samples:
+      - datatype-Rect-new-Numbers
     tags: []
     deprecation_message: ''
 constants: []
@@ -99,7 +97,8 @@ properties:
       equal to `Datatype.Rect.Max|Max`. Defaults to `0` for a `Datatype.Rect`
       created with no arguments.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Rect-Width
     tags: []
     deprecation_message: ''
   - name: Rect.Height
@@ -113,7 +112,8 @@ properties:
       equal to `Datatype.Rect.Max|Max`. Defaults to `0` for a `Datatype.Rect`
       created with no arguments.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Rect-Height
     tags: []
     deprecation_message: ''
   - name: Rect.Min
@@ -127,7 +127,8 @@ properties:
       were passed in. Defaults to `(0, 0)` for a `Datatype.Rect` created with no
       arguments.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Rect-Min
     tags: []
     deprecation_message: ''
   - name: Rect.Max
@@ -141,7 +142,8 @@ properties:
       were passed in. Defaults to `(0, 0)` for a `Datatype.Rect` created with no
       arguments.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Rect-Max
     tags: []
     deprecation_message: ''
 methods: []

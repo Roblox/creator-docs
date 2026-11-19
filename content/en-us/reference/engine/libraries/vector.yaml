@@ -26,7 +26,8 @@ properties:
       a default value or additive identity in vector arithmetic without
       allocating a new vector each time.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-zero
     deprecation_message: ''
   - name: vector.one
     type: vector
@@ -37,7 +38,8 @@ properties:
       a multiplicative identity or scale factor in vector arithmetic without
       allocating a new vector each time.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-one
     deprecation_message: ''
 functions:
   - name: vector.create
@@ -68,7 +70,8 @@ functions:
         summary: |
           A new vector with the specified x, y, and z component values.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-create
     deprecation_message: ''
   - name: vector.magnitude
     summary: |
@@ -87,7 +90,8 @@ functions:
         summary: |
           The Euclidean length of the vector.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-magnitude
     deprecation_message: ''
   - name: vector.normalize
     summary: |
@@ -107,7 +111,8 @@ functions:
         summary: |
           A unit vector pointing in the same direction as the input.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-normalize
     deprecation_message: ''
   - name: vector.cross
     summary: |
@@ -134,7 +139,8 @@ functions:
           A vector perpendicular to both inputs whose magnitude equals the area
           of the parallelogram they span.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-cross
     deprecation_message: ''
   - name: vector.dot
     summary: |
@@ -160,7 +166,8 @@ functions:
         summary: |
           The scalar dot product of the two vectors.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-dot
     deprecation_message: ''
   - name: vector.angle
     summary: |
@@ -191,7 +198,8 @@ functions:
           The angle between the two vectors in radians, signed if an axis is
           provided.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-angle
     deprecation_message: ''
   - name: vector.floor
     summary: |
@@ -211,7 +219,8 @@ functions:
         summary: |
           A new vector with each component rounded down to the nearest integer.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-floor
     deprecation_message: ''
   - name: vector.ceil
     summary: |
@@ -231,7 +240,8 @@ functions:
         summary: |
           A new vector with each component rounded up to the nearest integer.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-ceil
     deprecation_message: ''
   - name: vector.abs
     summary: |
@@ -251,7 +261,8 @@ functions:
         summary: |
           A new vector with each component replaced by its absolute value.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-abs
     deprecation_message: ''
   - name: vector.sign
     summary: |
@@ -273,7 +284,8 @@ functions:
           A new vector where each component is the sign of the corresponding
           input component.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-sign
     deprecation_message: ''
   - name: vector.clamp
     summary: |
@@ -306,7 +318,8 @@ functions:
           A new vector with each component clamped between the corresponding
           components of `min` and `max`.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-clamp
     deprecation_message: ''
   - name: vector.lerp
     summary: |
@@ -337,7 +350,8 @@ functions:
         summary: |
           A vector interpolated component-wise between `vec1` and `vec2`.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-lerp
     deprecation_message: ''
   - name: vector.max
     summary: |
@@ -346,8 +360,10 @@ functions:
     description: |
       Returns a new vector where each component is the maximum of the
       corresponding components across all input vectors. Accepts a variadic
-      number of vectors (at least one). When a component is `nan` in one vector
-      but a valid number in another, the valid number is used.
+      number of vectors (at least one). Components are compared from left to
+      right, as `Library.math.max()` and `Library.math.min()` do. When a
+      component is `nan` in the first vector, the result is `nan`. When it is
+      `nan` only in a later vector, the valid number is used.
     parameters:
       - name: ...
         type: vector
@@ -360,7 +376,8 @@ functions:
           A new vector where each component is the maximum of the corresponding
           components across all inputs.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-max
     deprecation_message: ''
   - name: vector.min
     summary: |
@@ -369,8 +386,10 @@ functions:
     description: |
       Returns a new vector where each component is the minimum of the
       corresponding components across all input vectors. Accepts a variadic
-      number of vectors (at least one). When a component is `nan` in one vector
-      but a valid number in another, the valid number is used.
+      number of vectors (at least one). Components are compared from left to
+      right, as `Library.math.max()` and `Library.math.min()` do. When a
+      component is `nan` in the first vector, the result is `nan`. When it is
+      `nan` only in a later vector, the valid number is used.
     parameters:
       - name: ...
         type: vector
@@ -383,5 +402,6 @@ functions:
           A new vector where each component is the minimum of the corresponding
           components across all inputs.
     tags: []
-    code_samples: []
+    code_samples:
+      - vector-min
     deprecation_message: ''

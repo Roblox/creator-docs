@@ -38,3 +38,10 @@ items:
     value: 3
     tags: []
     deprecation_message: ''
+  - name: Global
+    summary: |
+      Reserved for Roblox. Game scripts can't create `Datatype.User` values with
+      this domain type.
+    value: 4
+    tags: []
+    deprecation_message: ''

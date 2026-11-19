@@ -51,7 +51,8 @@ functions:
         summary: |
           The scheduled thread.
     tags: []
-    code_samples: []
+    code_samples:
+      - task-spawn
     deprecation_message: ''
   - name: task.defer
     summary: |
@@ -88,7 +89,8 @@ functions:
         summary: |
           The scheduled thread.
     tags: []
-    code_samples: []
+    code_samples:
+      - task-defer
     deprecation_message: ''
   - name: task.delay
     summary: |
@@ -141,7 +143,8 @@ functions:
         summary: |
           The scheduled thread.
     tags: []
-    code_samples: []
+    code_samples:
+      - task-delay
     deprecation_message: ''
   - name: task.desynchronize
     summary: |
@@ -169,7 +172,8 @@ functions:
           currently in a serial phase, or returns immediately if already in
           parallel.
     tags: []
-    code_samples: []
+    code_samples:
+      - task-desynchronize
     deprecation_message: ''
   - name: task.synchronize
     summary: |
@@ -197,7 +201,8 @@ functions:
           currently in a parallel phase, or returns immediately if already in
           serial.
     tags: []
-    code_samples: []
+    code_samples:
+      - task-synchronize
     deprecation_message: ''
   - name: task.wait
     summary: |
@@ -235,7 +240,8 @@ functions:
           The actual elapsed time (in seconds) from when `Library.task.wait()`
           was called to when the thread was resumed.
     tags: []
-    code_samples: []
+    code_samples:
+      - task-wait
     deprecation_message: ''
   - name: task.cancel
     summary: |
@@ -245,15 +251,8 @@ functions:
       or by the engine's scheduler.
 
       This function can be used with other members of the **task** library that
-      return a thread to cancel them before they are resumed. For example:
-
-      ```lua
-      local thread = task.delay(5, function()
-      	print("Hello world!")
-      end)
-
-      task.cancel(thread)
-      ```
+      return a thread to cancel them before they are resumed, such as the thread
+      returned by `Library.task.delay()`.
 
       Note that threads may be in a state where it is impossible to cancel them.
       For example, the currently executing thread and threads that have resumed
@@ -273,5 +272,6 @@ functions:
         summary: |
           This function does not return a value.
     tags: []
-    code_samples: []
+    code_samples:
+      - task-cancel
     deprecation_message: ''

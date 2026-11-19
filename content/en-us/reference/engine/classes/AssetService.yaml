@@ -825,6 +825,55 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - AssetRead
+  - name: AssetService:GetComposedDecalLayers
+    summary: |
+      Returns the layers that `Class.AssetService:ComposeDecalAsync()` composed
+      onto a `Class.Decal`.
+    description: |
+      Returns the layer stack that `Class.AssetService:ComposeDecalAsync()`
+      composed onto `decal`, bottom layer first. Composing clears the decal's
+      individual map properties, so this is the only way to read what a composed
+      decal is made of.
+
+      Each layer is a dictionary with the same keys
+      `Class.AssetService:ComposeDecalAsync()` accepts:
+
+      - `ColorMap`, `NormalMap`, `MetalnessMap`, `RoughnessMap`, and
+        `EmissiveMap`: a `Datatype.Content` for each map the layer has. Maps the
+        layer doesn't have are left out.
+      - `UVScale` and `UVOffset`: a `Datatype.Vector2`, present only when the
+        layer has a UV transform.
+
+      For a decal composed by `Class.AssetService:ComposeDecalAsync()`, passing
+      the result back to it composes another decal that looks the same. Layers
+      without any maps aren't returned, and layers past the limit of 8 were
+      never stored. Decals composed by the engine, such as avatar makeup, skip
+      `Class.AssetService:ComposeDecalAsync()` validation, so passing their
+      layers to it can fail.
+
+      The method returns an empty array if `decal` isn't composed, including
+      after any of its maps has been set, which clears the composition. It
+      throws if `decal` is `nil` or its composed data can't be read.
+    code_samples:
+      - AssetService-GetComposedDecalLayers
+    parameters:
+      - name: decal
+        type: Decal
+        default:
+        summary: |
+          The `Class.Decal` to read the composed layers from.
+    returns:
+      - type: '{ { [string]: Content | Vector2 } }'
+        summary: |
+          An array of layer dictionaries in the format
+          `Class.AssetService:ComposeDecalAsync()` accepts, or an empty array if
+          the decal isn't composed.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - PluginOrOpenCloud
   - name: AssetService:GetCreatorAssetID
     summary: |
       Returns the UserId of the account who created the creationID asset.

@@ -19,8 +19,7 @@ description: |
   or escape menu. This prevents automation tests from accidentally interfering
   with system UI that players depend on.
 
-  Targeting a specific window is in development and is not available yet. By
-  default, a `Class.VirtualInput` sends input to the main viewport. To send
+  By default, a `Class.VirtualInput` sends input to the main viewport. To send
   input to a specific window instead, such as a plugin's
   `Class.DockWidgetPluginGui`, pass that window as the `target` of
   `Class.UserInputService:CreateVirtualInput()`. Positions are then measured

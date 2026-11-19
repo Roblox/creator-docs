@@ -36,21 +36,6 @@ functions:
       calling it on a multi-character slice yields multiple return values. If
       the resolved range is empty (start index greater than end index after
       adjustment), no values are returned.
-
-      ```lua
-      -- Single character
-      print(string.byte("A")) -- 65
-
-      -- Range of characters
-      print(string.byte("hello", 1, 3)) -- 104 101 108
-
-      -- Negative indices (counts from end)
-      print(string.byte("abc", -1)) -- 99 (the byte value of 'c')
-
-      -- Roundtrip with string.char
-      local a, b, c = string.byte("ABC", 1, 3)
-      print(string.char(a, b, c)) -- ABC
-      ```
     parameters:
       - name: s
         type: string
@@ -73,7 +58,8 @@ functions:
           The numerical byte values (`0`-`255`) of each character in the
           specified range.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-byte
     deprecation_message: ''
   - name: string.char
     summary: |
@@ -87,22 +73,6 @@ functions:
 
       Each integer must be in the range `[0, 255]`; values outside that range
       raise an error. This is the inverse of `Library.string.byte()`.
-
-      ```lua
-      -- Basic usage
-      print(string.char(72, 101, 108, 108, 111)) -- Hello
-
-      -- Single character
-      print(string.char(65)) -- A
-
-      -- Construct from byte values (e.g. null byte)
-      local s = string.char(0)
-      print(#s) -- 1
-
-      -- Roundtrip with string.byte
-      local code = string.byte("Z")
-      print(string.char(code)) -- Z
-      ```
     parameters:
       - name: ...
         type: int
@@ -116,7 +86,8 @@ functions:
           A string whose length equals the number of arguments, with each byte
           set to the corresponding integer value.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-char
     deprecation_message: ''
   - name: string.find
     summary: |
@@ -130,38 +101,6 @@ functions:
       parameter turns off pattern matching, so the function performs a plain
       substring search; note that if you use `plain`, you must also provide
       `init.`
-
-      ```lua
-      -- Example 1: Basic usage
-      local s = "Hello, world!"
-      local pattern = "world"
-      local start_index, end_index = string.find(s, pattern)
-      print(start_index, end_index)  -- Output: 8 12
-      ```
-
-      ```lua
-      -- Example 2: Using init parameter
-      local s = "Hello, world! Hello, Roblox!"
-      local pattern = "Hello"
-      local start_index, end_index = string.find(s, pattern, 10)
-      print(start_index, end_index)  -- Output: 15 19
-      ```
-
-      ```lua
-      -- Example 3: Using plain parameter
-      local s = "Hello, world! (Hello)"
-      local pattern = "(Hello)"
-      local start_index, end_index = string.find(s, pattern, 1, true)
-      print(start_index, end_index)  -- Output: 14 20
-      ```
-
-      ```lua
-      -- Example 4: No Pattern found
-      local s = "Hello, world!"
-      local pattern = "Roblox"
-      local start_index, end_index = string.find(s, pattern)
-      print(start_index, end_index)  -- Output: nil
-      ```
     parameters:
       - name: s
         type: string
@@ -192,7 +131,8 @@ functions:
         summary: |
           The ending index of the match.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-find
     deprecation_message: ''
   - name: string.format
     summary: |
@@ -297,24 +237,6 @@ functions:
         </tbody>
       </table>
 
-      ```lua
-      local str = "The magic word is %s"
-      print(string.format(str, "Roblox"))
-      -- The magic word is Roblox
-
-      local str = "The magic word is %q"
-      print(string.format(str, "Roblox"))
-      -- The magic word is "Roblox"
-
-      local str = "Skip to \na new line and \nanother new line!"
-      print(string.format(str, "%q"))
-      --[[ Output:
-      Skip to
-      a new line and
-      another new line!
-      ]]
-      ```
-
       #### Flags
 
       <table>
@@ -348,20 +270,6 @@ functions:
       </tbody>
       </table>
 
-      ```lua
-      local str = "%-10d"
-      print(string.format(str, 300) .. "]")
-      -- 300       ]
-      -- There are 7 spaces between '300' and ']'
-
-      local str = "%+i versus %+i"
-      print(string.format(str, 300, -300)) -- +300 versus -300
-
-      local str = "There is a% i%% chance of rain in Seattle today."
-      print(string.format(str, 100))
-      -- There is a 100% chance of rain in Seattle today.
-      ```
-
       #### Width
 
       <table>
@@ -378,13 +286,6 @@ functions:
           </tr>
         </tbody>
       </table>
-
-      ```lua
-      local str = "%012i"
-      print("Score: " .. string.format(str, 15000))
-      -- Output: Score: 000000015000
-      -- The output has 12 digits total, left-padded with zeros
-      ```
 
       #### Precision
 
@@ -405,20 +306,6 @@ functions:
           </tr>
         </tbody>
       </table>
-
-      ```lua
-      -- Add decimal with precision of 2 for a currency output
-      local str = "$%.2f"
-      print(string.format(str, 300)) -- Output: $300.00
-
-      -- Return first 6 letters of a string
-      local str = "%.6s"
-      print(string.format(str, "Robloxian")) -- Output: Roblox
-
-      local str = "Once upon a time, there was a dragon named %s and it had %.8f horns."
-      print(string.format(str, "Pi", math.pi))
-      -- Output: Once upon a time, there was a dragon named Pi and it had 3.14159265 horns.
-      ```
     parameters:
       - name: formatstring
         type: string
@@ -438,7 +325,8 @@ functions:
           The format string with each specifier replaced by the formatted
           representation of the corresponding argument.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-format
     deprecation_message: ''
   - name: string.gmatch
     summary: |
@@ -453,30 +341,6 @@ functions:
       contains capture groups, each call returns the captured substrings as
       separate values. An empty match (zero-width) advances past the current
       position by one character to avoid an infinite loop.
-
-      ```lua
-      -- Iterate over all words in a sentence
-      for word in string.gmatch("Hello Roblox world", "%a+") do
-          print(word)
-      end
-      -- Hello
-      -- Roblox
-      -- world
-
-      -- Extract key-value pairs using captures
-      local t = {}
-      for key, value in string.gmatch("name=Roblox, version=1.0", "(%w+)=(%w[%w.]*)") do
-          t[key] = value
-      end
-      print(t.name, t.version) -- Roblox 1.0
-
-      -- Collect all digits
-      local digits = {}
-      for d in string.gmatch("abc123def456", "%d+") do
-          table.insert(digits, d)
-      end
-      print(table.concat(digits, ", ")) -- 123, 456
-      ```
     parameters:
       - name: s
         type: string
@@ -494,7 +358,8 @@ functions:
           An iterator function that returns the next match (or captures) each
           time it is called.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-gmatch
     deprecation_message: ''
   - name: string.gsub
     summary: |
@@ -518,23 +383,6 @@ functions:
 
       An optional final argument can be provided which specifies the maximum
       number of substitutions to make (for example, stop after 2 replacements)
-
-      #### Various Examples
-
-      ```lua
-      -- Basic replacement
-      string.gsub("I love tacos!", "tacos", "Roblox") --> I love Roblox! 1
-      -- Replacement with a pattern
-      string.gsub("I like red!", "%w+", "word") --> word word word! 3
-      -- Replacement table
-      string.gsub("I play Roblox.", "%w+", {I="Je", play="joue à"}) --> "Je joue à Roblox." 3
-      -- Replacement function
-      string.gsub("I have 2 cats.", "%d+", function(n) return tonumber(n) * 12 end) --> "I have 24 cats." 1
-      -- Replace only twice
-      string.gsub("aaa", "a", "b", 2) --> "bba" 2
-      -- Replacement with capture groups (maximum of nine)
-      string.gsub("love2play Roblox", "(%w+)(%d+)(%w+)%s+(%w+)", "I %1 %2 %3 %4!") --> "I love 2 play Roblox!" 1
-      ```
     parameters:
       - name: s
         type: string
@@ -551,11 +399,12 @@ functions:
         default:
         summary: |
           Determines what should replace the occurrence(s) of the given pattern.
-      - name: replacements
+      - name: 'n'
         type: number
         default:
         summary: |
-          The maximum number of substitutions to make.
+          The maximum number of substitutions to make. If omitted, every
+          occurrence is replaced.
     returns:
       - type: string
         summary: |
@@ -564,7 +413,8 @@ functions:
         summary: |
           The total number of substitutions made.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-gsub
     deprecation_message: ''
   - name: string.len
     summary: |
@@ -574,19 +424,6 @@ functions:
       byte sequences, this counts bytes rather than Unicode characters or
       grapheme clusters. An empty string returns `0`. Embedded null bytes (`\0`)
       are included in the count.
-
-      ```lua
-      print(string.len("Hello")) -- 5
-      print(string.len(""))      -- 0
-
-      -- Embedded null bytes are counted
-      local s = "ab\0cd"
-      print(string.len(s)) -- 5
-
-      -- Equivalent to the # length operator
-      local str = "Roblox"
-      print(string.len(str) == #str) -- true
-      ```
     parameters:
       - name: s
         type: string
@@ -598,7 +435,8 @@ functions:
         summary: |
           The number of bytes in the string.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-len
     deprecation_message: ''
   - name: string.lower
     summary: |
@@ -609,17 +447,6 @@ functions:
       (`A`-`Z`) changed to their lowercase equivalents (`a`-`z`). Characters
       outside the ASCII letter range, including accented or multibyte
       characters, are left unchanged.
-
-      ```lua
-      print(string.lower("HELLO")) -- hello
-      print(string.lower("Hello World!")) -- hello world!
-
-      -- Non-letter characters are unaffected
-      print(string.lower("Roblox 123!")) -- roblox 123!
-
-      -- Only ASCII letters are converted
-      print(string.lower("ABC abc")) -- abc abc
-      ```
     parameters:
       - name: s
         type: string
@@ -632,7 +459,8 @@ functions:
           A copy of the string with all uppercase ASCII letters changed to
           lowercase.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-lower
     deprecation_message: ''
   - name: string.match
     summary: |
@@ -647,24 +475,6 @@ functions:
       the search (default `1`). A negative `init` counts from the end of the
       string. Unlike `Library.string.find()`, this function returns captured
       values directly rather than the match indices.
-
-      ```lua
-      -- Extract matched substring
-      print(string.match("I have 42 cats", "%d+")) -- 42
-
-      -- Multiple captures
-      local year, month, day = string.match("2024-03-15", "(%d+)-(%d+)-(%d+)")
-      print(year, month, day) -- 2024 03 15
-
-      -- No match returns nil
-      print(string.match("hello", "%d+")) -- nil
-
-      -- Using init to skip ahead
-      print(string.match("foo123bar456", "%d+", 7)) -- 456
-
-      -- Anchored pattern
-      print(string.match("hello", "^%a+")) -- hello
-      ```
     parameters:
       - name: s
         type: string
@@ -687,7 +497,8 @@ functions:
           The captured substrings if the pattern contains captures, or the whole
           match otherwise; `nil` if no match is found.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-match
     deprecation_message: ''
   - name: string.pack
     summary: |
@@ -715,7 +526,8 @@ functions:
           A binary string containing the arguments packed according to the
           format string.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-pack
     deprecation_message: ''
   - name: string.packsize
     summary: |
@@ -739,7 +551,8 @@ functions:
           The total number of bytes that a string packed with the given format
           would occupy.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-packsize
     deprecation_message: ''
   - name: string.rep
     summary: |
@@ -750,19 +563,6 @@ functions:
       `s`. If `n` is zero or negative, the function returns an empty string. An
       error is raised if the resulting string would exceed the maximum string
       size.
-
-      ```lua
-      print(string.rep("ab", 3))  -- ababab
-      print(string.rep("Go! ", 2)) -- Go! Go!
-
-      -- Zero or negative repeats return empty string
-      print(string.rep("x", 0))  -- (empty string)
-      print(string.rep("x", -1)) -- (empty string)
-
-      -- Useful for padding or separators
-      local separator = string.rep("-", 20)
-      print(separator) -- --------------------
-      ```
     parameters:
       - name: s
         type: string
@@ -780,7 +580,8 @@ functions:
           A string formed by concatenating `n` copies of `s`, or an empty string
           if `n` is zero or negative.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-rep
     deprecation_message: ''
   - name: string.reverse
     summary: |
@@ -789,23 +590,6 @@ functions:
       Returns a string that is the string `s` reversed byte-by-byte. Because the
       reversal operates on individual bytes, multibyte UTF-8 sequences are not
       preserved as valid characters after reversal.
-
-      ```lua
-      print(string.reverse("hello"))  -- olleh
-      print(string.reverse("Roblox")) -- xolboR
-
-      -- Single character or empty string
-      print(string.reverse("a")) -- a
-      print(string.reverse(""))  -- (empty string)
-
-      -- Palindrome check
-      local function isPalindrome(s)
-          local lower = string.lower(s)
-          return lower == string.reverse(lower)
-      end
-      print(isPalindrome("racecar")) -- true
-      print(isPalindrome("hello"))   -- false
-      ```
     parameters:
       - name: s
         type: string
@@ -817,7 +601,8 @@ functions:
         summary: |
           A new string with the bytes of `s` in reverse order.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-reverse
     deprecation_message: ''
   - name: string.split
     summary: |
@@ -831,75 +616,10 @@ functions:
       string. For instance `string.split("abc||def", "|")` will return a table
       with three strings: `"abc"`, `""`, and `"def"`.
 
-      ```lua
-      local input = "a,b,c"
-      local values = input:split(",")
-      print(values[1], values[2], values[3]) --> "a" "b" "c"
-      ```
-
       Also note that whitespace from the original string will be preserved, for
       example `string.split("abc _ def", "_")` will honor the whitespace on both
       sides of the `_` separator. By default, the separator character is `,` but
       you can specify an alternative character or series of characters.
-
-      **Corner Cases**
-
-      #### Empty String
-
-      ```lua
-      local result = string.split("", ",")
-      print(#result) --> 1
-      print(result[1]) --> ""
-      ```
-
-      #### Empty Slices
-
-      ```lua
-      local result = string.split("foo,,bar", ",")
-      print(result[1], result[2], result[3]) --> "foo" "" "bar"
-
-      local result2 = string.split(",foo", ",")
-      print(result2[1], result2[2]) --> "" "foo"
-
-      local result3 = string.split("foo,", ",")
-      print(result3[1], result3[2]) --> "foo" ""
-
-      local result4 = string.split(",", ",")
-      print(result4[1], result4[2]) --> "" ""
-
-      local result5 = string.split(",,", ",")
-      print(result5[1], result5[2], result5[3]) --> "" "" ""
-      ```
-
-      #### Whitespace Preserved
-
-      ```lua
-      local result = string.split("   whitespace   ", ",")
-      print(result[1]) --> "   whitespace   "
-
-      local result2 = string.split("foo , bar", ",")
-      print(result2[1], result2[2]) --> "foo " " bar"
-      ```
-
-      #### Invalid UTF-8
-
-      ```lua
-      local result = string.split("\xFF", ",")
-      print(result[1]) --> "\xFF"
-
-      local result = string.split("\xFF,\xFE", ",")
-      print(result[1], result[2]) --> "\xFF" "\xFE"
-      ```
-
-      #### Unicode
-
-      ```lua
-      local result = string.split("我很高兴，你呢？", "，")
-      print(result[1], result[2]) --> "我很高兴" "你呢？"
-
-      local result2 = string.split("hello•world", "•")
-      print(result2[1], result2[2]) --> "hello" "world"
-      ```
     parameters:
       - name: s
         type: string
@@ -917,7 +637,8 @@ functions:
           A table of substrings produced by splitting `s` at each occurrence of
           the separator.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-split
     deprecation_message: ''
   - name: string.sub
     summary: |
@@ -935,22 +656,6 @@ functions:
       exceeds the string length, it is corrected to the string length. If after
       these corrections `i` is greater than `j`, the function returns an empty
       string.
-
-      ```lua
-      local s = "Hello, world!"
-      print(string.sub(s, 1, 5))   -- Hello
-      print(string.sub(s, 8))      -- world!
-      print(string.sub(s, -6))     -- orld!
-      print(string.sub(s, -6, -2)) -- orld
-
-      -- Extract file extension
-      local filename = "script.lua"
-      local dot = string.find(filename, "%.")
-      print(string.sub(filename, dot + 1)) -- lua
-
-      -- Empty result when start > end
-      print(string.sub("abc", 3, 1)) -- (empty string)
-      ```
     parameters:
       - name: s
         type: string
@@ -975,7 +680,8 @@ functions:
           The substring from position `i` to `j` inclusive, or an empty string
           if the range is empty.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-sub
     deprecation_message: ''
   - name: string.unpack
     summary: |
@@ -998,7 +704,7 @@ functions:
         summary: |
           The binary string to unpack values from.
       - name: readStart
-        type: string
+        type: number
         default: 1
         summary: |
           The byte position in `data` at which to begin reading.
@@ -1008,7 +714,8 @@ functions:
           The values packed into the provided binary string, plus the index of
           the first unread byte.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-unpack
     deprecation_message: ''
   - name: string.upper
     summary: |
@@ -1019,17 +726,6 @@ functions:
       (`a`-`z`) changed to their uppercase equivalents (`A`-`Z`). Characters
       outside the ASCII letter range, including accented or multibyte
       characters, are left unchanged.
-
-      ```lua
-      print(string.upper("hello")) -- HELLO
-      print(string.upper("Hello World!")) -- HELLO WORLD!
-
-      -- Non-letter characters are unaffected
-      print(string.upper("roblox 123!")) -- ROBLOX 123!
-
-      -- Only ASCII letters are converted
-      print(string.upper("abc ABC")) -- ABC ABC
-      ```
     parameters:
       - name: s
         type: string
@@ -1042,5 +738,6 @@ functions:
           A copy of the string with all lowercase ASCII letters changed to
           uppercase.
     tags: []
-    code_samples: []
+    code_samples:
+      - string-upper
     deprecation_message: ''

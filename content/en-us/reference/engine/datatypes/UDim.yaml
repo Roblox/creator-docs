@@ -18,11 +18,6 @@ description: |
   `Class.UICorner.CornerRadius`, `Class.UIPadding.PaddingTop`, and
   `Class.UIStroke.Thickness`, or paired as a `Datatype.UDim2` for
   two-dimensional sizing and positioning.
-
-  ```lua
-  -- 50% of the parent plus 10 extra logical pixels
-  local dimension = UDim.new(0.5, 10)
-  ```
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -35,12 +30,6 @@ constructors:
       components. Both parameters are optional and default to `0` when omitted;
       calling `UDim.new()` with no arguments produces a UDim equivalent to
       `UDim.new(0, 0)`.
-
-      ```lua
-      local fullScale = UDim.new(1, 0)    -- 100% of parent, no pixel offset
-      local fixedPixels = UDim.new(0, 200) -- 0% scale, 200 pixel offset
-      local mixed = UDim.new(0.5, 20)      -- 50% of parent plus 20 pixels
-      ```
     parameters:
       - name: Scale
         type: number
@@ -55,7 +44,8 @@ constructors:
         summary: |
           The absolute pixel offset added after the scale is applied. Stored as
           an integer. Defaults to `0`.
-    code_samples: []
+    code_samples:
+      - datatype-UDim-new
     tags: []
     deprecation_message: ''
 constants: []
@@ -72,7 +62,8 @@ properties:
       nothing to the resolved pixel value. Defaults to `0` when not specified in
       the constructor. This property is read-only.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-UDim-Scale
     tags: []
     deprecation_message: ''
   - name: UDim.Offset
@@ -86,7 +77,8 @@ properties:
       Defaults to `0` when not specified in the constructor. This property is
       read-only.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-UDim-Offset
     tags: []
     deprecation_message: ''
 methods: []
@@ -104,7 +96,8 @@ math_operations:
     type_a: UDim
     type_b: UDim
     return_type: UDim
-    code_samples: []
+    code_samples:
+      - datatype-UDim-Add
     tags: []
     deprecation_message: ''
   - name: '-'
@@ -120,6 +113,7 @@ math_operations:
     type_a: UDim
     type_b: UDim
     return_type: UDim
-    code_samples: []
+    code_samples:
+      - datatype-UDim-Subtract
     tags: []
     deprecation_message: ''

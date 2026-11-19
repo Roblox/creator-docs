@@ -69,16 +69,6 @@ description: |
   of the tokens shown below. The tokens are then replaced with a specific value
   depending on the provided locale.
 
-  ```lua
-  local dt = DateTime.now()
-
-  -- The "dddd" token is replaced with the full day of the week
-  print("Today is " .. dt:FormatLocalTime("dddd", "en-us"))
-
-  -- For the "en-us" locale, the "LL" token equals "MMMM D, YYYY"
-  print("The date is " .. dt:FormatLocalTime("LL", "en-us"))
-  ```
-
   ##### Composite Tokens
 
   Depending on locale, these tokens replace to **specific combinations** of the
@@ -424,7 +414,8 @@ constructors:
       When you need to precisely measure the time elapsed between two points in
       time, like when testing performance, use `Library.os.clock()` instead.
     parameters: []
-    code_samples: []
+    code_samples:
+      - datatype-DateTime-now
     tags: []
     deprecation_message: ''
   - name: DateTime.fromUnixTimestamp
@@ -444,7 +435,8 @@ constructors:
           The number of seconds since January 1st, 1970 at 00:00 UTC (the Unix
           epoch). Must be between -17,987,443,200 and 253,402,300,799
           (approximately years 1400 to 9999).
-    code_samples: []
+    code_samples:
+      - datatype-DateTime-fromUnixTimestamp
     tags: []
     deprecation_message: ''
   - name: DateTime.fromUnixTimestampMillis
@@ -462,7 +454,8 @@ constructors:
           The number of milliseconds since January 1st, 1970 at 00:00 UTC (the
           Unix epoch). Must be between -17,987,443,200,000 and
           253,402,300,799,999 (approximately years 1400 to 9999).
-    code_samples: []
+    code_samples:
+      - datatype-DateTime-fromUnixTimestampMillis
     tags: []
     deprecation_message: ''
   - name: DateTime.fromUniversalTime
@@ -519,7 +512,8 @@ constructors:
         default: 0
         summary: |
           The millisecond value, between 0 and 999.
-    code_samples: []
+    code_samples:
+      - datatype-DateTime-fromUniversalTime
     tags: []
     deprecation_message: ''
   - name: DateTime.fromLocalTime
@@ -576,7 +570,8 @@ constructors:
         default: 0
         summary: |
           The millisecond value, between 0 and 999.
-    code_samples: []
+    code_samples:
+      - datatype-DateTime-fromLocalTime
     tags: []
     deprecation_message: ''
   - name: DateTime.fromIsoDate
@@ -596,7 +591,8 @@ constructors:
         default:
         summary: |
           An ISO 8601 date-time string in UTC, such as `"2020-01-02T10:30:45Z"`.
-    code_samples: []
+    code_samples:
+      - datatype-DateTime-fromIsoDate
     tags: []
     deprecation_message: ''
 constants: []
@@ -611,7 +607,8 @@ properties:
       epoch). Range is -17,987,443,200 to 253,402,300,799, approximately years
       1400&ndash;9999.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-DateTime-UnixTimestamp
     tags: []
     deprecation_message: ''
   - name: DateTime.UnixTimestampMillis
@@ -624,7 +621,8 @@ properties:
       Unix epoch). Range is -17,987,443,200,000 to 253,402,300,799,999,
       approximately years 1400&ndash;9999.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-DateTime-UnixTimestampMillis
     tags: []
     deprecation_message: ''
 methods:
@@ -645,7 +643,8 @@ methods:
         summary: |
           A table containing Year, Month, Day, Hour, Minute, Second, and
           Millisecond keys representing the date and time in UTC.
-    code_samples: []
+    code_samples:
+      - datatype-DateTime-ToUniversalTime
     tags: []
     deprecation_message: ''
   - name: DateTime:ToLocalTime
@@ -664,7 +663,8 @@ methods:
         summary: |
           A table containing Year, Month, Day, Hour, Minute, Second, and
           Millisecond keys representing the date and time in the local timezone.
-    code_samples: []
+    code_samples:
+      - datatype-DateTime-ToLocalTime
     tags: []
     deprecation_message: ''
   - name: DateTime:ToIsoDate
@@ -684,7 +684,8 @@ methods:
         summary: |
           An ISO 8601 date-time string in UTC format, such as
           `"2020-01-02T10:30:45Z"`.
-    code_samples: []
+    code_samples:
+      - datatype-DateTime-ToIsoDate
     tags: []
     deprecation_message: ''
   - name: DateTime:FormatUniversalTime
@@ -696,13 +697,6 @@ methods:
       should contain tokens, which will replace to certain date/time values
       described by the `Datatype.DateTime` object. For more details, see the
       **String Format** section in this data type's description.
-
-      ```lua
-      local dt = DateTime.now()
-      -- For en-us, the "LL" token equals "MMM D, YYYY", which gives "June 11, 2020"
-      print("The date is " .. dt:FormatUniversalTime("LL", "en-us"))
-      --> "The date is June 11, 2020"
-      ```
     parameters:
       - name: format
         type: string
@@ -721,7 +715,8 @@ methods:
         summary: |
           The formatted date-time string with tokens replaced by their
           corresponding values.
-    code_samples: []
+    code_samples:
+      - datatype-DateTime-FormatUniversalTime
     tags: []
     deprecation_message: ''
   - name: DateTime:FormatLocalTime
@@ -734,13 +729,6 @@ methods:
       tokens, which will replace to certain date/time values described by the
       `Datatype.DateTime` object. For more details, see the **String Format**
       section in this data type's description.
-
-      ```lua
-      local dt = DateTime.now()
-      -- For en-us, the "LL" token equals "MMM D, YYYY", which gives "June 11, 2020"
-      print("The date is " .. dt:FormatLocalTime("LL", "en-us"))
-      --> "The date is June 11, 2020"
-      ```
     parameters:
       - name: format
         type: string
@@ -759,7 +747,8 @@ methods:
         summary: |
           The formatted date-time string with tokens replaced by their
           corresponding values.
-    code_samples: []
+    code_samples:
+      - datatype-DateTime-FormatLocalTime
     tags: []
     deprecation_message: ''
 functions: []

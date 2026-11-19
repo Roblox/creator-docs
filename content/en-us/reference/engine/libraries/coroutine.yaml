@@ -25,23 +25,6 @@ description: |
   function, the values sent to `Library.coroutine.yield()`, or an error message.
   If it does error, the second return value is the thrown error.
 
-  ```lua
-  local function task(...)
-  	-- This function might do some work for a bit then yield some value
-  	coroutine.yield("first")  -- To be returned by coroutine.resume()
-  	-- The function continues once it is resumed again
-  	return "second"
-  end
-
-  local taskCoro = coroutine.create(task)
-  -- Call resume for the first time, which runs the function from the beginning
-  local success, result = coroutine.resume(taskCoro, ...)
-  print(success, result)  --> true, first (task called coroutine.yield())
-  -- Continue running the function until it yields or halts
-  success, result = coroutine.resume(taskCoro)
-  print(success, result)  --> true, second (task halted because it returned "second")
-  ```
-
   During the lifetime of the coroutine, you can call
   `Library.coroutine.status()` to inspect its status:
 
@@ -79,22 +62,7 @@ description: |
   When working with coroutines, you can also forgo the use of the coroutine
   object and instead use a wrapper function. Such a wrapper function will resume
   a particular coroutine when it is called and will return only the yielded
-  values. You can do this using `Library.coroutine.wrap()`:
-
-  ```lua
-  -- A simple coroutine body that returns a value
-  local function task()
-  	return "done"
-  end
-
-  -- Create coroutine and return a wrapper function that resumes it
-  local f = coroutine.wrap(task)
-  -- Resume the coroutine as if we called coroutine.resume()
-  local result = f()
-  print(result) --> done
-  -- If an error occurs it will be raised here!
-  -- This differs from coroutine.resume() which acts similar to pcall()
-  ```
+  values. You can do this using `Library.coroutine.wrap()`.
 
   The first value returned from `Library.coroutine.resume()` describes whether a
   coroutine ran without errors. However, functions returned by
@@ -108,55 +76,13 @@ description: |
   Imagine a task that produces repetitions of a word: each time it produces a
   repetition, the next one will produce one more. For example, providing `Hello`
   will produce `Hello`, `HelloHello`, `HelloHelloHello`, etc. To do this, you
-  can define `repeatThis()`:
-
-  ```lua
-  -- This function repeats a word every time its coroutine is resumed
-  local function repeatThis(word)
-  	local repetition = ""
-  	while true do
-  		-- Do one repetition then yield the result
-  		repetition = repetition .. word
-  		coroutine.yield(repetition)
-  	end
-  end
-  ```
+  can define `repeatThis()`, which yields the longer string each time it runs.
 
   To run this function as a coroutine, you can use `Library.coroutine.create()`
-  followed by multiple calls to `Library.coroutine.resume()`:
-
-  ```lua
-  local function repeatThis(word)
-  	local repetition = ""
-  	while true do
-  		repetition = repetition .. word
-  		coroutine.yield(repetition)
-  	end
-  end
-
-  local repetitionCoro = coroutine.create(repeatThis)
-  print(coroutine.resume(repetitionCoro, "Hello"))  -- true, Hello
-  print(coroutine.resume(repetitionCoro))           -- true, HelloHello
-  print(coroutine.resume(repetitionCoro))           -- true, HelloHelloHello
-  ```
+  followed by multiple calls to `Library.coroutine.resume()`.
 
   For this producer function, you can also use `Library.coroutine.wrap()` to get
-  a function that produces values:
-
-  ```lua
-  local function repeatThis(word)
-  	local repetition = ""
-  	while true do
-  		repetition = repetition .. word
-  		coroutine.yield(repetition)
-  	end
-  end
-
-  local f = coroutine.wrap(repeatThis)
-  print(f("Hello"))  -- Hello
-  print(f())         -- HelloHello
-  print(f())         -- HelloHelloHello
-  ```
+  a function that produces values.
 tags: []
 code_samples: []
 properties: []
@@ -184,7 +110,8 @@ functions:
         summary: |
           The error message, if any.
     tags: []
-    code_samples: []
+    code_samples:
+      - coroutine-close
     deprecation_message: ''
   - name: coroutine.create
     summary: |
@@ -206,7 +133,8 @@ functions:
         summary: |
           A new coroutine in the suspended state, ready to be resumed.
     tags: []
-    code_samples: []
+    code_samples:
+      - coroutine-create
     deprecation_message: ''
   - name: coroutine.finally
     summary: |
@@ -255,7 +183,8 @@ functions:
           Function or a callable object to invoke.
     returns: []
     tags: []
-    code_samples: []
+    code_samples:
+      - coroutine-finally
     deprecation_message: ''
   - name: coroutine.isyieldable
     summary: |
@@ -271,7 +200,8 @@ functions:
         summary: |
           Whether or not the coroutine can safely yield at this point.
     tags: []
-    code_samples: []
+    code_samples:
+      - coroutine-isyieldable
     deprecation_message: ''
   - name: coroutine.resume
     summary: |
@@ -308,24 +238,27 @@ functions:
           The values passed to `coroutine.yield()` or returned by the body
           function on success, or the error message on failure.
     tags: []
-    code_samples: []
+    code_samples:
+      - coroutine-resume
     deprecation_message: ''
   - name: coroutine.running
     summary: |
       Returns the running coroutine.
     description: |
-      Returns the currently running coroutine as a `thread` value, or `nil` if
-      called from the main thread. The main thread is not considered a
-      coroutine, so only threads created by `Library.coroutine.create()` or
-      `Library.coroutine.wrap()` are returned by this function.
+      Returns the currently running thread as a `thread` value. Called inside a
+      coroutine made by `Library.coroutine.create()` or
+      `Library.coroutine.wrap()`, it returns that coroutine. Called outside any
+      coroutine, it returns the thread the script itself is running on, so it
+      never returns `nil`.
     parameters: []
     returns:
       - type: thread
         summary: |
-          The currently running coroutine, or `nil` if called from the main
-          thread.
+          The currently running thread. Outside any coroutine, this is the
+          thread the script itself is running on.
     tags: []
-    code_samples: []
+    code_samples:
+      - coroutine-running
     deprecation_message: ''
   - name: coroutine.status
     summary: |
@@ -348,7 +281,8 @@ functions:
         summary: |
           One of `"running"`, `"suspended"`, `"normal"`, or `"dead"`.
     tags: []
-    code_samples: []
+    code_samples:
+      - coroutine-status
     deprecation_message: ''
   - name: coroutine.wrap
     summary: |
@@ -373,7 +307,8 @@ functions:
           returning the yielded or returned values directly (without the boolean
           status). Raises an error if the coroutine errors.
     tags: []
-    code_samples: []
+    code_samples:
+      - coroutine-wrap
     deprecation_message: ''
   - name: coroutine.yield
     summary: |
@@ -396,5 +331,6 @@ functions:
           The arguments passed to the next `coroutine.resume()` call that
           continues this coroutine.
     tags: []
-    code_samples: []
+    code_samples:
+      - coroutine-yield
     deprecation_message: ''

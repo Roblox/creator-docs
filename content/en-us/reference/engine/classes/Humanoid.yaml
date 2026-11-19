@@ -1156,6 +1156,46 @@ properties:
     capabilities:
       - AvatarBehavior
     simulationAccess: true
+  - name: Humanoid.UsesAvatarCollider
+    summary: |
+      Whether an avatar collider applied by Avatar Settings does all of the
+      character's colliding.
+    description: |
+      This property is `true` while an avatar collider applied by the Avatar
+      Settings collision rules, such as the one created by
+      `Enum.AvatarSettingsCollisionMode.SingleCollider|SingleCollider`, does all
+      of the character's colliding. While `true`, the character's body parts
+      (head, torso, limbs and `HumanoidRootPart`) shouldn't collide in any state
+      except `Enum.HumanoidStateType.Dead`, where
+      `Class.Humanoid:GetCanCollideOnDeath()` decides. Defaults to `false`.
+
+      The engine sets this property when it creates an avatar collider for the
+      character, and clears it when the colliders are removed, for example when
+      `Class.Humanoid:ApplyAvatarRulesAsync()` applies default collision rules.
+      It replicates from the server, isn't saved, and isn't copied by
+      `Class.Instance:Clone()`. Scripts can read it but can't set it. A
+      sandboxed script needs the `AvatarBehavior` capability to read it.
+
+      The humanoid applies this collision itself only while
+      `Class.Humanoid.EvaluateStateMachine|EvaluateStateMachine` is `true`. A
+      script character controller that turns the state machine off can read this
+      property to leave body-part collisions off.
+    code_samples: []
+    type: boolean
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
+      write: NotAccessibleSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid.WalkSpeed
     summary: |
       Describes the humanoid's maximum movement speed in studs per second.
@@ -1770,6 +1810,73 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - AvatarBehavior
+  - name: Humanoid:GetCanCollideOnDeath
+    summary: |
+      Returns the `Class.BasePart.CanCollide|CanCollide` value that a part of
+      this humanoid's character should have when the humanoid dies, under the
+      character's Avatar Settings rules.
+    description: |
+      Returns the `Class.BasePart.CanCollide|CanCollide` value that the humanoid
+      gives `part` in the `Enum.HumanoidStateType.Dead` state under the
+      character's Avatar Settings rules, so a script character controller that
+      turns `Class.Humanoid.EvaluateStateMachine|EvaluateStateMachine` off can
+      match it.
+
+      When the Avatar Settings rules decide an R15 character's death collision,
+      its head, torso, and limbs return that decision and `HumanoidRootPart`
+      returns `false`. For example, when the
+      `Enum.AvatarSettingsCollisionMode.SingleCollider|SingleCollider` collider
+      does the character's colliding, they return whether the rules make body
+      parts collidable on death. When the rules turn off body-part collision on
+      death, they return `false`. When the character's avatar collider keeps
+      body parts from colliding on death, as legacy R6 colliders do, they return
+      `false`, except a `Class.MeshPart` head which returns `fallback`. When the
+      rules keep the humanoid's normal death collision, every part returns
+      `fallback`.
+
+      Every other part always returns `fallback`, including parts of R6
+      characters, the avatar collider, accessories, tools, custom parts, and
+      parts that aren't children of the humanoid's character. Body parts are
+      recognized by name. Errors if `part` is nil.
+
+      The answer doesn't depend on the humanoid's current state, so it can be
+      called before or after the humanoid dies. It reads replicated state, so
+      the server and clients get the same answer.
+
+      ```lua
+      local function onDied(character: Model, humanoid: Humanoid)
+      	for _, part in character:GetChildren() do
+      		if part:IsA("BasePart") then
+      			part.CanCollide = humanoid:GetCanCollideOnDeath(part, part.CanCollide)
+      		end
+      	end
+      end
+      ```
+    code_samples: []
+    parameters:
+      - name: part
+        type: BasePart
+        default:
+        summary: |
+          A part of the character.
+      - name: fallback
+        type: boolean
+        default:
+        summary: |
+          The value to return when the Avatar Settings rules don't decide the
+          part's death collision.
+    returns:
+      - type: boolean
+        summary: |
+          The part's `Class.BasePart.CanCollide|CanCollide` on death, or
+          `fallback`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities:
+      - AvatarBehavior
+    simulationAccess: true
   - name: Humanoid:GetLimb
     summary: |
       Returns the `Enum.Limb` enum that is associated with the given

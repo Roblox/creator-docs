@@ -74,7 +74,7 @@ Each ad campaign has a single goal that determines who Roblox shows the campaign
   When using the Qualify for Kids and Select objective, keep the following in mind:
 
   - **Expect a higher cost per play (CPP).** The Highly Engaged Player audience is smaller than the Plays audience, which typically results in a higher CPP.
-  - **Use a dedicated budget.** Consider Qualify for Kids and Select as a separate investment if your goal is to make progress toward the Roblox Kids and Select threshold, instead of shifting spend from Plays campaigns.
+  - **Set a separate budget.** Fund your Qualify for Kids and Select campaign on its own instead of moving budget out of your Plays campaigns, since each goal does a different job.
   - **Track your progress.** Use the Audience Reach dashboard in Creator Hub to see how close your game is to the threshold. The campaign stops automatically once it reaches your goal. To keep reaching players after that, create a new campaign with a different objective.
   - **Allow time for results.** Most campaigns require several days to produce meaningful results. If you don't see progress after 3–5 days, consider improving your game's onboarding and first-time user experience before continuing.
 

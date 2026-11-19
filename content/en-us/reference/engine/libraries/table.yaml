@@ -25,16 +25,6 @@ functions:
       of the table's array portion is maintained, which allows for efficient
       re-use of the space.
 
-      ```lua
-      local grades = {95, 82, 71, 92, 100, 60}
-      print(grades[4], #grades) --> 92, 6
-      table.clear(grades)
-      print(grades[4], #grades) --> nil, 0
-      -- If grades is filled again with the same number of entries,
-      -- no potentially expensive array resizing will occur
-      -- because the capacity was maintained by table.clear.
-      ```
-
       This function does not delete/destroy the table provided to it. This
       function is meant to be used specifically for tables that are to be
       re-used.
@@ -48,23 +38,14 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - table-clear
     deprecation_message: ''
   - name: table.clone
     summary: |
       Returns a shallow copy of the provided table.
     description: |
       Returns an unfrozen shallow copy of the provided table.
-
-      ```lua
-      local original = {
-      	key = "value",
-      	engine = "Roblox",
-      	playerID = 505306092
-      }
-
-      local clone = table.clone(original)
-      ```
     parameters:
       - name: t
         type: table
@@ -76,7 +57,8 @@ functions:
         summary: |
           The clone of the provided table.
     tags: []
-    code_samples: []
+    code_samples:
+      - table-clone
     deprecation_message: ''
   - name: table.concat
     summary: |
@@ -113,7 +95,8 @@ functions:
         summary: |
           The concatenated string of table elements joined by the separator.
     tags: []
-    code_samples: []
+    code_samples:
+      - table-concat
     deprecation_message: ''
   - name: table.create
     summary: |
@@ -121,11 +104,6 @@ functions:
     description: |
       Creates a table with the array portion allocated to the given `number` of
       elements, optionally filled with the given `value`.
-
-      ```lua
-      local t = table.create(3, "Roblox")
-      print(table.concat(t)) --> RobloxRobloxRoblox
-      ```
 
       If you are inserting into large array-like tables and are certain of a
       reasonable upper limit to the number of elements, it's recommended to use
@@ -151,7 +129,8 @@ functions:
           A new table with the array portion pre-allocated to `count` elements,
           filled with `value` if provided.
     tags: []
-    code_samples: []
+    code_samples:
+      - table-create
     deprecation_message: ''
   - name: table.find
     summary: |
@@ -164,13 +143,6 @@ functions:
 
       A [linear search](https://en.wikipedia.org/wiki/Linear_search) algorithm
       is performed.
-
-      ```lua
-      local t = {"a", "b", "c", "d", "e"}
-      print(table.find(t, "d")) --> 4
-      print(table.find(t, "z")) --> nil, because z is not in the table
-      print(table.find(t, "b", 3)) --> nil, because b appears before index 3
-      ```
     parameters:
       - name: haystack
         type: table
@@ -193,7 +165,8 @@ functions:
           The numeric index of the first occurrence of `needle`, or `nil` if not
           found.
     tags: []
-    code_samples: []
+    code_samples:
+      - table-find
     deprecation_message: ''
   - name: table.foreach
     summary: |
@@ -221,7 +194,8 @@ functions:
         summary: ''
     tags:
       - Deprecated
-    code_samples: []
+    code_samples:
+      - table-foreach
     deprecation_message: ''
   - name: table.foreachi
     summary: |
@@ -249,7 +223,8 @@ functions:
         summary: ''
     tags:
       - Deprecated
-    code_samples: []
+    code_samples:
+      - table-foreachi
     deprecation_message: ''
   - name: table.freeze
     summary: |
@@ -272,7 +247,8 @@ functions:
         summary: |
           The frozen table.
     tags: []
-    code_samples: []
+    code_samples:
+      - table-freeze
     deprecation_message: ''
   - name: table.getn
     summary: |
@@ -293,7 +269,8 @@ functions:
           operator.
     tags:
       - Deprecated
-    code_samples: []
+    code_samples:
+      - table-getn
     deprecation_message: ''
   - name: table.insert
     summary: |
@@ -303,12 +280,6 @@ functions:
       `t[pos], t[pos+1], ..., t[#t]` by one position. The position must be
       between `1` and `#t` (inclusive) for the shift to occur; the value is then
       written at `t[pos]`.
-
-      ```lua
-      local t = {"a", "b", "c"}
-      table.insert(t, 2, "new")
-      print(table.concat(t, ", ")) --> a, new, b, c
-      ```
     parameters:
       - name: t
         type: Array
@@ -329,7 +300,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - table-insert
     deprecation_message: ''
   - name: table.insert
     summary: |
@@ -338,12 +310,6 @@ functions:
       Appends `value` to the end of array `t` at position `#t + 1`. Unlike the
       positional overload, no existing elements are shifted, making this the
       most efficient way to grow an array by one element.
-
-      ```lua
-      local t = {"a", "b", "c"}
-      table.insert(t, "d")
-      print(table.concat(t, ", ")) --> a, b, c, d
-      ```
     parameters:
       - name: t
         type: Array
@@ -359,7 +325,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - table-insert-2
     deprecation_message: ''
   - name: table.isfrozen
     summary: |
@@ -379,7 +346,8 @@ functions:
         summary: |
           Whether the table is frozen from `Library.table.freeze()`.
     tags: []
-    code_samples: []
+    code_samples:
+      - table-isfrozen
     deprecation_message: ''
   - name: table.maxn
     summary: |
@@ -400,7 +368,8 @@ functions:
           The largest positive numeric key in the table, or `0` if the table has
           no numeric keys.
     tags: []
-    code_samples: []
+    code_samples:
+      - table-maxn
     deprecation_message: ''
   - name: table.move
     summary: |
@@ -412,20 +381,6 @@ functions:
 
       The default for `dst` is `src`. The destination range may overlap with the
       source range. Returns `dst` for convenience.
-
-      ```lua
-      local sourceTable = {4, 5} -- Table of data to copy from
-      local destTable = {1, 2, 3} -- Table to add copied data to
-
-      table.move(
-      	sourceTable, -- Source table
-      	1, -- Index to start from in source table
-      	#sourceTable, -- Index up to (and including) from source table
-      	#destTable + 1, -- Index within destination table to move data into
-      	destTable -- Destination table
-      )
-      print(destTable) --> {1, 2, 3, 4, 5}
-      ```
     parameters:
       - name: src
         type: table
@@ -457,7 +412,8 @@ functions:
         summary: |
           `dst` for convenience.
     tags: []
-    code_samples: []
+    code_samples:
+      - table-move
     deprecation_message: ''
   - name: table.pack
     summary: |
@@ -466,11 +422,6 @@ functions:
       Returns a new table with all arguments stored into keys 1, 2, etc. and
       with a field "n" with the total number of arguments. Note that the
       resulting table may not be a sequence.
-
-      ```lua
-      local t = table.pack(1, 2, 3)
-      print(table.concat(t, ", ")) --> 1, 2, 3
-      ```
     parameters:
       - name: values...
         type: Variant
@@ -478,12 +429,13 @@ functions:
         summary: |
           The values to store sequentially in the new table.
     returns:
-      - type: Variant
+      - type: table
         summary: |
           A new table with arguments at keys `1` through `n`, plus an `n` field
           storing the total argument count.
     tags: []
-    code_samples: []
+    code_samples:
+      - table-pack
     deprecation_message: ''
   - name: table.remove
     summary: |
@@ -512,7 +464,8 @@ functions:
           The value of the element that was removed, or nothing if the position
           is out of bounds.
     tags: []
-    code_samples: []
+    code_samples:
+      - table-remove
     deprecation_message: ''
   - name: table.sort
     summary: |
@@ -547,7 +500,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - table-sort
     deprecation_message: ''
   - name: table.unpack
     summary: |
@@ -580,5 +534,6 @@ functions:
           The elements `list[i], list[i+1], ..., list[j]` as individual return
           values.
     tags: []
-    code_samples: []
+    code_samples:
+      - table-unpack
     deprecation_message: ''

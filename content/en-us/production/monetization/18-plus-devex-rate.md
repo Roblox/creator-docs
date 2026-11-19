@@ -93,6 +93,8 @@ To set your project-level avatar settings so that players can only join with R15
 
    <img src="../../assets/avatar/avatar-settings/AvatarSettings-R15Only.png" width="800" alt="R15 Only button highlighted in the Avatar Settings window." />
 
+Selecting **R15 Only** changes which player rig can spawn. [Convert games from R6 Only to R15 Only](../../characters/r6-only-to-r15-only.md) covers the scripts, animations, tools, and gameplay checks that come with moving a game from **R6 Only** to **R15 Only**.
+
 #### Custom avatar systems
 
 If you're using a custom avatar system, make sure your setup meets the requirements above and the intent behind them. If it does, your game automatically qualifies for the U.S. 18+ DevEx rate. Roblox reviews games on an ongoing basis and removes eligibility for games that don't qualify.

@@ -279,12 +279,12 @@ Roblox offers various programs for creators on the platform to provide additiona
 <h4>Roblox Incubator</h4>
 <figure>
 <Chip
-        color="error"
-        label="Status: Closed"
+        color="success"
+        label="Status: Open"
         size="medium"
         variant="filled"/>
 </figure>
-<Typography variant='body1'>A six-month, milestone-driven program designed to help experienced teams refine promising concepts into polished, scalable, commercially successful games</Typography>
+<Typography variant='body1'>A milestone-driven program, run in two three-month sprints, that helps experienced teams take a novel game for 18+ players from prototype to launch</Typography>
 </CardContent>
 <CardActions>
 <Button href="/creator-programs/incubator" variant="contained" color="secondary" size='large'>Learn More</Button>

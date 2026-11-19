@@ -33,7 +33,7 @@ The top bar of the **Avatar Settings** window provides easy access to quickly se
   </tr>
   <tr>
     <td>**&ctdot;**</td>
-    <td>Sets the default avatar type to either **R6**, **R15**, or **R15 & R6**.</td>
+    <td>Sets player characters to **R6 Only**, **R15 Only**, or **R15 and R6**. To convert a game from **R6 Only** to **R15 Only**, see [Convert games from R6 Only to R15 Only](../characters/r6-only-to-r15-only.md).</td>
   </tr>
 </tbody>
 </table>

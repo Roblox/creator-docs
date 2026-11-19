@@ -393,6 +393,8 @@ navigation:
         path: /art/characters/facial-animation/moods
       - title: Pathfinding
         path: /characters/pathfinding
+      - title: Convert games from R6 Only to R15 Only
+        path: /characters/r6-only-to-r15-only
   - title: Input
     path: /input/
     section:
@@ -462,6 +464,8 @@ navigation:
             path: /ui/ui-drag-detectors
           - title: 3D drag detectors
             path: /ui/3D-drag-detectors
+          - title: 2D particle emitters
+            path: /ui/2D-particle-emitters
       - title: Position and size
         path: /ui/position-and-size
       - title: Layout structures

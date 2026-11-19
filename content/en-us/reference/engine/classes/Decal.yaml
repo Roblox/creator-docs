@@ -364,6 +364,41 @@ properties:
       can_save: true
     capabilities:
       - Basic
+  - name: Decal.ResampleMode
+    summary: |
+      Selects the texture resampling mode used for the decal's texture maps.
+    description: |
+      Determines how the decal's texture maps are filtered when displayed larger
+      or smaller than their size in texture memory. The default
+      `Enum.ResamplerMode.Default` uses bilinear filtering to smooth the
+      textures. `Enum.ResamplerMode.Pixelated|Pixelated` uses nearest-neighbor
+      filtering to preserve the sharp edges of pixels, with anti-aliasing to
+      reduce shimmering.
+
+      For physically based rendering (PBR) decals, pixelated filtering applies
+      to all texture maps using the color map's pixel grid.
+
+      Pixelated mode uses uncompressed texture assets to avoid compression
+      artifacts. At the same resolution, these textures can use more memory than
+      compressed textures in the default mode. For pixel art, use the original
+      low-resolution images instead of uploading enlarged versions.
+
+      This property is also inherited by `Class.Texture` and controls filtering
+      for its repeating texture maps.
+    code_samples: []
+    type: ResamplerMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
   - name: Decal.Rotation
     summary: |
       Rotates the decal texture.

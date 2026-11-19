@@ -19,7 +19,8 @@ properties:
     description: |
       The value of Euler's number, e.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-e
     deprecation_message: ''
   - name: math.huge
     type: number
@@ -31,7 +32,8 @@ properties:
       2<sup>1024</sup>). Dividing a positive number by zero yields this same
       value.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-huge
     deprecation_message: ''
   - name: math.nan
     type: number
@@ -41,7 +43,8 @@ properties:
       A NaN value, as defined by the IEEE 754 standard. Comparing directly to
       `math.nan` will always return false; use `Library.math.isnan()` instead.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-nan
     deprecation_message: ''
   - name: math.phi
     type: number
@@ -50,7 +53,8 @@ properties:
     description: |
       The value of the golden ratio.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-phi
     deprecation_message: ''
   - name: math.pi
     type: number
@@ -59,7 +63,8 @@ properties:
     description: |
       The value of pi.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-pi
     deprecation_message: ''
   - name: math.sqrt2
     type: number
@@ -68,7 +73,8 @@ properties:
     description: |
       The value of the square root of 2.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-sqrt2
     deprecation_message: ''
   - name: math.tau
     type: number
@@ -77,7 +83,8 @@ properties:
     description: |
       The value of tau, which is defined as `2 * math.pi`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-tau
     deprecation_message: ''
 functions:
   - name: math.abs
@@ -96,7 +103,8 @@ functions:
         summary: |
           The absolute value of `x`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-abs
     deprecation_message: ''
   - name: math.acos
     summary: |
@@ -114,7 +122,8 @@ functions:
         summary: |
           The angle in radians whose cosine is `x`, in the range `[0, pi]`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-acos
     deprecation_message: ''
   - name: math.asin
     summary: |
@@ -132,7 +141,8 @@ functions:
         summary: |
           The angle in radians whose sine is `x`, in the range `[-pi/2, pi/2]`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-asin
     deprecation_message: ''
   - name: math.atan
     summary: |
@@ -150,7 +160,8 @@ functions:
         summary: |
           The arc tangent of `x` in radians, in the range `[-pi/2, pi/2]`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-atan
     deprecation_message: ''
   - name: math.atan2
     summary: |
@@ -176,7 +187,8 @@ functions:
         summary: |
           The arc tangent of `y`/`x` in radians, in the range `[-pi, pi]`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-atan2
     deprecation_message: ''
   - name: math.ceil
     summary: |
@@ -194,7 +206,8 @@ functions:
         summary: |
           The smallest integer greater than or equal to `x`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-ceil
     deprecation_message: ''
   - name: math.clamp
     summary: |
@@ -223,7 +236,8 @@ functions:
         summary: |
           `x` constrained to the range `[`min`, `max`]`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-clamp
     deprecation_message: ''
   - name: math.cos
     summary: |
@@ -241,7 +255,8 @@ functions:
         summary: |
           The cosine of `x`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-cos
     deprecation_message: ''
   - name: math.cosh
     summary: |
@@ -259,7 +274,8 @@ functions:
         summary: |
           The hyperbolic cosine of `x`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-cosh
     deprecation_message: ''
   - name: math.deg
     summary: |
@@ -277,7 +293,8 @@ functions:
         summary: |
           The angle `x` converted to degrees.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-deg
     deprecation_message: ''
   - name: math.exp
     summary: |
@@ -295,7 +312,8 @@ functions:
         summary: |
           The value of `e` raised to the power `x`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-exp
     deprecation_message: ''
   - name: math.floor
     summary: |
@@ -313,7 +331,8 @@ functions:
         summary: |
           The largest integer less than or equal to `x`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-floor
     deprecation_message: ''
   - name: math.fmod
     summary: |
@@ -338,7 +357,8 @@ functions:
         summary: |
           The remainder of the division of `x` by `y`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-fmod
     deprecation_message: ''
   - name: math.frexp
     summary: |
@@ -362,7 +382,8 @@ functions:
         summary: |
           The exponent `e` such that `x = m * 2^e`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-frexp
     deprecation_message: ''
   - name: math.isfinite
     summary: |
@@ -381,7 +402,8 @@ functions:
         summary: |
           True if `x` is neither NaN nor infinity, false otherwise.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-isfinite
     deprecation_message: ''
   - name: math.isinf
     summary: |
@@ -400,7 +422,8 @@ functions:
         summary: |
           True if `x` is positive or negative infinity, false otherwise.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-isinf
     deprecation_message: ''
   - name: math.isnan
     summary: |
@@ -418,7 +441,8 @@ functions:
         summary: |
           True if `x` is NaN, false otherwise.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-isnan
     deprecation_message: ''
   - name: math.ldexp
     summary: |
@@ -441,7 +465,8 @@ functions:
         summary: |
           The value `x * 2^e`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-ldexp
     deprecation_message: ''
   - name: math.lerp
     summary: |
@@ -473,7 +498,8 @@ functions:
         summary: |
           The interpolated value between `a` and `b`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-lerp
     deprecation_message: ''
   - name: math.log
     summary: |
@@ -497,7 +523,8 @@ functions:
         summary: |
           The logarithm of `x` in the given base.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-log
     deprecation_message: ''
   - name: math.log10
     summary: |
@@ -515,7 +542,8 @@ functions:
         summary: |
           The base-10 logarithm of `x`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-log10
     deprecation_message: ''
   - name: math.map
     summary: |
@@ -556,7 +584,8 @@ functions:
         summary: |
           The value of `x` mapped to the output range.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-map
     deprecation_message: ''
   - name: math.max
     summary: |
@@ -579,7 +608,8 @@ functions:
         summary: |
           The largest value among all arguments.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-max
     deprecation_message: ''
   - name: math.min
     summary: |
@@ -602,7 +632,8 @@ functions:
         summary: |
           The smallest value among all arguments.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-min
     deprecation_message: ''
   - name: math.modf
     summary: |
@@ -625,7 +656,8 @@ functions:
         summary: |
           The fractional part of `x`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-modf
     deprecation_message: ''
   - name: math.noise
     summary: |
@@ -643,17 +675,18 @@ functions:
 
       Note that this function uses a Perlin noise algorithm to assign fixed
       values to coordinates. For example, `Library.math.noise(1.158, 5.723)`
-      will always return `0.48397532105446` and `Library.math.noise(1.158, 6)`
-      will always return `0.15315161645412`.
+      will always return `0.48397532105446` (to 14 digits) and
+      `Library.math.noise(1.158, 6)` will always return `0.15315161645412`.
 
       If `x`, `y`, and `z` are all integers, the return value will be `0`. For
-      fractional values of `x`, `y`, and `z`, the return value will gradually
-      fluctuate between `-0.5` and `0.5`. For coordinates that are close to each
-      other, the return values will also be close to each other.
+      fractional values of `x`, `y`, and `z`, the return value changes smoothly
+      and in practice stays between about `-0.9` and `0.9`. For coordinates that
+      are close to each other, the return values will also be close to each
+      other.
 
       The noise repeats with a period of `256` on each axis, so
       `Library.math.noise(x, y, z)` and `Library.math.noise(x + 256, y, z)`
-      return identical values.
+      return the same value, apart from a small rounding error.
     parameters:
       - name: x
         type: number
@@ -675,7 +708,8 @@ functions:
         summary: |
           A Perlin noise value, typically between `-1` and `1`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-noise
     deprecation_message: ''
   - name: math.pow
     summary: |
@@ -699,7 +733,8 @@ functions:
         summary: |
           The value `x` raised to the power `y`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-pow
     deprecation_message: ''
   - name: math.rad
     summary: |
@@ -717,7 +752,8 @@ functions:
         summary: |
           The angle `x` converted to radians.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-rad
     deprecation_message: ''
   - name: math.random
     summary: |
@@ -732,27 +768,32 @@ functions:
       When called with two integer numbers `m` and `n`, returns a uniform
       pseudo-random integer in the range of `m` to `n`, inclusive.
 
+      If the range contains no integers, such as `math.random(0)` or
+      `math.random(5, 1)`, the function raises an "interval is empty" error.
+
       Internally, this uses a 32-bit PCG (Permuted Congruential Generator) which
       achieves excellent statistical performance and makes its output hard to
       predict.
     parameters:
       - name: m
         type: number
-        default: 0
+        default:
         summary: |
-          When used alone, the upper bound of the integer range (lower bound is
-          `1`). When used with `n`, the lower bound.
+          When used alone, the upper bound of the integer range, which must be
+          at least `1` (the lower bound is `1`). When used with `n`, the lower
+          bound.
       - name: 'n'
         type: number
-        default: 1
+        default:
         summary: |
-          The upper bound of the integer range.
+          The upper bound of the integer range. Must be at least `m`.
     returns:
       - type: number
         summary: |
           A pseudo-random number within the specified range.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-random
     deprecation_message: ''
   - name: math.randomseed
     summary: |
@@ -770,7 +811,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - math-randomseed
     deprecation_message: ''
   - name: math.round
     summary: |
@@ -795,7 +837,8 @@ functions:
         summary: |
           The nearest integer to `x`, rounding away from zero for midpoints.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-round
     deprecation_message: ''
   - name: math.sign
     summary: |
@@ -816,7 +859,8 @@ functions:
           `-1` if `x` is negative, `0` if `x` is zero, or `1` if `x` is
           positive.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-sign
     deprecation_message: ''
   - name: math.sin
     summary: |
@@ -834,7 +878,8 @@ functions:
         summary: |
           The sine of `x`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-sin
     deprecation_message: ''
   - name: math.sinh
     summary: |
@@ -852,7 +897,8 @@ functions:
         summary: |
           The hyperbolic sine of `x`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-sinh
     deprecation_message: ''
   - name: math.sqrt
     summary: |
@@ -871,7 +917,8 @@ functions:
         summary: |
           The square root of `x`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-sqrt
     deprecation_message: ''
   - name: math.tan
     summary: |
@@ -889,7 +936,8 @@ functions:
         summary: |
           The tangent of `x`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-tan
     deprecation_message: ''
   - name: math.tanh
     summary: |
@@ -907,5 +955,6 @@ functions:
         summary: |
           The hyperbolic tangent of `x`.
     tags: []
-    code_samples: []
+    code_samples:
+      - math-tanh
     deprecation_message: ''

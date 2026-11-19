@@ -22,12 +22,6 @@ constructors:
     description: |
       Returns a `Datatype.Color3` with the given red, green, and blue values.
       The parameters should be within the range of 0 to 1.
-
-      ```lua
-      local red = Color3.new(1, 0, 0)
-      local green = Color3.new(0, 1, 0)
-      local blue = Color3.new(0, 0, 1)
-      ```
     parameters:
       - name: red
         type: number
@@ -44,7 +38,8 @@ constructors:
         default: 0
         summary: |
           The blue component of the color, from 0 to 1.
-    code_samples: []
+    code_samples:
+      - datatype-Color3-new
     tags: []
     deprecation_message: ''
   - name: Color3.fromRGB
@@ -55,12 +50,6 @@ constructors:
       Creates a `Datatype.Color3` with the given red, green, and blue
       components. Unlike most other `Datatype.Color3` functions, the parameters
       for this function should be within the range of 0 to 255.
-
-      ```lua
-      local red = Color3.fromRGB(255, 0, 0)
-      local green = Color3.fromRGB(0, 255, 0)
-      local blue = Color3.fromRGB(0, 0, 255)
-      ```
     parameters:
       - name: red
         type: number
@@ -77,7 +66,8 @@ constructors:
         default: 0
         summary: |
           The blue component of the color, from 0 to 255.
-    code_samples: []
+    code_samples:
+      - datatype-Color3-fromRGB
     tags: []
     deprecation_message: ''
   - name: Color3.fromHSV
@@ -87,12 +77,6 @@ constructors:
     description: |
       Creates a `Datatype.Color3` with the given hue, saturation, and value. The
       parameters should be within the range of 0 to 1.
-
-      ```lua
-      local red = Color3.fromHSV(1, 1, 1)
-      local green = Color3.fromHSV(0.3333333, 1, 1)
-      local white = Color3.fromHSV(0, 0, 1)
-      ```
     parameters:
       - name: hue
         type: number
@@ -109,7 +93,8 @@ constructors:
         default:
         summary: |
           The value (brightness) of the color, from 0 to 1.
-    code_samples: []
+    code_samples:
+      - datatype-Color3-fromHSV
     tags: []
     deprecation_message: ''
   - name: Color3.fromHex
@@ -121,13 +106,6 @@ constructors:
       present. This function interprets the given string as a typical web hex
       color in the format `RRGGBB` or `RGB` (shorthand for `RRGGBB`). For
       example, `#FFAA00` produces an orange color and is the same as `#FA0`.
-
-      ```lua
-      local red = Color3.fromHex("FF0000")
-      local magenta = Color3.fromHex("ec008c")
-      local black = Color3.fromHex("000")
-      local white = Color3.fromHex("#FFF")
-      ```
     parameters:
       - name: hex
         type: string
@@ -135,7 +113,8 @@ constructors:
         summary: |
           A three- or six-character hexadecimal color string, optionally
           prefixed with `#`.
-    code_samples: []
+    code_samples:
+      - datatype-Color3-fromHex
     tags: []
     deprecation_message: ''
 constants: []
@@ -147,7 +126,8 @@ properties:
     description: |
       The red value of the color.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Color3-R
     tags: []
     deprecation_message: ''
   - name: Color3.G
@@ -157,7 +137,8 @@ properties:
     description: |
       The green value of the color.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Color3-G
     tags: []
     deprecation_message: ''
   - name: Color3.B
@@ -167,7 +148,8 @@ properties:
     description: |
       The blue value of the color.
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Color3-B
     tags: []
     deprecation_message: ''
 methods:
@@ -177,20 +159,6 @@ methods:
     description: |
       Returns a `Datatype.Color3` interpolated between two colors. The `alpha`
       value should be within the range of 0 to 1.
-
-      ```lua
-      local white = Color3.new(1, 1, 1)
-      local black = Color3.new(0, 0, 0)
-
-      local gray10 = white:Lerp(black, 0.1)
-      print(gray10)  --> 0.9, 0.9, 0.9
-
-      local gray50 = white:Lerp(black, 0.5)
-      print(gray50)  --> 0.5, 0.5, 0.5
-
-      local gray85 = white:Lerp(black, 0.85)
-      print(gray85)  --> 0.15, 0.15, 0.15
-      ```
     parameters:
       - name: color
         type: Color3
@@ -219,17 +187,6 @@ methods:
       Returns the hue, saturation, and value of a `Datatype.Color3`. This
       function is the inverse operation of the `Datatype.Color3.fromHSV()`
       constructor.
-
-      ```lua
-      local red = Color3.fromRGB(255, 0, 0)
-      local green = Color3.fromRGB(0, 255, 0)
-
-      local redH, redS, redV = red:ToHSV()
-      print(redH, redS, redV)  --> 1 1 1
-
-      local greenH, greenS, greenV = green:ToHSV()
-      print(greenH, greenS, greenV)  --> 0.3333333 1 1
-      ```
     parameters: []
     returns:
       - type: number
@@ -254,17 +211,6 @@ methods:
 
       The returned string can be provided to `Datatype.Color3.fromHex()` to
       produce the original color.
-
-      ```lua
-      local red = Color3.fromRGB(255, 0, 0)
-      local magenta = Color3.fromRGB(236, 0, 140)
-
-      local redHex = red:ToHex()
-      print(redHex)  --> ff0000
-
-      local magentaHex = magenta:ToHex()
-      print(magentaHex)  --> ec008c
-      ```
     parameters: []
     returns:
       - type: string
@@ -285,17 +231,6 @@ methods:
       are treated as gamma-encoded sRGB and are clamped to the range of 0 to 1
       before the calculation, so out-of-range (HDR) values behave like their
       clamped equivalents.
-
-      ```lua
-      local red = Color3.fromRGB(255, 0, 0)
-      print(red:GetLuminance())  --> 0.2126
-
-      local white = Color3.new(1, 1, 1)
-      print(white:GetLuminance())  --> 1
-
-      local black = Color3.new(0, 0, 0)
-      print(black:GetLuminance())  --> 0
-      ```
     parameters: []
     returns:
       - type: number
@@ -318,14 +253,6 @@ methods:
       possible contrast (pure black against pure white). This function is
       symmetric: `colorA:GetContrastRatio(colorB)` always equals
       `colorB:GetContrastRatio(colorA)`.
-
-      ```lua
-      local black = Color3.new(0, 0, 0)
-      local white = Color3.new(1, 1, 1)
-
-      print(black:GetContrastRatio(white))  --> 21
-      print(white:GetContrastRatio(black))  --> 21
-      ```
     parameters:
       - name: other
         type: Color3
@@ -353,19 +280,6 @@ methods:
       Called with no arguments, this is equivalent to calling it with pure black
       (`Color3.new(0, 0, 0)`) followed by pure white (`Color3.new(1, 1, 1)`), so
       a tie between them resolves to black.
-
-      ```lua
-      local orange = Color3.fromRGB(255, 165, 0)
-      print(orange:GetContrastingColor())  --> 0, 0, 0
-
-      local darkBlue = Color3.fromRGB(0, 0, 139)
-      print(darkBlue:GetContrastingColor())  --> 1, 1, 1
-
-      -- Custom candidates can be supplied instead of the black/white default.
-      local offBlack = Color3.fromRGB(20, 20, 20)
-      local offWhite = Color3.fromRGB(240, 240, 240)
-      print(orange:GetContrastingColor(offBlack, offWhite))  --> 0.0784314, 0.0784314, 0.0784314
-      ```
     parameters:
       - name: ...
         type: Color3

@@ -211,19 +211,17 @@ methods:
         type: float
         default:
         summary: |
-          Time at which to insert the new `Datatype.ValueCurveKey`. - type:
-          number
+          Time at which to insert the new `Datatype.ValueCurveKey`.
       - name: value
         type: Variant
         default:
         summary: |
-          Value of the inserted `Datatype.ValueCurveKey`. - type: any
+          Value of the inserted `Datatype.ValueCurveKey`.
       - name: Interpolation
         type: KeyInterpolationMode
         default:
         summary: |
-          Interpolation mode of the inserted `Datatype.ValueCurveKey`. - type:
-          KeyInterpolationMode
+          Interpolation mode of the inserted `Datatype.ValueCurveKey`.
     returns:
       - type: Array
         summary: |

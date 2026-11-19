@@ -241,6 +241,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/AudioEqualizer.yaml
                 ignoreTranslation: true
+              - title: AudioFDNReverb
+                path: /reference/engine/classes/AudioFDNReverb
+                type: engineapi
+                source: /reference/engine/classes/AudioFDNReverb.yaml
+                ignoreTranslation: true
               - title: AudioFader
                 path: /reference/engine/classes/AudioFader
                 type: engineapi
@@ -1015,6 +1020,11 @@ navigation:
                 path: /reference/engine/classes/File
                 type: engineapi
                 source: /reference/engine/classes/File.yaml
+                ignoreTranslation: true
+              - title: FileSystemService
+                path: /reference/engine/classes/FileSystemService
+                type: engineapi
+                source: /reference/engine/classes/FileSystemService.yaml
                 ignoreTranslation: true
               - title: Fire
                 path: /reference/engine/classes/Fire
@@ -2113,6 +2123,11 @@ navigation:
                 type: engineapi
                 source: /reference/engine/classes/ParticleEmitter.yaml
                 ignoreTranslation: true
+              - title: ParticleEmitter2D
+                path: /reference/engine/classes/ParticleEmitter2D
+                type: engineapi
+                source: /reference/engine/classes/ParticleEmitter2D.yaml
+                ignoreTranslation: true
               - title: Path
                 path: /reference/engine/classes/Path
                 type: engineapi
@@ -2142,6 +2157,11 @@ navigation:
                 path: /reference/engine/classes/PhysicsSettings
                 type: engineapi
                 source: /reference/engine/classes/PhysicsSettings.yaml
+                ignoreTranslation: true
+              - title: PlaceSettings
+                path: /reference/engine/classes/PlaceSettings
+                type: engineapi
+                source: /reference/engine/classes/PlaceSettings.yaml
                 ignoreTranslation: true
               - title: Player
                 path: /reference/engine/classes/Player
@@ -2294,6 +2314,11 @@ navigation:
                 path: /reference/engine/classes/ProcessInstancePhysicsService
                 type: engineapi
                 source: /reference/engine/classes/ProcessInstancePhysicsService.yaml
+                ignoreTranslation: true
+              - title: ProcessService
+                path: /reference/engine/classes/ProcessService
+                type: engineapi
+                source: /reference/engine/classes/ProcessService.yaml
                 ignoreTranslation: true
               - title: ProximityPrompt
                 path: /reference/engine/classes/ProximityPrompt
@@ -2564,6 +2589,11 @@ navigation:
                 path: /reference/engine/classes/Smoke
                 type: engineapi
                 source: /reference/engine/classes/Smoke.yaml
+                ignoreTranslation: true
+              - title: SmoothVoxelsUpgraderService
+                path: /reference/engine/classes/SmoothVoxelsUpgraderService
+                type: engineapi
+                source: /reference/engine/classes/SmoothVoxelsUpgraderService.yaml
                 ignoreTranslation: true
               - title: SocialService
                 path: /reference/engine/classes/SocialService
@@ -4946,6 +4976,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ModelStreamingMode.yaml
         ignoreTranslation: true
+      - title: ModerationResultLabel
+        path: /reference/engine/enums/ModerationResultLabel
+        type: engineapi
+        source: /reference/engine/enums/ModerationResultLabel.yaml
+        ignoreTranslation: true
       - title: ModerationStatus
         path: /reference/engine/enums/ModerationStatus
         type: engineapi
@@ -5035,6 +5070,11 @@ navigation:
         path: /reference/engine/enums/PackagePermission
         type: engineapi
         source: /reference/engine/enums/PackagePermission.yaml
+        ignoreTranslation: true
+      - title: ParticleEmitter2DEmissionMode
+        path: /reference/engine/enums/ParticleEmitter2DEmissionMode
+        type: engineapi
+        source: /reference/engine/enums/ParticleEmitter2DEmissionMode.yaml
         ignoreTranslation: true
       - title: ParticleEmitterShape
         path: /reference/engine/enums/ParticleEmitterShape

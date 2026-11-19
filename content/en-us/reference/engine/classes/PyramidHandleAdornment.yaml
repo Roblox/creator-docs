@@ -19,6 +19,27 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
+  - name: PyramidHandleAdornment.DoubleSided
+    summary: |
+      Determines whether to render both faces of polygons in the adornment.
+    description: |
+      This property determines whether to render both faces of polygons in the
+      adornment.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+      - UI
   - name: PyramidHandleAdornment.Height
     summary: |
       Height of the pyramid adornment.

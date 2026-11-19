@@ -3,11 +3,9 @@ title: Particle emitters
 description: Particle emitters emit 2D images to simulate special effects like fire, smoke, and sparks.
 ---
 
-A `Class.ParticleEmitter` is an object that emits customizable 2D images (particles) into the world, useful for simulating special effects like fire, smoke, and sparks.
+`Class.ParticleEmitter` is an object that emits customizable 2D images (particles) into the world, useful for simulating special effects like fire, smoke, and sparks.
 
 <video src="../assets/lighting-and-effects/particle-emitter/Showcase.mp4" controls width="100%" alt="Video of particles emitting from a MeshPart in the 3D world"></video>
-
-## Create particle emitters
 
 You can parent a `Class.ParticleEmitter` to an `Class.Attachment` or an object of the `Class.BasePart` class. When parented to a `Class.BasePart`, particles spawn randomly within the part's bounding box or [shape](#shape); when parented to an `Class.Attachment`, particles spawn from the attachment's position.
 
@@ -21,13 +19,6 @@ itself instead of using `Class.ParticleEmitter.EmissionDirection|EmissionDirecti
 </Alert>
 
 <video src="../assets/lighting-and-effects/particle-emitter/Emission-Direction.mp4" controls width="800" alt="Video of the particle emission direction changing faces on a parent MeshPart"></video>
-
-To create a particle emitter on a part or attachment:
-
-1. In the **Explorer** window, hover over the part or attachment and click the &CirclePlus; button. A contextual menu displays.
-2. From the menu, insert a **ParticleEmitter**. The particle emitter immediately emits particles within the part's area or from the attachment's position.
-
-   <img src="../assets/studio/explorer/MeshPart-ParticleEmitter.png" width="320" alt="ParticleEmitter object as child of MeshPart in Explorer hierarchy" />
 
 ## Customize particles
 
@@ -49,119 +40,79 @@ can change it to any texture to achieve interesting effects.
   <figcaption>Three similar particle emitters with different `Class.ParticleEmitter.Texture|Texture` assets</figcaption>
 </figure>
 
-If you're creating an image to use as a particle texture, it's best to use `.png` format with a transparent background. If your texture is grayscale with no alpha channel, try setting the particle emitter's `Class.ParticleEmitter.LightEmission|LightEmission` property to **1** to hide the darker regions.
+If you're creating an image to use as a particle texture, it's best to use `.png` format with a transparent background. If your texture is grayscale with no alpha channel, try setting the particle emitter's `Class.ParticleEmitter.LightEmission|LightEmission` property to `1` to hide the darker regions.
 
 <Alert severity="info">
 For steps on how to import an image for use as a particle texture,
 see [here](../projects/assets/manager.md#asset-import).
 </Alert>
 
-To insert an image into a particle emitter:
-
-1. From Studio's **Window** menu or **Home** tab toolbar, open the [Toolbox](../projects/assets/toolbox.md).
-2. If you want to insert an image that you have previously imported, click the **Inventory** tab. If you want to insert an image from another creator, click the **Creator Store** tab.
-
-   <img src="../assets/studio/toolbox/Inventory-Tab.png" width="360" alt="Inventory tab indicated in Studio's Toolbox" />
-
-   <img src="../assets/studio/toolbox/Creator-Store-Tab.png" width="360" alt="Creator Store tab indicated in Studio's Toolbox" />
-
-3. Right-click on the image you want to insert into a particle emitter and select **Copy&nbsp;Asset&nbsp;ID**.
-4. In the **Explorer** window, select a `Class.ParticleEmitter`.
-5. In the **Properties** window, paste the asset ID into the **Texture** property.
-
 ### Color
 
-The `Class.ParticleEmitter.Color|Color` property tints each particle's texture to either a specific hue, or to a gradient `Datatype.ColorSequence` across its [lifetime](#lifetime).
+The `Class.ParticleEmitter.Color|Color` property tints each particle's texture to either a specific hue, or to a color gradient across its [lifetime](#lifetime).
 
 <Tabs>
-<TabItem label="Constant Color">
+<TabItem label="Scripting">
+In a script, set a `Datatype.ColorSequence` for the emitter's `Class.ParticleEmitter.Color|Color` property:
 
-1. In the **Explorer** window, select the `Class.ParticleEmitter`.
-1. In the **Properties** window, select the **Color** property. You can either:
+```lua
+local emitter = Instance.new("ParticleEmitter")
 
-   1. Click on the color square to open the **Colors** pop-up window and select a color.
-   2. Input three numbers into the RGB color value field.
-
-   <figure>
-   <img src="../assets/studio/properties/Color-Input-Options.png" width="320" />
-   <img src="../assets/lighting-and-effects/particle-emitter/Color-Examples.jpg" width="720" alt="Similar particle emitters with different colored particles" />
-   <figcaption>Similar particle emitters with different colored particles</figcaption>
-   </figure>
+-- Constant color
+emitter.Color = ColorSequence.new(Color3.fromRGB(255, 0, 40))
+-- Gradient sequence
+emitter.Color = ColorSequence.new{
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),
+	ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 125, 0)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 200, 0))
+}
+```
 
 </TabItem>
-<TabItem label="Color Gradient">
+<TabItem label="Studio">
+In Studio, select the `Class.ParticleEmitter` in the [Explorer](../studio/explorer.md) hierarchy and, in the [Properties](../studio//properties.md) window:
 
-1. In the **Explorer** window, select the `Class.ParticleEmitter`.
-1. In the **Properties** window, click inside the **Color** property field, then click the **&ctdot;** button.
+**🄐** — Click on the color square to open the **Colors** pop-up window and select a color.
 
-   <img src="../assets/studio/properties/Color-Open-Sequence.png" width="320" alt="Button to open color sequence popup" />
+**🄑** – Input three numbers into the RGB color value field.
 
-   In the color sequence popup, each triangle on the bottom axis is a
-   **keypoint** that determines the color value of the property at that point in
-   the particle's lifetime.
+**🄒** – Click the **&ctdot;** button to define a **color gradient**.
 
-    <img src="../assets/studio/general/ColorSequence-White-Keypoints-Labeled.png" width="628" alt="Keypoints labeled in color sequence popup" />
-
-1. Click the keypoint at the start of the color sequence, click the
-   small square next to **Color**, and select a color from the popup window.
-
- <img src="../assets/studio/general/ColorSequence-Red-White.png" width="628" alt="Color sequence popup from red to white" />
-
-1. If you want particles to change their color near the end of their
-   lifetime, click the keypoint at the end of the color sequence, click the small square next to **Color**, and select a color from the popup window.
-
-   <img src="../assets/studio/general/ColorSequence-Red-Purple.png" width="628" alt="Color sequence popup from red to purple" />
-
-1. For more customization, you can:
-
-   - Add another keypoint by clicking anywhere on the graph.
-   - Make a color change sooner or later within the gradient by dragging an intermediary keypoint to a new position.
-   - Delete an intermediary keypoint by selecting it and clicking the **Delete** button.
-   - Reset the entire sequence by clicking the **Reset** button.
+<img src="../assets/studio/properties/All-Color-Input-Options.png" width="330" />
 
 </TabItem>
 </Tabs>
 
 ### Size
 
-The `Class.ParticleEmitter.Size|Size` property sets the size of each particle to a consistent size, or to a `Datatype.NumberSequence` across its [lifetime](#lifetime).
+The `Class.ParticleEmitter.Size|Size` property sets the size of each particle to a consistent size, or to a numerical sequence across its [lifetime](#lifetime).
 
 <Tabs>
-<TabItem label="Constant Size">
+<TabItem label="Scripting">
+In a script, set a `Datatype.NumberSequence` for the emitter's `Class.ParticleEmitter.Size|Size` property:
 
-1. In the **Explorer** window, select the `Class.ParticleEmitter`.
-1. In the **Properties** window, select the **Size** property.
-1. Input the size that you want each particle to be.
+```lua
+local emitter = Instance.new("ParticleEmitter")
+
+-- Constant size
+emitter.Size = NumberSequence.new(3)
+-- Numerical sequence
+emitter.Size = NumberSequence.new{
+	NumberSequenceKeypoint.new(0, 1),
+	NumberSequenceKeypoint.new(0.2, 4),
+	NumberSequenceKeypoint.new(1, 0)
+}
+```
 
 </TabItem>
-<TabItem label="Number Sequence">
+<TabItem label="Studio">
+In Studio, select the `Class.ParticleEmitter` in the [Explorer](../studio/explorer.md) hierarchy and, in the [Properties](../studio//properties.md) window:
 
-1. In the **Explorer** window, select the `Class.ParticleEmitter`.
-1. In the **Properties** window, click inside the **Size** property field, then click the **&ctdot;** button.
+**🄐** — Input a number into the value field.
 
-   <img src="../assets/studio/properties/Size-Open-Sequence.png" width="320" alt="Button to open number sequence popup" />
+**🄑** – Click the **&ctdot;** button to define a **size sequence**.
 
-   In the number sequence popup, each square at the start and end of the graph is a **keypoint** that determines the size value of the property at that
-   point in the particle's lifetime. By default, the graph defaults to a straight line and a particle remains the same size throughout its lifetime.
-
-   <img src="../assets/studio/general/NumberSequence-0-0-Keypoints-Labeled.png" width="828" alt="Keypoints labeled in number sequence popup" />
-
-1. Perform any of the following actions:
-
-   - To change the size at a point, click on a keypoint and either
-     drag it up or down, or enter a value in the **Value** field.
-   - To insert a new keypoint, click on any point in the graph.
-   - To delete a keypoint, select it and click the **Delete** button.
-   - Reset the entire sequence by clicking the **Reset** button.
-   - To add a random range for size, click on any keypoint and
-     drag the **envelope lines** up or down. At that time, particles
-     generate at a random size between the pink envelope.
-
-     <figure>
-     <img src="../assets/studio/general/NumberSequence-Envelope.png" width="450" alt="Envelope lines indicated in number sequence popup" />
-     <video src="../assets/lighting-and-effects/particle-emitter/Size-Envelope.mp4" controls width="720" alt="Video of emitter with large size envelope toward end of its lifetime"></video>
-     <figcaption>Emitter with large size envelope toward end of its lifetime</figcaption>
-     </figure>
+<img src="../assets/studio/properties/All-Size-Input-Options.png" width="330" />
 
 </TabItem>
 </Tabs>
@@ -172,7 +123,7 @@ Particle size can impact performance due to fill-rate. The more pixels particles
 
 ### Transparency
 
-The `Class.ParticleEmitter.Transparency|Transparency` property sets the opacity of each particle as a consistent value, or as a `Datatype.NumberSequence` opacity across its [lifetime](#lifetime). Opacity can range from **0** (totally opaque) to **1** (fully clear). For details on how to set particles to either a specific opacity or to a number sequence, follow the process in customizing [Size](#size) but use the emitter's **Transparency** property field instead.
+The `Class.ParticleEmitter.Transparency|Transparency` property sets the opacity of each particle as a consistent value, or as an opacity sequence across its [lifetime](#lifetime). Opacity can range from `0` (totally opaque) to `1` (fully clear). For details on how to set particles to either a specific opacity or to a number sequence, follow the process in customizing [Size](#size) but use the emitter's `Class.ParticleEmitter.Transparency|Transparency` property field instead.
 
 <Alert severity="success">
 The `Class.ParticleEmitter.Transparency|Transparency` property is one of the most vital properties of a particle emitter. Fading particles near the start and/or end of their lifetime avoids a popping in/out effect and provides a more realistic effect.
@@ -187,11 +138,10 @@ The `Class.ParticleEmitter.Transparency|Transparency` property is one of the mos
 
 The `Class.ParticleEmitter.Lifetime|Lifetime`
 property sets the lifetime of a particle in seconds. You can set this
-property either as a consistent value, or provide a **Min** and **Max**
-range from which a random lifetime will be chosen for each particle.
+property either as a consistent value, or provide a `Datatype.NumberRange.Min|Min` and `Datatype.NumberRange.Max|Max` range from which a random lifetime will be chosen for each particle.
 
 <Alert severity="info">
-Particles have a maximum lifetime of 20 seconds. `Class.ParticleEmitter.Lifetime|Lifetime` values higher than this will be internally capped at 20.
+Particles have a maximum lifetime of 20 seconds. `Class.ParticleEmitter.Lifetime|Lifetime` values higher than this will be internally capped at `20`.
 </Alert>
 
 ### Speed
@@ -224,19 +174,19 @@ orientation mode to use for an emitter's particle geometry.
 </thead>
 <tbody>
 <tr>
-<td>**FacingCamera**</td>
+<td>`Enum.ParticleOrientation|FacingCamera`</td>
 <td>Standard camera-facing billboard quad; default behavior.</td>
 </tr>
 <tr>
-<td>**FacingCameraWorldUp**</td>
+<td>`Enum.ParticleOrientation|FacingCameraWorldUp`</td>
 <td>Facing the camera, but rotating only on the vertical upward world **Y** axis.</td>
 </tr>
 <tr>
-<td>**VelocityParallel**</td>
+<td>`Enum.ParticleOrientation|VelocityParallel`</td>
 <td>Aligned parallel to their direction of movement.</td>
 </tr>
 <tr>
-<td>**VelocityPerpendicular**</td>
+<td>`Enum.ParticleOrientation|VelocityPerpendicular`</td>
 <td>Aligned perpendicular to their direction movement.</td>
 </tr>
 </tbody>
@@ -249,7 +199,7 @@ orientation mode to use for an emitter's particle geometry.
 
 ### LightEmission
 
-The `Class.ParticleEmitter.LightEmission|LightEmission` property determines the blending of particle `Class.ParticleEmitter.Texture|Texture` colors with the colors behind them. A value of 0 uses normal blending mode while a value of 1 uses additive blending. Higher values can make particles glow even in environments with low lighting.
+The `Class.ParticleEmitter.LightEmission|LightEmission` property determines the blending of particle `Class.ParticleEmitter.Texture|Texture` colors with the colors behind them. A value of `0` uses normal blending mode while a value of `1` uses additive blending. Higher values can make particles glow even in environments with low lighting.
 
 <video src="../assets/lighting-and-effects/particle-emitter/LightEmission.mp4" controls width="800" alt="Video showing light emission values of 0 vs. 1"></video>
 
@@ -261,30 +211,28 @@ The `Class.ParticleEmitter.SpreadAngle|SpreadAngle` property has an **X** and a 
 
 ### WindAffectsDrag
 
-If you've enabled [global wind](../environment/global-wind.md) in a game, particles will follow the global wind vector as long as the emitter's `Class.ParticleEmitter.WindAffectsDrag|WindAffectsDrag` property is enabled and its `Class.ParticleEmitter.Drag|Drag` property is greater than 0.
-
-<img src="../assets/studio/properties/ParticleEmitter-WindAffectsDrag.png" width="320" alt="Drag and WindAffectsDrag properties shown in Properties window of Studio" />
+If you've enabled [global wind](../environment/global-wind.md) in a game, particles will follow the global wind vector as long as the emitter's `Class.ParticleEmitter.WindAffectsDrag|WindAffectsDrag` property is enabled and its `Class.ParticleEmitter.Drag|Drag` property is greater than `0`.
 
 ### Shape
 
-The `Class.ParticleEmitter.Shape|Shape` property sets the shape of the particle emitter to either a **Box**, **Sphere**, **Cylinder**, or **Disc**.
+The `Class.ParticleEmitter.Shape|Shape` property sets the shape of the particle emitter to either a `Enum.ParticleEmitterShape|Box`, `Enum.ParticleEmitterShape|Sphere`, `Enum.ParticleEmitterShape|Cylinder`, or `Enum.ParticleEmitterShape|Disc`.
 
 <GridContainer numColumns="4">
   <figure>
     <img src="../assets/lighting-and-effects/particle-emitter/Shape-Box.jpg" alt="Emitter of Box shape" />
-    <figcaption>Box</figcaption>
+    <figcaption>`Enum.ParticleEmitterShape|Box`</figcaption>
   </figure>
   <figure>
     <img src="../assets/lighting-and-effects/particle-emitter/Shape-Sphere.jpg" alt="Emitter of Sphere shape" />
-    <figcaption>Sphere</figcaption>
+    <figcaption>`Enum.ParticleEmitterShape|Sphere`</figcaption>
   </figure>
   <figure>
     <img src="../assets/lighting-and-effects/particle-emitter/Shape-Cylinder.jpg" alt="Emitter of Cylinder shape" />
-    <figcaption>Cylinder</figcaption>
+    <figcaption>`Enum.ParticleEmitterShape|Cylinder`</figcaption>
   </figure>
   <figure>
     <img src="../assets/lighting-and-effects/particle-emitter/Shape-Disc.jpg" alt="Emitter of Disc shape" />
-    <figcaption>Disc</figcaption>
+    <figcaption>`Enum.ParticleEmitterShape|Disc`</figcaption>
   </figure>
 </GridContainer>
 
@@ -294,26 +242,24 @@ with the [ShapeStyle](#shapestyle), [ShapeInOut](#shapeinout), and
 emission.
 
 <Alert severity="warning">
-If you parent a particle emitter to an `Class.Attachment`, the **Sphere** and **Cylinder** shapes will not display correctly. These shapes should only be used if the emitter is parented to a `Class.BasePart`.
+If you parent a particle emitter to an `Class.Attachment`, the `Enum.ParticleEmitterShape|Sphere` and `Enum.ParticleEmitterShape|Cylinder` shapes will not display correctly. These shapes should only be used if the emitter is parented to a `Class.BasePart`.
 </Alert>
 
 #### ShapeStyle
 
-The
-`Class.ParticleEmitter.ShapeStyle|ShapeStyle`
-property sets the emission type to either:
+The `Class.ParticleEmitter.ShapeStyle|ShapeStyle` property sets the emission type to either:
 
-- **Volume** &mdash; Particles emit anywhere within the shape.
-- **Surface** &mdash; Particles only emit from the outside of the shape.
+- `Enum.ParticleEmitterShapeStyle|Volume` &mdash; Particles emit anywhere within the shape.
+- `Enum.ParticleEmitterShapeStyle|Surface` &mdash; Particles only emit from the outside of the shape.
 
 <GridContainer numColumns="3">
   <figure>
     <img src="../assets/lighting-and-effects/particle-emitter/Cylinder-Volume.jpg" alt="Emitter of Cylinder shape with Volume shape style" />
-    <figcaption>Cylinder + Volume</figcaption>
+    <figcaption>`Enum.ParticleEmitterShape|Cylinder` + `Enum.ParticleEmitterShapeStyle|Volume`</figcaption>
   </figure>
   <figure>
     <img src="../assets/lighting-and-effects/particle-emitter/Cylinder-Surface.jpg" alt="Emitter of Cylinder shape with Surface shape style" />
-    <figcaption>Cylinder + Surface</figcaption>
+    <figcaption>`Enum.ParticleEmitterShape|Cylinder` + `Enum.ParticleEmitterShapeStyle|Surface`</figcaption>
   </figure>
 </GridContainer>
 
@@ -321,61 +267,61 @@ property sets the emission type to either:
 
 The `Class.ParticleEmitter.ShapeInOut|ShapeInOut` property sets the emission as follows:
 
-- **Inward** &mdash; Particles emit toward the shape.
-- **Outward** &mdash; Particles emit away from the shape.
-- **InAndOut** &mdash; Particles randomly behave as both **Inward** and **Outward**.
+- `Enum.ParticleEmitterShapeInOut|Inward` &mdash; Particles emit toward the shape.
+- `Enum.ParticleEmitterShapeInOut|Outward` &mdash; Particles emit away from the shape.
+- `Enum.ParticleEmitterShapeInOut|InAndOut` &mdash; Particles randomly behave as both `Enum.ParticleEmitterShapeInOut|Inward` and `Enum.ParticleEmitterShapeInOut|Outward`.
 
 <video src="../assets/lighting-and-effects/particle-emitter/ShapeInOut.mp4" controls width="800" alt="Particles emitting with different ShapeInOut settings"></video>
 
 #### ShapePartial
 
-The `Class.ParticleEmitter.ShapePartial|ShapePartial` property is a factor you can use to further modify **Cylinder**, **Disc**, and **Sphere** shapes.
+The `Class.ParticleEmitter.ShapePartial|ShapePartial` property is a factor you can use to further modify `Enum.ParticleEmitterShape|Cylinder`, `Enum.ParticleEmitterShape|Disc`, and `Enum.ParticleEmitterShape|Sphere` shapes.
 
 <Tabs>
 <TabItem label="Cylinder">
 
-For cylinders, `Class.ParticleEmitter.ShapePartial|ShapePartial` multiplies the radius of the cylinder on the side of its **EmissionDirection**.
+For cylinders, `Class.ParticleEmitter.ShapePartial|ShapePartial` multiplies the radius of the cylinder on the side of its `Class.ParticleEmitter.EmissionDirection|EmissionDirection`.
 
 <GridContainer numColumns="3">
   <figure>
     <img src="../assets/lighting-and-effects/particle-emitter/Cylinder-ShapePartial-0.5.jpg" alt="Emitter of Cylinder shape with ShapePartial value of 0.5" />
-    <figcaption>ShapePartial = 0.5</figcaption>
+    <figcaption>`Class.ParticleEmitter.ShapePartial|ShapePartial` = `0.5`</figcaption>
   </figure>
   <figure>
     <img src="../assets/lighting-and-effects/particle-emitter/Cylinder-ShapePartial-0.jpg" alt="Emitter of Cylinder shape with ShapePartial value of 0" />
-    <figcaption>ShapePartial = 0</figcaption>
+    <figcaption>`Class.ParticleEmitter.ShapePartial|ShapePartial` = `0`</figcaption>
   </figure>
 </GridContainer>
 
 </TabItem>
 <TabItem label="Disc">
 
-For discs, `Class.ParticleEmitter.ShapePartial|ShapePartial` inversely multiplies the **inner radius** of the disc.
+For discs, `Class.ParticleEmitter.ShapePartial|ShapePartial` inversely multiplies the inner radius of the disc.
 
 <GridContainer numColumns="3">
   <figure>
     <img src="../assets/lighting-and-effects/particle-emitter/Disc-ShapePartial-0.5.jpg" alt="Emitter of Disc shape with ShapePartial value of 0.5" />
-    <figcaption>ShapePartial = 0.5</figcaption>
+    <figcaption>`Class.ParticleEmitter.ShapePartial|ShapePartial` = `0.5`</figcaption>
   </figure>
   <figure>
     <img src="../assets/lighting-and-effects/particle-emitter/Disc-ShapePartial-0.1.jpg" alt="Emitter of Disc shape with ShapePartial value of 0.1" />
-    <figcaption>ShapePartial = 0.1</figcaption>
+    <figcaption>`Class.ParticleEmitter.ShapePartial|ShapePartial` = `0.1`</figcaption>
   </figure>
 </GridContainer>
 
 </TabItem>
 <TabItem label="Sphere">
 
-For spheres, `Class.ParticleEmitter.ShapePartial|ShapePartial` multiplies the **hemispherical angle**.
+For spheres, `Class.ParticleEmitter.ShapePartial|ShapePartial` multiplies the hemispherical angle.
 
 <GridContainer numColumns="3">
   <figure>
     <img src="../assets/lighting-and-effects/particle-emitter/Shape-Sphere.jpg" alt="Emitter of Sphere shape with ShapePartial value of 1" />
-    <figcaption>ShapePartial = 1</figcaption>
+    <figcaption>`Class.ParticleEmitter.ShapePartial|ShapePartial` = `1`</figcaption>
   </figure>
   <figure>
     <img src="../assets/lighting-and-effects/particle-emitter/Sphere-ShapePartial-0.5.jpg" alt="Emitter of Sphere shape with ShapePartial value of 0.5" />
-    <figcaption>ShapePartial = 0.5</figcaption>
+    <figcaption>`Class.ParticleEmitter.ShapePartial|ShapePartial` = `0.5`</figcaption>
   </figure>
 </GridContainer>
 
@@ -384,10 +330,11 @@ For spheres, `Class.ParticleEmitter.ShapePartial|ShapePartial` multiplies the **
 
 ### Squash
 
-The `Class.ParticleEmitter.Squash|Squash` property allows for non-uniform scaling of particles, curve-controlled over their lifetime. Values greater than 0 cause particles to both shrink horizontally and grow vertically, while values less than 0 cause particles to both grow horizontally and shrink vertically. For details on how to set the squash amount to either a constant or to a `Datatype.NumberSequence`, follow the process in customizing [Size](#size) but use the emitter's **Squash** property field instead.
+The `Class.ParticleEmitter.Squash|Squash` property allows for non-uniform scaling of particles, curve-controlled over their lifetime. Values greater than `0` cause particles to both shrink horizontally and grow vertically, while values less than `0` cause particles to both grow horizontally and shrink vertically. For details on how to set the squash amount to either a constant or to a `Datatype.NumberSequence`, follow the process in customizing [Size](#size) but use the emitter's `Class.ParticleEmitter.Squash|Squash` property field instead.
+
 <video src="../assets/lighting-and-effects/particle-emitter/Squash.mp4" controls width="800" alt="Video of particles being gradually squashed over their lifetime"></video>
 
-Squash is especially useful for rain. Stretching a particle makes its texture much less recognizable, so even the default sparkle texture can pass as a falling raindrop. For details, see [Simulate rain](#simulate-rain).
+Squash is especially useful for rain. Stretching a particle makes its texture much less recognizable, so even the default sparkle texture can pass as a falling raindrop. For details, see [simulate rain](#simulate-rain).
 
 ### Flipbooks
 
@@ -424,10 +371,10 @@ The `Class.ParticleEmitter.FlipbookFramerate|FlipbookFramerate` property determi
 <TabItem label="FlipbookMode">
 The `Class.ParticleEmitter.FlipbookMode|FlipbookMode` property determines the type of the flipbook animation. The property can be any value of the `Enum.ParticleFlipbookMode` enum:
 
-- **Loop** &mdash; Continuously play through all frames, starting back at the first frame after playing the last.
-- **OneShot** &mdash; Play through the animation only once across the particle's lifetime. With this setting, the `Class.ParticleEmitter.FlipbookFramerate|FlipbookFramerate` property doesn't apply; instead, the framerate is determined by the particle's `Class.ParticleEmitter.Lifetime|Lifetime` divided evenly by the number of frames in the animation. **OneShot** animations are useful for clear non-repeating animations, such as an explosion that creates a puff of smoke and then fades out.
-- **PingPong** &mdash; Play from the first to the last frame, then in reverse from the last to the first, repeating throughout the `Class.ParticleEmitter.Lifetime|Lifetime` of the particle.
-- **Random** &mdash; Play the frames in a random order, blending/crossfading from one frame to the next. This can be useful for organic particle textures at low framerates, such as stars slowly twinkling between subtly different shapes.
+- `Enum.ParticleFlipbookMode|Loop` &mdash; Continuously play through all frames, starting back at the first frame after playing the last.
+- `Enum.ParticleFlipbookMode|OneShot` &mdash; Play through the animation only once across the particle's lifetime. With this setting, the `Class.ParticleEmitter.FlipbookFramerate|FlipbookFramerate` property doesn't apply; instead, the framerate is determined by the particle's `Class.ParticleEmitter.Lifetime|Lifetime` divided evenly by the number of frames in the animation. `Enum.ParticleFlipbookMode|OneShot` animations are useful for clear non-repeating animations, such as an explosion that creates a puff of smoke and then fades out.
+- `Enum.ParticleFlipbookMode|PingPong` &mdash; Play from the first to the last frame, then in reverse from the last to the first, repeating throughout the `Class.ParticleEmitter.Lifetime|Lifetime` of the particle.
+- `Enum.ParticleFlipbookMode|Random` &mdash; Play the frames in a random order, blending/crossfading from one frame to the next. This can be useful for organic particle textures at low framerates, such as stars slowly twinkling between subtly different shapes.
 
 </TabItem>
 
@@ -459,7 +406,7 @@ The following appearance properties are in addition to [color](#color), [light e
   </tr>
 	<tr>
     <td>`Class.ParticleEmitter.Brightness|Brightness`</td>
-    <td>Scales the light emitted from the emitter when `Class.ParticleEmitter.LightInfluence|LightInfluence` is 0.</td>
+    <td>Scales the light emitted from the emitter when `Class.ParticleEmitter.LightInfluence|LightInfluence` is `0`.</td>
   </tr>
   <tr>
     <td>`Class.ParticleEmitter.ZOffset|ZOffset` </td>
@@ -471,7 +418,7 @@ The following appearance properties are in addition to [color](#color), [light e
 </TabItem>
 <TabItem label="Emission">
 
-The following emission properties are in addition to [emission direction](#create-particle-emitters), [lifetime](#lifetime), [speed](#speed), [rate](#rate), [spread angle](#spreadangle), and [shape](#shape).
+The following emission properties are in addition to `Class.ParticleEmitter.EmissionDirection|EmissionDirection`, [lifetime](#lifetime), [speed](#speed), [rate](#rate), [spread angle](#spreadangle), and [shape](#shape).
 
 <table>
 <thead>
@@ -482,8 +429,8 @@ The following emission properties are in addition to [emission direction](#creat
 </thead>
 <tbody>
 	<tr>
-    <td>`Class.ParticleEmitter.Enabled|Enabled` </td>
-    <td>Determines if particles emit from the emitter. Setting this to `false` stops further particles from spawning, but any existing particles remain active until they expire or the `Class.ParticleEmitter:Clear()|Clear()` method is called.</td>
+    <td>`Class.ParticleEmitter.Enabled|Enabled`</td>
+    <td>Determines if particles emit from the emitter. Setting this to `false` stops further particles from spawning, but any existing particles remain active until they expire or the `Class.ParticleEmitter:Clear()|Clear()` method is called. When disabled, the `Class.ParticleEmitter:Emit()|Emit()` method can be called to emit a one-off burst of particles.</td>
   </tr>
   <tr>
     <td>`Class.ParticleEmitter.Rotation|Rotation`</td>
@@ -491,7 +438,7 @@ The following emission properties are in addition to [emission direction](#creat
   </tr>
   <tr>
     <td>`Class.ParticleEmitter.RotSpeed|RotSpeed`</td>
-    <td>Determines the angular speed in degrees per second for particles. This can be a single number or a number range for a randomized speed. Negative values cause particles to rotate counter-clockwise.</td>
+    <td>Determines the angular speed in degrees per second for particles. This can be a single number or a number range for a randomized speed. Negative values cause particles to rotate counter‑clockwise.</td>
   </tr>
 </tbody>
 </table>
@@ -523,7 +470,7 @@ The following motion properties are in addition to [wind influence](#windaffects
   </tr>
   <tr>
     <td>`Class.ParticleEmitter.TimeScale|TimeScale`</td>
-    <td>A value between 0 and 1 that controls the speed of the particle effect.</td>
+    <td>A value between `0` and `1` that controls the speed of the particle effect.</td>
   </tr>
 	<tr>
     <td>`Class.ParticleEmitter.VelocityInheritance|VelocityInheritance`</td>
@@ -539,27 +486,25 @@ The following motion properties are in addition to [wind influence](#windaffects
 
 Simulating every raindrop isn't practical, but particle emitters can create a convincing illusion of rain in a 3D world:
 
-1. Insert a `Class.Part` above the area where you want rain to fall. Anchor it, set its **Transparency** to `1`, and disable **CanCollide**.
-1. Insert a `Class.ParticleEmitter` into the part and set its `Class.ParticleEmitter.EmissionDirection|EmissionDirection` to **Bottom**.
-1. Set [Squash](#squash) to a positive value, such as `3`, to stretch each particle into a streak. Higher values make particles thinner, so you might need to increase [size](#size) as well.
+1. Insert a `Class.Part` above the area where you want rain to fall. Anchor it, set its `Class.BasePart.Transparency|Transparency` to `1`, and disable `Class.BasePart.CanCollide|CanCollide`.
+1. Insert a `Class.ParticleEmitter` into the part and set its `Class.ParticleEmitter.EmissionDirection|EmissionDirection` to `Enum.NormalId.Bottom|Bottom`. A single emitter can create a limited number of particles per second (see [Rate](#rate)), so heavier rain or a larger area requires many parts with emitters arranged in a grid over the desired area.
+1. Set `Class.ParticleEmitter.Squash|Squash` to a positive value, such as `3`, to stretch each particle into a streak. Higher values make particles thinner, so you might need to increase [size](#size) as well.
 
    <Alert severity="success">
-   If you set [Orientation](#orientation) to **VelocityParallel** so that streaks align with their direction of travel, use a negative squash value instead.
+   If you set `Class.ParticleEmitter.Orientation|Orientation` to `Enum.ParticleOrientation.VelocityParallel|VelocityParallel` so that streaks align with their direction of travel, use a negative `Class.ParticleEmitter.Squash|Squash` value instead.
    </Alert>
 
-1. Darken [Color](#color), increase **LightInfluence** so that the rain reacts to the lighting around it, increase [Speed](#speed), and decrease [Lifetime](#lifetime) so that particles disappear near the ground.
-1. To angle the rain, set a small **Rotation** or enable [WindAffectsDrag](#windaffectsdrag) so that particles follow [global wind](../environment/global-wind.md). Drag slows the fall in addition to applying the wind, so you might need to increase the downward **Acceleration** to keep the rain falling quickly.
+1. Darken `Class.ParticleEmitter.Color|Color`, increase `Class.ParticleEmitter.LightInfluence|LightInfluence` so that the rain reacts to the lighting around it, increase `Class.ParticleEmitter.Speed|Speed`, and decrease `Class.ParticleEmitter.Lifetime|Lifetime` so that particles disappear near the ground.
+1. To angle the rain, set a small `Class.ParticleEmitter.Rotation|Rotation` or enable `Class.ParticleEmitter.WindAffectsDrag|WindAffectsDrag` so that particles follow [global wind](../environment/global-wind.md). `Class.ParticleEmitter.Drag|Drag` slows the fall in addition to applying the wind, so you might need to increase the downward `Class.ParticleEmitter.Acceleration|Acceleration` to keep the rain falling quickly.
 
-A single emitter can create a limited number of particles per second (see [Rate](#rate)), so heavier rain or a larger area requires many parts with emitters. Arrange them in a grid over the desired area.
-
-To show rain landing, place transparent parts on the ground with emitters whose **EmissionDirection** is **Top**. Splash particles aren't stretched like falling rain, so they usually need a custom [texture](#texture) and a [Transparency](#transparency) sequence that makes each splash appear to dissipate. Splashes only look right on surfaces where you've placed them carefully. If you can't place them by hand, low-lying mist is much more forgiving.
+To show rain landing, place transparent parts on the ground with emitters whose `Class.ParticleEmitter.EmissionDirection|EmissionDirection` is `Enum.NormalId.Top|Top`. Splash particles aren't stretched like falling rain, so they usually need a custom [texture](#texture) and a [transparency](#transparency) sequence that makes each splash appear to dissipate. Splashes only look right on surfaces where you've placed them carefully. If you can't place them by hand, low-lying mist is much more forgiving.
 
 ### Manage particle limits
 
 Rain that covers a large area reaches particle limits quickly, and mobile devices have much lower limits than desktops. If particles flicker in the distance, reduce how many are on screen at once:
 
-- Place the emitter parts lower in the air and shorten **Lifetime** to match.
-- Decrease **Rate** to turn a downpour into a lighter shower.
+- Place the emitter parts lower in the air and shorten `Class.ParticleEmitter.Lifetime|Lifetime` to match.
+- Decrease `Class.ParticleEmitter.Rate|Rate` to turn a downpour into a lighter shower.
 - Cover a smaller area with fewer emitter parts.
 
 ### Rain examples

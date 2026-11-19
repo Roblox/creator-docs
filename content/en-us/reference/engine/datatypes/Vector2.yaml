@@ -58,15 +58,6 @@ constructors:
     description: |
       Returns a `Datatype.Vector2` from the given x and y components. Both
       parameters default to `0` if not provided.
-
-      ```lua
-      local a = Vector2.new(3, 4)
-      print(a.X, a.Y)  --> 3  4
-
-      -- Omitted arguments default to 0
-      local b = Vector2.new()
-      print(b.X, b.Y)  --> 0  0
-      ```
     parameters:
       - name: x
         type: number
@@ -78,7 +69,8 @@ constructors:
         default:
         summary: |
           The y-coordinate of the new vector (defaults to 0).
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-new
     tags: []
     deprecation_message: ''
 constants:
@@ -92,11 +84,8 @@ constants:
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector2` global as opposed to an individual `Datatype.Vector2`
       object.
-
-      ```lua
-      print(Vector2.zero)  --> 0, 0
-      ```
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-zero
     tags: []
     deprecation_message: ''
   - name: Vector2.one
@@ -109,11 +98,8 @@ constants:
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector2` global as opposed to an individual `Datatype.Vector2`
       object.
-
-      ```lua
-      print(Vector2.one)  --> 1, 1
-      ```
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-one
     tags: []
     deprecation_message: ''
   - name: Vector2.xAxis
@@ -126,11 +112,8 @@ constants:
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector2` global as opposed to an individual `Datatype.Vector2`
       object.
-
-      ```lua
-      print(Vector2.xAxis)  --> 1, 0
-      ```
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-xAxis
     tags: []
     deprecation_message: ''
   - name: Vector2.yAxis
@@ -143,11 +126,8 @@ constants:
       This API member is a **constant**, and must be accessed through the
       `Datatype.Vector2` global as opposed to an individual `Datatype.Vector2`
       object.
-
-      ```lua
-      print(Vector2.yAxis)  --> 0, 1
-      ```
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-yAxis
     tags: []
     deprecation_message: ''
 properties:
@@ -158,13 +138,9 @@ properties:
     description: |
       The x-coordinate of the `Datatype.Vector2`, corresponding to the first
       argument passed to `Datatype.Vector2.new()`. This property is read-only.
-
-      ```lua
-      local v = Vector2.new(3, 4)
-      print(v.X)  --> 3
-      ```
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-X
     tags: []
     deprecation_message: ''
   - name: Vector2.Y
@@ -174,13 +150,9 @@ properties:
     description: |
       The y-coordinate of the `Datatype.Vector2`, corresponding to the second
       argument passed to `Datatype.Vector2.new()`. This property is read-only.
-
-      ```lua
-      local v = Vector2.new(3, 4)
-      print(v.Y)  --> 4
-      ```
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Y
     tags: []
     deprecation_message: ''
   - name: Vector2.Magnitude
@@ -190,13 +162,9 @@ properties:
     description: |
       The length (magnitude) of the `Datatype.Vector2`, computed as
       `math.sqrt(X^2 + Y^2)`. This property is read-only.
-
-      ```lua
-      local v = Vector2.new(3, 4)
-      print(v.Magnitude)  --> 5
-      ```
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Magnitude
     tags: []
     deprecation_message: ''
   - name: Vector2.Unit
@@ -208,14 +176,9 @@ properties:
       direction as the original but a magnitude of 1. If the vector has zero
       magnitude the result is undefined (contains `nan` values). This property
       is read-only.
-
-      ```lua
-      local v = Vector2.new(3, 4)
-      print(v.Unit)             --> 0.6, 0.8
-      print(v.Unit.Magnitude)   --> 1
-      ```
     default:
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Unit
     tags: []
     deprecation_message: ''
 methods:
@@ -229,13 +192,6 @@ methods:
       the signed magnitude of the perpendicular (Z) component. The result is
       positive when `other` is counter-clockwise from `self`, negative when
       clockwise, and zero when the vectors are parallel.
-
-      ```lua
-      local a = Vector2.new(1, 0)
-      local b = Vector2.new(0, 1)
-      print(a:Cross(b))  -->  1
-      print(b:Cross(a))  --> -1
-      ```
     parameters:
       - name: other
         type: Vector2
@@ -247,7 +203,8 @@ methods:
         summary: |
           The signed scalar magnitude of the perpendicular component, computed
           as `self.X * other.Y - self.Y * other.X`.
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Cross
     tags: []
     deprecation_message: ''
   - name: Vector2:Abs
@@ -264,7 +221,8 @@ methods:
         summary: |
           A new vector whose components are the absolute values of the
           original's components.
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Abs
     tags: []
     deprecation_message: ''
   - name: Vector2:Ceil
@@ -279,7 +237,8 @@ methods:
         summary: |
           A new vector whose components are the ceiling (rounded up) of the
           original's components.
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Ceil
     tags: []
     deprecation_message: ''
   - name: Vector2:Floor
@@ -294,7 +253,8 @@ methods:
         summary: |
           A new vector whose components are the floor (rounded down) of the
           original's components.
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Floor
     tags: []
     deprecation_message: ''
   - name: Vector2:Sign
@@ -311,7 +271,8 @@ methods:
         summary: |
           A new vector whose components are the sign (-1, 0, or 1) of the
           original's components.
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Sign
     tags: []
     deprecation_message: ''
   - name: Vector2:Angle
@@ -340,7 +301,8 @@ methods:
         summary: |
           The angle in radians between the two vectors, in the range [0, pi] for
           unsigned or [-pi, pi] for signed.
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Angle
     tags: []
     deprecation_message: ''
   - name: Vector2:Dot
@@ -353,13 +315,6 @@ methods:
       value means the vectors point in roughly the same direction; zero means
       they are perpendicular; negative means they point in roughly opposite
       directions.
-
-      ```lua
-      local a = Vector2.new(1, 0)
-      local b = Vector2.new(0, 1)
-      print(a:Dot(b))  --> 0  (perpendicular)
-      print(a:Dot(a))  --> 1  (parallel, equal to Magnitude^2)
-      ```
     parameters:
       - name: v
         type: Vector2
@@ -371,7 +326,8 @@ methods:
         summary: |
           The scalar dot product of the two vectors, equal to
           `self.X * v.X + self.Y * v.Y`.
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Dot
     tags: []
     deprecation_message: ''
   - name: Vector2:Lerp
@@ -385,12 +341,6 @@ methods:
       an `alpha` of 1 returns `v`, and values between 0 and 1 return a point in
       between. Note that `alpha` is **not** clamped to `[0, 1]` — values outside
       that range extrapolate beyond the two endpoints.
-
-      ```lua
-      local a = Vector2.new(0, 0)
-      local b = Vector2.new(4, 8)
-      print(a:Lerp(b, 0.5))  --> 2, 4
-      ```
     parameters:
       - name: v
         type: Vector2
@@ -408,7 +358,8 @@ methods:
         summary: |
           A vector linearly interpolated between this vector and `v` by the
           fraction `alpha`.
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Lerp
     tags: []
     deprecation_message: ''
   - name: Vector2:Max
@@ -418,13 +369,6 @@ methods:
     description: |
       Returns a `Datatype.Vector2` with each component as the highest among the
       respective components of the provided `Datatype.Vector2` objects.
-
-      ```lua
-      local a = Vector2.new(1, 2)
-      local b = Vector2.new(2, 1)
-
-      print(a:Max(b)) -- Vector2.new(2, 2)
-      ```
     parameters:
       - name: others...
         type: Tuple
@@ -436,7 +380,8 @@ methods:
         summary: |
           A vector whose each component is the highest value found among this
           vector and all provided vectors.
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Max
     tags: []
     deprecation_message: ''
   - name: Vector2:Min
@@ -446,13 +391,6 @@ methods:
     description: |
       Returns a `Datatype.Vector2` with each component as the lowest among the
       respective components of the provided `Datatype.Vector2` objects.
-
-      ```lua
-      local a = Vector2.new(1, 2)
-      local b = Vector2.new(2, 1)
-
-      print(a:Min(b)) -- Vector2.new(1, 1)
-      ```
     parameters:
       - name: others...
         type: Tuple
@@ -464,7 +402,8 @@ methods:
         summary: |
           A vector whose each component is the lowest value found among this
           vector and all provided vectors.
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Min
     tags: []
     deprecation_message: ''
   - name: Vector2:FuzzyEq
@@ -479,13 +418,6 @@ methods:
       `math.abs(self.X - other.X)` and `math.abs(self.Y - other.Y)` must be less
       than or equal to `epsilon`. The optional `epsilon` parameter defaults to
       `1e-5` (0.00001) and must be a positive value no greater than `0.1`.
-
-      ```lua
-      local a = Vector2.new(1, 2)
-      local b = Vector2.new(1.000009, 2.000009)
-      print(a:FuzzyEq(b))           --> true  (within default 1e-5)
-      print(a:FuzzyEq(b, 0.000001)) --> false (tighter epsilon)
-      ```
     parameters:
       - name: other
         type: Vector2
@@ -503,7 +435,8 @@ methods:
         summary: |
           `true` if every component of this vector is within `epsilon` of the
           corresponding component of `other`.
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-FuzzyEq
     tags: []
     deprecation_message: ''
 functions: []
@@ -516,14 +449,11 @@ math_operations:
     description: |
       Produces a `Datatype.Vector2` with each component of the second added to
       the corresponding component of the first.
-
-      ```lua
-      print(Vector2.new(1, 2) + Vector2.new(3, 4))  --> 4, 6
-      ```
     type_a: Vector2
     type_b: Vector2
     return_type: Vector2
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Add
     tags: []
     deprecation_message: ''
   - name: '-'
@@ -534,14 +464,11 @@ math_operations:
     description: |
       Produces a `Datatype.Vector2` with each component of the second subtracted
       from the corresponding component of the first.
-
-      ```lua
-      print(Vector2.new(3, 4) - Vector2.new(1, 2))  --> 2, 2
-      ```
     type_a: Vector2
     type_b: Vector2
     return_type: Vector2
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Subtract
     tags: []
     deprecation_message: ''
   - name: '*'
@@ -553,14 +480,11 @@ math_operations:
       Produces a `Datatype.Vector2` with each component of the second multiplied
       by the corresponding component of the first (component-wise
       multiplication, not a dot or cross product).
-
-      ```lua
-      print(Vector2.new(2, 3) * Vector2.new(4, 5))  --> 8, 15
-      ```
     type_a: Vector2
     type_b: Vector2
     return_type: Vector2
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Multiply
     tags: []
     deprecation_message: ''
   - name: /
@@ -571,14 +495,11 @@ math_operations:
     description: |
       Produces a `Datatype.Vector2` with each component of the first divided by
       the corresponding component of the second (component-wise division).
-
-      ```lua
-      print(Vector2.new(8, 15) / Vector2.new(4, 5))  --> 2, 3
-      ```
     type_a: Vector2
     type_b: Vector2
     return_type: Vector2
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-Divide
     tags: []
     deprecation_message: ''
   - name: '*'
@@ -589,14 +510,11 @@ math_operations:
     description: |
       Produces a `Datatype.Vector2` with each component multiplied by the number
       (scalar multiplication).
-
-      ```lua
-      print(Vector2.new(2, 3) * 4)  --> 8, 12
-      ```
     type_a: Vector2
     type_b: number
     return_type: Vector2
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-MultiplyNumber
     tags: []
     deprecation_message: ''
   - name: /
@@ -606,13 +524,10 @@ math_operations:
     description: |
       Produces a `Datatype.Vector2` with each component divided by the number
       (scalar division).
-
-      ```lua
-      print(Vector2.new(8, 12) / 4)  --> 2, 3
-      ```
     type_a: Vector2
     type_b: number
     return_type: Vector2
-    code_samples: []
+    code_samples:
+      - datatype-Vector2-DivideNumber
     tags: []
     deprecation_message: ''

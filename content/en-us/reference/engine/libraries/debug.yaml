@@ -25,30 +25,19 @@ functions:
       does not stop execution of the script.
 
       The `level` parameter specifies what level of the call stack to consider,
-      with `1` being the call of `Library.debug.traceback()` itself, `2` being
-      the call of the function calling `Library.debug.traceback()`, and so on.
-      See the code sample below for an example of sequential function calls.
+      with `1` (the default, and what `0` also gives) being the function that
+      called `Library.debug.traceback()`, `2` being the function that called
+      that function, and so on. The traceback lists the chosen frame and every
+      frame above it. See the code sample for an example of sequential function
+      calls.
 
       Note that this function will often return inaccurate results (compared to
       the original source code) and that the format of the returned traceback
       may change at any time. You should **not** parse the return value for
       specific information such as script names or line numbers.
 
-      The following example includes sequential function calls; `fnB()` is
-      called, and it calls `fnA()` which then calls `Library.debug.traceback()`.
-
-      ```lua
-      local function fnA()
-      	print(debug.traceback("Specific moment during fnA()"))
-      end
-
-      local function fnB()
-      	fnA()
-      end
-
-      -- Call function fnB() to begin traceback
-      fnB()
-      ```
+      The code sample includes sequential function calls; `fnB()` is called, and
+      it calls `fnA()` which then calls `Library.debug.traceback()`.
     parameters:
       - name: message
         type: string
@@ -59,13 +48,15 @@ functions:
         type: number
         default: 1
         summary: |
-          The number of calls "up" the call stack to return.
+          The frame to start the traceback at. The traceback lists that frame
+          and every caller above it.
     returns:
       - type: string
         summary: |
           Traceback of the current function call stack.
     tags: []
-    code_samples: []
+    code_samples:
+      - debug-traceback
     deprecation_message: ''
   - name: debug.traceback
     summary: |
@@ -78,30 +69,18 @@ functions:
       does not stop execution of the script.
 
       The `level` parameter specifies what level of the call stack to consider,
-      with `1` being the call of `Library.debug.traceback()` itself, `2` being
-      the call of the function calling `Library.debug.traceback()`, and so on.
-      See the code sample below for an example of sequential function calls.
+      with `1` (the default, and what `0` also gives) being the function the
+      coroutine is suspended in, `2` being the function that called that
+      function, and so on. The traceback lists the chosen frame and every frame
+      above it. See the code sample for an example with a coroutine.
 
       Note that this function will often return inaccurate results (compared to
       the original source code) and that the format of the returned traceback
       may change at any time. You should **not** parse the return value for
       specific information such as script names or line numbers.
 
-      The following example includes sequential function calls; `fnB()` is
-      called, and it calls `fnA()` which then calls `Library.debug.traceback()`.
-
-      ```lua
-      local function fnA()
-      	print(debug.traceback("Specific moment during fnA()"))
-      end
-
-      local function fnB()
-      	fnA()
-      end
-
-      -- Call function fnB() to begin traceback
-      fnB()
-      ```
+      The code sample inspects a coroutine that is suspended inside a nested
+      call.
     parameters:
       - name: thread
         type: thread
@@ -117,34 +96,26 @@ functions:
         type: number
         default: 1
         summary: |
-          The number of calls "up" the call stack to return.
+          The frame to start the traceback at. The traceback lists that frame
+          and every caller above it.
     returns:
       - type: string
         summary: |
           Traceback of the current function call stack.
     tags: []
-    code_samples: []
+    code_samples:
+      - debug-traceback-2
     deprecation_message: ''
   - name: debug.info
     summary: |
-      Traverses the entire stack of current thread and returns a string
-      containing the call stack of target level details.
+      Returns information about the function at the given level of the current
+      thread's call stack.
     description: |
       Allows programmatic inspection of the call stack. This function differs
       from `Library.debug.traceback()` in that it guarantees the format of the
       data it returns. This is useful for general logging and filtering purposes
       as well as for sending the data to systems expecting structured input,
       such as crash aggregation.
-
-      ```lua
-      local function fnA()
-      	-- Output source identifier ("s") and line ("l") at levels 1 and 2
-      	print(debug.info(1, "sl"))  --> fnA() 3
-      	print(debug.info(2, "sl"))  --> fnA() 7
-      end
-
-      fnA()
-      ```
 
       Note that this function is similar to
       [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
@@ -157,7 +128,8 @@ functions:
           Determines at what level of the call stack the information returned
           should describe. A value of `1` represents the function which is
           calling `Library.debug.info()`, a value of `2` represents the function
-          that called that function, and so on.
+          that called that function, and so on. A value of `0` represents
+          `Library.debug.info()` itself.
       - name: options
         type: string
         default:
@@ -185,32 +157,18 @@ functions:
           identifier (`s`), line number (`l`), function name (`n`), parameter
           count and whether variadic (`a`), or the function itself (`f`).
     tags: []
-    code_samples: []
+    code_samples:
+      - debug-info
     deprecation_message: ''
   - name: debug.info
     summary: |
-      Traverses the entire stack of current thread and returns a string
-      containing the call stack of target function details.
+      Returns information about the given function.
     description: |
       Allows programmatic inspection of the call stack. This function differs
       from `Library.debug.traceback()` in that it guarantees the format of the
       data it returns. This is useful for general logging and filtering purposes
       as well as for sending the data to systems expecting structured input,
       such as crash aggregation.
-
-      ```lua
-      local function fnA()
-
-      end
-
-      local function fnB()
-
-      end
-
-      -- Output line ("l"), name ("n"), and identifier ("f") for both fnA() and fnB()
-      print(debug.info(fnA, "lnf"))  --> 1 fnA function: 0x75e3d3c398a81252
-      print(debug.info(fnB, "lnf"))  --> 5 fnB function: 0x6022a6dc5ccf4ab2
-      ```
 
       Note that this function is similar to
       [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
@@ -249,7 +207,8 @@ functions:
           identifier (`s`), line number (`l`), function name (`n`), parameter
           count and whether variadic (`a`), or the function itself (`f`).
     tags: []
-    code_samples: []
+    code_samples:
+      - debug-info-2
     deprecation_message: ''
   - name: debug.info
     summary: |
@@ -261,16 +220,6 @@ functions:
       data it returns. This is useful for general logging and filtering purposes
       as well as for sending the data to systems expecting structured input,
       such as crash aggregation.
-
-      ```lua
-      local function fnA()
-      	-- Output source identifier ("s") and line ("l") at levels 1 and 2
-      	print(debug.info(1, "sl"))  --> fnA() 3
-      	print(debug.info(2, "sl"))  --> fnA() 7
-      end
-
-      fnA()
-      ```
 
       Note that this function is similar to
       [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
@@ -316,7 +265,8 @@ functions:
           identifier (`s`), line number (`l`), function name (`n`), parameter
           count and whether variadic (`a`), or the function itself (`f`).
     tags: []
-    code_samples: []
+    code_samples:
+      - debug-info-3
     deprecation_message: ''
   - name: debug.profilebegin
     summary: |
@@ -336,7 +286,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - debug-profilebegin
     deprecation_message: ''
   - name: debug.profileend
     summary: |
@@ -351,7 +302,8 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - debug-profileend
     deprecation_message: ''
   - name: debug.getmemorycategory
     summary: |
@@ -364,7 +316,8 @@ functions:
         summary: |
           The current thread's active memory category.
     tags: []
-    code_samples: []
+    code_samples:
+      - debug-getmemorycategory
     deprecation_message: ''
   - name: debug.setmemorycategory
     summary: |
@@ -387,7 +340,8 @@ functions:
         summary: |
           The current thread's previous memory category.
     tags: []
-    code_samples: []
+    code_samples:
+      - debug-setmemorycategory
     deprecation_message: ''
   - name: debug.resetmemorycategory
     summary: |
@@ -401,20 +355,29 @@ functions:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - debug-resetmemorycategory
     deprecation_message: ''
   - name: debug.dumpcodesize
     summary: |
       Displays a table of native code size of individual functions and scripts.
     description: |
       Displays a table of native code size of individual functions and scripts.
-      This function is only available in the Command Bar in Studio. More details
-      can be found on the [Native Code Generation](/luau/native-code-gen.md)
-      page.
+      This function is only available in the Command Bar in Studio, and raises
+      an error when called from anywhere else. It prints a "Native Code Size
+      Analysis" report to the Output window. The report starts with the number
+      of scripts and functions, the memory used, and the code size limit. It
+      then has one table for each script that opted into native code generation
+      with `--!native`, listing each function with its line, its native code
+      size and that size as a percentage of the limit, largest first. If no
+      native script has compiled, it prints a message saying so instead. More
+      details can be found on the
+      [Native Code Generation](/luau/native-code-gen.md) page.
     parameters: []
     returns:
       - type: ()
         summary: ''
     tags: []
-    code_samples: []
+    code_samples:
+      - debug-dumpcodesize
     deprecation_message: ''

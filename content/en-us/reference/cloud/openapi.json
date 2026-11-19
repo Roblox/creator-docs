@@ -14962,10 +14962,10 @@
             "in": "query",
             "description": "The view in which to retrieve the subscription.\n\nSupports BASIC and FULL.\n\nDefaults to BASIC.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | VIEW_UNSPECIFIED | The subscription view is not specified; the default will be used. |\n  | BASIC | Includes only the `active` and `renewing` fields. |\n  | FULL | Includes all fields. |",
             "schema": {
-              "example": "VIEW_UNSPECIFIED",
               "enum": ["VIEW_UNSPECIFIED", "BASIC", "FULL"],
               "type": "string",
-              "format": "enum"
+              "format": "enum",
+              "example": "VIEW_UNSPECIFIED"
             }
           }
         ],
@@ -14975,42 +14975,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Subscription"
+                  "$ref": "#/components/schemas/Roblox.Subscriptions.OpenCloud.V2.Subscription"
                 }
               }
             }
-          }
-        },
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "universe:write",
-            "targetResourceSpecifier": "universes"
-          },
-          {
-            "name": "universe.subscription-product.subscription:read",
-            "targetResourceSpecifier": "universes"
-          },
-          {
-            "name": "universe:write"
-          },
-          {
-            "name": "universe.subscription-product.subscription:read"
-          }
-        ],
-        "x-roblox-docs": {
-          "category": "Monetization",
-          "methodProperties": {
-            "scopes": [
-              "universe:write",
-              "universe.subscription-product.subscription:read"
-            ]
-          },
-          "resource": {
-            "$ref": "#/components/schemas/Subscription",
-            "name": "Subscription"
           }
         },
         "x-roblox-stability": "BETA",
@@ -15023,6 +14991,19 @@
             "period": "SECOND",
             "maxInPeriod": 3
           }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe:write",
+            "targetResourceSpecifier": "universes"
+          },
+          {
+            "name": "universe.subscription-product.subscription:read",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
         },
         "security": [
           {
@@ -28976,6 +28957,14 @@
             }
           }
         },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://apis.roblox.com/server-management/v1/universes/{universeId}/restarts:forecast",
+            "httpMethod": "GET",
+            "description": "Forecast a server restart using the universe ID in the URL instead of the request body.",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/observability#Restarts_ForecastRestart"
+          }
+        ],
         "x-roblox-stability": "BETA",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
@@ -29016,6 +29005,14 @@
             }
           }
         },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://apis.roblox.com/server-management/v1/universes/{universeId}/restarts",
+            "httpMethod": "GET",
+            "description": "List server restart statuses using the universe ID in the URL instead of a query parameter.",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/observability#Restarts_ListRestartStatuses"
+          }
+        ],
         "x-roblox-stability": "BETA",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
@@ -29070,6 +29067,14 @@
             }
           }
         },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://apis.roblox.com/server-management/v1/universes/{universeId}/restarts",
+            "httpMethod": "POST",
+            "description": "Launch a server restart using the universe ID in the URL.",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/observability#Restarts_LaunchRestart"
+          }
+        ],
         "x-roblox-stability": "BETA",
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
@@ -38082,228 +38087,6 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/creator-store#Toolbox_SearchCreatorStoreAssets"
-        }
-      }
-    },
-    "/universe-performance-raqi/v1/events/logging/universe/{universeId}/log-details": {
-      "get": {
-        "tags": ["Analytics"],
-        "summary": "Get logs based on message hash ids, keywords, placeVersions, start/end time.",
-        "operationId": "ErrorLoggingDetail_GetLogs",
-        "parameters": [
-          {
-            "name": "universeId",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "messageHashIds",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          {
-            "name": "keyword",
-            "in": "query",
-            "description": "Optional keyword to help highlight matching keyword in the error message",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "startTime",
-            "in": "query",
-            "description": "Optional query window start; omitted values are defaulted server-side.",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "endTime",
-            "in": "query",
-            "description": "Optional query window end; omitted values are defaulted server-side.",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "placeId",
-            "in": "query",
-            "description": "Optional place id filter.",
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "placeVersions",
-            "in": "query",
-            "description": "Optional place version filters.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "integer",
-                "format": "int64"
-              }
-            }
-          },
-          {
-            "name": "firstSeenPlaceVersion",
-            "in": "query",
-            "description": "Optional minimum first seen place version filter (inclusive).",
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorLogDetailResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorLogDetailResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorLogDetailResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Server Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 60
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 60
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "universe.analytics:read",
-            "targetResourceSpecifier": "universe"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          },
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.analytics:read"]
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#ErrorLoggingDetail_GetLogs"
         }
       }
     },
@@ -92924,73 +92707,6 @@
         },
         "additionalProperties": false
       },
-      "ErrorLogDetail": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "The message hash id for this log detail.",
-            "nullable": true
-          },
-          "logSeverity": {
-            "type": "string",
-            "description": "The logSeverity of the log",
-            "nullable": true
-          },
-          "logSource": {
-            "type": "string",
-            "description": "The source of the log",
-            "nullable": true
-          },
-          "os": {
-            "type": "string",
-            "nullable": true
-          },
-          "platform": {
-            "type": "string",
-            "nullable": true
-          },
-          "message": {
-            "type": "string",
-            "description": "The message of the error log",
-            "nullable": true
-          },
-          "stacktrace": {
-            "type": "string",
-            "description": "The stack trace of the error log. This might be not available",
-            "nullable": true
-          },
-          "firstSeenUtc": {
-            "type": "string",
-            "description": "UTC timestamp when this error was first observed.\r\nNull when the source document predates this field being populated.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "firstSeenPlaceVersion": {
-            "type": "integer",
-            "description": "First seen place version for the error.\r\nNOTE: This value will only be returned when place id is filtered",
-            "format": "int64",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "error log detail"
-      },
-      "ErrorLogDetailResponse": {
-        "type": "object",
-        "properties": {
-          "values": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ErrorLogDetail"
-            },
-            "description": "The analytics data for display.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "Response for top error logs"
-      },
       "ErrorResponse": {
         "type": "object",
         "properties": {
@@ -94882,6 +94598,11 @@
         "properties": {
           "dataStoreLocation": {
             "$ref": "#/components/schemas/DataStoreLocation"
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Whether game join routes players with the universe's start place override.\nNull when no start place override is configured for the universe.",
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -106785,6 +106506,12 @@
             "format": "int32",
             "enum": [1, 2, 3],
             "type": "integer"
+          },
+          "agreementIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "additionalProperties": false
@@ -117811,6 +117538,133 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Subscriptions.OpenCloud.V2.Subscription": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the subscription.\n\nFormat:\n`universes/{universe_id}/subscription-products/{subscription_product_id}/subscriptions/{subscription_id}`"
+          },
+          "createTime": {
+            "type": "string",
+            "description": "The timestamp when the subscription was created.",
+            "format": "date-time",
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z"
+          },
+          "updateTime": {
+            "type": "string",
+            "description": "The timestamp when the subscription was last updated.",
+            "format": "date-time",
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z"
+          },
+          "active": {
+            "type": "boolean",
+            "description": "Whether the subscription is active.\n\nThis is equivalent  to whether `state` is equal to SUBSCRIBED_WILL_RENEW,\nSUBSCRIBED_WILL_NOT_RENEW, or SUBSCRIBED_RENEWAL_PAYMENT_PENDING.",
+            "readOnly": true,
+            "example": true
+          },
+          "willRenew": {
+            "type": "boolean",
+            "description": "Whether the subscription will renew.\n\nThis is equivalent to whether `state` is equal to SUBSCRIBED_WILL_RENEW or\nSUBSCRIBED_RENEWAL_PAYMENT_PENDING.",
+            "readOnly": true,
+            "example": true
+          },
+          "lastBillingTime": {
+            "type": "string",
+            "description": "The timestamp when the subscription was last billed.",
+            "format": "date-time",
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z"
+          },
+          "nextRenewTime": {
+            "type": "string",
+            "description": "The timestamp when the subscription will next be automatically renewed.",
+            "format": "date-time",
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z"
+          },
+          "expireTime": {
+            "type": "string",
+            "description": "The timestamp when the subscription will, or did, expire.",
+            "format": "date-time",
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z"
+          },
+          "state": {
+            "enum": [
+              "STATE_UNSPECIFIED",
+              "SUBSCRIBED_WILL_RENEW",
+              "SUBSCRIBED_WILL_NOT_RENEW",
+              "SUBSCRIBED_RENEWAL_PAYMENT_PENDING",
+              "EXPIRED"
+            ],
+            "type": "string",
+            "description": "The state of the subscription.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | STATE_UNSPECIFIED | The subscription state is unspecified. |\n  | SUBSCRIBED_WILL_RENEW | The subscription is active and will be automatically renewed at `next_renew_time`. |\n  | SUBSCRIBED_WILL_NOT_RENEW | The subscription is active but will not be automatically renewed. |\n  | SUBSCRIBED_RENEWAL_PAYMENT_PENDING | The subscription is active and within the renewal grace period pending payment confirmation. |\n  | EXPIRED | The subscription has expired.  See `expiration_details` for more information. |",
+            "format": "enum",
+            "readOnly": true,
+            "example": "STATE_UNSPECIFIED"
+          },
+          "expirationDetails": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Roblox.Subscriptions.OpenCloud.V2.Subscription_ExpirationDetails"
+              }
+            ],
+            "description": "Information about the expiration of the subscription."
+          },
+          "purchasePlatform": {
+            "enum": ["PURCHASE_PLATFORM_UNSPECIFIED", "DESKTOP", "MOBILE"],
+            "type": "string",
+            "description": "The platform on which the subscription was purchased.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | PURCHASE_PLATFORM_UNSPECIFIED | The purchase platform is unspecified. |\n  | DESKTOP | The subscription was purchased on the Roblox website. |\n  | MOBILE | The subscription was purchased on the Roblox mobile app. |",
+            "format": "enum",
+            "readOnly": true,
+            "example": "PURCHASE_PLATFORM_UNSPECIFIED"
+          },
+          "paymentProvider": {
+            "enum": [
+              "PAYMENT_PROVIDER_UNSPECIFIED",
+              "STRIPE",
+              "APPLE",
+              "GOOGLE",
+              "ROBLOX_CREDIT",
+              "ROBUX"
+            ],
+            "type": "string",
+            "description": "The payment provider used to purchase the subscription.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | PAYMENT_PROVIDER_UNSPECIFIED | The payment provider is unspecified. |\n  | STRIPE | The subscription was purchased using Stripe. |\n  | APPLE | The subscription was purchased using Apple. |\n  | GOOGLE | The subscription was purchased using Google. |\n  | ROBLOX_CREDIT | The subscription was purchased using Roblox Credit. |\n  | ROBUX | The subscription was purchased using Robux. |",
+            "format": "enum",
+            "readOnly": true,
+            "example": "PAYMENT_PROVIDER_UNSPECIFIED"
+          },
+          "user": {
+            "type": "string",
+            "description": "The user who subscribed to the subscription.",
+            "x-immutable": true
+          }
+        },
+        "description": "Represents a user's subscription to a subscription product. The\nsubscription ID is the same as the user ID of the user who subscribed."
+      },
+      "Roblox.Subscriptions.OpenCloud.V2.Subscription_ExpirationDetails": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "enum": [
+              "EXPIRATION_REASON_UNSPECIFIED",
+              "PRODUCT_INACTIVE",
+              "PRODUCT_DELETED",
+              "SUBSCRIBER_CANCELLED",
+              "SUBSCRIBER_REFUNDED",
+              "LAPSED"
+            ],
+            "type": "string",
+            "description": "The reason the subscription expired.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | EXPIRATION_REASON_UNSPECIFIED | The expiration reason is unspecified. |\n  | PRODUCT_INACTIVE | The subscription product is inactive. |\n  | PRODUCT_DELETED | The subscription product is deleted. |\n  | SUBSCRIBER_CANCELLED | The subscriber cancelled the subscription. |\n  | SUBSCRIBER_REFUNDED | The subscriber requested a refund. |\n  | LAPSED | The subscriber’s payment was not received. |",
+            "format": "enum",
+            "example": "EXPIRATION_REASON_UNSPECIFIED"
+          }
+        },
+        "description": "Information about the expiration of a subscription."
+      },
       "Roblox.Thumbnails.Apis.Models.ThumbnailBatchRequest": {
         "type": "object",
         "properties": {
@@ -122137,7 +121991,8 @@
           "FieldMissing",
           "ValueParseFailure",
           "PlaceNotInExperience",
-          "PlaceNotPublished"
+          "PlaceNotPublished",
+          "UserNotFound"
         ],
         "type": "string",
         "description": "Whether a user's saved start place passed every check, and if not, why."
@@ -122276,142 +122131,6 @@
         "type": "object",
         "additionalProperties": false,
         "description": "Response object for Roblox.CloudPricing.ServiceEfficiencyApi.Operations.SubmitManualPaymentOperation"
-      },
-      "Subscription": {
-        "type": "object",
-        "properties": {
-          "path": {
-            "example": "universes/123/subscription-products/some-subscription-product-id/subscriptions/some-subscription-id",
-            "type": "string",
-            "description": "The resource path of the subscription.\n\nFormat:\n`universes/{universe_id}/subscription-products/{subscription_product_id}/subscriptions/{subscription_id}`"
-          },
-          "createTime": {
-            "readOnly": true,
-            "example": "2023-07-05T12:34:56Z",
-            "type": "string",
-            "description": "The timestamp when the subscription was created.",
-            "format": "date-time"
-          },
-          "updateTime": {
-            "readOnly": true,
-            "example": "2023-07-05T12:34:56Z",
-            "type": "string",
-            "description": "The timestamp when the subscription was last updated.",
-            "format": "date-time"
-          },
-          "active": {
-            "readOnly": true,
-            "example": true,
-            "type": "boolean",
-            "description": "Whether the subscription is active.\n\nThis is equivalent  to whether `state` is equal to SUBSCRIBED_WILL_RENEW,\nSUBSCRIBED_WILL_NOT_RENEW, or SUBSCRIBED_RENEWAL_PAYMENT_PENDING."
-          },
-          "willRenew": {
-            "readOnly": true,
-            "example": true,
-            "type": "boolean",
-            "description": "Whether the subscription will renew.\n\nThis is equivalent to whether `state` is equal to SUBSCRIBED_WILL_RENEW or\nSUBSCRIBED_RENEWAL_PAYMENT_PENDING."
-          },
-          "lastBillingTime": {
-            "readOnly": true,
-            "example": "2023-07-05T12:34:56Z",
-            "type": "string",
-            "description": "The timestamp when the subscription was last billed.",
-            "format": "date-time"
-          },
-          "nextRenewTime": {
-            "readOnly": true,
-            "example": "2023-07-05T12:34:56Z",
-            "type": "string",
-            "description": "The timestamp when the subscription will next be automatically renewed.",
-            "format": "date-time"
-          },
-          "expireTime": {
-            "readOnly": true,
-            "example": "2023-07-05T12:34:56Z",
-            "type": "string",
-            "description": "The timestamp when the subscription will, or did, expire.",
-            "format": "date-time"
-          },
-          "state": {
-            "readOnly": true,
-            "example": "STATE_UNSPECIFIED",
-            "enum": [
-              "STATE_UNSPECIFIED",
-              "SUBSCRIBED_WILL_RENEW",
-              "SUBSCRIBED_WILL_NOT_RENEW",
-              "SUBSCRIBED_RENEWAL_PAYMENT_PENDING",
-              "EXPIRED"
-            ],
-            "type": "string",
-            "description": "The state of the subscription.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | STATE_UNSPECIFIED | The subscription state is unspecified. |\n  | SUBSCRIBED_WILL_RENEW | The subscription is active and will be automatically renewed at `next_renew_time`. |\n  | SUBSCRIBED_WILL_NOT_RENEW | The subscription is active but will not be automatically renewed. |\n  | SUBSCRIBED_RENEWAL_PAYMENT_PENDING | The subscription is active and within the renewal grace period pending payment confirmation. |\n  | EXPIRED | The subscription has expired.  See `expiration_details` for more information. |",
-            "format": "enum"
-          },
-          "expirationDetails": {
-            "$ref": "#/components/schemas/Subscription_ExpirationDetails",
-            "description": "Information about the expiration of the subscription."
-          },
-          "purchasePlatform": {
-            "readOnly": true,
-            "example": "PURCHASE_PLATFORM_UNSPECIFIED",
-            "enum": ["PURCHASE_PLATFORM_UNSPECIFIED", "DESKTOP", "MOBILE"],
-            "type": "string",
-            "description": "The platform on which the subscription was purchased.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | PURCHASE_PLATFORM_UNSPECIFIED | The purchase platform is unspecified. |\n  | DESKTOP | The subscription was purchased on the Roblox website. |\n  | MOBILE | The subscription was purchased on the Roblox mobile app. |",
-            "format": "enum"
-          },
-          "paymentProvider": {
-            "readOnly": true,
-            "example": "PAYMENT_PROVIDER_UNSPECIFIED",
-            "enum": [
-              "PAYMENT_PROVIDER_UNSPECIFIED",
-              "STRIPE",
-              "APPLE",
-              "GOOGLE",
-              "ROBLOX_CREDIT",
-              "ROBUX"
-            ],
-            "type": "string",
-            "description": "The payment provider used to purchase the subscription.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | PAYMENT_PROVIDER_UNSPECIFIED | The payment provider is unspecified. |\n  | STRIPE | The subscription was purchased using Stripe. |\n  | APPLE | The subscription was purchased using Apple. |\n  | GOOGLE | The subscription was purchased using Google. |\n  | ROBLOX_CREDIT | The subscription was purchased using Roblox Credit. |\n  | ROBUX | The subscription was purchased using Robux. |",
-            "format": "enum"
-          },
-          "user": {
-            "example": "users/123",
-            "type": "string",
-            "description": "The user who subscribed to the subscription.",
-            "x-immutable": true
-          }
-        },
-        "description": "Represents a user's subscription to a subscription product. The\nsubscription ID is the same as the user ID of the user who subscribed.",
-        "x-aep-resource": {
-          "patterns": [
-            "universes/{universe_id}/subscription-products/{subscription_product_id}/subscriptions/{subscription_id}"
-          ],
-          "plural": "subscriptions",
-          "singular": "subscription"
-        },
-        "x-resource": true,
-        "x-oneOf": {
-          "subscriber": ["user"]
-        }
-      },
-      "Subscription_ExpirationDetails": {
-        "type": "object",
-        "properties": {
-          "reason": {
-            "example": "EXPIRATION_REASON_UNSPECIFIED",
-            "enum": [
-              "EXPIRATION_REASON_UNSPECIFIED",
-              "PRODUCT_INACTIVE",
-              "PRODUCT_DELETED",
-              "SUBSCRIBER_CANCELLED",
-              "SUBSCRIBER_REFUNDED",
-              "LAPSED"
-            ],
-            "type": "string",
-            "description": "The reason the subscription expired.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | EXPIRATION_REASON_UNSPECIFIED | The expiration reason is unspecified. |\n  | PRODUCT_INACTIVE | The subscription product is inactive. |\n  | PRODUCT_DELETED | The subscription product is deleted. |\n  | SUBSCRIBER_CANCELLED | The subscriber cancelled the subscription. |\n  | SUBSCRIBER_REFUNDED | The subscriber requested a refund. |\n  | LAPSED | The subscriber’s payment was not received. |",
-            "format": "enum"
-          }
-        },
-        "description": "Information about the expiration of a subscription."
       },
       "SuccessResponse": {
         "required": ["success"],
@@ -122676,6 +122395,11 @@
             "type": "integer",
             "description": "The place id read from the user's data store entry.\nNull when no place id could be read.",
             "format": "int64",
+            "nullable": true
+          },
+          "savedValue": {
+            "type": "string",
+            "description": "The value read at the configured value path of the user's data store entry, as JSON text,\nso a place id saved as text keeps its quotes. Cut to at most 100 characters.\nNull when no value could be read.",
             "nullable": true
           }
         },
@@ -125502,7 +125226,6 @@
           "patch_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_",
           "delete_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_",
           "get_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts_incidents",
-          "ErrorLoggingDetail_GetLogs",
           "LogAttributeService_Find",
           "LogAttributeService_Create",
           "LogAttributeService_Update",

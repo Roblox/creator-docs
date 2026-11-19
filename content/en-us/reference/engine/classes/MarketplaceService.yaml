@@ -1741,6 +1741,38 @@ methods:
     thread_safety: Unsafe
     capabilities:
       - PromptExternalPurchase
+  - name: MarketplaceService:PromptVIPServerPurchase
+    summary: |
+      Prompts a user to purchase a VIP server for the current experience.
+    description: |
+      Prompts a user to purchase a VIP server for the current experience. Roblox
+      checks whether the user is eligible and, if so, shows the price and
+      handles the purchase. Ineligible users see a message explaining that the
+      purchase is unavailable.
+
+      This method returns immediately and does not report whether the user
+      completed the purchase. If a purchase prompt is already open for the user,
+      additional calls are ignored.
+
+      This method can be called from a `Class.Script` for any player in the
+      server, or from a `Class.LocalScript` for the local player only.
+    code_samples:
+      - MarketplaceService-PromptVIPServerPurchase
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` to be prompted to purchase a private server.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - PromptExternalPurchase
   - name: MarketplaceService:RankProductsAsync
     summary: |
       Takes a list of product IDs and returns a personalized ordered list of

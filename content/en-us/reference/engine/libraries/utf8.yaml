@@ -33,7 +33,8 @@ properties:
       zero or more UTF-8 byte sequence, assuming that the subject is a valid
       UTF-8 string.
     tags: []
-    code_samples: []
+    code_samples:
+      - utf8-charpattern
     deprecation_message: ''
 functions:
   - name: utf8.char
@@ -56,24 +57,17 @@ functions:
           A string containing the concatenated UTF-8 byte sequences for each
           codepoint.
     tags: []
-    code_samples: []
+    code_samples:
+      - utf8-char
     deprecation_message: ''
   - name: utf8.codes
     summary: |
       Returns an iterator function that iterates over all codepoints in a given
       string.
     description: |
-      Returns an iterator function so that the construction:
-
-      ```lua
-      local str = "héllo"
-      for position, codepoint in utf8.codes(str) do
-      	print(position, codepoint)
-      end
-      ```
-
-      will iterate over all codepoints in string `str`. It raises an error if it
-      meets any invalid byte sequence.
+      Returns an iterator function that iterates over all codepoints in string
+      `str`, yielding each one's byte position and codepoint. It raises an error
+      if it meets any invalid byte sequence.
     parameters:
       - name: str
         type: string
@@ -92,7 +86,8 @@ functions:
         summary: |
           The initial control value (`0`) for the iterator.
     tags: []
-    code_samples: []
+    code_samples:
+      - utf8-codes
     deprecation_message: ''
   - name: utf8.codepoint
     summary: |
@@ -100,7 +95,7 @@ functions:
       string.
     description: |
       Returns the codepoints (as integers) from all codepoints in the provided
-      string (str) that start between byte positions `i` and `j` (both
+      string (`str`) that start between byte positions `i` and `j` (both
       included). The default for `i` is `1` and for `j` is `i`. It raises an
       error if it meets any invalid byte sequence.
     parameters:
@@ -113,29 +108,30 @@ functions:
         type: int
         default: 1
         summary: |
-          The index of the codepoint that should be fetched from this string.
+          The byte position at which to start reading codepoints.
       - name: j
         type: int
         default: i
         summary: |
-          The index of the last codepoint between `i` and `j` that will be
-          returned. If excluded, this will default to the value of `i`.
+          The last byte position at which a codepoint may start. If excluded,
+          this defaults to the value of `i`, so a single codepoint is returned.
     returns:
       - type: Tuple<int>
         summary: |
           The codepoints as integers for all characters that start between byte
           positions `i` and `j`.
     tags: []
-    code_samples: []
+    code_samples:
+      - utf8-codepoint
     deprecation_message: ''
   - name: utf8.len
     summary: |
       Returns the number of UTF-8 codepoints in a given string.
     description: |
-      Returns the number of UTF-8 codepoints in the string _str_ that start
-      between positions `i` and `j` (both inclusive). The default for `i` is `1`
-      and for `j` is `-1`. If it finds any invalid byte sequence, returns a nil
-      value plus the position of the first invalid byte.
+      Returns the number of UTF-8 codepoints in the string `s` that start
+      between byte positions `i` and `j` (both inclusive). The default for `i`
+      is `1` and for `j` is `-1`. If it finds any invalid byte sequence, returns
+      a nil value plus the position of the first invalid byte.
     parameters:
       - name: s
         type: string
@@ -146,19 +142,20 @@ functions:
         type: int
         default: 1
         summary: |
-          The starting position.
+          The byte position at which to start counting.
       - name: j
         type: int
         default: -1
         summary: |
-          The ending position.
+          The last byte position at which a codepoint may start.
     returns:
       - type: int
         summary: |
           The number of UTF-8 codepoints in the specified range, or `nil`
           followed by the byte position of the first invalid byte sequence.
     tags: []
-    code_samples: []
+    code_samples:
+      - utf8-len
     deprecation_message: ''
   - name: utf8.offset
     summary: |
@@ -197,23 +194,16 @@ functions:
           The byte position where the target codepoint begins, or `nil` if the
           character is not within the string.
     tags: []
-    code_samples: []
+    code_samples:
+      - utf8-offset
     deprecation_message: ''
   - name: utf8.graphemes
     summary: |
       Returns an iterator function that iterates over the grapheme clusters of a
       given string.
     description: |
-      Returns an iterator function so that
-
-      ```lua
-      for first, last in utf8.graphemes(str) do
-      	local grapheme = s:sub(first, last)
-      	-- body
-      end
-      ```
-
-      will iterate the grapheme clusters of the string.
+      Returns an iterator function that iterates the grapheme clusters of the
+      string, yielding the first and last byte position of each cluster.
     parameters:
       - name: str
         type: string
@@ -238,7 +228,8 @@ functions:
           An iterator function that returns the start and end byte positions of
           each grapheme cluster.
     tags: []
-    code_samples: []
+    code_samples:
+      - utf8-graphemes
     deprecation_message: ''
   - name: utf8.nfcnormalize
     summary: |
@@ -258,7 +249,8 @@ functions:
           The NFC-normalized string with decomposed characters composed into
           their precomposed equivalents.
     tags: []
-    code_samples: []
+    code_samples:
+      - utf8-nfcnormalize
     deprecation_message: ''
   - name: utf8.nfdnormalize
     summary: |
@@ -278,5 +270,6 @@ functions:
           The NFD-normalized string with precomposed characters decomposed into
           their component parts.
     tags: []
-    code_samples: []
+    code_samples:
+      - utf8-nfdnormalize
     deprecation_message: ''

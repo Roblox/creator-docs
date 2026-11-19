@@ -31,6 +31,37 @@ descendants: []
 tags: []
 deprecation_message: ''
 properties:
+  - name: TeleportOptions.ForcePublicServer
+    summary: |
+      Guarantees the teleport destination will be a public server, preventing a
+      player from automatically being placed in their private (VIP) server.
+    description: |
+      For a single-player teleport with no server routing option, the engine may
+      infer that the player should return to a VIP server they originally
+      joined. Set this property to `true` to skip that inference and send the
+      player to a public server. It defaults to `false` and applies only to this
+      teleport; it does not clear the player's VIP context for later teleports.
+
+      Like the routing fields below, this property is mutually exclusive:
+      setting it next to `Class.TeleportOptions.ReservedServerId`,
+      `Class.TeleportOptions.VipServerId`,
+      `Class.TeleportOptions.ReservedServerAccessCode`,
+      `Class.TeleportOptions.ShouldReserveServer`, or
+      `Class.TeleportOptions.ServerInstanceId` causes an error.
+    code_samples: []
+    type: boolean
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Teleport
   - name: TeleportOptions.ReservedServerId
     summary: |
       The reserved server ID that indicates the reserved server to teleport to.
