@@ -103,7 +103,7 @@ Publishing requirements depend on the target audience. The following table summa
 </table>
 
 <sup>1</sup> As long as the game is playable and not permanently removed due to Community Standards violations.<br />
-<sup>2</sup> Evaluation process requires 250 unique plays from highly engaged players in the last 60 days.<br />
+<sup>2</sup> Evaluation process requires 100 unique plays from highly engaged players in the last 60 days.<br />
 <sup>3</sup> Restricted content is limited to 18+ users.
 
 <Alert severity="info">
@@ -131,9 +131,9 @@ To reach users who are under 16 years old, creators of individual-owned games or
    1. **Trial phase** - The game is first made available only to age-checked users 16 and older.
    1. **Analysis of highly engaged players** - Engagement is analyzed through metrics like account age, play history, and spend on Roblox to verify it's from real users and not bots. Increasing engagement with age-checked 16+ users will help you progress towards becoming eligible faster. This metric is evaluated hourly.
    1. **Safety review** - The game's real-time moderation reports and gameplay are reviewed for age-suitability.
-   1. **Threshold** - Once the game reaches a benchmark of 250 unique plays by highly engaged age-checked users within a 60-day window, it completes evaluation and becomes eligible for Kids and Select audiences.
+   1. **Threshold** - Once the game reaches a benchmark of 100 unique plays by highly engaged age-checked users within a 60-day window, it completes evaluation and becomes eligible for Kids and Select audiences.
 
-   You can monitor your game's evaluation progress in real time using the **Audience Reach** dashboard in the [Creator Hub](https://create.roblox.com).
+   You can monitor your game's evaluation progress in real time by going to **Creator Hub** > your game > **Publish Settings** > **Manage Audience**.
 
 <Alert severity="info">
 You only need to meet the subscription requirement or pay the optional fee when you publish a new game or update an existing one for all ages audiences. If your subscription later expires, your game stays published for all ages.
@@ -187,7 +187,7 @@ Your game remains published and available to all ages. You only need to satisfy 
 <Typography variant='buttonLarge'>How do I track my game's evaluation status?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Use the **Audience Reach** dashboard in the [Creator Hub](https://create.roblox.com) to monitor your game's engagement benchmarks in real time.
+Go to **Creator Hub** > your game > **Publish Settings** > **Manage Audience** to monitor your game's engagement benchmarks in real time.
 </AccordionDetails>
 </BaseAccordion>
 

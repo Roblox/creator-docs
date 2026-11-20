@@ -498,6 +498,9 @@ navigation:
         path: /ui/rich-text
       - title: Text filtering
         path: /ui/text-filtering
+        section:
+          - title: Temporary text limits
+            path: /ui/temporary-limits
   - title: Animation
     path: /animation/
     section:

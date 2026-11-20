@@ -7,6 +7,8 @@ Applied to various sources and inputs, **text filtering** prevents users from se
 
 <Alert severity="error">
 Because filtering is crucial for a safe environment, Roblox actively moderates the content of games to make sure they meet [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). If Roblox receives reports or automatically detects that your game doesn't apply text filtering, then the system removes the game until you add filtering.
+
+If Roblox detects players holding conversations through a text feature other than `Class.TextChatService`, it temporarily limits text features in your game. For details, see [Temporary text limits](temporary-limits.md).
 </Alert>
 
 ## Filter scenarios
