@@ -1,6 +1,15 @@
 {
   "source": "https://devforum.roblox.com/c/resources/roblox-staff/278",
   "articles": {
+    "devforum-4996848": {
+      "audience": "staff",
+      "title": "Collections: How to Write Efficient Queries",
+      "description": "This guide starts with quick tips for writing efficient queries, then breaks down what each filter costs and why, and ends by revisiting the example queries from Collections: How t…",
+      "author": "camelsaucerer",
+      "date": "2026-11-19",
+      "href": "https://devforum.roblox.com/t/collections-how-to-write-efficient-queries/4996848",
+      "hue": 48
+    },
     "devforum-4974220": {
       "audience": "staff",
       "title": "Turn screenshots into teleporting paintings",

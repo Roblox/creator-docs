@@ -2533,7 +2533,7 @@
     },
     "/ads-management/v1/performance-estimates": {
       "post": {
-        "description": "Estimates an objective from a budget, or the budget required for a target outcome, for an experience the caller can advertise. Results are not cached.",
+        "description": "Estimates an objective from a budget, or the budget required for a target outcome, for an experience the caller can advertise.",
         "tags": ["Advertising"],
         "summary": "Create a performance estimate",
         "operationId": "CreatePerformanceEstimate",
@@ -7952,8 +7952,7 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "creator-store-product:write",
-            "targetResourceSpecifier": ""
+            "name": "creator-store-product:write"
           }
         ],
         "x-roblox-engine-usability": {
@@ -8024,8 +8023,7 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "creator-store-product:read",
-            "targetResourceSpecifier": ""
+            "name": "creator-store-product:read"
           }
         ],
         "x-roblox-engine-usability": {
@@ -8122,8 +8120,7 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "creator-store-product:write",
-            "targetResourceSpecifier": ""
+            "name": "creator-store-product:write"
           }
         ],
         "x-roblox-engine-usability": {
@@ -15988,9 +15985,6 @@
         },
         "x-roblox-scopes": [
           {
-            "name": "user.user-notification:write"
-          },
-          {
             "name": "user.user-notification:write",
             "description": "Required to send user notifications."
           }
@@ -16014,7 +16008,7 @@
             "roblox-api-key": []
           },
           {
-            "roblox-oauth2": ["user.user-notification:write"]
+            "roblox-oauth2": []
           }
         ],
         "externalDocs": {
@@ -20858,7 +20852,7 @@
                   },
                   "imageFile": {
                     "type": "string",
-                    "description": "The thumbnail image file to be uploaded.",
+                    "description": "The thumbnail image file to be uploaded. Maximum file size is 5 MB.",
                     "format": "binary",
                     "nullable": true
                   },
@@ -20872,12 +20866,6 @@
                     "description": "The default price of the game pass.",
                     "format": "int64",
                     "nullable": true
-                  },
-                  "isRegionalPricingEnabled": {
-                    "type": "boolean",
-                    "description": "Whether regional pricing should be enabled for the game pass.",
-                    "nullable": true,
-                    "deprecated": true
                   },
                   "isManagedPricingEnabled": {
                     "type": "boolean",
@@ -20907,9 +20895,6 @@
                 "price": {
                   "style": "form"
                 },
-                "isRegionalPricingEnabled": {
-                  "style": "form"
-                },
                 "isManagedPricingEnabled": {
                   "style": "form"
                 },
@@ -20922,7 +20907,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -21040,11 +21025,19 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "isForSale",
+            "in": "query",
+            "description": "Filters results by on-sale status.",
+            "schema": {
+              "type": "boolean"
+            }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -21134,7 +21127,7 @@
       "patch": {
         "tags": ["Game passes"],
         "summary": "Update game pass",
-        "description": "Updates a game pass with the provided configuration details.\r\nNote that only fields provided in the request will be updated.",
+        "description": "Updates a game pass with the provided configuration details.\nNote that only fields provided in the request will be updated.",
         "operationId": "GamePasses_UpdateGamePass",
         "parameters": [
           {
@@ -21176,13 +21169,13 @@
                   },
                   "file": {
                     "type": "string",
-                    "description": "The thumbnail image file to be uploaded. Alias for imageFile - if both are provided, imageFile will be used.",
+                    "description": "The thumbnail image file to be uploaded. Maximum file size is 5 MB. Alias for imageFile - if both are provided, imageFile will be used.",
                     "format": "binary",
                     "nullable": true
                   },
                   "imageFile": {
                     "type": "string",
-                    "description": "The thumbnail image file to be uploaded.",
+                    "description": "The thumbnail image file to be uploaded. Maximum file size is 5 MB.",
                     "format": "binary",
                     "nullable": true
                   },
@@ -21196,12 +21189,6 @@
                     "description": "The default price of the game pass.",
                     "format": "int64",
                     "nullable": true
-                  },
-                  "isRegionalPricingEnabled": {
-                    "type": "boolean",
-                    "description": "Whether regional pricing should be enabled for the game pass.",
-                    "nullable": true,
-                    "deprecated": true
                   },
                   "isManagedPricingEnabled": {
                     "type": "boolean",
@@ -21232,9 +21219,6 @@
                   "style": "form"
                 },
                 "price": {
-                  "style": "form"
-                },
-                "isRegionalPricingEnabled": {
                   "style": "form"
                 },
                 "isManagedPricingEnabled": {
@@ -21367,7 +21351,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -36119,6 +36103,844 @@
         }
       }
     },
+    "/thumbnail-personalization-api/v1/universes/{universeId}/personalization": {
+      "get": {
+        "tags": ["Thumbnail Personalization"],
+        "summary": "Gets a page of thumbnail personalization configurations for a universe.",
+        "operationId": "HomepageThumbnail_FindThumbnailPersonalizations",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The identifier of the universe whose configurations are returned.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "The configuration status to return.",
+            "required": true,
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/PersonalizedConfigStatus"
+                }
+              ],
+              "description": "The lifecycle status of a thumbnail personalization configuration."
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "The maximum number of configurations to return.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "description": "The cursor from a previous response, if any.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FindPersonalizedConfigsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.thumbnail:read",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnail-personalization#HomepageThumbnail_FindThumbnailPersonalizations"
+        }
+      }
+    },
+    "/thumbnail-personalization-api/v1/universes/{universeId}/personalization/create": {
+      "post": {
+        "tags": ["Thumbnail Personalization"],
+        "summary": "Creates a new active thumbnail personalization configuration for a universe.\nThis deactivates the current active configuration, and the new configuration starts its own statistics.",
+        "operationId": "HomepageThumbnail_CreateThumbnailPersonalization",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The identifier of the universe that owns the configuration.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The homepage thumbnails to include in the configuration.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateThumbnailPersonalizationRequest"
+                  }
+                ],
+                "description": "The request to create a thumbnail personalization configuration."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateThumbnailPersonalizationRequest"
+                  }
+                ],
+                "description": "The request to create a thumbnail personalization configuration."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateThumbnailPersonalizationRequest"
+                  }
+                ],
+                "description": "The request to create a thumbnail personalization configuration."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreateThumbnailPersonalizationRequest"
+                  }
+                ],
+                "description": "The request to create a thumbnail personalization configuration."
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 50
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.thumbnail:write",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnail-personalization#HomepageThumbnail_CreateThumbnailPersonalization"
+        }
+      }
+    },
+    "/thumbnail-personalization-api/v1/universes/{universeId}/personalization/update": {
+      "post": {
+        "tags": ["Thumbnail Personalization"],
+        "summary": "Replaces the homepage thumbnails in an active personalization configuration without changing its identifier\nor existing statistics.",
+        "operationId": "HomepageThumbnail_UpdateThumbnailPersonalization",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The identifier of the universe that owns the configuration.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The configuration and homepage thumbnails to update.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateThumbnailPersonalizationRequest"
+                  }
+                ],
+                "description": "The request to update a thumbnail personalization configuration."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateThumbnailPersonalizationRequest"
+                  }
+                ],
+                "description": "The request to update a thumbnail personalization configuration."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateThumbnailPersonalizationRequest"
+                  }
+                ],
+                "description": "The request to update a thumbnail personalization configuration."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/UpdateThumbnailPersonalizationRequest"
+                  }
+                ],
+                "description": "The request to update a thumbnail personalization configuration."
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 50
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.thumbnail:write",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnail-personalization#HomepageThumbnail_UpdateThumbnailPersonalization"
+        }
+      }
+    },
+    "/thumbnail-personalization-api/v1/universes/{universeId}/thumbnails": {
+      "delete": {
+        "tags": ["Thumbnail Personalization"],
+        "summary": "Deletes homepage thumbnails from a universe.",
+        "operationId": "HomepageThumbnail_DeleteHomepageThumbnails",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The identifier of the universe that owns the thumbnails.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "homepageThumbnailIds",
+            "in": "query",
+            "description": "The identifiers of the homepage thumbnails to delete.",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 50
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.thumbnail:write",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnail-personalization#HomepageThumbnail_DeleteHomepageThumbnails"
+        }
+      },
+      "get": {
+        "tags": ["Thumbnail Personalization"],
+        "summary": "Gets a page of homepage thumbnails for a universe.",
+        "operationId": "HomepageThumbnail_GetHomepageThumbnails",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The identifier of the universe whose thumbnails are returned.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "The maximum number of thumbnails to return.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "nextCursor",
+            "in": "query",
+            "description": "The cursor from a previous response, if any.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FindThumbnailsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.thumbnail:read",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnail-personalization#HomepageThumbnail_GetHomepageThumbnails"
+        }
+      }
+    },
+    "/thumbnail-personalization-api/v1/universes/{universeId}/thumbnails/uploads": {
+      "post": {
+        "tags": ["Thumbnail Personalization"],
+        "summary": "Uploads one or more images to create homepage thumbnails for a universe.",
+        "operationId": "HomepageThumbnail_UploadHomepageThumbnails",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The identifier of the universe that owns the thumbnails.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": ["files"],
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The image files to upload."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UploadThumbnailsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 50
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.thumbnail:write",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnail-personalization#HomepageThumbnail_UploadHomepageThumbnails"
+        }
+      }
+    },
+    "/thumbnail-personalization-api/v1/universes/{universeId}/thumbnails/uploads/status": {
+      "get": {
+        "tags": ["Thumbnail Personalization"],
+        "summary": "Gets the processing status of homepage thumbnail upload operations.",
+        "operationId": "HomepageThumbnail_GetHomepageThumbnailsStatus",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The identifier of the universe that owns the uploads.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "operationIds",
+            "in": "query",
+            "description": "The upload operation IDs to query.",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UploadThumbnailsStatusResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.thumbnail:read",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/thumbnail-personalization#HomepageThumbnail_GetHomepageThumbnailsStatus"
+        }
+      }
+    },
     "/toolbox-service/v1/saves": {
       "delete": {
         "tags": ["Creator Store"],
@@ -37404,7 +38226,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Success",
             "content": {
               "text/plain": {
                 "schema": {
@@ -37484,7 +38306,7 @@
             }
           },
           "500": {
-            "description": "Internal Server Error",
+            "description": "Server Error",
             "content": {
               "text/plain": {
                 "schema": {
@@ -40152,12 +40974,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 10000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:write",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:write"]
           }
         ],
         "externalDocs": {
@@ -40231,12 +41075,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 10000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:write",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:write"]
           }
         ],
         "externalDocs": {
@@ -40301,12 +41167,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 2000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 2000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:write",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:write"]
           }
         ],
         "externalDocs": {
@@ -40513,12 +41401,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 6000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 6000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:write",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:write"]
           }
         ],
         "externalDocs": {
@@ -45930,6 +46840,21 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "localization:read"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -45937,6 +46862,12 @@
           {},
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["localization:read"]
           }
         ],
         "externalDocs": {
@@ -47713,6 +48644,95 @@
         }
       }
     },
+    "/v1/external/link-candidate": {
+      "get": {
+        "summary": "The user ids a provider sign-in matched, and the Google or Apple email on the token. Flow 1 holds the\ntoken id in a cookie. Flows 2 and 3 send it as `linkCandidateTokenId`. Reading does not consume\nthe token, so the picker can be opened again.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "linkCandidateTokenId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.ExternalIdentityGateway.LinkCandidateResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: The request to link an account is invalid or has expired."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}]
+      }
+    },
+    "/v1/external/link-candidate/confirm": {
+      "post": {
+        "summary": "Links the sign-in to the account the user picked, then signs them in to it. With `createNew` it\ninstead creates a new account, as sign-up does, and signs them in to that. The session comes back the\nway the sign-in's intent asks: a cookie for the web redirect, `RBX-Authentication-Ticket` for the\napp intents.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.ConfirmLinkCandidateRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Request.ConfirmLinkCandidateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Authentication.Api.Models.Response.ExternalIdentityGateway.ExternalIdentityAccessResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: The request to link an account is invalid or has expired."
+          },
+          "403": {
+            "description": "0: Token Validation Failed"
+          },
+          "409": {
+            "description": "5: This identity is already linked to a Roblox account.\r\n6: This Roblox account already has this provider linked.\r\n7: This Roblox account is already linked to a different provider."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://auth.roblox.com"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [{}]
+      }
+    },
     "/v1/external/login": {
       "post": {
         "tags": ["Accounts"],
@@ -47907,7 +48927,7 @@
       "post": {
         "tags": ["Accounts"],
         "summary": "Reserves a nonce for a native SSO sign-in attempt.",
-        "description": "The web flow gets its nonce from M:Roblox.Authentication.Api.Controllers.V1.ExternalIdentitiesGatewayController.OAuthInit(System.Int64,System.String,System.Threading.CancellationToken), which native clients never call\nbecause they have no authorization redirect. They call this instead, pass the nonce to the\nprovider SDK, and post the resulting id_token to /access.\n            \nThe client must pass this value to the SDK verbatim. Both providers treat the nonce as an\nopaque string and echo it into the id_token unchanged, and redemption looks the value up as\nissued. The SHA256(nonce) convention seen in Apple examples belongs to Firebase, which hashes\non its own side before comparing; hashing here would make the lookup miss.",
+        "description": "The web flow gets its nonce from M:Roblox.Authentication.Api.Controllers.V1.ExternalIdentitiesGatewayController.OAuthInit(System.Int64,System.String,System.Threading.CancellationToken,System.Boolean), which native clients never call\nbecause they have no authorization redirect. They call this instead, pass the nonce to the\nprovider SDK, and post the resulting id_token to /access.\n            \nThe client must pass this value to the SDK verbatim. Both providers treat the nonce as an\nopaque string and echo it into the id_token unchanged, and redemption looks the value up as\nissued. The SHA256(nonce) convention seen in Apple examples belongs to Firebase, which hashes\non its own side before comparing; hashing here would make the lookup miss.",
         "parameters": [
           {
             "in": "path",
@@ -48050,6 +49070,14 @@
             "required": true,
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "supportsLinkCandidate",
+            "schema": {
+              "type": "boolean",
+              "default": false
             }
           }
         ],
@@ -49894,12 +50922,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:write",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:write"]
           }
         ],
         "externalDocs": {
@@ -49955,12 +51005,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 300
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -50029,12 +51101,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 300
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -50119,12 +51213,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 300
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -54916,6 +56032,21 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "localization:read"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -54923,6 +56054,12 @@
           {},
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["localization:read"]
           }
         ],
         "externalDocs": {
@@ -54989,12 +56126,33 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "HOUR",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "HOUR",
+            "maxInPeriod": 150
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "localization:write"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["localization:write"]
           }
         ],
         "externalDocs": {
@@ -55058,12 +56216,33 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "HOUR",
+            "maxInPeriod": 150
+          },
+          "perOauth2Authorization": {
+            "period": "HOUR",
+            "maxInPeriod": 150
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "localization:write"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["localization:write"]
           }
         ],
         "externalDocs": {
@@ -55105,6 +56284,21 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "localization:read"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -55112,6 +56306,12 @@
           {},
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["localization:read"]
           }
         ],
         "externalDocs": {
@@ -55154,6 +56354,21 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "localization:read"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -55161,6 +56376,12 @@
           {},
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["localization:read"]
           }
         ],
         "externalDocs": {
@@ -55253,6 +56474,21 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "localization:read"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -55260,6 +56496,12 @@
           {},
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["localization:read"]
           }
         ],
         "externalDocs": {
@@ -55298,6 +56540,21 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "localization:read"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -55305,6 +56562,12 @@
           {},
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["localization:read"]
           }
         ],
         "externalDocs": {
@@ -55450,12 +56713,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:write"]
           }
         ],
         "externalDocs": {
@@ -55758,12 +57043,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -55945,12 +57252,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -72559,6 +73888,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "3: This feature is currently disabled. Please try again later."
           }
         },
         "servers": [
@@ -88663,6 +89995,21 @@
         "description": "Request model for creating a save",
         "nullable": true
       },
+      "CreateThumbnailPersonalizationRequest": {
+        "required": ["homepageThumbnailIds"],
+        "type": "object",
+        "properties": {
+          "homepageThumbnailIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The homepage thumbnail identifiers to include in the configuration. Up to five are supported."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The request to create a thumbnail personalization configuration."
+      },
       "CreateUniverseRegexHttpRequest": {
         "type": "object",
         "properties": {
@@ -92149,7 +93496,6 @@
         "additionalProperties": false
       },
       "ErrorLogDetail": {
-        "required": ["id", "message"],
         "type": "object",
         "properties": {
           "id": {
@@ -92187,13 +93533,13 @@
           },
           "firstSeenUtc": {
             "type": "string",
-            "description": "UTC timestamp when this error was first observed.\nNull when the source document predates this field being populated.",
+            "description": "UTC timestamp when this error was first observed.\r\nNull when the source document predates this field being populated.",
             "format": "date-time",
             "nullable": true
           },
           "firstSeenPlaceVersion": {
             "type": "integer",
-            "description": "First seen place version for the error.\nNOTE: This value will only be returned when place id is filtered",
+            "description": "First seen place version for the error.\r\nNOTE: This value will only be returned when place id is filtered",
             "format": "int64",
             "nullable": true
           }
@@ -92839,6 +94185,46 @@
         "type": "string",
         "description": "Enum describing the data type of a filter field's values."
       },
+      "FindPersonalizedConfigsResponse": {
+        "required": ["personalizedConfigs"],
+        "type": "object",
+        "properties": {
+          "personalizedConfigs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ThumbnailPersonalizedConfig"
+            },
+            "description": "The personalization configurations matching the requested universe and status."
+          },
+          "nextCursor": {
+            "type": "string",
+            "description": "The cursor to use for the next page of results.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A page of thumbnail personalization configurations."
+      },
+      "FindThumbnailsResponse": {
+        "required": ["homepageThumbnails"],
+        "type": "object",
+        "properties": {
+          "homepageThumbnails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HomepageThumbnail"
+            },
+            "description": "The homepage thumbnails in this page."
+          },
+          "nextCursor": {
+            "type": "string",
+            "description": "The cursor to use for the next page of results.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A page of homepage thumbnails for a universe."
+      },
       "FindUniverseRegexesHttpResponse": {
         "type": "object",
         "properties": {
@@ -93086,6 +94472,7 @@
           "iconAssetId",
           "isForSale",
           "isManagedPricingEnabled",
+          "isTrialEnabled",
           "name",
           "priceInformation",
           "updatedTimestamp"
@@ -93171,12 +94558,14 @@
           "Blocked",
           "InvalidPageSize",
           "InvalidRegionalPricing",
-          "InvalidManagedPricing"
+          "InvalidManagedPricing",
+          "UnsupportedGamePassUpdate"
         ],
         "type": "string",
         "description": "Code representing various error conditions."
       },
       "GamePasses.ErrorResponse": {
+        "required": ["errorCode", "errorMessage"],
         "type": "object",
         "properties": {
           "errorCode": {
@@ -93189,8 +94578,7 @@
           },
           "errorMessage": {
             "type": "string",
-            "description": "The human readable error message.",
-            "nullable": true
+            "description": "The human readable error message."
           },
           "field": {
             "type": "string",
@@ -94840,6 +96228,59 @@
         },
         "additionalProperties": false
       },
+      "HomepageThumbnail": {
+        "required": [
+          "assetId",
+          "homepageThumbnailId",
+          "homepageThumbnailStatus",
+          "moderationStatus",
+          "personalizedConfigStatus"
+        ],
+        "type": "object",
+        "properties": {
+          "homepageThumbnailId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The unique identifier of the homepage thumbnail."
+          },
+          "assetId": {
+            "type": "integer",
+            "description": "The identifier of the image asset used by the thumbnail.",
+            "format": "int64"
+          },
+          "moderationStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ModerationStatus"
+              }
+            ],
+            "description": "The moderation status of the thumbnail's image asset."
+          },
+          "personalizedConfigStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PersonalizedConfigStatus"
+              }
+            ],
+            "description": "Indicates whether the thumbnail belongs to an active personalization configuration."
+          },
+          "homepageThumbnailStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/HomepageThumbnailStatus"
+              }
+            ],
+            "description": "The availability status of the homepage thumbnail."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A homepage thumbnail associated with a universe."
+      },
+      "HomepageThumbnailStatus": {
+        "enum": ["Active", "Spammy"],
+        "type": "string",
+        "description": "The availability status of a homepage thumbnail."
+      },
       "HostResponse": {
         "type": "object",
         "properties": {
@@ -95381,7 +96822,7 @@
                 "format": "int32"
               }
             },
-            "description": "Optional. A mapping of PlaceId to the specific versions to restart/bleed off for that place.\nWhen set for a place, only servers running those exact versions will be affected.\nIf a place is not in this dictionary or has an empty set, behavior falls back to CloseOldVersionsOnly logic.",
+            "description": "Optional. A mapping of PlaceId to the specific versions to restart/bleed off for that place.\nOnly servers running those exact versions will be affected.\nWhen set, it must list exactly the places in PlaceIds, each with at least one version, and CloseOldVersionsOnly\nmust be false.",
             "nullable": true
           },
           "attributes": {
@@ -97440,6 +98881,11 @@
         "type": "string",
         "description": "The moderation state of the asset."
       },
+      "ModerationStatus": {
+        "enum": ["Reviewing", "Rejected", "Approved", "Unspecified"],
+        "type": "string",
+        "description": "The moderation status of a homepage thumbnail's image asset."
+      },
       "Money": {
         "type": "object",
         "properties": {
@@ -98564,7 +100010,7 @@
         "type": "object",
         "properties": {
           "dailyAmountMicroUsd": {
-            "description": "Daily budget in micro-USD, as a decimal string.",
+            "description": "Supplied daily budget in micro-USD, as a decimal string. Omitted when predicting a budget.",
             "type": "string"
           },
           "dailyAmountMicroUsdRange": {
@@ -98576,7 +100022,7 @@
             ]
           },
           "lifetimeAmountMicroUsd": {
-            "description": "Lifetime budget in micro-USD, as a decimal string. Omitted for a daily budget.",
+            "description": "Supplied lifetime budget in micro-USD, as a decimal string. Omitted for a daily budget or when predicting a budget.",
             "type": "string"
           },
           "lifetimeAmountMicroUsdRange": {
@@ -98616,10 +100062,6 @@
       "PerformanceEstimateDerivedMetrics": {
         "type": "object",
         "properties": {
-          "costPerOutcomeMicroUsd": {
-            "description": "Cost per outcome in micro-USD, as a decimal string.",
-            "type": "string"
-          },
           "costPerOutcomeMicroUsdRange": {
             "description": "Optional range around the cost per outcome.",
             "allOf": [
@@ -98668,7 +100110,7 @@
         "type": "object",
         "properties": {
           "dailyValue": {
-            "description": "Daily outcome.",
+            "description": "Supplied daily outcome. Omitted when predicting an outcome.",
             "type": "integer"
           },
           "dailyValueRange": {
@@ -98680,7 +100122,7 @@
             ]
           },
           "lifetimeValue": {
-            "description": "Lifetime outcome. Omitted for a daily budget.",
+            "description": "Supplied lifetime outcome. Omitted for a daily budget or when predicting an outcome.",
             "type": "integer"
           },
           "lifetimeValueRange": {
@@ -98778,6 +100220,55 @@
         "enum": ["UNSPECIFIED", "MONTH", "DAY"],
         "type": "string",
         "description": "Period of time the quota is for."
+      },
+      "PersonalizedConfigStatus": {
+        "enum": ["Active", "Inactive"],
+        "type": "string",
+        "description": "The lifecycle status of a thumbnail personalization configuration."
+      },
+      "PersonalizedThumbnail": {
+        "required": [
+          "assetId",
+          "homepageThumbnailId",
+          "homepageThumbnailStatus",
+          "personalizedThumbnailStatus"
+        ],
+        "type": "object",
+        "properties": {
+          "homepageThumbnailId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The unique identifier of the homepage thumbnail."
+          },
+          "assetId": {
+            "type": "integer",
+            "description": "The identifier of the image asset used by the thumbnail.",
+            "format": "int64"
+          },
+          "personalizedThumbnailStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PersonalizedThumbnailStatus"
+              }
+            ],
+            "description": "The thumbnail's status within the personalization configuration."
+          },
+          "homepageThumbnailStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/HomepageThumbnailStatus"
+              }
+            ],
+            "description": "The availability status of the homepage thumbnail."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A homepage thumbnail and its status within a personalization configuration."
+      },
+      "PersonalizedThumbnailStatus": {
+        "enum": ["Active", "Inactive"],
+        "type": "string",
+        "description": "The status of a thumbnail within a personalization configuration."
       },
       "PingSignalLevel": {
         "enum": ["Low", "Medium", "High"],
@@ -106399,6 +107890,22 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Authentication.Api.Models.Request.ConfirmLinkCandidateRequest": {
+        "type": "object",
+        "properties": {
+          "linkCandidateTokenId": {
+            "type": "string"
+          },
+          "userId": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "createNew": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Authentication.Api.Models.Request.DeletePasskeysRequest": {
         "type": "object",
         "properties": {
@@ -106431,6 +107938,9 @@
           },
           "postAuthenticationIntentId": {
             "type": "string"
+          },
+          "supportsLinkCandidate": {
+            "type": "boolean"
           },
           "additionalInfoPayload": {
             "type": "object",
@@ -106759,6 +108269,12 @@
           },
           "launchData": {
             "type": "string"
+          },
+          "outcome": {
+            "type": "string"
+          },
+          "linkCandidateTokenId": {
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -106777,6 +108293,22 @@
         "properties": {
           "success": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Authentication.Api.Models.Response.ExternalIdentityGateway.LinkCandidateResponse": {
+        "type": "object",
+        "properties": {
+          "userIds": {
+            "type": "array",
+            "items": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          "email": {
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -121848,6 +123380,50 @@
         },
         "description": "The `Status` type defines a logical error model that is suitable for\ndifferent programming environments, including REST APIs and RPC APIs. It is\nused by [gRPC](https://github.com/grpc). Each `Status` message contains\nthree pieces of data: error code, error message, and error details.\n\nYou can find out more about this error model and how to work with it in the\n[API Design Guide](https://cloud.google.com/apis/design/errors)."
       },
+      "ThumbnailPersonalizedConfig": {
+        "required": [
+          "createdUtc",
+          "id",
+          "personalizedConfigStatus",
+          "thumbnails"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The unique identifier of the personalization configuration."
+          },
+          "personalizedConfigStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PersonalizedConfigStatus"
+              }
+            ],
+            "description": "The lifecycle status of the personalization configuration."
+          },
+          "createdUtc": {
+            "type": "string",
+            "description": "The UTC date and time when the configuration was created.",
+            "format": "date-time"
+          },
+          "thumbnails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PersonalizedThumbnail"
+            },
+            "description": "The homepage thumbnails included in the configuration."
+          },
+          "lastServedUtc": {
+            "type": "string",
+            "description": "The UTC date and time when the configuration last served a thumbnail, when available.",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A thumbnail personalization configuration."
+      },
       "ThumbnailResponse": {
         "type": "object",
         "properties": {
@@ -123294,6 +124870,26 @@
           }
         }
       },
+      "UpdateThumbnailPersonalizationRequest": {
+        "required": ["homepageThumbnailIds", "id"],
+        "type": "object",
+        "properties": {
+          "homepageThumbnailIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The homepage thumbnail identifiers to include in the configuration. Up to five are supported."
+          },
+          "id": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The identifier of the active personalization configuration to update."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The request to update a thumbnail personalization configuration."
+      },
       "UpdateUniverseRegexHttpRequest": {
         "type": "object",
         "properties": {
@@ -123314,6 +124910,76 @@
           }
         },
         "additionalProperties": false
+      },
+      "UploadStatus": {
+        "enum": [1, 2],
+        "type": "integer",
+        "description": "The aggregate processing status of a set of homepage thumbnail uploads.",
+        "format": "int32"
+      },
+      "UploadThumbnailStatus": {
+        "type": "object",
+        "properties": {
+          "homepageThumbnailId": {
+            "type": "string",
+            "description": "The unique identifier of the created homepage thumbnail.",
+            "nullable": true
+          },
+          "assetId": {
+            "type": "integer",
+            "description": "The identifier of the uploaded image asset.",
+            "format": "int64"
+          },
+          "moderationStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ModerationStatus"
+              }
+            ],
+            "description": "The moderation status of the uploaded image asset."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The result of a completed homepage thumbnail upload operation."
+      },
+      "UploadThumbnailsResponse": {
+        "required": ["fileToOperationIdDict"],
+        "type": "object",
+        "properties": {
+          "fileToOperationIdDict": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": "A mapping from each uploaded file name to the operation ID used to track its processing."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The operations created for uploaded homepage thumbnail files."
+      },
+      "UploadThumbnailsStatusResponse": {
+        "required": ["uploadStatus", "uploadThumbnailStatusDict"],
+        "type": "object",
+        "properties": {
+          "uploadStatus": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/UploadStatus"
+              }
+            ],
+            "description": "The aggregate status of the requested upload operations."
+          },
+          "uploadThumbnailStatusDict": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/UploadThumbnailStatus"
+            },
+            "description": "A mapping from each completed operation ID to its uploaded thumbnail details."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The processing status of homepage thumbnail upload operations."
       },
       "User": {
         "type": "object",
@@ -125603,6 +127269,23 @@
           "develop_get_v1_universes_multiget_teamcreate",
           "delete_legacy_develop_v2_teamtest__placeId_",
           "develop_delete_v2_teamtest__placeId_"
+        ]
+      }
+    },
+    {
+      "name": "Thumbnail Personalization",
+      "description": "Upload and manage creator-provided homepage thumbnail variants for an experience, then choose which player groups see each variant. Unlike the Thumbnails feature, these APIs manage homepage images and targeting rules instead of generating or retrieving standard Roblox thumbnails. See [Manage experience icons and thumbnails](/cloud/guides/experience-icons-and-thumbnails) for the other types of icon/thumbnail.\n",
+      "x-roblox-tag-info": {
+        "path": "thumbnail-personalization",
+        "content": "HTTP APIs for working with homepage thumbnail personalization on Roblox Cloud.",
+        "ordering": [
+          "HomepageThumbnail_UploadHomepageThumbnails",
+          "HomepageThumbnail_GetHomepageThumbnailsStatus",
+          "HomepageThumbnail_GetHomepageThumbnails",
+          "HomepageThumbnail_DeleteHomepageThumbnails",
+          "HomepageThumbnail_CreateThumbnailPersonalization",
+          "HomepageThumbnail_FindThumbnailPersonalizations",
+          "HomepageThumbnail_UpdateThumbnailPersonalization"
         ]
       }
     },

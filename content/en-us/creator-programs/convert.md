@@ -79,6 +79,11 @@ hideInPageNavigation: true
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
   }
+  .cv-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
   .cv-grid-how {
     display: grid;
     grid-template-columns: 5fr 7fr;
@@ -103,6 +108,7 @@ hideInPageNavigation: true
   }
   @media (max-width: 744px) {
     .cv-grid-3,
+    .cv-grid-4,
     .cv-grid-how,
     .cv-grid-apply,
     .cv-apply-checklist {
@@ -115,8 +121,9 @@ export const accent = 'var(--color-system-emphasis)';
 export const darkSurface = 'var(--color-surface-200)';
 export const darkBorder = 'var(--color-stroke-default)';
 export const APPLY_URL = `https://survey.roblox.com/jfe/form/SV_eUNlsH28ASCx4gu`;
-export const overlineStyle = { color: accent, fontWeight: 700, letterSpacing: '0.1em' };
-export const h2Style = { fontSize: 32, fontWeight: 800, marginBottom: 8 };
+export const overlineStyle = { color: 'var(--color-content-muted)', fontWeight: 600, letterSpacing: '0.08em' };
+export const extendedFont = "'Builder Extended', var(--config-text-font, 'Builder Sans'), sans-serif";
+export const h2Style = { fontFamily: extendedFont, fontSize: 32, fontWeight: 700, marginBottom: 8 };
 export const blueBtn = { backgroundColor: accent, color: 'var(--color-extended-white-100)' };
 
 {/* Material Symbols icon paths (24x24), used only as per-line-item markers in What You Get
@@ -135,22 +142,23 @@ hero: {
 overline: 'ROBLOX CREATOR PROGRAMS',
 title: 'Bring your existing game to Roblox',
 description:
-"We're working with a limited number of developers with games on mobile, PC, or console. If selected, our team will work with you to convert your game to Roblox at no cost, and you keep ownership of your game.",
+"We're working with a limited number of developers who have games on mobile, PC, or console. If selected, our team will work with you to convert your game into a native Roblox version that runs on phone, PC, and console, with avatars, social features, and hosting built in. It's free, and you keep ownership of your game.",
 cta: { label: 'Apply', href: APPLY_URL },
 image: '../assets/creator-programs/convert/header-option-a.jpg',
 },
 stats: [
-{ value: '138M', label: 'daily active users\*' },
-{ value: '$1.6B', label: 'earned by creators in the last 12 months\*\*' },
-{ value: '$10M', label: 'avg earned per top-100 creators in the last 12 months\*\*' },
+{ value: '138M', label: 'Daily Active Users\*' },
+{ value: '$1.6B', label: 'Earned by Creators in the last 12 months\*\*' },
+{ value: '$10M', label: 'Avg Earned Per Top 100 Creators in the last 12 months\*\*' },
 ],
 footnote: "\*Q3 2026 \*\*Reflects the 12 months ended September 30, 2026 Our creator ecosystem includes many hobbyists. Of the millions of creators monetizing on Roblox, over 45,000 are part of our Devex program, with the median creator receiving over $1,500 USD during the twelve months ended September 30, 2026.",
 whyApply: {
 title: 'Why Bring Your Game to Roblox',
 cards: [
-{ image: '../assets/creator-programs/convert/why-global-audience.jpg', title: 'A large, global audience', body: 'Get your game in front of players in more than 180 countries, many of whom may never have found it on another store.' },
-{ image: '../assets/creator-programs/convert/why-social-by-default.jpg', title: 'Social by default', body: 'On Roblox, people find games through their friends and play together. Depending on the game, players can play as its characters or as their own avatar.' },
-{ image: '../assets/creator-programs/convert/why-scale-without-overhead.jpg', title: 'Scale without the overhead', body: 'One version of your game on the Roblox app unlocks phone, PC, and console. Roblox runs the servers, matchmaking, and payments.' },
+{ image: '../assets/creator-programs/convert/why-global-audience.jpg', title: 'Play on every screen', body: 'Your Roblox version runs on phone, PC, and console from one build, and reaches players in more than 180 countries.' },
+{ image: '../assets/creator-programs/convert/why-social-by-default.jpg', title: 'Social from day one', body: 'Players can join friends, chat, and depending on the game, play as their own avatar. Social features are built into every Roblox experience.' },
+{ image: '../assets/creator-programs/convert/why-scale-without-overhead.jpg', title: 'Hosted and handled', body: 'Roblox runs the servers, matchmaking, and payments, so your team can focus on the game.' },
+{ image: '../assets/creator-programs/convert/why-safety-built-in.png', alt: 'Friends using voice chat together on Roblox', title: 'Safety built in', body: "Roblox's chat filtering, age-appropriate experiences, and parental controls apply to your game." },
 ],
 },
 how: {
@@ -161,7 +169,7 @@ steps: [
 { n: '01', title: 'Apply', body: 'Tell us about your game and share its store link.' },
 { n: '02', title: 'Selection', body: "We're starting with a small number of games across a range of genres and styles, and we'll email the teams we select." },
 { n: '03', title: 'Sign and share', body: "Sign the agreement, then share your source code and assets. Please be sure to omit third-party components that can't be licensed." },
-{ n: '04', title: 'We work on your game', body: 'Our team works with you to convert your game every step of the way.' },
+{ n: '04', title: 'We build your native Roblox version', body: "Our team works with you to convert your game into a Roblox version that runs across devices and works with Roblox's avatars, social features, and hosting." },
 ],
 },
 whatYouGet: {
@@ -200,6 +208,7 @@ faq: {
 title: 'General FAQ',
 items: [
 { q: 'Does it cost anything?', a: "No. There's no payment in either direction." },
+{ q: 'What does a native Roblox version include?', a: 'Your Roblox version runs on phone, PC, and console, with Roblox hosting, matchmaking, and payments. Depending on the game, players can also play as their own avatar and use Roblox\'s social features.' },
 { q: 'Who owns the game and the Roblox version?', a: 'You keep ownership of your game and its IP, and you own any Roblox version delivered to you.' },
 { q: 'Will my game be used to train AI models?', a: "No. Roblox may use AI-assisted tools within our environment to work with your code, but the code and assets you provide won't be used to train or fine-tune AI models." },
 { q: 'Do I have to publish my game on Roblox?', a: 'No. Nothing is published to Roblox unless you choose to publish it.' },
@@ -237,7 +246,7 @@ const Hero = ({ overline, title, description, cta, image }) => (
 <div className="cv-hero-scrim" />
 <div className="cv-hero-content">
 <Typography component="p" variant="overline" style={overlineStyle}>{overline}</Typography>
-<Typography component="div" style={{ fontSize: 'clamp(30px, 4.6vw, 48px)', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.05, margin: '6px 0 16px', maxWidth: 760 }}>{title}</Typography>
+<Typography component="div" style={{ fontFamily: extendedFont, fontSize: 'clamp(30px, 4.6vw, 48px)', fontWeight: 700, letterSpacing: '-0.01em', lineHeight: 1.05, margin: '6px 0 16px', maxWidth: 760 }}>{title}</Typography>
 <Typography component="p" variant="largeLabel1" style={{ marginBottom: 24, maxWidth: 640, color: 'var(--color-extended-white-100)', opacity: 0.85 }}>{description}</Typography>
 <Button variant="contained" size="large" href={cta.href} rel="noopener" style={blueBtn}>{cta.label}</Button>
 </div>
@@ -251,8 +260,8 @@ const StatBar = ({ stats }) => (
 <div className="cv-grid-3">
 {stats.map((s, i) => (
 <Card key={i} style={{ background: darkSurface, border: `1px solid ${darkBorder}`, borderRadius: 14, padding: '22px 24px', width: '100%', ...flexCol, gap: 6 }}>
-<Typography style={{ fontSize: 40, fontWeight: 800, color: 'var(--color-content-emphasis)', lineHeight: 1 }}>{s.value}</Typography>
-<Typography variant="smallLabel1" style={{ color: 'var(--color-content-default)', fontWeight: 600 }}>{s.label}</Typography>
+<Typography style={{ fontFamily: extendedFont, fontSize: 40, fontWeight: 700, letterSpacing: '-0.01em', color: 'var(--color-content-emphasis)', lineHeight: 1 }}>{s.value}</Typography>
+<Typography variant="smallLabel1" style={{ color: 'var(--color-content-muted)', fontWeight: 600, letterSpacing: '0.08em' }}>{s.label}</Typography>
 </Card>
 ))}
 </div>
@@ -262,10 +271,10 @@ const StatBar = ({ stats }) => (
 const WhyApply = ({ title, cards }) => (
 <div style={mb(72)}>
 <SectionHeader title={title} />
-<div className="cv-grid-3">
+<div className="cv-grid-4">
 {cards.map((c, i) => (
 <Card key={i} style={{ background: darkSurface, border: `1px solid ${darkBorder}`, borderRadius: 14, overflow: 'hidden', width: '100%', ...flexCol }}>
-{c.image && <img className="cv-why-card-img" src={c.image} alt="" />}
+{c.image && <img className="cv-why-card-img" src={c.image} alt={c.alt || ''} />}
 <div style={{ padding: '20px 24px 28px', ...flexCol, gap: 10 }}>
 <Typography variant="h5">{c.title}</Typography>
 <Typography variant="smallLabel1" color="secondary">{c.body}</Typography>

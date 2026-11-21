@@ -13,6 +13,8 @@ navigation:
         path: /avatar/character-bodies/specifications
       - title: Reference files
         path: /avatar/character-bodies/project-files
+      - title: Caging best practices
+        path: /avatar/character-bodies/caging-best-practices
       - title: Export settings
         path: /avatar/character-bodies/export
       - title: Import into Studio

@@ -17,6 +17,14 @@
     }
   },
   "videos": {
+    "3fr_hlMeF4s": {
+      "title": "Roblox Incubator - 2027 Applications Open Now",
+      "description": "Applications for Roblox Incubator program are open. Big ideas welcome. Learn more:  create.roblox.com/build",
+      "date": "2026-11-16",
+      "duration": "0:37",
+      "image": "https://img.youtube.com/vi/3fr_hlMeF4s/hq720.jpg",
+      "channel": true
+    },
     "kM1bDKESdvM": {
       "title": "Useful Plugins and Tools for Roblox Animations in Blender",
       "description": "DOWNLOAD LINKS DOWN BELOW",
@@ -141,7 +149,7 @@
     },
     "gu1iPJmyMgA": {
       "title": "How Procedural Models work on Roblox",
-      "description": "Chapters: What is it · How it works · Puzzle pieces · Sneaky techniques · Advanced puzzle pieces · Sneaky techniques pt 2 · One more thing",
+      "description": "ProceduralModels are a type of parameter-driven Model that let you build and generate 3D objects using code- learn how it works on Roblox! Instead of manually editing a model's con…",
       "date": "2026-09-03",
       "duration": "15:13",
       "image": "https://img.youtube.com/vi/gu1iPJmyMgA/maxresdefault.jpg",
@@ -358,7 +366,7 @@
     },
     "hb14MxhZiOU": {
       "title": "How Server Authority works on Roblox",
-      "description": "Chapters: What is it · Before Server Authority · After Server Authority · How prediction works · Smoothing",
+      "description": "In a server authority model, the server is the single source of truth for the entire game state, and clients are only trusted to report their own inputs. This architecture is the c…",
       "date": "2026-07-08",
       "duration": "14:21",
       "image": "https://img.youtube.com/vi/hb14MxhZiOU/maxresdefault.jpg",

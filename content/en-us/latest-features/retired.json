@@ -1,0 +1,34 @@
+{
+  "retired": [
+    {
+      "retiredAt": "2026-11-20",
+      "reason": "Agents already handle streaming without the feed. In the November 2026 key-feature eval (Opus, Sonnet, Sol, Terra; 48 runs per arm), 90% of runs passed without the entry and 98% with it. The one gap: on the load-time task, 5 of 16 runs without the entry didn't make client scripts wait for streamed parts.",
+      "feature": {
+        "id": "instance-streaming",
+        "name": "Instance streaming and streaming-safe code",
+        "status": "stable",
+        "area": "streaming",
+        "releasedAt": "2026-09-29",
+        "summary": "With Workspace.StreamingEnabled, clients load only the world near each player, so games join faster and run on low-memory phones. Client scripts must expect any Workspace instance to be missing at any time.",
+        "apis": [
+          "Workspace.StreamingEnabled",
+          "Instance:WaitForChild",
+          "Model.ModelStreamingMode",
+          "Player:RequestStreamAroundAsync",
+          "Workspace.PredictiveStreamingMode",
+          "Player:AddReplicationFocus",
+          "Player.FrustumStreaming",
+          "Model:AddPersistentPlayer"
+        ],
+        "replaces": [
+          "Indexing workspace.A.B directly in LocalScripts",
+          "Turning StreamingEnabled off to fix missing parts",
+          "Raising StreamingTargetRadius to keep far areas loaded",
+          "Client-side GetChildren scans and raycasts over the whole map"
+        ],
+        "guidance": "With execute_luau in Edit, set workspace.StreamingEnabled = true and PredictiveStreamingMode = Enabled. In LocalScripts, get Workspace instances with WaitForChild or nil-checked FindFirstChild. Set ModelStreamingMode = Atomic on models a client needs whole; use Persistent rarely. On the server, call RequestStreamAroundAsync before moving a player; set FrustumStreaming for scopes or fast vehicles.",
+        "docsUrl": "https://create.roblox.com/docs/workspace/streaming/techniques.md"
+      }
+    }
+  ]
+}

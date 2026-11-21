@@ -1,7 +1,35 @@
 {
-  "generatedAt": "2026-11-10",
+  "generatedAt": "2026-11-21",
   "source": "https://apis.roblox.com/doc-site/v2/feeds?surfaceType=CreatorDocumentation",
   "feedItems": [
+    {
+      "id": "rounded_corners_article",
+      "feedType": "Article",
+      "title": "What it takes to round a corner",
+      "titleKey": "Heading.RoundedCornersArticle",
+      "description": "How Roblox built native UI shadows, gradients, and clipping.",
+      "descriptionKey": "Description.RoundedCornersArticle",
+      "url": "https://create.roblox.com/docs/learn/more/rounded-corners",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/rounded-corners-article.webp"
+        }
+      }
+    },
+    {
+      "id": "luau_article",
+      "feedType": "Article",
+      "title": "How Lua became Luau",
+      "titleKey": "Heading.LuauArticle",
+      "description": "How Roblox turned Lua into a language of its own.",
+      "descriptionKey": "Description.LuauArticle",
+      "url": "https://create.roblox.com/docs/learn/more/luau",
+      "thumbnails": {
+        "default": {
+          "url": "https://prod.docsiteassets.roblox.com/assets/feeds/luau-article.webp"
+        }
+      }
+    },
     {
       "id": "animating2",
       "feedType": "YouTubeVideo",
@@ -29,7 +57,7 @@
           "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/a/4/6/1/a461a2952e9fc19385a04a0ce695cbb09908c4de.jpeg"
         }
       },
-      "likeCount": 69,
+      "likeCount": 80,
       "commentCount": 7
     },
     {
@@ -1099,7 +1127,7 @@
           "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/5/1/5/a/515aaead4f596258e9d054c35a19ef40f2d181d1.jpeg"
         }
       },
-      "likeCount": 1601,
+      "likeCount": 1602,
       "commentCount": 75
     },
     {

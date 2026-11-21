@@ -14,7 +14,6 @@ To upload an avatar asset to the Marketplace, you must:
 
 1. Verify your account through your own [government ID](../production/publishing/account-verification.md#verify-through-government-id) or a linked [parental account](https://about.roblox.com/parental-controls) with government ID verification.
 2. Pay a standard upload fee of **80 Robux** per submission.
-
    - Items that use an [emissive mask](../art/modeling/surface-appearance.md#emissive-mask) require an upload fee of **500 Robux**.
    - [Backgrounds](../avatar/backgrounds/index.md) require an upload fee of **200 Robux**.
 
@@ -24,139 +23,9 @@ In general, upload fees are not refunded if an item is rejected through moderati
 
 A publishing advance is a refundable upfront fee that you pay at the time of publishing an item. The publishing advance does not apply for **free Limited items** which require a [per-unit fee](#per-unit-fee). Items taken off-sale and put back on-sale do not require another publishing advance.
 
-This publishing advance is dependent on the type of Marketplace item being sold:
+The publishing advance depends on the type of Marketplace item, whether it's Limited or not, and whether it uses an [emissive mask](../art/modeling/surface-appearance.md#emissive-mask). The pricing calculator lists current publishing advances and free item publishing fees, which you can view below.
 
-<table>
-<thead>
-  <tr>
-    <th>**Avatar asset type**</th>
-    <th>**Non-limited publishing advance**</th>
-    <th>**Paid limited publishing advance**</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Classic t-shirt</td>
-    <td>10</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>Classic shirt</td>
-    <td>10</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>Classic pants</td>
-    <td>10</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>Hat</td>
-    <td>1500</td>
-    <td>13000</td>
-  </tr>
-  <tr>
-    <td>Face</td>
-    <td>1500</td>
-    <td>13000</td>
-  </tr>
-  <tr>
-    <td>Hair</td>
-    <td>1000</td>
-    <td>6000</td>
-  </tr>
-  <tr>
-    <td>Neck</td>
-    <td>1000</td>
-    <td>15000</td>
-  </tr>
-  <tr>
-    <td>Shoulder</td>
-    <td>1000</td>
-    <td>15000</td>
-  </tr>
-  <tr>
-    <td>Front</td>
-    <td>1000</td>
-    <td>15000</td>
-  </tr>
-  <tr>
-    <td>Back</td>
-    <td>1000</td>
-    <td>15000</td>
-  </tr>
-  <tr>
-    <td>Waist</td>
-    <td>1000</td>
-    <td>15000</td>
-  </tr>
-  <tr>
-    <td>Jacket</td>
-    <td>600</td>
-    <td>5000</td>
-  </tr>
-  <tr>
-    <td>T-Shirt</td>
-    <td>600</td>
-    <td>5000</td>
-  </tr>
-  <tr>
-    <td>Shirt</td>
-    <td>600</td>
-    <td>5000</td>
-  </tr>
-  <tr>
-    <td>Sweater</td>
-    <td>600</td>
-    <td>5000</td>
-  </tr>
-  <tr>
-    <td>Pants</td>
-    <td>600</td>
-    <td>5000</td>
-  </tr>
-  <tr>
-    <td>Dress/Skirt</td>
-    <td>600</td>
-    <td>5000</td>
-  </tr>
-  <tr>
-    <td>Shorts</td>
-    <td>600</td>
-    <td>5000</td>
-  </tr>
-  <tr>
-    <td>Body</td>
-    <td>2500</td>
-    <td>20000</td>
-  </tr>
-  <tr>
-    <td>Head</td>
-    <td>1500</td>
-    <td>10000</td>
-  </tr>
-  <tr>
-    <td>Shoes</td>
-    <td>600</td>
-    <td>5000</td>
-  </tr>
-  <tr>
-    <td>Emotes</td>
-    <td>1500</td>
-    <td>10000</td>
-  </tr>
-  <tr>
-    <td>Makeup</td>
-    <td>1000</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>Backgrounds</td>
-    <td>2000</td>
-    <td>15000</td>
-  </tr>
-</tbody>
-</table>
+[View Current Publishing Advances and Fees](https://create.roblox.com/dashboard/creations/pricing)
 
 <BaseAccordion>
 <AccordionSummary>Publishing advance example scenario</AccordionSummary>
@@ -273,143 +142,6 @@ See the following guidelines:
   <img src="../assets/publishing/marketplace/Transaction-Report.png" alt="Transaction report filtered by Publishing Advance Rebates." width="100%" />
 
 - If a sale occurs after Roblox processes rebates, you may need to wait until the next day's processing to receive the rebate credit and see the rebate in the transaction report.
-
-### Emissive publishing advance
-
-Avatar items that use an [emissive mask](../art/modeling/surface-appearance.md#emissive-mask) require a higher non-limited publishing advance than the standard rate for their asset type. The non-limited publishing advance for an emissive item is 5 times the standard non-limited publishing advance for its asset type. The paid limited publishing advance and free limited publishing fee remain the same as the standard rate.
-
-<table>
-<thead>
-  <tr>
-    <th>**Avatar asset type**</th>
-    <th>**Non-limited publishing advance**</th>
-    <th>**Paid limited publishing advance**</th>
-    <th>**Free limited publishing fee**</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Hat / head accessory</td>
-    <td>7500</td>
-    <td>13000</td>
-    <td>500</td>
-  </tr>
-  <tr>
-    <td>Face accessory</td>
-    <td>7500</td>
-    <td>13000</td>
-    <td>500</td>
-  </tr>
-  <tr>
-    <td>Dynamic head bundle</td>
-    <td>7500</td>
-    <td>10000</td>
-    <td>400</td>
-  </tr>
-  <tr>
-    <td>Full mask</td>
-    <td>7500</td>
-    <td>13000</td>
-    <td>450</td>
-  </tr>
-  <tr>
-    <td>Body bundle</td>
-    <td>12500</td>
-    <td>20000</td>
-    <td>500</td>
-  </tr>
-  <tr>
-    <td>Bodysuit</td>
-    <td>12500</td>
-    <td>20000</td>
-    <td>500</td>
-  </tr>
-  <tr>
-    <td>Back accessory</td>
-    <td>5000</td>
-    <td>15000</td>
-    <td>500</td>
-  </tr>
-  <tr>
-    <td>Front accessory</td>
-    <td>5000</td>
-    <td>15000</td>
-    <td>300</td>
-  </tr>
-  <tr>
-    <td>Neck accessory</td>
-    <td>5000</td>
-    <td>15000</td>
-    <td>300</td>
-  </tr>
-  <tr>
-    <td>Shoulder accessory</td>
-    <td>5000</td>
-    <td>15000</td>
-    <td>300</td>
-  </tr>
-  <tr>
-    <td>Waist accessory</td>
-    <td>5000</td>
-    <td>15000</td>
-    <td>350</td>
-  </tr>
-  <tr>
-    <td>Hair accessory</td>
-    <td>5000</td>
-    <td>6000</td>
-    <td>350</td>
-  </tr>
-  <tr>
-    <td>Jacket</td>
-    <td>3000</td>
-    <td>5000</td>
-    <td>350</td>
-  </tr>
-  <tr>
-    <td>Pants</td>
-    <td>3000</td>
-    <td>5000</td>
-    <td>350</td>
-  </tr>
-  <tr>
-    <td>Sweater</td>
-    <td>3000</td>
-    <td>5000</td>
-    <td>350</td>
-  </tr>
-  <tr>
-    <td>T-shirt</td>
-    <td>3000</td>
-    <td>5000</td>
-    <td>350</td>
-  </tr>
-  <tr>
-    <td>Shirt</td>
-    <td>3000</td>
-    <td>5000</td>
-    <td>300</td>
-  </tr>
-  <tr>
-    <td>Shorts</td>
-    <td>3000</td>
-    <td>5000</td>
-    <td>300</td>
-  </tr>
-  <tr>
-    <td>Dresses and skirts</td>
-    <td>3000</td>
-    <td>5000</td>
-    <td>300</td>
-  </tr>
-  <tr>
-    <td>Shoe bundle</td>
-    <td>3000</td>
-    <td>5000</td>
-    <td>300</td>
-  </tr>
-</tbody>
-</table>
 
 ## Commissions
 
@@ -591,7 +323,7 @@ At this time, only Roblox-created Limiteds are tradeable.
 
 When publishing free Limiteds, you must provide a per-unit fee depending on the quantity being published and other factors like the type of asset being uploaded. This payment depends on a range of market-based factors and may change over time.
 
-As a hypothetical case where limited hat items are 100 Robux per-unit, if 200 limited hats are listed at a **0** Robux price, the creator pays **20,000** Robux to list this free limited item. For free Limiteds, **Roblox keeps the entire per-unit fee**.
+As a hypothetical case where Limited hat items are 100 Robux per-unit, if 200 Limited hats are listed at a **0** Robux price, the creator pays **20,000** Robux to list this free Limited item. For free Limiteds, **Roblox keeps the entire per-unit fee**.
 
 ### Reselling
 
@@ -650,7 +382,7 @@ To toggle timed options for multiple assets:
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page > Avatar items.
 2. Filter by avatar asset type, such as **Clothing**.
 3. On the top right, select the **Timed option** button.
-  <img src="../assets/publishing/marketplace/Timed-Options-Bulk-A.png" alt="Timed options button on top right of Creations page" width="90%" />
+   <img src="../assets/publishing/marketplace/Timed-Options-Bulk-A.png" alt="Timed options button on top right of Creations page" width="90%" />
 
 4. Follow the prompts to confirm the bulk selection and timed option settings.
 
@@ -662,7 +394,7 @@ To toggle timed options for individual assets:
 
 1. In your [Creations](https://create.roblox.com/dashboard/creations) tab, navigate to the individual asset's **Manage Item** page.
 2. Toggle the timed option for your asset.
-  <img src="../assets/publishing/marketplace/Timed-Options-Per-Item.png" alt="Individual timed option toggle on the specific asset sale setting page" width="90%" />
+   <img src="../assets/publishing/marketplace/Timed-Options-Per-Item.png" alt="Individual timed option toggle on the specific asset sale setting page" width="90%" />
 3. When complete, click the **Save Changes** button.
 
 ## Price ranges

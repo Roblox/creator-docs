@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-11-12",
+  "generatedAt": "2026-11-21",
   "articles": {
-    "devforum-4974220": { "likes": 70, "replies": 6, "tags": ["scripting"] },
+    "devforum-4996848": { "likes": 16, "replies": 2 },
+    "devforum-4974220": { "likes": 79, "replies": 6, "tags": ["scripting"] },
     "devforum-4809143": {
-      "likes": 134,
+      "likes": 137,
       "replies": 16,
       "tags": ["collectionservice", "collections"]
     },
-    "devforum-4624565": { "likes": 831, "replies": 157 },
+    "devforum-4624565": { "likes": 841, "replies": 157 },
     "devforum-4618365": {
       "likes": 133,
       "replies": 45,
@@ -26,7 +27,7 @@
       "tags": ["chat", "matchmaking"]
     },
     "devforum-4139321": {
-      "likes": 356,
+      "likes": 358,
       "replies": 68,
       "tags": ["scripting", "anti-exploit", "game-engine"]
     },
@@ -43,7 +44,7 @@
     "devforum-3171223": { "likes": 68, "replies": 5, "tags": ["3d-art"] },
     "devforum-3145609": { "likes": 110, "replies": 6, "tags": ["building"] },
     "devforum-3127146": {
-      "likes": 1377,
+      "likes": 1379,
       "replies": 74,
       "tags": ["scripting", "building"]
     },
@@ -64,7 +65,7 @@
       "tags": ["translation", "localization"]
     },
     "devforum-3050119": {
-      "likes": 112,
+      "likes": 113,
       "replies": 5,
       "tags": ["studio", "building", "modeling", "blender", "art"]
     },
@@ -101,7 +102,7 @@
     "devforum-2873098": { "likes": 97, "replies": 7 },
     "devforum-2861569": { "likes": 44, "replies": 1, "tags": ["help"] },
     "devforum-2860031": { "likes": 90, "replies": 8, "tags": ["resources"] },
-    "devforum-2839937": { "likes": 42, "replies": 2, "tags": ["engine"] },
+    "devforum-2839937": { "likes": 43, "replies": 2, "tags": ["engine"] },
     "devforum-2849003": { "likes": 91, "replies": 8, "tags": ["art"] },
     "devforum-2840180": { "likes": 73, "replies": 19, "tags": ["art"] },
     "devforum-2849057": { "likes": 162, "replies": 11, "tags": ["audio"] },

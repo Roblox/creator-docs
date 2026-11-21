@@ -29,6 +29,14 @@ Caging is a complex process required to define the inner and outer surface of a 
 
 </GridContainer>
 
+A high-quality cage matters because it affects:
+
+- **Fit and layering** - Cages define how a layered accessory wraps over the body and over other layered accessories. Poor cages cause clipping, unnatural stretching, or accessories that don't stack correctly.
+- **Hidden surface removal** - Hidden surface removal (HSR) hides the parts of the body underneath a layered accessory. HSR only works when the inner cage is completely inside the layered accessory mesh and the outer cage completely encloses it.
+- **Body shape compatibility** - Characters come in many shapes and sizes. Precise cages help a layered accessory fit as well as possible on every body, not just one.
+- **Inflation control** - The outer cage of the body and the inner cage of the layered accessory define the space that the accessory occupies. Imprecise cages cause unnatural puffing or clipping.
+- **Animation** - Cages drive how a layered accessory fits and moves with the skeleton, especially when it uses auto-skinning. Sloppy cages create visual artifacts during any animation other than idle.
+
 In extreme cases, improper cages may interfere with gameplay or social elements on Roblox. If your asset includes improper cages, Roblox may prevent you from uploading them to the Marketplace and may remove existing assets with improper cages from the catalog.
 
 <Alert severity = 'warning'>
@@ -66,20 +74,61 @@ When caging your layered accessories, use these important universal guidelines:
   </GridContainer>
 
 - You must follow the [naming conventions](../../avatar/layered-accessories/specifications.md#cage-meshes) for the layered accessory geometry and the cage.
-- Many caging issues start from incorrect outer cage setup. See [working with outer cages](#working-with-outer-cages) for specific details.
+- Don't change the vertex count or UVs of either cage. Cages are deformers that rely on matching vertex counts and UVs to deform correctly. If either changes, the layered accessory distorts or fails to deform.
+
+  <img src="../../assets/accessories/caging-best-practices/16-Vertex-Count-UVs.jpg" width="60%" alt="A coat with its cage in a modeling application next to the unchanged cage UV layout." />
+
+- Model the layered accessory on the character body it's intended for. This is easier to visualize than modeling directly against a cage. For the best results, use the outer cage of the body as the inner cage of the layered accessory.
+  <GridContainer numColumns="2">
+  <figure>
+  <img src="../../assets/accessories/caging-best-practices/17-Model-To-Body-A.jpg" width="80%" alt="A coat modeled on a character body." />
+  <figcaption>A coat modeled on the character body it's intended for.</figcaption>
+  </figure>
+  <figure>
+  <img src="../../assets/accessories/caging-best-practices/17-Model-To-Body-B.jpg" width="80%" alt="The coat over the outer cage of the body." />
+  <figcaption>The outer cage of the body becomes the inner cage of the coat.</figcaption>
+  </figure>
+  </GridContainer>
+
+- Make sure the layered accessory mesh covers the inner cage everywhere. If needed, adjust the mesh to fit over the inner cage so it fits over the body and other layered accessories without intersecting them. For an example of what goes wrong, see [Clothing inside inner cage](#clothing-inside-inner-cage).
+
+  <img src="../../assets/accessories/caging-best-practices/18-Mesh-Covers-Inner-Cage.jpg" width="40%" alt="A coat sleeve that fully covers the inner cage of the arm." />
+
+- Many caging issues start from incorrect outer cage setup. For more information, see [Working with outer cages](#working-with-outer-cages).
 - Do not modify areas of your cage that are unrelated to the layered accessory you are caging. For example, do not modify the inner or outer cages of the lower leg areas when caging a t-shirt.
 - Review any specific best practices for [form-fitting clothes](#caging-form-fitting-clothing), [bulky clothes](#caging-bulky-clothing), and [clothing with protrusions](#caging-protrusions).
 - If troubleshooting any issues, review [common issues](#common-issues) to help identify problematic layered accessories or specific validation errors.
 
 ### Working with outer cages
 
+To create an outer cage, duplicate the inner cage and edit only the areas where the layered accessory sits. Offset the vertices along their normals, and use retopology tools that snap the cage to the layered accessory mesh for an accurate, close fit.
+
+<GridContainer numColumns="2">
+<figure>
+<img src="../../assets/accessories/caging-best-practices/19-Create-Outer-Cage-A.jpg" width="80%" alt="A coat with an outer cage created from a duplicate of the inner cage." />
+</figure>
+<figure>
+<img src="../../assets/accessories/caging-best-practices/19-Create-Outer-Cage-B.jpg" width="80%" alt="Shorts with an outer cage edited only around the area that the shorts cover." />
+</figure>
+</GridContainer>
+
 As long as the clothing mesh properly fits **over the inner cage** and **under the outer cage**, you can edit the outer cage in various ways depending on the final visual effect you intend to achieve.
 
 When working with the outer cage, use the following guidelines when possible:
 
 - Move vertices outwards in the normal's direction.
-  <img src="../../assets/accessories/caging-best-practices/8-Symmetry.png" width="60%" alt=""/>
-- Keep the outer cage as close to the clothing mesh as possible.
+  <img src="../../assets/accessories/caging-best-practices/8-Symmetry.png" width="40%" alt=""/>
+- Keep the outer cage as close to the clothing mesh as possible without intersecting it. Because the cage has a different topology and a lower resolution than the layered accessory mesh, this can be difficult. A close outer cage lets the next layer fit closely without intersecting the layered accessory, and keeps it from looking puffy or floating away from the body.
+  <img src="../../assets/accessories/caging-best-practices/20-Close-Outer-Cage.jpg" width="40%" alt="An outer cage that closely covers a shirt without intersecting it." />
+- Keep the outer cage similar in shape to the inner cage. Treat it as an offset along the normals rather than reshaping or distorting it to fit over the mesh. This reduces distortion in the next layer.
+  <GridContainer numColumns="2">
+  <figure>
+  <img src="../../assets/accessories/caging-best-practices/21-Outer-Cage-Offset-A.jpg" width="100%" alt="An outer cage that keeps the shape of the inner cage." />
+  </figure>
+  <figure>
+  <img src="../../assets/accessories/caging-best-practices/21-Outer-Cage-Offset-B.jpg" width="100%" alt="The same outer cage offset along its normals over the layered accessory." />
+  </figure>
+  </GridContainer>
 - Work symmetrically as much as possible to save time.
 - Do not alter the UVs in any way.
 - Do not stack your vertices.
@@ -152,6 +201,76 @@ To ensure that the protruded region stays visible independent of the number of l
 
 - Leave the protruded region outside the outer cage. Alternatively, edit the outer cage to pass under the regions that are meant to be visible and undeformed.
 - Avoid moving vertices that are not covered by the layered accessory.
+
+### Caging examples
+
+The following examples show caged layered accessories of different types.
+
+#### Skirt
+
+<GridContainer numColumns="2">
+<figure>
+<img src="../../assets/accessories/caging-best-practices/22-Skirt-A.jpg" width="80%" alt="A long skirt layered accessory." />
+</figure>
+<figure>
+<img src="../../assets/accessories/caging-best-practices/22-Skirt-B.jpg" width="82%" alt="The long skirt with its outer cage." />
+</figure>
+</GridContainer>
+
+#### Tall boots
+
+<GridContainer numColumns="2">
+<figure>
+<img src="../../assets/accessories/caging-best-practices/23-Tall-Boots-A.jpg" width="80%" alt="A tall boot layered accessory." />
+</figure>
+<figure>
+<img src="../../assets/accessories/caging-best-practices/23-Tall-Boots-B.jpg" width="72%" alt="The tall boots with their outer cages." />
+</figure>
+</GridContainer>
+
+#### Scarf
+
+<GridContainer numColumns="2">
+<figure>
+<img src="../../assets/accessories/caging-best-practices/24-Scarf-A.jpg" width="80%" alt="A scarf layered accessory." />
+</figure>
+<figure>
+<img src="../../assets/accessories/caging-best-practices/24-Scarf-B.jpg" width="72%" alt="The scarf with its outer cage." />
+</figure>
+</GridContainer>
+
+#### Shoulder pauldrons
+
+<GridContainer numColumns="2">
+<figure>
+<img src="../../assets/accessories/caging-best-practices/25-Pauldrons-A.jpg" width="80%" alt="A pair of shoulder pauldron layered accessories." />
+</figure>
+<figure>
+<img src="../../assets/accessories/caging-best-practices/25-Pauldrons-B.jpg" width="82%" alt="The shoulder pauldrons with their outer cage." />
+</figure>
+</GridContainer>
+
+#### Hat
+
+<GridContainer numColumns="2">
+<figure>
+<img src="../../assets/accessories/caging-best-practices/26-Hat-A.jpg" width="80%" alt="A cap layered accessory." />
+</figure>
+<figure>
+<img src="../../assets/accessories/caging-best-practices/26-Hat-B.jpg" width="75%" alt="The cap with its outer cage." />
+</figure>
+</GridContainer>
+
+#### Hair
+
+<GridContainer numColumns="2">
+<figure>
+<img src="../../assets/accessories/caging-best-practices/27-Hair-A.jpg" width="80%" alt="A long hair layered accessory." />
+</figure>
+<figure>
+<img src="../../assets/accessories/caging-best-practices/27-Hair-B.jpg" width="77%" alt="The long hair with its outer cage." />
+</figure>
+</GridContainer>
 
 ## Common issues
 

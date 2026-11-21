@@ -104,6 +104,31 @@ Objects can be quickly duplicated into the same branch, while items copied to th
 When pasting 3D objects copied to the clipboard, you can maintain their original `Datatype.CFrame` position by right‑clicking the target parent instance in the hierarchy and selecting **Paste&nbsp;Options**&nbsp;&rang; **Paste&nbsp;Into&nbsp;At&nbsp;Original&nbsp;Location**.
 </Alert>
 
+### Copy and paste as JSON
+
+You can copy instances, along with their properties, attributes, and tags, as plain‑text JSON by right‑clicking them and selecting **Copy&nbsp;as&nbsp;JSON**. Only properties that differ from their defaults are included, for example:
+
+```json
+{
+  "ClassName": "Part",
+  "Size": "4, 1, 2",
+  "Position": "388, 59.150013, 352",
+  "BottomSurface": "Smooth",
+  "TopSurface": "Smooth"
+}
+```
+
+You can paste a JSON payload (a single object or an array of objects) into Studio with the standard [Paste or Paste&nbsp;Into](#duplicate-and-paste) actions:
+
+- If the payload's `ClassName` matches the selected instance, the payload's properties overwrite that instance's properties. With multiple instances selected, all of them update. For example, pasting `{"ClassName":"Part","Anchored":"true","Name":"Renamed"}` onto selected parts anchors them and renames them to `Renamed`.
+- If the `ClassName` doesn't match, Studio creates a new instance with those properties, placed according to whether you used **Paste** or **Paste&nbsp;Into**.
+- Keys prefixed with `$` set [attributes](../studio/properties.md#instance-attributes), such as `{"$Label":"Important","$Speed":1.5,"$Active":true}`.
+- Keys prefixed with `.` set [tags](../studio/properties.md#instance-tags), such as `{".Interactable":true}`.
+
+<Alert severity="warning">
+JSON copy and paste doesn't currently support descendants. Only the selected instances themselves are included.
+</Alert>
+
 ## Contextual options
 
 Right-clicking on an instance opens the options menu, contextually adjusted for the object type. For example, right‑clicking a `Class.Model` reveals standard options like **Copy** and **Duplicate**, and also options specific to `Class.Model|Models` like **Ungroup**. In contrast, right‑clicking a service like `Class.Lighting` reveals a more concise menu of actions valid for services.

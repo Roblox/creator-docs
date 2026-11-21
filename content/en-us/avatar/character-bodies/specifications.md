@@ -668,6 +668,7 @@ Outer cages on your character model allow your character to wear layered accesso
 - **Vertices and UV Map** - Don't delete vertices or alter the UVs on outer cages as this can cause errors when importing in Studio or when equipping onto a character. Use Roblox's provided templates for cage meshes to ensure compatibility with other layered assets.
 - **Symmetry and consistency** - Keep each face of your geometry consistently sized and retain symmetry wherever possible by using symmetry tools in your modeling software.
 - For information on dynamic head cages and best practices when caging, see [Dynamic head specifications](../dynamic-heads/specifications.md#outer-cage).
+- For best practices and examples when caging the body, see [Character body caging best practices](./caging-best-practices.md).
 
 <Alert severity = 'info'>
 Character bodies only require an outer cage, but layered accessories require both an inner and outer cage to deform properly. For more information, see [Layered accessory specifications - Cage meshes](../layered-accessories/specifications.md#cage-meshes).
