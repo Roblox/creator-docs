@@ -119,7 +119,7 @@ Similar to Unity tools, Roblox Studio supports [plugins](studio/plugins.md), whi
 
 | Unity             | Roblox                                                                               | Notes                                                                               |
 | :---------------- | :----------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
-| Scene             | [Place](projects.md#places)                                                          |                                                                                     |
+| Scene             | [Place](projects/index.md#places)                                                    |                                                                                     |
 | GameObject        | `Class.Part` or `Class.Model`                                                        | See [Philosophical differences](#philosophical-differences).                        |
 | Prefab            | [Package](projects/assets/packages.md)                                               |                                                                                     |
 | Transform         | `Datatype.CFrame`                                                                    | `Datatype.CFrame` doesn't include scale information. See [Transforms](#transforms). |

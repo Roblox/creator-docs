@@ -174,7 +174,7 @@ and grow your creations.
 
 <h4 style={{marginBottom: 12}}>Earning on Roblox</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Learn about monetization options and strategies on the platform along with associated considerations for developers.</Typography>
-<a href="./monetize-experiences.md">
+<a href="./production/monetization/index.md">
   <Button variant="text">Learn more</Button>
 </a>
 </Grid>

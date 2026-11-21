@@ -123,7 +123,7 @@ Similar to Unreal, Roblox Studio supports [plugins](studio/plugins.md), which ca
 
 | Unreal          | Roblox                                                                               | Notes                                                                               |
 | :-------------- | :----------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
-| Level           | [Place](projects.md#places)                                                          |                                                                                     |
+| Level           | [Place](projects/index.md#places)                                                    |                                                                                     |
 | Actor           | `Class.Part` or `Class.Model`                                                        | See [Philosophical differences](#philosophical-differences).                        |
 | Blueprint Class | [Package](projects/assets/packages.md)                                               |                                                                                     |
 | Transform       | `Datatype.CFrame`                                                                    | `Datatype.CFrame` doesn't include scale information. See [Transforms](#transforms). |
