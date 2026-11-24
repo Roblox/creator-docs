@@ -1,5 +1,5 @@
 navigation:
-  - heading: Creator Programs
+  - heading: Programs
   - title: Overview
     path: /creator-programs/
   - title: Android TV Pilot Program
@@ -38,3 +38,28 @@ navigation:
     path: /creator-programs/standout-games
   - title: Today's Picks on Marketplace
     path: /creator-programs/todays-picks-marketplace
+  - heading: Policies
+  - title: Safety on Roblox
+    path: /safety
+  - title: Content ratings
+    path: /production/promotion/content-ratings
+  - title: Roblox Kids and Select
+    path: /production/publishing/kids-and-select
+  - title: Regional content availability
+    path: /production/promotion/regional-content-availability
+  - title: RTBF and creators
+    path: /production/publishing/RTBF-and-creators
+  - title: IP Guidelines
+    path: /production/publishing/ip-guidelines
+  - title: EU DSA IP Reporting
+    path: /production/publishing/dsa-ip-reporting
+  - title: Generative AI
+    path: /generative-AI
+  - title: AI data sharing
+    path: /ai-data-sharing
+  - title: Account verification
+    path: /production/publishing/account-verification
+  - title: Group guidelines
+    path: /projects/group-guidelines
+  - title: Paid random items guidelines
+    path: /production/monetization/paid-random-items

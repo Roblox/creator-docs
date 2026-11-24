@@ -162,4 +162,4 @@ navigation:
   - title: Layered accessories
     path: /art/accessories/creating
     navigation: /avatar/tutorials-clothing.yaml
-
+  - include: /education.yaml

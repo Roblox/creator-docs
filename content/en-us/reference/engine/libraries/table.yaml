@@ -196,7 +196,9 @@ functions:
       - Deprecated
     code_samples:
       - table-foreach
-    deprecation_message: ''
+    deprecation_message: |
+      This function is deprecated and should not be used in new work. Use a
+      `for` loop instead.
   - name: table.foreachi
     summary: |
       Similar to `Library.table.foreach()` except index-value pairs are passed
@@ -225,7 +227,9 @@ functions:
       - Deprecated
     code_samples:
       - table-foreachi
-    deprecation_message: ''
+    deprecation_message: |
+      This function is deprecated and should not be used in new work. Use a
+      `for` loop instead.
   - name: table.freeze
     summary: |
       Makes the given table read-only.
@@ -271,7 +275,9 @@ functions:
       - Deprecated
     code_samples:
       - table-getn
-    deprecation_message: ''
+    deprecation_message: |
+      This function is deprecated and should not be used in new work. Use the
+      `#` length operator instead.
   - name: table.insert
     summary: |
       Inserts the provided value to the target position of the array.

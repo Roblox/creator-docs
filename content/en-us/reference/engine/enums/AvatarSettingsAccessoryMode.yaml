@@ -5,31 +5,28 @@
 name: AvatarSettingsAccessoryMode
 type: enum
 summary: |
-  Determines whether `AvatarAccessoryRules` enforces custom size limits on rigid
-  accessories worn by player avatars.
+  Whether rigid accessories are limited to
+  `Class.AvatarAccessoryRules.LimitBounds`.
 description: |
-  Determines whether `AvatarAccessoryRules` enforces custom size limits on rigid
-  (non-layered) accessories worn by player avatars in the experience. Used by
-  `AccessoryMode`, which defaults to
-  `Enum.AvatarSettingsAccessoryMode.PlayerChoice`. When set to
-  `Enum.AvatarSettingsAccessoryMode.CustomLimit`, the engine evaluates each
-  rigid accessory against `LimitBounds` and applies the enforcement strategy in
-  `LimitMethod`.
+  Used by `Class.AvatarAccessoryRules.AccessoryMode` to determine whether rigid
+  accessories are limited to `Class.AvatarAccessoryRules.LimitBounds`. Layered
+  clothing isn't affected; see `Enum.AvatarSettingsClothingMode`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: PlayerChoice
     summary: |
-      No custom size limits are applied to rigid accessories; the player's own
-      accessory choices are displayed without modification.
+      Accessory size isn't limited. This is the default value for
+      `Class.AvatarAccessoryRules.AccessoryMode`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: CustomLimit
     summary: |
-      The experience enforces custom size limits on rigid accessories using the
-      LimitBounds and LimitMethod properties of `AvatarAccessoryRules`.
+      Each rigid accessory that extends outside
+      `Class.AvatarAccessoryRules.LimitBounds` is handled as
+      `Class.AvatarAccessoryRules.LimitMethod` specifies.
     value: 1
     tags: []
     deprecation_message: ''

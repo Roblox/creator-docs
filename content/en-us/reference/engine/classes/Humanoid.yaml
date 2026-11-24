@@ -1404,6 +1404,74 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities: []
+  - name: Humanoid:ApplyAvatarRulesAsync
+    summary: |
+      Applies an `Class.AvatarRules` tree to the character in place of the
+      experience's Avatar Settings.
+    description: |
+      This yielding method applies avatar rules to the character that this
+      `Class.Humanoid` belongs to. The rules replace the experience's
+      [Avatar Settings](../../../studio/avatar-settings.md) for this
+      application: a category that `avatarRules` omits uses that category's
+      default values. If `avatarRules` is `nil` or omitted, the experience's
+      Avatar Settings are applied.
+
+      Instead of an instance, `avatarRules` can be a table with the same
+      structure, keyed by class and property name. Enum properties accept an
+      `Datatype.EnumItem`, its name, or its value. The method validates the
+      whole table first; if any key or value is invalid, it raises an error
+      listing every problem and applies nothing.
+
+      ```lua
+      local Players = game:GetService("Players")
+
+      Players.PlayerAdded:Connect(function(player)
+      	player.CharacterAppearanceLoaded:Connect(function(character)
+      		local humanoid = character:FindFirstChildOfClass("Humanoid")
+      		humanoid:ApplyAvatarRulesAsync({
+      			AvatarRules = {
+      				AvatarCollisionRules = {
+      					CollisionMode = Enum.AvatarSettingsCollisionMode.SingleCollider,
+      				},
+      			},
+      		})
+      	end)
+      end)
+      ```
+
+      Applying rules doesn't change the character's rig type, and the properties
+      on the rules objects have no effect on an R6 rig. The rules aren't kept:
+      when the character respawns, or a `Class.HumanoidDescription` is applied
+      with `Class.HumanoidDescription.UseAvatarSettings|UseAvatarSettings` set
+      to `true`, the experience's Avatar Settings, or that description's own
+      `Class.AvatarRules` child, are used instead.
+
+      This method raises an error if:
+
+      - `avatarRules` isn't a valid `Class.AvatarRules` tree, or the table
+        describing one is invalid. See `Class.AvatarRules` for what a valid tree
+        contains.
+      - The character is R15 and has no `HumanoidRootPart`.
+      - It's called from a client on a `Class.Humanoid` that the server created.
+        A client can only apply rules to a `Class.Humanoid` it created itself.
+    code_samples: []
+    parameters:
+      - name: avatarRules
+        type: Variant
+        default:
+        summary: |
+          An `Class.AvatarRules` instance, a table describing one, or `nil` to
+          apply the experience's Avatar Settings.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AvatarAppearance
   - name: Humanoid:ApplyDescription
     summary: |
       Makes the character's look match that of the passed in

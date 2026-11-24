@@ -64,13 +64,21 @@ hideInPageNavigation: true
     color: inherit;
   }
   .cv-acc-header:hover { background: var(--color-state-hover); }
+  /* Foundation UI icon-regular-chevron-large-right, drawn as a mask the same way Foundation's .icon class does. */
   .cv-acc-caret {
-    color: var(--color-content-muted);
     font-size: 14px;
-    transition: transform 200ms ease, color 200ms ease;
+    width: 1em;
+    height: 1em;
+    background-color: var(--color-content-emphasis);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Cpath d='M22.7071 16.7071C23.0976 16.3166 23.0976 15.6834 22.7071 15.2929L12.7071 5.29289C12.3166 4.90237 11.6834 4.90237 11.2929 5.29289C10.9024 5.68342 10.9024 6.31658 11.2929 6.70711L20.5858 16L11.2929 25.2929C10.9024 25.6834 10.9024 26.3166 11.2929 26.7071C11.6834 27.0976 12.3166 27.0976 12.7071 26.7071L22.7071 16.7071Z' fill='black'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Cpath d='M22.7071 16.7071C23.0976 16.3166 23.0976 15.6834 22.7071 15.2929L12.7071 5.29289C12.3166 4.90237 11.6834 4.90237 11.2929 5.29289C10.9024 5.68342 10.9024 6.31658 11.2929 6.70711L20.5858 16L11.2929 25.2929C10.9024 25.6834 10.9024 26.3166 11.2929 26.7071C11.6834 27.0976 12.3166 27.0976 12.7071 26.7071L22.7071 16.7071Z' fill='black'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+    transition: transform 200ms ease;
     display: inline-block;
   }
-  .cv-acc-item.open .cv-acc-caret { transform: rotate(90deg); color: var(--color-system-emphasis); }
+  .cv-acc-item.open .cv-acc-caret { transform: rotate(90deg); }
+  @media (forced-colors: active) {
+    .cv-acc-caret { forced-color-adjust: none; background-color: CanvasText; }
+  }
   .cv-acc-panel { max-height: 0; overflow: hidden; transition: max-height 280ms ease; }
   .cv-acc-item.open .cv-acc-panel { max-height: 900px; }
   .cv-acc-panel-inner { padding: 0 22px 20px; line-height: 1.6; }
@@ -147,9 +155,9 @@ cta: { label: 'Apply', href: APPLY_URL },
 image: '../assets/creator-programs/convert/header-option-a.jpg',
 },
 stats: [
-{ value: '138M', label: 'Daily Active Users\*' },
-{ value: '$1.6B', label: 'Earned by Creators in the last 12 months\*\*' },
-{ value: '$10M', label: 'Avg Earned Per Top 100 Creators in the last 12 months\*\*' },
+{ value: '138', unit: 'M', label: 'Daily Active Users\*' },
+{ value: '$1.6', unit: 'B', label: 'Earned by Creators in the last 12 months\*\*' },
+{ value: '$10', unit: 'M', label: 'Avg Earned Per Top 100 Creators in the last 12 months\*\*' },
 ],
 footnote: "\*Q3 2026 \*\*Reflects the 12 months ended September 30, 2026 Our creator ecosystem includes many hobbyists. Of the millions of creators monetizing on Roblox, over 45,000 are part of our Devex program, with the median creator receiving over $1,500 USD during the twelve months ended September 30, 2026.",
 whyApply: {
@@ -253,15 +261,15 @@ const Hero = ({ overline, title, description, cta, image }) => (
 </div>
 );
 
-{/* Launch at Global Scale: three big-number stat tiles. */}
+{/* Launch at Global Scale: three stat tiles, label above the big number. */}
 const StatBar = ({ stats }) => (
 <div style={mb(72)}>
 <Typography component="h2" style={{ ...h2Style, marginBottom: 24 }}>Launch at Global Scale</Typography>
 <div className="cv-grid-3">
 {stats.map((s, i) => (
-<Card key={i} style={{ background: darkSurface, border: `1px solid ${darkBorder}`, borderRadius: 14, padding: '22px 24px', width: '100%', ...flexCol, gap: 6 }}>
-<Typography style={{ fontFamily: extendedFont, fontSize: 40, fontWeight: 700, letterSpacing: '-0.01em', color: 'var(--color-content-emphasis)', lineHeight: 1 }}>{s.value}</Typography>
-<Typography variant="smallLabel1" style={{ color: 'var(--color-content-muted)', fontWeight: 600, letterSpacing: '0.08em' }}>{s.label}</Typography>
+<Card key={i} style={{ background: darkSurface, border: `1px solid ${darkBorder}`, borderRadius: 14, padding: '24px 24px 22px', width: '100%', ...flexCol }}>
+<Typography component="div" style={{ fontSize: 12, fontWeight: 600, lineHeight: 1.3, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--color-content-muted)', minHeight: 48 }}>{s.label}</Typography>
+<Typography component="div" style={{ fontFamily: extendedFont, fontSize: 52, fontWeight: 600, letterSpacing: '-0.02em', color: 'var(--color-content-emphasis)', lineHeight: 1, marginTop: 18 }}>{s.value}<span style={{ fontSize: 30, letterSpacing: 0 }}>{s.unit}</span></Typography>
 </Card>
 ))}
 </div>
@@ -325,7 +333,7 @@ const WhatYouGet = ({ title, intro, cards }) => (
 <div style={{ marginTop: 4, ...flexCol, gap: 10 }}>
 {c.items.map((it, ii) => (
 <div key={ii} className="cv-item-icon-row">
-<span style={{ flexShrink: 0, marginTop: 1 }}><Icon path={ICON_PATHS[it.icon]} size={18} /></span>
+<span style={{ flexShrink: 0, marginTop: 1 }}><Icon path={ICON_PATHS[it.icon]} size={18} color="var(--color-content-emphasis)" /></span>
 <Typography component="span" variant="smallLabel1" color="secondary">{it.text}</Typography>
 </div>
 ))}
@@ -347,7 +355,7 @@ const WhoShouldApply = ({ title, intro, items, apply }) => (
 <div className="cv-apply-checklist">
 {items.map((it, i) => (
 <div key={i} className="cv-item-icon-row">
-<span style={{ flexShrink: 0, marginTop: 1 }}><Icon path={ICON_PATHS.check} size={20} /></span>
+<span style={{ flexShrink: 0, marginTop: 1 }}><Icon path={ICON_PATHS.check} size={20} color="var(--color-system-success)" /></span>
 <Typography variant="smallLabel1">{it}</Typography>
 </div>
 ))}
@@ -370,7 +378,7 @@ const FAQ = ({ title, items }) => (
 <div key={i} className="cv-acc-item">
 <button type="button" className="cv-acc-header" onClick={(e) => e.currentTarget.closest('.cv-acc-item')?.classList.toggle('open')}>
 <Typography component="span" variant="largeLabel1" style={{ fontWeight: 600 }}>{item.q}</Typography>
-<span className="cv-acc-caret">▸</span>
+<span className="cv-acc-caret" aria-hidden="true" />
 </button>
 <div className="cv-acc-panel">
 <div className="cv-acc-panel-inner">

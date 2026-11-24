@@ -19,7 +19,48 @@ description: |
   node's type resets its input pins to the default set for that type. For a node
   that outputs one or more values instead of a pose, see
   `Class.AnimationValueNodeDefinition`.
-code_samples: []
+
+  #### Connecting nodes
+
+  To connect the pose of another `Class.AnimationNodeDefinition` to an input of
+  this node, parent an `Class.ObjectValue` to this node, set its
+  `Class.ObjectValue.Value|Value` to the source node, and name it after the
+  input pin. Every pose connection's pin name must also appear in this node's
+  ordered input pin list. Wires from value nodes don't use input pins; see
+  `Class.AnimationValueOutputDefinition`.
+
+  - Node types with fixed inputs, such as `Enum.AnimationNodeType.AddNode`,
+    `Enum.AnimationNodeType.SubtractNode`, and
+    `Enum.AnimationNodeType.GraphOutput`, already have their pins in the list.
+    Name the `Class.ObjectValue` after one of them, for example `Base` or
+    `Pose`.
+  - Node types with a variable number of inputs, such as
+    `Enum.AnimationNodeType.Blend1DNode`, `Enum.AnimationNodeType.Blend2DNode`,
+    `Enum.AnimationNodeType.SelectNode`, and
+    `Enum.AnimationNodeType.SequenceNode`, start with an empty list. Call
+    `Class.AnimationNodeDefinition:AddInputPin()|AddInputPin()` for each
+    connection, or
+    `Class.AnimationNodeDefinition:SetOrderedInputPinNames()|SetOrderedInputPinNames()`
+    for all of them at once.
+
+  Set `Class.AnimationNodeDefinition.NodeType|NodeType` before adding pins,
+  since changing it resets the list. Give each node a
+  `Class.AnimationNodeDefinition.NodeId|NodeId` that is unique within the graph,
+  such as one from `Class.HttpService:GenerateGUID()`; a node without one logs a
+  warning when the graph is built.
+
+  A connection whose pin is missing from the list never plays on nodes that look
+  up their inputs by name, such as `Enum.AnimationNodeType.AddNode` and
+  `Enum.AnimationNodeType.SubtractNode`. Other nodes still play it, but evaluate
+  it after all listed inputs, and Studio's animation graph editor doesn't
+  display it as an input of the node.
+
+  Node properties, such as a clip's `AnimationId`, are attributes on the node.
+  Properties of a single input, such as the `Position` of a
+  `Enum.AnimationNodeType.Blend1DNode` input, are attributes on that input's
+  `Class.ObjectValue`.
+code_samples:
+  - AnimationNodeDefinition-ConnectInputs
 inherits:
   - Instance
 descendants: []
@@ -74,19 +115,24 @@ methods:
     summary: |
       Appends a named input pin to the end of the ordered input pin list.
     description: |
-      Appends a named input pin to the end of the ordered input pin list. The
-      order in which pins are added is significant for nodes such as
+      Appends a named input pin to the end of the ordered input pin list. Call
+      this for each `Class.ObjectValue` connection you add to a node with a
+      variable number of inputs, such as `Enum.AnimationNodeType.Blend2DNode`.
+      Without a matching pin, the connection still plays but isn't displayed as
+      an input in Studio's animation graph editor. The order in which pins are
+      added is significant for nodes such as
       `Enum.AnimationNodeType.SequenceNode`,
       `Enum.AnimationNodeType.RandomSequenceNode`, and
       `Enum.AnimationNodeType.PrioritySelectNode`.
-    code_samples: []
+    code_samples:
+      - AnimationNodeDefinition-ConnectInputs
     parameters:
       - name: pin
         type: string
         default:
         summary: |
           Name of the input pin to append. Should match the
-          `Class.ObjectValue.Name|Name` of the corresponding `Class.ObjectValue`
+          `Class.Instance.Name|Name` of the corresponding `Class.ObjectValue`
           wiring child.
     returns:
       - type: ()
@@ -143,7 +189,9 @@ methods:
       Bulk-replaces the entire ordered input pin list.
     description: |
       Bulk-replaces the entire ordered input pin list. Use this to reorder pins
-      or apply batch updates in a single call.
+      or apply batch updates in a single call, such as registering the pins of a
+      node whose `Class.ObjectValue` connections were added without
+      `Class.AnimationNodeDefinition:AddInputPin()|AddInputPin()`.
     code_samples: []
     parameters:
       - name: pins
@@ -151,6 +199,8 @@ methods:
         default:
         summary: |
           The new ordered list of input pin names, replacing the existing list.
+          Each name should match the `Class.Instance.Name|Name` of a
+          `Class.ObjectValue` wiring child.
     returns:
       - type: ()
         summary: ''

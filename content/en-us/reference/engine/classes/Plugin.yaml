@@ -715,7 +715,10 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This function is deprecated and should not be used in new work. Use
+      `Class.ScriptEditorService:OpenScriptDocumentAsync()|ScriptEditorService:OpenScriptDocumentAsync()`
+      instead.
     security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []

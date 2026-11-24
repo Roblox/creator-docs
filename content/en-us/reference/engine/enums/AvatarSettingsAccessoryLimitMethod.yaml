@@ -5,42 +5,42 @@
 name: AvatarSettingsAccessoryLimitMethod
 type: enum
 summary: |
-  Determines how `AvatarAccessoryRules` enforces accessory size limits when an
-  accessory exceeds the configured bounds.
+  What happens to a rigid accessory that extends outside
+  `Class.AvatarAccessoryRules.LimitBounds`.
 description: |
-  Determines how `AvatarAccessoryRules` enforces accessory size limits when an
-  accessory exceeds `LimitBounds`. Used by `LimitMethod`, which defaults to
-  `Enum.AvatarSettingsAccessoryLimitMethod.Remove`. Only takes effect when
-  `AccessoryMode` is `Enum.AvatarSettingsAccessoryMode.CustomLimit`.
+  Used by `Class.AvatarAccessoryRules.LimitMethod` to determine what happens to
+  a rigid accessory that extends outside
+  `Class.AvatarAccessoryRules.LimitBounds`. Only takes effect when
+  `Class.AvatarAccessoryRules.AccessoryMode` is
+  `Enum.AvatarSettingsAccessoryMode.CustomLimit`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Scale
     summary: |
-      Scales down rigid accessories that exceed the configured bounds, or
-      removes them if scaling would reduce them below minimum size thresholds.
+      The accessory is shrunk toward its attachment point until it fits. It's
+      destroyed instead if its attachment point is outside the bounds or it
+      would become too small.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Remove
     summary: |
-      Destroys any rigid accessory whose bounding box exceeds the configured
-      bounds.
+      The accessory is destroyed. This is the default value for
+      `Class.AvatarAccessoryRules.LimitMethod`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: PreviewScale
     summary: |
-      Reports whether an accessory would be scaled or removed for exceeding the
-      configured bounds without actually modifying it.
+      For internal use only. Not intended for creator use.
     value: 2
     tags: []
     deprecation_message: ''
   - name: PreviewRemove
     summary: |
-      Reports whether an accessory would be removed for exceeding the configured
-      bounds without actually destroying it.
+      For internal use only. Not intended for creator use.
     value: 3
     tags: []
     deprecation_message: ''

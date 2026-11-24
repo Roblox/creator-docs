@@ -1,0 +1,36 @@
+navigation:
+  - heading: For everyone
+  - title: Overview
+    path: /get-started/
+  - title: Why should I develop on Roblox?
+    path: /get-started/why-build-on-roblox
+  - title: How is Roblox different from other platforms?
+    path: /get-started/how-is-roblox-different
+  - title: What tools does Roblox provide?
+    path: /get-started/tools
+  - title: How do I make money?
+    path: /get-started/monetization
+  - title: Recommended strategies
+    path: /get-started/strategies
+  - title: Start creating
+    path: /get-started/creating
+  - title: Resources
+    path: /get-started/resources
+  - heading: For experienced creators
+  - title: Overview
+    path: /onboarding/
+  - title: For developers
+    path: /onboarding/developers
+  - title: For artists
+    path: /onboarding/artists
+  - title: From Unity
+    path: /unity
+  - title: From Unreal
+    path: /unreal
+  - heading: Platform
+  - title: Create
+    path: /platform
+  - title: Scale
+    path: /scale
+  - title: Monetize
+    path: /monetize

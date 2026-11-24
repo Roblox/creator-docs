@@ -50,7 +50,6 @@ descendants:
   - AudioEcho
   - AudioEmitter
   - AudioEqualizer
-  - AudioFDNReverb
   - AudioFader
   - AudioFilter
   - AudioFlanger
@@ -67,8 +66,14 @@ descendants:
   - AudioStreamWriter
   - AudioTextToSpeech
   - AudioTremolo
+  - AvatarAccessoryRules
+  - AvatarAnimationRules
+  - AvatarBodyRules
+  - AvatarClothingRules
+  - AvatarCollisionRules
   - AvatarCreationService
   - AvatarEditorService
+  - AvatarRules
   - Backpack
   - BadgeService
   - BaseCoreGuiConfiguration
@@ -242,7 +247,6 @@ descendants:
   - SharedTableRegistry
   - Sky
   - Smoke
-  - SmoothVoxelsUpgraderService
   - SocialService
   - Sound
   - SoundEffect
@@ -307,8 +311,6 @@ descendants:
   - RenderSettings
   - StopWatchReporter
   - VirtualInputManager
-  - FileSystemService
-  - ProcessService
   - CreatorStoreService
   - InputAction
   - InputBinding

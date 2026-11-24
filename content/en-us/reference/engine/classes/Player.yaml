@@ -1398,6 +1398,72 @@ methods:
     capabilities:
       - Players
     simulationAccess: true
+  - name: Player:GetFriendsInServerAsync
+    summary: |
+      Returns an array of friends in the same server.
+    description: |
+      This function returns an array of `Class.Player` objects for friends
+      currently in the same server as the `Class.Player` it is called on. The
+      player the method is called on is not included.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: List<Player>
+        summary: |
+          An array of friends in the same server.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+      - Social
+  - name: Player:GetFriendsInUniverseAsync
+    summary: |
+      Returns a dictionary of friends in the universe (all of the places in the
+      same experience).
+    description: |
+      This function returns a dictionary array of friends currently playing in
+      the same universe (all of the places in the same experience) as the
+      `Class.Players.LocalPlayer|LocalPlayer`.
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><code>User</code></td>
+                  <td>A <code>Class.Player.User</code> corresponding to the friend.</td>
+              </tr>
+              <tr>
+                  <td><code>PlaceId</code></td>
+                  <td>The place ID (number) of the friend's current location.</td>
+              </tr>
+              <tr>
+                  <td><code>GameId</code></td>
+                  <td>The <code>Class.DataModel.JobId</code> (string) of the friend's current location.</td>
+              </tr>
+          </tbody>
+      </table>
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          A dictionary of friends in the universe.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Players
+      - Social
   - name: Player:GetFriendsOnline
     summary: |
       Returns a dictionary of online friends.
@@ -2320,6 +2386,47 @@ methods:
     security: None
     thread_safety: Unsafe
     capabilities:
+      - Players
+  - name: Player:LoadCharacterWithAvatarRulesAsync
+    summary: |
+      Spawns the player's character with an `Class.AvatarRules` tree applied in
+      place of the experience's Avatar Settings.
+    description: |
+      This yielding method spawns the player's character like
+      `Class.Player:LoadCharacterAsync()|LoadCharacterAsync()`, with the
+      player's own avatar, but applies `avatarRules` in place of the
+      experience's [Avatar Settings](../../../studio/avatar-settings.md). A
+      category that `avatarRules` omits uses that category's default values. It
+      can only be called from the server.
+
+      `avatarRules` can be an `Class.AvatarRules` instance or a table with the
+      same structure, keyed by class and property name, as described in
+      `Class.Humanoid:ApplyAvatarRulesAsync()`. The method raises an error if
+      `avatarRules` is `nil` or isn't a valid tree.
+
+      Without a `StarterCharacter`, the character is always loaded as R15. The
+      rules aren't applied when `Class.StarterPlayer.LoadCharacterAppearance` or
+      `Class.Player.CanLoadCharacterAppearance|CanLoadCharacterAppearance` is
+      `false`, or when the experience uses a `StarterCharacter`. The rules apply
+      to this spawn only: later spawns, including automatic respawns, use the
+      experience's Avatar Settings.
+    code_samples: []
+    parameters:
+      - name: avatarRules
+        type: Variant
+        default:
+        summary: |
+          An `Class.AvatarRules` instance or a table describing one.
+    returns:
+      - type: ()
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - AvatarAppearance
       - Players
   - name: Player:LoadCharacterWithHumanoidDescription
     summary: |

@@ -940,7 +940,7 @@ methods:
     code_samples: []
     parameters:
       - name: player
-        type: Player
+        type: Player?
         default:
         summary: |
           The `Class.Player` validation is completed for.
@@ -989,7 +989,7 @@ methods:
     code_samples: []
     parameters:
       - name: player
-        type: Player
+        type: Player?
         default:
         summary: |
           The `Class.Player` validation is completed for.
@@ -1033,7 +1033,7 @@ methods:
     code_samples: []
     parameters:
       - name: player
-        type: Player
+        type: Player?
         default:
         summary: |
           The `Class.Player` validation is completed for.

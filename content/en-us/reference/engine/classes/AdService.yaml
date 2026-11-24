@@ -250,7 +250,8 @@ methods:
       `Class.AdService:ShowRewardedVideoAdAsync()|ShowRewardedVideoAdAsync` will
       return `Enum.ShowAdResult.AdNotReady`.
     code_samples:
-      - AdService-RewardedVideo
+      - AdService-RewardedVideo-Client
+      - AdService-RewardedVideo-Server
     parameters:
       - name: player
         type: Player

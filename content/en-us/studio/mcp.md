@@ -146,7 +146,7 @@ The server provides the following tools:
   </tr>
   <tr>
     <td>`screen_capture`</td>
-    <td>Captures the current Studio viewport and returns the image data. Optionally accepts a custom camera position and look-at target.</td>
+    <td>Captures the current Studio viewport and returns the image data. Optionally accepts a custom camera position and look-at target. During a playtest, it can also record video so the agent can check motion and timing, such as animation stutter, flicker, or whether an event happens at the right moment. Screenshots remain the default because they're much cheaper; agents record video only when an issue can't be seen in still frames or when you ask for a recording.</td>
   </tr>
 </tbody>
 <thead>
@@ -194,7 +194,7 @@ The server provides the following tools:
 <tbody>
   <tr>
     <td>`save_place`</td>
-    <td>Saves the open place the same way as **File** &rang; **Save**: as a new place version for places opened from Roblox, or back to the file for local `.rbx` and `.rbxlx` places. Doesn't open any dialogs.</td>
+    <td>Saves the open place the same way as **File** &rang; **Save**: as a new place version for places opened from Roblox, or back to the file for local `.rbx` and `.rbxlx` places. Works with Team Create. Doesn't open any dialogs. Never publishes, so players don't see changes until you publish. The agent can add a note to each save that appears in [version history](../projects/version-history.md). If the place has never been saved, you must save it once yourself before the agent can save it.</td>
   </tr>
 </tbody>
 <thead>
@@ -218,7 +218,7 @@ The server provides the following tools:
 <tbody>
   <tr>
     <td>`submit_feedback`</td>
-    <td>Sends feedback to Roblox when a tool fails, a capability is missing, or a workflow in Studio takes more steps than it should, so the team can improve Studio and its MCP tools.</td>
+    <td>Sends feedback to Roblox when a tool fails, a capability is missing, or a workflow in Studio takes more steps than it should, so the team can improve Studio and its MCP tools. Each report is a short description of what went wrong and what would have worked better. Reports cover Studio and its tools only, and never include your source code, personal information, or credentials. The agent can send a report without asking first, but it tells you each time it sends one, and stops if you ask it to.</td>
   </tr>
 </tbody>
 </table>

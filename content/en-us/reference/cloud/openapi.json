@@ -5745,7 +5745,7 @@
       "get": {
         "tags": ["Assets"],
         "summary": "Retrieves an asset by its ID with OpenCloud auth.",
-        "description": "Returns an object containing a `location` property which is a temporary CDN URL for the asset content. All asset types are supported.\nYou should request that URL with the `Accept-Encoding: gzip` header and decompress the result if the response is gzipped. If you are using cURL, the `--compressed` flag will automate these steps for you.\nThis endpoint is expected to be called with API key authentication through `apis.roblox.com/asset-delivery-api/v1/assetId/{assetId}`.\nWhile you are able to make requests to this endpoint with Cookie authentication via `assetdelivery.roblox.com/v1/openCloud/assetId/{assetId}`, we highly discourage use this way.\nExpect unannounced removal of this second route in the future.",
+        "description": "Returns an object containing a `location` property which is a temporary CDN URL for the asset content. All asset types are supported.\nYou should request that URL with the `Accept-Encoding: gzip` header and decompress the result if the response is gzipped. If you are using cURL, the `--compressed` flag will automate these steps for you.\nThis endpoint is expected to be called with API key authentication through `apis.roblox.com/asset-delivery-api/v1/assetId/{assetId}`.",
         "parameters": [
           {
             "in": "path",
@@ -5891,13 +5891,7 @@
             "description": "0: Authorization has been denied for this request."
           }
         },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/asset-delivery-api/v1/assetId/{assetId}",
-            "httpMethod": "GET",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/assets#get_asset_delivery_api_v1_assetId__assetId_"
-          }
-        ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -5934,7 +5928,7 @@
       "get": {
         "tags": ["Assets"],
         "summary": "Retrieves an asset by its ID and version number with OpenCloud auth.",
-        "description": "Refer to the assetId endpoint for details on usage.\nThis endpoint is expected to be called with API key authentication through `apis.roblox.com/asset-delivery-api/v1/assetId/{assetId}/version/{versionNumber}`.\nWhile you are able to make requests to this endpoint with Cookie authentication via `assetdelivery.roblox.com/v1/openCloud/assetId/{assetId}/version/{versionNumber}`, we highly discourage use this way.\nExpect unannounced removal of this second route in the future.",
+        "description": "Refer to the assetId endpoint for details on usage.\nThis endpoint is expected to be called with API key authentication through `apis.roblox.com/asset-delivery-api/v1/assetId/{assetId}/version/{versionNumber}`.",
         "parameters": [
           {
             "in": "path",
@@ -6077,13 +6071,7 @@
             "description": "0: Authorization has been denied for this request."
           }
         },
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/asset-delivery-api/v1/assetId/{assetId}/version/{versionNumber}",
-            "httpMethod": "GET",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/assets#get_asset_delivery_api_v1_assetId__assetId__version__versionNumber_"
-          }
-        ],
+        "x-roblox-stability": "EXPERIMENTAL",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -7901,6 +7889,139 @@
         }
       }
     },
+    "/cloud-authentication/v1/canUseApiKeys": {
+      "post": {
+        "summary": "Checks whether the current user can create and use API keys under the group.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CanUseApiKeysRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CanUseApiKeysResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CloudAuthenticationService.Status"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group.permission:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/cloud-authentication/v1/scopes": {
+      "get": {
+        "summary": "Gets the current scope-centric (v2) configuration, mainly for the UI.",
+        "parameters": [
+          {
+            "name": "groupId.value",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetScopesResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CloudAuthenticationService.Status"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "scope:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {},
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
     "/cloud/v2/creator-store-products": {
       "post": {
         "tags": ["Creator Store"],
@@ -9421,7 +9542,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OpenCloudUniversesService.Universe"
+                  "$ref": "#/components/schemas/Universe"
                 }
               }
             }
@@ -9484,7 +9605,7 @@
               "schema": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/OpenCloudUniversesService.Universe"
+                    "$ref": "#/components/schemas/Universe"
                   }
                 ],
                 "description": "Represents a Roblox experience."
@@ -9494,7 +9615,7 @@
               "schema": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/OpenCloudUniversesService.Universe"
+                    "$ref": "#/components/schemas/Universe"
                   }
                 ],
                 "description": "Represents a Roblox experience."
@@ -9504,7 +9625,7 @@
               "schema": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/OpenCloudUniversesService.Universe"
+                    "$ref": "#/components/schemas/Universe"
                   }
                 ],
                 "description": "Represents a Roblox experience."
@@ -9514,7 +9635,7 @@
               "schema": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/OpenCloudUniversesService.Universe"
+                    "$ref": "#/components/schemas/Universe"
                   }
                 ],
                 "description": "Represents a Roblox experience."
@@ -9528,7 +9649,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OpenCloudUniversesService.Universe"
+                  "$ref": "#/components/schemas/Universe"
                 }
               }
             }
@@ -10236,6 +10357,95 @@
         ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/universes#patch_cloud_v2_universes__universeId__secrets__secretId_"
+        }
+      }
+    },
+    "/cloud/v2/universes/{universeId}:publishMessage": {
+      "post": {
+        "tags": ["Universes"],
+        "summary": "Publish Universe Message",
+        "description": "Publishes a message to the universe's live servers.\n\nServers can consume messages via\n[MessagingService](https://create.roblox.com/docs/reference/engine/classes/MessagingService).",
+        "operationId": "Cloud_PublishUniverseMessage",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The topic and message to publish.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Roblox_OpenCloud_Cloud_V2_PublishUniverseMessageRequest"
+                  }
+                ],
+                "description": "Publish a message on the specified topic."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Roblox_OpenCloud_Cloud_V2_PublishUniverseMessageRequest"
+                  }
+                ],
+                "description": "Publish a message on the specified topic."
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Google_Protobuf_WellKnownTypes_Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-rate-limits": {
+          "description": "Messaging Service requests are subject to additional throttling limits described in the [Open Cloud guide for Messaging Service](https://create.roblox.com/docs/cloud/guides/usage-messaging#limits).",
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 5000
+          }
+        },
+        "x-roblox-stability": "STABLE",
+        "x-roblox-scopes": [
+          {
+            "name": "universe-messaging-service:publish",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": true
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe-messaging-service:publish"]
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#Cloud_PublishUniverseMessage"
         }
       }
     },
@@ -14922,7 +15132,7 @@
     },
     "/cloud/v2/universes/{universe_id}/subscription-products/{subscription_product_id}/subscriptions/{subscription_id}": {
       "get": {
-        "tags": ["Users"],
+        "tags": ["Universes", "Users"],
         "summary": "Get Subscription",
         "description": "Get the subscription.\n\nThe `universe.subscription-product.subscription:read` scope only allows\nreading subscriptions of the user making the request. Because of this, the\nsubscription ID must match the user ID of the user making the request. Note\nthat this scope might be more relevant for OAuth 2.0 apps.\n\nTo read all subscriptions made by users for a particular universe, use the\n`universe:write` scope instead.",
         "operationId": "Cloud_GetSubscription",
@@ -15014,7 +15224,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/users#Cloud_GetSubscription"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#Cloud_GetSubscription"
         }
       }
     },
@@ -15517,86 +15727,6 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}:publishMessage": {
-      "post": {
-        "tags": ["Universes"],
-        "summary": "Publish Universe Message",
-        "description": "Publishes a message to the universe's live servers.\n\nServers can consume messages via\n[MessagingService](https://create.roblox.com/docs/reference/engine/classes/MessagingService).",
-        "operationId": "Cloud_PublishUniverseMessage",
-        "parameters": [
-          {
-            "name": "universe_id",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PublishUniverseMessageRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {}
-          }
-        },
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": true
-        },
-        "x-roblox-rate-limits": {
-          "description": "Messaging Service requests are subject to additional throttling limits described in the [Open Cloud guide for Messaging Service](https://create.roblox.com/docs/cloud/guides/usage-messaging#limits).",
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 5000
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "universe-messaging-service:publish",
-            "targetResourceSpecifier": "universes"
-          },
-          {
-            "name": "universe-messaging-service:publish"
-          }
-        ],
-        "x-roblox-docs": {
-          "category": "Universes and places",
-          "methodProperties": {
-            "scopes": ["universe-messaging-service:publish"]
-          },
-          "resource": {
-            "$ref": "#/components/schemas/Universe",
-            "name": "Universe"
-          }
-        },
-        "x-roblox-stability": "STABLE",
-        "security": [
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe-messaging-service:publish"]
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/universes#Cloud_PublishUniverseMessage"
-        }
-      }
-    },
     "/cloud/v2/universes/{universe_id}:translateText": {
       "post": {
         "tags": ["Generative AI"],
@@ -15661,6 +15791,490 @@
             "roblox-api-key": []
           }
         ]
+      }
+    },
+    "/cloud/v2/universes/{universe}/memory-store/hash-maps/{hash-map}/items": {
+      "get": {
+        "tags": ["Data and memory stores"],
+        "summary": "List Keys",
+        "description": "Lists the keys in the map with pagination. Values are not returned; use the batch get endpoint to fetch values for the returned keys.",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "maximum": 9223372036854776000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "hash-map",
+            "in": "path",
+            "description": "The hash-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "Approximate maximum number of items to return per page (up to 200). A page may contain somewhat more; use pageToken to continue.",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "Token to retrieve next page of results.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ums.UmsService.Models.OpenCloud.OpenCloudListKeysHashMapItemsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "memory-store.hash-map:read",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/storage#get_cloud_v2_universes__universe__memory_store_hash_maps__hash_map__items"
+        }
+      },
+      "post": {
+        "tags": ["Data and memory stores"],
+        "summary": "Create Memory Store Hash Map Item",
+        "description": "Creates the specified map item if it doesn't exist.",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "maximum": 9223372036854776000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "hash-map",
+            "in": "path",
+            "description": "The hash-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The ID to use for the memory store hash map item, which will become the final component of the item's resource path. This value should be a 1-128 character string that supports alphanumeric and special characters. This ID is case sensitive. The ID must be url encoded if it contains any url breaking special characters.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Hash map request item.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Ums.UmsService.Models.OpenCloud.OpenCloudHashMapItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ums.UmsService.Models.OpenCloud.OpenCloudHashMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "memory-store.hash-map:write",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/storage#post_cloud_v2_universes__universe__memory_store_hash_maps__hash_map__items"
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/memory-store/hash-maps/{hash-map}/items/{item}": {
+      "delete": {
+        "tags": ["Data and memory stores"],
+        "summary": "Delete Memory Store Hash Map Item",
+        "description": "Deletes the specified item from the map.",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "maximum": 9223372036854776000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "hash-map",
+            "in": "path",
+            "description": "The hash-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "memory-store.hash-map:write",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/storage#delete_cloud_v2_universes__universe__memory_store_hash_maps__hash_map__items__item_"
+        }
+      },
+      "get": {
+        "tags": ["Data and memory stores"],
+        "summary": "Get Memory Store Hash Map Item",
+        "description": "Gets and returns the value of the given key in the map.",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "maximum": 9223372036854776000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "hash-map",
+            "in": "path",
+            "description": "The hash-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ums.UmsService.Models.OpenCloud.OpenCloudHashMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "memory-store.hash-map:read",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/storage#get_cloud_v2_universes__universe__memory_store_hash_maps__hash_map__items__item_"
+        }
+      },
+      "patch": {
+        "tags": ["Data and memory stores"],
+        "summary": "Update Memory Store Hash Map Item",
+        "description": "Updates the specified map item.",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "maximum": 9223372036854776000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "hash-map",
+            "in": "path",
+            "description": "The hash-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "allowMissing",
+            "in": "query",
+            "description": "If set to true, and the memory store hash map item is not found, a memory store hash map item is created.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The item to update.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Ums.UmsService.Models.OpenCloud.OpenCloudHashMapItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ums.UmsService.Models.OpenCloud.OpenCloudHashMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "memory-store.hash-map:write",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/storage#patch_cloud_v2_universes__universe__memory_store_hash_maps__hash_map__items__item_"
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/memory-store/hash-maps/{hash-map}/items:batchGet": {
+      "post": {
+        "tags": ["Data and memory stores"],
+        "summary": "Batch Get Memory Store Hash Map Items",
+        "description": "Retrieves the items for the provided keys. Keys that are not found are omitted from the response.",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "maximum": 9223372036854776000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "hash-map",
+            "in": "path",
+            "description": "The hash-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The keys to retrieve.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Ums.UmsService.Models.OpenCloud.OpenCloudBatchGetHashMapItemsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ums.UmsService.Models.OpenCloud.OpenCloudBatchGetHashMapItemsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "memory-store.hash-map:read",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/storage#post_cloud_v2_universes__universe__memory_store_hash_maps__hash_map__items_batchGet"
+        }
       }
     },
     "/cloud/v2/users/{user_id}": {
@@ -20258,15 +20872,9 @@
                   },
                   "imageFile": {
                     "type": "string",
-                    "description": "The thumbnail image file to be uploaded.",
+                    "description": "The thumbnail image file to be uploaded. Maximum file size is 5 MB.",
                     "format": "binary",
                     "nullable": true
-                  },
-                  "isRegionalPricingEnabled": {
-                    "type": "boolean",
-                    "description": "Whether regional pricing should be enabled for the developer product.\r\nShould not be used when setting isManagedPricingEnabled.",
-                    "nullable": true,
-                    "deprecated": true
                   },
                   "isManagedPricingEnabled": {
                     "type": "boolean",
@@ -20291,9 +20899,6 @@
                 "imageFile": {
                   "style": "form"
                 },
-                "isRegionalPricingEnabled": {
-                  "style": "form"
-                },
                 "isManagedPricingEnabled": {
                   "style": "form"
                 }
@@ -20303,7 +20908,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -20421,11 +21026,19 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "isForSale",
+            "in": "query",
+            "description": "Filters results by on-sale status.",
+            "schema": {
+              "type": "boolean"
+            }
           }
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -20515,7 +21128,7 @@
       "patch": {
         "tags": ["Developer products"],
         "summary": "Update developer product",
-        "description": "Updates a developer product with the provided configuration details. \r\nNote that only fields provided in the request will be updated.",
+        "description": "Updates a developer product with the provided configuration details. \nNote that only fields provided in the request will be updated.",
         "operationId": "DeveloperProducts_UpdateDeveloperProductV2",
         "parameters": [
           {
@@ -20568,21 +21181,9 @@
                   },
                   "imageFile": {
                     "type": "string",
-                    "description": "The thumbnail image file to be uploaded.",
+                    "description": "The thumbnail image file to be uploaded. Maximum file size is 5 MB.",
                     "format": "binary",
                     "nullable": true
-                  },
-                  "isRegionalPricingEnabled": {
-                    "type": "boolean",
-                    "description": "Whether regional pricing should be enabled for the developer product.\r\nShould not be used when setting isManagedPricingEnabled.",
-                    "nullable": true,
-                    "deprecated": true
-                  },
-                  "storePageEnabled": {
-                    "type": "boolean",
-                    "description": "Whether the developer product should be available for purchase on the external store page.",
-                    "nullable": true,
-                    "deprecated": true
                   },
                   "isManagedPricingEnabled": {
                     "type": "boolean",
@@ -20605,12 +21206,6 @@
                   "style": "form"
                 },
                 "imageFile": {
-                  "style": "form"
-                },
-                "isRegionalPricingEnabled": {
-                  "style": "form"
-                },
-                "storePageEnabled": {
                   "style": "form"
                 },
                 "isManagedPricingEnabled": {
@@ -20740,7 +21335,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -29198,16 +29793,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29219,9 +29811,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:write"]
           }
         ],
         "externalDocs": {
@@ -29260,16 +29849,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29281,9 +29867,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:write"]
           }
         ],
         "externalDocs": {
@@ -29344,16 +29927,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29365,9 +29945,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:write"]
           }
         ],
         "externalDocs": {
@@ -29407,16 +29984,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:read",
-            "targetResourceSpecifier": "player-attributes"
+            "targetResourceSpecifier": "player-attributes",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29428,9 +30002,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:read"]
           }
         ],
         "externalDocs": {
@@ -29484,16 +30055,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29505,9 +30073,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:write"]
           }
         ],
         "externalDocs": {
@@ -29535,16 +30100,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:read",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29556,9 +30118,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:read"]
           }
         ],
         "externalDocs": {
@@ -29632,16 +30191,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:read",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29653,9 +30209,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:read"]
           }
         ],
         "externalDocs": {
@@ -29709,16 +30262,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29730,9 +30280,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:write"]
           }
         ],
         "externalDocs": {
@@ -29773,16 +30320,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29794,9 +30338,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:write"]
           }
         ],
         "externalDocs": {
@@ -29836,16 +30377,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29857,9 +30395,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:write"]
           }
         ],
         "externalDocs": {
@@ -29897,16 +30432,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:read",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -29918,9 +30450,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:read"]
           }
         ],
         "externalDocs": {
@@ -29983,16 +30512,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -30004,9 +30530,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:write"]
           }
         ],
         "externalDocs": {
@@ -30071,16 +30594,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -30092,9 +30612,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:write"]
           }
         ],
         "externalDocs": {
@@ -30143,16 +30660,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -30164,9 +30678,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:write"]
           }
         ],
         "externalDocs": {
@@ -30238,16 +30749,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -30259,9 +30767,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:write"]
           }
         ],
         "externalDocs": {
@@ -30302,16 +30807,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:read",
-            "targetResourceSpecifier": "scoring-configurations"
+            "targetResourceSpecifier": "scoring-configurations",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -30323,9 +30825,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:read"]
           }
         ],
         "externalDocs": {
@@ -30366,16 +30865,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:read",
-            "targetResourceSpecifier": "scoring-configurations"
+            "targetResourceSpecifier": "scoring-configurations",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -30387,9 +30883,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:read"]
           }
         ],
         "externalDocs": {
@@ -30442,16 +30935,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -30463,9 +30953,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:write"]
           }
         ],
         "externalDocs": {
@@ -30504,16 +30991,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -30525,9 +31009,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:write"]
           }
         ],
         "externalDocs": {
@@ -30588,16 +31069,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:write",
-            "targetResourceSpecifier": ""
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -30609,9 +31087,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:write"]
           }
         ],
         "externalDocs": {
@@ -30651,16 +31126,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:read",
-            "targetResourceSpecifier": "server-attributes"
+            "targetResourceSpecifier": "server-attributes",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -30672,9 +31144,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:read"]
           }
         ],
         "externalDocs": {
@@ -30715,16 +31184,13 @@
           "perApiKeyOwner": {
             "period": "MINUTE",
             "maxInPeriod": 100
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 100
           }
         },
         "x-roblox-scopes": [
           {
             "name": "universe.matchmaking-configuration:read",
-            "targetResourceSpecifier": "universe"
+            "targetResourceSpecifier": "universe",
+            "firstPartyOAuthOnly": true
           }
         ],
         "x-roblox-engine-usability": {
@@ -30736,9 +31202,6 @@
           },
           {
             "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.matchmaking-configuration:read"]
           }
         ],
         "externalDocs": {
@@ -30828,6 +31291,7 @@
         }
       },
       "patch": {
+        "tags": ["Matchmaking"],
         "summary": "Turns the start place override for a universe on or off. A new override starts turned off.",
         "parameters": [
           {
@@ -30886,7 +31350,10 @@
           {
             "roblox-legacy-cookie": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/matchmaking#patch_matchmaking_api_v1_matchmaking_universe__universeId__start_place"
+        }
       },
       "post": {
         "tags": ["Matchmaking"],
@@ -31007,24 +31474,15 @@
     "/messaging-service/v1/universes/{universeId}/topics/{topic}": {
       "post": {
         "tags": ["Universes"],
-        "operationId": "CrossServerMessaging_Publish",
-        "x-roblox-cloud-api-operation-name": "Publish a Message",
-        "x-roblox-stability": "BETA",
-        "x-roblox-recommended-alternatives": [
-          {
-            "url": "https://apis.roblox.com/cloud/v2/universes/{universe_id}:publishMessage",
-            "httpMethod": "POST",
-            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/universes#Cloud_PublishUniverseMessage"
-          }
-        ],
         "summary": "Publish a cross-server message to a universe",
         "description": "Publish a message to a pre-defined topic of an experience, with the size of the message up to 1,024 characters (1 KB). Requires the **Publish** permission for API keys and the **universe-messaging-service:publish** scope for OAuth 2.0 apps. See [Cross-server messaging](/cloud-services/cross-server-messaging.md#subscribe-users-to-receive-messages) for defining and subscribing users to a topic.",
+        "operationId": "CrossServerMessaging_Publish",
         "parameters": [
           {
             "name": "universeId",
             "in": "path",
-            "required": true,
             "description": "The identifier of the experience in which you want to send your messages to. You can [copy your experience's Universe ID](/cloud/guides/usage-messaging.md#publishing-messages-to-live-servers) on **Creator Dashboard**.",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -31033,34 +31491,43 @@
           {
             "name": "topic",
             "in": "path",
-            "required": true,
             "description": "The topic that you want to publish your message to, with up to 80 characters.",
+            "required": true,
             "schema": {
-              "type": "string",
-              "nullable": true
+              "type": "string"
             }
           }
         ],
         "requestBody": {
           "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PublishRequest"
-              }
-            },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PublishRequest"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CrossServerMessaging_Models_Requests_PublishRequest"
+                  }
+                ],
+                "description": "The request body object with the message string that you want to publish to the live server."
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/PublishRequest"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CrossServerMessaging_Models_Requests_PublishRequest"
+                  }
+                ],
+                "description": "The request body object with the message string that you want to publish to the live server."
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/PublishRequest"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CrossServerMessaging_Models_Requests_PublishRequest"
+                  }
+                ],
+                "description": "The request body object with the message string that you want to publish to the live server."
               }
             }
           }
@@ -31082,24 +31549,14 @@
             "description": "Server internal error / Unknown error."
           }
         },
-        "security": [
+        "x-roblox-recommended-alternatives": [
           {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe-messaging-service:publish"]
+            "url": "https://apis.roblox.com/cloud/v2/universes/{universeId}:publishMessage",
+            "httpMethod": "POST",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/universes#Cloud_PublishUniverseMessage"
           }
         ],
-        "x-roblox-scopes": [
-          {
-            "name": "universe-messaging-service:publish",
-            "targetResourceSpecifier": "universes"
-          },
-          {
-            "name": "universe-messaging-service:publish"
-          }
-        ],
-        "x-roblox-cloud-api-operation": true,
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -31110,9 +31567,23 @@
             "maxInPeriod": 5000
           }
         },
+        "x-roblox-scopes": [
+          {
+            "name": "universe-messaging-service:publish",
+            "targetResourceSpecifier": "universes"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": true
         },
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe-messaging-service:publish"]
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/universes#CrossServerMessaging_Publish"
         }
@@ -32435,6 +32906,397 @@
         },
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/storage#OrderedDataStores_IncrementEntry"
+        }
+      }
+    },
+    "/place-annotations-service/v1/channel-preference": {
+      "post": {
+        "tags": ["Team Create"],
+        "operationId": "Annotations_CreateOrUpdateChannelPreference",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ChannelPreferenceRequest"
+                  }
+                ],
+                "description": "Request format for POST /v1/channel-preference"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ChannelPreferenceRequest"
+                  }
+                ],
+                "description": "Request format for POST /v1/channel-preference"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ChannelPreferenceRequest"
+                  }
+                ],
+                "description": "Request format for POST /v1/channel-preference"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ChannelPreferenceRequest"
+                  }
+                ],
+                "description": "Request format for POST /v1/channel-preference"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChannelPreferenceResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.place:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/team-create#Annotations_CreateOrUpdateChannelPreference"
+        }
+      }
+    },
+    "/place-annotations-service/v1/get-channel-preference": {
+      "post": {
+        "tags": ["Team Create"],
+        "operationId": "Annotations_GetChannelPreference",
+        "parameters": [
+          {
+            "name": "channelId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "placeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChannelPreferenceResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.place:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/team-create#Annotations_GetChannelPreference"
+        }
+      }
+    },
+    "/place-annotations-service/v1/get-place-preference": {
+      "post": {
+        "tags": ["Team Create"],
+        "operationId": "Annotations_GetPlacePreference",
+        "parameters": [
+          {
+            "name": "placeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlacePreferenceResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.place:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/team-create#Annotations_GetPlacePreference"
+        }
+      }
+    },
+    "/place-annotations-service/v1/place-preference": {
+      "post": {
+        "tags": ["Team Create"],
+        "operationId": "Annotations_CreateOrUpdatePlacePreference",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PlacePreferenceRequest"
+                  }
+                ],
+                "description": "Request format for POST /v1/place-preference"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PlacePreferenceRequest"
+                  }
+                ],
+                "description": "Request format for POST /v1/place-preference"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PlacePreferenceRequest"
+                  }
+                ],
+                "description": "Request format for POST /v1/place-preference"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/PlacePreferenceRequest"
+                  }
+                ],
+                "description": "Request format for POST /v1/place-preference"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlacePreferenceResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.place:write",
+            "targetResourceSpecifier": ""
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/team-create#Annotations_CreateOrUpdatePlacePreference"
         }
       }
     },
@@ -36153,7 +37015,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
@@ -36193,7 +37055,7 @@
             }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Server Error"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -36229,7 +37091,7 @@
     "/thumbnail-personalization-api/v1/universes/{universeId}/personalization/create": {
       "post": {
         "tags": ["Thumbnail Personalization"],
-        "summary": "Creates a new active thumbnail personalization configuration for a universe.\nThis deactivates the current active configuration, and the new configuration starts its own statistics.",
+        "summary": "Creates a new active thumbnail personalization configuration for a universe.\r\nThis deactivates the current active configuration, and the new configuration starts its own statistics.",
         "operationId": "HomepageThumbnail_CreateThumbnailPersonalization",
         "parameters": [
           {
@@ -36291,7 +37153,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
@@ -36331,7 +37193,7 @@
             }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Server Error"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -36367,7 +37229,7 @@
     "/thumbnail-personalization-api/v1/universes/{universeId}/personalization/update": {
       "post": {
         "tags": ["Thumbnail Personalization"],
-        "summary": "Replaces the homepage thumbnails in an active personalization configuration without changing its identifier\nor existing statistics.",
+        "summary": "Replaces the homepage thumbnails in an active personalization configuration without changing its identifier\r\nor existing statistics.",
         "operationId": "HomepageThumbnail_UpdateThumbnailPersonalization",
         "parameters": [
           {
@@ -36429,7 +37291,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
@@ -36472,7 +37334,7 @@
             "description": "Not Found"
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Server Error"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -36536,7 +37398,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
@@ -36579,7 +37441,7 @@
             }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Server Error"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -36646,7 +37508,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
@@ -36686,7 +37548,7 @@
             }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Server Error"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -36748,8 +37610,7 @@
                     "items": {
                       "type": "string",
                       "format": "binary"
-                    },
-                    "description": "The image files to upload."
+                    }
                   }
                 }
               },
@@ -36764,7 +37625,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
@@ -36804,7 +37665,7 @@
             }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Server Error"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -36868,7 +37729,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
@@ -36908,7 +37769,7 @@
             }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Server Error"
           }
         },
         "x-roblox-stability": "EXPERIMENTAL",
@@ -38365,12 +39226,14 @@
     "/universes/v1/{universeId}/places/{placeId}/versions": {
       "post": {
         "tags": ["Places", "Universes"],
-        "summary": "Invokes Roblox.UniversesApi.CreatePlaceVersionApiKeyOperation operation.",
+        "summary": "Publish a Place",
+        "description": "Publish a new place or update an existing place with a new version. Provide a RBXL or RBXLX file in the data-binary.",
         "operationId": "Places_CreatePlaceVersionApiKey",
         "parameters": [
           {
             "name": "universeId",
             "in": "path",
+            "description": "The identifier of the experience in which you want to publish your place to. You can [copy your experience's Universe ID](/cloud/guides/usage-place-publishing.md#publishing-a-place) on **Creator Dashboard**.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -38380,6 +39243,7 @@
           {
             "name": "placeId",
             "in": "path",
+            "description": "The identifier of your place. See [Publishing places with API keys](/cloud/guides/usage-place-publishing.md) on obtaining a Place ID.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -38389,28 +39253,33 @@
           {
             "name": "versionType",
             "in": "query",
+            "description": "Can only be either:\n- `Saved`: the place file should be saved, but not published.\n- `Published`: the place file should be saved and published.",
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "isOldVersionAllowed",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "name": "shouldForceRestart",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
           }
         ],
+        "requestBody": {
+          "description": "The place file to publish: an RBXLX file as `application/xml` or an RBXL file as `application/octet-stream`.",
+          "content": {
+            "application/xml": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Returns the published place's version number.",
             "content": {
               "application/json": {
                 "schema": {
@@ -38418,9 +39287,27 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid request / Invalid file content."
+          },
+          "401": {
+            "description": "API key not valid for operation, user does not have authorization."
+          },
+          "403": {
+            "description": "Publish not allowed on place."
+          },
+          "404": {
+            "description": "Place or universe does not exist."
+          },
+          "409": {
+            "description": "Place not part of the universe."
+          },
+          "500": {
+            "description": "Server internal error / Unknown error."
           }
         },
-        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -41821,12 +42708,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 6000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 6000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -41885,12 +42794,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 6000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 6000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -41963,10 +42894,33 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 6000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 6000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}],
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/localization#gameinternationalization_get_v1_automatic_translation_languages__languageCode__target_languages"
         }
@@ -48628,6 +49582,12 @@
                 }
               }
             }
+          },
+          "403": {
+            "description": "48: This account must sign in with a passkey."
+          },
+          "503": {
+            "description": "42: The platform identity provider is temporarily unavailable. Please try again."
           }
         },
         "servers": [
@@ -48646,6 +49606,7 @@
     },
     "/v1/external/link-candidate": {
       "get": {
+        "tags": ["Accounts"],
         "summary": "The user ids a provider sign-in matched, and the Google or Apple email on the token. Flow 1 holds the\ntoken id in a cookie. Flows 2 and 3 send it as `linkCandidateTokenId`. Reading does not consume\nthe token, so the picker can be opened again.",
         "parameters": [
           {
@@ -48680,11 +49641,15 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}]
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_get_v1_external_link_candidate"
+        }
       }
     },
     "/v1/external/link-candidate/confirm": {
       "post": {
+        "tags": ["Accounts"],
         "summary": "Links the sign-in to the account the user picked, then signs them in to it. With `createNew` it\ninstead creates a new account, as sign-up does, and signs them in to that. The session comes back the\nway the sign-in's intent asks: a cookie for the web redirect, `RBX-Authentication-Ticket` for the\napp intents.",
         "requestBody": {
           "content": {
@@ -48730,7 +49695,10 @@
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}]
+        "security": [{}],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#auth_post_v1_external_link_candidate_confirm"
+        }
       }
     },
     "/v1/external/login": {
@@ -51319,12 +52287,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": ""
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -51380,12 +52370,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "game-localization-status"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -52291,10 +53303,33 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 6000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 6000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}],
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/localization#gameinternationalization_get_v1_game_thumbnails_games__gameId__images"
         }
@@ -56126,33 +57161,12 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "HOUR",
-            "maxInPeriod": 150
-          },
-          "perOauth2Authorization": {
-            "period": "HOUR",
-            "maxInPeriod": 150
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "localization:write"
-          }
-        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
-          },
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["localization:write"]
           }
         ],
         "externalDocs": {
@@ -58477,7 +59491,6 @@
           "apiKeyWithHttpService": false
         },
         "security": [
-          {},
           {
             "roblox-legacy-cookie": []
           }
@@ -59160,10 +60173,33 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 6000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 6000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}],
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/localization#gameinternationalization_get_v1_name_description_games__gameId_"
         }
@@ -62903,10 +63939,33 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 6000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 6000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}],
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/localization#gameinternationalization_get_v1_source_language_games__gameId_"
         }
@@ -63038,10 +64097,33 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "SECOND",
+            "maxInPeriod": 20
+          },
+          "perOauth2Authorization": {
+            "period": "SECOND",
+            "maxInPeriod": 20
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
-        "security": [{}],
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
+          }
+        ],
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/localization#gameinternationalization_get_v1_source_language_games__gameId__language_with_locales"
         }
@@ -63294,6 +64376,22 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -63301,6 +64399,12 @@
           {},
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -63515,12 +64619,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -65039,12 +66165,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -65119,12 +66267,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:write",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:write"]
           }
         ],
         "externalDocs": {
@@ -67020,12 +68190,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "player-choice"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -67081,12 +68273,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "universe"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -67159,12 +68373,34 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:write",
+            "targetResourceSpecifier": "universe"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:write"]
           }
         ],
         "externalDocs": {
@@ -81997,6 +83233,22 @@
           }
         ],
         "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "universe.localization:read",
+            "targetResourceSpecifier": "games"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
@@ -82004,6 +83256,12 @@
           {},
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["universe.localization:read"]
           }
         ],
         "externalDocs": {
@@ -85453,6 +86711,465 @@
           "url": "https://create.roblox.com/docs/cloud/reference/features/virtual-events#GameEvents_CreateGameEvent"
         }
       }
+    },
+    "/vlop-api/v1/research/query": {
+      "post": {
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["research:query"]
+          }
+        ],
+        "description": "Submits a structured researcher query for asynchronous execution. The caller is authenticated by the API Gateway (API key or OAuth2) and must hold an active qualified researcher (QR) role grant; that entitlement governs the datasets, fields, and filters they may query. Vetted researcher (VR) data access is served through the data clean room, not this API. Returns a job id used to poll the query's status and fetch its result once it has completed.",
+        "tags": ["Research"],
+        "summary": "Submit a researcher query",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/internal_controller_http_controller.SubmitQueryRequest"
+              }
+            }
+          },
+          "description": "Query to submit",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.SubmitQueryResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "research:query"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/research#post_vlop_api_v1_research_query"
+        }
+      }
+    },
+    "/vlop-api/v1/research/query/{job_id}": {
+      "get": {
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["research:query"]
+          }
+        ],
+        "description": "Returns the current lifecycle state of a query job. The caller must hold an active qualified researcher (QR) role grant, and only the researcher who submitted the job may read it.",
+        "tags": ["Research"],
+        "summary": "Get a researcher query's status",
+        "parameters": [
+          {
+            "description": "Query job id",
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.QueryStatusResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "research:query"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/research#get_vlop_api_v1_research_query__job_id_"
+        }
+      }
+    },
+    "/vlop-api/v1/research/query/{job_id}/result": {
+      "get": {
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["research:query"]
+          }
+        ],
+        "description": "Returns presigned download links for a completed query job. The output is split across several files, so all of them must be fetched to have the complete extract; the links expire (see url_expires_at) and can be re-requested from this endpoint until the result stops being downloadable (see expires_at). While the job is still SUBMITTED or RUNNING (or ended without a result) it returns the current state and no links, so the client can poll. The caller must hold an active qualified researcher (QR) role grant, and only the researcher who submitted the job may read it.",
+        "tags": ["Research"],
+        "summary": "Get a researcher query's result",
+        "parameters": [
+          {
+            "description": "Query job id",
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.QueryResultResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "research:query"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/research#get_vlop_api_v1_research_query__job_id__result"
+        }
+      }
+    },
+    "/vlop-api/v1/researcher/roles": {
+      "get": {
+        "security": [
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["research.role:read"]
+          }
+        ],
+        "description": "Returns every DSA researcher-role grant held by the authenticated caller, newest first: the tier (QR qualified / VR vetted), its state (APPROVED or REVOKED), when it was granted, and when access ends. Holding no grants is not an error; the list is simply empty. Grants are written by Safety Platform decisions, so this is a read-only view of them. expires_at is the expiry recorded from the approval decision and is returned only for an APPROVED grant; it is absent for a REVOKED grant, whose access has already ended, and for a grant recorded with no expiry. An APPROVED grant whose expires_at has passed no longer authorizes the query API.",
+        "tags": ["Research"],
+        "summary": "Get the caller's researcher-role grants",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ResearcherRolesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/internal_controller_http_controller.ErrorBody"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 60
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "research.role:read"
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/research#get_vlop_api_v1_researcher_roles"
+        }
+      }
     }
   },
   "components": {
@@ -88540,6 +90257,27 @@
         },
         "additionalProperties": false
       },
+      "CanUseApiKeysRequest": {
+        "type": "object",
+        "properties": {
+          "groupId": {
+            "type": "integer",
+            "description": "Owner group of the potential API keys.",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CanUseApiKeysResponse": {
+        "type": "object",
+        "properties": {
+          "canUseApiKeys": {
+            "type": "boolean",
+            "description": "Whether the current user can create and use API keys under the group."
+          }
+        },
+        "additionalProperties": false
+      },
       "CategoryResponse": {
         "type": "object",
         "properties": {
@@ -88557,6 +90295,85 @@
           }
         },
         "additionalProperties": false
+      },
+      "ChannelContentPreference": {
+        "enum": [0, 1, 2],
+        "type": "integer",
+        "description": "Type of preference. Used to determine what types of notifications a user is sent for a given channel.\n\n0 = None\n\n1 = All\n\n2 = Unknown",
+        "format": "int32",
+        "x-enum-varnames": ["None", "All", "Unknown"]
+      },
+      "ChannelPreferenceRequest": {
+        "required": [
+          "channelContentPreference",
+          "channelId",
+          "placeId",
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "description": "The User ID of the requesting user.",
+            "format": "int64"
+          },
+          "placeId": {
+            "type": "integer",
+            "description": "The place the channel is associated with.",
+            "format": "int64"
+          },
+          "channelId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The channel the preference is being added to."
+          },
+          "channelContentPreference": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ChannelContentPreference"
+              }
+            ],
+            "description": "Type of channel content preference.\n\n0 = None\n\n1 = All\n\n2 = Unknown"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request format for POST /v1/channel-preference"
+      },
+      "ChannelPreferenceResponse": {
+        "required": [
+          "channelContentPreference",
+          "channelId",
+          "placeId",
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "description": "The User ID of the user.",
+            "format": "int64"
+          },
+          "placeId": {
+            "type": "integer",
+            "description": "The place the channel is associated with.",
+            "format": "int64"
+          },
+          "channelId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The channel the preference is associated with."
+          },
+          "channelContentPreference": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ChannelContentPreference"
+              }
+            ],
+            "description": "Type of channel content preference.\n\n0 = None\n\n1 = All\n\n2 = Unknown"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response for POST /v1/channel-preference and GET /v1/channel-preference"
       },
       "ChartOverlays": {
         "type": "object",
@@ -88865,6 +90682,25 @@
         },
         "additionalProperties": false,
         "description": "Set Client Status request."
+      },
+      "CloudAuthenticationService.Status": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Any"
+            }
+          }
+        },
+        "additionalProperties": false
       },
       "CompleteExperimentRequest": {
         "type": "object",
@@ -89920,11 +91756,13 @@
         "properties": {
           "versionNumber": {
             "type": "integer",
-            "format": "int32"
+            "description": "The version number of the saved or published place.",
+            "format": "int32",
+            "example": 7
           }
         },
         "additionalProperties": false,
-        "description": "response for !:CreatePlaceVersionOperation"
+        "description": "The result of saving or publishing a place version."
       },
       "CreatePrivateServerRequest": {
         "type": "object",
@@ -90318,6 +92156,18 @@
         "additionalProperties": false,
         "description": "The asset's creator store product information.",
         "nullable": true
+      },
+      "CrossServerMessaging_Models_Requests_PublishRequest": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "The message content that you want to publish to the live server.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The request body object with the message string that you want to publish to the live server."
       },
       "CurrencyType": {
         "enum": ["Robux", "Tickets"],
@@ -93114,12 +94964,6 @@
             "type": "boolean",
             "description": "Whether the developer product is currently on sale."
           },
-          "storePageEnabled": {
-            "type": "boolean",
-            "description": "Whether the developer product is currently available for purchase on the external store page.",
-            "nullable": true,
-            "deprecated": true
-          },
           "priceInformation": {
             "allOf": [
               {
@@ -93410,6 +95254,7 @@
       "ErrorCode": {
         "enum": [
           "InvalidImageFile",
+          "ImageFileTooLarge",
           "UnauthorizedAccess",
           "NotAuthenticated",
           "NotFound",
@@ -93575,8 +95420,7 @@
           },
           "errorMessage": {
             "type": "string",
-            "description": "The human readable error message.",
-            "nullable": true
+            "description": "The human readable error message."
           },
           "field": {
             "type": "string",
@@ -95434,6 +97278,48 @@
         "description": "Response model for getting saves",
         "nullable": true
       },
+      "GetScopesResponse": {
+        "type": "object",
+        "properties": {
+          "scopes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox_Opencloud_Scopeconfiguration_V2_Scope"
+            }
+          },
+          "scopeTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox_Opencloud_Scopeconfiguration_V2_ScopeType"
+            }
+          },
+          "targetTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox_Opencloud_Scopeconfiguration_V2_TargetType"
+            }
+          },
+          "targetParts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox_Opencloud_Scopeconfiguration_V2_TargetPart"
+            }
+          },
+          "operations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox_Opencloud_Scopeconfiguration_V2_Operation"
+            }
+          },
+          "products": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox_Opencloud_Scopeconfiguration_V2_Product"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "GetServiceEfficiencyPaymentMethodResponse": {
         "type": "object",
         "properties": {
@@ -95548,6 +97434,10 @@
       },
       "GoogleProtobufValue": {
         "description": "Represents a dynamically typed value which can be either null, a number, a string, a boolean, a recursive struct value, or a list of values."
+      },
+      "Google_Protobuf_WellKnownTypes_Empty": {
+        "type": "object",
+        "additionalProperties": false
       },
       "GrantPermissionError": {
         "type": "object",
@@ -99293,177 +101183,6 @@
         },
         "additionalProperties": false
       },
-      "OpenCloudUniversesService.Universe": {
-        "required": ["templateRootPlace"],
-        "type": "object",
-        "properties": {
-          "path": {
-            "type": "string",
-            "description": "The resource path of the universe.\n            \nFormat: `universes/{universe_id}`"
-          },
-          "createTime": {
-            "type": "string",
-            "description": "The timestamp when the universe was created.",
-            "format": "date-time",
-            "readOnly": true
-          },
-          "updateTime": {
-            "type": "string",
-            "description": "The timestamp when the universe was last updated.",
-            "format": "date-time",
-            "readOnly": true
-          },
-          "displayName": {
-            "type": "string",
-            "description": "The name of the universe.\n            \nThis field can be updated by updating the root place's name.",
-            "readOnly": true
-          },
-          "description": {
-            "type": "string",
-            "description": "The description of the universe.\n            \nThis field can be updated by updating the root place's description.",
-            "readOnly": true
-          },
-          "user": {
-            "type": "string",
-            "description": "The universe is user-owned.",
-            "readOnly": true
-          },
-          "group": {
-            "type": "string",
-            "description": "The universe is group-owned.",
-            "x-immutable": true
-          },
-          "visibility": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Universe_Visibility"
-              }
-            ],
-            "description": "Whether or not the universe is publicly accessible."
-          },
-          "facebookSocialLink": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OpenCloudUniversesService.Universe_SocialLink"
-              }
-            ],
-            "description": "The Facebook social link."
-          },
-          "twitterSocialLink": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OpenCloudUniversesService.Universe_SocialLink"
-              }
-            ],
-            "description": "The Twitter social link."
-          },
-          "youtubeSocialLink": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OpenCloudUniversesService.Universe_SocialLink"
-              }
-            ],
-            "description": "The Youtube social link."
-          },
-          "twitchSocialLink": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OpenCloudUniversesService.Universe_SocialLink"
-              }
-            ],
-            "description": "The Twitch social link."
-          },
-          "discordSocialLink": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OpenCloudUniversesService.Universe_SocialLink"
-              }
-            ],
-            "description": "The Discord social link."
-          },
-          "robloxGroupSocialLink": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OpenCloudUniversesService.Universe_SocialLink"
-              }
-            ],
-            "description": "The Roblox group social link."
-          },
-          "guildedSocialLink": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OpenCloudUniversesService.Universe_SocialLink"
-              }
-            ],
-            "description": "The Guilded social link."
-          },
-          "voiceChatEnabled": {
-            "type": "boolean",
-            "description": "Whether or not voice chat is enabled for users in the Experience.\n            \nUpdating this value will not affect active servers."
-          },
-          "ageRating": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Universe_AgeRating"
-              }
-            ],
-            "description": "The age rating of this universe."
-          },
-          "privateServerPriceRobux": {
-            "type": "integer",
-            "description": "Represents the price in Robux of private servers.\n            \nIf unset, private servers are not supported for this universe.\n            \nCan only be disabled when using a field mask.\n            \nSetting to null will disable all active private servers.\n            \nChanging the price will cancel all private server subscriptions.",
-            "format": "int32"
-          },
-          "desktopEnabled": {
-            "type": "boolean",
-            "description": "Whether or not players can join the Experience via Desktop."
-          },
-          "mobileEnabled": {
-            "type": "boolean",
-            "description": "Whether or not players can join the Experience via Mobile."
-          },
-          "tabletEnabled": {
-            "type": "boolean",
-            "description": "Whether or not players can join the Experience via Tablet."
-          },
-          "consoleEnabled": {
-            "type": "boolean",
-            "description": "Whether or not players can join the Experience via Console."
-          },
-          "vrEnabled": {
-            "type": "boolean",
-            "description": "Whether or not players can join the Experience via VR."
-          },
-          "rootPlace": {
-            "type": "string",
-            "description": "The resource path of the root place of this universe\nFormat: universes/{universe_id}/places/{place_id}",
-            "readOnly": true
-          },
-          "templateRootPlace": {
-            "type": "string",
-            "description": "The resource path of the template place, used for CreateUniverse.\nThe root place of the newly-created universe will be a clone of this\ntemplate. A list of the valid template places can be obtained from\nListTemplatePlaces. Format: universes/{universe_id}/places/{place_id}",
-            "writeOnly": true,
-            "x-immutable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "Represents a Roblox experience."
-      },
-      "OpenCloudUniversesService.Universe_SocialLink": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "description": "The title of the social link."
-          },
-          "uri": {
-            "type": "string",
-            "description": "The uri of the social link."
-          }
-        },
-        "additionalProperties": false,
-        "description": "A social link that may be associated with the universe.\n            \nCan only be removed when using a field mask."
-      },
       "OpenCloudUsers.Operation": {
         "type": "object",
         "properties": {
@@ -100327,6 +102046,13 @@
         "additionalProperties": false,
         "description": "Represents a Roblox place."
       },
+      "PlaceContentPreference": {
+        "enum": [0, 1, 2, 3],
+        "type": "integer",
+        "description": "Type of preference. Used to determine what types of notifications a user is sent for a given place.\n\n0 = None\n\n1 = All\n\n2 = MentionsAndReplies\n\n3 = Unknown",
+        "format": "int32",
+        "x-enum-varnames": ["None", "All", "MentionsAndReplies", "Unknown"]
+      },
       "PlaceFilter": {
         "type": "object",
         "properties": {
@@ -100347,6 +102073,58 @@
         },
         "additionalProperties": false,
         "description": "Filter for which versions of a place to restart."
+      },
+      "PlacePreferenceRequest": {
+        "required": ["placeContentPreference", "placeId", "userId"],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "description": "The User ID of the requesting user.",
+            "format": "int64"
+          },
+          "placeId": {
+            "type": "integer",
+            "description": "The place the preference is being added to.",
+            "format": "int64"
+          },
+          "placeContentPreference": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PlaceContentPreference"
+              }
+            ],
+            "description": "Type of place content preference.\n\n0 = None\n\n1 = All\n\n2 = MentionsAndReplies\n\n3 = Unknown"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request format for POST /v1/place-preference"
+      },
+      "PlacePreferenceResponse": {
+        "required": ["placeContentPreference", "placeId", "userId"],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "description": "The User ID of the user.",
+            "format": "int64"
+          },
+          "placeId": {
+            "type": "integer",
+            "description": "The place the preference is associated with.",
+            "format": "int64"
+          },
+          "placeContentPreference": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PlaceContentPreference"
+              }
+            ],
+            "description": "Type of place content preference.\n\n0 = None\n\n1 = All\n\n2 = MentionsAndReplies\n\n3 = Unknown"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response for POST /v1/place-preference and GET /v1/place-preference"
       },
       "PlaceResponse": {
         "type": "object",
@@ -101697,39 +103475,10 @@
         "additionalProperties": false,
         "description": "Response model for publishing a draft."
       },
-      "PublishRequest": {
-        "type": "object",
-        "description": "The request body object with the message string that you want to publish to the live server.",
-        "properties": {
-          "message": {
-            "type": "string",
-            "nullable": true,
-            "description": "The message content that you want to publish to the live server."
-          }
-        },
-        "additionalProperties": false
-      },
       "PublishStatus": {
         "enum": [0, 1, 2],
         "type": "integer",
         "format": "int32"
-      },
-      "PublishUniverseMessageRequest": {
-        "required": ["topic", "message"],
-        "type": "object",
-        "properties": {
-          "topic": {
-            "example": "my-topic",
-            "type": "string",
-            "description": "The topic on which to publish the message."
-          },
-          "message": {
-            "example": "Hello, world!",
-            "type": "string",
-            "description": "The message to publish."
-          }
-        },
-        "description": "Publish a message on the specified topic."
       },
       "QueryBenchmarkResult": {
         "type": "object",
@@ -121807,6 +123556,177 @@
         },
         "additionalProperties": false
       },
+      "Roblox_OpenCloud_Cloud_V2_PublishUniverseMessageRequest": {
+        "required": ["message", "topic"],
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string",
+            "description": "The topic on which to publish the message.",
+            "example": "my-topic"
+          },
+          "message": {
+            "type": "string",
+            "description": "The message to publish.",
+            "example": "Hello, world!"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Publish a message on the specified topic."
+      },
+      "Roblox_Opencloud_Scopeconfiguration_V2_Operation": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "translationKey": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The configuration of a global operation. The generic display label only; per-scope description/risk live on Scope."
+      },
+      "Roblox_Opencloud_Scopeconfiguration_V2_Product": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "translationKey": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Information about a product."
+      },
+      "Roblox_Opencloud_Scopeconfiguration_V2_RiskLevel": {
+        "enum": [
+          "RISK_LEVEL_INVALID",
+          "RISK_LEVEL_LOW",
+          "RISK_LEVEL_MODERATE",
+          "RISK_LEVEL_HIGH"
+        ],
+        "type": "string",
+        "description": "Risk level associated with a scope. Consumed by the front end."
+      },
+      "Roblox_Opencloud_Scopeconfiguration_V2_Scope": {
+        "type": "object",
+        "properties": {
+          "scopeType": {
+            "type": "string"
+          },
+          "operation": {
+            "type": "string"
+          },
+          "targetType": {
+            "type": "string"
+          },
+          "translationKey": {
+            "type": "string",
+            "description": "Scope-specific description translation key (replaces the legacy operation override description key)."
+          },
+          "riskLevel": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Roblox_Opencloud_Scopeconfiguration_V2_RiskLevel"
+              }
+            ],
+            "description": "Risk level associated with a scope. Consumed by the front end."
+          },
+          "groupAllowed": {
+            "type": "boolean",
+            "description": "Whether this scope is allowed on group-owned API keys."
+          },
+          "firstPartyOauthOnly": {
+            "type": "boolean",
+            "description": "Whether this scope may only be granted via first-party OAuth access. When true and the scope supports OAuth2,\nOAuth consumers must reject the scope unless the requesting client is a first-party client."
+          },
+          "description": {
+            "type": "string",
+            "description": "Localized scope description for the requested locale, falling back to English. Unset when unavailable."
+          },
+          "displaySection": {
+            "type": "string",
+            "description": "UI section this scope is listed under in permission dialogs. Unset when the scope has none."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The primary unit of the v2 configuration, identified by (scope_type, operation)."
+      },
+      "Roblox_Opencloud_Scopeconfiguration_V2_ScopeType": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "translationKey": {
+            "type": "string"
+          },
+          "product": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The configuration of a scope type. In v2 this carries only display + grouping data."
+      },
+      "Roblox_Opencloud_Scopeconfiguration_V2_TargetPart": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Roblox_Opencloud_Scopeconfiguration_V2_TargetPart_Types_ValueType"
+              }
+            ],
+            "description": "Data type of a target part value."
+          },
+          "constraints": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "translationKey": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The configuration of a target part. Referenced by TargetTypes."
+      },
+      "Roblox_Opencloud_Scopeconfiguration_V2_TargetPart_Types_ValueType": {
+        "enum": ["VALUE_TYPE_INVALID", "VALUE_TYPE_INT64", "VALUE_TYPE_STRING"],
+        "type": "string",
+        "description": "Data type of a target part value."
+      },
+      "Roblox_Opencloud_Scopeconfiguration_V2_TargetType": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "requiredParts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "optionalParts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "translationKey": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The configuration of a target type. Referenced by Scopes' target_type."
+      },
       "RobuxRateBreakdown": {
         "type": "object",
         "properties": {
@@ -123948,6 +125868,92 @@
         },
         "description": "Contains the detected or specified source language code and a map of\nrequested translations, where each key is a language code and the value is\nthe translated text."
       },
+      "Ums.UmsService.Models.OpenCloud.OpenCloudBatchGetHashMapItemsRequest": {
+        "type": "object",
+        "properties": {
+          "keys": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The keys of the items to retrieve.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request to retrieve multiple hash map items by key."
+      },
+      "Ums.UmsService.Models.OpenCloud.OpenCloudBatchGetHashMapItemsResponse": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Ums.UmsService.Models.OpenCloud.OpenCloudHashMapItem"
+            },
+            "description": "The retrieved hash map items.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The hash map items retrieved for the requested keys. Keys that are not\nfound are omitted from the response."
+      },
+      "Ums.UmsService.Models.OpenCloud.OpenCloudHashMapItem": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the memory store hash map item.  Format:\nuniverses/{universe}/memory-store/hash-maps/{hash-map}/items/{hash-map-item}",
+            "nullable": true
+          },
+          "value": {
+            "description": "Represents a dynamically typed value which can be either null, a number, a string, a boolean,\na recursive struct value, or a list of values."
+          },
+          "etag": {
+            "type": "string",
+            "description": "The server generated tag of an item.",
+            "nullable": true
+          },
+          "expireTime": {
+            "type": "string",
+            "description": "The expiration time of an item.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "ttl": {
+            "type": "string",
+            "description": "Gets or Sets Ttl",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "description": "The name of the item.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a sorted map item name."
+      },
+      "Ums.UmsService.Models.OpenCloud.OpenCloudListKeysHashMapItemsResponse": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Ums.UmsService.Models.OpenCloud.OpenCloudHashMapItem"
+            },
+            "description": "The MemoryStoreHashMapItems from the specified MemoryStoreHashMap.",
+            "nullable": true
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a pageToken parameter to retrieve the next page.\nIf this field is omitted, there are no subsequent pages.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A list of MemoryStoreHashMapItems in the parent collection."
+      },
       "UnassignRoleGroupMembershipRequest": {
         "required": ["role"],
         "type": "object",
@@ -123980,40 +125986,35 @@
         "type": "object",
         "properties": {
           "path": {
-            "example": "universes/123",
             "type": "string",
-            "description": "The resource path of the universe.\n\nFormat: `universes/{universe_id}`"
+            "description": "The resource path of the universe.\n            \nFormat: `universes/{universe_id}`"
           },
           "createTime": {
-            "readOnly": true,
-            "example": "2023-07-05T12:34:56Z",
             "type": "string",
             "description": "The timestamp when the universe was created.",
-            "format": "date-time"
+            "format": "date-time",
+            "readOnly": true
           },
           "updateTime": {
-            "readOnly": true,
-            "example": "2023-07-05T12:34:56Z",
             "type": "string",
             "description": "The timestamp when the universe was last updated.",
-            "format": "date-time"
+            "format": "date-time",
+            "readOnly": true
           },
           "displayName": {
-            "readOnly": true,
-            "example": "ROBLOX Battle [OPEN]",
             "type": "string",
-            "description": "The name of the universe.\n\nThis field can be updated by updating the root place's name."
+            "description": "The name of the universe.\n            \nThis field can be updated by updating the root place's name.",
+            "readOnly": true
           },
           "description": {
-            "readOnly": true,
-            "example": "OPEN SOURCE! \n Feel free to check out how we made this game and ask us about it!",
             "type": "string",
-            "description": "The description of the universe.\n\nThis field can be updated by updating the root place's description."
+            "description": "The description of the universe.\n            \nThis field can be updated by updating the root place's description.",
+            "readOnly": true
           },
           "user": {
-            "readOnly": true,
             "type": "string",
-            "description": "The universe is user-owned."
+            "description": "The universe is user-owned.",
+            "readOnly": true
           },
           "group": {
             "type": "string",
@@ -124021,120 +126022,120 @@
             "x-immutable": true
           },
           "visibility": {
-            "readOnly": true,
-            "example": "VISIBILITY_UNSPECIFIED",
-            "enum": ["VISIBILITY_UNSPECIFIED", "PUBLIC", "PRIVATE"],
-            "type": "string",
-            "description": "Whether or not the universe is publicly accessible.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | VISIBILITY_UNSPECIFIED | Updates using this value will throw an error on the backend. |\n  | PUBLIC | The universe is public. |\n  | PRIVATE | The universe is private.  If a universe's visibility is set to PRIVATE, all active players will immediately be removed from all running servers. |",
-            "format": "enum"
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Universe_Visibility"
+              }
+            ],
+            "description": "Whether or not the universe is publicly accessible."
           },
           "facebookSocialLink": {
-            "$ref": "#/components/schemas/Universe_SocialLink",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Universe_SocialLink"
+              }
+            ],
             "description": "The Facebook social link."
           },
           "twitterSocialLink": {
-            "$ref": "#/components/schemas/Universe_SocialLink",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Universe_SocialLink"
+              }
+            ],
             "description": "The Twitter social link."
           },
           "youtubeSocialLink": {
-            "$ref": "#/components/schemas/Universe_SocialLink",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Universe_SocialLink"
+              }
+            ],
             "description": "The Youtube social link."
           },
           "twitchSocialLink": {
-            "$ref": "#/components/schemas/Universe_SocialLink",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Universe_SocialLink"
+              }
+            ],
             "description": "The Twitch social link."
           },
           "discordSocialLink": {
-            "$ref": "#/components/schemas/Universe_SocialLink",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Universe_SocialLink"
+              }
+            ],
             "description": "The Discord social link."
           },
           "robloxGroupSocialLink": {
-            "$ref": "#/components/schemas/Universe_SocialLink",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Universe_SocialLink"
+              }
+            ],
             "description": "The Roblox group social link."
           },
           "guildedSocialLink": {
-            "$ref": "#/components/schemas/Universe_SocialLink",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Universe_SocialLink"
+              }
+            ],
             "description": "The Guilded social link."
           },
           "voiceChatEnabled": {
-            "example": true,
             "type": "boolean",
-            "description": "Whether or not voice chat is enabled for users in the Experience.\n\nUpdating this value will not affect active servers."
+            "description": "Whether or not voice chat is enabled for users in the Experience.\n            \nUpdating this value will not affect active servers."
           },
           "ageRating": {
-            "readOnly": true,
-            "example": "AGE_RATING_UNSPECIFIED",
-            "enum": [
-              "AGE_RATING_UNSPECIFIED",
-              "AGE_RATING_ALL",
-              "AGE_RATING_9_PLUS",
-              "AGE_RATING_13_PLUS",
-              "AGE_RATING_17_PLUS"
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Universe_AgeRating"
+              }
             ],
-            "type": "string",
-            "description": "The age rating of this universe.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | AGE_RATING_UNSPECIFIED | The age rating is not set. |\n  | AGE_RATING_ALL | Supported for all users. |\n  | AGE_RATING_9_PLUS | Supported for users aged 9 and up. |\n  | AGE_RATING_13_PLUS | Supported for users aged 13 and up. |\n  | AGE_RATING_17_PLUS | Supported for users aged 17 and up. |",
-            "format": "enum"
+            "description": "The age rating of this universe."
           },
           "privateServerPriceRobux": {
             "type": "integer",
-            "description": "Represents the price in Robux of private servers.\n\nIf unset, private servers are not supported for this universe.\n\nCan only be disabled when using a field mask.\n\nSetting to null will disable all active private servers.\n\nChanging the price will cancel all private server subscriptions.",
+            "description": "Represents the price in Robux of private servers.\n            \nIf unset, private servers are not supported for this universe.\n            \nCan only be disabled when using a field mask.\n            \nSetting to null will disable all active private servers.\n            \nChanging the price will cancel all private server subscriptions.",
             "format": "int32"
           },
           "desktopEnabled": {
-            "example": true,
             "type": "boolean",
             "description": "Whether or not players can join the Experience via Desktop."
           },
           "mobileEnabled": {
-            "example": true,
             "type": "boolean",
             "description": "Whether or not players can join the Experience via Mobile."
           },
           "tabletEnabled": {
-            "example": true,
             "type": "boolean",
             "description": "Whether or not players can join the Experience via Tablet."
           },
           "consoleEnabled": {
-            "example": true,
             "type": "boolean",
             "description": "Whether or not players can join the Experience via Console."
           },
           "vrEnabled": {
-            "example": true,
             "type": "boolean",
             "description": "Whether or not players can join the Experience via VR."
           },
           "rootPlace": {
-            "readOnly": true,
             "type": "string",
-            "description": "The resource path of the root place of this universe\nFormat: universes/{universe_id}/places/{place_id}"
+            "description": "The resource path of the root place of this universe\nFormat: universes/{universe_id}/places/{place_id}",
+            "readOnly": true
           },
           "templateRootPlace": {
-            "writeOnly": true,
-            "example": "universes/{universe_id}/places/{place_id}",
             "type": "string",
             "description": "The resource path of the template place, used for CreateUniverse.\nThe root place of the newly-created universe will be a clone of this\ntemplate. A list of the valid template places can be obtained from\nListTemplatePlaces. Format: universes/{universe_id}/places/{place_id}",
+            "writeOnly": true,
             "x-immutable": true
           }
         },
-        "description": "Represents a Roblox experience.",
-        "x-aep-resource": {
-          "patterns": ["universes/{universe_id}"],
-          "plural": "universes",
-          "singular": "universe"
-        },
-        "x-resource": true,
-        "x-oneOf": {
-          "ConsoleEnabled": ["consoleEnabled"],
-          "DesktopEnabled": ["desktopEnabled"],
-          "MobileEnabled": ["mobileEnabled"],
-          "PrivateServerPriceRobux": ["privateServerPriceRobux"],
-          "TabletEnabled": ["tabletEnabled"],
-          "VoiceChatEnabled": ["voiceChatEnabled"],
-          "VrEnabled": ["vrEnabled"],
-          "owner": ["user", "group"]
-        }
+        "additionalProperties": false,
+        "description": "Represents a Roblox experience."
       },
       "UniverseExperimentMetric": {
         "enum": [
@@ -124280,7 +126281,8 @@
             "description": "The uri of the social link."
           }
         },
-        "description": "A social link that may be associated with the universe.\n\nCan only be removed when using a field mask."
+        "additionalProperties": false,
+        "description": "A social link that may be associated with the universe.\n            \nCan only be removed when using a field mask."
       },
       "Universe_Visibility": {
         "enum": ["VISIBILITY_UNSPECIFIED", "PUBLIC", "PRIVATE"],
@@ -125703,6 +127705,192 @@
         "description": "model for voting.",
         "nullable": true
       },
+      "internal_controller_http_controller.ErrorBody": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "The request is unauthorized."
+          }
+        }
+      },
+      "internal_controller_http_controller.QueryResultData": {
+        "type": "object",
+        "properties": {
+          "expires_at": {
+            "description": "ExpiresAt is when the result stops being downloadable at all, RFC 3339.",
+            "type": "string",
+            "example": "2026-02-01T00:00:00Z"
+          },
+          "files": {
+            "description": "Files are the result objects, one presigned URL each. All must be fetched to\nhave the complete extract. Empty when the query matched no rows.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/internal_controller_http_controller.ResultFile"
+            }
+          },
+          "format": {
+            "description": "Format is the encoding of every file.",
+            "type": "string",
+            "example": "csv.gz"
+          },
+          "job_id": {
+            "description": "JobID is the public id of the query job.",
+            "type": "string",
+            "example": "3f6b1c2e-9d4a-4c1b-9f2e-2a1b3c4d5e6f"
+          },
+          "row_count": {
+            "description": "RowCount is the total across all files, so a client can verify it reassembled\nthe complete extract.",
+            "type": "integer",
+            "example": 4200
+          },
+          "state": {
+            "description": "State is the job's current lifecycle state.",
+            "type": "string",
+            "example": "SUCCEEDED"
+          },
+          "url_expires_at": {
+            "description": "URLExpiresAt is when these links stop working, RFC 3339; never later than\nExpiresAt. Re-request this endpoint for fresh links until then.",
+            "type": "string",
+            "example": "2026-01-31T01:00:00Z"
+          }
+        }
+      },
+      "internal_controller_http_controller.QueryResultResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/internal_controller_http_controller.QueryResultData"
+          }
+        }
+      },
+      "internal_controller_http_controller.QueryStatusData": {
+        "type": "object",
+        "properties": {
+          "job_id": {
+            "description": "JobID is the public id of the query job.",
+            "type": "string",
+            "example": "3f6b1c2e-9d4a-4c1b-9f2e-2a1b3c4d5e6f"
+          },
+          "state": {
+            "description": "State is the job's current lifecycle state.",
+            "type": "string",
+            "example": "RUNNING"
+          }
+        }
+      },
+      "internal_controller_http_controller.QueryStatusResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/internal_controller_http_controller.QueryStatusData"
+          }
+        }
+      },
+      "internal_controller_http_controller.ResearcherRoleData": {
+        "type": "object",
+        "properties": {
+          "expires_at": {
+            "description": "ExpiresAt is when an APPROVED grant's access ends, RFC 3339; absent when the\ngrant has no expiry.",
+            "type": "string",
+            "example": "2028-09-18T23:59:59Z"
+          },
+          "granted_at": {
+            "description": "GrantedAt is when the grant was first recorded, RFC 3339.",
+            "type": "string",
+            "example": "2026-06-27T09:05:00Z"
+          },
+          "role": {
+            "description": "Role is the granted tier: QR (qualified) or VR (vetted).",
+            "type": "string",
+            "example": "QR"
+          },
+          "state": {
+            "description": "State is the grant's lifecycle state.",
+            "type": "string",
+            "example": "APPROVED"
+          }
+        }
+      },
+      "internal_controller_http_controller.ResearcherRolesData": {
+        "type": "object",
+        "properties": {
+          "roles": {
+            "description": "Roles is every grant held by the caller; empty when they hold none.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/internal_controller_http_controller.ResearcherRoleData"
+            }
+          }
+        }
+      },
+      "internal_controller_http_controller.ResearcherRolesResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/internal_controller_http_controller.ResearcherRolesData"
+          }
+        }
+      },
+      "internal_controller_http_controller.ResultFile": {
+        "type": "object",
+        "properties": {
+          "download_url": {
+            "description": "DownloadURL is the time-limited presigned link to this file.",
+            "type": "string",
+            "example": "https://rbx-vlop-dsa-research-results-test.s3.amazonaws.com/research/query/3f6b1c2e/part-0.csv.gz?X-Amz-Signature=..."
+          },
+          "name": {
+            "description": "Name is the object's file name under the job's result prefix.",
+            "type": "string",
+            "example": "part-0.csv.gz"
+          }
+        }
+      },
+      "internal_controller_http_controller.SubmitQueryData": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "ID is the public job id used to poll status and fetch results.",
+            "type": "string",
+            "example": "3f6b1c2e-9d4a-4c1b-9f2e-2a1b3c4d5e6f"
+          },
+          "state": {
+            "description": "State is the job's lifecycle state; a freshly submitted job is SUBMITTED.",
+            "type": "string",
+            "example": "SUBMITTED"
+          }
+        }
+      },
+      "internal_controller_http_controller.SubmitQueryRequest": {
+        "type": "object",
+        "required": ["dataset"],
+        "properties": {
+          "dataset": {
+            "type": "string",
+            "example": "communities"
+          },
+          "fields": {
+            "description": "Fields is the projection; omitted means the dataset's default fields.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "query": {
+            "description": "Query is the filter DSL ({and|or|not:[{operation,field_name,field_values}]}).",
+            "type": "object"
+          }
+        }
+      },
+      "internal_controller_http_controller.SubmitQueryResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/internal_controller_http_controller.SubmitQueryData"
+          }
+        }
+      },
       "roblox.engine.Folder": {
         "type": "object",
         "properties": {},
@@ -125938,6 +128126,8 @@
           "auth_post_v1_external__identityProviderId__sso_native_nonce",
           "auth_post_v1_external__identityProviderId__sso_saml_assertion_consumer_service",
           "auth_post_v1_external_access",
+          "auth_get_v1_external_link_candidate",
+          "auth_post_v1_external_link_candidate_confirm",
           "auth_post_v1_external_login",
           "auth_post_v1_external_loginAndLink",
           "auth_post_v1_external_signup",
@@ -126558,6 +128748,12 @@
           "Cloud_DeleteMemoryStoreSortedMapItem",
           "Cloud_GetMemoryStoreSortedMapItem",
           "Cloud_UpdateMemoryStoreSortedMapItem",
+          "get_cloud_v2_universes__universe__memory_store_hash_maps__hash_map__items",
+          "post_cloud_v2_universes__universe__memory_store_hash_maps__hash_map__items",
+          "delete_cloud_v2_universes__universe__memory_store_hash_maps__hash_map__items__item_",
+          "get_cloud_v2_universes__universe__memory_store_hash_maps__hash_map__items__item_",
+          "patch_cloud_v2_universes__universe__memory_store_hash_maps__hash_map__items__item_",
+          "post_cloud_v2_universes__universe__memory_store_hash_maps__hash_map__items_batchGet",
           "Cloud_ListOrderedDataStoreEntries",
           "Cloud_CreateOrderedDataStoreEntry",
           "Cloud_DeleteOrderedDataStoreEntry",
@@ -127020,6 +129216,7 @@
           "get_matchmaking_api_v1_matchmaking_server_attributes__universeId_",
           "get_matchmaking_api_v1_matchmaking_universe__universeId__feature_flags",
           "get_matchmaking_api_v1_matchmaking_universe__universeId__start_place",
+          "patch_matchmaking_api_v1_matchmaking_universe__universeId__start_place",
           "post_matchmaking_api_v1_matchmaking_universe__universeId__start_place",
           "delete_matchmaking_api_v1_matchmaking_universe__universeId__start_place",
           "get_matchmaking_api_v1_matchmaking_universe__universeId__start_place_test",
@@ -127218,6 +129415,20 @@
       }
     },
     {
+      "name": "Research",
+      "description": "Query public platform data as a qualified researcher. Submit a structured query, check its status, and download its results once it completes. You can also retrieve your own researcher role grants.\n",
+      "x-roblox-tag-info": {
+        "path": "research",
+        "content": "HTTP APIs for qualified researchers to query public platform data on Roblox Cloud.",
+        "ordering": [
+          "get_vlop_api_v1_researcher_roles",
+          "post_vlop_api_v1_research_query",
+          "get_vlop_api_v1_research_query__job_id_",
+          "get_vlop_api_v1_research_query__job_id__result"
+        ]
+      }
+    },
+    {
       "name": "Service Efficiency",
       "description": "Manage Service Efficiency accounts and billing for users and groups, and configure consumer settings for a universe.\n\nCommon use cases include:\n\n- Account management: [Retrieve](#ServiceEfficiencyApi_GetAccountForUser) or [update](#ServiceEfficiencyApi_UpdateAccountForUser) a user's account, or [retrieve](#ServiceEfficiencyApi_GetAccountForGroup) or [update](#ServiceEfficiencyApi_UpdateAccountForGroup) a group's account\n- Billing: [Review billing activity](#ServiceEfficiencyApi_GetBillingActivitiesByUser) and [retrieve bills](#ServiceEfficiencyApi_GetBillByUser) for a user, or [review billing activity](#ServiceEfficiencyApi_GetBillingActivitiesByGroup) and [retrieve bills](#ServiceEfficiencyApi_GetBillByGroup) for a group\n- Eligibility and access: [Check user](#ServiceEfficiencyApi_CheckEligibilityForUser) or [group](#ServiceEfficiencyApi_CheckEligibilityForGroup) eligibility, and [check access](#ServiceEfficiencyApi_IsAllowed) for the current user\n- Payment profiles: [List](#ServiceEfficiencyApi_ListPaymentProfilesByUser), [create](#ServiceEfficiencyApi_CreatePaymentProfileForUser), or [delete](#ServiceEfficiencyApi_DeletePaymentProfileForUser) a user's payment profile\n- Payment methods: [Retrieve](#ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForUser) or [set](#ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForUser) a user's payment method, or [retrieve](#ServiceEfficiencyApi_GetServiceEfficiencyPaymentMethodForGroup) or [set](#ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForGroup) a group's payment method\n- Manual payments: [Submit a payment for a user](#ServiceEfficiencyApi_SubmitManualPaymentForUser) or [group](#ServiceEfficiencyApi_SubmitManualPaymentForGroup)\n- Universe service management: [Retrieve](#ServiceEfficiencyApi_GetConsumerConfigurationsByUniverse) or [update](#ServiceEfficiencyApi_UpdateConsumerConfigurationsByUniverse) consumer configuration, and [retrieve live monthly free-tier usage](#ServiceEfficiencyApi_GetConsumerUsages) for a universe\n",
       "x-roblox-tag-info": {
@@ -127252,11 +129463,15 @@
     },
     {
       "name": "Team Create",
-      "description": "Manage Team Create collaborative sessions for your experiences, including session monitoring, membership management, and collaboration settings.\n",
+      "description": "Manage Team Create collaborative sessions for your experiences, including session monitoring, membership management, and collaboration settings. [Retrieve place](#Annotations_GetPlacePreference) and [channel](#Annotations_GetChannelPreference) annotation preferences, or [create or update place](#Annotations_CreateOrUpdatePlacePreference) and [channel](#Annotations_CreateOrUpdateChannelPreference) annotation preferences.\n",
       "x-roblox-tag-info": {
         "path": "team-create",
         "content": "HTTP APIs for working with Team Create on Roblox Cloud.",
         "ordering": [
+          "Annotations_GetPlacePreference",
+          "Annotations_CreateOrUpdatePlacePreference",
+          "Annotations_GetChannelPreference",
+          "Annotations_CreateOrUpdateChannelPreference",
           "get_legacy_develop_v1_places__placeId__teamcreate_active_session_members",
           "develop_get_v1_places__placeId__teamcreate_active_session_members",
           "get_legacy_develop_v1_universes__universeId__teamcreate",
@@ -127365,7 +129580,7 @@
     },
     {
       "name": "Universes",
-      "description": "Manage experiences (universes), publish updates, and communicate with live servers. See the [Messaging Usage Guide](/cloud/guides/usage-messaging) and [Place Publishing Guide](/cloud/guides/usage-place-publishing).\n\nCommon use cases include:\n\n- **Cross-Server Messaging**: [Send announcements](#Cloud_PublishUniverseMessage), trigger events, or update all players across servers using the Messaging Service\n- User restrictions: [Ban or restrict users](#Cloud_UpdateUserRestriction__Using_Universes) from your experience at the universe or place level\n- Playtester access: [List](#develop_get_v1_universes__universeId__configuration_playtesters), [add](#develop_post_v1_universes__universeId__configuration_playtesters), or [remove](#develop_delete_v1_universes__universeId__configuration_playtesters) playtesters for a universe\n- Service configuration and usage: [Retrieve](#ServiceEfficiencyApi_GetConsumerConfigurationsByUniverse) or [update](#ServiceEfficiencyApi_UpdateConsumerConfigurationsByUniverse) consumer configuration, and [retrieve live monthly free-tier usage](#ServiceEfficiencyApi_GetConsumerUsages) for a universe\n",
+      "description": "Manage experiences (universes), publish updates, and communicate with live servers. See the [Messaging Usage Guide](/cloud/guides/usage-messaging) and [Place Publishing Guide](/cloud/guides/usage-place-publishing).\n\nCommon use cases include:\n\n- **Cross-Server Messaging**: [Send announcements](#Cloud_PublishUniverseMessage), trigger events, or update all players across servers using the Messaging Service\n- User restrictions: [Ban or restrict users](#Cloud_UpdateUserRestriction__Using_Universes) from your experience at the universe or place level\n- Playtester access: [List](#develop_get_v1_universes__universeId__configuration_playtesters), [add](#develop_post_v1_universes__universeId__configuration_playtesters), or [remove](#develop_delete_v1_universes__universeId__configuration_playtesters) playtesters for a universe\n- Service configuration and usage: [Retrieve](#ServiceEfficiencyApi_GetConsumerConfigurationsByUniverse) or [update](#ServiceEfficiencyApi_UpdateConsumerConfigurationsByUniverse) consumer configuration, and [retrieve live monthly free-tier usage](#ServiceEfficiencyApi_GetConsumerUsages) for a universe\n- Subscription management: [Retrieve a subscription](#Cloud_GetSubscription) for a subscription product in your experience\n",
       "x-roblox-tag-info": {
         "path": "universes",
         "content": "HTTP APIs for working with universes on Roblox Cloud, including subscriptions, place and instance updates, user restrictions, and more.",
@@ -127390,6 +129605,7 @@
           "Cloud_ListUserRestrictionLogs",
           "Cloud_GetUserRestriction__Using_Universes",
           "Cloud_UpdateUserRestriction__Using_Universes",
+          "Cloud_GetSubscription",
           "post_legacy_badges_v1_universes__universeId__badges",
           "badges_post_v1_universes__universeId__badges",
           "get_legacy_develop_v1_places__placeId__teamcreate_active_session_members",
@@ -127566,7 +129782,7 @@
     },
     {
       "name": "Users",
-      "description": "Retrieve user information, manage inventories, and restrict users from your experience. See the [Inventory Guide](/cloud/guides/inventory) for code examples.\n\nCommon use cases include:\n\n- User lookup: [Search users by username](#users_get_v1_users_search) or ID and [retrieve profile information](#Cloud_GetUser)\n- Avatar thumbnails: [Generate a user thumbnail](#Cloud_GenerateUserThumbnail) and [retrieve its generation operation](#Cloud_GetUserThumbnailGenerationOperation)\n- Inventory access: [List user-owned items](#Cloud_ListInventoryItems), badges, and collectibles\n- User restrictions: [Manage experience-level bans](#Cloud_UpdateUserRestriction__Using_Universes) and access restrictions\n",
+      "description": "Retrieve user information, manage inventories, and restrict users from your experience. See the [Inventory Guide](/cloud/guides/inventory) for code examples.\n\nCommon use cases include:\n\n- User lookup: [Search users by username](#users_get_v1_users_search) or ID and [retrieve profile information](#Cloud_GetUser)\n- Avatar thumbnails: [Generate a user thumbnail](#Cloud_GenerateUserThumbnail) and [retrieve its generation operation](#Cloud_GetUserThumbnailGenerationOperation)\n- Inventory access: [List user-owned items](#Cloud_ListInventoryItems), badges, and collectibles\n- User restrictions: [Manage experience-level bans](#Cloud_UpdateUserRestriction__Using_Universes) and access restrictions\n- Subscription status: [Retrieve a user's subscription](#Cloud_GetSubscription) for an experience\n",
       "x-roblox-tag-info": {
         "path": "users",
         "content": "HTTP APIs for working with users on Roblox Cloud, including inventory items, restrictions, subscriptions, and more.",

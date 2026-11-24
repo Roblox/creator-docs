@@ -34,7 +34,19 @@ description: |
 code_samples: []
 tags: []
 deprecation_message: ''
-constructors: []
+constructors:
+  - name: CatalogSearchParams.new
+    summary: |
+      Returns a blank `Datatype.CatalogSearchParams`.
+    description: |
+      Returns a blank `Datatype.CatalogSearchParams` object. This constructor
+      does not have any parameters, so you should set its properties
+      appropriately before passing it to
+      `Class.AvatarEditorService:SearchCatalogAsync()`.
+    parameters: []
+    code_samples: []
+    tags: []
+    deprecation_message: ''
 constants: []
 properties:
   - name: CatalogSearchParams.SearchKeyword

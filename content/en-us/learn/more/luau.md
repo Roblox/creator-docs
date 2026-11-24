@@ -1,8 +1,8 @@
 ---
 title: How Lua became Luau
 description: Roblox chose Lua because it was small, fast, and easy to learn. Twenty years later, keeping it that way has become a surprisingly complicated engineering job.
+date: '2026-11-17'
 template: editorial
-hideBreadcrumbs: true
 contentsTitle: In this article
 figureSize: compact
 lede: "You're building a disco-themed obby in Studio. You've lined up floating platforms over a pit of lava, scattered a few spinning mirror balls along the way, and saved the best part for the finish line: a dance floor. Every tile should change color when someone steps on it."

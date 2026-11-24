@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21",
+  "generatedAt": "2026-11-23",
   "source": "https://apis.roblox.com/doc-site/v2/feeds?surfaceType=CreatorDocumentation",
   "feedItems": [
     {
@@ -45,20 +45,6 @@
           "url": "https://prod.docsiteassets.roblox.com/assets/feeds/animating2.webp"
         }
       }
-    },
-    {
-      "id": "4974220",
-      "feedType": "ExpertArticle",
-      "title": "Turn screenshots into teleporting paintings",
-      "authorName": "BitwiseAndrea",
-      "url": "https://devforum.roblox.com/t/4974220",
-      "thumbnails": {
-        "default": {
-          "url": "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/a/4/6/1/a461a2952e9fc19385a04a0ce695cbb09908c4de.jpeg"
-        }
-      },
-      "likeCount": 80,
-      "commentCount": 7
     },
     {
       "id": "friendslop",

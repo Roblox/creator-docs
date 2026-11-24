@@ -1,0 +1,49 @@
+{
+  "sections": [
+    {
+      "id": "staff",
+      "title": "From Roblox",
+      "description": "Stories, deep dives, and tips from Roblox staff.",
+      "ctas": [
+        {
+          "label": "View on Forum",
+          "href": "https://devforum.roblox.com/c/resources/roblox-staff/278",
+          "icon": "icon-regular-speech-bubble-align-center"
+        },
+        {
+          "label": "View on YouTube",
+          "href": "https://www.youtube.com/@RobloxCreators",
+          "icon": "icon-regular-youtube"
+        }
+      ],
+      "featuredFilter": true,
+      "icon": "icon-regular-tilt",
+      "feed": "staff"
+    },
+    {
+      "id": "community",
+      "title": "From the community",
+      "description": "Top resources and videos from creators in the Roblox community.",
+      "ctas": [
+        {
+          "label": "Join the Learn program",
+          "href": "https://docs.google.com/forms/d/1eVo3QHZpxO4J13WcUG0_1daNDTBRVQiB42WtOisutOM/viewform"
+        },
+        {
+          "label": "View on Forum",
+          "href": "https://devforum.roblox.com/c/resources/community-resources/74",
+          "icon": "icon-regular-speech-bubble-align-center"
+        },
+        {
+          "label": "View on YouTube",
+          "href": "https://www.youtube.com/playlist?list=PLMneGxZNs3ZYC2U8grQFjpYDZjtYxzSeB",
+          "icon": "icon-regular-youtube"
+        }
+      ],
+      "featuredFilter": true,
+      "icon": "icon-regular-two-people",
+      "emptyText": "Community picks are on the way.",
+      "feed": "community"
+    }
+  ]
+}

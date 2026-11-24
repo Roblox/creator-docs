@@ -1,8 +1,8 @@
 ---
 title: What it takes to round a corner
 description: A shadow, a rounded menu, a gradient across a header. These are the kinds of details nobody thinks twice about... until someone has to teach a game engine how to draw them.
+date: '2026-11-07'
 template: editorial
-hideBreadcrumbs: true
 contentsTitle: In this article
 lede: "Picture this: you're making a shop menu for your Roblox game. There's a sword for sale. You sketch a panel that floats over the action, give it rounded corners and a soft shadow, and let the item cards scroll neatly under the curved edges. A gradient gives the header a little personality."
 cover:

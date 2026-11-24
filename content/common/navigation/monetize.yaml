@@ -76,3 +76,31 @@ navigation:
         path: /production/monetization/immersive-ads
       - title: Rewarded video ads
         path: /production/promotion/rewarded-video-ads
+
+  - title: Best practices and playbooks
+    section:
+      - title: Discover ad placements
+        path: /production/ad-placements/
+      - title: Rewarded video guides
+        path: /production/rewarded-video-guides
+        section:
+          - title: Overview
+            path: /production/rewarded-video-guides
+          - title: Incremental sim
+            path: /production/promotion/rewarded-video-playbooks/incremental-sim
+          - title: Obbies
+            path: /production/promotion/rewarded-video-playbooks/obby
+          - title: RPG
+            path: /production/promotion/rewarded-video-playbooks/rpg
+          - title: Tycoon
+            path: /production/promotion/rewarded-video-playbooks/tycoon
+          - title: Sports
+            path: /production/promotion/rewarded-video-playbooks/sports
+          - title: Survival
+            path: /production/promotion/rewarded-video-playbooks/survival
+          - title: Shooter
+            path: /production/promotion/rewarded-video-playbooks/shooter
+      - title: Rewarded video playbook
+        path: /production/promotion/rewarded-video-playbook
+      - title: Rewarded video optimization
+        path: /production/promotion/rewarded-video-optimization

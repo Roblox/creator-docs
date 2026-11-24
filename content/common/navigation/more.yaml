@@ -1,4 +1,6 @@
 navigation:
+  - title: More
+    path: /learn/more/
   - title: What it takes to round a corner
     path: /learn/more/rounded-corners
   - title: How Lua became Luau

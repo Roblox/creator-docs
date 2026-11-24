@@ -1,7 +1,28 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-23",
   "features": [
+    {
+      "id": "orthographic-camera",
+      "name": "Orthographic camera for 2D, isometric, and top-down views",
+      "status": "beta",
+      "area": "camera",
+      "releasedAt": "2026-10-30",
+      "summary": "Setting Camera.ProjectionType to Orthographic removes perspective, so objects keep the same size at any distance. Use it for side-scrollers, isometric and top-down games, and fixed-angle views. It's a Studio beta, so published games can't use it yet.",
+      "apis": [
+        "Camera.ProjectionType",
+        "Camera.OrthographicSize",
+        "Camera.OrthographicMode",
+        "Camera.ViewStretch"
+      ],
+      "replaces": [
+        "A FieldOfView of 1 with the camera pushed far away",
+        "Zooming by moving the camera closer or farther",
+        "Custom screen-to-world math for flat views"
+      ],
+      "guidance": "Ask the user to enable File > Beta Features > Orthographic Camera, and tell them published games can't use it yet. Each player has their own camera, so set it in a client script: workspace.CurrentCamera.ProjectionType = Enum.ProjectionType.Orthographic. Zoom with OrthographicSize (studs of view height), not distance. Keep the camera back so the near clip plane doesn't cut the scene. ScreenPointToRay and Mouse.Hit already work. ViewportFrames stay perspective.",
+      "docsUrl": "https://create.roblox.com/docs/reference/engine/classes/Camera.md"
+    },
     {
       "id": "textchatservice-for-all-chat",
       "name": "TextChatService for all player-to-player text",
@@ -47,7 +68,7 @@
       "status": "stable",
       "area": "data",
       "releasedAt": "2026-07-15",
-      "summary": "Data store requests from game servers and Open Cloud share one per-experience budget. Save player data with one key per player, an in-memory session copy, UpdateAsync writes, pcall retries with backoff, and saves on leave and shutdown.",
+      "summary": "Save player data with one key per player, an in-memory session copy, UpdateAsync writes, pcall retries with backoff, and saves on leave and shutdown.",
       "apis": [
         "GlobalDataStore:UpdateAsync()",
         "Players.PlayerRemoving",
@@ -91,26 +112,6 @@
       ],
       "guidance": "Ask the user to set Workspace AuthorityMode to Server in Properties; it turns on five prerequisites that execute_luau mostly can't write. Put gameplay in a ReplicatedStorage ModuleScript that a Script and a LocalScript both require, bound with BindToSimulation. Keep state in attributes, read InputActions cloned under each Player, use time(), and play effects in RenderStepped.",
       "docsUrl": "https://create.roblox.com/docs/projects/server-authority.md"
-    },
-    {
-      "id": "studio-script-sync",
-      "name": "Script Sync for editing scripts as local files",
-      "status": "stable",
-      "area": "workflow",
-      "releasedAt": "2026-06-17",
-      "summary": "Built-in two-way sync between Studio's scripts and folders and .luau files on disk. It lets creators use an external editor, Git, linters, and AI coding tools on any place, including Team Create, with no conversion step.",
-      "apis": [
-        "InstanceFileSyncService:GetAllInstances()",
-        "InstanceFileSyncService:GetStatus()",
-        "InstanceFileSyncService:GetSyncedInstance()",
-        "Enum.InstanceFileSyncStatus"
-      ],
-      "replaces": [
-        "Copying script source between Studio and files by hand",
-        "Adopting Rojo only to use an external editor"
-      ],
-      "guidance": "For Git or an external editor, have the creator right-click a Folder or service, choose Sync to..., and pick a directory; no tool starts sync. Check with InstanceFileSyncService:GetAllInstances() in execute_luau (Edit). Edit synced scripts as files or with multi_edit, not both at once. On disk, x.server.luau is a server Script and x.luau a ModuleScript. With Rojo, edit files only.",
-      "docsUrl": "https://create.roblox.com/docs/scripting/sync.md"
     },
     {
       "id": "input-action-system",

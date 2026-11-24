@@ -1,5 +1,5 @@
 navigation:
-  - heading: Educator training
+  - heading: Education
   - title: Educator onboarding
     path: /education/educator-onboarding/landing
     section:
@@ -27,8 +27,7 @@ navigation:
         path: /education/resources/collaboration-best-practices
       - title: Best practices for classrooms
         path: /education/resources/classroom-best-practices
-  - heading: Lesson plans
-  - title: Unit lessons
+  - title: Lesson plans
     section:
       - title: Game design and coding
         path: /education/lesson-plans/intro-to-game-and-coding
@@ -49,8 +48,6 @@ navigation:
             path: /education/lesson-plans/digital-citizenship/animating-characters
           - title: Finish projects
             path: /education/lesson-plans/digital-citizenship/finishing-projects
-  - title: Activity lessons
-    section:
       - title: Intro to Building
         path: /education/lesson-plans/build-an-obby-lesson
       - title: Roblox animations
@@ -68,14 +65,15 @@ navigation:
         path: /education/resources/roblox-for-the-ap-csp-create-performance-task
       - title: Bundled installers
         path: /education/support/creating-bundled-installers
-  - title: FAQ
-    path: /education/resources/frequently-asked-questions-education
-  - heading: Education developers
-  - title: Get started for developers
-    path: /education/resources/getting-started-for-developers-education
-  - title: Design educational experiences
-    path: /education/developer/designing-educational-experiences
-  - title: Plan for educational settings
-    path: /education/developer/planning-for-educational-settings
-  - title: Beta test experiences
-    path: /education/developer/beta-testing-experiences
+      - title: FAQ
+        path: /education/resources/frequently-asked-questions-education
+  - title: For developers
+    section:
+      - title: Get started
+        path: /education/resources/getting-started-for-developers-education
+      - title: Design educational experiences
+        path: /education/developer/designing-educational-experiences
+      - title: Plan for educational settings
+        path: /education/developer/planning-for-educational-settings
+      - title: Beta test experiences
+        path: /education/developer/beta-testing-experiences

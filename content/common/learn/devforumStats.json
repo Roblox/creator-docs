@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-21",
+  "generatedAt": "2026-11-23",
   "articles": {
     "devforum-4996848": { "likes": 16, "replies": 2 },
-    "devforum-4974220": { "likes": 79, "replies": 6, "tags": ["scripting"] },
+    "devforum-4974220": { "likes": 84, "replies": 6, "tags": ["scripting"] },
     "devforum-4809143": {
       "likes": 137,
       "replies": 16,
@@ -10,7 +10,7 @@
     },
     "devforum-4624565": { "likes": 841, "replies": 157 },
     "devforum-4618365": {
-      "likes": 133,
+      "likes": 134,
       "replies": 45,
       "tags": ["physics", "replication", "game-engine"]
     },

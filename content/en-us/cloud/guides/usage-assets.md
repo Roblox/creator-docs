@@ -101,6 +101,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
       <td>
         <ul>
           <li>Must be smaller than 8000x8000 pixels.</li>
+          <li>Upload as `Image` to use the asset ID in texture properties such as `Class.Decal.ColorMapContent`. A `Decal` upload also creates a separate image asset, and texture properties need that image's ID.</li>
           <li>Not available for updating.</li>
         </ul>
       </td>
@@ -349,14 +350,14 @@ If your request for creating a new asset or updating an existing asset succeeds,
        "assetId": "2205400862",
        "displayName": "Name",
        "description": "This is a description",
-       "assetType": "ASSET_TYPE_DECAL",
+       "assetType": "Image",
        "creationContext": {
          "creator": {
            "userId": "11112938575"
          }
        },
        "moderationResult": {
-         "moderationState": "MODERATION_STATE_APPROVED"
+         "moderationState": "Approved"
        }
      }
    }
@@ -373,7 +374,7 @@ An asset that you upload belongs to the user or group in the `creationContext` o
 
 - Insert it from the [Toolbox](../../projects/assets/toolbox.md) or the [Asset Manager](../../projects/assets/manager.md#inventory-sorting).
 - Models upload as [packages](../../projects/assets/packages.md), so check **Inventory** ⟩ **My Packages** in the Toolbox (or **Creations** ⟩ **Group Packages** if a group owns them).
-- To use an asset in a property, enter `rbxassetid://` followed by the `assetId` from the operation response in the [Properties](../../studio/properties.md) window. In a script, assign that string to a string property such as `Class.AudioPlayer.Asset`, or pass the `assetId` to `Datatype.Content.fromAssetId()` for a property of type `Datatype.Content`, such as `Class.Decal.ColorMapContent`. For more information, see [rbxassetid](../../projects/assets/index.md#rbxassetid).
+- To use an asset in a property, enter `rbxassetid://` followed by the `assetId` from the operation response in the [Properties](../../studio/properties.md) window. In a script, assign that string to a string property such as `Class.AudioPlayer.Asset`, or pass the `assetId` to `Datatype.Content.fromAssetId()` for a property of type `Datatype.Content`, such as `Class.Decal.ColorMapContent`. If you uploaded an image as a `Decal`, use the ID of the image asset the upload created instead. The Properties window converts a decal ID for you, but scripts don't. For more information, see [rbxassetid](../../projects/assets/index.md#rbxassetid).
 
 ## Add assets API to OAuth 2.0 apps
 
@@ -404,9 +405,9 @@ To use Assets API for your application and request permissions from your users, 
 
    --form 'request="{
 
-     \"assetType\": \"Decal\",
+     \"assetType\": \"Image\",
 
-     \"displayName\": \"DecalDemo123\",
+     \"displayName\": \"ImageDemo123\",
 
      \"description\": \"This is a description\",
 

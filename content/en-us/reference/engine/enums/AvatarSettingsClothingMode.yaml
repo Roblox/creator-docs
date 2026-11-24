@@ -5,29 +5,26 @@
 name: AvatarSettingsClothingMode
 type: enum
 summary: |
-  Determines whether the experience applies a spatial bounding limit to layered
-  clothing on player characters.
+  Whether layered clothing is limited to
+  `Class.AvatarClothingRules.LimitBounds`.
 description: |
-  Determines whether the experience applies a spatial bounding limit to layered
-  clothing on player characters. Used by `ClothingMode` to control how far
-  layered clothing accessories can extend from the character body. When set to
-  `Enum.AvatarSettingsClothingMode.CustomLimit`, the engine reads `LimitBounds`
-  and clips layered clothing deformation to those bounds. Defaults to
-  `Enum.AvatarSettingsClothingMode.PlayerChoice`.
+  Used by `Class.AvatarClothingRules.ClothingMode` to determine whether layered
+  clothing is limited to `Class.AvatarClothingRules.LimitBounds`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: PlayerChoice
     summary: |
-      No spatial limit is applied to layered clothing; the player's layered
-      clothing accessories deform without a bounding constraint.
+      Layered clothing isn't limited. This is the default value for
+      `Class.AvatarClothingRules.ClothingMode`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: CustomLimit
     summary: |
-      Applies a custom spatial limit to layered clothing based on `LimitBounds`.
+      A layered clothing item that extends outside
+      `Class.AvatarClothingRules.LimitBounds` isn't shown.
     value: 1
     tags: []
     deprecation_message: ''

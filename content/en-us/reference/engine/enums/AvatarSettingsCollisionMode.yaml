@@ -5,41 +5,36 @@
 name: AvatarSettingsCollisionMode
 type: enum
 summary: |
-  Determines the collision geometry mode for avatars managed by
-  `AvatarCollisionRules`.
+  Whether a character collides through its body parts, through inner boxes, or
+  through a single box collider.
 description: |
-  Determines the collision geometry mode for avatars managed by
-  `AvatarCollisionRules`. `Enum.AvatarSettingsCollisionMode.Default` uses each
-  body part's native collision geometry.
-  `Enum.AvatarSettingsCollisionMode.SingleCollider` replaces per-part collision
-  with a single box collider welded to the HumanoidRootPart.
-  `Enum.AvatarSettingsCollisionMode.Legacy` delegates to the
-  `LegacyCollisionMode` setting.
+  Used by `Class.AvatarCollisionRules.CollisionMode` to determine a character's
+  collision geometry. Which body parts collide in each `Enum.HumanoidStateType`
+  is still decided by the `Class.Humanoid`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
     summary: |
-      Each body part uses its native collision geometry. The HumanoidRootPart,
-      UpperTorso, and LowerTorso collide while other parts do not. This is the
-      default value for `CollisionMode`.
+      Each body part collides with its own geometry. This is the default value
+      for `Class.AvatarCollisionRules.CollisionMode`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: SingleCollider
     summary: |
-      A single box-shaped collider part replaces all per-part collision. The
-      collider is welded to the HumanoidRootPart and sized by
-      `SingleColliderSize` (default 2, 3, 1). All other parts become
-      non-collidable and massless.
+      One invisible box, sized by
+      `Class.AvatarCollisionRules.SingleColliderSize` and welded to the
+      `HumanoidRootPart`, collides for the whole character. Every other part in
+      the character stops colliding.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Legacy
     summary: |
-      Collision geometry is determined by `LegacyCollisionMode`, which selects
-      either inner-box colliders or R6-style colliders.
+      Each body part's collision geometry is replaced with a box inside the
+      part.
     value: 2
     tags: []
     deprecation_message: ''
