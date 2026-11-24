@@ -10,7 +10,8 @@ summary: |
 description: |
   `Class.AdService` is responsible for in-experience advertising. This includes
   [rewarded video](../../../production/promotion/rewarded-video-ads.md) and
-  [ad integrations](../../../production/promotion/ad-integrations.md).
+  [ad integrations](../../../production/promotion/ad-integrations.md), including
+  eligibility checks, ad disclosures, and viewable impression measurement.
 code_samples: []
 inherits:
   - Instance
@@ -97,9 +98,11 @@ methods:
       `{ IsEligible: boolean }`.
 
       Call this method and confirm that `result.IsEligible` is `true` before you
-      display any of the campaign's ad integration assets or register their
+      display any of the campaign's ad integration assets, register their
       disclosure buttons with
-      `Class.AdService:RegisterDisclosureButton()|RegisterDisclosureButton`. All
+      `Class.AdService:RegisterDisclosureButton()|RegisterDisclosureButton`, or
+      register their impression sources with
+      `Class.AdService:RegisterImpressionSource()|RegisterImpressionSource`. All
       ad integration assets should remain hidden until the `Class.Player` is
       confirmed eligible.
 
@@ -221,6 +224,75 @@ methods:
         default:
         summary: |
           The ID of the placement that this disclosure is attached to.
+    returns:
+      - type: ()
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities:
+      - Monetization
+  - name: AdService:RegisterImpressionSource
+    summary: |
+      Registers a part as an impression source so that viewable impressions can
+      be measured for an
+      [ad integration](../../../production/promotion/ad-integrations.md)
+      placement.
+    description: |
+      This method may only be called from a `Class.Script` with
+      `Enum.RunContext.Client`.
+
+      `Class.AdService:RegisterImpressionSource()|RegisterImpressionSource`
+      marks a `Class.Part` in your experience as an impression source for an ad
+      integration placement. While a registered part is a descendant of
+      `Class.Workspace`, Roblox periodically checks whether the user can
+      actually see it, based on its size on screen, its distance from the
+      camera, whether it is occluded, and how long it stays in view. Viewable
+      impressions are used to measure
+      [qualified visits](../../../production/promotion/ad-integrations.md#qualified-visits)
+      for the associated campaign.
+
+      The `instance` must be a `Class.Part` with its `Class.Part.Shape|Shape`
+      set to `Enum.PartType.Block`, and it should cover the visible ad content
+      of the placement. The part can be transparent, so you can use an invisible
+      bounding part around ad content that is made of other instances. Ad
+      content in the user interface, such as a `Class.ScreenGui`, is not
+      currently supported as an impression source. You can register more than
+      one part for the same placement, for example one for each side of a
+      billboard, but each part can only be registered for one placement.
+      Registering a part again for the same placement has no effect. A
+      registered part is tracked from every direction, and there is currently no
+      way to track only one of its faces. To measure only one side of an object,
+      such as the front of a billboard, register a thin part placed just in
+      front of that side, so that the object itself blocks the part from other
+      directions. Tracking pauses while the part is outside of `Class.Workspace`
+      and stops when the part is destroyed.
+
+      Note: you must verify that the `Class.Players.LocalPlayer|LocalPlayer` is
+      eligible to see the associated ad integration campaign by calling
+      `Class.AdService:GetCampaignEligibilityAsync()|GetCampaignEligibilityAsync`
+      and verifying that `result.IsEligible` is `true` before attempting to
+      register an impression source for it. If you do not wait, or the
+      `Class.Players.LocalPlayer|LocalPlayer` is not eligible to see the
+      associated campaign, then
+      `Class.AdService:RegisterImpressionSource()|RegisterImpressionSource` will
+      raise an error. It also raises an error if `instance` is not a
+      block-shaped `Class.Part`, if the part is already registered for a
+      different placement, or if too many impression sources are registered.
+    code_samples: []
+    parameters:
+      - name: instance
+        type: Instance
+        default:
+        summary: |
+          The `Class.Part` that covers the visible ad content of the placement.
+          Its `Class.Part.Shape|Shape` must be `Enum.PartType.Block`.
+      - name: adIntegrationPlacementId
+        type: string
+        default:
+        summary: |
+          The ID of the placement that this impression source belongs to.
     returns:
       - type: ()
         summary: ''

@@ -26,6 +26,7 @@ To run ad integrations in your game, you must:
 - Make sure all ad integrations comply with the [Community Standards](https://about.roblox.com/community-standards) and [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards).
 - Submit all assets associated with your ad integration campaign to Roblox for review and approval before exposing them to users.
 - Clearly and prominently disclose when content is an ad using simple, easy-to-understand language.
+- Register every ad asset as an [impression source](#impression-measurement) so that qualified visits can be measured.
 - Not include misleading or deceptive content to encourage user engagement (for example, offering free Robux).
 - Only show [rewarded video ads](./rewarded-video-ads.md) to users 13 and older.
 
@@ -83,7 +84,7 @@ If you register a campaign without assets, make sure to edit the campaign and as
 
 ### Asset deployment
 
-Before an ad integration campaign can go live, make sure all registered and moderated assets are implemented in each selected game where the campaign runs. You must check user eligibility and add the required ad labeling and disclosure.
+Before an ad integration campaign can go live, make sure all registered and moderated assets are implemented in each selected game where the campaign runs. You must check user eligibility, add the required ad labeling and disclosure, and register impression sources so that qualified visits can be measured.
 
 #### User eligibility
 
@@ -173,6 +174,39 @@ When placing ad labels in your game, make sure to:
 - Avoid letting nearby branding or decorative elements visually overpower the ad label. The disclosure should be the primary focus in its immediate area.
 - Any aesthetic adjustments, like size or opacity, should not reduce clarity or make the label harder to recognize, interact with, or understand.
 - When using subtle or highly stylized branding, make the ad label especially clear and visible on first encounter.
+
+#### Impression measurement
+
+Roblox measures [qualified visits](#qualified-visits) from viewable impressions of your ad assets. To make an asset measurable, register a `Class.Part` that covers its visible ad content as an impression source using `Class.AdService.RegisterImpressionSource|RegisterImpressionSource`. Use the placement ID from **Manage Assets** in Ads Manager, the same one that you pass to `Class.AdService.RegisterDisclosureButton|RegisterDisclosureButton`. For example:
+
+```lua
+local AdService = game:GetService("AdService")
+
+local success, result = pcall(function()
+    return AdService:GetCampaignEligibilityAsync("your-campaign-id")
+end)
+
+if success and result.IsEligible then
+    AdService:RegisterImpressionSource(yourImpressionSourcePart, "your-placement-id")
+end
+```
+
+When registering impression sources, make sure to:
+
+- Call `Class.AdService.RegisterImpressionSource|RegisterImpressionSource` from a client script, and only after `Class.AdService.GetCampaignEligibilityAsync|GetCampaignEligibilityAsync` confirms that the user is eligible. Otherwise, the call raises an error.
+- Use a `Class.Part` with its `Class.Part.Shape|Shape` set to `Enum.PartType.Block`. Other instances, such as a `Class.Model` or `Class.MeshPart`, aren't accepted.
+- Make sure the part exists on the client before you register it. If the part might not have loaded yet, for example in a game that uses instance streaming, wait for it with `Class.Instance:WaitForChild()|WaitForChild()`.
+- Size and position the part so that it covers the visible ad content.
+- If the ad content is a 3D object, such as a model or a group of several instances, use a single transparent part that encloses the whole object as the impression source.
+- Keep the part in the `Class.Workspace` while the ad asset is shown. Impressions are only measured for parts in the `Class.Workspace`.
+
+A registered part is tracked from every direction, and there's currently no way to track only one face of a part. If only one side of an object shows ad content, such as the front of a billboard, don't register the whole object. Instead, register a thin part that sits just in front of that side. From other directions, the object itself blocks the part, so those views don't count as impressions.
+
+<img src="../../assets/promotion/ad-integrations/AdIntegrations-ImpressionSourceOneSide.png" width="40%" alt="A thin green part covering the front face of a gray block. Only the thin part is registered as the impression source." />
+
+<Alert severity="info">
+Ad assets in the user interface, such as a `Class.ScreenGui`, aren't currently supported as impression sources.
+</Alert>
 
 ### Asset submission and moderation
 
@@ -275,6 +309,87 @@ Tags have one of the following serving outcomes:
 
 For a full list of prohibited, regulated, and restricted advertising content, see the [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#prohibited-advertising-content).
 
+## Reporting
+
+After a campaign starts, you can track its performance in Ads Manager. Reporting requires that the ad assets in your games are registered as [impression sources](#impression-measurement). Assets without an impression source don't generate reporting data.
+
+To view reporting for your campaigns:
+
+1. In [Ads Manager](https://ads.roblox.com), go to the **Ad integrations** page. For each campaign, the campaign list shows summary metrics for the whole campaign to date. The page also shows the date through which the data is accurate.
+2. Open a campaign to see its report. The report is a table with a row for each asset and a total row for the selected date range.
+3. (Optional) Change the date range, or filter the report by age, gender, pricing tier, operating system, or platform. The date range and filters only apply to the report table.
+4. (Optional) To export the campaign list as a CSV file, click **Download** on the **Ad integrations** page.
+5. (Optional) To export a single campaign as a CSV file, open the campaign's menu and select **Download CSV**. The file includes every metric for each asset and covers the whole campaign to date, regardless of the date range and filters that you selected in the report.
+
+In the pricing tier filter, **Other** corresponds to the Tier 3 [markets](#markets), and **Unknown** means that the user's country couldn't be determined.
+
+Reports include the following metrics. The CSV file for a single campaign includes all of them, with times in seconds:
+
+<table>
+<thead>
+  <tr>
+    <th>**Metric**</th>
+    <th>**Description**</th>
+    <th>**Shown in**</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>**Engaged Sessions**</td>
+    <td>The number of sessions in which a user had at least one ad engagement with the campaign's ad assets. These sessions are the campaign's [qualified visits](#qualified-visits).</td>
+    <td>Campaign list, campaign report</td>
+  </tr>
+  <tr>
+    <td>**Ad engagements**</td>
+    <td>The total number of [ad engagements](#qualified-visits) with the campaign's ad assets. A single session can include several ad engagements, so this number isn't the number of qualified visits.</td>
+    <td>Campaign list, campaign report</td>
+  </tr>
+  <tr>
+    <td>**Unique users**</td>
+    <td>The number of distinct users who had at least one ad engagement.</td>
+    <td>Campaign list, campaign report</td>
+  </tr>
+  <tr>
+    <td>**Reach**</td>
+    <td>The percentage of users eligible to see the campaign who had at least one ad engagement.</td>
+    <td>Campaign list</td>
+  </tr>
+  <tr>
+    <td>**Frequency**</td>
+    <td>The average number of engaged sessions for each unique user.</td>
+    <td>Campaign list, campaign report</td>
+  </tr>
+  <tr>
+    <td>**Avg session time**</td>
+    <td>The average time, in seconds, that ad assets were viewable in each engaged session.</td>
+    <td>Campaign report</td>
+  </tr>
+  <tr>
+    <td>**Total time spent**</td>
+    <td>The total time that ad assets were viewable to users, in minutes or hours.</td>
+    <td>Campaign report</td>
+  </tr>
+  <tr>
+    <td>**CPTV**</td>
+    <td>The [cost per 1,000 qualified visits](#cost-per-1000-visits-cptv), in USD.</td>
+    <td>Campaign list</td>
+  </tr>
+  <tr>
+    <td>**Rev share cost**</td>
+    <td>The [revenue share](#revenue-share) cost of the qualified visits in the selected date range, in USD. This amount is shown before your locked-in maximum cost is applied, so the amount you're invoiced can be lower. Campaigns that aren't subject to revenue share don't show a cost and aren't invoiced.</td>
+    <td>Campaign report</td>
+  </tr>
+</tbody>
+</table>
+
+In the campaign report, the cost of a qualified visit that includes ad engagements with several assets is split evenly between those assets, so that the assets' revenue share costs add up to the campaign total. Engaged sessions and unique users aren't split, so the asset rows for those metrics can add up to more than the total row.
+
+The campaign's details also show its CPTV and revenue share cost. These two values always cover the whole campaign to date, and don't change with the date range or filters.
+
+<Alert severity="info">
+Report data isn't available in real time, and metrics can be delayed by up to 24 hours. Metrics that aren't final yet are marked with a clock icon. Dates in reports are in UTC. A dash (—) means that a metric isn't available for the selected dates.
+</Alert>
+
 ## Revenue share
 
 <Alert severity="info">
@@ -290,15 +405,15 @@ Revenue share costs do not apply to:
 
 For active ad integration campaigns, revenue share costs are calculated based on qualified visits.
 
-A **qualified visit** is a session in which a user engages with one or more branded assets from your campaign. Qualified visits match what Roblox reports to brands as ad engagements, based on Interactive Advertising Bureau (IAB) standards for time-in-view, occlusion, and size.
+An **ad engagement** is a viewable impression of a branded asset that meets the Interactive Advertising Bureau (IAB) standards for time-in-view, occlusion, and size. Roblox reports ad engagements to brands in the same way.
+
+A **qualified visit** is a session in which a user has one or more ad engagements with branded assets from your campaign.
 
 If a user engages with multiple branded assets during the same session, that session counts as a **single qualified visit**.
 
 If the same user returns in a separate session and engages with a branded asset again, that session counts as a **new qualified visit**.
 
-<Alert severity="info">
-Reporting capabilities for ad integration campaigns will be available later this year.
-</Alert>
+Qualified visits are only measured for ad assets that have a registered [impression source](#impression-measurement). You can track them for each campaign as **Engaged Sessions** in the [reporting](#reporting) views of Ads Manager.
 
 ### Cost per 1,000 visits (CPTV)
 
@@ -654,7 +769,19 @@ No. You're charged the lower of:
 - The actual cost calculated from your branded visits.
 - Your locked-in maximum cost.
 
-<br />
+<br /><br />
+
+**Why doesn't my campaign show any qualified visits?**
+
+Qualified visits are only measured for ad assets that have a registered [impression source](#impression-measurement). Make sure each game in the campaign calls `Class.AdService.RegisterImpressionSource|RegisterImpressionSource` for its ad assets after it confirms that the user is eligible. Report data can also be delayed by up to 24 hours, so recent sessions might not be included yet.
+
+<br /><br />
+
+**Why is the revenue share cost in my report different from my invoice?**
+
+The report shows the revenue share cost calculated from your qualified visits, before your locked-in maximum cost is applied. You're invoiced the lower of the two amounts. Campaigns that aren't subject to [revenue share](#revenue-share) don't show a revenue share cost in the report and aren't invoiced.
+
+<br /><br />
 
 **Why is my campaign pending?**
 
