@@ -86,7 +86,7 @@ If you require a `Class.ModuleScript` from both sides of the client-server bound
 Module scripts have some common patterns that you can use to simplify your code and avoid pitfalls as your game grows in size and complexity.
 
 <Alert severity="success">
-Most of these patterns require an understanding of events. If you're not familiar with them, see [Events](events.md).
+Most of these patterns require an understanding of events. If you're not familiar with them, see [Events](events/index.md).
 </Alert>
 
 ### Data sharing
