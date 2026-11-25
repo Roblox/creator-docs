@@ -5,6 +5,10 @@ description: Explains how to configure a game's camera settings.
 
 Roblox's built-in camera powers a default **third person** mode and an optional **first person** mode, so you don't need to build your own following camera. For more customized scenarios, you can adjust the default properties in `Class.Camera` or replace it entirely like for over-the-shoulder, isometric, and weapon scoping views.
 
+<Alert severity="info">
+For 2D, isometric, and top-down views, you can use a true orthographic projection, where objects stay the same size at any distance. Set `Class.Camera.ProjectionType|ProjectionType` to `Enum.ProjectionType.Orthographic|Orthographic` and zoom with `Class.Camera.OrthographicSize|OrthographicSize` instead of `Class.Camera.FieldOfView|FieldOfView`. Orthographic projection is now available as a Studio beta at **File** > **Beta Features** > **Orthographic Camera**, but published games can't use it yet.
+</Alert>
+
 ## Basic settings
 
 You can configure common camera settings directly within Studio's `Class.StarterPlayer` object. These settings include [zoom distance](#zoom-distance) and various [camera](#camera-mode), [occlusion](#occlusion-mode), and [movement](#movement-mode) modes.
@@ -135,6 +139,14 @@ Each player [client](../../projects/client-server.md) has its own `Class.Camera`
   <tr>
     <td>`Class.Camera.FieldOfView`</td>
 <td>The extent of the observable 3D space that can be seen on screen, measured between 1–120 degrees in the direction defined by `Class.Camera.FieldOfViewMode`. Default is 70.</td>
+  </tr>
+  <tr>
+    <td>`Class.Camera.ProjectionType`</td>
+    <td>Chooses between a perspective projection, the default, and an orthographic projection, where objects stay the same size at any distance. Orthographic projection is useful for 2D, isometric, and top-down views. It's a Studio beta, so published games can't use it yet.</td>
+  </tr>
+  <tr>
+    <td>`Class.Camera.OrthographicSize`</td>
+    <td>The extent in studs of the view along the axis set by `Class.Camera.OrthographicMode`, when `Class.Camera.ProjectionType` is `Enum.ProjectionType.Orthographic|Orthographic`. Use it to zoom an orthographic camera instead of `Class.Camera.FieldOfView`.</td>
   </tr>
 	<tr>
     <td>`Class.Camera.CameraType`</td>

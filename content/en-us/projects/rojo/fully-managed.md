@@ -191,7 +191,7 @@ So the rules are:
 
 ## CI: build and publish
 
-The pipeline needs an [Open Cloud](https://create.roblox.com/docs/cloud/guides/usage-place-publishing) API key with the **assets** permission and **Read** and **Write** access, plus each place's ID. Store them as CI secrets.
+The pipeline needs an [Open Cloud](https://create.roblox.com/docs/cloud/guides/usage-place-publishing) API key with the **universe** permission and the **publish** operation for the game (`universe:publish`), plus each place's ID. Store them as CI secrets. If the pipeline also saves versions without publishing, add **universe-places** with the **write** operation (`universe-places:write`). The key must be owned by a user, not a group, because group-owned keys can't be granted the publish permission.
 
 | Trigger | Steps |
 | --- | --- |

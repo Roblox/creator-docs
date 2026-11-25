@@ -31,14 +31,17 @@ properties:
       Determines whether acoustic simulation should be used for this
       `Class.AudioEmitter`.
     description: |
-      Determines whether sound from this `Class.AudioEmitter` shoud
+      Determines whether sound from this `Class.AudioEmitter` should
       automatically implement features of acoustic simulation, such as occlusion
       (being muffled through walls), diffraction (bending around corners), and
       reverberation (echoing off of walls), when being heard by an
-      `Class.AudioListener|AudioListener`. Note that the `Class.AudioListener`
-      also needs its
-      `Class.AudioListener.AcousticSimulationEnabled|AcousticSimulationEnabled`
-      property set to `true` for the effects to occur.
+      `Class.AudioListener|AudioListener`. Note that
+      `Class.AudioListener.AcousticSimulationEnabled` and
+      `Class.SoundService.AcousticSimulationEnabled` must also be `true` for the
+      effects to occur.
+
+      This property is only visible in the **Properties** window if
+      `Class.SoundService.AcousticSimulationEnabled` is set to `true`.
     code_samples: []
     type: boolean
     tags: []

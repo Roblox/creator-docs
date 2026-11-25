@@ -24,8 +24,12 @@ To publish an existing place of a game with the [Update Asset](/cloud/reference/
 
 1. [Create an API key](../auth/api-keys.md#create-api-keys) on the **Creator Dashboard**. Make sure you perform the following settings:
 
-   1. Add **assets** to **Access Permissions**.
-   1. Add **Read** and **Write** operations to your selected game.
+   1. In **Access Permissions**, add **universe**, select the game that the place belongs to, and add the **publish** operation (`universe:publish`).
+   1. If you also want to save versions without publishing, add **universe-places** for the same game with the **write** operation (`universe-places:write`).
+
+   <Alert severity="info">
+   Create the API key under your user account, not a group. Group-owned API keys can't be granted the publish permission.
+   </Alert>
 
 1. Get the **Place ID** of the place that you want to update.
 
@@ -35,7 +39,7 @@ To publish an existing place of a game with the [Update Asset](/cloud/reference/
    1. Find the place that you want to update and click its thumbnail.
    1. The **Place ID** is in the redirected URL. For example, in the URL `https://create.roblox.com/dashboard/creations/experiences/0000000/places/111111/configure`, the **Place ID** is `111111`.
 
-1. Add the API key in the **x-api-key** header of a `PATCH` request to the endpoint. Pass the place file in the `fileContent` form field, and set `assetType` to `Place` and `published` to `true` in the `request` form field. **You must explicitly set `published` to `true`** to publish the new content; otherwise the upload saves as a new, unpublished asset version. The following two example requests reference a Roblox XML place file (`.rbxlx`) and a binary place file (`.rbxl`).
+1. Add the API key in the **x-api-key** header of a `PATCH` request to the endpoint. Pass the place file in the `fileContent` form field, and set `assetType` to `Place` and `published` to `true` in the `request` form field. **You must explicitly set `published` to `true`** to publish the new content; otherwise the upload saves as a new, unpublished asset version. A save-only request, where `published` is `false`, needs **universe-places:write** instead of **universe:publish**. The following two example requests reference a Roblox XML place file (`.rbxlx`) and a binary place file (`.rbxl`).
 
    ```bash title="XML Place File Request"
    $ curl --verbose --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/{placeId}' \

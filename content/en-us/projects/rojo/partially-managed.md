@@ -168,7 +168,7 @@ Write a small deploy script; [Lune](https://lune-org.github.io/docs) works well 
 
 1. **Download the current Dev place**, so it includes the Content, Workspace and lighting.
 2. **Remove every `PackageLink`.** The packages become plain models, so Stable is frozen and won't change when artists publish new package versions.
-3. **Publish the result to the Stable place** with the [Open Cloud place publishing API](https://create.roblox.com/docs/cloud/guides/usage-place-publishing). You need an API key with the **assets** permission and **Read** and **Write** access, plus the place ID.
+3. **Publish the result to the Stable place** with the [Open Cloud place publishing API](https://create.roblox.com/docs/cloud/guides/usage-place-publishing). You need an API key with the **universe** permission and the **publish** operation for the game (`universe:publish`), plus the place ID. If you also save versions without publishing, add **universe-places** with the **write** operation (`universe-places:write`). The key must be owned by a user, not a group, because group-owned keys can't be granted the publish permission.
 
 Testers get a stable build while the team keeps working in Dev. Nobody edits Stable by hand.
 

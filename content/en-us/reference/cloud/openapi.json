@@ -7891,6 +7891,7 @@
     },
     "/cloud-authentication/v1/canUseApiKeys": {
       "post": {
+        "tags": ["Groups"],
         "summary": "Checks whether the current user can create and use API keys under the group.",
         "requestBody": {
           "content": {
@@ -7950,11 +7951,15 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#post_cloud_authentication_v1_canUseApiKeys"
+        }
       }
     },
     "/cloud-authentication/v1/scopes": {
       "get": {
+        "tags": ["Metadata"],
         "summary": "Gets the current scope-centric (v2) configuration, mainly for the UI.",
         "parameters": [
           {
@@ -8019,7 +8024,10 @@
           {
             "roblox-api-key": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/metadata#get_cloud_authentication_v1_scopes"
+        }
       }
     },
     "/cloud/v2/creator-store-products": {
@@ -32218,6 +32226,70 @@
         }
       }
     },
+    "/oauth/v1/scopes": {
+      "get": {
+        "tags": ["Metadata"],
+        "operationId": "Scope_GetScopes",
+        "parameters": [
+          {
+            "name": "locale",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationAuthorizationsApi.Models.Response.ScopesConfigurationResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationAuthorizationsApi.Models.Response.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 1000
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "scope:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/metadata#Scope_GetScopes"
+        }
+      }
+    },
     "/ordered-data-stores/v1/universes/{universeId}/orderedDataStores/{orderedDataStore}/scopes/{scope}/entries": {
       "get": {
         "tags": ["Data and memory stores"],
@@ -32907,6 +32979,678 @@
         "externalDocs": {
           "url": "https://create.roblox.com/docs/cloud/reference/features/storage#OrderedDataStores_IncrementEntry"
         }
+      }
+    },
+    "/ownership-transfer/v1/transfers/cancel": {
+      "post": {
+        "operationId": "Transfer_CancelTransfer",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CancelTransferRequest"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CancelTransferRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CancelTransferRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CancelTransferRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ownership-transfer:write",
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/ownership-transfer/v1/transfers/invalidTargets": {
+      "post": {
+        "summary": "Returns a list of creators that should be excluded as possible targets for a transfer for the given resource\ndue to having been denied too recently",
+        "operationId": "Transfer_ListInvalidTargetsForResource",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ListInvalidTargetsRequest"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ListInvalidTargetsRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ListInvalidTargetsRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ListInvalidTargetsRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListInvalidTargetsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ownership-transfer:read",
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/ownership-transfer/v1/transfers/reject": {
+      "post": {
+        "operationId": "Transfer_RejectTransfer",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/RejectTransferRequest"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/RejectTransferRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/RejectTransferRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/RejectTransferRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ownership-transfer:write",
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/ownership-transfer/v1/transfers/resource": {
+      "post": {
+        "operationId": "Transfer_GetLatestTransferForResource",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/GetLatestTransferRequest"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/GetLatestTransferRequest"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/GetLatestTransferRequest"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/GetLatestTransferRequest"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Hold"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ownership-transfer:read",
+            "targetResourceSpecifier": "",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/ownership-transfer/v1/transfers/resource/group/{groupId}/eligibility": {
+      "get": {
+        "operationId": "Transfer_GetGroupEligibility",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "boolean"
+                  },
+                  "description": "A dictionary of eligibility check names to their boolean results.\nSerializes as a flat JSON object: { \"isEligibleExtendedServices\": true, ... }"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 100
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ownership-transfer:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
+      }
+    },
+    "/ownership-transfer/v1/users/permissibleGroups": {
+      "get": {
+        "summary": "List of group ids that this user has granular publish for",
+        "operationId": "User_ListPermissibleGroupsForExperienceTransfer",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "format": "int64"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnershipTransferApi.ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "ownership-transfer:read",
+            "firstPartyOAuthOnly": true
+          }
+        ],
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          }
+        ]
       }
     },
     "/place-annotations-service/v1/channel-preference": {
@@ -33851,7 +34595,7 @@
             "description": "Internal Server Error"
           }
         },
-        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-stability": "BETA",
         "x-roblox-rate-limits": {
           "perApiKeyOwner": {
             "period": "MINUTE",
@@ -39001,228 +39745,6 @@
         }
       }
     },
-    "/universe-performance-raqi/v1/events/logging/universe/{universeId}/log-details": {
-      "get": {
-        "tags": ["Analytics"],
-        "summary": "Get logs based on message hash ids, keywords, placeVersions, start/end time.",
-        "operationId": "ErrorLoggingDetail_GetLogs",
-        "parameters": [
-          {
-            "name": "universeId",
-            "in": "path",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "messageHashIds",
-            "in": "query",
-            "description": "",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          {
-            "name": "keyword",
-            "in": "query",
-            "description": "Optional keyword to help highlight matching keyword in the error message",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "startTime",
-            "in": "query",
-            "description": "Optional query window start; omitted values are defaulted server-side.",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "endTime",
-            "in": "query",
-            "description": "Optional query window end; omitted values are defaulted server-side.",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "placeId",
-            "in": "query",
-            "description": "Optional place id filter.",
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          },
-          {
-            "name": "placeVersions",
-            "in": "query",
-            "description": "Optional place version filters.",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "integer",
-                "format": "int64"
-              }
-            }
-          },
-          {
-            "name": "firstSeenPlaceVersion",
-            "in": "query",
-            "description": "Optional minimum first seen place version filter (inclusive).",
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorLogDetailResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorLogDetailResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorLogDetailResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Server Error",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActionResult"
-                }
-              }
-            }
-          }
-        },
-        "x-roblox-stability": "EXPERIMENTAL",
-        "x-roblox-rate-limits": {
-          "perApiKeyOwner": {
-            "period": "MINUTE",
-            "maxInPeriod": 60
-          },
-          "perOauth2Authorization": {
-            "period": "MINUTE",
-            "maxInPeriod": 60
-          }
-        },
-        "x-roblox-scopes": [
-          {
-            "name": "universe.analytics:read",
-            "targetResourceSpecifier": "universe"
-          }
-        ],
-        "x-roblox-engine-usability": {
-          "apiKeyWithHttpService": false
-        },
-        "security": [
-          {
-            "roblox-legacy-cookie": []
-          },
-          {
-            "roblox-api-key": []
-          },
-          {
-            "roblox-oauth2": ["universe.analytics:read"]
-          }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/analytics#ErrorLoggingDetail_GetLogs"
-        }
-      }
-    },
     "/universes/v1/{universeId}/places/{placeId}/versions": {
       "post": {
         "tags": ["Places", "Universes"],
@@ -39925,7 +40447,7 @@
     },
     "/v1/ads-tracking/click": {
       "post": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "Records an ad click.",
         "requestBody": {
           "content": {
@@ -39980,7 +40502,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#ads_post_v1_ads_tracking_click"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#ads_post_v1_ads_tracking_click"
         }
       }
     },
@@ -56077,6 +56599,77 @@
         }
       }
     },
+    "/v1/groups/{groupId}/social-links": {
+      "get": {
+        "tags": ["Groups"],
+        "summary": "Gets the social links of a group. Callers under 13 years old get an error. Callers get an error where local policy does not allow external links.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "groupId",
+            "description": "The ID of the group.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Api.GetSocialLinkResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Roblox.Groups.Api.GetSocialLinkResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "1: Group is invalid or does not exist."
+          },
+          "401": {
+            "description": "0: Authorization has been denied for this request."
+          },
+          "403": {
+            "description": "11: Social links cannot be processed as this time.\r\n13: Only users who are over thirteen years of age may edit social links."
+          },
+          "404": {
+            "description": "11: Social links cannot be processed as this time."
+          }
+        },
+        "servers": [
+          {
+            "url": "https://groups.roblox.com"
+          }
+        ],
+        "x-roblox-stability": "EXPERIMENTAL",
+        "x-roblox-engine-usability": {
+          "apiKeyWithHttpService": false
+        },
+        "security": [
+          {
+            "roblox-legacy-cookie": []
+          }
+        ],
+        "externalDocs": {
+          "url": "https://create.roblox.com/docs/cloud/reference/features/groups#groups_get_v1_groups__groupId__social_links"
+        },
+        "x-roblox-recommended-alternatives": [
+          {
+            "url": "https://apis.roblox.com/cloud/v2/groups/{group_id}",
+            "httpMethod": "GET",
+            "documentationUrl": "https://create.roblox.com/docs/cloud/reference/features/groups#Cloud_GetGroup"
+          }
+        ]
+      }
+    },
     "/v1/groups/{groupId}/universes": {
       "get": {
         "tags": ["Groups", "Universes"],
@@ -64131,7 +64724,7 @@
     },
     "/v1/sponsored-games/click": {
       "post": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "Records clicks for sponsored games.",
         "requestBody": {
           "content": {
@@ -64186,13 +64779,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#ads_post_v1_sponsored_games_click"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#ads_post_v1_sponsored_games_click"
         }
       }
     },
     "/v1/sponsored-pages": {
       "get": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "Retrieves sponsored pages to serve to a user on a specific device type in a specific country.",
         "responses": {
           "200": {
@@ -64228,13 +64821,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#ads_get_v1_sponsored_pages"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#ads_get_v1_sponsored_pages"
         }
       }
     },
     "/v1/sponsored/catalog-assets/{targetId}/create": {
       "get": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "Returns the asset information for creating a new sponsored campaign.",
         "parameters": [
           {
@@ -64282,7 +64875,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#ads_get_v1_sponsored_catalog_assets__targetId__create"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#ads_get_v1_sponsored_catalog_assets__targetId__create"
         }
       }
     },
@@ -67681,12 +68274,28 @@
           }
         ],
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group.payout:read",
+            "targetResourceSpecifier": "universes",
+            "firstPartyOAuthOnly": true
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
           }
         ],
         "externalDocs": {
@@ -75089,7 +75698,6 @@
     },
     "/v1/users/{userId}/roblox-badges": {
       "get": {
-        "tags": ["Accounts", "Badges", "User profiles", "Users"],
         "summary": "Returns a list of Roblox badges belonging to a user.",
         "parameters": [
           {
@@ -75142,10 +75750,7 @@
           {
             "roblox-legacy-cookie": []
           }
-        ],
-        "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/accounts#accountinformation_get_v1_users__userId__roblox_badges"
-        }
+        ]
       }
     },
     "/v1/users/{userId}/universes": {
@@ -78876,12 +79481,33 @@
           }
         ],
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group:read"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["group:read"]
           }
         ],
         "externalDocs": {
@@ -79107,12 +79733,33 @@
           }
         ],
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group:write"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["group:write"]
           }
         ],
         "externalDocs": {
@@ -79200,12 +79847,33 @@
           }
         ],
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group:read"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["group:read"]
           }
         ],
         "externalDocs": {
@@ -79328,12 +79996,33 @@
           }
         ],
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 30
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group:write"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["group:write"]
           }
         ],
         "externalDocs": {
@@ -79458,12 +80147,33 @@
           }
         ],
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group:read"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["group:read"]
           }
         ],
         "externalDocs": {
@@ -79621,12 +80331,33 @@
           }
         ],
         "x-roblox-stability": "BETA",
+        "x-roblox-rate-limits": {
+          "perApiKeyOwner": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          },
+          "perOauth2Authorization": {
+            "period": "MINUTE",
+            "maxInPeriod": 120
+          }
+        },
+        "x-roblox-scopes": [
+          {
+            "name": "group:read"
+          }
+        ],
         "x-roblox-engine-usability": {
           "apiKeyWithHttpService": false
         },
         "security": [
           {
             "roblox-legacy-cookie": []
+          },
+          {
+            "roblox-api-key": []
+          },
+          {
+            "roblox-oauth2": ["group:read"]
           }
         ],
         "externalDocs": {
@@ -82129,7 +82860,7 @@
     },
     "/v2/sponsored-campaigns": {
       "get": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "Gets a page of Roblox.AdConfiguration.Api.SponsoredCampaignModel with specified input parameters.",
         "parameters": [
           {
@@ -82221,13 +82952,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_get_v2_sponsored_campaigns"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#adconfiguration_get_v2_sponsored_campaigns"
         }
       }
     },
     "/v2/sponsored-campaigns/create": {
       "post": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "Creates a complete ad. Including ad campaign, ad set, escrow, and the ad.\nCurrently intended for creation of sponsorships only.",
         "requestBody": {
           "content": {
@@ -82294,13 +83025,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_post_v2_sponsored_campaigns_create"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#adconfiguration_post_v2_sponsored_campaigns_create"
         }
       }
     },
     "/v2/sponsored-campaigns/eligible-asset-type-ids": {
       "get": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "Get all asset type IDs that are eligible to be sponsored.",
         "responses": {
           "200": {
@@ -82348,13 +83079,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_get_v2_sponsored_campaigns_eligible_asset_type_ids"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#adconfiguration_get_v2_sponsored_campaigns_eligible_asset_type_ids"
         }
       }
     },
     "/v2/sponsored-campaigns/eligible-campaign-targets": {
       "post": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "Returns a collection of Roblox.AdConfiguration.Api.Models.CampaignTargetModel that the user is authorized to sponsor, ordered by most recently advertised",
         "requestBody": {
           "content": {
@@ -82413,13 +83144,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_post_v2_sponsored_campaigns_eligible_campaign_targets"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#adconfiguration_post_v2_sponsored_campaigns_eligible_campaign_targets"
         }
       }
     },
     "/v2/sponsored-campaigns/multi-get-can-user-sponsor": {
       "get": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "Checks whether the targets are eligible for sponsorship, and\nif the user is authorized to sponsor the targets.",
         "parameters": [
           {
@@ -82498,13 +83229,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_get_v2_sponsored_campaigns_multi_get_can_user_sponsor"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#adconfiguration_get_v2_sponsored_campaigns_multi_get_can_user_sponsor"
         }
       }
     },
     "/v2/sponsored-campaigns/stop": {
       "post": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "Stops a sponsored campaign / ad (ad set) from running. Initiated by a user.",
         "requestBody": {
           "content": {
@@ -82568,13 +83299,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_post_v2_sponsored_campaigns_stop"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#adconfiguration_post_v2_sponsored_campaigns_stop"
         }
       }
     },
     "/v2/sponsored-games": {
       "get": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "Gets a page of Roblox.AdConfiguration.Api.SponsoredGameV2Model with specified input parameters.",
         "parameters": [
           {
@@ -82655,13 +83386,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_get_v2_sponsored_games"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#adconfiguration_get_v2_sponsored_games"
         }
       }
     },
     "/v2/sponsored-games/create": {
       "post": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "Creates a new sponsored game ad with specified input parameters.",
         "requestBody": {
           "content": {
@@ -82726,13 +83457,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_post_v2_sponsored_games_create"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#adconfiguration_post_v2_sponsored_games_create"
         }
       }
     },
     "/v2/sponsored-games/stop": {
       "post": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "To stop a sponsored-game ad (ad set) from running, initiated by a user.",
         "requestBody": {
           "content": {
@@ -82794,13 +83525,13 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_post_v2_sponsored_games_stop"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#adconfiguration_post_v2_sponsored_games_stop"
         }
       }
     },
     "/v2/sponsored-games/universes": {
       "get": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "Gets a list of universes for the authenticated user, or the given group, ordered by most recently created sponsored game ads.",
         "parameters": [
           {
@@ -82854,7 +83585,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_get_v2_sponsored_games_universes"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#adconfiguration_get_v2_sponsored_games_universes"
         }
       }
     },
@@ -83346,7 +84077,7 @@
     },
     "/v2/tracking/click": {
       "post": {
-        "tags": ["Advertising"],
+        "tags": ["Sponsored items"],
         "summary": "Records an ad click.",
         "requestBody": {
           "content": {
@@ -83401,7 +84132,7 @@
           }
         ],
         "externalDocs": {
-          "url": "https://create.roblox.com/docs/cloud/reference/features/advertising#adconfiguration_post_v2_tracking_click"
+          "url": "https://create.roblox.com/docs/cloud/reference/features/sponsored-items#adconfiguration_post_v2_tracking_click"
         }
       }
     },
@@ -87680,6 +88411,19 @@
         "additionalProperties": false,
         "description": "Represents an address."
       },
+      "AdsManagementApi.Creator": {
+        "type": "object",
+        "properties": {
+          "groupId": {
+            "description": "The creator group's ID.",
+            "type": "string"
+          },
+          "userId": {
+            "description": "The creator user's ID.",
+            "type": "string"
+          }
+        }
+      },
       "AdvertisableUniverse": {
         "type": "object",
         "required": ["universeId"],
@@ -88420,6 +89164,282 @@
       },
       "ApiEmptyResponseModel": {
         "type": "object",
+        "additionalProperties": false
+      },
+      "ApplicationAuthorizationsApi.Models.Enum.ErrorCode": {
+        "enum": [
+          "InternalError",
+          "NotAuthenticated",
+          "MissingArgument",
+          "DuplicateValuesArgument",
+          "InvalidArgument",
+          "InvalidRequest",
+          "ArgumentExceedsLimit",
+          "AuthorizationUnauthorizedAccess",
+          "AuthorizationNotFound",
+          "ApplicationUnauthorizedAccess",
+          "ApplicationNotFound",
+          "TargetUnauthorizedAccess",
+          "TargetNotFound",
+          "ApplicationNameTaken",
+          "TextInappropriate",
+          "InvalidScope",
+          "MalformedRedirectUri",
+          "IllegalSchemeRedirectUri",
+          "RedirectUriMismatch",
+          "ScopeMismatch",
+          "AccessDenied",
+          "SettingsChangeRequired",
+          "LuobuCreatorMobileBindingMissing",
+          "AgeCheckRequired",
+          "EmailVerificationRequired",
+          "InvalidPromptValue",
+          "InvalidResponseTypeValue",
+          "IllegalPrompt",
+          "InteractionRequired",
+          "LoginRequired",
+          "AccountSelectionRequired",
+          "ConsentRequired",
+          "GroupNotFound",
+          "Conflict",
+          "UnauthorizedAccess",
+          "ActiveApplicationLimitExceeded",
+          "AuthorizationLimitExceeded",
+          "InvalidImageFile",
+          "ApplicationStatusConflict",
+          "InvalidOrigin",
+          "InvalidVerificationToken",
+          "PublishLimitExceeded",
+          "ApplicationModerated",
+          "ReviewSubmissionRequired"
+        ],
+        "type": "string"
+      },
+      "ApplicationAuthorizationsApi.Models.Response.ErrorResponse": {
+        "required": ["code"],
+        "type": "object",
+        "properties": {
+          "code": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ApplicationAuthorizationsApi.Models.Enum.ErrorCode"
+              }
+            ]
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "field": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplicationAuthorizationsApi.Models.Response.OperationConfigurationEntry": {
+        "required": ["name"],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "translationKey": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplicationAuthorizationsApi.Models.Response.ProductConfigurationEntry": {
+        "required": ["name"],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "translationKey": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplicationAuthorizationsApi.Models.Response.ScopeConfigurationEntry": {
+        "required": ["operation", "scopeType"],
+        "type": "object",
+        "properties": {
+          "scopeType": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "operation": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "targetType": {
+            "type": "string",
+            "nullable": true
+          },
+          "translationKey": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "riskLevel": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupAllowed": {
+            "type": "boolean"
+          },
+          "firstPartyOAuthOnly": {
+            "type": "boolean"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplicationAuthorizationsApi.Models.Response.ScopeTypeConfigurationEntry": {
+        "required": ["name"],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "translationKey": {
+            "type": "string",
+            "nullable": true
+          },
+          "product": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplicationAuthorizationsApi.Models.Response.ScopesConfigurationResponse": {
+        "required": [
+          "oidcScopes",
+          "operations",
+          "products",
+          "scopes",
+          "scopeTypes",
+          "targetParts",
+          "targetTypes"
+        ],
+        "type": "object",
+        "properties": {
+          "scopes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApplicationAuthorizationsApi.Models.Response.ScopeConfigurationEntry"
+            }
+          },
+          "scopeTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApplicationAuthorizationsApi.Models.Response.ScopeTypeConfigurationEntry"
+            }
+          },
+          "targetTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApplicationAuthorizationsApi.Models.Response.TargetTypeConfigurationEntry"
+            }
+          },
+          "targetParts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApplicationAuthorizationsApi.Models.Response.TargetPartConfigurationEntry"
+            }
+          },
+          "products": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApplicationAuthorizationsApi.Models.Response.ProductConfigurationEntry"
+            }
+          },
+          "operations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApplicationAuthorizationsApi.Models.Response.OperationConfigurationEntry"
+            }
+          },
+          "oidcScopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplicationAuthorizationsApi.Models.Response.TargetPartConfigurationEntry": {
+        "required": ["name"],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "constraints": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "translationKey": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplicationAuthorizationsApi.Models.Response.TargetTypeConfigurationEntry": {
+        "required": ["name"],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "requiredParts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "optionalParts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "translationKey": {
+            "type": "string",
+            "nullable": true
+          }
+        },
         "additionalProperties": false
       },
       "ArchiveNotificationStringRequest": {
@@ -89449,7 +90469,7 @@
             "description": "The user or group that created the account.",
             "allOf": [
               {
-                "$ref": "#/components/schemas/Creator"
+                "$ref": "#/components/schemas/AdsManagementApi.Creator"
               }
             ]
           },
@@ -89565,7 +90585,7 @@
             "description": "The user or group that created the account.",
             "allOf": [
               {
-                "$ref": "#/components/schemas/Creator"
+                "$ref": "#/components/schemas/AdsManagementApi.Creator"
               }
             ]
           },
@@ -89895,7 +90915,7 @@
             "description": "The user who created the campaign (read-only).",
             "allOf": [
               {
-                "$ref": "#/components/schemas/Creator"
+                "$ref": "#/components/schemas/AdsManagementApi.Creator"
               }
             ],
             "readOnly": true
@@ -90274,6 +91294,20 @@
           "canUseApiKeys": {
             "type": "boolean",
             "description": "Whether the current user can create and use API keys under the group."
+          }
+        },
+        "additionalProperties": false
+      },
+      "CancelTransferRequest": {
+        "required": ["resource"],
+        "type": "object",
+        "properties": {
+          "resource": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Resource"
+              }
+            ]
           }
         },
         "additionalProperties": false
@@ -91991,17 +93025,22 @@
         }
       },
       "Creator": {
+        "required": ["creatorId", "creatorType"],
         "type": "object",
         "properties": {
-          "groupId": {
-            "description": "The creator group's ID.",
-            "type": "string"
+          "creatorType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CreatorType"
+              }
+            ]
           },
-          "userId": {
-            "description": "The creator user's ID.",
-            "type": "string"
+          "creatorId": {
+            "type": "integer",
+            "format": "int64"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "CreatorConfigsPublicApi.SortOrder": {
         "enum": ["SORT_ORDER_ASCENDING", "SORT_ORDER_DESCENDING"],
@@ -92156,6 +93195,10 @@
         "additionalProperties": false,
         "description": "The asset's creator store product information.",
         "nullable": true
+      },
+      "CreatorType": {
+        "enum": ["Invalid", "User", "Group"],
+        "type": "string"
       },
       "CrossServerMessaging_Models_Requests_PublishRequest": {
         "type": "object",
@@ -95340,73 +96383,6 @@
         },
         "additionalProperties": false
       },
-      "ErrorLogDetail": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "The message hash id for this log detail.",
-            "nullable": true
-          },
-          "logSeverity": {
-            "type": "string",
-            "description": "The logSeverity of the log",
-            "nullable": true
-          },
-          "logSource": {
-            "type": "string",
-            "description": "The source of the log",
-            "nullable": true
-          },
-          "os": {
-            "type": "string",
-            "nullable": true
-          },
-          "platform": {
-            "type": "string",
-            "nullable": true
-          },
-          "message": {
-            "type": "string",
-            "description": "The message of the error log",
-            "nullable": true
-          },
-          "stacktrace": {
-            "type": "string",
-            "description": "The stack trace of the error log. This might be not available",
-            "nullable": true
-          },
-          "firstSeenUtc": {
-            "type": "string",
-            "description": "UTC timestamp when this error was first observed.\r\nNull when the source document predates this field being populated.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "firstSeenPlaceVersion": {
-            "type": "integer",
-            "description": "First seen place version for the error.\r\nNOTE: This value will only be returned when place id is filtered",
-            "format": "int64",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "error log detail"
-      },
-      "ErrorLogDetailResponse": {
-        "type": "object",
-        "properties": {
-          "values": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ErrorLogDetail"
-            },
-            "description": "The analytics data for display.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "Response for top error logs"
-      },
       "ErrorResponse": {
         "type": "object",
         "properties": {
@@ -97091,6 +98067,20 @@
         "properties": {},
         "description": "Represents metadata about the long-running operation corresponding to a\nGetInstance request.\n\nThis is the type of the `Operation.metadata` field in the response to\n`GetOperation` requests for GetInstance operations."
       },
+      "GetLatestTransferRequest": {
+        "required": ["resource"],
+        "type": "object",
+        "properties": {
+          "resource": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Resource"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
       "GetMatchmakingCustomizationFeatureFlagsResponse": {
         "required": ["featureFlags"],
         "type": "object",
@@ -98100,23 +99090,197 @@
             "type": "integer"
           },
           "type": {
-            "format": "int32",
             "description": " ['Image' = 1, 'TShirt' = 2, 'Audio' = 3, 'Mesh' = 4, 'Lua' = 5, 'HTML' = 6, 'Text' = 7, 'Hat' = 8, 'Place' = 9, 'Model' = 10, 'Shirt' = 11, 'Pants' = 12, 'Decal' = 13, 'Avatar' = 16, 'Head' = 17, 'Face' = 18, 'Gear' = 19, 'Badge' = 21, 'GroupEmblem' = 22, 'Animation' = 24, 'Arms' = 25, 'Legs' = 26, 'Torso' = 27, 'RightArm' = 28, 'LeftArm' = 29, 'LeftLeg' = 30, 'RightLeg' = 31, 'Package' = 32, 'YouTubeVideo' = 33, 'GamePass' = 34, 'App' = 35, 'Code' = 37, 'Plugin' = 38, 'SolidModel' = 39, 'MeshPart' = 40, 'HairAccessory' = 41, 'FaceAccessory' = 42, 'NeckAccessory' = 43, 'ShoulderAccessory' = 44, 'FrontAccessory' = 45, 'BackAccessory' = 46, 'WaistAccessory' = 47, 'ClimbAnimation' = 48, 'DeathAnimation' = 49, 'FallAnimation' = 50, 'IdleAnimation' = 51, 'JumpAnimation' = 52, 'RunAnimation' = 53, 'SwimAnimation' = 54, 'WalkAnimation' = 55, 'PoseAnimation' = 56, 'LocalizationTableManifest' = 59, 'LocalizationTableTranslation' = 60, 'EmoteAnimation' = 61, 'Video' = 62, 'TexturePack' = 63, 'TShirtAccessory' = 64, 'ShirtAccessory' = 65, 'PantsAccessory' = 66, 'JacketAccessory' = 67, 'SweaterAccessory' = 68, 'ShortsAccessory' = 69, 'LeftShoeAccessory' = 70, 'RightShoeAccessory' = 71, 'DressSkirtAccessory' = 72, 'FontFamily' = 73, 'FontFace' = 74, 'MeshHiddenSurfaceRemoval' = 75, 'EyebrowAccessory' = 76, 'EyelashAccessory' = 77, 'MoodAnimation' = 78, 'DynamicHead' = 79, 'CodeSnippet' = 80, 'AdsVideo' = 81, 'OtaUpdate' = 82, 'Screenshot' = 83, 'RuntimePropertySet' = 84, 'StorePreviewVideo' = 85, 'GamePreviewVideo' = 86, 'CreatorExperienceConfig' = 87, 'FaceMakeup' = 88, 'LipMakeup' = 89, 'EyeMakeup' = 90, 'VoxelFragment' = 91, 'AvatarBackground' = 92, 'TextDocument' = 93, 'Post' = 94, 'AnimatedImage' = 95, 'ComputeFunction' = 96, 'AvatarSpawnEffect' = 97, 'Voice' = 98]",
             "enum": [
-              1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22,
-              24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40,
-              41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
-              59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-              75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
-              91, 92, 93, 94, 95, 96, 97, 98
+              "Image",
+              "TShirt",
+              "Audio",
+              "Mesh",
+              "Lua",
+              "HTML",
+              "Text",
+              "Hat",
+              "Place",
+              "Model",
+              "Shirt",
+              "Pants",
+              "Decal",
+              "Avatar",
+              "Head",
+              "Face",
+              "Gear",
+              "Badge",
+              "GroupEmblem",
+              "Animation",
+              "Arms",
+              "Legs",
+              "Torso",
+              "RightArm",
+              "LeftArm",
+              "LeftLeg",
+              "RightLeg",
+              "Package",
+              "YouTubeVideo",
+              "GamePass",
+              "App",
+              "Code",
+              "Plugin",
+              "SolidModel",
+              "MeshPart",
+              "HairAccessory",
+              "FaceAccessory",
+              "NeckAccessory",
+              "ShoulderAccessory",
+              "FrontAccessory",
+              "BackAccessory",
+              "WaistAccessory",
+              "ClimbAnimation",
+              "DeathAnimation",
+              "FallAnimation",
+              "IdleAnimation",
+              "JumpAnimation",
+              "RunAnimation",
+              "SwimAnimation",
+              "WalkAnimation",
+              "PoseAnimation",
+              "LocalizationTableManifest",
+              "LocalizationTableTranslation",
+              "EmoteAnimation",
+              "Video",
+              "TexturePack",
+              "TShirtAccessory",
+              "ShirtAccessory",
+              "PantsAccessory",
+              "JacketAccessory",
+              "SweaterAccessory",
+              "ShortsAccessory",
+              "LeftShoeAccessory",
+              "RightShoeAccessory",
+              "DressSkirtAccessory",
+              "FontFamily",
+              "FontFace",
+              "MeshHiddenSurfaceRemoval",
+              "EyebrowAccessory",
+              "EyelashAccessory",
+              "MoodAnimation",
+              "DynamicHead",
+              "CodeSnippet",
+              "AdsVideo",
+              "OtaUpdate",
+              "Screenshot",
+              "RuntimePropertySet",
+              "StorePreviewVideo",
+              "GamePreviewVideo",
+              "CreatorExperienceConfig",
+              "FaceMakeup",
+              "LipMakeup",
+              "EyeMakeup",
+              "VoxelFragment",
+              "AvatarBackground",
+              "TextDocument",
+              "Post",
+              "AnimatedImage",
+              "ComputeFunction",
+              "AvatarSpawnEffect",
+              "Voice"
             ],
-            "type": "integer"
+            "type": "string"
           },
           "name": {
             "type": "string"
           }
         },
         "additionalProperties": false
+      },
+      "GroupsApi.Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Core.CreatorType_": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "type": {
+            "description": " ['User' = 0, 'Group' = 1, 'Experience' = 2]",
+            "enum": ["User", "Group", "Experience"],
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Hold": {
+        "required": [
+          "createdUtcTime",
+          "currentCreator",
+          "expirationAcknowledged",
+          "holdId",
+          "holdState",
+          "resource",
+          "targetCreator",
+          "updatedUtcTime"
+        ],
+        "type": "object",
+        "properties": {
+          "holdId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "currentCreator": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Creator"
+              }
+            ]
+          },
+          "targetCreator": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Creator"
+              }
+            ]
+          },
+          "resource": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Resource"
+              }
+            ]
+          },
+          "holdState": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/HoldState"
+              }
+            ]
+          },
+          "expirationAcknowledged": {
+            "type": "boolean"
+          },
+          "createdUtcTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedUtcTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HoldState": {
+        "enum": [
+          "Invalid",
+          "Pending",
+          "Canceled",
+          "Accepted",
+          "Completed",
+          "Rejected",
+          "Timedout",
+          "Failed"
+        ],
+        "type": "string"
       },
       "HomepageThumbnail": {
         "required": [
@@ -98639,7 +99803,7 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/PlaceFilter"
             },
-            "description": "Optional mapping of place ID to specific PlaceFilter objects.\nIf empty for a place, restart all versions of that place.\nIf null/omitted entirely, restart all places in the universe.",
+            "description": "Optional mapping of place ID to specific PlaceFilter objects.\nIf empty for a place, restart all versions of that place.\nIf any place specifies versions, every place must.\nIf null/omitted entirely, restart all places in the universe.",
             "nullable": true
           },
           "attributes": {
@@ -99277,6 +100441,33 @@
           }
         },
         "description": "Returns a list of the instance's children."
+      },
+      "ListInvalidTargetsRequest": {
+        "required": ["resource"],
+        "type": "object",
+        "properties": {
+          "resource": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Resource"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "ListInvalidTargetsResponse": {
+        "required": ["invalidTargets"],
+        "type": "object",
+        "properties": {
+          "invalidTargets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Creator"
+            }
+          }
+        },
+        "additionalProperties": false
       },
       "ListInventoryItemsResponse": {
         "type": "object",
@@ -101465,6 +102656,47 @@
         "additionalProperties": false,
         "description": "Standard error response model."
       },
+      "OwnershipTransferApi.ErrorCode": {
+        "enum": [
+          "InternalError",
+          "InvalidGroupId",
+          "InvalidUniverseId",
+          "InsufficientPermission",
+          "NoGroupOwner",
+          "UnsupportedTransfer",
+          "EmailNotVerified",
+          "InvalidTargetRelationship",
+          "InvalidHoldId",
+          "InvalidTransferAction"
+        ],
+        "type": "string"
+      },
+      "OwnershipTransferApi.ErrorResponse": {
+        "required": ["code"],
+        "type": "object",
+        "properties": {
+          "code": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OwnershipTransferApi.ErrorCode"
+              }
+            ],
+            "description": "The error code."
+          },
+          "message": {
+            "type": "string",
+            "description": "The error message.",
+            "nullable": true
+          },
+          "field": {
+            "type": "string",
+            "description": "Field on which model validation failed.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Standard error response model."
+      },
       "PaginatedGameEventsResponse": {
         "type": "object",
         "properties": {
@@ -102062,7 +103294,7 @@
               "type": "integer",
               "format": "int32"
             },
-            "description": "List of placeVersions to restart. Mutually exclusive with ServerManagementService.V2.Models.PlaceFilter.ExcludeCurrentVersion.",
+            "description": "List of placeVersions to restart. Mutually exclusive with ServerManagementService.V2.Models.PlaceFilter.ExcludeCurrentVersion.\nIf any place in a restart request specifies versions, every place must.",
             "nullable": true
           },
           "excludeCurrentVersion": {
@@ -103754,6 +104986,20 @@
         ],
         "type": "string"
       },
+      "RejectTransferRequest": {
+        "required": ["resource"],
+        "type": "object",
+        "properties": {
+          "resource": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Resource"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
       "RemovePlaceMatchmakingScoringConfigurationResponse": {
         "type": "object",
         "additionalProperties": false,
@@ -103805,6 +105051,24 @@
           "DataCaptureConfig"
         ]
       },
+      "Resource": {
+        "required": ["resourceId", "resourceType"],
+        "type": "object",
+        "properties": {
+          "resourceType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ResourceType"
+              }
+            ]
+          },
+          "resourceId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
       "ResourceConfiguration": {
         "required": ["price", "resourceId", "unitCost", "unlocked"],
         "type": "object",
@@ -103846,6 +105110,10 @@
         },
         "additionalProperties": false,
         "description": "Configuration for a resource, like Memory Stores request unit."
+      },
+      "ResourceType": {
+        "enum": ["Invalid", "Group", "Universe"],
+        "type": "string"
       },
       "ResourceUsage": {
         "required": ["price", "resourceId", "totalCost", "unitCost"],
@@ -115329,6 +116597,25 @@
         },
         "additionalProperties": false
       },
+      "Roblox.Groups.Api.GetSocialLinkResponse": {
+        "description": "The social links of a group.",
+        "type": "object",
+        "properties": {
+          "data": {
+            "description": "The social links of the group.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Roblox.Groups.Api.SocialLinkResponse"
+            }
+          },
+          "socialLinksVerificationStatus": {
+            "description": "The age-verification status of the group for social links, sent as a string: \"0\" (None), \"1\" (VerifiedForCommunity), \"2\" (VerifiedForExperiences), or \"3\" (VerifiedForAll).\nIt applies to the whole group, not to each link. It comes from the age verification of the group's owner and of members who manage the group or its experiences.\nReturned only when the caller can configure the group's social links. Otherwise the field is absent.\nWhen the caller is an age-verified member who manages the group, this call can raise the status.",
+            "enum": ["0", "1", "2", "3"],
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "Roblox.Groups.Api.GroupAuditLogPageResponse_Roblox.Groups.Api.Models.Response.GroupAuditLogResponseItem_": {
         "description": "ApiPageResponse for group audit log",
         "type": "object",
@@ -115527,16 +116814,21 @@
             "type": "boolean"
           },
           "verificationLevel": {
-            "format": "int32",
             "description": "The verification level for the group. Null if the verification level could not be determined due to an error.",
-            "enum": [0, 1, 2, 3],
-            "type": "integer"
+            "enum": ["None", "Low", "Medium", "High"],
+            "type": "string"
           },
           "accountTenureRequirement": {
-            "format": "int32",
             "description": "The account tenure requirement for the group. Null if the account tenure requirement could not be determined due to an error.",
-            "enum": [0, 1, 2, 3, 4, 5],
-            "type": "integer"
+            "enum": [
+              "None",
+              "OneDay",
+              "ThreeDays",
+              "OneWeek",
+              "OneMonth",
+              "ThreeMonths"
+            ],
+            "type": "string"
           },
           "slowmode": {
             "format": "int32",
@@ -115602,7 +116894,7 @@
             "type": "string"
           },
           "creator": {
-            "$ref": "#/components/schemas/Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Core.CreatorType_"
+            "$ref": "#/components/schemas/GroupsApi.Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Core.CreatorType_"
           },
           "rootPlace": {
             "$ref": "#/components/schemas/GroupsApi.Roblox.Web.Responses.RelatedEntityTypeResponse_Roblox.Platform.Assets.AssetType_"
@@ -115630,10 +116922,9 @@
         "type": "object",
         "properties": {
           "buildersClubMembershipType": {
-            "format": "int32",
             "description": "The user's builders club membership type",
-            "enum": [0, 1, 2, 3, 4],
-            "type": "integer"
+            "enum": ["None", "BC", "TBC", "OBC", "RobloxPremium"],
+            "type": "string"
           },
           "hasVerifiedBadge": {
             "description": "The user's verified badge status.",
@@ -115681,6 +116972,41 @@
           "updated": {
             "format": "date-time",
             "description": "The shout's last updated time",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roblox.Groups.Api.SocialLinkResponse": {
+        "description": "A social link on a group.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "format": "int64",
+            "description": "The ID of the social link.",
+            "type": "integer"
+          },
+          "type": {
+            "description": "The site that the link points to, such as Discord, YouTube, or a Roblox group. ['Facebook' = 0, 'Twitter' = 1, 'YouTube' = 2, 'Twitch' = 3, 'GooglePlus' = 4, 'Discord' = 5, 'RobloxGroup' = 6, 'Amazon' = 7, 'Guilded' = 8]",
+            "enum": [
+              "Facebook",
+              "Twitter",
+              "YouTube",
+              "Twitch",
+              "GooglePlus",
+              "Discord",
+              "RobloxGroup",
+              "Amazon",
+              "Guilded"
+            ],
+            "type": "string"
+          },
+          "url": {
+            "description": "The URL of the link.",
+            "type": "string"
+          },
+          "title": {
+            "description": "The title of the link.",
             "type": "string"
           }
         },
@@ -127106,13 +128432,7 @@
             "description": "The notification payload."
           }
         },
-        "description": "Represents a notification sent to a user.",
-        "x-aep-resource": {
-          "patterns": ["users/{user_id}/notifications/{user_notification_id}"],
-          "plural": "user-notifications",
-          "singular": "user-notification"
-        },
-        "x-resource": true
+        "description": "Represents a notification sent to a user."
       },
       "UserNotification_Payload": {
         "type": "object",
@@ -127156,10 +128476,7 @@
             "description": "Data for how analytics are reported."
           }
         },
-        "description": "Details about the notification.",
-        "x-oneOf": {
-          "callToAction": ["joinExperience"]
-        }
+        "description": "Details about the notification."
       },
       "UserNotification_Payload_AnalyticsData": {
         "type": "object",
@@ -127190,20 +128507,17 @@
         "properties": {
           "stringValue": {
             "type": "string",
-            "description": "A string value.",
+            "description": "A string value. Set either `stringValue` or `int64Value`, not both.",
             "example": "bronze egg"
           },
           "int64Value": {
             "type": "integer",
-            "description": "An int64 value.",
+            "description": "An int64 value. Set either `stringValue` or `int64Value`, not both.",
             "format": "int64",
             "example": 10101010
           }
         },
-        "description": "A parameter value that a template uses to render a notification message.",
-        "x-oneOf": {
-          "value": ["stringValue", "int64Value"]
-        }
+        "description": "A parameter value that a template uses to render a notification message."
       },
       "UserNotification_Source": {
         "type": "object",
@@ -127215,10 +128529,7 @@
             "example": "universes/96623001"
           }
         },
-        "description": "The source of the notification.",
-        "x-oneOf": {
-          "source": ["universe"]
-        }
+        "description": "The source of the notification."
       },
       "UserPresence": {
         "type": "object",
@@ -128085,7 +129396,6 @@
           "accountinformation_get_v1_promotion_channels",
           "accountinformation_post_v1_promotion_channels",
           "accountinformation_get_v1_users__userId__promotion_channels",
-          "accountinformation_get_v1_users__userId__roblox_badges",
           "users_get_v1_birthdate",
           "users_post_v1_birthdate",
           "users_get_v1_description",
@@ -128255,15 +129565,11 @@
     },
     {
       "name": "Advertising",
-      "description": "Create and manage advertising on Roblox. [Estimate campaign audiences](#CreateAudienceEstimate), [performance](#CreatePerformanceEstimate), and [recommendations](#CreateCampaignRecommendation), then [validate campaign settings](#ValidateCampaign). [Create](#CreateCreative), [retrieve](#GetCreative), and [update](#UpdateCreative) creatives, and [list](#ListCampaignAds), [retrieve](#GetCampaignAd), and [update](#UpdateCampaignAd) ads in a campaign. Experience advertising drives engagement to your experiences through the Ads API, and item advertising promotes Marketplace items through sponsored campaigns. See the [Advertising guide](https://create.roblox.com/docs/cloud/guides/advertising) for Open Cloud setup and usage.\n",
+      "description": "Run ads on Roblox with the Ads API: create and manage ad campaigns, ads, creatives, and billing for your experiences. [Find experiences you can advertise](#ListAdvertisableUniverses) and [get campaign options](#GetCampaignOptions). [Estimate campaign audiences](#CreateAudienceEstimate), [performance](#CreatePerformanceEstimate), and [recommendations](#CreateCampaignRecommendation), then [validate campaign settings](#ValidateCampaign). [Create](#CreateCampaign), [list](#ListCampaigns), [retrieve](#GetCampaign), and [update](#UpdateCampaign) campaigns, and [get the delivery status of several campaigns](#BatchGetCampaignStatus). [Create](#CreateCreative), [retrieve](#GetCreative), and [update](#UpdateCreative) creatives, and [list](#ListCampaignAds), [retrieve](#GetCampaignAd), and [update](#UpdateCampaignAd) ads in a campaign. See the [Advertising guide](https://create.roblox.com/docs/cloud/guides/advertising) for Open Cloud setup and usage.\n\nFor the legacy sponsored item endpoints that use cookie authentication, see [Sponsored items](https://create.roblox.com/docs/cloud/reference/features/sponsored-items).\n",
       "x-roblox-tag-info": {
         "path": "advertising",
-        "content": "HTTP APIs for creating and managing advertising on Roblox Cloud.",
+        "content": "HTTP APIs for running ads and managing ad campaigns on Roblox Cloud.",
         "ordering": [
-          "ads_get_v1_sponsored_pages",
-          "ads_get_v1_sponsored_catalog_assets__targetId__create",
-          "ads_post_v1_ads_tracking_click",
-          "ads_post_v1_sponsored_games_click",
           "CreateAudienceEstimate",
           "ListBillingAccounts",
           "GetBillingAccount",
@@ -128285,18 +129591,7 @@
           "CreateCreative",
           "GetCreative",
           "UpdateCreative",
-          "CreatePerformanceEstimate",
-          "adconfiguration_post_v2_tracking_click",
-          "adconfiguration_get_v2_sponsored_campaigns",
-          "adconfiguration_post_v2_sponsored_campaigns_create",
-          "adconfiguration_get_v2_sponsored_campaigns_eligible_asset_type_ids",
-          "adconfiguration_post_v2_sponsored_campaigns_eligible_campaign_targets",
-          "adconfiguration_get_v2_sponsored_campaigns_multi_get_can_user_sponsor",
-          "adconfiguration_post_v2_sponsored_campaigns_stop",
-          "adconfiguration_get_v2_sponsored_games",
-          "adconfiguration_get_v2_sponsored_games_universes",
-          "adconfiguration_post_v2_sponsored_games_create",
-          "adconfiguration_post_v2_sponsored_games_stop"
+          "CreatePerformanceEstimate"
         ]
       }
     },
@@ -128327,7 +129622,6 @@
           "patch_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_",
           "delete_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts__alertId_",
           "get_analytics_alert_control_plane_v1_resource__resourceType__id__resourceId__alerts_incidents",
-          "ErrorLoggingDetail_GetLogs",
           "LogAttributeService_Find",
           "LogAttributeService_Create",
           "LogAttributeService_Update",
@@ -128611,7 +129905,6 @@
           "gameinternationalization_patch_v1_badges__badgeId__name_language_codes__languageCode_",
           "post_legacy_publish_v1_badges__badgeId__icon",
           "publish_post_v1_badges__badgeId__icon",
-          "accountinformation_get_v1_users__userId__roblox_badges",
           "badges_get_v1_badges__badgeId_",
           "badges_get_v1_badges_metadata",
           "badges_get_v1_universes__universeId__badges",
@@ -128891,6 +130184,7 @@
         "path": "groups",
         "content": "HTTP APIs for working with groups on Roblox Cloud.",
         "ordering": [
+          "post_cloud_authentication_v1_canUseApiKeys",
           "ServiceEfficiencyApi_GetAccountForGroup",
           "ServiceEfficiencyApi_UpdateAccountForGroup",
           "ServiceEfficiencyApi_GetBillingActivitiesByGroup",
@@ -128926,6 +130220,7 @@
           "groups_get_v1_groups__groupId__payouts_latest",
           "groups_get_v1_groups__groupId__payouts_suggested",
           "groups_get_v1_universes__universeId__payouts",
+          "groups_get_v1_groups__groupId__social_links",
           "groups_get_v2_groups__groupId__invitations",
           "groups_post_v2_groups__groupId__invitations",
           "groups_get_v2_groups__groupId__invitations__invitationId_",
@@ -129246,6 +130541,8 @@
         "path": "metadata",
         "content": "HTTP APIs for working with metadata on Roblox Cloud.",
         "ordering": [
+          "get_cloud_authentication_v1_scopes",
+          "Scope_GetScopes",
           "get_legacy_localization_tables_v1_autolocalization_metadata",
           "localizationtables_get_v1_autolocalization_metadata",
           "get_legacy_localization_tables_v1_localization_table_limits",
@@ -129458,6 +130755,31 @@
           "ServiceEfficiencyApi_SetServiceEfficiencyPaymentMethodForGroup",
           "ServiceEfficiencyApi_SubmitManualPaymentForUser",
           "ServiceEfficiencyApi_SubmitManualPaymentForGroup"
+        ]
+      }
+    },
+    {
+      "name": "Sponsored items",
+      "description": "Legacy endpoints for sponsoring Marketplace items, such as avatar items, bundles, and passes, and for ad click tracking. These endpoints use cookie authentication. To create and manage ad campaigns from your own tools with an API key or OAuth 2.0, use the [Ads API](https://create.roblox.com/docs/cloud/reference/features/advertising).\n",
+      "x-roblox-tag-info": {
+        "path": "sponsored-items",
+        "content": "HTTP APIs for legacy sponsored items on Roblox.",
+        "ordering": [
+          "ads_get_v1_sponsored_pages",
+          "ads_get_v1_sponsored_catalog_assets__targetId__create",
+          "ads_post_v1_ads_tracking_click",
+          "ads_post_v1_sponsored_games_click",
+          "adconfiguration_post_v2_tracking_click",
+          "adconfiguration_get_v2_sponsored_campaigns",
+          "adconfiguration_post_v2_sponsored_campaigns_create",
+          "adconfiguration_get_v2_sponsored_campaigns_eligible_asset_type_ids",
+          "adconfiguration_post_v2_sponsored_campaigns_eligible_campaign_targets",
+          "adconfiguration_get_v2_sponsored_campaigns_multi_get_can_user_sponsor",
+          "adconfiguration_post_v2_sponsored_campaigns_stop",
+          "adconfiguration_get_v2_sponsored_games",
+          "adconfiguration_get_v2_sponsored_games_universes",
+          "adconfiguration_post_v2_sponsored_games_create",
+          "adconfiguration_post_v2_sponsored_games_stop"
         ]
       }
     },
@@ -129753,7 +131075,7 @@
     },
     {
       "name": "User profiles",
-      "description": "Access user profile pages. [Retrieve user descriptions](#users_get_v1_description), [badges](#accountinformation_get_v1_users__userId__roblox_badges), [avatar configuration](#avatar_get_v1_users__userId__avatar), and [wearing items](#avatar_get_v1_users__userId__currently_wearing).\n",
+      "description": "Access user profile pages. [Retrieve user descriptions](#users_get_v1_description), [badges](#badges_get_v1_users__userId__badges), [avatar configuration](#avatar_get_v1_users__userId__avatar), and [wearing items](#avatar_get_v1_users__userId__currently_wearing).\n",
       "x-roblox-tag-info": {
         "path": "user-profiles",
         "content": "HTTP APIs for working with user profiles on Roblox Cloud.",
@@ -129763,7 +131085,6 @@
           "accountinformation_get_v1_metadata",
           "accountinformation_get_v1_promotion_channels",
           "accountinformation_get_v1_users__userId__promotion_channels",
-          "accountinformation_get_v1_users__userId__roblox_badges",
           "avatar_post_v1_avatar_redraw_thumbnail",
           "avatar_get_v4_avatar_users__userId_",
           "avatar_get_v1_users__userId__avatar",
@@ -129826,7 +131147,6 @@
           "inventory_get_v2_users__userId__inventory__assetTypeId_",
           "inventory_get_v1_users__userId__categories",
           "inventory_get_v1_users__userId__categories_favorites",
-          "accountinformation_get_v1_users__userId__roblox_badges",
           "badges_get_v1_users__userId__badges",
           "badges_get_v1_users__userId__badges_awarded_dates",
           "badges_get_v1_users__userId__badges__badgeId__awarded_date",
