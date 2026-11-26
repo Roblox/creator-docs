@@ -45,7 +45,7 @@ When Studio opens up the template, you now have `Place1` that represents your ov
 
 ## Publish games
 
-When you publish a game, Roblox stores the data model of your start place as a `.rblx` file in the cloud. This is an important process because it connects the game to your account, allowing you to access and work on it from any computer.
+When you publish a game, Roblox stores the data model of your start place as a `.rbxl` file in the cloud. This is an important process because it connects the game to your account, allowing you to access and work on it from any computer.
 
 By default, new games are only accessible to you as the creator, users with **Edit** access, and group members with the appropriate [roles and permissions](../../projects/groups.md#roles-and-permissions). When you are ready to go live to everyone, you can [release your game to the public](#release-games) and [specify your target audience](#target-audience).
 
